@@ -35,7 +35,7 @@ combined into an unrestricted equality theorem.
 | `artifacts/efx_chambers/` | Audited chamber-radius extension; not currently in the paper |
 | `artifacts/multifloater_parking/` | Audited multi-floater extension; not currently in the paper |
 | `results/`, `tracks/`, root research scripts | Campaign archive and discovery work; presence is not a claim of correctness |
-| `docs/` | Accomplishments, audit history, provenance, and archive guide |
+| `docs/` | Accomplishments, audit history, archive guide, and [thesis research program](docs/THESIS_RESEARCH_PROGRAM.md) |
 
 Canonical status is recorded here and in
 [ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md). Older reports and campaign notes are
