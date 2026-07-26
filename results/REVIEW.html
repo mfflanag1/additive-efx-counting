@@ -1,0 +1,229 @@
+<title>EFX at (4,8): Campaign Report for Review</title>
+<style>
+  :root {
+    --ground: #FAFAF8; --panel: #F1F1EC; --ink: #22272E; --muted: #69707A;
+    --accent: #33608C; --thm: #2A6B4F; --thm-bg: #E8F0EB; --alert: #A3492F;
+    --alert-bg: #F4E9E4; --open-bg: #EFEAD9; --open: #8A6D1F; --rule: #D9D9D2;
+    --mono-bg: #EEEEE8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #15181C; --panel: #1C2026; --ink: #D7DCE2; --muted: #8A929C;
+      --accent: #7FA8D4; --thm: #6FB394; --thm-bg: #1B2822; --alert: #D08A6F;
+      --alert-bg: #2B1F1A; --open-bg: #282314; --open: #C9A84C; --rule: #333941;
+      --mono-bg: #20242A;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #15181C; --panel: #1C2026; --ink: #D7DCE2; --muted: #8A929C;
+    --accent: #7FA8D4; --thm: #6FB394; --thm-bg: #1B2822; --alert: #D08A6F;
+    --alert-bg: #2B1F1A; --open-bg: #282314; --open: #C9A84C; --rule: #333941;
+    --mono-bg: #20242A;
+  }
+  :root[data-theme="light"] {
+    --ground: #FAFAF8; --panel: #F1F1EC; --ink: #22272E; --muted: #69707A;
+    --accent: #33608C; --thm: #2A6B4F; --thm-bg: #E8F0EB; --alert: #A3492F;
+    --alert-bg: #F4E9E4; --open-bg: #EFEAD9; --open: #8A6D1F; --rule: #D9D9D2;
+    --mono-bg: #EEEEE8;
+  }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Charter, Georgia, serif;
+    line-height: 1.55; margin: 0; font-size: 17px;
+  }
+  main { max-width: 72ch; margin: 0 auto; padding: 3rem 1.4rem 5rem; }
+  .eyebrow {
+    font-family: system-ui, sans-serif; font-size: .72rem; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--accent); font-weight: 600;
+  }
+  h1 { font-size: 2rem; line-height: 1.15; margin: .4rem 0 .3rem; text-wrap: balance; font-weight: 600; }
+  .subtitle { color: var(--muted); margin: 0 0 1.2rem; font-size: 1.02rem; }
+  h2 {
+    font-size: 1.28rem; margin: 2.6rem 0 .7rem; font-weight: 600; text-wrap: balance;
+    border-bottom: 1px solid var(--rule); padding-bottom: .35rem;
+  }
+  h2 .no { color: var(--accent); font-variant-numeric: tabular-nums; margin-right: .45rem; }
+  h3 { font-size: 1.02rem; margin: 1.5rem 0 .4rem; font-weight: 600; }
+  p { margin: .65rem 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: .45rem; margin: 1rem 0 0; }
+  .chip {
+    font-family: system-ui, sans-serif; font-size: .72rem; font-weight: 600;
+    padding: .22rem .6rem; border-radius: 2px; letter-spacing: .04em;
+  }
+  .chip.thm { background: var(--thm-bg); color: var(--thm); }
+  .chip.open { background: var(--open-bg); color: var(--open); }
+  .chip.alert { background: var(--alert-bg); color: var(--alert); }
+  .box {
+    border-left: 3px solid var(--thm); background: var(--thm-bg);
+    padding: .8rem 1rem; margin: 1rem 0; border-radius: 0 3px 3px 0;
+  }
+  .box.open { border-color: var(--open); background: var(--open-bg); }
+  .box.alert { border-color: var(--alert); background: var(--alert-bg); }
+  .box .tag {
+    font-family: system-ui, sans-serif; font-size: .7rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; display: block; margin-bottom: .3rem;
+  }
+  .box.thmbox .tag { color: var(--thm); } .box.open .tag { color: var(--open); }
+  .box.alert .tag { color: var(--alert); }
+  .box p { margin: .35rem 0; }
+  table {
+    border-collapse: collapse; width: 100%; font-size: .88rem; margin: .8rem 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .tablewrap { overflow-x: auto; }
+  th {
+    font-family: system-ui, sans-serif; font-size: .7rem; text-transform: uppercase;
+    letter-spacing: .07em; color: var(--muted); text-align: left; font-weight: 600;
+    border-bottom: 1.5px solid var(--rule); padding: .35rem .6rem .35rem 0;
+  }
+  td { border-bottom: 1px solid var(--rule); padding: .4rem .6rem .4rem 0; vertical-align: top; }
+  .v { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .78rem; font-weight: 600; }
+  .v.u { color: var(--thm); } .v.o { color: var(--open); } .v.x { color: var(--alert); }
+  pre {
+    background: var(--mono-bg); padding: .7rem .9rem; overflow-x: auto; border-radius: 3px;
+    font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .78rem; line-height: 1.5;
+    margin: .7rem 0;
+  }
+  code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: .85em; background: var(--mono-bg); padding: .08em .3em; border-radius: 2px; }
+  .note { color: var(--muted); font-size: .88rem; }
+  ul, ol { padding-left: 1.3rem; } li { margin: .3rem 0; }
+  .refs { font-size: .86rem; } .refs li { margin: .45rem 0; }
+  a { color: var(--accent); }
+  strong { font-weight: 650; }
+</style>
+<main>
+<p class="eyebrow">Research campaign report · rev. 2.1 after referee rounds 1–2 · 2026-07-24</p>
+<h1>EFX at (4, 8): an exact-search and structure campaign on the first open cell of additive fair division</h1>
+<p class="subtitle">Max Flanagan's counterexample-hunt project, executed with a multi-agent Claude Fable 5 pipeline (dual verifiers, CEGAR solvers, theory agents, literature agents). Working artifacts in <code>~/projects/counterexample-hunt/efx/</code> (a public frozen archive is a pre-circulation TODO; see §10).</p>
+<div class="chips">
+  <span class="chip thm">5 bounded counterexample-exclusion results (4 at n=4, 1 composite at n=5)</span>
+  <span class="chip thm">2 instances with exactly 4 EFX₀ allocations, dual-verified</span>
+  <span class="chip open">(4,8) open — unrestricted engine still running</span>
+  <span class="chip alert">2 referee rounds incorporated; all findings verified &amp; applied</span>
+</div>
+
+<h2><span class="no">1</span>Summary</h2>
+<p>The target is the open problem of fair division: <em>do EFX allocations always exist for n ≥ 4 agents with additive valuations over indivisible goods?</em> Following the 2026 wave of AI-assisted counterexamples (and, in this problem's own family, the monotone/submodular and additive-chores EFX disproofs), we ran an intensive exact-search campaign on the smallest genuinely open cell, <strong>4 agents and 8 goods</strong>, using an exact-verifier-first discipline.</p>
+<div class="box thmbox"><span class="tag">Executive claim (calibrated)</span>
+<p>We report <strong>four computer-assisted bounded positive-integer UNSAT results for n = 4</strong>, <strong>two independently checked instances with exactly four EFX₀ allocations</strong>, and <strong>several structural hypotheses</strong> intended to guide the unresolved unrestricted (4,8) problem. A fifth bounded result at n = 5 is now complete as a three-part composite (see §4). No counterexample was found anywhere; evidence within the searched bounded and heuristic regimes is consistent with existence at n = 4 for m ≤ 10.</p></div>
+<p class="note">Calibration: nothing here is a breakthrough. The proven pieces are PhD-student-grade computational results plus incremental lemmas; the genuinely new prizes (an unconditional (4,8) resolution, or a witness at any cell) remain pending. This is revision 2.1 (two referee rounds): internal refereeing corrected one advertised theorem, a variant-coverage claim, a mislabeled empirical statistic, and two over-broad structural claims — details flagged inline and in §7.</p>
+
+<h2><span class="no">2</span>Problem position (verified against the literature)</h2>
+<p>EFX₀ ("envy-free up to any good"): allocation X₁…Xₙ of all goods is EFX₀ if for every pair i, j and every good g ∈ X_j: v_i(X_i) ≥ v_i(X_j) − v_i(g). Status as of July 2026:</p>
+<ul>
+  <li><strong>Fallen neighbors (2026):</strong> EFX fails for monotone/submodular valuations, n ≥ 3, m ≥ n+5 — found by SAT solving, encoding Lean-verified (Akrami–Mayorov–Mehlhorn–Srinivas–Weidenbach, arXiv:2604.18216); compact symmetric subadditive counterexamples (Mackenzie–Suzuki, arXiv:2605.06451); EFX fails for <em>additive chores</em>, n ≥ 4, tri-valued costs (He–Tao, arXiv:2606.08872). Additive <em>goods</em> is the last tower: 2604.18216 states explicitly that even n = 4 additive is unknown.</li>
+  <li><strong>Proven-safe classes:</strong> n ≤ 3 additive (Chaudhury–Garg–Mehlhorn; strongest form Akrami et al., arXiv:2205.07638); m ≤ n+3 for the strong every-good variant (Mahara, arXiv:2107.09901); ≤ 3 distinct valuation types (Vishwa Prakash H.V. et al., arXiv:2410.13580, EC 2025); bivalued instances; identical valuations. Almost-full: 4-agent additive instances always admit EFX on all but one good (Berger–Cohen–Feldman–Fiat, arXiv:2102.10654).</li>
+  <li><strong>First open cell:</strong> (n, m) = (4, 8), for unrestricted additive-goods instances. Even the <em>monotone</em> (4,8) case is unresolved — the SAT work solved n = 3 only. No competing work on additive n = 4 appeared on arXiv July 15–23, 2026.</li>
+  <li><strong>Zero values.</strong> The ε-perturbation reduction (Amanatidis et al., arXiv:2001.09838) transfers an <em>unrestricted</em> all-positive existence theorem to nonnegative valuations. It does <strong>not</strong> upgrade our fixed-value-cap searches (perturbing and clearing denominators leaves the searched box), so the bounded results in §4 are stated for positive integer values only. A prospective unrestricted result (the Z3 engine, §9) would cover zeros via this reduction.</li>
+</ul>
+
+<h2><span class="no">3</span>Method and verification discipline</h2>
+<ul>
+  <li><strong>Dual independent verifiers.</strong> Two exhaustive EFX₀ checkers written independently (different sessions, different enumeration algorithms), exact integer arithmetic, cross-validated on random instances plus theorem-backed self-tests; a later numpy counter validated to 100% exact agreement on 60+ instances. Every instance-level claim below passed both. <em>Scope caveat (referee):</em> the verifiers validate instances; they do not independently validate the CEGAR master encodings.</li>
+  <li><strong>CEGAR core.</strong> Master (CP-SAT over integers; separately Z3 over exact rationals): find valuations killing all pooled allocations. Slave (exact verifier): find EFX₀ allocations of the candidate; pool them. Master infeasibility = exhaustion of the searched class; slave failure = witness. Search-space cuts: row/column double-lex (Flener et al.); a distinct-rows cut justified by the ≤3-types theorem — <em>sound at n = 4, where it was designed; at n = 5 it silently strengthened to "5 distinct types," which is what forced the §4 downgrade.</em></li>
+  <li><strong>Calibration.</strong> The pipeline returned the expected verdict on four finite control classes before touching the open cell: (2,3); (3,5); (4,7) [Mahara]; (4,8) restricted to two values [bivalued].</li>
+  <li><strong>Directed search.</strong> Surrogate-objective annealing (minimize EFX₀ count, tie-break toward fragile survivors) plus CP-SAT finishers that exactly exhaust boxes around near-witnesses.</li>
+  <li><strong>Claim hygiene.</strong> Novelty checks before claiming lemmas; numerical testing of every theory claim; an adversarial referee round on this report itself. The catches are listed in §7 — including one catch that was itself wrong and was reversed on re-audit.</li>
+</ul>
+
+<h2><span class="no">4</span>Bounded counterexample-exclusion results (computer-assisted)</h2>
+<p>Each row is a completed CEGAR run ending in master infeasibility, for <strong>positive integer values only</strong> (see §2 on zeros). Conditional on CP-SAT correctness and cut soundness; not yet independently formalized.</p>
+<div class="tablewrap"><table>
+<tr><th>Cell</th><th>Statement</th><th>Verdict</th><th>Pool</th></tr>
+<tr><td>(4, 8), values {1..3}</td><td>No EFX₀ counterexample</td><td class="v u">UNSAT</td><td>567</td></tr>
+<tr><td>(4, 8), values {1..4}</td><td>No EFX₀ counterexample</td><td class="v u">UNSAT</td><td>1,725</td></tr>
+<tr><td>(4, 9), values {1..3}</td><td>No EFX₀ counterexample</td><td class="v u">UNSAT</td><td>1,341</td></tr>
+<tr><td>(4, 9), values {1..4}</td><td>No EFX₀ counterexample</td><td class="v u">UNSAT</td><td>3,669</td></tr>
+<tr><td>(5, 9), values {1..3}</td><td>No EFX&#8320; counterexample — composite, completed with corrected encoding: &le;3 types (HV et al. theorem) + exactly-4-types (referee-corrected duplicate-pair run: UNSAT, pool 10,385 — ~7&times; the unsound attempt's pool, confirming the excluded subclass was material) + 5-distinct-types (pool 5,088)</td><td class="v u">UNSAT</td><td>5,088 + 10,385</td></tr>
+<tr><td>(4, 8), values {1..5}</td><td>Master solves exceed time caps near pool ≈ 3,200</td><td class="v o">PENDING</td><td>3,200+</td></tr>
+<tr><td>(4, 7) counting, values {1..4}</td><td><strong>Every instance has ≥ 4 EFX₀ allocations</strong> — first exact verification of Neoh–Teh Conjecture 6.1 beyond their proven m = n+2 regime, via a novel slot-protected counting-CEGAR (the master may exempt up to three allocations; UNSAT bounds the minimum count)</td><td class="v u">UNSAT</td><td>1,295</td></tr>
+</table></div>
+<p class="note">Wall-clock times omitted: several runs were resumed from persisted pools after OS kills, and the per-run clocks reset on resume, so recorded times underreport at least two runs. Calibration rows: (2,3), (3,5), (4,7), (4,8)-bivalued — all UNSAT as required.</p>
+
+<h2><span class="no">5</span>The near-witness ladder and the count-4 phenomenon</h2>
+<p>Directed annealing (in the lineage of earlier local-search approaches to EFX, cf. Brânzei, arXiv:2510.05429) drives the number of EFX₀ allocations from ~300–2,500 (random instances) down a reproducible ladder: 184 → 118 → 18 → 5 → <strong>4</strong>. The decisive lever was a surrogate objective tie-breaking toward <em>fragile</em> survivors.</p>
+<div class="box thmbox"><span class="tag">Empirical observation (dual-verified instances; not a proved law)</span>
+<p>The minimum EFX₀-allocation count reached by deep directed search is <strong>exactly 4 — never 3, 2, 1, or 0</strong> — at (4,8) across six independent basins, and at (4,9) and (4,10). Positioning against the direct prior art — Neoh–Teh (AAAI 2025), read in full: their Table 1 gives, for the minimum number of EFX allocations, a tight bound n at m = n+1, bounds [n, n²] at m = n+2, and for m ≥ n+3 only the upper bound n! with <em>no</em> nontrivial lower bound; their Conjecture 6.1 asserts every instance has at least n EFX allocations; their exactly-n instances are at m = n+2 with n ≤ 4, and for n = 5 they report an empirical minimum of 14. Our contribution relative to this: <strong>explicit dual-verified instances with exactly n = 4 EFX₀ allocations at m = n+4, n+5, and n+6</strong> — improving the known upper bound on the minimum count in their m ≥ n+3 regime from n! to n, which is tight if their Conjecture 6.1 holds. (The tight set now spans three consecutive n: dual-verified instances with exactly n EFX₀ allocations at (4,7), (5,8), and (6,9) — every m = n+3 cell searched — plus n = 4 tight instances at m = 8, 9, 10. In each cell the published minimum-count upper bound was n!; these instances lower it to n, matching Conjecture 6.1's floor exactly. The (6,9) witness was constructed directly by an anatomy-constrained CEGAR whose master encodes the proven hub-plus-singletons-plus-floater structure.) We claim the instances, not a floor theorem; the floor-at-4 phenomenon is exactly their conjecture holding empirically at its boundary.</p></div>
+<p>The two best (4,8) instances (each with exactly 4 EFX₀ allocations; verified by both checkers):</p>
+<pre>Basin 1 (floater = good 3):        Basin 2 (floater = good 7):
+[[11,  8, 20, 1,  4,  1, 16, 1],   [[ 3, 95,100,  6, 64, 20, 23,  9],
+ [16, 49, 32, 2, 16,  2, 60, 1],    [28, 75, 77, 20, 74,  9, 21,  2],
+ [28, 28, 59, 1, 60,  7, 46, 8],    [ 9, 94,  4, 13, 93, 63,  3,  5],
+ [10, 12, 24, 1, 59,  1, 17, 1]]    [21, 58, 31, 19, 96, 34, 20, 10]]</pre>
+<p>In both, the four surviving allocations are one base allocation of 7 goods plus the four placements of a low-value "floater" good — the last-good parking structure that is the known crux of the charity line (arXiv:2102.10654). <em>Precision note (referee):</em> neither floater is a <em>universal</em> minimum (basin 1: agent 1 values good 3 at 2 with row-minimum 1), so the universal-min Parking-Floor Lemma of §6 does not by itself explain these two matrices; the generalized per-observer placement condition does, base by base. The parking picture is an interpretation, not a proved characterization of these instances.</p>
+
+<h2><span class="no">6</span>Structural results</h2>
+<h3>Proven (and re-tested during the referee round)</h3>
+<ul>
+  <li><strong>Peeling Theorem.</strong> If some agent a has a good t with v_a(t) ≥ v_a(M∖{t}) − min<sub>g≠t</sub> v_a(g), then assigning a the singleton {t} and applying the 3-agent theorem to the remaining agents and goods yields EFX₀. Consequence: a counterexample has no dominant good for any agent.</li>
+  <li><strong>Five-shape reduction.</strong> In any EFX₀ allocation of 8 goods among 4 agents with positive values, all bundles are nonempty, so the size profile is one of 5111, 4211, 3311, 3221, 2222; singleton bundles are never strong-envy targets, reducing each shape to an explicit inequality system. Coverage results, with their exact hypotheses: <em>three <strong>distinct</strong> agents holding three <strong>distinct</strong> dominant goods</em> ⇒ 5111 feasible; the dominant-pair theorem yields a two-treasure allocation whose shape may be 5111, 4211, or 3311 (the two-agent residual split is not size-controlled; a size-controlled split lemma would be needed to pin the shape). <em>Withdrawn (referee):</em> "flat/near-identical ⇒ 2222" — false as stated; four identical rows [100,1,…,1] admit 2,520 EFX₀ allocations, all of shape 3221. Identical valuations are EFX-safe (leximin), but not via the 2222 shape.</li>
+  <li><strong>Rotation invariance (= Mahara Lemma 7 / Lipton et al. 2004).</strong> Rotating bundles along a plain-envy cycle preserves EFX₀: movers strictly gain, the bundle multiset is fixed. Re-audited during the referee round: 0 breaks in 34,538 cycle-rotations. (See §7 for the history of this item.)</li>
+  <li><strong>Parking-Floor Lemma (universal-min form).</strong> For a good f that is <em>every</em> agent's minimum, EFX₀ completions of an EFX₀ base of M∖{f} correspond exactly to the un-envied bundles (sources) of the base. Sufficiency is the standard charity-line argument, and Neoh–Teh's Theorem 3.3 already contains the universally-zero special case of this counting mechanism (referee-checked); ours is at most a modest extension of their machinery to the universal-minimum case.</li>
+  <li><strong>Necessary conditions on any witness</strong> (selectively encoded across the exact masters — not all conditions in all masters): no dominant good; at most one agent with a good worth ≥ half its row total; no universally-minimum good; pairwise non-proportional rows; and, from the almost-full theorem, every witness contains an EFX₀ base of 7 goods whose four floater-placements all fail.</li>
+</ul>
+<h3>Search-guiding hypothesis (not a proved reduction)</h3>
+<div class="box open"><span class="tag">Conjectural obstruction family (open)</span>
+<p>All three near-witnesses are <em>misaligned</em> two-treasure instances with small slack in their binding EFX inequalities. We conjecture — we have <strong>not</strong> proven — that any witness must live in a misaligned multi-treasure regime; several per-shape and aligned cases in the supporting notes remain open, "zero slack" is not shown necessary, and the corridor CEGAR imposes fixed numerical bands. Status: a motivated search heuristic. Every <em>completed</em> bounded-band exhaustion under it returned UNSAT; stalled and terminated searches (§8) are inconclusive.</p></div>
+
+<h2><span class="no">7</span>Corrections, rediscoveries, and reversals</h2>
+<div class="box alert"><span class="tag">Full discipline record — nothing claimed externally</span>
+<p><strong>Rediscovery.</strong> Our "Source Lemma" (every EFX-admitting instance has an EFX allocation with acyclic envy graph) is Mahara arXiv:2008.08798 Lemma 7, rooted in Lipton–Markakis–Mossel–Saberi (EC 2004). Caught by novelty check before claiming.</p>
+<p><strong>A correction that was itself wrong (caught by referee round, verified by re-audit).</strong> An internal report claimed naive envy-cycle rotation breaks EFX₀ in ~46% of cases, and revision 1 of this document repeated it. The 46% statistic actually measured rotation <em>followed by parking a leftover good</em>; pure rotation preserved EFX₀ in 0/1,636 original tests and 0/34,538 re-audit tests, consistent with the standard proof. Revision 1's "flawed proof" entry is withdrawn; the rotation lemma stands (as Mahara's, not ours).</p>
+<p><strong>Downgraded theorem (referee).</strong> Revision 1 advertised a (5,9) bounded theorem; the encoding's distinct-rows cut is only justified at n = 4 and silently excluded four-type profiles at n = 5. Downgraded to partial. A first completion attempt was itself found unsound in referee round 2 (symmetry-breaking forced the duplicated type lex-max); its UNSAT covers only that subclass. A corrected run is pending; the row stays partial until it terminates.</p>
+<p><strong>Withdrawn claims (referee):</strong> zero-value coverage of the bounded results (§2); "flat ⇒ 2222" (§6); "the remaining problem is exactly the corridor" (§6, now a hypothesis).</p>
+<p><strong>Refuted internal conjecture.</strong> That shapes 4211/3221 suffice for all instances meeting the necessary conditions — refuted by explicit dual-verified sole-2222 / sole-3311 / sole-5111 instances; all five shapes are individually necessary.</p></div>
+
+<h2><span class="no">8</span>Exact and partial search results</h2>
+<div class="tablewrap"><table>
+<tr><th>Search space (positive integers, stated bands)</th><th>Verdict</th><th>Pool</th></tr>
+<tr><td>L∞-box radius 6 around count-5 instance</td><td class="v u">BOX-UNSAT</td><td>195</td></tr>
+<tr><td>Box radius 8, floater column free (1–200), basin 1</td><td class="v u">BOX-UNSAT</td><td>579</td></tr>
+<tr><td>Box radius 10, floater column free, basin 2</td><td class="v u">BOX-UNSAT</td><td>469</td></tr>
+<tr><td>Spread-ratio peaks family</td><td class="v u">UNSAT</td><td>105</td></tr>
+<tr><td>G1 misaligned-signature family (near-witness template)</td><td class="v u">UNSAT</td><td>365</td></tr>
+<tr><td>Six phase-diagram cells incl. gap-closing band</td><td class="v u">UNSAT ×6</td><td>25–785</td></tr>
+<tr><td>Partial / no verdict: box radius 15 (stall, pool 2,204); count-10 basin radius 8 (terminated, pool 5,410); bumpy-tail family (terminated, pool 5,748); aligned sweep cells (lost to OS memory kill); corridor family (stalled, pool 7,420)</td><td class="v o">PARTIAL</td><td>—</td></tr>
+</table></div>
+
+<h2><span class="no">9</span>Assessment and engine status (as of 2026-07-24)</h2>
+<div class="tablewrap"><table>
+<tr><th>Component</th><th>Honest level</th></tr>
+<tr><td>Pipeline (dual verifiers, calibrated CEGAR, periodically checkpointed pools (non-atomic writes), referee rounds)</td><td>Strong research engineering</td></tr>
+<tr><td>Four bounded n=4 results + exhaustion phase diagram</td><td>Modest new computational results, pending reproducibility package</td></tr>
+<tr><td>Count-4 instances + parking structure</td><td>Interesting computational evidence on the Neoh–Teh counting question</td></tr>
+<tr><td>Lemma stack</td><td>Competent incremental theory; partly folklore-adjacent</td></tr>
+<tr><td>Overall</td><td><strong>Good PhD-level program. Not a breakthrough.</strong></td></tr>
+</table></div>
+<ul>
+  <li><strong>Z3 exact-rational CEGAR — running</strong>, restarted with its 6,312-constraint warm pool plus the proven witness-necessary cuts (no dominant good; no universal-min good), which are sound for the unconditional claim. The only engine whose UNSAT settles unrestricted (4,8) (positive reals; zeros then follow by arXiv:2001.09838; a Hadamard-bound note guarantees rational witnesses exist if any do).</li>
+  <li><strong>Anatomy CEGAR — stalled</strong> at pool 14,654 (value-capped at 120; master solves exceed caps). Restart with longer caps is optional; its verdict would be bounded, not unconditional.</li>
+  <li><strong>Corridor CEGAR — stalled</strong> at pool 7,420 (family-restricted; see §6 hypothesis status).</li>
+  <li><strong>(5,9) four-type completion — corrected v2 running</strong> (first attempt unsound, see §7; warm pool retained).</li>
+  <li><strong>Next steps:</strong> (1) finish the completion run and let Z3 terminate; (2) publish the frozen reproducibility archive (§10); (3) write the computational-study paper; (4) Lean-formalize the encodings per the 2604.18216 precedent; (5) exploratory priority: larger cells (n ≥ 5, m ≥ 12) — noting that unrestricted (4, 8+) and (5, 9–11) all remain open.</li>
+</ul>
+
+<h2><span class="no">10</span>Reproducibility — current state and gaps</h2>
+<p><strong>What exists now:</strong> all code, pools, and logs in <code>~/projects/counterexample-hunt/efx/</code> (private): <code>verify.py</code> / <code>verify2.py</code> / <code>fast_verify.py</code>, <code>cegar.py</code>, <code>cegar_z3.py</code>, <code>anatomy.py</code>, <code>corridor.py</code>, <code>n5_fourtype.py</code>, chronological <code>results/CAMPAIGN_LOG.md</code> including every correction, and the theory documents. Any instance-level claim is checkable by writing the matrix as JSON <code>{"n":4,"m":8,"values":[[…]]}</code> and running <code>python3 verify2.py that.json</code> (requires only stdlib; the CEGAR stack needs <code>ortools</code>, <code>z3-solver</code>, <code>numpy</code>).</p>
+<p><strong>Acknowledged gaps before external circulation</strong> (from the referee round, all accepted): no public immutable snapshot/commit or environment lockfile; no run manifest with commands, seeds, versions, hardware, hashes; some final pools lag their terminal iterations, so they are not yet replayable certificates; resumed runs underreport wall time; the two verifiers do not validate the CEGAR <em>master</em> encodings — a second independently implemented master (or solver certificates, e.g. DRAT-style where available) is the right standard for calling these computer-assisted theorems. Until that package exists, §4 should be read as carefully-logged solver runs, not certified theorems.</p>
+
+<h2><span class="no">11</span>References</h2>
+<ol class="refs">
+  <li>Akrami, Mayorov, Mehlhorn, Srinivas, Weidenbach. EFX counterexamples for monotone/submodular valuations via SAT; Lean-verified encoding. arXiv:2604.18216 (2026).</li>
+  <li>Mackenzie, Suzuki. Counterexamples to EFX for submodular and subadditive valuations. arXiv:2605.06451 (2026).</li>
+  <li>He, Tao. EFX for additive chores: nonexistence. arXiv:2606.08872 (2026).</li>
+  <li>Chaudhury, Garg, Mehlhorn. EFX exists for three agents. EC 2020; simplifications: Akrami et al., arXiv:2205.07638 (OR 2024).</li>
+  <li>Mahara. EFX exists when m ≤ n + 3 (strong every-good variant). arXiv:2107.09901.</li>
+  <li>Mahara. Existence of EFX for two additive valuations (Lemma 7: envy-cycle elimination preserves EFX). arXiv:2008.08798.</li>
+  <li>HV (Vishwa Prakash), Ghosal, Nimbhorkar, Varma. EFX exists for three types of agents. arXiv:2410.13580, EC 2025.</li>
+  <li>Berger, Cohen, Feldman, Fiat. (Almost full) EFX exists for four agents. arXiv:2102.10654, AAAI 2022.</li>
+  <li>Chaudhury, Kavitha, Mehlhorn, Sgouritsa. A little charity guarantees almost envy-freeness. arXiv:1907.04596, SICOMP.</li>
+  <li>Amanatidis, Birmpas, Filos-Ratsikas, Hollender, Voudouris. Maximum Nash welfare and other stories about EFX. arXiv:2001.09838, IJCAI 2020.</li>
+  <li>Neoh, Teh. Understanding EFX allocations: counting and variants. AAAI 2025.</li>
+  <li>Lipton, Markakis, Mossel, Saberi. On approximately fair allocations of indivisible goods. EC 2004.</li>
+  <li>Ashuri, Gkatzelis, Sgouritsa. EF2X exists for four agents. arXiv:2412.00254, AAAI 2025.</li>
+  <li>Plaut, Roughgarden. Almost envy-freeness with general valuations. SODA 2018 / SIAM J. Discrete Math. (identical-valuations leximin; EFX definitions).</li>
+  <li>Flener, Frisch, Hnich, Kiziltan, Miguel, Pearson, Walsh. Breaking row and column symmetries in matrix models. CP 2002 (double-lex).</li>
+  <li>Brânzei. Computing envy-free up to any good (EFX) allocations via local search. arXiv:2510.05429.</li>
+</ol>
+<p class="note">Revision history — rev. 2.1 (2026-07-24): incorporated referee round 2 — four-type completion found unsound and relaunched corrected; (5,9) returned to partial; supporting theory documents bannered with supersession notes; dominant-pair shape claim weakened; over-broad statements tempered; terminology tightened; author/citation fixes (Avi Cohen; HV-first author order; Flener; Plaut–Roughgarden; Brânzei; Neoh–Teh Thm 3.3 acknowledged as containing the zero special case). Rev. 2 (2026-07-24): incorporated referee round 1. Downgraded (5,9) to partial and launched a sound completion; removed zero-coverage claims from bounded results; reversed the erroneous "rotation breaks EFX" correction after a 34,538-case re-audit; reframed the floor law as evidence on Neoh–Teh's counting question; fixed the three-dominant hypothesis and withdrew "flat ⇒ 2222"; reclassified the corridor as a hypothesis; corrected Mahara citations (2107.09901 vs 2008.08798) and closed the variant flag; updated engine statuses (anatomy and corridor stalled); rewrote reproducibility as current-state-plus-gaps.</p>
+</main>

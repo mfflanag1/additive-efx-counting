@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "status": "UNSAT",
+  "claim": "every 4x7 additive valuation matrix over {1,2,3,4} has at least four EFX0 allocations",
+  "encoding": {
+    "formulation": "independent CNF literal-slot master",
+    "values": "v = 1 + [v>=2] + [v>=3] + [v>=4]",
+    "symmetry": "exact row-and-column DoubleLex",
+    "slots": 3,
+    "strong_envy": "guarded sequential-counter cardinality encodings"
+  },
+  "solver": {
+    "requested": "cadical195",
+    "backend": "Cadical195",
+    "timeout_seconds": 10800.0,
+    "timeout_mechanism": "isolated child process with wall-clock termination",
+    "statistics": {
+      "restarts": 26008,
+      "conflicts": 603974,
+      "decisions": 2842921,
+      "propagations": 1236527111
+    },
+    "cpu_seconds": 67.656987
+  },
+  "K": 4,
+  "raw_pool_size": 1240,
+  "unique_pool_size": 1240,
+  "duplicates_dropped": 0,
+  "pool_path": "results/countpool_K4_complete.json",
+  "pool_sha256": "af85029ca3ec3527e60bffc516d2ef5ec9bfc1e82fbaeeb3e521f8c1f3d38e28",
+  "deduplicated_pool_sha256": "af85029ca3ec3527e60bffc516d2ef5ec9bfc1e82fbaeeb3e521f8c1f3d38e28",
+  "variables": 282029,
+  "named_and_auxiliary_variables": 282029,
+  "clauses": 600624,
+  "dimacs_path": "results/countcegar_K4_sat.cnf",
+  "dimacs_sha256": "ccc2aa45a5710d967a166abf7bc56a2026c517f4157730872b99524027baa166",
+  "dimacs_bytes": 13684928,
+  "seconds": {
+    "load_pool": 0.001709,
+    "build": 0.548294,
+    "solve_wall": 68.047963,
+    "total": 68.999384
+  },
+  "command": "repro/countcegar_k4/check_sat.py --pool results/countpool_K4_complete.json --solver cadical195 --timeout-seconds 10800 --expect unsat --export results/countcegar_K4_sat.cnf --result-out results/countcegar_K4_sat.json",
+  "environment": {
+    "python": "3.10.14",
+    "python_sat": "1.9.dev7",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  }
+}

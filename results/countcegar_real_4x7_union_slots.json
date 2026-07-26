@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "UNKNOWN",
+  "claim": "every positive-real 4x7 additive valuation matrix has at least four EFX0 allocations",
+  "formulation": "slots",
+  "symmetry": true,
+  "source_pool": "results/countpool_real_4x7_union.json",
+  "source_pool_sha256": "39d145f12b535be8187b31b9e55c24c44497515714b8175e5f7d0005cc7bf900",
+  "pool_path": "results/countpool_real_4x7_union_slots.json",
+  "pool_size": 2328,
+  "pool_sha256": "f68db42708cba26ca32da397fb086c4ca994ccaebf27c439890a48fcc26815b3",
+  "rounds_this_invocation": 3,
+  "last_check_seconds": 60.015327,
+  "seconds_this_invocation": 144.92423,
+  "command": "repro/countcegar_real/countcegar_real.py --seed-pool results/countpool_real_4x7_union.json --pool-out results/countpool_real_4x7_union_slots.json --result-out results/countcegar_real_4x7_union_slots.json --trace-out results/countcegar_real_4x7_union_slots.jsonl --timeout-ms 60000 --max-rounds 20 --add 16384",
+  "environment": {
+    "python": "3.10.14",
+    "z3": "5.0.0",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  },
+  "reason_unknown": "canceled"
+}

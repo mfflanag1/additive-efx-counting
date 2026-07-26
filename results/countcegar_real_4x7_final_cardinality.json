@@ -1,0 +1,71 @@
+{
+  "schema": 1,
+  "status": "CHECKPOINT",
+  "claim": "every positive-real 4x7 additive valuation matrix has at least four EFX0 allocations",
+  "formulation": "cardinality",
+  "symmetry": true,
+  "source_pool": "results/countpool_real_4x7_final_slots.json",
+  "source_pool_sha256": "f84280971a065f10271bc1a02e7c7618f88644a9ea626909e9181cad635ef3d1",
+  "checked_pool_size": 2624,
+  "checked_pool_sha256": "f84280971a065f10271bc1a02e7c7618f88644a9ea626909e9181cad635ef3d1",
+  "pool_path": "results/countpool_real_4x7_final_cardinality.json",
+  "pool_size": 2636,
+  "pool_sha256": "3cf2872437d134d2083c7bbdf9cb6e0837284e24c88da99dd126fcfb3e406ad2",
+  "cuts_added_after_last_check": 12,
+  "export_formula_checked": false,
+  "export_formula_stage": "post_cut_pool",
+  "rounds_this_invocation": 1,
+  "last_check_seconds": 37.561971,
+  "seconds_this_invocation": 75.066253,
+  "command": "repro/countcegar_real/countcegar_real.py --formulation cardinality --seed-pool results/countpool_real_4x7_final_slots.json --pool-out results/countpool_real_4x7_final_cardinality.json --result-out results/countcegar_real_4x7_final_cardinality.json --trace-out results/countcegar_real_4x7_final_cardinality.jsonl --export results/countcegar_real_4x7_final_cardinality.smt2 --timeout-ms 300000 --max-rounds 1 --add 16384",
+  "environment": {
+    "python": "3.10.14",
+    "z3": "5.0.0",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  },
+  "trace_path": "results/countcegar_real_4x7_final_cardinality.jsonl",
+  "export_path": "results/countcegar_real_4x7_final_cardinality.smt2",
+  "last_candidate": {
+    "row_total": "9363/4",
+    "integer_values": [
+      [
+        37009,
+        98,
+        98,
+        82,
+        66,
+        66,
+        33
+      ],
+      [
+        14110,
+        844,
+        166,
+        508,
+        29723,
+        29385,
+        168
+      ],
+      [
+        7055,
+        18,
+        7327,
+        255,
+        16,
+        15182,
+        7599
+      ],
+      [
+        7039,
+        4692,
+        16,
+        2329,
+        11679,
+        9351,
+        2346
+      ]
+    ],
+    "efx0_count": 15,
+    "pooled_efx0_count": 3
+  }
+}

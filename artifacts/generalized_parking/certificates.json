@@ -1,0 +1,164 @@
+{
+  "schema": "generalized-parking-certificate-v1",
+  "indexing": "zero-based agents and goods",
+  "parking_slack_definition": "sigma[k][h] = v_k(B_k) - v_k(B_h) - max(0, v_k(f) - min_{g in B_h} v_k(g)); diagonal entries are null",
+  "witnesses": [
+    {
+      "id": "n4_m7",
+      "cell": "(4,7)",
+      "source": "results/t47.json",
+      "source_sha256": "5dd6023dda9aeac85c921005ea345b176c6656f73a369f0f61a59658b2bf0481",
+      "n": 4,
+      "m": 7,
+      "floater": 3,
+      "base_bundles": [[0, 4, 5], [2], [6], [1]],
+      "expected_efx0_count": 4,
+      "base_efx_min_slack": 22,
+      "base_envy_min_slack": 1,
+      "floater_is_row_minimum": [true, true, false, false],
+      "universal_minimum": false,
+      "parking_min_slack": 1,
+      "parking_slack_matrix": [
+        [null, 1, 7, 4],
+        [12, null, 6, 2],
+        [8, 19, null, 31],
+        [25, 42, 19, null]
+      ]
+    },
+    {
+      "id": "n5_m8",
+      "cell": "(5,8)",
+      "source": "results/ch5_A.json",
+      "source_sha256": "e91fe406bd75e4337fc48ea496293befe0f736cc06b21490d2f9c0c71651a399",
+      "n": 5,
+      "m": 8,
+      "floater": 6,
+      "base_bundles": [[3], [2], [0], [4], [1, 5, 7]],
+      "expected_efx0_count": 5,
+      "base_efx_min_slack": 22,
+      "base_envy_min_slack": 3,
+      "floater_is_row_minimum": [false, false, false, false, true],
+      "universal_minimum": false,
+      "parking_min_slack": 3,
+      "parking_slack_matrix": [
+        [null, 44, 28, 44, 29],
+        [7, null, 15, 6, 39],
+        [27, 36, null, 36, 4],
+        [3, 14, 12, null, 13],
+        [8, 3, 10, 6, null]
+      ]
+    },
+    {
+      "id": "n6_m9",
+      "cell": "(6,9)",
+      "source": "results/tight69_witness.json",
+      "source_sha256": "58cf30e7e0a61e025e50350b9ecdf788f2357744bd39df4a99e338a19c01e45f",
+      "n": 6,
+      "m": 9,
+      "floater": 8,
+      "base_bundles": [[0, 1, 2], [3], [4], [5], [6], [7]],
+      "expected_efx0_count": 6,
+      "base_efx_min_slack": 29,
+      "base_envy_min_slack": 1,
+      "floater_is_row_minimum": [true, true, true, true, true, true],
+      "universal_minimum": true,
+      "parking_min_slack": 1,
+      "parking_slack_matrix": [
+        [null, 11, 13, 12, 9, 8],
+        [84, null, 82, 40, 101, 103],
+        [18, 142, null, 144, 145, 150],
+        [41, 102, 40, null, 96, 97],
+        [65, 25, 64, 43, null, 97],
+        [51, 47, 50, 49, 1, null]
+      ]
+    },
+    {
+      "id": "n4_m8_basin1",
+      "cell": "(4,8), basin 1",
+      "source": "results/tb4.json",
+      "source_sha256": "cfbce533012e41bf30bfc716ff12092ed4933e612f00093dc3984e4aaef780f5",
+      "n": 4,
+      "m": 8,
+      "floater": 3,
+      "base_bundles": [[2], [0, 1], [5, 6, 7], [4]],
+      "expected_efx0_count": 4,
+      "base_efx_min_slack": 3,
+      "base_envy_min_slack": 1,
+      "floater_is_row_minimum": [true, false, true, true],
+      "universal_minimum": false,
+      "parking_min_slack": 1,
+      "parking_slack_matrix": [
+        [null, 1, 2, 16],
+        [33, null, 1, 49],
+        [2, 5, null, 1],
+        [35, 37, 40, null]
+      ]
+    },
+    {
+      "id": "n4_m8_basin2",
+      "cell": "(4,8), basin 2",
+      "source": "results/tb4b.json",
+      "source_sha256": "0fe360b8caed151b04b428a61ad63e23dd22114598c4bc6fb58183c709cb4bde",
+      "n": 4,
+      "m": 8,
+      "floater": 7,
+      "base_bundles": [[2], [0, 3, 5, 6], [1], [4]],
+      "expected_efx0_count": 4,
+      "base_efx_min_slack": 9,
+      "base_envy_min_slack": 1,
+      "floater_is_row_minimum": [false, true, false, true],
+      "universal_minimum": false,
+      "parking_min_slack": 1,
+      "parking_slack_matrix": [
+        [null, 42, 5, 36],
+        [1, null, 3, 4],
+        [89, 4, null, 1],
+        [65, 2, 38, null]
+      ]
+    },
+    {
+      "id": "n4_m9",
+      "cell": "(4,9)",
+      "source": "results/tight49_witness.json",
+      "source_sha256": "398689093d089fdb0470b504cabea9adb96ef08424b1df245e57eb309fb89818",
+      "n": 4,
+      "m": 9,
+      "floater": 0,
+      "base_bundles": [[3, 5, 6, 7, 8], [1], [2], [4]],
+      "expected_efx0_count": 4,
+      "base_efx_min_slack": 2,
+      "base_envy_min_slack": 1,
+      "floater_is_row_minimum": [true, true, false, false],
+      "universal_minimum": false,
+      "parking_min_slack": 1,
+      "parking_slack_matrix": [
+        [null, 4, 3, 1],
+        [1, null, 46, 53],
+        [5, 1, null, 37],
+        [11, 10, 1, null]
+      ]
+    },
+    {
+      "id": "n4_m10",
+      "cell": "(4,10)",
+      "source": "results/tight410_witness.json",
+      "source_sha256": "fdabc8265cf10d69625e77a54b7b7862ef9f14867460c8a1906eca8588a69950",
+      "n": 4,
+      "m": 10,
+      "floater": 5,
+      "base_bundles": [[2], [4], [1], [0, 3, 6, 7, 8, 9]],
+      "expected_efx0_count": 4,
+      "base_efx_min_slack": 6,
+      "base_envy_min_slack": 1,
+      "floater_is_row_minimum": [true, false, false, true],
+      "universal_minimum": false,
+      "parking_min_slack": 1,
+      "parking_slack_matrix": [
+        [null, 11, 1, 5],
+        [1, null, 7, 8],
+        [60, 50, null, 1],
+        [2, 1, 3, null]
+      ]
+    }
+  ]
+}

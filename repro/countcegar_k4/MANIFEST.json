@@ -1,0 +1,313 @@
+{
+  "schema": 1,
+  "generated_utc": "2026-07-26T13:44:04.550946Z",
+  "claim": "every 4x7 valuation matrix over {1,2,3,4} has at least 4 EFX0 allocations",
+  "git_commit_at_manifest": "a9c88411593cefe464a0731cd15bc1d03ae97d31",
+  "git_worktree_dirty_at_manifest": true,
+  "git_note": "the commit identifies the base tree; per-file hashes below identify the exact archived inputs and sources",
+  "historical_run": {
+    "status": "incomplete retained terminal master",
+    "reported_terminal_pool_size": 1295,
+    "retained_pool_size": 1250,
+    "retained_unique_pool_size": 1134,
+    "missing_terminal_entries": 45,
+    "exact_terminal_pool_recoverable": false,
+    "reason": "the periodic checkpoint predates terminal UNSAT and the log records neither the final valuations nor cuts",
+    "command": "python countcegar.py --K 4",
+    "command_provenance": "inferred from the CLI; not recorded by run",
+    "bundle_first_committed_in": "a9c88411593cefe464a0731cd15bc1d03ae97d31",
+    "run_source_hash_recorded": false,
+    "files": [
+      {
+        "path": "countcegar.py",
+        "bytes": 4156,
+        "sha256": "26f5702819b21dca8281967a822bb7ae16748f1e69eda848df7ebc26df4a4d04"
+      },
+      {
+        "path": "cegar.py",
+        "bytes": 6743,
+        "sha256": "7f29163b0b102e48477e04701d5b33d58806072775f5b5b0065aa31e3e890101"
+      },
+      {
+        "path": "verify.py",
+        "bytes": 3877,
+        "sha256": "7f94a72285cb07799660d5b19abc829983f826dc97cf9dbed2534d2087581706"
+      },
+      {
+        "path": "results/countcegar_K4.json",
+        "bytes": 55,
+        "sha256": "69ccec1e38f283d92710b6a84e0491d574a69e1b5393738572830298bb1687ef"
+      },
+      {
+        "path": "results/countcegar_K4.log",
+        "bytes": 378,
+        "sha256": "e9a57aaf7e71a4cc0a79ed4ce6a99da82a55b045b060e214e99afbcb5aae55f5"
+      },
+      {
+        "path": "results/countpool_K4.json",
+        "bytes": 28750,
+        "sha256": "1e8333c3c9c73b8af74c52cc6680ad34fc3dc16f2f9e7842801209c138842f3c"
+      }
+    ]
+  },
+  "reconstructed_run": {
+    "status": "UNSAT",
+    "relationship_to_historical_run": "fresh alternative terminal pool; not recovery of the historical final 45 entries",
+    "pool_size": 1240,
+    "unique_pool_size": 1240,
+    "cp_sat_command": "repro/countcegar_k4/reconstruct.py --workers 6 --random-seed 1 --add 16",
+    "pool_generation_command": "repro/countcegar_k4/reconstruct.py --workers 6 --random-seed 1 --add 16",
+    "pool_generation_rounds": 8,
+    "pool_generation_seconds": 1060.725,
+    "z3_check": {
+      "status": "UNKNOWN",
+      "reason_unknown": "timeout",
+      "evidentiary_role": "auxiliary timed-out check; not evidence for the claim",
+      "command": "repro/countcegar_k4/check_z3.py --pool results/countpool_K4_complete.json --encoding pb --formulation cardinality --timeout-ms 10800000 --threads 4 --expect unsat --export results/countcegar_K4_complete.smt2 --result-out results/countcegar_K4_z3.json"
+    },
+    "optional_z3_cli_command": "z3 -T:10800 sat.threads=4 -smt2 results/countcegar_K4_complete.smt2",
+    "slot_boundary_command": "repro/countcegar_k4/test_slot_boundary.py",
+    "parsed_cp_model": {
+      "variables": 29854,
+      "constraints": 53455,
+      "source_pool_rebuild": "byte-identical"
+    },
+    "parsed_cp_solver_response": {
+      "status": "INFEASIBLE",
+      "wall_time": 285.698077
+    },
+    "source_pool_smt2_rebuild": "byte-identical",
+    "direct_sat_check": {
+      "status": "UNSAT",
+      "command": "repro/countcegar_k4/check_sat.py --pool results/countpool_K4_complete.json --solver cadical195 --timeout-seconds 10800 --expect unsat --export results/countcegar_K4_sat.cnf --result-out results/countcegar_K4_sat.json",
+      "solver": {
+        "requested": "cadical195",
+        "backend": "Cadical195",
+        "timeout_seconds": 10800.0,
+        "timeout_mechanism": "isolated child process with wall-clock termination",
+        "statistics": {
+          "restarts": 26008,
+          "conflicts": 603974,
+          "decisions": 2842921,
+          "propagations": 1236527111
+        },
+        "cpu_seconds": 67.656987
+      },
+      "variables": 282029,
+      "clauses": 600624,
+      "source_pool_dimacs_rebuild": "byte-identical",
+      "differential_regression": "PASS",
+      "isolated_process_regression": {
+        "successful_backend": "Cadical195",
+        "crash_exit_code": 17,
+        "crash_detected_within_seconds": 0.505011,
+        "timeout_reason": "wall-clock timeout",
+        "timeout_detected_within_seconds": 0.103714
+      },
+      "cold_replay": {
+        "status": "UNSAT",
+        "command": "repro/countcegar_k4/replay_sat.py --dimacs results/countcegar_K4_sat.cnf --expect-sha256 ccc2aa45a5710d967a166abf7bc56a2026c517f4157730872b99524027baa166 --solver cadical195 --timeout-seconds 10800 --expect unsat --result-out results/countcegar_K4_sat_replay.json",
+        "solver": {
+          "requested": "cadical195",
+          "backend": "Cadical195",
+          "timeout_seconds": 10800.0,
+          "timeout_mechanism": "isolated child process with wall-clock termination",
+          "statistics": {
+            "restarts": 26008,
+            "conflicts": 603974,
+            "decisions": 2842921,
+            "propagations": 1236527111
+          },
+          "cpu_seconds": 67.392297
+        },
+        "same_solver_statistics": true
+      },
+      "drat_certificate": {
+        "status": "VERIFIED",
+        "metadata": "repro/countcegar_k4/certificates/DRAT_CERTIFICATE.json",
+        "proof": {
+          "path": "repro/countcegar_k4/certificates/countcegar_K4_sat.cadical-1.9.5.binary.drat.xz",
+          "bytes": 38753120,
+          "sha256": "ddcad227664410e4e3552bd774ea369888dae4e56093a3016a4ce880eb549977"
+        },
+        "uncompressed_proof": {
+          "bytes": 134426255,
+          "sha256": "710c51bd36addd3d1ea73c14d902d2b1d9aba23cafcd4874ef1d21daf2779a5b"
+        },
+        "generator": {
+          "name": "CaDiCaL",
+          "version": "1.9.5",
+          "tag": "rel-1.9.5",
+          "commit": "146207318796f094dcded87349a64f0c6927309e",
+          "wall_seconds": 219.16
+        },
+        "checker": {
+          "name": "drat-trim",
+          "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+          "wall_seconds": 90.2,
+          "resolution_steps": 28212699,
+          "rat_lemmas_in_core": 0
+        }
+      }
+    },
+    "trace_replay": {
+      "status": "PASS",
+      "initial_unique_pool_size": 1134,
+      "sat_rounds": 7,
+      "terminal_pool_size": 1240
+    },
+    "files": [
+      {
+        "path": "results/countpool_K4_complete.json",
+        "bytes": 19842,
+        "sha256": "af85029ca3ec3527e60bffc516d2ef5ec9bfc1e82fbaeeb3e521f8c1f3d38e28"
+      },
+      {
+        "path": "results/countcegar_K4_reconstruction_run.json",
+        "bytes": 581,
+        "sha256": "7c75b0cbcd111bd1cee8a02ad1f698efd63b82a19e85b659dcbce930c04a63e1"
+      },
+      {
+        "path": "results/countcegar_K4_reconstructed.json",
+        "bytes": 1185,
+        "sha256": "8084e2df78b79572ee633ea56650565670472781604d2c3065db2f3b3306bddc"
+      },
+      {
+        "path": "results/countcegar_K4_reconstruction.jsonl",
+        "bytes": 3520,
+        "sha256": "1cb81831227164e5d54fbc4b0c46a96c73714f787ad8362f93036baa108042b5"
+      },
+      {
+        "path": "results/countcegar_K4_complete_model.pbtxt",
+        "bytes": 9463017,
+        "sha256": "9f4bf5d6fc3017d4b3f9ec117491480cbebbe5a988224e7cf7f3296e7c8ba7b1"
+      },
+      {
+        "path": "results/countcegar_K4_complete_response.pbtxt",
+        "bytes": 297,
+        "sha256": "0797bd1dd9dd7e0d8a0415f3d265a6da0f01387343e1be792d09490c081d67d3"
+      },
+      {
+        "path": "results/countcegar_K4_complete_stats.txt",
+        "bytes": 308,
+        "sha256": "7da26c7ff1ac2a23eb51dbd222c8ed3a6af1a7858cf54778594bfbc35f1d949c"
+      },
+      {
+        "path": "results/countcegar_K4_complete.smt2",
+        "bytes": 597641,
+        "sha256": "c5ca600674a282a42c4383b79dfcf4b9afe770389052c88fd4b5bd0dd81de374"
+      },
+      {
+        "path": "results/countcegar_K4_z3.json",
+        "bytes": 913,
+        "sha256": "68263c3b7bdff34ebf1a885c70dca16f1ba8bf3106202bc2a5c04bfb031d39fd"
+      },
+      {
+        "path": "results/countcegar_K4_sat.cnf",
+        "bytes": 13684928,
+        "sha256": "ccc2aa45a5710d967a166abf7bc56a2026c517f4157730872b99524027baa166"
+      },
+      {
+        "path": "results/countcegar_K4_sat.json",
+        "bytes": 1822,
+        "sha256": "422e2f7e0a5d1b9cc454cba48895d28aa910510459438c4aeec1d54b860624a4"
+      },
+      {
+        "path": "results/countcegar_K4_sat_replay.json",
+        "bytes": 1189,
+        "sha256": "c0625102eca2952551342a7502e89fbb7c222554fc40d9e11a0c00aa2fecb30c"
+      },
+      {
+        "path": "results/countcegar_K4_sat_differential.json",
+        "bytes": 4739,
+        "sha256": "2e70089018090b78d9c6dec635e37aa2baf4c7b86ec603d61f8582d5eb1e19e1"
+      },
+      {
+        "path": "results/countcegar_slot_boundary.json",
+        "bytes": 925,
+        "sha256": "a68b9575a83817b4f520a86786fa7add16e2e9eab1e4d391d6018a6538d6403a"
+      },
+      {
+        "path": "repro/countcegar_k4/certificates/DRAT_CERTIFICATE.json",
+        "bytes": 2401,
+        "sha256": "143a700841208414853239707e73042e9deb281c18d15ef6987e21c6562ec4a3"
+      },
+      {
+        "path": "repro/countcegar_k4/certificates/countcegar_K4_sat.cadical-1.9.5.binary.drat.xz",
+        "bytes": 38753120,
+        "sha256": "ddcad227664410e4e3552bd774ea369888dae4e56093a3016a4ce880eb549977"
+      },
+      {
+        "path": "repro/countcegar_k4/certificates/cadical-1.9.5.solve.log",
+        "bytes": 71647,
+        "sha256": "0db0ac91a010f0a7a1fd62b953c76042ae9d40316751a7d5026d4eddcec5e219"
+      },
+      {
+        "path": "repro/countcegar_k4/certificates/drat-trim.verify.log",
+        "bytes": 504,
+        "sha256": "7cbd5326063c5eb69623787054b9006c7de7876ff63f342b400f035d8c38ea63"
+      }
+    ]
+  },
+  "environment": {
+    "python": "3.10.14",
+    "ortools": "9.15.6755",
+    "z3_python": "5.0.0",
+    "z3_cli": "Z3 version 5.0.0 - 64 bit",
+    "python_sat": "1.9.dev7",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  },
+  "trust_boundary": "CpModelProto, CpSolverResponse, DIMACS, and the compressed binary DRAT preserve exact claim-bearing artifacts; SMT-LIB2 preserves the auxiliary Z3 input. The independently checkable DRAT trace removes trust in the SAT solver verdict, while the semantic conclusion still trusts the CNF translation and a correct proof checker",
+  "package_files": [
+    {
+      "path": "repro/countcegar_k4/README.md",
+      "bytes": 11843,
+      "sha256": "66d812b3448c0b303896770e3f3c7d24a61b84e5f20982a457717de26d24279d"
+    },
+    {
+      "path": "repro/countcegar_k4/requirements.txt",
+      "bytes": 59,
+      "sha256": "dbd9886d6f0f8e225a99457a0329b7e4587d51ba2a68ce626a94f286c45d3b4d"
+    },
+    {
+      "path": "repro/countcegar_k4/reconstruct.py",
+      "bytes": 11080,
+      "sha256": "40b5b18093b74e91425a647914ab464e830afb30834c64089f32d26c8d307e44"
+    },
+    {
+      "path": "repro/countcegar_k4/check_z3.py",
+      "bytes": 13149,
+      "sha256": "c63e481b9985d8bb9e65c102b18823189062db50205dcd9f7a0c40adbdc86fc7"
+    },
+    {
+      "path": "repro/countcegar_k4/check_sat.py",
+      "bytes": 18577,
+      "sha256": "7c60ea7a99966f5d033d7a164043859839eb1bc532777cabfba1131e77135263"
+    },
+    {
+      "path": "repro/countcegar_k4/replay_sat.py",
+      "bytes": 3945,
+      "sha256": "09eac47e807812f780891a150c7bb11177926252883ff4992975ad1337c12b4d"
+    },
+    {
+      "path": "repro/countcegar_k4/test_slot_boundary.py",
+      "bytes": 4751,
+      "sha256": "c8be5b6200cb2138fc6ac7e565bdd25c6e59337c74d4cc90ce8e2f4ab2c0dd0f"
+    },
+    {
+      "path": "repro/countcegar_k4/test_sat_differential.py",
+      "bytes": 12513,
+      "sha256": "adf3280047b68bbdc289f887c1fd5b849657e6ec3174f972825a1d04b85eb52e"
+    },
+    {
+      "path": "repro/countcegar_k4/verify_drat.py",
+      "bytes": 4687,
+      "sha256": "995ec1b060b33ac44ae7e1c3d8d2cf556d8e51ed4b9f85584e88f112c786f117"
+    },
+    {
+      "path": "repro/countcegar_k4/make_manifest.py",
+      "bytes": 25485,
+      "sha256": "a83ca286b146d290185880604c42c7ba1a2d122295e071b36e5cf90d0ae419b5"
+    }
+  ]
+}

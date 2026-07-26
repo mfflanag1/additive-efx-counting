@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "status": "UNKNOWN",
+  "claim": "every positive-real 4x7 additive valuation matrix has at least four EFX0 allocations",
+  "formulation": "cardinality",
+  "symmetry": true,
+  "source_pool": "results/countpool_real_4x7_union.json",
+  "source_pool_sha256": "39d145f12b535be8187b31b9e55c24c44497515714b8175e5f7d0005cc7bf900",
+  "pool_path": "results/countpool_real_4x7_union_cardinality.json",
+  "pool_size": 2354,
+  "pool_sha256": "4e7ecab9554717246e96f84ac691e18b846b491728ac77ebd5a7d6a463a5f52c",
+  "rounds_this_invocation": 5,
+  "last_check_seconds": 60.005325,
+  "seconds_this_invocation": 275.129483,
+  "command": "repro/countcegar_real/countcegar_real.py --formulation cardinality --seed-pool results/countpool_real_4x7_union.json --pool-out results/countpool_real_4x7_union_cardinality.json --result-out results/countcegar_real_4x7_union_cardinality.json --trace-out results/countcegar_real_4x7_union_cardinality.jsonl --timeout-ms 60000 --max-rounds 20 --add 16384",
+  "environment": {
+    "python": "3.10.14",
+    "z3": "5.0.0",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  },
+  "reason_unknown": "canceled"
+}

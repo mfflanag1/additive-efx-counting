@@ -1,0 +1,262 @@
+{
+  "schema": 2,
+  "generated_utc": "2026-07-26T15:56:54Z",
+  "target_statement": "every positive-real 4x7 additive valuation matrix has at least four EFX0 allocations",
+  "artifact_status": "CHECKPOINT",
+  "interpretation": "Both final master calls returned SAT candidates with more than three EFX0 allocations and added fresh cuts. No unrestricted theorem or counterexample is claimed.",
+  "git_commit_at_manifest": "a9c88411593cefe464a0731cd15bc1d03ae97d31",
+  "git_worktree_dirty_at_manifest": true,
+  "git_note": "the commit identifies the base tree; per-file hashes identify the exact checkpoint sources, dependencies, campaign lineage, and artifacts",
+  "campaign": {
+    "retained_sat_refinement_rounds": 80,
+    "retained_trace_branches": 7,
+    "lowest_count_candidate": 8,
+    "lowest_count_candidate_role": "CEGAR diagnostic only; the known paper witness has count four",
+    "final_pool_size": 2636,
+    "final_pool_path": "results/countpool_real_4x7_final_cardinality.json",
+    "final_pool_sha256": "3cf2872437d134d2083c7bbdf9cb6e0837284e24c88da99dd126fcfb3e406ad2",
+    "terminal_checks": [
+      {
+        "formulation": "three protected slots",
+        "status": "CHECKPOINT",
+        "checked_pool_size": 2613,
+        "checked_pool_sha256": "a125068a4b4233db86ea9f3a5acec9fbf9160ebcbb3fbe90acc297355b72db42",
+        "candidate_efx0_count": 14,
+        "pooled_efx0_count": 3,
+        "fresh_cuts_added": 11,
+        "output_pool_size": 2624,
+        "result": "results/countcegar_real_4x7_final_slots.json",
+        "formula": "results/countcegar_real_4x7_final_slots.smt2",
+        "formula_stage": "post_cut_pool",
+        "formula_checked": false
+      },
+      {
+        "formulation": "pooled cardinality",
+        "status": "CHECKPOINT",
+        "checked_pool_size": 2624,
+        "checked_pool_sha256": "f84280971a065f10271bc1a02e7c7618f88644a9ea626909e9181cad635ef3d1",
+        "candidate_efx0_count": 15,
+        "pooled_efx0_count": 3,
+        "fresh_cuts_added": 12,
+        "output_pool_size": 2636,
+        "result": "results/countcegar_real_4x7_final_cardinality.json",
+        "formula": "results/countcegar_real_4x7_final_cardinality.smt2",
+        "formula_stage": "post_cut_pool",
+        "formula_checked": false
+      }
+    ]
+  },
+  "verification": {
+    "differential_test_command": "/Users/maxf/miniforge3/bin/python repro/countcegar_real/test_countcegar_real.py",
+    "differential_test_status": "PASS",
+    "differential_test_summary": "81 lex cases, 64 DoubleLex orbits, 20 fixed-master cases, 2 controlled CEGAR refinements, trace-state validation, and a two-invocation provenance integration check",
+    "closure_validator_command": "/Users/maxf/miniforge3/bin/python repro/countcegar_real/validate_manifest.py",
+    "closure_validator_scope": "all file hashes; seven trace branches reconstructed from pinned seeds; 80 exact 4^7 candidate recounts; every fresh cut; both union checkpoints; best8 provenance",
+    "candidate_enumeration": "all 4^7 labeled allocations with exact integer arithmetic after rational denominator clearing",
+    "best8_verifiers": [
+      "verify.py",
+      "verify2.py"
+    ],
+    "best8_verifier_agreement": "PASS",
+    "independent_source_audit": "PASS; no soundness or CEGAR-completeness defect found",
+    "audit_limit": "the audit and closure validator are not a solver-independent proof certificate"
+  },
+  "environment": {
+    "python": "3.10.14",
+    "z3_python": "5.0.0",
+    "platform": "macOS-26.3.1-arm64"
+  },
+  "files": [
+    {
+      "path": "repro/countcegar_real/README.md",
+      "bytes": 9527,
+      "sha256": "7aa65b1f206a89fcb49587311a2f72b7b2e41e651dbf7decfc6add51eb6b79ba"
+    },
+    {
+      "path": "repro/countcegar_real/countcegar_real.py",
+      "bytes": 21048,
+      "sha256": "6ced9a452d198bf9ebd148045f8841f77c9bad95ae7764c51cee7ed620026760"
+    },
+    {
+      "path": "repro/countcegar_real/requirements.txt",
+      "bytes": 19,
+      "sha256": "137fd7f42291439e332a9f3be1055e8d593de68f83048fee673164e0c4f0dc65"
+    },
+    {
+      "path": "repro/countcegar_real/test_countcegar_real.py",
+      "bytes": 14796,
+      "sha256": "04163150b0e1e4e56c647f0ea0ef0f3641cb454e7bceb3f34b9a4a304de9188d"
+    },
+    {
+      "path": "repro/countcegar_real/validate_manifest.py",
+      "bytes": 12689,
+      "sha256": "52b811b8f0087b357583d10e553656c09660d1821d2e9b4c11e94d7a10b10021"
+    },
+    {
+      "path": "results/countcegar_real_4x7_best8.json",
+      "bytes": 1428,
+      "sha256": "6e9a7e79ba0748640ae4a66e51050473569ce3c4aa298754e64dab630616cd7d"
+    },
+    {
+      "path": "results/countcegar_real_4x7_cardinality_60s.json",
+      "bytes": 678,
+      "sha256": "314687f8491c939877cbdb6055d4c04e169192b84d583cdf410449372cfad637"
+    },
+    {
+      "path": "results/countcegar_real_4x7_cardinality_60s.jsonl",
+      "bytes": 19377,
+      "sha256": "ca984d268fbf1d9826ec0a42cbd7a9097a0269f957e0b8aa23f2e3e8ca6e3359"
+    },
+    {
+      "path": "results/countcegar_real_4x7_cardinality_60s.smt2",
+      "bytes": 32107199,
+      "sha256": "b23054a1851b98b655136f2296db6581897e3c804fbae1fd6d5bb7ab69e1bc77"
+    },
+    {
+      "path": "results/countcegar_real_4x7_final_cardinality.json",
+      "bytes": 2132,
+      "sha256": "89bac814c6c24184d072b4a6d6f72d3b355e1980cf6ce77d262f77b5c08f71e9"
+    },
+    {
+      "path": "results/countcegar_real_4x7_final_cardinality.jsonl",
+      "bytes": 561,
+      "sha256": "665a9b303561b9d4c21194ba143ace718173dc54e94fada7de5a4570c2b8e243"
+    },
+    {
+      "path": "results/countcegar_real_4x7_final_cardinality.smt2",
+      "bytes": 64334880,
+      "sha256": "92388eea938835dbd695ad9a6fbb84e78b8998450cf1fd19d5209ce3d27a8aaa"
+    },
+    {
+      "path": "results/countcegar_real_4x7_final_slots.json",
+      "bytes": 2100,
+      "sha256": "5c62d9cf294c6e7967c8d1ca05cf4311c402a2e9c442c395ac2465046b1dcb80"
+    },
+    {
+      "path": "results/countcegar_real_4x7_final_slots.jsonl",
+      "bytes": 557,
+      "sha256": "c9d251ad596c7fa6b1741fb0db4eff1795e7a42a110a453f9b704f5bf188432d"
+    },
+    {
+      "path": "results/countcegar_real_4x7_final_slots.smt2",
+      "bytes": 14584023,
+      "sha256": "c9abc674175641c76fd3f5f27e629fb895802a7735889c117645d67804611af8"
+    },
+    {
+      "path": "results/countcegar_real_4x7_long_cardinality.json",
+      "bytes": 695,
+      "sha256": "965a2d6fda5906c5d0017e9bc38bbfb3fe06563478f0ecfadf1ec46be09fa7d9"
+    },
+    {
+      "path": "results/countcegar_real_4x7_long_cardinality.jsonl",
+      "bytes": 11252,
+      "sha256": "304369a9455d6adabdd449254d89a6c81ca55c5a64d18b81a2a4522229c3580d"
+    },
+    {
+      "path": "results/countcegar_real_4x7_long_cardinality.smt2",
+      "bytes": 63237809,
+      "sha256": "38333392cf882899c1efacf7599dcee9824c9446e095d0b9ca60c9612386ab75"
+    },
+    {
+      "path": "results/countcegar_real_4x7_slots_60s.json",
+      "bytes": 621,
+      "sha256": "f5ed501f962ff2e9f500d8547af538b76ce211d9e3096d4b5a7f110e2c8943bf"
+    },
+    {
+      "path": "results/countcegar_real_4x7_slots_60s.jsonl",
+      "bytes": 19081,
+      "sha256": "5eb70cde690a286c0a6b9b824a874bbdcf9bad0f2408802169dfeb9fadefbd90"
+    },
+    {
+      "path": "results/countcegar_real_4x7_slots_60s.smt2",
+      "bytes": 10099384,
+      "sha256": "90dcdc3f1a8539b027421e44e1d865a29d458839944e2129f1ae332a0e99a3d8"
+    },
+    {
+      "path": "results/countcegar_real_4x7_union_cardinality.json",
+      "bytes": 1139,
+      "sha256": "91f6cda8d11c0db89ca1a400bad4a4b56c6a35c883d532fec3344b49ca80e923"
+    },
+    {
+      "path": "results/countcegar_real_4x7_union_cardinality.jsonl",
+      "bytes": 2381,
+      "sha256": "b90a2ef7a87d204f9ee6159e01ac0de10d6d9f18f1df92da75b6bba9c4db7d6d"
+    },
+    {
+      "path": "results/countcegar_real_4x7_union_slots.json",
+      "bytes": 1082,
+      "sha256": "bdef9b34e2627414589a3514ec7a58b06c553ae5636e405024aefca27c605c10"
+    },
+    {
+      "path": "results/countcegar_real_4x7_union_slots.jsonl",
+      "bytes": 1217,
+      "sha256": "3a33370299fa98d581f50f547b6a03c52accd95d8d8548bf8cf3f7cfc9fa774c"
+    },
+    {
+      "path": "results/countpool_K4_complete.json",
+      "bytes": 19842,
+      "sha256": "af85029ca3ec3527e60bffc516d2ef5ec9bfc1e82fbaeeb3e521f8c1f3d38e28"
+    },
+    {
+      "path": "results/countpool_real_4x7_cardinality.json",
+      "bytes": 105339,
+      "sha256": "fe4d9c35700eb7b7f8890e2c261b16b143b2639679b792e6c401049cebf2a025"
+    },
+    {
+      "path": "results/countpool_real_4x7_checkpoint.json",
+      "bytes": 135663,
+      "sha256": "83763a044c7f2874241c6caae606ac8d04a2b4c92c2897de70f3fd282195b69e"
+    },
+    {
+      "path": "results/countpool_real_4x7_final_cardinality.json",
+      "bytes": 150255,
+      "sha256": "3cf2872437d134d2083c7bbdf9cb6e0837284e24c88da99dd126fcfb3e406ad2"
+    },
+    {
+      "path": "results/countpool_real_4x7_final_slots.json",
+      "bytes": 149571,
+      "sha256": "f84280971a065f10271bc1a02e7c7618f88644a9ea626909e9181cad635ef3d1"
+    },
+    {
+      "path": "results/countpool_real_4x7_long_cardinality.json",
+      "bytes": 148944,
+      "sha256": "a125068a4b4233db86ea9f3a5acec9fbf9160ebcbb3fbe90acc297355b72db42"
+    },
+    {
+      "path": "results/countpool_real_4x7_slots.json",
+      "bytes": 104085,
+      "sha256": "edb89592dbcf95a6e831be281cd073fe76addeac20225fc0d117fc08b2e8200a"
+    },
+    {
+      "path": "results/countpool_real_4x7_union.json",
+      "bytes": 131103,
+      "sha256": "39d145f12b535be8187b31b9e55c24c44497515714b8175e5f7d0005cc7bf900"
+    },
+    {
+      "path": "results/countpool_real_4x7_union_cardinality.json",
+      "bytes": 134181,
+      "sha256": "4e7ecab9554717246e96f84ac691e18b846b491728ac77ebd5a7d6a463a5f52c"
+    },
+    {
+      "path": "results/countpool_real_4x7_union_slots.json",
+      "bytes": 132699,
+      "sha256": "f68db42708cba26ca32da397fb086c4ca994ccaebf27c439890a48fcc26815b3"
+    },
+    {
+      "path": "results/t47.json",
+      "bytes": 142,
+      "sha256": "5dd6023dda9aeac85c921005ea345b176c6656f73a369f0f61a59658b2bf0481"
+    },
+    {
+      "path": "verify.py",
+      "bytes": 3877,
+      "sha256": "7f94a72285cb07799660d5b19abc829983f826dc97cf9dbed2534d2087581706"
+    },
+    {
+      "path": "verify2.py",
+      "bytes": 7895,
+      "sha256": "2b4665f01c39beb28a9d82e8a30f445a566f774b373c018f2beff4c1c809e29e"
+    }
+  ],
+  "trust_boundary": "The closure validator pins the exact master, both shared verifiers, every retained seed/output pool, all seven traces and run records, five standalone formulas, both union checkpoints, and the best8 provenance. It reconstructs and semantically recounts all 80 retained refinements. SAT checkpoints prove nothing about the target statement. The two formulations still share normalization, EFX0 bundle construction, and symmetry code; any eventual UNSAT result should be promoted only after a genuinely independent terminal encoding or a checkable proof artifact."
+}

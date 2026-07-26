@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "artifact": "efx_chambers",
+  "base_git_commit": "a9c88411593cefe464a0731cd15bc1d03ae97d31",
+  "working_tree_note": "The chamber artifact is an uncommitted research extension assembled on top of this repository state; the commit is provenance, not a claim that these files occur in that commit.",
+  "source_manifest": "repro/counting_witnesses/instances.json",
+  "source_manifest_sha256": "bd83b96bc019d3dafad268b9ec3f7d7bb53cc0a6e15fb162e110936fdd30f3f1",
+  "files": {
+    "artifacts/efx_chambers/certificates.json": "a293e2d0e57b0cbde22d63d964e3426511220da1b44f732f28c49bcfe8885519",
+    "artifacts/efx_chambers/requirements.txt": "a23aaf94250a9f53031a592980142245a848e2372b6c6c3093e8260b129265b8",
+    "artifacts/efx_chambers/verify_radii.py": "b9f8be4ae478bdf70cf957bde9ba404ba91234e9ffd72f461becd18f2eb08814",
+    "artifacts/efx_chambers/verify_radii_exact.py": "255531eb7518de67f0648b82c41804d98ba3393c082536b79b29561981350c50"
+  },
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 python artifacts/efx_chambers/verify_radii.py",
+    "PYTHONDONTWRITEBYTECODE=1 python artifacts/efx_chambers/verify_radii_exact.py"
+  ]
+}

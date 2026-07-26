@@ -1,0 +1,736 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+  pdftitle={Exact count-n EFX instances for additive valuations beyond m=n+2 and a bounded counting verification},
+  pdfsubject={EFX allocations, counting, computer-assisted verification}}
+\setlength{\emergencystretch}{3em}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{cverified}[theorem]{Computer-verified result}
+
+\newcommand{\efxo}{\mathrm{EFX}_0}
+\newcommand{\Z}{\mathbb{Z}}
+
+\title{Exact count-\texorpdfstring{$n$}{n} EFX instances for additive valuations beyond
+\texorpdfstring{$m=n+2$}{m=n+2}\\and a bounded counting verification}
+\author{% TODO-AUTHOR: fill in author name(s), affiliation, and email before submission
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Neoh and Teh initiated the systematic study of how many allocations satisfy
+envy-freeness up to any good (EFX).  Their Conjecture~6.1 predicted at least
+$n$ EFX allocations for general monotone valuations, but the 2026 monotone
+submodular counterexamples of Akrami et al.\ refuted that statement.  Its additive
+specialization remains open.  We give positive additive instances having
+exactly $n$ labeled EFX allocations at $(n,m)=(4,7),(5,8),(6,9)$ and at
+$(4,8),(4,9),(4,10)$.  Thus the minimum over additive instances is at most
+$n$ at these six cells; equality remains conditional on the additive lower-bound
+conjecture.  The allocations in these instances
+are explained by a generalized parking criterion: for an EFX allocation of all
+but one good, an explicit observer--host inequality is necessary and sufficient
+for placing the remaining good at a chosen host.  Finally, a slot-protected
+counterexample-guided computation reports that every positive integer $(4,7)$
+instance with values in $\{1,\ldots,4\}$ has at least four EFX allocations.  We
+prove the soundness of the slot encoding and provide exact instance verifiers,
+parking-slack certificates, and a reconstruction and replay package.  Because
+the historical run did not retain its final checkpoint, we regenerated an
+alternative complete terminal pool; the fresh CP-SAT master is infeasible at
+pool size $1{,}240$, and an independently encoded CNF master is also UNSAT
+under CaDiCaL.  The artifact archives CaDiCaL's binary DRAT proof,
+independently verified by \texttt{drat-trim} \cite{DRATtrim}.  The bounded result depends on
+the stated CNF translation and proof checker; it is not an unrestricted
+counting theorem.
+\end{abstract}
+
+% ===========================================================================
+\section{Introduction}
+% ===========================================================================
+
+Let $N=[n]$ be a set of agents and $M=[m]$ a set of indivisible goods.  Agent
+$i$ has an additive valuation $v_i\colon 2^M\to\mathbb{R}_{\ge0}$, with
+$v_i(S)=\sum_{g\in S}v_i(g)$.  An allocation is a labeled partition
+$X=(X_1,\ldots,X_n)$ of $M$.
+
+\begin{definition}\label{def:efx}
+An allocation $X$ is \emph{$\efxo$} if, for every pair $i\ne j$ and every
+$g\in X_j$,
+\[
+  v_i(X_i)\ \ge\ v_i(X_j\setminus\{g\}).
+\]
+\end{definition}
+
+The subscript distinguishes the strong convention in which zero-valued goods are
+also quantified over.  Every computational instance and bounded result in this
+paper uses positive values, so the distinction disappears there; the parking
+theorem is stated directly for $\efxo$ and permits nonnegative valuations.  We
+count labeled allocations: permuting bundles among agents generally produces a
+different allocation.
+
+Suksompong \cite{Suksompong2020} obtained tight counting results for two agents.
+Neoh and Teh \cite{NeohTeh2025} subsequently studied the minimum count as a
+function of $(n,m)$ for general monotone valuations, using additive examples
+for their upper bounds.  Their Table~1 gives the exact value $n$ at $m=n+1$,
+bounds $[n,n^2]$ at $m=n+2$, and groups $m\ge n+3$ under the upper bound
+$n!$ with no positive lower bound uniform across that entire regime.  They
+conjectured at least $n$ allocations without an additivity restriction.
+Akrami et al.\ \cite{Akrami2026SAT} have since
+constructed monotone submodular instances with no EFX allocation for
+$n\ge3$ and $m\ge n+5$, refuting that original conjecture.
+
+\begin{conjecture}[additive specialization of Neoh--Teh
+\cite{NeohTeh2025}, Conjecture~6.1]\label{conj:nt}
+With $n$ agents and additive valuations, there are at least $n$ $\efxo$
+allocations.
+\end{conjecture}
+
+Conjecture~\ref{conj:nt} is the still-open additive restriction, not the
+now-false general-monotone statement.  It includes additive EFX existence as a
+special consequence.  For clarity, call an additive instance \emph{count-$n$}
+if its complete labeled allocation set contains exactly $n$ $\efxo$
+allocations.  We do not call such an instance tight unless a matching additive
+lower bound is available.
+
+\paragraph{Contributions.}
+The paper has three claims.
+\begin{enumerate}[label=(\roman*),leftmargin=2.3em]
+\item We give explicit count-$n$ instances at six cells:
+\[
+ (4,7),\ (5,8),\ (6,9),\ (4,8),\ (4,9),\ (4,10).
+\]
+Two independently written exact verifiers and a third vectorized implementation
+enumerate all $n^m$ labeled allocations and agree on every count.  These are
+upper bounds on the additive minimum count; they do not prove
+Conjecture~\ref{conj:nt}.
+\item We prove a generalized parking theorem.  It gives an exact
+observer--host inequality for when an unallocated good may be added to a bundle
+while preserving $\efxo$.  Machine-checkable slack matrices show that all $n$
+parkings in each displayed instance satisfy the theorem.  Universal-minimum
+parking is only a sufficient special case, and is not assumed for the family.
+\item We formalize a slot-protected counting-CEGAR master and prove its soundness.
+CP-SAT and an independently encoded threshold-CNF master both report UNSAT
+over the finite box $\{1,\ldots,4\}^{4\times7}$ for the hypothesis ``at most
+three $\efxo$ allocations.''  The artifact audits the historical checkpoint,
+supplies a complete alternative terminal pool generated by atomic
+reconstruction, and archives both masters, their replay programs, and an
+independently checked binary DRAT certificate for the CNF master.
+\end{enumerate}
+
+The instance upper bounds and bounded lower bound are logically separate.  In
+particular, the printed $(4,7)$ instance has values well outside
+$\{1,\ldots,4\}$, so the two computations cannot be combined into an
+unrestricted equality statement.
+
+\paragraph{Related computational work.}
+For additive valuations, EFX exists for at most three agents
+\cite{ChaudhuryThree}.  Mahara \cite{Mahara2107} proves EFX existence when
+$m\le n+3$, so existence is unconditional in our three diagonal cells even for
+general monotone valuations.  Together these results make $(4,8)$ the first
+additive parameter cell not covered by a general existence theorem.
+Akrami et al.\ \cite{Akrami2026SAT} refute general-monotone EFX existence from
+$m=n+5$ onward, while explicitly leaving additive valuations outside their
+counterexamples.  Their work also gives a recent computer-assisted precedent:
+a Lean-checked theoretical foundation for the SAT encoding, two SAT solvers,
+and a DRAT-checked UNSAT proof.  Our finite result concerns bounded additive
+integer valuations and now also retains an independently checked DRAT proof,
+but no proof-assistant formalization of its mathematical encoding.  The
+witness search is also distinct
+from Br\^anzei's simulated-annealing search for an EFX allocation of a fixed
+instance \cite{Branzei2025}: here the search varied valuation matrices to minimize
+the exact allocation count.
+
+% ===========================================================================
+\section{Six count-\texorpdfstring{$n$}{n} cells}\label{sec:instances}
+% ===========================================================================
+
+For an additive instance $I$, write $\#\efxo(I)$ for its number of complete
+labeled $\efxo$ allocations, and let the \emph{additive minimum count} be the
+minimum of this quantity over additive instances with the same $(n,m)$.  An
+explicit instance with $\#\efxo(I)=n$ proves that this additive minimum is at
+most $n$, regardless of whether the additive lower bound is $0$, lies in
+$\{1,\ldots,n-1\}$, or equals $n$.
+
+\begin{cverified}[count-$n$ instances]\label{cv:instances}
+There are positive additive instances with exactly $n$ $\efxo$ allocations at
+$(4,7)$, $(5,8)$, and $(6,9)$, and positive additive instances with exactly four
+$\efxo$ allocations at $(4,8)$, $(4,9)$, and $(4,10)$.
+\end{cverified}
+
+Rows below are agents and columns are goods.  One witness for each cell is:
+\begin{align*}
+(4,7):\quad & \begin{bmatrix}
+30&66&69& 9&21&19&63\\
+12&56&58& 9&10&24&52\\
+12&33&45&20&24& 8&64\\
+11&60& 1&18& 2& 6&41
+\end{bmatrix}
+\\[1ex]
+(5,8):\quad & \begin{bmatrix}
+32& 4&10&60& 8& 3&16&11\\
+42& 3&57&50&51& 1& 5&10\\
+54&12& 4&27& 3&20&18&11\\
+33& 9&31&42&45&10&13& 5\\
+45&13&52&47&49&21& 2&21
+\end{bmatrix}
+\\[1ex]
+(6,9):\quad & \begin{bmatrix}
+15&86&103&193&191&192&195&196&1\\
+ 6& 3& 12&105& 23& 65&  4&  2&1\\
+11&68& 55& 10&152&  8&  7&  2&1\\
+49& 3& 11&  2& 64&104&  8&  7&1\\
+ 2& 6& 31& 79& 40& 61&104&  7&1\\
+53&45&  3&105&102&103&151&152&2
+\end{bmatrix}.
+\end{align*}
+
+For the three remaining cells:
+\begin{align*}
+(4,8):\quad &
+\begin{bmatrix}
+11& 8&20&1& 4&1&16&1\\
+16&49&32&2&16&2&60&1\\
+28&28&59&1&60&7&46&8\\
+10&12&24&1&59&1&17&1
+\end{bmatrix}
+\\[1ex]
+(4,9):\quad & \begin{bmatrix}
+1&57&58& 6&60& 7&19&14&15\\
+1&57&11&12& 4&12& 1&21&10\\
+4&59&60& 2&23& 3&28& 8&12\\
+8&48&57& 1&58&34& 1& 1& 3
+\end{bmatrix}
+\\[1ex]
+(4,10):\quad & \begin{bmatrix}
+17&57&58&3&47& 1& 6&23& 3& 1\\
+ 2&51&57&5&58&11&12& 1&10&10\\
+ 1&75&15&8&25&13&19& 6&12&16\\
+10&58&59&8&60& 2& 8& 7&22& 6
+\end{bmatrix}.
+\end{align*}
+
+\paragraph{Verification.}
+Verifier~1 enumerates assignments by a base-$n$ counter and checks bundle
+bitmasks.  Verifier~2 uses a recursive good-by-good enumeration and separately
+constructs observer--bundle totals and minima.  A vectorized counter supplies a
+third implementation.  All arithmetic is integral.  For each observer--target
+pair, the strongest $\efxo$ constraint is obtained by removing an
+observer-minimum good from the target bundle, so the optimized check is
+\[
+  v_i(X_i)\ \ge\
+  v_i(X_j)-\min_{g\in X_j}v_i(g).
+\]
+This optimized constraint is imposed only when $X_j$ is nonempty; an empty
+target bundle has no removable-good constraint.
+The second verifier is also tested against a definition-faithful loop that checks
+every removable good separately.  The artifact contains the instance files,
+both exact verifiers, expected outputs, and hashes.
+
+The instances were found by directed count-minimizing search.  Search restrictions
+do not enter Result~\ref{cv:instances}: once a matrix is printed, exhaustive
+enumeration alone establishes its count.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lrrrl@{}}
+\toprule
+$(n,m)$ & allocations checked & $\#\efxo$ & prior additive UB & artifact instance \\
+\midrule
+$(4,7)$  & $4^7=16{,}384$       & $4$ & $24$  & \texttt{t47.json}\\
+$(5,8)$  & $5^8=390{,}625$      & $5$ & $120$ & \texttt{ch5\_A.json}\\
+$(6,9)$  & $6^9=10{,}077{,}696$ & $6$ & $720$ & \texttt{tight69\_witness.json}\\
+$(4,8)$  & $4^8=65{,}536$       & $4$ & $24$  & \texttt{tb4.json}\\
+$(4,9)$  & $4^9=262{,}144$      & $4$ & $24$  & \texttt{tight49\_witness.json}\\
+$(4,10)$ & $4^{10}=1{,}048{,}576$ & $4$ & $24$ & \texttt{tight410\_witness.json}\\
+\bottomrule
+\end{tabular}
+\caption{Full labeled-allocation enumerations for the six cells.  ``Prior
+additive UB'' is the $n!$ upper bound witnessed by the additive examples of
+Neoh and Teh \cite{NeohTeh2025}.}
+\label{tab:counts}
+\end{table}
+
+% ===========================================================================
+\section{A generalized parking theorem}\label{sec:parking}
+% ===========================================================================
+
+Let $f$ be a good and let $B=(B_1,\ldots,B_n)$ allocate $M\setminus\{f\}$.
+For host $h$, write $B^{+h}$ for the complete allocation obtained by adding $f$
+to $B_h$.  For observer $k\ne h$, define the \emph{parking slack}
+\begin{equation}\label{eq:slack}
+\sigma_{k,h}(B,f)
+ =
+ v_k(B_k)-
+ \left(
+   v_k(B_h)+v_k(f)
+   -\min_{g\in B_h\cup\{f\}}v_k(g)
+ \right).
+\end{equation}
+The minimum is always defined because the enlarged host bundle contains $f$.
+
+\begin{theorem}[generalized parking criterion]\label{thm:parking}
+Suppose $B$ is $\efxo$.  For a fixed host $h$, the completion $B^{+h}$ is
+$\efxo$ if and only if
+\[
+  \sigma_{k,h}(B,f)\ge0
+  \qquad\text{for every }k\ne h.
+\]
+Consequently all $n$ parkings are $\efxo$ if and only if every off-diagonal
+entry of the parking-slack matrix is nonnegative.
+\end{theorem}
+
+\begin{proof}
+Fix a host $h$.  Consider an ordered observer--target pair after adding $f$.
+If the target is not $h$ and the observer is not $h$, both bundles are unchanged
+from $B$, so the $\efxo$ inequalities follow from the hypothesis.  If the
+observer is $h$ and the target is some $j\ne h$, the observer's own value has
+weakly increased while the target is unchanged, so these inequalities also
+remain valid.
+
+It remains to consider observer $k\ne h$ and target $h$.  The observer's own
+bundle is $B_k$, while the target is $B_h\cup\{f\}$.  Among all possible removed
+goods, the largest remaining target value is obtained by removing a
+$k$-minimum good.  Thus the complete family of $\efxo$ inequalities for this
+pair is equivalent to
+\[
+v_k(B_k)\ge
+v_k(B_h)+v_k(f)-\min_{g\in B_h\cup\{f\}}v_k(g),
+\]
+which is exactly $\sigma_{k,h}(B,f)\ge0$.  This proves both necessity and
+sufficiency.
+\end{proof}
+
+When $B_h$ is nonempty, the condition can equivalently be written
+\[
+v_k(B_k)\ge
+v_k(B_h)+
+\max\!\left\{0,\,
+v_k(f)-\min_{g\in B_h}v_k(g)\right\}.
+\]
+This form makes clear that a floater need not be a minimum-valued good: the base
+may instead provide enough slack to absorb its excess value.
+
+\begin{corollary}[universal-minimum special case]\label{cor:universal}
+Suppose $B$ is envy-free and $v_k(f)\le v_k(g)$ for every agent $k$ and every
+$g\in M\setminus\{f\}$.  Then all $n$ parkings of $f$ are $\efxo$.
+\end{corollary}
+
+\begin{proof}
+Envy-freeness implies $\efxo$ under nonnegative valuations, so $B$ meets the
+hypothesis of Theorem~\ref{thm:parking}.
+For nonempty $B_h$, universal minimality makes the parenthesized target
+remainder in \eqref{eq:slack} equal to $v_k(B_h)$; for empty $B_h$ it equals
+$0$.  Envy-freeness gives the required inequality in either case, and
+Theorem~\ref{thm:parking} applies.
+\end{proof}
+
+Neoh and Teh use the zero-valued-good special case of
+Corollary~\ref{cor:universal} in their counting analysis
+\cite{NeohTeh2025}.  The corollary is also related to, but is not being
+attributed as a lemma of, the envy-graph and charity techniques in
+\cite{Lipton2004,CGM2019,Berger2022}.  Theorem~\ref{thm:parking} is the direct
+exact criterion needed here.
+
+\paragraph{Application to the witnesses.}
+For each matrix in Section~\ref{sec:instances}, the artifact identifies a good
+$f$ and an $\efxo$ base $B$ such that every $\efxo$ allocation of that instance is one
+of the $n$ parkings $B^{+h}$.  It records every integer
+$\sigma_{k,h}(B,f)$ and checks it directly from the matrix.  Only the $(6,9)$
+floater is a universal minimum; no such claim is needed.  Theorem
+\ref{thm:parking} proves that the $n$ listed parkings are $\efxo$, while the
+exhaustive verifiers establish that there are no additional allocations.
+For completeness, the certified bases below are written in agent order with
+one-based goods:
+\[
+\begin{array}{c@{\qquad}l}
+(4,7)  & (\{1,5,6\},\{3\},\{7\},\{2\}),\\
+(5,8)  & (\{4\},\{3\},\{1\},\{5\},\{2,6,8\}),\\
+(6,9)  & (\{1,2,3\},\{4\},\{5\},\{6\},\{7\},\{8\}),\\
+(4,8)  & (\{3\},\{1,2\},\{6,7,8\},\{5\}),\\
+(4,9)  & (\{4,6,7,8,9\},\{2\},\{3\},\{5\}),\\
+(4,10) & (\{3\},\{5\},\{2\},\{1,4,7,8,9,10\}).
+\end{array}
+\]
+
+\begin{table}[t]
+\centering
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+cell & floater & base shape & min.\ EF & min.\ parking & universal min. & count\\
+\midrule
+$(4,7)$  & $4$ & $3111$   & $1$ & $1$ & no  & $4$\\
+$(5,8)$  & $7$ & $31111$  & $3$ & $3$ & no  & $5$\\
+$(6,9)$  & $9$ & $311111$ & $1$ & $1$ & yes & $6$\\
+$(4,8)$  & $4$ & $3211$   & $1$ & $1$ & no  & $4$\\
+$(4,9)$  & $1$ & $5111$   & $1$ & $1$ & no  & $4$\\
+$(4,10)$ & $6$ & $6111$   & $1$ & $1$ & no  & $4$\\
+\bottomrule
+\end{tabular}
+\caption{Parking certificates for the six displayed matrices.  Goods are
+one-based.  The artifact records the full base bundles and observer--host slack
+matrices; ``min.\ EF'' is the minimum ordinary envy-free base margin.}
+\label{tab:parking}
+\end{table}
+
+% ===========================================================================
+\section{Bounded counting by protected slots}\label{sec:cegar}
+% ===========================================================================
+
+We next consider the finite domain
+\[
+ \mathcal V_K=\{1,\ldots,K\}^{n\times m}.
+\]
+Let $\mathcal A=[n]^m$ be the set of labeled allocations, represented by their
+good-to-agent assignment vectors, and let $E(V,A)$ denote that $A$ is $\efxo$
+under valuation matrix $V$.
+
+\subsection{The master formula}
+
+Fix an integer target lower bound $2\le c\le|\mathcal A|$ and a finite pool
+$P\subseteq\mathcal A$.  Introduce
+$c-1$ slot allocations $S_1,\ldots,S_{c-1}\in\mathcal A$.  The protected-slot
+master is
+\begin{equation}\label{eq:master}
+\begin{split}
+ V\in\mathcal V_K,\qquad C(V),\qquad
+ \bigwedge_{A\in P}
+ \left(
+   \neg E(V,A)\ \lor\
+   \bigvee_{t=1}^{c-1}(A=S_t)
+ \right),
+\end{split}
+\end{equation}
+where $C(V)$ is an orbit-complete symmetry-breaking condition.  Our CP-SAT
+master uses row/column DoubleLex \cite{Flener2002}; relabeling agents or goods
+preserves the number of $\efxo$ allocations.
+DoubleLex is orbit-complete: choose a lexicographically maximal row-major
+matrix in any row/column-permutation orbit.  An out-of-order adjacent row or
+column could be swapped to make that matrix larger, so its rows and columns
+must both be lexicographically ordered.
+
+For integer valuations, non-EFX of a fixed allocation $A$ is encoded exactly.
+Writing $A_g=j$ when good $g$ is assigned to $j$, we have
+\begin{equation}\label{eq:kill}
+\neg E(V,A)
+\iff
+\bigvee_{\substack{g\in M,\ j=A_g\\i\ne j}}
+\left[
+ \sum_{q:A_q=i}v_{i,q}+v_{i,g}+1
+ \le
+ \sum_{q:A_q=j}v_{i,q}
+\right].
+\end{equation}
+The $+1$ is the integral form of strict strong envy.  Equality $A=S_t$ is the
+conjunction of the $m$ corresponding assignment equalities.
+
+\begin{lemma}[protected-slot soundness]\label{lem:slots}
+Assume $C$ contains at least one representative of every row/good relabeling
+orbit.  If the master \eqref{eq:master} is infeasible for any pool $P$, then
+every $V\in\mathcal V_K$ has at least $c$ $\efxo$ allocations.
+\end{lemma}
+
+\begin{proof}
+Suppose instead that some $V\in\mathcal V_K$ has $r<c$ $\efxo$ allocations.
+Relabel its rows and columns to obtain a representative satisfying $C$; the
+count remains $r$.  Assign its $r$ $\efxo$ allocations to $r$ protected slots
+and fill any unused slots arbitrarily.  For every $A\in P$, either $A$ is not
+$\efxo$, satisfying the first disjunct, or it is one of the at most $r$
+protected allocations, satisfying a slot disjunct.  Hence the master is
+feasible, a contradiction.
+\end{proof}
+
+The slot assignments need not be distinct or themselves constrained to be
+$\efxo$.  Allowing arbitrary slots only relaxes the master, so it cannot create
+a false infeasibility conclusion.
+
+\paragraph{Independent cardinality form.}
+Because $P$ is a set of distinct allocations, existentially eliminating the
+slots in \eqref{eq:master} gives the equivalent constraint
+\[
+  \sum_{A\in P}\mathbf 1[E(V,A)]\le c-1.
+\]
+Indeed, slots can cover every surviving pooled allocation exactly when there
+are at most $c-1$ distinct survivors.  The independent Z3 re-encoding uses
+this cardinality form and one-hot finite-domain value variables, rather than
+sharing the CP-SAT slot-model builder.
+
+\paragraph{Independent CNF form.}
+For $K=4$, a second checker retains the literal slots and independently
+translates the master to CNF.  It represents each value by threshold bits
+$y_{i,q,t}=\mathbf 1[v_i(q)\ge t]$ for $t=2,3,4$, with
+$y_{i,q,4}\Rightarrow y_{i,q,3}\Rightarrow y_{i,q,2}$ and
+$v_i(q)=1+\sum_{t=2}^4y_{i,q,t}$.  Fix a disjunct of
+\eqref{eq:kill}, let $a=|A_i|$, and let
+$b=|A_j\setminus\{g\}|$.  Its strict-envy inequality is equivalent to
+\begin{equation}\label{eq:threshold-kill}
+ \sum_{\substack{q\in A_j\setminus\{g\}\\t=2,3,4}}y_{i,q,t}
+ +\sum_{\substack{q\in A_i\\t=2,3,4}}(1-y_{i,q,t})
+ \ \ge\ 4a-b+1.
+\end{equation}
+Indeed, the left side is
+$v_i(A_j\setminus\{g\})-b+4a-v_i(A_i)$.
+The checker guards PySAT's satisfiability-preserving sequential-counter
+encoding \cite{PySAT,Sinz2005} of \eqref{eq:threshold-kill} by the corresponding
+violation literal, gives every good in each slot a one-hot owner, and encodes
+the first strict coordinate of every DoubleLex comparison explicitly.  Its
+DIMACS formula therefore shares the terminal pool and mathematical
+specification with the CP-SAT and Z3 checks, but not either model builder.
+
+\subsection{CEGAR loop and bounded result}
+
+Starting from a pool, CP-SAT solves \eqref{eq:master}.  If the master is
+feasible, an exact slave enumerates the candidate valuation's $\efxo$
+allocations.  A candidate with fewer than $c$ is a counterexample.  Otherwise
+the slave adds allocations to the pool.  Since a feasible master permits at
+most $c-1$ pooled allocations to remain $\efxo$, returning at least $c$
+candidate allocations necessarily supplies a new pool member.  Thus the pool
+strictly grows inside the finite set $\mathcal A$, so only finitely many such
+refinements are possible.  If the master
+becomes infeasible, Lemma~\ref{lem:slots} yields the bounded lower bound.
+
+\begin{cverified}[bounded $(4,7)$ count]\label{cv:bounded}
+A CP-SAT \cite{ORtools} execution of the protected-slot master with $n=4$,
+$m=7$, $K=4$, and $c=4$ reports infeasible.  A fresh reconstruction terminates
+with a complete pool of $1{,}240$ distinct allocations.  The independently
+encoded literal-slot CNF for that pool is also UNSAT under CaDiCaL
+\cite{CaDiCaL}.  CaDiCaL's archived binary DRAT proof is accepted by the
+independent \texttt{drat-trim} checker.  Conditional on the reported CNF
+translation and proof checker, every positive integer $(4,7)$ instance with
+entries in $\{1,\ldots,4\}$ has at least four $\efxo$ allocations.
+\end{cverified}
+
+The implementation creates three slots.  For each pooled allocation it adds
+the exact disjunction \eqref{eq:kill} or equality with one of those slots.  It
+uses no valuation-type restriction.  A separate fixed-instance test checks the
+off-by-one boundary: protecting three distinct $\efxo$ allocations is feasible,
+whereas pooling all four allocations of the fixed count-$4$ witness is
+infeasible.
+
+\subsection{Reproducibility and trust boundary}\label{sec:artifact}
+
+The accompanying supplementary artifact freezes the claim-bearing inputs and
+source, with pinned external solver and proof-checker revisions.  Its entry points are
+\path{repro/counting_witnesses},
+\path{artifacts/generalized_parking}, and
+\path{repro/countcegar_k4}.  It includes:
+\begin{itemize}[leftmargin=1.6em]
+\item the six valuation matrices, expected counts, two pure-Python exact
+verifiers, a vectorized exact counter, and a definition-faithful regression;
+\item the generalized-parking bases, floaters, complete slack matrices, and a
+standard-library certificate checker;
+\item an audit of the historical checkpoint, an atomic reconstruction program,
+the complete $1{,}240$-allocation terminal pool, run metadata, logs, and a
+SHA-256 manifest; and
+\item an independently written Z3 \cite{Z3} master checker and SMT-LIB2 exporter
+for any reconstructed terminal pool, together with the threshold-CNF checker,
+differential tests, frozen DIMACS input, compressed binary DRAT proof, pinned
+tool revisions, and proof-verification wrapper described above.
+\end{itemize}
+The deterministic release workflow under \path{supplement} binds this source
+and PDF to those files in a SHA-256 manifest.  It intentionally excludes
+exploratory results that are not claims of this paper.
+
+The historical result reports infeasibility at pool size $1{,}295$, but its
+periodic checkpoint contains only $1{,}250$ entries, $1{,}134$ distinct.  The
+last $45$ entries cannot be recovered from the historical log.  The
+reconstruction starts from the distinct checkpoint entries and writes every
+subsequent pool atomically.  Any terminal pool it produces therefore determines
+an alternative complete terminal master for the same finite claim; it does not
+reconstruct the missing historical allocations.
+
+The fresh run begins with the $1{,}134$ distinct checkpoint allocations, makes
+seven feasible master calls that add $106$ new allocations, and returns
+infeasible on its eighth call.  It uses CP-SAT 9.15 with six workers and random
+seed $1$ and takes $1{,}060.725$ seconds in the recorded environment.  The complete
+pool is written atomically; its SHA-256 begins
+\texttt{af85029ca3ec}, with the full digest recorded in the artifact manifest.
+A subsequent one-call replay of the frozen pool again returns infeasible and
+exports the exact CP-SAT model and response; the artifact keeps the
+pool-generation and export-replay records separately.  The independent CNF has
+$282{,}029$ variables and $600{,}624$ clauses.  CaDiCaL 1.9.5, called through
+PySAT, returns UNSAT in $68.048$ wall-clock seconds in the recorded environment.
+The archived DIMACS file has SHA-256 prefix \texttt{ccc2aa45a571}; a cold
+replay that loads this frozen DIMACS without rebuilding the master reproduces
+UNSAT and the same solver counters.  A direct CaDiCaL 1.9.5 invocation writes
+a $134{,}426{,}255$-byte binary DRAT proof.  Official \texttt{drat-trim}
+verifies the archived proof in $90.182$ seconds using $28{,}212{,}699$
+resolution steps; its core uses no RAT lemmas.  The proof is stored under
+\path{repro/countcegar_k4/certificates} in a $38{,}753{,}120$-byte
+\texttt{xz} archive whose compressed and uncompressed SHA-256 digests are
+recorded in the manifest.
+
+The formal content of Lemma~\ref{lem:slots} and equations
+\eqref{eq:master}--\eqref{eq:kill} can be checked independently of either
+solver.  The universal bounded conclusion additionally trusts that the
+reported masters were built as specified.  Agreement between the independently
+built CP-SAT and CNF masters materially reduces the encoding risk, while the
+checked DRAT trace removes reliance on CaDiCaL's raw UNSAT verdict.  The
+remaining computational trust boundary is the auditable CNF translation and a
+correct proof checker.  Akrami et al.\ \cite{Akrami2026SAT} additionally
+formalize their theoretical SAT foundation in Lean.
+
+% ===========================================================================
+\section{Scope and limitations}
+% ===========================================================================
+
+\paragraph{Upper bounds, not tightness.}
+The six explicit matrices prove upper bounds on the minimum over additive
+instances.  Calling them ``tight'' would require a matching lower bound for
+arbitrary additive valuations.  That lower bound is precisely the content
+predicted by Conjecture~\ref{conj:nt} and is not proved here.  The original
+general-monotone conjecture is already false \cite{Akrami2026SAT}.
+
+\paragraph{Bounded means bounded.}
+Result~\ref{cv:bounded} concerns positive integer entries in
+$\{1,\ldots,4\}$ only.  No theorem bounds the magnitude of a minimum-count
+instance, and the computation says nothing about larger or zero entries.
+
+\paragraph{What is and is not formal.}
+The generalized parking theorem and protected-slot soundness lemma are ordinary
+mathematical proofs.  The fixed-instance counts are exhaustive computations
+that are inexpensive to repeat with independent code.  The bounded result is a
+substantially larger solver computation.  The fresh terminal pool is included
+and makes its exact input replayable; the historical terminal input remains
+unrecoverable.  A proof-producing solver certificate is included and
+independently checked; no proof-assistant formalization is claimed.
+
+\paragraph{Search provenance.}
+Simulated annealing and constraint-guided local search were used to discover
+the matrices, in the spirit of recent computational EFX search
+\cite{Branzei2025}.  Discovery heuristics are not used in their verification
+and are outside the paper's theorem claims.
+
+% ===========================================================================
+\section{Conclusion}
+% ===========================================================================
+
+The six count-$n$ instances show that very small EFX allocation sets already
+occur at several cells beyond $m=n+2$.  Their common, rigorously stated
+mechanism is not universal-minimum parking but the observer-specific slack
+criterion of Theorem~\ref{thm:parking}.  The protected-slot construction gives
+a general way to turn an existence CEGAR master into a bounded counting master,
+and the $(4,7)$, $K=4$ computation supplies its first test case here.
+
+The main open mathematical question addressed here is the additive
+specialization: prove or refute a lower bound of $n$ for arbitrary additive
+valuations.  The original general-monotone question has been answered
+negatively \cite{Akrami2026SAT}.  The present results provide explicit additive
+upper-bound targets, a local completion lemma, and a replayable finite
+verification without claiming that they settle the additive question.
+
+\section*{Acknowledgments}
+The computational campaign used independently written enumeration, constraint,
+and structure-checking programs, together with a multi-agent assistant workflow.
+All mathematical and computational claims included here are scoped to the
+checks described in the paper and artifact.
+
+\begin{thebibliography}{99}
+
+\bibitem{Suksompong2020}
+W.~Suksompong.
+\newblock On the number of almost envy-free allocations.
+\newblock \emph{Discrete Applied Mathematics}, 284:606--610, 2020.
+
+\bibitem{NeohTeh2025}
+T.~Y. Neoh and N.~Teh.
+\newblock Understanding EFX allocations: counting and variants.
+\newblock In \emph{Proceedings of AAAI}, pages 14036--14044, 2025.
+
+\bibitem{Mahara2107}
+R.~Mahara.
+\newblock Extension of additive valuations to general valuations on the
+existence of EFX.
+\newblock arXiv:2107.09901, 2021.
+
+\bibitem{ChaudhuryThree}
+B.~R. Chaudhury, J.~Garg, and K.~Mehlhorn.
+\newblock EFX exists for three agents.
+\newblock \emph{Journal of the ACM}, 71(1), Article 4, 2024;
+arXiv:2002.05119.
+
+\bibitem{Lipton2004}
+R.~J. Lipton, E.~Markakis, E.~Mossel, and A.~Saberi.
+\newblock On approximately fair allocations of indivisible goods.
+\newblock In \emph{Proceedings of EC}, 2004.
+
+\bibitem{CGM2019}
+B.~R. Chaudhury, T.~Kavitha, K.~Mehlhorn, and A.~Sgouritsa.
+\newblock A little charity guarantees almost envy-freeness.
+\newblock \emph{SIAM Journal on Computing}, 50(4):1336--1358, 2021.
+
+\bibitem{Berger2022}
+B.~Berger, A.~Cohen, M.~Feldman, and A.~Fiat.
+\newblock (Almost full) EFX exists for four agents (and beyond).
+\newblock In \emph{Proceedings of AAAI}, 2022.
+
+\bibitem{Flener2002}
+P.~Flener, A.~M. Frisch, B.~Hnich, Z.~Kiziltan, I.~Miguel, J.~Pearson, and
+T.~Walsh.
+\newblock Breaking row and column symmetries in matrix models.
+\newblock In \emph{Proceedings of CP}, 2002.
+
+\bibitem{Branzei2025}
+S.~Br\^anzei.
+\newblock Computing envy-free up to any good (EFX) allocations via local search.
+\newblock arXiv:2510.05429, 2025.
+
+\bibitem{Akrami2026SAT}
+H.~Akrami, A.~Mayorov, K.~Mehlhorn, S.~Srinivas, and C.~Weidenbach.
+\newblock A counterexample to EFX: $n\ge3$ agents, $m\ge n+5$ items,
+submodular valuations via SAT-solving.
+\newblock arXiv:2604.18216, 2026.
+
+\bibitem{ORtools}
+L.~Perron and F.~Didier.
+\newblock CP-SAT, version 9.15.
+\newblock Google, \url{https://developers.google.com/optimization/cp/cp_solver/},
+2026.
+
+\bibitem{Z3}
+L.~de Moura and N.~Bj{\o}rner.
+\newblock Z3: an efficient SMT solver.
+\newblock In \emph{Proceedings of TACAS}, 2008.
+
+\bibitem{PySAT}
+A.~Ignatiev, A.~Morgado, and J.~Marques-Silva.
+\newblock PySAT: a Python toolkit for prototyping with SAT oracles.
+\newblock In \emph{Proceedings of SAT}, pages 428--437, 2018.
+
+\bibitem{Sinz2005}
+C.~Sinz.
+\newblock Towards an optimal CNF encoding of Boolean cardinality constraints.
+\newblock In \emph{Proceedings of CP}, pages 827--831, 2005.
+
+\bibitem{CaDiCaL}
+A.~Biere, T.~Faller, K.~Fazekas, M.~Fleury, N.~Froleyks, and F.~Pollitt.
+\newblock CaDiCaL 2.0.
+\newblock In \emph{Proceedings of CAV}, pages 133--152, 2024.
+
+\bibitem{DRATtrim}
+N.~Wetzler, M.~J. H. Heule, and W.~A. Hunt.
+\newblock DRAT-trim: efficient checking and trimming using expressive clausal
+proofs.
+\newblock In \emph{Proceedings of SAT}, pages 422--429, 2014.
+
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "status": "CHECKPOINT",
+  "formulation": "cardinality",
+  "pool_size": 1848,
+  "pool_sha256": "fe4d9c35700eb7b7f8890e2c261b16b143b2639679b792e6c401049cebf2a025",
+  "rounds_this_invocation": 20,
+  "seconds_this_invocation": 111.789214,
+  "command": "repro/countcegar_real/countcegar_real.py --formulation cardinality --seed-pool results/countpool_K4_complete.json --pool-out results/countpool_real_4x7_cardinality.json --result-out results/countcegar_real_4x7_cardinality_60s.json --trace-out results/countcegar_real_4x7_cardinality_60s.jsonl --export results/countcegar_real_4x7_cardinality_60s.smt2 --timeout-ms 60000 --max-rounds 20 --add 16384 --resume"
+}

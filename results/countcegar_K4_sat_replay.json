@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "status": "UNSAT",
+  "replay": "cold solve of existing DIMACS without rebuilding the master",
+  "dimacs_path": "results/countcegar_K4_sat.cnf",
+  "dimacs_sha256": "ccc2aa45a5710d967a166abf7bc56a2026c517f4157730872b99524027baa166",
+  "dimacs_bytes": 13684928,
+  "variables": 282029,
+  "clauses": 600624,
+  "solver": {
+    "requested": "cadical195",
+    "backend": "Cadical195",
+    "timeout_seconds": 10800.0,
+    "timeout_mechanism": "isolated child process with wall-clock termination",
+    "statistics": {
+      "restarts": 26008,
+      "conflicts": 603974,
+      "decisions": 2842921,
+      "propagations": 1236527111
+    },
+    "cpu_seconds": 67.392297
+  },
+  "seconds": {
+    "load_dimacs": 0.126464,
+    "solve_wall": 67.760383,
+    "total": 67.898742
+  },
+  "command": "repro/countcegar_k4/replay_sat.py --dimacs results/countcegar_K4_sat.cnf --expect-sha256 ccc2aa45a5710d967a166abf7bc56a2026c517f4157730872b99524027baa166 --solver cadical195 --timeout-seconds 10800 --expect unsat --result-out results/countcegar_K4_sat_replay.json",
+  "environment": {
+    "python": "3.10.14",
+    "python_sat": "1.9.dev7",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  }
+}

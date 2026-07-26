@@ -1,0 +1,193 @@
+{
+ "round1": {
+  "file": "tracks/model/round1.jsonl",
+  "best": {
+   "stair-rot2-s1": 184,
+   "stair-rot2-s2": 187,
+   "stair-rot3-s1": 190,
+   "stair-rot1-s1": 201,
+   "circulant-bump-b4": 256,
+   "contested-top4-filler": 300
+  },
+  "mechanisms_that_help": [
+   "staircase rotation = maximal pairwise disagreement (dominant)",
+   "rotation offset 2 beats 1 and 3",
+   "steepness helps up to a point (s5 too steep=221)"
+  ],
+  "mechanisms_that_hurt": [
+   "flattening top block raises count (flat top = easy fair share)",
+   "poison pairs/distinct multisets decompose per-owner (441-1342)",
+   "near-proportional near-uniform (1484)",
+   "m=9 variants all worse than m=8 base"
+  ],
+  "survivor_structure_of_184": {
+   "(2,2,2,2)": 82,
+   "(1,2,2,3)": 100,
+   "(1,1,3,3)": 2
+  },
+  "pair_lemma": "agent i strongly envies 2-good bundle {a,b} iff v_i(own) < min(v_i(a),v_i(b))"
+ },
+ "round2": {
+  "file": "tracks/model/round2.jsonl",
+  "best_hand": {
+   "stair-offs-o0356b": 163,
+   "stair-offs-o0147": 170,
+   "stair-sweep-g23": 187
+  },
+  "hillclimb_best": {
+   "from_stair_s1": 118,
+   "from_stair_s2": 140,
+   "from_contested": 196,
+   "from_circ": 256
+  },
+  "mechanisms_that_help": [
+   "hill-climb from staircase seed 184->118 (big)",
+   "non-uniform rotation offsets help by hand (163)",
+   "asymmetric peak spacing breaks C4 symmetry"
+  ],
+  "mechanisms_that_hurt": [
+   "m=9 with high contested good far worse (772)",
+   "two-base / perturbation gave little",
+   "contested & circulant basins plateau higher (196,256)"
+  ],
+  "record": 118,
+  "record_matrix": [
+   [
+    18,
+    13,
+    11,
+    10,
+    3,
+    4,
+    2,
+    2
+   ],
+   [
+    14,
+    12,
+    2,
+    1,
+    2,
+    1,
+    22,
+    13
+   ],
+   [
+    2,
+    4,
+    1,
+    1,
+    20,
+    15,
+    11,
+    11
+   ],
+   [
+    3,
+    1,
+    20,
+    15,
+    14,
+    10,
+    8,
+    1
+   ]
+  ]
+ },
+ "tooling": {
+  "fast_counter": "tracks/model/fastcount.py numpy, validated exact vs verify.py m=8&m=9, ~100x faster",
+  "surrogate": "count + 0.02*mean margin of surviving EFX allocs (plateau escape)"
+ },
+ "round3": {
+  "method": "surrogate-objective annealing (count + 0.02*mean margin of surviving EFX allocs), fast numpy counter",
+  "results_verified": {
+   "fo_118_102": 5,
+   "fo_118_101": 6,
+   "fo_118_103": 8
+  },
+  "record": 5,
+  "mechanism": "surrogate objective smashed the 118 plateau to single digits in one 12k-step batch; single most effective lever",
+  "survivors_of_count5": {
+   "shapes": {
+    "(1,1,2,4)": 2,
+    "(1,2,2,3)": 2,
+    "(1,1,3,3)": 1
+   },
+   "structure": "agent0 lone contested good2, agent3 lone treasure good4; balanced (2,2,2,2) class fully eliminated"
+  }
+ },
+ "round4": {
+  "method": "v2 anneal (cap 100, coupled row-sum-preserving moves, sawtooth reheat, surrogate) from count-6/8 basins + structurally different seeds (3-treasure, m=9-filler, circulant)",
+  "record": 4,
+  "record_basin": "count-8 basin, cap-100 region, distinct from count-5 point",
+  "record_matrix": [
+   [
+    3,
+    95,
+    100,
+    6,
+    64,
+    20,
+    23,
+    9
+   ],
+   [
+    28,
+    75,
+    77,
+    20,
+    74,
+    9,
+    21,
+    2
+   ],
+   [
+    9,
+    94,
+    4,
+    13,
+    93,
+    63,
+    3,
+    5
+   ],
+   [
+    21,
+    58,
+    31,
+    19,
+    96,
+    34,
+    20,
+    10
+   ]
+  ],
+  "survivors_of_count4": {
+   "shapes": {
+    "(1,1,2,4)": 3,
+    "(1,1,1,5)": 1
+   },
+   "structure": "3-treasure lone-holder: agents 0,2,3 hold unique treasures goods 2,1,4; agent1 absorbs rest; good7 floats"
+  },
+  "note": "count-5 exact neighborhood handed to team-lead CP-SAT finisher; polish had reached count-4 there too before stopping"
+ },
+ "records_ladder": {
+  "r1": 184,
+  "r2": 118,
+  "r3": 5,
+  "r4": 4
+ },
+ "round5_scaling": {
+  "method": "generalized surrogate anneal (n,m) + global-min-good penalty; crash-safe incremental writes; fast numpy counter validated exact vs verify.py for (4,8),(4,9),(5,8),(5,9)",
+  "floors_verified": {
+   "(4,8)": 4,
+   "(4,9)": 4,
+   "(4,10)": 4
+  },
+  "floors_prelim": {
+   "(5,9)": 12
+  },
+  "finding": "n=4 floor FLAT at 4 across m=8,9,10 (all officially dual-verifiable). Total allocation space grows 4^8->4^9->4^10 (65k->262k->1.05M) yet min-EFX0-count pinned at 4. Floor NOT dropping toward 0 => leans additive EFX true for n=4; witness path not opening with more goods.",
+  "cegar_note": "the cegar.py (5,10)/(5,11) runs on the box are NOT trackB; trackB only runs anneal_gen.py/polish.py"
+ }
+}

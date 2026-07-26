@@ -1,0 +1,184 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "test": "independent CNF against direct definitions and four Z3 master formulations",
+  "strong_envy_identity_checks": 3003,
+  "lexicographic_comparator_checks": 256,
+  "differential_cases": [
+    {
+      "matrix": "all_ones",
+      "case": "empty",
+      "pool_size": 0,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "three_efx0",
+      "pool_size": 3,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "four_efx0",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 4,
+      "expected_sat": false,
+      "statuses": {
+        "definition": false,
+        "cnf_slots": false,
+        "lia_slots": false,
+        "lia_cardinality": false,
+        "pb_slots": false,
+        "pb_cardinality": false
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "non_efx0_only",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "three_efx0_plus_non_efx0",
+      "pool_size": 5,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "empty",
+      "pool_size": 0,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "three_efx0",
+      "pool_size": 3,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "four_efx0",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 4,
+      "expected_sat": false,
+      "statuses": {
+        "definition": false,
+        "cnf_slots": false,
+        "lia_slots": false,
+        "lia_cardinality": false,
+        "pb_slots": false,
+        "pb_cardinality": false
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "non_efx0_only",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "three_efx0_plus_non_efx0",
+      "pool_size": 5,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    }
+  ],
+  "pool_and_dimacs_checks": {
+    "raw_pool_size": 2,
+    "unique_pool_size": 1,
+    "dimacs_sha256": "d3839195ed373898a2c97fe88600ef262d23de1fda3c7c250da8e04e369e4908"
+  },
+  "isolated_solver_process": {
+    "successful_backend": "Cadical195",
+    "crash_exit_code": 17,
+    "crash_detected_within_seconds": 0.505011,
+    "timeout_reason": "wall-clock timeout",
+    "timeout_detected_within_seconds": 0.103714
+  },
+  "seconds": 2.11132,
+  "command": "repro/countcegar_k4/test_sat_differential.py",
+  "source_sha256": {
+    "check_sat": "7c60ea7a99966f5d033d7a164043859839eb1bc532777cabfba1131e77135263",
+    "check_z3": "c63e481b9985d8bb9e65c102b18823189062db50205dcd9f7a0c40adbdc86fc7",
+    "differential_test": "adf3280047b68bbdc289f887c1fd5b849657e6ec3174f972825a1d04b85eb52e"
+  },
+  "environment": {
+    "python": "3.10.14",
+    "python_sat": "1.9.dev7",
+    "z3": "5.0.0",
+    "platform": "macOS-26.3.1-arm64-arm-64bit"
+  }
+}
