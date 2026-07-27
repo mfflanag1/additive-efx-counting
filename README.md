@@ -34,6 +34,7 @@ combined into an unrestricted equality theorem.
 | `repro/countcegar_real/` | Audited exact-real CEGAR checkpoint; research prototype, not a theorem |
 | `artifacts/efx_chambers/` | Audited chamber-radius extension; not currently in the paper |
 | `artifacts/multifloater_parking/` | Audited multi-floater extension; not currently in the paper |
+| `tracks/parkability/` | Exact \((4,8)\) parkable-deletion evaluator and sound bounded CEGAR workbench; no \(K=4\) result yet |
 | `results/`, `tracks/`, root research scripts | Campaign archive and discovery work; presence is not a claim of correctness |
 | `docs/` | Accomplishments, audit history, archive guide, and [thesis research program](docs/THESIS_RESEARCH_PROGRAM.md) |
 

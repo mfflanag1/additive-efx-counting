@@ -1,7 +1,7 @@
 PYTHON ?= python3
 VERIFY_TMP ?= /tmp/additive-efx-counting-verify
 
-.PHONY: install verify verify-paper verify-audit paper
+.PHONY: install verify verify-paper verify-audit verify-parkability paper
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -23,6 +23,10 @@ verify-audit:
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) artifacts/efx_chambers/verify_radii_exact.py
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) artifacts/multifloater_parking/verify_small.py
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) supplement/test_build_release.py
+	$(MAKE) verify-parkability
+
+verify-parkability:
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_parkability.py
 
 paper:
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex

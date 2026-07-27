@@ -233,6 +233,12 @@ deletion allocations, retains every EFX base, and checks every host. A
 dual-verified zero would kill the pure parkable-deletion route even if that
 full matrix still has EFX allocations of another form.
 
+Implementation began on 2026-07-26 in
+[`tracks/parkability/`](../tracks/parkability/README.md): the current
+workbench has a solver-free exact landscape evaluator, an independent literal
+replay in two enumeration orders, and a symmetry-free bounded CEGAR. No
+\(K=4\) terminal result is claimed.
+
 ### Fixed-surplus shape leverage
 
 For \(n\ge4\), every complete EFX allocation with \(m=n+4\) and positive
