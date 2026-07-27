@@ -27,6 +27,8 @@ verify-audit:
 
 verify-parkability:
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_parkability.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_terminal_cnf.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_durable_campaign.py
 
 paper:
 	cd paper && latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex

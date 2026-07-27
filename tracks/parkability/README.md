@@ -53,7 +53,7 @@ Use the repository's Python 3.10 environment after installing
 `requirements.txt`.
 
 ```sh
-python3.10 tracks/parkability/test_parkability.py
+make verify-parkability PYTHON=python3.10
 
 python3.10 tracks/parkability/evaluate.py results/tb4.json \
   --output /tmp/tb4-parkability.json \
@@ -76,13 +76,32 @@ python3.10 tracks/parkability/run_cegar.py \
   --result /tmp/parkability-k1-result.json
 ```
 
-For a resumable \(K=4\) run, change `--K`, choose durable output paths, and
-set `--time-limit` and `--workers` explicitly. The default master is
+The target \(K=4\) campaign is launched through `durable_campaign.py`, which
+fixes the sound configuration, holds a whole-session file lock, requires a
+clean source commit, and archives hash-chained before/after pool snapshots:
+
+```sh
+python3.10 tracks/parkability/durable_campaign.py run \
+  --root /absolute/external/path/parkability/k4-none \
+  --python /absolute/path/to/python3.10
+
+python3.10 tracks/parkability/durable_campaign.py status \
+  --root /absolute/external/path/parkability/k4-none
+```
+
+`run` also resumes an inconclusive or interrupted campaign by allocating a
+new immutable session directory. It refuses concurrent access, configuration
+drift, archive corruption, source drift, and resumption after a terminal
+status. SIGINT and SIGTERM are forwarded to the child process group while the
+supervisor retains the lock and records the outcome. The child inherits the
+lock descriptor, so a supervisor hard-kill cannot permit concurrent pool
+access; after the child exits, the next `run` seals the incomplete ledger
+before resuming.
+
+The raw runner remains useful for smoke tests. Its default master is
 symmetry-free. `--symmetry double_lex` is available as a separate,
 non-strict row/column permutation symmetry mode; the selected mode is bound
-into the pool schema and result. The pool is authoritative across resumes;
-each resumed session must use a new trace path. A terminal result binds the
-pool and current-session trace bytes by SHA-256.
+into the pool schema and result.
 
 ## CEGAR soundness
 
@@ -105,6 +124,10 @@ Terminal statuses are deliberately conservative:
 | `UNSAT_CANDIDATE` | CP-SAT reports that the bounded master is infeasible. This is not promoted to a theorem without an independent terminal encoding and checked proof. |
 | `MASTER_UNKNOWN` | The master timed out or returned another inconclusive status. |
 | `ITERATION_LIMIT` | A valid resumable pool was written, but the requested iteration cap was reached. |
+
+The independent terminal encoder, cold replay, pinned proof generation,
+DRAT verification, and final `CERTIFIED_UNSAT` promotion are specified in
+[TERMINAL_CERTIFICATION.md](TERMINAL_CERTIFICATION.md).
 
 Run products belong under `results/parkability/` during discovery. Only
 terminal, independently archived evidence should be promoted under `repro/`.
