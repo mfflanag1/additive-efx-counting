@@ -41,7 +41,9 @@ owner-switch reduction. The natural one-transfer successor is false even
 with every favorite-singleton partition excluded: an exact profile blocks
 all six transfers but has 366 balanced repairs and 1,259 allocations. Its
 nearest repairs require two transfers, and the 63-partition radius-two gate
-remains open. See
+remains open. Its nine bundle-origin signatures expose a smaller 21-state
+contested-partner family; a dedicated CEGAR rebuild reaches 302 singleton
+cuts without a proof or counterexample. See
 [RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 The stronger common-low target has an exact boundary with zero favorite-pair
 repairs,

@@ -407,6 +407,10 @@ both encodings.
   — exact no-singleton rank-one profile blocking all six one-good transfers;
   all 366 supporting partitions are balanced, the nearest 15 are distance
   two, and the 63-partition radius-two successor remains open.
+- [`efx49_common_favorite_rank1_radius2_orbits_audit.json`](efx49_common_favorite_rank1_radius2_orbits_audit.json)
+  — exact nine-orbit decomposition of the radius-two neighborhood and a
+  sharper open 21-state contested-partner family with 302 reconstructed
+  singleton cuts.
 - [`FOUR_DISCONNECTED_BOTTOM_PAIRS_CONVERSION_THEOREM.md`](FOUR_DISCONNECTED_BOTTOM_PAIRS_CONVERSION_THEOREM.md)
   — first proof-checked all-distinct case: the four selected bottom pairs
   are disjoint and cover all eight residual goods. The complete

@@ -184,3 +184,5 @@ The associated audit also prevents overclaiming: a natural three-conversion
 rule is false even with the global no-singleton hypothesis. The exact
 boundary blocks all six one-good transfers, retains 366 balanced repairs and
 1,259 allocations, and raises the smallest surviving exchange radius to two.
+The 63 radius-two states are now reduced to nine origin signatures and a
+21-state contested-partner proof target, frozen at a 302-cut open boundary.

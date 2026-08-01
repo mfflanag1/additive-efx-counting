@@ -704,8 +704,9 @@ Consequences (both directions, size-preserving, same (n,m), additive-only):
   gives two exact successor cases. More decisively, a profile with no
   favorite-singleton EFX partition blocks all six one-good transfers. It
   has 366 balanced supporting partitions and 1,259 allocations; the nearest
-  15 repairs require two transfers. The radius-two implication remains open.
-  See
+  15 repairs require two transfers. The radius-two neighborhood has nine
+  origin signatures; its natural 21-state contested-partner subfamily
+  remains open after 302 exact CEGAR cuts. See
   [`results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 
 ---

@@ -94,7 +94,12 @@ def run(
 ):
     if (
         upper < 1
-        or conversion_scope not in {"first", "all", "radius2"}
+        or conversion_scope not in {
+            "first",
+            "all",
+            "radius2",
+            "radius2_contested",
+        }
         or add_per_iteration < 1
         or max_iterations < 1
         or time_limit <= 0
@@ -129,9 +134,23 @@ def run(
             singleton_pool.append(partition)
             singleton_pool_set.add(tuple(sorted(partition)))
     all_conversions = conversion_partitions()
+    radius_two = balanced_transfer_neighborhood(RESIDUAL, 2)
     blocked_partitions = (
-        balanced_transfer_neighborhood(RESIDUAL, 2)
+        radius_two
         if conversion_scope == "radius2"
+        else tuple(
+            partition
+            for partition in radius_two
+            for favorite_bundle in [
+                next(bundle for bundle in partition if FAVORITE in bundle)
+            ]
+            if len(favorite_bundle) == 2
+            and next(
+                good for good in favorite_bundle if good != FAVORITE
+            )
+            in CONTESTED
+        )
+        if conversion_scope == "radius2_contested"
         else conversion_partitions(conversion_scope)
     )
     for partition in blocked_partitions:
@@ -282,7 +301,7 @@ def main():
     parser.add_argument("--upper", type=int, default=20)
     parser.add_argument(
         "--conversion-scope",
-        choices=("first", "all", "radius2"),
+        choices=("first", "all", "radius2", "radius2_contested"),
         default="first",
     )
     parser.add_argument("--time-limit", type=float, default=60)

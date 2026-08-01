@@ -285,7 +285,9 @@ rank two or leaves a three-resident density wall/all-four-common-column
 case. The common-triple conversion-or-singleton dichotomy is now refuted
 even under the no-singleton hypothesis: all six one-good transfers can fail,
 while the nearest EFX repair is distance two. The exact next target is the
-63-partition radius-two implication. See
+radius-two implication, compressed from 63 states and nine origin signatures
+to the 21-state family where the favorite receives a contested-triple good.
+That family remains open after a 302-cut CEGAR boundary. See
 [`results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 
 The two terminal partition orbits now have a sharper local proof-mining

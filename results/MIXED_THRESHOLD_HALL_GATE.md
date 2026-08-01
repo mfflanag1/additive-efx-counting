@@ -130,7 +130,10 @@ and common-triple cases. The proof and exact boundaries are recorded in
 The strongest local result is negative: even with every favorite-singleton
 allocation excluded, one rank-one profile blocks all six one-good transfers.
 Its nearest EFX repairs require two transfers; the 63-partition radius-two
-successor remains open.
+successor remains open. Bundle-origin symmetry compresses the most natural
+successor further to 21 states in which the favorite receives a good from
+the contested triple; that implication also remains open after a 302-cut
+CEGAR boundary.
 
 ## Precise next gate
 

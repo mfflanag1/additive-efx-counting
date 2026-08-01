@@ -102,6 +102,17 @@ CEGAR master blocked all 63, learned 256 singleton obstructions from its
 first exact model, and returned `UNKNOWN` on the next 30-second solve. This endpoint
 neither proves nor refutes the radius-two implication.
 
+The 63 states have exactly nine bundle-origin signatures. The analytically
+natural subfamily has only 21 states: give the favorite a good from the
+contested triple, then either stop at one transfer or make one of eighteen
+second transfers. The boundary profile has eight repairs in this subfamily.
+A dedicated cap-20 CEGAR rebuild learned 302 singleton obstructions across
+two exact models before returning `UNKNOWN`. The complete orbit census and
+model replay are frozen in
+[efx49_common_favorite_rank1_radius2_orbits_audit.json](efx49_common_favorite_rank1_radius2_orbits_audit.json).
+This 21-state contested-partner implication is the smallest surviving
+rank-one exchange target.
+
 This normal form remains the first analytic reduction inside the mixed Hall
 branch: it replaces an arbitrary rank-one graph by one named bundle, one
 strict inequality per resident, and two owner-switch subcases. Any successful
