@@ -1,7 +1,7 @@
 PYTHON ?= python3
 VERIFY_TMP ?= /tmp/additive-efx-counting-verify
 
-.PHONY: install verify verify-paper verify-audit verify-parkability paper
+.PHONY: install verify verify-paper verify-audit verify-parkability verify-single-wall paper
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -24,6 +24,11 @@ verify-audit:
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) artifacts/multifloater_parking/verify_small.py
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) supplement/test_build_release.py
 	$(MAKE) verify-parkability
+
+verify-single-wall:
+	mkdir -p $(VERIFY_TMP)
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_single_wall_radius.py --source results/row_merge_single_wall_q2_radius2_refutation.json --source results/row_merge_single_wall_q3_radius2_refutation.json --source results/row_merge_single_wall_q4_radius1_refutation.json --unsat-source results/row_merge_single_wall_q4_radius2_m7_unsat.json --normalization results/row_merge_single_wall_q4_radius2_m7_unsat.cvc5.normalization.json --cvc5 results/row_merge_single_wall_q4_radius2_m7_unsat.cvc5.json --core results/row_merge_single_wall_q4_radius2_m7_core.json --core-normalization results/row_merge_single_wall_q4_radius2_m7_core.cvc5.normalization.json --core-cvc5 results/row_merge_single_wall_q4_radius2_m7_core.cvc5.json --output $(VERIFY_TMP)/row-merge-single-wall-radius-refutations.json
+	cmp results/row_merge_single_wall_radius_refutation_audit.json $(VERIFY_TMP)/row-merge-single-wall-radius-refutations.json
 
 verify-parkability:
 	mkdir -p $(VERIFY_TMP)
@@ -60,12 +65,52 @@ verify-parkability:
 	cmp results/efx49_common_favorite_mixed_hall_radius2_gate_audit.json $(VERIFY_TMP)/common-favorite-mixed-hall-radius2-gate.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_mixed_selection_gate.py --profile results/efx49_common_favorite_threshold_pass_hall_611_cap20_cpsat_session1.json --profile results/efx49_common_favorite_threshold_pass_hall_332_cap20_cpsat_session1.json --profile results/efx49_common_favorite_threshold_pass_hall_332_no_local6_cap20_cpsat_session1.json --zero-search results/efx49_common_favorite_mixed_zero_neighbor_332_cap20_cegar_session1.json --rank-search results/efx49_common_favorite_mixed_rank2_332_cap20_cegar_session1.json --output $(VERIFY_TMP)/common-favorite-mixed-selection-gate.json
 	cmp results/efx49_common_favorite_mixed_selection_gate_audit.json $(VERIFY_TMP)/common-favorite-mixed-selection-gate.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_mixed_selection_gate.py --profile results/efx49_common_favorite_threshold_pass_hall_611_cap20_cpsat_session1.json --profile results/efx49_common_favorite_threshold_pass_hall_332_cap20_cpsat_session1.json --profile results/efx49_common_favorite_threshold_pass_hall_332_no_local6_cap20_cpsat_session1.json --zero-search results/efx49_common_favorite_mixed_zero_neighbor_332_cap20_sym_cegar_session2.json --rank-search results/efx49_common_favorite_mixed_rank2_332_cap20_sym_cegar_session2.json --output $(VERIFY_TMP)/common-favorite-mixed-selection-gate-v2.json
+	cmp results/efx49_common_favorite_mixed_selection_gate_audit_v2.json $(VERIFY_TMP)/common-favorite-mixed-selection-gate-v2.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank2_selection_refutation.py --source results/efx49_common_favorite_mixed_rank2_332_cap4_sym_cegar_session2.json --output $(VERIFY_TMP)/common-favorite-rank2-selection-refutation.json
+	cmp results/efx49_common_favorite_rank2_selection_refutation_audit.json $(VERIFY_TMP)/common-favorite-rank2-selection-refutation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_fourtype_rank2_frontier.py --source results/efx49_common_favorite_mixed_rank2_332_cap4_fourtype_sym_cegar_session1.json --source results/efx49_common_favorite_mixed_rank2_332_cap4_fourtype_sym_cegar_session2.json --output $(VERIFY_TMP)/common-favorite-fourtype-rank2-frontier.json
+	cmp results/efx49_common_favorite_fourtype_rank2_frontier_audit.json $(VERIFY_TMP)/common-favorite-fourtype-rank2-frontier.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank2_selection_refutation.py --profile fourtype --source results/efx49_common_favorite_mixed_rank2_332_cap4_fourtype_sym_cegar_session3.json --output $(VERIFY_TMP)/common-favorite-fourtype-rank2-refutation.json
+	cmp results/efx49_common_favorite_fourtype_rank2_refutation_audit.json $(VERIFY_TMP)/common-favorite-fourtype-rank2-refutation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_interpolation.py --source results/t47.json --result $(VERIFY_TMP)/t47-row-merge-interpolation.json
+	cmp results/t47_row_merge_interpolation_audit.json $(VERIFY_TMP)/t47-row-merge-interpolation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_interpolation.py --source results/tb4.json --result $(VERIFY_TMP)/tb4-row-merge-interpolation.json
+	cmp results/tb4_row_merge_interpolation_audit.json $(VERIFY_TMP)/tb4-row-merge-interpolation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_interpolation.py --source results/tight49_witness.json --result $(VERIFY_TMP)/tight49-row-merge-interpolation.json
+	cmp results/tight49_row_merge_interpolation_audit.json $(VERIFY_TMP)/tight49-row-merge-interpolation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_interpolation.py --source results/tight410_witness.json --result $(VERIFY_TMP)/tight410-row-merge-interpolation.json
+	cmp results/tight410_row_merge_interpolation_audit.json $(VERIFY_TMP)/tight410-row-merge-interpolation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_essential_edge_hall.py --output $(VERIFY_TMP)/row-merge-essential-edge-hall.json
+	cmp results/row_merge_essential_edge_hall_audit.json $(VERIFY_TMP)/row-merge-essential-edge-hall.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_single_wall_radius.py --source results/row_merge_single_wall_q2_radius2_refutation.json --source results/row_merge_single_wall_q3_radius2_refutation.json --source results/row_merge_single_wall_q4_radius1_refutation.json --unsat-source results/row_merge_single_wall_q4_radius2_m7_unsat.json --normalization results/row_merge_single_wall_q4_radius2_m7_unsat.cvc5.normalization.json --cvc5 results/row_merge_single_wall_q4_radius2_m7_unsat.cvc5.json --core results/row_merge_single_wall_q4_radius2_m7_core.json --core-normalization results/row_merge_single_wall_q4_radius2_m7_core.cvc5.normalization.json --core-cvc5 results/row_merge_single_wall_q4_radius2_m7_core.cvc5.json --output $(VERIFY_TMP)/row-merge-single-wall-radius-refutations.json
+	cmp results/row_merge_single_wall_radius_refutation_audit.json $(VERIFY_TMP)/row-merge-single-wall-radius-refutations.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_interpolation.py --source results/efx49_common_favorite_threshold_pass_hall_611_cap20_cpsat_session1.json --result $(VERIFY_TMP)/common-favorite-threshold-pass-hall-611-row-merge-interpolation.json
+	cmp results/efx49_common_favorite_threshold_pass_hall_611_row_merge_interpolation_audit.json $(VERIFY_TMP)/common-favorite-threshold-pass-hall-611-row-merge-interpolation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_row_merge_interpolation.py --source results/efx49_common_favorite_threshold_pass_hall_332_cap20_cpsat_session1.json --result $(VERIFY_TMP)/common-favorite-threshold-pass-hall-332-row-merge-interpolation.json
+	cmp results/efx49_common_favorite_threshold_pass_hall_332_row_merge_interpolation_audit.json $(VERIFY_TMP)/common-favorite-threshold-pass-hall-332-row-merge-interpolation.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_triple_gate.py --dense results/efx49_common_favorite_rank1_triple_conversion_lra_session1.json --cegar results/efx49_common_favorite_rank1_triple_conversion_cegar_session1.json --normalization results/efx49_common_favorite_rank1_triple_conversion_cegar_session1.cvc5.normalization.json --output $(VERIFY_TMP)/common-favorite-rank1-triple-gate.json
 	cmp results/efx49_common_favorite_rank1_triple_gate_audit.json $(VERIFY_TMP)/common-favorite-rank1-triple-gate.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_local6_boundary.py --local6 results/efx49_common_favorite_rank1_triple_fixed_conversion_cap20_cpsat_cegar_session1.json --radius2 results/efx49_common_favorite_rank1_triple_no_radius2_cap20_cpsat_cegar_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-local6-boundary.json
 	cmp results/efx49_common_favorite_rank1_local6_boundary_audit.json $(VERIFY_TMP)/common-favorite-rank1-local6-boundary.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_radius2_orbits.py --local6 results/efx49_common_favorite_rank1_triple_fixed_conversion_cap20_cpsat_cegar_session1.json --contested results/efx49_common_favorite_rank1_triple_no_contested_radius2_cap20_cpsat_cegar_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-radius2-orbits.json
 	cmp results/efx49_common_favorite_rank1_radius2_orbits_audit.json $(VERIFY_TMP)/common-favorite-rank1-radius2-orbits.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_contested_refutation.py --session1 results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap6_sym_cpsat_cegar_session1.json --session2 results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap6_sym_cpsat_cegar_session2.json --bridge-boundary results/efx49_common_favorite_rank1_triple_no_radius2_bridge_cap6_sym_cpsat_cegar_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-contested-refutation.json
+	cmp results/efx49_common_favorite_rank1_contested_refutation_audit.json $(VERIFY_TMP)/common-favorite-rank1-contested-refutation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_bridge_checkpoint.py --source results/efx49_common_favorite_rank1_bridge_checkpoint_profile.json --output $(VERIFY_TMP)/common-favorite-rank1-bridge-checkpoint.json
+	cmp results/efx49_common_favorite_rank1_bridge_checkpoint_audit.json $(VERIFY_TMP)/common-favorite-rank1-bridge-checkpoint.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_bridge_refutation.py --source results/efx49_common_favorite_rank1_bridge_singleton_cap6_sym_cpsat_cegar_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-bridge-refutation.json
+	cmp results/efx49_common_favorite_rank1_bridge_refutation_audit.json $(VERIFY_TMP)/common-favorite-rank1-bridge-refutation.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_extended_bridge_checkpoint.py --source results/efx49_common_favorite_rank1_extended_bridge_checkpoint_profile.json --output $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-checkpoint.json
+	cmp results/efx49_common_favorite_rank1_extended_bridge_checkpoint_audit.json $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-checkpoint.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/search_common_favorite_rank1_bridge_singletons_local.py --source results/efx49_common_favorite_rank1_extended_bridge_checkpoint_profile.json --repair-family bridge45 --upper 6 --hamming-two --output $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-local.json
+	cmp results/efx49_common_favorite_rank1_extended_bridge_checkpoint_local_audit.json $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-local.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_extended_bridge_identical.py --matching results/efx49_common_favorite_rank1_extended_bridge_identical_cap6_matching_session1.json --hall results/efx49_common_favorite_rank1_extended_bridge_identical_cap6_hall_session1.json --checkpoint results/efx49_common_favorite_rank1_extended_bridge_checkpoint_profile.json --output $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-identical.json
+	cmp results/efx49_common_favorite_rank1_extended_bridge_identical_audit.json $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-identical.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_extended_bridge_collision_cap4.py --matching12 results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_duplicate_matching_session1.json --matching23 results/efx49_common_favorite_rank1_extended_bridge_collision23_cap4_duplicate_matching_session1.json --hall12 results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_duplicate_hall_session1.json --hall23 results/efx49_common_favorite_rank1_extended_bridge_collision23_cap4_duplicate_hall_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-collision-cap4.json
+	cmp results/efx49_common_favorite_rank1_extended_bridge_collision_cap4_audit.json $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-collision-cap4.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_extended_bridge_collision_cap4.py --upper 5 --matching12 results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_duplicate_matching_session1.json --matching23 results/efx49_common_favorite_rank1_extended_bridge_collision23_cap5_duplicate_matching_session1.json --hall12 results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_duplicate_hall_session1.json --hall23 results/efx49_common_favorite_rank1_extended_bridge_collision23_cap5_duplicate_hall_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-collision-cap5.json
+	cmp results/efx49_common_favorite_rank1_extended_bridge_collision_cap5_audit.json $(VERIFY_TMP)/common-favorite-rank1-extended-bridge-collision-cap5.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_owner_threshold_shape_envelope.py --output $(VERIFY_TMP)/owner-threshold-shape-envelope.json
 	cmp results/efx49_owner_threshold_shape_envelope_audit.json $(VERIFY_TMP)/owner-threshold-shape-envelope.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_owner_threshold_pair_degree_encoding.py --output $(VERIFY_TMP)/owner-threshold-pair-degree-encoding.json

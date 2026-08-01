@@ -22,29 +22,98 @@ three-agent feasibility graph is Hall-deficient. This branch is genuinely
 necessary. Two exact cap-20 profiles have 114 and 273 threshold-passing
 owner--partition pairs but no Hall-valid favorite-singleton partition; all
 their complete EFX support is balanced. A third profile blocks all six
-one-transfer repairs of a fixed passing \(3+3+2\) partition. The next target
-is therefore a rank-maximal, owner-changing alternating exchange, beginning
-with the rank-two/zero-neighbor Hall case. See
+one-transfer repairs of a fixed passing \(3+3+2\) partition. The proposed
+rank-two selection precursor is now exactly refuted at value cap 4: a
+two-type profile has three threshold passes, all of rank one, no
+favorite-singleton EFX allocation, and 3,690 balanced complete allocations.
+The next target must therefore treat rank-one and rank-two maxima separately
+with owner-changing balanced exchanges. See
 [MIXED_THRESHOLD_HALL_GATE.md](MIXED_THRESHOLD_HALL_GATE.md) and the frozen
 [mixed-boundary audit](efx49_common_favorite_mixed_hall_boundaries_audit.json).
 The first radius-two successor remains open: direct caps 6 and 20 and a
 six-model cap-6 CEGAR rebuild all return `UNKNOWN`, with 488 singleton
 obstructions learned in the latter. See
 [efx49_common_favorite_mixed_hall_radius2_gate_audit.json](efx49_common_favorite_mixed_hall_radius2_gate_audit.json).
-The rank-selection precursor is also now frozen exactly. All three known
-mixed profiles have rank-two threshold passes with a zero-neighbor bundle,
-but bounded cap-20 CEGAR searches prove or refute neither the rank-two claim
-nor its stronger zero-neighbor form. See
-[efx49_common_favorite_mixed_selection_gate_audit.json](efx49_common_favorite_mixed_selection_gate_audit.json).
+The earlier rank-selection frontier is retained as provenance: resumed cap-20
+CEGAR grew the rank-two and zero-neighbor motif pools to 119 and 69 before the
+smaller cap-4 search found the exact rank-one counterexample. See
+[efx49_common_favorite_mixed_selection_gate_audit_v2.json](efx49_common_favorite_mixed_selection_gate_audit_v2.json)
+and
+[efx49_common_favorite_rank2_selection_refutation_audit.json](efx49_common_favorite_rank2_selection_refutation_audit.json).
+The corrected cap-4 search excludes proportional row pairs. Twelve exact
+four-type trace profiles first extend its cumulative obstruction pool from
+29 to 77 motifs; the next session then finds an exact four-type refutation.
+Its three threshold passes all have rank one, none of 966
+favorite-singleton partitions supports EFX, and literal enumeration finds
+599 balanced supporting partitions and 3,878 complete allocations. Its four
+rows are pairwise bundle-order inequivalent, so it lies outside the immediate
+ordinal extension of the three-types theorem. See
+[efx49_common_favorite_fourtype_rank2_frontier_audit.json](efx49_common_favorite_fourtype_rank2_frontier_audit.json)
+and
+[efx49_common_favorite_fourtype_rank2_refutation_audit.json](efx49_common_favorite_fourtype_rank2_refutation_audit.json).
 The rank-one branch now has a proved common-column normal form and an exact
 owner-switch reduction. The natural one-transfer successor is false even
 with every favorite-singleton partition excluded: an exact profile blocks
-all six transfers but has 366 balanced repairs and 1,259 allocations. Its
-nearest repairs require two transfers, and the 63-partition radius-two gate
-remains open. Its nine bundle-origin signatures expose a smaller 21-state
-contested-partner family; a dedicated CEGAR rebuild reaches 302 singleton
-cuts without a proof or counterexample. See
-[RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
+all six transfers but has 366 balanced repairs and 1,259 allocations. A
+second cap-6 profile refutes the 21-state contested-partner radius-two
+successor as well. A third cap-6 profile now refutes the resulting 30-state
+bridge target: all 966 singleton partitions and all 30 repairs fail, although
+264 other partitions support 2,790 complete allocations. Its 15 nearest
+repairs occupy two additional origin orbits, giving a 45-state successor.
+The first exact campaign blocks all 45 states and reaches a six-singleton
+Hamming-two local minimum. The cap-6 subcell with three identical resident
+rows is now dual-encoded `UNSAT` using one shared 392-partition pool, while
+the unequal-resident decision remains `UNKNOWN` after 900 seconds. Through cap 5,
+full identity can be weakened to any repeated resident row: both adjacent
+equality cases close under independent quotient-matching and quotient-Hall
+encodings, with the Hall reduction exhaustively checked on 4,096 graphs.
+The wider repeated-row cell remains `UNKNOWN` at cap 6, making cap 6 the next
+bounded local-repair gate. This is not an uncovered EFX-existence class:
+for four agents, any repeated valuation row gives at most three valuation
+types, and complete EFX existence for three types is already known
+(Ghosal--Prakash--Nimbhorkar--Varma, EC 2025). The repeated-row computation
+is therefore retained as proof mining. The repaired four-type selector is
+also now false, so the live mixed-Hall proof must treat rank-one and rank-two
+maxima directly. See
+[RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md](RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md).
+
+An independent cap-free route now uses the published three-types theorem as
+a safe boundary. Merge one valuation row into another and then interpolate it
+back to the target row. Each fixed allocation is EFX on a closed rational
+interval of the interpolation parameter. A new resident-extension lemma
+reduces one fixed bundle partition to at most four moving-agent intervals and
+proves that the merged endpoint starts with at least two extendable bundles.
+It also gives an ordinal-chamber corollary: if any two rows induce the same
+weak ordering of all bundles, merging them preserves an EFX allocation, so
+the open four-agent stratum may assume four distinct bundle-order types.
+For a generic single-wall crossing, the current partition fails only if the
+one deleted moving-agent edge is essential to every perfect matching. Hall's
+theorem then leaves exactly four deficiency sizes, independently checked on
+all 4,929 labeled essential-edge graphs. The size-one case is unrealizable
+for additive feasibility rows, leaving exactly the three Hall sizes
+\(2,3,4\) for a bundle-changing wall pivot.
+The first bounded pivot menu is now decisively false. Generic seven-good
+wall profiles realize all three Hall sizes while changing exactly one
+feasibility edge. Hall sizes two and three can block every partition within
+two good transfers, with their nearest EFX support at distance three; Hall
+size four can block every one-transfer partition. The three post-wall
+profiles retain 16, 40, and 57 complete EFX allocations, so these are local
+pivot refutations rather than EFX counterexamples. In the same seven-good
+shape, the Hall-size-four radius-two obstruction is dual-solver UNSAT, but
+that bounded cell has not been converted into a human lemma and two
+eight-good extensions timed out. The live analytic target is therefore a
+Hall-directed exchange chain or global potential, not a universal
+one- or two-good repair. See
+[SINGLE_WALL_PIVOT_GATE.md](SINGLE_WALL_PIVOT_GATE.md).
+Proving that coverage never develops a first gap would resolve the
+four-agent additive conjecture. Exact enumeration covers all 72 ordered row
+merges of the four tight count-four witnesses from \((4,7)\) through
+\((4,10)\) and the two hostile mixed-Hall profiles. Every path has one fixed
+unlabeled partition valid throughout, allowing assignments to change; 63
+paths need one assignment and nine need two. These remain finite-profile
+results, not a continuation theorem. See
+[ROW_MERGE_CONTINUATION_GATE.md](ROW_MERGE_CONTINUATION_GATE.md).
+
 The stronger common-low target has an exact boundary with zero favorite-pair
 repairs,
 exactly one common-low repair, and 252 complete EFX allocations. See

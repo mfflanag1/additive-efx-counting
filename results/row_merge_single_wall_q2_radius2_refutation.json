@@ -1,0 +1,262 @@
+{
+  "audit": {
+    "changed_original_partition_edges": [
+      [
+        0,
+        0,
+        true,
+        false
+      ]
+    ],
+    "complete_efx_allocation_count": 16,
+    "complete_efx_supporting_partition_count": 9,
+    "minimum_supporting_partition_transfer_distance": 3,
+    "nearest_supporting_partition": [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6
+      ]
+    ],
+    "nearest_supporting_partition_graph": [
+      [
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        true,
+        false
+      ],
+      [
+        true,
+        false,
+        false,
+        true
+      ],
+      [
+        false,
+        true,
+        true,
+        true
+      ]
+    ],
+    "post_feasibility_graph": [
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        false,
+        true,
+        true,
+        true
+      ]
+    ],
+    "radius_partition_count": 127,
+    "supporting_partition_transfer_distance_histogram": {
+      "3": 9
+    },
+    "wall_feasibility_graph": [
+      [
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        false,
+        true,
+        true,
+        true
+      ]
+    ]
+  },
+  "bundle_sizes_excluding_critical_good": [
+    2,
+    1,
+    2,
+    1
+  ],
+  "candidate_partition_count": 127,
+  "candidate_partition_count_by_radius": {
+    "0": 1,
+    "1": 18,
+    "2": 108
+  },
+  "critical_wall": {
+    "critical_good": 3,
+    "envied_remainder_w": [
+      2
+    ],
+    "moving_bundle_u": [
+      0,
+      1
+    ],
+    "perturbed_good": 2,
+    "transferred_partition": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6
+      ]
+    ]
+  },
+  "domain": "strictly positive additive real valuations",
+  "elapsed_seconds": 23.63143014907837,
+  "interpretation": "SAT refutes the claim that every generic essential single-wall failure has an EFX partition within transfer radius 2. It is not an EFX counterexample unless the global EFX count is zero.",
+  "m": 7,
+  "minimal_hall_witness_size": 2,
+  "n": 4,
+  "obstructed_transfer_radius": 2,
+  "post_wall_values": [
+    [
+      2876,
+      4321,
+      7199,
+      8,
+      1423,
+      2882,
+      4333
+    ],
+    [
+      2297,
+      2307,
+      6907,
+      2313,
+      4598,
+      8,
+      4610
+    ],
+    [
+      11504,
+      6,
+      17265,
+      24,
+      5743,
+      11540,
+      23038
+    ],
+    [
+      257,
+      2047,
+      255,
+      2305,
+      1536,
+      1025,
+      4095
+    ]
+  ],
+  "reason_unknown": null,
+  "scaled_wall_epsilon": 2,
+  "schema": "row-merge-single-wall-radius-lra-v1",
+  "smt2_path": "results/row_merge_single_wall_q2_radius2_refutation.smt2",
+  "smt2_sha256": "53a5b7364749dda2dbb4e5a0f53b01363826f5a67c30ab266d6d95453c8e943e",
+  "solver_status": "sat",
+  "status": "RADIUS_PIVOT_REFUTATION_FOUND",
+  "time_limit_seconds": 300.0,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6
+    ]
+  ],
+  "wall_values": [
+    [
+      2876,
+      4321,
+      7197,
+      8,
+      1423,
+      2882,
+      4333
+    ],
+    [
+      2297,
+      2307,
+      6907,
+      2313,
+      4598,
+      8,
+      4610
+    ],
+    [
+      11504,
+      6,
+      17265,
+      24,
+      5743,
+      11540,
+      23038
+    ],
+    [
+      257,
+      2047,
+      255,
+      2305,
+      1536,
+      1025,
+      4095
+    ]
+  ]
+}

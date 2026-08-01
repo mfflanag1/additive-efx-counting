@@ -396,9 +396,58 @@ both encodings.
   6 and 20 and a cap-6 CEGAR master with 488 learned singleton obstructions
   all end `UNKNOWN`.
 - [`efx49_common_favorite_mixed_selection_gate_audit.json`](efx49_common_favorite_mixed_selection_gate_audit.json)
-  — open rank-selection gate: all three exact mixed profiles have rank-two
-  threshold passes with zero-neighbor witnesses, while bounded cap-20 CEGAR
-  searches settle neither the rank-two nor the stronger zero-neighbor claim.
+  — historical rank-selection frontier: all three early mixed profiles have
+  rank-two threshold passes with zero-neighbor witnesses, while the first
+  bounded cap-20 searches decided neither selector.
+- [`efx49_common_favorite_mixed_selection_gate_audit_v2.json`](efx49_common_favorite_mixed_selection_gate_audit_v2.json)
+  — resumed symmetry-reduced frontier: the rank-two pool grows from 66 to
+  119 motifs and the zero-neighbor pool from 49 to 69, with every trace model
+  and learned-count transition independently reconstructed.
+- [`efx49_common_favorite_rank2_selection_refutation_audit.json`](efx49_common_favorite_rank2_selection_refutation_audit.json)
+  — exact cap-4 refutation of both selectors: a two-type profile has exactly
+  three threshold passes, all with resident rank one, no favorite-singleton
+  EFX partition, but 195 balanced supporting partitions and 3,690 complete
+  allocations.
+- [`efx49_common_favorite_fourtype_rank2_frontier_audit.json`](efx49_common_favorite_fourtype_rank2_frontier_audit.json)
+  — repaired cap-4 frontier with four pairwise nonproportional rows: 12 exact
+  trace profiles grow the cumulative rank-two obstruction pool from 29 to
+  77 motifs; both sessions end at iteration limits.
+- [`efx49_common_favorite_fourtype_rank2_refutation_audit.json`](efx49_common_favorite_fourtype_rank2_refutation_audit.json)
+  — exact refutation of the repaired selector: four pairwise
+  bundle-order-inequivalent rows, three rank-one threshold passes, no
+  favorite-singleton EFX partition, 599 balanced supporting partitions,
+  and 3,878 complete allocations.
+- [`ROW_MERGE_CONTINUATION_GATE.md`](ROW_MERGE_CONTINUATION_GATE.md) and
+  [`tight49_row_merge_interpolation_audit.json`](tight49_row_merge_interpolation_audit.json)
+  — cap-free reduction of four-agent EFX to continuation away from a safe
+  three-valuation boundary, plus the resident-extension lemma reducing a
+  fixed bundle partition to at most four intervals. Its ordinal-chamber
+  corollary closes every profile with at most three bundle-order types.
+- [`row_merge_essential_edge_hall_audit.json`](row_merge_essential_edge_hall_audit.json)
+  — exact graph census for the single-wall gate: 4,929 labeled
+  essential-edge graphs, 213 symmetry orbits, and exactly four minimal Hall
+  witness sizes.
+- [`SINGLE_WALL_PIVOT_GATE.md`](SINGLE_WALL_PIVOT_GATE.md) and
+  [`row_merge_single_wall_radius_refutation_audit.json`](row_merge_single_wall_radius_refutation_audit.json)
+  — generic-wall no-go boundary: Hall sizes two and three can defeat every
+  partition within two good transfers, and Hall size four can defeat every
+  one-transfer partition. The post-wall profiles remain EFX-positive at
+  distances three, three, and two. One seven-good size-four/radius-two cell
+  is independently UNSAT in Z3 and cvc5.
+- [`t47_row_merge_interpolation_audit.json`](t47_row_merge_interpolation_audit.json),
+  [`tb4_row_merge_interpolation_audit.json`](tb4_row_merge_interpolation_audit.json),
+  and
+  [`tight410_row_merge_interpolation_audit.json`](tight410_row_merge_interpolation_audit.json)
+  — together with the \((4,9)\) audit, exact stable-partition checks for all
+  48 ordered row paths of the count-four witnesses from \((4,7)\) through
+  \((4,10)\); 17 paths have exactly one stable partition.
+- [`efx49_common_favorite_threshold_pass_hall_611_row_merge_interpolation_audit.json`](efx49_common_favorite_threshold_pass_hall_611_row_merge_interpolation_audit.json)
+  and
+  [`efx49_common_favorite_threshold_pass_hall_332_row_merge_interpolation_audit.json`](efx49_common_favorite_threshold_pass_hall_332_row_merge_interpolation_audit.json)
+  — exact continuation audits for the two hostile mixed-Hall profiles; every
+  one of their 24 ordered row paths is covered by a single fixed assignment.
+  Across all six row-merge audits, all 72 paths have a stable partition; 63
+  use one assignment and nine use two assignments of the same bundles.
 - [`RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md)
   and [`efx49_common_favorite_rank1_triple_gate_audit.json`](efx49_common_favorite_rank1_triple_gate_audit.json)
   — proved analytic normal form for rank-one resident graphs, exact
@@ -408,9 +457,33 @@ both encodings.
   all 366 supporting partitions are balanced, the nearest 15 are distance
   two, and the 63-partition radius-two successor remains open.
 - [`efx49_common_favorite_rank1_radius2_orbits_audit.json`](efx49_common_favorite_rank1_radius2_orbits_audit.json)
-  — exact nine-orbit decomposition of the radius-two neighborhood and a
-  sharper open 21-state contested-partner family with 302 reconstructed
-  singleton cuts.
+  — exact nine-orbit decomposition of the radius-two neighborhood and the
+  superseded 302-cut boundary for the former 21-state target.
+- [`RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md`](RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md)
+  and [`efx49_common_favorite_rank1_contested_refutation_audit.json`](efx49_common_favorite_rank1_contested_refutation_audit.json)
+  — exact cap-6 refutation of that 21-state implication, including zero
+  singleton repairs and one zero-neighbor bundle in every blocked state;
+  all nine nearest repairs form one missing bridge orbit.
+- [`efx49_common_favorite_rank1_bridge_checkpoint_audit.json`](efx49_common_favorite_rank1_bridge_checkpoint_audit.json)
+  — superseded target-zero seed blocking all 30 contested-or-bridge states while
+  retaining 30 favorite-singleton repairs; its six balanced radius-two
+  repairs occupy one outside orbit.
+- [`efx49_common_favorite_rank1_bridge_refutation_audit.json`](efx49_common_favorite_rank1_bridge_refutation_audit.json)
+  — exact refutation of the 30-state bridge implication: zero of 966
+  singleton partitions and zero target repairs work, although 264 other
+  partitions yield 2,790 complete allocations. Its 15 nearest repairs add
+  two origin orbits, giving the open 45-state successor; the first bounded
+  campaign reaches a six-singleton Hamming-two local minimum.
+- [`efx49_common_favorite_rank1_extended_bridge_identical_audit.json`](efx49_common_favorite_rank1_extended_bridge_identical_audit.json)
+  — dual-encoded cap-6 theorem candidate for the subcell with three identical
+  resident rows: the same 392 singleton partitions and 45 repairs close in
+  matching-clause and Hall-selector CP-SAT. Unequal residents remain open.
+- [`efx49_common_favorite_rank1_extended_bridge_collision_cap5_audit.json`](efx49_common_favorite_rank1_extended_bridge_collision_cap5_audit.json)
+  — dual-encoded cap-5 extension to any repeated resident row. The two
+  adjacent equality cases share the 392-partition pool and close under both
+  a 12-matching quotient and a seven-case Hall quotient; all 4,096 compressed
+  neighborhood graphs are checked against literal matching. Cap 6 is open;
+  the separately retained cap-4 audit records the preceding rung.
 - [`FOUR_DISCONNECTED_BOTTOM_PAIRS_CONVERSION_THEOREM.md`](FOUR_DISCONNECTED_BOTTOM_PAIRS_CONVERSION_THEOREM.md)
   — first proof-checked all-distinct case: the four selected bottom pairs
   are disjoint and cover all eight residual goods. The complete
