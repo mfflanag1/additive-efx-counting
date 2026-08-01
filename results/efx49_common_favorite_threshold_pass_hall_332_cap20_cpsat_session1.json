@@ -1,0 +1,132 @@
+{
+  "branches": 270950,
+  "candidate_audit": {
+    "all_supporting_partition_count": 396,
+    "complete_efx_allocation_count": 1494,
+    "favorite_singleton_supporting_partition_count": 0,
+    "selected_owner_threshold_pass": true,
+    "selected_partition_deficient_bundle_sets": [
+      {
+        "bundles": [
+          2
+        ],
+        "resident_neighbors": []
+      },
+      {
+        "bundles": [
+          1,
+          2
+        ],
+        "resident_neighbors": [
+          0
+        ]
+      }
+    ],
+    "selected_partition_resident_graph": [
+      [
+        false,
+        true,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    "selected_partition_resident_hall_rank": 2,
+    "supporting_partition_count_by_shape": {
+      "3222": 396
+    }
+  },
+  "claim_boundary": "A SAT witness refutes only the shortcut that an owner-threshold pass forces favorite-singleton EFX. Complete EFX may still be supported by a balanced or other nonsingleton partition.",
+  "conflicts": 1331,
+  "domain": "positive integers in [1,20]",
+  "elapsed_seconds": 47.58833312988281,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "proto": "results/efx49_common_favorite_threshold_pass_hall_332_cap20_cpsat_session1.pb",
+  "proto_bytes": 4402640,
+  "proto_sha256": "ac97032c27f879c235d497a0279d549323f2a8ae5371c9a0e9e5d17e254b1e8e",
+  "schema": "common-favorite-threshold-pass-hall-cpsat-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "selected_residual_shape": "332",
+  "solver_status": "OPTIMAL",
+  "solver_wall_seconds": 47.578998000000006,
+  "status": "THRESHOLD_PASS_WITHOUT_SINGLETON_EFX",
+  "strict_common_favorite": 0,
+  "upper": 20,
+  "values": [
+    [
+      20,
+      1,
+      19,
+      1,
+      1,
+      19,
+      1,
+      1,
+      19
+    ],
+    [
+      20,
+      1,
+      1,
+      19,
+      19,
+      1,
+      5,
+      19,
+      1
+    ],
+    [
+      20,
+      17,
+      1,
+      19,
+      19,
+      1,
+      1,
+      19,
+      1
+    ],
+    [
+      20,
+      5,
+      19,
+      1,
+      1,
+      19,
+      1,
+      4,
+      19
+    ]
+  ]
+}

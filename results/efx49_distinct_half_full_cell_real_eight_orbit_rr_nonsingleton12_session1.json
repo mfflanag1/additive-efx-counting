@@ -1,0 +1,53 @@
+{
+  "cell_obstruction": "rr_nonsingleton_12",
+  "core_size": 780,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 300.08788299560547,
+  "favorite_pair_repair_count": 0,
+  "favorite_pair_repair_sample": [],
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "fixed_values": null,
+  "full_cell_encoding": {
+    "full_hall": {
+      "accept_literals": 1680,
+      "hall_failure_templates_per_pairing": 21,
+      "low_pair_cells": 28,
+      "pairing_failure_terms": 420
+    },
+    "rr_nonsingleton_12": {
+      "low_pair": [
+        1,
+        2
+      ],
+      "required_nonempty_neighbor_edges": 15
+    }
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "SAT shows that the selected partition pool and cell obstruction do not close the positive-real branch. UNSAT would establish only the pool-relative implication and would still require independent replay.",
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "rank_disjunct_branch": null,
+  "reason_unknown": "timeout",
+  "schema": "distinct-half-full-cell-real-core-result-v1",
+  "smt2_path": "results/efx49_distinct_half_full_cell_real_eight_orbit_rr_nonsingleton12_session1.smt2",
+  "smt2_sha256": "9ebeda5e46908d14b00d72000c64a9668d6a883c2888c9de0d1ef4aa420a3bd5",
+  "solver": "Z3",
+  "solver_status": "unknown",
+  "source": "results/efx49_distinct_half_full_cell_eight_orbit_pool.json",
+  "source_sha256": "d3ac9ea85da07072fb8ce5f970d823fbafbc5e37083849ceddc9252477533437",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_breaking": [
+    "none on agents after fixing the nonsingleton RR cell",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 300.0,
+  "universal_owner_threshold_failure": true,
+  "universal_threshold_encoding": "cardinal",
+  "values": null
+}

@@ -1,0 +1,73 @@
+{
+  "add_per_iteration": 128,
+  "branches": 5713248,
+  "cap": 100,
+  "cell_obstruction": "none",
+  "common_bottom_pair_forbidden": true,
+  "common_rr_uu_singleton_witness": null,
+  "common_rr_uu_singleton_witness_encoding": null,
+  "common_rr_uu_singleton_witness_forbidden": false,
+  "conflicts": 281069,
+  "elapsed_seconds": 600.3297197818756,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": null,
+  "full_hall_cell_forbidden": false,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "no_common_bottom_pair_encoding": {
+    "candidate_bottom_pairs": 28,
+    "strict_nonbottom_terms_per_pair": 48,
+    "strict_nonbottom_witness_literals": 1344
+  },
+  "no_common_rr_uu_singleton_witness_encoding": null,
+  "partition_family": "all",
+  "pool_size": 362,
+  "pool_source": null,
+  "proto_path": "results/efx49_distinct_half_no_common_bottom_favorite_pair_cpsat_cap100_session1.pb",
+  "proto_sha256": "e0bdb275c5f92ea38f875e43c0a8df558169b8fcaa2a9c7d8f94b907c05ba47c",
+  "random_seed": 20260827,
+  "required_terminal_case": null,
+  "required_terminal_encoding": null,
+  "resume_source": null,
+  "resume_source_sha256": null,
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "union",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_six_orbit_refutation_profile.json",
+      "sha256": "761fe6d4eeb8e14bf5b2abe8075a5626a3b1bf48cdf7e72392c143cb68a24756"
+    },
+    {
+      "path": "results/efx49_distinct_half_terminal_radius2_R_m0_cpsat_cap20_forbid_cell12_optimize_session1.json",
+      "sha256": "fb3c3e91a0fb7ccc1c4da2f19413f3133624896c433104be4e0d032cfe999e45"
+    },
+    {
+      "path": "results/efx49_distinct_half_eight_minus_six_anneal_seed27_session1.json",
+      "sha256": "c34e7b0147da5823859dd20aa58c565d1fde41093311d2978d2c79535aa79a5b"
+    },
+    {
+      "path": "results/efx49_distinct_half_eight_orbit_anneal_seed30_session1.json",
+      "sha256": "81ebe58e9233aaea8f3a85731055a97c664e19fd7035ab33180230aba941b6b3"
+    }
+  ],
+  "seed_supported_union_size": 362,
+  "solver_status": "UNKNOWN",
+  "status": "CP_SAT_UNKNOWN",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 600.0,
+  "trace": [],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

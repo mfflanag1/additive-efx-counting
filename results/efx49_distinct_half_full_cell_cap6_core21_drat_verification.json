@@ -1,0 +1,45 @@
+{
+  "claim": "The cap-6 distinct-half no-full-cell formula with the 21-partition obstruction core is unsatisfiable.",
+  "cnf": {
+    "bytes": 29332111,
+    "clauses": 1145090,
+    "path": "results/efx49_distinct_half_full_cell_cap6_core21.cnf",
+    "sha256": "ab7a7c1d360fe6daa44acb74f1d25d6dd85f8fad3802ee89184f2d621b27125d",
+    "variables": 557152
+  },
+  "cnf_result_sha256": "fe0652058a06f8861027e0091f4c0b8a591f71d39bf066d1465069828de50e07",
+  "encoder_source_sha256": "864f10472621ebccedeee65a7fefce60e5e3a9ef517fb25ff0f3669e9ce4de1d",
+  "proof": {
+    "bytes": 75953525,
+    "compressed_bytes": 16790568,
+    "compressed_path": "output/cap6-certification/efx49_distinct_half_full_cell_cap6_core21.drat.xz",
+    "compressed_sha256": "1cd492edd7043ba8c1af4323b8b2d814b3bb0778b6fd229f48c534c55a2d4394",
+    "format": "binary DRAT",
+    "path": "output/cap6-certification/efx49_distinct_half_full_cell_cap6_core21.drat",
+    "sha256": "73703cbc5409896887ebbb2c6fb1a18c2e46be3ae3d13ba5b987b819492582c8"
+  },
+  "proof_checker": {
+    "binary_sha256": "111b0405566d55629f5d391b80b3220cc7a3ebc3cd406a35895ff65cc9acd5e4",
+    "core_input_clauses": 97980,
+    "core_lemmas": 169654,
+    "elapsed_seconds": 6.963401794433594,
+    "git_commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "input_clauses": 1145090,
+    "name": "drat-trim",
+    "proof_lemmas": 2553975,
+    "resolution_steps": 1918897,
+    "returncode": 0,
+    "source_path": "output/cap5-certification/drat-trim.c",
+    "source_sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+    "transcript": "\nc turning on binary mode checking\n\nc parsing input formula with 557152 variables and 1145090 clauses\n\nc finished parsing, read 75953525 bytes from proof file\n\nc detected empty clause; start verification via backward checking\n\nc 97980 of 1145090 clauses in core                            \n\nc 169654 of 2553975 lemmas in core using 1918897 resolution steps\n\nc 0 RAT lemmas in core; 13588 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 6.926 seconds\n"
+  },
+  "proof_generator": {
+    "binary_sha256": "feb9e74a89ab3e4e0ebdedf18904df8ebd24c1e8491a5c0060d7d1bb598f8fa2",
+    "git_commit": "146207318796f094dcded87349a64f0c6927309e",
+    "name": "CaDiCaL",
+    "version": "1.9.5"
+  },
+  "schema": "distinct-half-full-cell-drat-verification-v1",
+  "status": "VERIFIED",
+  "trust_boundary": "The checked proof certifies only the frozen finite cap-6 CNF. The separate semantic audits connect that CNF to the stated bounded EFX theorem."
+}

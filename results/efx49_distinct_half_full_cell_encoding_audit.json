@@ -1,0 +1,32 @@
+{
+  "cpsat_encoding_counts": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "encoding_counts": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "interpretation": "The no-full-cell formula is UNSAT on a profile with one exact full Hall cell and SAT on a profile with none, freezing both polarities of the intermediate gate.",
+  "negative_control": {
+    "cpsat_no_full_cell_formula_status": "OPTIMAL",
+    "full_hall_cells": [],
+    "no_full_cell_formula_status": "sat"
+  },
+  "positive_control": {
+    "cpsat_no_full_cell_formula_status": "INFEASIBLE",
+    "full_hall_cells": [
+      [
+        1,
+        2
+      ]
+    ],
+    "no_full_cell_formula_status": "unsat"
+  },
+  "schema": "distinct-half-full-cell-encoding-audit-v1",
+  "status": "DISTINCT_HALF_FULL_CELL_ENCODING_AUDIT_PASSED"
+}

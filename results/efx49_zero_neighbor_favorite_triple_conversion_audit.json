@@ -1,0 +1,180 @@
+{
+  "claim_boundary": "The audit verifies two discovery profiles and the local conversion; it does not prove that every hard-branch profile contains this motif.",
+  "conditional_three_pairing_boundary": {
+    "favorite_pair_efx_partition_count": 3,
+    "formula_sha256": "6ef8dd21ede2c4abf6a3a3a52a98629666db09329a0d46ba006aee2387a0b5f1",
+    "hard_partition_count": 777,
+    "interpretation": "The checkpoint preserves all three targets; its bound still permits zero repairs and proves no lower bound.",
+    "literal_complete_efx_count": 360,
+    "objective_bound": 3.0,
+    "path": "results/efx49_distinct_half_three_pairing_cell_cpsat_cap100_session1.json",
+    "sha256": "0f57d1622babcbcab5fc5a75d549a8a3d57eb86d4f2946adbb34bf68db356bca",
+    "target_partition_count": 3,
+    "target_repair_count": 3
+  },
+  "negative_control_count": 2,
+  "negative_controls": [
+    {
+      "favorite_pair_efx_partition_count": 27,
+      "full_hall_cells": [],
+      "path": "results/efx49_distinct_half_eight_minus_six_anneal_seed30_session2.json",
+      "sha256": "504f2952b3b2a8be56098e0343632cbde1c71e7336d51e0ba9714d84ae145c2c",
+      "zero_neighbor_conversion_count": 0
+    },
+    {
+      "favorite_pair_efx_partition_count": 27,
+      "full_hall_cells": [],
+      "path": "results/efx49_distinct_half_eight_orbit_anneal_seed30_session1.json",
+      "sha256": "81ebe58e9233aaea8f3a85731055a97c664e19fd7035ab33180230aba941b6b3",
+      "zero_neighbor_conversion_count": 0
+    }
+  ],
+  "profile_count": 2,
+  "profiles": [
+    {
+      "all_feasibility_graphs_complete": true,
+      "balanced_efx_partition_count": 15,
+      "common_high_low_orientation": [
+        8,
+        7
+      ],
+      "complete_efx_partition_count": 15,
+      "converted_favorite_pair_count": 3,
+      "hall_failed_pairing_count": 3,
+      "hall_valid_pairing_count": 12,
+      "literal_complete_efx_count": 360,
+      "low_pair": [
+        7,
+        8
+      ],
+      "path": "results/efx49_distinct_half_eight_minus_six_anneal_seed27_session1.json",
+      "sha256": "c34e7b0147da5823859dd20aa58c565d1fde41093311d2978d2c79535aa79a5b",
+      "shared_zero_neighbor_edge": [
+        5,
+        6
+      ],
+      "values": [
+        [
+          100,
+          71,
+          73,
+          58,
+          81,
+          52,
+          52,
+          1,
+          5
+        ],
+        [
+          100,
+          74,
+          68,
+          76,
+          91,
+          63,
+          41,
+          3,
+          5
+        ],
+        [
+          100,
+          72,
+          91,
+          77,
+          65,
+          50,
+          52,
+          1,
+          4
+        ],
+        [
+          100,
+          68,
+          69,
+          70,
+          62,
+          54,
+          56,
+          1,
+          13
+        ]
+      ]
+    },
+    {
+      "all_feasibility_graphs_complete": true,
+      "balanced_efx_partition_count": 15,
+      "common_high_low_orientation": [
+        7,
+        8
+      ],
+      "complete_efx_partition_count": 15,
+      "converted_favorite_pair_count": 3,
+      "hall_failed_pairing_count": 3,
+      "hall_valid_pairing_count": 12,
+      "literal_complete_efx_count": 360,
+      "low_pair": [
+        7,
+        8
+      ],
+      "path": "results/efx49_distinct_half_eight_orbit_anneal_seed27_session2.json",
+      "sha256": "6e004188361da1eadc2f8cc42137a8bbee9dbfd4c751208194c3ac8084901a3a",
+      "shared_zero_neighbor_edge": [
+        1,
+        6
+      ],
+      "values": [
+        [
+          100,
+          51,
+          70,
+          59,
+          65,
+          65,
+          56,
+          8,
+          6
+        ],
+        [
+          100,
+          67,
+          81,
+          71,
+          72,
+          70,
+          43,
+          12,
+          2
+        ],
+        [
+          100,
+          57,
+          66,
+          63,
+          83,
+          60,
+          51,
+          10,
+          1
+        ],
+        [
+          100,
+          57,
+          79,
+          73,
+          75,
+          64,
+          52,
+          14,
+          6
+        ]
+      ]
+    }
+  ],
+  "schema": "zero-neighbor-favorite-triple-conversion-audit-v1",
+  "status": "ZERO_NEIGHBOR_CONVERSION_BOUNDARIES_AUDITED",
+  "symbolic_implication": {
+    "smt2_sha256": "9e5e3479083b9191e347c2543cd3d31ade88ff5a8c1d7eba2b9eb6ba09976bdc",
+    "solver": "z3",
+    "status": "unsat"
+  }
+}

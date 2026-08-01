@@ -25,6 +25,14 @@ class Triple:
         }
 
 
+@dataclass(frozen=True)
+class ThresholdRotationResult:
+    assignment: tuple[int, ...]
+    rotations: tuple[tuple[int, ...], ...]
+    threshold_potential_trace: tuple[int, ...]
+    removable_pairs: tuple[tuple[int, int], ...]
+
+
 def validate_values(
     values: Sequence[Sequence[int]],
     *,
@@ -123,6 +131,68 @@ def assignment_to_masks(assignment: Sequence[int], n: int) -> tuple[int, ...]:
             raise ValueError("invalid allocation owner")
         masks[owner] |= 1 << good
     return tuple(masks)
+
+
+def iter_unlabeled_nonempty_partitions(
+    n: int,
+    m: int,
+) -> Iterator[tuple[tuple[int, ...], ...]]:
+    if type(n) is not int or type(m) is not int or not 1 <= n <= m:
+        raise ValueError("partition dimensions must satisfy 1 <= n <= m")
+    assignment = [0] * m
+
+    def visit(good: int, largest_block: int) -> Iterator[tuple[tuple[int, ...], ...]]:
+        if good == m:
+            if largest_block == n - 1:
+                yield tuple(
+                    tuple(
+                        item
+                        for item, block in enumerate(assignment)
+                        if block == target
+                    )
+                    for target in range(n)
+                )
+            return
+        remaining_after = m - good - 1
+        for block in range(min(largest_block + 1, n - 1) + 1):
+            next_largest = max(largest_block, block)
+            if next_largest + remaining_after < n - 1:
+                continue
+            assignment[good] = block
+            yield from visit(good + 1, next_largest)
+
+    yield from visit(1, 0)
+
+
+def favorite_pair_allocation(
+    values: Sequence[Sequence[int]],
+) -> tuple[int, ...] | None:
+    """Construct a 2-per-agent EFX0 allocation from distinct favorite goods."""
+    matrix = validate_values(values)
+    n = len(matrix)
+    m = len(matrix[0])
+    if m != 2 * n:
+        raise ValueError("favorite-pair construction requires exactly 2n goods")
+    favorites = [
+        tuple(good for good, value in enumerate(row) if value == max(row))
+        for row in matrix
+    ]
+    matching = next(
+        (
+            goods
+            for goods in itertools.permutations(range(m), n)
+            if all(goods[agent] in favorites[agent] for agent in range(n))
+        ),
+        None,
+    )
+    if matching is None:
+        return None
+    unmatched = iter(good for good in range(m) if good not in matching)
+    assignment = [-1] * m
+    for agent, favorite in enumerate(matching):
+        assignment[favorite] = agent
+        assignment[next(unmatched)] = agent
+    return tuple(assignment)
 
 
 def _subset_tables(
@@ -320,6 +390,30 @@ def iter_parkable_triples(
                     return
 
 
+def iter_one_nonsingleton_triples(n: int, m: int) -> Iterator[Triple]:
+    """Enumerate reverse certificates with one nonsingleton and n-1 singletons."""
+    if type(n) is not int or n < 2 or type(m) is not int or m < n:
+        raise ValueError("n >= 2 and m >= n are required")
+    big_size = m - n + 1
+    if big_size < 2:
+        return
+    goods = tuple(range(m))
+    for host in range(n):
+        other_agents = tuple(agent for agent in range(n) if agent != host)
+        for big_bundle in itertools.combinations(goods, big_size):
+            singleton_goods = tuple(
+                good for good in goods if good not in big_bundle
+            )
+            for singleton_owners in itertools.permutations(other_agents):
+                completion = [host] * m
+                for good, owner in zip(singleton_goods, singleton_owners):
+                    completion[good] = owner
+                for floater in big_bundle:
+                    base_owner: list[int | None] = list(completion)
+                    base_owner[floater] = None
+                    yield Triple(floater, tuple(base_owner), host)
+
+
 def triple_is_parkable(
     values: Sequence[Sequence[int]], raw_triple: Triple | dict
 ) -> bool:
@@ -341,6 +435,95 @@ def triple_is_parkable(
     return True
 
 
+def threshold_cycle_normal_form(
+    values: Sequence[Sequence[int]],
+    assignment: Sequence[int],
+) -> ThresholdRotationResult:
+    normalized = validate_values(values, lower=1)
+    n = len(normalized)
+    m = len(normalized[0])
+    if m < n:
+        raise ValueError("threshold-cycle normalization requires at least n goods")
+    current = tuple(assignment)
+    if len(current) != m:
+        raise ValueError(f"assignment must have length {m}")
+    totals, thresholds = _subset_tables(normalized)
+    masks = assignment_to_masks(current, n)
+    if not _is_efx0_masks(masks, totals, thresholds):
+        raise ValueError("threshold-cycle normalization requires an EFX0 allocation")
+
+    rotations: list[tuple[int, ...]] = []
+    potential_trace: list[int] = []
+    seen_assignments: set[tuple[int, ...]] = set()
+    while True:
+        masks = assignment_to_masks(current, n)
+        potential = sum(
+            thresholds[owner][masks[owner]] for owner in range(n)
+        )
+        potential_trace.append(potential)
+        best_targets = [
+            max(
+                range(n),
+                key=lambda target: (
+                    thresholds[owner][masks[target]],
+                    -target,
+                ),
+            )
+            for owner in range(n)
+        ]
+        if any(
+            thresholds[owner][masks[owner]]
+            >= thresholds[owner][masks[best_targets[owner]]]
+            for owner in range(n)
+        ):
+            break
+        if current in seen_assignments:
+            raise AssertionError("threshold-cycle rotation repeated an allocation")
+        seen_assignments.add(current)
+
+        path: list[int] = []
+        path_index: dict[int, int] = {}
+        owner = 0
+        while owner not in path_index:
+            path_index[owner] = len(path)
+            path.append(owner)
+            owner = best_targets[owner]
+        cycle = tuple(path[path_index[owner] :])
+        updated = list(current)
+        for receiver in cycle:
+            donor = best_targets[receiver]
+            for good, prior_owner in enumerate(current):
+                if prior_owner == donor:
+                    updated[good] = receiver
+        next_assignment = tuple(updated)
+        next_masks = assignment_to_masks(next_assignment, n)
+        if not _is_efx0_masks(next_masks, totals, thresholds):
+            raise AssertionError("threshold-cycle rotation did not preserve EFX0")
+        next_potential = sum(
+            thresholds[owner][next_masks[owner]] for owner in range(n)
+        )
+        if next_potential <= potential:
+            raise AssertionError("threshold-cycle potential did not increase")
+        rotations.append(cycle)
+        current = next_assignment
+
+    removable_pairs = []
+    for good, host in enumerate(current):
+        base: list[int | None] = list(current)
+        base[good] = None
+        triple = Triple(good, tuple(base), host)
+        if triple_is_parkable(normalized, triple):
+            removable_pairs.append((host, good))
+    if not removable_pairs:
+        raise AssertionError("threshold-cycle normal form has no removable good")
+    return ThresholdRotationResult(
+        assignment=current,
+        rotations=tuple(rotations),
+        threshold_potential_trace=tuple(potential_trace),
+        removable_pairs=tuple(removable_pairs),
+    )
+
+
 def count_efx0_allocations(values: Sequence[Sequence[int]]) -> int:
     normalized = validate_values(values, lower=0)
     n = len(normalized)
@@ -351,6 +534,124 @@ def count_efx0_allocations(values: Sequence[Sequence[int]]) -> int:
         if _is_efx0_masks(assignment_to_masks(assignment, n), totals, thresholds):
             count += 1
     return count
+
+
+def iter_efx0_assignments(
+    values: Sequence[Sequence[int]],
+) -> Iterator[tuple[int, ...]]:
+    normalized = validate_values(values, lower=0)
+    n = len(normalized)
+    m = len(normalized[0])
+    totals, thresholds = _subset_tables(normalized)
+    for assignment in itertools.product(range(n), repeat=m):
+        if _is_efx0_masks(
+            assignment_to_masks(assignment, n),
+            totals,
+            thresholds,
+        ):
+            yield assignment
+
+
+def complete_efx0_source_census(
+    values: Sequence[Sequence[int]],
+) -> tuple[int, ...]:
+    normalized = validate_values(values, lower=0)
+    n = len(normalized)
+    m = len(normalized[0])
+    totals, thresholds = _subset_tables(normalized)
+    census = [0] * (n + 1)
+    for assignment in itertools.product(range(n), repeat=m):
+        masks = assignment_to_masks(assignment, n)
+        if not _is_efx0_masks(masks, totals, thresholds):
+            continue
+        source_count = sum(
+            all(
+                observer == host
+                or totals[observer][masks[observer]]
+                >= totals[observer][masks[host]]
+                for observer in range(n)
+            )
+            for host in range(n)
+        )
+        census[source_count] += 1
+    return tuple(census)
+
+
+def bottom_pair_kernel_census(
+    values: Sequence[Sequence[int]],
+    bottom_goods: Sequence[int],
+) -> dict:
+    normalized = validate_values(values, lower=0)
+    n = len(normalized)
+    m = len(normalized[0])
+    bottom = tuple(bottom_goods)
+    if (
+        len(bottom) != 2
+        or len(set(bottom)) != 2
+        or any(type(good) is not int or not 0 <= good < m for good in bottom)
+    ):
+        raise ValueError("bottom_goods must contain two distinct valid indices")
+    outside = tuple(good for good in range(m) if good not in bottom)
+    for observer in range(n):
+        if any(
+            normalized[observer][low] > normalized[observer][good]
+            for low in bottom
+            for good in outside
+        ):
+            raise ValueError("bottom_goods are not a bottom set for every observer")
+
+    reduced = tuple(
+        tuple(row[good] for good in outside) for row in normalized
+    )
+    totals, thresholds = _subset_tables(reduced)
+    source_census = [0] * (n + 1)
+    equalizations = 0
+    efx_count = 0
+    for assignment in itertools.product(range(n), repeat=len(outside)):
+        masks = assignment_to_masks(assignment, n)
+        if not _is_efx0_masks(masks, totals, thresholds):
+            continue
+        efx_count += 1
+        sources = tuple(
+            host
+            for host in range(n)
+            if all(
+                observer == host
+                or totals[observer][masks[observer]]
+                >= totals[observer][masks[host]]
+                for observer in range(n)
+            )
+        )
+        source_census[len(sources)] += 1
+        bundles = tuple(
+            tuple(
+                outside[index]
+                for index, owner in enumerate(assignment)
+                if owner == host
+            )
+            for host in range(n)
+        )
+        for host in sources:
+            for inserted in bottom:
+                enlarged = tuple(
+                    bundle + ((inserted,) if target == host else ())
+                    for target, bundle in enumerate(bundles)
+                )
+                if all(
+                    sum(normalized[observer][good] for good in enlarged[observer])
+                    >= sum(
+                        normalized[observer][good] for good in enlarged[target]
+                    )
+                    for observer in range(n)
+                    for target in range(n)
+                ):
+                    equalizations += 1
+    return {
+        "efx0_count": efx_count,
+        "source_count_census": tuple(source_census),
+        "two_source_allocation_count": sum(source_census[2:]),
+        "source_equalization_count": equalizations,
+    }
 
 
 def landscape(

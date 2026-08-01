@@ -1,0 +1,48 @@
+{
+  "blocked_balanced_partition_count": 63,
+  "blocked_balanced_transfer_radius": 2,
+  "cegar_boundary": {
+    "iterations": 6,
+    "proto_sha256": "7b7e5caf5df6999664d07a9f2ffee793d2f359b0c98ba4dcb42ec48b3a401647",
+    "reconstructed_singleton_pool_sha256": "f3cb4ad59daf50b938a4db90e30bc381a6198541f80a87243515736f2beeab49",
+    "reconstructed_singleton_pool_size": 488,
+    "solver_status": "UNKNOWN",
+    "solver_wall_seconds": 60.167219,
+    "source": "results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap6_cpsat_cegar_session1.json",
+    "source_sha256": "76678381b9d5f96cca1036cd32a490549364210a944c2f12114281c118937977",
+    "supported_count_sequence": [
+      280,
+      59,
+      48,
+      35,
+      43,
+      47
+    ],
+    "upper": 6
+  },
+  "claim": "No exact witness or bounded UNSAT proof is known after blocking all 63 balanced partitions within two transfers of a fixed threshold-passing 3+3+2 residual partition and all common-favorite singleton EFX partitions.",
+  "claim_boundary": "Three UNKNOWN endpoints are computational boundaries only. They neither prove the radius-two implication nor refute it.",
+  "direct_boundaries": [
+    {
+      "proto_sha256": "b5a6d25f6a5f24faf1f73392bd3d9a290d4ec7566e7d013de16c6074e7ab6099",
+      "solver_status": "UNKNOWN",
+      "solver_wall_seconds": 180.143435,
+      "source": "results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap6_cpsat_session1.json",
+      "source_sha256": "b17ab8402b0261aba0550827f77624a08dfcc16eab93985c04eda96de7feaa27",
+      "upper": 6
+    },
+    {
+      "proto_sha256": "299cabfc637cd867b458a01b1fe1eb3680e858240d1492d2aecab7a9fb80a349",
+      "solver_status": "UNKNOWN",
+      "solver_wall_seconds": 300.271875,
+      "source": "results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap20_cpsat_session1.json",
+      "source_sha256": "192b356ef2c454e64563baa77069ae30ff1e00f95e6c422168484f20ea4d4481",
+      "upper": 20
+    }
+  ],
+  "m": 9,
+  "n": 4,
+  "schema": "common-favorite-mixed-hall-radius2-gate-audit-v1",
+  "selected_residual_shape": "332",
+  "status": "RADIUS_TWO_MIXED_HALL_GATE_OPEN"
+}

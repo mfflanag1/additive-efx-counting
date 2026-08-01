@@ -1,0 +1,158 @@
+{
+  "candidate": "Every connected plateau of constant EFX-feasibility matching rank below four has a single-good-swap exit to a partition of higher rank in the universal-threshold distinct-half branch.",
+  "deterministic_random_profiles": 256,
+  "maximum_random_favorite": 80,
+  "maximum_random_rank_preserving_path_then_exit_length": 2,
+  "minimum_random_higher_rank_exit_count": 21,
+  "negative_control": {
+    "has_half_favorite_matching": false,
+    "matching_rank_histogram": {
+      "1": 161,
+      "2": 533,
+      "3": 146
+    },
+    "maximum_rank_preserving_path_then_exit_length": 2,
+    "minimum_higher_rank_exit_count": 0,
+    "nonperfect_plateau_components_by_rank": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    },
+    "perfect_partition_count": 0,
+    "satisfies_universal_threshold_branch": false,
+    "source": "efx49_common_favorite_real_frontier_audit.json",
+    "trapped_nonperfect_plateau_count": 1,
+    "trapped_nonperfect_plateau_sample": [
+      {
+        "component_size": 146,
+        "partition": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "rank": 3
+      }
+    ]
+  },
+  "random_seed": 20260731,
+  "schema": "distinct-half-rank-augmentation-audit-v1",
+  "scope_warning": "This finite deterministic audit can falsify the augmentation candidate but cannot prove its cap-free real-valued statement.",
+  "source_profile_records": [
+    {
+      "half_favorite_representatives": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "matching_rank_histogram": {
+        "2": 18,
+        "3": 308,
+        "4": 514
+      },
+      "maximum_rank_preserving_path_then_exit_length": 1,
+      "minimum_higher_rank_exit_count": 224,
+      "nonperfect_plateau_components_by_rank": {
+        "2": 1,
+        "3": 1
+      },
+      "perfect_partition_count": 514,
+      "source": "efx49_common_favorite_real_shape6111_session1.json",
+      "trapped_nonperfect_plateau_count": 0,
+      "trapped_nonperfect_plateau_sample": []
+    },
+    {
+      "half_favorite_representatives": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "matching_rank_histogram": {
+        "1": 7,
+        "2": 156,
+        "3": 317,
+        "4": 360
+      },
+      "maximum_rank_preserving_path_then_exit_length": 2,
+      "minimum_higher_rank_exit_count": 107,
+      "nonperfect_plateau_components_by_rank": {
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "perfect_partition_count": 360,
+      "source": "efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "trapped_nonperfect_plateau_count": 0,
+      "trapped_nonperfect_plateau_sample": []
+    },
+    {
+      "half_favorite_representatives": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "matching_rank_histogram": {
+        "2": 34,
+        "3": 353,
+        "4": 453
+      },
+      "maximum_rank_preserving_path_then_exit_length": 1,
+      "minimum_higher_rank_exit_count": 323,
+      "nonperfect_plateau_components_by_rank": {
+        "2": 1,
+        "3": 1
+      },
+      "perfect_partition_count": 453,
+      "source": "efx49_universal_threshold_balanced_envelope_cegar_session1.json",
+      "trapped_nonperfect_plateau_count": 0,
+      "trapped_nonperfect_plateau_sample": []
+    },
+    {
+      "half_favorite_representatives": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "matching_rank_histogram": {
+        "1": 16,
+        "2": 227,
+        "3": 365,
+        "4": 232
+      },
+      "maximum_rank_preserving_path_then_exit_length": 2,
+      "minimum_higher_rank_exit_count": 183,
+      "nonperfect_plateau_components_by_rank": {
+        "1": 1,
+        "2": 1,
+        "3": 1
+      },
+      "perfect_partition_count": 232,
+      "source": "efx49_universal_threshold_balanced_cegar_session1.json",
+      "trapped_nonperfect_plateau_count": 0,
+      "trapped_nonperfect_plateau_sample": []
+    }
+  ],
+  "state_graph": {
+    "degree": 21,
+    "favorite_pair_balanced_partitions": 840,
+    "undirected_single_good_swap_edges": 8820
+  },
+  "status": "DISTINCT_HALF_RANK_AUGMENTATION_STRESS_AUDIT_PASSED"
+}

@@ -1,0 +1,1073 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 5792,
+  "elapsed_seconds": 1932.618326,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": false,
+  "exclude_universal_min": false,
+  "favorite_pattern": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 10656,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "partition_singleton_good": null,
+  "partition_singleton_goods": [
+    0
+  ],
+  "partition_universe_size": 2226,
+  "pool_sha256": "e86433dd1d68e118f09fac5bc47fb551a4f704774c326f87a1a55803ae7f3877",
+  "pool_size": 444,
+  "proto_bytes": 1427125,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_favorites4_balanced_or_singleton_sparse_matching_session1.pb",
+  "proto_sha256": "d1aacc8a264cf1c6d8c2e7e4d55c373a900dc881ac5713e6d445f51aa6323585",
+  "require_distinct_item_values": true,
+  "require_pairwise_distinct_rows": false,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [
+    {
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap12_favorites4_balanced_or_singleton_sparse_pool.json",
+      "sha256": "316b53b820c7be2d56e9b0db2c2f2c7c33266a472371f3b228b7dc397d0e2685"
+    }
+  ],
+  "solver_status": "UNKNOWN",
+  "status": "MASTER_UNKNOWN",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 715115,
+      "conflicts": 77105,
+      "deterministic_time": 125.47441416046726,
+      "iteration": 1,
+      "pool_size_before": 426,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 111,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          7,
+          3,
+          5,
+          4,
+          1,
+          2,
+          8,
+          6
+        ],
+        [
+          13,
+          5,
+          4,
+          7,
+          3,
+          2,
+          1,
+          8,
+          6
+        ],
+        [
+          13,
+          5,
+          4,
+          7,
+          2,
+          3,
+          1,
+          8,
+          6
+        ]
+      ],
+      "wall_time_seconds": 58.965723000000004
+    },
+    {
+      "branches": 611893,
+      "conflicts": 27509,
+      "deterministic_time": 42.909043176472785,
+      "iteration": 2,
+      "pool_size_before": 427,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 94,
+      "values": [
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          10,
+          5,
+          4,
+          3,
+          2,
+          7,
+          6,
+          1
+        ],
+        [
+          13,
+          9,
+          4,
+          5,
+          1,
+          3,
+          8,
+          7,
+          2
+        ],
+        [
+          13,
+          8,
+          5,
+          4,
+          2,
+          3,
+          7,
+          6,
+          1
+        ]
+      ],
+      "wall_time_seconds": 34.128294000000004
+    },
+    {
+      "branches": 783262,
+      "conflicts": 102372,
+      "deterministic_time": 176.08270941903805,
+      "iteration": 3,
+      "pool_size_before": 428,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 87,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          5,
+          7,
+          4,
+          1,
+          2,
+          3,
+          6
+        ],
+        [
+          13,
+          9,
+          7,
+          6,
+          3,
+          2,
+          4,
+          1,
+          5
+        ],
+        [
+          13,
+          8,
+          5,
+          7,
+          2,
+          3,
+          4,
+          1,
+          6
+        ]
+      ],
+      "wall_time_seconds": 91.683873
+    },
+    {
+      "branches": 1079393,
+      "conflicts": 148084,
+      "deterministic_time": 256.0212229990877,
+      "iteration": 4,
+      "pool_size_before": 429,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 96,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          3,
+          1,
+          5,
+          6,
+          4
+        ],
+        [
+          13,
+          7,
+          1,
+          10,
+          4,
+          2,
+          3,
+          6,
+          5
+        ],
+        [
+          13,
+          7,
+          1,
+          10,
+          4,
+          2,
+          3,
+          6,
+          5
+        ]
+      ],
+      "wall_time_seconds": 106.63860100000001
+    },
+    {
+      "branches": 732975,
+      "conflicts": 75421,
+      "deterministic_time": 113.2548685069759,
+      "iteration": 5,
+      "pool_size_before": 430,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 77,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          7,
+          4,
+          5,
+          1,
+          3,
+          2,
+          6,
+          8
+        ],
+        [
+          13,
+          7,
+          4,
+          5,
+          1,
+          3,
+          2,
+          6,
+          8
+        ],
+        [
+          13,
+          7,
+          4,
+          5,
+          1,
+          3,
+          2,
+          6,
+          8
+        ]
+      ],
+      "wall_time_seconds": 54.401675000000004
+    },
+    {
+      "branches": 962250,
+      "conflicts": 145309,
+      "deterministic_time": 245.48197706756778,
+      "iteration": 6,
+      "pool_size_before": 431,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 100,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          3,
+          1,
+          6,
+          4,
+          5
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          3,
+          1,
+          6,
+          4,
+          5
+        ],
+        [
+          13,
+          7,
+          2,
+          8,
+          6,
+          1,
+          3,
+          5,
+          4
+        ]
+      ],
+      "wall_time_seconds": 77.581349
+    },
+    {
+      "branches": 1028453,
+      "conflicts": 169795,
+      "deterministic_time": 290.99679245153584,
+      "iteration": 7,
+      "pool_size_before": 432,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 56,
+      "values": [
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          3,
+          4,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          5,
+          6,
+          2,
+          1,
+          3,
+          4
+        ]
+      ],
+      "wall_time_seconds": 90.759804
+    },
+    {
+      "branches": 1203365,
+      "conflicts": 228996,
+      "deterministic_time": 385.90966327114825,
+      "iteration": 8,
+      "pool_size_before": 433,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 52,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          6,
+          7,
+          2,
+          4,
+          5,
+          3,
+          1
+        ],
+        [
+          13,
+          12,
+          6,
+          7,
+          2,
+          4,
+          5,
+          1,
+          3
+        ],
+        [
+          13,
+          12,
+          6,
+          7,
+          1,
+          3,
+          4,
+          2,
+          5
+        ]
+      ],
+      "wall_time_seconds": 120.166582
+    },
+    {
+      "branches": 723129,
+      "conflicts": 68110,
+      "deterministic_time": 118.18809928783145,
+      "iteration": 9,
+      "pool_size_before": 434,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 48,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          4,
+          2,
+          3,
+          5,
+          1
+        ],
+        [
+          13,
+          12,
+          6,
+          7,
+          5,
+          4,
+          3,
+          1,
+          2
+        ],
+        [
+          13,
+          12,
+          6,
+          7,
+          4,
+          3,
+          2,
+          5,
+          1
+        ]
+      ],
+      "wall_time_seconds": 32.225216
+    },
+    {
+      "branches": 1253529,
+      "conflicts": 235324,
+      "deterministic_time": 404.8602919663697,
+      "iteration": 10,
+      "pool_size_before": 435,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 51,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          1,
+          3,
+          2,
+          4
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          3,
+          5,
+          2,
+          4,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          6,
+          4,
+          5,
+          1,
+          3,
+          2
+        ]
+      ],
+      "wall_time_seconds": 107.578697
+    },
+    {
+      "branches": 1032831,
+      "conflicts": 166089,
+      "deterministic_time": 295.23715213954654,
+      "iteration": 11,
+      "pool_size_before": 436,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 84,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          4,
+          10,
+          6,
+          2,
+          5,
+          3,
+          1
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          3,
+          1,
+          6,
+          5,
+          4
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          3,
+          1,
+          6,
+          5,
+          4
+        ]
+      ],
+      "wall_time_seconds": 77.618207
+    },
+    {
+      "branches": 711885,
+      "conflicts": 73729,
+      "deterministic_time": 114.0558273196938,
+      "iteration": 12,
+      "pool_size_before": 437,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 93,
+      "values": [
+        [
+          13,
+          9,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          2,
+          7,
+          4,
+          5,
+          1,
+          3,
+          6
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          4,
+          6,
+          1,
+          5,
+          3
+        ],
+        [
+          13,
+          7,
+          2,
+          11,
+          4,
+          5,
+          1,
+          3,
+          6
+        ]
+      ],
+      "wall_time_seconds": 31.928931000000002
+    },
+    {
+      "branches": 1053589,
+      "conflicts": 166004,
+      "deterministic_time": 261.2983658608699,
+      "iteration": 13,
+      "pool_size_before": 438,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 67,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          7,
+          4,
+          5,
+          3,
+          8,
+          1,
+          2,
+          6
+        ],
+        [
+          13,
+          7,
+          4,
+          5,
+          3,
+          8,
+          1,
+          2,
+          6
+        ],
+        [
+          13,
+          7,
+          4,
+          5,
+          3,
+          8,
+          1,
+          2,
+          6
+        ]
+      ],
+      "wall_time_seconds": 93.22120100000001
+    },
+    {
+      "branches": 918171,
+      "conflicts": 123670,
+      "deterministic_time": 205.7459999651021,
+      "iteration": 14,
+      "pool_size_before": 439,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 90,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          2,
+          7,
+          5,
+          6,
+          4,
+          3,
+          1
+        ],
+        [
+          13,
+          8,
+          2,
+          7,
+          5,
+          6,
+          4,
+          3,
+          1
+        ],
+        [
+          13,
+          7,
+          5,
+          9,
+          2,
+          6,
+          3,
+          4,
+          1
+        ]
+      ],
+      "wall_time_seconds": 79.289331
+    },
+    {
+      "branches": 1170573,
+      "conflicts": 181575,
+      "deterministic_time": 308.8228105128852,
+      "iteration": 15,
+      "pool_size_before": 440,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 75,
+      "values": [
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          7,
+          10,
+          12,
+          4,
+          2,
+          1,
+          3,
+          5
+        ]
+      ],
+      "wall_time_seconds": 110.16906300000001
+    },
+    {
+      "branches": 761619,
+      "conflicts": 97164,
+      "deterministic_time": 178.75080694458973,
+      "iteration": 16,
+      "pool_size_before": 441,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 71,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          6,
+          12,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          6,
+          12,
+          5,
+          4,
+          2,
+          3,
+          1
+        ],
+        [
+          13,
+          7,
+          6,
+          12,
+          4,
+          5,
+          3,
+          2,
+          1
+        ]
+      ],
+      "wall_time_seconds": 76.394014
+    },
+    {
+      "branches": 1156852,
+      "conflicts": 205451,
+      "deterministic_time": 334.7832397685653,
+      "iteration": 17,
+      "pool_size_before": 442,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 48,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          4,
+          1,
+          3,
+          5,
+          2
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          3,
+          4,
+          5,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          3,
+          4,
+          5,
+          2,
+          1
+        ]
+      ],
+      "wall_time_seconds": 168.30655800000002
+    },
+    {
+      "branches": 1307045,
+      "conflicts": 261784,
+      "deterministic_time": 459.00747035528707,
+      "iteration": 18,
+      "pool_size_before": 443,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 50,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          3,
+          5,
+          2,
+          1,
+          4
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          2,
+          5,
+          3,
+          4,
+          1
+        ],
+        [
+          13,
+          11,
+          7,
+          6,
+          3,
+          5,
+          4,
+          2,
+          1
+        ]
+      ],
+      "wall_time_seconds": 217.962502
+    },
+    {
+      "branches": 1467641,
+      "conflicts": 306911,
+      "deterministic_time": 680.541471893376,
+      "iteration": 19,
+      "pool_size": 444,
+      "solver_status": "UNKNOWN",
+      "wall_time_seconds": 300.021222
+    }
+  ],
+  "upper": 13,
+  "values": null
+}

@@ -1,0 +1,380 @@
+{
+  "add_per_iteration": 16,
+  "claim_boundary": "UNSAT in every relative matching orbit would establish the conditional two-cell selector only after independent replay. A terminal SAT model would refute that selector, not complete EFX.",
+  "elapsed_seconds": 361.89702892303467,
+  "favorite_pair_partition_count": 840,
+  "first_cell": {
+    "bottom_agents": [
+      0,
+      1
+    ],
+    "bottom_pair": [
+      7,
+      8
+    ],
+    "matching": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  },
+  "initial_local_conversion_count": 11,
+  "iterations": 6,
+  "literal_complete_efx_count": null,
+  "matching_orbit_count": 4,
+  "matching_orbit_index": 0,
+  "max_iterations": 6,
+  "pattern": "overlap",
+  "pool_size": 98,
+  "reason_unknown": null,
+  "schema": "two-pair-bottom-cross-cegar-v1",
+  "second_cell": {
+    "bottom_agents": [
+      2,
+      3
+    ],
+    "bottom_pair": [
+      6,
+      8
+    ],
+    "matching": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        7
+      ]
+    ]
+  },
+  "seed_sources": [],
+  "seeded_pool_size": 11,
+  "smt2_path": "results/efx49_two_pair_bottom_cross_overlap_orbit0_cegar_unseeded_add16_session1.smt2",
+  "smt2_sha256": "03e9803e676b0f2e0e95840804e95123501272b0b906e4357bda53dad57023eb",
+  "solver_status": "sat",
+  "status": "ITERATION_LIMIT",
+  "time_limit_seconds_per_solve": 300.0,
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 258,
+      "iteration": 1,
+      "pool_size_before": 11,
+      "values": [
+        [
+          286,
+          139,
+          141,
+          282,
+          135,
+          282,
+          278,
+          135,
+          2
+        ],
+        [
+          2597,
+          894,
+          877,
+          1771,
+          1482,
+          2546,
+          2529,
+          843,
+          741
+        ],
+        [
+          182,
+          86,
+          90,
+          97,
+          91,
+          103,
+          86,
+          100,
+          5
+        ],
+        [
+          3390,
+          1733,
+          914,
+          1828,
+          2362,
+          1676,
+          819,
+          2514,
+          724
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 190,
+      "iteration": 2,
+      "pool_size_before": 27,
+      "values": [
+        [
+          2203,
+          761,
+          2123,
+          857,
+          1314,
+          1474,
+          2043,
+          761,
+          16
+        ],
+        [
+          2183,
+          765,
+          2167,
+          797,
+          1354,
+          1450,
+          2055,
+          765,
+          16
+        ],
+        [
+          539,
+          181,
+          535,
+          189,
+          193,
+          394,
+          173,
+          535,
+          149
+        ],
+        [
+          754,
+          323,
+          748,
+          335,
+          353,
+          700,
+          323,
+          736,
+          60
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 95,
+      "iteration": 3,
+      "pool_size_before": 43,
+      "values": [
+        [
+          5227,
+          3982,
+          2699,
+          3830,
+          1302,
+          3792,
+          2870,
+          1264,
+          76
+        ],
+        [
+          5313,
+          3999,
+          2780,
+          3866,
+          1352,
+          2628,
+          3695,
+          1352,
+          57
+        ],
+        [
+          9093,
+          6367,
+          4121,
+          5196,
+          2758,
+          6399,
+          2662,
+          5324,
+          256
+        ],
+        [
+          5352,
+          5052,
+          2746,
+          3899,
+          1333,
+          2706,
+          1333,
+          3919,
+          20
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 60,
+      "iteration": 4,
+      "pool_size_before": 59,
+      "values": [
+        [
+          1441,
+          138,
+          1189,
+          1225,
+          1213,
+          1237,
+          1267,
+          120,
+          30
+        ],
+        [
+          6551,
+          1315,
+          3945,
+          5164,
+          3945,
+          3993,
+          5188,
+          1315,
+          24
+        ],
+        [
+          1471,
+          204,
+          1165,
+          1231,
+          1183,
+          1153,
+          120,
+          1255,
+          78
+        ],
+        [
+          1435,
+          180,
+          1153,
+          1219,
+          1177,
+          1267,
+          108,
+          1249,
+          72
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 7,
+      "iteration": 5,
+      "pool_size_before": 75,
+      "values": [
+        [
+          4145,
+          851,
+          2465,
+          2575,
+          2553,
+          2509,
+          2685,
+          851,
+          22
+        ],
+        [
+          454,
+          30,
+          397,
+          409,
+          400,
+          403,
+          418,
+          30,
+          3
+        ],
+        [
+          479,
+          63,
+          389,
+          383,
+          398,
+          374,
+          45,
+          410,
+          3
+        ],
+        [
+          911,
+          66,
+          809,
+          797,
+          815,
+          785,
+          66,
+          833,
+          6
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 45,
+      "iteration": 6,
+      "pool_size_before": 82,
+      "values": [
+        [
+          2318,
+          1240,
+          1177,
+          1150,
+          970,
+          1186,
+          1285,
+          952,
+          54
+        ],
+        [
+          5738,
+          3337,
+          3567,
+          3475,
+          1212,
+          3521,
+          3452,
+          1212,
+          890
+        ],
+        [
+          3582,
+          2233,
+          2383,
+          2293,
+          1064,
+          2173,
+          989,
+          2488,
+          15
+        ],
+        [
+          4564,
+          2390,
+          2336,
+          2857,
+          1132,
+          2893,
+          1114,
+          2857,
+          521
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

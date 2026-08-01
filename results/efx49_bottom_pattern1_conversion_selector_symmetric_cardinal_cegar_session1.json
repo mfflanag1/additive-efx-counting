@@ -1,0 +1,203 @@
+{
+  "add_per_iteration": 16,
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "cegar": true,
+  "claim_boundary": "UNSAT would prove the selected-cell conclusion for this one bottom-pair pattern using only its conversion closure, subject to independent replay. SAT refutes only that conversion-family selector, not the full favorite-pair selector or EFX.",
+  "conversion_orbit": null,
+  "conversion_orbit_count": null,
+  "distinct_conversion_partition_count": 228,
+  "distinct_selected_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ]
+  ],
+  "elapsed_seconds": 275.55570816993713,
+  "favorite_pair_efx_partition_count": null,
+  "favorite_pair_partition_count": 840,
+  "full_distinct_conversion_partition_count": 228,
+  "iterations": 3,
+  "literal_complete_efx_count": null,
+  "max_iterations": 100,
+  "pattern_index": 1,
+  "pool_size": 32,
+  "raw_conversion_count": 270,
+  "reason_unknown": "canceled",
+  "resume_source": null,
+  "schema": "bottom-pattern-conversion-selector-lra-v1",
+  "seeded_pool_size": 0,
+  "selected_cell_encoding": {
+    "accept_literals": 180,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 3,
+    "pairing_failure_terms": 45
+  },
+  "smt2_path": "results/efx49_bottom_pattern1_conversion_selector_symmetric_cardinal_cegar_session1.smt2",
+  "smt2_sha256": "e26340346d6314df0f8e004768b0ec50e4e59e5a497eeb08b3e8c04acef91500",
+  "solver_status": "unknown",
+  "source_pairing_count": 45,
+  "status": "MASTER_UNKNOWN",
+  "symmetry_breaking": "star_repeated_canonical",
+  "symmetry_encoding": {
+    "free_good_order": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "group_size": 96,
+    "reflection_agent_image": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reflection_good_image": [
+      0,
+      1,
+      2,
+      4,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "repeated_pair_agent_order": [
+      0,
+      1
+    ]
+  },
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds_per_solve": 300.0,
+  "trace": [
+    {
+      "conversion_efx_survivors": 153,
+      "iteration": 1,
+      "pool_size_before": 0,
+      "values": [
+        [
+          1351,
+          613,
+          543,
+          743,
+          743,
+          678,
+          678,
+          678,
+          633
+        ],
+        [
+          1301,
+          618,
+          548,
+          753,
+          748,
+          758,
+          683,
+          623,
+          628
+        ],
+        [
+          263,
+          114,
+          149,
+          114,
+          132,
+          148,
+          149,
+          132,
+          131
+        ],
+        [
+          266,
+          115,
+          150,
+          133,
+          117,
+          151,
+          150,
+          133,
+          117
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 137,
+      "iteration": 2,
+      "pool_size_before": 16,
+      "values": [
+        [
+          39972,
+          6667,
+          13454,
+          26698,
+          19881,
+          26728,
+          26728,
+          20001,
+          19971
+        ],
+        [
+          73307,
+          120,
+          19551,
+          53456,
+          19551,
+          53636,
+          53576,
+          53756,
+          73247
+        ],
+        [
+          46676,
+          13303,
+          26705,
+          6668,
+          33406,
+          20103,
+          13303,
+          26606,
+          33340
+        ],
+        [
+          653662,
+          227438,
+          554533,
+          227438,
+          226910,
+          325511,
+          424640,
+          425696,
+          455932
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

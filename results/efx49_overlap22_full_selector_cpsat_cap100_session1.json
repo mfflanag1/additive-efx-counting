@@ -1,0 +1,123 @@
+{
+  "branches": 24251,
+  "cap": 100,
+  "conflicts": 53,
+  "elapsed_seconds": 600.2375419139862,
+  "favorite_pair_efx_orbit_histogram": {
+    "('U', 1, ('RR', 'RU'))": 3
+  },
+  "favorite_pair_efx_partition_count": 3,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "full_hall_cells": [],
+  "hard_partition_count": 0,
+  "hard_partition_family": null,
+  "hard_partition_repair_count": 0,
+  "hint_eight_orbit_repair_count": null,
+  "hint_path": "results/efx49_overlap22_bottom_pattern_anneal_session2.json",
+  "literal_complete_efx_count": 180,
+  "m": 9,
+  "n": 4,
+  "no_three_agent_bottom_pair_encoding": {
+    "bottom_support_literals": 112,
+    "candidate_bottom_pairs": 28,
+    "maximum_agents_per_bottom_pair": 2,
+    "strict_nonbottom_witness_literals": 1344
+  },
+  "obstruction_objective": 837.0,
+  "obstruction_objective_bound": 840.0,
+  "partition_family": "all",
+  "proto_path": "results/efx49_overlap22_full_selector_cpsat_cap100_session1.pb",
+  "proto_sha256": "5f74fee9cd28a667d27e52cad25354b69f8fe1437036e6d2d91cc6770a3978e8",
+  "random_seed": 20260809,
+  "required_agent_bottom_pairs": [
+    [
+      5,
+      7
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      3,
+      7
+    ]
+  ],
+  "schema": "distinct-half-eight-orbit-cpsat-optimization-v1",
+  "semantic_obstruction_count": 837,
+  "solver_status": "FEASIBLE",
+  "status": "OPTIMIZATION_CHECKPOINT",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent"
+  ],
+  "target_partition_count": 840,
+  "target_partitions_sha256": "7f9776df1b363894a89d2ae4f6c71655c381d6b3dcbf041f96cf71f8c4795da7",
+  "target_repair_count": 3,
+  "three_agent_bottom_pair_forbidden": true,
+  "time_limit_seconds": 600.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      99,
+      60,
+      55,
+      67,
+      61,
+      13,
+      59,
+      1,
+      56
+    ],
+    [
+      96,
+      63,
+      56,
+      20,
+      70,
+      21,
+      63,
+      1,
+      56
+    ],
+    [
+      94,
+      56,
+      53,
+      77,
+      73,
+      14,
+      56,
+      2,
+      54
+    ],
+    [
+      74,
+      49,
+      46,
+      12,
+      48,
+      18,
+      52,
+      3,
+      45
+    ]
+  ],
+  "warning": "A zero-repair profile refutes the favorite-pair/full-cell selector, not EFX existence unless literal complete-EFX enumeration is also zero. Any positive optimum is a finite-cap theorem only.",
+  "workers": 8
+}

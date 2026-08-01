@@ -1,0 +1,345 @@
+{
+  "case": "R",
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 22.905202865600586,
+  "exchange_neighbor_count": 12,
+  "exchange_neighbors": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        5
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        6
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        8
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4,
+        5
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4,
+        6
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4,
+        7
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        8
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  ],
+  "favorite_pair_efx_orbit_histogram": {
+    "('R', 0, ('RR', 'RU'))": 1,
+    "('R', 1, ('RR', 'UU'))": 24,
+    "('R', 1, ('RU', 'RU'))": 39,
+    "('R', 2, ('RU', 'UU'))": 71,
+    "('R', 3, ('UU', 'UU'))": 11,
+    "('U', 0, ('RR', 'RR'))": 1,
+    "('U', 1, ('RR', 'RU'))": 43,
+    "('U', 2, ('RR', 'UU'))": 37,
+    "('U', 2, ('RU', 'RU'))": 70,
+    "('U', 3, ('RU', 'UU'))": 38
+  },
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "SAT refutes the proposed one-swap exchange implication for this orbit. UNSAT requires independent replay before theorem status.",
+  "m": 9,
+  "n": 4,
+  "reason_unknown": null,
+  "schema": "distinct-half-terminal-exchange-decision-v1",
+  "smt2_path": "results/efx49_distinct_half_terminal_exchange_R_session1.smt2",
+  "smt2_sha256": "93ff23b5cdae20c5315eacede5b6fb1070beadcd766ba63ab2cf2e3f8a2ddf41",
+  "solver_status": "sat",
+  "status": "TERMINAL_EXCHANGE_COUNTEREXAMPLE",
+  "terminal_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "terminal_signature": [
+    "R",
+    3,
+    [
+      "UU",
+      "UU"
+    ]
+  ],
+  "time_limit_seconds": 300.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      21016,
+      10532,
+      15702,
+      18479,
+      15894,
+      18671,
+      5266,
+      18239,
+      2537
+    ],
+    [
+      945,
+      4,
+      571,
+      581,
+      370,
+      362,
+      931,
+      744,
+      756
+    ],
+    [
+      31588,
+      10508,
+      13183,
+      18405,
+      28977,
+      23755,
+      23627,
+      7961,
+      10444
+    ],
+    [
+      3914,
+      683,
+      48,
+      1366,
+      2636,
+      3239,
+      3906,
+      1969,
+      3295
+    ]
+  ]
+}

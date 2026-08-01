@@ -1,0 +1,81 @@
+{
+  "interpretation": "With item values fixed, the independent threshold CNF is SAT exactly on the no-full-cell control and on a genuinely obstructed favorite-pair partition; reversing either semantic polarity makes it UNSAT.",
+  "no_full_cell_polarity": {
+    "counts": {
+      "clauses": 566828,
+      "full_cell_encoding": {
+        "hall_failure_templates_per_pairing": 21,
+        "hall_witnesses": 8820,
+        "low_pair_cells": 28,
+        "rejection_inequality_witnesses": 672
+      },
+      "partition_count": 0,
+      "variables": 273896
+    },
+    "negative_control_cells": [],
+    "negative_control_cnf_sat": true,
+    "positive_control_cells": [
+      [
+        7,
+        8
+      ]
+    ],
+    "positive_control_cnf_sat": false
+  },
+  "partition_obstruction_polarity": {
+    "counts": {
+      "clauses": 574836,
+      "full_cell_encoding": {
+        "hall_failure_templates_per_pairing": 21,
+        "hall_witnesses": 8820,
+        "low_pair_cells": 28,
+        "rejection_inequality_witnesses": 672
+      },
+      "partition_count": 1,
+      "variables": 277608
+    },
+    "obstructed_partition": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "obstructed_partition_cnf_sat": true,
+    "supporting_partition": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "supporting_partition_cnf_sat": false,
+    "trace_profile_repairs": 361
+  },
+  "schema": "distinct-half-full-cell-cnf-encoding-audit-v1",
+  "status": "DISTINCT_HALF_FULL_CELL_CNF_ENCODING_AUDIT_PASSED"
+}

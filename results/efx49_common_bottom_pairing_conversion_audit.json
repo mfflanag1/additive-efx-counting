@@ -1,0 +1,77 @@
+{
+  "canonical_hall_witness_cells": [
+    {
+      "elapsed_seconds": 53.58475303649902,
+      "formula": "results/efx49_common_bottom_pairing_conversion_zero_neighbor_sorting_z3.smt2",
+      "formula_sha256": "6e236bfc114c16325e9b80b7937a67454b3b36e15fca9c7da899cbcdca705543",
+      "hall_witness_type": "zero_neighbor",
+      "result": "results/efx49_common_bottom_pairing_conversion_zero_neighbor_sorting_z3.json",
+      "result_sha256": "bc724851d07b3c9cf1d9b7182722aace0d184c8557da27763dae979bb98416ab",
+      "threshold_encoding": "sorting"
+    },
+    {
+      "elapsed_seconds": 54.1843421459198,
+      "formula": "results/efx49_common_bottom_pairing_conversion_two_edges_one_neighbor_sorting_z3.smt2",
+      "formula_sha256": "76611bd21a32a825135f8e6988952a0ee99a6dbc9f09a639910fd993dd8242c7",
+      "hall_witness_type": "two_edges_one_neighbor",
+      "result": "results/efx49_common_bottom_pairing_conversion_two_edges_one_neighbor_sorting_z3.json",
+      "result_sha256": "f5c36558f4a1099fa40c483bf85fcb36aa6857159bc24cc4363e3b939516043b",
+      "threshold_encoding": "sorting"
+    },
+    {
+      "elapsed_seconds": 47.64028978347778,
+      "formula": "results/efx49_common_bottom_pairing_conversion_three_edges_two_neighbors_sorting_z3.smt2",
+      "formula_sha256": "528893f8f586ee454a488ff46b2409aed589451f424b357346d3c9fd635751c2",
+      "hall_witness_type": "three_edges_two_neighbors",
+      "result": "results/efx49_common_bottom_pairing_conversion_three_edges_two_neighbors_sorting_z3.json",
+      "result_sha256": "5c706cd51509dca099e563ff574d909f82137e044610e058180cf456ec8fb4c5",
+      "threshold_encoding": "sorting"
+    }
+  ],
+  "cardinal_z3": {
+    "elapsed_seconds": 20.891111850738525,
+    "formula": "results/efx49_common_bottom_pairing_conversion_z3.smt2",
+    "formula_sha256": "33084ef8d8b3f10adbfa6dcba49daf8963a55b1bc0fb5a8df695977f3b53c4c7",
+    "hall_witness_type": "all",
+    "result": "results/efx49_common_bottom_pairing_conversion_z3.json",
+    "result_sha256": "386c8dd31772f6bfaf968c5371060b52e8afc932edcf1bc5419642e90ef6c3b2",
+    "threshold_encoding": "sorting-free cardinal degree characterization"
+  },
+  "claim_boundary": "This certifies the common-bottom conversion and counting corollary. It does not prove that every no-favorite-pair profile has a common bottom pair.",
+  "injection_census": {
+    "conversions_per_matching": 6,
+    "distinct_conversion_partition_count": 90,
+    "perfect_matching_count": 15
+  },
+  "schema": "common-bottom-pairing-conversion-audit-v1",
+  "sorting_cpc_ethos": {
+    "ethos_sha256": "2fdda9736abbcfca24523722a03af632f56807f50484f0535a53f805401e1e13",
+    "ethos_status": "correct",
+    "proof": "results/efx49_common_bottom_pairing_conversion_sorting.cpc",
+    "proof_bytes": 17187116,
+    "proof_sha256": "a878765c0bffea05050a2e5c2d24a11652b348839ba906d06c18906203c70d4d",
+    "proof_step_lines": 218320,
+    "result": "results/efx49_common_bottom_pairing_conversion_sorting_cpc_ethos.json",
+    "result_sha256": "3c28753fb5f7a69dd23fd6fe2ae39fa4ab50a09665d5a5f113b85a4331a9863c"
+  },
+  "sorting_cvc5": {
+    "elapsed_seconds": 105.153224,
+    "formula": "results/efx49_common_bottom_pairing_conversion_sorting_cvc5.smt2",
+    "formula_sha256": "4acebc809c39a45dc93269eba31ff32d6a904db53ca1cf0c6e434c818a09b062",
+    "normalization": "results/efx49_common_bottom_pairing_conversion_sorting_cvc5.normalization.json",
+    "normalization_sha256": "11ea32b6707e03aa47a005f01b36ad9674943200aae1501046fb5e7dfad462ad",
+    "result": "results/efx49_common_bottom_pairing_conversion_sorting_cvc5.json",
+    "result_sha256": "26a8654334c818884a93d40ebb50069b7b6aed222d7214c484693ec355a0cab8",
+    "solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74"
+  },
+  "sorting_z3": {
+    "elapsed_seconds": 53.206270933151245,
+    "formula": "results/efx49_common_bottom_pairing_conversion_sorting_z3.smt2",
+    "formula_sha256": "ae71031fc2cb072e179d4260e4ffc62678b3fd440bb399f9555c74f2965f09a8",
+    "hall_witness_type": "all",
+    "result": "results/efx49_common_bottom_pairing_conversion_sorting_z3.json",
+    "result_sha256": "decdb9fca74d7a140fa616dad192d52419a195b3efe025be9cdd646ac1ca9e86",
+    "threshold_encoding": "sorting"
+  },
+  "status": "COMMON_BOTTOM_PAIRING_CONVERSION_DUAL_VERIFIED"
+}

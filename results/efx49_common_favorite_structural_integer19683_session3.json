@@ -1,0 +1,339 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 15428,
+  "elapsed_seconds": 756.985224,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": false,
+  "exclude_universal_min": false,
+  "favorite_pattern": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 19464,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "partition_shapes": [
+    [
+      3,
+      2,
+      2,
+      2
+    ]
+  ],
+  "partition_singleton_good": null,
+  "partition_singleton_goods": [
+    0
+  ],
+  "partition_universe_size": 2226,
+  "pool_sha256": "48d7228acf46f9e318c444aa3eb1af0f23f3ce94898c542cfde92e8071a0dc40",
+  "pool_size": 811,
+  "proto_bytes": 3428241,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_structural_integer19683_session3.pb",
+  "proto_sha256": "c3e93b250c327f926204a47759c6eced77482240f70022dd9329840220278a74",
+  "require_distinct_item_values": false,
+  "require_pairwise_distinct_rows": false,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [],
+  "solver_status": "OPTIMAL",
+  "status": "ITERATION_LIMIT",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 746539,
+      "conflicts": 60585,
+      "deterministic_time": 243.22395678934362,
+      "iteration": 1,
+      "pool_size_before": 719,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 46,
+      "values": [
+        [
+          19683,
+          10,
+          10,
+          10,
+          4,
+          4,
+          1,
+          1,
+          1
+        ],
+        [
+          19683,
+          10,
+          10,
+          3,
+          19682,
+          4,
+          19681,
+          1,
+          1
+        ],
+        [
+          19683,
+          10,
+          10,
+          3,
+          19682,
+          4,
+          19681,
+          1,
+          1
+        ],
+        [
+          19683,
+          10,
+          10,
+          3,
+          19682,
+          4,
+          19681,
+          1,
+          1
+        ]
+      ],
+      "wall_time_seconds": 171.317802
+    },
+    {
+      "branches": 450983,
+      "conflicts": 3056,
+      "deterministic_time": 39.367108257850475,
+      "iteration": 2,
+      "pool_size_before": 765,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 1,
+      "values": [
+        [
+          19683,
+          19677,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1
+        ],
+        [
+          19683,
+          19677,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          19682
+        ],
+        [
+          19683,
+          19677,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          19682
+        ],
+        [
+          19683,
+          19677,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          19682
+        ]
+      ],
+      "wall_time_seconds": 68.45490500000001
+    },
+    {
+      "branches": 462804,
+      "conflicts": 3615,
+      "deterministic_time": 47.43255473839415,
+      "iteration": 3,
+      "pool_size_before": 766,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 20,
+      "values": [
+        [
+          19683,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1
+        ],
+        [
+          19683,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          19682,
+          1
+        ],
+        [
+          19683,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          19682,
+          1
+        ],
+        [
+          19683,
+          3,
+          3,
+          3,
+          3,
+          3,
+          1,
+          19682,
+          1
+        ]
+      ],
+      "wall_time_seconds": 75.966447
+    },
+    {
+      "branches": 484893,
+      "conflicts": 4901,
+      "deterministic_time": 58.990329208585834,
+      "iteration": 4,
+      "pool_size_before": 786,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 19,
+      "values": [
+        [
+          19683,
+          19682,
+          19672,
+          5,
+          4,
+          3,
+          2,
+          2,
+          1
+        ],
+        [
+          19683,
+          19682,
+          5,
+          5,
+          4,
+          2,
+          2,
+          1,
+          19669
+        ],
+        [
+          19682,
+          2,
+          2,
+          4,
+          4,
+          2,
+          1,
+          19681,
+          19669
+        ],
+        [
+          19682,
+          1,
+          2,
+          4,
+          4,
+          4,
+          1,
+          19681,
+          2
+        ]
+      ],
+      "wall_time_seconds": 88.019135
+    },
+    {
+      "branches": 1363104,
+      "conflicts": 24415,
+      "deterministic_time": 364.7989372286774,
+      "iteration": 5,
+      "pool_size_before": 805,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 6,
+      "values": [
+        [
+          19683,
+          19678,
+          19672,
+          19672,
+          19672,
+          19671,
+          2,
+          2,
+          1
+        ],
+        [
+          19683,
+          19678,
+          19672,
+          19672,
+          19672,
+          19671,
+          2,
+          2,
+          1
+        ],
+        [
+          19683,
+          19678,
+          19672,
+          19672,
+          1,
+          19671,
+          2,
+          2,
+          1
+        ],
+        [
+          19683,
+          19678,
+          19672,
+          19672,
+          1,
+          19671,
+          2,
+          2,
+          1
+        ]
+      ],
+      "wall_time_seconds": 351.206678
+    }
+  ],
+  "upper": 19683,
+  "values": null
+}

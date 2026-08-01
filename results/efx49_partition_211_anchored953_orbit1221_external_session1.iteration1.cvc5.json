@@ -1,0 +1,33 @@
+{
+  "command": [
+    "/Users/maxf/projects/economics-research/game-theory/experimental-runs/additive-efx-counting-runs/parkability/certification-20260730-v1.0.1/tools/cvc5-1.3.3/cvc5-macOS-arm64-static/bin/cvc5",
+    "--lang=smt2",
+    "--tlimit=300000",
+    "--produce-models",
+    "--dump-models",
+    "results/efx49_partition_211_anchored953_orbit1221_external_session1.iteration1.cvc5.smt2"
+  ],
+  "confirmed_expected": null,
+  "elapsed_seconds": 300.022495,
+  "expected": null,
+  "formula": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_anchored953_orbit1221_external_session1.iteration1.cvc5.smt2",
+  "formula_sha256": "e51e237b38f9bcae94dc2aab4288c48f2a3d2babf32d942c3cf5857d8d88cd69",
+  "host": {
+    "machine": "arm64",
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "python": "3.10.14"
+  },
+  "returncode": -6,
+  "schema": "external-smt-replay-v1",
+  "solver": "/Users/maxf/projects/economics-research/game-theory/experimental-runs/additive-efx-counting-runs/parkability/certification-20260730-v1.0.1/tools/cvc5-1.3.3/cvc5-macOS-arm64-static/bin/cvc5",
+  "solver_interface": "cvc5",
+  "solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74",
+  "solver_version_stderr": "",
+  "solver_version_stdout": "This is cvc5 version 1.3.3 [git 8ff882e on branch HEAD]\ncompiled with GCC version Apple LLVM 17.0.0 (clang-1700.0.13.5)\non Feb 26 2026 01:24:24\n\nCopyright (c) 2009-2025 by the authors and their institutional\naffiliations listed at https://cvc5.github.io/people.html\n\ncvc5 is open-source and is covered by the BSD license (modified).\n\nTHIS SOFTWARE IS PROVIDED AS-IS, WITHOUT ANY WARRANTIES.\nUSE AT YOUR OWN RISK.\n\nThis version of cvc5 is linked against the following non-(L)GPL'ed\nthird party libraries.\n\n  CaDiCaL - Simplified Satisfiability Solver\n  See https://github.com/arminbiere/cadical for copyright information.\n\n  Editline Library\n  See https://thrysoee.dk/editline\n  for copyright information.\n\n  SymFPU - The Symbolic Floating Point Unit\n  See https://github.com/martin-cs/symfpu/tree/CVC4 for copyright information.\n\nThis version of cvc5 is linked against the following third party\nlibraries covered by the LGPLv3 license.\nSee licenses/lgpl-3.0.txt for more information.\n\n  GMP - Gnu Multi Precision Arithmetic Library\n  See http://gmplib.org for copyright information.\n\n  LibPoly polynomial library\n  See https://github.com/SRI-CSL/libpoly for copyright and\n  licensing information.\n\ncvc5 is statically linked against these libraries. To recompile\nthis version of cvc5 with different versions of these libraries\nfollow the instructions on https://github.com/cvc5/cvc5/blob/main/INSTALL.md\n\nSee the file COPYING (distributed with the source code, and with\nall binaries) for the full cvc5 copyright, licensing, and (lack of)\nwarranty information.",
+  "started_at_utc": "2026-07-31T05:33:46.217596+00:00",
+  "stderr": "cvc5 interrupted by timeout.",
+  "stdout": "",
+  "time_limit_seconds": 300.0,
+  "timed_out": false,
+  "verdict": null
+}

@@ -1,0 +1,151 @@
+{
+  "candidate_audit": null,
+  "claim_boundary": "A SAT candidate refutes only the named selection claim for motif rank_two. It is not an EFX counterexample. UNSAT requires independent replay.",
+  "elapsed_seconds": 115.83087420463562,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "iterations": 2,
+  "learned_motif_count": 66,
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_mixed_rank2_332_cap20_cegar_session1.pb",
+  "proto_bytes": 4532883,
+  "proto_sha256": "41628c1b5ef94424fde5e392b3d60f6c710162d05fd0dd6c2f2ffd32f4e663bd",
+  "schema": "common-favorite-mixed-selection-cegar-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "selected_residual_shape": "332",
+  "selection_motif": "rank_two",
+  "solver_status": "OPTIMAL",
+  "solver_wall_seconds": 56.77249200000001,
+  "status": "ITERATION_LIMIT",
+  "strict_common_favorite": 0,
+  "trace": [
+    {
+      "iteration": 1,
+      "learned_motif_count_before": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 58.970629,
+      "unlearned_selection_motif_count": 61,
+      "values": [
+        [
+          20,
+          1,
+          1,
+          19,
+          2,
+          18,
+          2,
+          1,
+          19
+        ],
+        [
+          20,
+          1,
+          5,
+          1,
+          8,
+          19,
+          2,
+          19,
+          19
+        ],
+        [
+          20,
+          18,
+          5,
+          2,
+          17,
+          1,
+          19,
+          1,
+          19
+        ],
+        [
+          20,
+          19,
+          1,
+          8,
+          19,
+          19,
+          19,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 2,
+      "learned_motif_count_before": 61,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 56.77249200000001,
+      "unlearned_selection_motif_count": 5,
+      "values": [
+        [
+          20,
+          3,
+          3,
+          1,
+          2,
+          1,
+          18,
+          19,
+          18
+        ],
+        [
+          20,
+          19,
+          1,
+          19,
+          1,
+          19,
+          2,
+          19,
+          1
+        ],
+        [
+          20,
+          1,
+          19,
+          19,
+          1,
+          19,
+          17,
+          19,
+          18
+        ],
+        [
+          20,
+          19,
+          19,
+          1,
+          19,
+          1,
+          2,
+          2,
+          19
+        ]
+      ]
+    }
+  ],
+  "upper": 20,
+  "values": null
+}

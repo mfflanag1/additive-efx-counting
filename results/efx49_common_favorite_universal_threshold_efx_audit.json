@@ -1,0 +1,98 @@
+{
+  "agents": 4,
+  "all_component_proofs_ethos_correct": true,
+  "bottom_pair_case_split": {
+    "1+1+1+1_pattern_indices": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "2+1+1_pattern_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8
+    ],
+    "2+2_pattern_indices": [
+      0,
+      6
+    ],
+    "covered_pattern_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "multiplicity_at_least_three": "three-agent-bottom theorem",
+    "multiplicity_at_most_two_canonical_patterns": 20
+  },
+  "claim_boundary": "This proves complete EFX only for four positive-additive agents and nine goods with a strict common favorite when every possible favorite-singleton owner fails the residual owner-threshold test. It does not cover the threshold-passing/Hall-deficient branch, the full (4,9) cell, or general additive EFX.",
+  "goods": 9,
+  "schema": "common-favorite-universal-threshold-existence-audit-v1",
+  "sources": {
+    "all_1_plus_1_plus_1_plus_1": {
+      "path": "results/efx49_all_distinct_bottom_pair_conversions_audit.json",
+      "sha256": "6128e090a078f22f5a354a0a945a01d2297565cb694643a8ca90a4ccee8eeca4"
+    },
+    "all_2_plus_1_plus_1": {
+      "path": "results/efx49_all_repeated_bottom_pair_conversions_audit.json",
+      "sha256": "07210aeddd04dcdf332bfe3a95af1bb5c2db8a5d62277e5481f51df16c0fd869"
+    },
+    "census": {
+      "path": "results/efx49_bottom_pair_pattern_census_audit.json",
+      "sha256": "44818311776741727a3e3c42a2067d8015b720ac1808f78ce9fb4386ee59c085"
+    },
+    "double_bottom_disjoint": {
+      "path": "results/efx49_disjoint_double_bottom_pair_conversion_audit.json",
+      "sha256": "b863ee18c8319a7fdb20c19cec36a96f5c3724defbcf419813fe442116de9d0a"
+    },
+    "double_bottom_overlap": {
+      "path": "results/efx49_overlap_double_bottom_pair_conversion_audit.json",
+      "sha256": "61e2f8f08ce8eab66e63717619467c9a94bfb5c7cb4d95a6a910598b9d378164"
+    },
+    "favorite_triple_hall_characterization": {
+      "path": "results/efx49_favorite_triple_hall_characterization_audit.json",
+      "sha256": "b8f163538710659d4b690567717361f0088bb51242a69b4e73a951015b80b0ae"
+    },
+    "owner_threshold_shape_envelope": {
+      "path": "results/efx49_owner_threshold_shape_envelope_audit.json",
+      "sha256": "bcd52ab6ace206b46d3212558a5d4832b0d045b785471deea00b23cf777082a8"
+    },
+    "three_agent_bottom": {
+      "path": "results/efx49_three_agent_bottom_pairing_conversion_audit.json",
+      "sha256": "d7e6dbb92aed4edcd6437fe1282bd449e9a7fc04d226864508ce1d52ecf287ad"
+    }
+  },
+  "status": "COMMON_FAVORITE_UNIVERSAL_THRESHOLD_EFX_PROOF_CHECKED",
+  "strict_common_favorite": true,
+  "total_checked_cpc_proof_bytes": 723786758,
+  "total_checked_cpc_proof_step_lines": 8552082,
+  "universal_owner_threshold_failure": true
+}

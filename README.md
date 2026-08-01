@@ -43,6 +43,14 @@ Canonical status is recorded here and in
 preserved as research history; see
 [docs/CAMPAIGN_ARCHIVE.md](docs/CAMPAIGN_ARCHIVE.md) before citing them.
 
+The later general-existence campaign, including the internally certified
+\((4,8)\) package and a proof-checked \((4,9)\) theorem for the strict-common-
+favorite/universal-owner-threshold-failure branch, is tracked separately in
+[results/GENERAL_EFX_GOAL_20260730.md](results/GENERAL_EFX_GOAL_20260730.md).
+It postdates this frozen counting manuscript. Results from the two tracks
+must be cited with their own scope and provenance; the counting paper does
+not claim the unrestricted \((4,9)\) cell or general existence theorem.
+
 ## Quick verification
 
 Python 3.10 was used for the audited runs. From the repository root:

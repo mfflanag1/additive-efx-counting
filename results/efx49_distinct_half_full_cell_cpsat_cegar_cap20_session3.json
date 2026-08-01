@@ -1,0 +1,119 @@
+{
+  "add_per_iteration": 512,
+  "branches": 11080593,
+  "cap": 20,
+  "conflicts": 515395,
+  "elapsed_seconds": 600.4691760540009,
+  "time_limit_seconds": 600.0,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 412,
+  "proto_path": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap20_session3.pbtxt",
+  "proto_sha256": "6e22e515fb3a53489ce5f0aee03760b091d16999083966ce451631b42e57195d",
+  "random_seed": 20260734,
+  "resume_source": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap20_session1.json",
+  "resume_source_sha256": "4599ff0776e6b5edce56e97447478f81ceb444587c964889d36146a0583c1fbe",
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "complement",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_favorite_triple_boundary_audit.json",
+      "sha256": "05534e7b1d06ea4ccb57af293b33582af6811c55f76d3c22c7ca051429d6c20c"
+    },
+    {
+      "path": "results/efx49_distinct_half_structured_floor_boundary_audit.json",
+      "sha256": "79d93b5bf09d9d656ec7e52b93f78ad63578bc9edbbcd02b8aab84d34698fec0"
+    },
+    {
+      "path": "results/efx49_distinct_half_fixed_host_lex_boundary_audit.json",
+      "sha256": "00e68567a2bc286d0359b8b08a148b3a7694b9995ba7f3dacc07292747b01081"
+    },
+    {
+      "path": "results/efx49_distinct_half_rank_radius_boundary_audit.json",
+      "sha256": "47736cdfc9e2c70a13a1393904967298f27d8255f115ba99e2771753a78d66a1"
+    },
+    {
+      "path": "results/efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "sha256": "0a69e1249a57ecec7d8cd45763ff54afb8258e1eace54205a70a591767b2c693"
+    }
+  ],
+  "seed_supported_union_size": 785,
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "solver_status": "UNKNOWN",
+  "status": "CP_SAT_UNKNOWN",
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 357,
+      "iteration": 1,
+      "pool_size_before": 55,
+      "values": [
+        [
+          10,
+          8,
+          8,
+          8,
+          7,
+          7,
+          6,
+          4,
+          4
+        ],
+        [
+          9,
+          4,
+          6,
+          6,
+          8,
+          6,
+          2,
+          2,
+          6
+        ],
+        [
+          5,
+          3,
+          4,
+          4,
+          3,
+          3,
+          3,
+          1,
+          3
+        ],
+        [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          4
+        ]
+      ]
+    }
+  ],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

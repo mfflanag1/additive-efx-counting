@@ -1,0 +1,100 @@
+{
+  "add_per_iteration": 128,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 300.1950421333313,
+  "favorite_pair_partition_count": 780,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "A terminal model refutes only the conditional full-cell selection target. UNSAT_CANDIDATE requires an independent encoding before theorem status.",
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "max_iterations": 4,
+  "n": 4,
+  "partition_family": "eight_orbit",
+  "pool_size": 173,
+  "reason_unknown": "timeout",
+  "resume_source": "results/efx49_distinct_half_eight_orbit_cegar_session1.json",
+  "resume_source_sha256": "5fbda64ac8cc09776928b3a7aaa17461b8423de75e90e9a0881923a0ec2bd146",
+  "schema": "distinct-half-full-cell-cegar-v1",
+  "seed_mode": "union",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_six_orbit_refutation_profile.json",
+      "sha256": "761fe6d4eeb8e14bf5b2abe8075a5626a3b1bf48cdf7e72392c143cb68a24756"
+    }
+  ],
+  "seed_supported_union_size": 45,
+  "smt2_path": "results/efx49_distinct_half_eight_orbit_cegar_session2.smt2",
+  "smt2_sha256": "c7832c61ed4f7d9c7ac1a3d3a3942daa9edfcbefadbbd8476b9c3554ce23250d",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "time_limit_seconds": 300.0,
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 300,
+      "iteration": 1,
+      "pool_size_before": 45,
+      "values": [
+        [
+          2848,
+          1434,
+          747,
+          677,
+          2191,
+          737,
+          2251,
+          1384,
+          2251
+        ],
+        [
+          2926,
+          1253,
+          1563,
+          120,
+          1613,
+          1323,
+          1553,
+          1393,
+          2776
+        ],
+        [
+          1426,
+          828,
+          1311,
+          723,
+          85,
+          773,
+          35,
+          1421,
+          658
+        ],
+        [
+          4371,
+          691,
+          3740,
+          1412,
+          2974,
+          2133,
+          1277,
+          2914,
+          2268
+        ]
+      ]
+    }
+  ],
+  "universal_owner_threshold_failure": true,
+  "universal_threshold_encoding": "cardinal",
+  "values": null
+}

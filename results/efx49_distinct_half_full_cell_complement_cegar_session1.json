@@ -1,0 +1,110 @@
+{
+  "add_per_iteration": 128,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 337.70642924308777,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "A terminal model refutes only the conditional full-cell selection target. UNSAT_CANDIDATE requires an independent encoding before theorem status.",
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 183,
+  "reason_unknown": "canceled",
+  "schema": "distinct-half-full-cell-cegar-v1",
+  "seed_mode": "complement",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_favorite_triple_boundary_audit.json",
+      "sha256": "05534e7b1d06ea4ccb57af293b33582af6811c55f76d3c22c7ca051429d6c20c"
+    },
+    {
+      "path": "results/efx49_distinct_half_structured_floor_boundary_audit.json",
+      "sha256": "79d93b5bf09d9d656ec7e52b93f78ad63578bc9edbbcd02b8aab84d34698fec0"
+    },
+    {
+      "path": "results/efx49_distinct_half_fixed_host_lex_boundary_audit.json",
+      "sha256": "00e68567a2bc286d0359b8b08a148b3a7694b9995ba7f3dacc07292747b01081"
+    },
+    {
+      "path": "results/efx49_distinct_half_rank_radius_boundary_audit.json",
+      "sha256": "47736cdfc9e2c70a13a1393904967298f27d8255f115ba99e2771753a78d66a1"
+    },
+    {
+      "path": "results/efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "sha256": "0a69e1249a57ecec7d8cd45763ff54afb8258e1eace54205a70a591767b2c693"
+    }
+  ],
+  "seed_supported_union_size": 785,
+  "smt2_path": "results/efx49_distinct_half_full_cell_complement_cegar_session1.smt2",
+  "smt2_sha256": "89023a4cc95491d56d60abe1549e0031e43c52293d85fa1a63b8e4943756bc0c",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 289,
+      "iteration": 1,
+      "pool_size_before": 55,
+      "values": [
+        [
+          6129,
+          4141,
+          4240,
+          2120,
+          5267,
+          3246,
+          961,
+          1955,
+          5997
+        ],
+        [
+          5195,
+          4072,
+          4184,
+          1039,
+          4072,
+          4184,
+          2078,
+          983,
+          3089
+        ],
+        [
+          1374,
+          49,
+          1076,
+          978,
+          1006,
+          1346,
+          340,
+          326,
+          729
+        ],
+        [
+          656,
+          89,
+          463,
+          368,
+          564,
+          297,
+          374,
+          12,
+          273
+        ]
+      ]
+    }
+  ],
+  "universal_owner_threshold_failure": true,
+  "values": null
+}

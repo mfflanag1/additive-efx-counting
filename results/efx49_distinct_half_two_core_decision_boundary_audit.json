@@ -1,0 +1,215 @@
+{
+  "bounded_cpsat": {
+    "branches": 2240178,
+    "cap": 20,
+    "conflicts": 177756,
+    "elapsed_seconds": 300.1230571269989,
+    "proto_sha256": "1cf3a3502c2e9e93ef9cb7002ed23f14c2f5485c18d3ee20b76416630939b426",
+    "source": "results/efx49_distinct_half_two_core_cpsat_cap20_session1.json",
+    "source_sha256": "d08f81246c6ba850dbd44fba894cf5b6f234176a92c94cc98fdfb0ecaa310281",
+    "status": "CP_SAT_UNKNOWN"
+  },
+  "bounded_cpsat_cegar": {
+    "branches": 3385500,
+    "cap": 20,
+    "conflicts": 258789,
+    "elapsed_seconds": 900.313285112381,
+    "final_profile": {
+      "balanced_landscape": {
+        "best_three_observer_cell_agent_slacks": [
+          1,
+          -1,
+          -1,
+          -1
+        ],
+        "best_three_observer_cell_parked_goods": [
+          7,
+          8
+        ],
+        "canonical_two_core_tutte_low_pair_count": 0,
+        "canonical_two_core_tutte_low_pairs": [],
+        "common_low_triple_repair_partition_count": 4,
+        "favorite_pair_perfect_partition_count": 20,
+        "favorite_triple_perfect_partition_count": 15,
+        "full_favorite_triple_cell_count": 1,
+        "matching_rank_histogram": {
+          "1": 342,
+          "2": 313,
+          "3": 570,
+          "4": 35
+        },
+        "maximum_favorite_triple_cell_count": 15,
+        "maximum_three_observer_cell_slack": -1,
+        "minimum_deficient_component_size": 313,
+        "minimum_higher_rank_exit_count": 35,
+        "minimum_radius_two_rank_three_exit_count": 0,
+        "minimum_radius_two_rank_three_exit_partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "perfect_partition_count": 35,
+        "robust_low_pair_count": 0,
+        "robust_low_pairs": [],
+        "six_orbit_perfect_partition_count": 0,
+        "trapped_nonperfect_plateau_count": 0,
+        "trapped_nonperfect_plateau_sample": [],
+        "two_core_tutte_low_pair_count": 0,
+        "two_core_tutte_low_pairs": []
+      },
+      "favorite_pair_efx_partition_count": 20,
+      "favorite_pair_triple_counts": {
+        "1+5+7": 2,
+        "1+5+8": 2,
+        "1+6+7": 3,
+        "1+6+8": 3,
+        "3+5+7": 2,
+        "3+5+8": 2,
+        "5+6+7": 3,
+        "5+6+8": 3
+      },
+      "favorite_partner_counts": {
+        "7": 10,
+        "8": 10
+      },
+      "full_favorite_triple_cells": [
+        [
+          7,
+          8
+        ]
+      ],
+      "literal_complete_efx_count": 293,
+      "values": [
+        [
+          15,
+          8,
+          11,
+          9,
+          10,
+          11,
+          11,
+          1,
+          1
+        ],
+        [
+          15,
+          8,
+          12,
+          9,
+          11,
+          7,
+          12,
+          1,
+          1
+        ],
+        [
+          14,
+          10,
+          6,
+          8,
+          11,
+          10,
+          8,
+          1,
+          1
+        ],
+        [
+          14,
+          8,
+          8,
+          10,
+          8,
+          9,
+          6,
+          1,
+          1
+        ]
+      ]
+    },
+    "proto_sha256": "f5c41cc06575cfc0b34ce44fba6731a09b81701309b38e47d4cd63943f53113b",
+    "replayed_pool_size": 331,
+    "resume_source": "results/efx49_distinct_half_two_core_cpsat_cegar_cap20_session2.json",
+    "resume_source_sha256": "2aba714260d4fa493a505bdb7927f324731f9de6dbbbc7f354ce9f31c2771d03",
+    "source": "results/efx49_distinct_half_two_core_cpsat_cegar_cap20_session3.json",
+    "source_sha256": "f2f07542900db8f29d8735c775ffd78a06aaed779855fb7762a1b8a2a277dca3",
+    "status": "CP_SAT_UNKNOWN",
+    "trace_survivor_counts": [
+      398,
+      143,
+      20
+    ]
+  },
+  "complement_cegar": {
+    "missing_partitions_sha256": "ffcc4e70acc9d3c2d50e73dd14d9dfe464d6a3b4bd7c916159bd885e1e8cfbf0",
+    "reason_unknown": "timeout",
+    "replayed_pool_size": 55,
+    "seed_supported_union_size": 785,
+    "smt2_sha256": "31300f3136331c86fa9f781310eff55c1d7f4e34a4c53f9f13b146d9e1441d43",
+    "source": "results/efx49_distinct_half_two_core_complement_cegar_session1.json",
+    "source_sha256": "5fddf937c8496f2160b81ef8f3a55faa6bfce3600cd3409caf9ae75a20951ae4",
+    "status": "MASTER_UNKNOWN",
+    "trace_survivor_counts": [],
+    "two_core_encoding": "direct"
+  },
+  "hall_cegar": {
+    "obstruction_encoding": "hall_selectors",
+    "reason_unknown": "canceled",
+    "replayed_pool_size": 24,
+    "smt2_sha256": "1b08137ed733cddbe6c4d5b62c39afd571f57acc9b4fc8945af85d34c254218e",
+    "source": "results/efx49_distinct_half_two_core_cegar_hall_session1.json",
+    "source_sha256": "4ffa18953f0dcfdddf3b598edb59b473d091752f7eb9df8cf2e12f63ad98de13",
+    "status": "MASTER_UNKNOWN",
+    "trace_survivor_counts": [
+      598,
+      270,
+      383
+    ]
+  },
+  "interpretation": "Exact-real CEGAR produced only profiles with hundreds of favorite-pair repairs before its current boundaries. A separate 55-cut complement frontier timed out before its first model; a reified replay found one 265-repair model before its 183-cut timeout. Bounded CP-SAT CEGAR reduced the remaining repairs from 398 to 143 to 20; the 331-cut continuation remained unknown after 900 seconds, and the full cap-20 formula also timed out. No two-core selection counterexample or UNSAT theorem is claimed.",
+  "matching_cegar": {
+    "obstruction_encoding": "matching_clauses",
+    "reason_unknown": null,
+    "replayed_pool_size": 40,
+    "smt2_sha256": "59c5e23f628fac839f3abacd1c262768c99fca657a38c245870dc054ec0df669",
+    "source": "results/efx49_distinct_half_two_core_cegar_matching_session1.json",
+    "source_sha256": "673ca3323e9a95b0e4d5cd4404f3f714c6dafcb52eb5100a00418aa97d108d62",
+    "status": "ITERATION_LIMIT",
+    "trace_survivor_counts": [
+      598,
+      319,
+      228,
+      283,
+      279
+    ]
+  },
+  "reified_complement_cegar": {
+    "missing_partitions_sha256": "ffcc4e70acc9d3c2d50e73dd14d9dfe464d6a3b4bd7c916159bd885e1e8cfbf0",
+    "reason_unknown": "canceled",
+    "replayed_pool_size": 183,
+    "seed_supported_union_size": 785,
+    "smt2_sha256": "9a43eef0041123cbbe0c2656a6f3ab490c6e90ebb66d7d1b8087b26400a5a821",
+    "source": "results/efx49_distinct_half_two_core_reified_complement_cegar_session1.json",
+    "source_sha256": "db9d6ab8d69a5efb5f2454ca1119072c268d0e54b320bcb4617108e913ba5dcc",
+    "status": "MASTER_UNKNOWN",
+    "trace_survivor_counts": [
+      265
+    ],
+    "two_core_encoding": "reified"
+  },
+  "schema": "distinct-half-two-core-decision-boundary-audit-v1",
+  "status": "TWO_CORE_DECISION_BOUNDARY_REPLAY_PASSED"
+}

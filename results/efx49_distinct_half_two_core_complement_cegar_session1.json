@@ -1,0 +1,67 @@
+{
+  "add_per_iteration": 128,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 120.10103607177734,
+  "favorite_pair_obstruction_encoding": "matching_clauses",
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "interpretation": "A terminal counterexample refutes only the conditional two-core/Tutte selection lemma. UNSAT_CANDIDATE requires an independent encoding before theorem status.",
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 55,
+  "preloaded_all_obstructions": false,
+  "reason_unknown": "timeout",
+  "schema": "distinct-half-two-core-cegar-v1",
+  "seed_mode": "complement",
+  "seed_pool_analysis": {
+    "missing_partition_count": 55,
+    "missing_partitions_sha256": "ffcc4e70acc9d3c2d50e73dd14d9dfe464d6a3b4bd7c916159bd885e1e8cfbf0",
+    "path": "results/efx49_distinct_half_two_core_seed_pool_analysis.json",
+    "sha256": "02946af0191d46e5f70d54452cc9f92ecbf87d6f1d530109b0b66313c1ddeca1"
+  },
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_favorite_triple_boundary_audit.json",
+      "sha256": "05534e7b1d06ea4ccb57af293b33582af6811c55f76d3c22c7ca051429d6c20c"
+    },
+    {
+      "path": "results/efx49_distinct_half_structured_floor_boundary_audit.json",
+      "sha256": "79d93b5bf09d9d656ec7e52b93f78ad63578bc9edbbcd02b8aab84d34698fec0"
+    },
+    {
+      "path": "results/efx49_distinct_half_fixed_host_lex_boundary_audit.json",
+      "sha256": "00e68567a2bc286d0359b8b08a148b3a7694b9995ba7f3dacc07292747b01081"
+    },
+    {
+      "path": "results/efx49_distinct_half_rank_radius_boundary_audit.json",
+      "sha256": "47736cdfc9e2c70a13a1393904967298f27d8255f115ba99e2771753a78d66a1"
+    },
+    {
+      "path": "results/efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "sha256": "0a69e1249a57ecec7d8cd45763ff54afb8258e1eace54205a70a591767b2c693"
+    }
+  ],
+  "seed_supported_union_size": 785,
+  "smt2_path": "results/efx49_distinct_half_two_core_complement_cegar_session1.smt2",
+  "smt2_sha256": "31300f3136331c86fa9f781310eff55c1d7f4e34a4c53f9f13b146d9e1441d43",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "trace": [],
+  "two_core_encoding": {
+    "bad_perfect_matching_terms": 2520,
+    "encoding": "direct",
+    "lost_core_literals": 5040,
+    "low_core_cells": 168
+  },
+  "two_core_target_forbidden": true,
+  "universal_owner_threshold_failure": true,
+  "universal_threshold_encoding": "cardinal",
+  "values": null
+}

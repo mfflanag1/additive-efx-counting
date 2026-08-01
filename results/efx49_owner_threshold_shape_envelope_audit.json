@@ -1,0 +1,34 @@
+{
+  "interpretation": "If f is the owner's favorite, every residual partition fails if and only if x5+x6+x7>v(f) and either x3+x7>v(f) or x4+x5>v(f).",
+  "limitations": [
+    "The audit is a regression check; the accompanying proof is analytic.",
+    "The shape reductions cover all 966 residual partitions.",
+    "The result controls the singleton owner's threshold, not the resident Hall gate."
+  ],
+  "partition_profile_checks": 242550,
+  "schema": "owner-threshold-shape-envelope-audit-v1",
+  "scope": {
+    "nonincreasing_value_grid": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "profile_count": 495,
+    "residual_bundles": 3,
+    "residual_goods": 8
+  },
+  "shape_3+3+2": {
+    "attaining_partition": "{x1,x2}|{x3,x7,x8}|{x4,x5,x6}",
+    "exact_minimum": "max(x1, x3+x7, x4+x5)",
+    "partition_count": 280
+  },
+  "shape_4+2+2": {
+    "attaining_partition": "{x1,x2}|{x3,x4}|{x5,x6,x7,x8}",
+    "exact_minimum": "max(x1, x5+x6+x7)",
+    "partition_count": 210
+  },
+  "status": "OWNER_THRESHOLD_SHAPE_ENVELOPE_AUDIT_PASSED",
+  "universal_threshold_checks": 2695
+}

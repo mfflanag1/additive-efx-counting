@@ -1,0 +1,182 @@
+{
+  "branch_audit": {
+    "distinct_half_favorite_representatives": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "distinct_item_values_per_row": true,
+    "pairwise_distinct_rows": true,
+    "rows": [
+      {
+        "envelope_holds": true,
+        "favorite": 82,
+        "literal_966_partition_failure": true,
+        "observer": 0,
+        "representative": 1,
+        "sorted_residual": [
+          75,
+          74,
+          63,
+          53,
+          47,
+          36,
+          27,
+          22
+        ]
+      },
+      {
+        "envelope_holds": true,
+        "favorite": 72,
+        "literal_966_partition_failure": true,
+        "observer": 1,
+        "representative": 2,
+        "sorted_residual": [
+          56,
+          47,
+          44,
+          43,
+          42,
+          40,
+          20,
+          1
+        ]
+      },
+      {
+        "envelope_holds": true,
+        "favorite": 20,
+        "literal_966_partition_failure": true,
+        "observer": 2,
+        "representative": 3,
+        "sorted_residual": [
+          19,
+          17,
+          16,
+          12,
+          11,
+          10,
+          7,
+          5
+        ]
+      },
+      {
+        "envelope_holds": true,
+        "favorite": 53,
+        "literal_966_partition_failure": true,
+        "observer": 3,
+        "representative": 4,
+        "sorted_residual": [
+          50,
+          40,
+          35,
+          34,
+          30,
+          19,
+          17,
+          3
+        ]
+      }
+    ],
+    "strict_common_favorite": true
+  },
+  "example_non_efx_structured_allocation": {
+    "bundles_by_owner": [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "violations": [
+      {
+        "observer": 0,
+        "own_value": 104,
+        "remainder_value": 121,
+        "removed_good": 1,
+        "target_bundle": 1
+      },
+      {
+        "observer": 0,
+        "own_value": 104,
+        "remainder_value": 122,
+        "removed_good": 2,
+        "target_bundle": 1
+      },
+      {
+        "observer": 0,
+        "own_value": 104,
+        "remainder_value": 149,
+        "removed_good": 3,
+        "target_bundle": 1
+      }
+    ]
+  },
+  "favorite_pair_balanced_efx_partition_count": 306,
+  "favorite_pair_partition_count": 840,
+  "interpretation": "The analytic density-floor construction is guaranteed and has many witnesses on this strict branch-valid profile, but none of those bottom-aware high-pair allocations is EFX. The profile itself still has complete balanced EFX.",
+  "limitation": "This refutes only the direct EFX strengthening of the analytic owner-floor construction, not EFX existence.",
+  "literal_complete_efx_allocation_count": 1364,
+  "schema": "distinct-half-structured-floor-boundary-audit-v1",
+  "status": "DISTINCT_HALF_STRUCTURED_FLOOR_BOUNDARY_AUDIT_PASSED",
+  "structured_efx_allocation_count": 0,
+  "structured_owner_floor_allocation_count": 728,
+  "values": [
+    [
+      82,
+      75,
+      74,
+      47,
+      27,
+      63,
+      36,
+      22,
+      53
+    ],
+    [
+      72,
+      43,
+      40,
+      42,
+      20,
+      47,
+      44,
+      1,
+      56
+    ],
+    [
+      20,
+      7,
+      10,
+      19,
+      16,
+      17,
+      12,
+      5,
+      11
+    ],
+    [
+      53,
+      40,
+      17,
+      30,
+      34,
+      19,
+      50,
+      3,
+      35
+    ]
+  ]
+}

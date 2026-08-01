@@ -1,0 +1,113 @@
+{
+  "add_per_iteration": 128,
+  "branches": 3782240,
+  "cap": 20,
+  "conflicts": 2085,
+  "elapsed_seconds": 309.8453600406647,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 183,
+  "proto_path": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap20_session1.pbtxt",
+  "proto_sha256": "9884f02a64b48c3ba664931522ea3925740a054c37f09c839221f84981daee71",
+  "random_seed": 20260734,
+  "resume_source": null,
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "complement",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_favorite_triple_boundary_audit.json",
+      "sha256": "05534e7b1d06ea4ccb57af293b33582af6811c55f76d3c22c7ca051429d6c20c"
+    },
+    {
+      "path": "results/efx49_distinct_half_structured_floor_boundary_audit.json",
+      "sha256": "79d93b5bf09d9d656ec7e52b93f78ad63578bc9edbbcd02b8aab84d34698fec0"
+    },
+    {
+      "path": "results/efx49_distinct_half_fixed_host_lex_boundary_audit.json",
+      "sha256": "00e68567a2bc286d0359b8b08a148b3a7694b9995ba7f3dacc07292747b01081"
+    },
+    {
+      "path": "results/efx49_distinct_half_rank_radius_boundary_audit.json",
+      "sha256": "47736cdfc9e2c70a13a1393904967298f27d8255f115ba99e2771753a78d66a1"
+    },
+    {
+      "path": "results/efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "sha256": "0a69e1249a57ecec7d8cd45763ff54afb8258e1eace54205a70a591767b2c693"
+    }
+  ],
+  "seed_supported_union_size": 785,
+  "solver_status": "UNKNOWN",
+  "status": "CP_SAT_UNKNOWN",
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 357,
+      "iteration": 1,
+      "pool_size_before": 55,
+      "values": [
+        [
+          10,
+          8,
+          8,
+          8,
+          7,
+          7,
+          6,
+          4,
+          4
+        ],
+        [
+          9,
+          4,
+          6,
+          6,
+          8,
+          6,
+          2,
+          2,
+          6
+        ],
+        [
+          5,
+          3,
+          4,
+          4,
+          3,
+          3,
+          3,
+          1,
+          3
+        ],
+        [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          4
+        ]
+      ]
+    }
+  ],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

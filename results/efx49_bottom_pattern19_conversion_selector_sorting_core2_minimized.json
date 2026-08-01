@@ -1,0 +1,267 @@
+{
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "assumption_solve_seconds": 129.98599410057068,
+  "claim_boundary": "A proof-checked UNSAT replay establishes only the conditional bottom-pattern conversion lemma represented by this formula.",
+  "conversion_orbit": null,
+  "core_minimization": true,
+  "core_partitions": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        6,
+        8
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        4,
+        8
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        4,
+        8
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        4,
+        7
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        4,
+        7
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        6,
+        7
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        5
+      ]
+    ]
+  ],
+  "core_size": 6,
+  "formula": "results/efx49_bottom_pattern19_conversion_selector_sorting_core2_minimized.smt2",
+  "formula_sha256": "580b821b2f003375e8508023491bb820cb53d928e5cf956710fb796870aef8a0",
+  "pattern_index": 19,
+  "pool_size": 360,
+  "reason_unknown": null,
+  "replay_reason_unknown": null,
+  "replay_solve_seconds": 362.11025404930115,
+  "replay_solver_status": "unsat",
+  "schema": "bottom-pattern-conversion-core-lra-v1",
+  "selected_cell_encoding": {
+    "accept_literals": 240,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 4,
+    "pairing_failure_terms": 60
+  },
+  "solver_status": "unsat",
+  "source": "results/efx49_bottom_pattern19_conversion_selector_symmetric_sorting_session1.json",
+  "source_sha256": "1e57f5c76b809a5fae80211748eb9728afdedf883a454f36663d8430ae1cb5ac",
+  "status": "CORE_UNSAT_CANDIDATE",
+  "symmetry_breaking": "four_disconnected_edges_canonical",
+  "symmetry_encoding": {
+    "component_swap_agent_images": [
+      [
+        1,
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        2,
+        1,
+        3
+      ],
+      [
+        0,
+        1,
+        3,
+        2
+      ]
+    ],
+    "component_swap_good_images": [
+      [
+        0,
+        3,
+        4,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        5,
+        6,
+        3,
+        4,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        5,
+        6
+      ]
+    ],
+    "endpoint_swap_good_images": [
+      [
+        0,
+        2,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        4,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        5,
+        7,
+        8
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        7
+      ]
+    ],
+    "group_size": 384
+  },
+  "time_limit_seconds_per_solve": 1200.0,
+  "universal_threshold_encoding": "sorting"
+}

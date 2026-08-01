@@ -1,0 +1,371 @@
+{
+  "block_local_favorite_pair_conversions": false,
+  "block_local_transfer_radius": 2,
+  "blocked_local_partition_count": 63,
+  "branches": 258215,
+  "candidate_audit": null,
+  "cegar_iterations": 6,
+  "cegar_singletons": true,
+  "cegar_trace": [
+    {
+      "iteration": 1,
+      "singleton_pool_size_before": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 1.118597,
+      "supported_unpooled_singleton_partition_count": 280,
+      "values": [
+        [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 2,
+      "singleton_pool_size_before": 256,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 24.342497,
+      "supported_unpooled_singleton_partition_count": 59,
+      "values": [
+        [
+          6,
+          1,
+          1,
+          4,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          2,
+          2,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          5,
+          5,
+          4,
+          1,
+          1,
+          1,
+          5,
+          3
+        ],
+        [
+          6,
+          2,
+          1,
+          5,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 3,
+      "singleton_pool_size_before": 315,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 18.364508,
+      "supported_unpooled_singleton_partition_count": 48,
+      "values": [
+        [
+          6,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ],
+        [
+          6,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5
+        ],
+        [
+          6,
+          5,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "iteration": 4,
+      "singleton_pool_size_before": 363,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 41.105782000000005,
+      "supported_unpooled_singleton_partition_count": 35,
+      "values": [
+        [
+          6,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          1,
+          2,
+          1,
+          1,
+          5,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          1,
+          1,
+          2,
+          1,
+          5,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 5,
+      "singleton_pool_size_before": 398,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 45.007338000000004,
+      "supported_unpooled_singleton_partition_count": 43,
+      "values": [
+        [
+          6,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          3,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 6,
+      "singleton_pool_size_before": 441,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 37.787200000000006,
+      "supported_unpooled_singleton_partition_count": 47,
+      "values": [
+        [
+          6,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          5,
+          1,
+          5,
+          3,
+          5,
+          1,
+          5
+        ],
+        [
+          6,
+          2,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "claim_boundary": "A SAT witness refutes only the shortcut that an owner-threshold pass forces favorite-singleton EFX. Complete EFX may still be supported by a balanced or other nonsingleton partition.",
+  "conflicts": 10317,
+  "domain": "positive integers in [1,6]",
+  "elapsed_seconds": 229.23201513290405,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "local_favorite_pair_conversion_count": 6,
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "proto": "results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap6_cpsat_cegar_session1.pb",
+  "proto_bytes": 2855594,
+  "proto_sha256": "7b7e5caf5df6999664d07a9f2ffee793d2f359b0c98ba4dcb42ec48b3a401647",
+  "schema": "common-favorite-threshold-pass-hall-cpsat-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "selected_residual_shape": "332",
+  "singleton_obstruction_pool_size": 488,
+  "solver_status": "UNKNOWN",
+  "solver_wall_seconds": 60.167219,
+  "status": "MASTER_UNKNOWN",
+  "strict_common_favorite": 0,
+  "upper": 6,
+  "values": null
+}

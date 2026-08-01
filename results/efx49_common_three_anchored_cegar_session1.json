@@ -1,0 +1,89 @@
+{
+  "branch": "Each agent has at least four low goods that pair above its favorite with every shared high good.",
+  "cegar_add": 16,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 303.498389005661,
+  "favorite": 0,
+  "interpretation": "UNSAT proves the target anchored family contains an EFX allocation throughout this common-three subbranch. SAT is only a counterexample to that target family, not to EFX existence.",
+  "low_goods": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "m": 9,
+  "max_iterations": 50,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "pool_size": 16,
+  "reason_unknown": "canceled",
+  "schema": "common-three-anchored-lra-result-v1",
+  "semantic_audit": null,
+  "shared_half_favorite_set": [
+    1,
+    2,
+    3
+  ],
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_three_anchored_cegar_session1.smt2",
+  "smt2_sha256": "a221345d6336033baa8aabd416332e13a73e053361942d8613aa97288a0d716e",
+  "solver_status": "unknown",
+  "status": "UNKNOWN",
+  "symmetry": "common-favorite row lex and unused-good column lex",
+  "target_family": "All anchor-separated partitions of shape 3+2+2+2 with one anchor from {0,1,2,3} in each bundle.",
+  "target_partition_count": 240,
+  "trace": [
+    {
+      "iteration": 1,
+      "pool_size_before": 0,
+      "supported_partition_count": 180,
+      "values": [
+        [
+          1966,
+          1243,
+          1243,
+          1243,
+          753,
+          753,
+          753,
+          753,
+          753
+        ],
+        [
+          1906,
+          1213,
+          1213,
+          1213,
+          783,
+          783,
+          783,
+          783,
+          783
+        ],
+        [
+          1876,
+          1273,
+          1273,
+          1273,
+          753,
+          753,
+          753,
+          753,
+          753
+        ],
+        [
+          1806,
+          1303,
+          1083,
+          1053,
+          903,
+          873,
+          843,
+          813,
+          783
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

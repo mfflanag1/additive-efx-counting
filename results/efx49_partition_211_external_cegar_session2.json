@@ -1,0 +1,91 @@
+{
+  "domain": "strictly_positive_reals_normalized_per_row",
+  "elapsed_seconds": 1468.3971228599548,
+  "exclude_peelable": true,
+  "exclude_universal_min": true,
+  "favorite_pattern": [
+    0,
+    0,
+    1,
+    2
+  ],
+  "favorite_pattern_stabilizer": true,
+  "iterations": 2,
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_universe_size": 7770,
+  "pool_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_batch64_pool.json",
+  "pool_sha256": "2900e29e6bf599a6914249b46bc3e9f69a78332361cfa74f0abab90228bab5d7",
+  "pool_size": 772,
+  "ranking_prefix_stabilizer": false,
+  "schema": "external-partition-cegar-result-v1",
+  "second_favorite_pattern": null,
+  "seed_imports": [
+    {
+      "new_partition_count": 4,
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/tracks/model/g49_c4.json",
+      "sha256": "be422af0d20d3877d52083eeb06e99d0fb69acaf601819f76a837d804efbd1a1",
+      "supported_partition_count": 4
+    },
+    {
+      "new_partition_count": 3,
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/tracks/model/g49_deep2.json",
+      "sha256": "2b8853c0058e9f5a69e52d1c2bda20f97ebee4d2bfdf8b78cd48624182c4fb27",
+      "supported_partition_count": 4
+    },
+    {
+      "new_partition_count": 7,
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/tracks/model/g49_c5.json",
+      "sha256": "25f0b6e0b5f20c4c48fd31ac79402a60c4ec2aa175bbd68ae4bcbc75a03fb7ff",
+      "supported_partition_count": 10
+    },
+    {
+      "new_partition_count": 9,
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/tracks/model/g49_stair.json",
+      "sha256": "3008d688e25a0595f472a2c4698d55b0b8cc3fac82fb7833b2bdb25e90fc8ff8",
+      "supported_partition_count": 12
+    }
+  ],
+  "solver": "/Users/maxf/projects/economics-research/game-theory/experimental-runs/additive-efx-counting-runs/parkability/certification-20260730-v1.0.1/tools/cvc5-1.3.3/cvc5-macOS-arm64-static/bin/cvc5",
+  "solver_args": [],
+  "solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74",
+  "status": "MASTER_UNKNOWN",
+  "symmetry": "none",
+  "time_limit_seconds_per_iteration": 900.0,
+  "trace": [
+    {
+      "complete_efx0_count": 84,
+      "iteration": 1,
+      "matching_complete_efx0_count": 84,
+      "model_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration1.values.json",
+      "model_sha256": "bdafeb8a08a51b6f672682683862a6a8bd1fea2120b5dc73d900f4506c9d74c7",
+      "new_partition_count": 33,
+      "normalized_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration1.cvc5.smt2",
+      "normalized_sha256": "e72791873ce2d92baa14e1ba7cbd0fef335fe4427332241136def77621a8beee",
+      "pool_size_before": 739,
+      "solver_elapsed_seconds": 564.516774,
+      "solver_result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration1.cvc5.json",
+      "solver_result_sha256": "90f82be1eb7afcdfb3e1ed62fecf9f8e80de8a0789697325f3b42fd33ff83c94",
+      "solver_verdict": "sat",
+      "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration1.smt2",
+      "source_sha256": "810f2313f2f3aade75e10131637f723fe41f0c3d28f4d46a3629a7a3c73772dd",
+      "supported_partition_count": 33,
+      "unary_sum_replacements": 39488
+    },
+    {
+      "iteration": 2,
+      "normalized_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration2.cvc5.smt2",
+      "normalized_sha256": "b7f39b5aecf0457492af873278b42b5b66ffaa64179228d79601c251e7c45966",
+      "pool_size_before": 772,
+      "solver_elapsed_seconds": 900.024544,
+      "solver_result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration2.cvc5.json",
+      "solver_result_sha256": "ccea77b83d9c8bf624bca19025915af8dae9413cce271cc3de66ec408f38d0fe",
+      "solver_verdict": null,
+      "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_external_session2.iteration2.smt2",
+      "source_sha256": "62d017f14c02414dcf618f196a03f185e522a7e64f7081f7b5d1cd035ab73aca",
+      "unary_sum_replacements": 41300
+    }
+  ],
+  "values": null
+}

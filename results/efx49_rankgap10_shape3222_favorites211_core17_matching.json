@@ -1,0 +1,108 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 3036,
+  "elapsed_seconds": 0.383641,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": false,
+  "exclude_universal_min": false,
+  "favorite_pattern": [
+    0,
+    0,
+    1,
+    2
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 1944,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "partition_universe_size": 1260,
+  "pool_sha256": "0db924d81c615e38703320f9cd1379d41e531a1f75be83002e400ca84a6336f9",
+  "pool_size": 81,
+  "proto_bytes": 523411,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap10_shape3222_favorites211_core17_matching.pb",
+  "proto_sha256": "292d22b29fb4bd24bf14f77787f0cf2913abbf7743bae4d0105387b457a79049",
+  "require_distinct_item_values": true,
+  "require_pairwise_distinct_rows": false,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [
+    {
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_borda_shape3222_favorites211_core17_matching_pool.json",
+      "sha256": "fffa0f0d269b4b9d6f895268f755e2fb437855dbc4921deb2e4107114552eff1"
+    }
+  ],
+  "solver_status": "OPTIMAL",
+  "status": "ITERATION_LIMIT",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 28396,
+      "conflicts": 3935,
+      "deterministic_time": 0.17445608788403366,
+      "iteration": 1,
+      "pool_size_before": 17,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 428,
+      "values": [
+        [
+          10,
+          9,
+          8,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          10,
+          5,
+          3,
+          6,
+          4,
+          2,
+          1,
+          7,
+          9
+        ],
+        [
+          1,
+          10,
+          7,
+          6,
+          2,
+          5,
+          9,
+          4,
+          3
+        ],
+        [
+          3,
+          7,
+          10,
+          4,
+          2,
+          9,
+          8,
+          1,
+          6
+        ]
+      ],
+      "wall_time_seconds": 0.28824900000000003
+    }
+  ],
+  "upper": 10,
+  "values": null
+}

@@ -1,0 +1,322 @@
+{
+  "four_favorite_dominating_pairs_boundary": {
+    "balanced_efx_partition_count": 60,
+    "branch_audit": {
+      "distinct_half_favorite_representatives": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "distinct_item_values_per_row": true,
+      "pairwise_distinct_rows": true,
+      "rows": [
+        {
+          "envelope_holds": true,
+          "favorite": 216,
+          "literal_966_partition_failure": true,
+          "observer": 0,
+          "representative": 1,
+          "sorted_residual": [
+            115,
+            114,
+            113,
+            112,
+            111,
+            96,
+            95,
+            94
+          ]
+        },
+        {
+          "envelope_holds": true,
+          "favorite": 216,
+          "literal_966_partition_failure": true,
+          "observer": 1,
+          "representative": 2,
+          "sorted_residual": [
+            115,
+            114,
+            113,
+            112,
+            111,
+            96,
+            95,
+            94
+          ]
+        },
+        {
+          "envelope_holds": true,
+          "favorite": 216,
+          "literal_966_partition_failure": true,
+          "observer": 2,
+          "representative": 3,
+          "sorted_residual": [
+            115,
+            114,
+            113,
+            112,
+            111,
+            96,
+            95,
+            94
+          ]
+        },
+        {
+          "envelope_holds": true,
+          "favorite": 216,
+          "literal_966_partition_failure": true,
+          "observer": 3,
+          "representative": 4,
+          "sorted_residual": [
+            115,
+            114,
+            113,
+            112,
+            111,
+            96,
+            95,
+            94
+          ]
+        }
+      ],
+      "strict_common_favorite": true
+    },
+    "example_balanced_efx_partition": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    "favorite_bundle_sizes_in_balanced_efx": [
+      2
+    ],
+    "literal_complete_efx_allocation_count": 1440,
+    "refuted_target_count": 0,
+    "values": [
+      [
+        216,
+        115,
+        114,
+        113,
+        112,
+        111,
+        96,
+        95,
+        94
+      ],
+      [
+        216,
+        111,
+        115,
+        114,
+        113,
+        112,
+        94,
+        96,
+        95
+      ],
+      [
+        216,
+        112,
+        111,
+        115,
+        114,
+        113,
+        95,
+        94,
+        96
+      ],
+      [
+        216,
+        113,
+        112,
+        111,
+        115,
+        114,
+        96,
+        94,
+        95
+      ]
+    ]
+  },
+  "globally_favorite_dominated_balanced_boundary": {
+    "balanced_efx_partition_count": 240,
+    "branch_audit": {
+      "distinct_half_favorite_representatives": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "distinct_item_values_per_row": true,
+      "pairwise_distinct_rows": true,
+      "rows": [
+        {
+          "envelope_holds": true,
+          "favorite": 89,
+          "literal_966_partition_failure": true,
+          "observer": 0,
+          "representative": 1,
+          "sorted_residual": [
+            75,
+            74,
+            73,
+            72,
+            71,
+            70,
+            69,
+            53
+          ]
+        },
+        {
+          "envelope_holds": true,
+          "favorite": 43,
+          "literal_966_partition_failure": true,
+          "observer": 1,
+          "representative": 2,
+          "sorted_residual": [
+            38,
+            37,
+            36,
+            35,
+            34,
+            33,
+            32,
+            16
+          ]
+        },
+        {
+          "envelope_holds": true,
+          "favorite": 43,
+          "literal_966_partition_failure": true,
+          "observer": 2,
+          "representative": 3,
+          "sorted_residual": [
+            38,
+            37,
+            36,
+            35,
+            34,
+            33,
+            32,
+            16
+          ]
+        },
+        {
+          "envelope_holds": true,
+          "favorite": 43,
+          "literal_966_partition_failure": true,
+          "observer": 3,
+          "representative": 4,
+          "sorted_residual": [
+            38,
+            37,
+            36,
+            35,
+            34,
+            33,
+            32,
+            16
+          ]
+        }
+      ],
+      "strict_common_favorite": true
+    },
+    "example_balanced_efx_partition": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    "favorite_bundle_sizes_in_balanced_efx": [
+      2
+    ],
+    "literal_complete_efx_allocation_count": 2537,
+    "refuted_target_count": 0,
+    "values": [
+      [
+        89,
+        53,
+        75,
+        74,
+        73,
+        72,
+        71,
+        70,
+        69
+      ],
+      [
+        43,
+        16,
+        38,
+        37,
+        36,
+        35,
+        34,
+        33,
+        32
+      ],
+      [
+        43,
+        16,
+        32,
+        38,
+        37,
+        36,
+        35,
+        34,
+        33
+      ],
+      [
+        43,
+        16,
+        33,
+        32,
+        38,
+        37,
+        36,
+        35,
+        34
+      ]
+    ]
+  },
+  "interpretation": "Both profiles are strict, row-distinct, universally owner-threshold-obstructed, and have four distinct half-favorite representatives. The first has no four-pair favorite-floor cover; the second has no balanced partition whose deletion remainders are globally favorite-bounded. Both nevertheless have many complete balanced EFX allocations.",
+  "limitations": [
+    "These are counterexamples only to two sufficient normal forms, not to EFX.",
+    "The favorite-pair balanced EFX target survives both profiles."
+  ],
+  "schema": "distinct-half-normal-form-boundaries-audit-v1",
+  "scope": {
+    "balanced_partition_count": 1260,
+    "four_pair_state_count": 945,
+    "residual_partitions_per_owner": 966
+  },
+  "status": "DISTINCT_HALF_NORMAL_FORM_BOUNDARIES_AUDIT_PASSED"
+}

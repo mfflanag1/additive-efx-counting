@@ -1,0 +1,170 @@
+{
+  "claim": "The first unrestricted-real common-favorite countermodel to the cap-13 pool still admits complete EFX allocations.",
+  "interpretation": "This is a countermodel only to the frozen 446-partition pool, not to EFX existence. Every literal EFX allocation isolates the common favorite, and every agent can be its owner.",
+  "literal_labeled_allocation_census": {
+    "common_favorite_singleton_owner_counts": {
+      "0": 17,
+      "1": 20,
+      "2": 20,
+      "3": 47
+    },
+    "complete_efx_count": 104,
+    "example_assignments": {
+      "4+2+2+1": [
+        0,
+        3,
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        1
+      ],
+      "4+3+1+1": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        2,
+        3,
+        3,
+        2
+      ],
+      "5+2+1+1": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        2,
+        3,
+        2,
+        2
+      ],
+      "6+1+1+1": [
+        1,
+        0,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2
+      ]
+    },
+    "shape_counts": {
+      "4+2+2+1": 6,
+      "4+3+1+1": 61,
+      "5+2+1+1": 35,
+      "6+1+1+1": 2
+    },
+    "singleton_threshold_slack_ranges": {
+      "0": {
+        "maximum": 6224,
+        "minimum": 30
+      },
+      "1": {
+        "maximum": 63375,
+        "minimum": 38009
+      },
+      "2": {
+        "maximum": 4202,
+        "minimum": 2792
+      },
+      "3": {
+        "maximum": 415,
+        "minimum": 1
+      }
+    }
+  },
+  "schema": "real-common-favorite-4x9-frontier-audit-v1",
+  "singleton_reduction_census": {
+    "0": {
+      "best_threshold_slack": 6224,
+      "residual_efx_allocations": 17,
+      "threshold_passing_allocations": 17
+    },
+    "1": {
+      "best_threshold_slack": 63375,
+      "residual_efx_allocations": 20,
+      "threshold_passing_allocations": 20
+    },
+    "2": {
+      "best_threshold_slack": 4202,
+      "residual_efx_allocations": 62,
+      "threshold_passing_allocations": 20
+    },
+    "3": {
+      "best_threshold_slack": 415,
+      "residual_efx_allocations": 51,
+      "threshold_passing_allocations": 47
+    }
+  },
+  "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_real_sparse_session1.json",
+  "source_sha256": "c08942b9989f50c6ba061c78f5c611dbd6d9160baffae7026cda332f22097597",
+  "status": "REAL_FRONTIER_AUDIT_PASSED",
+  "unlabeled_partition_census": {
+    "all_nonempty_partitions": 7770,
+    "shape_counts": {
+      "4+2+2+1": 3,
+      "4+3+1+1": 27,
+      "5+2+1+1": 8,
+      "6+1+1+1": 1
+    },
+    "singleton_good_counts": {
+      "0": 39,
+      "1": 35,
+      "6": 2
+    },
+    "supported_partitions": 39
+  },
+  "values": [
+    [
+      6293,
+      6263,
+      68,
+      29,
+      25,
+      13,
+      8,
+      2,
+      1
+    ],
+    [
+      88933,
+      50780,
+      48,
+      12563,
+      25366,
+      144,
+      12547,
+      80,
+      12771
+    ],
+    [
+      20950,
+      7624,
+      1025,
+      190,
+      4247,
+      4242,
+      16748,
+      30,
+      8454
+    ],
+    [
+      4189,
+      3982,
+      205,
+      37,
+      32,
+      103,
+      3774,
+      69,
+      311
+    ]
+  ]
+}

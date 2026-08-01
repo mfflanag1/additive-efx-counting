@@ -1,0 +1,100 @@
+{
+  "add_per_iteration": 16,
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "cegar": false,
+  "claim_boundary": "UNSAT would prove the selected-cell conclusion for this one bottom-pair pattern using only its conversion closure, subject to independent replay. SAT refutes only that conversion-family selector, not the full favorite-pair selector or EFX.",
+  "conversion_orbit": null,
+  "conversion_orbit_count": null,
+  "distinct_conversion_partition_count": 240,
+  "distinct_selected_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "elapsed_seconds": 584.1899259090424,
+  "favorite_pair_efx_partition_count": null,
+  "favorite_pair_partition_count": 840,
+  "full_distinct_conversion_partition_count": 240,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "max_iterations": 1,
+  "pattern_index": 3,
+  "pool_size": 240,
+  "raw_conversion_count": 270,
+  "reason_unknown": null,
+  "resume_source": null,
+  "schema": "bottom-pattern-conversion-selector-lra-v1",
+  "seeded_pool_size": 240,
+  "selected_cell_encoding": {
+    "accept_literals": 180,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 3,
+    "pairing_failure_terms": 45
+  },
+  "smt2_path": "results/efx49_bottom_pattern3_conversion_selector_symmetric_cardinal_session1.smt2",
+  "smt2_sha256": "2c32d932e1d43d7139aad4a53e3f8c537ec254b60ba16b68e3e926534a702340",
+  "solver_status": "unsat",
+  "source_pairing_count": 45,
+  "status": "UNSAT_CANDIDATE",
+  "symmetry_breaking": "path_repeated_canonical",
+  "symmetry_encoding": {
+    "free_good_order": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "group_size": 96,
+    "reflection_agent_image": [
+      0,
+      1,
+      3,
+      2
+    ],
+    "reflection_good_image": [
+      0,
+      2,
+      1,
+      4,
+      3,
+      5,
+      6,
+      7,
+      8
+    ],
+    "repeated_pair_agent_order": [
+      0,
+      1
+    ]
+  },
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds_per_solve": 2400.0,
+  "trace": [],
+  "values": null
+}

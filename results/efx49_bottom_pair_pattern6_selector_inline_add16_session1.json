@@ -1,0 +1,272 @@
+{
+  "add_per_iteration": 16,
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "claim_boundary": "UNSAT for all 20 patterns, followed by independent proof checking, would force a full Hall cell among the four selected bottom pairs whenever no pair is bottom-two for three agents. A SAT endpoint refutes only this selected-cell strengthening if another Hall cell or another EFX shape survives.",
+  "distinct_selected_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "elapsed_seconds": 163.8319239616394,
+  "favorite_pair_partition_count": 840,
+  "full_hall_cells": null,
+  "iterations": 5,
+  "literal_complete_efx_count": null,
+  "max_iterations": 20,
+  "multiplicity_signature": [
+    2,
+    2
+  ],
+  "obstruction_encoding": "inline_matching_clauses",
+  "pattern_count": 20,
+  "pattern_index": 6,
+  "pool_size": 64,
+  "reason_unknown": "canceled",
+  "schema": "bottom-pair-pattern-selector-cegar-v1",
+  "seed_sources": [],
+  "seeded_pool_size": 0,
+  "selected_cell_encoding": {
+    "accept_literals": 120,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 2,
+    "pairing_failure_terms": 30
+  },
+  "smt2_path": "results/efx49_bottom_pair_pattern6_selector_inline_add16_session1.smt2",
+  "smt2_sha256": "c118d24ad440bee2d4fe749a8f269894e0cead041ca8457d6d0909bcfb9d1293",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "time_limit_seconds_per_solve": 60.0,
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 781,
+      "full_hall_cells": [],
+      "iteration": 1,
+      "pool_size_before": 0,
+      "values": [
+        [
+          151,
+          73,
+          68,
+          78,
+          78,
+          78,
+          78,
+          73,
+          83
+        ],
+        [
+          151,
+          63,
+          68,
+          83,
+          78,
+          78,
+          78,
+          88,
+          73
+        ],
+        [
+          298,
+          169,
+          149,
+          149,
+          139,
+          159,
+          149,
+          159,
+          149
+        ],
+        [
+          298,
+          159,
+          169,
+          149,
+          139,
+          159,
+          149,
+          149,
+          149
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 389,
+      "full_hall_cells": [],
+      "iteration": 2,
+      "pool_size_before": 16,
+      "values": [
+        [
+          907,
+          733,
+          808,
+          877,
+          850,
+          835,
+          865,
+          853,
+          844
+        ],
+        [
+          7599,
+          2501,
+          2485,
+          5082,
+          5034,
+          5098,
+          2517,
+          5114,
+          4954
+        ],
+        [
+          12603,
+          11421,
+          10181,
+          1211,
+          5018,
+          10065,
+          7527,
+          7614,
+          7556
+        ],
+        [
+          7569,
+          5026,
+          5041,
+          2468,
+          2558,
+          5071,
+          4966,
+          2558,
+          2603
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 231,
+      "full_hall_cells": [],
+      "iteration": 3,
+      "pool_size_before": 32,
+      "values": [
+        [
+          934,
+          161,
+          8,
+          318,
+          479,
+          620,
+          785,
+          773,
+          930
+        ],
+        [
+          3730,
+          659,
+          627,
+          1929,
+          1158,
+          3151,
+          2476,
+          2588,
+          3714
+        ],
+        [
+          7506,
+          2278,
+          4844,
+          1315,
+          32,
+          6511,
+          6223,
+          6383,
+          4972
+        ],
+        [
+          649,
+          120,
+          523,
+          54,
+          9,
+          589,
+          604,
+          646,
+          562
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 330,
+      "full_hall_cells": [],
+      "iteration": 4,
+      "pool_size_before": 48,
+      "values": [
+        [
+          1393,
+          120,
+          1253,
+          1361,
+          1333,
+          1273,
+          1257,
+          1313,
+          1289
+        ],
+        [
+          5495,
+          2351,
+          2559,
+          5443,
+          5404,
+          2650,
+          5300,
+          2637,
+          2585
+        ],
+        [
+          10492,
+          2663,
+          7849,
+          2563,
+          40,
+          10472,
+          5386,
+          5326,
+          8169
+        ],
+        [
+          451,
+          397,
+          433,
+          2,
+          14,
+          41,
+          416,
+          450,
+          444
+        ]
+      ]
+    }
+  ],
+  "values": null
+}
