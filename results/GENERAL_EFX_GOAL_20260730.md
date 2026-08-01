@@ -37,9 +37,11 @@ but bounded cap-20 CEGAR searches prove or refute neither the rank-two claim
 nor its stronger zero-neighbor form. See
 [efx49_common_favorite_mixed_selection_gate_audit.json](efx49_common_favorite_mixed_selection_gate_audit.json).
 The rank-one branch now has a proved common-column normal form and an exact
-owner-switch reduction. The natural three-conversion successor is false
-without the no-singleton hypothesis; with that hypothesis its dense and
-185-cut sparse exact-real formulas remain `UNKNOWN`. See
+owner-switch reduction. The natural one-transfer successor is false even
+with every favorite-singleton partition excluded: an exact profile blocks
+all six transfers but has 366 balanced repairs and 1,259 allocations. Its
+nearest repairs require two transfers, and the 63-partition radius-two gate
+remains open. See
 [RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 The stronger common-low target has an exact boundary with zero favorite-pair
 repairs,

@@ -62,6 +62,8 @@ verify-parkability:
 	cmp results/efx49_common_favorite_mixed_selection_gate_audit.json $(VERIFY_TMP)/common-favorite-mixed-selection-gate.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_triple_gate.py --dense results/efx49_common_favorite_rank1_triple_conversion_lra_session1.json --cegar results/efx49_common_favorite_rank1_triple_conversion_cegar_session1.json --normalization results/efx49_common_favorite_rank1_triple_conversion_cegar_session1.cvc5.normalization.json --output $(VERIFY_TMP)/common-favorite-rank1-triple-gate.json
 	cmp results/efx49_common_favorite_rank1_triple_gate_audit.json $(VERIFY_TMP)/common-favorite-rank1-triple-gate.json
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_common_favorite_rank1_local6_boundary.py --local6 results/efx49_common_favorite_rank1_triple_fixed_conversion_cap20_cpsat_cegar_session1.json --radius2 results/efx49_common_favorite_rank1_triple_no_radius2_cap20_cpsat_cegar_session1.json --output $(VERIFY_TMP)/common-favorite-rank1-local6-boundary.json
+	cmp results/efx49_common_favorite_rank1_local6_boundary_audit.json $(VERIFY_TMP)/common-favorite-rank1-local6-boundary.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_owner_threshold_shape_envelope.py --output $(VERIFY_TMP)/owner-threshold-shape-envelope.json
 	cmp results/efx49_owner_threshold_shape_envelope_audit.json $(VERIFY_TMP)/owner-threshold-shape-envelope.json
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/audit_owner_threshold_pair_degree_encoding.py --output $(VERIFY_TMP)/owner-threshold-pair-degree-encoding.json

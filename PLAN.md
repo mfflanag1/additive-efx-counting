@@ -282,9 +282,10 @@ or counterexample. See
 The rank-one branch is reduced analytically to a common-column bundle and
 one strict density inequality per resident. Owner switching either reaches
 rank two or leaves a three-resident density wall/all-four-common-column
-case. The next smallest lemma is the common-triple conversion-or-singleton
-dichotomy; its unconditional form is refuted, while the exact no-singleton
-formula remains open after a 185-cut sparse rebuild. See
+case. The common-triple conversion-or-singleton dichotomy is now refuted
+even under the no-singleton hypothesis: all six one-good transfers can fail,
+while the nearest EFX repair is distance two. The exact next target is the
+63-partition radius-two implication. See
 [`results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 
 The two terminal partition orbits now have a sharper local proof-mining

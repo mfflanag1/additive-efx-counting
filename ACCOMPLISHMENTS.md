@@ -181,5 +181,6 @@ Inside the previously opaque rank-one Hall case, a new analytic normal form
 shows that all residents must accept only one common bundle and satisfy one
 strict density inequality. This yields an exact owner-switch reduction.
 The associated audit also prevents overclaiming: a natural three-conversion
-rule is false without the global no-singleton hypothesis, and the sharp
-version with that hypothesis remains an open 185-cut exact-real gate.
+rule is false even with the global no-singleton hypothesis. The exact
+boundary blocks all six one-good transfers, retains 366 balanced repairs and
+1,259 allocations, and raises the smallest surviving exchange radius to two.

@@ -402,8 +402,11 @@ both encodings.
 - [`RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md)
   and [`efx49_common_favorite_rank1_triple_gate_audit.json`](efx49_common_favorite_rank1_triple_gate_audit.json)
   — proved analytic normal form for rank-one resident graphs, exact
-  owner-switch reduction, an unconditional three-conversion counterexample,
-  and the open 185-cut conversion-or-singleton successor.
+  owner-switch reduction, and the superseded early triple-conversion gate.
+- [`efx49_common_favorite_rank1_local6_boundary_audit.json`](efx49_common_favorite_rank1_local6_boundary_audit.json)
+  — exact no-singleton rank-one profile blocking all six one-good transfers;
+  all 366 supporting partitions are balanced, the nearest 15 are distance
+  two, and the 63-partition radius-two successor remains open.
 - [`FOUR_DISCONNECTED_BOTTOM_PAIRS_CONVERSION_THEOREM.md`](FOUR_DISCONNECTED_BOTTOM_PAIRS_CONVERSION_THEOREM.md)
   — first proof-checked all-distinct case: the four selected bottom pairs
   are disjoint and cover all eight residual goods. The complete

@@ -200,7 +200,7 @@ def run(dense_path, cegar_path, normalization_path, output_path):
         raise ValueError("output must be new")
     result = {
         "schema": SCHEMA,
-        "status": "RANK1_TRIPLE_DICHOTOMY_GATE_OPEN",
+        "status": "RANK1_TRIPLE_EARLY_GATE_SUPERSEDED",
         "n": 4,
         "m": 9,
         "domain": "positive additive valuations",
@@ -217,16 +217,17 @@ def run(dense_path, cegar_path, normalization_path, output_path):
             "bundle A. For each resident i, threshold_i(A) is then strictly "
             "larger than the total value of either side bundle."
         ),
-        "candidate_lemma": (
+        "then_candidate_lemma": (
             "If the common bundle A is a triple and the selected 3+3+2 "
             "partition passes its owner's threshold, then either a favorite-"
             "singleton EFX partition exists or moving one good of A next to "
             "the favorite produces a balanced EFX partition."
         ),
+        "superseded_by": "results/efx49_common_favorite_rank1_local6_boundary_audit.json",
         "claim_boundary": (
-            "The candidate lemma remains open. The unconditional version is "
-            "exactly refuted, while the dense and sparse exact-real formulas "
-            "end UNKNOWN and provide neither proof nor counterexample."
+            "These early dense and sparse exact-real formulas ended UNKNOWN. "
+            "A later exact cap-20 profile refutes the candidate lemma even "
+            "with every favorite-singleton partition excluded."
         ),
     }
     atomic_json(output_path, result)

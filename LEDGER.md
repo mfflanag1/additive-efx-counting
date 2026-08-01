@@ -701,10 +701,11 @@ Consequences (both directions, size-preserving, same (n,m), additive-only):
 - The rank-one Hall branch has a proved common-column normal form: all three
   residents accept only one bundle, whose post-removal value strictly
   exceeds both side-bundle totals in every resident row. Owner switching
-  gives two exact successor cases. The unconditional three-conversion rule
-  is refuted by a profile with 116 singleton repairs and 301 allocations;
-  the no-singleton version remains open after a 185-cut sparse exact-real
-  rebuild. See
+  gives two exact successor cases. More decisively, a profile with no
+  favorite-singleton EFX partition blocks all six one-good transfers. It
+  has 366 balanced supporting partitions and 1,259 allocations; the nearest
+  15 repairs require two transfers. The radius-two implication remains open.
+  See
   [`results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 
 ---

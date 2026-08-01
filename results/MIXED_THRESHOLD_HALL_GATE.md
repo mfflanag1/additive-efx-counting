@@ -125,9 +125,12 @@ v_i(A)-\min A>\max\{v_i(B),v_i(C)\}.
 \]
 
 This yields an exact owner-switch reduction and separates the common-pair
-and common-triple cases. The proof, the unconditional three-conversion
-counterexample, and the sparse 185-cut successor gate are recorded in
+and common-triple cases. The proof and exact boundaries are recorded in
 [RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
+The strongest local result is negative: even with every favorite-singleton
+allocation excluded, one rank-one profile blocks all six one-good transfers.
+Its nearest EFX repairs require two transfers; the 63-partition radius-two
+successor remains open.
 
 ## Precise next gate
 
