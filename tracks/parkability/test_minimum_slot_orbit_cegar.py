@@ -11,6 +11,7 @@ try:
     from .run_minimum_slot_orbit_cegar import (
         eligible,
         owner_cores_dominate_floater,
+        owner_cores_dominate_predecessor_tokens,
         run,
         theta_upper_bound,
         threshold_terms,
@@ -30,6 +31,7 @@ except ImportError:
     from run_minimum_slot_orbit_cegar import (
         eligible,
         owner_cores_dominate_floater,
+        owner_cores_dominate_predecessor_tokens,
         run,
         theta_upper_bound,
         threshold_terms,
@@ -99,6 +101,19 @@ def test_owner_cores_dominate_floater_gate():
     for owner, core in enumerate((0, 2, 4, 6)):
         solver = z3.Solver()
         solver.add(gate, values[owner][core] < values[owner][8])
+        assert solver.check() == z3.unsat
+
+
+def test_owner_cores_dominate_predecessor_tokens_gate():
+    values = [
+        [z3.Real(f"p_{agent}_{good}") for good in range(9)]
+        for agent in range(4)
+    ]
+    gate = owner_cores_dominate_predecessor_tokens(values)
+    for owner, core in enumerate((0, 2, 4, 6)):
+        predecessor_token = (2 * owner - 1) % 8
+        solver = z3.Solver()
+        solver.add(gate, values[owner][predecessor_token] > values[owner][core])
         assert solver.check() == z3.unsat
 
 

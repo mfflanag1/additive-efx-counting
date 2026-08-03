@@ -223,10 +223,11 @@ The subsequent coarsening removes all 24 off-host and eight diagonal edge
 equalities.  Its current exact pool has 159 global-maximality cuts, 78 matching
 blockers, and 30 whole-token Hall blockers.  This yields the first structural
 lemma in the full cyclic pair-Hall cell: every owner's core good weakly
-dominates the floater.  The direct owner-1 refutation is confirmed by three Z3
-profiles and cvc5; cyclic relabeling gives all four rows.  The residual
-core-dominance master remains open, with seven of 36 exact cube leaves closed
-and 29 UNKNOWN.  See
+dominates both the floater and the preceding pair's token.  The core--floater
+wall is confirmed by three Z3 profiles and cvc5; the predecessor-token wall is
+confirmed by three Z3 profiles while cvc5 remains UNKNOWN.  Cyclic relabeling
+gives both walls in all four rows.  The residual two-wall master remains open;
+its fresh exact depth-six cover has 58 leaves and is not yet decided.  See
 `PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`.
 
 After the full-cut branch, the proper critical-cut branches of sizes two and
@@ -243,7 +244,7 @@ an arbitrary charity set while preserving collective charity dominance.
 The focused parkability suite passes:
 
 ```text
-45 passed, 36 warnings in 23.14s
+48 passed, 35 warnings in 15.00s
 ```
 
 The warnings are pre-existing pytest return-value warnings.  The new Python

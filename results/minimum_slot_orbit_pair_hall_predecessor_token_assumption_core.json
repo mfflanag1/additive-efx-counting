@@ -1,0 +1,33 @@
+{
+  "branch": 33,
+  "branch_path": "/tmp/pair-hall-core-dominance-cubes-d6/branch_033.smt2",
+  "branch_sha256": "79749c2a0f797aeb9b689cfee9a48ef5836c5aac8986f8fa1def2d171d8dfc88",
+  "core_literal_count": 1,
+  "core_literals": [
+    "Not(v_2_3 + -1*v_2_4 <= 0)"
+  ],
+  "core_positions": [
+    0
+  ],
+  "cube": [
+    "Not(v_2_3 + -1*v_2_4 <= 0)",
+    "v_2_1 + -1*v_2_3 + v_2_5 >= 0",
+    "Not(v_0_0 + v_0_3 + -1*v_0_4 + v_0_7 >= 0)",
+    "v_2_1 + v_2_4 + -1*v_2_6 + v_2_8 >= 0"
+  ],
+  "cube_literal_count": 4,
+  "elapsed_seconds": 2.3612296249484643,
+  "manifest": "/tmp/pair-hall-core-dominance-cubes-d6.json",
+  "manifest_sha256": "bc46380aee4c490282a4bac3bb729266fdda9dc2746516e3fb9de5a7b4c1205e",
+  "meaning": "Tracked UNSAT core over only the exact cube literals; all source assertions remain untracked premises. This is a core, not necessarily a minimum core.",
+  "reason_unknown": null,
+  "schema": "minimum-slot-cube-assumption-core-v1",
+  "solver": "z3",
+  "solver_profile": "default",
+  "solver_version": "5.0.0",
+  "source": "/tmp/pair-hall-core-dominance-master.smt2",
+  "source_sha256": "2c5d9e46d457762d04e272da2ec7a47f4038b0fb50f1747d08102538969bed9a",
+  "status": "CUBE_ASSUMPTION_CORE_EXTRACTED",
+  "timeout_seconds": 180,
+  "verdict": "unsat"
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "minimum-slot-pair-hall-predecessor-token-wall-audit-v1",
+  "status": "CYCLIC_PREDECESSOR_TOKEN_WALL_TRIPLE_Z3_CONFIRMED_CVC5_UNKNOWN",
+  "meaning": "Conditional on the proved core-floater dominance wall, the canonical cyclic pair-Hall antecedent forces every owner's core good to weakly dominate the preceding pair's token. The direct formula proves owner 2; cyclic relabeling gives all four owners. This remains a local structural lemma, not closure of the pair-Hall cell.",
+  "depends_on": "results/minimum_slot_orbit_pair_hall_core_dominance_replay_audit.json",
+  "direct_owner": 2,
+  "direct_inequality": "v_2_3 <= v_2_4",
+  "cyclic_inequalities": [
+    "v_0_7 <= v_0_0",
+    "v_1_1 <= v_1_2",
+    "v_2_3 <= v_2_4",
+    "v_3_5 <= v_3_6"
+  ],
+  "direct_artifact": "results/minimum_slot_orbit_pair_hall_predecessor_token_wall_default.json",
+  "direct_artifact_sha256": "15d62ebeac7d072a3257692d51d5245ddc6ad75ef48d08ca59df1aa5c6c1b3cb",
+  "assumption_core": "results/minimum_slot_orbit_pair_hall_predecessor_token_assumption_core.json",
+  "assumption_core_sha256": "b2acbe96cf520cd759812b290655f87422c576e5c4fa837a48e0bab9bc5d45a8",
+  "finite_consequence_counts": {
+    "global_cuts": 159,
+    "matching_witness_cuts": 78,
+    "whole_orbit_blockers": 30,
+    "maximum_pair_exchange_distance_preloaded": 3
+  },
+  "z3": {
+    "version": "5.0.0",
+    "profiles": {
+      "default": {
+        "status": "BASE_OWNER_PREDECESSOR_TOKEN_DOMINANCE_FORCED",
+        "elapsed_seconds": 40.13287733308971
+      },
+      "qf_lra": {
+        "status": "BASE_OWNER_PREDECESSOR_TOKEN_DOMINANCE_FORCED",
+        "elapsed_seconds": 77.58782541705295
+      },
+      "arith2": {
+        "status": "BASE_OWNER_PREDECESSOR_TOKEN_DOMINANCE_FORCED",
+        "elapsed_seconds": 62.45798979199026
+      }
+    },
+    "exported_formula_sha256": "a074126fe3b533867c42ca5d8b3bd6451b31a49ffb4d5cd88f2834ec0cd21a3d"
+  },
+  "cvc5": {
+    "version": "1.3.3",
+    "git_revision": "8ff882e",
+    "status": "unknown",
+    "reason_unknown": "timeout",
+    "timeout_seconds": 180,
+    "normalized_formula_sha256": "dbcf3b1d5ceb932d0696de3e1efab3c17a6f600dfb7acc9f16c34537b49ab9b3"
+  },
+  "two_wall_residual": {
+    "manifest": "results/minimum_slot_orbit_pair_hall_two_walls_cubes_d6.json",
+    "manifest_sha256": "7d60f70cbdae3c78680e7eade3e4dc75b745632fb6e219636da4e82c6306ab29",
+    "branch_count": 58,
+    "cube_status_hint_unsat_branches": [18, 27, 50, 53],
+    "decision_status": "NOT_YET_DECIDED"
+  },
+  "checks": {
+    "core_floater_wall_imposed": true,
+    "selected_owner_predecessor_token_above_core_refuted": true,
+    "assumption_core_has_one_literal": true,
+    "three_z3_profiles_unsat": true,
+    "cvc5_unsat": false,
+    "cyclic_pair_hall_cell_invariant": true,
+    "full_pair_hall_cell_proved": false,
+    "four_agent_efx_proved": false,
+    "general_efx_proved": false
+  }
+}

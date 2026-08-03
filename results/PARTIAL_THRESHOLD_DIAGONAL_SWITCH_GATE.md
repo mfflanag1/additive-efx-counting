@@ -161,9 +161,11 @@ not evidence that the coarser cell is satisfiable or that the theorem fails.
 The coarsened campaign now has 159 global cuts, 78 matching blockers, and 30
 whole-token Hall blockers.  A dual-solver-verified consequence of that finite
 subset, and hence of the full antecedent, is the cyclic core-dominance lemma
-\(v_i(2i)\geq v_i(8)\) for every owner.  Adding the four inequalities leaves
-an exact 36-branch cover with seven branches closed across two Z3 profiles and
-29 UNKNOWN.  See `PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`.
+\(v_i(2i)\geq v_i(8)\) for every owner.  A tracked one-literal extraction
+then proves the second cyclic wall
+\(v_i(2i)\geq v_i((2i-1)\bmod 8)\).  Adding both walls leaves a fresh exact
+58-branch cover; four leaves have immediate UNSAT hints, but the cover is not
+yet decided.  See `PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`.
 
 The exact pattern-1 result is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.  It is a second complete

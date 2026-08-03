@@ -11,9 +11,10 @@ has been obtained.
 theorems have now been coarsened to the full cyclic pair-Hall cell far enough
 to prove a new cap-free structural consequence: under global normalized-
 threshold maximality and complete blockage of the eligible fixed-core token
-orbit, every owner's core good weakly dominates the floater.  The direct wall
-is confirmed by three Z3 profiles and cvc5.  The residual pair-Hall master is
-not closed: an exact 36-leaf cover has seven UNSAT leaves and 29 UNKNOWN.
+orbit, every owner's core good weakly dominates both the floater and the
+preceding pair's token.  The first wall is confirmed by three Z3 profiles and
+cvc5; the second is triple-Z3 confirmed with cvc5 UNKNOWN.  The residual
+pair-Hall master is not closed: a fresh exact 58-leaf cover remains undecided.
 See
 [PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md).
 
