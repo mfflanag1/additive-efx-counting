@@ -101,6 +101,14 @@ sizes two and three and the full cut has the one-bottleneck-edge normal form,
 so this is a finite *structural* classification rather than another valuation
 cap search.
 
+The first exchange certificate in that classification is now proved: if each
+matched bundle receiver likes its incoming exchange good and every external
+observer weakly prefers the outgoing good, all matched Hall slacks improve
+coordinatewise. Hence any failed certificate supplies a specific external
+observer with the opposite strict sign. The remaining theorem must show that
+these observer dependencies close into a profitable eligible transfer union
+or an inconsistent strict cycle.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:

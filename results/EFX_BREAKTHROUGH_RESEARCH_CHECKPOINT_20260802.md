@@ -72,6 +72,15 @@ removes the need to eliminate every equality edge of a proper Hall cut in one
 move, but existence of the required eligible edge-improving or positive-gain
 exchange remains open.
 
+The matched-slack exchange lemma then converts the lexicographic refinement
+into a concrete sufficient move. Under a fixed optimal matching, an item
+cycle weakly improves every matched slack whenever each matched bundle
+receiver weakly prefers its incoming item and every external observer weakly
+prefers the outgoing item. One strict receiver preference gives strict
+\(\Lambda\)-progress. Failure therefore identifies an external observer with
+the opposite strict sign for each attempted target; chaining those named
+observers around the critical Hall cut is the remaining wall-cycle theorem.
+
 ## New cap-free analytic results
 
 1. **Threshold-maximum swap preservation.**  Every eligible owner-minimum

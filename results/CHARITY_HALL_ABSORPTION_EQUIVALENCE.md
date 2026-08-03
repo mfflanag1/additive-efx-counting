@@ -118,6 +118,15 @@ outcome. More precisely, lexicographic maximality of \(\Lambda\) lets the
 proof improve one tight matching edge at a time. A proof must derive one of
 the two extremal contradictions from the critical Hall walls.
 
+The matched-slack exchange lemma gives an exact sufficient certificate. For a
+fixed optimal matching, cyclically replace one good in selected bundles so
+that each matched receiver weakly prefers its incoming good while every
+external observer weakly prefers the outgoing good. Then every matched slack
+weakly improves, and one strict receiver comparison strictly improves
+\(\Lambda\). Failure of this certificate exposes a named external observer
+with the opposite strict sign, which is the dependency edge to be chained
+around the critical Hall cut.
+
 For four agents, the known one-unallocated-good theorem starts the induction
 at \(p=1\), so the \(p=1,n=4\) specialization would prove complete
 four-agent additive EFX. For arbitrary \(n\), the known EFX-with-charity

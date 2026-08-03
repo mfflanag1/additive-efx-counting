@@ -103,6 +103,23 @@ longer necessary to improve all of them simultaneously merely to register
 progress. They may be eliminated one at a time, provided previously matched
 slacks do not fall.
 
+## Proper-cut one-edge upgrade corollary
+
+Let \(S\) be an inclusion-minimal strict Hall witness and
+\(T=N_{>\lambda}(S)\). In the factorizing case of the bottleneck Hall-cut
+lemma, choose a crossing equality edge \((a,w)\) with \(a\in S\),
+\(w\notin T\), a strict matching from \(S-a\) onto \(T\), and a residual
+matching from the remaining agents to the remaining bundles so that their
+union attains \(\Lambda\).
+
+If an eligible state move strictly raises the slack of \((a,w)\) and weakly
+preserves the slack of every other edge in this factorized matching, then it
+strictly raises \(\Lambda\). This follows immediately from Lemma 2. If the
+residual factorization does not exist, the residual Hall witness expands
+\(S\) to a strictly larger deficient set. Hence a proof may alternate between
+single crossing-edge upgrades and strict cut expansion; it never needs to
+repair all proper-cut equality edges simultaneously.
+
 ## Claim boundary
 
 The three lemmas above are cap-free and valid for arbitrary positive-additive
