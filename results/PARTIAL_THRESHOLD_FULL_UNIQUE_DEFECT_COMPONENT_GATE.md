@@ -128,7 +128,10 @@ supplies a second construction language: the bad agent necessarily
 \(f\)-champions the host, with either an ordinary envy edge or a nonempty
 released bottom bundle. The next proof should use generalized-champion cycles
 to build an EFX-preserving component and the signed-wall lemma to certify its
-extremal improvement.
+extremal improvement. The component must preserve charity cardinality and have
+nonnegative total threshold change; Pareto improvement by itself is not
+enough. The exact distinction and a local counterexample are recorded in the
+[`reciprocal-champion threshold gate`](RECIPROCAL_CHAMPION_THRESHOLD_GATE.md).
 
 ## Claim boundary
 

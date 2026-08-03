@@ -136,6 +136,37 @@ When \(P=\{f\}\) and \(X_q\) is nonsingleton, the new floater \(g\) is
 automatically unenvied by old EFX, so the external-charity wall disappears.
 The lemma then specializes exactly to the one-floater obstruction lemma.
 
+## Pareto-sensitive one-floater dependency corollary
+
+Among the global \(\Theta\)-maxima, additionally maximize the owner-utility
+vector in a fixed lexicographic order. Let \(P=\{f\}\), let \(X_q\) be
+nonsingleton, and let \(g\) be a \(q\)-minimum satisfying
+
+\[
+v_q(f)>v_q(g). \tag{P}
+\]
+
+Then the \(f/g\) swap is ineligible, and there exists an external agent
+\(i\ne q\) such that
+
+\[
+v_i(X_i)<\tau_i(X_q-g+f)
+\quad\text{and}\quad
+v_i(f)>v_i(g). \tag{D}
+\]
+
+Indeed, if the swap were eligible, the plateau theorem would preserve
+\(\Theta\) while (P) strictly improved only owner \(q\)'s utility,
+contradicting the secondary extremum. Ineligibility must therefore have one
+of the wall types above. Nonsingleton one-floater swaps have no external
+charity wall. Both source-owner walls force \(v_q(g)>v_q(f)\), contradicting
+(P). Only an incoming-target wall remains, and (T) gives its strict sign.
+
+Thus every improving owner-minimum swap at the selected extremum points to a
+different blocking agent with the same row-wise orientation between \(f\)
+and the released minimum. For singleton \(X_q\), an external charity wall is
+an additional residual branch.
+
 ## Breakthrough target exposed by the lemma
 
 Starting from the known EFX-with-charity allocation, choose a global

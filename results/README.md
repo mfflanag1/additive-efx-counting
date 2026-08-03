@@ -71,6 +71,7 @@ proof-compression gates. The proved entry points are
 [`PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md`](PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md),
 [`GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md`](GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md),
 [`UNIQUE_DEFECT_CHAMPION_BRIDGE_LEMMA.md`](UNIQUE_DEFECT_CHAMPION_BRIDGE_LEMMA.md),
+[`RECIPROCAL_CHAMPION_THRESHOLD_GATE.md`](RECIPROCAL_CHAMPION_THRESHOLD_GATE.md),
 [`PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md`](PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md),
 [`PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md`](PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md),
 and
@@ -83,6 +84,21 @@ finds an exact four-agent witness refuting the corpus-suggested local
 host--bad reduction while confirming that the witness itself absorbs through
 another host. Thus future arguments must use global selector extremality and
 must not elevate the 4,320/4,320 corpus pattern into a theorem.
+
+The reciprocal-champion gate makes that warning exact. All 4,320 full-witness
+corpus states have threshold-neutral, one-charity reciprocal champion cycles,
+but separate exact local profiles refute reciprocity, champion-cycle
+threshold nonnegativity, and their naive combination with a bad-owner minimum
+swap. Every refuting state lies below absorbing global maxima. The proved
+host-wall propagation lemma converts the remaining reciprocal wall into a
+new host-minimum swap wall, while nonreciprocity redirects the incoming
+champion edge through an external owner. Global wall cancellation remains the
+unproved step.
+
+The revised \((\Theta,U,\Lambda)\) selector is independently enumerated in
+[`threshold_utility_tiebreak_corpus_audit.json`](threshold_utility_tiebreak_corpus_audit.json):
+all 1,104 combinations of 46 hard profiles and 24 agent orders select an
+absorbing state. This is a finite-corpus result, not a general theorem.
 
 Exact selector falsification is implemented by
 `scan_charity_threshold_absorption.py`,

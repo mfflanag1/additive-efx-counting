@@ -73,9 +73,19 @@ The absorption route continues only while it passes all three gates:
 ## Immediate analytic target
 
 Choose a fixed-charity-cardinality EFX state lexicographically maximizing
-\((\Theta,\Lambda)\), where \(\Theta\) is normalized owner-threshold potential
+\((\Theta,U,\Lambda)\), where \(\Theta\) is normalized owner-threshold
+potential, \(U\) is the owner-utility vector in an arbitrary fixed agent order,
 and \(\Lambda\) is the lexicographically maximum sorted vector of all matched
 Hall slacks. Its first coordinate is the old bottleneck margin \(\beta\).
+The utility layer excludes threshold-neutral Pareto-improving champion cycles;
+Pareto improvement alone does not imply an increase in \(\Theta\).
+
+This revised order has been tested exactly on the complete 46-profile hard
+plateau corpus for all 24 agent orders. Every one of the 1,104
+profile/order-specific \((\Theta,U)\)-maximal tie sets contains an absorbing
+state, so the final \(\Lambda\) tie-break selects one. This is exact corpus
+evidence only; the cap-free selector theorem remains the target. See
+[`threshold_utility_tiebreak_corpus_audit.json`](threshold_utility_tiebreak_corpus_audit.json).
 Saturate the state under:
 
 1. eligible charity/minimum exchanges;
@@ -119,14 +129,23 @@ two-external-row, and one bad-row conditions hold. The remaining proof task is
 existence of such a released minimum at the extremal state, not verification
 of the resulting allocation.
 
-The lexicographic signature removes even the handoff's bad-row closure
-requirement. If the released owner minimum produces an eligible swap, both
-external rows rank it below the old charity good, and the bad row ranks the
-charity good strictly above it, then the new identity candidate strictly
-improves its unique negative slack while every other slack stays
-nonnegative. This contradicts \(\Lambda\)-maximality even if the new bad-row
-slack has not yet reached zero. The unique-defect gate is therefore only an
-eligible-swap plus three item-order signs.
+Under the earlier \((\Theta,\Lambda)\) selection, the lexicographic signature
+removed even the handoff's bad-row closure requirement. If the released owner
+minimum produced an eligible swap, both external rows ranked it below the old
+charity good, and the bad row ranked the charity good strictly above it, the
+new identity candidate improved its unique negative slack while every other
+slack stayed nonnegative. That argument remains valid for the older extremum
+but cannot be invoked after inserting \(U\) unless the utility vector is also
+preserved.
+
+The Pareto-sensitive utility layer supplies a different, stronger test. By the
+owner-minimum swap lemma, every eligible such swap is \(\Theta\)-neutral at a
+global maximum. If the bad row strictly prefers the charity good to the
+released minimum, the swap itself strictly improves \(U\), before any
+completion is attempted. Under the revised extremum the full-witness handoff
+therefore needs only an eligible bad-owner minimum with that strict order;
+the two external item orders and Hall signature are unnecessary in this
+subcase.
 
 The matching side of this gate is also completely classified. Every
 four-agent unique-defect failure has one of only three Hall witnesses: the
@@ -152,7 +171,7 @@ The same state is nevertheless directly absorbable through a third host, so
 it does not challenge the selector. See
 [`PARTIAL_THRESHOLD_HOST_REDIRECTION_AUDIT.md`](PARTIAL_THRESHOLD_HOST_REDIRECTION_AUDIT.md).
 Any valid redirection argument must therefore use global
-\((\Theta,\Lambda)\)-maximality; the local Hall topology alone is
+\((\Theta,U,\Lambda)\)-maximality; the local Hall topology alone is
 insufficient.
 
 The next adversarial layer retires bounded local gradients even inside the
@@ -191,10 +210,19 @@ The exact endpoint and replay are recorded in
 
 This also sharpens the next decision gate. The live task is not to search for
 larger-radius moves; it is to classify the four-vertex champion graph around
-the forced edge and prove that either a Pareto-improvable champion edge set
-exists or the signed component walls cancel. Failure to obtain a cap-free
-classification from that finite graph counts against the primary route under
-the proof-compression stop condition below.
+the forced edge and prove that either a charity-cardinality-preserving champion
+edge set has nonnegative total threshold change or the signed component walls
+force a different positive-threshold transfer. A merely Pareto-improving edge
+set is insufficient.
+
+That distinction is exact, not cosmetic. All 4,320 full/unique-defect corpus
+states have a reciprocal singleton-discard champion two-cycle with exactly
+zero threshold change, so the new utility tie-break excludes every one. A
+separate positive \(4\times6\) state satisfies the same local Hall/champion
+topology but both reciprocal cycles lower \(\Theta\) by \(31/1430\). It lies
+strictly below two absorbing global \(\Theta\)-maximizers. Thus global
+maximality or signed-wall cancellation is genuinely necessary. See the
+[`reciprocal-champion threshold gate`](RECIPROCAL_CHAMPION_THRESHOLD_GATE.md).
 
 ## Stop/switch conditions
 

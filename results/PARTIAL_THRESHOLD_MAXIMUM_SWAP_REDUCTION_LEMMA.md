@@ -56,3 +56,19 @@ maximality of the old one force equality. Therefore
 This lemma proves plateau preservation conditional on eligibility. It does
 not say that any particular swap is eligible or that a sequence reaches an
 EFX-completable state.
+
+## Pareto-sensitive extremum corollary
+
+Refine the selection rule by maximizing, among all global \(\Theta\)-maxima,
+the owner-utility vector in any fixed lexicographic agent order. Then every
+eligible owner-minimum/floater swap above must satisfy
+
+\[
+v_q(f)\le v_q(g).
+\]
+
+Indeed, the swap remains on the maximum \(\Theta\)-plateau by the lemma and
+changes no owner's utility except \(q\)'s, whose change is
+\(v_q(f)-v_q(g)\). A positive change would strictly improve the secondary
+utility vector. Thus an eligible swap with \(v_q(f)>v_q(g)\) is already an
+extremal contradiction; no completion or Hall-signature argument is needed.

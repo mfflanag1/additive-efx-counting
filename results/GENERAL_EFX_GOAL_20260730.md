@@ -23,6 +23,27 @@ is to prove that dependency growth preserves enough positive normalized gain
 to close in an eligible union, or else yields an impossible strict wall
 cycle. This supersedes bounded item-radius targets but does not prove EFX.
 
+The champion bridge has now been sharpened against the same gate. All 4,320
+stored full/unique-defect transitions are exactly reconstructed by a
+one-charity reciprocal champion cycle with zero threshold change, so a
+secondary owner-utility maximum excludes the entire corpus. Local reciprocity
+and local threshold compatibility are both exactly false outside that corpus.
+The new cap-free host-wall propagation lemma shows that a failed reciprocal
+singleton swap forces the floater above the host's own minimum and hence a
+new owner-minimum swap wall; a missing reciprocal edge instead routes an
+incoming champion through an external owner. See
+[RECIPROCAL_CHAMPION_THRESHOLD_GATE.md](RECIPROCAL_CHAMPION_THRESHOLD_GATE.md).
+The remaining global step is still to prove that these named walls terminate
+in a nonnegative-threshold component rather than a realizable dependency
+cycle.
+
+The revised \((\Theta,U,\Lambda)\) selection rule survives an exact full-corpus
+audit: all 46 hard profiles and all 24 agent orders, 1,104 cases total, select
+an absorbing state after the utility and Hall tie-breaks. This validates the
+potential ordering on the stored frontier but is not a cap-free selector
+theorem. The frozen audit is
+[threshold_utility_tiebreak_corpus_audit.json](threshold_utility_tiebreak_corpus_audit.json).
+
 **Parallel four-agent Hall-gradient gate:** the fixed-profile diagonal
 theorems have now been coarsened to the full cyclic pair-Hall cell far enough
 to prove a new cap-free structural consequence: under global normalized-
