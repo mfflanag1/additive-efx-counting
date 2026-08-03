@@ -143,6 +143,18 @@ and nonidentity rematching. The proof should therefore attack the full
 witness with the minimum handoff and reserve distinct exchange arguments for
 the two proper-cut cases.
 
+A fresh anti-overfitting test rejects a tempting shortcut inside the full
+witness. The corpus suggests that redirecting the charity good from host
+\(h\) to the unique bad bundle \(b\) either absorbs or leaves only \(h\) bad.
+This is false without global extremality: an exact positive-additive
+four-agent, six-good witness makes two external agents bad after redirection.
+The same state is nevertheless directly absorbable through a third host, so
+it does not challenge the selector. See
+[`PARTIAL_THRESHOLD_HOST_REDIRECTION_AUDIT.md`](PARTIAL_THRESHOLD_HOST_REDIRECTION_AUDIT.md).
+Any valid redirection argument must therefore use global
+\((\Theta,\Lambda)\)-maximality; the local Hall topology alone is
+insufficient.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:

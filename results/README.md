@@ -67,12 +67,19 @@ proof-compression gates. The proved entry points are
 [`PARTIAL_CHARITY_MATCHED_SLACK_EXCHANGE_LEMMA.md`](PARTIAL_CHARITY_MATCHED_SLACK_EXCHANGE_LEMMA.md),
 [`PARTIAL_THRESHOLD_UNIQUE_DEFECT_HANDOFF_LEMMA.md`](PARTIAL_THRESHOLD_UNIQUE_DEFECT_HANDOFF_LEMMA.md),
 [`PARTIAL_THRESHOLD_UNIQUE_DEFECT_HALL_TRICHOTOMY.md`](PARTIAL_THRESHOLD_UNIQUE_DEFECT_HALL_TRICHOTOMY.md),
+[`PARTIAL_THRESHOLD_HOST_REDIRECTION_AUDIT.md`](PARTIAL_THRESHOLD_HOST_REDIRECTION_AUDIT.md),
 [`PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md`](PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md),
 [`PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md`](PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md),
 and
 [`PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md`](PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md).
 The absorption-gradient lemma remains unproved, so neither four-agent nor
 general additive EFX is claimed.
+
+The host-redirection audit is a deliberate anti-local-minimum result. It
+finds an exact four-agent witness refuting the corpus-suggested local
+host--bad reduction while confirming that the witness itself absorbs through
+another host. Thus future arguments must use global selector extremality and
+must not elevate the 4,320/4,320 corpus pattern into a theorem.
 
 Exact selector falsification is implemented by
 `scan_charity_threshold_absorption.py`,
