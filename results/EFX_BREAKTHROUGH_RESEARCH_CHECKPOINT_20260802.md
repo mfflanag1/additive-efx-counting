@@ -143,6 +143,15 @@ arbitrary-core generalization of the core-token exchange alternative recorded in
 `PARTIAL_THRESHOLD_CORE_TOKEN_EXCHANGE_GATE.md`.  Neither the global orbit
 theorem nor four-agent EFX has been proved.
 
+A nearest-higher-state oracle then reduced the observed maximality witnesses
+to 13 owner-distance-two exchanges and two owner-distance-three cycles.  The
+complete balanced radius-three menu has 32 swaps and 112 cycles.  An exact
+boundary valuation proves swaps alone insufficient: its blocked token orbit
+has no positive eligible distance-two exchange, while the unique positive
+local move is a three-owner cycle of gain \(41/1260\).  This replaces the broad
+core-reassignment target by the concrete swap-or-three-cycle alternative in
+the canonical pair cell.
+
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
 be integrated with the known one-unallocated-good theorem to prove complete

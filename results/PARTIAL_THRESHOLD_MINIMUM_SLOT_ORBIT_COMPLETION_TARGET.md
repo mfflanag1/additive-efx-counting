@@ -60,6 +60,14 @@ a completion inside the orbit or an eligible positive-gain core-token
 exchange.  See `PARTIAL_THRESHOLD_CORE_TOKEN_EXCHANGE_GATE.md` for the exact
 artifacts and claim boundary.
 
+The nearest-higher-state audit sharpens "core-token exchange" to a finite
+balanced menu: 32 swaps and 112 three-slot cycles.  A positive exact boundary
+model has no improving swap but does have an improving three-owner cycle, so
+cycles are necessary.  The current canonical-pair target is to prove that this
+distance-three menu always contains a gain whenever the token orbit is
+blocked.  Its arbitrary-core generalization remains the theorem needed for
+four-agent EFX.
+
 ## Why this is the current highest-leverage gate
 
 The target keeps arbitrary bundle sizes inside the frozen cores but reduces

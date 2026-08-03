@@ -1,0 +1,82 @@
+{
+  "claim_boundary": "THREE_CYCLE_NECESSARY proves that no eligible positive-threshold two-slot exchange exists for this valuation, while at least one positive three-slot cycle exists. It is not an EFX counterexample.",
+  "completing_orbit_state_count": 0,
+  "distance_three_state_count": 112,
+  "distance_two_state_count": 32,
+  "eligible_local_state_count": 2,
+  "eligible_local_states": [
+    {
+      "floater": 8,
+      "masks": [
+        3,
+        68,
+        24,
+        160
+      ],
+      "owner_distance": 3,
+      "threshold_gain": "41/1260"
+    },
+    {
+      "floater": 1,
+      "masks": [
+        257,
+        12,
+        48,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain": "0"
+    }
+  ],
+  "eligible_orbit_state_count": 2,
+  "fixed_base_is_global_threshold_maximum": false,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      3,
+      12,
+      48,
+      192
+    ]
+  },
+  "fixed_theta": "1943/1260",
+  "global_maximizer_count": 2,
+  "global_nearest_higher_state": {
+    "floater": 8,
+    "masks": [
+      3,
+      68,
+      24,
+      160
+    ],
+    "owner_distance": 3,
+    "threshold_gain_denominator": 7560,
+    "threshold_gain_numerator": 246
+  },
+  "improving_distance_counts": {
+    "2": 0,
+    "3": 1
+  },
+  "improving_local_state_count": 1,
+  "local_state_count": 144,
+  "meaning": "Exact audit of all balanced pair states at owner-assignment distance two or three from the canonical base.",
+  "nearest_improving_distance": 3,
+  "nearest_improving_states": [
+    {
+      "floater": 8,
+      "masks": [
+        3,
+        68,
+        24,
+        160
+      ],
+      "owner_distance": 3,
+      "threshold_gain": "41/1260"
+    }
+  ],
+  "orbit_status": "ORBIT_ALL_ELIGIBLE_STATES_BLOCKED",
+  "schema": "minimum-slot-local-exchange-radius-audit-v1",
+  "status": "THREE_CYCLE_NECESSARY",
+  "values_path": "results/minimum_slot_orbit_local_exchange_radius2_cegar_session1_orbit_blocked_seed.json",
+  "values_sha256": "86478b7da5df12e80d604a13293c0c08aa615e9198d6165e52aa19feb8d8a66f"
+}

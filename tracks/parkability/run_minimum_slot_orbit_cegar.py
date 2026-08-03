@@ -6,9 +6,11 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import math
 from pathlib import Path
 import time
 
+import numpy as np
 import z3
 
 try:
@@ -99,16 +101,85 @@ def global_landscape(raw_values):
         ),
         None,
     )
-    first = landscape["maximizers"][0]
-    first_masks = tuple(
-        int(mask)
-        for mask in evaluator.base_masks[first["floater"]][first["base_index"]]
+    higher_state = None
+    if fixed is None:
+        higher_state = nearest_higher_state(raw_values, evaluator, base_masks)
+    return landscape, fixed, higher_state
+
+
+def owner_assignment(state):
+    assignment = [-1] * 9
+    for owner, mask in enumerate(state["masks"]):
+        for good in range(9):
+            if int(mask) & (1 << good):
+                assignment[good] = owner
+    if assignment[state["floater"]] != -1:
+        raise AssertionError("floater appears in an allocated bundle")
+    if any(owner < 0 for good, owner in enumerate(assignment) if good != state["floater"]):
+        raise AssertionError("allocated good is missing from the state")
+    return tuple(assignment)
+
+
+def nearest_higher_state(raw_values, evaluator, base_masks):
+    matrix = np.asarray(raw_values, dtype=np.int64)
+    totals, thresholds = evaluator._tables(raw_values)
+    row_totals = tuple(int(total) for total in matrix.sum(axis=1))
+    common_denominator = math.lcm(*row_totals)
+    weights = np.asarray(
+        [common_denominator // total for total in row_totals],
+        dtype=object,
     )
-    return landscape, fixed, {
-        "floater": first["floater"],
-        "masks": first_masks,
-        "hall_insertable": first["hall_insertable"],
-    }
+    base_score = sum(
+        int(thresholds[owner, base_masks[owner]]) * int(weights[owner])
+        for owner in range(4)
+    )
+    base_state = {"floater": FLOATER, "masks": base_masks}
+    base_assignment = owner_assignment(base_state)
+    best = None
+    best_key = None
+
+    for floater, masks in enumerate(evaluator.base_masks):
+        valid = np.ones(len(masks), dtype=bool)
+        for observer in range(4):
+            own = totals[observer, masks[:, observer]]
+            valid &= own >= matrix[observer, floater]
+            for target in range(4):
+                if observer != target:
+                    valid &= own >= thresholds[observer, masks[:, target]]
+        indices = np.flatnonzero(valid)
+        if not len(indices):
+            continue
+        owner_thresholds = np.column_stack(
+            [
+                thresholds[owner, masks[indices, owner]]
+                for owner in range(4)
+            ]
+        )
+        scores = owner_thresholds.astype(object) @ weights
+        for offset in np.flatnonzero(scores > base_score):
+            index = int(indices[offset])
+            state = {
+                "floater": floater,
+                "masks": tuple(int(mask) for mask in masks[index]),
+            }
+            assignment = owner_assignment(state)
+            owner_distance = sum(
+                left != right
+                for left, right in zip(base_assignment, assignment)
+            )
+            gain = int(scores[offset]) - base_score
+            key = (owner_distance, gain, state_key(state))
+            if best_key is None or key < best_key:
+                best_key = key
+                best = {
+                    **state,
+                    "owner_distance": owner_distance,
+                    "threshold_gain_numerator": gain,
+                    "threshold_gain_denominator": common_denominator,
+                }
+    if best is None:
+        raise AssertionError("nonmaximal base has no strictly higher eligible state")
+    return best
 
 
 def state_key(state):
@@ -145,6 +216,15 @@ def relabeled_state_orbit(state, mode):
             "floater": good_map[state["floater"]],
             "masks": tuple(masks),
         }
+        for field in (
+            "owner_distance",
+            "threshold_gain_numerator",
+            "threshold_gain_denominator",
+        ):
+            if field in state:
+                mapped[field] = state[field]
+        if "preloaded" in state:
+            mapped["preloaded"] = state["preloaded"]
         results[state_key(mapped)] = mapped
     return tuple(results.values())
 
@@ -159,6 +239,33 @@ def add_global_cut(solver, values, base_theta, state):
     )
 
 
+def local_pair_exchange_states(max_distance):
+    if max_distance not in {0, 2, 3}:
+        raise ValueError("local pair-exchange distance must be 0, 2, or 3")
+    if max_distance == 0:
+        return ()
+    states = {}
+    base_assignment = owner_assignment(
+        {"floater": FLOATER, "masks": masks_from_bundles(BASE)}
+    )
+    for order in itertools.permutations(range(9)):
+        bundles = tuple(
+            tuple(sorted(order[2 * owner : 2 * owner + 2]))
+            for owner in range(4)
+        )
+        state = {"floater": order[8], "masks": masks_from_bundles(bundles)}
+        key = state_key(state)
+        if key in states:
+            continue
+        distance = sum(
+            left != right
+            for left, right in zip(base_assignment, owner_assignment(state))
+        )
+        if 2 <= distance <= max_distance:
+            states[key] = {**state, "owner_distance": distance, "preloaded": True}
+    return tuple(states.values())
+
+
 def run(
     output: Path,
     timeout_seconds: int,
@@ -166,6 +273,7 @@ def run(
     seed: Path | None,
     relabeling_mode: str,
     completion_batch_size: int,
+    preload_local_exchange_distance: int = 0,
 ):
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
@@ -210,6 +318,16 @@ def run(
             seed_state = {
                 "floater": int(record["floater"]),
                 "masks": tuple(int(mask) for mask in record["masks"]),
+                **{
+                    field: int(record[field])
+                    for field in (
+                        "owner_distance",
+                        "threshold_gain_numerator",
+                        "threshold_gain_denominator",
+                    )
+                    if field in record
+                },
+                **({"preloaded": bool(record["preloaded"])} if "preloaded" in record else {}),
             }
             for state in relabeled_state_orbit(seed_state, relabeling_mode):
                 key = state_key(state)
@@ -220,6 +338,16 @@ def run(
                     {
                         "floater": state["floater"],
                         "masks": list(state["masks"]),
+                        **{
+                            field: state[field]
+                            for field in (
+                                "owner_distance",
+                                "threshold_gain_numerator",
+                                "threshold_gain_denominator",
+                            )
+                            if field in state
+                        },
+                        **({"preloaded": state["preloaded"]} if "preloaded" in state else {}),
                     }
                 )
                 add_global_cut(solver, values, base_theta, state)
@@ -251,6 +379,20 @@ def run(
                     ),
                 )
             )
+    for state in local_pair_exchange_states(preload_local_exchange_distance):
+        key = state_key(state)
+        if key in global_cuts:
+            continue
+        global_cuts.add(key)
+        global_cut_records.append(
+            {
+                "floater": state["floater"],
+                "masks": list(state["masks"]),
+                "owner_distance": state["owner_distance"],
+                "preloaded": True,
+            }
+        )
+        add_global_cut(solver, values, base_theta, state)
     started = time.monotonic()
     last_values = None
     last_orbit = None
@@ -369,6 +511,15 @@ def run(
                     {
                         "floater": state["floater"],
                         "masks": list(state["masks"]),
+                        **{
+                            field: state[field]
+                            for field in (
+                                "owner_distance",
+                                "threshold_gain_numerator",
+                                "threshold_gain_denominator",
+                            )
+                            if field in state
+                        },
                     }
                 )
                 add_global_cut(solver, values, base_theta, state)
@@ -398,6 +549,7 @@ def run(
         "timeout_seconds_per_check": timeout_seconds,
         "relabeling_mode": relabeling_mode,
         "completion_batch_size": completion_batch_size,
+        "preload_local_exchange_distance": preload_local_exchange_distance,
         "elapsed_seconds": time.monotonic() - started,
         "global_cut_count": len(global_cuts),
         "completion_cut_count": len(completion_cuts),
@@ -432,6 +584,12 @@ def main():
         default="cyclic",
     )
     parser.add_argument("--completion-batch-size", type=int, default=8)
+    parser.add_argument(
+        "--preload-local-exchange-distance",
+        type=int,
+        choices=(0, 2, 3),
+        default=0,
+    )
     args = parser.parse_args()
     result = run(
         args.output,
@@ -440,6 +598,7 @@ def main():
         args.seed,
         args.relabeling_mode,
         args.completion_batch_size,
+        args.preload_local_exchange_distance,
     )
     summary = {
         key: result[key]
