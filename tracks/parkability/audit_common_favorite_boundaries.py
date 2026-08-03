@@ -151,11 +151,11 @@ def audit(results_dir: Path) -> dict:
             raise AssertionError((source_path, mismatches))
         if name == "tight18":
             for seed, digest in source.get("seed_sha256", {}).items():
-                seed_path = Path(seed)
+                seed_path = results_dir / Path(seed).name
                 if not seed_path.is_file() or file_sha256(seed_path) != digest:
                     raise AssertionError("tight18 seed chain is broken")
         else:
-            proto_path = Path(source["proto_path"])
+            proto_path = results_dir / Path(source["proto_path"]).name
             pool_path = results_dir / (
                 "efx49_rankgap13_common_balanced_or_residual6111_"
                 "matching_pool.json"
