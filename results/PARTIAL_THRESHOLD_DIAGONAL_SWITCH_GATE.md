@@ -102,13 +102,15 @@ ordered cut pools and the same UNSAT verdict in 374 seconds.  All 65 selected
 global witnesses are connected transfers: 18 have owner distance two, 28
 distance three, and 19 distance four.
 
-A tracked reconstruction shrinks the preferred certificate to a raw 76-cut
-core: 49 global cuts and 27 matching blockers.  Its fresh one-check replay is
-UNSAT in 294.41 seconds.  The retained global moves are 16 swaps, 18 connected
-three-owner transfers, and 15 connected four-owner transfers.  Cyclic
-quotienting leaves 17 improvement templates and 15 completion-failure
-templates.  Independent QF_LRA Z3 and cvc5 1.3.4 replays also return UNSAT;
-the compact core is dual-solver verified.
+Repeated tracked extraction and core minimization shrink the preferred
+certificate to 52 guarded consequences: 27 global cuts and 25 matching
+blockers.  A fresh standalone replay is UNSAT in 98.91 seconds.  The retained
+global moves are 12 swaps and 15 connected four-owner cycles; no three-owner
+transfer remains.  Across the cyclic pattern orbit they form eight exchange
+templates, alongside 15 completion-failure templates.  Independent QF_LRA
+Z3 and cvc5 1.3.4 replays also return UNSAT; the smaller core is dual-solver
+verified.  Its finite-menu interpretation is stated in
+`PARTIAL_THRESHOLD_DIAGONAL_FINITE_MENU_LEMMA.md`.
 
 The fixed 24-bit off-host profile is exactly invariant under cyclic
 relabeling.  Pattern 1 therefore closes the full cyclic orbit
@@ -123,9 +125,11 @@ fine-grained encoding reached 33 iterations with 58 global cuts and 70
 individual completion blockers; a 300-second continuation made no further
 progress.  Transferring the pattern-1 theorem pool, and then merging both
 pools into 69 global cuts and 149 blockers, also produced 300-second UNKNOWN
-checks.  Pattern 2 remains UNKNOWN.  Its timeouts are honest computational
-stalls, not mathematical evidence for either satisfiability or
-unsatisfiability.
+checks.  Replacing maximum expressions by equivalent literal pairwise EFX
+inequalities did not close this cell: both default Z3 and QF_LRA-specialized
+Z3 timed out again at 300 seconds on the merged pool, without adding a cut.
+Pattern 2 remains UNKNOWN.  Its timeouts are honest computational stalls, not
+mathematical evidence for either satisfiability or unsatisfiability.
 
 The exact pattern-1 result is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.  It is a second complete
@@ -182,8 +186,16 @@ general EFX.
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_quotient_audit.json`;
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_dual_replay_audit.json`;
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core.normalized.smt2`;
-- `minimum_slot_orbit_diagonal_pattern1_unsat_core.cvc5.json`; and
-- `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core.cvc5.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_pool_v5.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_untracked_replay_audit_v5.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_component_audit_v5.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_quotient_audit_v5.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_dual_replay_audit_v5.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_v5_untracked.normalized.smt2`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_v5_untracked.cvc5.json`;
+- `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`; and
+- `PARTIAL_THRESHOLD_DIAGONAL_FINITE_MENU_LEMMA.md`.
 
 Shortest exact replay of the distance-two-menu countermodel:
 

@@ -25,7 +25,6 @@ try:
     from .decide_threshold_hall_local_gradient import (
         eligible,
         integer_values,
-        maximum,
         threshold,
         total,
     )
@@ -41,7 +40,6 @@ except ImportError:
     from decide_threshold_hall_local_gradient import (
         eligible,
         integer_values,
-        maximum,
         threshold,
         total,
     )
@@ -75,24 +73,24 @@ def complete_failure(values, bundles, floater, host, permutation):
     failures = []
     for observer in range(4):
         assigned = permutation[observer]
-        required = maximum(
-            threshold(values[observer], complete[target])
+        failures.extend(
+            total(values[observer], complete[assigned])
+            < threshold(values[observer], complete[target])
             for target in range(4)
             if target != assigned
-        )
-        failures.append(
-            total(values[observer], complete[assigned]) < required
         )
     return z3.Or(*failures)
 
 
 def efx_edge(values, complete, observer, assigned):
-    required = maximum(
-        threshold(values[observer], complete[target])
-        for target in range(4)
-        if target != assigned
+    return z3.And(
+        *(
+            total(values[observer], complete[assigned])
+            >= threshold(values[observer], complete[target])
+            for target in range(4)
+            if target != assigned
+        )
     )
-    return total(values[observer], complete[assigned]) >= required
 
 
 def numeric_complete_edges(values, complete):
@@ -440,6 +438,7 @@ def run(
     base_host_diagonal_pattern: int | None = None,
     smt2_output: Path | None = None,
     track_unsat_core: bool = False,
+    minimize_unsat_core: bool = False,
 ):
     if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
         raise ValueError(
@@ -468,12 +467,20 @@ def run(
         and base_host_offhost_edge_cell_source is None
     ):
         raise ValueError("diagonal pattern requires the off-host edge cell")
+    if smt2_output is not None and track_unsat_core:
+        raise ValueError(
+            "standalone SMT2 output requires untracked assertions"
+        )
+    if minimize_unsat_core and not track_unsat_core:
+        raise ValueError("UNSAT-core minimization requires tracked assertions")
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
     ]
     solver = z3.SolverFor("QF_LRA") if solver_profile == "qf_lra" else z3.Solver()
     solver.set(timeout=timeout_seconds * 1000)
+    if minimize_unsat_core:
+        solver.set("smt.core.minimize", True)
     if solver_profile == "arith2":
         solver.set("smt.arith.solver", 2)
     for row in values:
@@ -1014,6 +1021,7 @@ def run(
         ),
         "smt2_output": str(smt2_output) if smt2_output is not None else None,
         "track_unsat_core": track_unsat_core,
+        "minimize_unsat_core": minimize_unsat_core,
         "unsat_core_labels": unsat_core_labels,
         "unsat_core_size": (
             len(unsat_core_labels) if unsat_core_labels is not None else None
@@ -1090,6 +1098,7 @@ def main():
     parser.add_argument("--base-host-diagonal-pattern", type=int)
     parser.add_argument("--smt2-output", type=Path)
     parser.add_argument("--track-unsat-core", action="store_true")
+    parser.add_argument("--minimize-unsat-core", action="store_true")
     args = parser.parse_args()
     result = run(
         args.output,
@@ -1108,6 +1117,7 @@ def main():
         args.base_host_diagonal_pattern,
         args.smt2_output,
         args.track_unsat_core,
+        args.minimize_unsat_core,
     )
     summary = {
         key: result[key]

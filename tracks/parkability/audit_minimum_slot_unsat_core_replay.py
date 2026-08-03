@@ -77,8 +77,9 @@ def run(core_path, replay_path, output_path):
             "replay agree on provenance, edge-cell hypotheses, and every cut."
         ),
         "claim_boundary": (
-            "This confirms the 76-cut fixed-edge-cell theorem, not the entire "
-            "eight-switch subcell, pair-Hall cell, or four-agent EFX."
+            f"This confirms the {core.get('unsat_core_size')}-cut fixed-edge-cell "
+            "theorem, not the entire eight-switch subcell, pair-Hall cell, or "
+            "four-agent EFX."
         ),
         "core": str(core_path),
         "core_sha256": sha256(core_path),

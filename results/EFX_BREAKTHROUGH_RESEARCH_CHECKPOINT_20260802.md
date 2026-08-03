@@ -184,17 +184,21 @@ of the fixed off-host profile transfers the theorem to patterns 1, 4, 32, and
 64.  Including the prior pattern-0 theorem, five diagonal profiles are now
 closed.  Pattern 2, representing the other single-bit orbit, remains UNKNOWN
 after 58 global cuts and 70 matching blockers.  Multi-bit patterns remain
-unclassified.  See
+unclassified.  A merged 69-global/149-completion pool remains UNKNOWN after
+fresh 300-second default and QF_LRA checks using the direct pairwise EFX
+encoding.  See
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and
 `PARTIAL_THRESHOLD_DIAGONAL_SWITCH_GATE.md` for the exact boundary and replay.
 
-The preferred pattern-1 certificate is now a raw 76-cut UNSAT core: 49 global
-cuts and 27 matching blockers.  A fresh one-check reconstruction returns
-UNSAT in 294.41 seconds.  Its global witnesses are exactly 16 connected
-swaps, 18 connected three-owner transfers, and 15 connected four-owner
-transfers; cyclic quotienting reduces the full core to 32 analytic templates.
-QF_LRA Z3 and independent cvc5 1.3.4 also return UNSAT on the normalized
-archived formula.
+The preferred pattern-1 certificate is now a solver-minimized 52-cut UNSAT
+core: 27 global cuts and 25 matching blockers.  A fresh standalone one-check
+reconstruction returns UNSAT in 98.91 seconds.  Its global witnesses are
+exactly 12 connected swaps and 15 connected four-owner cycles; no three-owner
+move remains.  Across the cyclic pattern orbit the core has eight exchange
+templates and 15 completion-failure templates.  QF_LRA Z3 and independent
+cvc5 1.3.4 also return UNSAT on the normalized archived formula.  The exact
+finite-menu alternative is recorded in
+`PARTIAL_THRESHOLD_DIAGONAL_FINITE_MENU_LEMMA.md`.
 
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma

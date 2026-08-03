@@ -77,8 +77,9 @@ def run(
             else "DUAL_SOLVER_REPLAY_MISMATCH"
         ),
         "meaning": (
-            "The 76-cut core is UNSAT in fresh one-check default and QF_LRA Z3 "
-            "replays and in an independently parsed cvc5 QF_LRA replay."
+            f"The {core.get('unsat_core_size')}-cut core is UNSAT in fresh "
+            "one-check default and QF_LRA Z3 replays and in an independently "
+            "parsed cvc5 QF_LRA replay."
         ),
         "claim_boundary": (
             "The audit validates one cyclic orbit of exact diagonal edge cells, "

@@ -186,14 +186,17 @@ are connected and have owner distance at most four.  Cyclic invariance of the
 fixed off-host profile transfers the theorem to patterns 1, 4, 32, and 64;
 together with pattern 0, five exact diagonal profiles are closed.  Pattern 2,
 representing the other single-bit orbit, remains an honest solver stall after
-58 global cuts and 70 matching blockers.
+58 global cuts and 70 matching blockers.  A larger merged pool with 69 global
+cuts and 149 blockers still times out under both default and QF_LRA-specialized
+Z3 after the direct pairwise-inequality rewrite.
 
-The pattern-1 proof has also been compressed to a fresh-replayed raw UNSAT
-core with 49 global cuts and 27 matching blockers.  Its global side consists
-only of 16 connected swaps, 18 connected three-owner transfers, and 15
-connected four-owner transfers.  Under cyclic relabeling the full core has 32
-templates, making it the current analytic extraction target.  Default Z3,
-QF_LRA Z3, and independent cvc5 1.3.4 all return UNSAT on the extracted core.
+The pattern-1 proof has also been compressed to a fresh-replayed,
+solver-minimized UNSAT core with 27 global cuts and 25 matching blockers.  Its
+global side consists only of 12 connected swaps and 15 connected four-owner
+cycles.  Across the cyclic pattern orbit the full core has eight exchange
+templates and 15 completion templates, making it the current analytic
+extraction target.  Default Z3, QF_LRA Z3, and independent cvc5 1.3.4 all
+return UNSAT on the extracted core.
 
 The theorem, exact map, claim boundaries, and replay commands are recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and
