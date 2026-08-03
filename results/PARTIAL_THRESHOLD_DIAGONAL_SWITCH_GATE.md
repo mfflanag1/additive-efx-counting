@@ -150,6 +150,14 @@ core reduces to 15 balanced connected exchange templates and 12 completion
 templates, proving pattern 2 and its cyclic orbit \(\{2,8,16,128\}\).  See
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`.
 
+The first direct coarsening replay removes both the 24 off-host equalities and
+the eight diagonal equalities from that 63-cut core while retaining only the
+cyclic pair-Hall constraints.  Three exact CEGAR iterations add 24 matching
+blockers, increasing the completion pool from 22 to 46 without adding a global
+improvement cut.  The next arithmetic-solver-2 check is UNKNOWN at 90 seconds.
+This is a resumable pool and a precise localization of the next obstruction,
+not evidence that the coarser cell is satisfiable or that the theorem fails.
+
 The exact pattern-1 result is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.  It is a second complete
 64-edge cell, not yet a theorem with a switch left symbolically free.
@@ -213,6 +221,7 @@ general EFX.
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_dual_replay_audit_v5.json`;
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_v5_untracked.normalized.smt2`;
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_v5_untracked.cvc5.json`;
+- `minimum_slot_orbit_pair_hall_from_diagonal_core_session1.json`;
 - `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`; and
 - `PARTIAL_THRESHOLD_DIAGONAL_FINITE_MENU_LEMMA.md`.
 
