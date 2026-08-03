@@ -215,6 +215,29 @@ def construct() -> tuple[dict, bytes]:
     return record, formula
 
 
+def premise_model_is_valid(raw_model: object) -> bool:
+    if (
+        not isinstance(raw_model, list)
+        or len(raw_model) != 4
+        or any(
+            not isinstance(row, list)
+            or len(row) != 9
+            or any(type(value) is not int or value <= 0 for value in row)
+            for row in raw_model
+        )
+    ):
+        return False
+    master, _, _ = build_premise()
+    for observer, row in enumerate(raw_model):
+        row_sum = sum(row)
+        for good, value in enumerate(row):
+            master.solver.add(
+                master.values[observer][good]
+                == z3.RealVal(f"{value}/{row_sum}")
+            )
+    return str(master.solver.check()) == "sat"
+
+
 def generate(record_path: Path, smt2_path: Path) -> dict:
     if record_path.exists() or smt2_path.exists():
         raise ValueError("generation requires new output paths")
@@ -231,8 +254,15 @@ def verify(record_path: Path, smt2_path: Path) -> dict:
     observed = json.loads(record_path.read_text())
     expected, formula = construct()
     expected["smt2_path"] = str(smt2_path)
+    # A satisfying model is not canonical across Z3 builds or platforms.
+    # Compare every other field exactly, then validate the committed witness
+    # by pinning it back into the premise solver.
+    observed_model = observed.get("checks", {}).get("premise_model")
+    expected["checks"]["premise_model"] = observed_model
     if observed != expected:
         raise AssertionError("forced-swap certificate record changed")
+    if not premise_model_is_valid(observed_model):
+        raise AssertionError("forced-swap premise witness is invalid")
     if smt2_path.read_bytes() != formula:
         raise AssertionError("forced-swap SMT formula changed")
     if observed["smt2_sha256"] != sha256(smt2_path):
