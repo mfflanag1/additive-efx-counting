@@ -1,0 +1,1394 @@
+{
+  "all_ordered_row_merges_have_stable_partition": true,
+  "claim_boundary": "This is an exact finite audit of the recorded source profile. Path coverage for this profile does not prove a row-merge continuation theorem for arbitrary additive instances.",
+  "complete_efx_allocation_count": 1532,
+  "m": 9,
+  "maximum_greedy_cover_size": 1,
+  "maximum_stable_partition_assignment_cover_size": 1,
+  "n": 4,
+  "ordered_row_merge_path_count": 12,
+  "paths": [
+    {
+      "base_agent": 1,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1828,
+      "full_path_partition_count": 410,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            0,
+            2,
+            1,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 1 + t row 0, for 0 <= t <= 1",
+      "moving_agent": 0,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              1,
+              1,
+              2,
+              2,
+              0,
+              0,
+              3,
+              3,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "supporting_interval_count": 2509,
+      "supporting_unlabeled_partition_count": 640,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 2,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1850,
+      "full_path_partition_count": 380,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 2 + t row 0, for 0 <= t <= 1",
+      "moving_agent": 0,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2413,
+      "supporting_unlabeled_partition_count": 629,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 3,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1552,
+      "full_path_partition_count": 376,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 3 + t row 0, for 0 <= t <= 1",
+      "moving_agent": 0,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              1,
+              1,
+              2,
+              2,
+              0,
+              0,
+              3,
+              3,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "supporting_interval_count": 2440,
+      "supporting_unlabeled_partition_count": 653,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 0,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1282,
+      "full_path_partition_count": 334,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 0 + t row 1, for 0 <= t <= 1",
+      "moving_agent": 1,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              1,
+              1,
+              2,
+              2,
+              3,
+              3,
+              3,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2291,
+      "supporting_unlabeled_partition_count": 672,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 2,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1822,
+      "full_path_partition_count": 322,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 2 + t row 1, for 0 <= t <= 1",
+      "moving_agent": 1,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2413,
+      "supporting_unlabeled_partition_count": 639,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 3,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1554,
+      "full_path_partition_count": 326,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 3 + t row 1, for 0 <= t <= 1",
+      "moving_agent": 1,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2425,
+      "supporting_unlabeled_partition_count": 652,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 0,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1396,
+      "full_path_partition_count": 409,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            0,
+            2,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 0 + t row 2, for 0 <= t <= 1",
+      "moving_agent": 2,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              1,
+              1,
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "supporting_interval_count": 2192,
+      "supporting_unlabeled_partition_count": 667,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 1,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1812,
+      "full_path_partition_count": 417,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 1 + t row 2, for 0 <= t <= 1",
+      "moving_agent": 2,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              1,
+              1,
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "supporting_interval_count": 2444,
+      "supporting_unlabeled_partition_count": 660,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 3,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1532,
+      "full_path_partition_count": 456,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 3 + t row 2, for 0 <= t <= 1",
+      "moving_agent": 2,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              1,
+              1,
+              0,
+              2,
+              2,
+              2,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      },
+      "supporting_interval_count": 2133,
+      "supporting_unlabeled_partition_count": 656,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 0,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1312,
+      "full_path_partition_count": 333,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 0 + t row 3, for 0 <= t <= 1",
+      "moving_agent": 3,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2283,
+      "supporting_unlabeled_partition_count": 649,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 1,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1782,
+      "full_path_partition_count": 343,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 1 + t row 3, for 0 <= t <= 1",
+      "moving_agent": 3,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2534,
+      "supporting_unlabeled_partition_count": 642,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    },
+    {
+      "base_agent": 2,
+      "covers_unit_interval": true,
+      "efx_allocation_count_at_one": 1532,
+      "efx_allocation_count_at_zero": 1800,
+      "full_path_partition_count": 336,
+      "greedy_cover": [
+        {
+          "assignment": [
+            3,
+            3,
+            2,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ],
+      "greedy_cover_size": 1,
+      "interpolated_row": "(1-t) row 2 + t row 3, for 0 <= t <= 1",
+      "moving_agent": 3,
+      "right_frontier": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      },
+      "stable_partition": {
+        "assignment_cover": [
+          {
+            "assignment": [
+              3,
+              3,
+              2,
+              2,
+              1,
+              1,
+              1,
+              0,
+              0
+            ],
+            "lower": {
+              "decimal": 0.0,
+              "denominator": 1,
+              "exact": "0",
+              "numerator": 0
+            },
+            "upper": {
+              "decimal": 1.0,
+              "denominator": 1,
+              "exact": "1",
+              "numerator": 1
+            }
+          }
+        ],
+        "assignment_cover_size": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "supporting_interval_count": 2276,
+      "supporting_unlabeled_partition_count": 628,
+      "union_component_count": 1,
+      "union_components": [
+        {
+          "lower": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "exact": "0",
+            "numerator": 0
+          },
+          "upper": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "exact": "1",
+            "numerator": 1
+          }
+        }
+      ]
+    }
+  ],
+  "schema": "row-merge-interpolation-audit-v2",
+  "source": "results/efx49_common_favorite_threshold_pass_hall_611_cap20_cpsat_session1.json",
+  "source_sha256": "4472e648b25078fbaa495f9da2f5ac1aebc35d33a834a66fbd4ac9a4f03b1cff",
+  "status": "ALL_ORDERED_ROW_MERGES_COVERED",
+  "values": [
+    [
+      20,
+      2,
+      2,
+      6,
+      4,
+      1,
+      6,
+      15,
+      19
+    ],
+    [
+      20,
+      19,
+      1,
+      19,
+      19,
+      19,
+      1,
+      1,
+      18
+    ],
+    [
+      20,
+      19,
+      1,
+      19,
+      1,
+      1,
+      19,
+      19,
+      11
+    ],
+    [
+      20,
+      19,
+      19,
+      1,
+      19,
+      1,
+      19,
+      19,
+      3
+    ]
+  ]
+}

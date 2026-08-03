@@ -1,0 +1,262 @@
+{
+  "bundle_sizes_excluding_critical_good": [
+    2,
+    1,
+    2,
+    2
+  ],
+  "claim_boundary": "This is a local row-merge wall lemma, not a proof of row-merge continuation or general complete EFX.",
+  "critical_equality": {
+    "left": [
+      0,
+      1
+    ],
+    "right": [
+      2
+    ]
+  },
+  "critical_good": 3,
+  "domain": "strictly positive additive real valuations",
+  "elapsed_seconds": 124.6783218383789,
+  "formula": "results/row_merge_q4_small_step_pair_m8.smt2",
+  "formula_sha256": "e1b53b406084f4ee13b9212002f5cbf3e4f0656a4e00cd75019dd1315170b2ff",
+  "interpretation": "UNSAT proves that at least one of the displayed pair pivots supports complete EFX in this exact wall cell. The fourth bundle size is fixed by this formula; compression is a separate argument.",
+  "m": 8,
+  "minimal_hall_witness_size": 4,
+  "n": 4,
+  "perturbed_good": 2,
+  "pivot_count": 11,
+  "pivot_matching_counts": null,
+  "pivots": [
+    [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5
+      ]
+    ]
+  ],
+  "post_wall_values": null,
+  "reason_unknown": null,
+  "schema": "row-merge-q4-small-step-pair-pivot-lra-v1",
+  "small_step_condition": "0 < wall_epsilon < min(value_0_4, value_0_5, value_0_6, value_0_7)",
+  "small_step_goods": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "solver_status": "unsat",
+  "status": "PAIR_PIVOT_LEMMA_VERIFIED",
+  "time_limit_seconds": 240.0,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "wall_values": null
+}

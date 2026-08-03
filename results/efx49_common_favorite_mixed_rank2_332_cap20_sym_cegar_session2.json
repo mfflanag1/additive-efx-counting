@@ -1,0 +1,266 @@
+{
+  "candidate_audit": null,
+  "cell_symmetry": true,
+  "claim_boundary": "A SAT candidate refutes only the named selection claim for motif rank_two. It is not an EFX counterexample. UNSAT requires independent replay.",
+  "elapsed_seconds": 1219.975289106369,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "iterations": 4,
+  "learned_motif_count": 119,
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_mixed_rank2_332_cap20_sym_cegar_session2.pbtxt",
+  "proto_bytes": 12446556,
+  "proto_sha256": "4ee3c2301d88ed28edb1bb90a404c8e6c67981aeae1c50e74c0b4b7f2f40fb81",
+  "schema": "common-favorite-mixed-selection-cegar-v1",
+  "seed_imports": [
+    {
+      "model_count": 2,
+      "new_motif_count": 66,
+      "source": "results/efx49_common_favorite_mixed_rank2_332_cap20_cegar_session1.json",
+      "source_sha256": "982a9f8adb30414cb406e8c2b76512f7d93c761a3c710c8cf47671b9aa9c29e6"
+    }
+  ],
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "selected_residual_shape": "332",
+  "selection_motif": "rank_two",
+  "solver_status": "OPTIMAL",
+  "solver_wall_seconds": 294.00858600000004,
+  "status": "ITERATION_LIMIT",
+  "strict_common_favorite": 0,
+  "trace": [
+    {
+      "iteration": 1,
+      "learned_motif_count_before": 66,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 419.86036,
+      "unlearned_selection_motif_count": 9,
+      "values": [
+        [
+          20,
+          10,
+          10,
+          4,
+          10,
+          10,
+          9,
+          17,
+          11
+        ],
+        [
+          20,
+          14,
+          1,
+          19,
+          19,
+          19,
+          16,
+          13,
+          1
+        ],
+        [
+          20,
+          4,
+          1,
+          2,
+          18,
+          16,
+          19,
+          15,
+          18
+        ],
+        [
+          19,
+          10,
+          1,
+          15,
+          18,
+          17,
+          9,
+          10,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 2,
+      "learned_motif_count_before": 75,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 188.4256,
+      "unlearned_selection_motif_count": 1,
+      "values": [
+        [
+          20,
+          19,
+          1,
+          1,
+          10,
+          10,
+          10,
+          19,
+          19
+        ],
+        [
+          20,
+          19,
+          1,
+          1,
+          19,
+          19,
+          3,
+          19,
+          17
+        ],
+        [
+          20,
+          19,
+          1,
+          1,
+          19,
+          19,
+          3,
+          19,
+          17
+        ],
+        [
+          20,
+          19,
+          1,
+          1,
+          19,
+          19,
+          3,
+          19,
+          17
+        ]
+      ]
+    },
+    {
+      "iteration": 3,
+      "learned_motif_count_before": 76,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 316.246568,
+      "unlearned_selection_motif_count": 13,
+      "values": [
+        [
+          12,
+          10,
+          2,
+          2,
+          6,
+          6,
+          3,
+          11,
+          11
+        ],
+        [
+          20,
+          19,
+          18,
+          16,
+          15,
+          1,
+          1,
+          18,
+          18
+        ],
+        [
+          19,
+          18,
+          14,
+          15,
+          12,
+          3,
+          16,
+          6,
+          6
+        ],
+        [
+          19,
+          18,
+          14,
+          14,
+          12,
+          3,
+          1,
+          9,
+          1
+        ]
+      ]
+    },
+    {
+      "iteration": 4,
+      "learned_motif_count_before": 89,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 294.00858600000004,
+      "unlearned_selection_motif_count": 30,
+      "values": [
+        [
+          20,
+          19,
+          1,
+          1,
+          10,
+          10,
+          1,
+          19,
+          8
+        ],
+        [
+          20,
+          1,
+          18,
+          18,
+          15,
+          1,
+          19,
+          16,
+          7
+        ],
+        [
+          20,
+          1,
+          18,
+          18,
+          1,
+          1,
+          18,
+          16,
+          19
+        ],
+        [
+          19,
+          2,
+          18,
+          18,
+          2,
+          14,
+          17,
+          16,
+          5
+        ]
+      ]
+    }
+  ],
+  "upper": 20,
+  "values": null
+}

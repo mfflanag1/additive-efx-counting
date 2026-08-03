@@ -1,0 +1,230 @@
+{
+  "candidate_partition_count": 7,
+  "canonical_core": [
+    {
+      "core_position": 650,
+      "equivalent_small_step_bound": "wall_epsilon < value_0_4",
+      "left": [
+        0,
+        1,
+        4
+      ],
+      "perturb_good_side": "right",
+      "right": [
+        2
+      ],
+      "selector": "generic_pair_651"
+    },
+    {
+      "core_position": 644,
+      "equivalent_small_step_bound": "wall_epsilon < value_0_5",
+      "left": [
+        0,
+        1,
+        5
+      ],
+      "perturb_good_side": "right",
+      "right": [
+        2
+      ],
+      "selector": "generic_pair_645"
+    }
+  ],
+  "canonical_core_deletion_checks": [
+    {
+      "core_position": 650,
+      "status": "sat"
+    },
+    {
+      "core_position": 644,
+      "status": "sat"
+    }
+  ],
+  "canonical_core_deletion_minimal": true,
+  "canonical_core_size": 2,
+  "canonical_core_status": "unsat",
+  "claim_boundary": "The retained subset-order assumptions suffice for the fixed seven-partition, seven-good, Hall-size-four contradiction. This is proof-mining data, not a general wall-pivot or EFX theorem.",
+  "core_formula": "results/row_merge_single_wall_q4_radius2_m7_genericity_core.smt2",
+  "core_formula_sha256": "de8927772b2d9a70d4d17400bdf3729f62b2b612bdb176e47c7c32ce8acec0e6",
+  "critical_equality": {
+    "left": [
+      0,
+      1
+    ],
+    "right": [
+      2
+    ]
+  },
+  "deletion_checks": [
+    {
+      "core_position": 41,
+      "status": "unsat"
+    },
+    {
+      "core_position": 100,
+      "status": "unsat"
+    },
+    {
+      "core_position": 157,
+      "status": "unsat"
+    },
+    {
+      "core_position": 165,
+      "status": "unsat"
+    },
+    {
+      "core_position": 193,
+      "status": "unsat"
+    },
+    {
+      "core_position": 229,
+      "status": "unsat"
+    },
+    {
+      "core_position": 247,
+      "status": "unsat"
+    },
+    {
+      "core_position": 277,
+      "status": "unsat"
+    },
+    {
+      "core_position": 283,
+      "status": "unsat"
+    },
+    {
+      "core_position": 458,
+      "status": "unsat"
+    },
+    {
+      "core_position": 488,
+      "status": "unsat"
+    },
+    {
+      "core_position": 494,
+      "status": "unsat"
+    },
+    {
+      "core_position": 644,
+      "status": "sat"
+    },
+    {
+      "core_position": 650,
+      "status": "sat"
+    },
+    {
+      "core_position": 668,
+      "status": "unsat"
+    }
+  ],
+  "deletion_minimal": true,
+  "elapsed_seconds": 57.62510108947754,
+  "final_status": "unsat",
+  "full_status": "unsat",
+  "genericity_pair_count": 965,
+  "initial_core_size": 15,
+  "m": 7,
+  "n": 4,
+  "per_check_time_limit_seconds": 60.0,
+  "perturbed_good": 2,
+  "relaxed_post_wall_moving_row": [
+    222,
+    4939,
+    7603,
+    1332,
+    4495,
+    888,
+    7603
+  ],
+  "relaxed_status": "sat",
+  "relaxed_wall_values": [
+    [
+      222,
+      4939,
+      5161,
+      1332,
+      4495,
+      888,
+      7603
+    ],
+    [
+      8,
+      8,
+      455,
+      415,
+      467,
+      435,
+      4
+    ],
+    [
+      2,
+      5,
+      10,
+      209,
+      219,
+      2,
+      1
+    ],
+    [
+      14,
+      2,
+      6,
+      431,
+      2,
+      10,
+      431
+    ]
+  ],
+  "retained_core": [
+    {
+      "core_position": 644,
+      "left": [
+        0,
+        1,
+        5
+      ],
+      "perturb_good_side": "right",
+      "right": [
+        2
+      ],
+      "selector": "generic_pair_645"
+    },
+    {
+      "core_position": 650,
+      "left": [
+        0,
+        1,
+        4
+      ],
+      "perturb_good_side": "right",
+      "right": [
+        2
+      ],
+      "selector": "generic_pair_651"
+    }
+  ],
+  "retained_core_size": 2,
+  "schema": "row-merge-single-wall-genericity-core-v1",
+  "small_step_condition": "0 < wall_epsilon < min(value_0_4, value_0_5)",
+  "source": "results/row_merge_single_wall_q4_radius2_m7_core.json",
+  "source_sha256": "9d70077b6966cc35733be726888a53039657ff6f201187f0fdeb10f5f681c0ff",
+  "status": "GENERICITY_ASSUMPTION_CORE_EXTRACTED",
+  "time_limit_seconds": 300.0,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6
+    ]
+  ]
+}

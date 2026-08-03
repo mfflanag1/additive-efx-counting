@@ -1,0 +1,147 @@
+{
+  "accepted_moves": 1262,
+  "completion_mode": "hall",
+  "elapsed_seconds": 80.169909,
+  "exact_audit": {
+    "best_maximizer_hall_normalized_margin": {
+      "denominator": 1,
+      "numerator": 0
+    },
+    "best_maximizer_host_normalized_margin": {
+      "denominator": 1899,
+      "numerator": 650
+    },
+    "eligible_base_count": 1239,
+    "hall_insertable_maximizer_count": 1,
+    "insertable_maximizer_count": 1,
+    "max_potential": {
+      "denominator": 106344,
+      "numerator": 141025
+    },
+    "maximizer_count": 1,
+    "maximizers": [
+      {
+        "base_owner": [
+          1,
+          null,
+          2,
+          0,
+          0,
+          3,
+          0,
+          1,
+          3
+        ],
+        "best_hall_normalized_margin": {
+          "denominator": 1,
+          "numerator": 0
+        },
+        "best_host_normalized_margin": {
+          "denominator": 1899,
+          "numerator": 650
+        },
+        "floater": 1,
+        "parkable_hosts": [
+          2
+        ],
+        "utilities": [
+          3238,
+          1481,
+          6998,
+          14547
+        ]
+      }
+    ]
+  },
+  "final_temperature": 1e-06,
+  "floater_penalty": {
+    "denominator": 1,
+    "numerator": 1
+  },
+  "improvements": 16,
+  "initial_temperature": 0.01,
+  "iterations_completed": 1800,
+  "iterations_requested": 1800,
+  "landscape": {
+    "best_maximizer_hall_normalized_margin": 0.0,
+    "best_maximizer_host_normalized_margin": 0.34228541337546076,
+    "eligible_base_count": 1239,
+    "floater_penalty": 1.0,
+    "hall_insertable_maximizer_count": 1,
+    "insertable_maximizer_count": 1,
+    "max_potential": 1.3261208906943505,
+    "maximizer_count": 1,
+    "maximizers": [
+      {
+        "base_index": 54025,
+        "best_hall_normalized_margin": 0.0,
+        "best_host_normalized_margin": 0.34228541337546076,
+        "floater": 1,
+        "hall_insertable": true,
+        "insertable": true,
+        "utilities": [
+          3238,
+          1481,
+          6998,
+          14547
+        ]
+      }
+    ],
+    "potential": "normalized_threshold"
+  },
+  "m": 9,
+  "meaning": "a blocked endpoint refutes only the stated partial-state potential completion lemma, not complete additive EFX",
+  "n": 4,
+  "potential": "normalized_threshold",
+  "random_seed": 127,
+  "schema": "partial-smooth-potential-anneal-v1",
+  "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/partial_threshold_maximality_anneal_seed113.json",
+  "seed_sha256": "85f8a174f906209b06e9460c1619878d212d9fa9488a9114e3d2820b53e00478",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      56,
+      11,
+      230,
+      1609,
+      1603,
+      127,
+      26,
+      81,
+      55
+    ],
+    [
+      866,
+      49,
+      181,
+      393,
+      424,
+      21,
+      499,
+      615,
+      750
+    ],
+    [
+      905,
+      323,
+      6998,
+      40,
+      37,
+      5482,
+      5231,
+      6339,
+      3763
+    ],
+    [
+      677,
+      756,
+      33,
+      667,
+      13816,
+      8947,
+      731,
+      4221,
+      5600
+    ]
+  ]
+}

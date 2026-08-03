@@ -81,7 +81,7 @@ def audit_unknown_boundary(
 ):
     payload = json.loads(path.read_text())
     universe = favorite_pair_universe("eight_orbit")
-    formula_path = Path(payload["smt2_path"])
+    formula_path = path.parent / Path(payload["smt2_path"]).name
     expected_common = [5, 6] if common else None
     expected_map = list(second_smallest_map) if second_smallest_map else None
     if (
@@ -171,7 +171,7 @@ def audit_optimizer(path: Path):
         ("U", 1, ("RR", "RU")): 24,
     }
     literal_count = independent.count_complete_efx0(values)
-    proto_path = Path(payload["proto_path"])
+    proto_path = path.parent / Path(payload["proto_path"]).name
     if (
         payload.get("schema") != OPTIMIZER_SCHEMA
         or payload.get("status") != "OPTIMIZATION_CHECKPOINT"

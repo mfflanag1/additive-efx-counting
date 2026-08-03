@@ -191,8 +191,8 @@ def audit_cell(case, matching_orbit, targets, target_hash):
     ):
         raise AssertionError(f"Z3 metadata changed for {case}/{matching_orbit}")
 
-    proto_path = Path(cp["proto_path"])
-    smt2_path = Path(z3["smt2_path"])
+    proto_path = cp_path.parent / Path(cp["proto_path"]).name
+    smt2_path = z3_path.parent / Path(z3["smt2_path"]).name
     if cp.get("proto_sha256") != sha256(proto_path):
         raise AssertionError(f"CP-SAT proto hash changed for {case}/{matching_orbit}")
     if z3.get("smt2_sha256") != sha256(smt2_path):
@@ -285,7 +285,7 @@ def audit_refutation(path, expected_target, expected_cap, expected_counts):
     formula_hash_key = (
         "proto_sha256" if formula_key == "proto_path" else "smt2_sha256"
     )
-    formula_path = Path(payload[formula_key])
+    formula_path = path.parent / Path(payload[formula_key]).name
     if payload.get(formula_hash_key) != sha256(formula_path):
         raise AssertionError(f"terminal selector formula hash changed: {path}")
     return {
@@ -313,7 +313,7 @@ def audit_unknown_boundary(path, expected_solver, expected_time):
     formula_hash_key = (
         "proto_sha256" if formula_key == "proto_path" else "smt2_sha256"
     )
-    formula_path = Path(payload[formula_key])
+    formula_path = path.parent / Path(payload[formula_key]).name
     if payload.get(formula_hash_key) != sha256(formula_path):
         raise AssertionError(f"new-partner formula hash changed: {path}")
     return {
@@ -351,7 +351,7 @@ def audit_optimization_refutation(path, expected_counts):
     }
     if counts != expected_counts or counts["radius2_new_favorite_partner"]:
         raise AssertionError(f"new-partner repair census changed: {path}")
-    proto_path = Path(payload["proto_path"])
+    proto_path = path.parent / Path(payload["proto_path"]).name
     if payload.get("proto_sha256") != sha256(proto_path):
         raise AssertionError(f"optimization formula hash changed: {path}")
     return {
@@ -437,7 +437,7 @@ def audit_radius_two_refutation():
         raise AssertionError("radius-two refutation distance census changed")
     if all_distance_histogram != Counter({0: 1, 1: 4, 2: 17, 3: 176, 4: 138}):
         raise AssertionError("radius-two refutation full distance census changed")
-    proto_path = Path(payload["proto_path"])
+    proto_path = path.parent / Path(payload["proto_path"]).name
     if payload.get("proto_sha256") != sha256(proto_path):
         raise AssertionError("radius-two optimization formula hash changed")
     return {

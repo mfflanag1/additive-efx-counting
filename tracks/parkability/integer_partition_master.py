@@ -43,6 +43,7 @@ class IntegerPartitionMaster:
         exclude_universal_min: bool = False,
         exclude_peelable: bool = False,
         require_pairwise_distinct_rows: bool = False,
+        require_pairwise_nonproportional_rows: bool = False,
         require_distinct_item_values: bool = False,
         require_upper_used: bool = False,
         symmetry: str = "none",
@@ -66,6 +67,9 @@ class IntegerPartitionMaster:
         self.exclude_universal_min = exclude_universal_min
         self.exclude_peelable = exclude_peelable
         self.require_pairwise_distinct_rows = require_pairwise_distinct_rows
+        self.require_pairwise_nonproportional_rows = (
+            require_pairwise_nonproportional_rows
+        )
         self.require_distinct_item_values = require_distinct_item_values
         self.require_upper_used = require_upper_used
         self.symmetry = symmetry
@@ -173,6 +177,41 @@ class IntegerPartitionMaster:
                         self.model.Add(
                             self.values[left][good] == self.values[right][good]
                         ).OnlyEnforceIf(different.Not())
+                        differences.append(different)
+                    self.model.AddBoolOr(differences)
+
+        if require_pairwise_nonproportional_rows:
+            for left in range(n):
+                for right in range(left + 1, n):
+                    differences = []
+                    for good in range(1, m):
+                        left_cross = self.model.NewIntVar(
+                            1,
+                            upper * upper,
+                            f"rows_{left}_{right}_left_cross_{good}",
+                        )
+                        right_cross = self.model.NewIntVar(
+                            1,
+                            upper * upper,
+                            f"rows_{left}_{right}_right_cross_{good}",
+                        )
+                        self.model.AddMultiplicationEquality(
+                            left_cross,
+                            [self.values[left][good], self.values[right][0]],
+                        )
+                        self.model.AddMultiplicationEquality(
+                            right_cross,
+                            [self.values[right][good], self.values[left][0]],
+                        )
+                        different = self.model.NewBoolVar(
+                            f"rows_{left}_{right}_nonproportional_{good}"
+                        )
+                        self.model.Add(left_cross != right_cross).OnlyEnforceIf(
+                            different
+                        )
+                        self.model.Add(left_cross == right_cross).OnlyEnforceIf(
+                            different.Not()
+                        )
                         differences.append(different)
                     self.model.AddBoolOr(differences)
 
@@ -339,6 +378,127 @@ class IntegerPartitionMaster:
                 obstruction.OnlyEnforceIf(activation)
             self.hall_selectors += len(selectors)
 
+        self._partitions.add(bundles)
+        return True
+
+    def add_duplicate_row_partition_obstruction(
+        self,
+        raw_bundles: Sequence[Sequence[int]],
+        duplicate_observers: tuple[int, int],
+        *,
+        encoding: str = "duplicate_hall_selectors",
+        activation: cp_model.IntVar | None = None,
+    ) -> bool:
+        """Block EFX support when the caller has equated two observer rows."""
+        if (
+            len(duplicate_observers) != 2
+            or len(set(duplicate_observers)) != 2
+            or any(
+                type(observer) is not int or not 0 <= observer < self.n
+                for observer in duplicate_observers
+            )
+            or self.n != 4
+            or len(raw_bundles) != self.n
+            or encoding
+            not in {"duplicate_matching_clauses", "duplicate_hall_selectors"}
+        ):
+            raise ValueError("a valid duplicate pair in a four-agent partition is required")
+        bundles = tuple(sorted(tuple(sorted(bundle)) for bundle in raw_bundles))
+        if (
+            any(not bundle for bundle in bundles)
+            or sorted(good for bundle in bundles for good in bundle)
+            != list(range(self.m))
+        ):
+            raise ValueError("partition bundles must cover every good exactly once")
+        if bundles in self._partitions:
+            return False
+
+        representative = duplicate_observers[0]
+        singletons = tuple(
+            observer
+            for observer in range(self.n)
+            if observer not in duplicate_observers
+        )
+        masks = tuple(sum(1 << good for good in bundle) for bundle in bundles)
+        edge_violations = {
+            (observer, own_bundle): self._edge_violations(
+                observer,
+                own_bundle,
+                bundles,
+                masks,
+            )
+            for observer in (representative,) + singletons
+            for own_bundle in range(self.n)
+        }
+        if encoding == "duplicate_matching_clauses":
+            for duplicate_bundles in itertools.combinations(range(self.n), 2):
+                remaining = tuple(
+                    bundle
+                    for bundle in range(self.n)
+                    if bundle not in duplicate_bundles
+                )
+                for singleton_bundles in (remaining, remaining[::-1]):
+                    violations = tuple(
+                        literal
+                        for own_bundle in duplicate_bundles
+                        for literal in edge_violations[representative, own_bundle]
+                    ) + tuple(
+                        literal
+                        for observer, own_bundle in zip(
+                            singletons,
+                            singleton_bundles,
+                            strict=True,
+                        )
+                        for literal in edge_violations[observer, own_bundle]
+                    )
+                    constraint = self.model.AddBoolOr(violations)
+                    if activation is not None:
+                        constraint.OnlyEnforceIf(activation)
+                    self.matching_clauses += 1
+        else:
+            hall_cases = (
+                ((representative,), 1),
+                ((singletons[0],), 0),
+                ((singletons[1],), 0),
+                (singletons, 1),
+                ((representative, singletons[0]), 2),
+                ((representative, singletons[1]), 2),
+                ((representative,) + singletons, 3),
+            )
+            partition_index = len(self._partitions)
+            selectors = []
+            for case_index, (observers, max_neighborhood_size) in enumerate(
+                hall_cases
+            ):
+                for neighborhood_size in range(max_neighborhood_size + 1):
+                    for neighborhood in itertools.combinations(
+                        range(self.n),
+                        neighborhood_size,
+                    ):
+                        selector = self.model.NewBoolVar(
+                            f"partition_{partition_index}_duplicate_hall_"
+                            f"{case_index}_{'_'.join(map(str, neighborhood))}"
+                        )
+                        if activation is not None:
+                            self.model.AddImplication(selector, activation)
+                        selectors.append(selector)
+                        neighborhood_set = set(neighborhood)
+                        for observer in observers:
+                            for own_bundle in range(self.n):
+                                if own_bundle in neighborhood_set:
+                                    continue
+                                violations = edge_violations[observer, own_bundle]
+                                if violations:
+                                    self.model.AddBoolOr(violations).OnlyEnforceIf(
+                                        selector
+                                    )
+                                else:
+                                    self.model.Add(selector == 0)
+                                self.hall_edge_clauses += 1
+            obstruction = self.model.AddBoolOr(selectors)
+            if activation is not None:
+                obstruction.OnlyEnforceIf(activation)
+            self.hall_selectors += len(selectors)
         self._partitions.add(bundles)
         return True
 

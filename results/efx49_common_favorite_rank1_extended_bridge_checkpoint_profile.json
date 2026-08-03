@@ -1,0 +1,25 @@
+{
+  "schema": "common-favorite-rank1-extended-bridge-search-checkpoint-v1",
+  "status": "EXTENDED_BRIDGE45_BLOCKED_WITH_SINGLETON_REPAIRS",
+  "n": 4,
+  "m": 9,
+  "upper": 6,
+  "repair_family": "bridge45",
+  "repair_partition_count": 45,
+  "values": [
+    [6, 3, 3, 3, 3, 1, 1, 4, 1],
+    [6, 5, 5, 5, 3, 1, 1, 1, 4],
+    [6, 5, 5, 5, 3, 1, 1, 1, 4],
+    [6, 5, 5, 5, 3, 1, 1, 1, 4]
+  ],
+  "discovery": {
+    "method": "activation-objective CEGAR followed by exact local replay",
+    "singleton_support_upper_bound_sequence": [30, 9, 6],
+    "terminal_singleton_obstruction_pool_size": 392,
+    "terminal_global_status": "FEASIBLE_FIXED_POINT",
+    "hamming_one_neighbor_count": 180,
+    "hamming_two_neighbor_count": 15750,
+    "hamming_two_local_minimum": true
+  },
+  "claim_boundary": "This profile gives a six-support upper bound and an exact Hamming-two local minimum for the cap-6 bridge45 cell. It does not prove a positive global floor."
+}

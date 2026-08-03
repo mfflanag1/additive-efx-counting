@@ -31,6 +31,12 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def resolve_committed_artifact(raw_path: str, results_dir: Path) -> Path:
+    path = Path(raw_path)
+    committed = results_dir / path.name
+    return path if path.is_file() else committed
+
+
 def result_stem(pattern_name: str, encoding: str) -> str:
     if pattern_name == "4":
         return (
@@ -105,7 +111,9 @@ def audit(results_dir: Path) -> dict:
             ) != "INFEASIBLE":
                 raise AssertionError(f"{result_path} lacks an infeasible trace")
 
-            proto_path = Path(raw["proto_path"])
+            proto_path = resolve_committed_artifact(
+                raw["proto_path"], results_dir
+            )
             if (
                 not proto_path.is_file()
                 or file_sha256(proto_path) != raw["proto_sha256"]

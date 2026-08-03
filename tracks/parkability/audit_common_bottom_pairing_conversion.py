@@ -49,7 +49,7 @@ def load(path: Path):
 
 def audit_z3(path: Path, expected_encoding, expected_witness):
     payload = load(path)
-    formula = Path(payload["smt2_path"])
+    formula = path.parent / Path(payload["smt2_path"]).name
     if (
         payload.get("schema") != "common-bottom-pairing-conversion-lra-v1"
         or payload.get("status") != "UNSAT_CANDIDATE"
@@ -75,7 +75,7 @@ def audit_z3(path: Path, expected_encoding, expected_witness):
 def audit_cvc5(path: Path, normalization_path: Path, sorting_record):
     payload = load(path)
     normalization = load(normalization_path)
-    formula = Path(payload["formula"])
+    formula = path.parent / Path(payload["formula"]).name
     if (
         payload.get("schema") != "external-smt-replay-v1"
         or payload.get("solver_interface") != "cvc5"
@@ -101,7 +101,7 @@ def audit_cvc5(path: Path, normalization_path: Path, sorting_record):
 
 def audit_cpc(path: Path, cvc5_record):
     payload = load(path)
-    proof = Path(payload["proof"])
+    proof = path.parent / Path(payload["proof"]).name
     if (
         payload.get("schema") != "cvc5-cpc-ethos-certificate-v1"
         or payload.get("verified") is not True
