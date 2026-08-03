@@ -226,9 +226,13 @@ lemma in the full cyclic pair-Hall cell: every owner's core good weakly
 dominates both the floater and the preceding pair's token.  The core--floater
 wall is confirmed by three Z3 profiles and cvc5; the predecessor-token wall is
 confirmed by three Z3 profiles while cvc5 remains UNKNOWN.  Cyclic relabeling
-gives both walls in all four rows.  The residual two-wall master remains open;
-its fresh exact depth-six cover has 58 leaves and is not yet decided.  See
-`PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`.
+gives both walls in all four rows. Two exact cross-row disjunctions and their
+eight cyclic images have now also been extracted. The first family is
+triple-Z3 confirmed; the second is confirmed by QF_LRA and arithmetic solver
+2, with default Z3 UNKNOWN. Adding all eight changes the residual cube
+geometry but leaves 4 UNSAT and 54 UNKNOWN leaves. See
+`PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md` and
+`PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md`.
 
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
@@ -244,7 +248,7 @@ an arbitrary charity set while preserving collective charity dominance.
 The focused parkability suite passes:
 
 ```text
-48 passed, 35 warnings in 15.00s
+49 passed, 35 warnings in 16.29s
 ```
 
 The warnings are pre-existing pytest return-value warnings.  The new Python

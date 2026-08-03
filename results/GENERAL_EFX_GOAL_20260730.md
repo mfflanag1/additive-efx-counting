@@ -13,10 +13,14 @@ to prove a new cap-free structural consequence: under global normalized-
 threshold maximality and complete blockage of the eligible fixed-core token
 orbit, every owner's core good weakly dominates both the floater and the
 preceding pair's token.  The first wall is confirmed by three Z3 profiles and
-cvc5; the second is triple-Z3 confirmed with cvc5 UNKNOWN.  The residual
-pair-Hall master is not closed: a fresh exact 58-leaf cover remains undecided.
+cvc5; the second is triple-Z3 confirmed with cvc5 UNKNOWN. Two further
+cross-row clause families, with eight cyclic images, are proved by direct Z3
+replays. The residual pair-Hall master is not closed: the augmented exact
+58-leaf cover has 4 UNSAT and 54 UNKNOWN leaves, with no SAT witness.
 See
-[PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md).
+[PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md)
+and
+[PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md](PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md).
 
 **Current live gate:** the strict-common-favorite universal owner-threshold-
 failure branch at \((4,9)\) is now closed by a cap-free, proof-checked

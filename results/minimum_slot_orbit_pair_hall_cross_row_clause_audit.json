@@ -1,0 +1,95 @@
+{
+  "schema": "minimum-slot-pair-hall-cross-row-clause-audit-v1",
+  "status": "TWO_CYCLIC_CROSS_ROW_CLAUSE_FAMILIES_PROVED",
+  "meaning": "Conditional on the two proved cyclic owner walls, the canonical pair-Hall antecedent forces two cross-row disjunctions and all of their cyclic images. These are structural consequences, not closure of the pair-Hall cell.",
+  "depends_on": "results/minimum_slot_orbit_pair_hall_predecessor_token_wall_audit.json",
+  "finite_consequence_counts": {
+    "global_cuts": 159,
+    "matching_witness_cuts": 78,
+    "whole_orbit_blockers": 30,
+    "maximum_pair_exchange_distance_preloaded": 3
+  },
+  "base_clauses": {
+    "a0": "v_0_0 >= v_0_3 OR v_2_2 <= v_2_3 + v_2_4",
+    "b0": "v_3_1 <= v_3_3 + v_3_6 OR v_0_1 + v_0_4 >= v_0_3 + v_0_8"
+  },
+  "cyclic_image_count": 8,
+  "direct_replays": {
+    "a0": {
+      "default": {
+        "status": "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED",
+        "elapsed_seconds": 183.26851870806422,
+        "artifact": "results/minimum_slot_orbit_pair_hall_cross_row_a0_default.json",
+        "sha256": "29e927a351fe4554cbb6957e88af9e85c7d3c82982e7f249a3be3152515bed65"
+      },
+      "qf_lra": {
+        "status": "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED",
+        "elapsed_seconds": 202.08962979202624,
+        "artifact": "results/minimum_slot_orbit_pair_hall_cross_row_a0_qflra.json",
+        "sha256": "6aa6b1ad16f1476413543d0d10e15fc84b934b31e9e68edbb830a4a294803972"
+      },
+      "arith2": {
+        "status": "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED",
+        "elapsed_seconds": 195.87893112492748,
+        "artifact": "results/minimum_slot_orbit_pair_hall_cross_row_a0_arith2.json",
+        "sha256": "b3da8efc33d6187a23b00c760ac2fe7f01fee358a42b3baf4c043080dff8b103"
+      }
+    },
+    "b0": {
+      "default": {
+        "status": "UNKNOWN",
+        "reason_unknown": "timeout",
+        "elapsed_seconds": 300.0176763749914,
+        "artifact": "results/minimum_slot_orbit_pair_hall_cross_row_b0_default.json",
+        "sha256": "165a851e60d7ca69913fe16452b1668e5150d693a36e0248da1af0a54e39584a"
+      },
+      "qf_lra": {
+        "status": "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED",
+        "elapsed_seconds": 170.80279254203197,
+        "artifact": "results/minimum_slot_orbit_pair_hall_cross_row_b0_qflra.json",
+        "sha256": "13d04d30b7f55e844b946cd749eb50a2c1f68eea2e3ed81b2976f9a3c5ce60e3"
+      },
+      "arith2": {
+        "status": "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED",
+        "elapsed_seconds": 101.03397670900449,
+        "artifact": "results/minimum_slot_orbit_pair_hall_cross_row_b0_arith2.json",
+        "sha256": "26434bd308d3a6b2e4ca8c1f4d2fce082df27508e4502f88d79e914e4812b65f"
+      }
+    }
+  },
+  "assumption_core_provenance": {
+    "branch18_artifact": "results/minimum_slot_orbit_pair_hall_cross_row_core_branch18.json",
+    "branch18_sha256": "d98e8bb969e19ea53a2fdb93ac4d787f13cdb531c835c7ea9b47a63c96ab8343",
+    "branch53_artifact": "results/minimum_slot_orbit_pair_hall_cross_row_core_branch53.json",
+    "branch53_sha256": "42c0944664a0cea3a03e76343c5a5b07227e7b6e2d4de49450583d1f4116be43"
+  },
+  "augmented_residual": {
+    "pool": "results/minimum_slot_orbit_pair_hall_cross_row_pool.json",
+    "pool_sha256": "400a5d37ee09ac6f840f6b48e4281c4b04c45d6960d41fd40e3358db292ea180",
+    "exported_formula_sha256": "bd1c976ecc12ff5f1c21d3fdd95382585600127cadf0fbaba66da9ec4e26e910",
+    "monolithic_default_status": "timeout",
+    "monolithic_arith2_status": "timeout",
+    "monolithic_timeout_seconds": 300,
+    "cover": "results/minimum_slot_orbit_pair_hall_cross_row_cubes_d6.json",
+    "cover_sha256": "c88d9b20b95f035b77594779e73e9a4a2fa92752b2380c1c57e25e5c2e1bb9c2",
+    "decision": "results/minimum_slot_orbit_pair_hall_cross_row_cubes_d6_qflra60.json",
+    "decision_sha256": "dd83163e782e2b33edf6ce575b91464bba86ab850c028ae2107afc53eca34725",
+    "branch_count": 58,
+    "qf_lra_unsat": 4,
+    "qf_lra_unknown": 54,
+    "qf_lra_sat": 0,
+    "decision_status": "INCOMPLETE"
+  },
+  "checks": {
+    "both_owner_walls_imposed": true,
+    "a0_triple_z3_confirmed": true,
+    "b0_qf_lra_confirmed": true,
+    "b0_arith2_confirmed": true,
+    "b0_default_confirmed": false,
+    "cvc5_confirmed": false,
+    "cyclic_pair_hall_cell_invariant": true,
+    "full_pair_hall_cell_proved": false,
+    "four_agent_efx_proved": false,
+    "general_efx_proved": false
+  }
+}

@@ -12,6 +12,7 @@ try:
         eligible,
         owner_cores_dominate_floater,
         owner_cores_dominate_predecessor_tokens,
+        pair_hall_cross_row_core_clauses,
         run,
         theta_upper_bound,
         threshold_terms,
@@ -32,6 +33,7 @@ except ImportError:
         eligible,
         owner_cores_dominate_floater,
         owner_cores_dominate_predecessor_tokens,
+        pair_hall_cross_row_core_clauses,
         run,
         theta_upper_bound,
         threshold_terms,
@@ -115,6 +117,28 @@ def test_owner_cores_dominate_predecessor_tokens_gate():
         solver = z3.Solver()
         solver.add(gate, values[owner][predecessor_token] > values[owner][core])
         assert solver.check() == z3.unsat
+
+
+def test_pair_hall_cross_row_core_clause_gate():
+    values = [
+        [z3.Real(f"c_{agent}_{good}") for good in range(9)]
+        for agent in range(4)
+    ]
+    gate = pair_hall_cross_row_core_clauses(values)
+    solver = z3.Solver()
+    solver.add(
+        gate,
+        values[0][0] < values[0][3],
+        values[2][2] > values[2][3] + values[2][4],
+    )
+    assert solver.check() == z3.unsat
+    solver = z3.Solver()
+    solver.add(
+        gate,
+        values[3][1] > values[3][3] + values[3][6],
+        values[0][1] + values[0][4] < values[0][3] + values[0][8],
+    )
+    assert solver.check() == z3.unsat
 
 
 def test_tracked_assertions_cannot_be_exported_as_standalone_smt2(tmp_path):

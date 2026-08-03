@@ -82,8 +82,15 @@ exact depth-six cover inside both walls has 58 leaves, four with immediate
 UNSAT hints; the cover has not yet been fully decided. No SAT valuation has
 been found.
 
-The next proof target is to decide or extract another shared assumption core
-from those 58 two-wall leaves. Monolithic timeout extension is not evidence.
+Tracked deletion from two of those leaves yields two cross-row clause
+families, each with four cyclic images.  Direct replays confirm the first
+family under three Z3 profiles and the second under QF_LRA and arithmetic
+solver 2.  Adding all eight clauses changes the exact cube geometry but still
+leaves 4 UNSAT and 54 UNKNOWN leaves at 60 seconds per leaf.  See
+`PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md`.
+
+The next proof target is to compose those eight clauses analytically with the
+two owner walls. Monolithic timeout extension is not evidence.
 
 ## Reproduction
 
@@ -138,4 +145,6 @@ Primary artifacts:
 - minimum_slot_orbit_pair_hall_predecessor_token_wall_default.json;
 - minimum_slot_orbit_pair_hall_predecessor_token_assumption_core.json;
 - minimum_slot_orbit_pair_hall_predecessor_token_wall_audit.json; and
-- minimum_slot_orbit_pair_hall_two_walls_cubes_d6.json.
+- minimum_slot_orbit_pair_hall_two_walls_cubes_d6.json;
+- minimum_slot_orbit_pair_hall_cross_row_clause_audit.json; and
+- minimum_slot_orbit_pair_hall_cross_row_pool.json.

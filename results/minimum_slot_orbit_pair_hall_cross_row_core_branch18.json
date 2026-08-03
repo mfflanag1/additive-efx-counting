@@ -1,0 +1,70 @@
+{
+  "branch": 18,
+  "branch_path": "/tmp/pair-hall-two-walls-cubes-d6/branch_018.smt2",
+  "branch_sha256": "642831f3e6e4dc078018f0f11cf00253e0cd7941493d009fa5f1c784235c892c",
+  "core_literal_count": 2,
+  "core_literals": [
+    "Not(v_3_1 + -1*v_3_3 + -1*v_3_6 <= 0)",
+    "Not(v_0_1 + -1*v_0_3 + v_0_4 + -1*v_0_8 >= 0)"
+  ],
+  "core_minimization_requested": true,
+  "core_positions": [
+    1,
+    4
+  ],
+  "core_subset_minimal": false,
+  "cube": [
+    "v_0_0 + -1*v_0_3 >= 0",
+    "Not(v_3_1 + -1*v_3_3 + -1*v_3_6 <= 0)",
+    "v_0_0 + -1*v_0_3 + v_0_5 + -1*v_0_8 >= 0",
+    "v_0_0 + -1*v_0_3 + v_0_5 + -1*v_0_6 <= 0",
+    "Not(v_0_1 + -1*v_0_3 + v_0_4 + -1*v_0_8 >= 0)"
+  ],
+  "cube_literal_count": 5,
+  "elapsed_seconds": 336.41553979204036,
+  "manifest": "results/minimum_slot_orbit_pair_hall_two_walls_cubes_d6.json",
+  "manifest_sha256": "7d60f70cbdae3c78680e7eade3e4dc75b745632fb6e219636da4e82c6306ab29",
+  "meaning": "Tracked UNSAT core over only the exact cube literals; all source assertions remain untracked premises. This is a core, not necessarily a minimum core.",
+  "minimization_checks": [
+    {
+      "elapsed_seconds": 50.08139966602903,
+      "reason_unknown": null,
+      "removed_position": 0,
+      "verdict": "unsat"
+    },
+    {
+      "elapsed_seconds": 180.00690937496256,
+      "reason_unknown": "canceled",
+      "removed_position": 1,
+      "verdict": "unknown"
+    },
+    {
+      "elapsed_seconds": 44.085560541949235,
+      "reason_unknown": null,
+      "removed_position": 2,
+      "verdict": "unsat"
+    },
+    {
+      "elapsed_seconds": 40.99934283294715,
+      "reason_unknown": null,
+      "removed_position": 3,
+      "verdict": "unsat"
+    },
+    {
+      "elapsed_seconds": 9.468185666948557,
+      "reason_unknown": "canceled",
+      "removed_position": 4,
+      "verdict": "unknown"
+    }
+  ],
+  "reason_unknown": null,
+  "schema": "minimum-slot-cube-assumption-core-v1",
+  "solver": "z3",
+  "solver_profile": "qf_lra",
+  "solver_version": "5.0.0",
+  "source": "/tmp/pair-hall-two-walls-master.smt2",
+  "source_sha256": "45c724b8dfb587346748e683d44a164de375548106338d6093e8fee8cc1a0cf5",
+  "status": "CUBE_ASSUMPTION_CORE_EXTRACTED",
+  "timeout_seconds": 180,
+  "verdict": "unsat"
+}

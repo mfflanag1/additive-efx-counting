@@ -60,9 +60,11 @@ in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 The current four-agent Hall-gradient route has removed the fixed off-host
 edge profile and proved its first structural consequence in the full cyclic
 pair-Hall cell: each owner's core good weakly dominates both the floater and
-the preceding pair's token.  The residual pair-Hall cell remains open.  See
+the preceding pair's token. Two cyclic cross-row clause families are also
+proved; the residual pair-Hall cell remains open. See
 [`PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md)
-and its triple-Z3/cvc5 replay audit.
+and
+[`PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md`](PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md).
 
 Both multiplicity-`2+2` bottom-pair branches are now proof-checked. Whether
 the two repeated pairs are disjoint or share one good, they force either a

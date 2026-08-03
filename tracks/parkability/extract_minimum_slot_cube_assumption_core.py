@@ -37,6 +37,7 @@ def run(
     output: Path,
     timeout_seconds: int,
     solver_profile: str,
+    minimize_core: bool = False,
 ):
     if timeout_seconds <= 0 or solver_profile not in {"default", "qf_lra", "arith2"}:
         raise ValueError("positive timeout and supported solver profile required")
@@ -72,11 +73,10 @@ def run(
     for position, literal in enumerate(branch_assertions[len(base_assertions) :]):
         label = z3.Bool(f"cube_{branch_index}_{position}")
         labels.append(label)
-        solver.assert_and_track(literal, label)
+        solver.add(z3.Implies(label, literal))
 
     started = time.monotonic()
-    verdict = solver.check()
-    elapsed = time.monotonic() - started
+    verdict = solver.check(*labels)
     core_names = (
         {str(label) for label in solver.unsat_core()}
         if verdict == z3.unsat
@@ -87,6 +87,31 @@ def run(
         for position, label in enumerate(labels)
         if str(label) in core_names
     ]
+    minimization_checks = []
+    if minimize_core and verdict == z3.unsat:
+        for position in tuple(core_positions):
+            candidate = [
+                labels[other]
+                for other in core_positions
+                if other != position
+            ]
+            candidate_started = time.monotonic()
+            candidate_verdict = solver.check(*candidate)
+            minimization_checks.append(
+                {
+                    "removed_position": position,
+                    "verdict": str(candidate_verdict),
+                    "reason_unknown": (
+                        solver.reason_unknown()
+                        if candidate_verdict == z3.unknown
+                        else None
+                    ),
+                    "elapsed_seconds": time.monotonic() - candidate_started,
+                }
+            )
+            if candidate_verdict == z3.unsat:
+                core_positions.remove(position)
+    elapsed = time.monotonic() - started
     artifact = {
         "schema": SCHEMA,
         "status": (
@@ -117,6 +142,21 @@ def run(
         "core_literal_count": len(core_positions),
         "core_positions": core_positions,
         "core_literals": [branch["cube"][position] for position in core_positions],
+        "core_minimization_requested": minimize_core,
+        "core_subset_minimal": (
+            all(
+                next(
+                    check["verdict"]
+                    for check in minimization_checks
+                    if check["removed_position"] == position
+                )
+                == "sat"
+                for position in core_positions
+            )
+            if minimize_core and verdict == z3.unsat
+            else None
+        ),
+        "minimization_checks": minimization_checks,
         "cube": branch["cube"],
     }
     atomic_json(output, artifact)
@@ -135,6 +175,7 @@ def main():
         choices=("default", "qf_lra", "arith2"),
         default="qf_lra",
     )
+    parser.add_argument("--minimize-core", action="store_true")
     args = parser.parse_args()
     artifact = run(
         args.source,
@@ -143,6 +184,7 @@ def main():
         args.output,
         args.timeout_seconds,
         args.solver_profile,
+        args.minimize_core,
     )
     print(
         json.dumps(
@@ -159,6 +201,7 @@ def main():
                     "core_literal_count",
                     "core_positions",
                     "core_literals",
+                    "core_subset_minimal",
                 )
             },
             indent=2,

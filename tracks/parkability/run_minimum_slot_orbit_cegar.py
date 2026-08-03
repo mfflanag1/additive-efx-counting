@@ -96,6 +96,40 @@ def owner_cores_dominate_predecessor_tokens(values):
     )
 
 
+def pair_hall_cross_row_core_clause(values, family, shift):
+    if family not in {"a", "b"} or shift not in range(4):
+        raise ValueError("cross-row clause requires family a/b and shift in [0,3]")
+
+    def owner(agent):
+        return (agent + shift) % 4
+
+    def good(item):
+        return (item + 2 * shift) % 8 if item < 8 else item
+
+    if family == "a":
+        return z3.Or(
+            values[owner(0)][good(0)] >= values[owner(0)][good(3)],
+            values[owner(2)][good(2)]
+            <= values[owner(2)][good(3)] + values[owner(2)][good(4)],
+        )
+    return z3.Or(
+        values[owner(3)][good(1)]
+        <= values[owner(3)][good(3)] + values[owner(3)][good(6)],
+        values[owner(0)][good(1)] + values[owner(0)][good(4)]
+        >= values[owner(0)][good(3)] + values[owner(0)][good(8)],
+    )
+
+
+def pair_hall_cross_row_core_clauses(values):
+    return z3.And(
+        *(
+            pair_hall_cross_row_core_clause(values, family, shift)
+            for shift in range(4)
+            for family in ("a", "b")
+        )
+    )
+
+
 def theta_upper_bound(values, bundles, bound):
     choices = tuple(
         threshold_terms(values[owner], bundles[owner])
@@ -487,6 +521,8 @@ def run(
     refute_base_owner_core_below_floater: int | None = None,
     base_owner_cores_dominate_predecessor_tokens: bool = False,
     refute_base_owner_predecessor_token_above_core: int | None = None,
+    base_pair_hall_cross_row_core_clauses: bool = False,
+    refute_base_pair_hall_cross_row_core_clause: str | None = None,
 ):
     if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
         raise ValueError(
@@ -551,6 +587,25 @@ def run(
         and refute_base_owner_predecessor_token_above_core is not None
     ):
         raise ValueError("only one core-dominance wall can be refuted at a time")
+    if base_pair_hall_cross_row_core_clauses and not (
+        base_owner_cores_dominate_floater
+        and base_owner_cores_dominate_predecessor_tokens
+    ):
+        raise ValueError("cross-row core clauses require both proved cyclic walls")
+    if refute_base_pair_hall_cross_row_core_clause is not None:
+        if refute_base_pair_hall_cross_row_core_clause not in {
+            f"{family}{shift}"
+            for family in ("a", "b")
+            for shift in range(4)
+        }:
+            raise ValueError("cross-row clause refutation must identify a0..a3/b0..b3")
+        if not (
+            base_owner_cores_dominate_floater
+            and base_owner_cores_dominate_predecessor_tokens
+        ):
+            raise ValueError("cross-row clause refutation requires both proved walls")
+        if base_pair_hall_cross_row_core_clauses:
+            raise ValueError("cross-row clause assumption and refutation are exclusive")
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
@@ -578,6 +633,12 @@ def run(
         owner = refute_base_owner_predecessor_token_above_core
         predecessor_token = (2 * owner - 1) % 8
         solver.add(values[owner][predecessor_token] > values[owner][CORES[owner]])
+    if base_pair_hall_cross_row_core_clauses:
+        solver.add(pair_hall_cross_row_core_clauses(values))
+    if refute_base_pair_hall_cross_row_core_clause is not None:
+        family = refute_base_pair_hall_cross_row_core_clause[0]
+        shift = int(refute_base_pair_hall_cross_row_core_clause[1])
+        solver.add(z3.Not(pair_hall_cross_row_core_clause(values, family, shift)))
     edge_cell_sha256 = None
     if base_host_edge_cell_source is not None:
         edge_document = json.loads(base_host_edge_cell_source.read_text())
@@ -826,6 +887,7 @@ def run(
     reason_unknown = None
     unsat_core_labels = None
 
+    iteration = 0
     for iteration in range(1, max_iterations + 1):
         verdict = solver.check()
         if verdict == z3.unsat:
@@ -834,6 +896,8 @@ def run(
                 if refute_base_owner_core_below_floater is not None
                 else "BASE_OWNER_PREDECESSOR_TOKEN_DOMINANCE_FORCED"
                 if refute_base_owner_predecessor_token_above_core is not None
+                else "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED"
+                if refute_base_pair_hall_cross_row_core_clause is not None
                 else "FIXED_PAIR_TOKEN_ORBIT_FORCED"
             )
             if track_unsat_core:
@@ -1046,6 +1110,13 @@ def run(
             )
             if refute_base_owner_predecessor_token_above_core is not None
             else (
+                "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED proves only the "
+                "selected two-literal clause, conditional on the two proved "
+                "cyclic walls and the archived pair-Hall consequence pool. "
+                "It does not close the pair-Hall cell or prove four-agent EFX."
+            )
+            if refute_base_pair_hall_cross_row_core_clause is not None
+            else (
                 "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
                 "orbit theorem inside the imposed host-edge subcell after exact "
                 "replay. UNSAT proves only the subcell fixing every base-host EFX "
@@ -1134,6 +1205,12 @@ def run(
         ),
         "refute_base_owner_predecessor_token_above_core": (
             refute_base_owner_predecessor_token_above_core
+        ),
+        "base_pair_hall_cross_row_core_clauses": (
+            base_pair_hall_cross_row_core_clauses
+        ),
+        "refute_base_pair_hall_cross_row_core_clause": (
+            refute_base_pair_hall_cross_row_core_clause
         ),
         "base_host_offhost_edge_cell_source": (
             str(base_host_offhost_edge_cell_source)
@@ -1238,6 +1315,18 @@ def main():
         type=int,
         choices=range(4),
     )
+    parser.add_argument(
+        "--base-pair-hall-cross-row-core-clauses",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--refute-base-pair-hall-cross-row-core-clause",
+        choices=tuple(
+            f"{family}{shift}"
+            for family in ("a", "b")
+            for shift in range(4)
+        ),
+    )
     parser.add_argument("--base-host-offhost-edge-cell-source", type=Path)
     parser.add_argument("--base-host-diagonal-pattern", type=int)
     parser.add_argument("--smt2-output", type=Path)
@@ -1266,6 +1355,8 @@ def main():
         args.refute_base_owner_core_below_floater,
         args.base_owner_cores_dominate_predecessor_tokens,
         args.refute_base_owner_predecessor_token_above_core,
+        args.base_pair_hall_cross_row_core_clauses,
+        args.refute_base_pair_hall_cross_row_core_clause,
     )
     summary = {
         key: result[key]

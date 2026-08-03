@@ -1,0 +1,58 @@
+{
+  "branch": 53,
+  "branch_path": "/tmp/pair-hall-two-walls-cubes-d6/branch_053.smt2",
+  "branch_sha256": "c66eb6be8198741eae3843c4ccd3a5244eb9f519ced3beb7bf48bfa7deea5985",
+  "core_literal_count": 2,
+  "core_literals": [
+    "Not(v_0_0 + -1*v_0_3 >= 0)",
+    "Not(v_2_2 + -1*v_2_3 + -1*v_2_4 <= 0)"
+  ],
+  "core_minimization_requested": true,
+  "core_positions": [
+    0,
+    4
+  ],
+  "core_subset_minimal": false,
+  "cube": [
+    "Not(v_0_0 + -1*v_0_3 >= 0)",
+    "Not(v_0_0 + -1*v_0_3 + -1*v_0_5 + v_0_7 >= 0)",
+    "Not(v_3_3 + -1*v_3_6 <= 0)",
+    "v_0_0 + -1*v_0_3 + v_1_2 + -1*v_1_5 >= 0",
+    "Not(v_2_2 + -1*v_2_3 + -1*v_2_4 <= 0)"
+  ],
+  "cube_literal_count": 5,
+  "elapsed_seconds": 336.4125355830183,
+  "manifest": "results/minimum_slot_orbit_pair_hall_two_walls_cubes_d6.json",
+  "manifest_sha256": "7d60f70cbdae3c78680e7eade3e4dc75b745632fb6e219636da4e82c6306ab29",
+  "meaning": "Tracked UNSAT core over only the exact cube literals; all source assertions remain untracked premises. This is a core, not necessarily a minimum core.",
+  "minimization_checks": [
+    {
+      "elapsed_seconds": 180.0032702499302,
+      "reason_unknown": "canceled",
+      "removed_position": 0,
+      "verdict": "unknown"
+    },
+    {
+      "elapsed_seconds": 4.414911208092235,
+      "reason_unknown": null,
+      "removed_position": 3,
+      "verdict": "unsat"
+    },
+    {
+      "elapsed_seconds": 96.9107646670891,
+      "reason_unknown": "canceled",
+      "removed_position": 4,
+      "verdict": "unknown"
+    }
+  ],
+  "reason_unknown": null,
+  "schema": "minimum-slot-cube-assumption-core-v1",
+  "solver": "z3",
+  "solver_profile": "qf_lra",
+  "solver_version": "5.0.0",
+  "source": "/tmp/pair-hall-two-walls-master.smt2",
+  "source_sha256": "45c724b8dfb587346748e683d44a164de375548106338d6093e8fee8cc1a0cf5",
+  "status": "CUBE_ASSUMPTION_CORE_EXTRACTED",
+  "timeout_seconds": 180,
+  "verdict": "unsat"
+}
