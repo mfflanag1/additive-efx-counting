@@ -1,0 +1,423 @@
+{
+  "batch_size": 8,
+  "candidate": {
+    "floater": 8,
+    "masks": [
+      65,
+      12,
+      48,
+      130
+    ]
+  },
+  "claim_boundary": "FORCED status proves the named swap lemma only in one fixed diagonal edge cell. COUNTERMODEL refutes only that named swap lemma, not the global-improvement alternative or four-agent EFX.",
+  "diagonal_edge_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "diagonal_pattern": 1,
+  "initial_values_source": "results/minimum_slot_orbit_diagonal_pattern1_swap_edge_only_decision.json",
+  "iterations": 5,
+  "max_iterations": 100,
+  "meaning": "Exact CEGAR for whether failure of one named improving swap can coexist with simultaneous blockage of the complete 120-state token orbit.",
+  "orbit_audit": {
+    "base_floater": 8,
+    "base_masks": [
+      3,
+      12,
+      48,
+      192
+    ],
+    "base_theta": "5065/3944",
+    "best_orbit_margin": "-1/1972",
+    "best_orbit_state": {
+      "assignment": [
+        1,
+        3,
+        5,
+        7,
+        8
+      ],
+      "best_host": 0,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bottleneck_count": 1,
+      "completing": false,
+      "floater": 8,
+      "margin": "-1/1972",
+      "masks": [
+        3,
+        12,
+        48,
+        192
+      ],
+      "theta": "5065/3944"
+    },
+    "completing_orbit_state_count": 0,
+    "eligible_orbit_state_count": 1,
+    "m": 9,
+    "meaning": "Exact rational audit of every permutation of four selected owner minima and one floater over four fixed cores.",
+    "minimum_eligible_orbit_theta": "5065/3944",
+    "n": 4,
+    "orbit_state_count": 120,
+    "records": [
+      {
+        "assignment": [
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "best_host": 0,
+        "best_permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "bottleneck_count": 1,
+        "completing": false,
+        "floater": 8,
+        "margin": "-1/1972",
+        "masks": [
+          3,
+          12,
+          48,
+          192
+        ],
+        "theta": "5065/3944"
+      }
+    ],
+    "schema": "minimum-slot-orbit-audit-v1",
+    "selected_minima": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "status": "ORBIT_ALL_ELIGIBLE_STATES_BLOCKED"
+  },
+  "orbit_cut_count": 26,
+  "orbit_cuts": [
+    {
+      "assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        8,
+        5
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        8,
+        5
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        7,
+        5
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        3,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        5,
+        7,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        8,
+        3,
+        7,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        8,
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        8,
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        7,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        7,
+        5,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        8,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        8,
+        3,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        7,
+        8
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        8,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        5,
+        8,
+        7,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        1,
+        3,
+        7,
+        8
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        1,
+        3,
+        8,
+        7
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        1,
+        8,
+        3,
+        7
+      ]
+    }
+  ],
+  "schema": "minimum-slot-diagonal-swap-cegar-v1",
+  "solver_reason_unknown": null,
+  "source": "results/minimum_slot_orbit_hall_state_nearest_cegar_session2_orbit_blocked_seed.json",
+  "source_sha256": "d673550b47f7c0d7b7b57bc8ffbda847ef3ac97dd38eaae516967e35e0e73d2b",
+  "status": "BLOCKED_NONIMPROVING_SWAP_COUNTERMODEL",
+  "timeout_seconds_per_check": 60,
+  "values": [
+    [
+      643,
+      16,
+      654,
+      4,
+      644,
+      3,
+      1,
+      1,
+      6
+    ],
+    [
+      1899,
+      68,
+      1731,
+      248,
+      4,
+      1971,
+      1811,
+      80,
+      76
+    ],
+    [
+      1,
+      2,
+      3,
+      7,
+      967,
+      11,
+      975,
+      2,
+      4
+    ],
+    [
+      1983,
+      4,
+      16,
+      1939,
+      1923,
+      20,
+      1959,
+      32,
+      12
+    ]
+  ]
+}

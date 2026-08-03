@@ -1,0 +1,551 @@
+{
+  "checks": {
+    "12_completion_templates": true,
+    "15_global_templates": true,
+    "22_completion_cuts": true,
+    "41_global_cuts": true,
+    "all_global_templates_balanced": true,
+    "all_global_templates_connected": true,
+    "all_global_templates_move_at_most_four_goods": true,
+    "no_orbit_hall_cuts": true,
+    "source_is_extracted_core": true
+  },
+  "claim_boundary": "This audit proves the structure of the persisted core. The separate untracked replay establishes whether its formulas are UNSAT.",
+  "completion_cut_count": 22,
+  "completion_template_count": 12,
+  "completion_templates": [
+    {
+      "canonical_assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 4
+    },
+    {
+      "canonical_assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "canonical_host": 2,
+      "canonical_permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "member_count": 4
+    },
+    {
+      "canonical_assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 3
+    },
+    {
+      "canonical_assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        3,
+        1,
+        2,
+        0
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        3,
+        7,
+        8,
+        5
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        5,
+        7,
+        3,
+        8
+      ],
+      "canonical_host": 3,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        5,
+        7,
+        8,
+        3
+      ],
+      "canonical_host": 3,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "canonical_host": 2,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "member_count": 3
+    },
+    {
+      "canonical_assignment": [
+        1,
+        7,
+        5,
+        8,
+        3
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "member_count": 1
+    },
+    {
+      "canonical_assignment": [
+        1,
+        7,
+        5,
+        8,
+        3
+      ],
+      "canonical_host": 0,
+      "canonical_permutation": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "member_count": 1
+    }
+  ],
+  "global_cut_count": 41,
+  "global_template_count": 15,
+  "global_templates": [
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        12,
+        80,
+        160
+      ],
+      "member_count": 4,
+      "moved_goods": 2,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        12,
+        96,
+        144
+      ],
+      "member_count": 4,
+      "moved_goods": 2,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        12,
+        160,
+        80
+      ],
+      "member_count": 4,
+      "moved_goods": 2,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        20,
+        96,
+        136
+      ],
+      "member_count": 1,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        20,
+        160,
+        72
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        24,
+        96,
+        132
+      ],
+      "member_count": 1,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        24,
+        160,
+        68
+      ],
+      "member_count": 2,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        36,
+        80,
+        136
+      ],
+      "member_count": 1,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        40,
+        144,
+        68
+      ],
+      "member_count": 2,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        68,
+        48,
+        136
+      ],
+      "member_count": 3,
+      "moved_goods": 2,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        24,
+        96,
+        130
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        24,
+        160,
+        66
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        40,
+        80,
+        130
+      ],
+      "member_count": 2,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        40,
+        144,
+        66
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        6,
+        24,
+        96,
+        129
+      ],
+      "member_count": 1,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    }
+  ],
+  "meaning": "Exact cyclic quotient and transfer-topology audit of the extracted pattern-2 UNSAT core menu.",
+  "schema": "minimum-slot-diagonal-core-menu-audit-v1",
+  "source": "results/minimum_slot_orbit_diagonal_pattern2_topology_union_hall_core_pool.json",
+  "source_sha256": "df7fbb903d615bdbdaa8808c069e6abe8b4c4384681ad6f28266377592ea2d14",
+  "status": "BALANCED_CONNECTED_CORE_MENU_EXACT",
+  "topology_histogram": [
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "moved_goods": 2,
+      "template_count": 4,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "moved_goods": 3,
+      "template_count": 6,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "moved_goods": 4,
+      "template_count": 5,
+      "transfer_support_size": 4
+    }
+  ]
+}

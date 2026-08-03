@@ -1,0 +1,33 @@
+{
+  "claim_boundary": "This validates the encoding on two exact profiles; it is not an EFX-existence theorem or a formal proof of the encoding for all inputs.",
+  "host_check_count": 960,
+  "meaning": "The compact symbolic Hall-failure formula and the auxiliary-free 24-matching blocker both agree with explicit perfect-matching enumeration for every host completion of all 120 token-orbit states in both audit profiles.",
+  "mismatch_count": 0,
+  "profile_count": 2,
+  "profiles": [
+    {
+      "enumerated_symbolic_failure_count": 0,
+      "explicit_failure_count": 0,
+      "hall_symbolic_failure_count": 0,
+      "host_check_count": 480,
+      "mismatch_count": 0,
+      "mismatches": [],
+      "name": "all_ones",
+      "orbit_state_count": 120
+    },
+    {
+      "enumerated_symbolic_failure_count": 416,
+      "explicit_failure_count": 416,
+      "hall_symbolic_failure_count": 416,
+      "host_check_count": 480,
+      "mismatch_count": 0,
+      "mismatches": [],
+      "name": "blocked_boundary",
+      "orbit_state_count": 120,
+      "source": "results/minimum_slot_orbit_hall_state_nearest_cegar_session2_orbit_blocked_seed.json",
+      "source_sha256": "d673550b47f7c0d7b7b57bc8ffbda847ef3ac97dd38eaae516967e35e0e73d2b"
+    }
+  ],
+  "schema": "minimum-slot-hall-encoding-audit-v2",
+  "status": "EXACT_MATCH"
+}

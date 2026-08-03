@@ -1,0 +1,22 @@
+{
+  "certificate": "results/minimum_slot_orbit_four_host_cycle_cegar_session2.json",
+  "certificate_sha256": "910d8d0188db22cce81b44fe8593ec102b42e5cefef6896a7dffe69c7d54e034",
+  "checks": {
+    "certificate_unsat": true,
+    "replay_not_unknown": true,
+    "replay_unsat": true,
+    "same_edge_cell_source_hash": true,
+    "same_global_cuts": true,
+    "same_orbit_hall_cuts": true,
+    "single_replay_check": true
+  },
+  "claim_boundary": "The replay confirms the exact bounded formula, not the coarser pair-Hall cycle cell or general four-agent EFX.",
+  "global_cut_count": 73,
+  "meaning": "A newly constructed solver containing the persisted cut pool and host-edge constraints returned UNSAT in one check.",
+  "orbit_hall_cut_count": 26,
+  "replay": "/tmp/minimum_slot_orbit_four_host_cycle_replay.json",
+  "replay_elapsed_seconds": 410.5913642080268,
+  "replay_sha256": "06aa656e6d12799465eba6be38df1bb6ed4c73eb69a5fc88e2f19fb70fe5658e",
+  "schema": "minimum-slot-cegar-replay-audit-v1",
+  "status": "FRESH_REPLAY_CONFIRMED"
+}
