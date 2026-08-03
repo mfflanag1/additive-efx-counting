@@ -119,6 +119,30 @@ two-external-row, and one bad-row conditions hold. The remaining proof task is
 existence of such a released minimum at the extremal state, not verification
 of the resulting allocation.
 
+The lexicographic signature removes even the handoff's bad-row closure
+requirement. If the released owner minimum produces an eligible swap, both
+external rows rank it below the old charity good, and the bad row ranks the
+charity good strictly above it, then the new identity candidate strictly
+improves its unique negative slack while every other slack stays
+nonnegative. This contradicts \(\Lambda\)-maximality even if the new bad-row
+slack has not yet reached zero. The unique-defect gate is therefore only an
+eligible-swap plus three item-order signs.
+
+The matching side of this gate is also completely classified. Every
+four-agent unique-defect failure has one of only three Hall witnesses: the
+bad/host pair sees only the host; the bad/host/one-external triple sees only
+the host and that external's bundle; or the full set is deficient because
+nobody accepts the bad bundle. This replaces the arbitrary 16-edge graph by
+three cap-free valuation cases.
+
+The exact data aligns perfectly with that trichotomy: all 4,320 canonical
+bad-source handoffs are full witnesses; the three noncanonical transitions
+are precisely two pair records and one triple record. The pair uses an
+external-source charity swap, while the triple uses an allocated-bundle swap
+and nonidentity rematching. The proof should therefore attack the full
+witness with the minimum handoff and reserve distinct exchange arguments for
+the two proper-cut cases.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:

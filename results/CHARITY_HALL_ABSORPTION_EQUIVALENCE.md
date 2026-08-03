@@ -127,6 +127,13 @@ weakly improves, and one strict receiver comparison strictly improves
 with the opposite strict sign, which is the dependency edge to be chained
 around the critical Hall cut.
 
+For the four-agent identity/unique-defect branch, that Hall cut now has a
+complete trichotomy. Since every nonbad diagonal edge exists and the bad agent
+accepts the host, a failed matching has either a deficient bad--host pair, a
+deficient bad--host--external triple, or a full witness in which nobody
+accepts the bad bundle. These are the only three valuation cases needed for
+the unique-defect release theorem.
+
 For four agents, the known one-unallocated-good theorem starts the induction
 at \(p=1\), so the \(p=1,n=4\) specialization would prove complete
 four-agent additive EFX. For arbitrary \(n\), the known EFX-with-charity

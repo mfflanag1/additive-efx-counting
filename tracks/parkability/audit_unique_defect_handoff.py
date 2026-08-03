@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from fractions import Fraction
 import hashlib
 import json
@@ -57,6 +58,37 @@ def candidate_slacks(masks, floater, witness, totals, thresholds, row_totals):
     return tuple(slacks)
 
 
+def acceptance_edges(masks, floater, witness, totals, thresholds):
+    complete = list(masks)
+    complete[witness["host"]] |= 1 << floater
+    edges = set()
+    for agent in range(len(masks)):
+        for assigned in range(len(masks)):
+            right = max(
+                thresholds[agent][complete[target]]
+                for target in range(len(masks))
+                if target != assigned
+            )
+            if totals[agent][complete[assigned]] >= right:
+                edges.add((agent, assigned))
+    return edges
+
+
+def obstruction_topology(edges, bad, host, n):
+    if {bundle for agent, bundle in edges if agent in (bad, host)} == {host}:
+        return "bad_host_pair"
+    for external in set(range(n)) - {bad, host}:
+        agents = {bad, host, external}
+        if {bundle for agent, bundle in edges if agent in agents} == {
+            host,
+            external,
+        }:
+            return "bad_host_external_triple"
+    if all((agent, bad) not in edges for agent in range(n)):
+        return "full_zero_bad_bundle"
+    raise AssertionError("unique-defect graph violates Hall trichotomy")
+
+
 def run(source, output):
     if output.exists():
         raise ValueError("output must be new")
@@ -65,6 +97,8 @@ def run(source, output):
     unique_defect_count = 0
     canonical_count = 0
     verified_count = 0
+    topology_counts = Counter()
+    canonical_topology_counts = Counter()
     exceptions = []
     for profile in document["records"]:
         values = load_record_values(profile)
@@ -99,6 +133,19 @@ def run(source, output):
             unique_defect_count += 1
             bad = negative_agents[0]
             host = witness["host"]
+            topology = obstruction_topology(
+                acceptance_edges(
+                    blocked_masks,
+                    old_floater,
+                    witness,
+                    totals,
+                    thresholds,
+                ),
+                bad,
+                host,
+                len(values),
+            )
+            topology_counts[topology] += 1
             completing_masks = tuple(transition["completing_masks"])
             new_floater = transition["completing_floater"]
             changed_sources = [
@@ -117,6 +164,7 @@ def run(source, output):
                 )
                 continue
             canonical_count += 1
+            canonical_topology_counts[topology] += 1
             endpoint_signature, endpoint_witness = absorption_signature(
                 completing_masks,
                 1 << new_floater,
@@ -178,6 +226,10 @@ def run(source, output):
         "identity_unique_defect_one_step_count": unique_defect_count,
         "canonical_bad_source_handoff_count": canonical_count,
         "verified_canonical_handoff_count": verified_count,
+        "unique_defect_topology_counts": dict(sorted(topology_counts.items())),
+        "canonical_handoff_topology_counts": dict(
+            sorted(canonical_topology_counts.items())
+        ),
         "exception_count": len(exceptions),
         "exceptions": exceptions,
         "claim_boundary": (

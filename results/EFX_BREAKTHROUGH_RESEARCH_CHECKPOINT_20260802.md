@@ -91,6 +91,26 @@ handoff and all replay. The open statement is existence of the released owner
 minimum under global \((\Theta,\Lambda)\)-maximality. Nonidentity and
 multi-negative signatures remain after that branch.
 
+Using the full signature \(\Lambda\) sharpens the handoff again: the bad-row
+completion inequality is unnecessary. An eligible owner-minimum swap with
+the two external orders \(g\preceq f\) and the bad-row strict order
+\(g\prec_b f\) strictly raises the unique negative matched slack while all
+other matched slacks remain nonnegative. It therefore contradicts
+\(\Lambda\)-maximality before full completion is reached. This leaves only
+existence of a released minimum satisfying those eligibility/sign conditions.
+
+Finally, the four-agent matching obstruction in this branch has only three
+possible Hall forms. A minimal deficient set must contain the bad agent; the
+bad agent accepts the host; and every other diagonal is present. Minimal
+witness sizes two, three, and four therefore give respectively the bad--host
+pair, the bad--host--external triple, and a full witness with zero acceptors
+for the bad bundle. This trichotomy is cap-free and exhaustive.
+
+The corpus split matches it exactly: 4,320 full witnesses all use the
+canonical bad-source handoff, while the remaining three records are two pair
+copies and one triple. Their repairs use, respectively, an external-source
+charity swap and an allocated-bundle swap with nonidentity rematching.
+
 ## New cap-free analytic results
 
 1. **Threshold-maximum swap preservation.**  Every eligible owner-minimum
