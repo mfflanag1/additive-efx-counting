@@ -10,6 +10,7 @@ try:
     )
     from .run_minimum_slot_orbit_cegar import (
         eligible,
+        owner_cores_dominate_floater,
         run,
         theta_upper_bound,
         threshold_terms,
@@ -28,6 +29,7 @@ except ImportError:
     )
     from run_minimum_slot_orbit_cegar import (
         eligible,
+        owner_cores_dominate_floater,
         run,
         theta_upper_bound,
         threshold_terms,
@@ -88,6 +90,18 @@ def test_literal_eligibility_is_exact():
     )
 
 
+def test_owner_cores_dominate_floater_gate():
+    values = [
+        [z3.Real(f"d_{agent}_{good}") for good in range(9)]
+        for agent in range(4)
+    ]
+    gate = owner_cores_dominate_floater(values)
+    for owner, core in enumerate((0, 2, 4, 6)):
+        solver = z3.Solver()
+        solver.add(gate, values[owner][core] < values[owner][8])
+        assert solver.check() == z3.unsat
+
+
 def test_tracked_assertions_cannot_be_exported_as_standalone_smt2(tmp_path):
     with pytest.raises(
         ValueError,
@@ -118,6 +132,23 @@ def test_core_minimization_requires_tracking(tmp_path):
             relabeling_mode="none",
             completion_batch_size=1,
             minimize_unsat_core=True,
+        )
+
+
+def test_core_dominance_modes_are_mutually_exclusive(tmp_path):
+    with pytest.raises(
+        ValueError,
+        match="core-dominance assumption and refutation mode are mutually exclusive",
+    ):
+        run(
+            tmp_path / "result.json",
+            timeout_seconds=1,
+            max_iterations=1,
+            seed=None,
+            relabeling_mode="none",
+            completion_batch_size=1,
+            base_owner_cores_dominate_floater=True,
+            refute_base_owner_core_below_floater=1,
         )
 
 

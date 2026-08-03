@@ -1,0 +1,69 @@
+{
+  "schema": "minimum-slot-pair-hall-core-dominance-audit-v1",
+  "status": "CYCLIC_CORE_DOMINANCE_LEMMA_TRIPLE_Z3_CVC5_CONFIRMED",
+  "meaning": "In the canonical cyclic pair-Hall cell, global normalized-threshold maximality and complete blockage of every eligible fixed-core token state force each owner's core good to weakly dominate the floater. The archived direct formula proves owner 1; cyclic relabeling gives all four owners. This is a local structural lemma, not four-agent EFX.",
+  "direct_owner": 1,
+  "direct_inequality": "v_1_2 >= v_1_8",
+  "cyclic_inequalities": [
+    "v_0_0 >= v_0_8",
+    "v_1_2 >= v_1_8",
+    "v_2_4 >= v_2_8",
+    "v_3_6 >= v_3_8"
+  ],
+  "pool": "results/minimum_slot_orbit_pair_hall_distance3_pool.json",
+  "pool_sha256": "b88ae26a7c799f5b1c42a9bcd3d81397d351885aee9ce0bc4856d03ce3c9f125",
+  "qf_lra_artifact": "results/minimum_slot_orbit_pair_hall_core_dominance_wall_qflra.json",
+  "qf_lra_artifact_sha256": "61c1727ee1a3e323584a511e9f64ff5f0ffdd1938e8ab30a1f37177fc0c0a5e7",
+  "finite_consequence_counts": {
+    "global_cuts": 159,
+    "matching_witness_cuts": 78,
+    "whole_orbit_blockers": 30,
+    "maximum_pair_exchange_distance_preloaded": 3
+  },
+  "z3": {
+    "version": "5.0.0",
+    "profiles": {
+      "default": {
+        "status": "BASE_OWNER_CORE_DOMINANCE_FORCED",
+        "elapsed_seconds": 1.8396425830433145
+      },
+      "qf_lra": {
+        "status": "BASE_OWNER_CORE_DOMINANCE_FORCED",
+        "elapsed_seconds": 0.11133920901920646
+      },
+      "arith2": {
+        "status": "BASE_OWNER_CORE_DOMINANCE_FORCED",
+        "elapsed_seconds": 72.78775266592856
+      }
+    },
+    "exported_formula_sha256": "f36df5b7be9eadbef0f887a598a3a62c1fec8b07582ba88664b07e1860b97e0c"
+  },
+  "cvc5": {
+    "version": "1.3.3",
+    "git_revision": "8ff882e",
+    "status": "unsat",
+    "elapsed_seconds": 0.608102375,
+    "normalization": "Bijectively rename v_i_g to value_i_g, insert QF_LRA logic, and replace 20120 unary sums by their identical atom.",
+    "renamed_source_sha256": "13a028278b69489e2c9b08f6d922547dfc22190e569fbe939af4d97814f6f38f",
+    "normalized_formula_sha256": "7b061da05276ffc4ba59c26d5db98c8885809aa5fb2969be6724aa5ef77332c5"
+  },
+  "residual_cube_map": {
+    "manifest": "results/minimum_slot_orbit_pair_hall_core_dominance_cubes_d6.json",
+    "qf_lra_decision": "results/minimum_slot_orbit_pair_hall_core_dominance_cubes_d6_qflra120.json",
+    "default_decision": "results/minimum_slot_orbit_pair_hall_core_dominance_cubes_d6_default120.json",
+    "branch_count": 36,
+    "union_unsat_branches": [25, 26, 28, 29, 31, 33, 34],
+    "remaining_unknown_branches": 29,
+    "status": "INCOMPLETE"
+  },
+  "checks": {
+    "pair_hall_cycle_imposed": true,
+    "owner_unique_minima_imposed": true,
+    "selected_owner_core_below_floater_refuted": true,
+    "three_z3_profiles_unsat": true,
+    "cvc5_unsat": true,
+    "cyclic_pair_hall_cell_invariant": true,
+    "four_agent_efx_proved": false,
+    "general_efx_proved": false
+  }
+}

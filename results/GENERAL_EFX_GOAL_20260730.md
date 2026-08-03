@@ -7,6 +7,16 @@ counterexample.
 **Current status:** **open**. No general proof and no additive counterexample
 has been obtained.
 
+**Parallel four-agent Hall-gradient gate:** the fixed-profile diagonal
+theorems have now been coarsened to the full cyclic pair-Hall cell far enough
+to prove a new cap-free structural consequence: under global normalized-
+threshold maximality and complete blockage of the eligible fixed-core token
+orbit, every owner's core good weakly dominates the floater.  The direct wall
+is confirmed by three Z3 profiles and cvc5.  The residual pair-Hall master is
+not closed: an exact 36-leaf cover has seven UNSAT leaves and 29 UNKNOWN.
+See
+[PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md).
+
 **Current live gate:** the strict-common-favorite universal owner-threshold-
 failure branch at \((4,9)\) is now closed by a cap-free, proof-checked
 computer-assisted theorem. The bottom-pair reduction splits into the

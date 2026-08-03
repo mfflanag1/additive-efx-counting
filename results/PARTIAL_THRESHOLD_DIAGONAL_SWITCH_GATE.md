@@ -158,6 +158,13 @@ improvement cut.  The next arithmetic-solver-2 check is UNKNOWN at 90 seconds.
 This is a resumable pool and a precise localization of the next obstruction,
 not evidence that the coarser cell is satisfiable or that the theorem fails.
 
+The coarsened campaign now has 159 global cuts, 78 matching blockers, and 30
+whole-token Hall blockers.  A dual-solver-verified consequence of that finite
+subset, and hence of the full antecedent, is the cyclic core-dominance lemma
+\(v_i(2i)\geq v_i(8)\) for every owner.  Adding the four inequalities leaves
+an exact 36-branch cover with seven branches closed across two Z3 profiles and
+29 UNKNOWN.  See `PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`.
+
 The exact pattern-1 result is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.  It is a second complete
 64-edge cell, not yet a theorem with a switch left symbolically free.
@@ -222,6 +229,9 @@ general EFX.
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_v5_untracked.normalized.smt2`;
 - `minimum_slot_orbit_diagonal_pattern1_unsat_core_v5_untracked.cvc5.json`;
 - `minimum_slot_orbit_pair_hall_from_diagonal_core_session1.json`;
+- `minimum_slot_orbit_pair_hall_distance3_pool.json`;
+- `minimum_slot_orbit_pair_hall_core_dominance_replay_audit.json`;
+- `PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`;
 - `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`; and
 - `PARTIAL_THRESHOLD_DIAGONAL_FINITE_MENU_LEMMA.md`.
 

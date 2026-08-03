@@ -57,6 +57,13 @@ as an internally verified hybrid theorem rather than a peer-reviewed theorem.
 The general problem remains open. Current exact status and proof gates are
 in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 
+The current four-agent Hall-gradient route has removed the fixed off-host
+edge profile and proved its first structural consequence in the full cyclic
+pair-Hall cell: each owner's core good weakly dominates the floater.  The
+residual pair-Hall cell remains open.  See
+[`PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md)
+and its triple-Z3/cvc5 replay audit.
+
 Both multiplicity-`2+2` bottom-pair branches are now proof-checked. Whether
 the two repeated pairs are disjoint or share one good, they force either a
 full selected Hall cell or one of their conversion allocations. cvc5

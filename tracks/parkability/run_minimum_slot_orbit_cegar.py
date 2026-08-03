@@ -78,6 +78,15 @@ def eligible(values, bundles, floater):
     return z3.And(*constraints)
 
 
+def owner_cores_dominate_floater(values):
+    return z3.And(
+        *(
+            values[owner][core] >= values[owner][FLOATER]
+            for owner, core in enumerate(CORES)
+        )
+    )
+
+
 def theta_upper_bound(values, bundles, bound):
     choices = tuple(
         threshold_terms(values[owner], bundles[owner])
@@ -465,6 +474,8 @@ def run(
     smt2_output: Path | None = None,
     track_unsat_core: bool = False,
     minimize_unsat_core: bool = False,
+    base_owner_cores_dominate_floater: bool = False,
+    refute_base_owner_core_below_floater: int | None = None,
 ):
     if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
         raise ValueError(
@@ -499,6 +510,18 @@ def run(
         )
     if minimize_unsat_core and not track_unsat_core:
         raise ValueError("UNSAT-core minimization requires tracked assertions")
+    if (
+        refute_base_owner_core_below_floater is not None
+        and not 0 <= refute_base_owner_core_below_floater < 4
+    ):
+        raise ValueError("core-dominance refutation owner must lie in [0,3]")
+    if (
+        base_owner_cores_dominate_floater
+        and refute_base_owner_core_below_floater is not None
+    ):
+        raise ValueError(
+            "core-dominance assumption and refutation mode are mutually exclusive"
+        )
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
@@ -515,6 +538,11 @@ def run(
     solver.add(eligible(values, BASE, FLOATER))
     for owner, (core, token) in enumerate(zip(CORES, TOKENS[:4])):
         solver.add(values[owner][token] < values[owner][core])
+    if base_owner_cores_dominate_floater:
+        solver.add(owner_cores_dominate_floater(values))
+    if refute_base_owner_core_below_floater is not None:
+        owner = refute_base_owner_core_below_floater
+        solver.add(values[owner][CORES[owner]] < values[owner][FLOATER])
     edge_cell_sha256 = None
     if base_host_edge_cell_source is not None:
         edge_document = json.loads(base_host_edge_cell_source.read_text())
@@ -766,7 +794,11 @@ def run(
     for iteration in range(1, max_iterations + 1):
         verdict = solver.check()
         if verdict == z3.unsat:
-            status = "FIXED_PAIR_TOKEN_ORBIT_FORCED"
+            status = (
+                "BASE_OWNER_CORE_DOMINANCE_FORCED"
+                if refute_base_owner_core_below_floater is not None
+                else "FIXED_PAIR_TOKEN_ORBIT_FORCED"
+            )
             if track_unsat_core:
                 unsat_core_labels = sorted(str(label) for label in solver.unsat_core())
             break
@@ -960,6 +992,15 @@ def run(
         ),
         "claim_boundary": (
             (
+                "BASE_OWNER_CORE_DOMINANCE_FORCED proves only that the selected "
+                "owner's core weakly dominates the floater under the imposed "
+                "pair-Hall cell and archived finite consequences of global "
+                "threshold maximality and token-orbit blockage. Cyclic lifting "
+                "to the other owners is a separate symmetry step. It does not "
+                "prove the full pair-Hall cell or four-agent EFX."
+            )
+            if refute_base_owner_core_below_floater is not None
+            else (
                 "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
                 "orbit theorem inside the imposed host-edge subcell after exact "
                 "replay. UNSAT proves only the subcell fixing every base-host EFX "
@@ -1036,6 +1077,12 @@ def run(
             [list(pair) for pair in PAIR_HALL_CYCLE]
             if base_host_pair_hall_cycle
             else None
+        ),
+        "base_owner_cores_dominate_floater": (
+            base_owner_cores_dominate_floater
+        ),
+        "refute_base_owner_core_below_floater": (
+            refute_base_owner_core_below_floater
         ),
         "base_host_offhost_edge_cell_source": (
             str(base_host_offhost_edge_cell_source)
@@ -1122,6 +1169,15 @@ def main():
     )
     parser.add_argument("--base-host-edge-cell-source", type=Path)
     parser.add_argument("--base-host-pair-hall-cycle", action="store_true")
+    parser.add_argument(
+        "--base-owner-cores-dominate-floater",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--refute-base-owner-core-below-floater",
+        type=int,
+        choices=range(4),
+    )
     parser.add_argument("--base-host-offhost-edge-cell-source", type=Path)
     parser.add_argument("--base-host-diagonal-pattern", type=int)
     parser.add_argument("--smt2-output", type=Path)
@@ -1146,6 +1202,8 @@ def main():
         args.smt2_output,
         args.track_unsat_core,
         args.minimize_unsat_core,
+        args.base_owner_cores_dominate_floater,
+        args.refute_base_owner_core_below_floater,
     )
     summary = {
         key: result[key]

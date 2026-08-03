@@ -219,6 +219,16 @@ all nine diagonal profiles of Hamming weight at most one are closed in the
 fixed off-host subcell.  See `PARTIAL_THRESHOLD_DIAGONAL_TOPOLOGY_GATE.md` and
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`.
 
+The subsequent coarsening removes all 24 off-host and eight diagonal edge
+equalities.  Its current exact pool has 159 global-maximality cuts, 78 matching
+blockers, and 30 whole-token Hall blockers.  This yields the first structural
+lemma in the full cyclic pair-Hall cell: every owner's core good weakly
+dominates the floater.  The direct owner-1 refutation is confirmed by three Z3
+profiles and cvc5; cyclic relabeling gives all four rows.  The residual
+core-dominance master remains open, with seven of 36 exact cube leaves closed
+and 29 UNKNOWN.  See
+`PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`.
+
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
 be integrated with the known one-unallocated-good theorem to prove complete
