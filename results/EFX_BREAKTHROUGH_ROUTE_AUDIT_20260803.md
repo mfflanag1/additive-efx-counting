@@ -180,6 +180,22 @@ subset either discards exactly \(f\), producing an ordinary envy edge, or
 retains \(f\) and releases a nonempty bottom bundle. This bridge supplies the
 EFX-preserving construction mechanism that raw transfer walls lacked.
 
+The hardest radius-three counterexample confirms that this is not merely a
+change of terminology. Its forced champion edge and one reciprocal champion
+edge form an ordinary-envy/champion two-cycle whose Pareto-improvable
+reallocation is EFX with charity, strictly raises \(\Theta\), and is directly
+absorbable. Thus the champion construction recovers an improving four-good
+connected transfer that every item-local move through radius three misses.
+The exact endpoint and replay are recorded in
+[`unique_defect_radius3_gradient_counterexample.json`](unique_defect_radius3_gradient_counterexample.json).
+
+This also sharpens the next decision gate. The live task is not to search for
+larger-radius moves; it is to classify the four-vertex champion graph around
+the forced edge and prove that either a Pareto-improvable champion edge set
+exists or the signed component walls cancel. Failure to obtain a cap-free
+classification from that finite graph counts against the primary route under
+the proof-compression stop condition below.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:
