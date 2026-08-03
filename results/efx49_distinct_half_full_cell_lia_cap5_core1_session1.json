@@ -1,0 +1,37 @@
+{
+  "cap": 5,
+  "core_source": {
+    "path": "results/efx49_distinct_half_full_cell_cpsat_cap5_core1.json",
+    "sha256": "4ecf8961d948a93d3a0b52250a2c414fd6a855a5f80128fa973005d0b343fefb"
+  },
+  "elapsed_seconds": 120.23998689651489,
+  "favorite_pair_partition_count": 840,
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "UNSAT independently corroborates only the finite integer cap and pooled full-cell dichotomy. It is not a real-valued or general additive-EFX theorem.",
+  "m": 9,
+  "n": 4,
+  "pool_size": 330,
+  "reason_unknown": null,
+  "schema": "distinct-half-full-cell-lia-replay-v1",
+  "smt2_path": "results/efx49_distinct_half_full_cell_lia_cap5_core1_session1.smt2",
+  "smt2_sha256": "b82ab9fec259b81cb78eccf3896bcb0d142a0840dee0dec3e8292965d96123cb",
+  "solver_status": "unsat",
+  "source": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap5_session1.json",
+  "source_sha256": "905ad5c7bf1dbcfaec41b9dc6b43a9b9a150243bd106607ed7d6d7786f003b83",
+  "source_trace_survivor_counts": [
+    361
+  ],
+  "status": "FINITE_CAP_UNSAT_CANDIDATE",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "universal_threshold_encoding": "sorting",
+  "values": null
+}

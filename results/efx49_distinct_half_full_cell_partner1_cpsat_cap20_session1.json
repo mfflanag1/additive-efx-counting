@@ -1,0 +1,103 @@
+{
+  "add_per_iteration": 512,
+  "branches": 469892,
+  "cap": 20,
+  "conflicts": 5914,
+  "elapsed_seconds": 13.92308521270752,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 420,
+  "pool_source": {
+    "partition_count": 105,
+    "path": "results/efx49_distinct_half_full_cell_partner1_pool.json",
+    "sha256": "d04c695ef92a4bff6cea835e40b28bc61b753114e099ac7878f133e6c7b9a292"
+  },
+  "proto_path": "results/efx49_distinct_half_full_cell_partner1_cpsat_cap20_session1.pb",
+  "proto_sha256": "422fd0e7283cdf4f3ad9eba1e5b1bc610f6fc71e7bfba5e73be9f937cce3ff00",
+  "random_seed": 20260731,
+  "resume_source": null,
+  "resume_source_sha256": null,
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "union",
+  "seed_sources": [],
+  "seed_supported_union_size": 105,
+  "solver_status": "OPTIMAL",
+  "status": "ITERATION_LIMIT",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 120.0,
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 315,
+      "iteration": 1,
+      "pool_size_before": 105,
+      "values": [
+        [
+          20,
+          11,
+          19,
+          19,
+          7,
+          19,
+          19,
+          19,
+          13
+        ],
+        [
+          20,
+          1,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ],
+        [
+          20,
+          1,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ],
+        [
+          20,
+          1,
+          1,
+          3,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      ]
+    }
+  ],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

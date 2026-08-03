@@ -1,0 +1,73 @@
+{
+  "cardinal_formula_sha256": "e16fc1c6b65d04f106bec06f65e967aff4a5999844543689a2dc8c442f178868",
+  "claim_boundary": "This proves the fixed overlap relative-matching orbit 1 for the 420-state shared-low-active family. It does not close the other three matching orbits or the overlap bottom-pair pattern.",
+  "cvc5_independent_unsat": true,
+  "ethos_status": "correct",
+  "matching_orbit_count": 4,
+  "matching_orbit_index": 1,
+  "partition_family": "shared_low_active",
+  "partition_family_size": 420,
+  "pattern": "overlap",
+  "proof_bytes": 52152488,
+  "proof_sha256": "ec65b2ce3876575ccbc7eccc490bd188d882444e07ae178a00c7160d6db2b0c8",
+  "proof_step_lines": 631679,
+  "schema": "overlap-orbit1-shared-active-audit-v1",
+  "second_bottom_agents": [
+    2,
+    3
+  ],
+  "selected_cells": [
+    {
+      "low_pair": [
+        7,
+        8
+      ],
+      "matching": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "low_pair": [
+        6,
+        8
+      ],
+      "matching": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          7
+        ]
+      ]
+    }
+  ],
+  "sorting_formula_sha256": "257c8a8d41a752b625c60181272ba7df2c0548c2fa479630be2d8dab0ad1cb9c",
+  "sources": {
+    "cardinal": "results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active_cegar_session1.json",
+    "cpc": "results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active_cpc_ethos.json",
+    "cvc5": "results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active_cvc5.json",
+    "external_z3": "results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active_external_z3.json",
+    "normalization": "results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active_cvc5.normalization.json",
+    "proof": "results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active.cpc"
+  },
+  "status": "OVERLAP_ORBIT1_SHARED_ACTIVE_PROOF_CHECKED",
+  "sufficient_pool_size": 107,
+  "z3_fresh_process_unsat": true
+}

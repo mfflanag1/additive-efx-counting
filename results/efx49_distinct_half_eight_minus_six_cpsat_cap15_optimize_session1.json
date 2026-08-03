@@ -1,0 +1,99 @@
+{
+  "branches": 28911,
+  "cap": 15,
+  "conflicts": 5,
+  "elapsed_seconds": 900.216185092926,
+  "favorite_pair_efx_orbit_histogram": {
+    "('U', 0, ('RR', 'RR'))": 6,
+    "('U', 1, ('RR', 'RU'))": 24
+  },
+  "favorite_pair_efx_partition_count": 30,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "full_hall_cells": [],
+  "hard_partition_count": 624,
+  "hard_partition_family": "six_orbit",
+  "hard_partition_repair_count": 0,
+  "hint_path": "results/efx49_distinct_half_eight_orbit_cpsat_cap20_optimize_session1.json",
+  "literal_complete_efx_count": 684,
+  "m": 9,
+  "n": 4,
+  "obstruction_objective": 126.0,
+  "obstruction_objective_bound": 156.0,
+  "partition_family": "eight_orbit",
+  "proto_path": "results/efx49_distinct_half_eight_minus_six_cpsat_cap15_optimize_session1.pb",
+  "proto_sha256": "84e3486145582137fc30e414fd10aa9191fb47bc8ec84fe2762bff105d147299",
+  "random_seed": 20260802,
+  "schema": "distinct-half-eight-orbit-cpsat-optimization-v1",
+  "semantic_obstruction_count": 126,
+  "solver_status": "FEASIBLE",
+  "status": "OPTIMIZATION_CHECKPOINT",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "target_partition_count": 156,
+  "target_partitions_sha256": "1fb49919e148318beae7eddc42f957b9a5d42c606e9d01cbf4915087a5073874",
+  "target_repair_count": 30,
+  "time_limit_seconds": 900.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      14,
+      9,
+      9,
+      9,
+      10,
+      10,
+      6,
+      2,
+      1
+    ],
+    [
+      9,
+      5,
+      5,
+      5,
+      5,
+      5,
+      4,
+      2,
+      1
+    ],
+    [
+      9,
+      5,
+      5,
+      5,
+      5,
+      5,
+      3,
+      2,
+      1
+    ],
+    [
+      7,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      1
+    ]
+  ],
+  "warning": "A zero-repair profile refutes only the eight-orbit selector, not EFX existence unless literal complete-EFX enumeration is also zero. Any positive optimum is a finite-cap theorem only.",
+  "workers": 8
+}

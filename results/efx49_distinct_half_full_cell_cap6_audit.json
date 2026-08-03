@@ -1,0 +1,62 @@
+{
+  "artifacts": {
+    "compressed_drat_sha256": "1cd492edd7043ba8c1af4323b8b2d814b3bb0778b6fd229f48c534c55a2d4394",
+    "cp_sat_cegar_sha256": "7fa3c4adbe6f266cb1bc46fb0cd9824c56b173cecccc141f6d04de4d1fab8c2d",
+    "cp_sat_core_sha256": "fa24febceb91480f786b8f8a2888ed5e74a72a09b676fe758bd2c34370e09d4a",
+    "deletion_minimal_core21_sha256": "a12bdd80d48d83d76c9af516ec49ad8df47b93ecaef795ca07bcea187208d1f1",
+    "drat_verification_sha256": "6e442adc69944c1f085c8b3f953e90dbd9919c9d965c69efdf04e440bcee842f",
+    "qf_lia_core175_formula_sha256": "cd10b103c4ebee19ebcfbd77b4c1157b65e926d51d81caac4b79dca48e9bbc04",
+    "qf_lia_core175_sha256": "783171c3e8acce0c6725becdb97708eabbb17fc9fdb846a3fe7e46f5a63ee035",
+    "qf_lia_formula_sha256": "0ac048d78ef6fedf921f0580c1c48ead5cb2553eaf381e719372de6d87bb53ee",
+    "qf_lia_result_sha256": "37183a2e30f9b1e4df79a326764e6c32ac088076118d0a254e3200d1e39852a3",
+    "threshold_cnf_formula_sha256": "ab7a7c1d360fe6daa44acb74f1d25d6dd85f8fad3802ee89184f2d621b27125d",
+    "threshold_cnf_result_sha256": "fe0652058a06f8861027e0091f4c0b8a591f71d39bf066d1465069828de50e07"
+  },
+  "conclusion": "Some favorite-pair balanced partition is EFX-supporting, or some favorite-triple low pair has all 15 residual pairings passing the Hall test; either alternative yields complete EFX.",
+  "independent_encodings": {
+    "cp_sat": {
+      "pool_size": 401,
+      "status": "INFEASIBLE"
+    },
+    "qf_lia": {
+      "pool_size": 359,
+      "status": "unsat",
+      "threshold_encoding": "sorting"
+    },
+    "threshold_cnf": {
+      "clauses": 1145090,
+      "drat_proof": "VERIFIED",
+      "pool_size": 21,
+      "solver": "Cadical195",
+      "status": "UNSAT",
+      "variables": 557152
+    }
+  },
+  "schema": "distinct-half-full-cell-cap6-audit-v1",
+  "scope": {
+    "agents": 4,
+    "fixed_half_favorite_representatives": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "goods": 9,
+    "item_values": "integers in {1,2,3,4,5,6}",
+    "strict_common_favorite": 0,
+    "universal_owner_threshold_failure": true
+  },
+  "status": "DISTINCT_HALF_FULL_CELL_CAP6_CERTIFIED",
+  "trust_boundary": "This is a finite integer-cap theorem in one structural branch. It is not a real-valued theorem and does not resolve general additive EFX. CP-SAT, Z3/QF_LIA, and threshold CNF are three distinct encodings, and the frozen CNF UNSAT verdict has a binary DRAT proof independently accepted by drat-trim.",
+  "universe": {
+    "cegar_trace_survivors": [
+      346
+    ],
+    "closed_pool": 401,
+    "cp_sat_core": 359,
+    "favorite_pair_partitions": 840,
+    "initial_complement_pool": 55,
+    "qf_lia_core": 175,
+    "sufficient_core": 21
+  }
+}

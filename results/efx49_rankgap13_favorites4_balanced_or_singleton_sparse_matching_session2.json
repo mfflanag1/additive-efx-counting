@@ -1,0 +1,172 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 5856,
+  "elapsed_seconds": 560.866232,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": false,
+  "exclude_universal_min": false,
+  "favorite_pattern": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 10704,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "partition_singleton_good": null,
+  "partition_singleton_goods": [
+    0
+  ],
+  "partition_universe_size": 2226,
+  "pool_sha256": "7afe929399f011baf59fa0cabad1de50110074e70050e6df3c5dc38b89ca07b4",
+  "pool_size": 446,
+  "proto_bytes": 1440329,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_favorites4_balanced_or_singleton_sparse_matching_session2.pb",
+  "proto_sha256": "0ebf5d7530982ae93d3105bbca439c3bb9fa1b2591284fe82d15c063683f617d",
+  "require_distinct_item_values": true,
+  "require_pairwise_distinct_rows": false,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [],
+  "solver_status": "INFEASIBLE",
+  "status": "UNSAT_BOUNDED_CELL_CANDIDATE",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 297257,
+      "conflicts": 524,
+      "deterministic_time": 7.495299458323094,
+      "iteration": 1,
+      "pool_size_before": 444,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 30,
+      "values": [
+        [
+          13,
+          11,
+          8,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          8,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          8,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          11,
+          8,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "wall_time_seconds": 6.011737
+    },
+    {
+      "branches": 309811,
+      "conflicts": 1532,
+      "deterministic_time": 10.46429423493219,
+      "iteration": 2,
+      "pool_size_before": 445,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 20,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      ],
+      "wall_time_seconds": 7.763210000000001
+    },
+    {
+      "branches": 2735522,
+      "conflicts": 754604,
+      "deterministic_time": 1961.7848476851382,
+      "iteration": 3,
+      "pool_size": 446,
+      "solver_status": "INFEASIBLE",
+      "wall_time_seconds": 546.6206930000001
+    }
+  ],
+  "upper": 13,
+  "values": null
+}

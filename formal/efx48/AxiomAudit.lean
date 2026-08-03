@@ -1,0 +1,13 @@
+import EFX48
+
+#check EFX48.admitsEFX_4x8_of_standard_published_inputs
+#print axioms EFX48.admitsEFX_4x8_of_standard_published_inputs
+
+#check EFX48.admitsEFX_4x8_of_standard_published_inputs_nonnegative
+#print axioms EFX48.admitsEFX_4x8_of_standard_published_inputs_nonnegative
+
+#check EFX48.favorite211_cell_unsat_of_anchored_contested_favorite
+#print axioms EFX48.favorite211_cell_unsat_of_anchored_contested_favorite
+
+#check EFX48.admitsEFX_of_injective_favorites_of_card_le_twice
+#print axioms EFX48.admitsEFX_of_injective_favorites_of_card_le_twice

@@ -1,0 +1,519 @@
+{
+  "add_per_iteration": 8,
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "cegar": true,
+  "claim_boundary": "UNSAT would prove the selected-cell conclusion for this one bottom-pair pattern using only its conversion closure, subject to independent replay. SAT refutes only that conversion-family selector, not the full favorite-pair selector or EFX.",
+  "distinct_conversion_partition_count": 180,
+  "distinct_selected_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "elapsed_seconds": 269.0977232456207,
+  "favorite_pair_efx_partition_count": null,
+  "favorite_pair_partition_count": 840,
+  "iterations": 10,
+  "literal_complete_efx_count": null,
+  "max_iterations": 20,
+  "pattern_index": 6,
+  "pool_size": 72,
+  "raw_conversion_count": 180,
+  "reason_unknown": null,
+  "schema": "bottom-pattern-conversion-selector-lra-v1",
+  "selected_cell_encoding": {
+    "accept_literals": 120,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 2,
+    "pairing_failure_terms": 30
+  },
+  "smt2_path": "results/efx49_bottom_pattern6_conversion_selector_cegar_session1.smt2",
+  "smt2_sha256": "5d22fe8440f1fd20e142a88d07e00041c6bbe0a9d87b3639320a38f58d7143bf",
+  "solver_status": "unsat",
+  "source_pairing_count": 30,
+  "status": "UNSAT_CANDIDATE",
+  "time_limit_seconds_per_solve": 60.0,
+  "trace": [
+    {
+      "conversion_efx_survivors": 164,
+      "iteration": 1,
+      "pool_size_before": 0,
+      "values": [
+        [
+          151,
+          73,
+          68,
+          78,
+          78,
+          78,
+          78,
+          73,
+          83
+        ],
+        [
+          151,
+          63,
+          68,
+          83,
+          78,
+          78,
+          78,
+          88,
+          73
+        ],
+        [
+          298,
+          169,
+          149,
+          149,
+          139,
+          159,
+          149,
+          159,
+          149
+        ],
+        [
+          298,
+          159,
+          169,
+          149,
+          139,
+          159,
+          149,
+          149,
+          149
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 100,
+      "iteration": 2,
+      "pool_size_before": 8,
+      "values": [
+        [
+          2946,
+          571,
+          1168,
+          2388,
+          2349,
+          1181,
+          2375,
+          1168,
+          1168
+        ],
+        [
+          814,
+          325,
+          373,
+          770,
+          794,
+          405,
+          413,
+          441,
+          377
+        ],
+        [
+          1202,
+          1160,
+          1174,
+          28,
+          35,
+          1195,
+          1153,
+          1118,
+          1181
+        ],
+        [
+          738,
+          366,
+          424,
+          131,
+          180,
+          442,
+          683,
+          375,
+          195
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 94,
+      "iteration": 3,
+      "pool_size_before": 16,
+      "values": [
+        [
+          1691,
+          1394,
+          1529,
+          1664,
+          1619,
+          1565,
+          1574,
+          1682,
+          1538
+        ],
+        [
+          7885,
+          3046,
+          3262,
+          6362,
+          4731,
+          4758,
+          4596,
+          3262,
+          4866
+        ],
+        [
+          3222,
+          1611,
+          3196,
+          1611,
+          1494,
+          1624,
+          1650,
+          3027,
+          3157
+        ],
+        [
+          4788,
+          1664,
+          4720,
+          1579,
+          1596,
+          1630,
+          4584,
+          4618,
+          1749
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 79,
+      "iteration": 4,
+      "pool_size_before": 24,
+      "values": [
+        [
+          2710,
+          1278,
+          1300,
+          1388,
+          2677,
+          1432,
+          1388,
+          1300,
+          1333
+        ],
+        [
+          4011,
+          1379,
+          144,
+          3993,
+          3993,
+          3939,
+          2650,
+          1415,
+          2704
+        ],
+        [
+          4083,
+          1441,
+          4051,
+          1425,
+          1169,
+          2434,
+          1489,
+          2770,
+          2674
+        ],
+        [
+          4038,
+          2019,
+          4020,
+          1394,
+          1358,
+          3413,
+          2662,
+          2626,
+          2698
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 83,
+      "iteration": 5,
+      "pool_size_before": 32,
+      "values": [
+        [
+          2305,
+          1120,
+          1198,
+          2292,
+          1910,
+          1554,
+          1198,
+          1528,
+          1923
+        ],
+        [
+          1307,
+          929,
+          1091,
+          1298,
+          1217,
+          1154,
+          1118,
+          1190,
+          1100
+        ],
+        [
+          806,
+          401,
+          802,
+          337,
+          325,
+          341,
+          409,
+          429,
+          774
+        ],
+        [
+          2190,
+          1216,
+          2179,
+          1095,
+          1051,
+          1304,
+          1337,
+          1238,
+          1106
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 69,
+      "iteration": 6,
+      "pool_size_before": 40,
+      "values": [
+        [
+          6954,
+          2282,
+          2354,
+          4816,
+          6011,
+          6918,
+          5759,
+          2354,
+          4528
+        ],
+        [
+          4756,
+          2234,
+          2186,
+          4732,
+          3459,
+          3603,
+          2306,
+          2474,
+          2234
+        ],
+        [
+          2386,
+          1226,
+          2309,
+          1028,
+          984,
+          1182,
+          1347,
+          1314,
+          1050
+        ],
+        [
+          6465,
+          4035,
+          6407,
+          2285,
+          1692,
+          2936,
+          3558,
+          4122,
+          2314
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 37,
+      "iteration": 7,
+      "pool_size_before": 48,
+      "values": [
+        [
+          3429,
+          1075,
+          1126,
+          3412,
+          1160,
+          1160,
+          3208,
+          1262,
+          3004
+        ],
+        [
+          384,
+          16,
+          169,
+          382,
+          175,
+          177,
+          374,
+          169,
+          370
+        ],
+        [
+          4484,
+          1692,
+          4463,
+          1671,
+          1016,
+          1734,
+          3279,
+          2095,
+          2834
+        ],
+        [
+          1103,
+          514,
+          1098,
+          514,
+          50,
+          529,
+          614,
+          524,
+          594
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 16,
+      "iteration": 8,
+      "pool_size_before": 56,
+      "values": [
+        [
+          2536,
+          40,
+          1103,
+          2526,
+          1133,
+          1333,
+          1213,
+          1343,
+          1453
+        ],
+        [
+          762,
+          12,
+          248,
+          759,
+          254,
+          490,
+          275,
+          490,
+          514
+        ],
+        [
+          3792,
+          1249,
+          3777,
+          1234,
+          105,
+          2408,
+          1459,
+          2348,
+          2648
+        ],
+        [
+          1264,
+          418,
+          1259,
+          393,
+          20,
+          816,
+          458,
+          811,
+          901
+        ]
+      ]
+    },
+    {
+      "conversion_efx_survivors": 31,
+      "iteration": 9,
+      "pool_size_before": 64,
+      "values": [
+        [
+          3347,
+          1093,
+          872,
+          3330,
+          1229,
+          3228,
+          1178,
+          1093,
+          3296
+        ],
+        [
+          1087,
+          359,
+          10,
+          1082,
+          693,
+          758,
+          374,
+          359,
+          768
+        ],
+        [
+          1084,
+          1079,
+          398,
+          368,
+          40,
+          746,
+          641,
+          413,
+          721
+        ],
+        [
+          2184,
+          2164,
+          1017,
+          1017,
+          20,
+          1227,
+          1117,
+          1057,
+          1177
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

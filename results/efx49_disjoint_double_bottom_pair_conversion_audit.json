@@ -1,0 +1,116 @@
+{
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "cardinal_z3": {
+    "elapsed_seconds": 269.0977232456207,
+    "formula": "results/efx49_bottom_pattern6_conversion_selector_cegar_session1.smt2",
+    "formula_sha256": "5d22fe8440f1fd20e142a88d07e00041c6bbe0a9d87b3639320a38f58d7143bf",
+    "result": "results/efx49_bottom_pattern6_conversion_selector_cegar_session1.json",
+    "result_sha256": "a1d34dd94278d64dada57f0f918ad4dd9c5fad3b278d5f307f2457213c9008bf",
+    "threshold_encoding": "cardinal"
+  },
+  "claim_boundary": "This proves the conditional disjoint double-bottom conversion lemma. It does not close the overlap or lower-multiplicity branches, 4x9 EFX, or general additive EFX.",
+  "compact_core": {
+    "cpc_ethos": {
+      "ethos_sha256": "2fdda9736abbcfca24523722a03af632f56807f50484f0535a53f805401e1e13",
+      "ethos_status": "correct",
+      "proof": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_bottom_pattern6_conversion_selector_sorting_core1.cpc",
+      "proof_bytes": 22393447,
+      "proof_sha256": "a8699e4a8c82072f799b0a46911d157b1d8cf6cae729e0ec8ca7754340eff21f",
+      "proof_step_lines": 280729,
+      "result": "results/efx49_bottom_pattern6_conversion_selector_sorting_core1_cpc_ethos.json",
+      "result_sha256": "c5eef52e971e4bb658d1da92962bc77d630f198056373f91efeb9970862b7a11"
+    },
+    "cvc5": {
+      "elapsed_seconds": 294.110378,
+      "formula": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_bottom_pattern6_conversion_selector_sorting_core1_cvc5.smt2",
+      "formula_sha256": "08a691f696c67263e71d66f8856c19c6c687d0a6fdbb408aff6178f5374090ff",
+      "normalization": "results/efx49_bottom_pattern6_conversion_selector_sorting_core1_cvc5.normalization.json",
+      "normalization_sha256": "f94c7bf3c3f79f3aba8b5122b7d9cc1291f67327b868a34c57896b1f503675d7",
+      "result": "results/efx49_bottom_pattern6_conversion_selector_sorting_core1_cvc5.json",
+      "result_sha256": "09dab4ef221e87cf6644117cfc81180603bd71a2722acd1ecc6faecfd41c9ff3",
+      "solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74"
+    },
+    "z3": {
+      "analysis": "results/efx49_bottom_pattern6_conversion_selector_sorting_core1_analysis.json",
+      "analysis_sha256": "18ae96891369a4d53a4bafdec21cef1cda70d6bed03c3c77ae3e8f0eef418b78",
+      "core_count_by_conversion_orbit": {
+        "0": 6,
+        "1": 7,
+        "2": 4,
+        "3": 2
+      },
+      "core_size": 19,
+      "favorite_partner_goods": [
+        1,
+        2
+      ],
+      "formula": "results/efx49_bottom_pattern6_conversion_selector_sorting_core1.smt2",
+      "formula_sha256": "d585ef57d12237c1cb1a88421697022c847f0205f83d224d24034df491000947",
+      "pool_size": 72,
+      "result": "results/efx49_bottom_pattern6_conversion_selector_sorting_core1.json",
+      "result_sha256": "a178039e0c6b7abf364cda3bfaa4f0508c6933f65f5763863c494b8ff5e698ee"
+    }
+  },
+  "conversion_orbit_audit": {
+    "automorphism_count": 192,
+    "orbit_sizes": [
+      12,
+      96,
+      24,
+      48
+    ],
+    "path": "results/efx49_bottom_pattern6_conversion_orbit_audit.json",
+    "sha256": "effe152a2eece84d941e310b37ea568f510e793fa1ef5a6579a14e718901c7d4"
+  },
+  "conversion_partition_count": 180,
+  "pattern_index": 6,
+  "schema": "disjoint-double-bottom-pair-conversion-audit-v1",
+  "sorting_cpc_ethos": {
+    "ethos_sha256": "2fdda9736abbcfca24523722a03af632f56807f50484f0535a53f805401e1e13",
+    "ethos_status": "correct",
+    "proof": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_bottom_pattern6_conversion_selector_sorting.cpc",
+    "proof_bytes": 35222160,
+    "proof_sha256": "1b6cff273ba71963b961bed6903809672686c2a804a0fcaa9ac27108e47b2bd8",
+    "proof_step_lines": 434968,
+    "result": "results/efx49_bottom_pattern6_conversion_selector_sorting_cpc_ethos.json",
+    "result_sha256": "662359725ac091247df795e8369ca15d26e7cc2e211c28c7a301930ddbec8fbb"
+  },
+  "sorting_cvc5": {
+    "elapsed_seconds": 526.843851,
+    "formula": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_bottom_pattern6_conversion_selector_sorting_cvc5.smt2",
+    "formula_sha256": "c7b385e08a56a026ccbab4707cb5fb029fcb336c3699682a710e52727caba680",
+    "normalization": "results/efx49_bottom_pattern6_conversion_selector_sorting_cvc5.normalization.json",
+    "normalization_sha256": "c2e122eccd34a10531306cdd179a72adb935ac6d10a535145669ea8142ab060e",
+    "result": "results/efx49_bottom_pattern6_conversion_selector_sorting_cvc5.json",
+    "result_sha256": "dae5c0a8fb062873aad349fe3996116902c91835439b9fea4431c037f23cfa83",
+    "solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74"
+  },
+  "sorting_z3": {
+    "elapsed_seconds": 320.0572917461395,
+    "formula": "results/efx49_bottom_pattern6_conversion_selector_sorting_z3.smt2",
+    "formula_sha256": "0afc62bd3106b366dc9d4aea257887f4fc44d0eeae9ff72500e1dd91cea60b78",
+    "result": "results/efx49_bottom_pattern6_conversion_selector_sorting_z3.json",
+    "result_sha256": "2456d9f1b04ab670d1b90f1c67cab04369e5f99072a9df44efeabadcec36f2c6",
+    "threshold_encoding": "sorting"
+  },
+  "source_pairing_count": 30,
+  "status": "DISJOINT_DOUBLE_BOTTOM_CONVERSION_PROOF_CHECKED",
+  "sufficient_partition_count": 72
+}

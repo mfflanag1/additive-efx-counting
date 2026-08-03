@@ -1,0 +1,51 @@
+{
+  "cap": 5,
+  "clauses": 702820,
+  "dimacs_bytes": 17550308,
+  "dimacs_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_distinct_half_full_cell_cap5_core17.cnf",
+  "dimacs_sha256": "2744a84a3c411781f53ecd8a447a7d3e4b75ac8d78f7080fcc1f11ec3fd1b310",
+  "encoder_source_sha256": "864f10472621ebccedeee65a7fefce60e5e3a9ef517fb25ff0f3669e9ce4de1d",
+  "encoding": {
+    "hall_witnesses": 8820,
+    "implementation": "independent monotone-threshold CNF",
+    "linear_witnesses": 6428,
+    "no_full_cell": {
+      "hall_failure_templates_per_pairing": 21,
+      "hall_witnesses": 8820,
+      "low_pair_cells": 28,
+      "rejection_inequality_witnesses": 672
+    },
+    "partition_violation_selectors": 272,
+    "universal_threshold": "four-set and pair-degree witnesses",
+    "value_bits_per_entry": 4
+  },
+  "environment": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "python_sat": "1.9.dev7"
+  },
+  "fixed_values": null,
+  "partition_pool_size": 17,
+  "schema": "distinct-half-full-cell-threshold-cnf-result-v1",
+  "seconds": {
+    "build": 1.525211,
+    "solve_wall": 12.859315,
+    "total": 15.648189
+  },
+  "solver": {
+    "backend": "Cadical195",
+    "cpu_seconds": 11.538578000000001,
+    "requested": "cadical195",
+    "statistics": {
+      "conflicts": 35007,
+      "decisions": 5587927,
+      "propagations": 18496157,
+      "restarts": 4163
+    },
+    "status": "UNSAT",
+    "timeout_seconds": 600.0
+  },
+  "source": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_distinct_half_full_cell_cap5_minimal_core.json",
+  "source_sha256": "57a557c1c7c04deec3063cecbea3cba0d84bc67ff8ead05c5258db85f4949ddd",
+  "status": "UNSAT",
+  "variables": 337000
+}

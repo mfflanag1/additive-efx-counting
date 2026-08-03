@@ -1,0 +1,25 @@
+{
+  "schema": "common-favorite-rank1-bridge-search-checkpoint-v1",
+  "status": "BRIDGE30_BLOCKED_WITH_SINGLETON_REPAIRS",
+  "n": 4,
+  "m": 9,
+  "upper": 6,
+  "values": [
+    [6, 2, 3, 3, 4, 1, 1, 1, 4],
+    [6, 5, 5, 2, 3, 1, 1, 1, 2],
+    [6, 4, 5, 5, 4, 1, 1, 1, 4],
+    [6, 3, 4, 5, 4, 1, 1, 1, 3]
+  ],
+  "selected_residual_partition": [[1, 2, 3], [4, 5, 6], [7, 8]],
+  "blocked_origin_signatures": [
+    "partnerA_tripleAAB_pairsBB_CC",
+    "partnerA_tripleABF_pairsAA_BB_CC",
+    "partnerA_tripleBCC_pairsAA_BB",
+    "partnerB_tripleABB_pairsAA_CC"
+  ],
+  "discovery": {
+    "method": "target-zero multi-coordinate search followed by exact one-coordinate descent on singleton-support count",
+    "singleton_support_count_sequence": [59, 51, 42, 39, 36, 33, 30]
+  },
+  "claim_boundary": "This profile blocks the 30-state contested-or-bridge family but has favorite-singleton EFX repairs. It does not refute the singleton-or-exchange implication or complete EFX."
+}

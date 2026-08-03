@@ -1,0 +1,165 @@
+{
+  "candidate_count": 5,
+  "cell_count": 24,
+  "core": [
+    {
+      "candidate": {
+        "base_owner": [
+          1,
+          0,
+          1,
+          3,
+          0,
+          1,
+          3,
+          2,
+          null
+        ],
+        "floater": 8
+      },
+      "candidate_index": 2,
+      "kind": "candidate",
+      "pool_index": 2
+    },
+    {
+      "candidate": {
+        "base_owner": [
+          null,
+          0,
+          0,
+          2,
+          2,
+          1,
+          3,
+          2,
+          3
+        ],
+        "floater": 0
+      },
+      "candidate_index": 3,
+      "kind": "candidate",
+      "pool_index": 3
+    },
+    {
+      "candidate": {
+        "base_owner": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          3,
+          3,
+          0,
+          3
+        ],
+        "floater": 1
+      },
+      "candidate_index": 4,
+      "kind": "candidate",
+      "pool_index": 4
+    },
+    {
+      "agent_order": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "candidate_index": 0,
+      "cell_index": 2,
+      "kind": "rival",
+      "pool_index": 162,
+      "rival": {
+        "base_owner": [
+          null,
+          0,
+          2,
+          3,
+          2,
+          1,
+          3,
+          0,
+          1
+        ],
+        "floater": 0
+      }
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "candidate_index": 1,
+      "cell_index": 6,
+      "kind": "rival",
+      "pool_index": 398,
+      "rival": {
+        "base_owner": [
+          1,
+          3,
+          1,
+          null,
+          2,
+          1,
+          3,
+          0,
+          2
+        ],
+        "floater": 3
+      }
+    }
+  ],
+  "deletion_minimal_assumption_count": 5,
+  "deletion_minimal_candidate_count": 3,
+  "deletion_minimal_rival_count": 2,
+  "dependency_candidate_indices": [
+    0,
+    1
+  ],
+  "dependency_closed_candidate_count": 5,
+  "discarded_assumption_count": 964,
+  "elapsed_seconds": 5.440457820892334,
+  "initial_assumption_count": 969,
+  "initial_rival_count": 964,
+  "m": 9,
+  "meaning": "the fixed candidate identities cannot all be strict blocked lexicographic maxima for their 24 seed-derived orders; this does not prove the adaptive-priority conjecture",
+  "n": 4,
+  "necessity_replay": [
+    {
+      "pool_index": 2,
+      "status_without": "sat"
+    },
+    {
+      "pool_index": 3,
+      "status_without": "sat"
+    },
+    {
+      "pool_index": 4,
+      "status_without": "sat"
+    },
+    {
+      "pool_index": 162,
+      "status_without": "sat"
+    },
+    {
+      "pool_index": 398,
+      "status_without": "sat"
+    }
+  ],
+  "pool_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace93_i9744_pool.json",
+  "pool_sha256": "b8d110e932b64b316f98345867f8e83c5a2ea2e9718806a0570b3fc43101be5f",
+  "preserve_rival_dependencies": true,
+  "require_distinct_item_values": false,
+  "schema": "adaptive-priority-rival-core-v1",
+  "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_seed_trace93_i9744.json",
+  "seed_sha256": "9d3a21f01bfa8110fee70304594a22dca78c1c0ba42c0aa84c2b970f5c8b7998",
+  "shrink_candidates": true,
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace93_i9744_dependency_core.smt2",
+  "smt2_sha256": "70551ab34f2a05cc016111942126d10ba3194bbb10387de588800e5411c317a6",
+  "solver_checks": 13,
+  "solver_unsat_core_count": 7,
+  "status": "UNSAT_DELETION_MINIMAL_RIVAL_CORE"
+}

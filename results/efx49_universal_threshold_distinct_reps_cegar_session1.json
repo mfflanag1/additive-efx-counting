@@ -1,0 +1,89 @@
+{
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 302.220853805542,
+  "favorite_pattern": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "fixed_half_representatives": true,
+  "interpretation": "UNSAT_CANDIDATE would prove, subject to independent replay, that universal owner-threshold failure forces balanced EFX in the strict common-favorite 4x9 cell. ZERO_BALANCED_EFX would refute only that structural implication, not general EFX.",
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "pool_size": 64,
+  "reason_unknown": "canceled",
+  "residual_partitions_per_owner": 966,
+  "schema": "universal-threshold-balanced-lra-result-v1",
+  "seed_values": [],
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_universal_threshold_distinct_reps_cegar_session1.smt2",
+  "smt2_sha256": "4375618503c8e1b7dbcef0a958b7f154e4f2c69b7a5838337e1bd77297cdcba2",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "target_partition_count": 1260,
+  "target_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "threshold_encoding": "exact 3+3+2 / 4+2+2 sorted shape envelope",
+  "trace": [
+    {
+      "iteration": 1,
+      "pool_size_before": 0,
+      "supported_partition_count": 375,
+      "values": [
+        [
+          30,
+          22,
+          23,
+          28,
+          25,
+          24,
+          27,
+          29,
+          26
+        ],
+        [
+          30,
+          22,
+          23,
+          29,
+          27,
+          24,
+          28,
+          26,
+          25
+        ],
+        [
+          30,
+          24,
+          23,
+          22,
+          28,
+          29,
+          25,
+          27,
+          26
+        ],
+        [
+          30,
+          23,
+          22,
+          24,
+          29,
+          25,
+          28,
+          26,
+          27
+        ]
+      ]
+    }
+  ],
+  "universal_threshold_failure": true,
+  "values": null
+}

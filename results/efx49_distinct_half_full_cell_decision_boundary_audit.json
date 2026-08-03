@@ -1,0 +1,242 @@
+{
+  "bounded_cpsat_cegar": {
+    "branches": 11080593,
+    "cap": 20,
+    "conflicts": 515395,
+    "elapsed_seconds": 600.4691760540009,
+    "proto_sha256": "6e22e515fb3a53489ce5f0aee03760b091d16999083966ce451631b42e57195d",
+    "replayed_pool_size": 412,
+    "resume_source": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap20_session1.json",
+    "resume_source_sha256": "4599ff0776e6b5edce56e97447478f81ceb444587c964889d36146a0583c1fbe",
+    "source": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap20_session3.json",
+    "source_sha256": "0dce1aac4894c1a54da47c702b48bc4ab288c4fcb090ea56b460ef322e6d0c8e",
+    "status": "CP_SAT_UNKNOWN",
+    "trace_profile": {
+      "balanced_landscape": {
+        "best_three_observer_cell_agent_slacks": [
+          -1,
+          -9,
+          -2,
+          -1
+        ],
+        "best_three_observer_cell_parked_goods": [
+          7,
+          8
+        ],
+        "canonical_two_core_tutte_low_pair_count": 0,
+        "canonical_two_core_tutte_low_pairs": [],
+        "common_low_triple_repair_partition_count": 0,
+        "favorite_pair_perfect_partition_count": 357,
+        "favorite_triple_perfect_partition_count": 0,
+        "full_favorite_triple_cell_count": 0,
+        "matching_rank_histogram": {
+          "1": 325,
+          "2": 84,
+          "3": 494,
+          "4": 357
+        },
+        "maximum_favorite_triple_cell_count": 0,
+        "maximum_three_observer_cell_slack": -2,
+        "minimum_deficient_component_size": 5,
+        "minimum_higher_rank_exit_count": 79,
+        "minimum_radius_two_rank_three_exit_count": 22,
+        "minimum_radius_two_rank_three_exit_partition": [
+          [
+            0,
+            1,
+            7
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "perfect_partition_count": 357,
+        "robust_low_pair_count": 0,
+        "robust_low_pairs": [],
+        "six_orbit_perfect_partition_count": 247,
+        "trapped_nonperfect_plateau_count": 0,
+        "trapped_nonperfect_plateau_sample": [],
+        "two_core_tutte_low_pair_count": 0,
+        "two_core_tutte_low_pairs": []
+      },
+      "literal_complete_efx_count": 3563,
+      "values": [
+        [
+          10,
+          8,
+          8,
+          8,
+          7,
+          7,
+          6,
+          4,
+          4
+        ],
+        [
+          9,
+          4,
+          6,
+          6,
+          8,
+          6,
+          2,
+          2,
+          6
+        ],
+        [
+          5,
+          3,
+          4,
+          4,
+          3,
+          3,
+          3,
+          1,
+          3
+        ],
+        [
+          5,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          1,
+          4
+        ]
+      ]
+    },
+    "trace_survivor_counts": [
+      357
+    ]
+  },
+  "elapsed_seconds": 337.70642924308777,
+  "interpretation": "The exact-real master found one no-full-cell profile with 289 favorite-pair repairs before its 183-cut unknown boundary. A separate cap-20 CP-SAT trace found a no-full-cell profile with 357 repairs; its 412-cut continuation remained unknown after 600 seconds. Neither endpoint is a counterexample or theorem.",
+  "reason_unknown": "canceled",
+  "replayed_pool_size": 183,
+  "schema": "distinct-half-full-cell-decision-boundary-audit-v2",
+  "seed_supported_union_size": 785,
+  "smt2_sha256": "89023a4cc95491d56d60abe1549e0031e43c52293d85fa1a63b8e4943756bc0c",
+  "solver_status": "MASTER_UNKNOWN",
+  "source": "results/efx49_distinct_half_full_cell_complement_cegar_session1.json",
+  "source_sha256": "20e3098d5b2821d5c983b82b086c54d15e84eb4acadea4e8ca96777f12d2093a",
+  "status": "FULL_CELL_DECISION_BOUNDARY_REPLAY_PASSED",
+  "trace_profile": {
+    "balanced_landscape": {
+      "best_three_observer_cell_agent_slacks": [
+        -4042,
+        -1067,
+        -1963,
+        -662
+      ],
+      "best_three_observer_cell_parked_goods": [
+        3,
+        7
+      ],
+      "canonical_two_core_tutte_low_pair_count": 0,
+      "canonical_two_core_tutte_low_pairs": [],
+      "common_low_triple_repair_partition_count": 0,
+      "favorite_pair_perfect_partition_count": 289,
+      "favorite_triple_perfect_partition_count": 15,
+      "full_favorite_triple_cell_count": 0,
+      "matching_rank_histogram": {
+        "1": 224,
+        "2": 326,
+        "3": 406,
+        "4": 304
+      },
+      "maximum_favorite_triple_cell_count": 12,
+      "maximum_three_observer_cell_slack": -1963,
+      "minimum_deficient_component_size": 224,
+      "minimum_higher_rank_exit_count": 304,
+      "minimum_radius_two_rank_three_exit_count": 18,
+      "minimum_radius_two_rank_three_exit_partition": [
+        [
+          0,
+          1,
+          8
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "perfect_partition_count": 304,
+      "robust_low_pair_count": 0,
+      "robust_low_pairs": [],
+      "six_orbit_perfect_partition_count": 219,
+      "trapped_nonperfect_plateau_count": 0,
+      "trapped_nonperfect_plateau_sample": [],
+      "two_core_tutte_low_pair_count": 0,
+      "two_core_tutte_low_pairs": []
+    },
+    "literal_complete_efx_count": 1381,
+    "values": [
+      [
+        6129,
+        4141,
+        4240,
+        2120,
+        5267,
+        3246,
+        961,
+        1955,
+        5997
+      ],
+      [
+        5195,
+        4072,
+        4184,
+        1039,
+        4072,
+        4184,
+        2078,
+        983,
+        3089
+      ],
+      [
+        1374,
+        49,
+        1076,
+        978,
+        1006,
+        1346,
+        340,
+        326,
+        729
+      ],
+      [
+        656,
+        89,
+        463,
+        368,
+        564,
+        297,
+        374,
+        12,
+        273
+      ]
+    ]
+  },
+  "trace_survivor_counts": [
+    289
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "accepted_moves": 1824,
+  "audit": {
+    "counting_score": 28,
+    "favorite_pair_efx_partition_count": 13,
+    "maximizing_low_pairs": [
+      [
+        7,
+        8
+      ]
+    ],
+    "maximum_favorite_triple_cell_count": 15
+  },
+  "candidate_lower_bound": 15,
+  "common_bottom_pair_forbidden": true,
+  "elapsed_seconds": 144.56842803955078,
+  "final_temperature": 0.02,
+  "initial_temperature": 8.0,
+  "iterations_completed": 3385,
+  "literal_complete_efx_count": 268,
+  "random_seed": 20260829,
+  "schema": "distinct-half-counting-invariant-anneal-v1",
+  "scope": "integer profiles normalized to favorite 100 in the exact universal-threshold distinct-representative branch",
+  "status": "NO_COMMON_BOTTOM_SELECTION_COUNTEREXAMPLE",
+  "values": [
+    [
+      100,
+      68,
+      76,
+      71,
+      71,
+      55,
+      67,
+      19,
+      1
+    ],
+    [
+      100,
+      81,
+      91,
+      92,
+      92,
+      68,
+      88,
+      1,
+      1
+    ],
+    [
+      100,
+      62,
+      63,
+      70,
+      58,
+      70,
+      19,
+      24,
+      1
+    ],
+    [
+      100,
+      69,
+      66,
+      71,
+      59,
+      41,
+      90,
+      4,
+      1
+    ]
+  ],
+  "warning": "Failure to find score below 15 is falsification evidence only, not a proof of the counting invariant."
+}

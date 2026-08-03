@@ -1,0 +1,92 @@
+{
+  "branches": 25084,
+  "cap": 20,
+  "conflicts": 0,
+  "elapsed_seconds": 900.7431371212006,
+  "favorite_pair_efx_orbit_histogram": {
+    "('U', 0, ('RR', 'RR'))": 6,
+    "('U', 1, ('RR', 'RU'))": 24
+  },
+  "favorite_pair_efx_partition_count": 30,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "full_hall_cells": [],
+  "hint_path": "results/efx49_distinct_half_six_orbit_refutation_profile.json",
+  "literal_complete_efx_count": 684,
+  "m": 9,
+  "n": 4,
+  "obstruction_objective": 750.0,
+  "obstruction_objective_bound": 780.0,
+  "partition_family": "eight_orbit",
+  "proto_path": "results/efx49_distinct_half_eight_orbit_cpsat_cap20_optimize_session1.pb",
+  "proto_sha256": "59309c6f4f8dd9d637e09d216d999834c9fc3ac8e3525022c67b0906c7eef7ec",
+  "random_seed": 20260731,
+  "schema": "distinct-half-eight-orbit-cpsat-optimization-v1",
+  "semantic_obstruction_count": 750,
+  "solver_status": "FEASIBLE",
+  "status": "OPTIMIZATION_CHECKPOINT",
+  "target_partition_count": 780,
+  "target_partitions_sha256": "46509f6109d41de371c01285786cbd362266279784f6b946397a06b99980f576",
+  "target_repair_count": 30,
+  "time_limit_seconds": 900.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      15,
+      10,
+      8,
+      10,
+      11,
+      11,
+      6,
+      1,
+      2
+    ],
+    [
+      9,
+      5,
+      5,
+      5,
+      5,
+      5,
+      4,
+      1,
+      2
+    ],
+    [
+      9,
+      5,
+      5,
+      5,
+      5,
+      5,
+      3,
+      1,
+      2
+    ],
+    [
+      7,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      1
+    ]
+  ],
+  "warning": "A zero-repair profile refutes only the eight-orbit selector, not EFX existence unless literal complete-EFX enumeration is also zero. Any positive optimum is a finite-cap theorem only.",
+  "workers": 8
+}

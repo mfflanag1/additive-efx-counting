@@ -1,0 +1,127 @@
+{
+  "branches": 2136,
+  "cap": 20,
+  "case": "R",
+  "conflicts": 0,
+  "elapsed_seconds": 278.0954911708832,
+  "favorite_pair_efx_orbit_histogram": {
+    "('R', 0, ('RR', 'RU'))": 18,
+    "('R', 1, ('RR', 'UU'))": 18,
+    "('R', 1, ('RU', 'RU'))": 46,
+    "('R', 2, ('RU', 'UU'))": 48,
+    "('R', 3, ('UU', 'UU'))": 11,
+    "('U', 0, ('RR', 'RR'))": 6,
+    "('U', 1, ('RR', 'RU'))": 52,
+    "('U', 2, ('RR', 'UU'))": 30,
+    "('U', 2, ('RU', 'RU'))": 72,
+    "('U', 3, ('RU', 'UU'))": 35
+  },
+  "favorite_pair_efx_partition_count": 336,
+  "full_cell_encoding": {
+    "accept_literals": 60,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 315,
+    "low_pair_cells": 1
+  },
+  "full_hall_cell_forbidden": false,
+  "full_hall_cell_forbidden_pairs": [
+    [
+      1,
+      2
+    ]
+  ],
+  "full_hall_cells": [],
+  "hint_path": "results/efx49_distinct_half_terminal_radius2_R_m0_cpsat_cap20_no_full_optimize_session1.json",
+  "literal_complete_efx_count": 1439,
+  "m": 9,
+  "minimum_terminal_matching_slack": 0,
+  "n": 4,
+  "obstruction_objective": 138.0,
+  "obstruction_objective_bound": 138.0,
+  "proto_path": "results/efx49_distinct_half_terminal_radius2_R_m0_cpsat_cap20_forbid_cell12_optimize_session1.pb",
+  "proto_sha256": "d3827a977f2ad731b93cb519a0f0df19d6c39c2b07593c1ed30d3a3852b159bf",
+  "random_seed": 20260781,
+  "schema": "distinct-half-terminal-exchange-cpsat-optimization-v1",
+  "solver_status": "OPTIMAL",
+  "status": "TERMINAL_SELECTOR_COUNTEREXAMPLE",
+  "target": "radius2",
+  "target_partition_count": 138,
+  "target_partitions_sha256": "33fa3be6744e6b04636bfadc4e5eeb06de1ebf8d5686bdaeca87bc13bf7a1af3",
+  "target_repair_count": 0,
+  "target_repairs": [],
+  "terminal_matching_orbit": 0,
+  "terminal_matching_representative": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "terminal_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "time_limit_seconds": 600.0,
+  "values": [
+    [
+      17,
+      13,
+      15,
+      15,
+      15,
+      16,
+      1,
+      16,
+      11
+    ],
+    [
+      17,
+      3,
+      14,
+      15,
+      15,
+      9,
+      7,
+      11,
+      9
+    ],
+    [
+      20,
+      1,
+      16,
+      16,
+      15,
+      17,
+      15,
+      6,
+      19
+    ],
+    [
+      19,
+      5,
+      13,
+      13,
+      14,
+      5,
+      18,
+      16,
+      14
+    ]
+  ],
+  "warning": "Only a zero target-repair count refutes the selected terminal exchange lemma. A positive optimization checkpoint is descriptive.",
+  "workers": 8
+}

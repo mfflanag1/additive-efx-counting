@@ -1,0 +1,97 @@
+{
+  "add_per_iteration": 32,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 148.13491702079773,
+  "favorite_pair_partition_count": 624,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "A terminal model refutes only the conditional full-cell selection target. UNSAT_CANDIDATE requires an independent encoding before theorem status.",
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "partition_family": "six_orbit",
+  "pool_size": 86,
+  "reason_unknown": "canceled",
+  "resume_source": null,
+  "schema": "distinct-half-full-cell-cegar-v1",
+  "seed_mode": "union",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_six_orbit_anneal_session1.json",
+      "sha256": "f7bd7945b1c62eff949599248535f3cbd4331ca06d0e004b70ae8900b856d54c"
+    }
+  ],
+  "seed_supported_union_size": 54,
+  "smt2_path": "results/efx49_distinct_half_six_orbit_cegar_session1.smt2",
+  "smt2_sha256": "c612a98cdbfbdaf93335f45e1ce11fb9e033465639df1100d4be9a113dd9de72",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 276,
+      "iteration": 1,
+      "pool_size_before": 54,
+      "values": [
+        [
+          3018,
+          1520,
+          2974,
+          760,
+          2324,
+          2941,
+          694,
+          1564,
+          749
+        ],
+        [
+          218,
+          1,
+          211,
+          212,
+          213,
+          214,
+          217,
+          1,
+          217
+        ],
+        [
+          34677,
+          19641,
+          27002,
+          18106,
+          16571,
+          34363,
+          22554,
+          33142,
+          30072
+        ],
+        [
+          1692,
+          374,
+          754,
+          1425,
+          849,
+          190,
+          570,
+          1490,
+          1680
+        ]
+      ]
+    }
+  ],
+  "universal_owner_threshold_failure": true,
+  "universal_threshold_encoding": "cardinal",
+  "values": null
+}

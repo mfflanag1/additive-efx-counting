@@ -1,0 +1,136 @@
+{
+  "branches": 302745,
+  "candidate_audit": {
+    "all_supporting_partition_count": 606,
+    "complete_efx_allocation_count": 1532,
+    "favorite_singleton_supporting_partition_count": 0,
+    "selected_owner_threshold_pass": true,
+    "selected_partition_deficient_bundle_sets": [
+      {
+        "bundles": [
+          1
+        ],
+        "resident_neighbors": []
+      },
+      {
+        "bundles": [
+          2
+        ],
+        "resident_neighbors": []
+      },
+      {
+        "bundles": [
+          1,
+          2
+        ],
+        "resident_neighbors": []
+      }
+    ],
+    "selected_partition_resident_graph": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    "selected_partition_resident_hall_rank": 1,
+    "supporting_partition_count_by_shape": {
+      "3222": 606
+    }
+  },
+  "claim_boundary": "A SAT witness refutes only the shortcut that an owner-threshold pass forces favorite-singleton EFX. Complete EFX may still be supported by a balanced or other nonsingleton partition.",
+  "conflicts": 5441,
+  "domain": "positive integers in [1,20]",
+  "elapsed_seconds": 44.44958209991455,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "proto": "results/efx49_common_favorite_threshold_pass_hall_611_cap20_cpsat_session1.pb",
+  "proto_bytes": 4402816,
+  "proto_sha256": "fd3443095e974708756d6517305b3509f565fa0bc220ae8eee6447c57aad81c0",
+  "schema": "common-favorite-threshold-pass-hall-cpsat-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      7
+    ],
+    [
+      8
+    ]
+  ],
+  "selected_residual_shape": "611",
+  "solver_status": "OPTIMAL",
+  "solver_wall_seconds": 44.439399,
+  "status": "THRESHOLD_PASS_WITHOUT_SINGLETON_EFX",
+  "strict_common_favorite": 0,
+  "upper": 20,
+  "values": [
+    [
+      20,
+      2,
+      2,
+      6,
+      4,
+      1,
+      6,
+      15,
+      19
+    ],
+    [
+      20,
+      19,
+      1,
+      19,
+      19,
+      19,
+      1,
+      1,
+      18
+    ],
+    [
+      20,
+      19,
+      1,
+      19,
+      1,
+      1,
+      19,
+      19,
+      11
+    ],
+    [
+      20,
+      19,
+      19,
+      1,
+      19,
+      1,
+      19,
+      19,
+      3
+    ]
+  ]
+}

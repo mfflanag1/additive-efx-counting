@@ -1,0 +1,519 @@
+{
+  "base_pivot_partition_count": 16,
+  "base_pivots_blocked": true,
+  "claim_boundary": "A bounded-integer verdict applies only to the stated wall cap. This decides only the displayed fixed nine-good Hall-size-four cell. It is not general row-merge continuation or complete EFX.",
+  "combined_partition_count": 30,
+  "complete_efx_audit": {
+    "allocation_count": 513,
+    "distance_histogram": {
+      "2": 5,
+      "3": 52,
+      "4": 116,
+      "5": 90
+    },
+    "minimum_transfer_distance": 2,
+    "nearest_partition": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    "supporting_partition_count": 263
+  },
+  "cycle_edge_orders": [
+    [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        0
+      ]
+    ]
+  ],
+  "cycle_partition_count": null,
+  "cycle_partitions": null,
+  "cycle_vertex_orders": [
+    [
+      0,
+      2,
+      3
+    ]
+  ],
+  "cycle_vertices": [
+    0,
+    2,
+    3
+  ],
+  "domain": "positive additive integer wall valuations with each wall item in 1..20; the perturbed post-wall entry may exceed the wall cap",
+  "fixed_graph_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "fixed_graph_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "formula": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.smt2",
+  "formula_sha256": "ea2631ff0ab839fe6f0e8342b5d5c1588a54a4f73a6193d2b207076245d80039",
+  "integer_upper": 20,
+  "interpretation": "SAT exactly refutes the combined base-pivot and minimum trace-topology cover menu.",
+  "m": 9,
+  "menu_kind": "minimum_trace_topology_cover",
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "pair_pivot_support_count": 0,
+  "path_end": null,
+  "path_lengths": null,
+  "path_partition_count": null,
+  "path_partitions": null,
+  "path_start": null,
+  "post_wall_values": [
+    [
+      11,
+      9,
+      21,
+      1,
+      5,
+      17,
+      2,
+      3,
+      14
+    ],
+    [
+      1,
+      14,
+      20,
+      2,
+      1,
+      17,
+      13,
+      9,
+      9
+    ],
+    [
+      8,
+      11,
+      20,
+      2,
+      2,
+      18,
+      1,
+      15,
+      1
+    ],
+    [
+      11,
+      1,
+      14,
+      12,
+      1,
+      19,
+      16,
+      10,
+      1
+    ]
+  ],
+  "reason_unknown": null,
+  "schema": "row-merge-q4-cycle023-gate-v1",
+  "simple_chain_support_count": 37,
+  "solver_status": "sat",
+  "solver_wall_seconds": 8.596619129180908,
+  "status": "TOPOLOGY_COVER_PLUS_BASE_REFUTATION_FOUND",
+  "topology_cover_partition_count": 14,
+  "topology_cover_partitions": [
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4,
+        5
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        6,
+        7
+      ]
+    ]
+  ],
+  "topology_cover_records": [
+    {
+      "covered_model_count": 9,
+      "kind": "cycle",
+      "partition_count": 8,
+      "vertices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 17,
+      "kind": "path",
+      "partition_count": 6,
+      "vertices": [
+        3,
+        0,
+        2
+      ]
+    }
+  ],
+  "topology_cover_source": "results/row_merge_q4_chain_topology_cover_analysis.json",
+  "topology_cover_source_sha256": "1fdaf871116c75c840d9e5e0156f0618b1988bfafe017aad939af3033375da13",
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "wall_values": [
+    [
+      11,
+      9,
+      20,
+      1,
+      5,
+      17,
+      2,
+      3,
+      14
+    ],
+    [
+      1,
+      14,
+      20,
+      2,
+      1,
+      17,
+      13,
+      9,
+      9
+    ],
+    [
+      8,
+      11,
+      20,
+      2,
+      2,
+      18,
+      1,
+      15,
+      1
+    ],
+    [
+      11,
+      1,
+      14,
+      12,
+      1,
+      19,
+      16,
+      10,
+      1
+    ]
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "schema": "lexmax-partial-counterexample-v1",
+  "status": "COUNTEREXAMPLE_TO_LEXMAX_COMPLETION_LEMMA",
+  "meaning": "This refutes only the proposed lexicographically maximal one-unallocated direct-completion lemma. It is not a counterexample to complete additive EFX existence.",
+  "n": 4,
+  "m": 9,
+  "agent_order": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "source": {
+    "author": "Bhaskar Ray Chaudhury",
+    "title": "Finding Fair and Efficient Allocations",
+    "theorem": "Theorem 6.25 and Table 6.1",
+    "url": "https://universaar.uni-saarland.de/bitstream/20.500.11880/31737/1/thesis.pdf",
+    "original_values": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        4,
+        0
+      ],
+      [
+        16,
+        4,
+        24,
+        4,
+        0,
+        34,
+        31,
+        0,
+        2
+      ],
+      [
+        10,
+        0,
+        18,
+        8,
+        20,
+        0,
+        29,
+        0,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        20,
+        19,
+        0,
+        4
+      ]
+    ]
+  },
+  "positive_nondegenerate_lift": {
+    "formula": "v'_i(g) = 1024 v_i(g) + 2^g",
+    "scale": 1024,
+    "perturbations": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "values": [
+      [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        6208,
+        4224,
+        256
+      ],
+      [
+        16385,
+        4098,
+        24580,
+        4104,
+        16,
+        34848,
+        31808,
+        128,
+        2304
+      ],
+      [
+        10241,
+        2,
+        18436,
+        8200,
+        20496,
+        32,
+        29760,
+        128,
+        6400
+      ],
+      [
+        1,
+        2,
+        4,
+        8,
+        18448,
+        20512,
+        19520,
+        128,
+        4352
+      ]
+    ]
+  },
+  "candidate": {
+    "floater": 8,
+    "base_owner": [
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      0,
+      0,
+      null
+    ],
+    "bundles": [
+      [
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "utilities": [
+      10432,
+      32782,
+      30737,
+      20512
+    ],
+    "nonenvy_floater_slacks": [
+      10176,
+      30478,
+      24337,
+      16160
+    ],
+    "base_min_efx_slack": 974,
+    "host_min_insertion_slacks": [
+      -5423,
+      -2299,
+      -2288,
+      -2066
+    ]
+  },
+  "exact_partial_audit": {
+    "eligible_base_count": 322,
+    "lexmax_key": [
+      10432,
+      32782,
+      30737,
+      20512
+    ],
+    "lexmax_base_count": 1,
+    "lexmax_insertable_count": 0
+  },
+  "exact_complete_audit": {
+    "complete_efx_count": 103,
+    "max_agent_0_utility": 6464,
+    "candidate_agent_0_utility": 10432
+  },
+  "all_agent_orders_audit": {
+    "agent_order_count": 24,
+    "insertable_agent_order_count": 18,
+    "blocked_agent_order_count": 6,
+    "blocked_orders_are_exactly_those_starting_with_agent": 0
+  },
+  "genericity": {
+    "strictly_positive": true,
+    "all_subset_sums_distinct_within_each_agent": true,
+    "explanation": "The perturbation of a subset is its unique binary mask. Since 1024 exceeds the sum 1+2+...+256=511, unequal original subset sums cannot be reversed by the perturbation."
+  }
+}

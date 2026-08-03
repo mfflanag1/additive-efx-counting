@@ -1,0 +1,53 @@
+{
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "claim_boundary": "UNSAT would prove the selected-cell conclusion for this one bottom-pair pattern using only its conversion closure, subject to independent replay. SAT refutes only that conversion-family selector, not the full favorite-pair selector or EFX.",
+  "distinct_conversion_partition_count": 165,
+  "distinct_selected_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "elapsed_seconds": 300.44314193725586,
+  "favorite_pair_efx_partition_count": null,
+  "favorite_pair_partition_count": 840,
+  "literal_complete_efx_count": null,
+  "pattern_index": 0,
+  "raw_conversion_count": 180,
+  "reason_unknown": "timeout",
+  "schema": "bottom-pattern-conversion-selector-lra-v1",
+  "selected_cell_encoding": {
+    "accept_literals": 120,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 2,
+    "pairing_failure_terms": 30
+  },
+  "smt2_path": "results/efx49_bottom_pattern0_conversion_selector_z3.smt2",
+  "smt2_sha256": "702bed1dfcef137676a831578b1ac70df96a7889e58501044599c0751c8d8093",
+  "solver_status": "unknown",
+  "source_pairing_count": 30,
+  "status": "MASTER_UNKNOWN",
+  "time_limit_seconds": 300.0,
+  "values": null
+}

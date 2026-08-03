@@ -1,0 +1,266 @@
+{
+  "candidate_audit": null,
+  "cell_symmetry": true,
+  "claim_boundary": "A SAT candidate refutes only the named selection claim for motif zero_neighbor_rank_two. It is not an EFX counterexample. UNSAT requires independent replay.",
+  "elapsed_seconds": 1079.6105599403381,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "iterations": 4,
+  "learned_motif_count": 69,
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_mixed_zero_neighbor_332_cap20_sym_cegar_session2.pbtxt",
+  "proto_bytes": 12131232,
+  "proto_sha256": "dc072723ee318d9c623714cf13a355e0d83b570514995bbc62e0b094a1e50a75",
+  "schema": "common-favorite-mixed-selection-cegar-v1",
+  "seed_imports": [
+    {
+      "model_count": 1,
+      "new_motif_count": 49,
+      "source": "results/efx49_common_favorite_mixed_zero_neighbor_332_cap20_cegar_session1.json",
+      "source_sha256": "4ae42bde2c7a14718113538a43b0963ef9d5d3f58f3a96dd1f59155ecd3fd11a"
+    }
+  ],
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "selected_residual_shape": "332",
+  "selection_motif": "zero_neighbor_rank_two",
+  "solver_status": "OPTIMAL",
+  "solver_wall_seconds": 322.874817,
+  "status": "ITERATION_LIMIT",
+  "strict_common_favorite": 0,
+  "trace": [
+    {
+      "iteration": 1,
+      "learned_motif_count_before": 49,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 273.566159,
+      "unlearned_selection_motif_count": 11,
+      "values": [
+        [
+          20,
+          15,
+          3,
+          3,
+          3,
+          1,
+          1,
+          19,
+          18
+        ],
+        [
+          20,
+          1,
+          19,
+          1,
+          4,
+          19,
+          19,
+          18,
+          19
+        ],
+        [
+          20,
+          1,
+          18,
+          18,
+          1,
+          19,
+          19,
+          1,
+          19
+        ],
+        [
+          20,
+          1,
+          18,
+          16,
+          10,
+          19,
+          1,
+          15,
+          19
+        ]
+      ]
+    },
+    {
+      "iteration": 2,
+      "learned_motif_count_before": 60,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 195.14365500000002,
+      "unlearned_selection_motif_count": 3,
+      "values": [
+        [
+          20,
+          17,
+          3,
+          2,
+          10,
+          10,
+          9,
+          19,
+          18
+        ],
+        [
+          20,
+          1,
+          19,
+          19,
+          3,
+          1,
+          19,
+          1,
+          19
+        ],
+        [
+          19,
+          18,
+          1,
+          18,
+          18,
+          18,
+          1,
+          18,
+          18
+        ],
+        [
+          19,
+          18,
+          1,
+          18,
+          1,
+          2,
+          3,
+          17,
+          18
+        ]
+      ]
+    },
+    {
+      "iteration": 3,
+      "learned_motif_count_before": 63,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 286.99266,
+      "unlearned_selection_motif_count": 3,
+      "values": [
+        [
+          20,
+          10,
+          10,
+          10,
+          19,
+          1,
+          1,
+          19,
+          19
+        ],
+        [
+          20,
+          19,
+          1,
+          1,
+          19,
+          19,
+          1,
+          19,
+          19
+        ],
+        [
+          20,
+          18,
+          19,
+          1,
+          17,
+          1,
+          1,
+          17,
+          4
+        ],
+        [
+          20,
+          18,
+          1,
+          19,
+          5,
+          19,
+          1,
+          1,
+          16
+        ]
+      ]
+    },
+    {
+      "iteration": 4,
+      "learned_motif_count_before": 66,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 322.874817,
+      "unlearned_selection_motif_count": 3,
+      "values": [
+        [
+          20,
+          10,
+          10,
+          10,
+          9,
+          9,
+          9,
+          19,
+          12
+        ],
+        [
+          20,
+          16,
+          15,
+          12,
+          17,
+          1,
+          1,
+          8,
+          19
+        ],
+        [
+          20,
+          15,
+          19,
+          11,
+          18,
+          2,
+          1,
+          8,
+          19
+        ],
+        [
+          20,
+          1,
+          1,
+          2,
+          19,
+          1,
+          19,
+          19,
+          19
+        ]
+      ]
+    }
+  ],
+  "upper": 20,
+  "values": null
+}

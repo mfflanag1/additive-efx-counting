@@ -1,0 +1,160 @@
+{
+  "all_nonempty_partitions": 7770,
+  "balanced_partitions": 1260,
+  "cases": [
+    {
+      "all_repairs_isolate_a_designated_favorite": true,
+      "favorite_multiplicity": "31",
+      "favorite_pattern": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "labeled_complete_efx_count": 467,
+      "labeled_shape_counts": {
+        "3+3+2+1": 335,
+        "4+2+2+1": 110,
+        "4+3+1+1": 22
+      },
+      "partitions_with_two_designated_singletons": 7,
+      "singleton_good_counts": {
+        "0": 82,
+        "1": 31
+      },
+      "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_shape3222_favorites31_matching_stabilized_session2.json",
+      "source_sha256": "b40f1df0af666920704b7ffd47167670e5ed9113897fc6bb2268f5204e9293a6",
+      "unlabeled_shape_counts": {
+        "3+3+2+1": 78,
+        "4+2+2+1": 21,
+        "4+3+1+1": 7
+      },
+      "unlabeled_supported_partition_count": 106,
+      "values": [
+        [
+          13,
+          9,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          7,
+          6,
+          4,
+          3,
+          1,
+          2,
+          5
+        ],
+        [
+          13,
+          8,
+          7,
+          6,
+          2,
+          4,
+          1,
+          3,
+          5
+        ],
+        [
+          8,
+          13,
+          7,
+          6,
+          5,
+          1,
+          2,
+          4,
+          3
+        ]
+      ]
+    },
+    {
+      "all_repairs_isolate_a_designated_favorite": true,
+      "favorite_multiplicity": "22",
+      "favorite_pattern": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "labeled_complete_efx_count": 350,
+      "labeled_shape_counts": {
+        "3+3+2+1": 242,
+        "4+2+2+1": 80,
+        "4+3+1+1": 28
+      },
+      "partitions_with_two_designated_singletons": 8,
+      "singleton_good_counts": {
+        "0": 55,
+        "1": 54
+      },
+      "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_shape3222_favorites22_matching_stabilized_session2.json",
+      "source_sha256": "48c69c3102b545f1fcd8ee20affe105603a1f8789b01214be85de8369fec400d",
+      "unlabeled_shape_counts": {
+        "3+3+2+1": 75,
+        "4+2+2+1": 18,
+        "4+3+1+1": 8
+      },
+      "unlabeled_supported_partition_count": 101,
+      "values": [
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          6,
+          7,
+          5,
+          2,
+          1,
+          3,
+          4
+        ],
+        [
+          8,
+          13,
+          7,
+          6,
+          2,
+          1,
+          3,
+          4,
+          5
+        ],
+        [
+          8,
+          13,
+          6,
+          7,
+          5,
+          1,
+          3,
+          2,
+          4
+        ]
+      ]
+    }
+  ],
+  "claim": "The frozen cap-13 3+1 and 2+2 favorite profiles have no (3,2,2,2) EFX allocation, while every complete-EFX repair isolates a designated favorite good.",
+  "interpretation": "The cap-12 balanced-or-common-singleton mechanism generalizes at cap 13 to balanced-or-designated-favorite-singleton.",
+  "schema": "rank-gap13-efx-4x9-boundary-audit-v1",
+  "status": "BOUNDARY_AUDIT_PASSED"
+}

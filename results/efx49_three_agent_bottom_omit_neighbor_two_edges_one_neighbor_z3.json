@@ -1,0 +1,163 @@
+{
+  "bottom_order_agents": [
+    1,
+    2,
+    3
+  ],
+  "bottom_order_constraint_count": 36,
+  "common_bottom_pair": [
+    7,
+    8
+  ],
+  "conversion_partition_count": 6,
+  "conversion_partitions": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ]
+    ]
+  ],
+  "conversion_scope": "all",
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 143.07278180122375,
+  "favorite": 0,
+  "fixed_residual_matching": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "hall_failure_template_count": 1,
+  "hall_witness_type": "two_edges_one_neighbor",
+  "interpretation": "UNSAT proves the fixed-pairing lemma in this exact encoding; independent replay is required before theorem status.",
+  "m": 9,
+  "n": 4,
+  "reason_unknown": null,
+  "residual_matching_wlog": "Every perfect matching of the six non-low residual goods is equivalent by a goods relabeling.",
+  "schema": "common-bottom-pairing-conversion-lra-v1",
+  "smt2_path": "results/efx49_three_agent_bottom_omit_neighbor_two_edges_one_neighbor_z3.smt2",
+  "smt2_sha256": "094b2ce8c6861022a7e5d6107830fda9e9b5b4800e966a4517f42f270bd6e490",
+  "solver_status": "unsat",
+  "status": "UNSAT_CANDIDATE",
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds": 180.0,
+  "universal_owner_threshold_failure": true,
+  "values": null
+}

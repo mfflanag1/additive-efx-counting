@@ -1,0 +1,45 @@
+{
+  "core_size": 17,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 0.0173189640045166,
+  "favorite_pair_repair_count": 0,
+  "favorite_pair_repair_sample": [],
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "fixed_values": {
+    "path": "results/efx49_distinct_half_full_cell_integer_core17_cap6.json",
+    "sha256": "8c89f9c6c12867e83dabcc2cf694698e32429834db6152c86e2ab005ee8338c9"
+  },
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "SAT shows that the finite obstruction core alone does not lift to positive reals; UNSAT would establish only the core-relative full-cell dichotomy and would still require independent replay.",
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "reason_unknown": null,
+  "schema": "distinct-half-full-cell-real-core-result-v1",
+  "smt2_path": "results/efx49_distinct_half_full_cell_real_core17_session2.smt2",
+  "smt2_sha256": "40b4112344217b284376012d822b9d00cf7f5e7775ee70d598543b834cc90d2f",
+  "solver": "Z3",
+  "solver_status": "unsat",
+  "source": "results/efx49_distinct_half_full_cell_cap5_minimal_core.json",
+  "source_sha256": "57a557c1c7c04deec3063cecbea3cba0d84bc67ff8ead05c5258db85f4949ddd",
+  "status": "UNSAT_CANDIDATE",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 60.0,
+  "universal_owner_threshold_failure": true,
+  "universal_threshold_encoding": "sorting",
+  "values": null
+}

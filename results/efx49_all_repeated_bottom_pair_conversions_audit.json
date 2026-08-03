@@ -1,0 +1,68 @@
+{
+  "all_cvc5_sorting_unsat": true,
+  "all_ethos_correct": true,
+  "all_fresh_z3_unsat": true,
+  "all_z3_cardinal_unsat": true,
+  "all_z3_sorting_unsat": true,
+  "canonical_pattern_count": 7,
+  "canonical_pattern_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8
+  ],
+  "census": {
+    "all_canonical_patterns": 20,
+    "path": "results/efx49_bottom_pair_pattern_census_audit.json",
+    "repeated_multiplicity_patterns": 7,
+    "sha256": "44818311776741727a3e3c42a2067d8015b720ac1808f78ce9fb4386ee59c085"
+  },
+  "claim_boundary": "This closes every 2+1+1 selected-bottom-pair pattern inside the strict-common-favorite universal-threshold branch. The eleven all-distinct patterns, mixed-threshold branch, full four-agent/nine-good case, and general additive EFX remain open.",
+  "conversion_partition_counts": {
+    "1": 228,
+    "2": 225,
+    "3": 240,
+    "4": 240,
+    "5": 255,
+    "7": 255,
+    "8": 270
+  },
+  "schema": "all-repeated-bottom-pair-conversions-audit-v1",
+  "sources": {
+    "1": {
+      "path": "results/efx49_star_repeated_bottom_pair_conversion_audit.json",
+      "sha256": "452bc3090a4dc2b8213ff5352c7f4f559b859f03d6d001c6ad92327311861e77"
+    },
+    "2": {
+      "path": "results/efx49_triangle_repeated_bottom_pair_conversion_audit.json",
+      "sha256": "9e12464b3173959b572637acdc3a8805936e7cc7dddda6aa33fffb90de7ea8c5"
+    },
+    "3": {
+      "path": "results/efx49_bottom_pattern3_conversion_audit.json",
+      "sha256": "b45eabb11ed9b76f83ecaf9fcd7f9d54d0728c16ef96910fa02162d7ca906ea1"
+    },
+    "4": {
+      "path": "results/efx49_bottom_pattern4_conversion_audit.json",
+      "sha256": "85043007c52863e9f121bfcd7a13db32714f055c0979fbf98c34eb48dbe5873d"
+    },
+    "5": {
+      "path": "results/efx49_bottom_pattern5_conversion_audit.json",
+      "sha256": "a8367cf6cfacd71b6a79c1b2cc5b7ad856ee137ec72ffeec7bbca5b6e5c499df"
+    },
+    "7": {
+      "path": "results/efx49_bottom_pattern7_conversion_audit.json",
+      "sha256": "b37c2e1226a918e6ad967ec1ef943fb67dc9cf82afc63490fc994f0a4c50c776"
+    },
+    "8": {
+      "path": "results/efx49_bottom_pattern8_conversion_audit.json",
+      "sha256": "a8b971cadfc1ea691de0502d72cfcb3c58f9fe81d0ef72ef12ba9042a89ad503"
+    }
+  },
+  "status": "ALL_2_PLUS_1_PLUS_1_BOTTOM_PATTERNS_PROOF_CHECKED",
+  "sum_of_case_conversion_partition_counts": 1713,
+  "total_checked_cpc_proof_bytes": 217425021,
+  "total_checked_cpc_proof_step_lines": 2512561
+}

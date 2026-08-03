@@ -1,0 +1,127 @@
+{
+  "bottom_order_constraint_count": 48,
+  "common_bottom_pair": [
+    7,
+    8
+  ],
+  "conversion_partition_count": 2,
+  "conversion_partitions": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  ],
+  "conversion_scope": "first_edge",
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 2.9181456565856934,
+  "favorite": 0,
+  "fixed_residual_matching": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "hall_failure_template_count": 1,
+  "hall_witness_type": "zero_neighbor",
+  "interpretation": "UNSAT proves the fixed-pairing lemma in this exact encoding; independent replay is required before theorem status.",
+  "m": 9,
+  "n": 4,
+  "reason_unknown": null,
+  "residual_matching_wlog": "Every perfect matching of the six non-low residual goods is equivalent by a goods relabeling.",
+  "schema": "common-bottom-pairing-conversion-lra-v1",
+  "smt2_path": "results/efx49_common_bottom_pairing_conversion_zero_neighbor_first_edge_cardinal_z3.smt2",
+  "smt2_sha256": "63d0868b5b7d2aa1b8d6adb7df3f6e81176e04a04cbd20c1b437b67c70e69f72",
+  "solver_status": "sat",
+  "status": "CONVERSION_COUNTEREXAMPLE",
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds": 300.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      674,
+      644,
+      337,
+      337,
+      357,
+      337,
+      347,
+      337,
+      50
+    ],
+    [
+      341,
+      219,
+      219,
+      117,
+      127,
+      249,
+      229,
+      112,
+      97
+    ],
+    [
+      991,
+      363,
+      698,
+      656,
+      363,
+      377,
+      642,
+      335,
+      363
+    ],
+    [
+      699,
+      377,
+      655,
+      366,
+      344,
+      344,
+      344,
+      344,
+      289
+    ]
+  ]
+}

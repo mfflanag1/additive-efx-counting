@@ -1,0 +1,118 @@
+{
+  "claim": "Even with no favorite-singleton EFX partition, a threshold-safe rank-one 3+3+2 state can block all six one-good transfers. Its nearest EFX repair may require two transfers.",
+  "claim_boundary": "The exact local-six matrix is not an EFX counterexample; it has 366 balanced supporting partitions. The radius-two UNKNOWN endpoint neither proves nor refutes the successor implication.",
+  "domain": "positive additive valuations",
+  "local_six_boundary": {
+    "all_supporting_partition_count": 366,
+    "complete_efx_allocation_count": 1259,
+    "favorite_singleton_supporting_partition_count": 0,
+    "local_conversion_ranks": [
+      3,
+      3,
+      3,
+      3,
+      2,
+      3
+    ],
+    "local_conversion_supporting_partition_count": 0,
+    "minimum_transfer_distance_to_efx_partition": 2,
+    "nearest_efx_partition_count": 15,
+    "proto_sha256": "37c425ec2828935bb33d81111c221707d5df58999dd34cab81c44f180a9ebe97",
+    "reconstructed_cegar_pool_size": 256,
+    "resident_graph": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    "source": "results/efx49_common_favorite_rank1_triple_fixed_conversion_cap20_cpsat_cegar_session1.json",
+    "source_sha256": "ab5da04fe0033bec1e1a8a8bd9546f5e69b1a619a281bebe9a86402449848670",
+    "supported_singleton_count_sequence": [
+      275,
+      0
+    ],
+    "supporting_partition_count_by_shape": {
+      "3222": 366
+    },
+    "supporting_partition_transfer_distance_histogram": {
+      "2": 15,
+      "3": 80,
+      "4": 179,
+      "5": 92
+    },
+    "values": [
+      [
+        20,
+        3,
+        1,
+        1,
+        18,
+        1,
+        1,
+        19,
+        1
+      ],
+      [
+        20,
+        1,
+        19,
+        19,
+        7,
+        1,
+        19,
+        4,
+        11
+      ],
+      [
+        20,
+        1,
+        19,
+        19,
+        19,
+        17,
+        1,
+        16,
+        19
+      ],
+      [
+        20,
+        1,
+        19,
+        19,
+        17,
+        1,
+        19,
+        1,
+        19
+      ]
+    ]
+  },
+  "m": 9,
+  "n": 4,
+  "radius_two_boundary": {
+    "blocked_balanced_partition_count": 63,
+    "proto_sha256": "c62f9172b45a2625249965120a325016ced73415714e4af7fd5e2d281a548277",
+    "reconstructed_cegar_pool_size": 256,
+    "solver_status": "UNKNOWN",
+    "solver_wall_seconds": 30.025669,
+    "source": "results/efx49_common_favorite_rank1_triple_no_radius2_cap20_cpsat_cegar_session1.json",
+    "source_sha256": "a12745dd8a716bc419bfe7b8bfef14dbe870ff23794066cb9e85f8c94bf50fef",
+    "supported_singleton_count_sequence": [
+      385
+    ]
+  },
+  "schema": "common-favorite-rank1-local6-boundary-audit-v1",
+  "status": "RANK1_LOCAL6_REFUTED_RADIUS2_OPEN",
+  "strict_common_favorite": 0
+}

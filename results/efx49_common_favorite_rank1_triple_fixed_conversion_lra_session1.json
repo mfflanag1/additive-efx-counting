@@ -1,0 +1,66 @@
+{
+  "candidate_audit": null,
+  "claim": "A threshold-safe 3+3+2 partition whose residents all accept only the same triple has either a favorite-singleton EFX partition or one of the three conversions moving a contested good next to the favorite.",
+  "claim_boundary": "UNSAT requires independent replay before theorem promotion. SAT refutes only this local dichotomy, not EFX existence. UNKNOWN decides neither direction.",
+  "conversion_scope": "first",
+  "domain": "strictly positive reals normalized per row",
+  "favorite_singleton_partition_count": 966,
+  "formula": "results/efx49_common_favorite_rank1_triple_fixed_conversion_lra_session1.smt2",
+  "formula_bytes": 17233556,
+  "formula_sha256": "aef1adc5ecff79af7ce2272966f0c6bbea0f8c1a8824198735d3a45392ebcdb1",
+  "local_conversion_partitions": [
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ]
+  ],
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "reason_unknown": "timeout",
+  "resident_rank_one_common_bundle": [
+    1,
+    2,
+    3
+  ],
+  "schema": "common-favorite-rank1-triple-conversion-lra-v1",
+  "selected_owner": 0,
+  "selected_owner_threshold_pass": true,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "solver_status": "unknown",
+  "solver_wall_seconds": 30.03145980834961,
+  "status": "MASTER_UNKNOWN",
+  "strict_common_favorite": 0,
+  "time_limit_seconds": 30.0,
+  "values": null
+}

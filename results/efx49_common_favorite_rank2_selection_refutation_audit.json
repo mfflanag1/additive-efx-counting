@@ -1,0 +1,258 @@
+{
+  "claim": "A mixed common-favorite profile need not have any threshold-passing owner/partition whose resident graph has matching rank two.",
+  "claim_boundary": "This refutes the rank-two selection lemma and its stronger zero-neighbor version. It is not an EFX counterexample: the profile has 3,690 complete EFX allocations, all on balanced 3+2+2+2 partitions.",
+  "complete_efx_allocation_count": 3690,
+  "complete_efx_supporting_partition_count": 195,
+  "complete_efx_supporting_partition_count_by_shape": {
+    "3222": 195
+  },
+  "complete_partition_count": 7770,
+  "distinct_valuation_row_count": 2,
+  "favorite_singleton_partition_count": 966,
+  "favorite_singleton_supporting_partition_count": 0,
+  "independent_complete_efx_allocation_count": 3690,
+  "m": 9,
+  "maximum_resident_matching_rank_over_threshold_passes": 1,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_mixed_rank2_332_cap4_sym_cegar_session2.pbtxt",
+  "proto_sha256": "de03d1e217bd82fad570a0cc6a3112ccfe27f6bb12996193c4c9e531aa11b986",
+  "radius_two_supporting_partition_count": 18,
+  "representative_one_transfer_repair": {
+    "assignment": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      3,
+      3
+    ],
+    "feasibility_graph": [
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "partition": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ]
+  },
+  "schema": "common-favorite-rank2-selection-refutation-audit-v1",
+  "selected_threshold_pass": true,
+  "source": "results/efx49_common_favorite_mixed_rank2_332_cap4_sym_cegar_session2.json",
+  "source_sha256": "7aabc05df2a9de58dca812bdef14b8368c15c3fe3286b58eb3114a5aa6ed75c2",
+  "status": "RANK_TWO_SELECTION_LEMMA_REFUTED",
+  "strict_common_favorite": 0,
+  "supporting_partition_transfer_distance_histogram": {
+    "1": 3,
+    "2": 15,
+    "3": 57,
+    "4": 90,
+    "5": 30
+  },
+  "threshold_pass_count": 3,
+  "threshold_passes": [
+    {
+      "owner": 0,
+      "partition": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "partition_index": 53,
+      "resident_graph": [
+        [
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false
+        ]
+      ],
+      "resident_matching_rank": 1,
+      "shape": "332"
+    },
+    {
+      "owner": 0,
+      "partition": [
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3,
+          8
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "partition_index": 715,
+      "resident_graph": [
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ]
+      ],
+      "resident_matching_rank": 1,
+      "shape": "332"
+    },
+    {
+      "owner": 0,
+      "partition": [
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          3,
+          7
+        ],
+        [
+          4,
+          5,
+          6
+        ]
+      ],
+      "partition_index": 717,
+      "resident_graph": [
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ]
+      ],
+      "resident_matching_rank": 1,
+      "shape": "332"
+    }
+  ],
+  "upper": 4,
+  "values": [
+    [
+      4,
+      3,
+      1,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3
+    ],
+    [
+      4,
+      3,
+      1,
+      1,
+      3,
+      3,
+      3,
+      2,
+      2
+    ],
+    [
+      4,
+      3,
+      1,
+      1,
+      3,
+      3,
+      3,
+      2,
+      2
+    ],
+    [
+      4,
+      3,
+      1,
+      1,
+      3,
+      3,
+      3,
+      2,
+      2
+    ]
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "audit": {
+    "changed_original_partition_edges": [
+      [
+        0,
+        0,
+        true,
+        false
+      ]
+    ],
+    "complete_efx_allocation_count": 40,
+    "complete_efx_supporting_partition_count": 11,
+    "minimum_supporting_partition_transfer_distance": 3,
+    "nearest_supporting_partition": [
+      [
+        0,
+        1,
+        6
+      ],
+      [
+        2
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4
+      ]
+    ],
+    "nearest_supporting_partition_graph": [
+      [
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        false,
+        false,
+        false
+      ]
+    ],
+    "post_feasibility_graph": [
+      [
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "radius_partition_count": 127,
+    "supporting_partition_transfer_distance_histogram": {
+      "3": 11
+    },
+    "wall_feasibility_graph": [
+      [
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false
+      ],
+      [
+        false,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ]
+    ]
+  },
+  "bundle_sizes_excluding_critical_good": [
+    2,
+    1,
+    2,
+    1
+  ],
+  "candidate_partition_count": 127,
+  "candidate_partition_count_by_radius": {
+    "0": 1,
+    "1": 18,
+    "2": 108
+  },
+  "critical_wall": {
+    "critical_good": 3,
+    "envied_remainder_w": [
+      2
+    ],
+    "moving_bundle_u": [
+      0,
+      1
+    ],
+    "perturbed_good": 2,
+    "transferred_partition": [
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        2
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6
+      ]
+    ]
+  },
+  "domain": "strictly positive additive real valuations",
+  "elapsed_seconds": 34.942118883132935,
+  "interpretation": "SAT refutes the claim that every generic essential single-wall failure has an EFX partition within transfer radius 2. It is not an EFX counterexample unless the global EFX count is zero.",
+  "m": 7,
+  "minimal_hall_witness_size": 3,
+  "n": 4,
+  "obstructed_transfer_radius": 2,
+  "post_wall_values": [
+    [
+      4486,
+      3501,
+      8013,
+      4746,
+      4460,
+      3319,
+      1089
+    ],
+    [
+      1122,
+      573,
+      2268,
+      1162,
+      3414,
+      541,
+      24
+    ],
+    [
+      9,
+      219,
+      229,
+      224,
+      449,
+      7,
+      1
+    ],
+    [
+      18,
+      2242,
+      1184,
+      1103,
+      2233,
+      1166,
+      2296
+    ]
+  ],
+  "reason_unknown": null,
+  "scaled_wall_epsilon": 26,
+  "schema": "row-merge-single-wall-radius-lra-v1",
+  "smt2_path": "results/row_merge_single_wall_q3_radius2_refutation.smt2",
+  "smt2_sha256": "a66d803ffcb6fc0fae67e5cd3ff5c539b071fa3f35e25660adce056c578ec0e8",
+  "solver_status": "sat",
+  "status": "RADIUS_PIVOT_REFUTATION_FOUND",
+  "time_limit_seconds": 300.0,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6
+    ]
+  ],
+  "wall_values": [
+    [
+      4486,
+      3501,
+      7987,
+      4746,
+      4460,
+      3319,
+      1089
+    ],
+    [
+      1122,
+      573,
+      2268,
+      1162,
+      3414,
+      541,
+      24
+    ],
+    [
+      9,
+      219,
+      229,
+      224,
+      449,
+      7,
+      1
+    ],
+    [
+      18,
+      2242,
+      1184,
+      1103,
+      2233,
+      1166,
+      2296
+    ]
+  ]
+}

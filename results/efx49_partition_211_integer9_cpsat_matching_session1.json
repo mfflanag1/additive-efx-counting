@@ -1,0 +1,55 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 13464,
+  "elapsed_seconds": 12.264313,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": true,
+  "exclude_universal_min": true,
+  "favorite_pattern": [
+    0,
+    0,
+    1,
+    2
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 18960,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_universe_size": 7770,
+  "pool_sha256": "5f4c899343aa0a95e93a99558163c95980ba186236dbe76f248e8acde2d3d870",
+  "pool_size": 790,
+  "proto_bytes": 3185413,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_integer9_cpsat_matching_session1.pb",
+  "proto_sha256": "f2882169063e7238283eccd8b29c18e2d2dcbeecfbafa887081ebdf4b5dd46fc",
+  "require_distinct_item_values": true,
+  "require_pairwise_distinct_rows": true,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [
+    {
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_partition_211_integer19683_pool.json",
+      "sha256": "5f4c899343aa0a95e93a99558163c95980ba186236dbe76f248e8acde2d3d870"
+    }
+  ],
+  "solver_status": "INFEASIBLE",
+  "status": "UNSAT_BOUNDED_CELL_CANDIDATE",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 158734,
+      "conflicts": 4203,
+      "deterministic_time": 26.207294027346837,
+      "iteration": 1,
+      "pool_size": 790,
+      "solver_status": "INFEASIBLE",
+      "wall_time_seconds": 12.245700000000001
+    }
+  ],
+  "upper": 9,
+  "values": null
+}

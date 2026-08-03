@@ -1,0 +1,151 @@
+{
+  "bottom_order_core": {
+    "formula": "results/efx49_common_bottom_conversion_zero_neighbor_order_core.smt2",
+    "formula_sha256": "19e66cc44b799d302ca66b0696926ac2dc9d99b3127154bab196e53ab9cd36ce",
+    "order_counts_by_agent": {
+      "0": 0,
+      "1": 12,
+      "2": 12,
+      "3": 12
+    },
+    "result": "results/efx49_common_bottom_conversion_zero_neighbor_order_core.json",
+    "result_sha256": "b28ca1d4355817143df7266c246aaf10a1042224ddf7f0e9f5eae1790bf271bd",
+    "retained_order_inequality_count": 36
+  },
+  "canonical_hall_role_cells": [
+    {
+      "bottom_order_agents": [
+        0,
+        1,
+        2
+      ],
+      "elapsed_seconds": 104.01728987693787,
+      "formula": "results/efx49_three_agent_bottom_zero_neighbor_z3.smt2",
+      "formula_sha256": "7679de6538163386aa16fa64766544170098255693dd80460f88707f781f03eb",
+      "hall_witness_type": "zero_neighbor",
+      "result": "results/efx49_three_agent_bottom_zero_neighbor_z3.json",
+      "result_sha256": "34e43e2d42f1842c45996acf5739c93366f2ef055370fd2b30ee070b0ce74648",
+      "threshold_encoding": "cardinal"
+    },
+    {
+      "bottom_order_agents": [
+        0,
+        1,
+        2
+      ],
+      "elapsed_seconds": 114.79369616508484,
+      "formula": "results/efx49_three_agent_bottom_two_edges_one_neighbor_z3.smt2",
+      "formula_sha256": "f5d8215b8ef995b413cfb1a64220c3e7ecfed6548452eadd4cd4384c60ae56cd",
+      "hall_witness_type": "two_edges_one_neighbor",
+      "result": "results/efx49_three_agent_bottom_two_edges_one_neighbor_z3.json",
+      "result_sha256": "8c8066840420e3d589cd6375aebb0e13592b44075dab27da435139ca2be75947",
+      "threshold_encoding": "cardinal"
+    },
+    {
+      "bottom_order_agents": [
+        1,
+        2,
+        3
+      ],
+      "elapsed_seconds": 143.07278180122375,
+      "formula": "results/efx49_three_agent_bottom_omit_neighbor_two_edges_one_neighbor_z3.smt2",
+      "formula_sha256": "094b2ce8c6861022a7e5d6107830fda9e9b5b4800e966a4517f42f270bd6e490",
+      "hall_witness_type": "two_edges_one_neighbor",
+      "result": "results/efx49_three_agent_bottom_omit_neighbor_two_edges_one_neighbor_z3.json",
+      "result_sha256": "13f5f4c23245e273d90461f4d6af3c43a3233dc6852a2d9c35291dd42e421716",
+      "threshold_encoding": "cardinal"
+    },
+    {
+      "bottom_order_agents": [
+        0,
+        1,
+        2
+      ],
+      "elapsed_seconds": 115.09926700592041,
+      "formula": "results/efx49_three_agent_bottom_three_edges_two_neighbors_z3.smt2",
+      "formula_sha256": "a11c43bba5844324e6eeb3ef9e4d67cea717086ad4788d015351a535f449b9b9",
+      "hall_witness_type": "three_edges_two_neighbors",
+      "result": "results/efx49_three_agent_bottom_three_edges_two_neighbors_z3.json",
+      "result_sha256": "e27f82c34128cbe08cff977a9b0ee5a300a42d94704de1022007df54a6b1cb99",
+      "threshold_encoding": "cardinal"
+    },
+    {
+      "bottom_order_agents": [
+        1,
+        2,
+        3
+      ],
+      "elapsed_seconds": 145.25932216644287,
+      "formula": "results/efx49_three_agent_bottom_omit_neighbor_three_edges_two_neighbors_z3.smt2",
+      "formula_sha256": "317e101428385d63fa2f7ac567cdc9151e8af09b40767422ea6e6c9b65c08b06",
+      "hall_witness_type": "three_edges_two_neighbors",
+      "result": "results/efx49_three_agent_bottom_omit_neighbor_three_edges_two_neighbors_z3.json",
+      "result_sha256": "e144a18dd9e8c426a4fb79189d816d97b48d8b32c10fa5b40cff8ef862fdb9bb",
+      "threshold_encoding": "cardinal"
+    }
+  ],
+  "cardinal_z3": {
+    "bottom_order_agents": [
+      0,
+      1,
+      2
+    ],
+    "elapsed_seconds": 124.553870677948,
+    "formula": "results/efx49_three_agent_bottom_pairing_conversion_cardinal_z3.smt2",
+    "formula_sha256": "6639dde6424476c162d7a94592f60d1c42c7f2a14ce243e224cd2f64976c6a5c",
+    "hall_witness_type": "all",
+    "result": "results/efx49_three_agent_bottom_pairing_conversion_cardinal_z3.json",
+    "result_sha256": "6295d22cf7d7fbc2b3ba08f6b915360776d0a29853aef5d30bc934adbb1f9a0f",
+    "threshold_encoding": "cardinal"
+  },
+  "claim_boundary": "This closes profiles with a pair ranked bottom-two by at least three agents. It does not close the remaining multiplicity-at-most-two branch or general additive EFX.",
+  "injection_census": {
+    "conversions_per_matching": 6,
+    "distinct_conversion_partition_count": 90,
+    "perfect_matching_count": 15
+  },
+  "schema": "three-agent-bottom-pairing-conversion-audit-v1",
+  "sorting_cpc_ethos": {
+    "ethos_sha256": "2fdda9736abbcfca24523722a03af632f56807f50484f0535a53f805401e1e13",
+    "ethos_status": "correct",
+    "proof": "results/efx49_three_agent_bottom_pairing_conversion_sorting.cpc",
+    "proof_bytes": 18975836,
+    "proof_sha256": "5e5bffd23dc4979a3329cd6ea48d66f4630f957b65d53493b7afe9225ecf93ad",
+    "proof_step_lines": 233949,
+    "result": "results/efx49_three_agent_bottom_pairing_conversion_sorting_cpc_ethos.json",
+    "result_sha256": "f75362ec856193948c608e93fd699c280f8094474c629c949d61d6bf919cc240"
+  },
+  "sorting_cvc5": {
+    "elapsed_seconds": 549.045175,
+    "formula": "results/efx49_three_agent_bottom_pairing_conversion_sorting_cvc5.smt2",
+    "formula_sha256": "547a4f51f89ee5a86bc7f19c17cdb772d2df7769623638cb3f37820cef00038e",
+    "normalization": "results/efx49_three_agent_bottom_pairing_conversion_sorting_cvc5.normalization.json",
+    "normalization_sha256": "56c697590128b3d1799da89769a122e8b5f34beba8d205aa8ecc990937312fe3",
+    "result": "results/efx49_three_agent_bottom_pairing_conversion_sorting_cvc5.json",
+    "result_sha256": "468eb735f5332af2eb5fb0c5a453f37a5fcd1b647e9a4acd382cb177121105f8",
+    "solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74"
+  },
+  "sorting_z3": {
+    "bottom_order_agents": [
+      0,
+      1,
+      2
+    ],
+    "elapsed_seconds": 198.24669790267944,
+    "formula": "results/efx49_three_agent_bottom_pairing_conversion_sorting_z3.smt2",
+    "formula_sha256": "eab3e59e38ae8200e7366a5b11bebd647659737efc8f2db83a716352ee055135",
+    "hall_witness_type": "all",
+    "result": "results/efx49_three_agent_bottom_pairing_conversion_sorting_z3.json",
+    "result_sha256": "db80ecc15be1fece90f6a227971bf8fb0028be557266d5a5836a61fc8e2e9ebd",
+    "threshold_encoding": "sorting"
+  },
+  "status": "THREE_AGENT_BOTTOM_CONVERSION_PROOF_CHECKED",
+  "two_agent_sharpness_boundary": {
+    "favorite_pair_efx_partition_count": 252,
+    "formula": "results/efx49_two_agent_bottom_zero_neighbor_conversion_boundary_z3.smt2",
+    "formula_sha256": "0a56568199bc973dd57ea22932d0309b521c77a66670af301cb4db98abf525f1",
+    "literal_complete_efx_count": 1533,
+    "result": "results/efx49_two_agent_bottom_zero_neighbor_conversion_boundary_z3.json",
+    "result_sha256": "1479908f8a8be3242e32c664ccb225f8fb033774330534ee26da10e5f8584878"
+  }
+}

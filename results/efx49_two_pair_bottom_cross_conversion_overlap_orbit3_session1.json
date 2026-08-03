@@ -1,0 +1,111 @@
+{
+  "claim_boundary": "This tests one canonical pair of residual matchings. Even UNSAT does not cover the other relative matching orbits. With the all-favorite-pair obstruction family, SAT would refute only the conditional two-cell selector, not complete EFX.",
+  "conversion_partition_count": 12,
+  "elapsed_seconds": 94.01196789741516,
+  "first_cell": {
+    "bottom_agents": [
+      0,
+      1
+    ],
+    "bottom_pair": [
+      7,
+      8
+    ],
+    "matching": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  },
+  "matching_orbit_count": 4,
+  "matching_orbit_index": 3,
+  "obstruction_family": "local_conversions",
+  "obstruction_partition_count": 12,
+  "pattern": "overlap",
+  "reason_unknown": null,
+  "schema": "two-pair-bottom-cross-conversion-lra-v1",
+  "second_cell": {
+    "bottom_agents": [
+      2,
+      3
+    ],
+    "bottom_pair": [
+      6,
+      8
+    ],
+    "matching": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        4,
+        7
+      ]
+    ]
+  },
+  "smt2_path": "results/efx49_two_pair_bottom_cross_conversion_overlap_orbit3_session1.smt2",
+  "smt2_sha256": "43fff5224786597f6941d646660be578841a99c7bc9396e35a56a4670238da5b",
+  "solver_status": "sat",
+  "status": "CROSS_CONVERSION_COUNTEREXAMPLE",
+  "time_limit_seconds": 300.0,
+  "values": [
+    [
+      3386,
+      3226,
+      1134,
+      1198,
+      1621,
+      3290,
+      2819,
+      1070,
+      112
+    ],
+    [
+      2278,
+      2242,
+      2230,
+      1091,
+      1079,
+      1079,
+      2266,
+      1079,
+      48
+    ],
+    [
+      3411,
+      2082,
+      2354,
+      2210,
+      1073,
+      3379,
+      1057,
+      2242,
+      48
+    ],
+    [
+      3369,
+      1258,
+      3264,
+      2276,
+      1063,
+      2171,
+      1063,
+      2261,
+      15
+    ]
+  ]
+}

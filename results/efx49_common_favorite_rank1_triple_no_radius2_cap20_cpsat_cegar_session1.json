@@ -1,0 +1,108 @@
+{
+  "blocked_partition_count": 63,
+  "branches": 320100,
+  "candidate_audit": null,
+  "cegar_iterations": 1,
+  "cegar_singletons": true,
+  "cegar_trace": [
+    {
+      "iteration": 1,
+      "singleton_pool_size_before": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 0.327245,
+      "supported_unpooled_singleton_partition_count": 385,
+      "values": [
+        [
+          4,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          1,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "claim_boundary": "SAT refutes only the selected fixed/all local-conversion dichotomy; it is not an EFX counterexample. UNSAT is bounded and requires independent replay.",
+  "conflicts": 29,
+  "conversion_scope": "radius2",
+  "domain": "positive integers in [1,20]",
+  "elapsed_seconds": 30.623422861099243,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_rank1_triple_no_radius2_cap20_cpsat_cegar_session1.pb",
+  "proto_bytes": 1671916,
+  "proto_sha256": "c62f9172b45a2625249965120a325016ced73415714e4af7fd5e2d281a548277",
+  "resident_rank_one_common_bundle": [
+    1,
+    2,
+    3
+  ],
+  "schema": "common-favorite-rank1-triple-conversion-cpsat-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "singleton_obstruction_pool_size": 256,
+  "solver_status": "UNKNOWN",
+  "solver_wall_seconds": 30.025669,
+  "status": "MASTER_UNKNOWN",
+  "strict_common_favorite": 0,
+  "time_limit_seconds": 30.0,
+  "upper": 20,
+  "values": null
+}
