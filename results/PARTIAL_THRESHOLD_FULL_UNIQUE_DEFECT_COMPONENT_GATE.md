@@ -99,6 +99,14 @@ dependency by a strict threshold-change sign in the blocking row. What
 remains is to cancel these row-labeled signs while retaining positive total
 owner gain.
 
+The
+[`unique-defect champion bridge`](UNIQUE_DEFECT_CHAMPION_BRIDGE_LEMMA.md)
+supplies a second construction language: the bad agent necessarily
+\(f\)-champions the host, with either an ordinary envy edge or a nonempty
+released bottom bundle. The next proof should use generalized-champion cycles
+to build an EFX-preserving component and the signed-wall lemma to certify its
+extremal improvement.
+
 ## Claim boundary
 
 The counterexample refutes only bounded local-gradient lemmas. Its radius-four

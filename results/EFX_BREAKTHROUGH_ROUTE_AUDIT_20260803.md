@@ -173,6 +173,13 @@ cut. This converts the remaining problem from item-radius enumeration to a
 dependency-growth and wall-cancellation statement, uniformly for four and
 arbitrary numbers of agents.
 
+The unique-defect hypothesis also now connects rigorously to the independent
+champion-cycle route. The bad agent is the unique strong envier of the
+augmented host and therefore \(f\)-champions that host. Its minimal desired
+subset either discards exactly \(f\), producing an ordinary envy edge, or
+retains \(f\) and releases a nonempty bottom bundle. This bridge supplies the
+EFX-preserving construction mechanism that raw transfer walls lacked.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:
