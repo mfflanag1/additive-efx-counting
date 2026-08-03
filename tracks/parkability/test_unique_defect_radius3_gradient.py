@@ -63,3 +63,25 @@ def test_full_unique_defect_requires_radius_four_component():
         "43/198",
     ]
     assert witness == {"good": 1, "host": 2, "permutation": [0, 1, 2, 3]}
+
+    champion_masks = (448, 1, 12, 18)
+    assert eligible(champion_masks, 1 << 5, totals, thresholds)
+    assert (
+        theta(champion_masks, totals, thresholds, row_totals)
+        - theta(masks, totals, thresholds, row_totals)
+        == Fraction(22288, 354981)
+    )
+    champion_signature, champion_witness = absorption_signature(
+        champion_masks, 1 << 5, totals, thresholds, row_totals
+    )
+    assert [str(value) for value in champion_signature] == [
+        "49/1023",
+        "101/901",
+        "35/264",
+        "140/1041",
+    ]
+    assert champion_witness == {
+        "good": 5,
+        "host": 1,
+        "permutation": [0, 1, 2, 3],
+    }

@@ -69,6 +69,29 @@ The four changed goods form one transfer component spanning all four agents.
 Thus the failure does not weaken the global-extremum program; it determines
 the necessary scale of its move-completeness lemma.
 
+The champion bridge gives a second, conceptually cleaner radius-four escape
+for the same profile. The forced champion edge from bad agent 1 to host 3
+discards \(f\), so agent 1 ordinarily envies bundle 3. Conversely, agent 3
+champions bundle 1 using desired set \(\{1,4\}\) and discarding good 5. The
+ordinary-envy/champion 2-cycle produces the EFX-with-charity state
+
+\[
+(448,1,12,18),\qquad f'=5.
+\]
+
+It Pareto-improves the owner-utility vector from
+\((284,236,357,240)\) to \((284,250,357,289)\), raises \(\Theta\) by
+\(22288/354981\), and is directly absorbable with signature
+
+\[
+\left(\frac{49}{1023},\frac{101}{901},
+      \frac{35}{264},\frac{140}{1041}\right).
+\]
+
+Thus generalized championship reconstructs an improving connected component
+that the bounded item-move menu could not see. The exact replay is included
+in the radius-three counterexample test.
+
 ## Surviving analytic target
 
 The full-witness proof must allow a connected transfer component of arbitrary
