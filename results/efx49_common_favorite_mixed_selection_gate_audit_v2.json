@@ -1,0 +1,100 @@
+{
+  "bounded_searches": [
+    {
+      "endpoint": "ITERATION_LIMIT",
+      "initial_learned_motif_count": 49,
+      "iterations": 4,
+      "motif": "zero_neighbor_rank_two",
+      "proto_sha256": "dc072723ee318d9c623714cf13a355e0d83b570514995bbc62e0b094a1e50a75",
+      "reconstructed_learned_motif_count": 69,
+      "solver_status": "OPTIMAL",
+      "source": "results/efx49_common_favorite_mixed_zero_neighbor_332_cap20_sym_cegar_session2.json",
+      "source_sha256": "4141669807fd619fb3fce1d9f6b24920315140d5d8d3e4bbb0a7ddbf375b07d9",
+      "unlearned_motif_count_sequence": [
+        11,
+        3,
+        3,
+        3
+      ]
+    },
+    {
+      "endpoint": "ITERATION_LIMIT",
+      "initial_learned_motif_count": 66,
+      "iterations": 4,
+      "motif": "rank_two",
+      "proto_sha256": "4ee3c2301d88ed28edb1bb90a404c8e6c67981aeae1c50e74c0b4b7f2f40fb81",
+      "reconstructed_learned_motif_count": 119,
+      "solver_status": "OPTIMAL",
+      "source": "results/efx49_common_favorite_mixed_rank2_332_cap20_sym_cegar_session2.json",
+      "source_sha256": "ccab0804e2a7bc40c23e8ec2ce31b2cbdc5f58b248eb9aca6ed38aa1bd37e250",
+      "unlearned_motif_count_sequence": [
+        9,
+        1,
+        13,
+        30
+      ]
+    }
+  ],
+  "candidate_lemma": "Every mixed profile has a threshold-passing owner/partition whose resident graph has matching rank two; a stronger version also asks for a zero-neighbor bundle.",
+  "claim_boundary": "The CEGAR searches found neither a selector counterexample nor an UNSAT certificate. Their timeout and iteration-limit endpoints are computational boundaries, not proofs of either selection claim.",
+  "domain": "positive additive valuations",
+  "evidence": "All three exact shortcut-refuting profiles attain resident rank two, and each has a rank-two pass with a zero-neighbor bundle.",
+  "m": 9,
+  "n": 4,
+  "profile_census": [
+    {
+      "favorite_singleton_supporting_partition_count": 0,
+      "maximum_edge_count": 6,
+      "maximum_edge_pass_type_count": {
+        "zero_bundle": 2
+      },
+      "maximum_rank_pass_count": 49,
+      "maximum_rank_type_count": {
+        "pair_witness": 9,
+        "zero_bundle": 40
+      },
+      "maximum_resident_rank": 2,
+      "selected_residual_shape": "611",
+      "source": "results/efx49_common_favorite_threshold_pass_hall_611_cap20_cpsat_session1.json",
+      "source_sha256": "4472e648b25078fbaa495f9da2f5ac1aebc35d33a834a66fbd4ac9a4f03b1cff",
+      "threshold_pass_count": 114
+    },
+    {
+      "favorite_singleton_supporting_partition_count": 0,
+      "maximum_edge_count": 5,
+      "maximum_edge_pass_type_count": {
+        "pair_witness": 12
+      },
+      "maximum_rank_pass_count": 273,
+      "maximum_rank_type_count": {
+        "pair_witness": 120,
+        "zero_bundle": 153
+      },
+      "maximum_resident_rank": 2,
+      "selected_residual_shape": "332",
+      "source": "results/efx49_common_favorite_threshold_pass_hall_332_cap20_cpsat_session1.json",
+      "source_sha256": "fb707dc1a432979778e95d535ece6790da4b608c35e293b30f65b16f71237423",
+      "threshold_pass_count": 273
+    },
+    {
+      "favorite_singleton_supporting_partition_count": 0,
+      "maximum_edge_count": 6,
+      "maximum_edge_pass_type_count": {
+        "zero_bundle": 1
+      },
+      "maximum_rank_pass_count": 17,
+      "maximum_rank_type_count": {
+        "pair_witness": 6,
+        "zero_bundle": 11
+      },
+      "maximum_resident_rank": 2,
+      "selected_residual_shape": "332",
+      "source": "results/efx49_common_favorite_threshold_pass_hall_332_no_local6_cap20_cpsat_session1.json",
+      "source_sha256": "8b471510ed7b2b05ce90ce849ed9afd42bcec1458a2daaeca0ea73c9252c84a2",
+      "threshold_pass_count": 36
+    }
+  ],
+  "schema": "common-favorite-mixed-selection-gate-audit-v1",
+  "status": "MIXED_SELECTION_GATE_OPEN",
+  "strict_common_favorite": 0
+}

@@ -220,7 +220,9 @@ def generate(record_path: Path, smt2_path: Path) -> dict:
         raise ValueError("generation requires new output paths")
     record, formula = construct()
     atomic_write(smt2_path, formula)
-    record["smt2_path"] = str(smt2_path.resolve())
+    # Preserve the caller's path spelling.  The default is repository-relative,
+    # which keeps the committed certificate portable across clean checkouts.
+    record["smt2_path"] = str(smt2_path)
     atomic_json(record_path, record)
     return record
 
@@ -228,7 +230,7 @@ def generate(record_path: Path, smt2_path: Path) -> dict:
 def verify(record_path: Path, smt2_path: Path) -> dict:
     observed = json.loads(record_path.read_text())
     expected, formula = construct()
-    expected["smt2_path"] = str(smt2_path.resolve())
+    expected["smt2_path"] = str(smt2_path)
     if observed != expected:
         raise AssertionError("forced-swap certificate record changed")
     if smt2_path.read_bytes() != formula:

@@ -1,0 +1,260 @@
+{
+  "claim": "Even with four pairwise bundle-order-inequivalent additive valuation rows, a mixed common-favorite profile need not have any threshold-passing owner/partition whose resident graph has matching rank two.",
+  "claim_boundary": "This refutes the repaired four-preference-type rank-two selector. It is not an EFX counterexample: the profile has 3,878 complete EFX allocations, all on balanced 3+2+2+2 partitions.",
+  "complete_efx_allocation_count": 3878,
+  "complete_efx_supporting_partition_count": 599,
+  "complete_efx_supporting_partition_count_by_shape": {
+    "3222": 599
+  },
+  "complete_partition_count": 7770,
+  "distinct_valuation_row_count": 4,
+  "favorite_singleton_partition_count": 966,
+  "favorite_singleton_supporting_partition_count": 0,
+  "independent_complete_efx_allocation_count": 3878,
+  "m": 9,
+  "maximum_resident_matching_rank_over_threshold_passes": 1,
+  "n": 4,
+  "pairwise_bundle_order_equivalent_row_pairs": [],
+  "pairwise_proportional_valuation_row_pairs": [],
+  "proto": "results/efx49_common_favorite_mixed_rank2_332_cap4_fourtype_sym_cegar_session3.pbtxt",
+  "proto_sha256": "c939eb432e59aa2f8df151f961ea3c0dba0d4edddbe442a192704c608ba8b4fe",
+  "radius_two_supporting_partition_count": 19,
+  "representative_one_transfer_repair": {
+    "assignment": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      2,
+      2,
+      3,
+      3
+    ],
+    "feasibility_graph": [
+      [
+        true,
+        true,
+        false,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ],
+      [
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "partition": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ]
+  },
+  "schema": "common-favorite-fourtype-rank2-refutation-audit-v1",
+  "selected_threshold_pass": true,
+  "source": "results/efx49_common_favorite_mixed_rank2_332_cap4_fourtype_sym_cegar_session3.json",
+  "source_sha256": "6280b2a80b1df03804239a32725eccc53f0905e6c008537070f22890e0f176d3",
+  "status": "FOUR_TYPE_RANK_TWO_SELECTION_LEMMA_REFUTED",
+  "strict_common_favorite": 0,
+  "supporting_partition_transfer_distance_histogram": {
+    "1": 3,
+    "2": 16,
+    "3": 112,
+    "4": 286,
+    "5": 182
+  },
+  "threshold_pass_count": 3,
+  "threshold_passes": [
+    {
+      "owner": 0,
+      "partition": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "partition_index": 53,
+      "resident_graph": [
+        [
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false
+        ]
+      ],
+      "resident_matching_rank": 1,
+      "shape": "332"
+    },
+    {
+      "owner": 0,
+      "partition": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6,
+          8
+        ]
+      ],
+      "partition_index": 86,
+      "resident_graph": [
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ]
+      ],
+      "resident_matching_rank": 1,
+      "shape": "332"
+    },
+    {
+      "owner": 0,
+      "partition": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "partition_index": 88,
+      "resident_graph": [
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          true
+        ]
+      ],
+      "resident_matching_rank": 1,
+      "shape": "332"
+    }
+  ],
+  "upper": 4,
+  "values": [
+    [
+      4,
+      2,
+      2,
+      2,
+      3,
+      1,
+      1,
+      3,
+      3
+    ],
+    [
+      4,
+      3,
+      1,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2
+    ],
+    [
+      4,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2
+    ],
+    [
+      4,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      2,
+      3
+    ]
+  ]
+}

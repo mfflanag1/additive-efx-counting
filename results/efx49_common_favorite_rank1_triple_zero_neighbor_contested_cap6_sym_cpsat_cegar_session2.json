@@ -1,0 +1,247 @@
+{
+  "blocked_partition_count": 21,
+  "branches": 146643,
+  "candidate_audit": {
+    "all_supporting_partition_count": 285,
+    "all_three_conversion_ranks": [
+      3,
+      3,
+      3
+    ],
+    "blocked_partition_supporting_count": 0,
+    "complete_efx_allocation_count": 3168,
+    "favorite_singleton_supporting_partition_count": 0,
+    "resident_graph": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    "selected_owner_threshold_pass": true,
+    "supporting_partition_count_by_shape": {
+      "3222": 285
+    }
+  },
+  "cegar_iterations": 2,
+  "cegar_singletons": true,
+  "cegar_trace": [
+    {
+      "iteration": 1,
+      "singleton_pool_size_before": 309,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 36.925563000000004,
+      "supported_unpooled_singleton_partition_count": 4,
+      "values": [
+        [
+          6,
+          5,
+          1,
+          1,
+          2,
+          2,
+          1,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          5,
+          5,
+          2,
+          1,
+          2,
+          4,
+          4
+        ],
+        [
+          6,
+          4,
+          5,
+          5,
+          1,
+          3,
+          1,
+          4,
+          4
+        ],
+        [
+          6,
+          3,
+          5,
+          5,
+          1,
+          3,
+          1,
+          5,
+          4
+        ]
+      ]
+    },
+    {
+      "iteration": 2,
+      "singleton_pool_size_before": 313,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 25.540987,
+      "supported_unpooled_singleton_partition_count": 0,
+      "values": [
+        [
+          6,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1,
+          5,
+          4
+        ],
+        [
+          5,
+          4,
+          3,
+          3,
+          1,
+          1,
+          2,
+          3,
+          3
+        ],
+        [
+          5,
+          3,
+          4,
+          4,
+          2,
+          1,
+          1,
+          3,
+          3
+        ],
+        [
+          5,
+          3,
+          4,
+          4,
+          2,
+          1,
+          1,
+          3,
+          3
+        ]
+      ]
+    }
+  ],
+  "cell_symmetry": true,
+  "claim_boundary": "SAT refutes only the selected local conversion-or-singleton implication under the recorded Hall-obstruction strength; it is not an EFX counterexample. UNSAT is bounded and requires independent replay.",
+  "conflicts": 4163,
+  "conversion_scope": "radius2_contested",
+  "domain": "positive integers in [1,6]",
+  "elapsed_seconds": 62.629167795181274,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "hall_obstruction": "zero_neighbor",
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap6_sym_cpsat_cegar_session2.pb",
+  "proto_bytes": 1872746,
+  "proto_sha256": "076e07f7538a37f7133daa352e520242fe3e5461fb6969529ab5d8f78eaa66ea",
+  "resident_rank_one_common_bundle": [
+    1,
+    2,
+    3
+  ],
+  "schema": "common-favorite-rank1-triple-conversion-cpsat-v1",
+  "seed_imports": [
+    {
+      "model_count": 3,
+      "new_singleton_count": 309,
+      "source": "results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap6_sym_cpsat_cegar_session1.json",
+      "source_sha256": "0953f4f06072694ced55123362d036319faf4bc205d58e6b237c9dd984aeb773"
+    }
+  ],
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "singleton_obstruction_pool_size": 313,
+  "solver_status": "OPTIMAL",
+  "solver_wall_seconds": 25.540987,
+  "status": "RANK1_TRIPLE_DICHOTOMY_COUNTEREXAMPLE",
+  "strict_common_favorite": 0,
+  "time_limit_seconds": 60.0,
+  "upper": 6,
+  "values": [
+    [
+      6,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1,
+      5,
+      4
+    ],
+    [
+      5,
+      4,
+      3,
+      3,
+      1,
+      1,
+      2,
+      3,
+      3
+    ],
+    [
+      5,
+      3,
+      4,
+      4,
+      2,
+      1,
+      1,
+      3,
+      3
+    ],
+    [
+      5,
+      3,
+      4,
+      4,
+      2,
+      1,
+      1,
+      3,
+      3
+    ]
+  ]
+}

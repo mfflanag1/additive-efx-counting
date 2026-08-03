@@ -34,14 +34,45 @@ paper/**/*.synctex.gz
 # Live solver workspaces and regenerable proof transcripts.  Durable theorem
 # notes, generators, compact JSON summaries, formal sources, and verification
 # code stay versioned; these multi-gigabyte files remain local.
-/output/
+/output/*
+!/output/cap5-certification/
+!/output/cap6-certification/
+/output/cap5-certification/*
+/output/cap6-certification/*
+!/output/cap5-certification/efx49_distinct_half_full_cell_cap5_core17.drat.xz
+!/output/cap6-certification/efx49_distinct_half_full_cell_cap6_core21.drat.xz
 /tmp/
 /results/*.drat
 /results/*.cnf
+!/results/efx49_distinct_half_full_cell_cap*_core*.cnf
 /results/*.cpc
+!/results/efx49_bottom_pattern*_conversion_selector*.cpc
+!/results/efx49_common_bottom_pairing_conversion_sorting.cpc
+!/results/efx49_three_agent_bottom_pairing_conversion_sorting.cpc
+!/results/efx49_two_pair_bottom_cross_overlap_orbit1_shared_active.cpc
 /results/*.smt2
+!/results/forced_singleton_swap_lemma.smt2
+!/results/efx49_bottom_pattern*_conversion_selector*.smt2
+!/results/efx49_common_bottom*.smt2
+!/results/efx49_three_agent_bottom*.smt2
+!/results/efx49_two_agent_bottom*.smt2
+!/results/efx49_two_pair_bottom*.smt2
+!/results/efx49_common_favorite_rank1_*.smt2
+!/results/efx49_distinct_half_*.smt2
+!/results/row_merge_*.smt2
 /results/*.pb
+!/results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap6_cpsat_session1.pb
+!/results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap20_cpsat_session1.pb
+!/results/efx49_common_favorite_threshold_pass_hall_332_no_radius2_cap6_cpsat_cegar_session1.pb
+!/results/efx49_common_favorite_mixed_*cegar_session*.pb
+!/results/efx49_common_favorite_rank1_*.pb
+!/results/efx49_common_favorite_threshold_pass_hall_*.pb
+!/results/efx49_distinct_half_*.pb
+!/results/efx49_overlap22_*.pb
 /results/*.pbtxt
+!/results/efx49_common_favorite_mixed_*.pbtxt
+!/results/efx49_common_favorite_rank1_*.pbtxt
+!/results/efx49_distinct_half_*.pbtxt
 /results/*.raw.*
 /results/*.stderr.*
 formal/**/.lake/

@@ -310,6 +310,117 @@ def audit_core(core_path, normalization_path, cvc5_path):
     }
 
 
+def audit_genericity_core(core_path, normalization_path, cvc5_path):
+    core = json.loads(core_path.read_text())
+    normalization = json.loads(normalization_path.read_text())
+    cvc5 = json.loads(cvc5_path.read_text())
+    source_path = Path(core["source"])
+    formula_path = Path(core["core_formula"])
+    normalized_path = Path(normalization["output"])
+    expected_bounds = {
+        ((0, 1, 4), (2,), "wall_epsilon < value_0_4"),
+        ((0, 1, 5), (2,), "wall_epsilon < value_0_5"),
+    }
+    recorded_bounds = {
+        (
+            tuple(record["left"]),
+            tuple(record["right"]),
+            record["equivalent_small_step_bound"],
+        )
+        for record in core.get("canonical_core", ())
+    }
+    if (
+        core.get("status") != "GENERICITY_ASSUMPTION_CORE_EXTRACTED"
+        or core.get("n") != 4
+        or core.get("m") != 7
+        or core.get("candidate_partition_count") != 7
+        or core.get("relaxed_status") != "sat"
+        or core.get("full_status") != "unsat"
+        or core.get("canonical_core_status") != "unsat"
+        or core.get("canonical_core_size") != 2
+        or not core.get("canonical_core_deletion_minimal")
+        or recorded_bounds != expected_bounds
+        or core.get("small_step_condition")
+        != "0 < wall_epsilon < min(value_0_4, value_0_5)"
+        or not source_path.is_file()
+        or hashlib.sha256(source_path.read_bytes()).hexdigest()
+        != core["source_sha256"]
+        or not formula_path.is_file()
+        or hashlib.sha256(formula_path.read_bytes()).hexdigest()
+        != core["core_formula_sha256"]
+        or normalization["source_sha256"] != core["core_formula_sha256"]
+        or not normalized_path.is_file()
+        or hashlib.sha256(normalized_path.read_bytes()).hexdigest()
+        != normalization["output_sha256"]
+        or cvc5.get("verdict") != "unsat"
+        or not cvc5.get("confirmed_expected")
+        or cvc5.get("formula_sha256") != normalization["output_sha256"]
+    ):
+        raise AssertionError("two-comparison genericity core audit failed")
+    return {
+        "source": str(core_path),
+        "source_sha256": hashlib.sha256(core_path.read_bytes()).hexdigest(),
+        "candidate_partition_count": 7,
+        "full_genericity_pair_count": core["genericity_pair_count"],
+        "canonical_core_size": 2,
+        "canonical_core_deletion_minimal": True,
+        "small_step_condition": core["small_step_condition"],
+        "core_formula_sha256": core["core_formula_sha256"],
+        "normalized_formula_sha256": normalization["output_sha256"],
+        "cvc5_status": cvc5["verdict"],
+        "cvc5_solver_sha256": cvc5["solver_sha256"],
+    }
+
+
+def audit_pair_pivot(source_path, normalization_path, cvc5_path):
+    source = json.loads(source_path.read_text())
+    normalization = json.loads(normalization_path.read_text())
+    cvc5 = json.loads(cvc5_path.read_text())
+    formula_path = Path(source["formula"])
+    normalized_path = Path(normalization["output"])
+    pivots = {
+        canonical(tuple(tuple(bundle) for bundle in partition))
+        for partition in source.get("pivots", ())
+    }
+    if (
+        source.get("schema")
+        != "row-merge-q4-small-step-pair-pivot-lra-v1"
+        or source.get("status") != "PAIR_PIVOT_LEMMA_VERIFIED"
+        or source.get("solver_status") != "unsat"
+        or source.get("n") != 4
+        or source.get("m") != 8
+        or source.get("minimal_hall_witness_size") != 4
+        or source.get("wall_partition")
+        != [[0, 1], [2, 3], [4, 5], [6, 7]]
+        or source.get("pivot_count") != 11
+        or len(pivots) != 11
+        or source.get("small_step_goods") != [4, 5, 6, 7]
+        or not formula_path.is_file()
+        or hashlib.sha256(formula_path.read_bytes()).hexdigest()
+        != source["formula_sha256"]
+        or normalization["source_sha256"] != source["formula_sha256"]
+        or not normalized_path.is_file()
+        or hashlib.sha256(normalized_path.read_bytes()).hexdigest()
+        != normalization["output_sha256"]
+        or cvc5.get("verdict") != "unsat"
+        or not cvc5.get("confirmed_expected")
+        or cvc5.get("formula_sha256") != normalization["output_sha256"]
+    ):
+        raise AssertionError("four-pair small-step pivot audit failed")
+    return {
+        "source": str(source_path),
+        "source_sha256": hashlib.sha256(source_path.read_bytes()).hexdigest(),
+        "scope": "four agents, eight goods, wall shape 2+2+2+2, Hall size four",
+        "pivot_count": 11,
+        "small_step_condition": source["small_step_condition"],
+        "z3_status": source["solver_status"],
+        "formula_sha256": source["formula_sha256"],
+        "normalized_formula_sha256": normalization["output_sha256"],
+        "cvc5_status": cvc5["verdict"],
+        "cvc5_solver_sha256": cvc5["solver_sha256"],
+    }
+
+
 def run(
     sources,
     output,
@@ -319,6 +430,12 @@ def run(
     core=None,
     core_normalization=None,
     core_cvc5=None,
+    genericity_core=None,
+    genericity_normalization=None,
+    genericity_cvc5=None,
+    pair_pivot=None,
+    pair_pivot_normalization=None,
+    pair_pivot_cvc5=None,
 ):
     if output.exists():
         raise ValueError("output path already exists")
@@ -339,6 +456,30 @@ def run(
         if all(core_inputs)
         else None
     )
+    genericity_inputs = (
+        genericity_core,
+        genericity_normalization,
+        genericity_cvc5,
+    )
+    if any(genericity_inputs) and not all(genericity_inputs):
+        raise ValueError("all three genericity-core inputs are required together")
+    genericity_record = (
+        audit_genericity_core(*genericity_inputs)
+        if all(genericity_inputs)
+        else None
+    )
+    pair_pivot_inputs = (
+        pair_pivot,
+        pair_pivot_normalization,
+        pair_pivot_cvc5,
+    )
+    if any(pair_pivot_inputs) and not all(pair_pivot_inputs):
+        raise ValueError("all three pair-pivot inputs are required together")
+    pair_pivot_record = (
+        audit_pair_pivot(*pair_pivot_inputs)
+        if all(pair_pivot_inputs)
+        else None
+    )
     result = {
         "schema": SCHEMA,
         "status": "SINGLE_WALL_RADIUS_REFUTATIONS_AUDITED",
@@ -346,13 +487,17 @@ def run(
         "records": records,
         "dual_solver_unsat_boundary": unsat_boundary,
         "dual_solver_seven_partition_core": core_record,
+        "dual_solver_two_comparison_core": genericity_record,
+        "dual_solver_four_pair_pivot": pair_pivot_record,
         "claim": (
-            "Generic essential single-wall failures of each realizable Hall size "
-            "can defeat the audited local transfer radius."
+            "Generic essential single-wall failures can defeat fixed radius-two "
+            "menus, while the audited Hall-size-four small-step cells admit one "
+            "of seven pivots at m=7 and one of eleven pivots at balanced m=8."
         ),
         "claim_boundary": (
-            "These positive post-wall instances retain complete EFX allocations "
-            "farther away. They refute local pivot menus, not additive EFX existence."
+            "The m=8 positive result covers only wall shape 2+2+2+2 and a "
+            "minimal Hall witness of size four. It does not prove row-merge "
+            "continuation or general additive EFX existence."
         ),
     }
     atomic_json(output, result)
@@ -369,6 +514,12 @@ def main():
     parser.add_argument("--core", type=Path)
     parser.add_argument("--core-normalization", type=Path)
     parser.add_argument("--core-cvc5", type=Path)
+    parser.add_argument("--genericity-core", type=Path)
+    parser.add_argument("--genericity-normalization", type=Path)
+    parser.add_argument("--genericity-cvc5", type=Path)
+    parser.add_argument("--pair-pivot", type=Path)
+    parser.add_argument("--pair-pivot-normalization", type=Path)
+    parser.add_argument("--pair-pivot-cvc5", type=Path)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     run(
@@ -380,6 +531,12 @@ def main():
         args.core,
         args.core_normalization,
         args.core_cvc5,
+        args.genericity_core,
+        args.genericity_normalization,
+        args.genericity_cvc5,
+        args.pair_pivot,
+        args.pair_pivot_normalization,
+        args.pair_pivot_cvc5,
     )
 
 

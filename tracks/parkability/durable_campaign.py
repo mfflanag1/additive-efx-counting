@@ -259,7 +259,9 @@ def _redact_remote(remote: str) -> str:
 def resolve_interpreter(interpreter: Path | str) -> Path:
     raw = os.fspath(interpreter)
     resolved = shutil.which(raw) if os.sep not in raw else None
-    path = Path(resolved or raw).resolve()
+    # Preserve virtual-environment launcher symlinks: resolving one selects the
+    # base interpreter and silently drops the environment's site-packages.
+    path = Path(resolved or raw).expanduser().absolute()
     if not path.is_file():
         raise CampaignError(f"Python interpreter does not exist: {path}")
     return path

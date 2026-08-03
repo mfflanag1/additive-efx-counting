@@ -1,0 +1,78 @@
+{
+  "add_per_iteration": 966,
+  "blocked_partition_count": 30,
+  "branches": 264769,
+  "candidate_audit": null,
+  "cegar_iterations": 0,
+  "cegar_singletons": true,
+  "cegar_trace": [],
+  "cell_symmetry": true,
+  "claim_boundary": "SAT refutes only the selected local conversion-or-singleton implication under the recorded Hall-obstruction strength; it is not an EFX counterexample. UNSAT is bounded and requires independent replay.",
+  "conflicts": 33162,
+  "conversion_scope": "radius2_bridge",
+  "domain": "positive integers in [1,6]",
+  "elapsed_seconds": 60.037651777267456,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "hall_obstruction": "any",
+  "m": 9,
+  "max_iterations": 3,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_rank1_triple_no_radius2_bridge_cap6_sym_cpsat_cegar_session1.pb",
+  "proto_bytes": 1928719,
+  "proto_sha256": "b0668b638b7d7d161dc1c4ac0f9390dbdc4c843393cd72bbf5a2b17f475563da",
+  "resident_rank_one_common_bundle": [
+    1,
+    2,
+    3
+  ],
+  "schema": "common-favorite-rank1-triple-conversion-cpsat-v1",
+  "seed_imports": [
+    {
+      "import_mode": "singleton_obstructions_only",
+      "model_count": 3,
+      "new_singleton_count": 309,
+      "source": "results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap6_sym_cpsat_cegar_session1.json",
+      "source_conversion_scope": "radius2_contested",
+      "source_hall_obstruction": "zero_neighbor",
+      "source_sha256": "0953f4f06072694ced55123362d036319faf4bc205d58e6b237c9dd984aeb773"
+    },
+    {
+      "import_mode": "singleton_obstructions_only",
+      "model_count": 3,
+      "new_singleton_count": 4,
+      "source": "results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap6_sym_cpsat_cegar_session2.json",
+      "source_conversion_scope": "radius2_contested",
+      "source_hall_obstruction": "zero_neighbor",
+      "source_sha256": "66b7f87d885b466ebe203bc783a58077bf4767990b90d058bc0f9496ac004e77"
+    }
+  ],
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "singleton_obstruction_pool_size": 313,
+  "solver_status": "UNKNOWN",
+  "solver_wall_seconds": 60.027506,
+  "status": "MASTER_UNKNOWN",
+  "strict_common_favorite": 0,
+  "time_limit_seconds": 60.0,
+  "upper": 6,
+  "values": null
+}

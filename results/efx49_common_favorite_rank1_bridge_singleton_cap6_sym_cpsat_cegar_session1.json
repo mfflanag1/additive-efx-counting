@@ -1,0 +1,349 @@
+{
+  "add_per_iteration": 256,
+  "best_singleton_support_count": 0,
+  "best_values": [
+    [
+      6,
+      1,
+      1,
+      1,
+      3,
+      3,
+      3,
+      4,
+      1
+    ],
+    [
+      5,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      1,
+      3
+    ],
+    [
+      5,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      1,
+      3
+    ],
+    [
+      5,
+      4,
+      4,
+      4,
+      2,
+      2,
+      2,
+      1,
+      3
+    ]
+  ],
+  "bridge_union_partition_count": 30,
+  "cegar_trace": [
+    {
+      "all_singleton_support_count": 41,
+      "best_objective_bound": 30.0,
+      "branches": 316,
+      "conflicts": 0,
+      "iteration": 1,
+      "new_singleton_partition_count": 41,
+      "objective_obstructed_pool_count": 30,
+      "pool_size_before": 30,
+      "pooled_singleton_support_count": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 1.35525,
+      "supported_outside_pool_count": 41,
+      "values": [
+        [
+          6,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          5,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          6,
+          5,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4,
+          3,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "all_singleton_support_count": 116,
+      "best_objective_bound": 71.0,
+      "branches": 435,
+      "conflicts": 1,
+      "iteration": 2,
+      "new_singleton_partition_count": 116,
+      "objective_obstructed_pool_count": 71,
+      "pool_size_before": 71,
+      "pooled_singleton_support_count": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 3.1534380000000004,
+      "supported_outside_pool_count": 116,
+      "values": [
+        [
+          6,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          4,
+          1
+        ],
+        [
+          6,
+          4,
+          1,
+          4,
+          1,
+          2,
+          1,
+          3,
+          4
+        ],
+        [
+          6,
+          4,
+          1,
+          4,
+          1,
+          2,
+          1,
+          2,
+          4
+        ],
+        [
+          6,
+          4,
+          1,
+          3,
+          1,
+          1,
+          1,
+          1,
+          5
+        ]
+      ]
+    },
+    {
+      "all_singleton_support_count": 31,
+      "best_objective_bound": 187.0,
+      "branches": 2016,
+      "conflicts": 0,
+      "iteration": 3,
+      "new_singleton_partition_count": 31,
+      "objective_obstructed_pool_count": 187,
+      "pool_size_before": 187,
+      "pooled_singleton_support_count": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 11.842942,
+      "supported_outside_pool_count": 31,
+      "values": [
+        [
+          6,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          3,
+          2
+        ],
+        [
+          6,
+          1,
+          1,
+          5,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        [
+          6,
+          1,
+          1,
+          5,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "all_singleton_support_count": 0,
+      "best_objective_bound": 218.0,
+      "branches": 5767,
+      "conflicts": 1,
+      "iteration": 4,
+      "objective_obstructed_pool_count": 218,
+      "pool_size_before": 218,
+      "pooled_singleton_support_count": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 21.169826,
+      "supported_outside_pool_count": 0,
+      "values": [
+        [
+          6,
+          1,
+          1,
+          1,
+          3,
+          3,
+          3,
+          4,
+          1
+        ],
+        [
+          5,
+          4,
+          4,
+          4,
+          2,
+          2,
+          2,
+          1,
+          3
+        ],
+        [
+          5,
+          4,
+          4,
+          4,
+          2,
+          2,
+          2,
+          1,
+          3
+        ],
+        [
+          5,
+          4,
+          4,
+          4,
+          2,
+          2,
+          2,
+          1,
+          3
+        ]
+      ]
+    }
+  ],
+  "cell_symmetry": true,
+  "claim_boundary": "A zero witness refutes only the selected 30-state local lemma. A positive optimum certifies only this bounded integer cell. Neither outcome resolves complete additive EFX.",
+  "domain": "positive integers in [1,6]",
+  "elapsed_seconds": 38.08306312561035,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exact_minimum_singleton_support_count": 0,
+  "favorite_singleton_partition_count": 966,
+  "final_solver_status": "OPTIMAL",
+  "initial_singleton_pool_size": 30,
+  "m": 9,
+  "max_iterations": 8,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_rank1_bridge_singleton_cap6_sym_cpsat_cegar_session1.pbtxt",
+  "proto_bytes": 4485999,
+  "proto_sha256": "5f6ecdc7ca10cc7b1f354be6c99d2165cb43721cc06dfdc6f025af66914c15e0",
+  "random_seed": 1,
+  "resident_rank_one_common_bundle": [
+    1,
+    2,
+    3
+  ],
+  "schema": "common-favorite-rank1-bridge-singleton-optimization-cpsat-v1",
+  "seed_imports": [
+    {
+      "accepted_model_count": 1,
+      "candidate_model_count": 1,
+      "source": "results/efx49_common_favorite_rank1_bridge_checkpoint_profile.json",
+      "source_sha256": "b3b12876730532d16dee588e7311fa08ea04a7f3ac6fbd3fd8c7d3516d2e6437"
+    }
+  ],
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "status": "BOUNDED_RANK1_BRIDGE_LEMMA_REFUTED",
+  "strict_common_favorite": 0,
+  "terminal_singleton_pool_size": 218,
+  "terminal_status": "OPTIMAL_FIXED_POINT",
+  "time_limit_seconds_per_iteration": 60.0,
+  "upper": 6,
+  "workers": 8
+}

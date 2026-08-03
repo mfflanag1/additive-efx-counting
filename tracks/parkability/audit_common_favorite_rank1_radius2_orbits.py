@@ -207,7 +207,7 @@ def run(local6_path, contested_path, output_path):
 
     result = {
         "schema": SCHEMA,
-        "status": "CONTESTED_RADIUS_TWO_GATE_OPEN",
+        "status": "CONTESTED_RADIUS_TWO_EARLY_GATE_SUPERSEDED",
         "n": 4,
         "m": 9,
         "domain": "positive additive valuations",
@@ -238,10 +238,13 @@ def run(local6_path, contested_path, output_path):
             "solver_wall_seconds": boundary["solver_wall_seconds"],
             "proto_sha256": boundary["proto_sha256"],
         },
+        "superseded_by": (
+            "results/efx49_common_favorite_rank1_contested_refutation_audit.json"
+        ),
         "claim_boundary": (
-            "The 21-state implication remains open. The UNKNOWN endpoint "
-            "neither proves that this family always repairs a rank-one state "
-            "nor supplies a profile blocking it and all singleton completions."
+            "This historical UNKNOWN endpoint decided neither direction. A "
+            "later exact cap-6 profile refutes the 21-state implication and "
+            "is recorded in the superseding audit."
         ),
     }
     atomic_json(output_path, result)

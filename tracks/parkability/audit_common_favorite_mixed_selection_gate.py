@@ -21,6 +21,10 @@ try:
         residual_partitions,
         threshold_passes,
     )
+    from .run_common_favorite_mixed_zero_neighbor_cegar import (
+        proportional_rows,
+        reconstruct_seed_motifs,
+    )
 except ImportError:
     from anneal import atomic_json
     from audit_matching_augmentation import feasible_graph, matching_rank
@@ -31,6 +35,10 @@ except ImportError:
         SHAPES,
         residual_partitions,
         threshold_passes,
+    )
+    from run_common_favorite_mixed_zero_neighbor_cegar import (
+        proportional_rows,
+        reconstruct_seed_motifs,
     )
 
 
@@ -165,21 +173,25 @@ def selection_motifs(values, motif):
     return found
 
 
-def audit_search(path, motif):
+def audit_search(
+    path,
+    motif,
+    upper=20,
+    require_pairwise_nonproportional_rows=False,
+):
     payload = json.loads(path.read_text())
-    old_zero_schema = motif == "zero_neighbor_rank_two"
-    expected_schema = (
-        "common-favorite-mixed-zero-neighbor-cegar-v1"
-        if old_zero_schema
-        else "common-favorite-mixed-selection-cegar-v1"
-    )
-    expected_status = "MASTER_UNKNOWN" if old_zero_schema else "ITERATION_LIMIT"
+    accepted_schemas = {
+        "common-favorite-mixed-zero-neighbor-cegar-v1",
+        "common-favorite-mixed-selection-cegar-v1",
+    }
     if (
-        payload.get("schema") != expected_schema
-        or payload.get("status") != expected_status
-        or payload.get("upper") != 20
+        payload.get("schema") not in accepted_schemas
+        or payload.get("status") not in {"MASTER_UNKNOWN", "ITERATION_LIMIT"}
+        or payload.get("upper") != upper
         or payload.get("selected_residual_shape") != "332"
         or (payload.get("selection_motif") or "zero_neighbor_rank_two") != motif
+        or payload.get("require_pairwise_nonproportional_rows", False)
+        != require_pairwise_nonproportional_rows
         or payload.get("values") is not None
     ):
         raise ValueError("selection-search metadata changed")
@@ -187,17 +199,40 @@ def audit_search(path, motif):
     if not proto.is_file() or sha256(proto) != payload["proto_sha256"]:
         raise AssertionError("selection-search proto changed")
 
+    residual = tuple(residual_partitions())
     learned = set()
+    for imported in payload.get("seed_imports", []):
+        seed_path = Path(imported["source"])
+        if (
+            not seed_path.is_file()
+            or sha256(seed_path) != imported["source_sha256"]
+        ):
+            raise AssertionError("selection seed changed")
+        learned.update(
+            reconstruct_seed_motifs(seed_path, motif, upper, residual)
+        )
+    initial_learned_count = len(learned)
     motif_sequence = []
-    for expected_iteration, record in enumerate(payload["trace"], 1):
+    for index, record in enumerate(payload["trace"]):
         values = tuple(tuple(row) for row in record["values"])
         if (
-            record["iteration"] != expected_iteration
+            record["iteration"] != index + 1
             or record["learned_motif_count_before"] != len(learned)
+            or any(
+                type(value) is not int or not 1 <= value <= upper
+                for row in values
+                for value in row
+            )
             or any(row[0] <= max(row[1:]) for row in values)
             or not threshold_passes(values, 0, SHAPES["332"])
         ):
             raise AssertionError("selection trace left the target cell")
+        if require_pairwise_nonproportional_rows and any(
+            proportional_rows(values[left], values[right])
+            for left in range(N)
+            for right in range(left + 1, N)
+        ):
+            raise AssertionError("selection trace gained proportional rows")
         if any(
             matching_rank(feasible_graph(values, ((FAVORITE,),) + partition)) == N
             for partition in residual_partitions()
@@ -211,10 +246,21 @@ def audit_search(path, motif):
         if len(motifs) != recorded_count:
             raise AssertionError("selection motif census changed")
         motif_sequence.append(len(motifs))
-        learned.update(motifs[:64])
+        target_size = (
+            payload["trace"][index + 1]["learned_motif_count_before"]
+            if index + 1 < len(payload["trace"])
+            else payload["learned_motif_count"]
+        )
+        add_count = target_size - len(learned)
+        if not 0 <= add_count <= len(motifs):
+            raise AssertionError("selection learned-count transition changed")
+        learned.update(motifs[:add_count])
     if len(learned) != payload["learned_motif_count"]:
         raise AssertionError("learned selection pool changed")
-    return {
+    reconstructed = reconstruct_seed_motifs(path, motif, upper, residual)
+    if learned != reconstructed:
+        raise AssertionError("serialized selection pool disagrees with replay")
+    result = {
         "source": str(path),
         "source_sha256": sha256(path),
         "motif": motif,
@@ -225,6 +271,9 @@ def audit_search(path, motif):
         "reconstructed_learned_motif_count": len(learned),
         "proto_sha256": payload["proto_sha256"],
     }
+    if payload.get("seed_imports"):
+        result["initial_learned_motif_count"] = initial_learned_count
+    return result
 
 
 def run(profile_paths, zero_path, rank_path, output):
