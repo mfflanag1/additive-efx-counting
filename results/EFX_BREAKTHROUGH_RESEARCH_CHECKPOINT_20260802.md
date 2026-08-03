@@ -170,6 +170,20 @@ global cuts are connected transfers.  This is a bounded edge-cell theorem,
 not yet the same theorem for the coarser cyclic pair-Hall normal form; see
 `PARTIAL_THRESHOLD_FOUR_HOST_EDGE_CELL_THEOREM.md`.
 
+The subsequent coarsening pass leaves eight diagonal host-edge switches free
+while fixing the source's other 24 unconstrained edge values.  Exact models
+refute both a named-swap lemma and the full 32-state distance-two exchange
+menu in diagonal pattern 1.  The stronger countermodel has a blocked token
+orbit but is not globally maximal; its nearest higher Hall-completable state
+is a connected distance-three transfer.  A finer matching-witness CEGAR then
+closed the complete pattern-1 edge cell with 65 global cuts and 116 individual
+completion blockers after 50 cumulative iterations.  A fresh staged replay
+reproduced the same ordered pools and UNSAT verdict; all 65 global witnesses
+are connected and have owner distance at most four.  Pattern 2 remains
+UNKNOWN after 58 global cuts and 70 matching blockers.  See
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and
+`PARTIAL_THRESHOLD_DIAGONAL_SWITCH_GATE.md` for the exact boundary and replay.
+
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
 be integrated with the known one-unallocated-good theorem to prove complete

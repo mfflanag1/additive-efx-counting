@@ -1,0 +1,59 @@
+{
+  "all_have_hall_completing_higher_state": true,
+  "all_selected_higher_states_connected": true,
+  "claim_boundary": "This is finite landmark evidence, not a proof that every blocked orbit has a connected completing improver.",
+  "landmark_count": 1,
+  "meaning": "Exact replay of the nearest higher Hall-completable allocation for selected blocked-orbit landmark valuations.",
+  "records": [
+    {
+      "eligible_orbit_state_count": 1,
+      "global_maximizer_count": 5,
+      "higher_state": {
+        "best_hall_margin": "7/986",
+        "best_host": 3,
+        "best_permutation": [
+          0,
+          2,
+          3,
+          1
+        ],
+        "floater": 8,
+        "hall_insertable": true,
+        "masks": [
+          6,
+          9,
+          48,
+          192
+        ],
+        "owner_distance": 2,
+        "threshold_gain_denominator": 7888,
+        "threshold_gain_numerator": 212
+      },
+      "source": "results/minimum_slot_orbit_diagonal_pattern1_swap_cegar_session1.json",
+      "source_sha256": "3825af8229421a8eb452b38f49aed1cf1b20e4790541882f96ae13848f54ebf8",
+      "transfer_component_count": 1,
+      "transfer_components": [
+        {
+          "edges": [
+            {
+              "destination": 1,
+              "good": 0,
+              "source": 0
+            },
+            {
+              "destination": 0,
+              "good": 2,
+              "source": 1
+            }
+          ],
+          "vertices": [
+            0,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "schema": "minimum-slot-nearest-completing-landmark-audit-v1",
+  "status": "ALL_LANDMARKS_HAVE_CONNECTED_COMPLETING_IMPROVER"
+}

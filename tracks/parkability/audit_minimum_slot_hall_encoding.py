@@ -18,6 +18,7 @@ try:
         minimum_slot_orbit_states,
     )
     from .run_minimum_slot_orbit_cegar import (
+        efx_edge,
         hall_matching_failure,
         numeric_complete_edges,
     )
@@ -25,12 +26,13 @@ except ImportError:
     from anneal import atomic_json
     from audit_minimum_slot_orbit import bundles_from_masks, minimum_slot_orbit_states
     from run_minimum_slot_orbit_cegar import (
+        efx_edge,
         hall_matching_failure,
         numeric_complete_edges,
     )
 
 
-SCHEMA = "minimum-slot-hall-encoding-audit-v1"
+SCHEMA = "minimum-slot-hall-encoding-audit-v2"
 BASE_STATE = {"floater": 8, "masks": (3, 12, 48, 192)}
 MINIMA = (1, 3, 5, 7)
 
@@ -55,11 +57,45 @@ def symbolic_matching_failure(values, complete, prefix):
     return result == z3.sat
 
 
+def symbolic_enumerated_matching_failure(values, complete):
+    symbolic_values = [
+        [z3.RealVal(entry) for entry in row]
+        for row in values
+    ]
+    formula = z3.And(
+        *(
+            z3.Or(
+                *(
+                    z3.Not(
+                        efx_edge(
+                            symbolic_values,
+                            complete,
+                            observer,
+                            permutation[observer],
+                        )
+                    )
+                    for observer in range(4)
+                )
+            )
+            for permutation in itertools.permutations(range(4))
+        )
+    )
+    solver = z3.Solver()
+    solver.add(formula)
+    result = solver.check()
+    if result == z3.unknown:
+        raise RuntimeError(
+            f"enumerated matching encoding returned unknown: {solver.reason_unknown()}"
+        )
+    return result == z3.sat
+
+
 def audit_profile(name, values, source=None):
     mismatches = []
     host_checks = 0
     explicit_failures = 0
-    symbolic_failures = 0
+    hall_symbolic_failures = 0
+    enumerated_symbolic_failures = 0
     for state_index, state in enumerate(
         minimum_slot_orbit_states(values, BASE_STATE, MINIMA)
     ):
@@ -69,22 +105,32 @@ def audit_profile(name, values, source=None):
             complete[host] = tuple(sorted((*complete[host], state["floater"])))
             edges = numeric_complete_edges(values, complete)
             explicit_failure = not explicit_matching_exists(edges)
-            symbolic_failure = symbolic_matching_failure(
+            hall_symbolic_failure = symbolic_matching_failure(
                 values,
                 complete,
                 f"audit_{name}_{state_index}_{host}",
             )
+            enumerated_symbolic_failure = symbolic_enumerated_matching_failure(
+                values,
+                complete,
+            )
             host_checks += 1
             explicit_failures += int(explicit_failure)
-            symbolic_failures += int(symbolic_failure)
-            if explicit_failure != symbolic_failure:
+            hall_symbolic_failures += int(hall_symbolic_failure)
+            enumerated_symbolic_failures += int(enumerated_symbolic_failure)
+            if not (
+                explicit_failure
+                == hall_symbolic_failure
+                == enumerated_symbolic_failure
+            ):
                 mismatches.append(
                     {
                         "assignment": list(state["assignment"]),
                         "host": host,
                         "edges": [list(row) for row in edges],
                         "explicit_failure": explicit_failure,
-                        "symbolic_failure": symbolic_failure,
+                        "hall_symbolic_failure": hall_symbolic_failure,
+                        "enumerated_symbolic_failure": enumerated_symbolic_failure,
                     }
                 )
     record = {
@@ -92,7 +138,8 @@ def audit_profile(name, values, source=None):
         "orbit_state_count": 120,
         "host_check_count": host_checks,
         "explicit_failure_count": explicit_failures,
-        "symbolic_failure_count": symbolic_failures,
+        "hall_symbolic_failure_count": hall_symbolic_failures,
+        "enumerated_symbolic_failure_count": enumerated_symbolic_failures,
         "mismatch_count": len(mismatches),
         "mismatches": mismatches,
     }
@@ -114,9 +161,10 @@ def run(source, output):
         "schema": SCHEMA,
         "status": "EXACT_MATCH" if mismatch_count == 0 else "MISMATCH",
         "meaning": (
-            "The compact symbolic Hall-failure formula agrees with explicit "
-            "enumeration of all 24 perfect matchings for every host completion "
-            "of all 120 token-orbit states in both audit profiles."
+            "The compact symbolic Hall-failure formula and the auxiliary-free "
+            "24-matching blocker both agree with explicit perfect-matching "
+            "enumeration for every host completion of all 120 token-orbit states "
+            "in both audit profiles."
         ),
         "claim_boundary": (
             "This validates the encoding on two exact profiles; it is not an "

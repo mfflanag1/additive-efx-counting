@@ -1,0 +1,28 @@
+{
+  "certificate": "results/minimum_slot_orbit_diagonal_pattern1_global_witness_cegar_session3.json",
+  "certificate_sha256": "c323d04cd29e504bf323208ca88ea09525d8f6e4e98cd6533250180403df9213",
+  "checks": {
+    "certificate_unsat": true,
+    "replay_not_unknown": true,
+    "replay_unsat": true,
+    "same_completion_cuts": true,
+    "same_diagonal_pattern": true,
+    "same_edge_cell_source_hash": true,
+    "same_global_cuts": true,
+    "same_offhost_edge_cell_source_hash": true,
+    "same_orbit_hall_cuts": true,
+    "same_pair_hall_cycle": true
+  },
+  "claim_boundary": "The replay confirms the exact bounded formula and its persisted cut pool. It does not remove any recorded edge-cell assumptions or prove general four-agent EFX.",
+  "completion_cut_count": 116,
+  "global_cut_count": 65,
+  "meaning": "A fresh staged CEGAR reconstruction returned UNSAT and reproduced the certificate's complete ordered cut pools exactly.",
+  "orbit_hall_cut_count": 0,
+  "replay": "results/minimum_slot_orbit_diagonal_pattern1_global_witness_cegar_staged_replay.json",
+  "replay_elapsed_seconds": 374.16218012489844,
+  "replay_iteration_count": 26,
+  "replay_mode": "staged",
+  "replay_sha256": "efe0a6f9981b02bf68b81e21ae02c5c8421b0e60889fa31823e3638b33522bb9",
+  "schema": "minimum-slot-cegar-replay-audit-v1",
+  "status": "FRESH_REPLAY_CONFIRMED"
+}

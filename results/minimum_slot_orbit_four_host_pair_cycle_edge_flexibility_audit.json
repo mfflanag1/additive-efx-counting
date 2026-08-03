@@ -1,0 +1,506 @@
+{
+  "baseline_reason_unknown": null,
+  "baseline_verdict": "SAT",
+  "claim_boundary": "SAT flips identify an adjacent simultaneously blocked edge cell. UNSAT flips prove only local Hamming-one isolation from the source pattern; multiple edge bits may still change together.",
+  "flexible_edge_count": 5,
+  "flip_timeout_seconds_per_check": 60,
+  "forced_edge_count": 24,
+  "free_edge_count": 32,
+  "meaning": "Exact satisfiability test of every Hamming-one neighboring host-edge cell, holding the other 31 bits at the source pattern under simultaneous blockage of all 120 token states.",
+  "records": [
+    {
+      "assigned": 0,
+      "flip_verdict": "SAT",
+      "host": 0,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": false,
+      "values": [
+        [
+          1809,
+          132,
+          1921,
+          16,
+          1865,
+          28,
+          1841,
+          12,
+          24
+        ],
+        [
+          5736,
+          1912,
+          5757,
+          5736,
+          9581,
+          1891,
+          3803,
+          3803,
+          1933
+        ],
+        [
+          12,
+          12,
+          12,
+          26,
+          1841,
+          36,
+          6,
+          1869,
+          10
+        ],
+        [
+          14,
+          1875,
+          10,
+          4,
+          10,
+          2,
+          1855,
+          36,
+          18
+        ]
+      ]
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNSAT",
+      "host": 0,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNSAT",
+      "host": 0,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNSAT",
+      "host": 0,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "SAT",
+      "host": 0,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": false,
+      "values": [
+        [
+          1959,
+          1955,
+          3906,
+          4,
+          16,
+          3874,
+          3870,
+          20,
+          12
+        ],
+        [
+          3874,
+          16,
+          1959,
+          1955,
+          4,
+          3906,
+          1979,
+          1911,
+          12
+        ],
+        [
+          3867,
+          32,
+          3871,
+          16,
+          3851,
+          60,
+          3903,
+          4,
+          12
+        ],
+        [
+          1955,
+          2,
+          1939,
+          8,
+          1937,
+          2,
+          1927,
+          32,
+          6
+        ]
+      ]
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNSAT",
+      "host": 0,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNSAT",
+      "host": 0,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNSAT",
+      "host": 0,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "UNSAT",
+      "host": 1,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNKNOWN",
+      "host": 1,
+      "observer": 2,
+      "reason_unknown": "canceled",
+      "source_edge": false,
+      "values": null
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNSAT",
+      "host": 1,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNSAT",
+      "host": 1,
+      "observer": 2,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "UNSAT",
+      "host": 1,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "SAT",
+      "host": 1,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": false,
+      "values": [
+        [
+          631259,
+          36,
+          3,
+          631289,
+          631259,
+          15,
+          9,
+          6,
+          12
+        ],
+        [
+          210414,
+          6,
+          210421,
+          10,
+          210429,
+          1,
+          5,
+          7,
+          3
+        ],
+        [
+          913,
+          1102,
+          913,
+          2016,
+          310247,
+          2928,
+          1,
+          312264,
+          912
+        ],
+        [
+          10,
+          946922,
+          315674,
+          315639,
+          45,
+          5,
+          631278,
+          631273,
+          315634
+        ]
+      ]
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNSAT",
+      "host": 1,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNSAT",
+      "host": 1,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "UNSAT",
+      "host": 2,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNSAT",
+      "host": 2,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "SAT",
+      "host": 2,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": false,
+      "values": [
+        [
+          601238,
+          601236,
+          2,
+          1202470,
+          601234,
+          300619,
+          300613,
+          300611,
+          300617
+        ],
+        [
+          325,
+          164,
+          1051346,
+          327,
+          1051512,
+          156,
+          163,
+          165,
+          162
+        ],
+        [
+          30412,
+          32959,
+          32969,
+          65918,
+          10342864,
+          97597,
+          10,
+          10410069,
+          30402
+        ],
+        [
+          10,
+          6312946,
+          2104307,
+          2104297,
+          80,
+          70,
+          4208614,
+          4208594,
+          2104282
+        ]
+      ]
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNSAT",
+      "host": 2,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "UNSAT",
+      "host": 2,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNSAT",
+      "host": 2,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNKNOWN",
+      "host": 2,
+      "observer": 3,
+      "reason_unknown": "canceled",
+      "source_edge": false,
+      "values": null
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNSAT",
+      "host": 2,
+      "observer": 3,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "UNSAT",
+      "host": 3,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNSAT",
+      "host": 3,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNSAT",
+      "host": 3,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "SAT",
+      "host": 3,
+      "observer": 0,
+      "reason_unknown": null,
+      "source_edge": false,
+      "values": [
+        [
+          4735,
+          4729,
+          9446,
+          12,
+          6,
+          18,
+          4759,
+          4681,
+          30
+        ],
+        [
+          18,
+          15,
+          2366,
+          2363,
+          4723,
+          3,
+          3540,
+          1171,
+          9
+        ],
+        [
+          1197,
+          1155,
+          2354,
+          10,
+          1189,
+          1187,
+          2,
+          2372,
+          6
+        ],
+        [
+          4749,
+          4,
+          4681,
+          20,
+          4705,
+          16,
+          4725,
+          32,
+          12
+        ]
+      ]
+    },
+    {
+      "assigned": 0,
+      "flip_verdict": "UNSAT",
+      "host": 3,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": false
+    },
+    {
+      "assigned": 1,
+      "flip_verdict": "UNSAT",
+      "host": 3,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 2,
+      "flip_verdict": "UNSAT",
+      "host": 3,
+      "observer": 1,
+      "reason_unknown": null,
+      "source_edge": true
+    },
+    {
+      "assigned": 3,
+      "flip_verdict": "UNKNOWN",
+      "host": 3,
+      "observer": 1,
+      "reason_unknown": "canceled",
+      "source_edge": false,
+      "values": null
+    }
+  ],
+  "schema": "minimum-slot-pair-cycle-edge-flexibility-audit-v1",
+  "source": "results/minimum_slot_orbit_hall_state_nearest_cegar_session2_orbit_blocked_seed.json",
+  "status": "EDGE_FLEXIBILITY_PARTIAL",
+  "timeout_seconds_per_check": 60,
+  "unknown_edge_count": 3
+}

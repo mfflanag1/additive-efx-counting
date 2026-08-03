@@ -52,6 +52,7 @@ SCHEMA = "minimum-slot-orbit-global-threshold-cegar-v1"
 BASE = ((0, 1), (2, 3), (4, 5), (6, 7))
 CORES = (0, 2, 4, 6)
 TOKENS = (1, 3, 5, 7, 8)
+PAIR_HALL_CYCLE = ((0, 3), (0, 1), (1, 2), (2, 3))
 FLOATER = 8
 
 
@@ -149,6 +150,25 @@ def orbit_hall_failure(values, assignment):
             )
         )
     return z3.And(*failures)
+
+
+def orbit_matching_failure(values, assignment):
+    bundles = orbit_bundles(assignment)
+    failures = []
+    for host in range(4):
+        failures.extend(
+            complete_failure(values, bundles, assignment[4], host, permutation)
+            for permutation in itertools.permutations(range(4))
+        )
+    return z3.And(*failures)
+
+
+def orbit_completion_failure(values, assignment, mode):
+    if mode == "orbit_hall":
+        return orbit_hall_failure(values, assignment)
+    if mode == "orbit_matching":
+        return orbit_matching_failure(values, assignment)
+    raise ValueError(f"no whole-orbit blocker for mode: {mode}")
 
 
 def orbit_bundles(assignment):
@@ -385,19 +405,46 @@ def run(
     solver_profile: str = "default",
     global_witness_mode: str = "any",
     base_host_edge_cell_source: Path | None = None,
+    base_host_pair_hall_cycle: bool = False,
+    base_host_offhost_edge_cell_source: Path | None = None,
+    base_host_diagonal_pattern: int | None = None,
+    smt2_output: Path | None = None,
 ):
-    if completion_cut_mode not in {"witness", "orbit_hall"}:
-        raise ValueError("completion-cut mode must be witness or orbit_hall")
-    if solver_profile not in {"default", "qf_lra"}:
-        raise ValueError("solver profile must be default or qf_lra")
+    if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
+        raise ValueError(
+            "completion-cut mode must be witness, orbit_hall, or orbit_matching"
+        )
+    if solver_profile not in {"default", "qf_lra", "arith2"}:
+        raise ValueError("solver profile must be default, qf_lra, or arith2")
     if global_witness_mode not in {"any", "hall_insertable"}:
         raise ValueError("global witness mode must be any or hall_insertable")
+    if base_host_edge_cell_source is not None and base_host_pair_hall_cycle:
+        raise ValueError("exact host-edge and pair-Hall cells are mutually exclusive")
+    if (
+        base_host_offhost_edge_cell_source is not None
+        and not base_host_pair_hall_cycle
+    ):
+        raise ValueError("off-host edge cell requires the pair-Hall cycle")
+    if (
+        base_host_edge_cell_source is not None
+        and base_host_offhost_edge_cell_source is not None
+    ):
+        raise ValueError("exact and off-host edge cells are mutually exclusive")
+    if base_host_diagonal_pattern is not None and not 0 <= base_host_diagonal_pattern < 256:
+        raise ValueError("diagonal pattern must be an integer from 0 to 255")
+    if (
+        base_host_diagonal_pattern is not None
+        and base_host_offhost_edge_cell_source is None
+    ):
+        raise ValueError("diagonal pattern requires the off-host edge cell")
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
     ]
     solver = z3.SolverFor("QF_LRA") if solver_profile == "qf_lra" else z3.Solver()
     solver.set(timeout=timeout_seconds * 1000)
+    if solver_profile == "arith2":
+        solver.set("smt.arith.solver", 2)
     for row in values:
         solver.add(z3.Sum(*row) == 1)
         solver.add(*(entry > 0 for entry in row))
@@ -421,6 +468,47 @@ def run(
                         efx_edge(values, complete, observer, assigned)
                         == expected_edges[observer][assigned]
                     )
+    if base_host_pair_hall_cycle:
+        for host, observers in enumerate(PAIR_HALL_CYCLE):
+            complete = [tuple(bundle) for bundle in BASE]
+            complete[host] = tuple(sorted((*complete[host], FLOATER)))
+            for observer in observers:
+                for assigned in range(4):
+                    solver.add(
+                        efx_edge(values, complete, observer, assigned)
+                        == (assigned == host)
+                    )
+    offhost_edge_cell_sha256 = None
+    if base_host_offhost_edge_cell_source is not None:
+        offhost_document = json.loads(base_host_offhost_edge_cell_source.read_text())
+        offhost_values = offhost_document.get("values", offhost_document)
+        offhost_edge_cell_sha256 = hashlib.sha256(
+            base_host_offhost_edge_cell_source.read_bytes()
+        ).hexdigest()
+        for host, pair in enumerate(PAIR_HALL_CYCLE):
+            complete = [tuple(bundle) for bundle in BASE]
+            complete[host] = tuple(sorted((*complete[host], FLOATER)))
+            expected_edges = numeric_complete_edges(offhost_values, complete)
+            for observer in sorted(set(range(4)) - set(pair)):
+                for assigned in range(4):
+                    if assigned == host:
+                        continue
+                    solver.add(
+                        efx_edge(values, complete, observer, assigned)
+                        == expected_edges[observer][assigned]
+                    )
+    diagonal_edge_order = []
+    if base_host_diagonal_pattern is not None:
+        for host, pair in enumerate(PAIR_HALL_CYCLE):
+            complete = [tuple(bundle) for bundle in BASE]
+            complete[host] = tuple(sorted((*complete[host], FLOATER)))
+            for observer in sorted(set(range(4)) - set(pair)):
+                bit = len(diagonal_edge_order)
+                expected = bool(base_host_diagonal_pattern & (1 << bit))
+                solver.add(
+                    efx_edge(values, complete, observer, host) == expected
+                )
+                diagonal_edge_order.append([host, observer])
 
     base_theta = theta(values, BASE)
     for assignment in itertools.permutations(TOKENS):
@@ -543,7 +631,11 @@ def run(
             solver.add(
                 z3.Implies(
                     eligible(values, bundles, assignment[4]),
-                    orbit_hall_failure(values, assignment),
+                    orbit_completion_failure(
+                        values,
+                        assignment,
+                        completion_cut_mode,
+                    ),
                 )
             )
     for state in local_pair_exchange_states(preload_local_exchange_distance):
@@ -568,6 +660,8 @@ def run(
                     symbolic_entry,
                     z3.Q(int(entry), row_total),
                 )
+    if smt2_output is not None:
+        smt2_output.write_text(solver.to_smt2())
     started = time.monotonic()
     last_values = None
     last_orbit = None
@@ -611,7 +705,7 @@ def run(
             record for record in last_orbit["records"] if record["completing"]
         ][:completion_batch_size]
         if completing_records:
-            if completion_cut_mode == "orbit_hall":
+            if completion_cut_mode in {"orbit_hall", "orbit_matching"}:
                 for completing in completing_records:
                     assignment = tuple(completing["assignment"])
                     if assignment in orbit_hall_cuts:
@@ -624,7 +718,11 @@ def run(
                     solver.add(
                         z3.Implies(
                             eligible(values, bundles, assignment[4]),
-                            orbit_hall_failure(values, assignment),
+                            orbit_completion_failure(
+                                values,
+                                assignment,
+                                completion_cut_mode,
+                            ),
                         )
                     )
             else:
@@ -764,11 +862,44 @@ def run(
             )
             if base_host_edge_cell_source is not None
             else (
-                "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
-                "orbit theorem for this base cell after exact replay. UNSAT proves "
-                "only the canonical four-pair cell. Hall-insertable metadata "
-                "describes each cut's discovery valuation. Other statuses are not "
-                "verdicts."
+                (
+                    (
+                        "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the "
+                        "fixed-core orbit theorem inside one fixed diagonal-pattern "
+                        "edge cell after exact replay. UNSAT proves only that exact "
+                        "pattern, not the eight-switch family or full pair-Hall cell."
+                    )
+                    if base_host_diagonal_pattern is not None
+                    else (
+                        (
+                            "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the "
+                            "fixed-core orbit theorem inside the imposed eight-"
+                            "diagonal-switch subcell after exact replay. UNSAT fixes "
+                            "the 24 off-host edge values and does not prove the full "
+                            "pair-Hall cell. Hall-insertable metadata describes "
+                            "discovery valuations only. Other statuses are not "
+                            "verdicts."
+                        )
+                        if base_host_offhost_edge_cell_source is not None
+                        else (
+                            "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the "
+                            "fixed-core orbit theorem inside the imposed cyclic "
+                            "pair-Hall cell after exact replay. UNSAT proves only "
+                            "that pair-Hall subcell. Hall-insertable metadata "
+                            "describes each cut's discovery valuation, not every "
+                            "valuation satisfying that cut. Other statuses are not "
+                            "verdicts."
+                        )
+                    )
+                )
+                if base_host_pair_hall_cycle
+                else (
+                    "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
+                    "orbit theorem for this base cell after exact replay. UNSAT "
+                    "proves only the canonical four-pair cell. Hall-insertable "
+                    "metadata describes each cut's discovery valuation. Other "
+                    "statuses are not verdicts."
+                )
             )
         ),
         "global_cut_semantics": (
@@ -793,6 +924,23 @@ def run(
             else None
         ),
         "base_host_edge_cell_source_sha256": edge_cell_sha256,
+        "base_host_pair_hall_cycle": base_host_pair_hall_cycle,
+        "base_host_pair_hall_witnesses": (
+            [list(pair) for pair in PAIR_HALL_CYCLE]
+            if base_host_pair_hall_cycle
+            else None
+        ),
+        "base_host_offhost_edge_cell_source": (
+            str(base_host_offhost_edge_cell_source)
+            if base_host_offhost_edge_cell_source is not None
+            else None
+        ),
+        "base_host_offhost_edge_cell_source_sha256": offhost_edge_cell_sha256,
+        "base_host_diagonal_pattern": base_host_diagonal_pattern,
+        "base_host_diagonal_edge_order": (
+            diagonal_edge_order if base_host_diagonal_pattern is not None else None
+        ),
+        "smt2_output": str(smt2_output) if smt2_output is not None else None,
         "seed_initial_values_applied": seed_values_hint is not None,
         "elapsed_seconds": time.monotonic() - started,
         "global_cut_count": len(global_cuts),
@@ -846,12 +994,12 @@ def main():
     )
     parser.add_argument(
         "--completion-cut-mode",
-        choices=("witness", "orbit_hall"),
+        choices=("witness", "orbit_hall", "orbit_matching"),
         default="witness",
     )
     parser.add_argument(
         "--solver-profile",
-        choices=("default", "qf_lra"),
+        choices=("default", "qf_lra", "arith2"),
         default="default",
     )
     parser.add_argument(
@@ -860,6 +1008,10 @@ def main():
         default="any",
     )
     parser.add_argument("--base-host-edge-cell-source", type=Path)
+    parser.add_argument("--base-host-pair-hall-cycle", action="store_true")
+    parser.add_argument("--base-host-offhost-edge-cell-source", type=Path)
+    parser.add_argument("--base-host-diagonal-pattern", type=int)
+    parser.add_argument("--smt2-output", type=Path)
     args = parser.parse_args()
     result = run(
         args.output,
@@ -873,6 +1025,10 @@ def main():
         args.solver_profile,
         args.global_witness_mode,
         args.base_host_edge_cell_source,
+        args.base_host_pair_hall_cycle,
+        args.base_host_offhost_edge_cell_source,
+        args.base_host_diagonal_pattern,
+        args.smt2_output,
     )
     summary = {
         key: result[key]

@@ -1,0 +1,239 @@
+{
+  "base_eligible": true,
+  "claim_boundary": "A valid finite-pool model only identifies missing CEGAR cuts. It refutes the full pair-Hall theorem only if the full orbit is blocked and the canonical base is a true global threshold maximum.",
+  "full_global_audit": {
+    "eligible_state_count": 1608,
+    "fixed_base_is_global_threshold_maximum": false,
+    "hall_insertable_maximum_threshold_state_count": 6,
+    "maximum_threshold_state_count": 6,
+    "nearest_higher_state": {
+      "best_hall_margin": "1/1504",
+      "best_host": 3,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "floater": 5,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        24,
+        260,
+        192
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 180480,
+      "threshold_gain_numerator": 80
+    }
+  },
+  "full_orbit_audit": {
+    "base_floater": 8,
+    "base_masks": [
+      3,
+      12,
+      48,
+      192
+    ],
+    "base_theta": "148903/180480",
+    "best_orbit_margin": "1/4512",
+    "best_orbit_state": {
+      "assignment": [
+        8,
+        3,
+        1,
+        7,
+        5
+      ],
+      "best_host": 1,
+      "best_permutation": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bottleneck_count": 1,
+      "completing": true,
+      "floater": 5,
+      "margin": "1/4512",
+      "masks": [
+        257,
+        12,
+        18,
+        192
+      ],
+      "theta": "148903/180480"
+    },
+    "completing_orbit_state_count": 1,
+    "eligible_orbit_state_count": 4,
+    "m": 9,
+    "meaning": "Exact rational audit of every permutation of four selected owner minima and one floater over four fixed cores.",
+    "minimum_eligible_orbit_theta": "148903/180480",
+    "n": 4,
+    "orbit_state_count": 120,
+    "records": [],
+    "schema": "minimum-slot-orbit-audit-v1",
+    "selected_minima": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "status": "ORBIT_COMPLETION_FOUND"
+  },
+  "global_cut_count": 73,
+  "global_cut_violation_count": 0,
+  "global_cut_violations": [],
+  "host_edge_records": [
+    {
+      "deficient_pair": [
+        0,
+        3
+      ],
+      "edges": [
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          false
+        ]
+      ],
+      "host": 0,
+      "pair_condition_holds": true
+    },
+    {
+      "deficient_pair": [
+        0,
+        1
+      ],
+      "edges": [
+        [
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          true
+        ]
+      ],
+      "host": 1,
+      "pair_condition_holds": true
+    },
+    {
+      "deficient_pair": [
+        1,
+        2
+      ],
+      "edges": [
+        [
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          true,
+          false,
+          true,
+          true
+        ]
+      ],
+      "host": 2,
+      "pair_condition_holds": true
+    },
+    {
+      "deficient_pair": [
+        2,
+        3
+      ],
+      "edges": [
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true
+        ],
+        [
+          false,
+          false,
+          false,
+          true
+        ]
+      ],
+      "host": 3,
+      "pair_condition_holds": true
+    }
+  ],
+  "meaning": "Exact rational replay of the batch-Z3 model against every persisted global cut, orbit blocker, and cyclic pair-Hall edge condition.",
+  "orbit_cut_count": 26,
+  "orbit_cut_violation_count": 0,
+  "orbit_cut_violations": [],
+  "pair_hall_cycle_holds": true,
+  "pool": "results/minimum_slot_orbit_four_host_pair_cycle_cegar_session1.json",
+  "pool_sha256": "3330f40ac86862d944b6607a1245bde91aaa223d25edfb92adbd91cfffcc5176",
+  "positive": true,
+  "schema": "minimum-slot-pair-cycle-pool-model-audit-v1",
+  "status": "FINITE_POOL_SAT_REPLAYED",
+  "strict_owner_minima": true,
+  "values": "results/minimum_slot_orbit_four_host_pair_cycle_finite_pool_sat_seed.json",
+  "values_sha256": "1523c5e7194252cbf56b8818b6a1e179427b46cc85524af78137f10f83a1afb6"
+}

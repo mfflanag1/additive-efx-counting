@@ -166,6 +166,29 @@ truth values, rather than only the four cyclic pair-Hall witnesses.  The next
 exact gate is to remove the 32 truth values not specified by those four pair
 obstructions.
 
+## Diagonal-switch coarsening
+
+The first coarsening pass fixes the source's 24 off-host edge values while
+allowing the eight remaining host-edge switches to vary.  Local exact tests
+show that all 24 Hamming-one off-host flips are impossible under simultaneous
+token-orbit blockage, while five diagonal flips have exact blocked models and
+three diagonal flips remain bounded UNKNOWN.  This is local rigidity only;
+multiple off-host bits may still change together.
+
+The named-swap lemma and the complete 32-state distance-two exchange menu are
+both exactly false in diagonal pattern 1.  The latter countermodel remains
+nonmaximal, and its nearest higher Hall-completable allocation is a connected
+distance-three transfer.  A fine-grained dynamic CEGAR nevertheless closes
+the complete pattern-1 edge cell: 65 global cuts and 116 individual matching
+blockers are UNSAT after 50 cumulative iterations.  A fresh staged replay
+reproduces the same ordered pools and UNSAT verdict.  All 65 global witnesses
+are connected and have owner distance at most four.  Pattern 2 remains an
+honest solver stall after 58 global cuts and 70 matching blockers.
+
+The theorem, exact map, claim boundaries, and replay commands are recorded in
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and
+`PARTIAL_THRESHOLD_DIAGONAL_SWITCH_GATE.md`.
+
 ## Live analytic lemma
 
 The canonical-pair target is now:
