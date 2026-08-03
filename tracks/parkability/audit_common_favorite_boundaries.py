@@ -289,7 +289,7 @@ def audit(results_dir: Path) -> dict:
         ):
             raise AssertionError((continuation_path, mismatches))
         for source, digest in continuation.get("seed_sha256", {}).items():
-            source_path = Path(source)
+            source_path = results_dir / Path(source).name
             if not source_path.is_file() or file_sha256(source_path) != digest:
                 raise AssertionError("continuation seed chain is broken")
         continuation_records.append({
