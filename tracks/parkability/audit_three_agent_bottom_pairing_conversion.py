@@ -57,7 +57,7 @@ def portable(path: Path) -> str:
 
 def audit_z3(path, encoding, witness, bottom_agents):
     payload = load(path)
-    formula = Path(payload["smt2_path"])
+    formula = path.parent / Path(payload["smt2_path"]).name
     if (
         payload.get("schema") != "common-bottom-pairing-conversion-lra-v1"
         or payload.get("status") != "UNSAT_CANDIDATE"
@@ -88,7 +88,7 @@ def audit_z3(path, encoding, witness, bottom_agents):
 def audit_cvc5(path, normalization_path, sorting_record):
     payload = load(path)
     normalization = load(normalization_path)
-    formula = Path(payload["formula"])
+    formula = path.parent / Path(payload["formula"]).name
     if (
         payload.get("schema") != "external-smt-replay-v1"
         or payload.get("solver_interface") != "cvc5"
@@ -114,7 +114,7 @@ def audit_cvc5(path, normalization_path, sorting_record):
 
 def audit_cpc(path, cvc5_record):
     payload = load(path)
-    proof = Path(payload["proof"])
+    proof = path.parent / Path(payload["proof"]).name
     if (
         payload.get("schema") != "cvc5-cpc-ethos-certificate-v1"
         or payload.get("verified") is not True
@@ -174,7 +174,7 @@ def audit_order_core(path):
 
 def audit_two_agent_boundary(path):
     payload = load(path)
-    formula = Path(payload["smt2_path"])
+    formula = path.parent / Path(payload["smt2_path"]).name
     values = tuple(tuple(row) for row in payload["values"])
     audit_threshold_failure(values)
     if (

@@ -124,7 +124,7 @@ def audit_dense_boundary(path):
         or payload.get("values") is not None
     ):
         raise ValueError("dense rank-one boundary metadata changed")
-    formula = Path(payload["formula"])
+    formula = path.parent / Path(payload["formula"]).name
     if not formula.is_file() or sha256(formula) != payload["formula_sha256"]:
         raise AssertionError("dense rank-one formula changed")
     return {
@@ -168,12 +168,12 @@ def audit_cegar_boundary(path, normalization_path):
         or record["supported_unlearned_singleton_count"] != 185
     ):
         raise AssertionError("sparse singleton pool changed")
-    formula = Path(payload["formula"])
+    formula = path.parent / Path(payload["formula"]).name
     if not formula.is_file() or sha256(formula) != payload["formula_sha256"]:
         raise AssertionError("sparse rank-one formula changed")
 
     normalization = json.loads(normalization_path.read_text())
-    normalized = Path(normalization["output"])
+    normalized = normalization_path.parent / Path(normalization["output"]).name
     if (
         normalization.get("schema") != "strict-smt2-normalization-v1"
         or normalization["source_sha256"] != payload["formula_sha256"]

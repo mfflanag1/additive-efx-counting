@@ -36,9 +36,16 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def artifact_path(owner_path, recorded):
+    archived = owner_path.parent / Path(recorded).name
+    return archived if archived.is_file() else Path(recorded)
+
+
 def audit_exact_real(path):
     payload = json.loads(path.read_text())
-    seed_paths = tuple(Path(source["path"]) for source in payload["seed_sources"])
+    seed_paths = tuple(
+        artifact_path(path, source["path"]) for source in payload["seed_sources"]
+    )
     for source, seed_path in zip(payload["seed_sources"], seed_paths):
         if sha256(seed_path) != source["sha256"]:
             raise AssertionError("full-cell seed hash changed")
@@ -72,7 +79,7 @@ def audit_exact_real(path):
         trace_counts.append(len(survivors))
         pool.update(survivors[: payload["add_per_iteration"]])
         final_values = values
-    smt2_path = Path(payload["smt2_path"])
+    smt2_path = artifact_path(path, payload["smt2_path"])
     if (
         payload["status"] != "MASTER_UNKNOWN"
         or payload["solver_status"] != "unknown"
@@ -126,7 +133,9 @@ def audit_exact_real(path):
 
 def audit_cpsat_cegar(path):
     payload = json.loads(path.read_text())
-    seed_paths = tuple(Path(source["path"]) for source in payload["seed_sources"])
+    seed_paths = tuple(
+        artifact_path(path, source["path"]) for source in payload["seed_sources"]
+    )
     for source, seed_path in zip(payload["seed_sources"], seed_paths):
         if sha256(seed_path) != source["sha256"]:
             raise AssertionError("bounded full-cell seed hash changed")
@@ -163,10 +172,10 @@ def audit_cpsat_cegar(path):
         pool.update(survivors[: payload["add_per_iteration"]])
         final_values = values
 
-    resume_path = Path(payload["resume_source"])
+    resume_path = artifact_path(path, payload["resume_source"])
     resume = json.loads(resume_path.read_text())
-    resume_proto = Path(resume["proto_path"])
-    proto_path = Path(payload["proto_path"])
+    resume_proto = artifact_path(resume_path, resume["proto_path"])
+    proto_path = artifact_path(path, payload["proto_path"])
     expected_encoding = {
         "accept_literals": 1680,
         "hall_failure_templates_per_pairing": 21,
