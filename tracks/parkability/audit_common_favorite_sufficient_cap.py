@@ -55,8 +55,10 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def validate_proto(raw: dict) -> Path:
+def validate_proto(raw: dict, results_dir: Path) -> Path:
     proto_path = Path(raw["proto_path"])
+    if not proto_path.is_file():
+        proto_path = results_dir / proto_path.name
     if (
         not proto_path.is_file()
         or file_sha256(proto_path) != raw["proto_sha256"]
@@ -123,7 +125,7 @@ def audit(results_dir: Path) -> dict:
         }
         if mismatches or len(raw.get("trace", [])) != 5:
             raise AssertionError((result_path, mismatches))
-        proto_path = validate_proto(raw)
+        proto_path = validate_proto(raw, results_dir)
         if len(pool) != expected_before:
             raise AssertionError("uncut pool chain has the wrong starting size")
 
@@ -203,7 +205,7 @@ def audit(results_dir: Path) -> dict:
         != first_residual.get("pool_sha256")
     ):
         raise AssertionError("first residual timeout changed")
-    validate_proto(first_residual)
+    validate_proto(first_residual, results_dir)
 
     residual_records = []
     for encoding, result_name, pool_name in RESIDUAL_RESULTS:
@@ -241,7 +243,7 @@ def audit(results_dir: Path) -> dict:
             or file_sha256(pool_path) != raw.get("pool_sha256")
         ):
             raise AssertionError((result_path, mismatches))
-        proto_path = validate_proto(raw)
+        proto_path = validate_proto(raw, results_dir)
         residual_records.append({
             "encoding": encoding,
             "result_path": str(result_path.resolve()),
