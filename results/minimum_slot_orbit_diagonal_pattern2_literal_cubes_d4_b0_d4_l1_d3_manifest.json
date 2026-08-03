@@ -1,0 +1,88 @@
+{
+  "branch_count": 7,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "v_2_2 + v_2_3 + -1*v_2_4 >= 0",
+        "v_2_4 + v_2_5 + -1*v_2_6 + -1*v_2_7 >= 0",
+        "v_3_4 + v_3_7 + -1*v_3_8 >= 0"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_000.smt2",
+      "sha256": "9ecf0991b6a9a23e844e4b68d70bd5d12368832815299029268cfa6425256492"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "v_2_2 + v_2_3 + -1*v_2_4 >= 0",
+        "v_2_4 + v_2_5 + -1*v_2_6 + -1*v_2_7 >= 0",
+        "Not(v_3_4 + v_3_7 + -1*v_3_8 >= 0)"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_001.smt2",
+      "sha256": "41e66a5c337506d77fdb1de5ce78612603c5bdfd3af92954daa451be8ce2040f"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "v_2_2 + v_2_3 + -1*v_2_4 >= 0",
+        "Not(v_2_4 + v_2_5 + -1*v_2_6 + -1*v_2_7 >= 0)"
+      ],
+      "cube_status_hint": "unsat",
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_002.smt2",
+      "sha256": "26e3556c904d72060a3a3998b97258dd870e5129f3252e9c3fd2ad245fdc50dd"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(v_2_2 + v_2_3 + -1*v_2_4 >= 0)",
+        "v_3_4 + v_3_7 + -1*v_3_8 >= 0",
+        "v_3_1 + v_3_7 + -1*v_3_8 >= 0"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_003.smt2",
+      "sha256": "78bd92db79e8c2fcd0782d01940f0f7e75b25256794f8c2e89ac98c717efa92c"
+    },
+    {
+      "branch": 4,
+      "cube": [
+        "Not(v_2_2 + v_2_3 + -1*v_2_4 >= 0)",
+        "v_3_4 + v_3_7 + -1*v_3_8 >= 0",
+        "Not(v_3_1 + v_3_7 + -1*v_3_8 >= 0)"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_004.smt2",
+      "sha256": "a4a80fed79dbd80fffa95907f5d779e47ab35f4e31f5204387df30650d54fc9b"
+    },
+    {
+      "branch": 5,
+      "cube": [
+        "Not(v_2_2 + v_2_3 + -1*v_2_4 >= 0)",
+        "Not(v_3_4 + v_3_7 + -1*v_3_8 >= 0)",
+        "v_1_2 + v_1_5 + -1*v_1_6 + v_1_7 >= 0"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_005.smt2",
+      "sha256": "bd60f468c61fac53d73d063b0a3b4011676923c416e84d8e2335dfb8e0bc0a62"
+    },
+    {
+      "branch": 6,
+      "cube": [
+        "Not(v_2_2 + v_2_3 + -1*v_2_4 >= 0)",
+        "Not(v_3_4 + v_3_7 + -1*v_3_8 >= 0)",
+        "Not(v_1_2 + v_1_5 + -1*v_1_6 + v_1_7 >= 0)"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l1_d3/branch_006.smt2",
+      "sha256": "3bea43b7c34d7f3d453c51abedaa5b3e0ed636488f921a4b99e621aeffe5efc7"
+    }
+  ],
+  "cube_timeout_seconds": 30,
+  "depth": 3,
+  "meaning": "Z3 cube literals form an exact disjunctive cover of the source. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "minimum-slot-literal-cube-cover-v1",
+  "source": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4/branch_001.smt2",
+  "source_sha256": "b544729b1d6fc3d5a717b6a81d157584b343373ea6c6b16b1a8e97aee03d3a26",
+  "status": "EXACT_CUBE_COVER"
+}

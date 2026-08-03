@@ -1,0 +1,76 @@
+{
+  "branch_count": 6,
+  "branches": [
+    {
+      "branch": 0,
+      "elapsed_seconds": 120.01645204098895,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4/branch_000.smt2",
+      "reason_unknown": "timeout",
+      "sha256": "66eff58a94f2e5608bcc2f0835de60e93c001a4a9e914363ae87f3d8ec9ff047",
+      "values": null,
+      "verdict": "unknown"
+    },
+    {
+      "branch": 1,
+      "elapsed_seconds": 120.01653925003484,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4/branch_001.smt2",
+      "reason_unknown": "timeout",
+      "sha256": "a7036770bbfd69a67b3929d5f9a2dd4cd763bc319d3f02f2af9103af3397724a",
+      "values": null,
+      "verdict": "unknown"
+    },
+    {
+      "branch": 2,
+      "elapsed_seconds": 120.01639833301306,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4/branch_002.smt2",
+      "reason_unknown": "timeout",
+      "sha256": "27afc6b56dd0e348b56725647174d3d0a6c3ccebabab6eb5418a5efbf992a0ee",
+      "values": null,
+      "verdict": "unknown"
+    },
+    {
+      "branch": 3,
+      "elapsed_seconds": 101.18349150009453,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4/branch_003.smt2",
+      "reason_unknown": null,
+      "sha256": "b00d0ee36f6ac8c7c5bc50e800c2b80ed551f014122e122cff5d2396a12bf1a1",
+      "values": null,
+      "verdict": "unsat"
+    },
+    {
+      "branch": 4,
+      "elapsed_seconds": 0.1949320409912616,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4/branch_004.smt2",
+      "reason_unknown": null,
+      "sha256": "f63e83c156d43ecd1793bc3cf5977b8a344e0c349cc20a863ccde7405ff00bf9",
+      "values": null,
+      "verdict": "unsat"
+    },
+    {
+      "branch": 5,
+      "elapsed_seconds": 0.14631270803511143,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4/branch_005.smt2",
+      "reason_unknown": null,
+      "sha256": "eb347e1d832b963d41573761afad0ef09341a2a6e24330cbed658a6a11699b3c",
+      "values": null,
+      "verdict": "unsat"
+    }
+  ],
+  "elapsed_seconds": 120.26579920807853,
+  "manifest": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_manifest.json",
+  "manifest_sha256": "76471d121a8ab7becfc5655fa6655b4932d033647b541238b9e9b08043d4512b",
+  "meaning": "Decision results for every branch in an exact cube cover. The source is UNSAT only when every branch is UNSAT.",
+  "schema": "minimum-slot-literal-cube-cover-decision-v1",
+  "solver": "z3",
+  "solver_profile": "qf_lra",
+  "solver_version": "5.0.0",
+  "source": "results/minimum_slot_orbit_diagonal_pattern2_literal_master.smt2",
+  "source_sha256": "2cd03bfdbae63ccfd557682d7a6d42da9573ba238ea0f8960fe671f16aaa1d7b",
+  "status": "INCOMPLETE",
+  "timeout_seconds_per_branch": 120,
+  "verdict_histogram": {
+    "unknown": 3,
+    "unsat": 3
+  },
+  "workers": 4
+}

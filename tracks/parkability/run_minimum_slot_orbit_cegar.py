@@ -23,9 +23,7 @@ try:
         mask_value,
     )
     from .decide_threshold_hall_local_gradient import (
-        eligible,
         integer_values,
-        threshold,
         total,
     )
     from .fast_count import FastParkability
@@ -38,9 +36,7 @@ except ImportError:
         mask_value,
     )
     from decide_threshold_hall_local_gradient import (
-        eligible,
         integer_values,
-        threshold,
         total,
     )
     from fast_count import FastParkability
@@ -61,9 +57,37 @@ def masks_from_bundles(bundles):
     )
 
 
-def theta(values, bundles):
-    return z3.Sum(
-        *(threshold(values[owner], bundles[owner]) for owner in range(4))
+def threshold_terms(row, bundle):
+    return tuple(
+        total(row, tuple(good for good in bundle if good != removed))
+        for removed in bundle
+    )
+
+
+def eligible(values, bundles, floater):
+    constraints = []
+    for observer in range(4):
+        own = total(values[observer], bundles[observer])
+        constraints.append(own >= values[observer][floater])
+        constraints.extend(
+            own >= term
+            for target in range(4)
+            if target != observer
+            for term in threshold_terms(values[observer], bundles[target])
+        )
+    return z3.And(*constraints)
+
+
+def theta_upper_bound(values, bundles, bound):
+    choices = tuple(
+        threshold_terms(values[owner], bundles[owner])
+        for owner in range(4)
+    )
+    return z3.And(
+        *(
+            z3.Sum(*terms) <= bound
+            for terms in itertools.product(*choices)
+        )
     )
 
 
@@ -75,9 +99,10 @@ def complete_failure(values, bundles, floater, host, permutation):
         assigned = permutation[observer]
         failures.extend(
             total(values[observer], complete[assigned])
-            < threshold(values[observer], complete[target])
+            < term
             for target in range(4)
             if target != assigned
+            for term in threshold_terms(values[observer], complete[target])
         )
     return z3.Or(*failures)
 
@@ -86,9 +111,10 @@ def efx_edge(values, complete, observer, assigned):
     return z3.And(
         *(
             total(values[observer], complete[assigned])
-            >= threshold(values[observer], complete[target])
+            >= term
             for target in range(4)
             if target != assigned
+            for term in threshold_terms(values[observer], complete[target])
         )
     )
 
@@ -388,7 +414,7 @@ def add_global_cut(solver, values, base_theta, state, *, track=False):
         solver,
         z3.Implies(
             eligible(values, bundles, state["floater"]),
-            theta(values, bundles) <= base_theta,
+            theta_upper_bound(values, bundles, base_theta),
         ),
         global_cut_tracker(state) if track else None,
     )
@@ -548,7 +574,9 @@ def run(
                 )
                 diagonal_edge_order.append([host, observer])
 
-    base_theta = theta(values, BASE)
+    base_theta = z3.Sum(
+        *(values[owner][core] for owner, core in enumerate(CORES))
+    )
     for assignment in itertools.permutations(TOKENS):
         bundles = orbit_bundles(assignment)
         solver.add(

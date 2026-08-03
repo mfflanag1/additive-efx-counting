@@ -1,0 +1,52 @@
+{
+  "checks": {
+    "eligibility_equivalent": true,
+    "source_has_zero_ites": true,
+    "theta_equivalences": true,
+    "threshold_equivalences": true
+  },
+  "meaning": "Symbolic QF_LRA equivalence checks prove the leave-one-good-out expansions used for threshold upper bounds, strict failures, eligibility, and threshold-potential bounds.",
+  "schema": "minimum-slot-literal-threshold-expansion-audit-v1",
+  "source": "results/minimum_slot_orbit_diagonal_pattern2_literal_master.smt2",
+  "source_assertion_count": 447,
+  "source_ite_count": 0,
+  "source_sha256": "2cd03bfdbae63ccfd557682d7a6d42da9573ba238ea0f8960fe671f16aaa1d7b",
+  "status": "LITERAL_THRESHOLD_EXPANSION_PROVED",
+  "theta_checks": [
+    {
+      "shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "upper_bound_equivalent": true
+    },
+    {
+      "shape": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "upper_bound_equivalent": true
+    }
+  ],
+  "threshold_checks": [
+    {
+      "bundle_size": 1,
+      "strict_failure_equivalent": true,
+      "upper_bound_equivalent": true
+    },
+    {
+      "bundle_size": 2,
+      "strict_failure_equivalent": true,
+      "upper_bound_equivalent": true
+    },
+    {
+      "bundle_size": 3,
+      "strict_failure_equivalent": true,
+      "upper_bound_equivalent": true
+    }
+  ]
+}

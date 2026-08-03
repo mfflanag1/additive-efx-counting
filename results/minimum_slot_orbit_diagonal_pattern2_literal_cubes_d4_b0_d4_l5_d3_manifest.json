@@ -1,0 +1,65 @@
+{
+  "branch_count": 5,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "v_2_4 + -1*v_2_8 >= 0",
+        "v_2_5 + v_2_6 + -1*v_2_8 >= 0",
+        "v_2_0 + v_2_5 + -1*v_2_8 >= 0"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l5_d3/branch_000.smt2",
+      "sha256": "1ae34d7bd37ef7d7d55d6d0ef3a5313412ab5573bd544fde834d85ca77fe7366"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "v_2_4 + -1*v_2_8 >= 0",
+        "v_2_5 + v_2_6 + -1*v_2_8 >= 0",
+        "Not(v_2_0 + v_2_5 + -1*v_2_8 >= 0)"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l5_d3/branch_001.smt2",
+      "sha256": "d3a4f2f5c3f1df3443721c7412c0291564fd89425ee9155ad7a0bfab15bf582c"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "v_2_4 + -1*v_2_8 >= 0",
+        "Not(v_2_5 + v_2_6 + -1*v_2_8 >= 0)",
+        "v_1_2 + v_1_5 + -1*v_1_6 + v_1_8 >= 0"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l5_d3/branch_002.smt2",
+      "sha256": "e1951a4074352d78cdd4ae95fde41be7035b75e6d79d048621a7a25f8a7873f1"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "v_2_4 + -1*v_2_8 >= 0",
+        "Not(v_2_5 + v_2_6 + -1*v_2_8 >= 0)",
+        "Not(v_1_2 + v_1_5 + -1*v_1_6 + v_1_8 >= 0)"
+      ],
+      "cube_status_hint": null,
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l5_d3/branch_003.smt2",
+      "sha256": "a277c9306642686536bae5ab95d76fb7c2e6e867c763554a5ce07925cf0d908f"
+    },
+    {
+      "branch": 4,
+      "cube": [
+        "Not(v_2_4 + -1*v_2_8 >= 0)"
+      ],
+      "cube_status_hint": "unsat",
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4_l5_d3/branch_004.smt2",
+      "sha256": "ec4a04d71dc8e783a2bab04f06ff7fc917a9d5ea0f9cab3ab761ede88aadb7c1"
+    }
+  ],
+  "cube_timeout_seconds": 30,
+  "depth": 3,
+  "meaning": "Z3 cube literals form an exact disjunctive cover of the source. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "minimum-slot-literal-cube-cover-v1",
+  "source": "results/minimum_slot_orbit_diagonal_pattern2_literal_cubes_d4_b0_d4/branch_005.smt2",
+  "source_sha256": "6dc6f13d8a97676a2fb6d538599ac44774cfb839d7c0d37fe6c2b93e213a64c1",
+  "status": "EXACT_CUBE_COVER"
+}

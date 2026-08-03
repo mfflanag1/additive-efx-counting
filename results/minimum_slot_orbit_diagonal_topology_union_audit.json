@@ -1,0 +1,445 @@
+{
+  "checks": {
+    "all_moves_at_most_four_goods": true,
+    "all_templates_connected": true,
+    "common_templates": true,
+    "pattern1_templates": true,
+    "pattern2_templates": true,
+    "union_templates": true
+  },
+  "claim_boundary": "Pattern 1 is an UNSAT theorem core. Pattern 2 is an incomplete CEGAR pool, so its templates are evidence and analytic targets, not a complete theorem menu.",
+  "common_template_count": 3,
+  "common_templates": [
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        12,
+        80,
+        160
+      ],
+      "member_count": 8,
+      "moved_goods": 2,
+      "pattern1_member_count": 4,
+      "pattern2_member_count": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        12,
+        96,
+        144
+      ],
+      "member_count": 8,
+      "moved_goods": 2,
+      "pattern1_member_count": 4,
+      "pattern2_member_count": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        12,
+        160,
+        80
+      ],
+      "member_count": 8,
+      "moved_goods": 2,
+      "pattern1_member_count": 4,
+      "pattern2_member_count": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    }
+  ],
+  "meaning": "Exact cyclic quotient and transfer-topology comparison of the persisted pattern-1 theorem core and pattern-2 Hall witness pool.",
+  "pattern1_global_cut_count": 27,
+  "pattern1_only_templates": [
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        24,
+        96,
+        130
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        24,
+        160,
+        66
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        40,
+        80,
+        130
+      ],
+      "member_count": 2,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        5,
+        40,
+        144,
+        66
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        6,
+        24,
+        96,
+        129
+      ],
+      "member_count": 1,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 4
+    }
+  ],
+  "pattern1_template_count": 8,
+  "pattern2_global_cut_count": 50,
+  "pattern2_only_templates": [
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        20,
+        96,
+        136
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        20,
+        160,
+        72
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        24,
+        96,
+        132
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        24,
+        160,
+        68
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        36,
+        80,
+        136
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        1,
+        2,
+        2,
+        3
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        40,
+        64,
+        148
+      ],
+      "member_count": 4,
+      "moved_goods": 4,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        40,
+        80,
+        132
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        40,
+        144,
+        68
+      ],
+      "member_count": 4,
+      "moved_goods": 3,
+      "transfer_component_count": 1,
+      "transfer_support_size": 3
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        68,
+        48,
+        136
+      ],
+      "member_count": 4,
+      "moved_goods": 2,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    },
+    {
+      "bundle_shape": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "canonical_floater": 8,
+      "canonical_masks": [
+        3,
+        72,
+        48,
+        132
+      ],
+      "member_count": 2,
+      "moved_goods": 2,
+      "transfer_component_count": 1,
+      "transfer_support_size": 2
+    }
+  ],
+  "pattern2_template_count": 13,
+  "schema": "minimum-slot-diagonal-topology-union-audit-v1",
+  "sources": {
+    "pattern1": {
+      "path": "results/minimum_slot_orbit_diagonal_pattern1_unsat_core_pool_v5.json",
+      "sha256": "31195d09b7587d74b43e818aa08bbe8727973917b839ef73de50b4b3a66f59dc"
+    },
+    "pattern2": {
+      "path": "results/minimum_slot_orbit_diagonal_pattern2_literal_hall_replay_session1.json",
+      "sha256": "b3591a86f553b319c8b2737f9f00891daf4e9deb5b65fc5b2cd22d2cf9f0184d"
+    }
+  },
+  "status": "DIAGONAL_TOPOLOGY_UNION_EXACT",
+  "topology_histograms": {
+    "pattern1": [
+      {
+        "bundle_shape": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "moved_goods": 2,
+        "template_count": 3,
+        "transfer_support_size": 2
+      },
+      {
+        "bundle_shape": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "moved_goods": 4,
+        "template_count": 5,
+        "transfer_support_size": 4
+      }
+    ],
+    "pattern2": [
+      {
+        "bundle_shape": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "moved_goods": 2,
+        "template_count": 5,
+        "transfer_support_size": 2
+      },
+      {
+        "bundle_shape": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "moved_goods": 3,
+        "template_count": 7,
+        "transfer_support_size": 3
+      },
+      {
+        "bundle_shape": [
+          1,
+          2,
+          2,
+          3
+        ],
+        "moved_goods": 4,
+        "template_count": 1,
+        "transfer_support_size": 3
+      }
+    ]
+  },
+  "union_template_count": 18
+}

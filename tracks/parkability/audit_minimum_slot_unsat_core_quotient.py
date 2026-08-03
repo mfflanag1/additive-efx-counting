@@ -45,6 +45,16 @@ def completion_key(record, shift):
     )
 
 
+def orbit_hall_key(record, shift):
+    assignment = [None] * 5
+    for owner in range(4):
+        assignment[(owner + shift) % 4] = mapped_good(
+            record["assignment"][owner], shift
+        )
+    assignment[4] = mapped_good(record["assignment"][4], shift)
+    return tuple(assignment)
+
+
 def run(source, output):
     document = json.loads(source.read_text())
     global_groups = {}
@@ -64,15 +74,24 @@ def run(source, output):
         key = min(completion_key(record, shift) for shift in range(4))
         completion_groups.setdefault(key, []).append(record)
 
+    orbit_hall_groups = {}
+    for record in document.get("orbit_hall_cuts", []):
+        key = min(orbit_hall_key(record, shift) for shift in range(4))
+        orbit_hall_groups.setdefault(key, []).append(record)
+
     global_histogram = Counter(len(records) for records in global_groups.values())
     completion_histogram = Counter(
         len(records) for records in completion_groups.values()
+    )
+    orbit_hall_histogram = Counter(
+        len(records) for records in orbit_hall_groups.values()
     )
     result = {
         "schema": SCHEMA,
         "status": "CYCLIC_CORE_QUOTIENT_EXACT",
         "meaning": (
-            "Exact quotient of persisted global and completion cuts under "
+            "Exact quotient of persisted global, completion, and whole-orbit "
+            "Hall cuts under "
             "simultaneous cyclic relabeling of owners, paired goods, hosts, "
             "observers, and assigned bundles."
         ),
@@ -94,7 +113,15 @@ def run(source, output):
             str(size): count
             for size, count in sorted(completion_histogram.items())
         },
-        "total_template_count": len(global_groups) + len(completion_groups),
+        "orbit_hall_cut_count": len(document.get("orbit_hall_cuts", [])),
+        "orbit_hall_template_count": len(orbit_hall_groups),
+        "orbit_hall_template_coverage_histogram": {
+            str(size): count
+            for size, count in sorted(orbit_hall_histogram.items())
+        },
+        "total_template_count": (
+            len(global_groups) + len(completion_groups) + len(orbit_hall_groups)
+        ),
         "global_templates": [
             {
                 "canonical_floater": key[0],
@@ -112,6 +139,13 @@ def run(source, output):
                 "member_count": len(records),
             }
             for key, records in sorted(completion_groups.items())
+        ],
+        "orbit_hall_templates": [
+            {
+                "canonical_assignment": list(key),
+                "member_count": len(records),
+            }
+            for key, records in sorted(orbit_hall_groups.items())
         ],
     }
     atomic_json(output, result)

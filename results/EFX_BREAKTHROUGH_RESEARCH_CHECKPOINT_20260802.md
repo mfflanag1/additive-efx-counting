@@ -200,6 +200,17 @@ cvc5 1.3.4 also return UNSAT on the normalized archived formula.  The exact
 finite-menu alternative is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_FINITE_MENU_LEMMA.md`.
 
+The subsequent pattern-2 attack removes every threshold `ITE` by exact
+leave-one-good-out expansions.  The literal runner reproduces the pattern-1
+core as UNSAT, but pattern 2 remains UNKNOWN after a nested exact cube cover
+and after a separate compact whole-Hall replay.  Structural extraction reduces
+the pattern-2 witness pool to 13 cyclic connected templates.  Together with
+the pattern-1 theorem core, the union has 18 templates: five swaps, seven
+balanced three-owner transfers, five balanced four-owner cycles, and one
+lopsided three-owner transfer of bundle shape 1+2+2+3.  This is an analytic
+target, not a pattern-2 theorem; see
+`PARTIAL_THRESHOLD_DIAGONAL_TOPOLOGY_GATE.md`.
+
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
 be integrated with the known one-unallocated-good theorem to prove complete
@@ -214,8 +225,8 @@ an arbitrary charity set while preserving collective charity dominance.
 The focused parkability suite passes:
 
 ```text
-31 passed, 29 warnings in 21.35s
+35 passed
 ```
 
-The warnings are pre-existing pytest return-value warnings.  The new Python
-generators compile successfully, and every quoted artifact parses as JSON.
+The new Python generators compile successfully, and every quoted artifact
+parses as JSON.

@@ -131,6 +131,18 @@ Z3 timed out again at 300 seconds on the merged pool, without adding a cut.
 Pattern 2 remains UNKNOWN.  Its timeouts are honest computational stalls, not
 mathematical evidence for either satisfiability or unsatisfiability.
 
+The literal rewrite has now been extended to eligibility and
+threshold-potential upper bounds, removing every threshold `ITE`.  Symbolic
+QF_LRA audits prove all expansions equivalent, and the new runner reproduces
+the preferred pattern-1 core as UNSAT.  Pattern 2 still times out in both the
+69-global/149-completion formulation and a compact
+50-global/26-whole-Hall formulation.  Exact cube splitting closes some
+polyhedral branches but plateaus on the remaining descendants, with no SAT
+branch found.  The 50 compact-pool witnesses reduce to 13 cyclic connected
+templates; comparison with the pattern-1 theorem core gives an 18-template
+union moving at most four goods.  The precise topology target and claim
+boundary are recorded in `PARTIAL_THRESHOLD_DIAGONAL_TOPOLOGY_GATE.md`.
+
 The exact pattern-1 result is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.  It is a second complete
 64-edge cell, not yet a theorem with a switch left symbolically free.
