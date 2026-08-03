@@ -5,9 +5,49 @@
 Four-agent additive EFX and general additive EFX remain unresolved.  This
 checkpoint makes no existence or counterexample claim for either problem.
 
-The active branch is `codex/efx-breakthrough-next-20260802`.  It is isolated
-from the immutable threshold-Hall publication branch and the two existing
-pull requests.  No new research result has been pushed from this branch.
+The continuation is integrated on `main`; the immutable publication tags and
+prior releases remain untouched. The August 3 results below are a local
+checkpoint until committed and pushed.
+
+## August 3 continuation
+
+The canonical cyclic pair-Hall branch has been narrowed but not closed.
+The heavy-token graph has matching number at most one; owner-star and
+token-star exclusions reduce it to no heavy edge, one next-token edge, or one
+opposite-token edge. The two nonzero cases are UNSAT. In the zero-heavy case,
+an exact equality/strict cover closes 127 of 128 regimes. The remaining
+all-strict regime was split into 16 exact leaves; two are UNSAT and fourteen
+remain UNKNOWN after two 300-second arithmetic-solver-2 runs. No SAT
+valuation was found. This is now frozen as a bounded computational checkpoint
+rather than extended through another cut-harvesting round.
+
+The analytic route has advanced in four cap-free steps:
+
+1. an inclusion-minimal bottleneck Hall cut of size \(k\) has exactly
+   \(k-1\) strict neighbors;
+2. a proper cut either factors into one equality crossing plus a residual
+   matching, or expands to a larger deficient set;
+3. owner-minimum/floater swaps from a global threshold maximum preserve the
+   maximum plateau whenever eligible, and their failures have an exact
+   two-sign wall classification; and
+4. the same exchange theorem extends to arbitrary charity sets, adding
+   collective-charity walls but preserving the same opposite-sign
+   dichotomy.
+
+The fourth item is the first common formal target for the four-agent and
+general-EFX objectives: a simultaneous exchange-cycle lemma would specialize
+to the one-floater case and would permit iterative charity reduction in the
+general case. It remains unproved.
+
+An explicit route audit then compared this program with the champion-cycle,
+near-diagonal, Nash-potential, and fixed-cell solver routes. The Hall-
+absorption program remains primary only under stated falsification and proof-
+compression gates. A 241-profile adversarial walk from a zero-margin selector
+boundary found no negative instance. Independently, the owner-Pareto exchange
+plateau lemma imports the swap-saturation idea from the four-agent EF2X
+algorithm: every eligible cycle in which each owner receives a weakly better
+good stays on the global threshold plateau. This enlarges the live move set
+beyond charity/minimum swaps without assuming the selector theorem.
 
 ## New cap-free analytic results
 

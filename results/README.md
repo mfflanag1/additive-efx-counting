@@ -57,7 +57,20 @@ as an internally verified hybrid theorem rather than a peer-reviewed theorem.
 The general problem remains open. Current exact status and proof gates are
 in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 
-The current four-agent Hall-gradient route has removed the fixed off-host
+The August 3 anti-local-minimum checkpoint is
+[`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
+It freezes the diminishing-return completion-cut branch and promotes a
+unified charity Hall-absorption target under explicit falsification and
+proof-compression gates. The proved entry points are
+[`CHARITY_HALL_ABSORPTION_EQUIVALENCE.md`](CHARITY_HALL_ABSORPTION_EQUIVALENCE.md),
+[`PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md`](PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md),
+[`PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md`](PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md),
+and
+[`PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md`](PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md).
+The absorption-gradient lemma remains unproved, so neither four-agent nor
+general additive EFX is claimed.
+
+The earlier four-agent Hall-gradient branch removed the fixed off-host
 edge profile and proved its first structural consequence in the full cyclic
 pair-Hall cell: each owner's core good weakly dominates both the floater and
 the preceding pair's token. Two cyclic cross-row clause families are also

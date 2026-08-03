@@ -37,8 +37,15 @@ def decide_branch(task):
     path = Path(path_text)
     if sha256(path) != expected_hash:
         raise ValueError(f"branch hash mismatch: {path}")
-    solver = z3.SolverFor("QF_LRA") if solver_profile == "qf_lra" else z3.Solver()
+    if solver_profile == "qf_lra":
+        solver = z3.SolverFor("QF_LRA")
+    elif solver_profile == "sls_smt":
+        solver = z3.Tactic("sls-smt").solver()
+    else:
+        solver = z3.Solver()
     solver.set(timeout=timeout_seconds * 1000)
+    if solver_profile == "arith2":
+        solver.set("smt.arith.solver", 2)
     solver.from_file(str(path))
     started = time.monotonic()
     verdict = solver.check()
@@ -70,7 +77,7 @@ def run(manifest, output, timeout_seconds, workers, solver_profile):
         output.exists()
         or timeout_seconds <= 0
         or workers <= 0
-        or solver_profile not in {"default", "qf_lra"}
+        or solver_profile not in {"default", "qf_lra", "arith2", "sls_smt"}
     ):
         raise ValueError("a new output and supported solver profile are required")
     cover = json.loads(manifest.read_text())
@@ -137,7 +144,11 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--timeout-seconds", type=int, default=60)
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--solver-profile", choices=("default", "qf_lra"), default="qf_lra")
+    parser.add_argument(
+        "--solver-profile",
+        choices=("default", "qf_lra", "arith2", "sls_smt"),
+        default="qf_lra",
+    )
     args = parser.parse_args()
     result = run(
         args.manifest,

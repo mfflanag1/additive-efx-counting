@@ -48,6 +48,15 @@ CORES = (0, 2, 4, 6)
 TOKENS = (1, 3, 5, 7, 8)
 PAIR_HALL_CYCLE = ((0, 3), (0, 1), (1, 2), (2, 3))
 FLOATER = 8
+CANONICAL_HEAVY_TOKEN_EDGES = (
+    (0, 5),
+    (1, 5),
+    (1, 7),
+    (2, 7),
+    (2, 1),
+    (3, 1),
+    (3, 3),
+)
 
 
 def masks_from_bundles(bundles):
@@ -139,6 +148,41 @@ def some_owner_core_dominates_next_token(values):
         *(
             values[owner][CORES[owner]] >= values[owner][(2 * owner + 3) % 8]
             for owner in range(4)
+        )
+    )
+
+
+def canonical_heavy_token_matching_at_least_two(values):
+    return z3.Or(
+        *(
+            z3.And(
+                values[left_owner][left_token]
+                > values[left_owner][CORES[left_owner]],
+                values[right_owner][right_token]
+                > values[right_owner][CORES[right_owner]],
+            )
+            for (left_owner, left_token), (right_owner, right_token)
+            in itertools.combinations(CANONICAL_HEAVY_TOKEN_EDGES, 2)
+            if left_owner != right_owner and left_token != right_token
+        )
+    )
+
+
+def canonical_heavy_owner_star(values, owner):
+    core = CORES[owner]
+    return z3.And(
+        values[owner][(2 * owner + 3) % 8] > values[owner][core],
+        values[owner][(2 * owner + 5) % 8] > values[owner][core],
+    )
+
+
+def canonical_heavy_token_star(values, token):
+    pair = (token - 1) // 2
+    owners = ((pair - 2) % 4, (pair - 1) % 4)
+    return z3.And(
+        *(
+            values[owner][token] > values[owner][CORES[owner]]
+            for owner in owners
         )
     )
 
@@ -539,13 +583,26 @@ def run(
     track_structural_core: bool = False,
     base_owner0_core_dominates_next_token: bool = False,
     refute_all_owner_cores_below_next_tokens: bool = False,
+    refute_canonical_heavy_token_matching_size_two: bool = False,
+    base_canonical_heavy_token_matching_number_at_most_one: bool = False,
+    preload_all_orbit_hall_cuts: bool = False,
+    base_canonical_heavy_token_mask: int | None = None,
+    refute_canonical_heavy_owner_star: int | None = None,
+    refute_canonical_heavy_token_star: int | None = None,
+    drop_seed_completion_cuts: bool = False,
+    drop_fixed_orbit_maximality_constraints: bool = False,
+    drop_seed_orbit_hall_cuts: bool = False,
+    preload_orbit_assignments=(),
+    preload_all_identity_completion_cuts: bool = False,
 ):
     if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
         raise ValueError(
             "completion-cut mode must be witness, orbit_hall, or orbit_matching"
         )
-    if solver_profile not in {"default", "qf_lra", "arith2"}:
-        raise ValueError("solver profile must be default, qf_lra, or arith2")
+    if solver_profile not in {"default", "qf_lra", "arith2", "sls_smt"}:
+        raise ValueError(
+            "solver profile must be default, qf_lra, arith2, or sls_smt"
+        )
     if global_witness_mode not in {"any", "hall_insertable"}:
         raise ValueError("global witness mode must be any or hall_insertable")
     if base_host_edge_cell_source is not None and base_host_pair_hall_cycle:
@@ -633,11 +690,83 @@ def run(
         and refute_all_owner_cores_below_next_tokens
     ):
         raise ValueError("next-token symmetry break and refutation are exclusive")
+    if refute_canonical_heavy_token_matching_size_two and not (
+        base_host_pair_hall_cycle
+        and relabeling_mode == "cyclic"
+        and base_owner_cores_dominate_floater
+        and base_owner_cores_dominate_predecessor_tokens
+        and base_owner0_core_dominates_next_token
+    ):
+        raise ValueError("canonical heavy-token matching refutation requires the full canonical walls")
+    if base_canonical_heavy_token_matching_number_at_most_one and not (
+        base_host_pair_hall_cycle
+        and relabeling_mode == "cyclic"
+        and base_owner_cores_dominate_floater
+        and base_owner_cores_dominate_predecessor_tokens
+        and base_owner0_core_dominates_next_token
+    ):
+        raise ValueError("canonical heavy-token matching wall requires the full canonical walls")
+    if (
+        refute_canonical_heavy_token_matching_size_two
+        and base_canonical_heavy_token_matching_number_at_most_one
+    ):
+        raise ValueError("heavy-token matching wall and refutation are exclusive")
+    if preload_all_orbit_hall_cuts and completion_cut_mode == "witness":
+        raise ValueError("whole-orbit preloading requires an orbit completion-cut mode")
+    if preload_all_identity_completion_cuts and completion_cut_mode != "witness":
+        raise ValueError("identity-completion preloading requires witness mode")
+    preload_orbit_assignments = tuple(
+        tuple(int(good) for good in assignment)
+        for assignment in preload_orbit_assignments
+    )
+    if any(
+        len(assignment) != len(TOKENS)
+        or sorted(assignment) != sorted(TOKENS)
+        for assignment in preload_orbit_assignments
+    ):
+        raise ValueError("preloaded orbit assignments must permute the five tokens")
+    if base_canonical_heavy_token_mask is not None and not (
+        0 <= base_canonical_heavy_token_mask < (1 << len(CANONICAL_HEAVY_TOKEN_EDGES))
+        and base_host_pair_hall_cycle
+        and relabeling_mode == "cyclic"
+        and base_owner_cores_dominate_floater
+        and base_owner_cores_dominate_predecessor_tokens
+        and base_owner0_core_dominates_next_token
+    ):
+        raise ValueError("canonical heavy-token mask requires the full canonical walls and a seven-bit mask")
+    if refute_canonical_heavy_owner_star is not None and not (
+        refute_canonical_heavy_owner_star in {1, 2, 3}
+        and base_host_pair_hall_cycle
+        and relabeling_mode == "cyclic"
+        and base_owner_cores_dominate_floater
+        and base_owner_cores_dominate_predecessor_tokens
+        and base_owner0_core_dominates_next_token
+    ):
+        raise ValueError("canonical heavy owner-star refutation requires owner 1..3 and the full canonical walls")
+    if refute_canonical_heavy_token_star is not None and not (
+        refute_canonical_heavy_token_star in {1, 5, 7}
+        and base_host_pair_hall_cycle
+        and relabeling_mode == "cyclic"
+        and base_owner_cores_dominate_floater
+        and base_owner_cores_dominate_predecessor_tokens
+        and base_owner0_core_dominates_next_token
+    ):
+        raise ValueError("canonical heavy token-star refutation requires token 1, 5, or 7 and the full canonical walls")
+    if (
+        refute_canonical_heavy_owner_star is not None
+        and refute_canonical_heavy_token_star is not None
+    ):
+        raise ValueError("only one canonical heavy-star gate can be refuted at a time")
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
     ]
-    solver = z3.SolverFor("QF_LRA") if solver_profile == "qf_lra" else z3.Solver()
+    if solver_profile == "qf_lra":
+        solver = z3.SolverFor("QF_LRA")
+    elif solver_profile == "sls_smt":
+        solver = z3.Tactic("sls-smt").solver()
+    else:
+        solver = z3.Solver()
     solver.set(timeout=timeout_seconds * 1000)
     if minimize_unsat_core:
         solver.set("smt.core.minimize", True)
@@ -690,6 +819,26 @@ def run(
         solver.add(values[0][CORES[0]] >= values[0][3])
     if refute_all_owner_cores_below_next_tokens:
         solver.add(z3.Not(some_owner_core_dominates_next_token(values)))
+    if refute_canonical_heavy_token_matching_size_two:
+        solver.add(canonical_heavy_token_matching_at_least_two(values))
+    if base_canonical_heavy_token_matching_number_at_most_one:
+        solver.add(z3.Not(canonical_heavy_token_matching_at_least_two(values)))
+    if base_canonical_heavy_token_mask is not None:
+        for position, (owner, token) in enumerate(CANONICAL_HEAVY_TOKEN_EDGES):
+            heavy = values[owner][token] > values[owner][CORES[owner]]
+            solver.add(
+                heavy
+                if (base_canonical_heavy_token_mask >> position) & 1
+                else z3.Not(heavy)
+            )
+    if refute_canonical_heavy_owner_star is not None:
+        solver.add(
+            canonical_heavy_owner_star(values, refute_canonical_heavy_owner_star)
+        )
+    if refute_canonical_heavy_token_star is not None:
+        solver.add(
+            canonical_heavy_token_star(values, refute_canonical_heavy_token_star)
+        )
     edge_cell_sha256 = None
     if base_host_edge_cell_source is not None:
         edge_document = json.loads(base_host_edge_cell_source.read_text())
@@ -753,21 +902,22 @@ def run(
     base_theta = z3.Sum(
         *(values[owner][core] for owner, core in enumerate(CORES))
     )
-    for assignment in itertools.permutations(TOKENS):
-        bundles = orbit_bundles(assignment)
-        add_structural(
-            z3.Implies(
-                eligible(values, bundles, assignment[4]),
-                z3.And(
-                    *(
-                        values[owner][assignment[owner]]
-                        <= values[owner][CORES[owner]]
-                        for owner in range(4)
-                    )
+    if not drop_fixed_orbit_maximality_constraints:
+        for assignment in itertools.permutations(TOKENS):
+            bundles = orbit_bundles(assignment)
+            add_structural(
+                z3.Implies(
+                    eligible(values, bundles, assignment[4]),
+                    z3.And(
+                        *(
+                            values[owner][assignment[owner]]
+                            <= values[owner][CORES[owner]]
+                            for owner in range(4)
+                        )
+                    ),
                 ),
-            ),
-            "orbit_max_{}".format("_".join(str(good) for good in assignment)),
-        )
+                "orbit_max_{}".format("_".join(str(good) for good in assignment)),
+            )
 
     global_cuts = set()
     completion_cuts = set()
@@ -842,46 +992,104 @@ def run(
                     state,
                     track=track_unsat_core,
                 )
-        for record in seed_document.get("completion_cuts", []):
-            assignment = tuple(int(good) for good in record["assignment"])
-            host = int(record["host"])
-            permutation = tuple(int(bundle) for bundle in record["permutation"])
-            key = (assignment, host, permutation)
-            if key in completion_cuts:
-                continue
-            completion_cuts.add(key)
-            completion_cut_records.append(
-                {
-                    "assignment": list(assignment),
-                    "host": host,
-                    "permutation": list(permutation),
-                }
-            )
-            bundles = orbit_bundles(assignment)
-            add_constraint(
-                solver,
-                z3.Implies(
-                    eligible(values, bundles, assignment[4]),
-                    complete_failure(
-                        values,
-                        bundles,
-                        assignment[4],
-                        host,
-                        permutation,
+        if not drop_seed_completion_cuts:
+            for record in seed_document.get("completion_cuts", []):
+                assignment = tuple(int(good) for good in record["assignment"])
+                host = int(record["host"])
+                permutation = tuple(int(bundle) for bundle in record["permutation"])
+                key = (assignment, host, permutation)
+                if key in completion_cuts:
+                    continue
+                completion_cuts.add(key)
+                completion_cut_records.append(
+                    {
+                        "assignment": list(assignment),
+                        "host": host,
+                        "permutation": list(permutation),
+                    }
+                )
+                bundles = orbit_bundles(assignment)
+                add_constraint(
+                    solver,
+                    z3.Implies(
+                        eligible(values, bundles, assignment[4]),
+                        complete_failure(
+                            values,
+                            bundles,
+                            assignment[4],
+                            host,
+                            permutation,
+                        ),
                     ),
-                ),
-                (
-                    completion_cut_tracker(assignment, host, permutation)
-                    if track_unsat_core
-                    else None
-                ),
-            )
-        for record in seed_document.get("orbit_hall_cuts", []):
-            assignment = tuple(int(good) for good in record["assignment"])
+                    (
+                        completion_cut_tracker(assignment, host, permutation)
+                        if track_unsat_core
+                        else None
+                    ),
+                )
+        if not drop_seed_orbit_hall_cuts:
+            for record in seed_document.get("orbit_hall_cuts", []):
+                assignment = tuple(int(good) for good in record["assignment"])
+                if assignment in orbit_hall_cuts:
+                    continue
+                orbit_hall_cuts.add(assignment)
+                orbit_hall_cut_records.append({"assignment": list(assignment)})
+                bundles = orbit_bundles(assignment)
+                add_constraint(
+                    solver,
+                    z3.Implies(
+                        eligible(values, bundles, assignment[4]),
+                        orbit_completion_failure(
+                            values,
+                            assignment,
+                            completion_cut_mode,
+                        ),
+                    ),
+                    orbit_cut_tracker(assignment) if track_unsat_core else None,
+                )
+    if preload_all_identity_completion_cuts:
+        identity = tuple(range(4))
+        for assignment in itertools.permutations(TOKENS):
+            bundles = orbit_bundles(assignment)
+            for host in range(4):
+                key = (assignment, host, identity)
+                if key in completion_cuts:
+                    continue
+                completion_cuts.add(key)
+                completion_cut_records.append(
+                    {
+                        "assignment": list(assignment),
+                        "host": host,
+                        "permutation": list(identity),
+                        "preloaded": True,
+                    }
+                )
+                add_constraint(
+                    solver,
+                    z3.Implies(
+                        eligible(values, bundles, assignment[4]),
+                        complete_failure(
+                            values,
+                            bundles,
+                            assignment[4],
+                            host,
+                            identity,
+                        ),
+                    ),
+                    (
+                        completion_cut_tracker(assignment, host, identity)
+                        if track_unsat_core
+                        else None
+                    ),
+                )
+    if preload_all_orbit_hall_cuts:
+        for assignment in itertools.permutations(TOKENS):
             if assignment in orbit_hall_cuts:
                 continue
             orbit_hall_cuts.add(assignment)
-            orbit_hall_cut_records.append({"assignment": list(assignment)})
+            orbit_hall_cut_records.append(
+                {"assignment": list(assignment), "preloaded": True}
+            )
             bundles = orbit_bundles(assignment)
             add_constraint(
                 solver,
@@ -895,6 +1103,26 @@ def run(
                 ),
                 orbit_cut_tracker(assignment) if track_unsat_core else None,
             )
+    for assignment in preload_orbit_assignments:
+        if assignment in orbit_hall_cuts:
+            continue
+        orbit_hall_cuts.add(assignment)
+        orbit_hall_cut_records.append(
+            {"assignment": list(assignment), "preloaded": True}
+        )
+        bundles = orbit_bundles(assignment)
+        add_constraint(
+            solver,
+            z3.Implies(
+                eligible(values, bundles, assignment[4]),
+                orbit_completion_failure(
+                    values,
+                    assignment,
+                    completion_cut_mode,
+                ),
+            ),
+            orbit_cut_tracker(assignment) if track_unsat_core else None,
+        )
     for state in local_pair_exchange_states(preload_local_exchange_distance):
         key = state_key(state)
         if key in global_cuts:
@@ -915,7 +1143,7 @@ def run(
             state,
             track=track_unsat_core,
         )
-    if seed_values_hint is not None:
+    if seed_values_hint is not None and solver_profile != "sls_smt":
         for row, symbolic_row in zip(seed_values_hint, values):
             row_total = sum(int(entry) for entry in row)
             for entry, symbolic_entry in zip(row, symbolic_row):
@@ -953,6 +1181,12 @@ def run(
                 if refute_base_pair_hall_cross_row_core_clause is not None
                 else "BASE_SOME_OWNER_CORE_DOMINATES_NEXT_TOKEN_FORCED"
                 if refute_all_owner_cores_below_next_tokens
+                else "BASE_HEAVY_TOKEN_MATCHING_NUMBER_AT_MOST_ONE_FORCED"
+                if refute_canonical_heavy_token_matching_size_two
+                else "BASE_CANONICAL_HEAVY_OWNER_STAR_FORCED_ABSENT"
+                if refute_canonical_heavy_owner_star is not None
+                else "BASE_CANONICAL_HEAVY_TOKEN_STAR_FORCED_ABSENT"
+                if refute_canonical_heavy_token_star is not None
                 else "FIXED_PAIR_TOKEN_ORBIT_FORCED"
             )
             if track_unsat_core:
@@ -1180,6 +1414,26 @@ def run(
             )
             if refute_all_owner_cores_below_next_tokens
             else (
+                "BASE_HEAVY_TOKEN_MATCHING_NUMBER_AT_MOST_ONE_FORCED proves "
+                "only that the canonical strict token-above-core graph has "
+                "matching number at most one under the imposed finite "
+                "consequence pool and canonical walls. It does not close the "
+                "pair-Hall cell or prove four-agent EFX."
+            )
+            if refute_canonical_heavy_token_matching_size_two
+            else (
+                "BASE_CANONICAL_HEAVY_OWNER_STAR_FORCED_ABSENT proves only "
+                "the selected two-edge owner-star exclusion inside the "
+                "canonical pair-Hall consequence pool."
+            )
+            if refute_canonical_heavy_owner_star is not None
+            else (
+                "BASE_CANONICAL_HEAVY_TOKEN_STAR_FORCED_ABSENT proves only "
+                "the selected two-edge token-star exclusion inside the "
+                "canonical pair-Hall consequence pool."
+            )
+            if refute_canonical_heavy_token_star is not None
+            else (
                 "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
                 "orbit theorem inside the imposed host-edge subcell after exact "
                 "replay. UNSAT proves only the subcell fixing every base-host EFX "
@@ -1294,6 +1548,27 @@ def run(
         "refute_all_owner_cores_below_next_tokens": (
             refute_all_owner_cores_below_next_tokens
         ),
+        "refute_canonical_heavy_token_matching_size_two": (
+            refute_canonical_heavy_token_matching_size_two
+        ),
+        "base_canonical_heavy_token_matching_number_at_most_one": (
+            base_canonical_heavy_token_matching_number_at_most_one
+        ),
+        "preload_all_orbit_hall_cuts": preload_all_orbit_hall_cuts,
+        "base_canonical_heavy_token_mask": base_canonical_heavy_token_mask,
+        "refute_canonical_heavy_owner_star": refute_canonical_heavy_owner_star,
+        "refute_canonical_heavy_token_star": refute_canonical_heavy_token_star,
+        "drop_seed_completion_cuts": drop_seed_completion_cuts,
+        "drop_fixed_orbit_maximality_constraints": (
+            drop_fixed_orbit_maximality_constraints
+        ),
+        "drop_seed_orbit_hall_cuts": drop_seed_orbit_hall_cuts,
+        "preload_orbit_assignments": [
+            list(assignment) for assignment in preload_orbit_assignments
+        ],
+        "preload_all_identity_completion_cuts": (
+            preload_all_identity_completion_cuts
+        ),
         "minimize_unsat_core": minimize_unsat_core,
         "unsat_core_labels": unsat_core_labels,
         "unsat_core_size": (
@@ -1357,7 +1632,7 @@ def main():
     )
     parser.add_argument(
         "--solver-profile",
-        choices=("default", "qf_lra", "arith2"),
+        choices=("default", "qf_lra", "arith2", "sls_smt"),
         default="default",
     )
     parser.add_argument(
@@ -1405,6 +1680,50 @@ def main():
         "--refute-all-owner-cores-below-next-tokens",
         action="store_true",
     )
+    parser.add_argument(
+        "--refute-canonical-heavy-token-matching-size-two",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--base-canonical-heavy-token-matching-number-at-most-one",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--preload-all-orbit-hall-cuts",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--base-canonical-heavy-token-mask",
+        type=int,
+        choices=range(1 << len(CANONICAL_HEAVY_TOKEN_EDGES)),
+    )
+    parser.add_argument(
+        "--refute-canonical-heavy-owner-star",
+        type=int,
+        choices=(1, 2, 3),
+    )
+    parser.add_argument(
+        "--refute-canonical-heavy-token-star",
+        type=int,
+        choices=(1, 5, 7),
+    )
+    parser.add_argument("--drop-seed-completion-cuts", action="store_true")
+    parser.add_argument(
+        "--drop-fixed-orbit-maximality-constraints",
+        action="store_true",
+    )
+    parser.add_argument("--drop-seed-orbit-hall-cuts", action="store_true")
+    parser.add_argument(
+        "--preload-orbit-assignment",
+        type=int,
+        nargs=5,
+        action="append",
+        default=[],
+    )
+    parser.add_argument(
+        "--preload-all-identity-completion-cuts",
+        action="store_true",
+    )
     parser.add_argument("--base-host-offhost-edge-cell-source", type=Path)
     parser.add_argument("--base-host-diagonal-pattern", type=int)
     parser.add_argument("--smt2-output", type=Path)
@@ -1439,6 +1758,17 @@ def main():
         args.track_structural_core,
         args.base_owner0_core_dominates_next_token,
         args.refute_all_owner_cores_below_next_tokens,
+        args.refute_canonical_heavy_token_matching_size_two,
+        args.base_canonical_heavy_token_matching_number_at_most_one,
+        args.preload_all_orbit_hall_cuts,
+        args.base_canonical_heavy_token_mask,
+        args.refute_canonical_heavy_owner_star,
+        args.refute_canonical_heavy_token_star,
+        args.drop_seed_completion_cuts,
+        args.drop_fixed_orbit_maximality_constraints,
+        args.drop_seed_orbit_hall_cuts,
+        args.preload_orbit_assignment,
+        args.preload_all_identity_completion_cuts,
     )
     summary = {
         key: result[key]

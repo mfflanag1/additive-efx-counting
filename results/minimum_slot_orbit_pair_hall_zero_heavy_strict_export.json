@@ -1,0 +1,97 @@
+{
+  "case_count": 1,
+  "cases": [
+    {
+      "elapsed_seconds": 1.0108735839603469,
+      "equal_edges": [],
+      "equality_count": 0,
+      "mask": 0,
+      "reason_unknown": "canceled",
+      "values": null,
+      "verdict": "unknown"
+    }
+  ],
+  "edge_order": [
+    {
+      "owner": 0,
+      "position": 0,
+      "token": 5
+    },
+    {
+      "owner": 1,
+      "position": 1,
+      "token": 5
+    },
+    {
+      "owner": 1,
+      "position": 2,
+      "token": 7
+    },
+    {
+      "owner": 2,
+      "position": 3,
+      "token": 7
+    },
+    {
+      "owner": 2,
+      "position": 4,
+      "token": 1
+    },
+    {
+      "owner": 3,
+      "position": 5,
+      "token": 1
+    },
+    {
+      "owner": 3,
+      "position": 6,
+      "token": 3
+    }
+  ],
+  "elapsed_seconds": 1.4125533750047907,
+  "exact_source_cover": false,
+  "meaning": "Under the source's seven weak token-at-most-core inequalities, equality versus strict inequality forms an exact 128-case cover.",
+  "schema": "pair-hall-zero-heavy-equality-case-decision-v1",
+  "selected_masks": [
+    0
+  ],
+  "smt2_output": "/private/tmp/pair-hall-mask0-witness4084-strict.smt2",
+  "smt2_output_sha256": "0186b57a1d71ca99b5e1d06b6668fbe872c79b5f81391a16a6087d79180d23cc",
+  "solver": "z3",
+  "solver_profile": "default",
+  "solver_version": "5.0.0",
+  "source": "/private/tmp/pair-hall-mask0-witness4084.smt2",
+  "source_sha256": "8e29925d0f1099f617c37361935944d59676ed85b4d0fa4b8a4ecf7edfb4cc11",
+  "status": "INCOMPLETE",
+  "timeout_seconds_per_case": 1,
+  "verdict_histogram": {
+    "unknown": 1
+  },
+  "verdicts_by_equality_count": {
+    "0": {
+      "unknown": 1
+    },
+    "1": {
+      "unknown": 0
+    },
+    "2": {
+      "unknown": 0
+    },
+    "3": {
+      "unknown": 0
+    },
+    "4": {
+      "unknown": 0
+    },
+    "5": {
+      "unknown": 0
+    },
+    "6": {
+      "unknown": 0
+    },
+    "7": {
+      "unknown": 0
+    }
+  },
+  "workers": 1
+}

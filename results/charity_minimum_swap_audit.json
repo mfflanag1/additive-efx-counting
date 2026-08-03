@@ -1,0 +1,39 @@
+{
+  "claim_boundary": "The audit verifies local inequalities, not existence of an eligible simultaneous exchange cycle.",
+  "claim_count": 7,
+  "claims": [
+    {
+      "claim": "plateau_gain_nonnegative",
+      "verdict": "unsat"
+    },
+    {
+      "claim": "plateau_equality_makes_incoming_a_minimum",
+      "verdict": "unsat"
+    },
+    {
+      "claim": "incoming_target_wall_forces_incoming_above_released",
+      "verdict": "unsat"
+    },
+    {
+      "claim": "external_charity_wall_forces_released_above_incoming",
+      "verdict": "unsat"
+    },
+    {
+      "claim": "source_efx_wall_forces_released_above_incoming",
+      "verdict": "unsat"
+    },
+    {
+      "claim": "source_charity_wall_forces_released_above_incoming",
+      "verdict": "unsat"
+    },
+    {
+      "claim": "old_efx_makes_released_good_unenvied_for_nonsingleton_source",
+      "verdict": "unsat"
+    }
+  ],
+  "meaning": "QF_LRA audits of every algebraic implication in the charity/minimum exchange and one-floater obstruction lemmas.",
+  "schema": "charity-minimum-swap-audit-v1",
+  "solver": "z3",
+  "solver_version": "5.0.0",
+  "status": "ALL_SYMBOLIC_IMPLICATIONS_UNSAT"
+}
