@@ -182,9 +182,9 @@ reproduced the same ordered pools and UNSAT verdict; all 65 global witnesses
 are connected and have owner distance at most four.  Exact cyclic invariance
 of the fixed off-host profile transfers the theorem to patterns 1, 4, 32, and
 64.  Including the prior pattern-0 theorem, five diagonal profiles are now
-closed.  Pattern 2, representing the other single-bit orbit, remains UNKNOWN
-after 58 global cuts and 70 matching blockers.  Multi-bit patterns remain
-unclassified.  A merged 69-global/149-completion pool remains UNKNOWN after
+closed.  At this intermediate stage, pattern 2—the other single-bit orbit—was
+UNKNOWN after 58 global cuts and 70 matching blockers.  Multi-bit patterns
+remain unclassified.  A merged 69-global/149-completion pool remains UNKNOWN after
 fresh 300-second default and QF_LRA checks using the direct pairwise EFX
 encoding.  See
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and
@@ -202,14 +202,22 @@ finite-menu alternative is recorded in
 
 The subsequent pattern-2 attack removes every threshold `ITE` by exact
 leave-one-good-out expansions.  The literal runner reproduces the pattern-1
-core as UNSAT, but pattern 2 remains UNKNOWN after a nested exact cube cover
-and after a separate compact whole-Hall replay.  Structural extraction reduces
+core as UNSAT.  Pattern 2 initially remains UNKNOWN after a nested exact cube
+cover and a separate compact whole-Hall replay.  Structural extraction reduces
 the pattern-2 witness pool to 13 cyclic connected templates.  Together with
 the pattern-1 theorem core, the union has 18 templates: five swaps, seven
 balanced three-owner transfers, five balanced four-owner cycles, and one
-lopsided three-owner transfer of bundle shape 1+2+2+3.  This is an analytic
-target, not a pattern-2 theorem; see
-`PARTIAL_THRESHOLD_DIAGONAL_TOPOLOGY_GATE.md`.
+lopsided three-owner transfer of bundle shape 1+2+2+3.
+
+The 18-template union then closes pattern 2.  A tracked UNSAT extraction leaves
+a 63-cut core with 41 global moves and 22 completion blockers.  The core itself
+uses only 15 balanced connected exchange templates—4 swaps, 6 three-owner
+cycles, and 5 four-owner cycles—plus 12 completion templates.  Fresh
+default, arithmetic-solver-2, and QF_LRA replays return UNSAT, and cyclic symmetry closes
+patterns \(\{2,8,16,128\}\).  Together with pattern 0 and the pattern-1 orbit,
+all nine diagonal profiles of Hamming weight at most one are closed in the
+fixed off-host subcell.  See `PARTIAL_THRESHOLD_DIAGONAL_TOPOLOGY_GATE.md` and
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`.
 
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
@@ -225,8 +233,8 @@ an arbitrary charity set while preserving collective charity dominance.
 The focused parkability suite passes:
 
 ```text
-35 passed
+45 passed, 36 warnings in 23.14s
 ```
 
-The new Python generators compile successfully, and every quoted artifact
-parses as JSON.
+The warnings are pre-existing pytest return-value warnings.  The new Python
+generators compile successfully, and every quoted artifact parses as JSON.

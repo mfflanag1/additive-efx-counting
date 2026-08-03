@@ -3,10 +3,10 @@
 ## Current result boundary
 
 Four-agent additive EFX and general additive EFX remain open.  This checkpoint
-does not close diagonal pattern 2.  It replaces the threshold encoding by an
-exact literal formulation, maps part of the remaining pattern-2 search space,
-and extracts a small connected-transfer topology target from the two
-single-bit diagonal orbits.
+closes diagonal pattern 2 and its cyclic orbit in the fixed off-host edge
+profile.  It replaces the threshold encoding by an exact literal formulation,
+records the unsuccessful direct search, and then extracts and verifies a
+63-cut connected-transfer theorem core.
 
 ## Exact literal threshold lemma
 
@@ -64,7 +64,15 @@ A second replay uses the more compact pool of 50 global-improvement cuts and
 26 whole-token-state Hall blockers.  The literal QF_LRA check also returns
 UNKNOWN at 300 seconds, as does an independently parsed cvc5 replay.  This
 rules out the hypothesis that the 149
-permutation blockers alone caused the stall; it does not decide the cell.
+permutation blockers alone caused the stall.
+
+The decisive formulation unions the pattern-1 theorem menu with the compact
+pattern-2 pool.  Its 65 global cuts, 25 completion blockers, and 26 whole-Hall
+blockers are UNSAT under Z3 arithmetic solver 2.  Core extraction removes all
+whole-Hall blockers and leaves a 63-cut formula: 41 global cuts and 22
+completion blockers.  Fresh arithmetic-solver-2 and QF_LRA replays both return
+UNSAT.  Thus pattern 2 is closed; see
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`.
 
 ## Exact topology extraction
 
@@ -97,32 +105,35 @@ templates, all moving at most four goods:
 - 5 balanced four-owner cycles; and
 - 1 lopsided three-owner transfer.
 
-This exposes a real structural difference between the two single-bit orbits.
-Pattern 1 needs full four-owner cycles, whereas the current pattern-2 boundary
-needs three-owner moves and one bundle-shape-changing move.  A swap-only or
-balanced-cycle-only proof cannot cover both observed mechanisms.
+The final UNSAT core sharpens this exploratory union to 15 balanced templates:
+
+- 4 swaps;
+- 6 balanced three-owner transfers; and
+- 5 balanced four-owner cycles.
+
+The lopsided template and three other exploratory templates are not needed.
+The two single-bit orbits still use different connected topologies—pattern 1
+has no three-owner move in its preferred core, while the combined pattern-2
+proof does—but the exact theorem menu stays entirely pair preserving.
 
 ## Analytic conversion target
 
-The next lemma to prove is the following fixed-profile statement.
+The solver-certified fixed-profile lemma is now:
 
 > **Four-good connected alternative.**  In the cyclic pair-Hall cell with the
 > recorded 24 off-host edges fixed, if every eligible fixed-core token state
-> is EFX-completion blocked, then one of the 18 cyclic transfer templates is
+> is EFX-completion blocked, then one of the 15 retained transfer templates is
 > eligible and has strictly larger normalized owner-threshold potential.
 
-Global threshold maximality would exclude the improving alternative.  The
-pattern-1 theorem proves the statement in its cyclic orbit using 8 of the 18
-templates.  Pattern 2 currently supplies only a candidate 13-template menu;
-the solver has not proved that menu sufficient.
+Global threshold maximality excludes the improving alternative.  The 63-cut
+core proves this statement exactly for pattern 2, and cyclic symmetry transfers
+it to patterns 8, 16, and 128.
 
-The analytic proof should separate the three topologies.  For balanced cycles,
-the potential change is a sum of owner-local retained/incoming maxima.  The
-lopsided template requires one additional inequality transferring a good from
-the future singleton bundle to the future triple bundle.  That is the precise
-place where a proof restricted to pair-preserving exchanges would fail.
+The human proof should separate swaps, three-owner cycles, and four-owner
+cycles.  Every retained move is balanced, so each potential change is a sum of
+owner-local retained/incoming maxima; no bundle-shape correction is required.
 
-After this lemma, the remaining gates are still substantial: remove the fixed
+The remaining gates are still substantial: remove the fixed
 24 off-host edges, lift from canonical pairs to arbitrary cores, close the
 four-agent one-charity-good reduction, and prove charity absorption for an
 arbitrary charity set.
@@ -137,6 +148,10 @@ arbitrary charity set.
 - `minimum_slot_orbit_diagonal_pattern2_literal_hall_quotient_audit_v2.json`;
 - `minimum_slot_orbit_diagonal_pattern2_literal_hall_master_cvc5.json`;
 - `minimum_slot_orbit_diagonal_topology_union_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern2_topology_union_hall_core_pool.json`;
+- `minimum_slot_orbit_diagonal_pattern2_topology_union_hall_core_replay_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern2_topology_union_hall_core_menu_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern2_symmetry_audit.json`;
 - `audit_minimum_slot_literal_expansion.py`;
 - `split_minimum_slot_literal_cubes.py`;
 - `decide_minimum_slot_literal_cube_cover.py`; and

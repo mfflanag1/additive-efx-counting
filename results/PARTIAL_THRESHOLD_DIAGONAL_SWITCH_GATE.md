@@ -128,8 +128,8 @@ pools into 69 global cuts and 149 blockers, also produced 300-second UNKNOWN
 checks.  Replacing maximum expressions by equivalent literal pairwise EFX
 inequalities did not close this cell: both default Z3 and QF_LRA-specialized
 Z3 timed out again at 300 seconds on the merged pool, without adding a cut.
-Pattern 2 remains UNKNOWN.  Its timeouts are honest computational stalls, not
-mathematical evidence for either satisfiability or unsatisfiability.
+At that stage pattern 2 remained UNKNOWN; those timeouts were computational
+stalls, not mathematical evidence for either satisfiability or unsatisfiability.
 
 The literal rewrite has now been extended to eligibility and
 threshold-potential upper bounds, removing every threshold `ITE`.  Symbolic
@@ -142,6 +142,13 @@ branch found.  The 50 compact-pool witnesses reduce to 13 cyclic connected
 templates; comparison with the pattern-1 theorem core gives an 18-template
 union moving at most four goods.  The precise topology target and claim
 boundary are recorded in `PARTIAL_THRESHOLD_DIAGONAL_TOPOLOGY_GATE.md`.
+
+Adding the pattern-1-only topologies to the compact pattern-2 pool is decisive.
+The union is UNSAT and core extraction leaves 41 global cuts plus 22 completion
+blockers.  Fresh default, arithmetic-solver-2, and QF_LRA replays all return UNSAT.  The
+core reduces to 15 balanced connected exchange templates and 12 completion
+templates, proving pattern 2 and its cyclic orbit \(\{2,8,16,128\}\).  See
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`.
 
 The exact pattern-1 result is recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.  It is a second complete

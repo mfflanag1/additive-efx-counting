@@ -185,10 +185,17 @@ reproduces the same ordered pools and UNSAT verdict.  All 65 global witnesses
 are connected and have owner distance at most four.  Cyclic invariance of the
 fixed off-host profile transfers the theorem to patterns 1, 4, 32, and 64;
 together with pattern 0, five exact diagonal profiles are closed.  Pattern 2,
-representing the other single-bit orbit, remains an honest solver stall after
+representing the other single-bit orbit, initially stalled after
 58 global cuts and 70 matching blockers.  A larger merged pool with 69 global
 cuts and 149 blockers still times out under both default and QF_LRA-specialized
 Z3 after the direct pairwise-inequality rewrite.
+
+The later literal/topology attack closes pattern 2 with a fresh-replayed
+63-cut core: 41 connected global moves and 22 completion blockers.  Its cyclic
+orbit is \(\{2,8,16,128\}\), so all nine diagonal profiles of Hamming weight
+at most one are now closed in the fixed off-host subcell.  The exact theorem
+and remaining boundary are recorded in
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`.
 
 The pattern-1 proof has also been compressed to a fresh-replayed,
 solver-minimized UNSAT core with 27 global cuts and 25 matching blockers.  Its

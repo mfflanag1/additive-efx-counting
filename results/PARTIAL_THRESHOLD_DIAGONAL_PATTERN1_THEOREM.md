@@ -134,9 +134,10 @@ goods, and no witness splits into independent transfer components.
 This is one cyclic orbit of four exact diagonal patterns out of 256 in one
 fixed off-host edge profile.  It does not prove the entire eight-switch
 subcell, the cyclic pair-Hall cell, arbitrary-core four-agent EFX, or general
-EFX.  In particular, pattern 2 remains computationally unresolved, multi-bit
-patterns remain unclassified, and the 24 off-host edge equalities have not
-been derived from pair-Hall blockage.
+EFX.  Pattern 2 and its cyclic orbit are now closed by the separate theorem in
+`PARTIAL_THRESHOLD_DIAGONAL_PATTERN2_THEOREM.md`; multi-bit patterns remain
+unclassified, and the 24 off-host edge equalities have not been derived from
+pair-Hall blockage.
 
 ## Reproduction
 
