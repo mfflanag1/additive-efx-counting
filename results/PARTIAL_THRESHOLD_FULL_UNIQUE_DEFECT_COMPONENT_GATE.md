@@ -94,8 +94,10 @@ The general
 [`transfer-component hybrid wall lemma`](GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md)
 now proves the exact decomposition needed for this step: potential gain is
 component-additive, and every failed hybrid inequality crosses the selected
-component cut. What remains is the sign-cancellation theorem along the
-resulting dependency growth.
+component cut. Its crossing-wall polarity formula additionally labels every
+dependency by a strict threshold-change sign in the blocking row. What
+remains is to cancel these row-labeled signs while retaining positive total
+owner gain.
 
 ## Claim boundary
 

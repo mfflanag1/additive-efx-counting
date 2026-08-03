@@ -53,6 +53,31 @@ Then:
 
 No inequality whose two slots lie on the same side can fail.
 
+5. Every crossing wall has an exact strict polarity. Write
+
+   \[
+   d_i(j)=\tau_i(Y_j)-\tau_i(X_j)
+   \]
+
+   for an owner slot and
+
+   \[
+   d_i(c)=v_i(Q)-v_i(P)
+   \]
+
+   for the charity slot. Let \(a_s=1\) when slot \(s\) lies in a selected
+   component and \(a_s=0\) otherwise. A failed owner--target or
+   owner--charity inequality between slots \(i\) and \(s\) satisfies
+
+   \[
+   (a_s-a_i)d_i(s)>0. \tag{1}
+   \]
+
+   Thus an outside owner blocked by an inside target sees that target's
+   threshold strictly increase, while an inside owner blocked by an outside
+   target sees the outside target's threshold strictly decrease between
+   \(X\) and \(Y\).
+
 ## Proof
 
 Every moved good is one edge and every edge belongs to exactly one transfer
@@ -83,7 +108,24 @@ argument applies to owner-versus-charity dominance, using the charity slot in
 place of \(j\). Moreover, the opposite slot cannot be isolated in the
 transfer graph: an isolated slot has the same bundle in \(X\) and \(Y\), so
 the mixed inequality would again be an inequality of \(Y\). Hence every wall
-really names another transfer component. \(\square\)
+really names another transfer component.
+
+For item 5, suppose first that owner \(i\) is outside and target \(s\) is
+inside. The failed hybrid inequality and feasibility of \(X\) give
+
+\[
+\tau_i(Y_s)>v_i(X_i)\geq\tau_i(X_s),
+\]
+
+with \(\tau_i\) replaced by charity value when \(s=c\). Hence \(d_i(s)>0\),
+which is (1). If \(i\) is inside and \(s\) is outside, failure in the hybrid
+and feasibility of \(Y\) give
+
+\[
+\tau_i(X_s)>v_i(Y_i)\geq\tau_i(Y_s),
+\]
+
+so \(d_i(s)<0\), again yielding (1). \(\square\)
 
 ## Positive-component corollary
 
@@ -92,7 +134,7 @@ If \(\Theta(Y)>\Theta(X)\), at least one transfer component \(C\) has
 
 1. an eligible connected transfer with strictly larger \(\Theta\); or
 2. a named EFX or charity wall crossing from \(C\) to another transfer
-   component.
+   component, carrying the strict polarity (1).
 
 Starting from a positive component and repeatedly adjoining the component
 named by a crossing wall yields the exact dependency-growth process needed by

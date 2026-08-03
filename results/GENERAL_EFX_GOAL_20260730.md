@@ -17,7 +17,8 @@ The replacement cap-free invariant is now proved in
 [GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md](GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md):
 between any two fixed-charity EFX states, \(\Theta\)-gain is additive over
 transfer components, and every infeasible partial component has a wall
-crossing to another component. The unresolved common four-agent/general gate
+crossing to another component with an exact strict row-wise polarity. The
+unresolved common four-agent/general gate
 is to prove that dependency growth preserves enough positive normalized gain
 to close in an eligible union, or else yields an impossible strict wall
 cycle. This supersedes bounded item-radius targets but does not prove EFX.
