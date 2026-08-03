@@ -149,8 +149,26 @@ complete balanced radius-three menu has 32 swaps and 112 cycles.  An exact
 boundary valuation proves swaps alone insufficient: its blocked token orbit
 has no positive eligible distance-two exchange, while the unique positive
 local move is a three-owner cycle of gain \(41/1260\).  This replaces the broad
-core-reassignment target by the concrete swap-or-three-cycle alternative in
-the canonical pair cell.
+core-reassignment target by a concrete local menu to test.
+
+The full local menu did not survive the next adversarial pass.  A compact
+whole-state Hall encoding reached 120 cumulative rounds with 21 Hall cuts and
+108 nearest-exchange cuts.  Its final aligned blocked model has no eligible
+balanced radius-three state; the nearest higher-threshold allocation has shape
+\(1+3+2+2\), owner distance four, and gain \(403/8220\).  Across the run,
+nearest witnesses reached owner distance seven.  The corrected live target is
+therefore the augmenting-component-cycle alternative: failed local moves must
+combine into an eligible positive-gain union, with no fixed-radius bound.
+
+The first exact subcell of that corrected target is now closed.  In the final
+boundary profile, the four host completions have cyclic deficient agent pairs.
+Fixing the complete four host-edge graphs, an exact formula is UNSAT after 86
+cumulative CEGAR iterations with 73 global-maximality cuts and 26 whole-state
+Hall blockers.  Thus a globally threshold-maximal canonical base in this exact
+edge subcell must have an EFX-completable token permutation.  All 73 selected
+global cuts are connected transfers.  This is a bounded edge-cell theorem,
+not yet the same theorem for the coarser cyclic pair-Hall normal form; see
+`PARTIAL_THRESHOLD_FOUR_HOST_EDGE_CELL_THEOREM.md`.
 
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma

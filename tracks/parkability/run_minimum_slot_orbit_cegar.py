@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import itertools
 import json
 import math
@@ -16,6 +17,11 @@ import z3
 try:
     from .anneal import atomic_json
     from .audit_minimum_slot_orbit import audit_orbit, bundles_from_masks
+    from .audit_threshold_plateau_exact_paths import (
+        exact_best_hall_margin,
+        mask_threshold,
+        mask_value,
+    )
     from .decide_threshold_hall_local_gradient import (
         eligible,
         integer_values,
@@ -27,6 +33,11 @@ try:
 except ImportError:
     from anneal import atomic_json
     from audit_minimum_slot_orbit import audit_orbit, bundles_from_masks
+    from audit_threshold_plateau_exact_paths import (
+        exact_best_hall_margin,
+        mask_threshold,
+        mask_value,
+    )
     from decide_threshold_hall_local_gradient import (
         eligible,
         integer_values,
@@ -74,6 +85,72 @@ def complete_failure(values, bundles, floater, host, permutation):
     return z3.Or(*failures)
 
 
+def efx_edge(values, complete, observer, assigned):
+    required = maximum(
+        threshold(values[observer], complete[target])
+        for target in range(4)
+        if target != assigned
+    )
+    return total(values[observer], complete[assigned]) >= required
+
+
+def numeric_complete_edges(values, complete):
+    masks = masks_from_bundles(complete)
+    return tuple(
+        tuple(
+            mask_value(values, observer, masks[assigned])
+            >= max(
+                mask_threshold(values, observer, masks[target])
+                for target in range(4)
+                if target != assigned
+            )
+            for assigned in range(4)
+        )
+        for observer in range(4)
+    )
+
+
+def hall_matching_failure(values, complete, prefix):
+    selected = [z3.Bool(f"{prefix}_selected_{observer}") for observer in range(4)]
+    neighbors = [z3.Bool(f"{prefix}_neighbor_{bundle}") for bundle in range(4)]
+    constraints = [z3.Or(*selected)]
+    for bundle in range(4):
+        constraints.append(
+            neighbors[bundle]
+            == z3.Or(
+                *(
+                    z3.And(
+                        selected[observer],
+                        efx_edge(values, complete, observer, bundle),
+                    )
+                    for observer in range(4)
+                )
+            )
+        )
+    constraints.append(
+        z3.Sum(*(z3.If(neighbor, 1, 0) for neighbor in neighbors))
+        < z3.Sum(*(z3.If(selector, 1, 0) for selector in selected))
+    )
+    return z3.And(*constraints)
+
+
+def orbit_hall_failure(values, assignment):
+    bundles = orbit_bundles(assignment)
+    failures = []
+    assignment_key = "_".join(str(good) for good in assignment)
+    for host in range(4):
+        complete = list(bundles)
+        complete[host] = tuple(sorted((*complete[host], assignment[4])))
+        failures.append(
+            hall_matching_failure(
+                values,
+                complete,
+                f"orbit_{assignment_key}_host_{host}",
+            )
+        )
+    return z3.And(*failures)
+
+
 def orbit_bundles(assignment):
     return tuple(
         tuple(sorted((CORES[owner], assignment[owner])))
@@ -81,7 +158,7 @@ def orbit_bundles(assignment):
     )
 
 
-def global_landscape(raw_values):
+def global_landscape(raw_values, witness_mode="any"):
     evaluator = FastParkability(4, 9)
     landscape = evaluator.partial_linear_potential_landscape(
         raw_values,
@@ -103,7 +180,12 @@ def global_landscape(raw_values):
     )
     higher_state = None
     if fixed is None:
-        higher_state = nearest_higher_state(raw_values, evaluator, base_masks)
+        higher_state = nearest_higher_state(
+            raw_values,
+            evaluator,
+            base_masks,
+            witness_mode=witness_mode,
+        )
     return landscape, fixed, higher_state
 
 
@@ -120,7 +202,9 @@ def owner_assignment(state):
     return tuple(assignment)
 
 
-def nearest_higher_state(raw_values, evaluator, base_masks):
+def nearest_higher_state(raw_values, evaluator, base_masks, witness_mode="any"):
+    if witness_mode not in {"any", "hall_insertable"}:
+        raise ValueError("witness mode must be any or hall_insertable")
     matrix = np.asarray(raw_values, dtype=np.int64)
     totals, thresholds = evaluator._tables(raw_values)
     row_totals = tuple(int(total) for total in matrix.sum(axis=1))
@@ -135,8 +219,7 @@ def nearest_higher_state(raw_values, evaluator, base_masks):
     )
     base_state = {"floater": FLOATER, "masks": base_masks}
     base_assignment = owner_assignment(base_state)
-    best = None
-    best_key = None
+    candidates = []
 
     for floater, masks in enumerate(evaluator.base_masks):
         valid = np.ones(len(masks), dtype=bool)
@@ -169,17 +252,38 @@ def nearest_higher_state(raw_values, evaluator, base_masks):
             )
             gain = int(scores[offset]) - base_score
             key = (owner_distance, gain, state_key(state))
-            if best_key is None or key < best_key:
-                best_key = key
-                best = {
-                    **state,
-                    "owner_distance": owner_distance,
-                    "threshold_gain_numerator": gain,
-                    "threshold_gain_denominator": common_denominator,
-                }
-    if best is None:
+            candidates.append(
+                (
+                    key,
+                    {
+                        **state,
+                        "owner_distance": owner_distance,
+                        "threshold_gain_numerator": gain,
+                        "threshold_gain_denominator": common_denominator,
+                    },
+                )
+            )
+    if not candidates:
         raise AssertionError("nonmaximal base has no strictly higher eligible state")
-    return best
+    candidates.sort(key=lambda entry: entry[0])
+    if witness_mode == "hall_insertable":
+        for _key, state in candidates:
+            margin, host, permutation, _bottlenecks = exact_best_hall_margin(
+                raw_values,
+                state,
+            )
+            if margin >= 0:
+                return {
+                    **state,
+                    "hall_insertable": True,
+                    "best_hall_margin": str(margin),
+                    "best_host": host,
+                    "best_permutation": list(permutation),
+                }
+    return {
+        **candidates[0][1],
+        "hall_insertable": False if witness_mode == "hall_insertable" else None,
+    }
 
 
 def state_key(state):
@@ -225,6 +329,9 @@ def relabeled_state_orbit(state, mode):
                 mapped[field] = state[field]
         if "preloaded" in state:
             mapped["preloaded"] = state["preloaded"]
+        for field in ("hall_insertable", "best_hall_margin"):
+            if field in state:
+                mapped[field] = state[field]
         results[state_key(mapped)] = mapped
     return tuple(results.values())
 
@@ -274,12 +381,22 @@ def run(
     relabeling_mode: str,
     completion_batch_size: int,
     preload_local_exchange_distance: int = 0,
+    completion_cut_mode: str = "witness",
+    solver_profile: str = "default",
+    global_witness_mode: str = "any",
+    base_host_edge_cell_source: Path | None = None,
 ):
+    if completion_cut_mode not in {"witness", "orbit_hall"}:
+        raise ValueError("completion-cut mode must be witness or orbit_hall")
+    if solver_profile not in {"default", "qf_lra"}:
+        raise ValueError("solver profile must be default or qf_lra")
+    if global_witness_mode not in {"any", "hall_insertable"}:
+        raise ValueError("global witness mode must be any or hall_insertable")
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
     ]
-    solver = z3.Solver()
+    solver = z3.SolverFor("QF_LRA") if solver_profile == "qf_lra" else z3.Solver()
     solver.set(timeout=timeout_seconds * 1000)
     for row in values:
         solver.add(z3.Sum(*row) == 1)
@@ -287,6 +404,23 @@ def run(
     solver.add(eligible(values, BASE, FLOATER))
     for owner, (core, token) in enumerate(zip(CORES, TOKENS[:4])):
         solver.add(values[owner][token] < values[owner][core])
+    edge_cell_sha256 = None
+    if base_host_edge_cell_source is not None:
+        edge_document = json.loads(base_host_edge_cell_source.read_text())
+        edge_values = edge_document.get("values", edge_document)
+        edge_cell_sha256 = hashlib.sha256(
+            base_host_edge_cell_source.read_bytes()
+        ).hexdigest()
+        for host in range(4):
+            complete = [tuple(bundle) for bundle in BASE]
+            complete[host] = tuple(sorted((*complete[host], FLOATER)))
+            expected_edges = numeric_complete_edges(edge_values, complete)
+            for observer in range(4):
+                for assigned in range(4):
+                    solver.add(
+                        efx_edge(values, complete, observer, assigned)
+                        == expected_edges[observer][assigned]
+                    )
 
     base_theta = theta(values, BASE)
     for assignment in itertools.permutations(TOKENS):
@@ -306,14 +440,19 @@ def run(
 
     global_cuts = set()
     completion_cuts = set()
+    orbit_hall_cuts = set()
     global_cut_records = []
     completion_cut_records = []
+    orbit_hall_cut_records = []
     prior_iterations = 0
+    seed_values_hint = None
     if seed is not None:
         seed_document = json.loads(seed.read_text())
         if seed_document.get("schema") != SCHEMA:
             raise ValueError("seed has incompatible schema")
         prior_iterations = int(seed_document.get("total_iterations", 0))
+        if seed_document.get("values") is not None:
+            seed_values_hint = seed_document["values"]
         for record in seed_document.get("global_cuts", []):
             seed_state = {
                 "floater": int(record["floater"]),
@@ -328,6 +467,16 @@ def run(
                     if field in record
                 },
                 **({"preloaded": bool(record["preloaded"])} if "preloaded" in record else {}),
+                **(
+                    {"hall_insertable": bool(record["hall_insertable"])}
+                    if "hall_insertable" in record
+                    else {}
+                ),
+                **(
+                    {"best_hall_margin": str(record["best_hall_margin"])}
+                    if "best_hall_margin" in record
+                    else {}
+                ),
             }
             for state in relabeled_state_orbit(seed_state, relabeling_mode):
                 key = state_key(state)
@@ -348,6 +497,11 @@ def run(
                             if field in state
                         },
                         **({"preloaded": state["preloaded"]} if "preloaded" in state else {}),
+                        **{
+                            field: state[field]
+                            for field in ("hall_insertable", "best_hall_margin")
+                            if field in state
+                        },
                     }
                 )
                 add_global_cut(solver, values, base_theta, state)
@@ -379,6 +533,19 @@ def run(
                     ),
                 )
             )
+        for record in seed_document.get("orbit_hall_cuts", []):
+            assignment = tuple(int(good) for good in record["assignment"])
+            if assignment in orbit_hall_cuts:
+                continue
+            orbit_hall_cuts.add(assignment)
+            orbit_hall_cut_records.append({"assignment": list(assignment)})
+            bundles = orbit_bundles(assignment)
+            solver.add(
+                z3.Implies(
+                    eligible(values, bundles, assignment[4]),
+                    orbit_hall_failure(values, assignment),
+                )
+            )
     for state in local_pair_exchange_states(preload_local_exchange_distance):
         key = state_key(state)
         if key in global_cuts:
@@ -393,10 +560,19 @@ def run(
             }
         )
         add_global_cut(solver, values, base_theta, state)
+    if seed_values_hint is not None:
+        for row, symbolic_row in zip(seed_values_hint, values):
+            row_total = sum(int(entry) for entry in row)
+            for entry, symbolic_entry in zip(row, symbolic_row):
+                solver.set_initial_value(
+                    symbolic_entry,
+                    z3.Q(int(entry), row_total),
+                )
     started = time.monotonic()
     last_values = None
     last_orbit = None
     last_global = None
+    last_higher_state = None
     last_orbit_blocked_values = None
     last_orbit_blocked_orbit = None
     last_orbit_blocked_global = None
@@ -420,6 +596,7 @@ def run(
         raw_values = integer_values(model, values)
         last_values = raw_values
         last_global = None
+        last_higher_state = None
         base_state = {
             "floater": FLOATER,
             "masks": masks_from_bundles(BASE),
@@ -434,39 +611,63 @@ def run(
             record for record in last_orbit["records"] if record["completing"]
         ][:completion_batch_size]
         if completing_records:
-            for completing in completing_records:
-                assignment = tuple(completing["assignment"])
-                key = (
-                    assignment,
-                    completing["best_host"],
-                    tuple(completing["best_permutation"]),
-                )
-                if key in completion_cuts:
-                    raise AssertionError("repeated token-orbit completion witness")
-                completion_cuts.add(key)
-                completion_cut_records.append(
-                    {
-                        "assignment": list(assignment),
-                        "host": completing["best_host"],
-                        "permutation": list(completing["best_permutation"]),
-                    }
-                )
-                bundles = orbit_bundles(assignment)
-                solver.add(
-                    z3.Implies(
-                        eligible(values, bundles, assignment[4]),
-                        complete_failure(
-                            values,
-                            bundles,
-                            assignment[4],
-                            completing["best_host"],
-                            tuple(completing["best_permutation"]),
-                        ),
+            if completion_cut_mode == "orbit_hall":
+                for completing in completing_records:
+                    assignment = tuple(completing["assignment"])
+                    if assignment in orbit_hall_cuts:
+                        raise AssertionError("repeated orbit Hall cut")
+                    orbit_hall_cuts.add(assignment)
+                    orbit_hall_cut_records.append(
+                        {"assignment": list(assignment)}
                     )
-                )
+                    bundles = orbit_bundles(assignment)
+                    solver.add(
+                        z3.Implies(
+                            eligible(values, bundles, assignment[4]),
+                            orbit_hall_failure(values, assignment),
+                        )
+                    )
+            else:
+                for completing in completing_records:
+                    assignment = tuple(completing["assignment"])
+                    key = (
+                        assignment,
+                        completing["best_host"],
+                        tuple(completing["best_permutation"]),
+                    )
+                    if key in completion_cuts:
+                        raise AssertionError(
+                            "repeated token-orbit completion witness"
+                        )
+                    completion_cuts.add(key)
+                    completion_cut_records.append(
+                        {
+                            "assignment": list(assignment),
+                            "host": completing["best_host"],
+                            "permutation": list(
+                                completing["best_permutation"]
+                            ),
+                        }
+                    )
+                    bundles = orbit_bundles(assignment)
+                    solver.add(
+                        z3.Implies(
+                            eligible(values, bundles, assignment[4]),
+                            complete_failure(
+                                values,
+                                bundles,
+                                assignment[4],
+                                completing["best_host"],
+                                tuple(completing["best_permutation"]),
+                            ),
+                        )
+                    )
             continue
 
-        landscape, fixed, higher_state = global_landscape(raw_values)
+        landscape, fixed, higher_state = global_landscape(
+            raw_values,
+            witness_mode=global_witness_mode,
+        )
         last_global = {
             "eligible_state_count": landscape["eligible_base_count"],
             "maximum_threshold_state_count": landscape["maximizer_count"],
@@ -475,6 +676,7 @@ def run(
             ],
             "fixed_base_is_global_threshold_maximum": fixed is not None,
         }
+        last_higher_state = higher_state
         last_orbit_blocked_values = raw_values
         last_orbit_blocked_orbit = last_orbit
         last_orbit_blocked_global = last_global
@@ -493,8 +695,17 @@ def run(
                 "values": raw_values,
                 "orbit_audit": last_orbit,
                 "global_audit": last_global,
+                "nearest_higher_state": (
+                    {
+                        **last_higher_state,
+                        "masks": list(last_higher_state["masks"]),
+                    }
+                    if last_higher_state is not None
+                    else None
+                ),
                 "global_cut_count": len(global_cuts),
                 "completion_cut_count": len(completion_cuts),
+                "orbit_hall_cut_count": len(orbit_hall_cuts),
             },
         )
 
@@ -520,6 +731,11 @@ def run(
                             )
                             if field in state
                         },
+                        **{
+                            field: state[field]
+                            for field in ("hall_insertable", "best_hall_margin")
+                            if field in state
+                        },
                     }
                 )
                 add_global_cut(solver, values, base_theta, state)
@@ -538,9 +754,27 @@ def run(
             "the fixed five-token orbit."
         ),
         "claim_boundary": (
-            "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
-            "orbit theorem for this base cell after exact replay. UNSAT proves "
-            "only the canonical four-pair cell. Other statuses are not verdicts."
+            (
+                "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
+                "orbit theorem inside the imposed host-edge subcell after exact "
+                "replay. UNSAT proves only the subcell fixing every base-host EFX "
+                "edge to the recorded source profile. Hall-insertable metadata "
+                "describes each cut's discovery valuation, not every valuation "
+                "satisfying that cut. Other statuses are not verdicts."
+            )
+            if base_host_edge_cell_source is not None
+            else (
+                "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
+                "orbit theorem for this base cell after exact replay. UNSAT proves "
+                "only the canonical four-pair cell. Hall-insertable metadata "
+                "describes each cut's discovery valuation. Other statuses are not "
+                "verdicts."
+            )
+        ),
+        "global_cut_semantics": (
+            "Every stored cut is eligibility(state) implies "
+            "theta(state) <= theta(base). Completion metadata is not part of "
+            "the cut formula."
         ),
         "iterations": iteration,
         "prior_iterations": prior_iterations,
@@ -550,14 +784,34 @@ def run(
         "relabeling_mode": relabeling_mode,
         "completion_batch_size": completion_batch_size,
         "preload_local_exchange_distance": preload_local_exchange_distance,
+        "completion_cut_mode": completion_cut_mode,
+        "solver_profile": solver_profile,
+        "global_witness_mode": global_witness_mode,
+        "base_host_edge_cell_source": (
+            str(base_host_edge_cell_source)
+            if base_host_edge_cell_source is not None
+            else None
+        ),
+        "base_host_edge_cell_source_sha256": edge_cell_sha256,
+        "seed_initial_values_applied": seed_values_hint is not None,
         "elapsed_seconds": time.monotonic() - started,
         "global_cut_count": len(global_cuts),
         "completion_cut_count": len(completion_cuts),
+        "orbit_hall_cut_count": len(orbit_hall_cuts),
         "global_cuts": global_cut_records,
         "completion_cuts": completion_cut_records,
+        "orbit_hall_cuts": orbit_hall_cut_records,
         "solver_reason_unknown": reason_unknown,
         "values": last_values,
         "global_audit": last_global,
+        "nearest_higher_state": (
+            {
+                **last_higher_state,
+                "masks": list(last_higher_state["masks"]),
+            }
+            if last_higher_state is not None
+            else None
+        ),
         "orbit_audit": last_orbit,
         "last_orbit_blocked_values": last_orbit_blocked_values,
         "last_orbit_blocked_orbit_audit": last_orbit_blocked_orbit,
@@ -590,6 +844,22 @@ def main():
         choices=(0, 2, 3),
         default=0,
     )
+    parser.add_argument(
+        "--completion-cut-mode",
+        choices=("witness", "orbit_hall"),
+        default="witness",
+    )
+    parser.add_argument(
+        "--solver-profile",
+        choices=("default", "qf_lra"),
+        default="default",
+    )
+    parser.add_argument(
+        "--global-witness-mode",
+        choices=("any", "hall_insertable"),
+        default="any",
+    )
+    parser.add_argument("--base-host-edge-cell-source", type=Path)
     args = parser.parse_args()
     result = run(
         args.output,
@@ -599,6 +869,10 @@ def main():
         args.relabeling_mode,
         args.completion_batch_size,
         args.preload_local_exchange_distance,
+        args.completion_cut_mode,
+        args.solver_profile,
+        args.global_witness_mode,
+        args.base_host_edge_cell_source,
     )
     summary = {
         key: result[key]
@@ -610,6 +884,7 @@ def main():
             "elapsed_seconds",
             "global_cut_count",
             "completion_cut_count",
+            "orbit_hall_cut_count",
             "solver_reason_unknown",
             "global_audit",
         )

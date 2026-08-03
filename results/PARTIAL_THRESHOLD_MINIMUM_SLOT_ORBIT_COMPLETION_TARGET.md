@@ -63,9 +63,11 @@ artifacts and claim boundary.
 The nearest-higher-state audit sharpens "core-token exchange" to a finite
 balanced menu: 32 swaps and 112 three-slot cycles.  A positive exact boundary
 model has no improving swap but does have an improving three-owner cycle, so
-cycles are necessary.  The current canonical-pair target is to prove that this
-distance-three menu always contains a gain whenever the token orbit is
-blocked.  Its arbitrary-core generalization remains the theorem needed for
+cycles are necessary.  A later exact boundary model refutes the full balanced
+radius-three menu: all 144 such states are ineligible, while the nearest
+higher-threshold state has shape \(1+3+2+2\) and owner distance four.  The live
+target is therefore an augmenting union of transfer components, not any fixed
+balanced radius.  Its arbitrary-core form remains the theorem needed for
 four-agent EFX.
 
 ## Why this is the current highest-leverage gate

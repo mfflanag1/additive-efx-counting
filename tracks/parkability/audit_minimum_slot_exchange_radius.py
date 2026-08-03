@@ -85,24 +85,37 @@ def run(values_path, output_path):
 
     landscape, fixed, global_nearest = global_landscape(values)
     orbit = audit_orbit(values, FIXED_STATE, TOKENS[:4], include_records=False)
+    status = (
+        "THREE_CYCLE_NECESSARY"
+        if nearest_distance == 3
+        else "DISTANCE_TWO_IMPROVEMENT"
+        if nearest_distance == 2
+        else "NO_RADIUS_THREE_IMPROVEMENT"
+    )
+    claim_boundaries = {
+        "THREE_CYCLE_NECESSARY": (
+            "No eligible positive-threshold two-slot exchange exists for "
+            "this valuation, while a positive three-slot cycle does. This "
+            "is not an EFX counterexample."
+        ),
+        "DISTANCE_TWO_IMPROVEMENT": (
+            "An eligible positive-threshold two-slot exchange exists. This "
+            "is a local witness, not an EFX existence theorem."
+        ),
+        "NO_RADIUS_THREE_IMPROVEMENT": (
+            "No eligible positive-threshold balanced state at distance two "
+            "or three exists. This does not prove global threshold maximality "
+            "and is not an EFX counterexample."
+        ),
+    }
     result = {
         "schema": SCHEMA,
-        "status": (
-            "THREE_CYCLE_NECESSARY"
-            if nearest_distance == 3
-            else "DISTANCE_TWO_IMPROVEMENT"
-            if nearest_distance == 2
-            else "NO_RADIUS_THREE_IMPROVEMENT"
-        ),
+        "status": status,
         "meaning": (
             "Exact audit of all balanced pair states at owner-assignment "
             "distance two or three from the canonical base."
         ),
-        "claim_boundary": (
-            "THREE_CYCLE_NECESSARY proves that no eligible positive-threshold "
-            "two-slot exchange exists for this valuation, while at least one "
-            "positive three-slot cycle exists. It is not an EFX counterexample."
-        ),
+        "claim_boundary": claim_boundaries[status],
         "values_path": str(values_path),
         "values_sha256": hashlib.sha256(values_path.read_bytes()).hexdigest(),
         "fixed_state": {
