@@ -1,0 +1,33 @@
+{
+  "checks": {
+    "core_pool_schema": true,
+    "core_pool_status": true,
+    "core_size_accounting": true,
+    "derivation_hash": true,
+    "derivation_tracked": true,
+    "derivation_unsat": true,
+    "replay_not_unknown": true,
+    "replay_unsat": true,
+    "same_completion_cuts": true,
+    "same_diagonal_pattern": true,
+    "same_global_cuts": true,
+    "same_offhost_source_hash": true,
+    "same_orbit_hall_cuts": true,
+    "same_pair_hall_cycle": true,
+    "single_replay_check": true
+  },
+  "claim_boundary": "This confirms the 76-cut fixed-edge-cell theorem, not the entire eight-switch subcell, pair-Hall cell, or four-agent EFX.",
+  "completion_cut_count": 27,
+  "core": "results/minimum_slot_orbit_diagonal_pattern1_unsat_core_pool.json",
+  "core_sha256": "ca2f8a86151a1a37456b5473acaa4d8d25d9aeb7ad5d982f9e0173b97b6ed000",
+  "derivation": "results/minimum_slot_orbit_diagonal_pattern1_global_witness_cegar_core_session1.json",
+  "derivation_sha256": "f652b998c94544f9b7e17b2cd86de21cd7eb450138e84921689ec31d7d10e395",
+  "global_cut_count": 49,
+  "meaning": "The tracked UNSAT derivation, extracted raw core, and fresh one-check replay agree on provenance, edge-cell hypotheses, and every cut.",
+  "orbit_hall_cut_count": 0,
+  "replay": "results/minimum_slot_orbit_diagonal_pattern1_unsat_core_replay.json",
+  "replay_elapsed_seconds": 294.4053424579324,
+  "replay_sha256": "c40d037a3680b0e7f46f2aff0482c62f55bb210dd67222466cc9146fd5cabde7",
+  "schema": "minimum-slot-unsat-core-replay-audit-v1",
+  "status": "FRESH_CORE_REPLAY_CONFIRMED"
+}

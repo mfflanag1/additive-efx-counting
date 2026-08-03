@@ -102,11 +102,28 @@ ordered cut pools and the same UNSAT verdict in 374 seconds.  All 65 selected
 global witnesses are connected transfers: 18 have owner distance two, 28
 distance three, and 19 distance four.
 
+A tracked reconstruction shrinks the preferred certificate to a raw 76-cut
+core: 49 global cuts and 27 matching blockers.  Its fresh one-check replay is
+UNSAT in 294.41 seconds.  The retained global moves are 16 swaps, 18 connected
+three-owner transfers, and 15 connected four-owner transfers.  Cyclic
+quotienting leaves 17 improvement templates and 15 completion-failure
+templates.  Independent QF_LRA Z3 and cvc5 1.3.4 replays also return UNSAT;
+the compact core is dual-solver verified.
+
+The fixed 24-bit off-host profile is exactly invariant under cyclic
+relabeling.  Pattern 1 therefore closes the full cyclic orbit
+\(\{1,4,32,64\}\).  Together with the earlier pattern-0 theorem, five exact
+diagonal profiles are closed.  Pattern 2 represents the other single-bit
+orbit \(\{2,8,16,128\}\) and remains UNKNOWN; multi-bit profiles are not yet
+classified.
+
 For diagonal pattern 2, the whole-Hall pool reached 23 cumulative iterations
 with 50 global cuts and 26 whole-state blockers before timing out.  The
 fine-grained encoding reached 33 iterations with 58 global cuts and 70
 individual completion blockers; a 300-second continuation made no further
-progress.  Pattern 2 remains UNKNOWN.  Its timeouts are honest computational
+progress.  Transferring the pattern-1 theorem pool, and then merging both
+pools into 69 global cuts and 149 blockers, also produced 300-second UNKNOWN
+checks.  Pattern 2 remains UNKNOWN.  Its timeouts are honest computational
 stalls, not mathematical evidence for either satisfiability or
 unsatisfiability.
 
@@ -157,7 +174,15 @@ general EFX.
 - `minimum_slot_orbit_diagonal_pattern1_global_witness_cegar_staged_replay.json`;
 - `minimum_slot_orbit_diagonal_pattern1_global_witness_cegar_replay_audit.json`;
 - `minimum_slot_orbit_diagonal_pattern1_global_witness_cegar_component_audit.json`;
-  and
+- `minimum_slot_orbit_diagonal_pattern1_symmetry_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_pool.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_replay.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_replay_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_component_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_quotient_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core_dual_replay_audit.json`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core.normalized.smt2`;
+- `minimum_slot_orbit_diagonal_pattern1_unsat_core.cvc5.json`; and
 - `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md`.
 
 Shortest exact replay of the distance-two-menu countermodel:

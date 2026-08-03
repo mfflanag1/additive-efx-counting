@@ -1,0 +1,3449 @@
+{
+  "base_host_diagonal_edge_order": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "base_host_diagonal_pattern": 2,
+  "base_host_edge_cell_source": null,
+  "base_host_edge_cell_source_sha256": null,
+  "base_host_offhost_edge_cell_source": "results/minimum_slot_orbit_hall_state_nearest_cegar_session2_orbit_blocked_seed.json",
+  "base_host_offhost_edge_cell_source_sha256": "d673550b47f7c0d7b7b57bc8ffbda847ef3ac97dd38eaae516967e35e0e73d2b",
+  "base_host_pair_hall_cycle": true,
+  "base_host_pair_hall_witnesses": [
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "claim_boundary": "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core orbit theorem inside one fixed diagonal-pattern edge cell after exact replay. UNSAT proves only that exact pattern, not the eight-switch family or full pair-Hall cell.",
+  "completion_batch_size": 8,
+  "completion_cut_count": 149,
+  "completion_cut_mode": "witness",
+  "completion_cuts": [
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        8,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        3,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        7,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        5,
+        7,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        5,
+        7,
+        1
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        5,
+        7,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        1,
+        7,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        1,
+        7,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        7,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        5,
+        7,
+        1
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        8,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        7,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        8,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        7,
+        3,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        8,
+        3,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        1,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        8,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        8,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        7,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        8,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        5,
+        1,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        5,
+        8,
+        1
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        5,
+        1,
+        7
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        5,
+        3,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        7,
+        3
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        5,
+        8,
+        3
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        8,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        7,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        7,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        3,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        7,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        8,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        7,
+        3,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        7,
+        8,
+        3
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        8,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        3,
+        1,
+        2
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        8,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        3,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        7,
+        3
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        5,
+        1,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        5,
+        8,
+        1
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        5,
+        1,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        5,
+        7,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        1,
+        7,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        8,
+        7,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 1,
+      "permutation": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        1,
+        7,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        1,
+        8,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        7,
+        8,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        8,
+        7,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        7,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        1,
+        7,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        3,
+        8,
+        7,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        8,
+        1,
+        7,
+        3
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        8,
+        3,
+        7,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        3,
+        5,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        5,
+        3,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        8,
+        3,
+        5
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        8,
+        5,
+        3
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        8,
+        5,
+        1
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        1,
+        3,
+        5,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        8,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        5,
+        3,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        7,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        1,
+        5,
+        8,
+        7
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        1,
+        5,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        1,
+        8,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        7,
+        5,
+        1,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        8,
+        5,
+        3
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        5,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        1,
+        3,
+        7,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        1,
+        8,
+        7,
+        3
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        8,
+        3,
+        7,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        8,
+        1
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        5,
+        7
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        3,
+        7,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        8,
+        5,
+        3,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        2,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        3,
+        5,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        3,
+        8,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        5,
+        3,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        5,
+        8,
+        3
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        1,
+        5,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        1,
+        8,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        8,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        1,
+        3,
+        7,
+        5
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        1,
+        5,
+        7,
+        3
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        5,
+        7,
+        1
+      ],
+      "host": 3,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        5,
+        3,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        8,
+        3,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        1,
+        8,
+        5,
+        3
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        8,
+        5,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        5,
+        8,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        8,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        5,
+        7
+      ],
+      "host": 2,
+      "permutation": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        7,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        7,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        5,
+        1,
+        7,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        1,
+        7,
+        5
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        3,
+        8,
+        5,
+        7,
+        1
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        5,
+        1,
+        3,
+        7,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        8,
+        7,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        8,
+        3,
+        5
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        8,
+        7,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        1,
+        8
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        8,
+        1
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        8,
+        5,
+        1,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        8,
+        5,
+        3,
+        1
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        5,
+        1,
+        7
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        1,
+        7,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        5,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        3,
+        8,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        5,
+        1,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        8,
+        3,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        7,
+        8,
+        5,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        1,
+        5,
+        8
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        1,
+        8,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        7,
+        3,
+        8,
+        1,
+        5
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        5,
+        8
+      ],
+      "host": 2,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        3,
+        7,
+        8,
+        5
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        3,
+        7,
+        8
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        7,
+        8,
+        3
+      ],
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        1,
+        5,
+        8,
+        3,
+        7
+      ],
+      "host": 1,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "assignment": [
+        8,
+        3,
+        1,
+        7,
+        5
+      ],
+      "host": 3,
+      "permutation": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "elapsed_seconds": 300.069077666034,
+  "global_audit": null,
+  "global_cut_count": 69,
+  "global_cut_semantics": "Every stored cut is eligibility(state) implies theta(state) <= theta(base). Completion metadata is not part of the cut formula.",
+  "global_cuts": [
+    {
+      "best_hall_margin": "9/3776",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        20,
+        40,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 15104,
+      "threshold_gain_numerator": 116
+    },
+    {
+      "best_hall_margin": "9/3776",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        12,
+        80,
+        160
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 15104,
+      "threshold_gain_numerator": 116
+    },
+    {
+      "best_hall_margin": "9/3776",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        130,
+        12,
+        48,
+        65
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 15104,
+      "threshold_gain_numerator": 116
+    },
+    {
+      "best_hall_margin": "9/3776",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        10,
+        48,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 15104,
+      "threshold_gain_numerator": 116
+    },
+    {
+      "best_hall_margin": "1/164",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        5,
+        48,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 73472,
+      "threshold_gain_numerator": 11128
+    },
+    {
+      "best_hall_margin": "1/164",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        40,
+        20,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 73472,
+      "threshold_gain_numerator": 11128
+    },
+    {
+      "best_hall_margin": "1/164",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        12,
+        160,
+        80
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 73472,
+      "threshold_gain_numerator": 11128
+    },
+    {
+      "best_hall_margin": "1/164",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        65,
+        12,
+        48,
+        130
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 73472,
+      "threshold_gain_numerator": 11128
+    },
+    {
+      "best_hall_margin": "10/479",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        132,
+        48,
+        65
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 100590,
+      "threshold_gain_numerator": 24214
+    },
+    {
+      "best_hall_margin": "10/479",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        40,
+        18,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 100590,
+      "threshold_gain_numerator": 24214
+    },
+    {
+      "best_hall_margin": "10/479",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        20,
+        160,
+        72
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 100590,
+      "threshold_gain_numerator": 24214
+    },
+    {
+      "best_hall_margin": "10/479",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        33,
+        12,
+        80,
+        130
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 100590,
+      "threshold_gain_numerator": 24214
+    },
+    {
+      "best_hall_margin": "11/756",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        18,
+        12,
+        33,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 127008,
+      "threshold_gain_numerator": 17328
+    },
+    {
+      "best_hall_margin": "11/756",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        72,
+        48,
+        132
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 127008,
+      "threshold_gain_numerator": 17328
+    },
+    {
+      "best_hall_margin": "11/1440",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        17,
+        12,
+        34,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 17280,
+      "threshold_gain_numerator": 1503
+    },
+    {
+      "best_hall_margin": "11/1440",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        68,
+        48,
+        136
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 17280,
+      "threshold_gain_numerator": 1503
+    },
+    {
+      "best_hall_margin": "11/1440",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        34,
+        12,
+        17,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 17280,
+      "threshold_gain_numerator": 1503
+    },
+    {
+      "best_hall_margin": "11/1440",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        136,
+        48,
+        68
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 17280,
+      "threshold_gain_numerator": 1503
+    },
+    {
+      "best_hall_margin": "3/1148",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        66,
+        12,
+        48,
+        129
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 321440,
+      "threshold_gain_numerator": 2240
+    },
+    {
+      "best_hall_margin": "3/1148",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        9,
+        48,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 321440,
+      "threshold_gain_numerator": 2240
+    },
+    {
+      "best_hall_margin": "3/1148",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        24,
+        36,
+        192
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 321440,
+      "threshold_gain_numerator": 2240
+    },
+    {
+      "best_hall_margin": "3/1148",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        12,
+        96,
+        144
+      ],
+      "owner_distance": 2,
+      "threshold_gain_denominator": 321440,
+      "threshold_gain_numerator": 2240
+    },
+    {
+      "best_hall_margin": "1/193",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        36,
+        80,
+        136
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 23160,
+      "threshold_gain_numerator": 4761
+    },
+    {
+      "best_hall_margin": "1/193",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        34,
+        12,
+        144,
+        65
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 23160,
+      "threshold_gain_numerator": 4761
+    },
+    {
+      "best_hall_margin": "1/193",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        136,
+        48,
+        66
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 23160,
+      "threshold_gain_numerator": 4761
+    },
+    {
+      "best_hall_margin": "1/193",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        9,
+        20,
+        34,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 23160,
+      "threshold_gain_numerator": 4761
+    },
+    {
+      "best_hall_margin": "11/1013",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        36,
+        17,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 121560,
+      "threshold_gain_numerator": 37487
+    },
+    {
+      "best_hall_margin": "11/1013",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        40,
+        144,
+        68
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 121560,
+      "threshold_gain_numerator": 37487
+    },
+    {
+      "best_hall_margin": "11/1013",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        17,
+        12,
+        160,
+        66
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 121560,
+      "threshold_gain_numerator": 37487
+    },
+    {
+      "best_hall_margin": "11/1013",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        9,
+        68,
+        48,
+        130
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 121560,
+      "threshold_gain_numerator": 37487
+    },
+    {
+      "best_hall_margin": "8087/24312",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        36,
+        144,
+        65
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 583488,
+      "threshold_gain_numerator": 221551
+    },
+    {
+      "best_hall_margin": "8087/24312",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        40,
+        144,
+        66
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 583488,
+      "threshold_gain_numerator": 221551
+    },
+    {
+      "best_hall_margin": "8087/24312",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        9,
+        20,
+        160,
+        66
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 583488,
+      "threshold_gain_numerator": 221551
+    },
+    {
+      "best_hall_margin": "8087/24312",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        9,
+        36,
+        80,
+        130
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 583488,
+      "threshold_gain_numerator": 221551
+    },
+    {
+      "best_hall_margin": "19/500",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        34,
+        12,
+        80,
+        129
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 3000,
+      "threshold_gain_numerator": 934
+    },
+    {
+      "best_hall_margin": "19/500",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        136,
+        48,
+        65
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 3000,
+      "threshold_gain_numerator": 934
+    },
+    {
+      "best_hall_margin": "19/500",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        24,
+        34,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 3000,
+      "threshold_gain_numerator": 934
+    },
+    {
+      "best_hall_margin": "19/500",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        20,
+        96,
+        136
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 3000,
+      "threshold_gain_numerator": 934
+    },
+    {
+      "best_hall_margin": "21/628",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        68,
+        48,
+        129
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 105504,
+      "threshold_gain_numerator": 14679
+    },
+    {
+      "best_hall_margin": "21/628",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        40,
+        17,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 105504,
+      "threshold_gain_numerator": 14679
+    },
+    {
+      "best_hall_margin": "21/628",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        24,
+        160,
+        68
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 105504,
+      "threshold_gain_numerator": 14679
+    },
+    {
+      "best_hall_margin": "21/628",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        17,
+        12,
+        96,
+        130
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 105504,
+      "threshold_gain_numerator": 14679
+    },
+    {
+      "best_hall_margin": "231/648320",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        36,
+        80,
+        129
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 9076480,
+      "threshold_gain_numerator": 1324206
+    },
+    {
+      "best_hall_margin": "231/648320",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        40,
+        144,
+        65
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 9076480,
+      "threshold_gain_numerator": 1324206
+    },
+    {
+      "best_hall_margin": "231/648320",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        24,
+        160,
+        66
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 9076480,
+      "threshold_gain_numerator": 1324206
+    },
+    {
+      "best_hall_margin": "231/648320",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        9,
+        20,
+        96,
+        130
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 9076480,
+      "threshold_gain_numerator": 1324206
+    },
+    {
+      "best_hall_margin": "3/61",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        24,
+        33,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 7320,
+      "threshold_gain_numerator": 1030
+    },
+    {
+      "best_hall_margin": "3/61",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        24,
+        96,
+        132
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 7320,
+      "threshold_gain_numerator": 1030
+    },
+    {
+      "best_hall_margin": "3/61",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        18,
+        12,
+        96,
+        129
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 7320,
+      "threshold_gain_numerator": 1030
+    },
+    {
+      "best_hall_margin": "3/61",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        72,
+        48,
+        129
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 7320,
+      "threshold_gain_numerator": 1030
+    },
+    {
+      "best_hall_margin": "11/337",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        20,
+        33,
+        192
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 14154,
+      "threshold_gain_numerator": 5211
+    },
+    {
+      "best_hall_margin": "11/337",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        40,
+        80,
+        132
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 14154,
+      "threshold_gain_numerator": 5211
+    },
+    {
+      "best_hall_margin": "11/337",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        18,
+        12,
+        160,
+        65
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 14154,
+      "threshold_gain_numerator": 5211
+    },
+    {
+      "best_hall_margin": "11/337",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        72,
+        48,
+        130
+      ],
+      "owner_distance": 3,
+      "threshold_gain_denominator": 14154,
+      "threshold_gain_numerator": 5211
+    },
+    {
+      "best_hall_margin": "9/230",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        20,
+        160,
+        65
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 3680,
+      "threshold_gain_numerator": 677
+    },
+    {
+      "best_hall_margin": "9/230",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        40,
+        80,
+        130
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 3680,
+      "threshold_gain_numerator": 677
+    },
+    {
+      "best_hall_margin": "20/1173",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        24,
+        160,
+        65
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 140760,
+      "threshold_gain_numerator": 29016
+    },
+    {
+      "best_hall_margin": "20/1173",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        5,
+        24,
+        96,
+        130
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 140760,
+      "threshold_gain_numerator": 29016
+    },
+    {
+      "best_hall_margin": "20/1173",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        10,
+        20,
+        96,
+        129
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 140760,
+      "threshold_gain_numerator": 29016
+    },
+    {
+      "best_hall_margin": "20/1173",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        40,
+        80,
+        129
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 140760,
+      "threshold_gain_numerator": 29016
+    },
+    {
+      "best_hall_margin": "1/466",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        68,
+        10,
+        48,
+        129
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 430584,
+      "threshold_gain_numerator": 1848
+    },
+    {
+      "best_hall_margin": "1/466",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        17,
+        40,
+        192
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 430584,
+      "threshold_gain_numerator": 1848
+    },
+    {
+      "best_hall_margin": "1/466",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        24,
+        68,
+        160
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 430584,
+      "threshold_gain_numerator": 1848
+    },
+    {
+      "best_hall_margin": "1/466",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        130,
+        12,
+        96,
+        17
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 430584,
+      "threshold_gain_numerator": 1848
+    },
+    {
+      "best_hall_margin": "13/616",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        6,
+        24,
+        96,
+        129
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 2464,
+      "threshold_gain_numerator": 274
+    },
+    {
+      "best_hall_margin": "1/400",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        9,
+        32,
+        22,
+        192
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 156800,
+      "threshold_gain_numerator": 18875
+    },
+    {
+      "best_hall_margin": "1/400",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        3,
+        36,
+        128,
+        88
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 156800,
+      "threshold_gain_numerator": 18875
+    },
+    {
+      "best_hall_margin": "1/400",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        97,
+        12,
+        144,
+        2
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 156800,
+      "threshold_gain_numerator": 18875
+    },
+    {
+      "best_hall_margin": "1/400",
+      "floater": 8,
+      "hall_insertable": true,
+      "masks": [
+        8,
+        133,
+        48,
+        66
+      ],
+      "owner_distance": 4,
+      "threshold_gain_denominator": 156800,
+      "threshold_gain_numerator": 18875
+    }
+  ],
+  "global_witness_mode": "hall_insertable",
+  "iterations": 1,
+  "last_orbit_blocked_global_audit": null,
+  "last_orbit_blocked_orbit_audit": null,
+  "last_orbit_blocked_values": null,
+  "max_iterations": 100,
+  "meaning": "Exact CEGAR for a positive canonical four-pair base with unique owner minima. Global cuts enforce normalized-threshold maximality; completion cuts adversarially block exact EFX matchings inside the fixed five-token orbit.",
+  "nearest_higher_state": null,
+  "orbit_audit": null,
+  "orbit_blocked_seed": null,
+  "orbit_hall_cut_count": 0,
+  "orbit_hall_cuts": [],
+  "preload_local_exchange_distance": 0,
+  "prior_iterations": 83,
+  "relabeling_mode": "cyclic",
+  "schema": "minimum-slot-orbit-global-threshold-cegar-v1",
+  "seed_initial_values_applied": true,
+  "smt2_output": null,
+  "solver_profile": "default",
+  "solver_reason_unknown": "timeout",
+  "status": "UNKNOWN",
+  "timeout_seconds_per_check": 300,
+  "total_iterations": 84,
+  "track_unsat_core": false,
+  "unsat_core_labels": null,
+  "unsat_core_size": null,
+  "values": null
+}

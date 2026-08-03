@@ -182,8 +182,18 @@ distance-three transfer.  A fine-grained dynamic CEGAR nevertheless closes
 the complete pattern-1 edge cell: 65 global cuts and 116 individual matching
 blockers are UNSAT after 50 cumulative iterations.  A fresh staged replay
 reproduces the same ordered pools and UNSAT verdict.  All 65 global witnesses
-are connected and have owner distance at most four.  Pattern 2 remains an
-honest solver stall after 58 global cuts and 70 matching blockers.
+are connected and have owner distance at most four.  Cyclic invariance of the
+fixed off-host profile transfers the theorem to patterns 1, 4, 32, and 64;
+together with pattern 0, five exact diagonal profiles are closed.  Pattern 2,
+representing the other single-bit orbit, remains an honest solver stall after
+58 global cuts and 70 matching blockers.
+
+The pattern-1 proof has also been compressed to a fresh-replayed raw UNSAT
+core with 49 global cuts and 27 matching blockers.  Its global side consists
+only of 16 connected swaps, 18 connected three-owner transfers, and 15
+connected four-owner transfers.  Under cyclic relabeling the full core has 32
+templates, making it the current analytic extraction target.  Default Z3,
+QF_LRA Z3, and independent cvc5 1.3.4 all return UNSAT on the extracted core.
 
 The theorem, exact map, claim boundaries, and replay commands are recorded in
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and

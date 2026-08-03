@@ -179,10 +179,22 @@ is a connected distance-three transfer.  A finer matching-witness CEGAR then
 closed the complete pattern-1 edge cell with 65 global cuts and 116 individual
 completion blockers after 50 cumulative iterations.  A fresh staged replay
 reproduced the same ordered pools and UNSAT verdict; all 65 global witnesses
-are connected and have owner distance at most four.  Pattern 2 remains
-UNKNOWN after 58 global cuts and 70 matching blockers.  See
+are connected and have owner distance at most four.  Exact cyclic invariance
+of the fixed off-host profile transfers the theorem to patterns 1, 4, 32, and
+64.  Including the prior pattern-0 theorem, five diagonal profiles are now
+closed.  Pattern 2, representing the other single-bit orbit, remains UNKNOWN
+after 58 global cuts and 70 matching blockers.  Multi-bit patterns remain
+unclassified.  See
 `PARTIAL_THRESHOLD_DIAGONAL_PATTERN1_THEOREM.md` and
 `PARTIAL_THRESHOLD_DIAGONAL_SWITCH_GATE.md` for the exact boundary and replay.
+
+The preferred pattern-1 certificate is now a raw 76-cut UNSAT core: 49 global
+cuts and 27 matching blockers.  A fresh one-check reconstruction returns
+UNSAT in 294.41 seconds.  Its global witnesses are exactly 16 connected
+swaps, 18 connected three-owner transfers, and 15 connected four-owner
+transfers; cyclic quotienting reduces the full core to 32 analytic templates.
+QF_LRA Z3 and independent cvc5 1.3.4 also return UNSAT on the normalized
+archived formula.
 
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma

@@ -356,13 +356,43 @@ def relabeled_state_orbit(state, mode):
     return tuple(results.values())
 
 
-def add_global_cut(solver, values, base_theta, state):
+def add_constraint(solver, constraint, tracker=None):
+    if tracker is None:
+        solver.add(constraint)
+    else:
+        solver.assert_and_track(constraint, z3.Bool(tracker))
+
+
+def global_cut_tracker(state):
+    return "global_{}_{}".format(
+        state["floater"],
+        "_".join(str(int(mask)) for mask in state["masks"]),
+    )
+
+
+def completion_cut_tracker(assignment, host, permutation):
+    return "completion_{}_host_{}_perm_{}".format(
+        "_".join(str(int(good)) for good in assignment),
+        host,
+        "_".join(str(int(bundle)) for bundle in permutation),
+    )
+
+
+def orbit_cut_tracker(assignment):
+    return "orbit_{}".format(
+        "_".join(str(int(good)) for good in assignment),
+    )
+
+
+def add_global_cut(solver, values, base_theta, state, *, track=False):
     bundles = bundles_from_masks(state["masks"], 9)
-    solver.add(
+    add_constraint(
+        solver,
         z3.Implies(
             eligible(values, bundles, state["floater"]),
             theta(values, bundles) <= base_theta,
-        )
+        ),
+        global_cut_tracker(state) if track else None,
     )
 
 
@@ -409,6 +439,7 @@ def run(
     base_host_offhost_edge_cell_source: Path | None = None,
     base_host_diagonal_pattern: int | None = None,
     smt2_output: Path | None = None,
+    track_unsat_core: bool = False,
 ):
     if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
         raise ValueError(
@@ -592,7 +623,13 @@ def run(
                         },
                     }
                 )
-                add_global_cut(solver, values, base_theta, state)
+                add_global_cut(
+                    solver,
+                    values,
+                    base_theta,
+                    state,
+                    track=track_unsat_core,
+                )
         for record in seed_document.get("completion_cuts", []):
             assignment = tuple(int(good) for good in record["assignment"])
             host = int(record["host"])
@@ -609,7 +646,8 @@ def run(
                 }
             )
             bundles = orbit_bundles(assignment)
-            solver.add(
+            add_constraint(
+                solver,
                 z3.Implies(
                     eligible(values, bundles, assignment[4]),
                     complete_failure(
@@ -619,7 +657,12 @@ def run(
                         host,
                         permutation,
                     ),
-                )
+                ),
+                (
+                    completion_cut_tracker(assignment, host, permutation)
+                    if track_unsat_core
+                    else None
+                ),
             )
         for record in seed_document.get("orbit_hall_cuts", []):
             assignment = tuple(int(good) for good in record["assignment"])
@@ -628,7 +671,8 @@ def run(
             orbit_hall_cuts.add(assignment)
             orbit_hall_cut_records.append({"assignment": list(assignment)})
             bundles = orbit_bundles(assignment)
-            solver.add(
+            add_constraint(
+                solver,
                 z3.Implies(
                     eligible(values, bundles, assignment[4]),
                     orbit_completion_failure(
@@ -636,7 +680,8 @@ def run(
                         assignment,
                         completion_cut_mode,
                     ),
-                )
+                ),
+                orbit_cut_tracker(assignment) if track_unsat_core else None,
             )
     for state in local_pair_exchange_states(preload_local_exchange_distance):
         key = state_key(state)
@@ -651,7 +696,13 @@ def run(
                 "preloaded": True,
             }
         )
-        add_global_cut(solver, values, base_theta, state)
+        add_global_cut(
+            solver,
+            values,
+            base_theta,
+            state,
+            track=track_unsat_core,
+        )
     if seed_values_hint is not None:
         for row, symbolic_row in zip(seed_values_hint, values):
             row_total = sum(int(entry) for entry in row)
@@ -675,11 +726,14 @@ def run(
     )
     status = "ITERATION_LIMIT"
     reason_unknown = None
+    unsat_core_labels = None
 
     for iteration in range(1, max_iterations + 1):
         verdict = solver.check()
         if verdict == z3.unsat:
             status = "FIXED_PAIR_TOKEN_ORBIT_FORCED"
+            if track_unsat_core:
+                unsat_core_labels = sorted(str(label) for label in solver.unsat_core())
             break
         if verdict == z3.unknown:
             status = "UNKNOWN"
@@ -715,7 +769,8 @@ def run(
                         {"assignment": list(assignment)}
                     )
                     bundles = orbit_bundles(assignment)
-                    solver.add(
+                    add_constraint(
+                        solver,
                         z3.Implies(
                             eligible(values, bundles, assignment[4]),
                             orbit_completion_failure(
@@ -723,7 +778,8 @@ def run(
                                 assignment,
                                 completion_cut_mode,
                             ),
-                        )
+                        ),
+                        orbit_cut_tracker(assignment) if track_unsat_core else None,
                     )
             else:
                 for completing in completing_records:
@@ -748,7 +804,8 @@ def run(
                         }
                     )
                     bundles = orbit_bundles(assignment)
-                    solver.add(
+                    add_constraint(
+                        solver,
                         z3.Implies(
                             eligible(values, bundles, assignment[4]),
                             complete_failure(
@@ -758,7 +815,16 @@ def run(
                                 completing["best_host"],
                                 tuple(completing["best_permutation"]),
                             ),
-                        )
+                        ),
+                        (
+                            completion_cut_tracker(
+                                assignment,
+                                completing["best_host"],
+                                tuple(completing["best_permutation"]),
+                            )
+                            if track_unsat_core
+                            else None
+                        ),
                     )
             continue
 
@@ -836,7 +902,13 @@ def run(
                         },
                     }
                 )
-                add_global_cut(solver, values, base_theta, state)
+                add_global_cut(
+                    solver,
+                    values,
+                    base_theta,
+                    state,
+                    track=track_unsat_core,
+                )
             continue
 
         status = "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND"
@@ -941,6 +1013,11 @@ def run(
             diagonal_edge_order if base_host_diagonal_pattern is not None else None
         ),
         "smt2_output": str(smt2_output) if smt2_output is not None else None,
+        "track_unsat_core": track_unsat_core,
+        "unsat_core_labels": unsat_core_labels,
+        "unsat_core_size": (
+            len(unsat_core_labels) if unsat_core_labels is not None else None
+        ),
         "seed_initial_values_applied": seed_values_hint is not None,
         "elapsed_seconds": time.monotonic() - started,
         "global_cut_count": len(global_cuts),
@@ -1012,6 +1089,7 @@ def main():
     parser.add_argument("--base-host-offhost-edge-cell-source", type=Path)
     parser.add_argument("--base-host-diagonal-pattern", type=int)
     parser.add_argument("--smt2-output", type=Path)
+    parser.add_argument("--track-unsat-core", action="store_true")
     args = parser.parse_args()
     result = run(
         args.output,
@@ -1029,6 +1107,7 @@ def main():
         args.base_host_offhost_edge_cell_source,
         args.base_host_diagonal_pattern,
         args.smt2_output,
+        args.track_unsat_core,
     )
     summary = {
         key: result[key]
