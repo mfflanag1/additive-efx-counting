@@ -7,6 +7,21 @@ counterexample.
 **Current status:** **open**. No general proof and no additive counterexample
 has been obtained.
 
+**August 3 primary gate:** the fixed-radius exchange program is retired even
+inside the four-agent identity/unique-defect/full-Hall branch. An exact
+positive profile has no improving EFX-with-charity state within three item
+relabelings; its first improvement is a connected four-good component
+spanning all owners and leading directly to absorption. See
+[PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md](PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md).
+The replacement cap-free invariant is now proved in
+[GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md](GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md):
+between any two fixed-charity EFX states, \(\Theta\)-gain is additive over
+transfer components, and every infeasible partial component has a wall
+crossing to another component. The unresolved common four-agent/general gate
+is to prove that dependency growth preserves enough positive normalized gain
+to close in an eligible union, or else yields an impossible strict wall
+cycle. This supersedes bounded item-radius targets but does not prove EFX.
+
 **Parallel four-agent Hall-gradient gate:** the fixed-profile diagonal
 theorems have now been coarsened to the full cyclic pair-Hall cell far enough
 to prove a new cap-free structural consequence: under global normalized-

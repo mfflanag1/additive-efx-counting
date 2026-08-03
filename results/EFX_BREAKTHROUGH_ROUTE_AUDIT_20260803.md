@@ -155,6 +155,24 @@ Any valid redirection argument must therefore use global
 \((\Theta,\Lambda)\)-maximality; the local Hall topology alone is
 insufficient.
 
+The next adversarial layer retires bounded local gradients even inside the
+full/unique-defect branch. State-level reciprocity, minimum swaps, and the
+complete radius-two menu all have exact counterexamples. A targeted walk then
+found a full/unique-defect profile with no improving state through radius
+three. Its first escape is one connected radius-four component spanning all
+four owners and leading directly to absorption. See the
+[`full unique-defect connected-component gate`](PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md).
+The proof must therefore cancel Hall walls over whole connected owner
+components; another fixed-radius ladder is explicitly retired.
+
+The cap-free transfer-component hybrid lemma supplies the replacement
+invariant. Between any two fixed-charity EFX states, owner-threshold gain is
+exactly additive over transfer components, and every infeasible partial
+component is blocked only by an EFX/charity inequality crossing its component
+cut. This converts the remaining problem from item-radius enumeration to a
+dependency-growth and wall-cancellation statement, uniformly for four and
+arbitrary numbers of agents.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:
