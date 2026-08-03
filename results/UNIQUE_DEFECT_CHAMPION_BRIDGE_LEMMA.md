@@ -1,115 +1,101 @@
-# Unique-defect champion bridge lemma
+# Unique-defect two-source champion bridge lemma
 
 ## Statement
 
-Let \(X=(X_1,\ldots,X_n)\) be an EFX allocation and let \(f\) be an
-unallocated good. Fix a host \(h\), put
+Let \(X=(X_1,\ldots,X_n)\) be an EFX allocation, let \(f\) be an
+unallocated good, fix a host \(h\) with nonempty bundle, and put
+\(S=X_h\cup\{f\}\). Suppose assigning the augmented bundles by identity
+creates exactly one EFX defect, at agent \(b\). Then:
+
+1. \(b\ne h\), and \(b\) strongly envies \(S\);
+2. no agent outside \(\{b,h\}\) strongly envies \(S\); and
+3. some agent in \(\{b,h\}\) is a most-envious source for \(S\), and hence
+   \(f\)-champions \(h\).
+
+If the source is \(b\), let \(T=S\setminus D\) be its desired bundle. Its
+nonempty discard has exactly one of two forms:
+
+1. \(D=\{f\}\), in which case \(T=X_h\) and \(b\) ordinarily envies \(h\);
+   or
+2. \(D\subseteq X_h\), in which case \(f\in T\) and a nonempty bottom
+   bundle from \(X_h\) is released.
+
+If the host strongly envies \(S\), additivity gives the exact alternative
 
 \[
-S=X_h\cup\{f\},
+v_h(f)>\min_{x\in X_h}v_h(x). \tag{1}
 \]
 
-and suppose that assigning the augmented bundles by identity creates exactly
-one EFX defect, at agent \(b\). Then \(b\ne h\), agent \(b\) is the unique
-strong envier of \(S\), and \(b\) champions \(h\) with respect to \(f\).
-
-More precisely, there is a nonempty discard set \(D\subsetneq S\) such that
-
-\[
-T=S\setminus D,qquad v_b(T)>v_b(X_b),
-\]
-
-and no agent strongly envies \(T\). The discard has exactly one of two forms:
-
-1. \(D=\{f\}\), in which case \(T=X_h\) and \(b\) ordinarily envies
-   \(h\); or
-2. \(D\subseteq X_h\), in which case \(f\in T\), the champion edge genuinely
-   \(f\)-decomposes the host, and the nonempty bottom bundle \(D\) is
-   released.
-
-The statement holds for every number of agents and arbitrary monotone
-valuations for which strong envy is defined; additivity is needed only to
-identify the identity defect with the deletion threshold used in the current
-Hall formulation.
+Thus the bridge has two possible sources. The unique bad identity agent is
+not universally forced to be the champion.
 
 ## Proof
 
-The host cannot be the defective agent. Her own bundle gains \(f\), while
-every competing bundle is unchanged, so all of her old EFX inequalities
-remain valid. Hence \(b\ne h\).
+The host cannot be the defective identity agent. Her assigned bundle gains
+\(f\), while every competing bundle is unchanged, so her old EFX
+inequalities remain valid. Hence \(b\ne h\).
 
-For additive valuations, the strong-envy threshold of \(S\) is
+Only the host bundle changed. The negative identity slack of \(b\) therefore
+says that \(b\) strongly envies \(S\). Every external agent
+\(i\notin\{b,h\}\) retains a valid identity edge whose comparisons include
+\(S\), so no such agent strongly envies \(S\). The identity test does not
+make the analogous statement about \(h\), because the host is assigned
+\(S\), rather than her old bundle \(X_h\).
 
-\[
-\tau_i(S)=\max_{g\in S}v_i(S-g).
-\]
+Because \(b\) strongly envies \(S\), some proper subset of \(S\) is envied.
+Choose, across all agents, an inclusion-minimal proper subset
+\(T\subsetneq S\) that some agent \(j\) envies. No agent strongly envies
+\(T\): otherwise deleting the witnessing good would give a smaller envied
+subset. If \(j\notin\{b,h\}\), choose any \(x\in S\setminus T\). Then
+\(T\subseteq S-x\), so monotonicity implies that \(j\) strongly envies
+\(S\), a contradiction. Hence \(j\in\{b,h\}\), proving the two-source
+champion claim.
 
-The original allocation is EFX, and only the host bundle changed. Therefore
-the unique negative identity slack says exactly that \(b\) strongly envies
-\(S\), while no other agent does.
-
-Because \(b\) strongly envies \(S\), there is a proper subset of \(S\) that
-she envies. Choose an inclusion-minimal envied subset \(T\subsetneq S\), and
-put \(D=S\setminus T\). Minimality implies that \(b\) does not strongly envy
-\(T\): removing any good from \(T\) destroys her envy.
-
-No other agent strongly envies \(T\). Otherwise some agent \(i\ne b\) and
-good \(g\in T\) would satisfy
-
-\[
-v_i(T-g)>v_i(X_i).
-\]
-
-Monotonicity and \(T-g\subseteq S-g\) would then give
+Suppose \(j=b\), and put \(D=S\setminus T\). The set \(D\) is nonempty. If
+\(f\notin D\), then \(D\subseteq X_h\), giving case 2. If \(f\in D\), then
+\(T\subseteq X_h\). Were \(T\ne X_h\), choosing
+\(g\in X_h\setminus T\) would give
 
 \[
-v_i(S-g)>v_i(X_i),
+v_b(X_h-g)\ge v_b(T)>v_b(X_b),
 \]
 
-contradicting that \(b\) is the unique strong envier of \(S\). Thus \(b\) is
-most envious of \(S\), which is precisely the champion relation
-\(b\xrightarrow{f}h\), with discard set \(D\). The set \(D\) is nonempty
-because \(T\) is proper.
+contradicting EFX of \(X\). Therefore \(T=X_h\) and \(D=\{f\}\), giving
+case 1.
 
-It remains to classify whether \(f\) is discarded. If \(f\notin D\), then
-\(D\subseteq X_h\), giving case 2. Suppose instead that \(f\in D\), so
-\(T\subseteq X_h\). If \(T\ne X_h\), choose
-\(g\in X_h\setminus T\). Monotonicity gives
+Finally, for positive-additive valuations,
 
 \[
-v_b(X_h-g)\geq v_b(T)>v_b(X_b),
+\tau_h(S)=\max\!\left\{v_h(X_h),
+v_h(X_h)+v_h(f)-\min_{x\in X_h}v_h(x)\right\}.
 \]
 
-so \(b\) strongly envies the original bundle \(X_h\), contradicting that
-\(X\) is EFX. Therefore \(T=X_h\) and \(D=\{f\}\), proving case 1.
-\(\square\)
+Consequently \(h\) strongly envies \(S\) relative to her old bundle exactly
+when (1) holds. \(\square\)
 
-## Consequence for the four-agent full witness
+## Consequence for the extremal route
 
-The dominant Hall branch is no longer merely an acceptance-graph pattern.
-Its unique bad--host arc is a genuine generalized-champion edge. If case 1
-holds, the branch already contains an ordinary envy edge. If case 2 holds, it
-contains a nonempty released bottom bundle to feed a Pareto-improvable
-generalized-champion cycle.
+The bad-source branch retains the discard dichotomy and reciprocal-champion
+analysis, now explicitly as a conditional branch. The host-interference
+branch feeds directly into the cap-free owner-minimum-swap dependency lemma:
+at a fixed-cardinality \((\Theta,U)\)-maximum, replacing a host minimum by
+\(f\) is an owner-improving candidate and therefore must either be eligible
+(a contradiction) or expose a signed EFX/charity wall. The singleton-chain
+lemma propagates the exceptional charity wall to a nonsingleton positive
+incoming-target wall and generalized champion edge.
 
-Every target bundle also has at least one incoming \(f\)-champion by the
-standard most-envious-agent argument. Choosing incoming champion edges
-therefore yields a directed champion cycle. The remaining four-agent proof
-task is now finite at the owner-graph level: determine how the forced edge
-\(b\xrightarrow{f}h\), the full Hall witness at bundle \(b\), and the bottom
-bundle released above force either a Pareto-improvable edge set or the signed
-transfer-component contradiction.
-
-This is complementary to the transfer-component hybrid wall lemma. Champion
-edges make EFX-preserving component construction possible; the component
-lemma supplies the extremal contradiction once the constructed endpoint has
-positive threshold gain.
+An exact positive-additive \((4,8)\) state shows that the correction is
+necessary: it has a unique bad identity agent that does not champion the
+augmented host, while the host strongly envies that set and self-champions.
+The state lies strictly below absorbing global \(\Theta\)-maximizers. See
+[`unique_defect_bad_champion_local_counterexample.json`](unique_defect_bad_champion_local_counterexample.json).
 
 ## Claim boundary
 
-The champion bridge and discard dichotomy are proved. The existence of a
-Pareto-improvable cycle using the forced edge is not proved. Consequently the
-lemma does not resolve four-agent or general additive EFX.
+The two-source bridge and the bad-source discard dichotomy are proved. A
+bad-to-host champion edge is conditional, not forced. Neither branch has yet
+been shown to terminate in a nonnegative-threshold eligible component, so
+this lemma does not resolve four-agent or general additive EFX.
 
 ## Primary source for terminology
 

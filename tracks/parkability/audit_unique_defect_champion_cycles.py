@@ -180,12 +180,13 @@ def run(source, output):
             }
             forced_desired = desired_by_edge[(bad, host)]
             if not forced_desired:
-                raise AssertionError("forced champion bridge did not replay")
-            counts["forced_champion_replayed"] += 1
+                counts["bad_champion_missing"] += 1
+                continue
+            counts["bad_champion_replayed"] += 1
             if any(desired & (1 << floater) == 0 for desired in forced_desired):
-                counts["forced_champion_can_discard_floater"] += 1
+                counts["bad_champion_can_discard_floater"] += 1
             if any(desired & (1 << floater) for desired in forced_desired):
-                counts["forced_champion_can_retain_floater"] += 1
+                counts["bad_champion_can_retain_floater"] += 1
             reciprocal_desired = desired_by_edge[(host, bad)]
             if reciprocal_desired:
                 counts["reciprocal_forced_pair"] += 1

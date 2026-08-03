@@ -3,10 +3,13 @@ import hashlib
 import json
 from pathlib import Path
 
-from .audit_unique_defect_champion_cycles import run as audit_corpus
+from .audit_unique_defect_champion_cycles import (
+    champion_desired_sets,
+    run as audit_corpus,
+)
 from .audit_unique_defect_champion_escapes import run as audit_escapes
 from .audit_threshold_utility_tiebreak import analyze as analyze_utility_tiebreak
-from .audit_unique_defect_handoff import load_record_values
+from .audit_unique_defect_handoff import candidate_slacks, load_record_values
 from .scan_charity_threshold_absorption import scan_profile, tables
 from .search_unique_defect_champion_threshold import classify
 from .search_unique_defect_missing_reciprocal import classify as classify_reciprocity
@@ -28,6 +31,46 @@ def test_full_unique_defect_corpus_has_threshold_neutral_champion_cycles(tmp_pat
         == 4320
     )
     assert result["counts"]["states_with_zero_theta_basic_pi_cycle"] == 4320
+    assert result["counts"]["bad_champion_replayed"] == 4320
+    assert result["counts"].get("bad_champion_missing", 0) == 0
+
+
+def test_unique_bad_agent_need_not_champion_augmented_host():
+    record = json.loads(
+        (RESULTS / "unique_defect_bad_champion_local_counterexample.json")
+        .read_text()
+    )
+    values = tuple(tuple(row) for row in record["values"])
+    masks = tuple(record["masks"])
+    floater = record["floater"]
+    totals, thresholds = tables(values)
+    row_totals = tuple(sum(row) for row in values)
+    witness = {"host": record["host"], "permutation": list(range(len(values)))}
+    slacks = candidate_slacks(
+        masks, floater, witness, totals, thresholds, row_totals
+    )
+    assert [agent for agent, slack in enumerate(slacks) if slack < 0] == [
+        record["bad"]
+    ]
+    assert not champion_desired_sets(
+        record["bad"], record["host"], masks, floater, totals, thresholds
+    )
+    assert list(
+        champion_desired_sets(
+            record["host"], record["host"], masks, floater, totals, thresholds
+        )
+    ) == record["host_self_champion_desired_masks"]
+    augmented = masks[record["host"]] | (1 << floater)
+    assert thresholds[record["host"]][augmented] > totals[record["host"]][
+        masks[record["host"]]
+    ]
+    for agent in range(len(values)):
+        if agent not in (record["bad"], record["host"]):
+            assert thresholds[agent][augmented] <= totals[agent][masks[agent]]
+
+    selector = scan_profile(values, 1)
+    assert selector["best_theta"] == record["global_theta_audit"]["best_theta"]
+    assert not record["global_theta_audit"]["state_is_global_maximizer"]
 
 
 def test_local_reciprocal_champion_cycle_can_lower_threshold():

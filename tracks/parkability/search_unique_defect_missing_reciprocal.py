@@ -69,7 +69,8 @@ def classify(values, masks, floater, counts):
             thresholds,
         )
         if not forced:
-            raise AssertionError("forced champion bridge did not replay")
+            counts["bad_champion_missing"] += 1
+            continue
         reciprocal = champion_desired_sets(
             host,
             bad,

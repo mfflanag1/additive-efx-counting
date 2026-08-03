@@ -85,9 +85,12 @@ host--bad reduction while confirming that the witness itself absorbs through
 another host. Thus future arguments must use global selector extremality and
 must not elevate the 4,320/4,320 corpus pattern into a theorem.
 
-The reciprocal-champion gate makes that warning exact. All 4,320 full-witness
-corpus states have threshold-neutral, one-charity reciprocal champion cycles,
-but separate exact local profiles refute reciprocity, champion-cycle
+The corrected two-source champion bridge makes that warning exact. The bad
+agent need not champion the augmented host: the host can be the competing
+most-envious source, as a frozen local \((4,8)\) counterexample demonstrates.
+All 4,320 full-witness corpus states nevertheless lie in the bad-source branch
+and have threshold-neutral, one-charity reciprocal champion cycles, but
+separate exact local profiles refute reciprocity, champion-cycle
 threshold nonnegativity, and their naive combination with a bad-owner minimum
 swap. Every refuting state lies below absorbing global maxima. The proved
 host-wall propagation lemma converts the remaining reciprocal wall into a

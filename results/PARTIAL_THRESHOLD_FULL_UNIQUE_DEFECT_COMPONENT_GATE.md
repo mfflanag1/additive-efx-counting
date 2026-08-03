@@ -69,8 +69,8 @@ The four changed goods form one transfer component spanning all four agents.
 Thus the failure does not weaken the global-extremum program; it determines
 the necessary scale of its move-completeness lemma.
 
-The champion bridge gives a second, conceptually cleaner radius-four escape
-for the same profile. The forced champion edge from bad agent 1 to host 3
+The two-source champion analysis gives a second, conceptually cleaner
+radius-four escape for the same profile. Its bad-source champion edge from agent 1 to host 3
 discards \(f\), so agent 1 ordinarily envies bundle 3. Conversely, agent 3
 champions bundle 1 using desired set \(\{1,4\}\) and discarding good 5. The
 ordinary-envy/champion 2-cycle produces the EFX-with-charity state

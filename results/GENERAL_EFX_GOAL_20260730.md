@@ -23,8 +23,13 @@ is to prove that dependency growth preserves enough positive normalized gain
 to close in an eligible union, or else yields an impossible strict wall
 cycle. This supersedes bounded item-radius targets but does not prove EFX.
 
-The champion bridge has now been sharpened against the same gate. All 4,320
-stored full/unique-defect transitions are exactly reconstructed by a
+The champion bridge has now been corrected to a two-source dichotomy. The bad
+agent and host are the only possible most-envious sources; an exact local
+\((4,8)\) state refutes the earlier claim that the bad agent must be the
+source. The host-source branch forces the floater above the host minimum and
+therefore enters the proved dependency machinery. All 4,320 stored
+full/unique-defect transitions happen to lie in the bad-source branch and are
+exactly reconstructed by a
 one-charity reciprocal champion cycle with zero threshold change, so a
 secondary owner-utility maximum excludes the entire corpus. Local reciprocity
 and local threshold compatibility are both exactly false outside that corpus.

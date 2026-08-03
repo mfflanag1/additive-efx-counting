@@ -92,8 +92,8 @@ subcase reduces to one possible wall:
 v_h(g)>v_h(X_h). \tag{4}
 \]
 
-When (4) holds, host \(h\) envies the bad bundle \(X_b\). If the forced
-bad-to-host champion discards \(f\), then \(b\) also envies \(h\), producing
+When (4) holds, host \(h\) envies the bad bundle \(X_b\). If a bad-to-host
+champion exists and discards \(f\), then \(b\) also envies \(h\), producing
 an ordinary envy two-cycle. That cycle is EFX-preserving and Pareto-improving,
 but its threshold change can be negative.
 
@@ -139,10 +139,14 @@ the nonsingleton endpoint also yields a generalized
 additional bottom discard (with the resource good and target renamed at the
 end of a singleton chain).
 
-## Exact reciprocal-cycle criterion
+## Two-source correction and exact reciprocal-cycle criterion
 
-The unique-defect champion bridge gives a forced edge
-\(b\mathrel{\smash{\xrightarrow{f}}}h\). If its discard is \(\{f\}\), then
+The corrected unique-defect bridge gives a most-envious source in
+\(\{b,h\}\), not necessarily the edge
+\(b\mathrel{\smash{\xrightarrow{f}}}h\). If the source is \(h\), then
+\(v_h(f)>\min_{x\in X_h}v_h(x)\), which enters the host-minimum dependency
+route above. The remainder of this section is conditional on the bad-source
+branch. If its discard is \(\{f\}\), then
 \(b\) ordinarily envies \(h\). Suppose also that \(h\) \(f\)-champions
 \(b\) with desired bundle
 
@@ -184,8 +188,8 @@ a genuine \(f\)-decomposition retaining \(f\).
    EFX-preserving Pareto improvement with the original charity good.
 2. Only \(b\to h\) is envy. Combine it with the reciprocal
    \(f\)-champion edge; charity becomes that edge's discard set.
-3. Only \(h\to b\) is envy. Combine it with the forced
-   \(f\)-champion edge; charity becomes the forced edge's discard set.
+3. Only \(h\to b\) is envy. Combine it with the bad-source
+   \(f\)-champion edge; charity becomes that edge's discard set.
 4. Neither direction is envy. The two edges form a good \(f\)-cycle. The
    bottom-edge theorem supplies an internal good edge or an external bottom
    edge for each of its two released bottom bundles.
@@ -214,7 +218,7 @@ charity-cardinality and threshold compatibility.
 The full plateau corpus contains 4,320 distinct identity/unique-defect/full-
 witness states. Exact enumeration gives, for every one of them:
 
-1. the forced bad-to-host champion discards the floater, so the bad agent
+1. the bad-to-host champion exists and discards the floater, so the bad agent
    envies the host;
 2. the host reciprocally champions the bad bundle;
 3. a reciprocal desired set has singleton discard, preserving one-good
@@ -281,7 +285,7 @@ component argument. The exact replay is
 
 Reciprocity itself is also not a local consequence of the full Hall witness.
 An exact positive \(4\times6\) state has an identity unique defect, the full
-witness, and the forced bad-to-host champion, while the host is not a
+witness, and a bad-to-host champion, while the host is not a
 champion of the bad bundle. Its score is \(30/91\), below the absorbing global
 maximum \(29/84\). See
 [`unique_defect_missing_reciprocal_local_counterexample.json`](unique_defect_missing_reciprocal_local_counterexample.json).

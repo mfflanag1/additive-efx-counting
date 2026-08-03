@@ -193,15 +193,18 @@ cut. This converts the remaining problem from item-radius enumeration to a
 dependency-growth and wall-cancellation statement, uniformly for four and
 arbitrary numbers of agents.
 
-The unique-defect hypothesis also now connects rigorously to the independent
-champion-cycle route. The bad agent is the unique strong envier of the
-augmented host and therefore \(f\)-champions that host. Its minimal desired
-subset either discards exactly \(f\), producing an ordinary envy edge, or
-retains \(f\) and releases a nonempty bottom bundle. This bridge supplies the
-EFX-preserving construction mechanism that raw transfer walls lacked.
+The unique-defect hypothesis also connects rigorously to the independent
+champion-cycle route, but with a necessary two-source correction. The bad
+agent strongly envies the augmented host, no external agent does, and a
+most-envious source lies in the bad/host pair. If the bad agent is the source,
+its desired subset either discards exactly \(f\), producing an ordinary envy
+edge, or retains \(f\) and releases a nonempty bottom bundle. If the host
+interferes, the floater exceeds the host minimum and feeds directly into the
+proved owner-minimum dependency machinery. An exact local \((4,8)\) state
+refutes the earlier stronger claim that the bad agent is always the source.
 
 The hardest radius-three counterexample confirms that this is not merely a
-change of terminology. Its forced champion edge and one reciprocal champion
+change of terminology. Its bad-source champion edge and one reciprocal champion
 edge form an ordinary-envy/champion two-cycle whose Pareto-improvable
 reallocation is EFX with charity, strictly raises \(\Theta\), and is directly
 absorbable. Thus the champion construction recovers an improving four-good
@@ -211,7 +214,7 @@ The exact endpoint and replay are recorded in
 
 This also sharpens the next decision gate. The live task is not to search for
 larger-radius moves; it is to classify the four-vertex champion graph around
-the forced edge and prove that either a charity-cardinality-preserving champion
+the selected two-source edge and prove that either a charity-cardinality-preserving champion
 edge set has nonnegative total threshold change or the signed component walls
 force a different positive-threshold transfer. A merely Pareto-improving edge
 set is insufficient.
