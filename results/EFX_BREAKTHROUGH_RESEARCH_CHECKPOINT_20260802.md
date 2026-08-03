@@ -81,6 +81,16 @@ prefers the outgoing item. One strict receiver preference gives strict
 the opposite strict sign for each attempted target; chaining those named
 observers around the critical Hall cut is the remaining wall-cycle theorem.
 
+The unique-defect branch is now reduced further. A cap-free handoff lemma
+shows that if an identity insertion has only one bad agent, an eligible swap
+of the charity good with that agent's released good completes after putting
+the released good into the old host, provided two external item-order checks
+and one bad-row scalar inequality hold. The exact corpus contains 4,323
+identity/one-negative/one-step transitions; 4,320 follow this canonical
+handoff and all replay. The open statement is existence of the released owner
+minimum under global \((\Theta,\Lambda)\)-maximality. Nonidentity and
+multi-negative signatures remain after that branch.
+
 ## New cap-free analytic results
 
 1. **Threshold-maximum swap preservation.**  Every eligible owner-minimum

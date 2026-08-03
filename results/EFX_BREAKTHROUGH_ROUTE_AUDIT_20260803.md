@@ -109,6 +109,16 @@ observer with the opposite strict sign. The remaining theorem must show that
 these observer dependencies close into a profitable eligible transfer union
 or an inconsistent strict cycle.
 
+The dominant four-agent subcase is now separated completely. Across 4,847
+selected exact plateau transitions, 4,323 have an identity optimal matching,
+one negative slack, and a one-step completion. In 4,320 of them the unique bad
+agent receives the charity good, releases one owner minimum, and that minimum
+replaces the charity good in the same old host. The cap-free unique-defect
+handoff lemma proves that this move completes whenever its eligible-swap,
+two-external-row, and one bad-row conditions hold. The remaining proof task is
+existence of such a released minimum at the extremal state, not verification
+of the resulting allocation.
+
 ## Stop/switch conditions
 
 Switch away from the primary route if any of the following occurs:
