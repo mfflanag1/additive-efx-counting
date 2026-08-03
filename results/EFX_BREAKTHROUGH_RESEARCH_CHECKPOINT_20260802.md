@@ -1,0 +1,164 @@
+# EFX breakthrough research checkpoint — critical-cut phase
+
+## Status
+
+Four-agent additive EFX and general additive EFX remain unresolved.  This
+checkpoint makes no existence or counterexample claim for either problem.
+
+The active branch is `codex/efx-breakthrough-next-20260802`.  It is isolated
+from the immutable threshold-Hall publication branch and the two existing
+pull requests.  No new research result has been pushed from this branch.
+
+## New cap-free analytic results
+
+1. **Threshold-maximum swap preservation.**  Every eligible owner-minimum
+   floater swap from a global normalized owner-threshold maximum remains on
+   the same maximum plateau.  The incoming floater occupies a new owner-
+   minimum slot.
+2. **Exact swap obstruction.**  For a nonsingleton source, the new floater is
+   automatically unenvied.  Ineligibility can arise only from an external
+   incoming-target wall or a source-owner shortfall wall, with opposite strict
+   comparisons between the old floater and released good.
+3. **Completion-move trichotomy.**  Every strict increase of the exact Hall
+   bottleneck margin induced by a floater swap becomes, at the completed-
+   partition level, either a one-good transfer, a two-bundle swap, or a
+   three-bundle augmenting path.  Reinserting the new floater into its source
+   reconstructs an old completion candidate and can never strictly improve.
+4. **Bottleneck Hall cut.**  At the exact bottleneck level \(\beta\), the
+   weak edge graph has a perfect matching and the strict edge graph is
+   Hall-deficient.  Every critical cut forces equality edges, and every
+   improving successor must create a strict edge crossing the old cut.
+5. **Full-cut one-bottleneck normal form.**  If the smallest strict Hall
+   witness is the full agent set, the strict graph misses exactly one bundle
+   and a weak optimal matching can be chosen with exactly one equality edge;
+   all remaining matching edges are strict.
+6. **Receiver-edge monotonicity.**  Transferring a positive good into a bundle
+   strictly improves every observer's edge slack to that receiver.  Swapping
+   the floater into a bundle strictly improves observer \(i\)'s receiver edge
+   whenever \(i\) values the floater above the released good.
+7. **Owner-separable component decomposition.**  Transfer-component gain
+   decomposes for any sum of owner-level bundle functions, not only linear
+   utilitarian welfare.  It therefore applies exactly to normalized owner-
+   threshold potential.
+8. **Full-eligibility dependency cycles.**  Component-local EFX failures and
+   floater-nonenvy failures both cross transfer-component boundaries.  If no
+   component state is eligible, the dependency graph contains a directed
+   cycle.
+9. **Minimum-slot permutation plateau.**  At a global threshold maximum, any
+   eligible simultaneous permutation of one selected owner minimum from each
+   bundle together with the floater stays on the same plateau.  This extends
+   radius-one floater swaps to owner-minimum exchanges and arbitrary cycles.
+
+The central source files are:
+
+- `PARTIAL_THRESHOLD_MAXIMUM_SWAP_REDUCTION_LEMMA.md`;
+- `PARTIAL_THRESHOLD_MINIMUM_SWAP_OBSTRUCTION_LEMMA.md`;
+- `PARTIAL_THRESHOLD_HALL_COMPLETION_MOVE_REDUCTION_LEMMA.md`;
+- `PARTIAL_THRESHOLD_MINIMUM_SLOT_PERMUTATION_LEMMA.md`;
+- `PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md`;
+- `PARTIAL_EFX_TRANSFER_COMPONENT_DECOMPOSITION_LEMMA.md`; and
+- `PARTIAL_EFX_TRANSFER_COMPONENT_DEPENDENCY_LEMMA.md`.
+
+## Exact finite evidence
+
+The enriched exact-rational plateau artifact has SHA-256
+`16d1d9041c32278cf243462d8bea679926cced30817c21b34b9f2f53448fcdb2`.
+Across 46 positive four-agent profiles it verifies:
+
+- 15,557 global threshold-maximal states;
+- 7,655 blocked maximum states, every one with a strict Hall-margin path to a
+  completing maximum state;
+- all 7,655 remain reachable when every transition is required to release an
+  owner minimum and insert a new owner minimum, so the path stays inside one
+  fixed-core, five-token permutation orbit; the maximum restricted path length
+  is two;
+- 4,848 selected strict owner-minimum swaps, all preserving the maximum
+  threshold plateau;
+- completion moves split into 2,374 one-good transfers, 2,440 two-bundle
+  swaps, and 34 three-bundle augmenting paths;
+- 331 minimum critical cuts of size two, 58 of size three, and 4,459 of size
+  four; and
+- all 4,459 selected full-cut states have a strict gradient from one of only
+  two canonical sources: the best host or the unique missing bundle.
+
+These are corpus facts.  Every audited plateau already contains a completing
+state, so the census does not sample a hypothetical all-blocked counterexample
+plateau.
+
+## Exact falsifications and strategy correction
+
+The two-source gradient is false as a purely local lemma.  A fixed positive
+\(4\times9\) full-cut model has no eligible strict gradient from either
+canonical source, but the base is not globally threshold-maximal.  Its nearest
+Hall-completable global maximum is owner distance two and improves the
+threshold potential by \(95/3478\).
+
+A second exact model also blocks all four old-good swaps between the canonical
+two-good host and missing bundles.  One such swap would improve the potential
+but is ineligible; the nearest completing global maximum is owner distance six
+and improves the potential by \(869/13976\).
+
+Therefore the surviving proof cannot replace true global maximality with a
+fixed-radius menu or with local threshold compatibility.  The natural
+off-diagonal matrix potential is also not monotone on the exact paths: 99
+steps increase it, 4,738 preserve it, and 11 decrease it.
+
+The falsification artifacts and generators are:
+
+- `threshold_full_cut_two_source_natural_4x9_identity_session1.json`;
+- `threshold_full_cut_exchange_or_gradient_min03_4x9_identity_session1.json`;
+- `decide_threshold_full_cut_two_source.py`; and
+- `audit_threshold_plateau_exact_paths.py`.
+
+## Remaining four-agent theorem
+
+The dominant full-cut branch is reduced to the following global statement:
+
+> At a globally normalized-threshold-maximal eligible state, a full critical
+> Hall cut forces either a strict two-source Hall gradient or a positive-gain
+> union of transfer components.  If individual positive components are
+> ineligible, their full-eligibility dependency cycle yields either an
+> eligible positive union or an impossible weighted wall cycle.
+
+This is not proved.  The immediate analytic work is to write the two canonical
+source failures as component dependencies and decide the possible cycles on
+four owner vertices.  Fixed-radius search is no longer justified.
+
+The sharper formulation is now
+`PARTIAL_THRESHOLD_MINIMUM_SLOT_ORBIT_COMPLETION_TARGET.md`: freeze the four
+bundle cores and search analytically over the five parking tokens.  Proving
+that one eligible token permutation completes would resolve the four-agent
+case.
+
+The subsequent adversarial pass has now shown, in the canonical (4\times9)
+pair-base stress cell, that frozen-core orbit blockage is feasible away from a
+global maximum.  An exact CEGAR reached 141 cumulative rounds with 137
+completion blockers and 42 global-maximality witnesses: every blocked orbit
+found still has a higher-threshold eligible base.  An independent exact-
+preserving anneal improved the blocked base/global ratio to 0.961317 but did
+not reach one.  At that endpoint the orbit Hall deficit is (1/55584), while
+the threshold gap is (3857/55584); the gap is dominated by a core
+reassignment outside the token orbit.  The live statement is consequently the
+arbitrary-core generalization of the core-token exchange alternative recorded in
+`PARTIAL_THRESHOLD_CORE_TOKEN_EXCHANGE_GATE.md`.  Neither the global orbit
+theorem nor four-agent EFX has been proved.
+
+After the full-cut branch, the proper critical-cut branches of sizes two and
+three remain.  Only after all three branches close can the Hall-gradient lemma
+be integrated with the known one-unallocated-good theorem to prove complete
+EFX for four agents.
+
+General additive EFX remains farther away.  The charity Hall-absorption
+equivalence is available, but there is no theorem that absorbs one good from
+an arbitrary charity set while preserving collective charity dominance.
+
+## Verification
+
+The focused parkability suite passes:
+
+```text
+31 passed, 29 warnings in 21.35s
+```
+
+The warnings are pre-existing pytest return-value warnings.  The new Python
+generators compile successfully, and every quoted artifact parses as JSON.

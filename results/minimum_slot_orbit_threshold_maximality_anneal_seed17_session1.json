@@ -1,0 +1,195 @@
+{
+  "accepted_moves": 125,
+  "elapsed_seconds": 15.083773,
+  "exact_record": {
+    "candidate_score": {
+      "denominator": 6176,
+      "numerator": 10673
+    },
+    "candidate_to_maximum_ratio": 0.9201743462017434,
+    "eligible_state_count": 811,
+    "global_maximizer_count": 6,
+    "global_maximizers": [
+      {
+        "floater": 1,
+        "masks": [
+          128,
+          9,
+          272,
+          100
+        ]
+      },
+      {
+        "floater": 1,
+        "masks": [
+          128,
+          9,
+          48,
+          324
+        ]
+      },
+      {
+        "floater": 5,
+        "masks": [
+          128,
+          9,
+          272,
+          70
+        ]
+      },
+      {
+        "floater": 5,
+        "masks": [
+          128,
+          9,
+          18,
+          324
+        ]
+      },
+      {
+        "floater": 8,
+        "masks": [
+          128,
+          9,
+          48,
+          70
+        ]
+      },
+      {
+        "floater": 8,
+        "masks": [
+          128,
+          9,
+          18,
+          100
+        ]
+      }
+    ],
+    "hall_insertable_global_maximizer_count": 6,
+    "is_global_maximizer": false,
+    "maximum_score": {
+      "denominator": 27792,
+      "numerator": 52195
+    },
+    "orbit_audit": {
+      "base_floater": 8,
+      "base_masks": [
+        3,
+        12,
+        48,
+        192
+      ],
+      "base_theta": "10673/6176",
+      "best_orbit_margin": "-1/6948",
+      "best_orbit_state": {
+        "assignment": [
+          1,
+          3,
+          5,
+          7,
+          8
+        ],
+        "best_host": 0,
+        "best_permutation": [
+          1,
+          0,
+          2,
+          3
+        ],
+        "bottleneck_count": 1,
+        "completing": false,
+        "floater": 8,
+        "margin": "-1/6948",
+        "masks": [
+          3,
+          12,
+          48,
+          192
+        ],
+        "theta": "10673/6176"
+      },
+      "completing_orbit_state_count": 0,
+      "eligible_orbit_state_count": 2,
+      "m": 9,
+      "meaning": "Exact rational audit of every permutation of four selected owner minima and one floater over four fixed cores.",
+      "minimum_eligible_orbit_theta": "10673/6176",
+      "n": 4,
+      "orbit_state_count": 120,
+      "records": [],
+      "schema": "minimum-slot-orbit-audit-v1",
+      "selected_minima": [
+        1,
+        3,
+        5,
+        7
+      ],
+      "status": "ORBIT_ALL_ELIGIBLE_STATES_BLOCKED"
+    }
+  },
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      3,
+      12,
+      48,
+      192
+    ]
+  },
+  "guided_probability": 0.85,
+  "improvements": 34,
+  "iterations_completed": 1500,
+  "iterations_requested": 1500,
+  "max_delta": 4096,
+  "meaning": "A counterexample refutes the fixed-core five-token orbit lemma at a global normalized-threshold maximum. It does not refute complete additive EFX or the existential threshold selector.",
+  "random_seed": 17,
+  "schema": "minimum-slot-orbit-threshold-maximality-anneal-v1",
+  "seed_path": "results/minimum_slot_orbit_global_threshold_cegar_orbit_first_session3_orbit_blocked_seed.json",
+  "seed_sha256": "81395b0c9cf036ccf38476fa5bb9f62eec961c720e40a5211a753340c106769b",
+  "status": "NO_GLOBAL_MAXIMUM_COUNTEREXAMPLE",
+  "values": [
+    [
+      13759,
+      125,
+      13,
+      13863,
+      13840,
+      68,
+      2,
+      13871,
+      43
+    ],
+    [
+      7436,
+      1,
+      4898,
+      3578,
+      4198,
+      1045,
+      5406,
+      140,
+      1090
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      13875,
+      1,
+      2,
+      13,
+      1
+    ],
+    [
+      985,
+      1,
+      8508,
+      1,
+      4096,
+      1,
+      8501,
+      5698,
+      1
+    ]
+  ]
+}
