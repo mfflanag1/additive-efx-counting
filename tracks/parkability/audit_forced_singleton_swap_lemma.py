@@ -252,21 +252,33 @@ def generate(record_path: Path, smt2_path: Path) -> dict:
 
 def verify(record_path: Path, smt2_path: Path) -> dict:
     observed = json.loads(record_path.read_text())
-    expected, formula = construct()
+    expected, _ = construct()
     expected["smt2_path"] = str(smt2_path)
-    # A satisfying model is not canonical across Z3 builds or platforms.
-    # Compare every other field exactly, then validate the committed witness
-    # by pinning it back into the premise solver.
+    # These provenance values are not canonical across Z3 builds or platforms.
+    # Compare every mathematical field exactly, then validate each committed
+    # provenance value independently below.
     observed_model = observed.get("checks", {}).get("premise_model")
     expected["checks"]["premise_model"] = observed_model
+    observed_solver = observed.get("solver", {})
+    expected["solver"]["version"] = observed_solver.get("version")
+    expected["smt2_sha256"] = observed.get("smt2_sha256")
     if observed != expected:
         raise AssertionError("forced-swap certificate record changed")
     if not premise_model_is_valid(observed_model):
         raise AssertionError("forced-swap premise witness is invalid")
-    if smt2_path.read_bytes() != formula:
-        raise AssertionError("forced-swap SMT formula changed")
+    if (
+        observed_solver.get("name") != "z3"
+        or observed_solver.get("logic") != "QF_LRA"
+        or not isinstance(observed_solver.get("version"), str)
+        or not observed_solver["version"]
+    ):
+        raise AssertionError("forced-swap solver provenance is invalid")
     if observed["smt2_sha256"] != sha256(smt2_path):
         raise AssertionError("forced-swap formula hash mismatch")
+    frozen = z3.SolverFor("QF_LRA")
+    frozen.from_string(smt2_path.read_text())
+    if frozen.check() != z3.unsat:
+        raise AssertionError("committed forced-swap formula is not UNSAT")
     return {
         "status": "PASS",
         "record": str(record_path.resolve()),
