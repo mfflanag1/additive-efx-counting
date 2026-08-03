@@ -65,6 +65,10 @@ proved; the residual pair-Hall cell remains open. See
 [`PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md`](PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md)
 and
 [`PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md`](PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md).
+The human
+[`rotating-token lemma`](PARTIAL_THRESHOLD_ROTATING_TOKEN_LEMMA.md) supplies a
+valid cyclic symmetry break; its canonical pool currently stands at
+159/78/38 and remains open.
 
 Both multiplicity-`2+2` bottom-pair branches are now proof-checked. Whether
 the two repeated pairs are disjoint or share one good, they force either a

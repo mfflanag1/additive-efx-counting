@@ -14,6 +14,7 @@ try:
         owner_cores_dominate_predecessor_tokens,
         pair_hall_cross_row_core_clauses,
         run,
+        some_owner_core_dominates_next_token,
         theta_upper_bound,
         threshold_terms,
     )
@@ -35,6 +36,7 @@ except ImportError:
         owner_cores_dominate_predecessor_tokens,
         pair_hall_cross_row_core_clauses,
         run,
+        some_owner_core_dominates_next_token,
         theta_upper_bound,
         threshold_terms,
     )
@@ -138,6 +140,18 @@ def test_pair_hall_cross_row_core_clause_gate():
         values[3][1] > values[3][3] + values[3][6],
         values[0][1] + values[0][4] < values[0][3] + values[0][8],
     )
+    assert solver.check() == z3.unsat
+
+
+def test_some_owner_core_dominates_next_token_gate():
+    values = [
+        [z3.Real(f"n_{agent}_{good}") for good in range(9)]
+        for agent in range(4)
+    ]
+    solver = z3.Solver()
+    solver.add(some_owner_core_dominates_next_token(values))
+    for owner, core in enumerate((0, 2, 4, 6)):
+        solver.add(values[owner][core] < values[owner][(2 * owner + 3) % 8])
     assert solver.check() == z3.unsat
 
 

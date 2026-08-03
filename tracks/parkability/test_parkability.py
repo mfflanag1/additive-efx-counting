@@ -1548,6 +1548,11 @@ def test_standard_hall_smt2() -> int:
     integer_normalized, _ = normalize_smt2_for_cvc5.normalize(integer_source)
     if "(set-logic QF_LIA)" not in integer_normalized:
         raise AssertionError("integer Hall formula received the wrong logic")
+    generic_normalized, replacements = normalize_smt2_for_cvc5.normalize(
+        "(declare-fun v_0_0 () Real)\n(assert (= (+ v_0_0) 1))\n(check-sat)\n"
+    )
+    if "(+ v_0_0)" in generic_normalized or replacements != 1:
+        raise AssertionError("generic unary atom sum was not normalized")
     return 3
 
 

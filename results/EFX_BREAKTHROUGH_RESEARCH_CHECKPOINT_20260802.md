@@ -234,6 +234,14 @@ geometry but leaves 4 UNSAT and 54 UNKNOWN leaves. See
 `PARTIAL_THRESHOLD_PAIR_HALL_CORE_DOMINANCE_LEMMA.md` and
 `PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md`.
 
+A separate minimized core yields a human rotating-token lemma: base
+eligibility, the four unique owner minima, and one fixed-orbit maximality
+implication force some owner core to dominate the next pair's token. Cyclic
+symmetry therefore permits the canonical assumption (v_0(0)\ge v_0(3)).
+Three audited CEGAR iterations in that sector added eight new whole-orbit
+blockers, taking the pool from 159/78/30 to 159/78/38. The sector remains open.
+See `PARTIAL_THRESHOLD_ROTATING_TOKEN_LEMMA.md`.
+
 After the full-cut branch, the proper critical-cut branches of sizes two and
 three remain.  Only after all three branches close can the Hall-gradient lemma
 be integrated with the known one-unallocated-good theorem to prove complete
@@ -248,7 +256,7 @@ an arbitrary charity set while preserving collective charity dominance.
 The focused parkability suite passes:
 
 ```text
-49 passed, 35 warnings in 16.29s
+50 passed, 35 warnings in 15.45s
 ```
 
 The warnings are pre-existing pytest return-value warnings.  The new Python

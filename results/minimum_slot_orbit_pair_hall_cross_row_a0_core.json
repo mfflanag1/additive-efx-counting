@@ -1,0 +1,55 @@
+{
+  "global_states": [
+    {
+      "floater": 0,
+      "masks": [
+        10,
+        260,
+        48,
+        192
+      ]
+    },
+    {
+      "floater": 8,
+      "masks": [
+        3,
+        24,
+        36,
+        192
+      ]
+    },
+    {
+      "floater": 8,
+      "masks": [
+        3,
+        40,
+        20,
+        192
+      ]
+    }
+  ],
+  "meaning": "Standalone refutation of the negation of cross-row clause A0 using exactly the eight top-level facts selected by the minimized structural UNSAT core.",
+  "refuted_conjunction": [
+    "v_0_0 < v_0_3",
+    "v_2_2 > v_2_3 + v_2_4"
+  ],
+  "schema": "pair-hall-cross-row-a0-core-v1",
+  "smt2": "/tmp/pair-hall-cross-row-a0-core.smt2",
+  "smt2_sha256": "b65173cf8d7edb1595730291af48acb40bf78a9833398e4fe504dca74807ccd9",
+  "solver": "z3",
+  "solver_profile": "qf_lra",
+  "solver_version": "5.0.0",
+  "status": "A0_CORE_UNSAT",
+  "structural_core_labels": [
+    "base_eligible",
+    "owner_2_unique_minimum",
+    "positive_2_3",
+    "pair_hall_1_1_2",
+    "pair_hall_2_1_1",
+    "global_0_10_260_48_192",
+    "global_8_3_24_36_192",
+    "global_8_3_40_20_192"
+  ],
+  "top_level_assertion_count": 10,
+  "verdict": "unsat"
+}

@@ -96,7 +96,7 @@ def owner_cores_dominate_predecessor_tokens(values):
     )
 
 
-def pair_hall_cross_row_core_clause(values, family, shift):
+def pair_hall_cross_row_core_clause_terms(values, family, shift):
     if family not in {"a", "b"} or shift not in range(4):
         raise ValueError("cross-row clause requires family a/b and shift in [0,3]")
 
@@ -107,17 +107,21 @@ def pair_hall_cross_row_core_clause(values, family, shift):
         return (item + 2 * shift) % 8 if item < 8 else item
 
     if family == "a":
-        return z3.Or(
+        return (
             values[owner(0)][good(0)] >= values[owner(0)][good(3)],
             values[owner(2)][good(2)]
             <= values[owner(2)][good(3)] + values[owner(2)][good(4)],
         )
-    return z3.Or(
+    return (
         values[owner(3)][good(1)]
         <= values[owner(3)][good(3)] + values[owner(3)][good(6)],
         values[owner(0)][good(1)] + values[owner(0)][good(4)]
         >= values[owner(0)][good(3)] + values[owner(0)][good(8)],
     )
+
+
+def pair_hall_cross_row_core_clause(values, family, shift):
+    return z3.Or(*pair_hall_cross_row_core_clause_terms(values, family, shift))
 
 
 def pair_hall_cross_row_core_clauses(values):
@@ -126,6 +130,15 @@ def pair_hall_cross_row_core_clauses(values):
             pair_hall_cross_row_core_clause(values, family, shift)
             for shift in range(4)
             for family in ("a", "b")
+        )
+    )
+
+
+def some_owner_core_dominates_next_token(values):
+    return z3.Or(
+        *(
+            values[owner][CORES[owner]] >= values[owner][(2 * owner + 3) % 8]
+            for owner in range(4)
         )
     )
 
@@ -523,6 +536,9 @@ def run(
     refute_base_owner_predecessor_token_above_core: int | None = None,
     base_pair_hall_cross_row_core_clauses: bool = False,
     refute_base_pair_hall_cross_row_core_clause: str | None = None,
+    track_structural_core: bool = False,
+    base_owner0_core_dominates_next_token: bool = False,
+    refute_all_owner_cores_below_next_tokens: bool = False,
 ):
     if completion_cut_mode not in {"witness", "orbit_hall", "orbit_matching"}:
         raise ValueError(
@@ -557,6 +573,8 @@ def run(
         )
     if minimize_unsat_core and not track_unsat_core:
         raise ValueError("UNSAT-core minimization requires tracked assertions")
+    if track_structural_core and not track_unsat_core:
+        raise ValueError("structural-core tracking requires tracked assertions")
     if (
         refute_base_owner_core_below_floater is not None
         and not 0 <= refute_base_owner_core_below_floater < 4
@@ -606,6 +624,15 @@ def run(
             raise ValueError("cross-row clause refutation requires both proved walls")
         if base_pair_hall_cross_row_core_clauses:
             raise ValueError("cross-row clause assumption and refutation are exclusive")
+    if base_owner0_core_dominates_next_token and (
+        not base_host_pair_hall_cycle or relabeling_mode != "cyclic"
+    ):
+        raise ValueError("canonical next-token symmetry breaking requires cyclic pair-Hall")
+    if (
+        base_owner0_core_dominates_next_token
+        and refute_all_owner_cores_below_next_tokens
+    ):
+        raise ValueError("next-token symmetry break and refutation are exclusive")
     values = [
         [z3.Real(f"v_{agent}_{good}") for good in range(9)]
         for agent in range(4)
@@ -616,19 +643,39 @@ def run(
         solver.set("smt.core.minimize", True)
     if solver_profile == "arith2":
         solver.set("smt.arith.solver", 2)
-    for row in values:
-        solver.add(z3.Sum(*row) == 1)
-        solver.add(*(entry > 0 for entry in row))
-    solver.add(eligible(values, BASE, FLOATER))
+
+    def add_structural(constraint, label):
+        add_constraint(
+            solver,
+            constraint,
+            label if track_structural_core else None,
+        )
+
+    for owner, row in enumerate(values):
+        add_structural(z3.Sum(*row) == 1, f"row_{owner}_normalized")
+        for good, entry in enumerate(row):
+            add_structural(entry > 0, f"positive_{owner}_{good}")
+    add_structural(eligible(values, BASE, FLOATER), "base_eligible")
     for owner, (core, token) in enumerate(zip(CORES, TOKENS[:4])):
-        solver.add(values[owner][token] < values[owner][core])
+        add_structural(
+            values[owner][token] < values[owner][core],
+            f"owner_{owner}_unique_minimum",
+        )
     if base_owner_cores_dominate_floater:
-        solver.add(owner_cores_dominate_floater(values))
+        for owner, core in enumerate(CORES):
+            add_structural(
+                values[owner][core] >= values[owner][FLOATER],
+                f"owner_{owner}_core_dominates_floater",
+            )
     if refute_base_owner_core_below_floater is not None:
         owner = refute_base_owner_core_below_floater
         solver.add(values[owner][CORES[owner]] < values[owner][FLOATER])
     if base_owner_cores_dominate_predecessor_tokens:
-        solver.add(owner_cores_dominate_predecessor_tokens(values))
+        for owner, core in enumerate(CORES):
+            add_structural(
+                values[owner][core] >= values[owner][(2 * owner - 1) % 8],
+                f"owner_{owner}_core_dominates_predecessor",
+            )
     if refute_base_owner_predecessor_token_above_core is not None:
         owner = refute_base_owner_predecessor_token_above_core
         predecessor_token = (2 * owner - 1) % 8
@@ -639,6 +686,10 @@ def run(
         family = refute_base_pair_hall_cross_row_core_clause[0]
         shift = int(refute_base_pair_hall_cross_row_core_clause[1])
         solver.add(z3.Not(pair_hall_cross_row_core_clause(values, family, shift)))
+    if base_owner0_core_dominates_next_token:
+        solver.add(values[0][CORES[0]] >= values[0][3])
+    if refute_all_owner_cores_below_next_tokens:
+        solver.add(z3.Not(some_owner_core_dominates_next_token(values)))
     edge_cell_sha256 = None
     if base_host_edge_cell_source is not None:
         edge_document = json.loads(base_host_edge_cell_source.read_text())
@@ -662,9 +713,10 @@ def run(
             complete[host] = tuple(sorted((*complete[host], FLOATER)))
             for observer in observers:
                 for assigned in range(4):
-                    solver.add(
+                    add_structural(
                         efx_edge(values, complete, observer, assigned)
-                        == (assigned == host)
+                        == (assigned == host),
+                        f"pair_hall_{host}_{observer}_{assigned}",
                     )
     offhost_edge_cell_sha256 = None
     if base_host_offhost_edge_cell_source is not None:
@@ -703,7 +755,7 @@ def run(
     )
     for assignment in itertools.permutations(TOKENS):
         bundles = orbit_bundles(assignment)
-        solver.add(
+        add_structural(
             z3.Implies(
                 eligible(values, bundles, assignment[4]),
                 z3.And(
@@ -713,7 +765,8 @@ def run(
                         for owner in range(4)
                     )
                 ),
-            )
+            ),
+            "orbit_max_{}".format("_".join(str(good) for good in assignment)),
         )
 
     global_cuts = set()
@@ -898,6 +951,8 @@ def run(
                 if refute_base_owner_predecessor_token_above_core is not None
                 else "BASE_PAIR_HALL_CROSS_ROW_CORE_CLAUSE_FORCED"
                 if refute_base_pair_hall_cross_row_core_clause is not None
+                else "BASE_SOME_OWNER_CORE_DOMINATES_NEXT_TOKEN_FORCED"
+                if refute_all_owner_cores_below_next_tokens
                 else "FIXED_PAIR_TOKEN_ORBIT_FORCED"
             )
             if track_unsat_core:
@@ -1117,6 +1172,14 @@ def run(
             )
             if refute_base_pair_hall_cross_row_core_clause is not None
             else (
+                "BASE_SOME_OWNER_CORE_DOMINATES_NEXT_TOKEN_FORCED proves only "
+                "the cyclic existential next-token inequality from base "
+                "eligibility, unique owner minima, and fixed-token-orbit "
+                "maximality. It does not close the pair-Hall cell or prove "
+                "four-agent EFX."
+            )
+            if refute_all_owner_cores_below_next_tokens
+            else (
                 "GLOBAL_MAXIMUM_BLOCKED_TOKEN_ORBIT_FOUND refutes the fixed-core "
                 "orbit theorem inside the imposed host-edge subcell after exact "
                 "replay. UNSAT proves only the subcell fixing every base-host EFX "
@@ -1224,6 +1287,13 @@ def run(
         ),
         "smt2_output": str(smt2_output) if smt2_output is not None else None,
         "track_unsat_core": track_unsat_core,
+        "track_structural_core": track_structural_core,
+        "base_owner0_core_dominates_next_token": (
+            base_owner0_core_dominates_next_token
+        ),
+        "refute_all_owner_cores_below_next_tokens": (
+            refute_all_owner_cores_below_next_tokens
+        ),
         "minimize_unsat_core": minimize_unsat_core,
         "unsat_core_labels": unsat_core_labels,
         "unsat_core_size": (
@@ -1327,10 +1397,19 @@ def main():
             for shift in range(4)
         ),
     )
+    parser.add_argument(
+        "--base-owner0-core-dominates-next-token",
+        action="store_true",
+    )
+    parser.add_argument(
+        "--refute-all-owner-cores-below-next-tokens",
+        action="store_true",
+    )
     parser.add_argument("--base-host-offhost-edge-cell-source", type=Path)
     parser.add_argument("--base-host-diagonal-pattern", type=int)
     parser.add_argument("--smt2-output", type=Path)
     parser.add_argument("--track-unsat-core", action="store_true")
+    parser.add_argument("--track-structural-core", action="store_true")
     parser.add_argument("--minimize-unsat-core", action="store_true")
     args = parser.parse_args()
     result = run(
@@ -1357,6 +1436,9 @@ def main():
         args.refute_base_owner_predecessor_token_above_core,
         args.base_pair_hall_cross_row_core_clauses,
         args.refute_base_pair_hall_cross_row_core_clause,
+        args.track_structural_core,
+        args.base_owner0_core_dominates_next_token,
+        args.refute_all_owner_cores_below_next_tokens,
     )
     summary = {
         key: result[key]

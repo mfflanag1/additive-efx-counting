@@ -90,7 +90,11 @@ leaves 4 UNSAT and 54 UNKNOWN leaves at 60 seconds per leaf.  See
 `PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md`.
 
 The next proof target is to compose those eight clauses analytically with the
-two owner walls. Monolithic timeout extension is not evidence.
+two owner walls. A new human rotating-token lemma now supplies the valid
+cyclic symmetry break (v_0(0)\ge v_0(3)); three canonical-sector CEGAR
+iterations increased the whole-orbit blockers from 30 to 38. See
+`PARTIAL_THRESHOLD_ROTATING_TOKEN_LEMMA.md`. Monolithic timeout extension is
+not evidence.
 
 ## Reproduction
 

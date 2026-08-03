@@ -35,6 +35,10 @@ cross-row clauses in total.
 These disjunctions are the first consequences in this route that couple
 different valuation rows. They do not close the pair-Hall cell.
 
+A minimized eight-fact structural core now gives a direct human exchange
+proof of A0, independently replayed by Z3 and cvc5 in under 0.08 seconds. See
+`PARTIAL_THRESHOLD_ROTATING_TOKEN_LEMMA.md`.
+
 ## Verification boundary
 
 A0 is directly refuted under its negation by default, QF_LRA, and

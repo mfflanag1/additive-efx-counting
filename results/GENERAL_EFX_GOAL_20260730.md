@@ -22,6 +22,12 @@ See
 and
 [PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md](PARTIAL_THRESHOLD_PAIR_HALL_CROSS_ROW_CLAUSES.md).
 
+The human rotating-token lemma now gives a valid cyclic symmetry break for
+this cell without using any pair-Hall edges or finite global/completion cuts.
+The resulting canonical CEGAR pool has 159 global, 78 matching, and 38
+whole-orbit cuts, but is not closed. See
+[PARTIAL_THRESHOLD_ROTATING_TOKEN_LEMMA.md](PARTIAL_THRESHOLD_ROTATING_TOKEN_LEMMA.md).
+
 **Current live gate:** the strict-common-favorite universal owner-threshold-
 failure branch at \((4,9)\) is now closed by a cap-free, proof-checked
 computer-assisted theorem. The bottom-pair reduction splits into the

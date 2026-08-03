@@ -1,0 +1,106 @@
+{
+  "schema": "minimum-slot-rotating-token-lemma-audit-v1",
+  "status": "ROTATING_TOKEN_EXISTENCE_HUMAN_PROVED_TRIPLE_Z3",
+  "meaning": "For a positive eligible four-pair base with unique owner minima and fixed-token-orbit maximality, at least one owner values its core at least as highly as the next pair's token. This result does not require the pair-Hall cell, global maximality cuts, completion cuts, or the cross-row clauses.",
+  "theorem": "exists i in {0,1,2,3}: v_i(2i) >= v_i((2i+3) mod 8)",
+  "direct_replays": {
+    "default": {
+      "status": "BASE_SOME_OWNER_CORE_DOMINATES_NEXT_TOKEN_FORCED",
+      "elapsed_seconds": 0.04498295905068517,
+      "global_cut_count": 0,
+      "completion_cut_count": 0,
+      "orbit_hall_cut_count": 0,
+      "artifact": "results/minimum_slot_orbit_pair_hall_next_token_exists_default.json",
+      "sha256": "ccb81902137b16ad7850d2e0ad13c8c1ddebae27e5865545d517eb2da1d09178"
+    },
+    "qf_lra": {
+      "status": "BASE_SOME_OWNER_CORE_DOMINATES_NEXT_TOKEN_FORCED",
+      "elapsed_seconds": 0.04530162503942847,
+      "global_cut_count": 0,
+      "completion_cut_count": 0,
+      "orbit_hall_cut_count": 0,
+      "artifact": "results/minimum_slot_orbit_pair_hall_next_token_exists_qflra.json",
+      "sha256": "c9bd51b23012f61b7b1629cfe8ec2e494782672c2a818ee7fbdde196329e31f6"
+    },
+    "arith2": {
+      "status": "BASE_SOME_OWNER_CORE_DOMINATES_NEXT_TOKEN_FORCED",
+      "elapsed_seconds": 0.024471667013131082,
+      "global_cut_count": 0,
+      "completion_cut_count": 0,
+      "orbit_hall_cut_count": 0,
+      "artifact": "results/minimum_slot_orbit_pair_hall_next_token_exists_arith2.json",
+      "sha256": "22de5af88df8fea86d185667619cfeb2f824ea06e4fe7db11289994ade9f50cc"
+    }
+  },
+  "structural_core": {
+    "artifact": "results/minimum_slot_orbit_pair_hall_next_token_exists_structural_mincore.json",
+    "sha256": "d14bdf51265b685152d20e66abe809168f3a6fe4b848f5364433343bd32398da",
+    "size": 6,
+    "labels": [
+      "base_eligible",
+      "orbit_max_3_5_7_1_8",
+      "owner_0_unique_minimum",
+      "owner_1_unique_minimum",
+      "owner_2_unique_minimum",
+      "owner_3_unique_minimum"
+    ]
+  },
+  "a0_compact_core": {
+    "formula": "results/minimum_slot_orbit_pair_hall_cross_row_a0_core.smt2",
+    "formula_sha256": "b65173cf8d7edb1595730291af48acb40bf78a9833398e4fe504dca74807ccd9",
+    "metadata": "results/minimum_slot_orbit_pair_hall_cross_row_a0_core.json",
+    "metadata_sha256": "9ee77a8eff0651a901179542839ee8948c67b7c65a160b4a2dd235087b64f181",
+    "structural_mincore": "results/minimum_slot_orbit_pair_hall_cross_row_a0_structural_mincore.json",
+    "structural_mincore_sha256": "ff1962bae6eff32469622e4b1238fb19e0e060b8bda7ff85f156fb81e3d51f0c",
+    "normalized_formula": "results/minimum_slot_orbit_pair_hall_cross_row_a0_core_cvc5.smt2",
+    "normalized_formula_sha256": "6766f56089fb303e60e5b7e5873a5293c663223209b40acb13d725aa44d9e211",
+    "normalization": "results/minimum_slot_orbit_pair_hall_cross_row_a0_core_normalization.json",
+    "normalization_sha256": "6d1e7e02f021d007056447e23509bfc9e847e8682083868568a2d88edf43ac73",
+    "z3_default_replay_sha256": "0f1e7c489e638d213b3a90b638e5c3bcf7392ba9502a03b2fd0e867ff05826e1",
+    "z3_arith2_replay_sha256": "15369d328d98a62028e2a251cce06c8a34b71bdf5f9189adb30320ba46f8f23c",
+    "cvc5_replay_sha256": "de40a04c4a5ffeb085bba33a4f850fbfec97e2b5f4f9ebf2c60008a1fbfb48fd",
+    "cvc5_version": "1.3.3",
+    "cvc5_status": "unsat",
+    "cvc5_elapsed_seconds": 0.076074
+  },
+  "canonical_pair_hall_refinement": {
+    "symmetry_break": "v_0_0 >= v_0_3",
+    "justification": "the pair-Hall antecedent is invariant under simultaneous cyclic rotation, and the rotating-token lemma supplies at least one qualifying owner",
+    "iteration_artifacts": [
+      {
+        "artifact": "results/minimum_slot_orbit_pair_hall_next_token_canonical_cegar1.json",
+        "sha256": "b04af3d01244df77a476bfaee30fdd1d29ccf28769d8220a1fbce30407da540d",
+        "new_orbit_hall_cuts": 3,
+        "orbit_hall_cut_count": 33
+      },
+      {
+        "artifact": "results/minimum_slot_orbit_pair_hall_next_token_canonical_cegar2.json",
+        "sha256": "c3ec2bc224ff69682af8b0f855f9e09f5aec4f156edee951d08cdb7243e7efda",
+        "new_orbit_hall_cuts": 1,
+        "orbit_hall_cut_count": 34
+      },
+      {
+        "artifact": "results/minimum_slot_orbit_pair_hall_next_token_canonical_cegar3.json",
+        "sha256": "02e5c9687d24253c1bdd1648e7baf8bdeb8c5fd5fc7b5bb5950e8521b2f9f03f",
+        "new_orbit_hall_cuts": 4,
+        "orbit_hall_cut_count": 38
+      }
+    ],
+    "final_counts": {
+      "global_cuts": 159,
+      "matching_witness_cuts": 78,
+      "whole_orbit_blockers": 38
+    },
+    "status": "CANONICAL_SECTOR_REFINED_NOT_CLOSED"
+  },
+  "checks": {
+    "human_proof_available": true,
+    "triple_z3_confirmed": true,
+    "requires_cross_row_clauses": false,
+    "requires_pair_hall_cycle": false,
+    "canonical_symmetry_break_valid_in_pair_hall_cell": true,
+    "full_pair_hall_cell_proved": false,
+    "four_agent_efx_proved": false,
+    "general_efx_proved": false
+  }
+}
