@@ -41,6 +41,18 @@ and then maximizes charity-absorption margin:
 - a 241-profile simulated-annealing walk beginning on a zero-margin boundary
   also found no negative margin.
 
+The follow-up stress pass adds:
+
+- a 161-profile exact adversarial walk from a zero-margin \(5\times8\),
+  charity-size-two boundary;
+- a constructed eligible \(5\times9\), charity-size-three zero-margin
+  boundary and a 101-profile adversarial walk from it; and
+- seven exhaustive normalized integer domains containing 811,315 distinct
+  valuation profiles in total. These include all rowwise-primitive
+  \(3\times4\), cap-three profiles at charity size one and all
+  \(3\times5\), cap-two profiles at charity size two. No negative selector
+  margin occurs; 153,675 profiles lie exactly on margin zero.
+
 These are falsification attempts, not a theorem.  A single negative profile
 retires the extremal selector immediately without refuting EFX existence.
 
@@ -61,17 +73,30 @@ The absorption route continues only while it passes all three gates:
 ## Immediate analytic target
 
 Choose a fixed-charity-cardinality EFX state lexicographically maximizing
-\((\Theta,\beta)\), where \(\Theta\) is normalized owner-threshold potential
-and \(\beta\) is the best Hall absorption margin.  Saturate the state under:
+\((\Theta,\Lambda)\), where \(\Theta\) is normalized owner-threshold potential
+and \(\Lambda\) is the lexicographically maximum sorted vector of all matched
+Hall slacks. Its first coordinate is the old bottleneck margin \(\beta\).
+Saturate the state under:
 
 1. eligible charity/minimum exchanges;
 2. eligible owner-Pareto item-exchange cycles; and
-3. bundle rematchings certified by the Hall graph.
+3. eligible connected transfer unions with positive total normalized-
+   threshold gain, even when some participating owner loses; and
+4. bundle rematchings certified by the Hall graph.
 
-If \(\beta<0\), take an inclusion-minimal strict Hall cut.  The next proof
+The owner-exchange equality characterization proves that strict Pareto cycles
+on the plateau only permute unique minimum-slot tokens. They cannot supply the
+core-changing moves seen in the hardest exact boundaries. The third move
+class is therefore essential: global maximality excludes every eligible
+positive-*total*-gain union, not merely exchanges that improve each owner.
+
+If \(\Lambda_1=\beta<0\), take an inclusion-minimal strict Hall cut. The next proof
 unit is to show that the opposite-sign eligibility walls around this cut
 either form an admissible exchange cycle crossing the cut or sum to an
-impossible strict inequality cycle.  For four agents the proper cuts have
+eligible positive-total-gain transfer union. If neither exists, the walls
+must sum to an impossible strict inequality cycle. The full signature allows
+tight matching edges to be improved sequentially rather than all at once.
+For four agents the proper cuts have
 sizes two and three and the full cut has the one-bottleneck-edge normal form,
 so this is a finite *structural* classification rather than another valuation
 cap search.

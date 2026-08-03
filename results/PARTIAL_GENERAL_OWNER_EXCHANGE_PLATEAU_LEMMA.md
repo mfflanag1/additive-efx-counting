@@ -38,6 +38,17 @@ In particular, every eligible mutually owner-improving two-good swap and
 every eligible owner-Pareto exchange cycle stays on the global threshold
 plateau.
 
+Moreover, every *strict* comparison in such a plateau exchange has a rigid
+minimum-slot normal form. If owner \(i\) releases \(g\), receives \(h\), and
+\(v_i(h)>v_i(g)\), then:
+
+1. \(g\) is the unique \(i\)-minimum of \(X_i\); and
+2. \(v_i(h)\) is no larger than the \(i\)-minimum of \(X_i-g\).
+
+Thus the incoming good becomes an owner minimum and the rest of the bundle is
+unchanged. Every strict owner-Pareto plateau cycle is exactly a permutation of
+minimum-slot tokens over fixed bundle cores.
+
 ## Proof
 
 For additive valuations, \(\tau_i(S)\) is the sum of the \(|S|-1\) largest
@@ -52,13 +63,26 @@ participating in the cycle,
 Every other owner's bundle is unchanged, as is the charity set.  Therefore
 \(\Theta(X',P)\geq\Theta(X,P)\).  The new state belongs to the same feasible
 fixed-cardinality domain, while \((X,P)\) is a global maximizer.  Strict
-increase is impossible, so equality holds. \(\square\)
+increase is impossible, so equality holds.
+
+For the final statement, fix a participating owner \(i\) with
+\(v_i(h)>v_i(g)\). We have already shown that every owner's threshold change
+is nonnegative. Their normalized sum is zero, so each individual change is
+zero. If \(g\) were not the unique minimum, replacing it by a strictly more
+valuable good would strictly increase the sum of the \(|X_i|-1\) largest
+singleton values. Hence \(g\) is the unique minimum. Let \(s\) be the minimum
+value in \(X_i-g\). If \(v_i(h)>s\), the new \(|X_i|-1\) largest-value sum
+would exceed the old one by \(v_i(h)-s>0\). Therefore
+\(v_i(h)\leq s\), proving the minimum-slot normal form. \(\square\)
 
 ## Why this widens the live route
 
 The charity/minimum exchange lemma moves a good between charity and one
-allocated bundle.  This lemma supplies an independent family of plateau
-moves entirely inside the allocated partition.  It is the exact
+allocated bundle. This lemma supplies an independent family of plateau
+moves entirely inside the allocated partition. Its equality characterization
+also explains why the fixed-core token orbit is not an arbitrary
+computational restriction: every strictly owner-improving Pareto exchange at
+a true global maximum necessarily lies in that orbit. It is the exact
 owner-threshold analogue of the pairwise swap-optimization technique used in
 the constructive four-agent EF2X algorithm: first eliminate mutually
 beneficial item inversions between owners, then analyze only the

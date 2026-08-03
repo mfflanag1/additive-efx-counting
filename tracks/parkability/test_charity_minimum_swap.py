@@ -21,3 +21,4 @@ def test_charity_absorption_selector_on_identical_profile():
 
     assert result["status"] == "SELECTOR_ABSORBS"
     assert result["best_absorption_margin"] == "0"
+    assert result["best_absorption_signature"] == ["0", "0", "1/4"]

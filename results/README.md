@@ -63,12 +63,21 @@ It freezes the diminishing-return completion-cut branch and promotes a
 unified charity Hall-absorption target under explicit falsification and
 proof-compression gates. The proved entry points are
 [`CHARITY_HALL_ABSORPTION_EQUIVALENCE.md`](CHARITY_HALL_ABSORPTION_EQUIVALENCE.md),
+[`PARTIAL_CHARITY_LEXICOGRAPHIC_BOTTLENECK_LEMMA.md`](PARTIAL_CHARITY_LEXICOGRAPHIC_BOTTLENECK_LEMMA.md),
 [`PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md`](PARTIAL_GENERAL_CHARITY_MINIMUM_SWAP_LEMMA.md),
 [`PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md`](PARTIAL_GENERAL_OWNER_EXCHANGE_PLATEAU_LEMMA.md),
 and
 [`PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md`](PARTIAL_THRESHOLD_BOTTLENECK_HALL_CUT_LEMMA.md).
 The absorption-gradient lemma remains unproved, so neither four-agent nor
 general additive EFX is claimed.
+
+Exact selector falsification is implemented by
+`scan_charity_threshold_absorption.py`,
+`search_charity_selector_anneal.py`, and
+`exhaust_charity_threshold_selector.py`. The seven
+`charity_threshold_selector_*_exhaustion.json` artifacts cover 811,315
+row-normalized finite profiles without a negative selector margin. These are
+finite-domain theorems and must not be cited as unrestricted EFX existence.
 
 The earlier four-agent Hall-gradient branch removed the fixed off-host
 edge profile and proved its first structural consequence in the full cyclic

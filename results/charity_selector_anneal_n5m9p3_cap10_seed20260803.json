@@ -1,0 +1,102 @@
+{
+  "accepted_move_count": 72,
+  "best_margin": "0",
+  "best_result": {
+    "absorption_witness": {
+      "good": 2,
+      "host": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "best_absorption_margin": "0",
+    "best_theta": "8/49",
+    "charity_mask": 276,
+    "eligible_state_count": 2,
+    "insertable_theta_maximizer_count": 2,
+    "masks": [
+      8,
+      32,
+      2,
+      128,
+      65
+    ],
+    "status": "SELECTOR_ABSORBS",
+    "theta_maximizer_count": 2
+  },
+  "best_values": [
+    [
+      5,
+      1,
+      6,
+      10,
+      2,
+      8,
+      4,
+      10,
+      1
+    ],
+    [
+      7,
+      5,
+      4,
+      1,
+      3,
+      8,
+      8,
+      1,
+      1
+    ],
+    [
+      9,
+      10,
+      6,
+      8,
+      1,
+      8,
+      10,
+      9,
+      1
+    ],
+    [
+      1,
+      3,
+      2,
+      10,
+      6,
+      2,
+      8,
+      10,
+      1
+    ],
+    [
+      7,
+      5,
+      9,
+      3,
+      5,
+      6,
+      8,
+      5,
+      1
+    ]
+  ],
+  "cap": 10,
+  "charity_size": 3,
+  "claim_boundary": "Failure to find a counterexample is heuristic evidence only. A counterexample would refute the selector, not EFX existence.",
+  "counterexample": null,
+  "evaluated_profile_count": 101,
+  "improvement_trace": [],
+  "meaning": "Simulated annealing over positive integer valuation profiles, using the exact global-selector absorption margin as objective.",
+  "restart_count": 1,
+  "schema": "charity-selector-anneal-v1",
+  "seed": 20260803,
+  "source": "results/charity_threshold_absorption_n5m9p3_lifted_boundary_scan.json",
+  "source_sha256": "de7c4ad5e45ebf60ad7a396d2eb7b376857e4bbf29223c6fbec32aa06557e4c7",
+  "status": "NO_COUNTEREXAMPLE_IN_ANNEAL",
+  "steps_per_restart": 100
+}

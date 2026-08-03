@@ -71,6 +71,13 @@ bottleneck Hall-cut normal form to its score matrix. Every obstruction is
 therefore an equality edge across an inclusion-minimal critical cut, followed
 by either proper-cut factorization or expansion.
 
+For proof progress, refine \(\beta\) to the lexicographically maximum sorted
+vector \(\Lambda(X,P)\) of all \(n\) matched slacks. Its first coordinate is
+\(\beta\), so the absorption criterion is unchanged. Unlike the scalar
+margin, \(\Lambda\) strictly improves when one tight matched edge improves
+and every other matched edge is preserved. See
+`PARTIAL_CHARITY_LEXICOGRAPHIC_BOTTLENECK_LEMMA.md`.
+
 When \(P=\{f\}\), the charity term is zero and this specializes to the
 one-floater completion graph used in the four-agent program.
 
@@ -80,26 +87,36 @@ At a fixed charity cardinality \(p\), select an EFX-with-charity state
 lexicographically as follows:
 
 1. maximize normalized owner-threshold potential \(\Theta(X,P)\);
-2. among those maxima, maximize the finite absorption margin
-   \(\beta(X,P)\).
+2. among those maxima, maximize the finite lexicographic absorption signature
+   \(\Lambda(X,P)\).
 
 The charity/minimum exchange lemma shows that every eligible exchange of a
 charity good with an owner minimum remains on the first plateau. Hence the
 single missing theorem is:
 
 > **Absorption-gradient lemma.** If \(P\ne\varnothing\) and
-> \(\beta(X,P)<0\), some simultaneous cycle of charity/minimum exchanges is
-> EFX-with-charity eligible and strictly increases \(\beta\).
+> \(\Lambda_1(X,P)<0\), some eligible exchange either strictly increases
+> \(\Theta\), or preserves \(\Theta\) and strictly increases \(\Lambda\).
 
 The selected state would contradict this lemma unless
-\(\beta(X,P)\geq0\). One good could then be absorbed, and induction on
+\(\Lambda_1(X,P)=\beta(X,P)\geq0\). One good could then be absorbed, and induction on
 \(|P|\) would produce a complete EFX allocation.
 
 The owner-exchange plateau lemma widens the admissible move family: every
 eligible cycle in which each selected owner receives a weakly preferred good
 also remains on the same global \(\Theta\)-plateau. The live gradient target
 therefore allows both charity/minimum exchanges and owner-Pareto exchange
-cycles before seeking a strict increase in \(\beta\).
+cycles before seeking a strict increase in \(\Lambda\).
+
+Its equality case also imposes a limitation: every strict owner-Pareto
+plateau cycle only permutes unique owner-minimum tokens over fixed cores.
+Consequently the complete extremal alternative must additionally allow an
+eligible connected transfer union with positive *total* \(\Theta\)-gain,
+even if one participating owner loses. Global \(\Theta\)-maximality rules out
+that outcome; plateau maximality of \(\Lambda\) rules out the token-exchange
+outcome. More precisely, lexicographic maximality of \(\Lambda\) lets the
+proof improve one tight matching edge at a time. A proof must derive one of
+the two extremal contradictions from the critical Hall walls.
 
 For four agents, the known one-unallocated-good theorem starts the induction
 at \(p=1\), so the \(p=1,n=4\) specialization would prove complete
@@ -138,6 +155,16 @@ A separate simulated-annealing falsification pass began at a zero-margin
 profiles in the positive integer box \(\{1,\ldots,10\}\). Its best margin
 remained zero and it found no negative selector profile. This is heuristic
 adversarial evidence, not an exhaustive neighborhood theorem.
+
+The next falsification layer checked zero-margin five-agent boundaries at
+charity sizes two and three, evaluating another 262 exact adversarial
+profiles without finding a negative margin. Seven complete row-normalized
+integer domains were also exhausted: 811,315 profiles total, including the
+full \(3\times4\) cap-three/one-charity and \(3\times5\)
+cap-two/two-charity boxes. All 680,109 profiles admitting an
+EFX-with-charity state had nonnegative selected absorption margin. Of the
+full domains, 153,675 profiles attain margin exactly zero. These are exact
+finite theorems only; they do not imply the unrestricted selector.
 
 These sharper checks support the local-gradient form rather than merely the
 existential selector, but remain finite evidence.

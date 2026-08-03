@@ -49,6 +49,29 @@ algorithm: every eligible cycle in which each owner receives a weakly better
 good stays on the global threshold plateau. This enlarges the live move set
 beyond charity/minimum swaps without assuming the selector theorem.
 
+The subsequent falsification pass found no selector counterexample in 161
+exact five-agent/two-charity mutations or in 101 mutations of a constructed
+eligible five-agent/three-charity zero-margin boundary. Seven exhaustive
+row-normalized integer domains add 811,315 profiles, including complete
+three-agent cap-two/cap-three boxes; every eligible profile has nonnegative
+selected absorption margin. The equality case of the owner-exchange lemma is
+also rigid: every strict owner-Pareto plateau exchange must release a unique
+owner minimum and install another minimum, so it only permutes fixed-core
+tokens. Core-changing progress therefore has to come from a connected move
+with positive *total* threshold gain, potentially sacrificing one owner,
+rather than from further Pareto-swap variants.
+
+Finally, the scalar absorption margin is now refined to the full
+lexicographically sorted matching-slack signature \(\Lambda\). Its first
+coordinate is the old margin, so absorption is still exactly
+\(\Lambda_1\geq0\). The refinement is analytically stronger: preserving all
+matched slacks while improving even one tight edge strictly improves
+\(\Lambda\), including when other edges remain at the same bottleneck level.
+The live extremal state is therefore selected by \((\Theta,\Lambda)\). This
+removes the need to eliminate every equality edge of a proper Hall cut in one
+move, but existence of the required eligible edge-improving or positive-gain
+exchange remains open.
+
 ## New cap-free analytic results
 
 1. **Threshold-maximum swap preservation.**  Every eligible owner-minimum

@@ -19,7 +19,7 @@ except ImportError:
     from scan_partial_nash_potential import matrices
 
 
-SCHEMA = "charity-threshold-absorption-scan-v1"
+SCHEMA = "charity-threshold-absorption-scan-v2"
 
 
 def parse_values(document, source: Path) -> tuple[tuple[int, ...], ...]:
@@ -91,7 +91,7 @@ def theta(masks, totals, thresholds, row_totals):
     )
 
 
-def absorption_margin(masks, charity, totals, thresholds, row_totals):
+def absorption_signature(masks, charity, totals, thresholds, row_totals):
     n = len(masks)
     best = None
     witness = None
@@ -103,23 +103,25 @@ def absorption_margin(masks, charity, totals, thresholds, row_totals):
             complete = list(masks)
             complete[host] |= 1 << good
             for permutation in itertools.permutations(range(n)):
-                margin = min(
-                    Fraction(
-                        totals[agent][complete[permutation[agent]]]
-                        - max(
-                            totals[agent][remainder],
-                            max(
-                                thresholds[agent][complete[target]]
-                                for target in range(n)
-                                if target != permutation[agent]
+                signature = tuple(
+                    sorted(
+                        Fraction(
+                            totals[agent][complete[permutation[agent]]]
+                            - max(
+                                totals[agent][remainder],
+                                max(
+                                    thresholds[agent][complete[target]]
+                                    for target in range(n)
+                                    if target != permutation[agent]
+                                ),
                             ),
-                        ),
-                        row_totals[agent],
+                            row_totals[agent],
+                        )
+                        for agent in range(n)
                     )
-                    for agent in range(n)
                 )
-                if best is None or margin > best:
-                    best = margin
+                if best is None or signature > best:
+                    best = signature
                     witness = {
                         "good": good,
                         "host": host,
@@ -128,6 +130,13 @@ def absorption_margin(masks, charity, totals, thresholds, row_totals):
     if best is None or witness is None:
         raise AssertionError("nonempty charity has no absorption candidate")
     return best, witness
+
+
+def absorption_margin(masks, charity, totals, thresholds, row_totals):
+    signature, witness = absorption_signature(
+        masks, charity, totals, thresholds, row_totals
+    )
+    return signature[0], witness
 
 
 def theta_maximizers(values, charity_size):
@@ -181,33 +190,34 @@ def scan_profile(values, charity_size):
     row_totals = landscape["row_totals"]
     maximizers = landscape["maximizers"]
 
-    best_margin = None
+    best_signature = None
     best_record = None
     insertable_maximizers = 0
     for masks, charity in maximizers:
-        margin, witness = absorption_margin(
+        signature, witness = absorption_signature(
             masks, charity, totals, thresholds, row_totals
         )
-        insertable_maximizers += margin >= 0
-        if best_margin is None or margin > best_margin:
-            best_margin = margin
+        insertable_maximizers += signature[0] >= 0
+        if best_signature is None or signature > best_signature:
+            best_signature = signature
             best_record = {
                 "masks": list(masks),
                 "charity_mask": charity,
                 "absorption_witness": witness,
             }
-    assert best_margin is not None and best_record is not None
+    assert best_signature is not None and best_record is not None
     return {
         "status": (
             "SELECTOR_ABSORBS"
-            if best_margin >= 0
+            if best_signature[0] >= 0
             else "BLOCKED_SELECTOR_COUNTEREXAMPLE"
         ),
         "eligible_state_count": landscape["eligible_state_count"],
         "theta_maximizer_count": len(maximizers),
         "insertable_theta_maximizer_count": insertable_maximizers,
         "best_theta": str(best_theta),
-        "best_absorption_margin": str(best_margin),
+        "best_absorption_margin": str(best_signature[0]),
+        "best_absorption_signature": [str(value) for value in best_signature],
         **best_record,
     }
 
