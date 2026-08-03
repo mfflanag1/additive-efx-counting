@@ -103,6 +103,14 @@ longer necessary to improve all of them simultaneously merely to register
 progress. They may be eliminated one at a time, provided previously matched
 slacks do not fall.
 
+The current champion-compatible route refines the order further to
+\((\Theta,U,\Lambda)\), with a fixed-order owner-utility vector \(U\) between
+the two quantities. Lemmas 1--3 are unchanged. Under that revised order, a
+\(\Lambda\)-improving move is an extremal contradiction only when it also
+preserves \(U\); threshold-neutral Pareto improvements instead contradict the
+\(U\) layer directly. This condition must not be dropped when combining the
+Hall and champion arguments.
+
 ## Proper-cut one-edge upgrade corollary
 
 Let \(S\) be an inclusion-minimal strict Hall witness and

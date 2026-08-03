@@ -215,6 +215,19 @@ def run(source, output):
                         if not eligible(endpoint, charity, totals, thresholds):
                             counts["basic_pi_endpoints_failing_charity_eligibility"] += 1
                             continue
+                        old_utilities = tuple(
+                            totals[owner][blocked_masks[owner]]
+                            for owner in range(len(values))
+                        )
+                        new_utilities = tuple(
+                            totals[owner][endpoint[owner]]
+                            for owner in range(len(values))
+                        )
+                        if not (
+                            all(new >= old for old, new in zip(old_utilities, new_utilities))
+                            and any(new > old for old, new in zip(old_utilities, new_utilities))
+                        ):
+                            raise AssertionError("basic PI cycle failed Pareto replay")
                         endpoints.append(
                             {
                                 "source": agent,

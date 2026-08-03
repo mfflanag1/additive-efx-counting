@@ -153,10 +153,17 @@ def test_threshold_utility_tiebreak_corpus_manifest_and_first_profile():
         (RESULTS / "threshold_utility_tiebreak_corpus_audit.json").read_text()
     )
     source = RESULTS / "partial_hall_threshold_plateau_completion_analysis.json"
+    extra = RESULTS / "lexmax_partial_counterexample_4x9.json"
     assert audit["source_sha256"] == hashlib.sha256(source.read_bytes()).hexdigest()
+    assert audit["extra_sources"] == [
+        {
+            "source": str(extra),
+            "source_sha256": hashlib.sha256(extra.read_bytes()).hexdigest(),
+        }
+    ]
     assert audit["status"] == "ALL_UTILITY_TIEBREAKS_ABSORB"
-    assert audit["profile_count"] == 46
-    assert audit["agent_order_count"] == 1104
+    assert audit["profile_count"] == 47
+    assert audit["agent_order_count"] == 1128
     assert audit["blocked_order_count"] == 0
 
     source_record = json.loads(source.read_text())["records"][0]

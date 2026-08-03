@@ -22,7 +22,7 @@ except ImportError:
     from scan_charity_threshold_absorption import absorption_margin, theta_maximizers
 
 
-SCHEMA = "threshold-utility-tiebreak-audit-v1"
+SCHEMA = "threshold-utility-tiebreak-audit-v2"
 
 
 def analyze(values):
@@ -74,7 +74,17 @@ def analyze(values):
     }
 
 
-def run(source, output):
+def load_extra_values(path):
+    document = json.loads(path.read_text())
+    raw = document.get("values", document.get("candidate_values"))
+    if raw is None and "positive_nondegenerate_lift" in document:
+        raw = document["positive_nondegenerate_lift"].get("values")
+    if raw is None:
+        raise ValueError(f"{path} contains no supported value matrix")
+    return tuple(tuple(int(entry) for entry in row) for row in raw)
+
+
+def run(source, output, extras=()):
     if output.exists():
         raise ValueError("output must be new")
     document = json.loads(source.read_text())
@@ -88,6 +98,17 @@ def run(source, output):
                 **analyze(values),
             }
         )
+    for path in extras:
+        values = load_extra_values(path)
+        records.append(
+            {
+                "source": str(path),
+                "values_sha256": hashlib.sha256(
+                    json.dumps(values, separators=(",", ":")).encode()
+                ).hexdigest(),
+                **analyze(values),
+            }
+        )
     blocked_profiles = [record for record in records if record["blocked_order_count"]]
     result = {
         "schema": SCHEMA,
@@ -98,6 +119,13 @@ def run(source, output):
         ),
         "source": str(source),
         "source_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+        "extra_sources": [
+            {
+                "source": str(path),
+                "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+            }
+            for path in extras
+        ],
         "profile_count": len(records),
         "agent_order_count": sum(record["agent_order_count"] for record in records),
         "absorbing_order_count": sum(
@@ -118,8 +146,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--extra", action="append", default=[], type=Path)
     args = parser.parse_args()
-    result = run(args.source, args.output)
+    result = run(args.source, args.output, args.extra)
     print(
         json.dumps(
             {

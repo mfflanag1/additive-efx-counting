@@ -80,8 +80,9 @@ Hall slacks. Its first coordinate is the old bottleneck margin \(\beta\).
 The utility layer excludes threshold-neutral Pareto-improving champion cycles;
 Pareto improvement alone does not imply an increase in \(\Theta\).
 
-This revised order has been tested exactly on the complete 46-profile hard
-plateau corpus for all 24 agent orders. Every one of the 1,104
+This revised order has been tested exactly on 47 hard profiles--the complete
+46-profile plateau corpus plus the Chaudhury lex-potential counterexample--for
+all 24 agent orders. Every one of the 1,128
 profile/order-specific \((\Theta,U)\)-maximal tie sets contains an absorbing
 state, so the final \(\Lambda\) tie-break selects one. This is exact corpus
 evidence only; the cap-free selector theorem remains the target. See
@@ -223,6 +224,20 @@ topology but both reciprocal cycles lower \(\Theta\) by \(31/1430\). It lies
 strictly below two absorbing global \(\Theta\)-maximizers. Thus global
 maximality or signed-wall cancellation is genuinely necessary. See the
 [`reciprocal-champion threshold gate`](RECIPROCAL_CHAMPION_THRESHOLD_GATE.md).
+
+The first wall-propagation step is now cap-free. At a fixed-cardinality
+\((\Theta,U)\) maximum, every owner-improving charity/minimum swap is
+ineligible and produces, in another agent's row, either a positive
+incoming-target sign or an opposite charity sign. With one charity good and a
+nonsingleton source, only the positive sign remains, in the sharpened form
+that the blocker ranks the floater above both the released minimum and its
+least-valued remaining source good. The incoming wall also constructs a
+generalized \(\{f\}\mid\{g\}\)-champion edge releasing \(g\). Thus the live
+gap is now cycle closure/cardinality control, not conversion of walls into
+champion edges. The apparent singleton exception is also eliminated:
+successive charity walls form a nonrepeating chain of singleton owners and
+must terminate at a nonsingleton positive target wall, since any repetition
+would be a threshold-neutral Pareto-improving singleton cycle.
 
 ## Stop/switch conditions
 

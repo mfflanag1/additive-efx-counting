@@ -136,6 +136,17 @@ def classify(values, masks, floater, counts, require_no_owner_minimum_escape=Fal
             if not eligible(endpoint, charity, totals, thresholds):
                 counts["one_charity_champion_cycles_failing_eligibility"] += 1
                 continue
+            old_utilities = tuple(
+                totals[owner][masks[owner]] for owner in range(n)
+            )
+            new_utilities = tuple(
+                totals[owner][endpoint[owner]] for owner in range(n)
+            )
+            if not (
+                all(new >= old for old, new in zip(old_utilities, new_utilities))
+                and any(new > old for old, new in zip(old_utilities, new_utilities))
+            ):
+                raise AssertionError("basic champion cycle failed Pareto replay")
             endpoints.append(
                 {
                     "desired_mask": desired,

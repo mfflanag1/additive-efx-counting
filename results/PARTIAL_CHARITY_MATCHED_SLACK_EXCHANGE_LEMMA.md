@@ -116,6 +116,13 @@ these observer dependencies around a critical Hall cut is now the exact
 remaining route to either a positive-total-gain transfer union or an
 impossible strict sign cycle.
 
+For the current \((\Theta,U,\Lambda)\) selector, the same conclusion applies
+to exchanges that weakly preserve the owner-utility vector. If an exchange
+strictly Pareto-improves owners while preserving \(\Theta\), it is already
+excluded by \(U\); if it lowers \(U\), its \(\Lambda\)-improvement alone is
+not an extremal contradiction. This is the exact compatibility condition
+between the matched-slack and champion routes.
+
 ## Connection to charity/minimum exchanges
 
 Swapping a charity good into one allocated bundle and then absorbing the

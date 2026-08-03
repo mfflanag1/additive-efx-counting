@@ -65,6 +65,28 @@ fixed-core threshold function forces
 v_i(f)>v_i(g). \tag{T}
 \]
 
+There is a sharper exact form. Put
+
+\[
+r_{iq}=\min_{x\in X_q-g}v_i(x),
+\]
+
+with \(r_{iq}=+\infty\) when \(X_q=\{g\}\). Then
+
+\[
+\tau_i(X_q-g+f)-\tau_i(X_q)
+=\max\{0,v_i(f)-r_{iq}\}
+ -\max\{0,v_i(g)-r_{iq}\}. \tag{T1}
+\]
+
+Hence an incoming-target wall actually forces
+
+\[
+v_i(f)>\max\{v_i(g),r_{iq}\}. \tag{T2}
+\]
+
+In particular, this wall is impossible when \(X_q\) is a singleton.
+
 ### External charity wall
 
 For an external agent \(i\ne q\),
@@ -136,6 +158,28 @@ When \(P=\{f\}\) and \(X_q\) is nonsingleton, the new floater \(g\) is
 automatically unenvied by old EFX, so the external-charity wall disappears.
 The lemma then specializes exactly to the one-floater obstruction lemma.
 
+## Pareto-sensitive fixed-cardinality dependency corollary
+
+Among the global \(\Theta\)-maxima at a fixed charity cardinality, additionally
+maximize the owner-utility vector in a fixed lexicographic order. If owner
+\(q\) strictly prefers a chosen charity good \(f\) to her own minimum \(g\),
+then the \(f/g\) swap is ineligible. Otherwise the plateau theorem would keep
+\(\Theta\) fixed while strictly improving only owner \(q\)'s utility.
+
+The two source-owner wall types are impossible because both force
+\(v_q(g)>v_q(f)\). Every failed improving swap therefore produces, in some
+other agent's row, exactly one of two opposite signs:
+
+\[
+\begin{array}{c|c}
+\text{incoming-target wall}&v_i(f)>v_i(g),\\
+\text{external-charity wall}&v_i(g)>v_i(f).
+\end{array}
+\]
+
+This is the arbitrary-charity signed dependency supplied by the revised
+extremum. The positive target sign has the sharper top-two form (T2).
+
 ## Pareto-sensitive one-floater dependency corollary
 
 Among the global \(\Theta\)-maxima, additionally maximize the owner-utility
@@ -152,7 +196,7 @@ Then the \(f/g\) swap is ineligible, and there exists an external agent
 \[
 v_i(X_i)<\tau_i(X_q-g+f)
 \quad\text{and}\quad
-v_i(f)>v_i(g). \tag{D}
+v_i(f)>\max\{v_i(g),\min_{x\in X_q-g}v_i(x)\}. \tag{D}
 \]
 
 Indeed, if the swap were eligible, the plateau theorem would preserve
@@ -160,12 +204,112 @@ Indeed, if the swap were eligible, the plateau theorem would preserve
 contradicting the secondary extremum. Ineligibility must therefore have one
 of the wall types above. Nonsingleton one-floater swaps have no external
 charity wall. Both source-owner walls force \(v_q(g)>v_q(f)\), contradicting
-(P). Only an incoming-target wall remains, and (T) gives its strict sign.
+(P). Only an incoming-target wall remains, and (T2) gives its sharpened
+strict sign.
 
 Thus every improving owner-minimum swap at the selected extremum points to a
 different blocking agent with the same row-wise orientation between \(f\)
 and the released minimum. For singleton \(X_q\), an external charity wall is
 an additional residual branch.
+
+## Incoming wall-to-champion corollary
+
+Every incoming-target wall for the attempted \(f/g\) swap produces a
+generalized champion edge into source bundle \(q\) with label
+\(\{f\}\mid\{g\}\). Put
+
+\[
+T=(X_q-g)+f.
+\]
+
+The wall says that some agent strongly envies \(T\), so some proper subset of
+\(T\) is envied. Among all subsets of \(T\) envied by at least one agent,
+choose an inclusion-minimal set \(A\), and choose an agent \(a\) who envies
+it. No agent strongly envies \(A\), since deleting the witnessing good would
+give a smaller envied subset. Hence \(a\) is most envious of \(T\), which is
+exactly the generalized edge
+
+\[
+a\mathrel{\smash{\xrightarrow{\{f\}\mid\{g\}}}}q.
+\]
+
+The edge releases \(g\), together with any additional discard
+\(T-A\). Therefore every positive one-floater dependency wall is not merely a
+sign: it supplies an EFX-preserving generalized-champion construction step.
+The remaining difficulty is to reallocate all additional discarded goods
+while preserving charity cardinality and nonnegative total threshold change.
+
+## Singleton-chain elimination lemma
+
+The singleton exception in the one-floater dependency corollary cannot cycle
+indefinitely. Work at a \((\Theta,U)\)-maximal one-floater state. Suppose
+\(X_{q_0}=\{g_0\}\) and
+
+\[
+v_{q_0}(f)>v_{q_0}(g_0).
+\]
+
+The direct swap has unchanged owner threshold and improves \(q_0\), so it is
+ineligible. An incoming-target wall is impossible because the replacement
+bundle \(\{f\}\) has threshold zero, and the source walls have the wrong
+strict sign. Hence some agent envies the proposed charity singleton \(g_0\).
+
+If that agent also owns a singleton \(X_{q_1}=\{g_1\}\), then
+\(v_{q_1}(g_0)>v_{q_1}(g_1)\). Continue in this way. After distinct singleton
+owners \(q_0,\ldots,q_k\) have been found, consider the prefix rotation
+
+\[
+Y_{q_0}=\{f\},\qquad
+Y_{q_r}=\{g_{r-1}\}\ (1\le r\le k),
+\qquad P_Y=\{g_k\},
+\]
+
+with all other bundles unchanged. Every changed owner strictly improves, all
+changed target bundles are singletons, and all unchanged EFX comparisons
+remain valid. Thus \(Y\) is EFX; only dominance of its charity good can fail.
+
+No charity blocker can be an earlier chain owner. If \(q_j\) blocked
+\(g_k\), then rotating the original singleton goods on the subcycle
+\(q_j,q_{j+1},\ldots,q_k\) would strictly improve every owner on that cycle,
+preserve the original charity \(f\), preserve every owner threshold at zero,
+and remain EFX with charity. This contradicts the secondary utility maximum.
+Therefore every singleton blocker is new. Since there are finitely many
+agents, the process either produces an eligible prefix rotation--again a
+contradiction--or reaches an agent \(i\) with a nonsingleton bundle and
+
+\[
+v_i(g_k)>v_i(X_i). \tag{SC1}
+\]
+
+In the latter case let \(x\) be an \(i\)-minimum and extend the prefix by
+
+\[
+Z_i=X_i-x+g_k,qquad P_Z=\{x\}.
+\]
+
+All prefix owners still improve, and (SC1) makes owner \(i\) improve. More
+strongly, if \(r=\min_{y\in X_i-x}v_i(y)\), then
+
+\[
+\tau_i(Z_i)-\tau_i(X_i)=v_i(g_k)-r>0. \tag{SC2}
+\]
+
+Hence \(\Theta(Z)>\Theta(X)\). The new charity good \(x\) is automatically
+dominated: for every other agent \(a\), old EFX and nonsingularity give
+\(v_a(X_a)\ge\tau_a(X_i)\ge v_a(x)\), while every prefix owner only became
+better off; owner \(i\)'s new utility exceeds \(v_i(g_k)>v_i(x)\). All EFX
+comparisons are unchanged except comparisons against
+\(Z_i\). Consequently either \(Z\) is eligible, contradicting primary
+\(\Theta\)-maximality, or an incoming-target wall strongly envies \(Z_i\).
+In the latter case the wall-to-champion corollary produces a generalized
+\(\{g_k\}\mid\{x\}\)-champion edge into \(i\), using the good released by the
+singleton prefix and releasing \(x\) plus its additional discard.
+
+Thus every improving one-floater minimum-swap obstruction, including a
+singleton source, terminates in a positive incoming-target wall and a
+generalized champion edge. What remains unproved is that the resulting
+champion/dependency edges can be combined into one charity-cardinality-
+preserving component with nonnegative total threshold change.
 
 ## Breakthrough target exposed by the lemma
 

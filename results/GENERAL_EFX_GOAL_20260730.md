@@ -38,11 +38,31 @@ in a nonnegative-threshold component rather than a realizable dependency
 cycle.
 
 The revised \((\Theta,U,\Lambda)\) selection rule survives an exact full-corpus
-audit: all 46 hard profiles and all 24 agent orders, 1,104 cases total, select
-an absorbing state after the utility and Hall tie-breaks. This validates the
+audit: all 47 hard profiles and all 24 agent orders, 1,128 cases total, select
+an absorbing state after the utility and Hall tie-breaks. The profiles include
+the Chaudhury lex-potential counterexample. This validates the
 potential ordering on the stored frontier but is not a cap-free selector
 theorem. The frozen audit is
 [threshold_utility_tiebreak_corpus_audit.json](threshold_utility_tiebreak_corpus_audit.json).
+
+The utility layer also lifts to the arbitrary-charity exchange lemma. At a
+fixed-cardinality \((\Theta,U)\) maximum, every owner-improving
+charity/minimum swap must be blocked, and every blocker has one of exactly two
+opposite item-order signs in another agent's row: a target wall ranks the
+charity good above the released minimum, while a charity wall reverses that
+order. With one charity good and a nonsingleton source, the charity-wall sign
+is impossible and the target wall additionally ranks the floater above the
+least-valued remaining source good. This is now the common signed-dependency
+input for the four-agent and general wall-cycle problems.
+
+For the one-charity specialization, the remaining singleton-source exception
+is now eliminated cap-free. Successive charity blockers form a chain of
+distinct singleton owners; revisiting one creates an EFX Pareto-improving
+singleton cycle, while exhausting the chain either gives an eligible utility
+improvement or reaches a nonsingleton owner. At that endpoint, inserting the
+last singleton good strictly raises \(\Theta\), so infeasibility can only be a
+positive incoming-target wall and hence a generalized champion edge. Every
+improving one-floater minimum-swap obstruction now terminates in such an edge.
 
 **Parallel four-agent Hall-gradient gate:** the fixed-profile diagonal
 theorems have now been coarsened to the full cyclic pair-Hall cell far enough

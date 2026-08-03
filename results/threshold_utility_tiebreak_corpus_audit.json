@@ -1,9 +1,15 @@
 {
-  "absorbing_order_count": 1104,
-  "agent_order_count": 1104,
+  "absorbing_order_count": 1128,
+  "agent_order_count": 1128,
   "blocked_order_count": 0,
   "claim_boundary": "This is an exact finite-corpus audit. It does not prove the threshold/utility selector or complete EFX existence.",
-  "profile_count": 46,
+  "extra_sources": [
+    {
+      "source": "results/lexmax_partial_counterexample_4x9.json",
+      "source_sha256": "4daf2ff7575a314f47a329d695578def026304b1bd3d4a3870aefc52bebe2a32"
+    }
+  ],
+  "profile_count": 47,
   "records": [
     {
       "absorbing_order_count": 24,
@@ -464,9 +470,19 @@
       "source": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json",
       "theta_maximizer_count": 26,
       "values_sha256": "a2e7ba6bb9dff89db7c1bb9bea037e73f1cd48da53aec9355069e537db94c340"
+    },
+    {
+      "absorbing_order_count": 24,
+      "agent_order_count": 24,
+      "blocked_order_count": 0,
+      "blocked_orders": [],
+      "eligible_state_count": 322,
+      "source": "results/lexmax_partial_counterexample_4x9.json",
+      "theta_maximizer_count": 6,
+      "values_sha256": "98c0b5241c32112cd1e6e4956ea22abdbcd319da6de42b32aa2508dcd956fe88"
     }
   ],
-  "schema": "threshold-utility-tiebreak-audit-v1",
+  "schema": "threshold-utility-tiebreak-audit-v2",
   "source": "results/partial_hall_threshold_plateau_completion_analysis.json",
   "source_sha256": "f1aed59eb64405d0eaef0c80e44c408af0810e3176e3b5f627f61bf912e20ffd",
   "status": "ALL_UTILITY_TIEBREAKS_ABSORB"

@@ -97,8 +97,9 @@ unproved step.
 
 The revised \((\Theta,U,\Lambda)\) selector is independently enumerated in
 [`threshold_utility_tiebreak_corpus_audit.json`](threshold_utility_tiebreak_corpus_audit.json):
-all 1,104 combinations of 46 hard profiles and 24 agent orders select an
-absorbing state. This is a finite-corpus result, not a general theorem.
+all 1,128 combinations of 47 hard profiles and 24 agent orders select an
+absorbing state. The profiles include the Chaudhury lex-potential
+counterexample. This is a finite-corpus result, not a general theorem.
 
 Exact selector falsification is implemented by
 `scan_charity_threshold_absorption.py`,

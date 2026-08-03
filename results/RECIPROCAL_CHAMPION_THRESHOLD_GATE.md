@@ -128,9 +128,16 @@ owner/component.
 If \(X_h\) is nonsingleton, the Pareto-sensitive one-floater dependency
 corollary makes this propagation exact: some other agent \(i\ne h\)
 strongly envies \(X_h-x+f\), and necessarily
-\(v_i(f)>v_i(x)\). If \(X_h\) is a singleton, an external charity wall is the
-only additional wall type. This is the first cap-free directed edge in the
-remaining wall-dependency graph.
+\(v_i(f)\) exceeds both \(v_i(x)\) and the least \(i\)-valued good in
+\(X_h-x\). If \(X_h\) is a singleton, an external charity wall is the only
+immediate wall type, but the singleton-chain elimination lemma propagates it
+through distinct singleton owners until it reaches a positive incoming-target
+wall. Thus both size branches produce a cap-free directed edge in the
+remaining wall-dependency graph. By the incoming wall-to-champion corollary,
+the nonsingleton endpoint also yields a generalized
+\(\{f\}\mid\{x\}\)-champion into host bundle \(h\), releasing \(x\) and any
+additional bottom discard (with the resource good and target renamed at the
+end of a singleton chain).
 
 ## Exact reciprocal-cycle criterion
 
@@ -220,9 +227,10 @@ is
 [`unique_defect_champion_cycle_corpus_audit.json`](unique_defect_champion_cycle_corpus_audit.json).
 
 The revised extremum itself has also been audited, rather than inferred from
-those transitions. For each of 46 hard profiles and each of all 24 fixed agent
+those transitions. For the 46-profile hard plateau corpus and the separate
+Chaudhury lex-potential counterexample, and for each of all 24 fixed agent
 orders, exact enumeration first selects the global \(\Theta\)-plateau and then
-the lexicographically maximum owner-utility vector. In all 1,104
+the lexicographically maximum owner-utility vector. In all 1,128
 profile/order cases, at least one utility-tied maximizer is Hall-absorbable.
 Maximizing \(\Lambda\) within that final tie therefore selects an absorber in
 every audited case. See
