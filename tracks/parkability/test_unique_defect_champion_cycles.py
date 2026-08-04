@@ -1,5 +1,6 @@
 from collections import Counter
 import hashlib
+import itertools
 import json
 from pathlib import Path
 
@@ -9,8 +10,12 @@ from .audit_unique_defect_champion_cycles import (
 )
 from .audit_unique_defect_champion_escapes import run as audit_escapes
 from .audit_threshold_utility_tiebreak import analyze as analyze_utility_tiebreak
-from .audit_unique_defect_handoff import candidate_slacks, load_record_values
-from .scan_charity_threshold_absorption import scan_profile, tables
+from .audit_unique_defect_handoff import (
+    acceptance_edges,
+    candidate_slacks,
+    load_record_values,
+)
+from .scan_charity_threshold_absorption import eligible, scan_profile, tables
 from .search_unique_defect_champion_threshold import classify
 from .search_unique_defect_missing_reciprocal import classify as classify_reciprocity
 
@@ -71,6 +76,225 @@ def test_unique_bad_agent_need_not_champion_augmented_host():
     selector = scan_profile(values, 1)
     assert selector["best_theta"] == record["global_theta_audit"]["best_theta"]
     assert not record["global_theta_audit"]["state_is_global_maximizer"]
+
+
+def test_host_interference_positive_wall_is_locally_realized():
+    record = json.loads(
+        (RESULTS / "host_interference_positive_wall_local_counterexample.json")
+        .read_text()
+    )
+    values = tuple(tuple(row) for row in record["values"])
+    masks = tuple(record["masks"])
+    floater = record["floater"]
+    host = record["host"]
+    bad = record["bad"]
+    minimum = record["host_minimum"]
+    totals, thresholds = tables(values)
+    row_totals = tuple(sum(row) for row in values)
+    witness = {"host": host, "permutation": list(range(len(values)))}
+    slacks = candidate_slacks(
+        masks, floater, witness, totals, thresholds, row_totals
+    )
+    assert [agent for agent, slack in enumerate(slacks) if slack < 0] == [bad]
+
+    augmented = masks[host] | (1 << floater)
+    target = (masks[host] ^ (1 << minimum)) | (1 << floater)
+    swapped = list(masks)
+    swapped[host] = target
+    assert augmented == record["augmented_host_mask"]
+    assert target == record["reduced_target_mask"]
+    assert not eligible(tuple(swapped), 1 << minimum, totals, thresholds)
+    assert [
+        agent
+        for agent in range(len(values))
+        if agent != host
+        and thresholds[agent][target] > totals[agent][masks[agent]]
+    ] == [bad]
+    assert thresholds[host][target] > totals[host][masks[host]]
+    assert record["host_floater_value"] > (
+        record["host_minimum_value"] + record["host_next_minimum_value"]
+    )
+
+    selector = scan_profile(values, 1)
+    assert selector["best_theta"] == record["global_theta_audit"]["best_theta"]
+    assert selector["insertable_theta_maximizer_count"] == 24
+
+
+def test_bad_source_champion_can_force_multi_good_bottom():
+    record = json.loads(
+        (RESULTS / "unique_defect_multi_bottom_local_counterexample.json")
+        .read_text()
+    )
+    values = tuple(tuple(row) for row in record["values"])
+    masks = tuple(record["masks"])
+    floater = record["floater"]
+    host = record["host"]
+    bad = record["bad"]
+    totals, thresholds = tables(values)
+    row_totals = tuple(sum(row) for row in values)
+    witness = {"host": host, "permutation": list(range(len(values)))}
+    slacks = candidate_slacks(
+        masks, floater, witness, totals, thresholds, row_totals
+    )
+    assert [agent for agent, slack in enumerate(slacks) if slack < 0] == [bad]
+    assert not any(
+        target == bad
+        for _agent, target in acceptance_edges(
+            masks, floater, witness, totals, thresholds
+        )
+    )
+    assert totals[bad][masks[host]] <= totals[bad][masks[bad]]
+
+    desired = champion_desired_sets(
+        bad, host, masks, floater, totals, thresholds
+    )
+    augmented = masks[host] | (1 << floater)
+    discards = [augmented ^ candidate for candidate in desired]
+    assert list(desired) == record["bad_champion_desired_masks"]
+    assert discards == record["bad_champion_discard_masks"]
+    assert min(discard.bit_count() for discard in discards) == 2
+
+    selector = scan_profile(values, 1)
+    assert selector["best_theta"] == record["global_theta_audit"]["best_theta"]
+    assert selector["insertable_theta_maximizer_count"] == 24
+
+
+def test_exact_lra_witness_refutes_all_host_redistribution_matchings():
+    record = json.loads(
+        (RESULTS / "unique_defect_host_redistribution_lra_counterexample.json")
+        .read_text()
+    )
+    values = tuple(tuple(row) for row in record["values"])
+    masks = tuple(record["masks"])
+    floater = record["floater"]
+    host = record["host"]
+    bad = record["bad"]
+    totals, thresholds = tables(values)
+    row_totals = tuple(sum(row) for row in values)
+    witness = {"host": host, "permutation": list(range(len(values)))}
+    slacks = candidate_slacks(
+        masks, floater, witness, totals, thresholds, row_totals
+    )
+    assert [agent for agent, slack in enumerate(slacks) if slack < 0] == [bad]
+    assert not any(
+        target == bad
+        for _agent, target in acceptance_edges(
+            masks, floater, witness, totals, thresholds
+        )
+    )
+    assert totals[bad][masks[host]] <= totals[bad][masks[bad]]
+    desired = champion_desired_sets(
+        bad, host, masks, floater, totals, thresholds
+    )
+    assert list(desired) == record["bad_champion_desired_masks"]
+    augmented = masks[host] | (1 << floater)
+    assert [augmented ^ candidate for candidate in desired] == record[
+        "bad_champion_discard_masks"
+    ]
+
+    host_goods = tuple(
+        good for good in range(len(values[0])) if masks[host] & (1 << good)
+    )
+    partitions = set()
+    complete_count = 0
+    for destinations in itertools.product(range(len(values)), repeat=len(host_goods)):
+        redistributed = list(masks)
+        redistributed[host] = 0
+        for good, owner in zip(host_goods, destinations):
+            redistributed[owner] |= 1 << good
+        for insertion_host in range(len(values)):
+            candidates = list(redistributed)
+            candidates[insertion_host] |= 1 << floater
+            if not all(candidates):
+                continue
+            partitions.add(tuple(sorted(candidates)))
+            for permutation in itertools.permutations(range(len(values))):
+                allocation = tuple(
+                    candidates[permutation[agent]]
+                    for agent in range(len(values))
+                )
+                complete_count += eligible(allocation, 0, totals, thresholds)
+    assert len(partitions) == record["reachable_host_redistribution_partition_count"]
+    assert complete_count == record["complete_efx_matching_count"] == 0
+
+
+def test_exact_lra_residual_saturates_local_extremal_menu():
+    record = json.loads(
+        (RESULTS / "unique_defect_extremal_local_menu_lra_counterexample.json")
+        .read_text()
+    )
+    values = tuple(tuple(row) for row in record["values"])
+    masks = tuple(record["masks"])
+    floater = record["floater"]
+    totals, thresholds = tables(values)
+    owners = range(len(values))
+    bundles = tuple(
+        tuple(good for good in range(len(values[0])) if mask & (1 << good))
+        for mask in masks
+    )
+
+    cycle_count = 0
+    eligible_pareto_count = 0
+    for length in (2, 3, 4):
+        for cycle in itertools.permutations(owners, length):
+            if cycle[0] != min(cycle):
+                continue
+            for goods in itertools.product(*(bundles[owner] for owner in cycle)):
+                cycle_count += 1
+                weak = all(
+                    values[owner][goods[index - 1]]
+                    >= values[owner][goods[index]]
+                    for index, owner in enumerate(cycle)
+                )
+                strict = any(
+                    values[owner][goods[index - 1]]
+                    > values[owner][goods[index]]
+                    for index, owner in enumerate(cycle)
+                )
+                if not (weak and strict):
+                    continue
+                endpoint = list(masks)
+                for index, owner in enumerate(cycle):
+                    endpoint[owner] ^= 1 << goods[index]
+                    endpoint[owner] |= 1 << goods[index - 1]
+                eligible_pareto_count += eligible(
+                    tuple(endpoint), 1 << floater, totals, thresholds
+                )
+    assert cycle_count == record["owner_pareto_exchange_candidates_saturated"]
+    assert eligible_pareto_count == 0
+
+    minimum_swap_count = 0
+    eligible_improving_minimum_count = 0
+    for owner, bundle in enumerate(bundles):
+        for good in bundle:
+            minimum_swap_count += 1
+            if values[owner][good] != min(values[owner][item] for item in bundle):
+                continue
+            if values[owner][floater] <= values[owner][good]:
+                continue
+            endpoint = list(masks)
+            endpoint[owner] ^= 1 << good
+            endpoint[owner] |= 1 << floater
+            eligible_improving_minimum_count += eligible(
+                tuple(endpoint), 1 << good, totals, thresholds
+            )
+    assert minimum_swap_count == record["owner_minimum_charity_swaps_saturated"]
+    assert eligible_improving_minimum_count == 0
+
+
+def test_adverse_branch_escape_audit_reaches_three_good_component():
+    audit = json.loads(
+        (RESULTS / "unique_defect_adverse_branch_escape_audit.json").read_text()
+    )
+    assert audit["status"] == "EXACT_ESCAPES_EXTRACTED"
+    assert len(audit["records"]) == 7
+    residual = audit["records"][-1]
+    assert residual["minimum_label_distance"] == 3
+    assert residual["selected_escape"]["theta_change"] == "28099/195720"
+    assert residual["selected_escape"]["utility_changes"] == [0, 2897, -1141, 0]
+    assert residual["selected_escape"]["transfer_components"] == [
+        {"goods": [3, 4, 5], "slots": [1, 2]}
+    ]
 
 
 def test_local_reciprocal_champion_cycle_can_lower_threshold():

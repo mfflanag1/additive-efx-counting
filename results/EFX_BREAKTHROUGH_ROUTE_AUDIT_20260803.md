@@ -202,6 +202,12 @@ edge, or retains \(f\) and releases a nonempty bottom bundle. If the host
 interferes, the floater exceeds the host minimum and feeds directly into the
 proved owner-minimum dependency machinery. An exact local \((4,8)\) state
 refutes the earlier stronger claim that the bad agent is always the source.
+At the selected extremum the host branch is sharper: after releasing one host
+minimum, the unique bad agent is necessarily the incoming blocker. If the
+host no longer strongly envies the reduced target, the bad agent becomes a
+generalized champion; otherwise the blocked move has strictly positive
+threshold gain, with the floater exceeding the host minimum plus the next
+host minimum.
 
 The hardest radius-three counterexample confirms that this is not merely a
 change of terminology. Its bad-source champion edge and one reciprocal champion

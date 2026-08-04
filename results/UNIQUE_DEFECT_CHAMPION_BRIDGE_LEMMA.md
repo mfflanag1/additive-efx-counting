@@ -76,12 +76,13 @@ when (1) holds. \(\square\)
 ## Consequence for the extremal route
 
 The bad-source branch retains the discard dichotomy and reciprocal-champion
-analysis, now explicitly as a conditional branch. The host-interference
-branch feeds directly into the cap-free owner-minimum-swap dependency lemma:
-at a fixed-cardinality \((\Theta,U)\)-maximum, replacing a host minimum by
-\(f\) is an owner-improving candidate and therefore must either be eligible
-(a contradiction) or expose a signed EFX/charity wall. The singleton-chain
-lemma propagates the exceptional charity wall to a nonsingleton positive
+analysis, now explicitly as a conditional branch. For a nonsingleton host,
+the new
+[`host-interference localization lemma`](HOST_INTERFERENCE_LOCALIZATION_LEMMA.md)
+shows that after releasing one host minimum the incoming blocker is exactly
+\(b\): either \(b\) becomes a generalized champion source or the blocked
+move has strictly positive threshold gain. For a singleton host, the
+singleton-chain lemma propagates the charity wall to a nonsingleton positive
 incoming-target wall and generalized champion edge.
 
 An exact positive-additive \((4,8)\) state shows that the correction is

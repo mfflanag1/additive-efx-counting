@@ -166,7 +166,7 @@ def run(paths, output):
         "status": "EXACT_ESCAPES_EXTRACTED",
         "records": [audit_record(path) for path in paths],
         "claim_boundary": (
-            "These are exact escape witnesses for three finite profiles. They "
+            "These are exact escape witnesses for the listed finite profiles. They "
             "do not prove the global extremal alternative or EFX existence."
         ),
     }

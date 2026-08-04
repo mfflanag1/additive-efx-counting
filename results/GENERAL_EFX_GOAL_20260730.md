@@ -27,7 +27,12 @@ The champion bridge has now been corrected to a two-source dichotomy. The bad
 agent and host are the only possible most-envious sources; an exact local
 \((4,8)\) state refutes the earlier claim that the bad agent must be the
 source. The host-source branch forces the floater above the host minimum and
-therefore enters the proved dependency machinery. All 4,320 stored
+therefore enters the proved dependency machinery. For a nonsingleton host,
+the blocker after releasing that minimum is now proved to be exactly the
+unique bad agent; either that agent becomes a generalized champion source or
+the blocked move has strictly positive threshold gain. See
+[HOST_INTERFERENCE_LOCALIZATION_LEMMA.md](HOST_INTERFERENCE_LOCALIZATION_LEMMA.md).
+All 4,320 stored
 full/unique-defect transitions happen to lie in the bad-source branch and are
 exactly reconstructed by a
 one-charity reciprocal champion cycle with zero threshold change, so a
@@ -49,6 +54,15 @@ the Chaudhury lex-potential counterexample. This validates the
 potential ordering on the stored frontier but is not a cap-free selector
 theorem. The frozen audit is
 [threshold_utility_tiebreak_corpus_audit.json](threshold_utility_tiebreak_corpus_audit.json).
+
+The bad-source bottom-cardinality branch has now been adversarially reduced
+to the genuine component gate. Exact \((4,8)\) and QF_LRA witnesses refute
+singleton discard, positive one-good repair, every host-only redistribution
+completion, and the combined local menu of owner-Pareto item cycles plus
+owner-minimum/charity swaps. The final residual's nearest improvement is a
+three-good, two-owner, non-Pareto component with positive \(\Theta\) and one
+remaining Hall defect. See
+[MULTI_BOTTOM_CARDINALITY_GATE.md](MULTI_BOTTOM_CARDINALITY_GATE.md).
 
 The utility layer also lifts to the arbitrary-charity exchange lemma. At a
 fixed-cardinality \((\Theta,U)\) maximum, every owner-improving

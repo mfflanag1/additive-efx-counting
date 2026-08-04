@@ -1,0 +1,42 @@
+{
+  "bad": 1,
+  "bad_champion_desired_masks": [132, 129],
+  "bad_champion_discard_masks": [3, 6],
+  "bad_envies_old_host": false,
+  "base_theta": "2401/9120",
+  "canonical_bundles": [[0, 1, 2], [3, 4], [5], [6]],
+  "claim_boundary": "This exact rational witness refutes every completion obtained by redistributing only the original host bundle, inserting the floater into any bundle, and applying any bundle matching. It is not globally maximal and does not refute coupled transfers using another owner bundle, the extremal selector, or EFX existence.",
+  "complete_efx_matching_count": 0,
+  "domain": "positive integers representing row-normalized positive rationals",
+  "floater": 7,
+  "full_zero_bad_bundle": true,
+  "global_theta_audit": {
+    "best_theta": "1391/1824",
+    "insertable_theta_maximizer_count": 4,
+    "selector_status": "SELECTOR_ABSORBS",
+    "state_is_global_maximizer": false,
+    "theta_maximizer_count": 4
+  },
+  "host": 0,
+  "identity_slacks": ["1903/18240", "-643/9120", "1/1824", "0"],
+  "masks": [7, 24, 32, 64],
+  "minimum_discard_size": 2,
+  "reachable_host_redistribution_partition_count": 175,
+  "schema": "unique-defect-host-redistribution-lra-counterexample-v1",
+  "selected_desired_mask": 129,
+  "solver_provenance": {
+    "assertion_count": 7110,
+    "elapsed_seconds": 18.320294857025146,
+    "logic": "QF_LRA",
+    "reachable_partition_obstructions": 175,
+    "z3_status": "sat"
+  },
+  "status": "FLEXIBLE_HOST_REDISTRIBUTION_REFUTED",
+  "values": [
+    [10, 1833, 1773, 3616, 80, 3716, 5309, 1903],
+    [314, 10, 628, 598, 598, 2721, 3354, 897],
+    [15, 10, 891, 831, 1867, 2738, 941, 1827],
+    [20, 1793, 30, 804, 964, 1858, 2737, 914]
+  ],
+  "values_sha256": "f41f098ab414113c07940e24a3b1a0f16562b5e45e618518e3b5bad9bd9d84f0"
+}

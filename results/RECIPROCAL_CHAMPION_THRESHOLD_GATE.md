@@ -299,6 +299,29 @@ swap with strict host utility gain, and a positive two-good/three-owner
 transfer. See
 [`unique_defect_champion_local_escape_audit.json`](unique_defect_champion_local_escape_audit.json).
 
+Singleton bottom discard is not a universal fallback. An exact full-witness
+\((4,8)\) state has a bad-to-host champion that retains the floater, does not
+envy the old host, and has a unique desired bundle whose discard contains two
+host goods. This state too lies below 24 absorbing global maxima. See
+[`unique_defect_multi_bottom_local_counterexample.json`](unique_defect_multi_bottom_local_counterexample.json).
+Nor can the multi-bottom branch always be repaired by a positive one-good
+owner transfer or by redistributing only the host bundle before insertion.
+Exact \((4,8)\) witnesses refute both local strengthenings. The first needs a
+connected two-good/three-owner escape; the second cannot complete through the
+original host after redistributing that host's bundle. Its nearest escape
+moves one host good but absorbs the floater through a different host. See
+[`unique_defect_multi_bottom_one_transfer_local_counterexample.json`](unique_defect_multi_bottom_one_transfer_local_counterexample.json)
+and
+[`unique_defect_multi_bottom_host_split_local_counterexample.json`](unique_defect_multi_bottom_host_split_local_counterexample.json).
+
+Even allowing every insertion host and all 24 bundle matchings does not make
+host-only redistribution universal. An exact QF_LRA search in the canonical
+\(3+2+1+1\) bundle cell produced a positive-rational profile for which all
+175 reachable host-redistribution partitions have deficient EFX matching
+graphs after every insertion. Literal integer replay confirms the full
+unique-defect multi-bottom hypotheses and zero completions. See
+[`unique_defect_host_redistribution_lra_counterexample.json`](unique_defect_host_redistribution_lra_counterexample.json).
+
 ## Remaining theorem gate
 
 Champion topology alone is insufficient. At a globally \(\Theta\)-maximal
