@@ -18,6 +18,7 @@ from .audit_unique_defect_handoff import (
 from .scan_charity_threshold_absorption import eligible, scan_profile, tables
 from .search_unique_defect_champion_threshold import classify
 from .search_unique_defect_missing_reciprocal import classify as classify_reciprocity
+from .run_unique_defect_extremal_cell_cegar import extremal_improvements
 
 
 RESULTS = Path("results")
@@ -295,6 +296,17 @@ def test_adverse_branch_escape_audit_reaches_three_good_component():
     assert residual["selected_escape"]["transfer_components"] == [
         {"goods": [3, 4, 5], "slots": [1, 2]}
     ]
+
+    values = tuple(
+        tuple(row)
+        for row in json.loads(
+            (RESULTS / "unique_defect_extremal_local_menu_lra_counterexample.json")
+            .read_text()
+        )["values"]
+    )
+    improvements, total = extremal_improvements(values, 4)
+    assert total == residual["improving_state_count"] == 136
+    assert len(improvements) == 4
 
 
 def test_local_reciprocal_champion_cycle_can_lower_threshold():

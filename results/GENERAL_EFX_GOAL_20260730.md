@@ -63,6 +63,9 @@ owner-minimum/charity swaps. The final residual's nearest improvement is a
 three-good, two-owner, non-Pareto component with positive \(\Theta\) and one
 remaining Hall defect. See
 [MULTI_BOTTOM_CARDINALITY_GATE.md](MULTI_BOTTOM_CARDINALITY_GATE.md).
+The corresponding targeted global-extremum CEGAR has installed 40 exact
+state-wide cuts; its current master is a resumable two-minute timeout, not a
+proof or counterexample.
 
 The utility layer also lifts to the arbitrary-charity exchange lemma. At a
 fixed-cardinality \((\Theta,U)\) maximum, every owner-improving

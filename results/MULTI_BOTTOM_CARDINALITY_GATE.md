@@ -68,6 +68,28 @@ transfer-component hybrid wall lemma supplies component additivity and the
 strict crossing polarity; the missing statement is preservation of enough
 positive gain during dependency closure.
 
+## Targeted global-extremum CEGAR
+
+The canonical \(3+2+1+1\) selected-desired cell is now encoded directly as
+an exact QF_LRA CEGAR problem. Each refinement cut says that a concrete
+one-charity state cannot be both eligible and strictly better than the adverse
+base under \((\Theta,U)\). Unlike the retired local menus, these cuts allow
+arbitrary goods, owners, and connected-component shapes.
+
+Five bounded iterations installed 40 exact extremal cuts. The improvement
+counts in the successive concrete models were \(169,63,219,108,107\). At
+pool size 40, a fresh two-minute master solve returned `unknown` with reason
+`timeout`; it did not establish satisfiability or unsatisfiability. The pool,
+result, and 2.8 MB SMT2 formula are resumable:
+
+- [`unique_defect_extremal_cell_cegar_pool.json`](unique_defect_extremal_cell_cegar_pool.json)
+- [`unique_defect_extremal_cell_cegar_result.json`](unique_defect_extremal_cell_cegar_result.json)
+- [`unique_defect_extremal_cell_cegar.smt2`](unique_defect_extremal_cell_cegar.smt2)
+
+`CELL_UNSAT` would prove this canonical cell only; a satisfiable model with no
+better eligible state would be an exact counterexample to the proposed
+\((\Theta,U)\) selector. The current timeout is neither result.
+
 ## Claim boundary
 
 The counterexamples, their exhaustive local menus, and their nearest escape
