@@ -1,0 +1,105 @@
+{
+  "agent_order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "agent_order_names": [
+    "p",
+    "s",
+    "r",
+    "q"
+  ],
+  "base_q_remainder_allocation_escape_count": 2,
+  "base_q_remainder_witness_count": 0,
+  "claim_boundary": {
+    "sat": "only the selected base-q-remainder gate is refuted; the broader singleton-return and external-observer lemmas require separate checks",
+    "unknown": "no mathematical decision",
+    "unsat": "the selected base-q-remainder gate holds in this exact packet cell"
+  },
+  "desired_bundle_count_per_source": 511,
+  "gate": "recipient_relaxed",
+  "goods": [
+    "tr0",
+    "tr1",
+    "br0",
+    "br1",
+    "tq0",
+    "tq1",
+    "bq0",
+    "bq1",
+    "x",
+    "y",
+    "f"
+  ],
+  "packet_sizes": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_alternating_base_q_remainder_gate.py",
+    "script_sha256": "8aec4f217d24fff45f19627e7ee7e76336065fb950f0081d82200eb127815162",
+    "z3_version": "5.0.0"
+  },
+  "schema": "alternating-base-q-remainder-gate-v2",
+  "solver_status": "sat",
+  "status": "BASE_Q_REMAINDER_RECIPIENT_RELAXED_GATE_REFUTED",
+  "symbolic_candidate_count": 1022,
+  "values": [
+    [
+      65,
+      1763,
+      1828,
+      1841,
+      117,
+      1698,
+      13,
+      1815,
+      5510,
+      5497,
+      3695
+    ],
+    [
+      25,
+      20,
+      4,
+      10,
+      3,
+      8,
+      4,
+      40,
+      58,
+      1648,
+      14
+    ],
+    [
+      601,
+      601,
+      1182,
+      1232,
+      631,
+      611,
+      611,
+      1252,
+      4277,
+      4287,
+      3055
+    ],
+    [
+      85,
+      56,
+      9,
+      95,
+      62,
+      42,
+      27,
+      141,
+      1190,
+      1,
+      126
+    ]
+  ]
+}
