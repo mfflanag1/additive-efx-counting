@@ -795,3 +795,16 @@ both encodings.
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the
   anchored candidate and availability of other rival forms made explicit.
+- [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
+  — analytic cap-free closure of all 24 priority orders in the adjacent-large
+  length-four residual. The final five `p`-first types are closed by an
+  endogenous safe-repartition theorem on `X_r+X_q+f`: reservoir extraction
+  either pays `q` for `D_r`, or returns an arbitrary `r`-desired bundle for
+  which `D_r` pays `q`. This proves the adjacent residual lemma, not complete
+  four-agent EFX.
+- [`adjacent_large_safe_repartition_cells_audit.json`](adjacent_large_safe_repartition_cells_audit.json)
+  and [`adjacent_large_safe_repartition_core_2222.json`](adjacent_large_safe_repartition_core_2222.json)
+  — exact corroboration of the safe-repartition theorem in the atom, all four
+  one-packet splits, and the full binary cell, plus a 28-rival
+  binary solver core. The exact cells are diagnostics; the cap-free result is
+  the analytic theorem above.
