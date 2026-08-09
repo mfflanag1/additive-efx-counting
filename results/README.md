@@ -682,3 +682,12 @@ both encodings.
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the
   anchored candidate and availability of other rival forms made explicit.
+- [`ALTERNATING_PSQR_EXTENSION_GATE.md`](ALTERNATING_PSQR_EXTENSION_GATE.md)
+  — exact refutation of the unrestricted anchored-or-any-desired lemma for
+  `(p,s,q,r)` and `(s,p,r,q)`. A positive eight-good profile has 716 anchored
+  EFX allocations but no anchored improvement, and no EFX completion of its
+  only desired champion-offer root bundle; it nevertheless has 174
+  unrestricted EFX improvements. The route diagnostics retain the cap-free
+  reservoir reduction, dual-bottom safety lemma, and atomic Hall gate. A
+  previously reported first-split core was withdrawn after the guarded-cut
+  correction invalidated its replay.

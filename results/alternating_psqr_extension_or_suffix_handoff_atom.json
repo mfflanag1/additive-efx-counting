@@ -1,0 +1,53 @@
+{
+  "agent_order": [
+    0,
+    2,
+    3,
+    1
+  ],
+  "agent_order_names": [
+    "p",
+    "s",
+    "q",
+    "r"
+  ],
+  "anchored_candidate_count": 422,
+  "candidate_count": 76,
+  "claim_boundary": {
+    "sat": "refutes only the extension-or-suffix-handoff gate under the displayed hard premises in this exact packet cell",
+    "unknown": "no mathematical decision",
+    "unsat": "proves only that combined gate under the displayed hard premises in this exact packet cell; a cap-free proof is still required"
+  },
+  "goods": [
+    "tr",
+    "br",
+    "tq",
+    "bq",
+    "x",
+    "y",
+    "f"
+  ],
+  "hard_branch": {
+    "no_common_safe_q_threshold_payment_in_Xr_plus_Bq": true,
+    "no_s_desired_subset_in_Xr_plus_Bq": true,
+    "q_values_Tq_plus_f_below_base": true
+  },
+  "packet_sizes": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_alternating_psqr_threshold_matching_gate.py",
+    "script_sha256": "1b84bfe9cfce2eb9fa5dfe09e66abef4af3c489da7a4df3d70b01754bd07ec82"
+  },
+  "schema": "alternating-psqr-extension-or-suffix-handoff-gate-v2",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "solver_status": "unsat",
+  "status": "UNSAT_EXTENSION_OR_HANDOFF_GATE"
+}

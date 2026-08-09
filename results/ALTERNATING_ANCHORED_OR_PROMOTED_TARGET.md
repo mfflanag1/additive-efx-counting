@@ -2,8 +2,16 @@
 
 **Date:** 2026-08-09
 **Status:** all orders closed cap-free by a broader promotion; strict
-same-offer refinement exactly refuted
+same-offer refinement independently refuted by two exact profiles
 **Scope:** the eight hard priority orders in the alternating two-large cell
+
+> **Supersession (2026-08-09).**  The repaired any-desired packet target is
+> false.  A positive eight-good `(1,1,2,1)` profile exactly refutes it for
+> `(p,s,q,r)`, and half-turn relabeling refutes `(s,p,r,q)`.  See
+> [`ALTERNATING_PSQR_EXTENSION_GATE.md`](ALTERNATING_PSQR_EXTENSION_GATE.md)
+> and
+> [`alternating_psqr_unrestricted_refutation_audit.json`](alternating_psqr_unrestricted_refutation_audit.json).
+> The historical development below is retained as proof-search provenance.
 
 ## Rooted EFX equivalence
 
@@ -133,19 +141,25 @@ Therefore the live statement must retain the full external-observer-safe
 three-agent anchored branch.  Neither a canonical desired set nor a fixed
 envy-return bundle is universal.
 
-## Next analytic gate
+## Retired analytic gate
 
 > **Anchored-or-any-desired extension lemma.** If the base is maximal among
 > the EFX allocations that keep the first singleton owner fixed, then some
 > desired subset on that owner's champion offer extends to an EFX allocation
 > that promotes the owner.
 
-This statement is false. In the eight-good `(1,1,2,1)` packet cell, an
-independent exhaustive audit finds no anchored escape and no EFX escape
-promoting `p` to any desired subset of `X_r+f`. Its smallest escape instead
-promotes `p` to the cross-face desired bundle `B_r+{t_q^0}+B_q` and gives
-`q` the complementary `{t_q^1,x}`. See
+Two independently audited eight-good `(1,1,2,1)` profiles refute this
+statement by different mechanisms.  The first has no anchored escape and no
+EFX escape promoting `p` to any desired subset of `X_r+f`; its smallest
+escape instead promotes `p` to the cross-face desired bundle
+`B_r+{t_q^0}+B_q` and gives `q` the complementary `{t_q^1,x}`.  See
 [`alternating_variable_extension_1121_refutation_audit.json`](alternating_variable_extension_1121_refutation_audit.json).
+In the second, unrestricted improvements use a root bundle that is unsafe
+relative to the base but becomes safe after simultaneous suffix
+improvements.  See
+[`alternating_psqr_unrestricted_refutation_audit.json`](alternating_psqr_unrestricted_refutation_audit.json).
+Any successor must therefore allow both cross-face and coupled endogenous
+promotion rather than a base-desired block from the original offer.
 
 The cap-free
 [`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
