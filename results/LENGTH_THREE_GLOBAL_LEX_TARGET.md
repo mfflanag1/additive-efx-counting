@@ -401,6 +401,89 @@ also forces the rotated `U` extraction away from its `p`, `q`, and `s`
 desired-source outputs.  This paired `q`-source/`r`-source wall—not the
 external singleton by itself—is the final cap-free uncrossing target.
 
+## Desired-set transversal and quota uncrossing
+
+The final wall has a forced intersection geometry.  Let `A subseteq W` be
+desired by `q`.  Since `D_r=T_q+f` is desired by `r`, disjointness would make
+
+\[
+(Y_p,Y_r,Y_q,Y_s)=(\{x\},D_r,A,\{y\})
+\]
+
+an EFX Pareto improvement.  Hence global maximality forces
+
+\[
+A\cap D_r=A\cap T_q\ne\varnothing.
+\tag{16}
+\]
+
+Symmetrically, every `r`-desired `B subseteq U=X_r+B_q` must meet
+`D_p`, and therefore $B\cap T_r$ is nonempty.  Thus the two reservoir
+source walls are trapped on the corresponding top packets, not on arbitrary
+goods.
+
+There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
+and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
+deficits
+
+\[
+\delta_q=b_q-v_q(A\setminus H),
+\qquad
+\delta_r=b_r-v_r(B\setminus H).
+\]
+
+If `H` has a partition $H=H_q\mathbin{\dot\cup}H_r$ satisfying
+
+\[
+v_q(H_q)>\delta_q,
+\qquad
+v_r(H_r)>\delta_r,
+\tag{17}
+\]
+
+then
+
+\[
+A'=(A\setminus H)+H_q,qquad
+B'=(B\setminus H)+H_r
+\]
+
+are disjoint desired bundles for `q` and `r`.  They remain common-safe by
+downward closure, and `({x},B',A',{y})` is an EFX Pareto improvement.  Hence
+every obstruction must violate the two-demand partition condition (17).
+Equivalently, for every `J subseteq H`, at least one of
+
+\[
+v_q(J)\le\delta_q,qquad
+v_r(H\setminus J)\le\delta_r
+\]
+
+holds.  This is the precise contested-good Hall witness left by the paired
+source wall.
+
+For `B=D_r`, equation (16) puts `H subseteq T_q`.  Giving the whole top
+packet to `r` and returning `q` to the envied singleton produces the atomic
+fallback
+
+\[
+(D_p,T_q,\{x\},\{y\}),
+\tag{18}
+\]
+
+which is EFX exactly when
+
+\[
+v_r(T_q)\ge\tau_r(D_p).
+\tag{19}
+\]
+
+The atomic cell makes (19) automatic because `T_r` is a singleton and the
+no-self inequalities give `v_r(T_q)>max(v_r(T_r),v_r(f))`.  For a genuine
+packet, a deletion `T_r-g+f` can exceed `v_r(T_q)`.  Therefore the remaining
+analytic step is precisely to use the contested-top quota witness to pay
+that deletion threshold through a coupled return; treating `T_q` as one
+supergood would be unsound.
+
 ## Exact atomic motif audit
 
 For discovery only, the proper-decomposition atom has goods
