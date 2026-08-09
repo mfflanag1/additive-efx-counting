@@ -1,0 +1,262 @@
+{
+  "agent_order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "agent_order_names": [
+    "p",
+    "s",
+    "r",
+    "q"
+  ],
+  "candidate_count": 65536,
+  "claim_boundary": {
+    "sat": "refutes the rooted external-observer lemma in this exact variable-packet cell only",
+    "unsat": "proves the rooted lemma only in this exact variable-packet cell until a cap-free proof is supplied"
+  },
+  "elapsed_seconds": 12.135229110717773,
+  "goods": [
+    "tr",
+    "br0",
+    "br1",
+    "tq0",
+    "tq1",
+    "bq",
+    "x",
+    "y",
+    "f"
+  ],
+  "iterations": 4,
+  "packet_sizes": [
+    1,
+    2,
+    2,
+    1
+  ],
+  "pool_size": 440,
+  "reason_unknown": null,
+  "schema": "alternating-variable-packet-rooted-cegar-v1",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "UNSAT_ROOTED_VARIABLE_PACKET_CELL",
+  "trace": [
+    {
+      "dominating_count": 309,
+      "efx_count": 2732,
+      "iteration": 1,
+      "new_count": 309,
+      "pool_size_before": 0,
+      "values": [
+        [
+          358,
+          171,
+          187,
+          16,
+          32,
+          310,
+          732,
+          716,
+          390
+        ],
+        [
+          7,
+          2,
+          2,
+          3,
+          2,
+          5,
+          10,
+          148,
+          3
+        ],
+        [
+          40,
+          23,
+          17,
+          38,
+          21,
+          21,
+          80,
+          82,
+          42
+        ],
+        [
+          6,
+          5,
+          5,
+          8,
+          2,
+          7,
+          131,
+          16,
+          2
+        ]
+      ]
+    },
+    {
+      "dominating_count": 225,
+      "efx_count": 1741,
+      "iteration": 2,
+      "new_count": 225,
+      "pool_size_before": 128,
+      "values": [
+        [
+          731,
+          16,
+          20,
+          4,
+          8,
+          12,
+          779,
+          775,
+          767
+        ],
+        [
+          871,
+          1419,
+          1590,
+          795,
+          76,
+          19,
+          3861,
+          3899,
+          2252
+        ],
+        [
+          5369,
+          902,
+          63,
+          2391,
+          3041,
+          5621,
+          12290,
+          12353,
+          6984
+        ],
+        [
+          21,
+          41,
+          2,
+          79,
+          12,
+          47,
+          528,
+          1,
+          47
+        ]
+      ]
+    },
+    {
+      "dominating_count": 102,
+      "efx_count": 1523,
+      "iteration": 3,
+      "new_count": 102,
+      "pool_size_before": 256,
+      "values": [
+        [
+          186,
+          1,
+          2,
+          5,
+          6,
+          2,
+          190,
+          189,
+          179
+        ],
+        [
+          84,
+          24,
+          590,
+          45,
+          36,
+          27,
+          695,
+          701,
+          78
+        ],
+        [
+          749,
+          167,
+          9,
+          361,
+          397,
+          785,
+          1701,
+          1710,
+          961
+        ],
+        [
+          2,
+          8,
+          11,
+          7,
+          40,
+          67,
+          577,
+          1,
+          47
+        ]
+      ]
+    },
+    {
+      "dominating_count": 82,
+      "efx_count": 1718,
+      "iteration": 4,
+      "new_count": 82,
+      "pool_size_before": 358,
+      "values": [
+        [
+          16,
+          16,
+          619,
+          4,
+          8,
+          4,
+          655,
+          651,
+          643
+        ],
+        [
+          164,
+          310,
+          12,
+          143,
+          170,
+          18,
+          483,
+          489,
+          173
+        ],
+        [
+          1213,
+          678,
+          65,
+          65,
+          1252,
+          587,
+          1956,
+          1969,
+          717
+        ],
+        [
+          1,
+          38,
+          7,
+          14,
+          56,
+          16,
+          443,
+          68,
+          11
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

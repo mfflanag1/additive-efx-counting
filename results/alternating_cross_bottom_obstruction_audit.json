@@ -1,0 +1,271 @@
+{
+  "claim_boundary": {
+    "not_proved": "global lexicographic maximality or failure of the priority-sensitive escape lemma",
+    "proved": "the displayed base is EFX-Pareto-maximal and blocks all four compatible local cross-bottom families"
+  },
+  "exhaustive_census": {
+    "assignment_count": 78125,
+    "efx_assignment_count": 2263,
+    "first_priority_escapes": {
+      "p": {
+        "gain": 939,
+        "owner_by_good": [
+          "p",
+          "s",
+          "s",
+          "s",
+          "q",
+          "r",
+          "p"
+        ],
+        "utilities": [
+          11003,
+          11032,
+          7026,
+          11032
+        ]
+      },
+      "q": {
+        "gain": 967,
+        "owner_by_good": [
+          "p",
+          "p",
+          "s",
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "utilities": [
+          7026,
+          11032,
+          11003,
+          11032
+        ]
+      },
+      "r": {
+        "gain": 967,
+        "owner_by_good": [
+          "p",
+          "p",
+          "s",
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "utilities": [
+          7026,
+          11032,
+          11003,
+          11032
+        ]
+      },
+      "s": {
+        "gain": 939,
+        "owner_by_good": [
+          "p",
+          "p",
+          "s",
+          "p",
+          "q",
+          "r",
+          "s"
+        ],
+        "utilities": [
+          7026,
+          11032,
+          11003,
+          11032
+        ]
+      }
+    },
+    "pareto_dominating_efx_count": 0
+  },
+  "profile": {
+    "agents": [
+      "p",
+      "r",
+      "s",
+      "q"
+    ],
+    "base_owner_by_good": [
+      "r",
+      "r",
+      "q",
+      "q",
+      "p",
+      "s",
+      null
+    ],
+    "base_utilities": [
+      10064,
+      10065,
+      10064,
+      10065
+    ],
+    "goods": [
+      "tr",
+      "br",
+      "tq",
+      "bq",
+      "x",
+      "y",
+      "f"
+    ],
+    "values": [
+      [
+        5002,
+        1008,
+        4004,
+        1016,
+        10064,
+        1032,
+        6001
+      ],
+      [
+        9001,
+        1064,
+        1004,
+        1008,
+        1016,
+        11032,
+        1002
+      ],
+      [
+        4004,
+        1008,
+        5002,
+        1016,
+        1032,
+        10064,
+        6001
+      ],
+      [
+        1004,
+        1008,
+        9001,
+        1064,
+        11032,
+        1016,
+        1002
+      ]
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_alternating_cross_bottom_obstruction.py",
+    "script_sha256": "d20b1a33d1a00d769364442c4fb3f7883226749032ae42def46d43020c2f3357"
+  },
+  "schema": "alternating-cross-bottom-obstruction-audit-v1",
+  "status": "PASSED",
+  "structural_checks": {
+    "base_efx": true,
+    "basic_f_champions": [
+      {
+        "desired_sets": [
+          [
+            "tr",
+            "f"
+          ]
+        ],
+        "source": "p",
+        "target": "r"
+      },
+      {
+        "desired_sets": [
+          [
+            "y"
+          ]
+        ],
+        "source": "r",
+        "target": "s"
+      },
+      {
+        "desired_sets": [
+          [
+            "tq",
+            "f"
+          ]
+        ],
+        "source": "s",
+        "target": "q"
+      },
+      {
+        "desired_sets": [
+          [
+            "x"
+          ]
+        ],
+        "source": "q",
+        "target": "p"
+      }
+    ],
+    "compatible_family_largest_offer_checks": [
+      {
+        "largest_offer": [
+          "tq",
+          "bq",
+          "br"
+        ],
+        "margin": 6989,
+        "own_value": 10065,
+        "source": "r",
+        "source_value": 3076,
+        "target": "q"
+      },
+      {
+        "largest_offer": [
+          "tq",
+          "bq",
+          "br"
+        ],
+        "margin": 3038,
+        "own_value": 10064,
+        "source": "s",
+        "source_value": 7026,
+        "target": "q"
+      },
+      {
+        "largest_offer": [
+          "tr",
+          "br",
+          "bq"
+        ],
+        "margin": 6989,
+        "own_value": 10065,
+        "source": "q",
+        "source_value": 3076,
+        "target": "r"
+      },
+      {
+        "largest_offer": [
+          "tr",
+          "br",
+          "bq"
+        ],
+        "margin": 3038,
+        "own_value": 10064,
+        "source": "p",
+        "source_value": 7026,
+        "target": "r"
+      }
+    ],
+    "envy_edges": [
+      [
+        "r",
+        "s"
+      ],
+      [
+        "q",
+        "p"
+      ]
+    ],
+    "strict_charity_dominance": true,
+    "subset_nondegenerate_by_agent": [
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+}
