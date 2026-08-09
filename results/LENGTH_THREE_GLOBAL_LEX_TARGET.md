@@ -757,6 +757,97 @@ The strict two-split adversarial profile that survived 928 earlier rival
 allocations was escaped exactly by (16j), with a two-good `J`; this is motif
 evidence only, not a premise of the lemma.
 
+The same construction gives an exact six-face failure certificate even
+without the sufficient sandwich bounds.  Suppose only that
+
+\[
+v_r(J)\le v_r(f),\qquad v_q(J)>v_q(T_q).
+\tag{16k}
+\]
+
+Then the two recipients in (16j) weakly/strictly improve.  If (16j) is not
+EFX, one of only the following faces fails:
+
+1. an observer in `{p,q,s}` blocks a deletion of
+   `R_J=(X_r\setminus J)+f`; or
+2. an observer in `{p,r,s}` blocks a deletion of `Q_J=J+B_q`.
+
+Deleting `f` from `R_J` is always safe.  A blocker on its other deletion
+therefore yields, by minimal crossing, a desired set containing `f` inside
+`X_r\setminus(J\cup\{h\})+f`.  This is exactly the charity-swap transition: a
+new genuine `f`-champion into `r`, omitting `J` and one further good.
+
+A blocker on `Q_J` yields a desired subset of the generalized offer that
+replaces `T_q` by `J`, hence an explicit edge
+
+\[
+k\mathrel{\mathop{\longrightarrow}^{J\mid T_q}}q
+\tag{16l}
+\]
+
+for some source `k` (with possible additional discard).  Moreover `J`
+cannot lie wholly in `B_r`: the bottom-pool exclusion gives
+`v_q(B_r)<=v_q(T_q)`, contradicting (16k).  Thus
+`J\cap T_r` is nonempty.  The part `J\cap B_r` is already released by the
+selected `p -f-> r` edge; the sole compatibility defect of (16l) is the
+explicit top subpacket `J\cap T_r`.
+
+This converts the adaptive-root problem into a precise finite choice:
+select a parallel `p -f-> r` decomposition that places the top defect of a
+recipient-feasible `J` in its released bottom, or route the source of
+(16l) directly.  No fixed packet-size statement is hidden in this
+certificate.
+
+The source routing in the second face is in fact complete whenever
+`R_J=(X_r\setminus J)+f` is common-safe.  Let `E subseteq Q_J-h` be the
+desired set exposed by an unsafe deletion of `Q_J=J+B_q`.
+
+| source of `E` | EFX escape `(p,r,q,s)` |
+|---|---|
+| `p` | `(E,R_J,{x},{y})` |
+| `q` | `({x},R_J,E,{y})` |
+| `s`, `a=p` | `({y},R_J,{x},E)` |
+| `s`, `a=q` | `({x},R_J,{y},E)` |
+
+Every row is disjoint; `R_J` weakly improves `r`, and every other changed
+recipient gets a desired bundle.  Thus each row is EFX and improves every
+residual priority order.
+
+Only source `r`, and source `s` with `a=r`, remain.  Suppose there is a
+parallel selected decomposition `D'_p=T'_r+f` with `T'_r\cap J=empty`.
+Its bottom `B'_r=X_r\setminus T'_r` releases all of `J`.  Source `r` then
+gives the PI cycle
+
+\[
+r\mathrel{\mathop{\longrightarrow}^{J\mid T_q}}q
+\longrightarrow p\xrightarrow f r,
+\]
+
+and source `s` with `a=r` gives
+
+\[
+s\mathrel{\mathop{\longrightarrow}^{J\mid T_q}}q
+\longrightarrow p\xrightarrow f r\longrightarrow s.
+\]
+
+The incoming sets are `J` and `{f}`, which are disjoint; `J` is released by
+the `p -f-> r` edge under the alternative decomposition.  Both are valid PI
+cycles.
+
+Consequently an unresolved `Q_J` face forces the exact
+**root-transversal obstruction**
+
+\[
+T'_r\cap J\ne empty
+\quad\text{for every valid parallel }p -f-> r\text{ decomposition }T'_r+f.
+\tag{16m}
+\]
+
+This is stronger than failure of one canonical root flip: the same
+recipient-feasible `J` must hit the top of every admissible root.  Defeating
+(16m), or converting its minimal hitting set into a desired-family cycle,
+is the remaining adaptive-root step on the `Q_J` face.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
