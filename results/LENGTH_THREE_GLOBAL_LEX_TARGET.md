@@ -757,6 +757,21 @@ The strict two-split adversarial profile that survived 928 earlier rival
 allocations was escaped exactly by (16j), with a two-good `J`; this is motif
 evidence only, not a premise of the lemma.
 
+At a hypothetical globally maximal state, the split flip collapses to its
+charity-transition face.  BCFF's respecting nondegenerate perturbation
+ensures `v_r(J)!=v_r(f)` for distinct bundles.  Hence the recipient
+condition `v_r(J)<=v_r(f)` is strict.  If `R_J` were common-safe, replacing
+`X_r` by `R_J` while leaving `J` unallocated would already be an EFX Pareto
+improvement of `r`, without using `Q_J` at all.  Therefore global maximality
+forces `R_J` to be unsafe for every recipient-feasible `J`.
+
+Accordingly the `Q_J` analysis below is a useful exact diagnosis of why a
+root-only repair cannot rescue a tied or nonmaximal split profile, but it is
+not the live maximal-state branch.  At a nondegenerate global maximum, the
+live branch is always the genuine
+`f`-champion exposed by the unsafe `R_J` deletion and routed by the
+single-pivot lemma (16n)--(16o).
+
 The same construction gives an exact six-face failure certificate even
 without the sufficient sandwich bounds.  Suppose only that
 
@@ -843,10 +858,85 @@ T'_r\cap J\ne empty
 \tag{16m}
 \]
 
-This is stronger than failure of one canonical root flip: the same
-recipient-feasible `J` must hit the top of every admissible root.  Defeating
-(16m), or converting its minimal hitting set into a desired-family cycle,
-is the remaining adaptive-root step on the `Q_J` face.
+In fact (16m) is forced automatically whenever `R_J` is common-safe and
+`v_r(J)<=v_r(f)`.  Suppose a valid parallel decomposition
+`D'_p=T'_r+f` had `T'_r\cap J=empty`, and put
+`B'_r=X_r\setminus T'_r`.  The no-self inequality for this decomposition
+gives
+
+\[
+v_r(B'_r)>v_r(f)\ge v_r(J),
+\]
+
+so `B'_r\setminus J` contains a good `h`.  But then the deletion remainder
+`R_J-h` contains the entire desired set `T'_r+f`, which `p` values above
+`b_p`.  This contradicts common safety of `R_J`.
+
+Therefore a root change cannot resolve the two hard `Q_J` sources while
+preserving the safe compensated bundle: every admissible root necessarily
+meets `J`.  This exactly refutes the narrower **root-only completion** of
+the split-flip bridge.  The missing operation must change the allocation
+itself—remove an additional top blocker, repartition the suffix, or pay the
+single budget-crossing pivot—rather than merely select a different parallel
+decomposition.
+
+The two hard sources nevertheless have one exact common reduction.  Let
+`E subseteq Q_J-h` be the desired bundle exposed by the `Q_J` face.  If its
+source is `r`, or if its source is `s` and `a=r`, then any common-safe set
+`Z` disjoint from `E,x,y` satisfying
+
+\[
+v_q(Z)\ge\tau_q(E)
+\tag{16m.1}
+\]
+
+gives an EFX escape:
+
+\[
+({x},E,Z,{y})
+\quad\text{or}\quad
+({x},{y},Z,E),
+\]
+
+respectively.  In the second allocation `r` receives the singleton she
+envies.  This is exactly the already-proved two-safe-bundle reduction, with
+`E` as its desired bundle and `Z` as the `q` payment.
+
+Thus the root-only bridge is false for a structural reason, but the full
+adaptive bridge now has a precise final obligation: extract the payment
+`Z` from the residual goods, or reverse an unsafe threshold extraction into
+a compatible desired family.  No additional four-agent EFX verification is
+needed once (16m.1) holds.
+
+There is a canonical first payment.  Since `E subseteq J+B_q`, put
+
+\[
+E_q=E\cap B_q,
+\qquad
+Z_0=X_q\setminus E_q=T_q+(B_q\setminus E_q).
+\]
+
+The sets `E` and `Z_0` are disjoint.  Moreover `Z_0` is common-safe by
+downward closure from the base bundle `X_q`.  Hence (16m.1) holds, and the
+hard face closes, whenever
+
+\[
+v_q(E_q)+\tau_q(E)\le b_q.
+\tag{16m.2}
+\]
+
+Consequently every surviving hard blocker must use a nonempty part of
+`B_q` and satisfy the strict overlap inequality
+
+\[
+v_q(E\cap B_q)+\tau_q(E)>b_q.
+\tag{16m.3}
+\]
+
+The safe-payment problem is therefore no longer spread across the residual
+goods: its irreducible overlap lies entirely in `B_q`.  Goods of
+`J\setminus E` may be added only to repair the strict deficit in (16m.3),
+with an unsafe addition again exposing a desired-family edge.
 
 There is a monotone cap-free potential on the other face.  For any
 `J subseteq X_r` with `v_r(J)<v_r(f)`, put
