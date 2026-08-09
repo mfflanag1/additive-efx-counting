@@ -631,6 +631,64 @@ good.  The final analytic operation therefore needs to defeat one price or
 compensate one indivisible pivot; it no longer needs to reason about an
 arbitrary family of overlapping desired sets.
 
+There is a complementary residual-payment formulation.  For a
+`q`-sufficient `J subseteq K`, put
+
+\[
+S_J=(T_q\setminus A_q)+B_q,
+\qquad
+G_J=(B_r\setminus J)+S_J.
+\]
+
+Then `D_p`, `A_J`, and `G_J` are pairwise disjoint, and
+
+\[
+v_q(G_J)=v_q(B_r)-v_q(J)+d_q
+<v_q(B_r)\le v_q(T_q)<b_q.
+\tag{16f}
+\]
+
+Let `theta=tau_r(D_p)` for seven of the nine residual source/order types,
+and let `theta=b_r` for the two `a=r` orders beginning `(s,r)`.  If
+`v_r(G_J)>=theta`, choose an inclusion-minimal `R subseteq G_J` at that
+threshold.  A common-safe `R` makes `(D_p,R,A_J,{y})` EFX; it either
+promotes `p`, or in the two `theta=b_r` orders preserves `r` before the
+later promotion.
+
+If `R` is unsafe, reverse a violating deletion to a desired set
+`E subseteq R-h`.  Minimality gives `v_r(E)<theta`, while (16f) rules out
+source `q`.  The all-source payment allocations close sources `p,r,s`
+except in exactly two symmetry pairs:
+
+1. `a=r`, order `(s,r,p,q)` or `(s,r,q,p)`, with source `p`; and
+2. `a=q`, order `(p,r,q,s)` or `(p,r,s,q)`, with source `s`.
+
+In the first pair, paying `r` by `D_p` would lower `r` before the
+`p`-promotion.  In the second, transferring `y` to `q` would lower `r`
+before either later improvement.  These are source/order mismatches, not a
+new packing wall.
+
+If no `J` reaches the threshold, every `q`-sufficient subset satisfies the
+additional scalar inequality
+
+\[
+v_r(J)>v_r(B_r)+v_r(S_J)-\theta.
+\tag{16g}
+\]
+
+Together, (16d) and (16g) reduce the non-mismatch branch to one knapsack
+cost bound with lower threshold
+
+\[
+v_r(J)\ge
+\max\{v_r(B_q),\ v_r(B_r)+v_r(S_J)-\theta\}.
+\tag{16h}
+\]
+
+The remaining work is now exact: defeat this price/pivot bound using `f`,
+or show that the two mismatch sources create a root-flipped or adjacent
+cycle whose established escape preserves the earlier-priority agent.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
