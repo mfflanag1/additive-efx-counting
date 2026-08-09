@@ -1,7 +1,7 @@
 # Alternating anchored-or-promoted target
 
 **Date:** 2026-08-09
-**Status:** exact seven-good dichotomy; cap-free packet lift open
+**Status:** six orders closed cap-free; strict same-offer lift open in two
 **Scope:** the eight hard priority orders in the alternating two-large cell
 
 ## Rooted EFX equivalence
@@ -144,6 +144,15 @@ pool growth is frozen.  The next work is to turn failure of a promoted
 extension into a suffix-improving anchored exchange, using the two bundle
 failure inequalities in the root-flip proof and the absent compatible-family
 witnesses.
+
+The cap-free
+[`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
+now closes `(p,s,q,r)` and its half-turn `(s,p,r,q)` for the wider
+lexicographic maximality program.  Its third branch promotes the root to a
+desired subset of the opposite reservoir rather than the original champion
+offer, so it does not prove the stricter lemma displayed above.  Together
+with root flip and reservoir exchange, six of the eight hard orders are
+closed.  The remaining priority pair is `(p,q,s,r)` and `(s,r,p,q)`.
 
 The target is not yet a proof of the alternating case or of complete
 four-agent EFX.

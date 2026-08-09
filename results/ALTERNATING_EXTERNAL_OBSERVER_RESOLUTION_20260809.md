@@ -46,12 +46,14 @@ profiles.  It is corroboration; the theorem is analytic.
 The external-observer candidate is now fully resolved, but the alternating
 topology is not.  The cap-free root-flip lemma closes `(p,q,r,s)` and
 `(s,r,q,p)` using a different rival form despite their anchored-candidate
-countermodels.  Four hard priority orders still require a promoted-root or
-another non-anchored construction:
+countermodels.  The cap-free
+[`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
+closes `(p,s,q,r)` and `(s,p,r,q)` using either a selected-offer promotion,
+an anchored `q`-handoff, or an opposite-reservoir root promotion.  Two hard
+priority orders remain:
 
 \[
-(p,s,q,r),\quad(p,q,s,r),\quad
-(s,p,r,q),\quad(s,r,p,q).
+(p,q,s,r),\quad(s,r,p,q).
 \]
 
 Thus this classification completes the stated external-observer research

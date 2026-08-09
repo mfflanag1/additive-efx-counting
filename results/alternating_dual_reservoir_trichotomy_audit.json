@@ -1,0 +1,633 @@
+{
+  "branch_counts": {
+    "same_offer_extension": 16,
+    "unsafe_threshold_reversal": 2
+  },
+  "claim_boundary": "constructive replay only; the cap-free trichotomy is analytic, while elimination of opposite-reservoir p-promotion remains open",
+  "mode_counts": {
+    "anchored_q_handoff": 1,
+    "opposite_reservoir_promotion": 1,
+    "same_offer_promotion": 16
+  },
+  "packet_sizes": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "profile_count": 18,
+  "profiles": [
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_1",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq0",
+        "bq1",
+        "br1"
+      ],
+      "r_slack": 2,
+      "rival_utilities": [
+        462,
+        28,
+        383,
+        261
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_2",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq0",
+        "bq1",
+        "br1"
+      ],
+      "r_slack": 20,
+      "rival_utilities": [
+        4452,
+        754,
+        1466,
+        491
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "tr0",
+          "tr1",
+          "f"
+        ],
+        "payment_bundle": [
+          "br0",
+          "bq0",
+          "bq1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tq1",
+        "bq1",
+        "br0",
+        "br1"
+      ],
+      "branch": "unsafe_threshold_reversal",
+      "label": "cegar_iteration_3",
+      "mode": "opposite_reservoir_promotion",
+      "payment_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "r_slack": 16,
+      "rival_utilities": [
+        370,
+        78,
+        8912,
+        994
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_4",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "tq1",
+        "br1"
+      ],
+      "r_slack": 0,
+      "rival_utilities": [
+        1223,
+        4924,
+        1199,
+        855
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_5",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "br1"
+      ],
+      "r_slack": 44,
+      "rival_utilities": [
+        1731,
+        125,
+        9421,
+        1149
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "br1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_6",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq0",
+        "br0",
+        "br1"
+      ],
+      "r_slack": 845,
+      "rival_utilities": [
+        18115,
+        7110,
+        14528,
+        2959
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0",
+          "br1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_7",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq1",
+        "br0",
+        "br1"
+      ],
+      "r_slack": 176,
+      "rival_utilities": [
+        2065,
+        6221,
+        28678,
+        2794
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_8",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "tq0",
+        "br0",
+        "br1"
+      ],
+      "r_slack": 2367,
+      "rival_utilities": [
+        671,
+        18424,
+        2608,
+        1825
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_9",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq1",
+        "br1"
+      ],
+      "r_slack": 2267,
+      "rival_utilities": [
+        5397,
+        7713,
+        124466,
+        3755
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tq1",
+        "br1"
+      ],
+      "branch": "unsafe_threshold_reversal",
+      "label": "cegar_iteration_10",
+      "mode": "anchored_q_handoff",
+      "payment_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "r_slack": 46966,
+      "rival_utilities": [
+        5887,
+        82358,
+        17730,
+        531
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br1",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr1"
+        ]
+      },
+      "source": "q"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_11",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "tq1"
+      ],
+      "r_slack": 2139,
+      "rival_utilities": [
+        1009,
+        14344,
+        12048,
+        1441
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "cegar_iteration_12",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "br1"
+      ],
+      "r_slack": 110624,
+      "rival_utilities": [
+        7411,
+        273062,
+        7183,
+        6216
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br1",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0",
+          "tr1",
+          "br0",
+          "bq0",
+          "bq1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "alternating_bottom_partition_dichotomy_2222_audit",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq1",
+        "br1"
+      ],
+      "r_slack": 87,
+      "rival_utilities": [
+        3089,
+        5114,
+        1027,
+        676
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "tr0",
+          "tr1",
+          "f"
+        ],
+        "payment_bundle": [
+          "br0",
+          "bq1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "alternating_any_root_subset_dichotomy_2222_audit",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "tq0",
+        "tq1",
+        "br1"
+      ],
+      "r_slack": 7,
+      "rival_utilities": [
+        3360,
+        3352,
+        9521,
+        12833
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "alternating_any_cross_subset_dichotomy_2222_audit",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq1",
+        "br0",
+        "br1"
+      ],
+      "r_slack": 2097,
+      "rival_utilities": [
+        4811,
+        26187,
+        7674,
+        4355
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "alternating_base_q_remainder_gate_2222",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq1",
+        "br0",
+        "br1"
+      ],
+      "r_slack": 7,
+      "rival_utilities": [
+        15512,
+        62,
+        8658,
+        1123
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "br1"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "alternating_base_q_remainder_recipient_relaxed_gate_2222",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "bq1",
+        "br1"
+      ],
+      "r_slack": 5,
+      "rival_utilities": [
+        5523,
+        50,
+        4287,
+        1190
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr0"
+        ]
+      },
+      "source": "p"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "branch": "same_offer_extension",
+      "label": "alternating_base_q_remainder_exact_efx_gate_2222",
+      "mode": "same_offer_promotion",
+      "payment_bundle": [
+        "br0"
+      ],
+      "r_slack": 1751,
+      "rival_utilities": [
+        34256,
+        6254,
+        65093,
+        2465
+      ],
+      "same_offer_pair": {
+        "active_bundle": [
+          "br0",
+          "f"
+        ],
+        "payment_bundle": [
+          "tr1",
+          "tq1"
+        ]
+      },
+      "source": "p"
+    }
+  ],
+  "profiles_with_same_offer_pair": 18,
+  "provenance": {
+    "profiles": [
+      {
+        "path": "results/alternating_bottom_partition_dichotomy_2222_audit.json",
+        "sha256": "d49d15422412e4f61c46f7282c81cf3d7bf6dc27ddd18944b9938e8fc66e5044"
+      },
+      {
+        "path": "results/alternating_any_root_subset_dichotomy_2222_audit.json",
+        "sha256": "494f1319cb8e79fb752906857b1eb8fcf5cdf8b2102735ec1ac77ef567e8ed69"
+      },
+      {
+        "path": "results/alternating_any_cross_subset_dichotomy_2222_audit.json",
+        "sha256": "55b9d8edcdfe731aa04a02082e78bc4564d41bf8a42c536825a0269f9613261e"
+      },
+      {
+        "path": "results/alternating_base_q_remainder_gate_2222.json",
+        "sha256": "8ea2615a063fef695e3a8ce5008ed77902476a6446957495415a5cd3e106f498"
+      },
+      {
+        "path": "results/alternating_base_q_remainder_recipient_relaxed_gate_2222.json",
+        "sha256": "f8b10a16350e3d7d2407a6287a9692fff8b863e6c5281c17422821f5adadfbf2"
+      },
+      {
+        "path": "results/alternating_base_q_remainder_exact_efx_gate_2222.json",
+        "sha256": "d660c034537e70c9b7989800ce65c92a2fba7c2dd454a8e17623b898ffb83185"
+      }
+    ],
+    "script": "tracks/parkability/audit_alternating_dual_reservoir_trichotomy.py",
+    "script_sha256": "c5f522963ff99b63d3fb057f1f274b4f31899c32faf28c98e3fed9140390b70a",
+    "session": {
+      "path": "results/alternating_singleton_return_0213_session1.json",
+      "sha256": "ad1550cdbef628419527051d8ae28e514d009c37e8f1744fa78f821e1c58a313"
+    }
+  },
+  "schema": "alternating-dual-reservoir-trichotomy-audit-v1",
+  "status": "ALL_PROFILES_PASS_DUAL_RESERVOIR_TRICHOTOMY"
+}

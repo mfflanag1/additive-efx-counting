@@ -650,8 +650,16 @@ both encodings.
   A minimal `q`-threshold reservoir set is either common-safe or its unsafe
   deletion contains a desired `r`/`s` set paid by the original disjoint safe
   block. This proves the arbitrary-packet two-safe packing lemma and its
-  half-turn, but not the four hard orders with refuted observer candidates
-  or complete four-agent EFX.
+  half-turn. A subsequent dual-reservoir argument closes two of the four
+  hard orders with refuted observer candidates; complete four-agent EFX
+  remains open.
+- [`ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
+  — cap-free analytic escape theorem for `(p,s,q,r)` and its half-turn.
+  Minimal threshold extraction yields either a same-offer promotion, an
+  anchored `q`-handoff, or an opposite-reservoir root promotion. Together
+  with root flip and reservoir exchange this closes six of eight hard
+  alternating priority orders. The strict same-champion-offer refinement
+  and the remaining pair `(p,q,s,r)`, `(s,r,p,q)` are open.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

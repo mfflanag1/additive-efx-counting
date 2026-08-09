@@ -63,7 +63,8 @@ cap-free: no further root change is needed in `(p,s,r,q)` or `(s,p,q,r)`;
 one may use the reservoir exchange directly. The proof does not require a
 packet-size cap or a fixed finite move menu. It does not transfer
 lexicographic maximality between different priority orders, and therefore
-does not close the four remaining hard orders listed below.
+does not itself close the four hard orders listed below. The later
+dual-reservoir theorem closes two of them by a different construction.
 
 ## Proof
 
@@ -125,9 +126,11 @@ proves the symmetric order `(s,p,q,r)`.
 The external-observer candidate is exactly false in the other six hard
 orders.  The separate cap-free root-flip theorem nevertheless closes two of
 those orders, `(p,q,r,s)` and `(s,r,q,p)`, by a different rival form.  The
-remaining four hard orders require different constructions.  This theorem
-does not revive the refuted candidate there and does not by itself prove
-complete additive EFX.
+other four hard orders require different constructions.  The later
+dual-reservoir trichotomy supplies those constructions for `(p,s,q,r)` and
+`(s,p,r,q)`, leaving `(p,q,s,r)` and `(s,r,p,q)`.  The present theorem does
+not revive the refuted candidate there and does not by itself prove complete
+additive EFX.
 
 The replay script checks the construction on the frozen exact profiles and
 on targeted countermodels to the false fixed-payment strengthenings.  That

@@ -179,5 +179,5 @@ The adaptive-order route has reached a clean stopping boundary:
 Accordingly, this counterexample is now a diagnostic rather than the live
 gate. Root/order adaptation selects a half-turn, while the reservoir-exchange
 lemma supplies the required suffix reallocation. The remaining EFX program
-must move to the four hard orders whose external-observer candidate was
+must move to the hard orders whose external-observer candidate was
 already exactly refuted.
