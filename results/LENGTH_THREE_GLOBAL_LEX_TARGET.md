@@ -522,6 +522,78 @@ no-self-`q` consequence.  Hence the final cell is not an arbitrary Hall
 obstruction: `q` strictly prefers the foreign bottom to her own bottom,
 but not to her own top.
 
+There is a still smaller witness inside the hard `q` reversal.  In the
+critical-pool proof, a genuine `q` wall yields a `q`-desired set
+
+\[
+A\subseteq T_q+B_r
+\]
+
+inside a deletion of the minimal `r`-threshold bundle.  Put
+`K=A\cap B_r`.  The transversal property gives `A\cap T_q != empty`, while
+`K` is also nonempty: a subset of `T_q` alone is worth strictly less than
+`b_q=v_q(T_q+B_q)`.  More sharply,
+
+\[
+v_q(K)>v_q(B_q)+v_q(T_q\setminus A)>v_q(B_q).
+\tag{16a}
+\]
+
+Indeed, expand `v_q(A)>b_q` and move the missing part of `T_q` to the other
+side.
+
+Now replace the contested subset `K` in `r`'s base bundle by `B_q` and put
+
+\[
+L=(X_r\setminus K)+B_q.
+\]
+
+The pools `L` and `A` are disjoint.  If `v_r(B_q)>v_r(K)`, then
+`v_r(L)>b_r`, so `L` contains a desired set `E` disjoint from `A`.  Every
+possible source is impossible:
+
+1. source `r` gives the Pareto-EFX allocation `({x},E,A,{y})`;
+2. source `p` gives the PI cycle
+   `p -(B_q|K)-> r -f-> q -> p`;
+3. source `q` gives the PI cycle
+   `q -(B_q|K)-> r -f-> q`;
+4. source `s` gives the analogous PI cycle through the external envy edge
+   when `a=p` or `a=q`; when `a=r`, the direct allocation
+   `({x},{y},A,E)` is Pareto-EFX.
+
+Here `E` is exactly the desired bundle of the generalized edge into `r`
+with incoming set `B_q` and release set `K` (possibly with additional
+discard).  The existing basic edge `r -f-> q` releases `B_q`, so every
+listed generalized cycle satisfies the PI release condition; its incoming
+sets `B_q` and `{f}` are disjoint.
+
+Therefore global maximality forces the **joint bottleneck**
+
+\[
+K\subseteq B_r,\qquad
+v_q(K)>v_q(B_q),\qquad
+v_r(K)\ge v_r(B_q).
+\tag{16b}
+\]
+
+The selected `p -> r` edge and absence of the parallel envy edge also give
+`v_p(B_r)<v_p(f)`, hence
+
+\[
+v_p(K)<v_p(f),qquad
+v_q(K)>v_q(B_q)>v_q(f),qquad
+v_r(K)\ge v_r(B_q).
+\tag{16c}
+\]
+
+This is the smallest currently known missing operation.  The three rows
+want the resource chain `f -> p`, `K -> q`, and `B_q -> r`, but `B_q`
+alone does not compensate `r` for releasing `K`.  A completion must either
+augment `B_q` by a subset of the released part `T_q\setminus A`, give `f`
+to `r` while promoting `p` through a different desired set, or turn the
+failure of one of those payments into a compatible generalized champion
+cycle.  This is strictly sharper than an arbitrary packet Hall failure.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
