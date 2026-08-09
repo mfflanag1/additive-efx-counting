@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-09
 **Status:** all orders closed cap-free by a broader promotion; strict
-same-offer refinement open
+same-offer refinement exactly refuted
 **Scope:** the eight hard priority orders in the alternating two-large cell
 
 ## Rooted EFX equivalence
@@ -140,11 +140,12 @@ envy-return bundle is universal.
 > desired subset on that owner's champion offer extends to an EFX allocation
 > that promotes the owner.
 
-The exact cell supports this statement but has not decided it.  Further blind
-pool growth is frozen.  The next work is to turn failure of a promoted
-extension into a suffix-improving anchored exchange, using the two bundle
-failure inequalities in the root-flip proof and the absent compatible-family
-witnesses.
+This statement is false. In the eight-good `(1,1,2,1)` packet cell, an
+independent exhaustive audit finds no anchored escape and no EFX escape
+promoting `p` to any desired subset of `X_r+f`. Its smallest escape instead
+promotes `p` to the cross-face desired bundle `B_r+{t_q^0}+B_q` and gives
+`q` the complementary `{t_q^1,x}`. See
+[`alternating_variable_extension_1121_refutation_audit.json`](alternating_variable_extension_1121_refutation_audit.json).
 
 The cap-free
 [`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
@@ -155,9 +156,9 @@ champion offer, so it does not prove the stricter lemma displayed above.
 Together with root flip and reservoir exchange, all eight hard orders are
 closed.
 
-The strict target itself remains open. The broader opposite-reservoir
-construction already proves the alternating global-lex theorem, but not
-complete four-agent EFX.
+The strict target is therefore exactly refuted. The broader
+opposite-reservoir construction already admits the missing operation and
+proves the alternating global-lex theorem, but not complete four-agent EFX.
 
 ## Strict-refinement reduction
 
@@ -167,5 +168,5 @@ uses failure of both strict branches to prove a desired-set transversal,
 common-safety of `B_r+B_q`, two strict threshold inequalities, and a boosted
 moving-ceiling handoff reduction. The only surviving cap-free wall is an
 `r`-desired subset of `X_r+B_q` that intersects every `p`-desired subset of
-`X_r+f`. This is the live strict-refinement gate; larger blind rival pools
-remain frozen.
+`X_r+f`. The exact eight-good profile realizes the failure beyond this gate;
+larger blind rival pools are unnecessary.

@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-09
 
-**Status:** cap-free analytic reduction; one intersecting `r`-source wall remains
+**Status:** strict bridge exactly refuted; broader cap-free theorem unaffected
 
 **Order:** `(p,s,q,r)`; the half-turn is symmetric
 
@@ -144,7 +144,7 @@ proves (6).
 Unlike the earlier two-safe pair, `Q` need not be common-safe at the base:
 the recipients `r=y` and `s=D` provide strictly higher moving ceilings.
 
-## Exact remaining source wall
+## Former source wall
 
 Start with `D_s` and `U=X_r+B_q`, as in the reservoir-exchange theorem, and
 put `t=tau_q(D_s)`. If a minimal `q`-threshold subset of `U` satisfies the
@@ -158,18 +158,54 @@ and `D_s` as `Q`. Minimality gives
 `v_q(D_s)>=tau_q(D)`, while common safety of `D_s` gives the other three
 inequalities in (5).
 
-Consequently the only surviving wall is:
+Consequently the only surviving wall of the reduction was:
 
 > There is an `r`-desired set `A subseteq X_r+B_q`, below the relevant
 > `q` threshold, and `A` intersects every `p`-desired subset of `X_r+f`.
 
-In particular `A` intersects `D_p`, hence contains a good of `T_r`. A final
-proof must uncross this shared top good into either a disjoint `r`-desired
-set (giving a same-offer promotion) or a boosted `s`-to-`q` handoff. An exact
-counterexample must realize this intersecting wall while blocking every such
-uncrossing.
+In particular `A` intersects `D_p`, hence contains a good of `T_r`. The
+eight-good counterexample below realizes failure of the strict bridge:
+neither an anchored escape nor a desired promotion from the original
+champion offer exists. Thus the proposed uncrossing cannot be universal.
 
-## Adversarial evidence and boundary
+## Exact eight-good refutation
+
+The first non-atomic cell already refutes the strict target. Take packet
+sizes
+
+\[
+(|T_r|,|B_r|,|T_q|,|B_q|)=(1,1,2,1).
+\]
+
+The positive integer profile is frozen in
+[`alternating_variable_extension_1121_refutation.json`](alternating_variable_extension_1121_refutation.json).
+An independent exhaustive audit checks the structural premises and all
+\(5^8=390{,}625\) allocations. Exactly 162 allocations are EFX and improve
+the base lexicographically in order `(p,s,q,r)`, but none keeps `p={x}` and
+none gives `p` a desired subset of `X_r+f`. See
+[`alternating_variable_extension_1121_refutation_audit.json`](alternating_variable_extension_1121_refutation_audit.json).
+
+The smallest missing move changes four goods and is the cross-face exchange
+
+\[
+(Y_p,Y_r,Y_s,Y_q)
+=
+(B_r+\{t_q^0\}+B_q,\ T_r,\ \{y\},\ \{t_q^1,x\}),
+\]
+
+leaving `f` in charity. Its utilities are `(1104,22,539,252)`, versus base
+utilities `(1078,24,539,61)`. The new `p` bundle is desired at the base but
+is not contained in `X_r+f`. The allocation is EFX and improves the first
+priority coordinate. Exhaustive enumeration proves that no outside escape
+changes fewer than four goods.
+
+This is precisely the operation omitted by the strict bridge: an
+opposite-reservoir or cross-face desired-root promotion. It is already
+allowed by the dual-reservoir trichotomy, so the refutation does not weaken
+the cap-free alternating global-lex theorem and is not a counterexample to
+EFX.
+
+## Earlier adversarial evidence and boundary
 
 The boosted handoff exists in all 18 frozen eleven-good profiles, the strict
 cross-source/no-two-safe-pair profile, the three-pair residual profile, and
@@ -191,6 +227,7 @@ to satisfy `v_s(P+f)<=b_s`. Thus some `P+f` crosses `s` in that cell. See
 This identifies a plausible circuit-uncrossing move but is not used as a
 cap-free premise.
 
-The unrestricted extension-or-handoff lemma remains open precisely at the
-intersecting `r`-source wall above. Complete four-agent additive EFX is not
-claimed.
+The unrestricted strict extension-or-handoff lemma is false. Its smallest
+known repair is to admit the cross-face promotion above, which returns the
+statement to the already-proved dual-reservoir trichotomy. Complete
+four-agent additive EFX is not claimed.

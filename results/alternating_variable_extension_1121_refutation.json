@@ -1,0 +1,25 @@
+{
+  "schema": "alternating-variable-extension-counterexample-v1",
+  "status": "SAT_STRICT_EXTENSION_COUNTEREXAMPLE_CANDIDATE",
+  "packet_sizes": [1, 1, 2, 1],
+  "agent_order": [0, 2, 3, 1],
+  "goods": ["tr", "br", "tq0", "tq1", "bq", "x", "y", "f"],
+  "values": [
+    [684, 381, 329, 342, 394, 1078, 1065, 407],
+    [22, 2, 11, 5, 3, 1, 315, 1],
+    [169, 8, 169, 8, 177, 4, 539, 366],
+    [2, 1, 19, 10, 32, 242, 28, 26]
+  ],
+  "provenance": {
+    "method": "exact QF_LRA master with exhaustive QF_LIA rival separation",
+    "source_cell": [1, 1, 2, 1],
+    "source_pool_size": 216,
+    "source_iterations": 4,
+    "source_script": "tracks/parkability/run_alternating_variable_extension_cegar.py"
+  },
+  "claim_boundary": {
+    "candidate": "no anchored EFX lexicographic improvement and no EFX improvement promoting p to a desired subset of X_r+f",
+    "audit_required": "recheck every structural premise and exhaust all 5^8 allocations",
+    "not_claimed": "a counterexample to EFX or to the broader opposite-reservoir theorem"
+  }
+}

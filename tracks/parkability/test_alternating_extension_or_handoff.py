@@ -8,9 +8,15 @@ from pathlib import Path
 try:
     from .audit_alternating_boosted_handoff_profiles import audit
     from .audit_alternating_no_same_offer_promotion import audit as audit_no_promotion
+    from .audit_alternating_variable_extension_counterexample import (
+        audit as audit_variable_extension,
+    )
 except ImportError:
     from audit_alternating_boosted_handoff_profiles import audit
     from audit_alternating_no_same_offer_promotion import audit as audit_no_promotion
+    from audit_alternating_variable_extension_counterexample import (
+        audit as audit_variable_extension,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -46,7 +52,23 @@ def test_no_promotion_boundary() -> None:
     assert result["anchor_search_status"] == "sat"
 
 
+def test_variable_extension_refutation() -> None:
+    import json
+
+    payload = json.loads(
+        (RESULTS / "alternating_variable_extension_1121_refutation.json").read_text()
+    )
+    result = audit_variable_extension(payload)
+    assert result["status"] == "EXACT_STRICT_BRIDGE_COUNTEREXAMPLE"
+    assert result["allocations_exhausted"] == 390625
+    assert result["allocation_counts"]["anchored"] == 0
+    assert result["allocation_counts"]["promoted_original_offer"] == 0
+    assert result["allocation_counts"]["outside"] == 162
+    assert result["smallest_missing_operation"]["changed_good_count"] == 4
+
+
 if __name__ == "__main__":
     test_boosted_handoff_profiles()
     test_no_promotion_boundary()
+    test_variable_extension_refutation()
     print("alternating extension-or-handoff tests passed")

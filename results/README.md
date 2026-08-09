@@ -668,10 +668,16 @@ both encodings.
   additive EFX.
 - [`ALTERNATING_EXTENSION_OR_HANDOFF_REDUCTION.md`](ALTERNATING_EXTENSION_OR_HANDOFF_REDUCTION.md)
   — cap-free reduction of the stricter same-champion-offer refinement to one
-  intersecting `r`-source wall. It derives the desired-set transversal and
-  boosted moving-ceiling handoff; 21 adversarial profiles replay the handoff.
-  The strict refinement remains open, although the broader alternating
-  global-lex theorem is already complete.
+  intersecting `r`-source wall, followed by its exact eight-good refutation.
+  The audit exhausts all 390,625 allocations: zero anchored escapes, zero
+  desired promotions from `X_r+f`, and 162 cross-face escapes. The smallest
+  missing operation is an opposite-reservoir desired-root promotion, already
+  covered by the broader alternating global-lex theorem.
+- [`alternating_variable_extension_1121_refutation.json`](alternating_variable_extension_1121_refutation.json)
+  and [`alternating_variable_extension_1121_refutation_audit.json`](alternating_variable_extension_1121_refutation_audit.json)
+  — positive eight-good profile and independent exhaustive certificate
+  refuting the strict anchored-or-original-offer bridge. This is not an EFX
+  counterexample.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

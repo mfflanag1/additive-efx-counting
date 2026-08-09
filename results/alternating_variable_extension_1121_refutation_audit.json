@@ -1,0 +1,103 @@
+{
+  "agent_order": [
+    0,
+    2,
+    3,
+    1
+  ],
+  "allocation_counts": {
+    "anchored": 0,
+    "efx_lex": 162,
+    "outside": 162,
+    "promoted_original_offer": 0
+  },
+  "allocations_exhausted": 390625,
+  "base_utilities": [
+    1078,
+    24,
+    539,
+    61
+  ],
+  "claim_boundary": "Refutes only the anchored-or-desired-subset-of-original-r-offer bridge. An outside EFX lexicographic improvement may still exist and does not refute EFX.",
+  "packet_sizes": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "profile_sha256": "2dc9daf4590c952369db3dadf42e726441a994a191d51e681100f8533354acaa",
+  "provenance": {
+    "script": "tracks/parkability/audit_alternating_variable_extension_counterexample.py",
+    "script_sha256": "60dfafb66238152c55925ce8e3c300b4c1981e3d5ab7686c814969cf612beb83"
+  },
+  "schema": "alternating-variable-extension-counterexample-audit-v1",
+  "smallest_missing_operation": {
+    "bundles": [
+      [
+        1,
+        2,
+        4
+      ],
+      [
+        0
+      ],
+      [
+        6
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "changed_good_count": 4,
+    "minimum_change_allocation_count": 4,
+    "named_bundles": [
+      [
+        "br",
+        "tq0",
+        "bq"
+      ],
+      [
+        "tr"
+      ],
+      [
+        "y"
+      ],
+      [
+        "tq1",
+        "x"
+      ]
+    ],
+    "operation": "cross-face desired-root promotion",
+    "owner": [
+      1,
+      0,
+      0,
+      3,
+      0,
+      3,
+      2,
+      null
+    ],
+    "root_bundle_desired_at_base": true,
+    "root_bundle_within_original_offer": false,
+    "root_keeps_x": false,
+    "utilities": [
+      1104,
+      22,
+      539,
+      252
+    ]
+  },
+  "status": "EXACT_STRICT_BRIDGE_COUNTEREXAMPLE",
+  "structural_checks": {
+    "champion_cycle_relations": true,
+    "charity_below_own": true,
+    "exact_alternating_envy_edges": true,
+    "four_compatible_families_absent": true,
+    "normalized_rows_not_required_after_integerization": true,
+    "p_packet_sort": true,
+    "positive_values": true,
+    "strict_base_efx": true
+  }
+}
