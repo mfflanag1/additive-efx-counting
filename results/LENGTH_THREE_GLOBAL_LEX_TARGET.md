@@ -594,6 +594,43 @@ to `r` while promoting `p` through a different desired set, or turn the
 failure of one of those payments into a compatible generalized champion
 cycle.  This is strictly sharper than an arbitrary packet Hall failure.
 
+The joint bottleneck has an exact one-sided threshold form.  Write
+`A_q=A\cap T_q` and
+
+\[
+d_q=v_q(B_q)+v_q(T_q\setminus A_q).
+\]
+
+For every `J subseteq K` satisfying `v_q(J)>d_q`, global maximality forces
+
+\[
+v_r(J)\ge v_r(B_q).
+\tag{16d}
+\]
+
+Otherwise `A_J=A_q+J` is a `q`-desired subset of `A`, while
+`L_J=(X_r\setminus J)+B_q` is disjoint from `A_J` and is worth more than
+`b_r` to `r`.  Extract a desired set `E subseteq L_J`.  Source `r` pairs
+directly with `A_J`.  Sources `p` and `q` create respectively the PI cycles
+`p -(B_q|J)-> r -f-> q -> p` and
+`q -(B_q|J)-> r -f-> q`.  Source `s` uses the analogous external-envy
+cycle for `a=p,q`, while for `a=r` the allocation
+`({x},{y},A_J,E)` is Pareto-EFX.  These are the same release checks as in
+the proof of (16b).
+
+Thus the surviving wall is the pure knapsack statement
+
+\[
+\min\{v_r(J):J\subseteq K,\ v_q(J)>d_q\}\ge v_r(B_q).
+\tag{16e}
+\]
+
+Its fractional relaxation either has a scalar `q/r` ratio price separating
+the two thresholds, or has a greedy optimum with one fractional boundary
+good.  The final analytic operation therefore needs to defeat one price or
+compensate one indivisible pivot; it no longer needs to reason about an
+arbitrary family of overlapping desired sets.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
