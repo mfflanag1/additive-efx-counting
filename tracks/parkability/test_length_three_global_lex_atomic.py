@@ -19,6 +19,17 @@ def test_atomic_sweep() -> None:
     assert result["maximum_core_size"] == 3
 
 
+def test_selected_residual_sweep() -> None:
+    result = audit(
+        ROOT / "results" / "length_three_selected_residual_atomic_cores.json"
+    )
+    assert result["status"] == "ALL_9_ATOMIC_SOURCE_ORDER_CORES_UNSAT"
+    assert result["structural_mode"] == "selected"
+    assert result["total_cell_count"] == 9
+    assert result["maximum_core_size"] == 6
+
+
 if __name__ == "__main__":
     test_atomic_sweep()
+    test_selected_residual_sweep()
     print("length-three global-lex atomic sweep test passed")

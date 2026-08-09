@@ -38,14 +38,16 @@ except ImportError:
 
 
 SCHEMA = "length-three-global-lex-atomic-cegar-v1"
-POOL_SCHEMA = "length-three-global-lex-atomic-pool-v1"
+POOL_SCHEMA = "length-three-global-lex-atomic-pool-v2"
 AGENTS = ("p", "r", "q", "s")
 GOODS = ("tr", "br", "tq", "bq", "x", "y", "f")
 BASE_OWNER = (1, 1, 2, 2, 0, 3, None)
 BASE_BUNDLES = ((4,), (0, 1), (2, 3), (5,))
-def structural_solver(singleton_source: int):
+def structural_solver(singleton_source: int, mode: str = "exact"):
     if singleton_source not in (0, 1, 2):
         raise ValueError("singleton champion source must be p, r, or q")
+    if mode not in {"exact", "selected"}:
+        raise ValueError("mode must be exact or selected")
     values = tuple(
         tuple(z3.Real(f"l3_v_{agent}_{good}") for good in range(7))
         for agent in range(N)
@@ -59,7 +61,7 @@ def structural_solver(singleton_source: int):
     for observer in range(N):
         solver.add(own[observer] > values[observer][6])
         for target in range(N):
-            if observer != target:
+            if observer != target and mode == "exact":
                 target_value = subset_sum(values, observer, BASE_BUNDLES[target])
                 solver.add(
                     target_value > own[observer]
@@ -76,6 +78,11 @@ def structural_solver(singleton_source: int):
                     )
                 )
 
+    if mode == "selected":
+        solver.add(subset_sum(values, 2, BASE_BUNDLES[0]) > own[2])
+        solver.add(subset_sum(values, singleton_source, BASE_BUNDLES[3]) > own[singleton_source])
+        solver.add(own[0] > subset_sum(values, 0, BASE_BUNDLES[1]))
+        solver.add(own[1] > subset_sum(values, 1, BASE_BUNDLES[2]))
     expected_desired = {
         (0, 1): (0, 6),
         (1, 2): (2, 6),
@@ -91,7 +98,7 @@ def structural_solver(singleton_source: int):
                     relation = desired_expression(values, own, source, candidate)
                     if candidate == expected:
                         solver.add(relation)
-                    elif expected is None or candidate == offer:
+                    elif mode == "exact" and (expected is None or candidate == offer):
                         solver.add(z3.Not(relation))
     return solver, values, own
 
@@ -120,7 +127,7 @@ def dominating_rivals(values, order):
     return found, efx_count
 
 
-def load_pool(path, source, order):
+def load_pool(path, source, order, mode="exact"):
     if not path.exists():
         return []
     payload = json.loads(path.read_text())
@@ -128,6 +135,7 @@ def load_pool(path, source, order):
         payload.get("schema") != POOL_SCHEMA
         or payload.get("singleton_champion_source") != source
         or payload.get("agent_order") != list(order)
+        or payload.get("structural_mode") != mode
     ):
         raise ValueError("pool metadata mismatch")
     owners = [tuple(owner) for owner in payload["rivals"]]
@@ -136,22 +144,23 @@ def load_pool(path, source, order):
     return owners
 
 
-def save_pool(path, source, order, rivals):
+def save_pool(path, source, order, rivals, mode="exact"):
     atomic_json(
         path,
         {
             "schema": POOL_SCHEMA,
             "singleton_champion_source": source,
             "agent_order": list(order),
+            "structural_mode": mode,
             "rivals": [list(owner) for owner in rivals],
         },
     )
 
 
-def run(source, order, pool_path, output, iterations, batch, timeout):
-    solver, values, own = structural_solver(source)
+def run(source, order, pool_path, output, iterations, batch, timeout, mode="exact"):
+    solver, values, own = structural_solver(source, mode)
     solver.set(timeout=max(1, timeout * 1000))
-    rivals = load_pool(pool_path, source, order)
+    rivals = load_pool(pool_path, source, order, mode)
     rival_set = set(rivals)
     for owner in rivals:
         solver.add(rival_blocker(values, own, owner, order))
@@ -197,11 +206,12 @@ def run(source, order, pool_path, output, iterations, batch, timeout):
             solver.add(rival_blocker(values, own, owner, order))
             rivals.append(owner)
             rival_set.add(owner)
-        save_pool(pool_path, source, order, rivals)
+        save_pool(pool_path, source, order, rivals, mode)
     result = {
         "schema": SCHEMA,
         "status": status,
         "singleton_champion_source": source,
+        "structural_mode": mode,
         "agent_order": list(order),
         "iterations": len(trace),
         "pool_size": len(rivals),
@@ -228,6 +238,7 @@ def main():
     parser.add_argument("--iterations", type=int, default=50)
     parser.add_argument("--batch", type=int, default=128)
     parser.add_argument("--timeout-seconds", type=int, default=120)
+    parser.add_argument("--mode", choices=("exact", "selected"), default="exact")
     args = parser.parse_args()
     if args.output.exists():
         parser.error("output path must not exist")
@@ -243,6 +254,7 @@ def main():
         args.iterations,
         args.batch,
         args.timeout_seconds,
+        args.mode,
     )
     print(json.dumps({key: result[key] for key in ("status", "iterations", "pool_size")}, indent=2))
 

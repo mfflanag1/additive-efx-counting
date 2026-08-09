@@ -59,6 +59,16 @@ Both are common-safe at the base.  In particular each of `T_r,T_q` is
 common-safe in total.  Since the base is EFX and the complementary packets
 are nonempty, each of `B_r,B_q` is also common-safe in total.
 
+The four packets are necessarily nonempty; this is not an additional
+genericity assumption.  If `T_r` were empty, the selected desired set
+`D_p={f}` would make `p` envy the charity good, contradicting (1).  The same
+argument excludes empty `T_q`.  If `B_r` were empty, then `X_r=T_r` and
+BCFF Observation 2.10 would make the negation of the self-edge `r -> r`
+imply `v_r(X_r)>v_r(X_r+f)`, contradicting positivity.  Hence `r` is a
+self-`f`-champion, which is a PI cycle.  The same argument excludes empty
+`B_q`.  Thus every proper-decomposition fact used below is forced at a
+globally maximal state.
+
 Global maximality also excludes every self-`f`-champion.  Applying BCFF
 Observation 2.10 to the selected decompositions gives
 
@@ -498,23 +508,50 @@ to its envier, and repartition `T_r,B_r,T_q` between the two remaining
 agents.  Their atomic EFX safety relies on singleton packets and is not a
 packet theorem.
 
+The nine residual types were also replayed in a strictly weaker structural
+cell that requires only the two selected genuine edges, `q -> p`, `a -> s`,
+base EFX, charity dominance, and the two genuine-edge nonenvy comparisons.
+Every additional envy or champion chord is permitted.  All nine cells remain
+exact UNSAT; their minimal menus have size at most six.  See
+[`length_three_selected_residual_atomic_cores.json`](length_three_selected_residual_atomic_cores.json)
+and its independent exact replay
+[`length_three_selected_residual_atomic_cores_audit.json`](length_three_selected_residual_atomic_cores_audit.json).
+
+This proves no packet theorem, but it verifies that the atomic exclusion is
+not an artifact of silently imposing the chordless normalization.  In the
+analytic BCFF composition, self-champions and edges closing a cycle with at
+most one `f` edge are already PI certificates; other extra edges must either
+be routed by the all-source lemmas above or assigned to a different residual
+topology in the final graph classification.
+
 ## Completion requirements
 
 The target is complete only after all of the following are proved:
 
-1. cap-free closure of the external `s`-source wall for every remaining
-   priority order;
-2. treatment of empty top/bottom packets rather than assuming proper
-   decompositions silently;
-3. derivation of the exact length-three normal form from the BCFF
+1. cap-free closure of the nine contested-top source/order types;
+2. derivation of the exact length-three normal form from the BCFF
    globally-maximal state, including disposal of extra envy/champion edges;
-4. a nonnegative/tie wrapper replacing the temporary positive,
-   nondegenerate convention; and
-5. an explicit statement of what the result proves inside the
+3. an explicit statement of what the result proves inside the
    exactly-two-nonsingleton reduction and what cases remain outside it.
 
 Until these items are discharged, neither the exactly-two-nonsingleton
 closure nor complete four-agent additive EFX is claimed.
+
+## Nonnegative and tie wrapper
+
+Empty packets are handled above.  Zero item values and valuation ties do not
+require a separate limiting argument inside the packet proof.  Apply BCFF
+Lemma A.1 to replace the original nice additive profile by a nondegenerate
+additive profile that respects every strict comparison of the original.
+Run the lexicographic-maximality argument entirely in the perturbed profile.
+If it yields a complete EFX allocation, that allocation is EFX for the
+original valuations: any original strict EFX violation would remain strict
+under the respecting perturbation, contradicting perturbed EFX.
+
+Consequently positivity and nondegeneracy may be used for the structural
+argument without changing the final existence claim.  What remains is the
+mathematical closure of the contested-top cases and the graph-classification
+composition, not a continuity assumption.
 
 ## Primary source
 

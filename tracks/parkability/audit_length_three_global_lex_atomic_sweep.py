@@ -33,11 +33,28 @@ def owner_from_bundles(named_bundles):
 def audit(source_path):
     payload = json.loads(source_path.read_text())
     records = payload["records"]
-    expected_types = {
-        (source, order)
-        for source in range(3)
-        for order in itertools.permutations(range(4))
-    }
+    mode = payload.get("structural_mode", "exact")
+    scope = payload.get("case_scope", "all-72")
+    if scope == "all-72":
+        expected_types = {
+            (source, order)
+            for source in range(3)
+            for order in itertools.permutations(range(4))
+        }
+    elif scope == "residual-nine":
+        expected_types = {
+            (0, (3, 0, 1, 2)),
+            (1, (0, 3, 1, 2)),
+            (1, (3, 0, 1, 2)),
+            (1, (3, 1, 0, 2)),
+            (1, (3, 1, 2, 0)),
+            (2, (0, 1, 2, 3)),
+            (2, (0, 1, 3, 2)),
+            (2, (0, 3, 1, 2)),
+            (2, (3, 0, 1, 2)),
+        }
+    else:
+        raise AssertionError("unknown case scope")
     actual_types = {
         (record["singleton_champion_source"], tuple(record["agent_order"]))
         for record in records
@@ -50,7 +67,9 @@ def audit(source_path):
             raise AssertionError("non-UNSAT frozen record")
         source = record["singleton_champion_source"]
         order = tuple(record["agent_order"])
-        solver, values, own = structural_solver(source)
+        if record.get("structural_mode", mode) != mode:
+            raise AssertionError("mixed structural modes")
+        solver, values, own = structural_solver(source, mode)
         if solver.check() != z3.sat:
             raise AssertionError("structural source cell is empty")
         owners = [owner_from_bundles(bundles) for bundles in record["core_bundles"]]
@@ -62,10 +81,12 @@ def audit(source_path):
     script = Path(__file__).resolve()
     return {
         "schema": "length-three-global-lex-atomic-sweep-audit-v1",
-        "status": "ALL_72_ATOMIC_SOURCE_ORDER_CORES_UNSAT",
+        "status": f"ALL_{len(records)}_ATOMIC_SOURCE_ORDER_CORES_UNSAT",
+        "structural_mode": mode,
+        "case_scope": scope,
         "source_type_count": 3,
-        "priority_order_count_per_source": 24,
-        "total_cell_count": 72,
+        "priority_order_count_per_source": 24 if scope == "all-72" else None,
+        "total_cell_count": len(records),
         "maximum_core_size": maximum_core,
         "claim_boundary": "exact atomic motif audit only; not a packet theorem",
         "provenance": {

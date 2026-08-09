@@ -691,6 +691,12 @@ both encodings.
   — exact motif audit of all 72 atomic external-source/priority cells. Every
   cell is UNSAT with a core of at most three allocations; this is explicitly
   proof-mining evidence, not a packet theorem.
+- [`length_three_selected_residual_atomic_cores.json`](length_three_selected_residual_atomic_cores.json)
+  and [`length_three_selected_residual_atomic_cores_audit.json`](length_three_selected_residual_atomic_cores_audit.json)
+  — exact replay of the nine remaining atomic types after dropping every
+  nonselected envy/champion exclusion. All remain UNSAT, showing that the
+  chordless normalization is not carrying the atomic result; packet closure
+  still requires the contested-top lemma.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

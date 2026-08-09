@@ -34,9 +34,9 @@ def named(owner):
     ]
 
 
-def extract(source, order, pool_path):
-    rivals = load_pool(pool_path, source, order)
-    solver, values, own = structural_solver(source)
+def extract(source, order, pool_path, mode="exact"):
+    rivals = load_pool(pool_path, source, order, mode)
+    solver, values, own = structural_solver(source, mode)
     active = []
     for index, owner in enumerate(rivals):
         guard = z3.Bool(f"rival_{index}")
@@ -59,6 +59,7 @@ def extract(source, order, pool_path):
         "schema": "length-three-global-lex-atomic-core-v1",
         "singleton_champion_source": source,
         "singleton_champion_source_name": AGENTS[source],
+        "structural_mode": mode,
         "agent_order": list(order),
         "agent_order_names": [AGENTS[agent] for agent in order],
         "pool_size": len(rivals),
@@ -77,10 +78,11 @@ def main():
     parser.add_argument("--order", required=True)
     parser.add_argument("--pool", type=Path, required=True)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--mode", choices=("exact", "selected"), default="exact")
     args = parser.parse_args()
     source = AGENTS.index(args.singleton_source)
     order = tuple(AGENTS.index(name) for name in args.order.split(","))
-    result = extract(source, order, args.pool)
+    result = extract(source, order, args.pool, args.mode)
     rendered = json.dumps(result, indent=2, sort_keys=True) + "\n"
     if args.output:
         args.output.write_text(rendered)
