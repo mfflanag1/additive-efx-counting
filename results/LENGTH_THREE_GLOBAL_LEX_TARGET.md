@@ -574,6 +574,56 @@ analytic step is precisely to use the contested-top quota witness to pay
 that deletion threshold through a coupled return; treating `T_q` as one
 supergood would be unsound.
 
+### Charity-swap transition lemma
+
+The failed fallback has an additional structural consequence.  In any
+one-charity partial EFX allocation, suppose `g in X_j` and
+`v_j(f)>v_j(g)`.  Replace `g` in `X_j` by `f` and leave `g` unallocated.  If
+the resulting allocation is EFX, it Pareto improves `j`.  Otherwise there
+are an observer `i != j` and a good `h in X_j-{g}` such that
+
+\[
+v_i(X_j-\{g,h\}+f)>b_i.
+\tag{21}
+\]
+
+Indeed, every bundle other than `j`'s is unchanged.  Deleting `f` from the
+new bundle leaves a subset of the old bundle and is base-safe.  Therefore a
+violating deletion must remove an old good `h`; self-comparison cannot be
+the violation because `j` strictly improves.  Choosing an
+inclusion-minimal crossing subset inside the left side of (21) gives a
+common-safe desired set `E` for `i`.  It must contain `f`: without `f`, it
+is a proper subset of `X_j` and hence lies inside an old EFX deletion
+remainder.  Thus `i` is a genuine `f`-champion of `j`, with a desired set
+that omits both `g` and `h`.
+
+If (20) fails, its maximizing deletion cannot remove `f`, because
+`v_r(T_q)>v_r(T_r)`.  Hence it removes some `g in T_r` and gives
+
+\[
+v_r(f)>v_r(g).
+\tag{22}
+\]
+
+Apply the transition lemma to owner `r`.  Global maximality rules out the
+EFX-swap branch, so a new genuine edge `i -> r` is forced.  Its source
+classifies the remaining obstruction:
+
+1. `i=r` is impossible (the improved owner's self-comparison cannot fail);
+2. `i=q` creates the two-genuine-edge length-two topology with the selected
+   edge `r -> q`;
+3. `i=s`, together with the incoming envy edge to `s`, either creates a PI
+   shortcut or redirects to a length-three/length-four two-large topology;
+4. only `i=p` remains in the same rooted topology, and supplies a second
+   `p -> r` desired set omitting the offending good and one deletion
+   witness.
+
+Accordingly the genuinely new packet gate is a **same-source champion
+refinement** problem.  A completion may select the `p -> r` desired set by
+a finite extremal potential and show that case 4 strictly improves it; the
+other sources must be discharged by the corresponding cycle-class theorem.
+This transition does not by itself prove that such a potential exists.
+
 ## Exact atomic motif audit
 
 For discovery only, the proper-decomposition atom has goods
@@ -608,8 +658,11 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. cap-free closure of the nine contested-top source/order types;
-2. an explicit statement of what the result proves inside the
+1. cap-free closure of the same-source champion-refinement branch and of
+   the scalar-price/pivot branch in the nine contested source/order types;
+2. composition of the other charity-swap sources with independently proved
+   length-two and adjacent/alternate length-four cycle lemmas;
+3. an explicit statement of what the result proves inside the
    exactly-two-nonsingleton reduction and what cases remain outside it.
 
 Until these items are discharged, neither the exactly-two-nonsingleton
