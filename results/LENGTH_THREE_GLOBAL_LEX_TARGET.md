@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-09
 
-**Status:** BCFF normal form reconstructed; easy priority types closed
-cap-free; packet-safety gate open
+**Status:** BCFF basic-cycle classification reconstructed; easy priority
+types closed cap-free; contested-top packet-safety gate open
 
 ## Source-valid starting point
 
@@ -110,6 +110,46 @@ a=p,\qquad a=r,\qquad a=q.
 This correction is essential.  Modeling `s` as unenvied makes the structural
 cell inconsistent, because `s` is then a self-`f`-champion and can absorb
 the charity good.
+
+## BCFF basic-cycle classification
+
+The normal form above follows from BCFF without a chordless-graph
+assumption.  Select one incoming basic `f`-champion edge for every allocated
+bundle.  Since every vertex has an incoming selected edge, the finite
+directed graph contains a simple directed cycle.  If a selected champion
+edge discards `f`, its desired set lies inside the target's old bundle, so
+the source envies the target; replace that edge by the parallel envy edge.
+Call the remaining selected `f`-edges genuine.
+
+A cycle with zero or one genuine `f`-edge is a basic PI cycle and is
+impossible at global maximality.  Thus the selected cycle has at least two
+genuine edges.
+
+No genuine edge can enter a singleton bundle `{z}`.  The
+singleton-absorption lemma says `{z}` is envied.  The only subsets of
+`{z,f}` containing `f` are `{f}` and `{z,f}`.  The former cannot be envied
+by (1); the latter is not common-safe because deleting `f` leaves the envied
+singleton `{z}`.  Hence every incoming champion of a singleton is
+nongenuine and can be represented by an envy edge.
+
+With exactly two nonsingleton bundles, a simple cycle therefore contains at
+most two genuine edges.  It contains exactly two, and they enter the two
+nonsingleton owners.  A simple cycle on four agents has only the following
+possibilities:
+
+1. length two: the two large owners exchange genuine edges;
+2. length three: two consecutive genuine edges followed by one envy return,
+   which is exactly (2), with the other singleton external;
+3. length four: the two genuine edges have adjacent or alternating target
+   positions.
+
+These are the four residual classes in the exactly-two-nonsingleton
+reduction.  Extra basic edges do not invalidate the selected length-three
+cycle.  A self-edge or an extra edge closing a cycle with at most one `f`
+edge is already PI; any remaining edge is simply additional input to the
+all-source reservoir lemmas.  Thus the length-three theorem, once its nine
+quota cases are closed, applies to the BCFF state without an unstated exact
+envy/champion-graph premise.
 
 ## Cap-free easy-priority lemma
 
@@ -529,9 +569,7 @@ topology in the final graph classification.
 The target is complete only after all of the following are proved:
 
 1. cap-free closure of the nine contested-top source/order types;
-2. derivation of the exact length-three normal form from the BCFF
-   globally-maximal state, including disposal of extra envy/champion edges;
-3. an explicit statement of what the result proves inside the
+2. an explicit statement of what the result proves inside the
    exactly-two-nonsingleton reduction and what cases remain outside it.
 
 Until these items are discharged, neither the exactly-two-nonsingleton
@@ -550,8 +588,9 @@ under the respecting perturbation, contradicting perturbed EFX.
 
 Consequently positivity and nondegeneracy may be used for the structural
 argument without changing the final existence claim.  What remains is the
-mathematical closure of the contested-top cases and the graph-classification
-composition, not a continuity assumption.
+mathematical closure of the contested-top cases and the explicit placement
+of the resulting length-three lemma inside the other three basic-cycle
+classes, not a continuity assumption.
 
 ## Primary source
 
