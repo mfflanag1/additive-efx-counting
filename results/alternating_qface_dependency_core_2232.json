@@ -1,0 +1,145 @@
+{
+  "candidate_pair_count": 3969,
+  "claim_boundary": "dependency audit of the exact bounded q-face gate only",
+  "core_group_count": 18,
+  "core_groups": [
+    "positive",
+    "packet_order",
+    "charity_dominance",
+    "absent_envy",
+    "base_efx",
+    "desired_0_1",
+    "no_desired_0_3",
+    "no_desired_1_1",
+    "desired_1_2",
+    "no_desired_1_3",
+    "no_desired_2_1",
+    "desired_2_3",
+    "no_desired_3_1",
+    "no_desired_3_3",
+    "compatible_absence_1_3",
+    "compatible_absence_2_3",
+    "compatible_absence_3_1",
+    "compatible_absence_0_1"
+  ],
+  "granularity": "coarse",
+  "minimal_core_group_count": 8,
+  "minimal_core_groups": [
+    "positive",
+    "no_desired_0_3",
+    "no_desired_1_3",
+    "no_desired_2_1",
+    "desired_2_3",
+    "no_desired_3_3",
+    "compatible_absence_2_3",
+    "compatible_absence_0_1"
+  ],
+  "minimal_core_replay_status": "unsat",
+  "packet_sizes": [
+    2,
+    2,
+    3,
+    2
+  ],
+  "premise_group_count": 31,
+  "provenance": {
+    "script": "tracks/parkability/extract_alternating_qface_dependency_core.py",
+    "script_sha256": "153fbb6875d8343864294c8ad4e3edc652143c321f3d081fda2beb94eab69d1e",
+    "z3_version": "5.0.0"
+  },
+  "schema": "alternating-qface-dependency-core-v1",
+  "sequential_deletion_checks": [
+    {
+      "omitted": "positive",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "packet_order",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "charity_dominance",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "absent_envy",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "base_efx",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "desired_0_1",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "no_desired_0_3",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "no_desired_1_1",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "desired_1_2",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "no_desired_1_3",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "no_desired_2_1",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "desired_2_3",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "no_desired_3_1",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "no_desired_3_3",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "compatible_absence_1_3",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "compatible_absence_2_3",
+      "removed": false,
+      "status": "sat"
+    },
+    {
+      "omitted": "compatible_absence_3_1",
+      "removed": true,
+      "status": "unsat"
+    },
+    {
+      "omitted": "compatible_absence_0_1",
+      "removed": false,
+      "status": "sat"
+    }
+  ],
+  "solver_status": "unsat",
+  "status": "UNSAT_DEPENDENCY_CORE_EXTRACTED"
+}

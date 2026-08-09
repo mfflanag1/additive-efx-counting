@@ -2,9 +2,15 @@
 
 **Date:** 2026-08-09
 
-**Status:** exact bounded progress; cap-free dichotomy open
+**Status:** superseded by the cap-free reservoir-exchange lemma
 
 **Order:** `(p,s,r,q)` with `p={x}` fixed
+
+The later
+[`reservoir-exchange lemma`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+proves the full safe-pair packing statement without the q-face restriction
+or a packet-size cap.  The exact results below remain useful discovery and
+falsification provenance.
 
 ## Result boundary
 
@@ -50,6 +56,13 @@ Tracked-core extraction gives:
 - a replayed 136-pair core for the nonbinary q-face schema, split into 90
   augmented-q-face pairs and 46 bottom-return pairs.
 
+A later coarse premise-dependency audit reduces the `(2,2,3,2)` bounded
+decision to eight retained groups.  With 60-second deletion checks, every
+removed group replayed UNSAT and every retained-group deletion was SAT; the
+earlier timeout on `compatible_absence_3_1` is resolved as removable.  This
+dependency result is bounded proof-mining evidence, not part of the later
+analytic proof.
+
 The nonbinary core uses augmented-q-face desired bundles only of sizes two,
 three, and four. Its bottom-return pairs always pay `q` with `X_q-b`.
 
@@ -69,10 +82,10 @@ counterexamples and support no theorem claim. Earlier narrower schemas were
 SAT-refuted at `|T_q|=4,5`; their smallest unrestricted escapes motivated the
 proper-q-face formulation used here.
 
-## Analytic target
+## Superseded analytic target
 
-Let `C` be the downward-closed family of common base-safe sets. The remaining
-cap-free statement is:
+Let `C` be the downward-closed family of common base-safe sets. The former
+q-face-restricted target was:
 
 > Under the alternating structural premises and absence of the four
 > compatible desired families, either some desired proper face `S+f` of
@@ -80,28 +93,29 @@ cap-free statement is:
 > `b in B_q` and `A subseteq X_r+f` give a desired `A+b` with
 > `q(X_q-b)>=tau_q(A+b)`.
 
-The structural cell supplies the two endpoints needed for a boundary proof:
+The structural cell supplies the two endpoints that motivated a boundary proof:
 `T_q+f` is desired by `s`, whereas the full `X_q+f` is not desired. Because
 values are strictly positive, the latter failure is a common-safety wall,
-not a failure to cross `s`'s utility. The proof must convert the first
-critical wall on a chain between those endpoints into either a disjoint safe
-payment or the bottom-return branch.
+not a failure to cross `s`'s utility. The reservoir-exchange lemma bypasses
+this restricted chain: it proves the full safe-pair statement directly by
+reversing an unsafe minimal threshold set into a desired set.
 
 ## Verification and trust boundary
 
 The exact results use one generator and Z3 QF_LRA. Every reported UNSAT core
 was replayed, but no solver-independent encoding or checked certificate yet
-exists. The cap-free dichotomy itself remains unproved. Complete additive EFX
-is not proved.
+exists. These bounded certificates are no longer needed for the cap-free
+claim, which is proved analytically by the reservoir-exchange lemma. Complete
+additive EFX is not proved.
 
 Primary artifacts and SHA-256 hashes:
 
 - `alternating_two_safe_bundle_core_2222.json`:
   `3e4335675dc9ed4d87f9ff1b330a19de392cbf1ca7a64daaac2d5310cd3c8c96`
 - `alternating_safe_pair_qface_2222.json`:
-  `78f60b0e8ee61ebf46495ea568ebf9008295a0ee4f1bcf121540c25cdefb6e84`
+  `1699ce0ed1a5df8805533ab9d087f75732b6b74c781716f0a50e3560117238f6`
 - `alternating_safe_pair_qface_2232.json`:
-  `d8fc3d5ff3f6ee811cfc6f268beaac32cf3c292a605953250bd06a1598382069`
+  `2d517dbaafc7d8953937c0cfc8b504ed9844d52d1f275ecdbb4b0331f2c9cd33`
 - `alternating_safe_pair_qface_core_2232.json`:
   `48b04be1e2a1d14f59fccaae9227c33d941d4edeafeedbc3863c6178b49dfc7a`
 - `alternating_safe_pair_qface_remainder_2222.json`:
@@ -110,6 +124,8 @@ Primary artifacts and SHA-256 hashes:
   `659915cd6746214d2ccc05c76eab6f758b93ee157fcd9e7bd9f65bd0db5c72ab`
 - `alternating_two_safe_bundle_gate_2232.json`:
   `f9cc04eec5ed1c242a2a383e43f1b25f7b99ea39f1c49361a82d0599826a647b`
+- `alternating_qface_dependency_core_2232.json`:
+  `9962632a3fff2f0052acb4fa1e7555a8abd8e28fb5da1ef0d6c880653556ff1a`
 
 Shortest theorem replay:
 

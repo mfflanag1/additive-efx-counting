@@ -652,3 +652,7 @@ both encodings.
   block. This proves the arbitrary-packet two-safe packing lemma and its
   half-turn, but not the four hard orders with refuted observer candidates
   or complete four-agent EFX.
+- [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
+  — the complete eight-order classification: two cap-free theorems and six
+  exact strict countermodels, with the distinction between failure of the
+  anchored candidate and availability of other rival forms made explicit.

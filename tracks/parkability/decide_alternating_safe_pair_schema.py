@@ -11,11 +11,33 @@ from pathlib import Path
 import z3
 
 try:
-    from .decide_alternating_two_safe_bundle_gate import pair_expression, powerset
-    from .run_alternating_variable_packet_rooted_cegar import AGENTS, make_cell, structural_solver
+    from .decide_alternating_two_safe_bundle_gate import (
+        numeric_desired,
+        numeric_safe,
+        pair_expression,
+        powerset,
+    )
+    from .run_alternating_variable_packet_rooted_cegar import (
+        AGENTS,
+        integerize,
+        make_cell,
+        numeric_utilities,
+        structural_solver,
+    )
 except ImportError:
-    from decide_alternating_two_safe_bundle_gate import pair_expression, powerset
-    from run_alternating_variable_packet_rooted_cegar import AGENTS, make_cell, structural_solver
+    from decide_alternating_two_safe_bundle_gate import (
+        numeric_desired,
+        numeric_safe,
+        pair_expression,
+        powerset,
+    )
+    from run_alternating_variable_packet_rooted_cegar import (
+        AGENTS,
+        integerize,
+        make_cell,
+        numeric_utilities,
+        structural_solver,
+    )
 
 
 SCHEMA = "alternating-safe-pair-schema-gate-v2"
@@ -37,11 +59,12 @@ def schema_records(cell, q_face_payment):
             continue
         desired_bundle = tuple(q_face_subset) + (floater,)
         available = tuple(good for good in x_q if good not in desired_bundle)
-        q_bundles = (
-            (available,)
-            if q_face_payment == "remainder"
-            else powerset(tuple(good for good in x_r + available))
-        )
+        if q_face_payment == "remainder":
+            q_bundles = (available,)
+        elif q_face_payment == "bases":
+            q_bundles = (available, x_r)
+        else:
+            q_bundles = powerset(tuple(good for good in x_r + available))
         for q_bundle in q_bundles:
             if q_bundle:
                 yield "q_face", 2, desired_bundle, q_bundle
@@ -53,6 +76,24 @@ def schema_records(cell, q_face_payment):
             desired_bundle = tuple(chosen) + (bottom_good,)
             for source in (2, 1):
                 yield "bottom_return", source, desired_bundle, q_bundle
+
+
+def numeric_pair_count(values, cell, records):
+    own = numeric_utilities(values, cell["base_owner"])
+    count = 0
+    for _, source, desired_bundle, q_bundle in records:
+        if not numeric_desired(values, own, source, desired_bundle):
+            continue
+        if not numeric_safe(values, own, q_bundle):
+            continue
+        threshold = max(
+            sum(values[3][good] for good in desired_bundle if good != removed)
+            for removed in desired_bundle
+        )
+        if sum(values[3][good] for good in q_bundle) >= threshold:
+            count += 1
+    return count
+
 
 def decide(sizes, timeout_seconds, q_face_payment):
     cell = make_cell(sizes)
@@ -86,17 +127,19 @@ def decide(sizes, timeout_seconds, q_face_payment):
         "status": decision,
         "claim_boundary": {
             "unsat": "the stated schema suffices only in this exact packet cell",
-            "sat": "only this restricted schema is refuted; the broader safe-pair lemma remains open",
+            "sat": "only this restricted schema is refuted; the broader safe-pair lemma is separately proved analytically",
             "unknown": "no mathematical decision",
         },
     }
     if status == z3.unknown:
         result["reason_unknown"] = solver.reason_unknown()
     elif status == z3.sat:
-        result["model"] = [
-            [str(solver.model().eval(entry, model_completion=True)) for entry in row]
-            for row in values
-        ]
+        integers = integerize(solver.model(), values)
+        pair_count = numeric_pair_count(integers, cell, records)
+        if pair_count:
+            raise AssertionError(f"SAT model still has {pair_count} schema pairs")
+        result["schema_pair_count"] = pair_count
+        result["values"] = [list(row) for row in integers]
     return result
 
 
@@ -104,7 +147,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--sizes", default="2,2,2,2")
     parser.add_argument("--timeout-seconds", type=float, default=180.0)
-    parser.add_argument("--q-face-payment", choices=("any", "remainder"), default="any")
+    parser.add_argument(
+        "--q-face-payment",
+        choices=("any", "remainder", "bases"),
+        default="any",
+    )
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     sizes = tuple(int(part) for part in args.sizes.split(","))
