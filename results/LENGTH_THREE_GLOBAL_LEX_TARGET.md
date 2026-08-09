@@ -511,23 +511,63 @@ v_r(H\setminus J)\le\delta_r
 holds.  This is the precise contested-good Hall witness left by the paired
 source wall.
 
+### Fractional price-or-pivot lemma
+
+The obstruction in (17) has a cap-free one-dimensional relaxation.  Write
+`a_g=v_q(g)`, `c_g=v_r(g)`, and
+
+\[
+C=v_r(H)-\delta_r.
+\]
+
+Giving a fraction `z_g` of good `g` to `q` and the remaining fraction to
+`r` meets the two deficits precisely when
+
+\[
+\sum_{g\in H}a_gz_g>\delta_q,
+\qquad
+\sum_{g\in H}c_gz_g<C.
+\tag{18}
+\]
+
+Minimize the second sum subject to the first reaching `delta_q`, with
+`0<=z_g<=1`.  The fractional-knapsack rule orders goods by decreasing
+ratio `a_g/c_g`; an optimum is a prefix with at most one fractional
+boundary good.  Consequently exactly one of the following holds (with the
+strict thresholds obtained by an arbitrarily small respecting
+perturbation):
+
+1. the minimum `r`-cost is at least `C`; equivalently a scalar ratio price
+   separates the two demands, so even fractional sharing cannot satisfy
+   (17); or
+2. a fractional split satisfies (17) and splits at most one good.  If no
+   integral partition satisfies (17), all remaining integrality failure is
+   therefore localized at that one boundary good.
+
+This is just fractional knapsack, but it materially sharpens the Hall wall:
+an arbitrary contested packet is never the irreducible object.  The final
+operation must either contradict the scalar price obstruction using the
+off-face goods `B_r+B_q+f`, or compensate one recipient for one indivisible
+pivot good.  It is not sound merely to round the pivot; either rounding can
+violate one of the strict deficits.
+
 For `B=D_r`, equation (16) puts `H subseteq T_q`.  Giving the whole top
 packet to `r` and returning `q` to the envied singleton produces the atomic
 fallback
 
 \[
 (D_p,T_q,\{x\},\{y\}),
-\tag{18}
+\tag{19}
 \]
 
 which is EFX exactly when
 
 \[
 v_r(T_q)\ge\tau_r(D_p).
-\tag{19}
+\tag{20}
 \]
 
-The atomic cell makes (19) automatic because `T_r` is a singleton and the
+The atomic cell makes (20) automatic because `T_r` is a singleton and the
 no-self inequalities give `v_r(T_q)>max(v_r(T_r),v_r(f))`.  For a genuine
 packet, a deletion `T_r-g+f` can exceed `v_r(T_q)`.  Therefore the remaining
 analytic step is precisely to use the contested-top quota witness to pay
