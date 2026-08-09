@@ -643,5 +643,12 @@ both encodings.
   by canonical root flip, half-turn, or priority relabeling alone. Both
   promoted rotations and three immediate two-good exchanges fail strictly;
   the unique minimum escape for `(s,p,q,r)` is a one-good anchored suffix
-  transfer. This identifies the missing cap-free operation but does not
-  prove the two-safe-bundle packing lemma or complete four-agent EFX.
+  transfer. This identifies why the suffix operation in the reservoir
+  theorem is necessary; it does not refute the broader adaptive escape.
+- [`ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+  — cap-free analytic closure of the two surviving external-observer orders.
+  A minimal `q`-threshold reservoir set is either common-safe or its unsafe
+  deletion contains a desired `r`/`s` set paid by the original disjoint safe
+  block. This proves the arbitrary-packet two-safe packing lemma and its
+  half-turn, but not the four hard orders with refuted observer candidates
+  or complete four-agent EFX.

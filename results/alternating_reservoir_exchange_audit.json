@@ -1,0 +1,447 @@
+{
+  "branch_counts": {
+    "low_reservoir": 1,
+    "threshold_minimal_safe": 13,
+    "unsafe_threshold_subset_reversal": 4
+  },
+  "claim_boundary": "constructive replay only; the cap-free result is proved analytically",
+  "packet_sizes": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "profile_count": 18,
+  "profiles": [
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_1",
+      "payment_bundle": [
+        "bq0"
+      ],
+      "q_slack": 3,
+      "rival_utilities": [
+        383,
+        294,
+        387,
+        24
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_2",
+      "payment_bundle": [
+        "br1",
+        "bq0",
+        "bq1"
+      ],
+      "q_slack": 21,
+      "rival_utilities": [
+        4427,
+        1343,
+        1474,
+        97
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_3",
+      "payment_bundle": [
+        "tr0",
+        "bq1"
+      ],
+      "q_slack": 21,
+      "rival_utilities": [
+        368,
+        1235,
+        8938,
+        214
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_4",
+      "payment_bundle": [
+        "br1",
+        "bq0",
+        "bq1"
+      ],
+      "q_slack": 18,
+      "rival_utilities": [
+        1219,
+        6075,
+        1203,
+        168
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_5",
+      "payment_bundle": [
+        "tr0",
+        "tr1",
+        "br1"
+      ],
+      "q_slack": 8,
+      "rival_utilities": [
+        1727,
+        1126,
+        9444,
+        280
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tr0",
+        "br0",
+        "bq0"
+      ],
+      "branch": "unsafe_threshold_subset_reversal",
+      "label": "cegar_iteration_6",
+      "payment_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "q_slack": 174,
+      "rival_utilities": [
+        14524,
+        7246,
+        14528,
+        326
+      ],
+      "source": "r"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_7",
+      "payment_bundle": [
+        "br0",
+        "br1",
+        "bq0",
+        "bq1"
+      ],
+      "q_slack": 32,
+      "rival_utilities": [
+        2055,
+        8228,
+        28707,
+        597
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_8",
+      "payment_bundle": [
+        "tr1",
+        "bq0",
+        "bq1"
+      ],
+      "q_slack": 9,
+      "rival_utilities": [
+        665,
+        29292,
+        2632,
+        327
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_9",
+      "payment_bundle": [
+        "br1",
+        "bq1"
+      ],
+      "q_slack": 217,
+      "rival_utilities": [
+        5389,
+        8067,
+        128826,
+        775
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tr1",
+        "br1",
+        "bq0"
+      ],
+      "branch": "unsafe_threshold_subset_reversal",
+      "label": "cegar_iteration_10",
+      "payment_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "q_slack": 85,
+      "rival_utilities": [
+        5887,
+        102981,
+        17730,
+        437
+      ],
+      "source": "r"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_11",
+      "payment_bundle": [
+        "tr1",
+        "br0",
+        "br1",
+        "bq1"
+      ],
+      "q_slack": 14,
+      "rival_utilities": [
+        1007,
+        18363,
+        12073,
+        285
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "cegar_iteration_12",
+      "payment_bundle": [
+        "tr1",
+        "br0",
+        "br1",
+        "bq0",
+        "bq1"
+      ],
+      "q_slack": 5,
+      "rival_utilities": [
+        7379,
+        442902,
+        7450,
+        506
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tr1",
+        "br1",
+        "bq1"
+      ],
+      "branch": "unsafe_threshold_subset_reversal",
+      "label": "alternating_bottom_partition_dichotomy_2222_audit",
+      "payment_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "q_slack": 50,
+      "rival_utilities": [
+        3076,
+        7177,
+        1027,
+        154
+      ],
+      "source": "r"
+    },
+    {
+      "active_bundle": [
+        "tr1",
+        "br1",
+        "bq1"
+      ],
+      "branch": "unsafe_threshold_subset_reversal",
+      "label": "alternating_any_root_subset_dichotomy_2222_audit",
+      "payment_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "q_slack": 150,
+      "rival_utilities": [
+        3359,
+        3360,
+        10080,
+        347
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tr1",
+        "br0",
+        "bq0"
+      ],
+      "branch": "low_reservoir",
+      "label": "alternating_any_cross_subset_dichotomy_2222_audit",
+      "payment_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "q_slack": 148,
+      "rival_utilities": [
+        4807,
+        55631,
+        8719,
+        262
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "alternating_base_q_remainder_gate_2222",
+      "payment_bundle": [
+        "br1",
+        "bq1"
+      ],
+      "q_slack": 14,
+      "rival_utilities": [
+        15475,
+        1460,
+        10178,
+        191
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "alternating_base_q_remainder_recipient_relaxed_gate_2222",
+      "payment_bundle": [
+        "br1",
+        "bq1"
+      ],
+      "q_slack": 48,
+      "rival_utilities": [
+        5510,
+        1648,
+        4297,
+        236
+      ],
+      "source": "s"
+    },
+    {
+      "active_bundle": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "branch": "threshold_minimal_safe",
+      "label": "alternating_base_q_remainder_exact_efx_gate_2222",
+      "payment_bundle": [
+        "br0",
+        "br1",
+        "bq1"
+      ],
+      "q_slack": 12,
+      "rival_utilities": [
+        32571,
+        13076,
+        77600,
+        281
+      ],
+      "source": "s"
+    }
+  ],
+  "provenance": {
+    "profiles": [
+      {
+        "path": "results/alternating_bottom_partition_dichotomy_2222_audit.json",
+        "sha256": "d49d15422412e4f61c46f7282c81cf3d7bf6dc27ddd18944b9938e8fc66e5044"
+      },
+      {
+        "path": "results/alternating_any_root_subset_dichotomy_2222_audit.json",
+        "sha256": "494f1319cb8e79fb752906857b1eb8fcf5cdf8b2102735ec1ac77ef567e8ed69"
+      },
+      {
+        "path": "results/alternating_any_cross_subset_dichotomy_2222_audit.json",
+        "sha256": "55b9d8edcdfe731aa04a02082e78bc4564d41bf8a42c536825a0269f9613261e"
+      },
+      {
+        "path": "results/alternating_base_q_remainder_gate_2222.json",
+        "sha256": "8ea2615a063fef695e3a8ce5008ed77902476a6446957495415a5cd3e106f498"
+      },
+      {
+        "path": "results/alternating_base_q_remainder_recipient_relaxed_gate_2222.json",
+        "sha256": "f8b10a16350e3d7d2407a6287a9692fff8b863e6c5281c17422821f5adadfbf2"
+      },
+      {
+        "path": "results/alternating_base_q_remainder_exact_efx_gate_2222.json",
+        "sha256": "d660c034537e70c9b7989800ce65c92a2fba7c2dd454a8e17623b898ffb83185"
+      }
+    ],
+    "script": "tracks/parkability/audit_alternating_reservoir_exchange.py",
+    "script_sha256": "7f0e5c8b4fa77ef1fd93ddb8f04ce13aef9fc3542316974af426de72fffb854b",
+    "session": {
+      "path": "results/alternating_singleton_return_0213_session1.json",
+      "sha256": "ad1550cdbef628419527051d8ae28e514d009c37e8f1744fa78f821e1c58a313"
+    }
+  },
+  "schema": "alternating-reservoir-exchange-audit-v1",
+  "status": "ALL_PROFILES_PASS_RESERVOIR_EXCHANGE"
+}

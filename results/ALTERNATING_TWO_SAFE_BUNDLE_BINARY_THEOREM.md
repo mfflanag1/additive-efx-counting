@@ -1,7 +1,7 @@
 # Alternating two-safe-bundle binary theorem
 
 **Date:** 2026-08-09
-**Status:** exact Z3 QF_LRA theorem; independent encoding audit pending
+**Status:** exact bounded theorem, superseded by a cap-free analytic proof
 **Cell:** `(2,2,2,2)` and priority order `(p,s,r,q)`
 
 ## Theorem
@@ -63,7 +63,7 @@ escapes, and each has many two-safe-bundle pairs.  The countermodels are:
 These refutations show that an arbitrary disjoint safe `Q`, rather than the
 remainder of `q`'s original bundle, is essential.
 
-## Verification boundary and cap-free gate
+## Verification boundary and supersession
 
 The UNSAT status currently comes from one direct generator and one exact
 solver implementation.  The frozen-profile analyzer independently checks
@@ -71,8 +71,7 @@ the semantic pair conditions on all recorded SAT models, but it is not an
 independent proof of UNSAT.  A second generator/solver replay or a checked
 certificate remains required before referee-grade bounded publication.
 
-The theorem is finite: it does not establish the safe-pair packing lemma for
-packets larger than two.  The next analytic step is to extract a small core
-of the 37,338 pair blockers and prove that any minimal counterexample with a
-larger packet admits a critical-minimum contraction or the same finite wall
-contradiction.
+This exact theorem is finite and its independent encoding audit remains
+pending.  It is no longer the basis for the arbitrary-packet claim: the
+[`reservoir-exchange lemma`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md) proves
+the same safe-pair conclusion analytically for all packet sizes.

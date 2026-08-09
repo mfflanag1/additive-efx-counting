@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-09
 
-**Status:** exact atomic refutation of the root-only bridge; cap-free anchored
-suffix theorem remains open
+**Status:** exact atomic refutation of the root-only bridge; its missing
+cap-free suffix operation is now supplied by the reservoir-exchange theorem
 
 **Scope:** four positive additive agents, one charity good, strict alternating
 seven-good atom
@@ -26,8 +26,8 @@ which:
 Thus an adaptive root or priority selection cannot replace the packet-selection
 step. The smallest missing operation in this countermodel is a one-subpacket
 anchored suffix transfer. For arbitrary packets, its cap-free replacement is
-exactly an external-observer-safe suffix reallocation of the kind isolated by
-the two-safe-bundle reduction.
+the external-observer-safe reservoir exchange now proved in
+[`ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md).
 
 This does not refute the broad statement “some external-observer-safe EFX
 improvement exists”; the displayed suffix transfer is such an improvement.
@@ -172,11 +172,12 @@ The adaptive-order route has reached a clean stopping boundary:
 - **closed:** canonical root selection is insufficient, even in the atom;
 - **identified:** the smallest absent move is an anchored safe-subpacket
   suffix transfer;
-- **still live:** prove the cap-free anchored-suffix/two-safe packing lemma,
-  possibly by the first common-safety wall on a chain of `q`-faces; and
+- **now closed:** the cap-free anchored-suffix/two-safe packing lemma, by the
+  reservoir threshold reversal; and
 - **not useful:** more fixed-size cells or larger blind rival pools.
 
-Accordingly, the highest-leverage next theorem remains a cap-free selection
-lemma for the anchored suffix reallocation. Root/order adaptation is useful
-for choosing which half-turn of that lemma to apply, but it does not remove
-the lemma.
+Accordingly, this counterexample is now a diagnostic rather than the live
+gate. Root/order adaptation selects a half-turn, while the reservoir-exchange
+lemma supplies the required suffix reallocation. The remaining EFX program
+must move to the four hard orders whose external-observer candidate was
+already exactly refuted.

@@ -1,7 +1,7 @@
 # Alternating singleton-return target
 
 **Date:** 2026-08-09
-**Status:** proved in the full binary cell through the two-safe-bundle theorem; cap-free lift open
+**Status:** proved cap-free by the reservoir-exchange lemma
 **Order:** `(p,s,r,q)` with `p` fixed at `{x}`
 
 ## Candidate
@@ -77,34 +77,26 @@ The exact theorem is
 [`ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md`](ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md).
 No further blind pool growth is needed.
 
-## Analytic route
+## Cap-free proof
 
-The target separates the active problem into a common downward-closed
-safe-set system. The binary theorem finds disjoint safe bundles `D,Q`, with
-`D` desired by `s` or `r` and `q(Q)>=tau_q(D)`. The analytic reduction then
-constructs one of the two singleton-return allocations. For any proposed
-bundle, EFX against an observer is controlled by its total value and its
-minimum-value deletion good.
+The [`reservoir-exchange lemma`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+proves the required safe pair for arbitrary packet sizes.  Starting with the
+selected desired block `D=T_q+f`, it uses the disjoint reservoir
+`U=X_r+B_q`.  If `q(U)` is below `tau_q(D)`, a minimal desired subset of `U`
+can use `D` as its safe payment.  Otherwise an inclusion-minimal
+`q`-threshold subset of `U` is either safe, or its first unsafe deletion
+contains a new desired set that can again use `D` as payment.  Absence of the
+two compatible families into `X_r` forces every such desired set to belong
+to `r` or `s`.
 
-The cap-free
-[`critical-minimum contraction lemma`](EFX_CRITICAL_MINIMUM_CONTRACTION_LEMMA.md)
-therefore reduces the proof obligation to the case where every possible
-merge destroys a critical minimum in at least one of the two families. The
-next lemma should show that simultaneous critical coverage in both families
-creates either:
-
-1. one of the six atomic wall contradictions;
-2. a forbidden compatible desired family; or
-3. a safe exchange between the two active agents.
-
-The exact
-[`atomic wall lemma`](ALTERNATING_EXTERNAL_OBSERVER_ATOMIC_WALL_LEMMA.md)
-already supplies alternatives 1--2 when every packet is atomic.
+The two-safe-bundle reduction then constructs one of the two
+singleton-return allocations.  No contraction, packet-size cap, or finite
+solver enumeration is used in this proof.
 
 ## Claim boundary
 
 The six other hard external-observer orders remain exactly refuted by strict
 seven-good profiles. The singleton-return target concerns only the surviving
 order `(p,s,r,q)` and, by half-turn symmetry, `(s,p,q,r)`. Both are now
-proved throughout the bounded packet grid `{1,2}^4`, but neither is proved
-for arbitrary packet sizes. Complete four-agent additive EFX is not proved.
+proved for arbitrary packet sizes. Complete four-agent additive EFX is not
+proved.

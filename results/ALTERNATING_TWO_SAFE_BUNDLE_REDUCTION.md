@@ -1,7 +1,7 @@
 # Alternating two-safe-bundle reduction
 
 **Date:** 2026-08-09
-**Status:** cap-free analytic reduction; exact in the full binary cell, arbitrary-packet existence open
+**Status:** cap-free analytic reduction and cap-free safe-pair existence theorem
 **Order:** `(p,s,r,q)` with `p` fixed at `{x}`
 
 ## Common safe-set system
@@ -91,17 +91,24 @@ handles `q`'s comparison to `D`.  Consequently (5) is EFX, and its utility
 vector agrees with `X` at `p,s` and strictly improves at `r`.  This is the
 required lexicographic improvement. \(\square\)
 
-## Exact residual target
+## Safe-pair packing theorem
 
-The surviving external-observer theorem is now implied by the following
-pure packing statement.
+The surviving external-observer theorem is implied by the following pure
+packing statement.
 
 > **Alternating safe-pair packing lemma.** Under the alternating structural
 > premises and absence of the four compatible desired families, there are
 > disjoint `D,Q` in the common safe family `C` such that `D` is desired by
 > `s` or `r` and `v_q(Q)>=tau_q(D)`.
 
-This target has three useful features:
+The [`reservoir-exchange lemma`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+now proves this statement for arbitrary packet sizes.  It starts from
+`D=T_q+f` and `U=X_r+B_q`, then uses an inclusion-minimal `q`-threshold set
+or reverses an unsafe threshold set into a new desired set.  The proof uses
+only positivity, the selected desired block, and absence of the compatible
+`p`- and `q`-into-`X_r` families.
+
+The packing formulation has three useful features:
 
 - it mentions no candidate allocation or moving EFX threshold;
 - all feasibility constraints except the final `q` threshold belong to one
@@ -130,6 +137,6 @@ and
 [`analyze_alternating_singleton_return_models.py`](../tracks/parkability/analyze_alternating_singleton_return_models.py).
 
 The direct UNSAT result proves the full binary cell, while the census is only
-an adversarial audit.  A solver-independent re-encoding, an analytic proof
-of the safe-pair packing lemma for arbitrary packet sizes, and complete
-four-agent additive EFX remain open.
+an adversarial audit.  The later analytic reservoir-exchange proof supersedes
+the packet-size restriction and does not depend on that UNSAT result.
+Complete four-agent additive EFX remains open.
