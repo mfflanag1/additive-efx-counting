@@ -1,0 +1,352 @@
+{
+  "claim_boundary": {
+    "not_refuted": "existence of EFX allocations, existence of unrestricted lexicographic EFX improvements, or complete additive EFX",
+    "refuted": "the cap-free anchored-or-any-desired extension lemma for (p,s,q,r) and its half-turn"
+  },
+  "profiles": [
+    {
+      "agent_order": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "agent_order_names": [
+        "p",
+        "s",
+        "q",
+        "r"
+      ],
+      "exhaustive": {
+        "allocation_count": 390625,
+        "anchored_candidate_count": 16384,
+        "anchored_efx_count": 716,
+        "anchored_lex_improving_efx_count": 0,
+        "base_utilities": [
+          554,
+          291,
+          255,
+          49
+        ],
+        "desired_promoted_candidate_count": 4096,
+        "desired_promoted_efx_count": 0,
+        "desired_root_bundles": [
+          [
+            "tr",
+            "f"
+          ]
+        ],
+        "unrestricted_efx_count": 4919,
+        "unrestricted_examples": [
+          {
+            "allocation": {
+              "p": [
+                "tr",
+                "br",
+                "tq0",
+                "tq1"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "y"
+              ],
+              "s": [
+                "bq",
+                "f"
+              ]
+            },
+            "charity": []
+          },
+          {
+            "allocation": {
+              "p": [
+                "tr",
+                "br",
+                "tq0",
+                "tq1"
+              ],
+              "q": [
+                "bq",
+                "x"
+              ],
+              "r": [
+                "y"
+              ],
+              "s": [
+                "f"
+              ]
+            },
+            "charity": []
+          },
+          {
+            "allocation": {
+              "p": [
+                "tr",
+                "br",
+                "tq0",
+                "tq1"
+              ],
+              "q": [
+                "bq"
+              ],
+              "r": [
+                "y"
+              ],
+              "s": [
+                "f"
+              ]
+            },
+            "charity": [
+              "x"
+            ]
+          }
+        ],
+        "unrestricted_lex_improving_efx_count": 174
+      },
+      "goods": [
+        "tr",
+        "br",
+        "tq0",
+        "tq1",
+        "bq",
+        "x",
+        "y",
+        "f"
+      ],
+      "label": "psqr",
+      "packet_sizes": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "root": 0,
+      "root_name": "p",
+      "structural_qf_lra_status": "sat",
+      "target_qf_lia_status": "unsat",
+      "values": [
+        [
+          281,
+          265,
+          32,
+          40,
+          273,
+          554,
+          546,
+          281
+        ],
+        [
+          283,
+          8,
+          243,
+          24,
+          12,
+          4,
+          554,
+          8
+        ],
+        [
+          22,
+          4,
+          10,
+          16,
+          28,
+          2,
+          255,
+          231
+        ],
+        [
+          6,
+          2,
+          18,
+          3,
+          28,
+          192,
+          16,
+          19
+        ]
+      ]
+    },
+    {
+      "agent_order": [
+        2,
+        0,
+        1,
+        3
+      ],
+      "agent_order_names": [
+        "s",
+        "p",
+        "r",
+        "q"
+      ],
+      "exhaustive": {
+        "allocation_count": 390625,
+        "anchored_candidate_count": 16384,
+        "anchored_efx_count": 716,
+        "anchored_lex_improving_efx_count": 0,
+        "base_utilities": [
+          255,
+          49,
+          554,
+          291
+        ],
+        "desired_promoted_candidate_count": 4096,
+        "desired_promoted_efx_count": 0,
+        "desired_root_bundles": [
+          [
+            "tq",
+            "f"
+          ]
+        ],
+        "unrestricted_efx_count": 4919,
+        "unrestricted_examples": [
+          {
+            "allocation": {
+              "p": [
+                "tr0",
+                "tr1",
+                "f"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "bq",
+                "y"
+              ],
+              "s": [
+                "br",
+                "tq"
+              ]
+            },
+            "charity": []
+          },
+          {
+            "allocation": {
+              "p": [
+                "tr0",
+                "tr1",
+                "f"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "y"
+              ],
+              "s": [
+                "br",
+                "tq",
+                "bq"
+              ]
+            },
+            "charity": []
+          },
+          {
+            "allocation": {
+              "p": [
+                "tr0",
+                "tr1",
+                "f"
+              ],
+              "q": [
+                "bq",
+                "x"
+              ],
+              "r": [
+                "y"
+              ],
+              "s": [
+                "br",
+                "tq"
+              ]
+            },
+            "charity": []
+          }
+        ],
+        "unrestricted_lex_improving_efx_count": 174
+      },
+      "goods": [
+        "tr0",
+        "tr1",
+        "br",
+        "tq",
+        "bq",
+        "x",
+        "y",
+        "f"
+      ],
+      "label": "half_turn_sprq",
+      "packet_sizes": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "root": 2,
+      "root_name": "s",
+      "structural_qf_lra_status": "sat",
+      "target_qf_lia_status": "unsat",
+      "values": [
+        [
+          10,
+          16,
+          28,
+          22,
+          4,
+          255,
+          2,
+          231
+        ],
+        [
+          18,
+          3,
+          28,
+          6,
+          2,
+          16,
+          192,
+          19
+        ],
+        [
+          32,
+          40,
+          273,
+          281,
+          265,
+          546,
+          554,
+          281
+        ],
+        [
+          243,
+          24,
+          12,
+          283,
+          8,
+          554,
+          4,
+          8
+        ]
+      ]
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_alternating_psqr_unrestricted_refutation.py",
+    "script_sha256": "e907bd492974c7a51677dd655197cd4c7889c9807efe0e0d0ff1c9f667d35150"
+  },
+  "schema": "alternating-psqr-unrestricted-refutation-audit-v1",
+  "solver": {
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "UNRESTRICTED_EXTENSION_OR_HANDOFF_REFUTED_BOTH_HALF_TURNS",
+  "verification": {
+    "enumeration": "all 5^8 partial allocations with exact integer arithmetic",
+    "independent_target_solver": "QF_LIA owner encoding",
+    "structural_membership": "QF_LRA with each integer row pinned up to positive scaling"
+  }
+}

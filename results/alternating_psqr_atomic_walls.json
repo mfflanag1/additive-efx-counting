@@ -1,0 +1,256 @@
+{
+  "blocker_selection_count": 6,
+  "claim_boundary": {
+    "not_proved": "the extension-or-handoff lemma for arbitrary packets",
+    "proved": "exact failure-wall decomposition of the four-rival atomic core"
+  },
+  "minimal_failure_cores": [
+    {
+      "selection_count": 2,
+      "walls": [
+        "R1:r!>p-f",
+        "R4:r!>q-tq"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R2:r!>p-f",
+        "R4:r!>q-bq"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R3:r!>p-f",
+        "R4:r!>q-br"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R1:r!>p-f",
+        "R2:r!>p-f",
+        "R3:r!>p-tr",
+        "R4:r!>q-br"
+      ]
+    }
+  ],
+  "order": [
+    0,
+    2,
+    3,
+    1
+  ],
+  "order_names": [
+    "p",
+    "s",
+    "q",
+    "r"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/extract_alternating_psqr_atomic_walls.py",
+    "script_sha256": "33677e86b5c99864480023d5d5186f61568c1474da8207d320cd954261b437d2"
+  },
+  "rivals": [
+    {
+      "allocation": {
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "x"
+        ],
+        "r": [
+          "br",
+          "bq"
+        ],
+        "s": [
+          "y"
+        ]
+      },
+      "index": 1,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "r!>p-f"
+      ],
+      "structurally_implied_safe_comparisons": [
+        "p!>p-tr",
+        "p!>p-f",
+        "p!>r-br",
+        "p!>r-bq",
+        "p!>s-y",
+        "p!>q-x",
+        "r!>p-tr",
+        "r!>r-br",
+        "r!>r-bq",
+        "r!>s-y",
+        "r!>q-x",
+        "s!>p-tr",
+        "s!>p-f",
+        "s!>r-br",
+        "s!>r-bq",
+        "s!>s-y",
+        "s!>q-x",
+        "q!>p-tr",
+        "q!>p-f",
+        "q!>r-br",
+        "q!>r-bq",
+        "q!>s-y",
+        "q!>q-x"
+      ]
+    },
+    {
+      "allocation": {
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "x"
+        ],
+        "r": [
+          "br",
+          "tq"
+        ],
+        "s": [
+          "y"
+        ]
+      },
+      "index": 2,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "r!>p-f"
+      ],
+      "structurally_implied_safe_comparisons": [
+        "p!>p-tr",
+        "p!>p-f",
+        "p!>r-br",
+        "p!>r-tq",
+        "p!>s-y",
+        "p!>q-x",
+        "r!>p-tr",
+        "r!>r-br",
+        "r!>r-tq",
+        "r!>s-y",
+        "r!>q-x",
+        "s!>p-tr",
+        "s!>p-f",
+        "s!>r-br",
+        "s!>r-tq",
+        "s!>s-y",
+        "s!>q-x",
+        "q!>p-tr",
+        "q!>p-f",
+        "q!>r-br",
+        "q!>r-tq",
+        "q!>s-y",
+        "q!>q-x"
+      ]
+    },
+    {
+      "allocation": {
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "x"
+        ],
+        "r": [
+          "tq",
+          "bq"
+        ],
+        "s": [
+          "y"
+        ]
+      },
+      "index": 3,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "r!>p-tr",
+        "r!>p-f"
+      ],
+      "structurally_implied_safe_comparisons": [
+        "p!>p-tr",
+        "p!>p-f",
+        "p!>r-tq",
+        "p!>r-bq",
+        "p!>s-y",
+        "p!>q-x",
+        "r!>r-tq",
+        "r!>r-bq",
+        "r!>s-y",
+        "r!>q-x",
+        "s!>p-tr",
+        "s!>p-f",
+        "s!>r-tq",
+        "s!>r-bq",
+        "s!>s-y",
+        "s!>q-x",
+        "q!>p-tr",
+        "q!>p-f",
+        "q!>r-tq",
+        "q!>r-bq",
+        "q!>s-y",
+        "q!>q-x"
+      ]
+    },
+    {
+      "allocation": {
+        "p": [
+          "x"
+        ],
+        "q": [
+          "br",
+          "tq",
+          "bq"
+        ],
+        "r": [
+          "tr"
+        ],
+        "s": [
+          "y"
+        ]
+      },
+      "index": 4,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "r!>q-br",
+        "r!>q-tq",
+        "r!>q-bq"
+      ],
+      "structurally_implied_safe_comparisons": [
+        "p!>p-x",
+        "p!>r-tr",
+        "p!>s-y",
+        "p!>q-br",
+        "p!>q-tq",
+        "p!>q-bq",
+        "r!>p-x",
+        "r!>r-tr",
+        "r!>s-y",
+        "s!>p-x",
+        "s!>r-tr",
+        "s!>s-y",
+        "s!>q-br",
+        "s!>q-tq",
+        "s!>q-bq",
+        "q!>p-x",
+        "q!>r-tr",
+        "q!>s-y",
+        "q!>q-br",
+        "q!>q-tq",
+        "q!>q-bq"
+      ]
+    }
+  ],
+  "schema": "alternating-psqr-atomic-walls-v1",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "ALL_PSQR_ATOMIC_BLOCKER_SELECTIONS_UNSAT"
+}

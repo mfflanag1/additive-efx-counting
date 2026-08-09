@@ -1,8 +1,16 @@
 # Alternating anchored-or-promoted target
 
 **Date:** 2026-08-09
-**Status:** exact seven-good dichotomy; cap-free packet lift open
+**Status:** superseded; cap-free packet lift exactly refuted
 **Scope:** the eight hard priority orders in the alternating two-large cell
+
+> **Supersession (2026-08-09).**  The repaired any-desired packet target is
+> false.  A positive eight-good `(1,1,2,1)` profile exactly refutes it for
+> `(p,s,q,r)`, and half-turn relabeling refutes `(s,p,r,q)`.  See
+> [`ALTERNATING_PSQR_EXTENSION_GATE.md`](ALTERNATING_PSQR_EXTENSION_GATE.md)
+> and
+> [`alternating_psqr_unrestricted_refutation_audit.json`](alternating_psqr_unrestricted_refutation_audit.json).
+> The historical development below is retained as proof-search provenance.
 
 ## Rooted EFX equivalence
 
@@ -132,18 +140,18 @@ Therefore the live statement must retain the full external-observer-safe
 three-agent anchored branch.  Neither a canonical desired set nor a fixed
 envy-return bundle is universal.
 
-## Next analytic gate
+## Retired analytic gate
 
 > **Anchored-or-any-desired extension lemma.** If the base is maximal among
 > the EFX allocations that keep the first singleton owner fixed, then some
 > desired subset on that owner's champion offer extends to an EFX allocation
 > that promotes the owner.
 
-The exact cell supports this statement but has not decided it.  Further blind
-pool growth is frozen.  The next work is to turn failure of a promoted
-extension into a suffix-improving anchored exchange, using the two bundle
-failure inequalities in the root-flip proof and the absent compatible-family
-witnesses.
+The exact eight-good counterexample now refutes this statement.  Its
+unrestricted improving allocations use a root bundle that is unsafe relative
+to the base but becomes safe after simultaneous suffix improvements.  Any
+successor must therefore allow coupled endogenous promotion rather than a
+base-desired root block.
 
 The target is not yet a proof of the alternating case or of complete
 four-agent EFX.

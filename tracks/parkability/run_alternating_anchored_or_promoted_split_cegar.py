@@ -20,6 +20,7 @@ try:
         M,
         N,
         concrete_rival_blocker,
+        desired_expression,
         integerize_model,
         numeric_efx,
         numeric_utilities,
@@ -35,6 +36,7 @@ except ImportError:
         M,
         N,
         concrete_rival_blocker,
+        desired_expression,
         integerize_model,
         numeric_efx,
         numeric_utilities,
@@ -42,8 +44,8 @@ except ImportError:
     )
 
 
-SCHEMA = "alternating-anchored-or-promoted-split-cegar-v1"
-POOL_SCHEMA = "alternating-anchored-or-promoted-split-pool-v1"
+SCHEMA = "alternating-anchored-or-promoted-split-cegar-v2"
+POOL_SCHEMA = "alternating-anchored-or-promoted-split-pool-v2"
 Owner = tuple[int | None, ...]
 
 
@@ -108,6 +110,24 @@ def numeric_anchor_valid(owner: Owner, root: int, anchor_mode: str) -> bool:
     return_agent, return_good = envy_return(root)
     return tuple(good for good, assigned in enumerate(owner) if assigned == return_agent) == (
         return_good,
+    )
+
+
+def restricted_rival_blocker(
+    values,
+    base_own,
+    owner: Owner,
+    order: tuple[int, ...],
+    promotion_mode: str,
+):
+    blocker = concrete_rival_blocker(values, base_own, owner, order)
+    root = order[0]
+    if numeric_mode(owner, root, promotion_mode) != "promoted":
+        return blocker
+    root_bundle = tuple(good for good, assigned in enumerate(owner) if assigned == root)
+    return z3.Or(
+        z3.Not(desired_expression(values, base_own, root, root_bundle)),
+        blocker,
     )
 
 
@@ -322,7 +342,11 @@ def run(
             rivals.append(owner)
             rival_set.add(owner)
     for owner in rivals:
-        solver.add(concrete_rival_blocker(values, own, owner, order))
+        solver.add(
+            restricted_rival_blocker(
+                values, own, owner, order, promotion_mode
+            )
+        )
     save_pool(pool_path, order, promotion_mode, anchor_mode, rivals)
 
     started = time.time()
@@ -381,7 +405,11 @@ def run(
         if not unseen:
             raise AssertionError("a pooled restricted rival still dominates the model")
         for owner in unseen:
-            solver.add(concrete_rival_blocker(values, own, owner, order))
+            solver.add(
+                restricted_rival_blocker(
+                    values, own, owner, order, promotion_mode
+                )
+            )
             rivals.append(owner)
             rival_set.add(owner)
         save_pool(pool_path, order, promotion_mode, anchor_mode, rivals)

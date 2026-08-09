@@ -3,6 +3,12 @@
 **Date:** 2026-08-09
 **Status:** active cap-free conversion; no general alternating theorem yet
 
+> **Update.**  The later anchored-or-any-desired lift for `(p,s,q,r)` and
+> `(s,p,r,q)` is exactly refuted in an eight-good split cell; see
+> [`ALTERNATING_PSQR_EXTENSION_GATE.md`](ALTERNATING_PSQR_EXTENSION_GATE.md).
+> This does not refute the broader alternating escape, because both profiles
+> retain many unrestricted EFX improvements.
+
 **Encoding correction:** the original eleven-good split-packet search sorted
 the two goods in every packet independently in every valuation row.  A global
 relabeling justifies sorting one reference row, not all four; the original
