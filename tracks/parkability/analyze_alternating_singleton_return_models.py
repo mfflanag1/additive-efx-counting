@@ -38,8 +38,10 @@ def make_cell(sizes: tuple[int, int, int, int]) -> dict:
     )
     return {
         "goods": tuple(goods),
+        "packets": tuple(packets),
         "x": x,
         "y": y,
+        "floater": len(goods) - 1,
         "base_owner": base_owner,
         "m": len(goods),
     }
@@ -92,6 +94,110 @@ def dominates(values, cell, allocation) -> bool:
     return tuple(rival[agent] for agent in ORDER) > tuple(base[agent] for agent in ORDER)
 
 
+def desired(values, cell, source: int, candidate: tuple[int, ...]) -> bool:
+    base_own = numeric_utilities(values, cell["base_owner"])
+    return bool(candidate) and sum(values[source][good] for good in candidate) > base_own[source] and base_safe(
+        values, cell, candidate
+    )
+
+
+def base_safe(values, cell, candidate: tuple[int, ...]) -> bool:
+    base_own = numeric_utilities(values, cell["base_owner"])
+    return all(
+        base_own[observer]
+        >= sum(values[observer][good] for good in candidate if good != removed)
+        for observer in range(N)
+        for removed in candidate
+    )
+
+
+def base_safe_for(values, cell, candidate, observers) -> bool:
+    base_own = numeric_utilities(values, cell["base_owner"])
+    return all(
+        base_own[observer]
+        >= sum(values[observer][good] for good in candidate if good != removed)
+        for observer in observers
+        for removed in candidate
+    )
+
+
+def powerset(goods):
+    for size in range(len(goods) + 1):
+        yield from itertools.combinations(goods, size)
+
+
+def selected_root_analysis(values, cell) -> dict:
+    tr, br, tq, bq = cell["packets"]
+    selected = tq + (cell["floater"],)
+    available = tr + br + bq
+    threshold = sum(values[3][good] for good in selected) - min(
+        values[3][good] for good in selected
+    )
+    remaining_total = sum(values[3][good] for good in available)
+    threshold_subsets = []
+    externally_safe = []
+    escapes = []
+    failure_counts = Counter()
+    for candidate in powerset(available):
+        if sum(values[3][good] for good in candidate) < threshold:
+            continue
+        threshold_subsets.append(candidate)
+        owner = [None] * cell["m"]
+        owner[cell["x"]] = 0
+        owner[cell["y"]] = 1
+        for good in selected:
+            owner[good] = 2
+        for good in candidate:
+            owner[good] = 3
+        allocation = tuple(owner)
+        assigned = bundles(allocation)
+        own = numeric_utilities(values, allocation)
+        external_failures = []
+        all_failures = []
+        for observer in range(N):
+            for target in range(N):
+                for removed in assigned[target]:
+                    remainder = sum(
+                        values[observer][good]
+                        for good in assigned[target]
+                        if good != removed
+                    )
+                    if own[observer] < remainder:
+                        wall = (observer, target, removed)
+                        all_failures.append(wall)
+                        if target == 3 and observer != 3:
+                            external_failures.append(wall)
+        if not external_failures:
+            externally_safe.append(candidate)
+        if not all_failures and dominates(values, cell, allocation):
+            escapes.append(candidate)
+        else:
+            for observer, target, removed in all_failures:
+                key = f"{AGENTS[observer]}>{AGENTS[target]}-{cell['goods'][removed]}"
+                failure_counts[key] += 1
+    if escapes:
+        classification = "DIRECT_SELECTED_ROOT_ESCAPE"
+    elif remaining_total < threshold:
+        classification = "INSUFFICIENT_Q_TOTAL"
+    else:
+        classification = "THRESHOLD_SUBSETS_BLOCKED"
+    return {
+        "classification": classification,
+        "s_bundle": [cell["goods"][good] for good in selected],
+        "q_available_goods": [cell["goods"][good] for good in available],
+        "q_threshold": threshold,
+        "remaining_q_total": remaining_total,
+        "threshold_subset_count": len(threshold_subsets),
+        "externally_safe_threshold_subset_count": len(externally_safe),
+        "efx_lex_escape_count": len(escapes),
+        "minimum_escape_q_bundles": [
+            [cell["goods"][good] for good in candidate]
+            for candidate in sorted(escapes, key=lambda item: (len(item), item))[:16]
+        ],
+        "failure_wall_counts": dict(sorted(failure_counts.items())),
+    }
+
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -114,6 +220,10 @@ def mode(cell, assigned) -> str:
 
 def record_model(values, label, cell, candidates) -> dict:
     escapes = []
+    desired_active_escapes = []
+    two_base_safe_bundle_escapes = []
+    base_q_remainder_escapes = []
+    relaxed_base_q_remainder_escapes = []
     mode_counts = Counter()
     shape_counts = Counter()
     for allocation in candidates:
@@ -125,6 +235,23 @@ def record_model(values, label, cell, candidates) -> dict:
         mode_counts[allocation_mode] += 1
         shape_counts[(allocation_mode, shape(assigned))] += 1
         escapes.append((allocated_count, allocation_mode, allocation, assigned))
+        active_agent = 2 if allocation_mode == "return_r" else 1
+        base_q = set(cell["packets"][2] + cell["packets"][3])
+        if set(assigned[3]) == base_q.difference(assigned[active_agent]):
+            fixed_observers = (0, 1) if active_agent == 2 else (0, 2)
+            if base_safe_for(
+                values, cell, assigned[active_agent], fixed_observers
+            ) and base_safe_for(values, cell, assigned[3], (0, 1, 2)):
+                relaxed_base_q_remainder_escapes.append(
+                    (allocated_count, allocation_mode, allocation, assigned)
+                )
+        if desired(values, cell, active_agent, assigned[active_agent]):
+            record = (allocated_count, allocation_mode, allocation, assigned)
+            desired_active_escapes.append(record)
+            if base_safe(values, cell, assigned[3]):
+                two_base_safe_bundle_escapes.append(record)
+                if set(assigned[3]) == base_q.difference(assigned[active_agent]):
+                    base_q_remainder_escapes.append(record)
     if not escapes:
         raise AssertionError((label, "no singleton-return escape"))
     escapes.sort(key=lambda item: (item[0], item[1], str(item[2])))
@@ -148,12 +275,60 @@ def record_model(values, label, cell, candidates) -> dict:
         "label": label,
         "escape_count": len(escapes),
         "mode_counts": dict(sorted(mode_counts.items())),
+        "base_desired_active_escape_count": len(desired_active_escapes),
+        "base_desired_active_mode_counts": dict(
+            sorted(Counter(item[1] for item in desired_active_escapes).items())
+        ),
+        "two_base_safe_bundle_escape_count": len(two_base_safe_bundle_escapes),
+        "two_base_safe_bundle_mode_counts": dict(
+            sorted(Counter(item[1] for item in two_base_safe_bundle_escapes).items())
+        ),
+        "base_q_remainder_escape_count": len(base_q_remainder_escapes),
+        "base_q_remainder_mode_counts": dict(
+            sorted(Counter(item[1] for item in base_q_remainder_escapes).items())
+        ),
+        "relaxed_base_q_remainder_escape_count": len(
+            relaxed_base_q_remainder_escapes
+        ),
+        "relaxed_base_q_remainder_mode_counts": dict(
+            sorted(
+                Counter(item[1] for item in relaxed_base_q_remainder_escapes).items()
+            )
+        ),
+        "minimum_two_base_safe_bundle_escapes": [
+            {
+                "mode": allocation_mode,
+                "active_bundle": [
+                    cell["goods"][good]
+                    for good in assigned[2 if allocation_mode == "return_r" else 1]
+                ],
+                "q_bundle": [cell["goods"][good] for good in assigned[3]],
+            }
+            for _, allocation_mode, _, assigned in sorted(
+                two_base_safe_bundle_escapes,
+                key=lambda item: (item[0], item[1], str(item[2])),
+            )[:16]
+        ],
+        "minimum_base_desired_active_escapes": [
+            {
+                "mode": allocation_mode,
+                "bundles": {
+                    AGENTS[agent]: [cell["goods"][good] for good in bundle]
+                    for agent, bundle in enumerate(assigned)
+                },
+            }
+            for _, allocation_mode, _, assigned in sorted(
+                desired_active_escapes,
+                key=lambda item: (item[0], item[1], str(item[2])),
+            )[:16]
+        ],
         "minimum_allocated_good_count": minimum,
         "minimum_escapes": minimum_records,
         "shape_counts": [
             {"mode": key[0], "shape": list(key[1]), "count": count}
             for key, count in sorted(shape_counts.items())
         ],
+        "selected_root": selected_root_analysis(values, cell),
     }
 
 
@@ -171,8 +346,22 @@ def analyze(session_path: Path, audit_paths: list[Path]) -> dict:
     records = [record_model(values, label, cell, candidates) for label, values in profiles]
     minimum_mode_presence = Counter()
     minimum_allocated_good_counts = Counter()
+    selected_root_classifications = Counter()
+    profiles_with_base_desired_active_escape = 0
+    profiles_with_two_base_safe_bundle_escape = 0
+    profiles_with_base_q_remainder_escape = 0
+    profiles_with_relaxed_base_q_remainder_escape = 0
     for record in records:
         minimum_allocated_good_counts[record["minimum_allocated_good_count"]] += 1
+        selected_root_classifications[record["selected_root"]["classification"]] += 1
+        if record["base_desired_active_escape_count"]:
+            profiles_with_base_desired_active_escape += 1
+        if record["two_base_safe_bundle_escape_count"]:
+            profiles_with_two_base_safe_bundle_escape += 1
+        if record["base_q_remainder_escape_count"]:
+            profiles_with_base_q_remainder_escape += 1
+        if record["relaxed_base_q_remainder_escape_count"]:
+            profiles_with_relaxed_base_q_remainder_escape += 1
         modes = {escape["mode"] for escape in record["minimum_escapes"]}
         for allocation_mode in modes:
             minimum_mode_presence[allocation_mode] += 1
@@ -191,6 +380,13 @@ def analyze(session_path: Path, audit_paths: list[Path]) -> dict:
             str(count): frequency
             for count, frequency in sorted(minimum_allocated_good_counts.items())
         },
+        "selected_root_classification_counts": dict(
+            sorted(selected_root_classifications.items())
+        ),
+        "profiles_with_base_desired_active_escape": profiles_with_base_desired_active_escape,
+        "profiles_with_two_base_safe_bundle_escape": profiles_with_two_base_safe_bundle_escape,
+        "profiles_with_base_q_remainder_escape": profiles_with_base_q_remainder_escape,
+        "profiles_with_relaxed_base_q_remainder_escape": profiles_with_relaxed_base_q_remainder_escape,
         "profiles": records,
         "claim_boundary": {
             "proved": "the exact escape census for the recorded frozen profiles",

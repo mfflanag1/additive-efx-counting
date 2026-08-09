@@ -1,7 +1,7 @@
 # Alternating singleton-return target
 
 **Date:** 2026-08-09
-**Status:** strongest surviving structured target; full binary decision unknown
+**Status:** proved in the full binary cell through the two-safe-bundle theorem; cap-free lift open
 **Order:** `(p,s,r,q)` with `p` fixed at `{x}`
 
 ## Candidate
@@ -69,16 +69,22 @@ The terminal master returned `unknown` at 120 seconds:
 - [`alternating_singleton_return_0213_pool.json`](alternating_singleton_return_0213_pool.json)
 - [`run_alternating_singleton_return_cegar.py`](../tracks/parkability/run_alternating_singleton_return_cegar.py)
 
-This is neither an UNSAT theorem nor a SAT refutation. No further blind pool
-growth is authorized by this result.
+That CEGAR run was neither an UNSAT theorem nor a SAT refutation. A later,
+more structured direct formula proved the full binary cell: every profile
+has two disjoint base-safe bundles satisfying the
+[`two-safe-bundle reduction`](ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md).
+The exact theorem is
+[`ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md`](ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md).
+No further blind pool growth is needed.
 
 ## Analytic route
 
-The target separates the active problem into two downward-closed safe-set
-systems. In the first family, `r={y}` strictly improves over the base, so an
-escape needs only preserve or improve `s`; in the second, `s={y}` is fixed
-and `r` must improve. For any proposed bundle, EFX against an observer is
-controlled by its total value and its minimum-value deletion good.
+The target separates the active problem into a common downward-closed
+safe-set system. The binary theorem finds disjoint safe bundles `D,Q`, with
+`D` desired by `s` or `r` and `q(Q)>=tau_q(D)`. The analytic reduction then
+constructs one of the two singleton-return allocations. For any proposed
+bundle, EFX against an observer is controlled by its total value and its
+minimum-value deletion good.
 
 The cap-free
 [`critical-minimum contraction lemma`](EFX_CRITICAL_MINIMUM_CONTRACTION_LEMMA.md)
@@ -99,6 +105,6 @@ already supplies alternatives 1--2 when every packet is atomic.
 
 The six other hard external-observer orders remain exactly refuted by strict
 seven-good profiles. The singleton-return target concerns only the surviving
-order `(p,s,r,q)` and, by half-turn symmetry, `(s,p,q,r)`. Neither order is
-proved for arbitrary packet sizes, and complete four-agent additive EFX is
-not proved.
+order `(p,s,r,q)` and, by half-turn symmetry, `(s,p,q,r)`. Both are now
+proved throughout the bounded packet grid `{1,2}^4`, but neither is proved
+for arbitrary packet sizes. Complete four-agent additive EFX is not proved.

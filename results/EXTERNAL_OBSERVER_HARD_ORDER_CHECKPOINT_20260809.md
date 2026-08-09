@@ -3,8 +3,8 @@
 **Date:** 2026-08-09
 **Goal:** decide the external-observer-safe three-agent lexicographic
 improvement lemma in all eight hard alternating priority orders
-**Status:** six orders refuted; one half-turn pair survives all completed
-exact cells but is not cap-free proved
+**Status:** six orders refuted; one half-turn pair proved on the full binary
+packet grid but not cap-free
 
 ## The candidate lemma
 
@@ -103,13 +103,15 @@ cores. This identifies a one-dimensional bottom-partition gate rather than
 a generic three-agent repartition problem; the frozen anatomy is
 [`alternating_external_observer_0213_bq2_broad_core_walls.json`](alternating_external_observer_0213_bq2_broad_core_walls.json).
 
-## Sole unresolved binary cell
+## Full binary cell now decided
 
-The fully split size vector `(2,2,2,2)` remains undecided.  Under the corrected
-broader encoding, the master with 1,024 valid rooted rival blockers returned
-`unknown` after 120 seconds before completing a new model.  An independent
-cvc5 replay of the earlier, narrower master also timed out and has no theorem
-status.
+The earlier broad master for `(2,2,2,2)` returned `unknown` after 120 seconds.
+A later reduction isolated a smaller semantic certificate: two disjoint
+base-safe bundles `D,Q`, where `D` is desired by `s` or `r` and
+`q(Q)>=tau_q(D)`. A direct exact formula blocking all 37,338 such pairs is
+QF_LRA-UNSAT. The analytic reduction proves that any pair produces the
+required rooted EFX lexicographic escape. See
+[`ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md`](ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md).
 
 Three targeted structured menus have since been exactly refuted inside this
 cell, without refuting the rooted lemma. Each countermodel has thousands of
@@ -122,14 +124,15 @@ two-agent repartition. A bounded exact test processed 12 models, preserving
 1,513 blockers, before returning `unknown` at 120 seconds. This is a sharper
 analytic target, not a decision of the full cell.
 
-No countermodel to the surviving rooted order is known.  No UNSAT claim is
-made for the fully split cell.
+No countermodel to the surviving rooted order is known. The full binary
+cell is now an exact UNSAT theorem, pending an independent generator/solver
+audit before referee-grade release.
 
 ## Structural lesson and cap-free target
 
-Any binary countermodel must use internal disagreement in all four packets
-simultaneously.  No single packet split, pair of packet splits, or triple of
-packet splits suffices.
+No binary countermodel exists. Internal disagreement in all four packets
+was necessary to evade the earlier small menus, but the two-safe-bundle
+formula closes that last cell.
 
 The corresponding cap-free target is a **safe packet-contraction lemma**:
 
@@ -155,13 +158,14 @@ covered.
 
 Proving safe contraction for one of the four packets would establish the
 surviving order for arbitrary packet sizes, and half-turn symmetry would
-establish the eighth order.  Alternatively, a correctly audited full-split
-SAT model with no rooted rival would exactly refute the candidate.
+establish the eighth order. The exact binary safe-pair theorem supplies the
+finite base case for that induction.
 
 ## Breakthrough boundary
 
 The external-observer candidate is not a universal solution for all hard
-orders: six exact atomic counterexamples settle that negatively.  Its
-surviving symmetry pair remains a plausible cap-free lemma and a useful
-component of the broader anchored-or-promoted alternating program.  Complete
-four-agent additive EFX is not proved here.
+orders: six exact atomic counterexamples settle that negatively. Its
+surviving symmetry pair is now proved for every packet-size vector in
+`{1,2}^4` and remains a plausible cap-free lemma and a useful component of
+the broader anchored-or-promoted alternating program. Complete four-agent
+additive EFX is not proved here.
