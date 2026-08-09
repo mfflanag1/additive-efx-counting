@@ -472,6 +472,56 @@ Symmetrically, every `r`-desired `B subseteq U=X_r+B_q` must meet
 source walls are trapped on the corresponding top packets, not on arbitrary
 goods.
 
+There is also a universal exclusion that holds for every valid parallel
+decomposition `D_p=T_r+f`.  Put `P=B_r+B_q`.
+
+> **Bottom-pool exclusion lemma.** No subset of `P` is desired by any
+> agent.  Consequently `v_i(P)<=b_i` for every agent `i`, and `P` and all
+> its subsets are common-safe.
+
+Suppose `A subseteq P` is desired.  Route it according to its source:
+
+| source of `A` | Pareto-EFX allocation `(p,r,q,s)` |
+|---|---|
+| `p` | `(A,D_r,{x},{y})` |
+| `r` | `(D_p,A,{x},{y})` |
+| `q` | `({x},D_r,A,{y})` |
+| `s`, with `a=p` | `({y},D_r,{x},A)` |
+| `s`, with `a=r` | `(D_p,{y},{x},A)` |
+| `s`, with `a=q` | `({x},D_r,{y},A)` |
+
+All displayed bundles are pairwise disjoint and common-safe, and every
+non-base recipient receives a desired bundle.  Each row contradicts global
+maximality.  If some agent valued `P` above her base, an inclusion-minimal
+subset of `P` envied by any agent would be desired, giving the same
+contradiction.
+
+Thus the bottoms may change the numerical deficits, but they are disjoint
+universal safe currency.  Every irreducible desired-set collision is forced
+onto `T_q` (and, in the rotated argument, onto `T_r`).
+
+The exclusion also removes the easy half of the moving `q` ceiling.  Let
+`C subseteq B_r+T_q` be any critical-pool bundle.  If
+`v_q(B_r)<=v_q(B_q)`, then
+
+\[
+v_q(C)\le v_q(B_r)+v_q(T_q)
+\le v_q(B_q)+v_q(T_q)=b_q<v_q(x).
+\]
+
+Thus `tau_q(C)<v_q(x)` automatically.  Every genuine `q`-wall must
+therefore satisfy
+
+\[
+v_q(T_q)\ge v_q(B_r)>v_q(B_q)>v_q(f).
+\]
+
+The first weak inequality follows from the bottom-pool bound
+`v_q(B_r+B_q)<=b_q=v_q(T_q+B_q)`; the last strict inequality is the
+no-self-`q` consequence.  Hence the final cell is not an arbitrary Hall
+obstruction: `q` strictly prefers the foreign bottom to her own bottom,
+but not to her own top.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
@@ -567,12 +617,19 @@ v_r(T_q)\ge\tau_r(D_p).
 \tag{20}
 \]
 
-The atomic cell makes (20) automatic because `T_r` is a singleton and the
-no-self inequalities give `v_r(T_q)>max(v_r(T_r),v_r(f))`.  For a genuine
-packet, a deletion `T_r-g+f` can exceed `v_r(T_q)`.  Therefore the remaining
-analytic step is precisely to use the contested-top quota witness to pay
-that deletion threshold through a coupled return; treating `T_q` as one
-supergood would be unsound.
+The no-self inequalities imply `v_r(T_q)>v_r(T_r)` and
+`v_r(B_r)>v_r(f)`, but they do **not** imply `v_r(T_q)>v_r(f)`.  Thus (20)
+is not automatic even when `T_r` is a singleton under the selected-edge
+premises.  At the globally maximal atom, however, failure swaps the unique
+good of `T_r` with `f`; the new `r` bundle has two goods, so all of its
+deletion remainders are singletons and the swap is EFX.  It Pareto improves
+`r`, a contradiction.  This—not the two displayed inequalities—is why the
+atomic fallback succeeds.  For a genuine packet, a deletion `T_r-g+f` can
+likewise exceed `v_r(T_q)`, while the corresponding charity swap can fail
+through a second retained good.  Therefore the remaining analytic step is
+precisely to use the contested-top quota witness or the extra desired family
+exposed by that failure to pay the deletion threshold through a coupled
+return; treating `T_q` as one supergood would be unsound.
 
 ### Charity-swap transition lemma
 
@@ -590,12 +647,14 @@ v_i(X_j-\{g,h\}+f)>b_i.
 Indeed, every bundle other than `j`'s is unchanged.  Deleting `f` from the
 new bundle leaves a subset of the old bundle and is base-safe.  Therefore a
 violating deletion must remove an old good `h`; self-comparison cannot be
-the violation because `j` strictly improves.  Choosing an
-inclusion-minimal crossing subset inside the left side of (21) gives a
-common-safe desired set `E` for `i`.  It must contain `f`: without `f`, it
-is a proper subset of `X_j` and hence lies inside an old EFX deletion
-remainder.  Thus `i` is a genuine `f`-champion of `j`, with a desired set
-that omits both `g` and `h`.
+the violation because `j` strictly improves.  Now choose an
+inclusion-minimal subset `E` of the left side of (21) that is envied by
+*some* agent, and let `k` be such an agent.  Minimality makes `E`
+common-safe, so `E` is desired by `k`.  It must contain `f`: without `f`,
+it is a proper subset of `X_j` and hence lies inside an old EFX deletion
+remainder.  Thus `k` is a genuine `f`-champion of `j`, with a desired set
+that omits both `g` and `h`.  The extracted champion `k` need not equal the
+original violating observer `i`.
 
 If (20) fails, its maximizing deletion cannot remove `f`, because
 `v_r(T_q)>v_r(T_r)`.  Hence it removes some `g in T_r` and gives
@@ -606,23 +665,65 @@ v_r(f)>v_r(g).
 \]
 
 Apply the transition lemma to owner `r`.  Global maximality rules out the
-EFX-swap branch, so a new genuine edge `i -> r` is forced.  Its source
+EFX-swap branch, so a new genuine edge `k -> r` is forced.  Its source
 classifies the remaining obstruction:
 
-1. `i=r` is impossible (the improved owner's self-comparison cannot fail);
-2. `i=q` creates the two-genuine-edge length-two topology with the selected
+1. `k=r` is impossible at global maximality because it is a self-`f`-
+   champion and hence a PI cycle;
+2. `k=q` creates the two-genuine-edge length-two topology with the selected
    edge `r -> q`;
-3. `i=s`, together with the incoming envy edge to `s`, either creates a PI
+3. `k=s`, together with the incoming envy edge to `s`, either creates a PI
    shortcut or redirects to a length-three/length-four two-large topology;
-4. only `i=p` remains in the same rooted topology, and supplies a second
+4. only `k=p` remains in the same rooted topology, and supplies a second
    `p -> r` desired set omitting the offending good and one deletion
    witness.
 
-Accordingly the genuinely new packet gate is a **same-source champion
-refinement** problem.  A completion may select the `p -> r` desired set by
-a finite extremal potential and show that case 4 strictly improves it; the
-other sources must be discharged by the corresponding cycle-class theorem.
-This transition does not by itself prove that such a potential exists.
+In case 4, write `E=T'_r+f` and `B'_r=X_r-T'_r`.  The extracted set is a
+valid alternative decomposition of the same `p -> r` edge.  The structural
+inequalities and the critical-pool construction reapply with
+`B'_r+T_q`: this pool improves `r`, while `p` values it below `E`.
+Consequently `p`-, `r`-, and `s`-sourced unsafe reversals are again handled
+by the all-source constructions.  The branch is not a separate obstruction;
+it enlarges the finite family of admissible `p -> r` decompositions over
+which the persistent `q`-source wall may be optimized.  A completion may
+select a decomposition by an extremal potential and prove that its
+`q`-wall uncrosses.  The transition does not by itself supply that
+potential.
+
+### Shortest-cycle routing of the transition
+
+For the residual classification, choose a shortest simple basic cycle
+containing at least two genuine `f`-edges.  The length-three cell means that
+this shortest length is three.  The sources in the charity-swap transition
+then route more sharply than the raw four-way list above.
+
+- A new `q -> r` edge, together with the selected `r -> q` edge, creates a
+  length-two two-genuine-edge cycle.  It therefore leaves the length-three
+  residual immediately.
+- If the new source is `s` and the external envy source is `a=r`, the cycle
+  `r -> s -> r` contains only one genuine edge and is PI.
+- If the new source is `s` and `a=p`, the edges
+  `p -> s -> r -> q -> p` form the adjacent-genuine length-four topology.
+- If the new source is `s` and `a=q`, the edges
+  `s -> r -> q -> s` form another length-three cycle, now with `p` external.
+  In the new normal-form names this swaps the singleton roles `p` and `s`
+  while keeping `r,q` fixed.
+
+The last swap changes the four hard `a=q` orders as follows:
+
+| old order | order in the swapped normal form | status |
+|---|---|---|
+| `(p,r,q,s)` | `(s,r,q,p)` | already closed |
+| `(p,r,s,q)` | `(s,r,p,q)` | already closed |
+| `(p,s,r,q)` | `(s,p,r,q)` | remains in the hard table |
+| `(s,p,r,q)` | `(p,s,r,q)` | remains in the hard table |
+
+Thus a shortest-cycle choice disposes of the `q`-source transition, and the
+singleton flip disposes of half of the `s`-source transition orders.  The
+irreducible transition orbit consists of the two swapped orders in the last
+two rows, the `a=p` adjacent-cycle branch, and a `q`-source contested wall
+that persists across the finite family of parallel `p -> r`
+decompositions.
 
 ## Exact atomic motif audit
 
@@ -658,8 +759,9 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. cap-free closure of the same-source champion-refinement branch and of
-   the scalar-price/pivot branch in the nine contested source/order types;
+1. a cap-free extremal choice among parallel `p -> r` decompositions that
+   closes the scalar-price/pivot `q`-wall in the nine contested
+   source/order types;
 2. composition of the other charity-swap sources with independently proved
    length-two and adjacent/alternate length-four cycle lemmas;
 3. an explicit statement of what the result proves inside the
