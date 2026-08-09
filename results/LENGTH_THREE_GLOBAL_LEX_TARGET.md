@@ -848,6 +848,47 @@ recipient-feasible `J` must hit the top of every admissible root.  Defeating
 (16m), or converting its minimal hitting set into a desired-family cycle,
 is the remaining adaptive-root step on the `Q_J` face.
 
+There is a monotone cap-free potential on the other face.  For any
+`J subseteq X_r` with `v_r(J)<v_r(f)`, put
+
+\[
+R_J=(X_r\setminus J)+f.
+\]
+
+If `R_J` is common-safe, replacing `X_r` by `R_J` and leaving `J`
+unallocated is EFX and strictly Pareto improves `r`.  Moreover common
+safety is monotone in `J`: enlarging `J` only lowers every deletion
+remainder of `R_J`.
+
+Choose an inclusion-maximal `r`-affordable set `J`, so
+
+\[
+v_r(J)<v_r(f),qquad
+v_r(J+h)\ge v_r(f)\quad(h\in X_r\setminus J).
+\tag{16n}
+\]
+
+Global maximality says `R_J` is unsafe.  Deleting `f` is safe, so some old
+good `h` and observer expose a desired set
+
+\[
+E\subseteq (X_r\setminus(J\cup\{h\}))+f
+\tag{16o}
+\]
+
+that contains `f`.  Thus one of the following occurs:
+
+1. a self-`f`-champion of `r`, which is PI;
+2. a `q -f-> r` edge, which redirects to the length-two class;
+3. an `s -f-> r` edge, routed by the shortest-cycle cases above; or
+4. a parallel `p -f-> r` decomposition whose top avoids both `J` and the
+   single pivot `h`.
+
+Hence arbitrary packet growth never produces an irreducible multi-good
+swap wall.  It produces one budget-crossing pivot `h`, while every cheaper
+good in `J` is released by the alternative root in case 4.  This is the
+integral counterpart of the fractional price-or-pivot lemma.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
