@@ -1,0 +1,27 @@
+{
+  "block_all_same_offer_pairs": true,
+  "block_s_augmented_reversal": true,
+  "claim_boundary": {
+    "sat": "realizes only the selected-set cross-source residual under the recorded optional blockers",
+    "unknown": "no mathematical decision",
+    "unsat": "proves only the corresponding bounded implication in this packet cell; no cap-free or unrestricted dichotomy follows"
+  },
+  "p_reversal_candidate_count": 63,
+  "packet_sizes": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_alternating_cross_source_residual.py",
+    "script_sha256": "199f1e904013fc3e5daf77d7053af2b4bf283b0f4601a23c7eb0d03b00d3562b",
+    "z3_version": "5.0.0"
+  },
+  "r_reversal_candidate_count": 63,
+  "same_offer_pair_count": 3376,
+  "schema": "alternating-cross-source-residual-gate-v1",
+  "solver_status": "unsat",
+  "status": "UNSAT_CROSS_SOURCE_RESIDUAL",
+  "tested_strengthening": "when block_s_augmented_reversal is true, every qualifying p-reversal P is additionally forced to satisfy v_s(P+f)<=b_s"
+}

@@ -49,7 +49,12 @@ def tau_constraints(values, observer, active, payment):
     )
 
 
-def decide(sizes, timeout_seconds, block_all_same_offer_pairs):
+def decide(
+    sizes,
+    timeout_seconds,
+    block_all_same_offer_pairs,
+    block_s_augmented_reversal,
+):
     cell = make_cell(sizes)
     tr, br, tq, bq = cell["packets"]
     floater = cell["floater"]
@@ -99,6 +104,13 @@ def decide(sizes, timeout_seconds, block_all_same_offer_pairs):
                 ),
             )
         )
+        if block_s_augmented_reversal:
+            solver.add(
+                z3.Implies(
+                    p_reversals[-1],
+                    subset_sum(values, 2, active + (floater,)) <= own[2],
+                )
+            )
         q_reversals.append(
             z3.And(
                 desired_expression(values, own, 3, active),
@@ -190,11 +202,23 @@ def decide(sizes, timeout_seconds, block_all_same_offer_pairs):
         "p_reversal_candidate_count": len(p_reversals),
         "r_reversal_candidate_count": len(r_reversals),
         "block_all_same_offer_pairs": block_all_same_offer_pairs,
+        "block_s_augmented_reversal": block_s_augmented_reversal,
         "same_offer_pair_count": same_offer_pair_count,
-        "claim_boundary": (
-            "This targets only the cross-source residual of the selected-set "
-            "reservoir proofs; it neither proves nor refutes the unrestricted dichotomy."
+        "tested_strengthening": (
+            "when block_s_augmented_reversal is true, every qualifying "
+            "p-reversal P is additionally forced to satisfy v_s(P+f)<=b_s"
         ),
+        "claim_boundary": {
+            "sat": (
+                "realizes only the selected-set cross-source residual under the "
+                "recorded optional blockers"
+            ),
+            "unsat": (
+                "proves only the corresponding bounded implication in this packet "
+                "cell; no cap-free or unrestricted dichotomy follows"
+            ),
+            "unknown": "no mathematical decision",
+        },
     }
     if status == z3.sat:
         model = integerize(solver.model(), values)
@@ -216,10 +240,16 @@ def main():
     parser.add_argument("--sizes", default="2,2,2,2")
     parser.add_argument("--timeout-seconds", type=float, default=120.0)
     parser.add_argument("--block-all-same-offer-pairs", action="store_true")
+    parser.add_argument("--block-s-augmented-reversal", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     sizes = tuple(int(part) for part in args.sizes.split(","))
-    result = decide(sizes, args.timeout_seconds, args.block_all_same_offer_pairs)
+    result = decide(
+        sizes,
+        args.timeout_seconds,
+        args.block_all_same_offer_pairs,
+        args.block_s_augmented_reversal,
+    )
     script = Path(__file__).resolve()
     result["provenance"] = {
         "script": str(script.relative_to(script.parents[2])),

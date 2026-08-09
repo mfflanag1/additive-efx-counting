@@ -666,6 +666,12 @@ both encodings.
   root flips, two reservoir exchanges, and four dual-reservoir escapes.
   This closes the alternating two-large residual, not general four-agent
   additive EFX.
+- [`ALTERNATING_EXTENSION_OR_HANDOFF_REDUCTION.md`](ALTERNATING_EXTENSION_OR_HANDOFF_REDUCTION.md)
+  — cap-free reduction of the stricter same-champion-offer refinement to one
+  intersecting `r`-source wall. It derives the desired-set transversal and
+  boosted moving-ceiling handoff; 21 adversarial profiles replay the handoff.
+  The strict refinement remains open, although the broader alternating
+  global-lex theorem is already complete.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

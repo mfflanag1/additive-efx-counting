@@ -155,5 +155,17 @@ champion offer, so it does not prove the stricter lemma displayed above.
 Together with root flip and reservoir exchange, all eight hard orders are
 closed.
 
-The target is not yet a proof of the alternating case or of complete
-four-agent EFX.
+The strict target itself remains open. The broader opposite-reservoir
+construction already proves the alternating global-lex theorem, but not
+complete four-agent EFX.
+
+## Strict-refinement reduction
+
+The later
+[`extension-or-handoff reduction`](ALTERNATING_EXTENSION_OR_HANDOFF_REDUCTION.md)
+uses failure of both strict branches to prove a desired-set transversal,
+common-safety of `B_r+B_q`, two strict threshold inequalities, and a boosted
+moving-ceiling handoff reduction. The only surviving cap-free wall is an
+`r`-desired subset of `X_r+B_q` that intersects every `p`-desired subset of
+`X_r+f`. This is the live strict-refinement gate; larger blind rival pools
+remain frozen.
