@@ -1,0 +1,312 @@
+{
+  "base_owner": [
+    1,
+    1,
+    3,
+    3,
+    0,
+    2,
+    null
+  ],
+  "base_utility": [
+    31,
+    55,
+    62,
+    8
+  ],
+  "block_bottom_swaps": true,
+  "block_cross_bottom_swap": true,
+  "claim_boundary": {
+    "sat": "refutes only the selected finite root/exchange menu; it does not refute adaptive escape with broader anchored suffix operations",
+    "unsat": "would prove the canonical promoted-root alternative only in the atomic cell"
+  },
+  "root_allocations": {
+    "cross_bottom_swap": {
+      "delta": [
+        0,
+        -43,
+        0,
+        1
+      ],
+      "efx": false,
+      "owner": [
+        1,
+        3,
+        3,
+        1,
+        0,
+        2,
+        null
+      ],
+      "utility": [
+        31,
+        12,
+        62,
+        9
+      ]
+    },
+    "p_anchored": {
+      "delta": [
+        0,
+        3,
+        0,
+        0
+      ],
+      "efx": true,
+      "owner": [
+        2,
+        null,
+        3,
+        3,
+        0,
+        1,
+        2
+      ],
+      "utility": [
+        31,
+        58,
+        62,
+        8
+      ]
+    },
+    "p_promoted": {
+      "delta": [
+        2,
+        3,
+        -29,
+        31
+      ],
+      "efx": false,
+      "owner": [
+        0,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0
+      ],
+      "utility": [
+        33,
+        58,
+        33,
+        39
+      ]
+    },
+    "q_bottom_for_charity": {
+      "delta": [
+        0,
+        6,
+        0,
+        -2
+      ],
+      "efx": false,
+      "owner": [
+        1,
+        1,
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "utility": [
+        31,
+        61,
+        62,
+        6
+      ]
+    },
+    "r_bottom_for_charity": {
+      "delta": [
+        0,
+        -46,
+        0,
+        4
+      ],
+      "efx": false,
+      "owner": [
+        1,
+        3,
+        3,
+        3,
+        0,
+        2,
+        1
+      ],
+      "utility": [
+        31,
+        9,
+        62,
+        12
+      ]
+    },
+    "s_anchored": {
+      "delta": [
+        0,
+        0,
+        0,
+        31
+      ],
+      "efx": true,
+      "owner": [
+        1,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0
+      ],
+      "utility": [
+        31,
+        55,
+        62,
+        39
+      ]
+    },
+    "s_promoted": {
+      "delta": [
+        -4,
+        3,
+        4,
+        31
+      ],
+      "efx": false,
+      "owner": [
+        0,
+        0,
+        2,
+        null,
+        3,
+        1,
+        2
+      ],
+      "utility": [
+        27,
+        58,
+        66,
+        39
+      ]
+    }
+  },
+  "schema": "alternating-adaptive-root-promotion-bridge-v1",
+  "smallest_surviving_order_escapes": [
+    {
+      "agent_order": [
+        0,
+        2,
+        1,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "s",
+        "r",
+        "q"
+      ],
+      "escape": {
+        "changed_goods": 3,
+        "delta": [
+          2,
+          -6,
+          0,
+          0
+        ],
+        "owner": [
+          0,
+          1,
+          3,
+          3,
+          null,
+          2,
+          0
+        ],
+        "utility": [
+          33,
+          49,
+          62,
+          8
+        ]
+      }
+    },
+    {
+      "agent_order": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "agent_order_names": [
+        "s",
+        "p",
+        "q",
+        "r"
+      ],
+      "escape": {
+        "changed_goods": 1,
+        "delta": [
+          0,
+          -6,
+          0,
+          1
+        ],
+        "owner": [
+          3,
+          1,
+          3,
+          3,
+          0,
+          2,
+          null
+        ],
+        "utility": [
+          31,
+          49,
+          62,
+          9
+        ]
+      }
+    }
+  ],
+  "solver_status": "sat",
+  "status": "SAT_AUGMENTED_ROOT_MENU_FAILS",
+  "values": [
+    [
+      4,
+      23,
+      2,
+      2,
+      31,
+      29,
+      29
+    ],
+    [
+      6,
+      49,
+      6,
+      6,
+      52,
+      58,
+      3
+    ],
+    [
+      25,
+      25,
+      29,
+      4,
+      58,
+      62,
+      37
+    ],
+    [
+      1,
+      4,
+      5,
+      3,
+      39,
+      7,
+      1
+    ]
+  ]
+}

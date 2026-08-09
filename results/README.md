@@ -638,3 +638,10 @@ both encodings.
 - [`efx49_common_favorite_sufficient_cap_audit.json`](efx49_common_favorite_sufficient_cap_audit.json)
   — independently reconstructed 485→811 CEGAR chain and hash-bound
   matching/Hall residual timeouts; explicitly no theorem verdict.
+- [`ADAPTIVE_ROOT_ORDER_BRIDGE_REFUTATION_20260809.md`](ADAPTIVE_ROOT_ORDER_BRIDGE_REFUTATION_20260809.md)
+  — exact alternating-atom obstruction to closing the two surviving orders
+  by canonical root flip, half-turn, or priority relabeling alone. Both
+  promoted rotations and three immediate two-good exchanges fail strictly;
+  the unique minimum escape for `(s,p,q,r)` is a one-good anchored suffix
+  transfer. This identifies the missing cap-free operation but does not
+  prove the two-safe-bundle packing lemma or complete four-agent EFX.
