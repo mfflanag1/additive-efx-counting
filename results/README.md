@@ -678,6 +678,18 @@ both encodings.
   — positive eight-good profile and independent exhaustive certificate
   refuting the strict anchored-or-original-offer bridge. This is not an EFX
   counterexample.
+- [`LENGTH_THREE_GLOBAL_LEX_TARGET.md`](LENGTH_THREE_GLOBAL_LEX_TARGET.md)
+  — source-valid reconstruction of the BCFF two-large length-three residual.
+  It proves the singleton-absorption and easy-priority lemmas cap-free,
+  imports the packet-safe part of the dual-reservoir theorem, and proves two
+  new three-promotion/payment reductions. The remaining gate is an external
+  singleton-source payment through a mixed reservoir; no two-large or
+  general EFX closure is yet claimed.
+- [`length_three_global_lex_atomic_sweep.json`](length_three_global_lex_atomic_sweep.json)
+  and [`length_three_global_lex_atomic_sweep_audit.json`](length_three_global_lex_atomic_sweep_audit.json)
+  — exact motif audit of all 72 atomic external-source/priority cells. Every
+  cell is UNSAT with a core of at most three allocations; this is explicitly
+  proof-mining evidence, not a packet theorem.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

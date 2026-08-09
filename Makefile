@@ -34,6 +34,7 @@ verify-alternating:
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_dual_reservoir_trichotomy.py
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_capfree_order_coverage.py
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_extension_or_handoff.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_length_three_global_lex_atomic.py
 
 verify-single-wall:
 	mkdir -p $(VERIFY_TMP)
