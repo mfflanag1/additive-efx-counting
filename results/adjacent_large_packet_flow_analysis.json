@@ -1,0 +1,4042 @@
+{
+  "agent_order": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "claim_boundary": "Classifies exact finite profiles and learned escapes. It does not prove the cap-free adjacent-large lemma.",
+  "escape_count": 512,
+  "escape_motifs": [
+    {
+      "count": 43,
+      "first_changed": "p",
+      "p_has_f": false,
+      "p_kind": "cross_face_desired",
+      "p_packet_faces": 2
+    },
+    {
+      "count": 52,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "cross_face_desired",
+      "p_packet_faces": 2
+    },
+    {
+      "count": 55,
+      "first_changed": "p",
+      "p_has_f": false,
+      "p_kind": "cross_face_desired",
+      "p_packet_faces": 3
+    },
+    {
+      "count": 21,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "cross_face_desired",
+      "p_packet_faces": 3
+    },
+    {
+      "count": 4,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 0
+    },
+    {
+      "count": 48,
+      "first_changed": "p",
+      "p_has_f": false,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 1
+    },
+    {
+      "count": 3,
+      "first_changed": "p",
+      "p_has_f": false,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 2
+    },
+    {
+      "count": 46,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 2
+    },
+    {
+      "count": 16,
+      "first_changed": "p",
+      "p_has_f": false,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 3
+    },
+    {
+      "count": 12,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 3
+    },
+    {
+      "count": 2,
+      "first_changed": "p",
+      "p_has_f": false,
+      "p_kind": "endogenous_p_improvement",
+      "p_packet_faces": 4
+    },
+    {
+      "count": 66,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "selected_offer_desired",
+      "p_packet_faces": 1
+    },
+    {
+      "count": 5,
+      "first_changed": "p",
+      "p_has_f": true,
+      "p_kind": "selected_offer_desired",
+      "p_packet_faces": 2
+    },
+    {
+      "count": 10,
+      "first_changed": "q",
+      "p_has_f": false,
+      "p_kind": "anchored_x",
+      "p_packet_faces": 0
+    },
+    {
+      "count": 1,
+      "first_changed": "q",
+      "p_has_f": false,
+      "p_kind": "other",
+      "p_packet_faces": 2
+    },
+    {
+      "count": 127,
+      "first_changed": "r",
+      "p_has_f": false,
+      "p_kind": "anchored_x",
+      "p_packet_faces": 0
+    },
+    {
+      "count": 1,
+      "first_changed": "r",
+      "p_has_f": false,
+      "p_kind": "other",
+      "p_packet_faces": 2
+    }
+  ],
+  "packet_sizes": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "profile_count": 32,
+  "profile_summary": {
+    "both_direct_payments_fail": 0,
+    "direct_p_payment": 32,
+    "direct_r_payment": 27,
+    "has_quota_blocked_wall_pair": 0,
+    "has_r_and_p_wall": 0
+  },
+  "profiles": [
+    {
+      "direct_p_payment_count": 17,
+      "direct_r_payment_count": 9,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 1,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 9,
+      "direct_r_payment_count": 0,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 2,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 11,
+      "direct_r_payment_count": 0,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 3,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 5,
+      "direct_r_payment_count": 0,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 4,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 5,
+      "direct_r_payment_count": 0,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 5,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            5
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 2,
+      "direct_r_payment_count": 0,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 6,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r",
+            "s"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            5
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 15,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 7,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 11,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 8,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 8,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 9,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 17,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 10,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 17,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 11,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 16,
+      "direct_r_payment_count": 15,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 12,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "p",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "p",
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p",
+            "r",
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "p",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "p",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 18,
+      "direct_r_payment_count": 12,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 13,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 16,
+      "direct_r_payment_count": 26,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 14,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 20,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 15,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 18,
+      "direct_r_payment_count": 8,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 16,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 21,
+      "direct_r_payment_count": 7,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 17,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 9,
+      "direct_r_payment_count": 7,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 18,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "p",
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 6,
+      "direct_r_payment_count": 10,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 19,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            2,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "sources": [
+            "p",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 20,
+      "direct_r_payment_count": 1,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 20,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 19,
+      "direct_r_payment_count": 9,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 21,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 32,
+      "direct_r_payment_count": 4,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 22,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 21,
+      "direct_r_payment_count": 5,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 23,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4
+          ],
+          "sources": [
+            "r",
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6
+          ],
+          "sources": [
+            "r",
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "s",
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 22,
+      "direct_r_payment_count": 22,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 24,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 19,
+      "direct_r_payment_count": 13,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 25,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 6,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 26,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "sources": [
+            "p"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r",
+            "s"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 18,
+      "direct_r_payment_count": 14,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 27,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            0,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 31,
+      "direct_r_payment_count": 6,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 28,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 29,
+      "direct_r_payment_count": 6,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 29,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            2,
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "s"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 27,
+      "direct_r_payment_count": 3,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 30,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            6
+          ],
+          "sources": [
+            "s"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            5,
+            7
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            4,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 9,
+      "direct_r_payment_count": 13,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 31,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            1,
+            6,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            2,
+            6,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            6
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            7
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            3,
+            4
+          ],
+          "sources": [
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            6
+          ],
+          "sources": [
+            "r"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    },
+    {
+      "direct_p_payment_count": 17,
+      "direct_r_payment_count": 19,
+      "disjoint_wall_pair_count": 0,
+      "iteration": 32,
+      "p_wall_count": 0,
+      "quota_blocked_examples": [],
+      "quota_splittable_wall_pair_count": 0,
+      "r_wall_count": 0,
+      "u_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            1,
+            3,
+            6
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            1,
+            3,
+            7
+          ],
+          "sources": [
+            "p",
+            "r"
+          ]
+        },
+        {
+          "bundle": [
+            0,
+            3,
+            6,
+            7
+          ],
+          "sources": [
+            "p"
+          ]
+        }
+      ],
+      "w_minimal_desired_source_sets": [
+        {
+          "bundle": [
+            3,
+            4
+          ],
+          "sources": [
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            3,
+            5,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        },
+        {
+          "bundle": [
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sources": [
+            "r",
+            "q"
+          ]
+        }
+      ],
+      "wall_pair_count": 0
+    }
+  ],
+  "provenance": {
+    "pool": "/private/tmp/adjacent-unrestricted-2222-0123-pool.json",
+    "pool_sha256": "79c7a5b4b25daa9534cc437f81f892c4318d09265454b45a60bb76ecaf6ab259",
+    "result": "/private/tmp/adjacent-unrestricted-2222-0123-result.json",
+    "result_sha256": "48ef5023d1689b3788a78e770b5bd119ae61a69175190ebc3fe6914f3a36e194"
+  },
+  "schema": "adjacent-large-packet-flow-analysis-v1",
+  "status": "DIAGNOSTIC_ONLY"
+}

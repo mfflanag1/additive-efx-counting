@@ -1,0 +1,284 @@
+{
+  "agent_order": [
+    2,
+    1,
+    0,
+    3
+  ],
+  "agent_order_names": [
+    "s",
+    "r",
+    "p",
+    "q"
+  ],
+  "claim_boundary": {
+    "not_proved": "arbitrary packet sizes, other priority orders in this split cell, or complete four-agent EFX",
+    "proved_exactly": "unrestricted global-lex escape in this fixed adjacent-large packet cell and priority order"
+  },
+  "core": [
+    {
+      "allocation": {
+        "charity": [],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "y"
+        ],
+        "r": [
+          "br0",
+          "br1",
+          "tq"
+        ],
+        "s": [
+          "bq",
+          "x"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "allocation": {
+        "charity": [
+          "br1"
+        ],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "y"
+        ],
+        "r": [
+          "br0",
+          "tq"
+        ],
+        "s": [
+          "bq",
+          "x"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        1,
+        null,
+        1,
+        2,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "allocation": {
+        "charity": [
+          "br1"
+        ],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "tq",
+          "bq"
+        ],
+        "r": [
+          "y"
+        ],
+        "s": [
+          "br0",
+          "x"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        2,
+        null,
+        3,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "allocation": {
+        "charity": [
+          "bq"
+        ],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "y"
+        ],
+        "r": [
+          "x"
+        ],
+        "s": [
+          "br0",
+          "br1",
+          "tq"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        2,
+        2,
+        2,
+        null,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "allocation": {
+        "charity": [
+          "bq"
+        ],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "y"
+        ],
+        "r": [
+          "br1",
+          "tq"
+        ],
+        "s": [
+          "br0",
+          "x"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        2,
+        1,
+        1,
+        null,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "allocation": {
+        "charity": [
+          "bq"
+        ],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "br1",
+          "tq"
+        ],
+        "r": [
+          "x"
+        ],
+        "s": [
+          "br0",
+          "y"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        2,
+        3,
+        3,
+        null,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "allocation": {
+        "charity": [
+          "br1"
+        ],
+        "p": [
+          "tr",
+          "f"
+        ],
+        "q": [
+          "br0",
+          "tq"
+        ],
+        "r": [
+          "x"
+        ],
+        "s": [
+          "bq",
+          "y"
+        ]
+      },
+      "owner_by_good": [
+        0,
+        3,
+        null,
+        3,
+        2,
+        1,
+        2,
+        0
+      ]
+    }
+  ],
+  "deletion_minimal_core_size": 7,
+  "goods": [
+    "tr",
+    "br0",
+    "br1",
+    "tq",
+    "bq",
+    "x",
+    "y",
+    "f"
+  ],
+  "initial_core_size": 7,
+  "packet_sizes": [
+    1,
+    2,
+    1,
+    1
+  ],
+  "pool_size": 256,
+  "provenance": {
+    "script": "tracks/parkability/extract_adjacent_large_variable_packet_core.py",
+    "script_sha256": "6ced9771e05b880860bb788245b7496ba16fcbbaaaacba6e65dd107b211a8ff1",
+    "search_script": "tracks/parkability/run_adjacent_large_variable_packet_global_lex_cegar.py",
+    "search_script_sha256": "70a616ff41422ab13bac77d68295fc1c603a50c9c12e49e68c86a9f559bb801e"
+  },
+  "schema": "adjacent-large-variable-packet-core-extraction-v1",
+  "single_deletion_statuses": [
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat"
+  ],
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "UNSAT_ADJACENT_SPLIT_CELL"
+}

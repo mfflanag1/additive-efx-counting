@@ -691,3 +691,24 @@ both encodings.
   reservoir reduction, dual-bottom safety lemma, and atomic Hall gate. A
   previously reported first-split core was withdrawn after the guarded-cut
   correction invalidated its replay.
+- [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
+  — cap-free closure of all `q`-, `s`-, and `r`-first orders in the adjacent-
+  large residual. The remaining five `p`-first source/order types contract
+  analytically to a two-demand quota obstruction inside `T_r`, coupled to a
+  low `q`/`s` reservoir wall. This is a reduction, not complete EFX.
+- [`adjacent_large_frozen_cores_audit.json`](adjacent_large_frozen_cores_audit.json)
+  — exact replay of the corrected all-order seven-good exclusion and all
+  four one-packet splits. The atomic cores have sizes at most three; the
+  split cores for `(s,r,p,q)` have sizes `1,7,11,1`.
+- [`adjacent_large_binary_selected_root_counterexample_audit.json`](adjacent_large_binary_selected_root_counterexample_audit.json)
+  and [`adjacent_large_dual_payment_counterexample_audit.json`](adjacent_large_dual_payment_counterexample_audit.json)
+  — strict subset-nondegenerate profiles refuting, respectively, fixed
+  selected-`p` completion and the mirrored direct-payment dichotomy. Every
+  priority order still has an unrestricted escape; neither profile refutes
+  EFX or the adjacent global-lex lemma.
+- [`adjacent_large_packet_flow_analysis.json`](adjacent_large_packet_flow_analysis.json)
+  and [`adjacent_large_minimum_escape_anatomies.json`](adjacent_large_minimum_escape_anatomies.json)
+  — exact finite anatomy of 512 learned escapes and minimum-change repairs
+  for the two hard prefixes. Cross-face and endogenous bundles are frequent,
+  confirming the move-completeness lessons of the 162/174 alternating
+  profiles. These files are diagnostics, not cap-free proofs.

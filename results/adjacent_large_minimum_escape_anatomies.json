@@ -1,0 +1,4983 @@
+{
+  "claim_boundary": "Finite exact anatomy mining only; no cap-free conclusion.",
+  "packet_sizes": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "profile_count": 34,
+  "provenance": {
+    "dual_payment_audit": "results/adjacent_large_dual_payment_counterexample_audit.json",
+    "dual_payment_audit_sha256": "fe4aab3aa20dbafc91ba2e0a7d629ad6b6b6b139c0ef043727ba3cc5dd481451",
+    "selected_root_audit": "/private/tmp/adjacent-strict-binary-audit.json",
+    "selected_root_audit_sha256": "f6a3fc2c51e0f4d1c31ada4adff4914a979cf3d1508831bb153eeec07a79d12e",
+    "unrestricted_result": "/private/tmp/adjacent-unrestricted-2222-0123-result.json",
+    "unrestricted_result_sha256": "48ef5023d1689b3788a78e770b5bd119ae61a69175190ebc3fe6914f3a36e194"
+  },
+  "records": [
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "p",
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          167,
+          639,
+          6,
+          6
+        ]
+      },
+      "profile": "pool_iteration_1",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          167,
+          530,
+          6,
+          6
+        ]
+      },
+      "profile": "pool_iteration_1",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          571,
+          2682,
+          567,
+          392
+        ]
+      },
+      "profile": "pool_iteration_2",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr1",
+          "f"
+        ],
+        "utilities": [
+          571,
+          2287,
+          567,
+          366
+        ]
+      },
+      "profile": "pool_iteration_2",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          428,
+          11956,
+          3374,
+          3350
+        ]
+      },
+      "profile": "pool_iteration_3",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          428,
+          10209,
+          3374,
+          4869
+        ]
+      },
+      "profile": "pool_iteration_3",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          313,
+          4930,
+          2442,
+          3675
+        ]
+      },
+      "profile": "pool_iteration_4",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          313,
+          4930,
+          2442,
+          3675
+        ]
+      },
+      "profile": "pool_iteration_4",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          606,
+          5583,
+          4786,
+          3995
+        ]
+      },
+      "profile": "pool_iteration_5",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          606,
+          5583,
+          4786,
+          3995
+        ]
+      },
+      "profile": "pool_iteration_5",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          1718,
+          8103,
+          492,
+          1685
+        ]
+      },
+      "profile": "pool_iteration_6",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          1718,
+          8103,
+          492,
+          1685
+        ]
+      },
+      "profile": "pool_iteration_6",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          120,
+          1529,
+          16,
+          950
+        ]
+      },
+      "profile": "pool_iteration_7",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          120,
+          1529,
+          16,
+          950
+        ]
+      },
+      "profile": "pool_iteration_7",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          1743,
+          46516,
+          133,
+          1559
+        ]
+      },
+      "profile": "pool_iteration_8",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          1743,
+          46516,
+          133,
+          1559
+        ]
+      },
+      "profile": "pool_iteration_8",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr1",
+          "f"
+        ],
+        "utilities": [
+          1115,
+          10386,
+          266,
+          2200
+        ]
+      },
+      "profile": "pool_iteration_9",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          1115,
+          10424,
+          266,
+          2200
+        ]
+      },
+      "profile": "pool_iteration_9",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr1",
+          "f"
+        ],
+        "utilities": [
+          4331,
+          4382,
+          247,
+          60690
+        ]
+      },
+      "profile": "pool_iteration_10",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr1",
+          "f"
+        ],
+        "utilities": [
+          4331,
+          4382,
+          247,
+          60690
+        ]
+      },
+      "profile": "pool_iteration_10",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          2877,
+          8145,
+          327,
+          34412
+        ]
+      },
+      "profile": "pool_iteration_11",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          2877,
+          8145,
+          327,
+          34412
+        ]
+      },
+      "profile": "pool_iteration_11",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          357,
+          2548,
+          31,
+          238
+        ]
+      },
+      "profile": "pool_iteration_12",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          357,
+          2548,
+          31,
+          238
+        ]
+      },
+      "profile": "pool_iteration_12",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "p",
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          2423,
+          19444,
+          111,
+          151
+        ]
+      },
+      "profile": "pool_iteration_13",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "p",
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          2423,
+          19444,
+          111,
+          151
+        ]
+      },
+      "profile": "pool_iteration_13",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          11845,
+          18743,
+          579,
+          4725
+        ]
+      },
+      "profile": "pool_iteration_14",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          11845,
+          18743,
+          579,
+          4725
+        ]
+      },
+      "profile": "pool_iteration_14",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          1955,
+          3191,
+          5236,
+          12004
+        ]
+      },
+      "profile": "pool_iteration_15",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          1955,
+          3191,
+          5236,
+          12004
+        ]
+      },
+      "profile": "pool_iteration_15",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1",
+            "f"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r",
+            "q"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [],
+        "utilities": [
+          321,
+          647,
+          320,
+          647
+        ]
+      },
+      "profile": "pool_iteration_16",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "f:charity->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1",
+            "f"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r",
+            "q"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [],
+        "utilities": [
+          321,
+          647,
+          320,
+          647
+        ]
+      },
+      "profile": "pool_iteration_16",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "f:charity->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "tr0",
+            "tq1"
+          ],
+          "q": [
+            "br0",
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "p"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 4,
+        "charity": [
+          "x",
+          "f"
+        ],
+        "utilities": [
+          16230,
+          12899,
+          1798,
+          38424
+        ]
+      },
+      "profile": "pool_iteration_17",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->q",
+        "tq:q->p",
+        "tr:r->p",
+        "x:p->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "br0",
+            "br1",
+            "tq0",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 4,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          14566,
+          21873,
+          1798,
+          54948
+        ]
+      },
+      "profile": "pool_iteration_17",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tq:q->r",
+        "tr:r->charity",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq0",
+            "bq0"
+          ],
+          "s": [
+            "tq1",
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [
+            "q"
+          ],
+          "r": [],
+          "s": []
+        },
+        "changed_good_count": 4,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          3507,
+          42463,
+          5193,
+          217646
+        ]
+      },
+      "profile": "pool_iteration_18",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tq:q->r",
+        "tq:q->s",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq0",
+            "bq0"
+          ],
+          "s": [
+            "tq1",
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [
+            "q"
+          ],
+          "r": [],
+          "s": []
+        },
+        "changed_good_count": 4,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          3507,
+          42463,
+          5193,
+          217646
+        ]
+      },
+      "profile": "pool_iteration_18",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tq:q->r",
+        "tq:q->s",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "p",
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          2197,
+          19989,
+          2186,
+          241
+        ]
+      },
+      "profile": "pool_iteration_19",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "p",
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          2197,
+          19989,
+          2186,
+          241
+        ]
+      },
+      "profile": "pool_iteration_19",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr0",
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          53176,
+          19884,
+          106633,
+          79829
+        ]
+      },
+      "profile": "pool_iteration_20",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq0"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "bq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          53176,
+          19884,
+          106633,
+          53196
+        ]
+      },
+      "profile": "pool_iteration_20",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr1",
+          "f"
+        ],
+        "utilities": [
+          42775,
+          10282,
+          154,
+          58
+        ]
+      },
+      "profile": "pool_iteration_21",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          42775,
+          10489,
+          154,
+          60
+        ]
+      },
+      "profile": "pool_iteration_21",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          10815,
+          85182,
+          429,
+          214287
+        ]
+      },
+      "profile": "pool_iteration_22",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          10815,
+          94679,
+          429,
+          214287
+        ]
+      },
+      "profile": "pool_iteration_22",
+      "status": "sat",
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr0",
+            "tr1",
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r",
+            "s"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          19828,
+          79310,
+          4438,
+          2951
+        ]
+      },
+      "profile": "pool_iteration_23",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "tq0",
+            "bq0"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1",
+            "bq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [
+            "s",
+            "q"
+          ],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          19828,
+          65096,
+          4438,
+          2975
+        ]
+      },
+      "profile": "pool_iteration_23",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          70433,
+          8349,
+          286,
+          65355
+        ]
+      },
+      "profile": "pool_iteration_24",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          70433,
+          8349,
+          286,
+          65355
+        ]
+      },
+      "profile": "pool_iteration_24",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          147939,
+          30002,
+          327,
+          44238
+        ]
+      },
+      "profile": "pool_iteration_25",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq0"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "bq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          147939,
+          26164,
+          327,
+          38314
+        ]
+      },
+      "profile": "pool_iteration_25",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq0"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "bq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          5954,
+          1777,
+          124950,
+          345591
+        ]
+      },
+      "profile": "pool_iteration_26",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq0"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "bq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          5954,
+          1777,
+          124950,
+          345591
+        ]
+      },
+      "profile": "pool_iteration_26",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          193342,
+          9067,
+          17735,
+          19749
+        ]
+      },
+      "profile": "pool_iteration_27",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          193342,
+          9067,
+          17735,
+          19749
+        ]
+      },
+      "profile": "pool_iteration_27",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr1",
+            "tq0",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "tr0",
+          "f"
+        ],
+        "utilities": [
+          2764,
+          27340,
+          30280,
+          26953
+        ]
+      },
+      "profile": "pool_iteration_28",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "br1",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "tq0",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [
+            "q"
+          ],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          2764,
+          24631,
+          30280,
+          32433
+        ]
+      },
+      "profile": "pool_iteration_28",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tr0",
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "tr1",
+          "f"
+        ],
+        "utilities": [
+          71838,
+          34650,
+          30280,
+          9184
+        ]
+      },
+      "profile": "pool_iteration_29",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1",
+            "f"
+          ],
+          "r": [
+            "tr0",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "tr1"
+        ],
+        "utilities": [
+          71838,
+          35867,
+          30280,
+          9865
+        ]
+      },
+      "profile": "pool_iteration_29",
+      "status": "sat",
+      "transfer_signature": [
+        "f:charity->q",
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          1741,
+          1745,
+          3446,
+          4669
+        ]
+      },
+      "profile": "pool_iteration_30",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq1",
+            "bq0",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "br1",
+            "tq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 1,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          1741,
+          1745,
+          3446,
+          4669
+        ]
+      },
+      "profile": "pool_iteration_30",
+      "status": "sat",
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "br1",
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          15091,
+          48447,
+          11107,
+          25989
+        ]
+      },
+      "profile": "pool_iteration_31",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "br1",
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 2,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          15091,
+          48447,
+          11107,
+          25989
+        ]
+      },
+      "profile": "pool_iteration_31",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "bq0",
+            "bq1",
+            "f"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1",
+            "tq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "tr0"
+        ],
+        "utilities": [
+          4723,
+          27862,
+          47198,
+          11891
+        ]
+      },
+      "profile": "pool_iteration_32",
+      "status": "sat",
+      "transfer_signature": [
+        "f:charity->q",
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br1",
+            "bq0"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "p",
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "tr0",
+          "br0",
+          "f"
+        ],
+        "utilities": [
+          4723,
+          26361,
+          47198,
+          11819
+        ]
+      },
+      "profile": "pool_iteration_32",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "bq0",
+            "x"
+          ],
+          "q": [
+            "tr0",
+            "tq0",
+            "bq1"
+          ],
+          "r": [
+            "tr1",
+            "br0",
+            "br1"
+          ],
+          "s": [
+            "tq1",
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [],
+          "q": [
+            "q"
+          ],
+          "r": [],
+          "s": []
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "f"
+        ],
+        "utilities": [
+          7524672,
+          2773006,
+          3678752,
+          14090385
+        ]
+      },
+      "profile": "selected_root_refutation",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->p",
+        "tq:q->s",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "x"
+          ],
+          "q": [
+            "br1",
+            "tq0",
+            "bq0"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "bq1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "s"
+          ],
+          "q": [],
+          "r": [
+            "r"
+          ],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 3,
+        "charity": [
+          "tq1",
+          "f"
+        ],
+        "utilities": [
+          7426304,
+          2805895,
+          1868288,
+          11366488
+        ]
+      },
+      "profile": "selected_root_refutation",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q",
+        "tq:q->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "br0",
+            "f"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br1"
+          ],
+          "s": [
+            "y"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "p"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "q"
+          ]
+        },
+        "changed_good_count": 4,
+        "charity": [
+          "bq0",
+          "x"
+        ],
+        "utilities": [
+          1479684,
+          8724491,
+          193024,
+          131248
+        ]
+      },
+      "profile": "dual_payment_refutation",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->charity",
+        "br:r->p",
+        "f:charity->p",
+        "x:p->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "minimum_change_escape": {
+        "allocation": {
+          "p": [
+            "y"
+          ],
+          "q": [
+            "tq0",
+            "tq1",
+            "bq1"
+          ],
+          "r": [
+            "tr0",
+            "tr1",
+            "br0",
+            "bq0"
+          ],
+          "s": [
+            "x"
+          ]
+        },
+        "bundle_desired_sources_at_base": {
+          "p": [
+            "q"
+          ],
+          "q": [],
+          "r": [],
+          "s": [
+            "s"
+          ]
+        },
+        "changed_good_count": 4,
+        "charity": [
+          "br1",
+          "f"
+        ],
+        "utilities": [
+          1073664,
+          12767303,
+          3641600,
+          131248
+        ]
+      },
+      "profile": "dual_payment_refutation",
+      "status": "sat",
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity",
+        "x:p->s",
+        "y:s->p"
+      ]
+    }
+  ],
+  "schema": "adjacent-large-minimum-escape-anatomies-v1",
+  "signature_counts": [
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 8,
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 5,
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 4,
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 4,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 4,
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 4,
+      "transfer_signature": [
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 3,
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 3,
+      "transfer_signature": [
+        "br:r->charity",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 3,
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 3,
+      "transfer_signature": [
+        "bq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 2,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 2,
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->charity",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 2,
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->charity",
+        "br:r->p",
+        "f:charity->p",
+        "x:p->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->p",
+        "tq:q->s",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "f:charity->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "tq:q->r",
+        "tq:q->s",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "br:r->q",
+        "tq:q->p",
+        "tr:r->p",
+        "x:p->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "f:charity->q",
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "p",
+        "r",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->charity",
+        "x:p->s",
+        "y:s->p"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q",
+        "tq:q->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "br:r->q",
+        "tq:q->r"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "f:charity->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "tq:q->r",
+        "tq:q->s",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "bq:q->r",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "f:charity->q",
+        "tq:q->r",
+        "tr:r->charity"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "tq:q->r",
+        "tq:q->r",
+        "tr:r->charity",
+        "tr:r->q"
+      ]
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "agent_order_names": [
+        "r",
+        "p",
+        "s",
+        "q"
+      ],
+      "count": 1,
+      "transfer_signature": [
+        "tq:q->r",
+        "tr:r->q"
+      ]
+    }
+  ],
+  "status": "DIAGNOSTIC_ONLY"
+}

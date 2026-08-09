@@ -1,0 +1,279 @@
+{
+  "claim_boundary": "The dichotomy is exact only in the listed finite cells. The binary SAT profile is not an unrestricted escape counterexample.",
+  "provenance": {
+    "decision_script": "tracks/parkability/decide_adjacent_large_dual_payment_gate.py",
+    "decision_script_sha256": "5b7402a2af2eace46bfdca78d3a5c50f3181869091b4479509ac2159f1120b0a",
+    "script": "tracks/parkability/audit_adjacent_large_dual_payment_cells.py",
+    "script_sha256": "3516b2e2c913005e626a7bc600d568f3d88c8120caf1447fb1c0f947f221e968"
+  },
+  "records": [
+    {
+      "claim_boundary": {
+        "sat": "exact fixed-cell counterexample to the dual-payment dichotomy, not to unrestricted escape or EFX existence",
+        "unknown": "no mathematical decision",
+        "unsat": "exact dual-payment dichotomy only in this fixed packet-size cell"
+      },
+      "constraints": {
+        "first_failure": "no common-safe R subset B_r+X_q pays tau_r(T_r+f)",
+        "second_failure": "no common-safe P subset X_r+B_q pays tau_p(T_q+f)"
+      },
+      "goods": [
+        "tr",
+        "br",
+        "tq",
+        "bq",
+        "x",
+        "y",
+        "f"
+      ],
+      "packet_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "schema": "adjacent-large-dual-payment-gate-v1",
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "claim_boundary": {
+        "sat": "exact fixed-cell counterexample to the dual-payment dichotomy, not to unrestricted escape or EFX existence",
+        "unknown": "no mathematical decision",
+        "unsat": "exact dual-payment dichotomy only in this fixed packet-size cell"
+      },
+      "constraints": {
+        "first_failure": "no common-safe R subset B_r+X_q pays tau_r(T_r+f)",
+        "second_failure": "no common-safe P subset X_r+B_q pays tau_p(T_q+f)"
+      },
+      "goods": [
+        "tr0",
+        "tr1",
+        "br",
+        "tq",
+        "bq",
+        "x",
+        "y",
+        "f"
+      ],
+      "packet_sizes": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "schema": "adjacent-large-dual-payment-gate-v1",
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "claim_boundary": {
+        "sat": "exact fixed-cell counterexample to the dual-payment dichotomy, not to unrestricted escape or EFX existence",
+        "unknown": "no mathematical decision",
+        "unsat": "exact dual-payment dichotomy only in this fixed packet-size cell"
+      },
+      "constraints": {
+        "first_failure": "no common-safe R subset B_r+X_q pays tau_r(T_r+f)",
+        "second_failure": "no common-safe P subset X_r+B_q pays tau_p(T_q+f)"
+      },
+      "goods": [
+        "tr",
+        "br0",
+        "br1",
+        "tq",
+        "bq",
+        "x",
+        "y",
+        "f"
+      ],
+      "packet_sizes": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "schema": "adjacent-large-dual-payment-gate-v1",
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "claim_boundary": {
+        "sat": "exact fixed-cell counterexample to the dual-payment dichotomy, not to unrestricted escape or EFX existence",
+        "unknown": "no mathematical decision",
+        "unsat": "exact dual-payment dichotomy only in this fixed packet-size cell"
+      },
+      "constraints": {
+        "first_failure": "no common-safe R subset B_r+X_q pays tau_r(T_r+f)",
+        "second_failure": "no common-safe P subset X_r+B_q pays tau_p(T_q+f)"
+      },
+      "goods": [
+        "tr",
+        "br",
+        "tq0",
+        "tq1",
+        "bq",
+        "x",
+        "y",
+        "f"
+      ],
+      "packet_sizes": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "schema": "adjacent-large-dual-payment-gate-v1",
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "claim_boundary": {
+        "sat": "exact fixed-cell counterexample to the dual-payment dichotomy, not to unrestricted escape or EFX existence",
+        "unknown": "no mathematical decision",
+        "unsat": "exact dual-payment dichotomy only in this fixed packet-size cell"
+      },
+      "constraints": {
+        "first_failure": "no common-safe R subset B_r+X_q pays tau_r(T_r+f)",
+        "second_failure": "no common-safe P subset X_r+B_q pays tau_p(T_q+f)"
+      },
+      "goods": [
+        "tr",
+        "br",
+        "tq",
+        "bq0",
+        "bq1",
+        "x",
+        "y",
+        "f"
+      ],
+      "packet_sizes": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "schema": "adjacent-large-dual-payment-gate-v1",
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "claim_boundary": {
+        "sat": "exact fixed-cell counterexample to the dual-payment dichotomy, not to unrestricted escape or EFX existence",
+        "unknown": "no mathematical decision",
+        "unsat": "exact dual-payment dichotomy only in this fixed packet-size cell"
+      },
+      "constraints": {
+        "first_failure": "no common-safe R subset B_r+X_q pays tau_r(T_r+f)",
+        "second_failure": "no common-safe P subset X_r+B_q pays tau_p(T_q+f)"
+      },
+      "goods": [
+        "tr0",
+        "tr1",
+        "br0",
+        "br1",
+        "tq0",
+        "tq1",
+        "bq0",
+        "bq1",
+        "x",
+        "y",
+        "f"
+      ],
+      "packet_sizes": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "schema": "adjacent-large-dual-payment-gate-v1",
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "sat",
+      "values": [
+        [
+          27,
+          30,
+          57,
+          60,
+          3,
+          45,
+          3,
+          12,
+          944,
+          941,
+          890
+        ],
+        [
+          866,
+          156,
+          996,
+          983,
+          260,
+          788,
+          13,
+          1048,
+          2988,
+          2988,
+          1966
+        ],
+        [
+          2,
+          18,
+          24,
+          40,
+          12,
+          10,
+          28,
+          34,
+          707,
+          85,
+          44
+        ],
+        [
+          1,
+          5,
+          35,
+          22,
+          13,
+          13,
+          8,
+          30,
+          63,
+          789,
+          25
+        ]
+      ]
+    }
+  ],
+  "schema": "adjacent-large-dual-payment-cells-audit-v1",
+  "status": "DUAL_PAYMENT_FIRST_FAILS_IN_FULL_BINARY_CELL"
+}
