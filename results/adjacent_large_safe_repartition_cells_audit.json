@@ -1,0 +1,103 @@
+{
+  "claim_boundary": "Exact fixed-cell corroboration only. The cap-free conclusion is proved analytically in ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md.",
+  "provenance": {
+    "audit_script": "tracks/parkability/audit_adjacent_large_safe_repartition_cells.py",
+    "audit_script_sha256": "ff04ac43871845a48c2d1008d6fd913bbd1cd72ed107a3246fb33ca6ade3253e",
+    "gate_script": "tracks/parkability/decide_adjacent_large_safe_repartition_gate.py",
+    "gate_script_sha256": "a2d82b81a4863d2e08c0eed7313b50836417efd12e69ac853fbc60e5fefc25a1"
+  },
+  "records": [
+    {
+      "packet_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "packet_sizes": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "packet_sizes": [
+        1,
+        2,
+        1,
+        1
+      ],
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "packet_sizes": [
+        1,
+        1,
+        2,
+        1
+      ],
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "packet_sizes": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    },
+    {
+      "packet_sizes": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "solver": {
+        "logic": "QF_LRA",
+        "name": "z3",
+        "reason_unknown": null,
+        "version": "5.0.0"
+      },
+      "status": "unsat"
+    }
+  ],
+  "schema": "adjacent-large-safe-repartition-cells-audit-v1",
+  "status": "ALL_FIXED_CELLS_UNSAT"
+}

@@ -692,10 +692,18 @@ both encodings.
   previously reported first-split core was withdrawn after the guarded-cut
   correction invalidated its replay.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
-  — cap-free closure of all `q`-, `s`-, and `r`-first orders in the adjacent-
-  large residual. The remaining five `p`-first source/order types contract
-  analytically to a two-demand quota obstruction inside `T_r`, coupled to a
-  low `q`/`s` reservoir wall. This is a reduction, not complete EFX.
+  — analytic cap-free closure of all 24 priority orders in the adjacent-large
+  length-four residual. The final five `p`-first types are closed by an
+  endogenous safe-repartition theorem on `X_r+X_q+f`: reservoir extraction
+  either pays `q` for `D_r`, or returns an arbitrary `r`-desired bundle for
+  which `D_r` pays `q`. This proves the adjacent residual lemma, not complete
+  four-agent EFX.
+- [`adjacent_large_safe_repartition_cells_audit.json`](adjacent_large_safe_repartition_cells_audit.json)
+  and [`adjacent_large_safe_repartition_core_2222.json`](adjacent_large_safe_repartition_core_2222.json)
+  — exact corroboration of the safe-repartition theorem in the atom, all four
+  one-packet splits, and the full binary cell, plus a 28-rival
+  binary solver core. The exact cells are diagnostics; the cap-free result is
+  the analytic theorem above.
 - [`adjacent_large_frozen_cores_audit.json`](adjacent_large_frozen_cores_audit.json)
   — exact replay of the corrected all-order seven-good exclusion and all
   four one-packet splits. The atomic cores have sizes at most three; the

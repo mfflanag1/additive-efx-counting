@@ -1,8 +1,8 @@
 # Adjacent-large global-lex target
 
 **Date:** 2026-08-09  
-**Status:** every `q`-, `s`-, and `r`-first order closed cap-free; `p`-first
-residual contracted to a contested-`T_r` quota wall
+**Status:** all 24 priority orders closed analytically for arbitrary packet
+sizes; adjacent-large global-lex escape lemma proved
 
 ## Structural normal form
 
@@ -276,9 +276,120 @@ that remains in the length-three residue, with the source roles rotated.
 > Conversely, failure to induce either object gives one of the explicit EFX
 > lexicographic improvements (8)--(12).
 
-Theorem 2 is a reduction, not yet a proof that the five types cannot occur.
-Closing (15) against (9), or producing an exact unrestricted profile in one
-of those types, remains the final adjacent-large gate.
+Theorem 2 was the intermediate contraction that isolated the five hard
+types.  The next theorem closes them without having to solve the quota wall
+directly.
+
+## Endogenous safe-repartition closure
+
+The minimum escapes from the binary payment counterprofiles reveal a useful
+cap-free family that is broader than an anchored handoff or a one-way packet
+transfer.  Put
+
+\[
+P=X_r+X_q+f.
+\]
+
+> **Safe-repartition lemma.** Suppose disjoint sets `R,Q subseteq P` satisfy
+>
+> 1. `R` is desired by `r`;
+> 2. `Q` is common-safe at the base; and
+> 3. `v_q(Q)>=tau_q(R)`.
+>
+> Then
+> \[
+> (Y_p,Y_r,Y_s,Y_q)=(\{x\},R,\{y\},Q)
+> \tag{16}
+> \]
+> is EFX.  It closes all five remaining priority/source types.
+
+Indeed, common safety of `R` checks every observer other than possibly `q`,
+whose comparison is exactly condition 3.  Common safety of `Q` checks
+`p,r,s`, while `q`'s comparison with its own bundle is automatic.  The two
+singleton bundles impose no nonzero deletion comparison.  Agents `p,s`
+keep their base utilities and `r` strictly improves, so (16) is a strict
+lexicographic improvement whether `r` is second or follows the fixed `s`.
+This proof permits arbitrary repartition and discard inside `P`; neither
+bundle must be an old offer or be safe only by reference to the old
+recipient.
+
+> **Theorem 3 (adjacent `p`-first escape).** No PI-free adjacent-large state
+> is globally lexicographically maximal in any of the five remaining
+> `p`-first priority/source types, for arbitrary packet sizes.
+
+Apply the reservoir extraction lemma to the common-safe set `D_r`, recipient
+`q`, and pool
+
+\[
+U=X_r+B_q.
+\]
+
+The sets `D_r=T_q+f` and `U` are disjoint.  Moreover `U` contains a desired
+set: positivity gives `v_r(U)>b_r`, so an inclusion-minimal subset of `U`
+that crosses some agent's base is desired.
+
+In the first extraction branch there is a common-safe `Q subseteq U` with
+
+\[
+v_q(Q)\ge\tau_q(D_r).
+\tag{17}
+\]
+
+Take `R=D_r` in (16).  It is desired by `r`, and (17) is exactly the payment
+condition, so the safe-repartition lemma gives the required escape.
+
+In the second extraction branch there is a desired `A subseteq U` with
+
+\[
+v_q(A)<\tau_q(D_r).
+\tag{18}
+\]
+
+The three compatible cycles in (5) exclude `p`, `q`, and `s` as sources of
+any desired subset of `U`; hence `A` is desired by `r`.  Now take `R=A` and
+`Q=D_r` in (16).  Positivity and (18) give
+
+\[
+v_q(D_r)>\tau_q(D_r)>v_q(A)>\tau_q(A),
+\tag{19}
+\]
+
+so `D_r` pays `q`'s EFX threshold for `A`.  The safe-repartition lemma again
+gives an EFX allocation fixing `p,s` and strictly improving `r`.  The two
+extraction branches are exhaustive, proving the theorem.
+
+This is the same minimal-threshold mechanism as the independently audited
+[`ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md),
+but the adjacent cycle has the stronger source wall (5): its low reversal
+must be sourced by `r`, exactly the recipient needed in (16).
+
+Combining Theorem 3 with the twelve singleton-first escapes and Theorem 1
+closes all twenty-four priority orders.  Thus the adjacent-large length-four
+residual cannot occur at a PI-free globally lexicographically maximal
+one-charity state.
+
+The argument does not assume that an unrestricted escape is anchored or
+uses an original offer.  It searches the full logical space and proves that
+one of the two displayed safe repartitions exists; in the second branch the
+promoted `r` bundle is an arbitrary extracted desired subset of `U`.  The
+common safety of the constructed bundles is a conclusion of extraction,
+not a restriction placed on possible rival allocations.
+
+## Nonnegative values and ties
+
+The structural proof is run after the standard BCFF nondegenerate positive
+perturbation.  BCFF Lemma A.1 supplies an additive perturbation respecting
+every strict comparison of the original instance.  Positivity is used only
+for `v_r(U)>b_r` and for the strict total-versus-deletion inequalities in
+(19); nondegeneracy makes the selected envy/champion relations strict.
+
+If the surrounding composition produces a complete EFX allocation in the
+perturbed instance, it is EFX for the original valuations: an original
+strict EFX violation would remain strict under a respecting perturbation.
+Thus zero item values and ties do not create an additional adjacent-large
+packet case.  This wrapper does not upgrade the present cycle-class theorem
+to complete four-agent EFX; that still requires the composition described
+below.
 
 ## Corrected exact diagnostics
 
@@ -298,33 +409,62 @@ relations.  After that correction:
 - the mirrored direct-payment dichotomy is false in another strict binary
   profile, while all 24 unrestricted orders again escape with minimum
   repairs changing two to four goods.
+- the broad safe-repartition gate is exact UNSAT in the atom, every
+  one-packet split, and the full binary cell.  The pure binary solver core
+  uses 28 repartition rivals and no direct-payment premise.  The repartition
+  ranges over all disjoint `R,Q` in
+  `X_r+X_q+f`, permits discards, requires `R` desired by `r`, and requires
+  only endogenous common safety plus `v_q(Q)>=tau_q(R)`.  These fixed-cell
+  results are diagnostics; Theorem 3 supplies the independent arbitrary-
+  packet proof.  A larger `(3,2,2,2)` pure-gate replay was deliberately
+  retired without a decision; no cap-free claim depends on scaling the
+  encoding.
 
-The last counterprofile has only `s`-sourced minimal desired sets in `U`.
-It therefore contains the compatible middle cycle
+The mirrored-payment counterprofile has only `s`-sourced minimal desired
+sets in `U`.  It therefore contains the compatible middle cycle
 `r -f-> q -> s -(B_q)-> r` from (5) and is correctly excluded from the
 PI-free branch of Theorem 1.  The finite refutation does not refute the
 analytic theorem.
 
 The 162- and 174-escape profiles remain essential move-completeness tests.
-They show that a final proof cannot require the promoted bundle to lie in
-the original champion offer, cannot insist on an anchored root, and cannot
-test safety only against old base utilities.  The constructions above use
-only those restrictions when deriving a contradiction; Theorem 2's final
-gate explicitly permits cross-face and endogenous reallocations.
+They belong to the alternating topology, not the adjacent normal form, and
+therefore do not contradict Theorem 3.  Their lesson is nevertheless built
+into its formulation: the safe-repartition family permits cross-face,
+opposite-reservoir, discarded, and endogenous bundles, and the second
+extraction branch promotes an arbitrary desired subset rather than a subset
+of the original champion offer.  The theorem concludes that a particularly
+simple witness exists from the adjacent PI-cycle structure; it does not
+assume that narrower witness as a premise.
 
-## Trust boundary and next gate
+Concretely, the 162 profile is frozen in
+[`alternating_variable_extension_1121_refutation_audit.json`](alternating_variable_extension_1121_refutation_audit.json),
+and the 174 profiles in
+[`alternating_psqr_unrestricted_refutation_audit.json`](alternating_psqr_unrestricted_refutation_audit.json).
+The first refutes “anchored or original-offer promotion”; the second refutes
+“anchored or any base-desired root.”  Theorem 3 asserts neither dichotomy.
+Its extraction ranges over every desired subset of `U`, and its validity
+comes from the three adjacent PI-compatible source exclusions in (5), which
+those alternating profiles do not satisfy in the adjacent labeling.
 
-Theorem 1 and the contraction in Theorem 2 are analytic and independent of
-packet sizes.  The exact computations corroborate them but are not premises
-of their proofs.  Neither theorem proves complete four-agent EFX.
+## Trust boundary and composition gate
 
-Completion of the active target requires one of:
+Theorems 1--3 are analytic and independent of packet sizes.  The exact
+computations corroborate them but are not premises of their proofs.  The
+result proves the cap-free global-lex escape lemma for the adjacent-large
+length-four residual topology.  It does **not** by itself prove complete
+four-agent EFX.
 
-1. an uncrossing argument showing that (9) and (15) force a cross-face,
-   root-flip, endogenous, or length-three-contraction escape in all five
-   remaining types; or
-2. a strict exact profile with no unrestricted EFX lexicographic improvement
-   in one of those types.
+The next program-level gate is composition: combine this adjacent theorem
+with independently verified length-two, length-three, and alternating
+cycle-class theorems, and verify that the exactly-two-nonsingleton BCFF
+reduction reaches one of those classes without an unstated graph or
+decomposition assumption.
+
+Shortest exact replay from the repository root (with `z3-solver` installed):
+
+```bash
+PYTHONPATH=tracks/parkability python3 tracks/parkability/audit_adjacent_large_safe_repartition_cells.py --output /tmp/adjacent-safe-repartition-audit.json
+```
 
 Primary source: Berger, Cohen, Feldman, and Fiat, *Almost Full EFX Exists
 for Four Agents (and Beyond)*, Definitions 3.1--3.4 and Lemma 3.5,
