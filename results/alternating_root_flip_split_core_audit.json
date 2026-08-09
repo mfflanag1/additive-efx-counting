@@ -1,0 +1,109 @@
+{
+  "agent_order": [
+    0,
+    3,
+    1,
+    2
+  ],
+  "agent_order_names": [
+    "p",
+    "q",
+    "r",
+    "s"
+  ],
+  "claim_boundary": {
+    "analytic_lift": "the accompanying root-flip lemma proves the same conclusion for arbitrary packet sizes",
+    "not_proved": "the other six hard priority orders, alternating closure, or complete four-agent EFX",
+    "proved_exactly": "the two root-flip rivals suffice in the exact eleven-good alternating split-packet cell for order (p,q,r,s)"
+  },
+  "core_size": 2,
+  "core_status": "unsat",
+  "goods": [
+    "tr0",
+    "tr1",
+    "br0",
+    "br1",
+    "tq0",
+    "tq1",
+    "bq0",
+    "bq1",
+    "x",
+    "y",
+    "f"
+  ],
+  "provenance": {
+    "audit_script": "tracks/parkability/audit_alternating_root_flip_split_core.py",
+    "audit_script_sha256": "f59a3a30c43ec059bb96b638ae758336329d82c3de793c657dfe4b4750cef734",
+    "search_script": "tracks/parkability/run_alternating_anchored_or_promoted_split_cegar.py",
+    "search_script_sha256": "b3846b1b0cfde39ca27cbba9d44d5c75eeeb5e6c15f6da80544ff434a71e7311"
+  },
+  "rivals": [
+    {
+      "owner_by_good": [
+        2,
+        2,
+        null,
+        null,
+        3,
+        3,
+        3,
+        3,
+        0,
+        1,
+        2
+      ],
+      "owner_by_good_names": [
+        "s",
+        "s",
+        null,
+        null,
+        "q",
+        "q",
+        "q",
+        "q",
+        "p",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "owner_by_good": [
+        0,
+        0,
+        null,
+        null,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0
+      ],
+      "owner_by_good_names": [
+        "p",
+        "p",
+        null,
+        null,
+        "s",
+        "s",
+        "s",
+        "s",
+        "q",
+        "r",
+        "p"
+      ]
+    }
+  ],
+  "schema": "alternating-root-flip-split-core-audit-v1",
+  "single_deletion_statuses": [
+    "sat",
+    "sat"
+  ],
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "TWO_RIVAL_ROOT_FLIP_CORE_UNSAT"
+}

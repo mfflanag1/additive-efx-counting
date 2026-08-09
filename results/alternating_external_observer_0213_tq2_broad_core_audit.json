@@ -1,0 +1,238 @@
+{
+  "agent_order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "agent_order_names": [
+    "p",
+    "s",
+    "r",
+    "q"
+  ],
+  "claim_boundary": {
+    "not_proved": "the escape for arbitrary packet sizes or complete EFX",
+    "proved_exactly": "the rooted external-observer escape in the recorded finite variable-packet cell"
+  },
+  "goods": [
+    "tr",
+    "br",
+    "tq0",
+    "tq1",
+    "bq",
+    "x",
+    "y",
+    "f"
+  ],
+  "initial_assumption_core_size": 8,
+  "minimal_core_size": 8,
+  "packet_sizes": [
+    1,
+    1,
+    2,
+    1
+  ],
+  "pool_size": 116,
+  "provenance": {
+    "audit_script": "tracks/parkability/audit_alternating_variable_packet_rooted_core.py",
+    "audit_script_sha256": "3e382f00a2f466b0f7fba45e6f41da49cc1142bbaff1aeef16e80514ab8fef73",
+    "pool": "results/alternating_external_observer_0213_tq2_broad_pool.json",
+    "pool_sha256": "394b6f7de1176d690a1adedeffb8adf9a91ab0087377293cac0bde450a646790"
+  },
+  "rivals": [
+    {
+      "owner_by_good": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "owner_by_good_names": [
+        "q",
+        "q",
+        "s",
+        "s",
+        "q",
+        "p",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "owner_by_good": [
+        null,
+        3,
+        2,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "owner_by_good_names": [
+        null,
+        "q",
+        "s",
+        "s",
+        "q",
+        "p",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "owner_by_good": [
+        1,
+        1,
+        3,
+        3,
+        1,
+        0,
+        2,
+        null
+      ],
+      "owner_by_good_names": [
+        "r",
+        "r",
+        "q",
+        "q",
+        "r",
+        "p",
+        "s",
+        null
+      ]
+    },
+    {
+      "owner_by_good": [
+        1,
+        1,
+        3,
+        null,
+        1,
+        0,
+        2,
+        3
+      ],
+      "owner_by_good_names": [
+        "r",
+        "r",
+        "q",
+        null,
+        "r",
+        "p",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "owner_by_good": [
+        1,
+        1,
+        null,
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "owner_by_good_names": [
+        "r",
+        "r",
+        null,
+        "q",
+        "r",
+        "p",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "owner_by_good": [
+        1,
+        null,
+        3,
+        3,
+        1,
+        0,
+        2,
+        null
+      ],
+      "owner_by_good_names": [
+        "r",
+        null,
+        "q",
+        "q",
+        "r",
+        "p",
+        "s",
+        null
+      ]
+    },
+    {
+      "owner_by_good": [
+        1,
+        null,
+        3,
+        null,
+        1,
+        0,
+        2,
+        3
+      ],
+      "owner_by_good_names": [
+        "r",
+        null,
+        "q",
+        null,
+        "r",
+        "p",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "owner_by_good": [
+        1,
+        null,
+        null,
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "owner_by_good_names": [
+        "r",
+        null,
+        null,
+        "q",
+        "r",
+        "p",
+        "s",
+        "q"
+      ]
+    }
+  ],
+  "schema": "alternating-variable-packet-rooted-core-audit-v1",
+  "single_deletion_statuses": [
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat"
+  ],
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "DELETION_MINIMAL_ROOTED_CORE_UNSAT"
+}

@@ -1,0 +1,276 @@
+{
+  "blocker_selection_count": 36,
+  "claim_boundary": {
+    "not_proved": "the rooted escape for arbitrary packet sizes",
+    "proved": "exact failure-wall anatomy of the recorded finite rooted core"
+  },
+  "failure_cores": [
+    {
+      "selection_count": 4,
+      "walls": [
+        "R1:q!>s-f",
+        "R3:q!>r-bq1"
+      ]
+    },
+    {
+      "selection_count": 4,
+      "walls": [
+        "R1:q!>s-f",
+        "R4:q!>r-bq0"
+      ]
+    },
+    {
+      "selection_count": 4,
+      "walls": [
+        "R1:q!>s-tq",
+        "R3:q!>r-bq1"
+      ]
+    },
+    {
+      "selection_count": 6,
+      "walls": [
+        "R1:q!>s-tq",
+        "R4:q!>r-bq0"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R2:q!>s-tq",
+        "R4:q!>r-br"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R3:q!>r-tr",
+        "R4:q!>r-tr"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R1:q!>s-f",
+        "R3:q!>r-bq1",
+        "R4:q!>r-bq0"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R1:q!>s-f",
+        "R3:q!>r-br",
+        "R4:q!>r-br"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R1:q!>s-f",
+        "R3:q!>r-br",
+        "R4:q!>r-tr"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R1:q!>s-f",
+        "R3:q!>r-tr",
+        "R4:q!>r-br"
+      ]
+    },
+    {
+      "selection_count": 2,
+      "walls": [
+        "R1:q!>s-f",
+        "R3:q!>r-tr",
+        "R4:q!>r-tr"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R2:q!>s-f",
+        "R3:q!>r-br",
+        "R4:q!>r-br"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R2:q!>s-tq",
+        "R3:q!>r-br",
+        "R4:q!>r-br"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R2:q!>s-tq",
+        "R3:q!>r-br",
+        "R4:q!>r-tr"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R1:q!>s-tq",
+        "R2:q!>s-f",
+        "R3:q!>r-br",
+        "R4:q!>r-tr"
+      ]
+    },
+    {
+      "selection_count": 1,
+      "walls": [
+        "R1:q!>s-tq",
+        "R2:q!>s-f",
+        "R3:q!>r-tr",
+        "R4:q!>r-br"
+      ]
+    }
+  ],
+  "goods": [
+    "tr",
+    "br",
+    "tq",
+    "bq0",
+    "bq1",
+    "x",
+    "y",
+    "f"
+  ],
+  "order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "order_names": [
+    "p",
+    "s",
+    "r",
+    "q"
+  ],
+  "packet_sizes": [
+    1,
+    1,
+    1,
+    2
+  ],
+  "provenance": {
+    "core": "results/alternating_external_observer_0213_bq2_broad_core_audit.json",
+    "core_sha256": "cd51ff6c576634db59d5ebbfc0e72351b1eb3b92274b537959cdd07ece84d30c",
+    "script": "tracks/parkability/extract_alternating_variable_core_walls.py",
+    "script_sha256": "ceafa71438a4ab3a80216ea042a9a272dfd7254810337f79de36999c10129e59"
+  },
+  "rivals": [
+    {
+      "allocation": {
+        "p": [
+          "x"
+        ],
+        "q": [
+          "tr",
+          "br"
+        ],
+        "r": [
+          "y"
+        ],
+        "s": [
+          "tq",
+          "f"
+        ]
+      },
+      "index": 1,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "q!>s-tq",
+        "q!>s-f"
+      ]
+    },
+    {
+      "allocation": {
+        "p": [
+          "x"
+        ],
+        "q": [
+          "tr",
+          "bq0"
+        ],
+        "r": [
+          "y"
+        ],
+        "s": [
+          "tq",
+          "f"
+        ]
+      },
+      "index": 2,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "q!>s-tq",
+        "q!>s-f"
+      ]
+    },
+    {
+      "allocation": {
+        "p": [
+          "x"
+        ],
+        "q": [
+          "tq",
+          "bq0"
+        ],
+        "r": [
+          "tr",
+          "br",
+          "bq1"
+        ],
+        "s": [
+          "y"
+        ]
+      },
+      "index": 3,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "q!>r-tr",
+        "q!>r-br",
+        "q!>r-bq1"
+      ]
+    },
+    {
+      "allocation": {
+        "p": [
+          "x"
+        ],
+        "q": [
+          "tq",
+          "bq1"
+        ],
+        "r": [
+          "tr",
+          "br",
+          "bq0"
+        ],
+        "s": [
+          "y"
+        ]
+      },
+      "index": 4,
+      "lex_improvement_implied": true,
+      "possible_failure_walls": [
+        "q!>r-tr",
+        "q!>r-br",
+        "q!>r-bq0"
+      ]
+    }
+  ],
+  "schema": "alternating-variable-core-walls-v1",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "ALL_CORE_BLOCKER_SELECTIONS_UNSAT"
+}
