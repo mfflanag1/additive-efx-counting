@@ -48,13 +48,11 @@ topology is not.  The cap-free root-flip lemma closes `(p,q,r,s)` and
 `(s,r,q,p)` using a different rival form despite their anchored-candidate
 countermodels.  The cap-free
 [`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
-closes `(p,s,q,r)` and `(s,p,r,q)` using either a selected-offer promotion,
-an anchored `q`-handoff, or an opposite-reservoir root promotion.  Two hard
-priority orders remain:
-
-\[
-(p,q,s,r),\quad(s,r,p,q).
-\]
+closes `(p,s,q,r)` and `(p,q,s,r)` using either a selected-offer promotion,
+an anchored `q`-handoff, or an opposite-reservoir root promotion.  Its
+half-turn closes `(s,p,r,q)` and `(s,r,p,q)`. Thus all eight hard orders are
+closed cap-free by the three component constructions, even though six of
+the narrower anchored candidates remain exactly refuted.
 
 Thus this classification completes the stated external-observer research
 goal and removes one genuine arbitrary-packet gate, but it is not a proof

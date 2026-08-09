@@ -1,7 +1,7 @@
 # Alternating packet-lift checkpoint
 
 **Date:** 2026-08-09
-**Status:** active cap-free conversion; no general alternating theorem yet
+**Status:** superseded by the cap-free alternating global-lex theorem
 
 **Encoding correction:** the original eleven-good split-packet search sorted
 the two goods in every packet independently in every valuation row.  A global
@@ -20,11 +20,13 @@ sizes. It needs only the two ordinary envy edges and the fact that `p,s`
 own singleton bundles. The construction discards the large packets and
 gives every agent at most one good, making EFX automatic.
 
-The live alternating gate was initially reduced to eight orders beginning
+The alternating gate was initially reduced to eight orders beginning
 with a singleton owner whose good cannot be transferred to its incoming
 envier.  The cap-free
 [`root-flip lemma`](ALTERNATING_ROOT_FLIP_LEMMA.md) now closes two more,
-`(p,q,r,s)` and `(s,r,q,p)`, leaving six.
+`(p,q,r,s)` and `(s,r,q,p)`, leaving six. Subsequent reservoir and
+dual-reservoir theorems close those six cap-free; see
+[`ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md`](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md).
 
 ## Exact atomic result
 

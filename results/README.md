@@ -657,9 +657,15 @@ both encodings.
   — cap-free analytic escape theorem for `(p,s,q,r)` and its half-turn.
   Minimal threshold extraction yields either a same-offer promotion, an
   anchored `q`-handoff, or an opposite-reservoir root promotion. Together
-  with root flip and reservoir exchange this closes six of eight hard
-  alternating priority orders. The strict same-champion-offer refinement
-  and the remaining pair `(p,q,s,r)`, `(s,r,p,q)` are open.
+  with root flip and reservoir exchange this closes all eight hard
+  alternating priority orders. The strict same-champion-offer refinement is
+  open but unnecessary for the wider escape theorem.
+- [`ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md`](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md)
+  — complete cap-free analytic cover of all 24 priority orders in the
+  arbitrary-packet alternating topology: 16 easy singletonizations, two
+  root flips, two reservoir exchanges, and four dual-reservoir escapes.
+  This closes the alternating two-large residual, not general four-agent
+  additive EFX.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

@@ -1,7 +1,7 @@
 PYTHON ?= python3
 VERIFY_TMP ?= /tmp/additive-efx-counting-verify
 
-.PHONY: install verify verify-paper verify-audit verify-parkability verify-single-wall paper
+.PHONY: install verify verify-paper verify-audit verify-parkability verify-single-wall verify-alternating paper
 
 install:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -24,6 +24,15 @@ verify-audit:
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) artifacts/multifloater_parking/verify_small.py
 	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) supplement/test_build_release.py
 	$(MAKE) verify-parkability
+
+verify-alternating:
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_cross_bottom_obstruction.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_external_observer_walls.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_global_lex_atomic_core.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_root_flip.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_reservoir_exchange.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_dual_reservoir_trichotomy.py
+	PYTHONDONTWRITEBYTECODE=1 $(PYTHON) tracks/parkability/test_alternating_capfree_order_coverage.py
 
 verify-single-wall:
 	mkdir -p $(VERIFY_TMP)

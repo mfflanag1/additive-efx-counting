@@ -4,7 +4,8 @@
 
 **Status:** cap-free analytic escape theorem; strict same-offer refinement open
 
-**Order:** `(p,s,q,r)` with `p={x}` fixed
+**Orders:** `(p,s,q,r)` and `(p,q,s,r)` with `p={x}` fixed, plus their
+half-turns
 
 ## Purpose
 
@@ -113,21 +114,23 @@ construction is EFX. \(\square\)
 ## Cap-free priority-order consequence
 
 All three alternatives are EFX and lexicographically improve the base in
-`(p,s,q,r)`: alternative 1 and alternative 3 improve first-priority `p`,
-while alternative 2 fixes `p,s` and improves `q`. Therefore:
+both `(p,s,q,r)` and `(p,q,s,r)`: alternative 1 and alternative 3 improve
+first-priority `p`, while alternative 2 fixes `p,s` and improves `q`.
+Therefore:
 
 > **Dual-reservoir escape theorem.** An arbitrary-packet alternating state
 > with the compatible families absent is not globally lexicographically
-> maximal in priority order `(p,s,q,r)`.
+> maximal in either priority order `(p,s,q,r)` or `(p,q,s,r)`.
 
 If one of the compatible families is present, its standard PI cycle already
 gives an EFX improvement. Hence the conclusion holds without assuming their
 absence as a separate global branch. Half-turn relabeling proves the same
-statement for `(s,p,r,q)`.
+statement for `(s,p,r,q)` and `(s,r,p,q)`.
 
-Together with the root-flip and reservoir-exchange theorems, six of the eight
-hard alternating priority orders are now closed cap-free. The remaining pair
-is `(p,q,s,r)` and `(s,r,p,q)`.
+Together with the root-flip and reservoir-exchange theorems, all eight hard
+alternating priority orders are now closed cap-free. Combined with the 16
+easy orders, this proves the
+[`cap-free alternating global-lex theorem`](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md).
 
 This order-level theorem is sufficient for the wider lexicographic
 maximality argument. The stricter same-champion-offer dichotomy requested in
@@ -180,7 +183,7 @@ and
 are bounded falsification probes and support no negative conclusion about the
 unrestricted dichotomy.
 
-Half-turn relabeling gives the identical trichotomy for `(s,p,r,q)`. The
-anchored-or-any-desired same-offer refinement, the two remaining alternating
-orders `(p,q,s,r)` and `(s,r,p,q)`, and complete four-agent additive EFX
-remain open.
+Half-turn relabeling gives the identical trichotomy for both `s`-rooted hard
+orders. The anchored-or-any-desired same-offer refinement and complete
+four-agent additive EFX remain open; the alternating global-lex topology does
+not.

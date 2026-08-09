@@ -1,7 +1,8 @@
 # Alternating anchored-or-promoted target
 
 **Date:** 2026-08-09
-**Status:** six orders closed cap-free; strict same-offer lift open in two
+**Status:** all orders closed cap-free by a broader promotion; strict
+same-offer refinement open
 **Scope:** the eight hard priority orders in the alternating two-large cell
 
 ## Rooted EFX equivalence
@@ -147,12 +148,12 @@ witnesses.
 
 The cap-free
 [`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
-now closes `(p,s,q,r)` and its half-turn `(s,p,r,q)` for the wider
-lexicographic maximality program.  Its third branch promotes the root to a
-desired subset of the opposite reservoir rather than the original champion
-offer, so it does not prove the stricter lemma displayed above.  Together
-with root flip and reservoir exchange, six of the eight hard orders are
-closed.  The remaining priority pair is `(p,q,s,r)` and `(s,r,p,q)`.
+now closes both `(p,s,q,r)` and `(p,q,s,r)`, plus both half-turns, for the
+wider lexicographic maximality program.  Its third branch promotes the root
+to a desired subset of the opposite reservoir rather than the original
+champion offer, so it does not prove the stricter lemma displayed above.
+Together with root flip and reservoir exchange, all eight hard orders are
+closed.
 
 The target is not yet a proof of the alternating case or of complete
 four-agent EFX.

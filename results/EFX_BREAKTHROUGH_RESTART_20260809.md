@@ -3,7 +3,7 @@
 **Date:** 2026-08-09
 **Research objective:** prove that every four-agent additive-goods instance
 admits a complete EFX allocation, for an arbitrary number of goods
-**Current status:** open; no complete proof is claimed
+**Current status:** alternating residual closed cap-free; general theorem open
 
 ## Breakthrough target
 
@@ -89,10 +89,9 @@ core is converted to a cap-free analytic argument.
 
 ## Full proof ladder after Target B
 
-1. Prove the priority-sensitive alternating escape.  Eighteen of its 24
-   priority-role orders are now closed cap-free: the original sixteen easy
-   orders plus `(p,q,r,s)` and `(s,r,q,p)` by the
-   [root-flip lemma](ALTERNATING_ROOT_FLIP_LEMMA.md).
+1. The priority-sensitive alternating escape is now proved cap-free for all
+   24 priority orders by the
+   [alternating global-lex theorem](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md).
 2. Reuse its exchange invariant to close the length-three and adjacent
    length-four residues, yielding Target B.
 3. Generalize the invariant from two bottom packets to three nonsingleton

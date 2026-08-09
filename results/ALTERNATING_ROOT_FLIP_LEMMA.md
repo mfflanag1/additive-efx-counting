@@ -149,6 +149,11 @@ strict envy relations; additivity and absence of compatible cross-bottom
 families are not needed.  It does not by itself close the alternating
 topology, the complete two-large case, or complete four-agent EFX.
 
+The later reservoir-exchange and dual-reservoir theorems close the six
+orders left here. Their composition with this lemma and the easy-priority
+lemma is the
+[`cap-free alternating global-lex theorem`](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md).
+
 ## Exact discovery certificate
 
 The lemma was extracted from a deletion-minimal two-rival QF_LRA core in the
