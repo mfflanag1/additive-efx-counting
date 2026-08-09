@@ -111,6 +111,27 @@ This correction is essential.  Modeling `s` as unenvied makes the structural
 cell inconsistent, because `s` is then a self-`f`-champion and can absorb
 the charity good.
 
+The selected cycle also forces ordinary nonenvy of both large bundles:
+
+> **Large-bundle no-envy lemma.** Every agent other than the owner weakly
+> prefers her own bundle to `X_r` and to `X_q`.
+
+Each contrary edge closes a basic PI cycle.  For `X_r`, edges from `p` or
+`q` close respectively through `r -f-> q -> p` or directly through
+`r -f-> q`; an edge from `s` closes through the external envy edge in each
+of the three source cases.  For `X_q`, an edge from `p` closes the envy
+2-cycle with `q -> p`, one from `r` closes through
+`q -> p -f-> r`, and one from `s` again closes using the external envy
+edge.  Every resulting cycle has at most one genuine `f`-edge.  Hence, at
+global maximality,
+
+\[
+v_i(X_r)\le b_i\quad(i\ne r),
+\qquad
+v_i(X_q)\le b_i\quad(i\ne q).
+\tag{4a}
+\]
+
 ## BCFF basic-cycle classification
 
 The normal form above follows from BCFF without a chordless-graph
@@ -688,6 +709,53 @@ v_r(J)\ge
 The remaining work is now exact: defeat this price/pivot bound using `f`,
 or show that the two mismatch sources create a root-flipped or adjacent
 cycle whose established escape preserves the earlier-priority agent.
+
+### Charity-compensated split flip
+
+There is one operation that bypasses every source/order distinction.  Let
+`J subseteq X_r` satisfy
+
+\[
+\begin{aligned}
+v_r(J)&\le \min\{v_r(f),v_r(T_q)\},\\
+v_q(J)&>v_q(T_q),\qquad v_q(J)\ge v_q(f),\\
+v_i(f)&\le v_i(J)\le v_i(T_q)\qquad(i=p,s).
+\end{aligned}
+\tag{16i}
+\]
+
+Then the allocation
+
+\[
+(Y_p,Y_r,Y_q,Y_s)
+=\bigl(\{x\},(X_r\setminus J)+f,J+B_q,\{y\}\bigr)
+\tag{16j}
+\]
+
+is EFX, weakly improves `r`, and strictly improves `q`.  Hence it
+lexicographically improves every order in the nine-row residual table,
+because all those orders place `r` before `q` and keep `p,s` fixed.
+
+For the proof, `r`'s utility changes by `v_r(f)-v_r(J)`, while `q` replaces
+`T_q` by the strictly preferred `J`.  To check the new `r` bundle, deleting
+`f` leaves a subset of `X_r`; after deleting an old good `h`, every observer
+`i=p,q,s` sees at most `X_r-h`, because `v_i(f)<=v_i(J)`.  These remainders
+are safe by base EFX.  To check `J+B_q`, observers `i=p,r,s` may replace
+`J` by `T_q` using `v_i(J)<=v_i(T_q)`; the resulting set is a subset of
+`X_q` or one of its deletion remainders, and (4a) plus base EFX makes it
+safe.  Recipient self-comparisons are automatic.  Thus (16j) is EFX.
+
+This identifies the most economical possible pivot repair: transfer one
+subpacket `J` from `r` to `q`, compensate `r` with the charity good, and
+release `T_q`.  The final selector theorem may therefore be stated as:
+
+> either a subset satisfying the four-row sandwich (16i) exists, or the
+> scalar separator for this subset-sum system forces a compatible desired
+> family/root-flipped cycle.
+
+The strict two-split adversarial profile that survived 928 earlier rival
+allocations was escaped exactly by (16j), with a two-good `J`; this is motif
+evidence only, not a premise of the lemma.
 
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
