@@ -144,16 +144,104 @@ desired by `r` or `s`.  It yields one of:
 2. an anchored desired `q`-handoff paid by `D_p`; or
 3. an opposite-reservoir desired promotion of `p`.
 
-No alternating second champion edge is used in that proof.  The only new
-source wall is therefore a desired set in `W` sourced by the external
-singleton `s`.  A desired `r`-set in `W`, disjoint from `D_p,x,y`, combines
-with `(D_p,A,x,y)` to give an EFX Pareto improvement and is impossible at
-global maximality.
+No alternating second champion edge is used in that proof.  Unlike the
+alternating application, however, the length-three topology need not assume
+that `r`- and `s`-sourced desired subsets of `W` are absent.  The next lemma
+closes both sources explicitly.
 
-The remaining analytic task is to reroute an `s`-desired set in `W`, or to
-use its failure inequalities to construct a coupled cross-reservoir escape.
-This is the cap-free packet-safety gate; proving more fixed-size cells would
-not close it.
+## All-source reservoir return lemma
+
+Put `t=tau_r(D_p)`.  The threshold extraction in `W=X_q+B_r` has the
+following cap-free outputs.
+
+1. If `v_r(W)>=t`, choose an inclusion-minimal `Q subseteq W` at the
+   `r` threshold.  If `Q` is common-safe, then
+
+   \[
+   (Y_p,Y_r,Y_q,Y_s)=(D_p,Q,\{x\},\{y\})
+   \tag{5}
+   \]
+
+   is EFX.
+2. Otherwise—either `v_r(W)<t`, or a deletion of the minimal `Q` is
+   unsafe—there is a desired `A subseteq W` satisfying
+
+   \[
+   \tau_r(A)<t\le v_r(D_p).
+   \tag{6}
+   \]
+
+   The source of `A` determines an EFX allocation:
+
+   | source of `A` | `(Y_p,Y_r,Y_q,Y_s)` |
+   |---|---|
+   | `r` | `(D_p,A,{x},{y})` |
+   | `p` | `(A,D_p,{x},{y})` |
+   | `q` | `({x},D_p,A,{y})` |
+   | `s`, with `a=p` | `({y},D_p,{x},A)` |
+   | `s`, with `a=r` | `(D_p,{y},{x},A)` |
+   | `s`, with `a=q` | `({x},D_p,{y},A)` |
+
+For the first three rows this is the dual-reservoir proof without excluding
+sources.  In the `s` rows, assign the envied singleton `y` to its source `a`.
+If `a=p` or `a=q`, `r` receives `D_p` and inequality (6) is exactly her sole
+nontrivial comparison.  If `a=r`, every recipient receives a desired or
+base bundle and strictly improves except possibly none.  All displayed
+bundles are disjoint and common-safe at the base, apart from the recipient
+payment whose comparison is supplied by (6).
+
+Thus the former external-`s` source wall is closed.  The only output that
+can move `r` downward while fixing `p,s` is the `q`-source handoff
+`({x},D_p,A,{y})`.  It lexicographically closes every priority type in which
+`q` precedes `r` after the fixed agents, but requires a second operation when
+`r` has earlier priority.  This is the exact remaining reservoir-order wall.
+
+## Rotated all-source reservoir lemma: all `r`-first orders
+
+Every priority order beginning with `r` is also closed cap-free.  If `a=r`,
+this is already the easy singleton transfer `r <- y`.  Assume therefore
+`a in {p,q}` and put
+
+\[
+U=X_r+B_q,qquad t'=\tau_p(D_r).
+\]
+
+The sets `U` and `D_r` are disjoint, and
+`v_r(U)=b_r+v_r(B_q)>b_r`, so `U` contains a desired set.  Repeat the
+threshold extraction, now at the `p` threshold.
+
+If `v_p(U)>=t'`, choose an inclusion-minimal `Q subseteq U` at that
+threshold.  When `Q` is common-safe,
+
+\[
+(Y_p,Y_r,Y_q,Y_s)=(Q,D_r,\{x\},\{y\})
+\tag{7}
+\]
+
+is EFX and strictly improves `r`.  Otherwise—also covering
+`v_p(U)<t'`—extract a desired `A subseteq U` with
+
+\[
+\tau_p(A)<t'\le v_p(D_r).
+\tag{8}
+\]
+
+Use the following allocation according to the source of `A`:
+
+| source of `A` | `(Y_p,Y_r,Y_q,Y_s)` |
+|---|---|
+| `p` | `(A,D_r,{x},{y})` |
+| `r` | `(D_r,A,{x},{y})` |
+| `q` | `({x},D_r,A,{y})` |
+| `s`, with `a=p` | `({y},D_r,{x},A)` |
+| `s`, with `a=q` | `({x},D_r,{y},A)` |
+
+In the `r` row, `p` is the sole possibly sub-base recipient and (8) is
+exactly her comparison to `A`.  Every other row gives each non-base
+recipient a desired bundle, with (8) available whenever `D_r` is used as
+the `p` payment.  In all rows `r` receives a desired set and strictly
+improves.  Therefore every `r`-first priority order is contradicted,
+independently of all later priorities and without a packet-size bound.
 
 ## A cap-free three-promotion/payment lemma
 
@@ -170,21 +258,21 @@ Exactly one of the following constructions applies.
 
    \[
    (Y_p,Y_r,Y_q,Y_s)=(\{y\},D_r,\{x\},C).
-   \tag{5}
+   \tag{9}
    \]
 
 2. If `v_s(X_r)<t`, set
 
    \[
    (Y_p,Y_r,Y_q,Y_s)=(\{y\},X_r,\{x\},D_r).
-   \tag{6}
+   \tag{10}
    \]
 
-Both allocations are EFX for arbitrary packet sizes.  For (5), minimality
+Both allocations are EFX for arbitrary packet sizes.  For (9), minimality
 gives `tau_s(C)<t`, while `p` and `q` do not envy `X_r` and `r` values
 `X_r` at her base.  Hence `C` lies below the new utilities of `p,r,q`, and
 `s(C)>=tau_s(D_r)` is the only nontrivial comparison made by `s`.  The
-bundles `D_r`, `x`, and `y` are common-safe or singletons.  For (6), agents
+bundles `D_r`, `x`, and `y` are common-safe or singletons.  For (10), agents
 `p,q` improve and `r` keeps her base bundle.  The only agent below base can
 be `s`, and
 
@@ -194,8 +282,8 @@ v_s(D_r)\ge\tau_s(D_r)>v_s(X_r)\ge\tau_s(X_r),
 
 so her only nonsingleton comparison is safe.
 
-In (5), `p,r,q` all strictly improve, so every order not beginning with `s`
-is closed.  In (6), `p,q` improve and `r` is fixed.  It closes every order
+In (9), `p,r,q` all strictly improve, so every order not beginning with `s`
+is closed.  In (10), `p,q` improve and `r` is fixed.  It closes every order
 in which `p` or `q` occurs before `s` after an optional initial `r`.
 Combined with the easy-priority lemma, source type `a=p` is therefore reduced
 to the six orders beginning with `s` or with `(r,s)`.  The residual failure
@@ -209,23 +297,109 @@ type `a=r`.  Put `u=tau_s(D_p)`.  If `v_s(X_q)>=u`, take a minimal
 
 \[
 (Y_p,Y_r,Y_q,Y_s)=(D_p,\{y\},\{x\},C).
-\tag{7}
+\tag{11}
 \]
 
 If `v_s(X_q)<u`, use
 
 \[
 (Y_p,Y_r,Y_q,Y_s)=(\{x\},\{y\},X_q,D_p).
-\tag{8}
+\tag{12}
 \]
 
-For (7), `p,r,q` improve and `C subseteq X_q` lies below each of their new
-utilities: `p,r` do not envy `X_q`, while `q(x)>b_q`.  For (8), `p,q` are
+For (11), `p,r,q` improve and `C subseteq X_q` lies below each of their new
+utilities: `p,r` do not envy `X_q`, while `q(x)>b_q`.  For (12), `p,q` are
 fixed, `r` improves, and the low inequality gives
 `v_s(D_p)>tau_s(X_q)`.  Thus both are EFX cap-free.  In the low branch an
 order is closed whenever `r` occurs before `s` after an optional prefix of
 the fixed agents `p,q`; together with the easy lemma only the seven hard
 `a=r` orders in which `s` precedes `r` remain.
+
+## Critical mixed-pool reduction
+
+The hardest `p`-promotion motifs admit a sharper two-wall formulation.  Put
+
+\[
+R=B_r+T_q.
+\]
+
+The no-self and no-chord inequalities above imply
+
+\[
+v_r(R)>b_r,
+\qquad
+v_p(R)<v_p(D_p).
+\tag{13}
+\]
+
+For the first inequality, `v_r(T_q)>v_r(T_r)`.  For the second, the selected
+`p` edge and absence of `p -> q` give `v_p(T_r)>v_p(T_q)`, while
+`p` not envying `X_r` together with `p(D_p)>b_p` gives
+`v_p(f)>v_p(B_r)`.
+
+Choose an inclusion-minimal `C subseteq R` with `v_r(C)>b_r`.  Then every
+deletion of `C` is below `b_r`, and (13) gives
+
+\[
+\tau_p(C)<v_p(D_p).
+\]
+
+Consequently
+
+\[
+(Y_p,Y_r,Y_q,Y_s)=(D_p,C,\{x\},\{y\})
+\tag{14}
+\]
+
+is EFX—and strictly improves `p,r,q`—if and only if the following two
+moving-ceiling conditions hold:
+
+\[
+\tau_q(C)\le v_q(x),
+\qquad
+\tau_s(C)\le b_s.
+\tag{15}
+\]
+
+All other comparisons follow from desired-set safety, minimality, (13), or
+the singleton bundles.  Thus a failed `p` promotion has only two possible
+packet walls:
+
+1. a `q`-heavy deletion `C-h` with `v_q(C-h)>v_q(x)>b_q`; or
+2. an external-`s`-heavy deletion `C-h` with `v_s(C-h)>b_s`.
+
+Both walls lie strictly below `b_r` by minimality of `C`.  This asymmetry is
+the prospective uncrossing currency: every obstruction is high for `q` or
+`s` but low for the intended recipient `r`.  The atomic three-rival menus
+are precisely the singleton-packet realizations of choosing which side of
+this separation to return to `r`.
+
+The reduction is cap-free, but it does not yet prove that either wall can
+always be rerouted.  A valid completion must use the remaining goods
+`T_r+B_q+f` and may use the coupled/off-offer promotions already permitted
+by the alternating theorem.
+
+## Exact remaining source/order table
+
+Combining the easy-priority lemma, the all-source `W` return, and the rotated
+`U` return leaves only nine source/order types:
+
+| source of `a -> s` | priority orders not yet closed |
+|---|---|
+| `a=p` | `(s,p,r,q)` |
+| `a=r` | `(p,s,r,q)`, `(s,p,r,q)`, `(s,r,p,q)`, `(s,r,q,p)` |
+| `a=q` | `(p,r,q,s)`, `(p,r,s,q)`, `(p,s,r,q)`, `(s,p,r,q)` |
+
+For `a=p` or `a=q`, the rotated theorem closes every order beginning with
+`r` and every `(s,r,...)` order.  The `W` theorem closes every order in
+which `q` precedes `r`.  For `a=r`, direct transfer of `y` closes `r`-first
+and `(p,r,...)` orders, while the `W` theorem again closes `q` before `r`.
+
+In every row above, a hypothetical failure forces the `W` extraction onto
+its `q`-source handoff while `r` precedes `q`.  In the `(s,p,r,q)` column it
+also forces the rotated `U` extraction away from its `p`, `q`, and `s`
+desired-source outputs.  This paired `q`-source/`r`-source wall—not the
+external singleton by itself—is the final cap-free uncrossing target.
 
 ## Exact atomic motif audit
 

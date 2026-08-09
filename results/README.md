@@ -681,10 +681,11 @@ both encodings.
 - [`LENGTH_THREE_GLOBAL_LEX_TARGET.md`](LENGTH_THREE_GLOBAL_LEX_TARGET.md)
   — source-valid reconstruction of the BCFF two-large length-three residual.
   It proves the singleton-absorption and easy-priority lemmas cap-free,
-  imports the packet-safe part of the dual-reservoir theorem, and proves two
-  new three-promotion/payment reductions. The remaining gate is an external
-  singleton-source payment through a mixed reservoir; no two-large or
-  general EFX closure is yet claimed.
+  proves all-source primal and rotated reservoir lemmas, closes every
+  `r`-first order, and proves two three-promotion/payment reductions. The
+  external singleton-source wall is closed; the remaining gate is the
+  `q`-source handoff when `r` has earlier priority, together with a two-wall
+  mixed-pool uncrossing. No two-large or general EFX closure is yet claimed.
 - [`length_three_global_lex_atomic_sweep.json`](length_three_global_lex_atomic_sweep.json)
   and [`length_three_global_lex_atomic_sweep_audit.json`](length_three_global_lex_atomic_sweep_audit.json)
   — exact motif audit of all 72 atomic external-source/priority cells. Every
