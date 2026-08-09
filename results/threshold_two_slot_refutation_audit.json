@@ -1,0 +1,205 @@
+{
+  "agents": [
+    "p",
+    "r",
+    "s",
+    "q"
+  ],
+  "base_bundles": [
+    [
+      "x"
+    ],
+    [
+      "tr0",
+      "tr1",
+      "br0",
+      "br1"
+    ],
+    [
+      "y"
+    ],
+    [
+      "tq0",
+      "tq1",
+      "bq0",
+      "bq1"
+    ]
+  ],
+  "champion_edges": [
+    {
+      "desired_set_count_on_edge": 3,
+      "selected_desired": [
+        "tr0",
+        "tr1",
+        "f"
+      ],
+      "source": "p",
+      "target": "r"
+    },
+    {
+      "desired_set_count_on_edge": 1,
+      "selected_desired": [
+        "y"
+      ],
+      "source": "r",
+      "target": "s"
+    },
+    {
+      "desired_set_count_on_edge": 1,
+      "selected_desired": [
+        "tq0",
+        "tq1",
+        "f"
+      ],
+      "source": "s",
+      "target": "q"
+    },
+    {
+      "desired_set_count_on_edge": 1,
+      "selected_desired": [
+        "x"
+      ],
+      "source": "q",
+      "target": "p"
+    }
+  ],
+  "claim_boundary": {
+    "not_refuted": "sequential threshold extraction, subpacket splitting, the full priority-sensitive alternating escape, or complete EFX",
+    "refuted": "after fixing p's selected top-plus-f block and q's singleton x, the residual pool must contain one whole threshold-safe block crossing r's or s's terminal threshold"
+  },
+  "compatible_family_edge_count": 0,
+  "compatible_family_offer_count": 256,
+  "construction": {
+    "accepted_iteration": 410,
+    "method": "binary perturbation of a rational QF_LRA model",
+    "multiplier": 4096,
+    "random_seed": 20260809
+  },
+  "envy_edges": [
+    [
+      "r",
+      "s"
+    ],
+    [
+      "q",
+      "p"
+    ]
+  ],
+  "goods": [
+    "tr0",
+    "tr1",
+    "br0",
+    "br1",
+    "tq0",
+    "tq1",
+    "bq0",
+    "bq1",
+    "x",
+    "y",
+    "f"
+  ],
+  "own_utilities": [
+    3486720,
+    197778,
+    4215808,
+    1741985
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_threshold_two_slot_refutation.py",
+    "script_sha256": "fa937e4b4d4db6bb5fae69bfeed2d9d56b97373f06cebb29daa3beba3e1711e9"
+  },
+  "schema": "threshold-two-slot-refutation-audit-v1",
+  "status": "NONDEGENERATE_TWO_SLOT_THRESHOLD_TARGET_REFUTED",
+  "subset_nondegenerate_by_agent": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "threshold_test": {
+    "fixed_p_bundle": [
+      "tr0",
+      "tr1",
+      "f"
+    ],
+    "fixed_q_bundle": [
+      "x"
+    ],
+    "priority_order": [
+      "p",
+      "q",
+      "r",
+      "s"
+    ],
+    "residual_pool": [
+      "br0",
+      "br1",
+      "tq0",
+      "tq1",
+      "bq0",
+      "bq1"
+    ],
+    "residual_subset_count": 63,
+    "threshold_safe_crossing_subset_count": 0,
+    "thresholds": [
+      3502856,
+      181504,
+      3543049,
+      1749248
+    ]
+  },
+  "values": [
+    [
+      16896,
+      376840,
+      16416,
+      3059840,
+      180240,
+      196610,
+      81984,
+      98308,
+      3486720,
+      3469313,
+      3109120
+    ],
+    [
+      4224,
+      140288,
+      4098,
+      49168,
+      25088,
+      28680,
+      61472,
+      65540,
+      192576,
+      2912257,
+      41216
+    ],
+    [
+      20544,
+      1425409,
+      672000,
+      2076674,
+      794656,
+      1343492,
+      41088,
+      713216,
+      4194320,
+      4215808,
+      2117640
+    ],
+    [
+      8704,
+      81984,
+      40962,
+      1601552,
+      155776,
+      1496064,
+      24577,
+      65568,
+      1749248,
+      1732616,
+      90116
+    ]
+  ]
+}
