@@ -877,7 +877,16 @@ both encodings.
   strict cycle. An exact packet-total/minimum replay checks all 1,020 hard
   source/support/order cells under two Z3 versions. This closes first-packet
   selection, but the target/charity wall dependency still needs a termination
-  theorem before the `GG` flower is closed.
+  theorem before the `GG` flower is closed. A location census forces the
+  selected good into the later owner's bottom packet in 754 cells; the other
+  266 retain a top/bottom disjunction.
+- [`FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md`](FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md)
+  — dual-solver exact refutations of two natural ways to freeze the selected
+  later-owner operation. Neither a fixed singleton replacement nor a fixed
+  inclusion-maximal low packet must admit an EFX completion preserving the
+  earlier owner. Both witnesses still have a two-good flexible EFX lex
+  escape, so the corrected `GG` target must allow the distinguished bundle
+  to evolve during dependency growth.
 - [`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
   — cap-free classification of every EFX failure after an improving owner
   replaces a packet by the charity good and partitions the released packet

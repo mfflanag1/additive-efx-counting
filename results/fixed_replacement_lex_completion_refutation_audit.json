@@ -1,0 +1,28 @@
+{
+  "schema": "fixed-replacement-lex-completion-refutation-dual-audit-v1",
+  "status": "VERIFIED_REFUTATIONS",
+  "solvers": ["Z3 5.0.0", "Z3 4.15.3"],
+  "singleton_selector": {
+    "witness": "results/fixed_replacement_lex_completion_refutation.json",
+    "witness_sha256": "3182f1fa1671d2136afc4174c9cbfefb28ed99f12ec0d3690db2deb219dcb5ed",
+    "eligible_packets": [["aq_tq_1"], ["ar_bq_0"], ["ar_bq_1"]],
+    "completion_results": ["unsat", "unsat", "unsat"],
+    "flexible_escape": "VERIFIED_EFX_LEX_ESCAPE",
+    "moved_goods": 2
+  },
+  "maximal_packet_selector": {
+    "witness": "results/maximal_packet_replacement_lex_completion_refutation.json",
+    "witness_sha256": "3825a50cd65d2f7de0bd6c18c80346ab3a6196c23fa271f5b65c9ac96e5e25b2",
+    "eligible_packets": [["aq_tq_1", "ar_bq_0"]],
+    "completion_results": ["unsat"],
+    "flexible_escape": "VERIFIED_EFX_LEX_ESCAPE",
+    "moved_goods": 2
+  },
+  "flower_checks": {
+    "strict_positive_values": true,
+    "partial_efx_with_charity": true,
+    "displayed_desired_bundles": true,
+    "failed_common_safe_covers_per_witness": 9
+  },
+  "claim_boundary": "The fixed singleton and inclusion-maximal low-packet later-owner bundle selectors are refuted in bounded full-capture flower cells. Both witnesses still have a two-good flexible EFX lex escape. This does not refute EFX existence or adaptive dependency termination."
+}

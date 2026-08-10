@@ -23,6 +23,12 @@ try:
     from .analyze_single_replacement_dependency_census import (
         run as run_single_replacement_census,
     )
+    from .audit_fixed_replacement_lex_completion_refutation import (
+        run as run_fixed_replacement_refutation,
+    )
+    from .analyze_three_nonsingleton_flower_single_replacement_location import (
+        run as run_single_replacement_location,
+    )
 except ImportError:
     from analyze_two_leaf_hub_split_census import run as run_hub_split_census
     from audit_charity_rooted_hub_split import run as run_hub_split_audit
@@ -41,6 +47,12 @@ except ImportError:
     )
     from analyze_single_replacement_dependency_census import (
         run as run_single_replacement_census,
+    )
+    from audit_fixed_replacement_lex_completion_refutation import (
+        run as run_fixed_replacement_refutation,
+    )
+    from analyze_three_nonsingleton_flower_single_replacement_location import (
+        run as run_single_replacement_location,
     )
 
 
@@ -363,6 +375,34 @@ def main() -> None:
         "one_leaf_open_response_source": 6,
         "target_dependency": 2,
     }
+
+    singleton_refutation = run_fixed_replacement_refutation(
+        ROOT / "results" / "fixed_replacement_lex_completion_refutation.json",
+        "singleton",
+    )
+    assert singleton_refutation["status"] == "VERIFIED_REFUTATION"
+    assert len(singleton_refutation["eligible_packets"]) == 3
+    assert singleton_refutation["flexible_escape"]["moved_goods"] == 2
+    maximal_packet_refutation = run_fixed_replacement_refutation(
+        ROOT / "results" / "maximal_packet_replacement_lex_completion_refutation.json",
+        "maximal-packet",
+    )
+    assert maximal_packet_refutation["status"] == "VERIFIED_REFUTATION"
+    assert maximal_packet_refutation["eligible_packets"] == [
+        ["aq_tq_1", "ar_bq_0"]
+    ]
+    assert maximal_packet_refutation["flexible_escape"]["moved_goods"] == 2
+    location_census = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_single_replacement_location_census.json"
+        ).read_text()
+    )
+    assert run_single_replacement_location() == location_census
+    assert location_census["hard_cell_count"] == 1020
+    assert location_census["bottom_forced_count"] == 754
+    assert location_census["top_or_bottom_disjunction_count"] == 266
     print("three-nonsingleton flower packet-minimum tests passed")
 
 

@@ -137,6 +137,18 @@ the open-source response branch after all one-leaf completions are tested,
 so the next theorem must grow that released-good dependency to an EFX
 allocation or a release-compatible PI edge set.
 
+Two natural ways of freezing the selected operation are now exactly refuted.
+Neither fixing the selected singleton replacement nor first enlarging it to
+an inclusion-maximal packet below `f` guarantees an EFX completion that keeps
+the earlier mutual owner nonworse. Each countermodel nevertheless has a
+two-good EFX lex escape that fixes the earlier owner and improves the later
+owner. Thus dependency termination must allow the distinguished owner's
+bundle itself to evolve. The corrected bounded target is existence of any
+EFX completion that keeps the earlier mutual owner weakly nonworse and makes
+the later mutual owner strictly better; the cap-free proof target remains an
+adaptive component construction. See
+[`FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md`](FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

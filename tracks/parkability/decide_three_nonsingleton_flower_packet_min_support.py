@@ -123,13 +123,27 @@ def checked_mask(
         solver.add(total[bundle, source] > base[source])
 
     if forbid_single_replacement_owner is not None:
-        owners = AGENTS if forbid_single_replacement_owner == "all" else (forbid_single_replacement_owner,)
+        owners = AGENTS if forbid_single_replacement_owner == "all" else (
+            forbid_single_replacement_owner.split("_", 1)[0],
+        )
         for owner in owners:
+            scope = (
+                forbid_single_replacement_owner.split("_", 1)[1]
+                if "_" in forbid_single_replacement_owner
+                else "bundle"
+            )
+            scoped_components = {
+                ("q", "top"): ("aq_tq", "tq_rest"),
+                ("q", "bottom"): ("ar_bq", "bq_rest"),
+                ("r", "top"): ("ar_tr", "tr_rest"),
+                ("r", "bottom"): ("aq_br", "br_rest"),
+            }.get((owner, scope), bundle_parts[BASE[owner]])
             solver.add(
                 total_component["f", owner]
                 <= minimum([
                     minimum_component[component, owner]
-                    for component in bundle_parts[BASE[owner]]
+                    for component in scoped_components
+                    if component in present
                 ])
             )
 

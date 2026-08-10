@@ -90,6 +90,15 @@ gap is now only dependency termination after that selected replacement, not
 endpoint selection.  See
 [FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md).
 
+The selected replacement cannot be frozen through termination. Exact
+full-capture witnesses refute both fixed-singleton completion and fixed
+inclusion-maximal-low-packet completion, even when only the earlier mutual
+owner must remain nonworse. Both witnesses still admit two-good flexible EFX
+lex escapes. The live `GG` target is therefore a flexible later-owner
+completion or an adaptive transfer-component theorem in which the
+distinguished bundle can evolve. See
+[FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md](FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

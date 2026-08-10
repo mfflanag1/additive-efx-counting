@@ -175,3 +175,18 @@ The normal-form coverage and its encoding still need independent audit.  The
 analytic selector proves selection of an improving operation, not
 termination of the resulting wall dependency, and it does not close the
 remaining seven selected-cycle classes.
+
+## Packet-location refinement
+
+The exact hard-cell census further localizes—but does not completely locate—
+the selected good. In 754 of the 1,020 cells, every eligible later-owner good
+lies in that owner's displayed bottom packet. The owner-resolved counts are
+357 of 501 cells with later owner `q` and 397 of 519 with later owner `r`.
+The remaining 266 cells retain a genuine top/bottom disjunction, and no cell
+forces eligibility in the top packet alone. See
+[`three_nonsingleton_flower_single_replacement_location_census.json`](three_nonsingleton_flower_single_replacement_location_census.json).
+
+This refinement can attach the first dependency directly to a released
+bottom edge in most cells. It is not universal, so a cap-free termination
+proof must either handle the 266 disjunctive cells separately or avoid using
+bottom location as a premise.

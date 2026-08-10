@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import itertools
 import json
 from collections import Counter
 from pathlib import Path
@@ -38,6 +39,28 @@ def owner_walls(values, allocation):
             < tail(values, observer, allocation[target])
         ]
         for target in AGENTS
+    }
+
+
+def champion_source_modes(values, base, offered, token):
+    modes = {source: set() for source in AGENTS}
+    offered = tuple(offered)
+    for size in range(1, len(offered) + 1):
+        for subset in itertools.combinations(offered, size):
+            if any(
+                value(values, observer, base[observer])
+                < tail(values, observer, subset)
+                for observer in AGENTS
+            ):
+                continue
+            mode = "genuine" if token in subset else "ordinary"
+            for source in AGENTS:
+                if value(values, source, subset) > value(values, source, base[source]):
+                    modes[source].add(mode)
+    return {
+        source: sorted(source_modes)
+        for source, source_modes in modes.items()
+        if source_modes
     }
 
 
@@ -86,6 +109,10 @@ def run(witness_path: Path, hub: str) -> dict:
                     target: champion_sources(values, base, complete[target])
                     for target in changed
                 }
+                response_modes = {
+                    hub: champion_source_modes(values, base, complete[hub], "f"),
+                    leaf: champion_source_modes(values, base, complete[leaf], released),
+                }
                 internal = {
                     target: set(responses[target]).intersection(changed)
                     for target in changed
@@ -107,6 +134,7 @@ def run(witness_path: Path, hub: str) -> dict:
                 "classification": classification,
                 "wall_observers": complete_walls,
                 "champion_sources": responses,
+                "champion_source_modes": response_modes if responses else {},
             })
 
         records.append({
@@ -115,6 +143,9 @@ def run(witness_path: Path, hub: str) -> dict:
             "target_wall_observers": walls,
             "charity_wall_observers": charity_walls,
             "hub_target_champion_sources": champion_sources(values, base, partial[hub]),
+            "hub_target_champion_source_modes": champion_source_modes(
+                values, base, partial[hub], "f"
+            ),
             "one_leaf_completions": completions,
         })
 
