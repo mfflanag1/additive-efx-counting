@@ -709,6 +709,10 @@ both encodings.
   the charity-swap pivot to a newly exposed `p`-root strictly improves the
   `p` coordinate; every surviving augmentation failure contains that one
   pivot. A compatible payment or pivot routing is still required.
+- [`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json)
+  — exact QF_LRA replay of the owner/selected-edge top ordering, the failed-
+  fallback charity-versus-pivot inequality, and the strict augmented-root
+  improvement. All three negated implications are UNSAT.
 - [`length_three_global_lex_atomic_sweep.json`](length_three_global_lex_atomic_sweep.json)
   and [`length_three_global_lex_atomic_sweep_audit.json`](length_three_global_lex_atomic_sweep_audit.json)
   — exact motif audit of all 72 atomic external-source/priority cells. Every

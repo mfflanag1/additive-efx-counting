@@ -112,3 +112,9 @@ The remaining theorem must route (6) through a cross-reservoir/alternating
 operation or exhibit an exact unrestricted state in which every compatible
 payment fails.  This reduction alone does not assert that such a payment
 always exists.
+
+The three scalar implications (1), (3), and (4) replay independently as
+QF_LRA-UNSAT when negated in
+[`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json).
+This audit checks the displayed algebra; the champion-source routing remains
+the analytic part of the proof.
