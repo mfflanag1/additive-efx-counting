@@ -165,6 +165,32 @@ def analyze_profile(label, raw_values, sizes):
                 not has_direct_escape(record) for record in anchored_maximal
             ),
         }
+    canonical_p = sum(1 << good for good in tr) | f_mask
+    fixed_candidates = [
+        record
+        for record in feasible
+        if record[2] == canonical_p
+        and record[3] & x_mask
+        and "r_tail" in record[6]
+        and tails[P][record[3]] <= totals[P][y_mask]
+        and tails[R][record[3]] <= totals[R][canonical_p]
+    ]
+    maximum_q = max((record[1] for record in fixed_candidates), default=None)
+    fixed_maximal = [record for record in fixed_candidates if record[1] == maximum_q]
+    fixed_failures = 0
+    for record in fixed_maximal:
+        _pv, _qv, local_p, local_q, local_residual, local_threshold, _modes = record
+        if not any(
+            totals[R][payment] >= local_threshold
+            and allocation_efx(totals, tails, [local_p, payment, y_mask, local_q])
+            for payment in submasks(local_residual)
+        ):
+            fixed_failures += 1
+    anchor_summaries["fixed_p_qmax"] = {
+        "feasible_pair_count": len(fixed_candidates),
+        "maximal_pair_count": len(fixed_maximal),
+        "maximal_pair_failure_count": fixed_failures,
+    }
     return {
         "label": label,
         "packet_sizes": list(sizes),
@@ -204,6 +230,10 @@ def run(output):
             record["anchor_summaries"]["two_way"]["pareto_pair_failure_count"]
             for record in records
         ),
+        "fixed_p_qmax_failure_count": sum(
+            record["anchor_summaries"]["fixed_p_qmax"]["maximal_pair_failure_count"]
+            for record in records
+        ),
         "profiles": records,
         "claim_boundary": {
             "proved": "the exact hybrid-extremal census on the frozen profiles",
@@ -241,6 +271,7 @@ def main():
                     "pareto_pair_failure_count",
                     "canonical_anchor_failure_count",
                     "two_way_anchor_failure_count",
+                    "fixed_p_qmax_failure_count",
                 )
             },
             indent=2,

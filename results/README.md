@@ -720,6 +720,8 @@ both encodings.
   payment on the expanded 28-profile corpus, including the two exact
   length-three models. The canonically anchored subfamily (`f in P`,
   `x in Q`) likewise has zero failures across its 52 Pareto-maximal pairs.
+  The fixed-`P`, maximizing-`Q` subfamily is structurally feasible on 24
+  profiles and has zero failures at all 24 unique maxima.
   The corpus uses the `a=r` singleton-source pattern; this is adversarial
   evidence for that sub-tier, not a cap-free or all-source theorem.
 - [`length_three_hybrid_atom_exact.json`](length_three_hybrid_atom_exact.json)

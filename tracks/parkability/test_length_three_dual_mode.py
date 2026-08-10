@@ -92,6 +92,7 @@ def test_extremal_adversarial_audits():
                 "pareto_pair_failure_count": 0,
                 "canonical_anchor_failure_count": 0,
                 "two_way_anchor_failure_count": 0,
+                "fixed_p_qmax_failure_count": 0,
             },
         ),
     )

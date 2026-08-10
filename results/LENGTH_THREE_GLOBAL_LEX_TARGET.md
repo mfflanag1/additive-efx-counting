@@ -276,7 +276,7 @@ this is already the easy singleton transfer `r <- y`.  Assume therefore
 `a in {p,q}` and put
 
 \[
-U=X_r+B_q,qquad t'=\tau_p(D_r).
+U=X_r+B_q,\qquad t'=\tau_p(D_r).
 \]
 
 The sets `U` and `D_r` are disjoint, and
@@ -603,8 +603,8 @@ The selected `p -> r` edge and absence of the parallel envy edge also give
 `v_p(B_r)<v_p(f)`, hence
 
 \[
-v_p(K)<v_p(f),qquad
-v_q(K)>v_q(B_q)>v_q(f),qquad
+v_p(K)<v_p(f),\qquad
+v_q(K)>v_q(B_q)>v_q(f),\qquad
 v_r(K)\ge v_r(B_q).
 \tag{16c}
 \]
@@ -955,7 +955,7 @@ remainder of `R_J`.
 Choose an inclusion-maximal `r`-affordable set `J`, so
 
 \[
-v_r(J)<v_r(f),qquad
+v_r(J)<v_r(f),\qquad
 v_r(J+h)\ge v_r(f)\quad(h\in X_r\setminus J).
 \tag{16n}
 \]
@@ -1091,7 +1091,7 @@ freeze either desired bundle.  Call a disjoint ordered pair `(P,Q)`
 **`r`-residual-feasible** when `y` belongs to neither member,
 
 \[
-v_p(P)>b_p,qquad v_q(Q)>b_q,
+v_p(P)>b_p,\qquad v_q(Q)>b_q,
 \tag{16v}
 \]
 
@@ -1219,7 +1219,7 @@ source/order mismatch.  Call a triple `(P,Q,S)`, provisionally assigned to
 `y` belongs to neither `P` nor `Q`,
 
 \[
-v_p(P)>b_p,qquad v_q(Q)>b_q,qquad v_s(S)\ge b_s,
+v_p(P)>b_p,\qquad v_q(Q)>b_q,\qquad v_s(S)\ge b_s,
 \tag{16ad}
 \]
 
@@ -1565,6 +1565,127 @@ may be below base.  Thus the four `a=q` types reduce source-validly to:
 This priority distinction is why ownership of `{y}` cannot be treated as a
 source-independent mode switch.
 
+The persistent `q` wall admits a root-preserving one-coordinate potential.
+Fix `P=E` and consider compatible bundles `Q` with
+
+\[
+x\in Q,\qquad v_q(Q)>b_q,\qquad
+\tau_p(Q)\le v_p(y),\qquad
+\tau_r(Q)\le v_r(E),\qquad
+v_r(U(E,Q))\ge\max\{\tau_r(E),\tau_r(Q)\}.
+\tag{16ak.0e}
+\]
+
+The family is nonempty at `Q={x}`.  Choose a member maximizing `v_q(Q)` and
+take a minimal exact-tail payment.  A `p`-source boundary closes through
+`(F,E,Q,{y})`; for `a=p`, an `s`-source closes through
+`({y},E,Q,F)`.  The direct EFX checks use both extra ceilings in
+(16ak.0e): `r` can hold `E`, and `p={y}` can compare safely to `Q`.
+
+For a surviving `q`-source boundary `F`, the only anchor-preserving
+replacement is
+
+\[
+Q'=F+\{x\}.
+\tag{16ak.0f}
+\]
+
+If `Q'` is compatible and its residual is tail-feasible, it contradicts
+the maximal choice of `Q`.  Otherwise there are exactly two outputs:
+
+1. a safety failure of `F+x`.  Deleting `x` is safe after excluding a
+   simultaneous second source; deleting `z in F` can fail only through a
+   desired set
+   \[
+   x\in A\subseteq(F\setminus\{z\})+x;
+   \tag{16ak.0g}
+   \]
+2. the anchored scalar deficit
+   \[
+   v_r\bigl((U(E,Q)\setminus F)+(Q\setminus\{x\})\bigr)
+   <\max\{\tau_r(E),\tau_r(F+x)\}.
+   \tag{16ak.0h}
+   \]
+
+Thus the `a=p` row is reduced cap-free to one envied-singleton anchor wall
+or one exact `r`-tail deficit.  For `a=q`, the same reduction handles the
+`q`-source part of all four orders; the two earlier-`r` `s`-source walls
+remain source-specific outputs.  This anchored one-coordinate gate retains
+the original `p -f-> r` root and is strictly narrower than the unrestricted
+hybrid return lemma.
+
+The exact extremal audit also tests this fixed-`P` potential directly.  Its
+structural family is nonempty on 24 of the 28 loaded profiles; the four
+exceptions are precisely profiles missing one of the canonical capacity or
+compatibility premises.  Each of the 24 has a unique maximizing `Q`, and
+all 24 admit a direct exact `R`-tail payment.  This is targeted evidence for
+(16ak.0e)--(16ak.0h), not a proof of the anchored scalar gate.
+
+There is a structural suffix operation on the scalar side of the
+`q`-source wall.  Before forcing the anchor `x` into the replacement, test
+the compatible unanchored pair `(E,F)`.  Its residual is
+
+\[
+V=(U(E,Q)\setminus F)+Q,
+\qquad
+\theta_0=\max\{\tau_r(E),\tau_r(F)\}.
+\tag{16ak.0i}
+\]
+
+If `v_r(V)>=theta_0`, an exact-tail payment either gives an EFX escape or
+reverses to another explicit minimal desired boundary.  Suppose instead
+
+\[
+v_r(V)<\theta_0.
+\tag{16ak.0j}
+\]
+
+The original minimal payment gives `v_r(F)<theta`, where
+`theta=max{tau_r(E),tau_r(Q)}`, while the old residual has value at least
+`theta`.  Comparing it with (16ak.0j) yields
+
+\[
+v_r(Q)<v_r(F)<\theta.
+\tag{16ak.0k}
+\]
+
+Consequently `theta` cannot equal `tau_r(Q)`, since
+`v_r(Q)>=tau_r(Q)`.  Hence
+
+\[
+\theta=\tau_r(E)>\tau_r(Q).
+\tag{16ak.0l}
+\]
+
+Choose a least-`r` good `h in E`.  Then `v_r(E-h)=theta`, and the forced
+suffix rotation is
+
+\[
+(p,r,q,s)=(Q+h,\ E-h,\ F,\ \{y\}).
+\tag{16ak.0m}
+\]
+
+Its `p` bundle strictly improves.  If `h=f`, it contains `x+f`; if
+`h in T_r`, (16ar) gives
+`v_p(Q+h)>=v_p(x+h)>=v_p(E)>b_p`.  Agent `r` can compare safely to
+`F` by (16ak.0k).  All comparisons to `F` and `E-h` are safe by common
+safety, (16ak.0k), and the fact that `E-h` is a deletion remainder of the
+desired set `E`.  Thus every failure of (16ak.0m) is an observer of the
+single augmented bundle `Q+h`; there is no separate recipient-deficit wall.
+Deleting `h` can only expose an `s`-source wall; for `a=p`
+that wall closes through
+
+\[
+(p,r,q,s)=(\{y\},E,F,Q).
+\tag{16ak.0n}
+\]
+
+Deleting `z in Q` can fail only through a desired set containing `h`,
+because `Q-z` is below the old pair thresholds for `p,q,r,s`.  Therefore
+the scalar `a=p` obstruction is reduced to one actual good of the selected
+champion bundle: `h=f` gives a genuine charity-containing desired family,
+while `h in T_r` gives a top-good root flip.
+
 Otherwise the only possible failure is an external comparison to a
 deletion of `R`.  Within such a deletion perform the same simultaneous
 minimal-threshold extraction at
@@ -1838,7 +1959,7 @@ not used as a packet theorem.
 The global pair need not discard the BCFF root data.  Restrict (16ak.16) to
 
 \[
-f\in P,qquad x\in Q.
+f\in P,\qquad x\in Q.
 \tag{16ak.18a}
 \]
 
@@ -2380,7 +2501,7 @@ v_r(H_r)>\delta_r,
 then
 
 \[
-A'=(A\setminus H)+H_q,qquad
+A'=(A\setminus H)+H_q,\qquad
 B'=(B\setminus H)+H_r
 \]
 
@@ -2390,7 +2511,7 @@ every obstruction must violate the two-demand partition condition (17).
 Equivalently, for every `J subseteq H`, at least one of
 
 \[
-v_q(J)\le\delta_q,qquad
+v_q(J)\le\delta_q,\qquad
 v_r(H\setminus J)\le\delta_r
 \]
 
