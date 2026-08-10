@@ -1541,8 +1541,16 @@ parallel-root recurrence, not a free observer failure.
 The recurrence has a strict augmented-root potential: a new parallel root
 `E'` exposed after removing pivot `g` satisfies
 `v_p(E'+g)>v_p(E)`, and every surviving safety failure of `E'+g` contains
-that single pivot.  See
+that single pivot.  Such a pivot failure either gives an ordinary one-
+charity-edge PI cycle or a non-`p` champion routed to the swapped
+length-three/length-two classes.  Hence only the augmented root's residual
+payment, not its safety, remains.  See
 [`LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md`](LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md).
+When total capacity exists, minimal-payment failure further reduces to one
+two-good compensation: the singleton assigned to `r` plus the least-`p`
+good of the augmented root must fail to cover a deletion tail of the
+remaining root or boundary.  See
+[`LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md`](LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md).
 
 For the seven residual priority/source types in which `p` or `q` precedes
 `r` after any unchanged initial `s`, the `r`-mode feasibility threshold can

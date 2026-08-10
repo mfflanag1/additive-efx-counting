@@ -163,6 +163,12 @@ single returned pivot outweighs the entire released `q`-bottom packet.
 When (9) is false, total `r`-capacity exists and only safety of a minimal
 payment remains to be routed.
 
+That minimal-payment routing is reduced in
+[`LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md`](LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md):
+a `p` boundary closes directly, while a `q` or `s` boundary is paid by the
+appropriate singleton plus the least-`p` good of the augmented root.  The
+only surviving output is failure of that explicit two-good compensation.
+
 The four scalar implications (1), (3), (4), and (9) replay independently as
 QF_LRA-UNSAT when negated in
 [`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json).

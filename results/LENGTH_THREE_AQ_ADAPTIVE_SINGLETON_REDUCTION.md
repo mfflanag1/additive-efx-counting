@@ -220,6 +220,7 @@ escape, is the remaining operation.
 The parallel branch itself admits a strict refinement.  If a failed
 charity swap exposes a new `p`-root `E'` after removing pivot `g`, then
 `E'+g` is strictly better for `p` than the old root.  Every external failure
-of this augmentation either creates a non-`p` champion and routes out, or
-is a desired set containing the single pivot `g`.  See
+of this augmentation either creates an ordinary PI cycle or a non-`p`
+champion and routes out.  Thus the root recurrence closes at the safety
+level; only the residual payment for the augmented root remains.  See
 [`LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md`](LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md).
