@@ -50,7 +50,10 @@ model now blocks every priority-directed one- and two-good exchange while a
 source-safe swap remains externally blocked; its nearest escape is a
 three-good connected chain. The blocker edge need not have release support,
 so immediate swap/PI closure is false. A cap-free component-growth theorem
-is the live analytic target. See
+is the live analytic target. A second exact model blocks every simple
+three-good owner path and instead escapes through an owner/charity transfer
+multigraph, showing that repeated slots and charity-cardinality changes must
+be admitted. See
 [THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even

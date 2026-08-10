@@ -855,7 +855,9 @@ both encodings.
   model's nearest improving EFX allocation moves three goods along a
   connected owner chain. This redirects the cap-free target from a
   fixed-radius swap lemma to component growth; it is not an EFX
-  counterexample.
+  counterexample. A strengthened model blocks every simple three-good owner
+  path and escapes through a connected owner/charity multigraph instead, so
+  the target must allow repeated slots and charity-cardinality changes.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

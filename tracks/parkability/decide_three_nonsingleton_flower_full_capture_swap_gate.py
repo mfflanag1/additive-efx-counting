@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import itertools
 import json
 from pathlib import Path
 
@@ -55,7 +56,11 @@ def true_tail(values):
     return z3.Sum(*values) - minimum(values)
 
 
-def run(require_source_safe: bool = False, block_pair_exchanges: bool = False) -> dict:
+def run(
+    require_source_safe: bool = False,
+    block_pair_exchanges: bool = False,
+    block_three_good_paths: bool = False,
+) -> dict:
     atom_names = {
         component: (
             (component,) if component in ("f", "z")
@@ -114,6 +119,19 @@ def run(require_source_safe: bool = False, block_pair_exchanges: bool = False) -
                 })
         return failures
 
+    def lex_improves(allocation):
+        own = {
+            agent: z3.Sum(*(value[atom, agent] for atom in allocation[agent]))
+            for agent in AGENTS
+        }
+        return z3.Or(*(
+            z3.And(
+                *(own[earlier] == base[earlier] for earlier in AGENTS[:position]),
+                own[agent] > base[agent],
+            )
+            for position, agent in enumerate(AGENTS)
+        ))
+
     # A globally lex-maximal state cannot admit an EFX insertion of f, an
     # owner-improving f-for-item swap, or a one-good transfer from a later
     # owner to an earlier owner.  These radius-one moves were already blocked
@@ -171,6 +189,22 @@ def run(require_source_safe: bool = False, block_pair_exchanges: bool = False) -
                                 *(failure["formula"] for failure in efx_failures(exchanged)),
                             ))
 
+    if block_three_good_paths:
+        for path in itertools.permutations(AGENTS):
+            for moved_goods in itertools.product(*(
+                old_atoms[owner] for owner in path[:-1]
+            )):
+                moved = dict(old_atoms)
+                for index, good in enumerate(moved_goods):
+                    source = path[index]
+                    target = path[index + 1]
+                    moved[source] = tuple(atom for atom in moved[source] if atom != good)
+                    moved[target] = moved[target] + (good,)
+                solver.add(z3.Or(
+                    z3.Not(lex_improves(moved)),
+                    *(failure["formula"] for failure in efx_failures(moved)),
+                ))
+
     covers = candidate_covers("r", "c", "c", "c", tuple(AGENTS))
     one_unpaid = [cover for cover in covers if cover["unpaid_agent"] is not None]
     for cover in one_unpaid:
@@ -220,6 +254,7 @@ def run(require_source_safe: bool = False, block_pair_exchanges: bool = False) -
         },
         "require_source_safe_improving_pair": require_source_safe,
         "block_priority_directed_pair_exchanges": block_pair_exchanges,
+        "block_three_good_owner_paths": block_three_good_paths,
         "pair_count": len(pairs),
         "claim_boundary": (
             "exact two-good-per-component full-X_q capture cell with every priority-directed bottom swap "
@@ -261,9 +296,14 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--require-source-safe", action="store_true")
     parser.add_argument("--block-pair-exchanges", action="store_true")
+    parser.add_argument("--block-three-good-paths", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
-    result = run(args.require_source_safe, args.block_pair_exchanges)
+    result = run(
+        args.require_source_safe,
+        args.block_pair_exchanges,
+        args.block_three_good_paths,
+    )
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"status": result["status"], "pairs": result["pair_count"]}, indent=2))
 

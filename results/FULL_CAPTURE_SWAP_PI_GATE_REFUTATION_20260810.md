@@ -98,6 +98,31 @@ good. Prove that growth either:
 The three-good chain above is the smallest surviving motif that this theorem
 must cover. A fixed item-radius bound is not part of the target.
 
+## Simple-path strengthening is also false
+
+A second exact gate additionally blocks every three-good transfer whose
+slot topology is a simple directed path through the four owners. It remains
+SAT. Its nearest partial improvement still moves three goods, but its
+connected transfer multigraph uses the slots `q,c,charity`:
+
+- `aq_tq_1` moves from `q` to charity;
+- `ar_bq_0` moves from `q` to `c`; and
+- `tc_1` moves from `c` to `q`.
+
+Thus the component has two parallel incidences at `q`, a `q--c` exchange,
+and a `q--charity` tail. It is not a simple path on distinct owners and it
+changes charity cardinality. Its nearest complete improvement moves seven
+goods. The exact model and optimization are
+[`three_nonsingleton_flower_full_capture_path_gate.json`](three_nonsingleton_flower_full_capture_path_gate.json)
+and
+[`three_nonsingleton_flower_full_capture_path_gate_improvement.json`](three_nonsingleton_flower_full_capture_path_gate_improvement.json).
+
+Consequently the correct object is a connected transfer **multigraph** on
+the four owner slots plus charity. The fixed-cardinality hybrid lemma applies
+only when the charity degree balances; the flower theorem must either permit
+cardinality-changing components directly or supply a completion edge that
+balances the charity slot.
+
 ## Claim boundary
 
 This is an exact countermodel to one proposed proof mechanism, not to EFX

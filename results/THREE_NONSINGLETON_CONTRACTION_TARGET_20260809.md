@@ -78,6 +78,9 @@ The next research output must therefore be a cap-free component-growth
 lemma: follow the unsupplied incoming good of each blocker through successive
 owners until the component yields a lex-improving EFX allocation, a
 release-compatible PI edge set, or an impossible strict item-order cycle.
+The component must be a slot multigraph and may involve charity: blocking
+all simple three-good owner paths still leaves an exact model whose nearest
+partial escape has a `q--c` exchange plus a `q--charity` tail.
 
 ## Claim boundary
 

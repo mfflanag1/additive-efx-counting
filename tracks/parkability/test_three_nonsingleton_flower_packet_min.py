@@ -82,6 +82,7 @@ def main() -> None:
     assert gate["status"] == "sat"
     assert gate["require_source_safe_improving_pair"]
     assert gate["block_priority_directed_pair_exchanges"]
+    assert not gate["block_three_good_owner_paths"]
     assert any(
         pair["improves_r"] and pair["source_safe"]
         for pair in gate["pair_diagnostics"]
@@ -95,11 +96,28 @@ def main() -> None:
     )
     assert gate_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 3
     assert gate_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 3
+    path_gate = json.loads(
+        (ROOT / "results" / "three_nonsingleton_flower_full_capture_path_gate.json").read_text()
+    )
+    path_replay = run_swap_gate(True, True, True)
+    assert path_replay["status"] == path_gate["status"] == "sat"
+    assert path_replay["block_three_good_owner_paths"]
+    assert path_gate["block_three_good_owner_paths"]
+    path_improvement = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_full_capture_path_gate_improvement.json"
+        ).read_text()
+    )
+    assert path_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 3
+    assert path_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 7
     gate_note = (
         ROOT / "results" / "FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md"
     ).read_text()
     assert "release compatibility" in gate_note
     assert "component-growth theorem" in gate_note
+    assert "transfer multigraph" in gate_note
 
     theorem = (
         ROOT
