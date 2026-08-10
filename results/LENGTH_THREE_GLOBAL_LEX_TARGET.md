@@ -1661,30 +1661,34 @@ Choose a least-`r` good `h in E`.  Then `v_r(E-h)=theta`, and the forced
 suffix rotation is
 
 \[
-(p,r,q,s)=(Q+h,\ E-h,\ F,\ \{y\}).
+(p,r,q,s)=(\{x,h\},\ E-h,\ F,\ \{y\}).
 \tag{16ak.0m}
 \]
 
-Its `p` bundle strictly improves.  If `h=f`, it contains `x+f`; if
-`h in T_r`, (16ar) gives
-`v_p(Q+h)>=v_p(x+h)>=v_p(E)>b_p`.  Agent `r` can compare safely to
-`F` by (16ak.0k).  All comparisons to `F` and `E-h` are safe by common
-safety, (16ak.0k), and the fact that `E-h` is a deletion remainder of the
-desired set `E`.  Thus every failure of (16ak.0m) is an observer of the
-single augmented bundle `Q+h`; there is no separate recipient-deficit wall.
-Deleting `h` can only expose an `s`-source wall; for `a=p`
-that wall closes through
+This allocation is EFX for arbitrary packets.  Its `p` bundle strictly
+improves: if `h=f`, positivity gives `v_p(x+f)>b_p`; if
+`h in T_r`, (16ar) gives `v_p(x+h)>=v_p(E)>b_p`.
 
-\[
-(p,r,q,s)=(\{y\},E,F,Q).
-\tag{16ak.0n}
-\]
+For agent `r`, (16ak.0k) gives
+`v_r(x)<=v_r(Q)<theta`, while leastness of `h` gives
+`v_r(h)<=theta=v_r(E-h)`; also `v_r(F)<theta`.  Thus all of
+`r`'s comparisons are safe.  Agent `q` values `F` above `Q`, so she
+can compare to `x`; she can compare to `h` because `h` lies in a deletion
+remainder of the common-safe desired set `E`, and hence
+`v_q(h)<=b_q<v_q(F)`.
 
-Deleting `z in Q` can fail only through a desired set containing `h`,
-because `Q-z` is below the old pair thresholds for `p,q,r,s`.  Therefore
-the scalar `a=p` obstruction is reduced to one actual good of the selected
-champion bundle: `h=f` gives a genuine charity-containing desired family,
-while `h in T_r` gives a top-good root flip.
+Finally `s` can compare to `h` by the same common-safety argument.  She
+also satisfies `v_s(x)<=b_s`: otherwise the ordinary envy edge
+`s -> p`, together with the external edge `p -> s` of the `a=p`
+cell, would be a zero-charity PI 2-cycle, contradicting global maximality.
+Comparisons to `F` and `E-h` follow from common safety.  Therefore
+(16ak.0m) closes the scalar `q`-source branch completely; no
+anchor-observer or recipient wall remains.
+
+The 14 atomic boundary/pivot cases, including tied least-`r` pivots, replay
+as exact QF_LRA-UNSAT in
+[`length_three_ap_suffix_atom_exact.json`](length_three_ap_suffix_atom_exact.json).
+This is a local audit of the displayed packet proof, not its justification.
 
 Otherwise the only possible failure is an external comparison to a
 deletion of `R`.  Within such a deletion perform the same simultaneous

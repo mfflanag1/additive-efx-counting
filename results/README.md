@@ -730,6 +730,11 @@ both encodings.
   `R`-tail/`S`-base forms for `a=r`, and 4,096 `R`-tail forms for `a=q`.
   Every formula is UNSAT, supporting the source-valid motif only; this is not
   an arbitrary-packet proof.
+- [`length_three_ap_suffix_atom_exact.json`](length_three_ap_suffix_atom_exact.json)
+  — exact 14-case QF_LRA audit of the trimmed suffix rotation in the atomic
+  `a=p`, external-`q` source motif, including tied least-`r` pivots. Every
+  case is UNSAT. This corroborates the cap-free packet proof's local algebra;
+  it does not replace that proof or decide the remaining unsafe-payment wall.
 - [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
   [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
   and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)

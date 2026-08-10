@@ -20,6 +20,7 @@ try:
     from .analyze_length_three_tail_extremal_profiles import run as run_tail_extremal
     from .analyze_length_three_hybrid_extremal_profiles import run as run_hybrid_extremal
     from .decide_length_three_hybrid_atom import run as run_hybrid_atom
+    from .decide_length_three_ap_suffix_atom import run as run_ap_suffix_atom
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -33,6 +34,7 @@ except ImportError:
     from analyze_length_three_tail_extremal_profiles import run as run_tail_extremal
     from analyze_length_three_hybrid_extremal_profiles import run as run_hybrid_extremal
     from decide_length_three_hybrid_atom import run as run_hybrid_atom
+    from decide_length_three_ap_suffix_atom import run as run_ap_suffix_atom
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -114,6 +116,9 @@ def test_atomic_decisions():
     assert hybrid["status"] == "ALL_SOURCE_ATOM_FORCED"
     assert hybrid["candidate_count"] == 16384
     assert [record["status"] for record in hybrid["records"]] == ["FORCED"] * 3
+    suffix = run_ap_suffix_atom(120)
+    assert suffix["status"] == "SUFFIX_FORCED"
+    assert suffix["case_count"] == 14
 
 
 def test_split_refutation():

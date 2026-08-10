@@ -23,6 +23,26 @@ among partial EFX allocations.
 
 No bound is imposed on the number of goods in any top or bottom packet.
 
+## Adaptive-root/order formulation
+
+For a fixed priority order, the proof gives the requested adaptive escape:
+
+1. a compatible desired family gives its standard PI-cycle EFX
+   improvement immediately;
+2. otherwise, choose the root orientation from the priority order.  A root
+   flip or half-turn reduces the applicable hard orbit to the reservoir
+   orders `(p,s,r,q)` or `(s,p,q,r)`, preserving common safety, packet
+   disjointness, the two champion decompositions, and the two ordinary-envy
+   edges; or
+3. the root-flip or dual-reservoir allocation itself is an explicit EFX
+   lexicographic improvement, with the external observer checked inside the
+   corresponding lemma.
+
+No literal change of the fixed lexicographic priority is needed or used.
+Such a change would not contradict maximality for the original order.  The
+"priority change" is instead a proof-level choice of the root/half-turn
+normal form determined by that original order.
+
 ## Proof by exhaustive analytic order cover
 
 There are 24 priority orders.
@@ -73,4 +93,8 @@ adversarially test its component lemmas, not to extrapolate from a finite
 cell. The 24-order coverage is regression-tested by
 [`test_alternating_capfree_order_coverage.py`](../tracks/parkability/test_alternating_capfree_order_coverage.py).
 The constructive dual-reservoir audit replays 18 frozen eleven-good profiles
-and is byte-reproducible.
+and is byte-reproducible.  The six strict hard-order countermodels and the
+augmented-`q`-face models refute the narrower fixed anchored candidate, not
+this adaptive theorem: in each case one of the root-flip, reservoir, or
+dual-reservoir rival forms survives.  The exact boundary is catalogued in
+[`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md).
