@@ -1468,6 +1468,160 @@ in particular it lacks the length-three residual-capacity consequence
 is adversarial evidence for the global potential, not a proof of its final
 uncrossing step.
 
+### Joint-split completion of a canonical `q` blocker
+
+The three-good suffix cycle has a cap-free formulation.  Return to the
+structural compatible pair `(E,{x})`, where `E=T+f` is inclusion-minimal
+for `p`, and put `U=B+X_q`.  Suppose a failed `r`-payment exposes an
+inclusion-minimal relative blocker `F subseteq U` sourced by `q`, with
+
+\[
+v_q(F)>v_q(x),
+\tag{16ap}
+\]
+
+and every deletion of `F` below the four moving thresholds
+
+\[
+v_p(E),\qquad b_r,\qquad v_q(x),\qquad b_s.
+\tag{16aq}
+\]
+
+For every `j in T`, minimality of `E` gives
+
+\[
+v_p(E-j)\le b_p=v_p(x),
+\qquad
+v_p(x+j)\ge v_p(E).
+\tag{16ar}
+\]
+
+Moreover `q`'s base EFX comparison to `X_r` gives
+`v_q(j)<b_q<v_q(x)<v_q(F)`.  Hence the two provisional bundles
+
+\[
+P_j=\{x,j\},\qquad Q=F
+\]
+
+are mutually EFX-safe, strictly improve `p` and `q`, and are base-safe for
+`r,s`.  They are disjoint because `F subseteq U` and `T` is disjoint from
+`U`.
+
+The exact joint-split payment pool is
+
+\[
+H_j=(E\setminus\{j\})+(U\setminus F).
+\tag{16as}
+\]
+
+If it contains a bundle `Z` satisfying
+
+\[
+\begin{aligned}
+v_r(Z)&\ge b_r,\\
+\tau_p(Z)&\le v_p(P_j),\\
+\tau_q(Z)&\le v_q(F),\\
+\tau_s(Z)&\le b_s,
+\end{aligned}
+\tag{16at}
+\]
+
+then
+
+\[
+(P_j,Z,F,\{y\})
+\tag{16au}
+\]
+
+is EFX and Pareto improves the base.  Conditions (16ap)--(16ar) check the
+comparisons between `P_j` and `F`; (16at) checks every comparison to `Z`;
+and both moving bundles are safe for `s={y}`.  This proves the claim without
+any packet-size restriction.
+
+Thus a canonical `q` blocker cannot merely be declared incompatible with
+the original root.  The correct operation gives one top subgood to `p`,
+gives the blocker to `q`, and releases the rest of the old champion bundle
+to pay `r`.  Failure has only two exact forms:
+
+1. the total scalar deficit `v_r(H_j)<b_r` for every `j in T`; or
+2. every minimal `r`-threshold subset of some adequate `H_j` violates one
+   of the three moving ceilings in (16at).
+
+In the second form, minimal reversal again excludes source `r`.  Source
+`s` closes by assigning `{y}` to `r`; sources `p,q` strictly improve one
+coordinate of the compatible pair and return to the dual-mode extremal
+potential.  Hence (16as)--(16at), rather than a fixed placement of `f`, is
+the remaining packet-safe joint operation.
+
+The scalar branch has an exact closed form.  Since
+`E+U=X_r+X_q+f`,
+
+\[
+v_r(H_j)=b_r+v_r(X_q)+v_r(f)-v_r(F)-v_r(j).
+\]
+
+Consequently failure for every top good is equivalent to
+
+\[
+v_r(F)+v_r(j)>v_r(X_q)+v_r(f)
+\qquad(j\in T).
+\tag{16av}
+\]
+
+It also forces the transversal
+
+\[
+F\cap T_q\ne\varnothing.
+\tag{16aw}
+\]
+
+Indeed, if `F` were disjoint from `T_q`, then
+
+\[
+(\{x,j\},T_q+f,F,\{y\})
+\]
+
+would be EFX for any `j in T`: the first and third bundles are mutually
+safe by (16ap)--(16ar), `T_q+f` is desired by `r` and common-safe, and all
+four recipients weakly improve.  Thus the final scalar obstruction is
+confined to the overlap of the relative `q` blocker with `r`'s desired top,
+not spread through the residual pool.
+
+Put $H=F\cap T_q$ and define the moving deficits
+
+\[
+\delta_q^x=v_q(x)-v_q(F\setminus H),
+\qquad
+\delta_r^f=b_r-v_r((T_q\setminus H)+f).
+\tag{16ax}
+\]
+
+If $H$ has a partition $H=H_q\mathbin{\dot\cup}H_r$ with
+
+\[
+v_q(H_q)>\delta_q^x,
+\qquad
+v_r(H_r)>\delta_r^f,
+\tag{16ay}
+\]
+
+then, for every `j in T`,
+
+\[
+\bigl(\{x,j\},
+      (T_q\setminus H)+H_r+f,
+      (F\setminus H)+H_q,
+      \{y\}\bigr)
+\tag{16az}
+\]
+
+is EFX and Pareto improves the base.  The `q` bundle is a subset of `F`
+and exceeds `v_q(x)`; the `r` bundle is a subset of the desired common-safe
+set `T_q+f` and exceeds `b_r`; and (16ar) protects the `p` bundle.  Therefore
+failure of (16ay) is the sole contested-top partition wall for the canonical
+`q` blocker.  Its fractional relaxation has one boundary good by the same
+price-or-pivot argument below.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
