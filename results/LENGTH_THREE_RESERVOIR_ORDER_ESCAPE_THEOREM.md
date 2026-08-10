@@ -243,3 +243,10 @@ QF_LRA-UNSAT in
 That audit checks the additive inequalities. The source exclusion in the
 `r`-before-`q` low branch and the derivation of the normal form from BCFF
 remain analytic parts of the theorem.
+
+The two frozen exact length-three models also replay constructively in
+[`length_three_reservoir_order_model_audit.json`](length_three_reservoir_order_model_audit.json).
+They include the split profile that refutes the fixed-root dual-mode bridge.
+Across four external-source labels, both order orientations find an exact
+EFX escape, for eight orientation/source witnesses in total. This is an
+adversarial test, not a premise of the packet proof.

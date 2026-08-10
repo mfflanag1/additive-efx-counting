@@ -25,6 +25,7 @@ try:
     from .decide_length_three_parallel_pivot import run as run_parallel_pivot
     from .decide_length_three_augmented_payment import run as run_augmented_payment
     from .decide_length_three_reservoir_order import run as run_reservoir_order
+    from .audit_length_three_reservoir_order_models import run as run_reservoir_models
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -43,6 +44,7 @@ except ImportError:
     from decide_length_three_parallel_pivot import run as run_parallel_pivot
     from decide_length_three_augmented_payment import run as run_augmented_payment
     from decide_length_three_reservoir_order import run as run_reservoir_order
+    from audit_length_three_reservoir_order_models import run as run_reservoir_models
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -141,6 +143,18 @@ def test_atomic_decisions():
     assert len(reservoir_order["records"]) == 24
 
 
+def test_reservoir_order_models():
+    frozen = ROOT / "results/length_three_reservoir_order_model_audit.json"
+    result = json.loads(frozen.read_text())
+    assert result["model_count"] == 2
+    assert result["external_source_count"] == 4
+    assert result["orientation_escape_count"] == 8
+    with tempfile.TemporaryDirectory() as directory:
+        replay = Path(directory) / frozen.name
+        run_reservoir_models(replay)
+        assert replay.read_bytes() == frozen.read_bytes()
+
+
 def test_split_refutation():
     result = json.loads((ROOT / "results/length_three_dual_mode_split_refutation.json").read_text())
     assert result["status"] == "FIXED_ROOT_DUAL_MODE_REFUTED"
@@ -170,5 +184,6 @@ if __name__ == "__main__":
     test_lex_tail_adversarial_audit()
     test_extremal_adversarial_audits()
     test_atomic_decisions()
+    test_reservoir_order_models()
     test_split_refutation()
     print("length-three dual-mode tests passed")

@@ -40,6 +40,11 @@ in
 [`length_three_reservoir_order_packet_audit.json`](length_three_reservoir_order_packet_audit.json).
 The order partition is regression-tested in
 [`test_length_three_capfree_order_coverage.py`](../tracks/parkability/test_length_three_capfree_order_coverage.py).
+The two exact length-three countermodels to narrower bridges are replayed in
+[`length_three_reservoir_order_model_audit.json`](length_three_reservoir_order_model_audit.json):
+all eight source/orientation checks escape, while the selected-atom model's
+extra `q -> X_r` edge is separately recorded as the PI shortcut predicted
+by the analytic source wall.
 
 ## Exact claim boundary
 

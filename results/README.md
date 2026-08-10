@@ -729,6 +729,10 @@ both encodings.
 - [`length_three_reservoir_order_packet_audit.json`](length_three_reservoir_order_packet_audit.json)
   — exact 24-case QF_LRA replay of both reservoir orientations for all
   three external sources.
+- [`length_three_reservoir_order_model_audit.json`](length_three_reservoir_order_model_audit.json)
+  — byte-reproducible constructive replay on the two frozen exact
+  length-three models, including the split fixed-root counterexample; all
+  eight external-source/orientation checks escape.
 - [`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json)
   — exact QF_LRA replay of the owner/selected-edge top ordering, the failed-
   fallback charity-versus-pivot inequality, and the strict augmented-root

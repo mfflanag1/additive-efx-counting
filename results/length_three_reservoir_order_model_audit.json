@@ -1,0 +1,231 @@
+{
+  "claim_boundary": {
+    "not_proved": "the arbitrary-packet theorem, which is analytic",
+    "proved": "exact reservoir-order escapes for both orientations and every external source present in the two frozen length-three models"
+  },
+  "external_source_count": 4,
+  "model_count": 2,
+  "models": [
+    {
+      "extra_p_or_q_envy_of_xr": [
+        "q"
+      ],
+      "label": "length_three_dual_mode_atom_selected",
+      "packet_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "records": [
+        {
+          "external_source": "p",
+          "q_before_r": {
+            "branch": "low_reversal",
+            "bundles": {
+              "p": [
+                "tq",
+                "bq"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "tr",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": "p"
+          },
+          "r_before_q": {
+            "branch": "safe_payment",
+            "bundles": {
+              "p": [
+                "x"
+              ],
+              "q": [
+                "br",
+                "bq"
+              ],
+              "r": [
+                "tq",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": null
+          }
+        },
+        {
+          "external_source": "r",
+          "q_before_r": {
+            "branch": "low_reversal",
+            "bundles": {
+              "p": [
+                "tq",
+                "bq"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "tr",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": "p"
+          },
+          "r_before_q": {
+            "branch": "safe_payment",
+            "bundles": {
+              "p": [
+                "x"
+              ],
+              "q": [
+                "br",
+                "bq"
+              ],
+              "r": [
+                "tq",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": null
+          }
+        },
+        {
+          "external_source": "q",
+          "q_before_r": {
+            "branch": "low_reversal",
+            "bundles": {
+              "p": [
+                "tq",
+                "bq"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "tr",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": "p"
+          },
+          "r_before_q": {
+            "branch": "safe_payment",
+            "bundles": {
+              "p": [
+                "x"
+              ],
+              "q": [
+                "br",
+                "bq"
+              ],
+              "r": [
+                "tq",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": null
+          }
+        }
+      ]
+    },
+    {
+      "extra_p_or_q_envy_of_xr": [],
+      "label": "length_three_dual_mode_split_refutation",
+      "packet_sizes": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "records": [
+        {
+          "external_source": "r",
+          "q_before_r": {
+            "branch": "safe_payment",
+            "bundles": {
+              "p": [
+                "tr0",
+                "tr1",
+                "f"
+              ],
+              "q": [
+                "x"
+              ],
+              "r": [
+                "tq0",
+                "tq1",
+                "bq0",
+                "bq1"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": null
+          },
+          "r_before_q": {
+            "branch": "safe_payment",
+            "bundles": {
+              "p": [
+                "x"
+              ],
+              "q": [
+                "tr0",
+                "tr1",
+                "bq0",
+                "bq1"
+              ],
+              "r": [
+                "tq0",
+                "tq1",
+                "f"
+              ],
+              "s": [
+                "y"
+              ]
+            },
+            "source": null
+          }
+        }
+      ]
+    }
+  ],
+  "orientation_escape_count": 8,
+  "provenance": {
+    "inputs": [
+      {
+        "path": "results/length_three_dual_mode_atom_selected.json",
+        "sha256": "53627f03f4ee110b8ba5dd3b159fb53eb50971fdf91c2e718fb8aebf6df052af"
+      },
+      {
+        "path": "results/length_three_dual_mode_split_refutation.json",
+        "sha256": "d849c8b2429944a0056df2a088ecc9c0340e3dbaea78aafb82edffcbeb7bc1e7"
+      }
+    ],
+    "script": "tracks/parkability/audit_length_three_reservoir_order_models.py",
+    "script_sha256": "dda75c4eb150421e27098788f724598847312ba0cecef647527c88ccc065a326"
+  },
+  "schema": "length-three-reservoir-order-model-audit-v1",
+  "status": "EXACT_FROZEN_MODEL_AUDIT"
+}
