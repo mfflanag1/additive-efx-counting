@@ -69,8 +69,10 @@ independent-total/tail abstraction. A true-tail atomic audit reduces this to
 one-good transfers are blocked. This rules out continuing by fixed radius.
 The next research output should be either:
 
-- a cap-free crossing-capture exchange/PI lemma, beginning with the
-  full-`X_q` capture normal form isolated by the packet-minimum theorem; or
+- a cap-free bottom-crossing swap/PI lemma for the full-`X_q` capture normal
+  form isolated by the packet-minimum theorem, using the proved bilateral
+  swap obstruction lemma to convert every external blocker into a
+  generalized exchange edge; or
 - one exact component-level countermodel, followed by a corrected global
   potential stated on connected slot components rather than item radius.
 

@@ -1,0 +1,204 @@
+{
+  "aq_support": "both",
+  "ar_support": "both",
+  "bundle_tails": {
+    "c": {
+      "A_q": "9/8",
+      "A_r": "23/16",
+      "D_c": "23/16",
+      "D_q": "7/8",
+      "D_r": "3/4",
+      "X_c": "45/32",
+      "X_q": "23/16",
+      "X_r": "11/8",
+      "Z": "0"
+    },
+    "q": {
+      "A_q": "19/16",
+      "A_r": "9/8",
+      "D_c": "41/32",
+      "D_q": "13/8",
+      "D_r": "13/8",
+      "X_c": "17/16",
+      "X_q": "5/4",
+      "X_r": "1",
+      "Z": "0"
+    },
+    "r": {
+      "A_q": "7/16",
+      "A_r": "7/32",
+      "D_c": "15/32",
+      "D_q": "11/32",
+      "D_r": "15/32",
+      "X_c": "7/16",
+      "X_q": "15/32",
+      "X_r": "7/16",
+      "Z": "0"
+    },
+    "s": {
+      "A_q": "1/2",
+      "A_r": "3/16",
+      "D_c": "3/8",
+      "D_q": "5/16",
+      "D_r": "1/2",
+      "X_c": "3/8",
+      "X_q": "1/2",
+      "X_r": "7/16",
+      "Z": "0"
+    }
+  },
+  "bundle_totals": {
+    "c": {
+      "A_q": "47/32",
+      "A_r": "47/32",
+      "D_c": "47/32",
+      "D_q": "29/32",
+      "D_r": "35/32",
+      "X_c": "23/16",
+      "X_q": "57/32",
+      "X_r": "45/32",
+      "Z": "47/32"
+    },
+    "q": {
+      "A_q": "5/4",
+      "A_r": "37/32",
+      "D_c": "21/16",
+      "D_q": "53/32",
+      "D_r": "2",
+      "X_c": "35/32",
+      "X_q": "13/8",
+      "X_r": "33/32",
+      "Z": "1/32"
+    },
+    "r": {
+      "A_q": "15/32",
+      "A_r": "1/4",
+      "D_c": "1/2",
+      "D_q": "3/8",
+      "D_r": "1/2",
+      "X_c": "15/32",
+      "X_q": "1/2",
+      "X_r": "15/32",
+      "Z": "1/32"
+    },
+    "s": {
+      "A_q": "17/32",
+      "A_r": "7/32",
+      "D_c": "13/32",
+      "D_q": "11/32",
+      "D_r": "17/32",
+      "X_c": "13/32",
+      "X_q": "17/32",
+      "X_r": "15/32",
+      "Z": "1/2"
+    }
+  },
+  "claim_boundary": "exact positive additive realization with true minimum-good tails for one source/order cell; SAT shows only that simultaneous failure of the current common-safe cover family returns after packet splitting, not that the state is globally maximal or lacks EFX",
+  "copies_per_nonsingleton_component": 2,
+  "cover_count": 9,
+  "empty_rest": [
+    "bq_rest",
+    "tq_rest"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_three_nonsingleton_flower_packet_split_witness.py",
+    "script_sha256": "ea7d099a9409b5a430a51f4e018326dbbbd284e73dd66f43f49ecdf7d9bff164",
+    "z3_version": "5.0.0"
+  },
+  "schema": "three-nonsingleton-flower-packet-split-witness-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "sat",
+  "values": {
+    "c": {
+      "aq_br_0": "3/8",
+      "aq_br_1": "3/8",
+      "aq_tq_0": "11/32",
+      "aq_tq_1": "3/8",
+      "ar_bq_0": "3/8",
+      "ar_bq_1": "11/16",
+      "ar_tr_0": "1/32",
+      "ar_tr_1": "3/8",
+      "bc_0": "1/16",
+      "bc_1": "9/32",
+      "br_rest_0": "1/16",
+      "br_rest_1": "1/16",
+      "f": "3/8",
+      "tc_0": "1/32",
+      "tc_1": "17/16",
+      "tr_rest_0": "1/16",
+      "tr_rest_1": "1/16",
+      "z": "47/32"
+    },
+    "q": {
+      "aq_br_0": "13/32",
+      "aq_br_1": "1/16",
+      "aq_tq_0": "3/8",
+      "aq_tq_1": "13/32",
+      "ar_bq_0": "7/16",
+      "ar_bq_1": "13/32",
+      "ar_tr_0": "1/32",
+      "ar_tr_1": "9/32",
+      "bc_0": "15/16",
+      "bc_1": "1/16",
+      "br_rest_0": "1/16",
+      "br_rest_1": "1/16",
+      "f": "39/32",
+      "tc_0": "1/32",
+      "tc_1": "1/16",
+      "tr_rest_0": "1/16",
+      "tr_rest_1": "1/16",
+      "z": "1/32"
+    },
+    "r": {
+      "aq_br_0": "1/16",
+      "aq_br_1": "1/16",
+      "aq_tq_0": "1/32",
+      "aq_tq_1": "5/16",
+      "ar_bq_0": "3/32",
+      "ar_bq_1": "1/16",
+      "ar_tr_0": "1/32",
+      "ar_tr_1": "1/16",
+      "bc_0": "1/16",
+      "bc_1": "1/16",
+      "br_rest_0": "1/16",
+      "br_rest_1": "1/16",
+      "f": "5/32",
+      "tc_0": "1/32",
+      "tc_1": "5/16",
+      "tr_rest_0": "1/16",
+      "tr_rest_1": "1/16",
+      "z": "1/32"
+    },
+    "s": {
+      "aq_br_0": "1/16",
+      "aq_br_1": "1/16",
+      "aq_tq_0": "1/32",
+      "aq_tq_1": "3/8",
+      "ar_bq_0": "1/16",
+      "ar_bq_1": "1/16",
+      "ar_tr_0": "1/32",
+      "ar_tr_1": "1/16",
+      "bc_0": "1/16",
+      "bc_1": "1/16",
+      "br_rest_0": "1/16",
+      "br_rest_1": "1/16",
+      "f": "1/8",
+      "tc_0": "1/32",
+      "tc_1": "1/4",
+      "tr_rest_0": "1/16",
+      "tr_rest_1": "1/16",
+      "z": "1/2"
+    }
+  }
+}

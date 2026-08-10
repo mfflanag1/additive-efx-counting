@@ -1,0 +1,115 @@
+{
+  "claim_boundary": "exact optimization on one bounded full-X_q capture witness; the resulting transfer component is proof-mining evidence and not a cap-free escape theorem",
+  "integer_scale": 32,
+  "nearest_complete_improvement": {
+    "allocation": {
+      "c": [
+        "aq_br_0",
+        "bc_1",
+        "tc_0",
+        "tc_1"
+      ],
+      "q": [
+        "aq_tq_0",
+        "aq_tq_1",
+        "ar_bq_0",
+        "ar_bq_1"
+      ],
+      "r": [
+        "aq_br_1",
+        "ar_tr_0",
+        "ar_tr_1",
+        "bc_0",
+        "br_rest_0",
+        "br_rest_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "s": [
+        "f",
+        "z"
+      ]
+    },
+    "base_utility_vector": [
+      15,
+      52,
+      46,
+      16
+    ],
+    "minimum_moved_goods": 3,
+    "status": "SAT",
+    "utility_vector": [
+      15,
+      52,
+      56,
+      20
+    ]
+  },
+  "nearest_partial_improvement": {
+    "allocation": {
+      "_": [
+        "f"
+      ],
+      "c": [
+        "bc_0",
+        "bc_1",
+        "tc_0",
+        "tc_1"
+      ],
+      "q": [
+        "aq_br_0",
+        "aq_tq_0",
+        "aq_tq_1",
+        "ar_bq_1"
+      ],
+      "r": [
+        "aq_br_1",
+        "ar_bq_0",
+        "ar_tr_0",
+        "ar_tr_1",
+        "br_rest_0",
+        "br_rest_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "s": [
+        "z"
+      ]
+    },
+    "base_utility_vector": [
+      15,
+      52,
+      46,
+      16
+    ],
+    "minimum_moved_goods": 2,
+    "status": "SAT",
+    "utility_vector": [
+      16,
+      51,
+      46,
+      16
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/analyze_three_nonsingleton_flower_full_q_capture_witness.py",
+    "script_sha256": "a9673342d2d778fd9050f06db00d5e884b0dd66d94634312ec8256c7f62e9297",
+    "witness": "results/three_nonsingleton_flower_full_q_capture_witness.json",
+    "witness_sha256": "58e7f802c5ade7c7e43a123ca2813526b68e780927ecff3c32630a01783b94a6",
+    "z3_version": "5.0.0"
+  },
+  "schema": "three-nonsingleton-flower-full-q-capture-improvement-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "COMPLETE"
+}

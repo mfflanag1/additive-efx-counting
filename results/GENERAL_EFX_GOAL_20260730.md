@@ -42,7 +42,12 @@ generalized exchange. The live target is therefore a flower-specific
 exchange-component/PI closure, not another bounded-radius menu. A subsequent
 cap-free packet-minimum classification reduces all eight singleton-envier-`c`
 source patterns to crossing desired sets, with full-`X_q` capture as the
-universal hard normal form and a priority-restricted full-`X_r` dual. See
+universal hard normal form and a priority-restricted full-`X_r` dual. A
+representative full-capture model escapes by a single bottom-crossing swap,
+and the bilateral swap obstruction lemma now converts every external blocker
+into one of the two generalized exchange-edge orientations. Selecting an
+extremal swap and routing the remaining losing-owner wall to a PI cycle is
+the live analytic target. See
 [THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even

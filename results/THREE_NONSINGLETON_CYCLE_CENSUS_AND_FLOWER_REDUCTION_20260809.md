@@ -333,6 +333,37 @@ independent encoding audit. It does not close the crossing/capture normal
 forms. Those forms are now the analytic exchange-component gate; arbitrary
 desired subsets outside them are eliminated.
 
+### Full-capture exchange witness
+
+A frozen positive two-good-per-component realization of the universal
+full-`X_q` capture case survives every allocation in the common-safe cover
+menu. Exact optimization nevertheless finds a lex-improving EFX allocation
+at distance two. It swaps one good
+
+\[
+h\in A_q\cap B_r
+\]
+
+from `r` with one good
+
+\[
+b\in A_r\cap B_q=B_q
+\]
+
+from `q`; `c,s` remain fixed and `f` remains unallocated. For priority
+`r,q,c,s`, agent `r` improves and `q` loses slightly. The transfer graph is
+one connected `r--q` component, exactly aligned with the two external bottom
+edges. See
+[`three_nonsingleton_flower_full_q_capture_witness.json`](three_nonsingleton_flower_full_q_capture_witness.json)
+and
+[`three_nonsingleton_flower_full_q_capture_improvement.json`](three_nonsingleton_flower_full_q_capture_improvement.json).
+
+This bounded witness does not prove that a two-good swap always succeeds.
+It identifies the next analytic statement: either some priority-directed
+bottom-crossing swap is EFX, or the blockers of all such swaps supply the
+generalized edges needed to close a PI cycle with the existing mutual
+bottom-edge pair.
+
 The exact one-good-per-displayed-component cell adds the true
 minimum-good formula for every tail. In that bounded cell 316 of the 432
 one-unpaid cases are impossible and 116 remain satisfiable. The surviving
@@ -386,15 +417,15 @@ third champion arm in any cap-free proof.
 
 ## Next analytic gate
 
-Prove a **crossing-capture exchange lemma** for the normal forms in Theorem 8.
-Start with the full-`X_q` capture case, which survives every priority and
-bottom-source pattern. Use the two crossing desired sets as one connected
-exchange component and show that it either becomes EFX with positive
-lexicographic gain or closes an explicit PI cycle with one of the three
-genuine flower edges. Then handle the priority-restricted full-`X_r` dual
-and the opposite-source crossing case. The argument must allow arbitrary
-packet sizes and must use connected slot components, not a bound on moved
-goods.
+Prove a **bottom-crossing swap/PI lemma** for full-`X_q` capture. For the
+earlier mutual-cycle owner, consider swaps between goods in
+`A_q intersect B_r` and `B_q` (and the symmetric pair when `q` is earlier).
+Show that an eligible swap is lex-improving, while simultaneous blockage of
+all swaps yields generalized exchange edges whose packet releases close a PI
+cycle with the two existing external bottom edges. Then lift the same
+argument to the priority-restricted full-`X_r` dual and the opposite-source
+crossing case. The proof must allow arbitrary packet sizes; the two-good
+witness is a guide, not an item cap.
 
 Closing the flower settles only the `GG` row of the eight-class census. It
 does not by itself eliminate the other seven three-nonsingleton classes.

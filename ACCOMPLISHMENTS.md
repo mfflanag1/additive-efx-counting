@@ -199,6 +199,18 @@ support/order cells (5,124 UNSAT); arm-source `q` follows by relabeling. This
 is a new computer-assisted normal-form theorem, not closure of the capture
 cases.
 
+The first exact full-`X_q` capture witness has a distance-two EFX escape: a
+good in the captured `B_r` part swaps with a `B_q` good. This converts the
+next proof obligation into a precise bottom-crossing swap-blocker-to-PI
+lemma rather than a generic component search.
+
+The local half of that obligation is now proved cap-free: in a
+priority-directed bilateral swap, the earlier improving owner cannot fail;
+external target walls force exactly one of two opposite item comparisons and
+produce the matching generalized exchange edge, while a losing later owner
+is the only source-wall case. The remaining step is global pair selection and
+PI routing inside the capture normal form.
+
 ## Bottom-line assessment
 
 The existing counting paper remains a focused package of six exact witnesses,

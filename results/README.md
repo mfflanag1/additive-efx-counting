@@ -837,8 +837,16 @@ both encodings.
   and extracts a two-good generalized exchange after all one-good transfers
   are blocked. A cap-free packet-total/minimum theorem then reduces all eight
   `a=c` source patterns to crossing desired sets and two explicit full-bundle
-  capture alternatives. The flower remains open; this is not a general-EFX
-  proof.
+  capture alternatives. A full-`X_q` witness's nearest escape is one
+  bottom-crossing `r--q` swap, isolating the next swap/PI lemma. The flower
+  remains open; this is not a general-EFX proof.
+- [`BILATERAL_SWAP_OBSTRUCTION_LEMMA_20260810.md`](BILATERAL_SWAP_OBSTRUCTION_LEMMA_20260810.md)
+  — cap-free classification of every failed priority-directed item swap.
+  External target walls have one of two opposite item-order signs and yield
+  the corresponding generalized exchange edge; a losing later owner is the
+  sole source-wall case. This supplies the local edge conversion needed by
+  the full-capture PI target but does not select a successful swap or close
+  the flower.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

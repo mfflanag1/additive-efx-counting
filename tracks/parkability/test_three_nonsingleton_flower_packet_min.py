@@ -42,6 +42,34 @@ def main() -> None:
         else:
             assert sorted(entry["order_count"] for entry in signatures) == [8, 8, 8, 24, 24, 24, 24]
 
+    witness = json.loads(
+        (ROOT / "results" / "three_nonsingleton_flower_full_q_capture_witness.json").read_text()
+    )
+    assert witness["status"] == "sat"
+    assert witness["aq_support"] == witness["ar_support"] == "both"
+    assert witness["empty_rest"] == ["bq_rest", "tq_rest"]
+
+    improvement = json.loads(
+        (ROOT / "results" / "three_nonsingleton_flower_full_q_capture_improvement.json").read_text()
+    )
+    partial = improvement["nearest_partial_improvement"]
+    assert partial["status"] == "SAT"
+    assert partial["minimum_moved_goods"] == 2
+    assert any(good.startswith("ar_bq") for good in partial["allocation"]["r"])
+    assert any(good.startswith("aq_br") for good in partial["allocation"]["q"])
+    assert partial["allocation"]["_"] == ["f"]
+
+    swap_audit = json.loads(
+        (ROOT / "results" / "bilateral_swap_obstruction_audit.json").read_text()
+    )
+    assert swap_audit["status"] == "ALL_FORCED"
+    assert len(swap_audit["records"]) == 4
+    swap_theorem = (
+        ROOT / "results" / "BILATERAL_SWAP_OBSTRUCTION_LEMMA_20260810.md"
+    ).read_text()
+    assert "Agent `r` cannot fail any comparison" in swap_theorem
+    assert "Wall-to-edge consequence" in swap_theorem
+
     theorem = (
         ROOT
         / "results"
@@ -50,6 +78,7 @@ def main() -> None:
     assert "packet-minimum normal form" in theorem
     assert "fully captures `X_q`" in theorem
     assert "5,124 of 6,144" in theorem
+    assert "bottom-crossing swap/PI lemma" in theorem
     print("three-nonsingleton flower packet-minimum tests passed")
 
 
