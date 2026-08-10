@@ -1622,6 +1622,83 @@ failure of (16ay) is the sole contested-top partition wall for the canonical
 `q` blocker.  Its fractional relaxation has one boundary good by the same
 price-or-pivot argument below.
 
+The boundary-good case has an exact two-rounding payment form.  A fractional
+solution supplies a partition
+
+\[
+H=H_q\mathbin{\dot\cup}H_r\mathbin{\dot\cup}\{h\}
+\]
+
+such that, with
+
+\[
+Q_0=(F\setminus H)+H_q,
+\qquad
+R_0=(T_q\setminus H)+H_r+f,
+\]
+
+\[
+v_q(Q_0)\le v_q(x)<v_q(Q_0+h),
+\qquad
+v_r(R_0)\le b_r<v_r(R_0+h).
+\tag{16ba}
+\]
+
+The residual currency disjoint from `P_j`, `F`, and `T_q+f` is
+
+\[
+G_j=(T\setminus\{j\})+\bigl((B+B_q)\setminus F\bigr).
+\tag{16bb}
+\]
+
+There are two sufficient compensations.
+
+1. Give `h` to `r`.  If some `C_q subseteq G_j` makes
+   `Q_0+C_q` exceed `v_q(x)` and
+
+   \[
+   \tau_p(Q_0+C_q)\le v_p(P_j),\quad
+   \tau_r(Q_0+C_q)\le v_r(R_0+h),\quad
+   \tau_s(Q_0+C_q)\le b_s,
+   \tag{16bc}
+   \]
+
+   then `(P_j,R_0+h,Q_0+C_q,{y})` is EFX and Pareto improving.
+2. Give `h` to `q`.  If some `C_r subseteq G_j` makes
+   `R_0+C_r` exceed `b_r` and
+
+   \[
+   \tau_p(R_0+C_r)\le v_p(P_j),\quad
+   \tau_q(R_0+C_r)\le v_q(Q_0+h),\quad
+   \tau_s(R_0+C_r)\le b_s,
+   \tag{16bd}
+   \]
+
+   then `(P_j,R_0+C_r,Q_0+h,{y})` is EFX and Pareto improving.
+
+All comparisons not displayed in (16bc)--(16bd) follow from
+(16ap)--(16ar), because `Q_0+h subseteq F` and
+`R_0+h subseteq T_q+f`.  Thus the same pool `G_j` pays either rounding.
+If its total value fails both recipient thresholds, the surviving scalar
+certificate is
+
+\[
+v_q(G_j)\le v_q(x)-v_q(Q_0),
+\qquad
+v_r(G_j)\le b_r-v_r(R_0).
+\tag{16be}
+\]
+
+If a total threshold is met but every minimal payment violates a moving
+ceiling, minimal reversal produces an explicit relative desired bundle.  On
+the `r`-compensation side its source is in `{p,q,s}`; on the
+`q`-compensation side it is in `{p,r,s}`.  Source `s` switches `y` to `r`,
+sources `p,q` feed the strictly increasing dual-mode pair potential, and
+the remaining `r` source returns to the two-demand overlap uncrossing.
+Consequently (16be), the `r`-source reversal, and the scalar
+ratio-separation alternative when even fractional sharing fails are the
+three final outputs of the canonical `q` wall.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
