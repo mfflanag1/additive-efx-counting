@@ -47,13 +47,19 @@ representative full-capture model escapes by a single bottom-crossing swap,
 and the bilateral swap obstruction lemma converts every external blocker
 into one of two generalized exchange-edge orientations. A stronger exact
 model now blocks every priority-directed one- and two-good exchange while a
-source-safe swap remains externally blocked; its nearest escape is a
-three-good connected chain. The blocker edge need not have release support,
+source-safe swap remains externally blocked; its nearest EFX-with-charity
+escape is a three-good owner/charity multigraph. The blocker edge need not have release support,
 so immediate swap/PI closure is false. A cap-free component-growth theorem
 is the live analytic target. A second exact model blocks every simple
 three-good owner path and instead escapes through an owner/charity transfer
 multigraph, showing that repeated slots and charity-cardinality changes must
-be admitted. See
+be admitted. The transfer-component theorem now handles unequal charity
+cardinalities, and a new packet-for-charity replacement lemma proves an exact
+opposite-sign target-wall/charity-wall dichotomy. The unresolved step is
+endpoint selection from the flower's champion packets. Blocking every such
+one-recipient charity replacement still leaves a bounded cell whose nearest
+escape is a three-edge hub split, so the selector must allow a released
+packet to be partitioned among multiple recipients. See
 [THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even
@@ -64,9 +70,11 @@ spanning all owners and leading directly to absorption. See
 [PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md](PARTIAL_THRESHOLD_FULL_UNIQUE_DEFECT_COMPONENT_GATE.md).
 The replacement cap-free invariant is now proved in
 [GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md](GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md):
-between any two fixed-charity EFX states, \(\Theta\)-gain is additive over
-transfer components, and every infeasible partial component has a wall
-crossing to another component with an exact strict row-wise polarity. The
+between any two EFX-with-charity states—even with different charity
+cardinalities—\(\Theta\)-gain is additive over transfer components, and every
+infeasible partial component has a wall crossing to another component with
+an exact strict row-wise polarity. Its distinguished lex-component corollary
+also preserves lexicographic improvement throughout dependency growth. The
 unresolved common four-agent/general gate
 is to prove that dependency growth preserves enough positive normalized gain
 to close in an eligible union, or else yields an impossible strict wall

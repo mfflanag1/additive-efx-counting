@@ -1,11 +1,11 @@
 {
-  "claim_boundary": "exact optimization on one bounded full-X_q capture witness; the resulting transfer component is proof-mining evidence and not a cap-free escape theorem",
+  "claim_boundary": "exact optimization on one bounded full-X_q capture witness; partial endpoints satisfy both pairwise EFX and owner-versus-charity dominance; the resulting transfer component is proof-mining evidence and not a cap-free escape theorem",
   "integer_scale": 32,
   "nearest_complete_improvement": {
     "allocation": {
       "c": [
         "aq_br_0",
-        "bc_1",
+        "bc_0",
         "tc_0",
         "tc_1"
       ],
@@ -19,7 +19,7 @@
         "aq_br_1",
         "ar_tr_0",
         "ar_tr_1",
-        "bc_0",
+        "bc_1",
         "br_rest_0",
         "br_rest_1",
         "tr_rest_0",
@@ -36,12 +36,85 @@
       46,
       16
     ],
+    "charity_utility_vector": [
+      0,
+      0,
+      0,
+      0
+    ],
     "minimum_moved_goods": 3,
+    "owner_charity_slack_vector": [
+      15,
+      52,
+      49,
+      20
+    ],
     "status": "SAT",
+    "transfer_multigraph": {
+      "base_charity_cardinality": 1,
+      "moved_edges": [
+        {
+          "good": "aq_br_0",
+          "source": "r",
+          "target": "c"
+        },
+        {
+          "good": "bc_1",
+          "source": "c",
+          "target": "r"
+        },
+        {
+          "good": "f",
+          "source": "_",
+          "target": "s"
+        }
+      ],
+      "new_charity_cardinality": 0,
+      "nontrivial_components": [
+        {
+          "edges": [
+            {
+              "good": "aq_br_0",
+              "source": "r",
+              "target": "c"
+            },
+            {
+              "good": "bc_1",
+              "source": "c",
+              "target": "r"
+            }
+          ],
+          "goods": [
+            "aq_br_0",
+            "bc_1"
+          ],
+          "slots": [
+            "r",
+            "c"
+          ]
+        },
+        {
+          "edges": [
+            {
+              "good": "f",
+              "source": "_",
+              "target": "s"
+            }
+          ],
+          "goods": [
+            "f"
+          ],
+          "slots": [
+            "s",
+            "_"
+          ]
+        }
+      ]
+    },
     "utility_vector": [
       15,
       52,
-      56,
+      49,
       20
     ]
   },
@@ -82,8 +155,60 @@
       46,
       16
     ],
+    "charity_utility_vector": [
+      5,
+      39,
+      12,
+      4
+    ],
     "minimum_moved_goods": 2,
+    "owner_charity_slack_vector": [
+      11,
+      12,
+      34,
+      12
+    ],
     "status": "SAT",
+    "transfer_multigraph": {
+      "base_charity_cardinality": 1,
+      "moved_edges": [
+        {
+          "good": "aq_br_0",
+          "source": "r",
+          "target": "q"
+        },
+        {
+          "good": "ar_bq_0",
+          "source": "q",
+          "target": "r"
+        }
+      ],
+      "new_charity_cardinality": 1,
+      "nontrivial_components": [
+        {
+          "edges": [
+            {
+              "good": "aq_br_0",
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "good": "ar_bq_0",
+              "source": "q",
+              "target": "r"
+            }
+          ],
+          "goods": [
+            "aq_br_0",
+            "ar_bq_0"
+          ],
+          "slots": [
+            "r",
+            "q"
+          ]
+        }
+      ]
+    },
     "utility_vector": [
       16,
       51,
@@ -93,7 +218,7 @@
   },
   "provenance": {
     "script": "tracks/parkability/analyze_three_nonsingleton_flower_full_q_capture_witness.py",
-    "script_sha256": "57c8d10ea7b1bc6e6b42459e6baabd273299cb29d3b0c705c5e237945b149831",
+    "script_sha256": "952c9731f650a5eeca25cf4ef0ab515f4fb5a10b80abe5650066b505831a0b32",
     "witness": "results/three_nonsingleton_flower_full_q_capture_witness.json",
     "witness_sha256": "58e7f802c5ade7c7e43a123ca2813526b68e780927ecff3c32630a01783b94a6",
     "z3_version": "5.0.0"

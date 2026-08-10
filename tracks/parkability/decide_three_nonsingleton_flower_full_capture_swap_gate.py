@@ -60,6 +60,7 @@ def run(
     require_source_safe: bool = False,
     block_pair_exchanges: bool = False,
     block_three_good_paths: bool = False,
+    block_charity_packet_replacements: bool = False,
 ) -> dict:
     atom_names = {
         component: (
@@ -205,6 +206,33 @@ def run(
                     *(failure["formula"] for failure in efx_failures(moved)),
                 ))
 
+    if block_charity_packet_replacements:
+        for owner in AGENTS:
+            goods = old_atoms[owner]
+            for packet_size in range(1, len(goods) + 1):
+                for packet in itertools.combinations(goods, packet_size):
+                    replaced = dict(old_atoms)
+                    replaced[owner] = tuple(
+                        atom for atom in goods if atom not in packet
+                    ) + ("f",)
+                    charity_walls = []
+                    for observer in AGENTS:
+                        own_total = z3.Sum(*(
+                            value[atom, observer] for atom in replaced[observer]
+                        ))
+                        charity_walls.append(
+                            own_total < z3.Sum(*(
+                                value[atom, observer] for atom in packet
+                            ))
+                        )
+                    solver.add(z3.Or(
+                        value["f", owner] <= z3.Sum(*(
+                            value[atom, owner] for atom in packet
+                        )),
+                        *(failure["formula"] for failure in efx_failures(replaced)),
+                        *charity_walls,
+                    ))
+
     covers = candidate_covers("r", "c", "c", "c", tuple(AGENTS))
     one_unpaid = [cover for cover in covers if cover["unpaid_agent"] is not None]
     for cover in one_unpaid:
@@ -255,6 +283,7 @@ def run(
         "require_source_safe_improving_pair": require_source_safe,
         "block_priority_directed_pair_exchanges": block_pair_exchanges,
         "block_three_good_owner_paths": block_three_good_paths,
+        "block_charity_packet_replacements": block_charity_packet_replacements,
         "pair_count": len(pairs),
         "claim_boundary": (
             "exact two-good-per-component full-X_q capture cell with every priority-directed bottom swap "
@@ -297,12 +326,14 @@ def main() -> None:
     parser.add_argument("--require-source-safe", action="store_true")
     parser.add_argument("--block-pair-exchanges", action="store_true")
     parser.add_argument("--block-three-good-paths", action="store_true")
+    parser.add_argument("--block-charity-packet-replacements", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     result = run(
         args.require_source_safe,
         args.block_pair_exchanges,
         args.block_three_good_paths,
+        args.block_charity_packet_replacements,
     )
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"status": result["status"], "pairs": result["pair_count"]}, indent=2))

@@ -63,22 +63,21 @@ The exact model is
 
 ## Smallest escape of the frozen model
 
-Exact allocation optimization proves that the nearest partial and complete
-lex-improving EFX allocations both move three goods.
+Exact allocation optimization, now imposing owner-versus-charity dominance
+as well as pairwise EFX, proves that the nearest partial and complete
+lex-improving states both move three goods.
 
-The nearest partial escape leaves `f` unallocated and forms the chain
+The nearest partial escape has one component on `q,c,charity`:
 
-\[
-q\longrightarrow c\longrightarrow r\longrightarrow s:
-\]
+- `aq_tq_1` moves from `q` to charity;
+- `ar_bq_1` moves from `q` to `c`; and
+- `tc_0` moves from `c` to `q`.
 
-- `ar_bq_1` moves from `q` to `c`;
-- `tc_1` moves from `c` to `r`; and
-- `tr_rest_1` moves from `r` to `s`.
-
+Agents `r,s` are fixed and `q,c` improve; charity changes from `{f}` to
+`{f,aq_tq_1}` and remains unenvied. The nearest complete escape moves
+`ar_bq_1` from `q` to `c`, `bc_0` from `c` to `r`, and `f` to `s`.
 Agent `r`, first in priority, improves; `q` loses one unit at the integer
-scale; `c,s` improve. The nearest complete escape swaps `tc_1` and
-`aq_br_1` between `c,r` and gives `f` to `s`. Both have item distance three.
+scale; `c,s` improve. Both endpoints have item distance three.
 See
 [`three_nonsingleton_flower_full_capture_swap_gate_improvement.json`](three_nonsingleton_flower_full_capture_swap_gate_improvement.json).
 
@@ -95,33 +94,62 @@ good. Prove that growth either:
 3. revisits an owner with a strict cyclic item ordering, which is
    impossible.
 
-The three-good chain above is the smallest surviving motif that this theorem
-must cover. A fixed item-radius bound is not part of the target.
+The three-edge owner/charity component above is the smallest surviving motif
+that this theorem must cover. A fixed item-radius bound is not part of the
+target.
 
 ## Simple-path strengthening is also false
 
 A second exact gate additionally blocks every three-good transfer whose
 slot topology is a simple directed path through the four owners. It remains
 SAT. Its nearest partial improvement still moves three goods, but its
-connected transfer multigraph uses the slots `q,c,charity`:
+connected transfer multigraph uses only the slots `q,charity`:
 
 - `aq_tq_1` moves from `q` to charity;
-- `ar_bq_0` moves from `q` to `c`; and
-- `tc_1` moves from `c` to `q`.
+- `ar_bq_1` moves from `q` to charity; and
+- `f` moves from charity to `q`.
 
-Thus the component has two parallel incidences at `q`, a `q--c` exchange,
-and a `q--charity` tail. It is not a simple path on distinct owners and it
-changes charity cardinality. Its nearest complete improvement moves seven
-goods. The exact model and optimization are
+Thus one owner replaces two of her goods by `f`, with two parallel
+`q--charity` releases and one return edge. It is not a simple path on
+distinct owners and it changes charity cardinality from one to two. Its
+nearest complete improvement moves seven goods in one component spanning all
+five slots. The exact model and optimization are
 [`three_nonsingleton_flower_full_capture_path_gate.json`](three_nonsingleton_flower_full_capture_path_gate.json)
 and
 [`three_nonsingleton_flower_full_capture_path_gate_improvement.json`](three_nonsingleton_flower_full_capture_path_gate_improvement.json).
 
 Consequently the correct object is a connected transfer **multigraph** on
-the four owner slots plus charity. The fixed-cardinality hybrid lemma applies
-only when the charity degree balances; the flower theorem must either permit
-cardinality-changing components directly or supply a completion edge that
-balances the charity slot.
+the four owner slots plus charity. The strengthened
+[`GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md`](GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md)
+now handles different charity cardinalities directly and proves that every
+hybrid wall crosses to another slot component. What remains is not charity
+balancing but endpoint construction: derive one globally feasible endpoint
+multigraph from the flower's champion data rather than discovering it only
+after solving a bounded model.
+
+## Packet-selector strengthening is false
+
+A third exact gate additionally blocks every owner-improving replacement of
+an arbitrary nonempty owner packet by `f`, including failures caused by the
+new charity packet. It remains SAT. Its nearest partial EFX-with-charity
+improvement has one three-edge branching component on `r,c,s`:
+
+- `r` sends `aq_br_0` to `s`;
+- `r` sends `aq_br_1` to `c`; and
+- `c` sends `tc_1` to `r`.
+
+Owners `r,c,s` all improve and `q` is fixed. The nearest complete
+improvement is the charity-side dual: `c` receives `f`, sends `bc_1` to `r`,
+and sends `tc_1` to `s`. It also moves three goods and improves every changed
+owner. The frozen model and optimization are
+[`three_nonsingleton_flower_full_capture_packet_gate.json`](three_nonsingleton_flower_full_capture_packet_gate.json)
+and
+[`three_nonsingleton_flower_full_capture_packet_gate_improvement.json`](three_nonsingleton_flower_full_capture_packet_gate_improvement.json).
+
+Thus the next primitive is a **hub-splitting component**: one slot receives
+an incoming good or packet while releasing a packet partitioned among two or
+more recipients. Linear paths and one-recipient packet replacements are both
+strictly too narrow.
 
 ## Claim boundary
 

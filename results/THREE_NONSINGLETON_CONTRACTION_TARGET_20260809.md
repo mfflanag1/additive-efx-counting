@@ -70,7 +70,7 @@ one-good transfers are blocked. This rules out continuing by fixed radius.
 The second alternative has now occurred. An exact full-`X_q` model blocks
 every priority-directed one- and two-good exchange, including a source-safe
 improving bottom swap, while its nearest improving EFX allocation is a
-three-good connected chain. Moreover, the external swap-blocker edge need
+three-good connected owner/charity multigraph. Moreover, the external swap-blocker edge need
 not have its incoming good released by the apparent flower cycle. See
 [`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md).
 
@@ -80,7 +80,21 @@ owners until the component yields a lex-improving EFX allocation, a
 release-compatible PI edge set, or an impossible strict item-order cycle.
 The component must be a slot multigraph and may involve charity: blocking
 all simple three-good owner paths still leaves an exact model whose nearest
-partial escape has a `q--c` exchange plus a `q--charity` tail.
+partial escape is a three-edge `q--charity` packet replacement.
+
+The variable-charity hybrid-wall theorem now removes the cardinality
+restriction, and the packet-for-charity replacement lemma supplies the exact
+opposite-sign obstruction rule for a component incident to charity. The
+remaining construction premise is to select the first improving packet or
+exchange component from the flower data; once a feasible endpoint is named,
+the distinguished lex-component corollary grows to it in finitely many slot
+components.
+
+An exact strengthening now blocks every one-recipient packet-for-charity
+replacement as well. Its nearest partial and complete escapes are three-edge
+hub-splitting components: one owner receives one good (or `f`) while sending
+two goods to two distinct recipients. The selector must therefore range over
+packet partitions at a hub, not just subsets sent to charity.
 
 ## Claim boundary
 

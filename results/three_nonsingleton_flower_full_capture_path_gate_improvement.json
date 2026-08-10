@@ -1,32 +1,32 @@
 {
-  "claim_boundary": "exact optimization on one bounded full-X_q capture witness; the resulting transfer component is proof-mining evidence and not a cap-free escape theorem",
+  "claim_boundary": "exact optimization on one bounded full-X_q capture witness; partial endpoints satisfy both pairwise EFX and owner-versus-charity dominance; the resulting transfer component is proof-mining evidence and not a cap-free escape theorem",
   "integer_scale": 256,
   "nearest_complete_improvement": {
     "allocation": {
       "c": [
-        "bc_0",
-        "bc_1",
         "z"
       ],
       "q": [
-        "aq_tq_1",
+        "aq_tq_0",
         "ar_bq_0",
-        "f",
+        "ar_bq_1",
         "tc_1"
       ],
       "r": [
         "aq_br_0",
         "aq_br_1",
-        "aq_tq_0",
-        "ar_bq_1",
         "ar_tr_0",
         "ar_tr_1",
+        "bc_1",
         "br_rest_0",
+        "br_rest_1",
+        "f",
         "tr_rest_0",
         "tr_rest_1"
       ],
       "s": [
-        "br_rest_1",
+        "aq_tq_1",
+        "bc_0",
         "tc_0"
       ]
     },
@@ -36,31 +36,141 @@
       988,
       998
     ],
+    "charity_utility_vector": [
+      0,
+      0,
+      0,
+      0
+    ],
     "minimum_moved_goods": 7,
+    "owner_charity_slack_vector": [
+      1542,
+      15266,
+      1469,
+      1279
+    ],
     "status": "SAT",
+    "transfer_multigraph": {
+      "base_charity_cardinality": 1,
+      "moved_edges": [
+        {
+          "good": "aq_tq_1",
+          "source": "q",
+          "target": "s"
+        },
+        {
+          "good": "bc_0",
+          "source": "c",
+          "target": "s"
+        },
+        {
+          "good": "bc_1",
+          "source": "c",
+          "target": "r"
+        },
+        {
+          "good": "f",
+          "source": "_",
+          "target": "r"
+        },
+        {
+          "good": "tc_0",
+          "source": "c",
+          "target": "s"
+        },
+        {
+          "good": "tc_1",
+          "source": "c",
+          "target": "q"
+        },
+        {
+          "good": "z",
+          "source": "s",
+          "target": "c"
+        }
+      ],
+      "new_charity_cardinality": 0,
+      "nontrivial_components": [
+        {
+          "edges": [
+            {
+              "good": "aq_tq_1",
+              "source": "q",
+              "target": "s"
+            },
+            {
+              "good": "bc_0",
+              "source": "c",
+              "target": "s"
+            },
+            {
+              "good": "bc_1",
+              "source": "c",
+              "target": "r"
+            },
+            {
+              "good": "f",
+              "source": "_",
+              "target": "r"
+            },
+            {
+              "good": "tc_0",
+              "source": "c",
+              "target": "s"
+            },
+            {
+              "good": "tc_1",
+              "source": "c",
+              "target": "q"
+            },
+            {
+              "good": "z",
+              "source": "s",
+              "target": "c"
+            }
+          ],
+          "goods": [
+            "aq_tq_1",
+            "bc_0",
+            "bc_1",
+            "f",
+            "tc_0",
+            "tc_1",
+            "z"
+          ],
+          "slots": [
+            "r",
+            "q",
+            "c",
+            "s",
+            "_"
+          ]
+        }
+      ]
+    },
     "utility_vector": [
-      2829,
-      13301,
-      1762,
-      1595
+      1542,
+      15266,
+      1469,
+      1279
     ]
   },
   "nearest_partial_improvement": {
     "allocation": {
       "_": [
         "aq_tq_1",
-        "f"
+        "ar_bq_1"
       ],
       "c": [
-        "ar_bq_0",
         "bc_0",
         "bc_1",
-        "tc_0"
+        "tc_0",
+        "tc_1"
       ],
       "q": [
         "aq_tq_0",
-        "ar_bq_1",
-        "tc_1"
+        "ar_bq_0",
+        "f"
       ],
       "r": [
         "aq_br_0",
@@ -82,20 +192,83 @@
       988,
       998
     ],
+    "charity_utility_vector": [
+      115,
+      352,
+      479,
+      369
+    ],
     "minimum_moved_goods": 3,
+    "owner_charity_slack_vector": [
+      1325,
+      12948,
+      509,
+      629
+    ],
     "status": "SAT",
+    "transfer_multigraph": {
+      "base_charity_cardinality": 1,
+      "moved_edges": [
+        {
+          "good": "aq_tq_1",
+          "source": "q",
+          "target": "_"
+        },
+        {
+          "good": "ar_bq_1",
+          "source": "q",
+          "target": "_"
+        },
+        {
+          "good": "f",
+          "source": "_",
+          "target": "q"
+        }
+      ],
+      "new_charity_cardinality": 2,
+      "nontrivial_components": [
+        {
+          "edges": [
+            {
+              "good": "aq_tq_1",
+              "source": "q",
+              "target": "_"
+            },
+            {
+              "good": "ar_bq_1",
+              "source": "q",
+              "target": "_"
+            },
+            {
+              "good": "f",
+              "source": "_",
+              "target": "q"
+            }
+          ],
+          "goods": [
+            "aq_tq_1",
+            "ar_bq_1",
+            "f"
+          ],
+          "slots": [
+            "q",
+            "_"
+          ]
+        }
+      ]
+    },
     "utility_vector": [
       1440,
-      11725,
-      961,
+      13300,
+      988,
       998
     ]
   },
   "provenance": {
     "script": "tracks/parkability/analyze_three_nonsingleton_flower_full_q_capture_witness.py",
-    "script_sha256": "57c8d10ea7b1bc6e6b42459e6baabd273299cb29d3b0c705c5e237945b149831",
+    "script_sha256": "fa1e5e6ea7df666d4c889650118ba49f4b49076256987c1f99ecdb0e72e57fe6",
     "witness": "results/three_nonsingleton_flower_full_capture_path_gate.json",
-    "witness_sha256": "b1905683756604b4357bbaab405819bf015cd1318569f47a8f817fcd1f86dfab",
+    "witness_sha256": "c47ee0fb1e5002612205f4bcb536895b297af257cb7bc76e37fcc72a298124d8",
     "z3_version": "5.0.0"
   },
   "schema": "three-nonsingleton-flower-full-q-capture-improvement-v1",

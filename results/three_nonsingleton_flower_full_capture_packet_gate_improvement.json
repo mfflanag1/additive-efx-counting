@@ -1,0 +1,244 @@
+{
+  "claim_boundary": "exact optimization on one bounded full-X_q capture witness; partial endpoints satisfy both pairwise EFX and owner-versus-charity dominance; the resulting transfer component is proof-mining evidence and not a cap-free escape theorem",
+  "integer_scale": 2048,
+  "nearest_complete_improvement": {
+    "allocation": {
+      "c": [
+        "bc_0",
+        "f",
+        "tc_0"
+      ],
+      "q": [
+        "aq_tq_0",
+        "aq_tq_1",
+        "ar_bq_0",
+        "ar_bq_1"
+      ],
+      "r": [
+        "aq_br_0",
+        "aq_br_1",
+        "ar_tr_0",
+        "ar_tr_1",
+        "bc_1",
+        "br_rest_0",
+        "br_rest_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "s": [
+        "tc_1",
+        "z"
+      ]
+    },
+    "base_utility_vector": [
+      1104,
+      856,
+      1926,
+      756
+    ],
+    "charity_utility_vector": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "minimum_moved_goods": 3,
+    "owner_charity_slack_vector": [
+      1546,
+      856,
+      2271,
+      758
+    ],
+    "status": "SAT",
+    "transfer_multigraph": {
+      "base_charity_cardinality": 1,
+      "moved_edges": [
+        {
+          "good": "bc_1",
+          "source": "c",
+          "target": "r"
+        },
+        {
+          "good": "f",
+          "source": "_",
+          "target": "c"
+        },
+        {
+          "good": "tc_1",
+          "source": "c",
+          "target": "s"
+        }
+      ],
+      "new_charity_cardinality": 0,
+      "nontrivial_components": [
+        {
+          "edges": [
+            {
+              "good": "bc_1",
+              "source": "c",
+              "target": "r"
+            },
+            {
+              "good": "f",
+              "source": "_",
+              "target": "c"
+            },
+            {
+              "good": "tc_1",
+              "source": "c",
+              "target": "s"
+            }
+          ],
+          "goods": [
+            "bc_1",
+            "f",
+            "tc_1"
+          ],
+          "slots": [
+            "r",
+            "c",
+            "s",
+            "_"
+          ]
+        }
+      ]
+    },
+    "utility_vector": [
+      1546,
+      856,
+      2271,
+      758
+    ]
+  },
+  "nearest_partial_improvement": {
+    "allocation": {
+      "_": [
+        "f"
+      ],
+      "c": [
+        "aq_br_1",
+        "bc_0",
+        "bc_1",
+        "tc_0"
+      ],
+      "q": [
+        "aq_tq_0",
+        "aq_tq_1",
+        "ar_bq_0",
+        "ar_bq_1"
+      ],
+      "r": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "br_rest_0",
+        "br_rest_1",
+        "tc_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "s": [
+        "aq_br_0",
+        "z"
+      ]
+    },
+    "base_utility_vector": [
+      1104,
+      856,
+      1926,
+      756
+    ],
+    "charity_utility_vector": [
+      674,
+      558,
+      1148,
+      40
+    ],
+    "minimum_moved_goods": 3,
+    "owner_charity_slack_vector": [
+      576,
+      298,
+      1391,
+      766
+    ],
+    "status": "SAT",
+    "transfer_multigraph": {
+      "base_charity_cardinality": 1,
+      "moved_edges": [
+        {
+          "good": "aq_br_0",
+          "source": "r",
+          "target": "s"
+        },
+        {
+          "good": "aq_br_1",
+          "source": "r",
+          "target": "c"
+        },
+        {
+          "good": "tc_1",
+          "source": "c",
+          "target": "r"
+        }
+      ],
+      "new_charity_cardinality": 1,
+      "nontrivial_components": [
+        {
+          "edges": [
+            {
+              "good": "aq_br_0",
+              "source": "r",
+              "target": "s"
+            },
+            {
+              "good": "aq_br_1",
+              "source": "r",
+              "target": "c"
+            },
+            {
+              "good": "tc_1",
+              "source": "c",
+              "target": "r"
+            }
+          ],
+          "goods": [
+            "aq_br_0",
+            "aq_br_1",
+            "tc_1"
+          ],
+          "slots": [
+            "r",
+            "c",
+            "s"
+          ]
+        }
+      ]
+    },
+    "utility_vector": [
+      1250,
+      856,
+      2539,
+      806
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/analyze_three_nonsingleton_flower_full_q_capture_witness.py",
+    "script_sha256": "fa1e5e6ea7df666d4c889650118ba49f4b49076256987c1f99ecdb0e72e57fe6",
+    "witness": "results/three_nonsingleton_flower_full_capture_packet_gate.json",
+    "witness_sha256": "0adbfb51578c9b8efafb38ebce53ebc7111af35d99501cc34444c5cebdc71254",
+    "z3_version": "5.0.0"
+  },
+  "schema": "three-nonsingleton-flower-full-q-capture-improvement-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "COMPLETE"
+}

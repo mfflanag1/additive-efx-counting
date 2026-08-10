@@ -837,9 +837,10 @@ both encodings.
   and extracts a two-good generalized exchange after all one-good transfers
   are blocked. A cap-free packet-total/minimum theorem then reduces all eight
   `a=c` source patterns to crossing desired sets and two explicit full-bundle
-  capture alternatives. A full-`X_q` witness's nearest escape is one
-  bottom-crossing `r--q` swap, isolating the next swap/PI lemma. The flower
-  remains open; this is not a general-EFX proof.
+  capture alternatives. Later exact gates refute immediate swap/PI closure
+  and simple owner-path closure, replacing them with the connected
+  owner/charity multigraph target below. The flower remains open; this is not
+  a general-EFX proof.
 - [`BILATERAL_SWAP_OBSTRUCTION_LEMMA_20260810.md`](BILATERAL_SWAP_OBSTRUCTION_LEMMA_20260810.md)
   — cap-free classification of every failed priority-directed item swap.
   External target walls have one of two opposite item-order signs and yield
@@ -852,12 +853,22 @@ both encodings.
   swap/PI closure. Even after every priority-directed one- and two-good
   exchange is blocked, a source-safe improving bottom swap can have an
   external wall whose generalized edge lacks release support. The frozen
-  model's nearest improving EFX allocation moves three goods along a
-  connected owner chain. This redirects the cap-free target from a
+  model's nearest improving EFX-with-charity allocation moves three goods in
+  a connected owner/charity multigraph. This redirects the cap-free target from a
   fixed-radius swap lemma to component growth; it is not an EFX
   counterexample. A strengthened model blocks every simple three-good owner
   path and escapes through a connected owner/charity multigraph instead, so
   the target must allow repeated slots and charity-cardinality changes.
+- [`PACKET_CHARITY_REPLACEMENT_OBSTRUCTION_LEMMA_20260810.md`](PACKET_CHARITY_REPLACEMENT_OBSTRUCTION_LEMMA_20260810.md)
+  — cap-free classification of replacing an arbitrary owner packet by the
+  charity good and releasing that packet into charity. A target wall forces
+  the observer to rank the charity good above the whole packet; a charity
+  wall forces the opposite strict ranking. With no wall the move is an EFX-
+  with-charity lexicographic improvement. This supplies the charity-side
+  signed dependency rule but does not select an improving packet.
+  An exact strengthening blocks every such packet replacement and survives;
+  its nearest escapes are three-edge hub-splitting components, identifying
+  packet partition among multiple recipients as the next primitive.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

@@ -51,6 +51,53 @@ def load_values(path: Path):
     return payload, values, scale
 
 
+def transfer_multigraph(allocation: dict) -> dict:
+    slot_order = AGENTS + (UNALLOCATED,)
+    slot_index = {slot: index for index, slot in enumerate(slot_order)}
+    new_slot = {
+        good: slot
+        for slot, goods in allocation.items()
+        for good in goods
+    }
+    edges = [
+        {"good": good, "source": old_owner(good), "target": new_slot[good]}
+        for good in sorted(new_slot)
+        if old_owner(good) != new_slot[good]
+    ]
+    adjacency = {slot: set() for slot in slot_order}
+    for edge in edges:
+        adjacency[edge["source"]].add(edge["target"])
+        adjacency[edge["target"]].add(edge["source"])
+    components = []
+    unseen = {slot for slot, neighbors in adjacency.items() if neighbors}
+    while unseen:
+        root = min(unseen, key=slot_index.get)
+        stack = [root]
+        slots = set()
+        while stack:
+            slot = stack.pop()
+            if slot in slots:
+                continue
+            slots.add(slot)
+            stack.extend(adjacency[slot] - slots)
+        unseen -= slots
+        component_edges = [
+            edge for edge in edges
+            if edge["source"] in slots and edge["target"] in slots
+        ]
+        components.append({
+            "slots": sorted(slots, key=slot_index.get),
+            "goods": sorted(edge["good"] for edge in component_edges),
+            "edges": component_edges,
+        })
+    return {
+        "base_charity_cardinality": 1,
+        "new_charity_cardinality": len(allocation.get(UNALLOCATED, [])),
+        "moved_edges": edges,
+        "nontrivial_components": components,
+    }
+
+
 def solve(values: dict, complete: bool):
     goods = tuple(values[AGENTS[0]])
     recipients = AGENTS if complete else AGENTS + (UNALLOCATED,)
@@ -75,6 +122,16 @@ def solve(values: dict, complete: bool):
                     owner[good] == recipient_index[target],
                     own >= target_total - values[observer][good],
                 ))
+        if not complete:
+            charity_value = z3.Sum(*(
+                z3.If(
+                    owner[good] == recipient_index[UNALLOCATED],
+                    values[observer][good],
+                    0,
+                )
+                for good in goods
+            ))
+            solver.add(own >= charity_value)
     base = {
         agent: sum(values[agent][good] for good in goods if old_owner(good) == agent)
         for agent in AGENTS
@@ -108,6 +165,10 @@ def solve(values: dict, complete: bool):
                 for recipient in recipients
             }
             utilities = [model.eval(bundle_value[agent, agent]).as_long() for agent in AGENTS]
+            charity_utilities = [
+                sum(values[agent][good] for good in allocation.get(UNALLOCATED, []))
+                for agent in AGENTS
+            ]
             solver.pop()
             return {
                 "status": "SAT",
@@ -115,6 +176,12 @@ def solve(values: dict, complete: bool):
                 "allocation": allocation,
                 "base_utility_vector": [base[agent] for agent in AGENTS],
                 "utility_vector": utilities,
+                "charity_utility_vector": charity_utilities,
+                "owner_charity_slack_vector": [
+                    own - charity
+                    for own, charity in zip(utilities, charity_utilities)
+                ],
+                "transfer_multigraph": transfer_multigraph(allocation),
             }
         solver.pop()
     return {"status": "UNSAT"}
@@ -125,6 +192,10 @@ def run(witness_path: Path) -> dict:
     witness, values, scale = load_values(witness_path)
     root = Path(__file__).resolve().parents[2]
     script = Path(__file__).resolve()
+    try:
+        witness_label = str(witness_path.relative_to(root))
+    except ValueError:
+        witness_label = str(witness_path)
     return {
         "schema": "three-nonsingleton-flower-full-q-capture-improvement-v1",
         "status": "COMPLETE",
@@ -133,13 +204,14 @@ def run(witness_path: Path) -> dict:
         "nearest_partial_improvement": solve(values, False),
         "nearest_complete_improvement": solve(values, True),
         "claim_boundary": (
-            "exact optimization on one bounded full-X_q capture witness; the resulting transfer component "
-            "is proof-mining evidence and not a cap-free escape theorem"
+            "exact optimization on one bounded full-X_q capture witness; partial endpoints satisfy both "
+            "pairwise EFX and owner-versus-charity dominance; the resulting transfer component is "
+            "proof-mining evidence and not a cap-free escape theorem"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),
             "script_sha256": sha256(script),
-            "witness": str(witness_path.relative_to(root)),
+            "witness": witness_label,
             "witness_sha256": sha256(witness_path),
             "z3_version": z3.get_version_string(),
         },

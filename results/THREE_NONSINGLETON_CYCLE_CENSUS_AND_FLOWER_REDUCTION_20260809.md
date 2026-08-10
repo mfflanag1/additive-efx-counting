@@ -428,6 +428,14 @@ argument to the priority-restricted full-`X_r` dual and the opposite-source
 crossing case. The proof must allow arbitrary packet sizes and component
 length; no fixed item radius is claimed.
 
+For components incident to charity, the packet-for-charity replacement
+lemma gives the required signed step: replacing `R subseteq X_q` by `f`
+either improves EFX with charity, produces a target edge with
+`v_i(f)>v_i(R)`, or produces a charity wall with the reverse inequality.
+Together with the variable-charity hybrid-wall theorem, this reduces the
+live gap to selecting a first improving packet/component from the flower's
+champion data.
+
 The exact model and nearest three-good escape establishing this correction
 are documented in
 [`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md).

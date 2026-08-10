@@ -5,8 +5,10 @@ import json
 from pathlib import Path
 
 try:
+    from .audit_packet_charity_replacement import run as run_packet_charity_audit
     from .decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 except ImportError:
+    from audit_packet_charity_replacement import run as run_packet_charity_audit
     from decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 
 
@@ -83,6 +85,7 @@ def main() -> None:
     assert gate["require_source_safe_improving_pair"]
     assert gate["block_priority_directed_pair_exchanges"]
     assert not gate["block_three_good_owner_paths"]
+    assert not gate["block_charity_packet_replacements"]
     assert any(
         pair["improves_r"] and pair["source_safe"]
         for pair in gate["pair_diagnostics"]
@@ -96,6 +99,10 @@ def main() -> None:
     )
     assert gate_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 3
     assert gate_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 3
+    primary_graph = gate_improvement["nearest_partial_improvement"]["transfer_multigraph"]
+    assert primary_graph["base_charity_cardinality"] == 1
+    assert primary_graph["new_charity_cardinality"] == 2
+    assert primary_graph["nontrivial_components"][0]["slots"] == ["q", "c", "_"]
     path_gate = json.loads(
         (ROOT / "results" / "three_nonsingleton_flower_full_capture_path_gate.json").read_text()
     )
@@ -103,6 +110,7 @@ def main() -> None:
     assert path_replay["status"] == path_gate["status"] == "sat"
     assert path_replay["block_three_good_owner_paths"]
     assert path_gate["block_three_good_owner_paths"]
+    assert not path_gate["block_charity_packet_replacements"]
     path_improvement = json.loads(
         (
             ROOT
@@ -112,12 +120,61 @@ def main() -> None:
     )
     assert path_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 3
     assert path_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 7
+    assert min(path_improvement["nearest_partial_improvement"]["owner_charity_slack_vector"]) >= 0
+    path_graph = path_improvement["nearest_partial_improvement"]["transfer_multigraph"]
+    assert path_graph["base_charity_cardinality"] == 1
+    assert path_graph["new_charity_cardinality"] == 2
+    assert path_graph["nontrivial_components"][0]["slots"] == ["q", "_"]
+    complete_graph = path_improvement["nearest_complete_improvement"]["transfer_multigraph"]
+    assert complete_graph["nontrivial_components"][0]["slots"] == [
+        "r", "q", "c", "s", "_"
+    ]
+    packet_gate = json.loads(
+        (ROOT / "results" / "three_nonsingleton_flower_full_capture_packet_gate.json").read_text()
+    )
+    packet_replay = run_swap_gate(True, True, True, True)
+    assert packet_replay["status"] == packet_gate["status"] == "sat"
+    assert packet_gate["block_charity_packet_replacements"]
+    packet_improvement = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_full_capture_packet_gate_improvement.json"
+        ).read_text()
+    )
+    assert packet_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 3
+    assert packet_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 3
+    packet_graph = packet_improvement["nearest_partial_improvement"]["transfer_multigraph"]
+    assert packet_graph["nontrivial_components"][0]["slots"] == ["r", "c", "s"]
+    packet_complete_graph = packet_improvement["nearest_complete_improvement"][
+        "transfer_multigraph"
+    ]
+    assert packet_complete_graph["nontrivial_components"][0]["slots"] == [
+        "r", "c", "s", "_"
+    ]
     gate_note = (
         ROOT / "results" / "FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md"
     ).read_text()
     assert "release compatibility" in gate_note
     assert "component-growth theorem" in gate_note
     assert "transfer multigraph" in gate_note
+    assert "hub-splitting component" in gate_note
+    component_theorem = (
+        ROOT / "results" / "GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA.md"
+    ).read_text()
+    assert "charity cardinalities may differ" in component_theorem
+    assert "Distinguished lex-component corollary" in component_theorem
+    packet_charity = json.loads(
+        (ROOT / "results" / "packet_charity_replacement_obstruction_audit.json").read_text()
+    )
+    assert run_packet_charity_audit() == packet_charity
+    assert packet_charity["status"] == "ALL_FORCED"
+    assert len(packet_charity["records"]) == 4
+    packet_charity_theorem = (
+        ROOT / "results" / "PACKET_CHARITY_REPLACEMENT_OBSTRUCTION_LEMMA_20260810.md"
+    ).read_text()
+    assert "opposite aggregate signs" in packet_charity_theorem
+    assert "arbitrary-packet and cap-free" in packet_charity_theorem
 
     theorem = (
         ROOT
