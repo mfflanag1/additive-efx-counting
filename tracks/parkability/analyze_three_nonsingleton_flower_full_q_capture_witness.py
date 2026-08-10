@@ -121,6 +121,7 @@ def solve(values: dict, complete: bool):
 
 
 def run(witness_path: Path) -> dict:
+    witness_path = witness_path.resolve()
     witness, values, scale = load_values(witness_path)
     root = Path(__file__).resolve().parents[2]
     script = Path(__file__).resolve()

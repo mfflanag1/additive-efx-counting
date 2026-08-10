@@ -4,6 +4,11 @@
 import json
 from pathlib import Path
 
+try:
+    from .decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
+except ImportError:
+    from decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
+
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -70,6 +75,32 @@ def main() -> None:
     assert "Agent `r` cannot fail any comparison" in swap_theorem
     assert "Wall-to-edge consequence" in swap_theorem
 
+    gate = json.loads(
+        (ROOT / "results" / "three_nonsingleton_flower_full_capture_swap_gate.json").read_text()
+    )
+    assert run_swap_gate(True, True) == gate
+    assert gate["status"] == "sat"
+    assert gate["require_source_safe_improving_pair"]
+    assert gate["block_priority_directed_pair_exchanges"]
+    assert any(
+        pair["improves_r"] and pair["source_safe"]
+        for pair in gate["pair_diagnostics"]
+    )
+    gate_improvement = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_full_capture_swap_gate_improvement.json"
+        ).read_text()
+    )
+    assert gate_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 3
+    assert gate_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 3
+    gate_note = (
+        ROOT / "results" / "FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md"
+    ).read_text()
+    assert "release compatibility" in gate_note
+    assert "component-growth theorem" in gate_note
+
     theorem = (
         ROOT
         / "results"
@@ -78,7 +109,7 @@ def main() -> None:
     assert "packet-minimum normal form" in theorem
     assert "fully captures `X_q`" in theorem
     assert "5,124 of 6,144" in theorem
-    assert "bottom-crossing swap/PI lemma" in theorem
+    assert "component-growth lemma" in theorem
     print("three-nonsingleton flower packet-minimum tests passed")
 
 

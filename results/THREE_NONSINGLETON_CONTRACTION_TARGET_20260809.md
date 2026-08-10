@@ -67,14 +67,17 @@ improver. A four-cover strict-cycle lemma closes another 148 cells, leaving
 independent-total/tail abstraction. A true-tail atomic audit reduces this to
 116 bounded cells but supplies an exact two-good exchange witness after all
 one-good transfers are blocked. This rules out continuing by fixed radius.
-The next research output should be either:
+The second alternative has now occurred. An exact full-`X_q` model blocks
+every priority-directed one- and two-good exchange, including a source-safe
+improving bottom swap, while its nearest improving EFX allocation is a
+three-good connected chain. Moreover, the external swap-blocker edge need
+not have its incoming good released by the apparent flower cycle. See
+[`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md).
 
-- a cap-free bottom-crossing swap/PI lemma for the full-`X_q` capture normal
-  form isolated by the packet-minimum theorem, using the proved bilateral
-  swap obstruction lemma to convert every external blocker into a
-  generalized exchange edge; or
-- one exact component-level countermodel, followed by a corrected global
-  potential stated on connected slot components rather than item radius.
+The next research output must therefore be a cap-free component-growth
+lemma: follow the unsupplied incoming good of each blocker through successive
+owners until the component yields a lex-improving EFX allocation, a
+release-compatible PI edge set, or an impossible strict item-order cycle.
 
 ## Claim boundary
 

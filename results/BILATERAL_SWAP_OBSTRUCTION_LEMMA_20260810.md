@@ -83,8 +83,9 @@ An incoming target-`r` wall strongly envies `X_r-h+b`. Taking an
 inclusion-minimal envied subset produces a generalized
 `({b}|{h})`-champion edge into `r`. A target-`q` wall similarly produces a
 generalized `({h}|{b})`-edge into `q`. Thus every external blockage of a
-priority-directed swap supplies exactly one of the two exchange-edge
-orientations needed by the flower's bottom-packet PI routing.
+priority-directed swap supplies one of the two exchange-edge orientations.
+It does not by itself supply the incoming good of that edge: release
+compatibility must be established separately.
 
 The remaining source-`q` obstruction is purely ordinal: both mutual-cycle
 owners rank `b` above `h`. The full-capture theorem must either choose an
@@ -98,5 +99,9 @@ The four scalar implications replay as QF_LRA-UNSAT in
 
 This lemma classifies every failed bilateral swap and converts external
 walls to generalized edges. It does not prove that some swap is eligible or
-that the resulting exchange edges close a PI cycle. That flower-specific
-selection/routing is the next gate.
+that the resulting exchange edges close a PI cycle. The exact full-capture
+model in
+[`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md)
+shows that even a source-safe improving pair can be blocked without an
+immediate release-compatible PI cycle. The next gate is component growth,
+not single-edge closure.

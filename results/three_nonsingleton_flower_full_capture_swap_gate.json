@@ -1,0 +1,177 @@
+{
+  "block_priority_directed_pair_exchanges": true,
+  "claim_boundary": "exact two-good-per-component full-X_q capture cell with every priority-directed bottom swap blocked after excluding EFX f-insertions, owner-improving f-for-item swaps, and priority-directed one-good transfers; SAT is proof-mining evidence, not a globally maximal state or an EFX counterexample",
+  "pair_count": 4,
+  "pair_diagnostics": [
+    {
+      "b": "ar_bq_0",
+      "blockers": [
+        {
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "observer": "r",
+          "target": "c"
+        },
+        {
+          "observer": "q",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_0",
+      "improves_r": false,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_1",
+      "blockers": [
+        {
+          "observer": "c",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_0",
+      "improves_r": true,
+      "source_safe": true
+    },
+    {
+      "b": "ar_bq_0",
+      "blockers": [
+        {
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "observer": "r",
+          "target": "c"
+        },
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "q"
+        }
+      ],
+      "h": "aq_br_1",
+      "improves_r": false,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_1",
+      "blockers": [
+        {
+          "observer": "c",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_1",
+      "improves_r": true,
+      "source_safe": true
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_three_nonsingleton_flower_full_capture_swap_gate.py",
+    "script_sha256": "78a0b117ca2132a66ca830334193385dbcb9680774be068c2a5bd925578cf4fe",
+    "z3_version": "5.0.0"
+  },
+  "require_source_safe_improving_pair": true,
+  "schema": "three-nonsingleton-flower-full-capture-swap-gate-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "sat",
+  "values": {
+    "c": {
+      "aq_br_0": "5/64",
+      "aq_br_1": "25/128",
+      "aq_tq_0": "5/64",
+      "aq_tq_1": "5/64",
+      "ar_bq_0": "5/64",
+      "ar_bq_1": "67/256",
+      "ar_tr_0": "3/256",
+      "ar_tr_1": "5/64",
+      "bc_0": "13/128",
+      "bc_1": "21/256",
+      "br_rest_0": "1/64",
+      "br_rest_1": "1/128",
+      "f": "1/256",
+      "tc_0": "35/256",
+      "tc_1": "27/256",
+      "tr_rest_0": "1/64",
+      "tr_rest_1": "3/256",
+      "z": "55/128"
+    },
+    "q": {
+      "aq_br_0": "9/128",
+      "aq_br_1": "1/64",
+      "aq_tq_0": "63/256",
+      "aq_tq_1": "73/256",
+      "ar_bq_0": "43/256",
+      "ar_bq_1": "1/256",
+      "ar_tr_0": "11/64",
+      "ar_tr_1": "57/256",
+      "bc_0": "1/128",
+      "bc_1": "43/256",
+      "br_rest_0": "3/256",
+      "br_rest_1": "1/128",
+      "f": "73/256",
+      "tc_0": "3/8",
+      "tc_1": "1/128",
+      "tr_rest_0": "3/128",
+      "tr_rest_1": "5/256",
+      "z": "3/256"
+    },
+    "r": {
+      "aq_br_0": "17/256",
+      "aq_br_1": "1/16",
+      "aq_tq_0": "3/128",
+      "aq_tq_1": "181/256",
+      "ar_bq_0": "1/64",
+      "ar_bq_1": "3/32",
+      "ar_tr_0": "29/256",
+      "ar_tr_1": "65/256",
+      "bc_0": "3/64",
+      "bc_1": "1/128",
+      "br_rest_0": "15/256",
+      "br_rest_1": "11/256",
+      "f": "7/64",
+      "tc_0": "29/256",
+      "tc_1": "167/256",
+      "tr_rest_0": "15/128",
+      "tr_rest_1": "31/256",
+      "z": "3/256"
+    },
+    "s": {
+      "aq_br_0": "15/256",
+      "aq_br_1": "7/128",
+      "aq_tq_0": "7/128",
+      "aq_tq_1": "47/128",
+      "ar_bq_0": "13/256",
+      "ar_bq_1": "11/256",
+      "ar_tr_0": "1/16",
+      "ar_tr_1": "1/16",
+      "bc_0": "1/256",
+      "bc_1": "53/128",
+      "br_rest_0": "13/256",
+      "br_rest_1": "3/64",
+      "f": "5/256",
+      "tc_0": "7/256",
+      "tc_1": "3/128",
+      "tr_rest_0": "1/16",
+      "tr_rest_1": "1/16",
+      "z": "123/256"
+    }
+  }
+}

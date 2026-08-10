@@ -847,6 +847,15 @@ both encodings.
   sole source-wall case. This supplies the local edge conversion needed by
   the full-capture PI target but does not select a successful swap or close
   the flower.
+- [`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md)
+  — exact two-good-per-component refutation of the proposed immediate
+  swap/PI closure. Even after every priority-directed one- and two-good
+  exchange is blocked, a source-safe improving bottom swap can have an
+  external wall whose generalized edge lacks release support. The frozen
+  model's nearest improving EFX allocation moves three goods along a
+  connected owner chain. This redirects the cap-free target from a
+  fixed-radius swap lemma to component growth; it is not an EFX
+  counterexample.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

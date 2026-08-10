@@ -359,10 +359,10 @@ and
 [`three_nonsingleton_flower_full_q_capture_improvement.json`](three_nonsingleton_flower_full_q_capture_improvement.json).
 
 This bounded witness does not prove that a two-good swap always succeeds.
-It identifies the next analytic statement: either some priority-directed
-bottom-crossing swap is EFX, or the blockers of all such swaps supply the
-generalized edges needed to close a PI cycle with the existing mutual
-bottom-edge pair.
+The initially proposed analytic statement—either some priority-directed
+bottom-crossing swap is EFX, or its blockers immediately close a PI
+cycle—is now exactly refuted. A source-safe improving swap can have an
+external blocker whose generalized edge lacks release support.
 
 The exact one-good-per-displayed-component cell adds the true
 minimum-good formula for every tail. In that bounded cell 316 of the 432
@@ -417,15 +417,20 @@ third champion arm in any cap-free proof.
 
 ## Next analytic gate
 
-Prove a **bottom-crossing swap/PI lemma** for full-`X_q` capture. For the
-earlier mutual-cycle owner, consider swaps between goods in
-`A_q intersect B_r` and `B_q` (and the symmetric pair when `q` is earlier).
-Show that an eligible swap is lex-improving, while simultaneous blockage of
-all swaps yields generalized exchange edges whose packet releases close a PI
-cycle with the two existing external bottom edges. Then lift the same
+Prove a **component-growth lemma** for full-`X_q` capture. For the earlier
+mutual-cycle owner, begin with swaps between goods in
+`A_q intersect B_r` and `B_q` (and the symmetric pair when `q` is earlier),
+but treat every blocker edge as a dependency whose incoming good still needs
+release support. Follow that dependency across owners until the connected
+component yields a lex-improving EFX allocation, a release-compatible PI
+edge set, or an impossible strict item-order cycle. Then lift the same
 argument to the priority-restricted full-`X_r` dual and the opposite-source
-crossing case. The proof must allow arbitrary packet sizes; the two-good
-witness is a guide, not an item cap.
+crossing case. The proof must allow arbitrary packet sizes and component
+length; no fixed item radius is claimed.
+
+The exact model and nearest three-good escape establishing this correction
+are documented in
+[`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md).
 
 Closing the flower settles only the `GG` row of the eight-class census. It
 does not by itself eliminate the other seven three-nonsingleton classes.
