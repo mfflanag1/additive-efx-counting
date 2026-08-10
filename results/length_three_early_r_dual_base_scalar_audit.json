@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "name": "critical_pool_strictly_exceeds_r_base",
+      "negated_status": "UNSAT"
+    },
+    {
+      "name": "unsafe_boundary_is_below_r_base",
+      "negated_status": "UNSAT"
+    },
+    {
+      "name": "q_source_foreign_bottom_exceeds_own_bottom",
+      "negated_status": "UNSAT"
+    },
+    {
+      "name": "profitable_bottom_replacement_raises_r",
+      "negated_status": "UNSAT"
+    }
+  ],
+  "claim_boundary": "Checks only the four displayed additive implications in the early-r reduction. Desired-set extraction and PI routing remain analytic; the p/q cross-packet walls remain open.",
+  "schema": "length-three-early-r-dual-base-scalar-audit-v1",
+  "status": "ALL_NEGATED_IMPLICATIONS_UNSAT"
+}

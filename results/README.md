@@ -698,6 +698,16 @@ both encodings.
   the edge `r -> s` rules out the suffix allocation's sole external
   observer wall. Only the two `r`-before-`p,q` dual-base rows remain for
   this source type.
+- [`LENGTH_THREE_EARLY_R_DUAL_BASE_REDUCTION_20260809.md`](LENGTH_THREE_EARLY_R_DUAL_BASE_REDUCTION_20260809.md)
+  — cap-free base-threshold extraction for the two remaining external-`r`
+  orders. The atomic core `(T_r+f,B_r+T_q,{x},{y})` lifts to arbitrary
+  packets unless an unsafe payment exposes a `p`- or `q`-desired set using
+  both `B_r` and `T_q`. In the `q`-source branch its `B_r` part must exceed
+  `B_q` for both `q` and `r`. This is a reduction, not a closure theorem.
+- [`length_three_early_r_dual_base_scalar_audit.json`](length_three_early_r_dual_base_scalar_audit.json)
+  — byte-replayable QF_LRA audit of the four additive implications used by
+  the early-`r` reduction. Desired-set extraction and PI routing remain the
+  analytic proof layer.
 - [`LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md`](LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md)
   — cap-free reduction of all four external-`q` rows. Assigning the two
   singleton roots adaptively closes every minimal-payment source except two

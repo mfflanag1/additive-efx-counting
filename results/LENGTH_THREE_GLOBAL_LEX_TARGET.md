@@ -1512,6 +1512,13 @@ Consequently the asymmetric hybrid potential below is no longer needed for
 the two `p`-before-`r` rows.  Its exact models remain useful adversarial
 evidence for the still-open dual-base operation.
 
+For the two remaining orders `(s,r,p,q)` and `(s,r,q,p)`, direct extraction
+at the full base threshold `b_r` reduces the obstruction further to a
+`p`- or `q`-desired set crossing both `B_r` and `T_q`.  In the `q` branch,
+the `B_r` portion must dominate `B_q` in both the `q` and `r` rows.  See
+[`LENGTH_THREE_EARLY_R_DUAL_BASE_REDUCTION_20260809.md`](LENGTH_THREE_EARLY_R_DUAL_BASE_REDUCTION_20260809.md).
+This sharper interface still requires a dual-base routing operation.
+
 #### Adaptive-singleton reduction of the external-`q` rows
 
 Assign `s` her preferred singleton from `{x,y}` and `q` the other before
