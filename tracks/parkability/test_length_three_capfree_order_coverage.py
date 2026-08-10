@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the source/order coverage of the proved length-three lemmas."""
+"""Check the two-orientation cover of the length-three reservoir theorem."""
 
 import itertools
 
@@ -7,40 +7,25 @@ import itertools
 AGENTS = ("p", "r", "q", "s")
 EXPECTED_REMAINDER = {
     "p": set(),
-    "r": {
-        ("s", "r", "p", "q"),
-        ("s", "r", "q", "p"),
-    },
-    "q": {
-        ("p", "r", "q", "s"),
-        ("p", "r", "s", "q"),
-        ("p", "s", "r", "q"),
-        ("s", "p", "r", "q"),
-    },
+    "r": set(),
+    "q": set(),
 }
 
 
-def easy(source, order):
+def covered(_source, order):
     return (
-        order[0] in {"q", source}
-        or (source != "p" and order[:2] == ("p", source))
-        or order[:2] == ("s", "q")
+        order.index("q") < order.index("r")
+        or order.index("r") < order.index("q")
     )
 
 
-def covered(source, order):
-    if easy(source, order):
-        return True
-    if order.index("q") < order.index("r"):
-        return True
-    if source == "p" and order == ("s", "p", "r", "q"):
-        return True
-    if source == "r" and order in {("p", "s", "r", "q"), ("s", "p", "r", "q")}:
-        return True
-    return source in {"p", "q"} and order.index("r") < order.index("p")
-
-
 def test_coverage():
+    orders = set(itertools.permutations(AGENTS))
+    q_before_r = {order for order in orders if order.index("q") < order.index("r")}
+    r_before_q = {order for order in orders if order.index("r") < order.index("q")}
+    assert q_before_r.isdisjoint(r_before_q)
+    assert q_before_r | r_before_q == orders
+    assert len(q_before_r) == len(r_before_q) == 12
     for source in ("p", "r", "q"):
         remainder = {
             order for order in itertools.permutations(AGENTS) if not covered(source, order)

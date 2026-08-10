@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-09
 
-**Status:** cap-free analytic closure of the parallel-root safety recurrence;
-residual payment remains
+**Status:** valid cap-free analytic reduction, superseded as a completion
+gate by the reservoir-order escape theorem
 
 ## Setup
 

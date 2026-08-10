@@ -7,6 +7,19 @@ counterexample.
 **Current status:** **open**. No general proof and no additive counterexample
 has been obtained.
 
+**August 9 topology result:** the cap-free global-lex escape lemma for the
+BCFF length-three residual with exactly two nonsingleton bundles is now
+proved analytically for arbitrary packet sizes. Two minimal-threshold
+reservoir orientations partition all 24 priority orders according to the
+relative positions of the two large owners and cover all three possible
+external-singleton sources. The BCFF composition audit derives every premise
+without a chordless-graph or unique-decomposition assumption. See
+[LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md](LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md)
+and
+[LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md](LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md).
+This is a genuine residual-topology theorem, not a proof of general additive
+EFX; states with more nonsingleton bundles remain outside it.
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

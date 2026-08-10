@@ -144,6 +144,28 @@ This is a genuine new \((4,9)\) subclass theorem, not the full \((4,9)\)
 cell and not a resolution of general additive EFX. The next common-favorite
 gate is threshold-passing but resident-Hall-deficient.
 
+## 8. Cap-free BCFF length-three residual theorem
+
+The project now proves an analytic arbitrary-packet escape theorem for the
+length-three basic-cycle topology in the BCFF exactly-two-nonsingleton
+reduction. The proof uses two minimal-threshold reservoir extractions. If
+`q` precedes `r`, only `r` can lose and `q` strictly improves; if `r`
+precedes `q`, only `q` can lose and `r` strictly improves. These orientations
+partition all 24 priority orders and work for all three possible sources of
+the external singleton envy edge.
+
+The low branch of the second extraction has an exact PI source wall: a
+`p`- or `q`-desired subset of `X_r+B_q` induces a generalized edge whose
+incoming `B_q` part is released by the selected `r -f-> q` edge. Hence only
+`r` and `s` can source the reversal, and both have explicit EFX allocations.
+
+The theorem is analytic and cap-free. A 24-case QF_LRA audit verifies the
+aggregate allocation inequalities under Z3 5.0.0 and 4.15.3, and a separate
+composition audit derives the normal form, nonempty packets, external edge,
+and source exclusions from BCFF. It closes the length-three residual only;
+it is not a proof of complete four-agent additive EFX and has not yet been
+externally refereed.
+
 ## Bottom-line assessment
 
 The existing counting paper remains a focused package of six exact witnesses,
