@@ -86,7 +86,13 @@ def test_extremal_adversarial_audits():
         (
             "length_three_hybrid_extremal_adversarial_audit.json",
             run_hybrid_extremal,
-            {"profile_count": 28, "pareto_pair_count": 54, "pareto_pair_failure_count": 0},
+            {
+                "profile_count": 28,
+                "pareto_pair_count": 54,
+                "pareto_pair_failure_count": 0,
+                "canonical_anchor_failure_count": 0,
+                "two_way_anchor_failure_count": 0,
+            },
         ),
     )
     with tempfile.TemporaryDirectory() as directory:
@@ -104,8 +110,9 @@ def test_atomic_decisions():
     assert run_atom("exact")["status"] == "FIXED_ROOT_DUAL_MODE_FORCED"
     assert run_atom("selected")["status"] == "SAT"
     hybrid = run_hybrid_atom(120)
-    assert hybrid["status"] == "HYBRID_ATOM_FORCED"
-    assert hybrid["candidate_count"] == 8192
+    assert hybrid["status"] == "ALL_SOURCE_ATOM_FORCED"
+    assert hybrid["candidate_count"] == 16384
+    assert [record["status"] for record in hybrid["records"]] == ["FORCED"] * 3
 
 
 def test_split_refutation():

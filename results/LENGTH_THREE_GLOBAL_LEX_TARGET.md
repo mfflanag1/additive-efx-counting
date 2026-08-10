@@ -2,10 +2,10 @@
 
 **Date:** 2026-08-09
 
-**Status:** BCFF basic-cycle classification reconstructed; the two hard
-orders reduce cap-free to one asymmetric hybrid crossing certificate;
-the canonical feasible-overlap branch also collapses to one contested good;
-the final crossing/cycle routing remains open
+**Status:** BCFF basic-cycle classification reconstructed; the seven
+`p/q`-before-`r` residual types admit exact tail-mode reduction, with an
+asymmetric hybrid repair when `a=r`; the two `r`-before-`p,q` types retain
+the dual-base overlap gate; final source-sensitive routing remains open
 
 ## Source-valid starting point
 
@@ -1471,7 +1471,8 @@ uncrossing step.
 
 ### Lexicographic tail-mode extremal reduction
 
-For the two surviving hard orders, the `r`-mode feasibility threshold can
+For the seven residual priority/source types in which `p` or `q` precedes
+`r` after any unchanged initial `s`, the `r`-mode feasibility threshold can
 be lowered analytically.  Retain the compatible-pair definition
 (16ah)--(16ai), and define
 
@@ -1498,9 +1499,11 @@ v_r(R)\ge\vartheta_r(P,Q).
 \tag{16ak.3}
 \]
 
-If `(P,R,Q,{y})` is EFX, it lexicographically improves both
-`(p,s,r,q)` and `(s,p,q,r)`: `p` strictly improves, while `s` keeps `{y}`.
-This conclusion does not require `v_r(R)>=b_r`.
+If `(P,R,Q,{y})` is EFX, it lexicographically improves every such type:
+`p,q` strictly improve, while `s` keeps `{y}`.  This conclusion does not
+require `v_r(R)>=b_r`.  It does not apply to the two `a=r` types
+`(s,r,p,q)` and `(s,r,q,p)`, where `r` is earlier than both improving pair
+owners.
 
 Otherwise the only possible failure is an external comparison to a
 deletion of `R`.  Within such a deletion perform the same simultaneous
@@ -1615,7 +1618,7 @@ where the displayed order is `(p,r,q,s)`.  Equations (16ak.6)--(16ak.8)
 settle `r`'s comparison to `F`, and compatibility/minimality settle every
 comparison between `F` and the unaugmented old bundles.  The only new EFX
 walls involve the single augmented bundle `B_k+h`; in the `q`-source case
-it must also keep `p` above `b_p` to improve the two target priority orders.
+it must also keep the first changed pair owner above base.
 There are two orientations to check: the displayed rotation assigns
 `B_l-h` to `r` and `B_k+h` to the other provisional owner, while the
 reverse matching exchanges those two recipients.  The displayed
@@ -1661,7 +1664,7 @@ This leaves an exact two-bundle matching gate.  With `F` fixed at its source
 and `{y}` fixed at `s`, match
 
 \[
-B_l-h,qquad B_k+h
+B_l-h,\qquad B_k+h
 \tag{16ak.14}
 \]
 
@@ -1706,8 +1709,8 @@ profile has an `s`-payment escape.
 Thus the smallest missing operation is ownership reversal of `{y}` together
 with a base-level payment to `s`.
 
-The correct global family is consequently asymmetric.  A compatible pair
-is feasible in
+For the `a=r`, `p/q`-before-`r` sub-tier, the correct global family is
+consequently asymmetric.  A compatible pair is feasible in
 
 \[
 \begin{array}{ll}
@@ -1718,15 +1721,24 @@ S\text{-mode} & v_s(U(P,Q))\ge b_s.
 \tag{16ak.16}
 
 In `R`-mode keep `s={y}` and pay `r` only at her exact EFX tail threshold.
-In `S`-mode give `r={y}` and pay `s` at base.  Either completed allocation
-contradicts both surviving orders: in `R`-mode `s` is fixed and `p`
-improves; in `S`-mode `s` weakly improves, and if she ties then `p`
-improves.  The family is nonempty because `(E,{x})` is `R`-feasible by
-(16x).
+In `S`-mode give `r={y}` and pay `s` at base.  A completed `R`-mode
+allocation closes every `p/q`-before-`r` type because `p,q` improve before
+any possible loss of `r`.  The `S`-mode repair is justified here when
+`a=r`: `r` improves to `{y}`, while `s` weakly improves and `p,q` improve.
+For `a=p` or `a=q`, ownership reversal of `{y}` must instead use the
+source-specific all-source rows above; it is not supplied by (16ak.16).
+The family is nonempty because `(E,{x})` is `R`-feasible by (16x).
+
+For the two `r`-before-`p,q` types, `R`-mode must instead require
+`v_r(U)>=b_r`; `S`-mode still requires `v_s(U)>=b_s` and uses `a=r`, so
+`r` improves to `{y}`.  That is the dual-base potential (16ah)--(16al), not
+the asymmetric tail potential.  None of the tail-mode audits is evidence
+that this earlier-priority requirement can be dropped.
 
 Choose a Pareto-maximal compatible pair over the union of the two modes and
 test an inclusion-minimal payment in each mode in which it is feasible.  If
-any resulting allocation is EFX, it closes the two orders.  Otherwise fix a
+any resulting allocation is EFX, it closes the applicable `a=r` sub-tier.
+Otherwise fix a
 failing feasible mode and perform simultaneous minimal-threshold reversal at
 
 \[
@@ -1746,20 +1758,108 @@ v_r(U')<\max\{\tau_r(F),\tau_r(B_l)\},
 v_s(U')<b_s.
 \tag{16ak.18}
 
-This is the exact cap-free **hybrid crossing certificate**.  It supersedes
-the one-mode claim as the live global potential.  The exact audit
+This is the exact cap-free **hybrid crossing certificate for the `a=r`,
+`p/q`-before-`r` sub-tier**.  It supersedes the one-mode claim there.  The exact audit
 [`length_three_hybrid_extremal_adversarial_audit.json`](length_three_hybrid_extremal_adversarial_audit.json)
 tests all 54 Pareto-maximal hybrid pairs on the expanded 28-profile corpus.
 Every one has a direct EFX payment: the strict countermodel (16ak.15) closes
 in `S`-mode, while `V*` closes in `R`-mode.  The zero-failure census is
 evidence for (16ak.16), not a packet proof that (16ak.18) is impossible.
-In the exact seven-good length-three atom, blocking all 8,192 allocations in
-the two hybrid forms is QF_LRA-UNSAT; see
+In the exact seven-good length-three atom, the source-valid family is forced
+for all three singleton sources.  The exact decisions block 4,096 `R`-tail
+forms for `a=p`, 8,192 `R`-tail/`S`-base forms for `a=r`, and 4,096
+`R`-tail forms for `a=q`; all three formulas are QF_LRA-UNSAT.  See
 [`length_three_hybrid_atom_exact.json`](length_three_hybrid_atom_exact.json).
 That decision is a discovery/falsification check on the motif only and is
 not used as a packet theorem.
 
-The hybrid crossing has a pure packing formulation.  In (16ak.18), let `l`
+#### Canonically anchored hybrid potential
+
+The global pair need not discard the BCFF root data.  Restrict (16ak.16) to
+
+\[
+f\in P,qquad x\in Q.
+\tag{16ak.18a}
+\]
+
+This anchored family is nonempty because its structural member is
+`(E,{x})`.  Choose a Pareto-maximal anchored hybrid-feasible pair and test
+both payments exactly as above.  The expanded exact audit contains 52 such
+anchored Pareto-maximal pairs and no direct-payment failure.  Thus the
+restriction loses none of the observed escapes while preserving the two
+distinguished root goods.  This remains corpus evidence, not a theorem.
+
+Analytically, let a failed payment expose `F` sourced by `k in {p,q}` and
+write
+
+\[
+a_k=\begin{cases}f,&k=p,\\x,&k=q,\end{cases}
+\qquad
+B_k^-=B_k\setminus\{a_k\}.
+\tag{16ak.18b}
+\]
+
+The anchor-preserving replacement is
+
+\[
+B'_k=F+a_k.
+\tag{16ak.18c}
+\]
+
+It strictly improves source `k`, remains disjoint from the other anchored
+bundle, and has residual
+
+\[
+U^a=(U\setminus F)+B_k^-.
+\tag{16ak.18d}
+\]
+
+If `(B'_k,B_l)` is compatible and either hybrid mode is feasible on `U^a`,
+it contradicts anchored maximality.  Hence every surviving anchored
+boundary has one of only two forms:
+
+1. **anchor-safety wall:** a deletion of `F+a_k` is unsafe.  Deleting the
+   anchor leaves `F`; after excluding a simultaneous second source and the
+   already-closing `r/s` source, this is safe.  Deleting `z in F` can fail
+   only through a desired set
+   \[
+   a_k\in A\subseteq(F\setminus\{z\})+a_k;
+   \tag{16ak.18e}
+   \]
+2. **anchored hybrid deficit:** the augmented pair is compatible, but
+   \[
+   v_r(U^a)<\max\{\tau_r(F+a_k),\tau_r(B_l)\},
+   \qquad v_s(U^a)<b_s.
+   \tag{16ak.18f}
+   \]
+
+Unlike the arbitrary pivot `h`, the sole contested good in (16ak.18e) is
+now the actual charity good or envied singleton.  This is the correct input
+for the established root-flip, cross-reservoir, and alternating-cycle
+operations.  The remaining composition task is to show that each
+anchor-containing desired family triggers one of those operations, and
+that (16ak.18f) forces such a family when direct compatibility survives.
+
+The scalar return test below applies verbatim to (16ak.18f) after replacing
+`F` by the anchored boundary `F+a_k` and replacing `A` in (16ak.23) by
+`U^a`.  In particular, put
+
+\[
+t_l^a=\max\{b_l,\tau_l(F+a_k)\}.
+\tag{16ak.18g}
+\]
+
+Because compatibility in the deficit branch makes `B_l` an admissible
+endpoint, every inclusion-minimal subset `C subseteq B_l` crossing `t_l^a`
+is a valid anchored return.  If neither hybrid budget survives, every such
+return is simultaneously above the corresponding `r`-cost cap and
+`s`-cost cap.  Thus the live anchored deficit is again one additive demand
+against two scalar prices, but its boundary set contains the actual root
+good.  This is the precise form to which the parallel-root and alternating
+reservoir lemmas must be applied.
+
+The unrestricted hybrid crossing also has a pure packing formulation.  In
+(16ak.18), let `l`
 be the other provisional owner and put
 
 \[
@@ -2072,10 +2172,10 @@ a multi-good overlap can survive only in the fractionally infeasible
 ratio-separation branch.  This does not yet eliminate that branch; it
 separates it cleanly from the integral rounding obstruction.
 
-There is then a sharper order-valid two-rounding form.  The two surviving
-orders are `(p,s,r,q)` and `(s,p,q,r)`.  In both, `s={y}` may be kept fixed
-and a strict improvement of `p` is lexicographically decisive; the later
-agents need not weakly retain their base utilities.  Put
+There is then a sharper order-valid two-rounding form for the seven
+tail-priority types.  In each, `s={y}` may be kept fixed and `p` precedes
+both `r` and `q`, so a strict improvement of `p` is lexicographically
+decisive; the later agents need not weakly retain their base utilities.  Put
 
 \[
 L^r_j=((T_q\setminus\{h\})+f)+G_j,
@@ -2193,7 +2293,7 @@ the `r`-compensation side its source is in `{p,q,s}`; on the
 sources `p,q` feed the strictly increasing dual-mode pair potential, and
 the remaining `r` source returns to the two-demand overlap uncrossing.
 Consequently the Pareto-strength outputs (16be) and the `r`-source reversal
-are subsumed, for the two surviving orders in the fractionally feasible
+are subsumed, for the seven tail-priority types in the fractionally feasible
 branch, by the sharper tail deficit (16ba.6) and its minimal-payment
 reversals.  The fractionally infeasible ratio-separation output remains
 separate.
@@ -2435,12 +2535,14 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. closure of the hybrid crossing certificate (16ak.18), either directly
-   or by proving that its mode switch/two-bundle matching routes every
-   boundary wall to a shorter or adjacent basic cycle.  Equivalently,
-   the canonical fallback
+1. closure of all nine source/order types at the correct priority threshold:
+   the source-specific `R`-tail return for the five `a=p/q` types, the
+   asymmetric hybrid certificate (16ak.18) for the two `a=r` types with
+   `p` before `r`, and the dual-base certificate (16ak) for
+   `(s,r,p,q)` and `(s,r,q,p)`.  Equivalently, the canonical tail fallback
    must defeat the fractionally infeasible ratio-separation branch and the
-   two-row tail deficit (16ba.6) with its minimal-payment reversals;
+   two-row tail deficit (16ba.6), while the earlier-`r` fallback must retain
+   the base threshold;
 2. composition of the other charity-swap sources with independently proved
    length-two and adjacent/alternate length-four cycle lemmas;
 3. an explicit statement of what the result proves inside the

@@ -83,6 +83,22 @@ def analyze_profile(label, raw_values, sizes):
     witnesses = []
     escapes = 0
     mode_escapes = {"r_tail": 0, "s_base": 0}
+
+    def has_direct_escape(record):
+        _pv, _qv, local_p, local_q, local_residual, local_r_threshold, local_modes = record
+        for local_mode in local_modes:
+            for local_payment in submasks(local_residual):
+                if local_mode == "r_tail":
+                    if totals[R][local_payment] < local_r_threshold:
+                        continue
+                    local_assigned = [local_p, local_payment, y_mask, local_q]
+                else:
+                    if totals[S][local_payment] < base[S]:
+                        continue
+                    local_assigned = [local_p, y_mask, local_payment, local_q]
+                if allocation_efx(totals, tails, local_assigned):
+                    return True
+        return False
     for p_value, q_value, p_mask, q_mask, residual, r_threshold, modes in maximal:
         witness = None
         witness_assigned = None
@@ -128,6 +144,27 @@ def analyze_profile(label, raw_values, sizes):
                     "r_tail_threshold": str(r_threshold),
                 }
             )
+    f_mask = 1 << cell["floater"]
+    x_mask = 1 << cell["x"]
+    anchor_summaries = {}
+    for anchor, predicate in (
+        ("canonical", lambda record: record[2] & f_mask and record[3] & x_mask),
+        (
+            "two_way",
+            lambda record: (record[2] & f_mask and record[3] & x_mask)
+            or (record[2] & x_mask and record[3] & f_mask),
+        ),
+    ):
+        anchored = [record for record in feasible if predicate(record)]
+        anchored_frontier = pareto_vectors(anchored)
+        anchored_maximal = [record for record in anchored if record[:2] in anchored_frontier]
+        anchor_summaries[anchor] = {
+            "feasible_pair_count": len(anchored),
+            "pareto_pair_count": len(anchored_maximal),
+            "pareto_pair_failure_count": sum(
+                not has_direct_escape(record) for record in anchored_maximal
+            ),
+        }
     return {
         "label": label,
         "packet_sizes": list(sizes),
@@ -138,6 +175,7 @@ def analyze_profile(label, raw_values, sizes):
         "mode_escape_counts": mode_escapes,
         "pareto_pair_witnesses": witnesses,
         "pareto_pair_failures": failures,
+        "anchor_summaries": anchor_summaries,
     }
 
 
@@ -158,10 +196,19 @@ def run(output):
         "pareto_pair_failure_count": sum(
             len(record["pareto_pair_failures"]) for record in records
         ),
+        "canonical_anchor_failure_count": sum(
+            record["anchor_summaries"]["canonical"]["pareto_pair_failure_count"]
+            for record in records
+        ),
+        "two_way_anchor_failure_count": sum(
+            record["anchor_summaries"]["two_way"]["pareto_pair_failure_count"]
+            for record in records
+        ),
         "profiles": records,
         "claim_boundary": {
             "proved": "the exact hybrid-extremal census on the frozen profiles",
             "not_proved": "the cap-free hybrid-extremal escape lemma",
+            "source_scope": "the loaded corpus uses the a=r singleton-source pattern",
         },
         "provenance": {
             "script": str(Path(__file__).resolve().relative_to(root)),
@@ -188,7 +235,13 @@ def main():
         json.dumps(
             {
                 key: result[key]
-                for key in ("profile_count", "pareto_pair_count", "pareto_pair_failure_count")
+                for key in (
+                    "profile_count",
+                    "pareto_pair_count",
+                    "pareto_pair_failure_count",
+                    "canonical_anchor_failure_count",
+                    "two_way_anchor_failure_count",
+                )
             },
             indent=2,
         )

@@ -278,6 +278,7 @@ def run(output):
         "claim_boundary": {
             "proved": "the exact extremal-tail census on the frozen profiles",
             "not_proved": "the cap-free extremal-tail escape lemma",
+            "source_scope": "the loaded corpus uses the a=r singleton-source pattern",
         },
         "provenance": {
             "script": str(Path(__file__).resolve().relative_to(root)),

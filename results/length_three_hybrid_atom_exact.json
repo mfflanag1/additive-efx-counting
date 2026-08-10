@@ -1,8 +1,8 @@
 {
-  "candidate_count": 8192,
+  "candidate_count": 16384,
   "claim_boundary": {
-    "sat": "an exact atomic countermodel to the hybrid family, not necessarily to all EFX escapes",
-    "unsat": "the hybrid escape family in the exact seven-good length-three atom only"
+    "forced": "the source-valid tail/hybrid family in each exact seven-good length-three source atom",
+    "not_proved": "the arbitrary-packet all-source length-three theorem"
   },
   "provenance": {
     "dependencies": [
@@ -13,15 +13,52 @@
       {
         "path": "tracks/parkability/run_alternating_global_lex_cegar.py",
         "sha256": "66f291257e03f5f7eb7636cd603cd8d336d53932090ad63c5febac28ea737fbe"
+      },
+      {
+        "path": "tracks/parkability/run_length_three_global_lex_atomic_cegar.py",
+        "sha256": "1859868152dc79191f6e8f6395ee811a2a17d7d7e137e8d89de22c858545d46f"
       }
     ],
     "script": "tracks/parkability/decide_length_three_hybrid_atom.py",
-    "script_sha256": "29e74b5cddc77b64fd900ef53b023537a8f92cd57b36efa42ad54710d0cef969",
+    "script_sha256": "9275e6269af9623ee9af413b9766d25df16a11c9aa54fd3cf18ae3cade3fdb7d",
     "z3_version": "5.0.0"
   },
-  "reason_unknown": null,
+  "records": [
+    {
+      "candidate_count": 4096,
+      "modes": [
+        "r_tail"
+      ],
+      "reason_unknown": null,
+      "singleton_source": "p",
+      "solver_status": "unsat",
+      "status": "FORCED",
+      "values": null
+    },
+    {
+      "candidate_count": 8192,
+      "modes": [
+        "r_tail",
+        "s_base"
+      ],
+      "reason_unknown": null,
+      "singleton_source": "r",
+      "solver_status": "unsat",
+      "status": "FORCED",
+      "values": null
+    },
+    {
+      "candidate_count": 4096,
+      "modes": [
+        "r_tail"
+      ],
+      "reason_unknown": null,
+      "singleton_source": "q",
+      "solver_status": "unsat",
+      "status": "FORCED",
+      "values": null
+    }
+  ],
   "schema": "length-three-hybrid-atom-v1",
-  "solver_status": "unsat",
-  "status": "HYBRID_ATOM_FORCED",
-  "values": null
+  "status": "ALL_SOURCE_ATOM_FORCED"
 }

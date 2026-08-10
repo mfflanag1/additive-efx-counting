@@ -718,11 +718,16 @@ both encodings.
   — byte-replayable exact audit of the asymmetric `r`-tail/`s`-base
   potential. Every one of 54 Pareto-maximal hybrid pairs has a direct EFX
   payment on the expanded 28-profile corpus, including the two exact
-  length-three models. This is adversarial evidence, not a cap-free theorem.
+  length-three models. The canonically anchored subfamily (`f in P`,
+  `x in Q`) likewise has zero failures across its 52 Pareto-maximal pairs.
+  The corpus uses the `a=r` singleton-source pattern; this is adversarial
+  evidence for that sub-tier, not a cap-free or all-source theorem.
 - [`length_three_hybrid_atom_exact.json`](length_three_hybrid_atom_exact.json)
-  — exact QF_LRA decision blocking all 8,192 `r`-tail/`s`-base allocation
-  forms in the seven-good length-three atom. The formula is UNSAT, supporting
-  the hybrid motif only; it is not an arbitrary-packet proof.
+  — exact QF_LRA decisions for all singleton-source types in the seven-good
+  length-three atom: 4,096 `R`-tail forms for `a=p`, 8,192
+  `R`-tail/`S`-base forms for `a=r`, and 4,096 `R`-tail forms for `a=q`.
+  Every formula is UNSAT, supporting the source-valid motif only; this is not
+  an arbitrary-packet proof.
 - [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
   [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
   and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)
