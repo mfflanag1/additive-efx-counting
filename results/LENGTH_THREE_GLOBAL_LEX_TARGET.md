@@ -1550,6 +1550,82 @@ byte-identical.
 This validates the strict weakening from base mode to tail mode on the
 adversarial corpus, but it is not a proof that (16ak.5) is impossible.
 
+The scalar crossing already determines which side must move.  Let `k` be
+the source of `F`, let `B_k` be the replaced provisional bundle, and let
+`B_l` be the other member of `(P,Q)`.  Since `F subseteq R-g` and `R` is
+minimal at (16ak.3),
+
+\[
+v_r(F)<\vartheta_r(P,Q).
+\tag{16ak.6}
+\]
+
+For the replacement pair, put
+`vartheta'_r=max{tau_r(F),tau_r(B_l)}`.  Compatibility gives
+`vartheta'_r<=vartheta_r(P,Q)`.  Combining (16ak.2), (16ak.5), and
+additivity of `U'=U-F+B_k` yields
+
+\[
+v_r(B_k)<v_r(F)<\vartheta_r(P,Q),
+\qquad
+\vartheta_r(P,Q)=\tau_r(B_l)>\tau_r(B_k).
+\tag{16ak.7}
+\]
+
+Indeed, the residual inequality gives
+`v_r(B_k)-v_r(F)<vartheta'_r-v_r(U)<=0`.  If the binding tail belonged to
+`B_k`, then `v_r(B_k)>=tau_r(B_k)=vartheta_r(P,Q)`, contradicting
+(16ak.6)--(16ak.7).  Thus every tail-budget crossing replaces the
+nonbinding bundle and is paid against the other bundle's binding tail.
+There is no unordered two-budget wall left.
+
+This identifies the smallest missing operation.  Choose a least-`r` good
+`h in B_l`, so
+
+\[
+v_r(B_l-h)=\tau_r(B_l)=\vartheta_r(P,Q).
+\tag{16ak.8}
+\]
+
+The forced three-way pivot rotation is
+
+\[
+B_k\longmapsto B_l\text{'s owner},\qquad
+B_l-h\longmapsto r,\qquad
+F\longmapsto k,
+\tag{16ak.9}
+\]
+
+with `h` appended to the released bundle `B_k` and `{y}` left at `s`.
+If `k=p`, the candidate is
+
+\[
+(F,B_l-h,B_k+h,\{y\});
+\tag{16ak.10}
+\]
+
+if `k=q`, it is
+
+\[
+(B_k+h,B_l-h,F,\{y\}),
+\tag{16ak.11}
+\]
+
+where the displayed order is `(p,r,q,s)`.  Equations (16ak.6)--(16ak.8)
+settle `r`'s comparison to `F`, and compatibility/minimality settle every
+comparison between `F` and the unaugmented old bundles.  The only new EFX
+walls are comparisons involving the single augmented bundle `B_k+h`; in
+the `q`-source case it must also keep `p` above `b_p` to improve the two
+target priority orders.  Reversing a failed comparison to `B_k+h` exposes
+a desired set contained in one deletion of precisely that bundle.
+
+Thus (16ak.9), not another root choice or a larger fixed menu, is the
+smallest operation still missing from the analytic bridge.  It is the
+cap-free analogue of the anchored three-good suffix cycle in (16ao).  The
+remaining proof obligation is to show that its augmented-bundle wall closes
+a shorter/adjacent basic cycle, or to produce an exact state in which every
+such pivot rotation fails while (16ak.5) holds.
+
 ### Joint-split completion of a canonical `q` blocker
 
 The three-good suffix cycle has a cap-free formulation.  Return to the
@@ -2110,8 +2186,9 @@ topology in the final graph classification.
 The target is complete only after all of the following are proved:
 
 1. closure of the global tail-mode certificate (16ak.5), either directly
-   or by routing its released bundle and minimal-payment deletion to a
-   shorter or adjacent basic cycle.  Equivalently, the canonical fallback
+   or by proving that the forced three-way pivot (16ak.9) routes every
+   augmented-bundle wall to a shorter or adjacent basic cycle.  Equivalently,
+   the canonical fallback
    must defeat the fractionally infeasible ratio-separation branch and the
    two-row tail deficit (16ba.6) with its minimal-payment reversals;
 2. composition of the other charity-swap sources with independently proved
