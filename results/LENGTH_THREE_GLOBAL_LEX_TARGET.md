@@ -3,8 +3,8 @@
 **Date:** 2026-08-09
 
 **Status:** BCFF basic-cycle classification reconstructed; the external-`p`
-row and the two external-`r`, `p`-before-`r` rows are closed cap-free by a
-canonical minimal-payment dichotomy; four external-`q` rows and two
+row and the two external-`r`, `p`-before-`r` rows are closed cap-free; the
+four external-`q` rows reduce to two scalar singleton-preference walls; two
 external-`r` dual-base rows remain; final source-sensitive routing is open
 
 ## Source-valid starting point
@@ -1512,6 +1512,27 @@ Consequently the asymmetric hybrid potential below is no longer needed for
 the two `p`-before-`r` rows.  Its exact models remain useful adversarial
 evidence for the still-open dual-base operation.
 
+#### Adaptive-singleton reduction of the external-`q` rows
+
+Assign `s` her preferred singleton from `{x,y}` and `q` the other before
+performing the same canonical payment extraction.  A `q`-sourced boundary
+uses its assigned singleton as the direct payment or suffix anchor.  An
+`s`-sourced boundary instead assigns `q` her preferred singleton and uses
+the other as the payment/anchor.  All branches close unless `y` is the
+forced anchor and simultaneously
+
+\[
+v_r(y)<\tau_r(E),\qquad v_p(y)<v_p(E-h),
+\]
+
+where `h` is least for `r` in `E`; the forcing preference is either
+`v_s(x)>v_s(y)` for a `q` boundary or `v_q(x)>v_q(y)` for an `s` boundary.
+See
+[`LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md`](LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md).
+
+Thus the former four-row external-`q` table is now one two-scalar anchor
+deficit with two possible witnesses, not an unrestricted tail-payment wall.
+
 For the seven residual priority/source types in which `p` or `q` precedes
 `r` after any unchanged initial `s`, the `r`-mode feasibility threshold can
 be lowered analytically.  Retain the compatible-pair definition
@@ -2762,8 +2783,9 @@ topology in the final graph classification.
 The target is complete only after all of the following are proved:
 
 1. closure of the remaining external-`q` and external-`r` source/order
-   types at the correct priority threshold: the source-specific `R`-tail
-   return for the external-`q` types and the dual-base certificate (16ak) for
+   types at the correct priority threshold: defeat the two adaptive-
+   singleton walls (13)--(14) for the external-`q` types and prove the
+   dual-base certificate (16ak) for
    `(s,r,p,q)` and `(s,r,q,p)`.  Equivalently, the canonical tail fallback
    must defeat the fractionally infeasible ratio-separation branch and the
    two-row tail deficit (16ba.6), while the earlier-`r` fallback must retain

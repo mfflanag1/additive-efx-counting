@@ -43,8 +43,9 @@ def tail(v, label, agent):
         return v["ltail"][agent]
     if label == "f":
         return v["ftail"][agent]
-    if label == "xh":
-        return maximum(v["x"][agent], v["h"][agent])
+    if label in {"xh", "yh"}:
+        singleton = label[0]
+        return maximum(v[singleton][agent], v["h"][agent])
     raise ValueError(label)
 
 
@@ -53,8 +54,8 @@ def total(v, label, agent):
         return v[label][agent]
     if label == "e":
         return v["h"][agent] + v["l"][agent]
-    if label == "xh":
-        return v["x"][agent] + v["h"][agent]
+    if label in {"xh", "yh"}:
+        return v[label[0]][agent] + v["h"][agent]
     raise ValueError(label)
 
 
@@ -111,6 +112,44 @@ def base_solver(prefix, source_type, boundary_source, r_x_case):
     return solver, v
 
 
+def external_q_solver(prefix, boundary_source, anchor, other, r_case):
+    v = make_variables(prefix)
+    solver = z3.SolverFor("QF_LRA")
+    for agent in AGENTS:
+        solver.add(v["b"][agent] > 0)
+        for name in ("x", "y", "h", "l", "f"):
+            solver.add(v[name][agent] > 0)
+        solver.add(v["ltail"][agent] >= 0, v["ltail"][agent] <= v["l"][agent])
+        solver.add(v["ftail"][agent] >= 0, v["ftail"][agent] <= v["f"][agent])
+        solver.add(v["l"][agent] <= v["b"][agent])
+        solver.add(v["h"][agent] + v["ltail"][agent] <= v["b"][agent])
+    solver.add(v["x"][P] == v["b"][P])
+    solver.add(v["y"][S] == v["b"][S])
+    solver.add(v["h"][P] + v["l"][P] > v["b"][P])
+    solver.add(v["x"][Q] > v["b"][Q], v["y"][Q] > v["b"][Q])
+    solver.add(v["h"][R] + v["ltail"][R] <= v["l"][R])
+    solver.add(v["f"][R] < v["l"][R])
+    solver.add(v["ftail"][P] <= v["h"][P] + v["l"][P])
+    if boundary_source == Q:
+        solver.add(v[other][S] >= v[anchor][S], v[other][S] >= v["b"][S])
+        solver.add(v["ftail"][Q] <= v[anchor][Q])
+        solver.add(v["ftail"][S] <= v[other][S])
+        solver.add(v["f"][Q] > v[anchor][Q])
+    elif boundary_source == S:
+        # `anchor` is q's less-preferred singleton and `other` the preferred one.
+        solver.add(v[other][Q] >= v[anchor][Q])
+        solver.add(v["f"][S] > v["x"][S], v["f"][S] > v["y"][S])
+        solver.add(v["ftail"][Q] <= v[other][Q])
+    else:
+        raise ValueError(boundary_source)
+    if r_case == "high":
+        solver.add(v[anchor][R] >= v["l"][R])
+    else:
+        solver.add(v[anchor][R] < v["l"][R])
+        solver.add(v[anchor][P] >= v["l"][P])
+    return solver, v
+
+
 def run():
     cases = (
         ("p_p_source", "p", P, None, ("f", "e", "x", "y")),
@@ -128,13 +167,30 @@ def run():
         solver.add(efx_failure(values, assignment))
         checked = solver.check()
         records.append({"case": name, "status": "FORCED" if checked == z3.unsat else str(checked)})
+    for boundary_source, source_name in ((Q, "q"), (S, "s")):
+        for anchor, other in (("x", "y"), ("y", "x")):
+            for r_case in ("high", "low"):
+                name = f"qrow_{source_name}_{anchor}_{r_case}"
+                solver, values = external_q_solver(name, boundary_source, anchor, other, r_case)
+                assignment = (
+                    ("e", anchor, "f", other)
+                    if boundary_source == Q and r_case == "high"
+                    else (anchor + "h", "l", "f", other)
+                    if boundary_source == Q
+                    else ("e", anchor, other, "f")
+                    if r_case == "high"
+                    else (anchor + "h", "l", other, "f")
+                )
+                solver.add(efx_failure(values, assignment))
+                checked = solver.check()
+                records.append({"case": name, "status": "FORCED" if checked == z3.unsat else str(checked)})
     root = Path(__file__).resolve().parents[2]
     script = Path(__file__).resolve()
     return {
-        "schema": "length-three-canonical-packet-audit-v1",
+        "schema": "length-three-canonical-packet-audit-v2",
         "status": "ALL_FORCED" if all(record["status"] == "FORCED" for record in records) else "FAILED",
         "records": records,
-        "claim_boundary": "exact audit of the aggregate inequalities in the two analytic packet lemmas; BCFF derivation of those inequalities remains analytic",
+        "claim_boundary": "exact audit of the aggregate inequalities in the three analytic canonical packet lemmas/reductions; BCFF derivation of those inequalities remains analytic",
         "provenance": {
             "script": str(script.relative_to(root)),
             "script_sha256": sha256(script),

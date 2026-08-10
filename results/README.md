@@ -698,6 +698,12 @@ both encodings.
   the edge `r -> s` rules out the suffix allocation's sole external
   observer wall. Only the two `r`-before-`p,q` dual-base rows remain for
   this source type.
+- [`LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md`](LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md)
+  — cap-free reduction of all four external-`q` rows. Assigning the two
+  singleton roots adaptively closes every minimal-payment source except two
+  explicit cases where `y` is simultaneously too small to anchor `p` and
+  to pay `r`; the remaining witness is one strict `s`- or `q`-preference
+  for `x`. This is a reduction, not yet the full external-`q` theorem.
 - [`length_three_global_lex_atomic_sweep.json`](length_three_global_lex_atomic_sweep.json)
   and [`length_three_global_lex_atomic_sweep_audit.json`](length_three_global_lex_atomic_sweep_audit.json)
   — exact motif audit of all 72 atomic external-source/priority cells. Every
@@ -749,10 +755,11 @@ both encodings.
   it does not replace that proof. The later canonical dichotomy eliminates
   the former unsafe-payment wall for this source type.
 - [`length_three_canonical_packet_audit.json`](length_three_canonical_packet_audit.json)
-  — exact QF_LRA replay of all eight aggregate packet calculations in the
-  external-`p` canonical lemma and external-`r` tail lemma. Every negated
-  EFX conclusion is UNSAT. The audit verifies the local algebra; the
-  structural derivation of its inequalities remains analytic.
+  — exact QF_LRA replay of all sixteen aggregate packet calculations in the
+  external-`p` canonical lemma, external-`r` tail lemma, and both
+  orientations of the external-`q` adaptive-singleton reduction. Every
+  negated EFX conclusion is UNSAT. The audit verifies the local algebra;
+  the structural derivation of its inequalities remains analytic.
 - [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
   [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
   and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)

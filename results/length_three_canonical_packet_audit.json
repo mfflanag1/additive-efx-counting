@@ -1,8 +1,8 @@
 {
-  "claim_boundary": "exact audit of the aggregate inequalities in the two analytic packet lemmas; BCFF derivation of those inequalities remains analytic",
+  "claim_boundary": "exact audit of the aggregate inequalities in the three analytic canonical packet lemmas/reductions; BCFF derivation of those inequalities remains analytic",
   "provenance": {
     "script": "tracks/parkability/decide_length_three_canonical_packet.py",
-    "script_sha256": "96e2a4aaa3e1fd9d85efdbb6875fd4c0adccecb59ff9e06553ef1a0c9f706088",
+    "script_sha256": "56204a744b78e82a2e0e3a9552f93c2987fd46d7b385f40c23fd2ec0a1a187b9",
     "z3_version": "5.0.0"
   },
   "records": [
@@ -37,8 +37,40 @@
     {
       "case": "r_q_low",
       "status": "FORCED"
+    },
+    {
+      "case": "qrow_q_x_high",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_q_x_low",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_q_y_high",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_q_y_low",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_s_x_high",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_s_x_low",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_s_y_high",
+      "status": "FORCED"
+    },
+    {
+      "case": "qrow_s_y_low",
+      "status": "FORCED"
     }
   ],
-  "schema": "length-three-canonical-packet-audit-v1",
+  "schema": "length-three-canonical-packet-audit-v2",
   "status": "ALL_FORCED"
 }

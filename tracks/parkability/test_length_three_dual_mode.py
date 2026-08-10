@@ -123,7 +123,7 @@ def test_atomic_decisions():
     assert suffix["case_count"] == 14
     canonical = run_canonical_packet()
     assert canonical["status"] == "ALL_FORCED"
-    assert len(canonical["records"]) == 8
+    assert len(canonical["records"]) == 16
 
 
 def test_split_refutation():
