@@ -703,6 +703,12 @@ both encodings.
   EFX Pareto escape; the sole failure is the known Pareto-maximal `V*`, which
   lacks the length-three residual-capacity premise. This is corpus evidence,
   not a packet theorem.
+- [`length_three_lex_tail_adversarial_audit.json`](length_three_lex_tail_adversarial_audit.json)
+  — byte-replayable exact search using the weaker payment thresholds
+  justified by the two surviving lexicographic orders. Both the `p`-first and
+  `s`-then-`p` tail-payment families escape all 26 frozen adversarial
+  profiles, including `V*`. This removes a corpus obstruction but is not a
+  cap-free theorem.
 - [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
   [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
   and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)

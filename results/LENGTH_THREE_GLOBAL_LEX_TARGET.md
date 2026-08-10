@@ -2,9 +2,10 @@
 
 **Date:** 2026-08-09
 
-**Status:** BCFF basic-cycle classification reconstructed; arbitrary
-observer walls reduced cap-free to one dual-mode, two-budget-crossing
-minimal bundle; final integral compensation/routing gate open
+**Status:** BCFF basic-cycle classification reconstructed; the two hard
+orders reduce cap-free to one global lexicographic tail-budget crossing;
+the canonical feasible-overlap branch also collapses to one contested good;
+the final crossing/cycle routing remains open
 
 ## Source-valid starting point
 
@@ -1468,6 +1469,87 @@ in particular it lacks the length-three residual-capacity consequence
 is adversarial evidence for the global potential, not a proof of its final
 uncrossing step.
 
+### Lexicographic tail-mode extremal reduction
+
+For the two surviving hard orders, the `r`-mode feasibility threshold can
+be lowered analytically.  Retain the compatible-pair definition
+(16ah)--(16ai), and define
+
+\[
+\vartheta_r(P,Q)=\max\{\tau_r(P),\tau_r(Q)\}.
+\tag{16ak.1}
+\]
+
+Call `(P,Q)` **`r`-tail-feasible** when its residual pool satisfies
+
+\[
+v_r(U(P,Q))\ge\vartheta_r(P,Q).
+\tag{16ak.2}
+\]
+
+This family is nonempty: the structural pair `(E,{x})` is compatible,
+`vartheta_r(E,{x})<=b_r`, and (16x) gives residual `r`-value strictly above
+`b_r`.  Choose an `r`-tail-feasible pair Pareto-maximal in
+`(v_p(P),v_q(Q))`, and inside its residual choose an inclusion-minimal
+`R` with
+
+\[
+v_r(R)\ge\vartheta_r(P,Q).
+\tag{16ak.3}
+\]
+
+If `(P,R,Q,{y})` is EFX, it lexicographically improves both
+`(p,s,r,q)` and `(s,p,q,r)`: `p` strictly improves, while `s` keeps `{y}`.
+This conclusion does not require `v_r(R)>=b_r`.
+
+Otherwise the only possible failure is an external comparison to a
+deletion of `R`.  Within such a deletion perform the same simultaneous
+minimal-threshold extraction at
+
+\[
+v_p(P),\qquad v_q(Q),\qquad b_s.
+\tag{16ak.4}
+\]
+
+Agent `r` cannot be the source because every deletion of the minimal
+payment has `r`-value below (16ak.3).  If the source is `s` in the hard
+`a=r` orbit, `(P,{y},Q,F)` is EFX and Pareto improving: `r` receives the
+singleton she envies and `s` receives her desired set.  If the source is
+`k in {p,q}`, replace `k`'s provisional bundle `B_k` by `F`.  Minimality
+at (16ak.4), together with `v_r(F)<vartheta_r(P,Q)<=b_r`, makes the new pair
+compatible and strictly improves one extremal coordinate.  Hence its
+residual
+
+\[
+U'=(U(P,Q)\setminus F)+B_k
+\]
+
+cannot be `r`-tail-feasible.  Every surviving obstruction therefore has
+the single exact certificate
+
+\[
+v_r(U')<
+\max\{\tau_r(F),\tau_r(B_{\{p,q\}\setminus\{k\}})\}.
+\tag{16ak.5}
+\]
+
+This is the cap-free tail-budget crossing.  It subsumes the `r` half of
+(16ak), but with the exact EFX threshold in place of `b_r`; it also bypasses
+the canonical overlap split entirely.  A completion now has two equivalent
+routes: contradict (16ak.5) for a globally extremal compatible pair, or use
+the released bundle `B_k` and a minimal-payment deletion to form a
+shorter or adjacent basic cycle.  What is not yet proved is that one of
+those routes must always succeed.
+
+The exact replay
+[`length_three_lex_tail_adversarial_audit.json`](length_three_lex_tail_adversarial_audit.json)
+searches the unrestricted compatible-pair/payment family exactly on the
+same 26 frozen adversarial profiles.  Both surviving lexicographic orders
+have an EFX escape on every profile, including `V*`; the replay is
+byte-identical.
+This validates the strict weakening from base mode to tail mode on the
+adversarial corpus, but it is not a proof that (16ak.5) is impossible.
+
 ### Joint-split completion of a canonical `q` blocker
 
 The three-good suffix cycle has a cap-free formulation.  Return to the
@@ -1622,8 +1704,8 @@ failure of (16ay) is the sole contested-top partition wall for the canonical
 `q` blocker.  Its fractional relaxation has one boundary good by the same
 price-or-pivot argument below.
 
-The boundary-good case has an exact two-rounding payment form.  A fractional
-solution supplies a partition
+When the fractional relaxation is feasible, its boundary-good case
+collapses further.  Such a solution supplies a partition
 
 \[
 H=H_q\mathbin{\dot\cup}H_r\mathbin{\dot\cup}\{h\}
@@ -1644,7 +1726,96 @@ v_r(R_0)\le b_r<v_r(R_0+h).
 \tag{16ba}
 \]
 
-The residual currency disjoint from `P_j`, `F`, and `T_q+f` is
+In fact
+
+\[
+H_q=H_r=\varnothing,
+\qquad H=\{h\}.
+\tag{16ba.1}
+\]
+
+To see this, `F` was chosen inclusion-minimal above the `q` threshold
+`v_q(x)`.  Thus every proper subset of `F` has `q`-value at most
+`v_q(x)`.  Since `Q_0+h` is a subset of `F` and exceeds that threshold in
+(16ba), it equals `F`, forcing `H_r=empty`.  Likewise `T_q+f` is a desired
+set for `r`, hence every proper subset has `r`-value at most `b_r`.
+Because `R_0+h subseteq T_q+f` exceeds `b_r`, it equals `T_q+f`, forcing
+`H_q=empty`.  Therefore, in the fractionally feasible branch, the relative
+blocker and the selected desired set meet in exactly one good.  Equivalently,
+a multi-good overlap can survive only in the fractionally infeasible
+ratio-separation branch.  This does not yet eliminate that branch; it
+separates it cleanly from the integral rounding obstruction.
+
+There is then a sharper order-valid two-rounding form.  The two surviving
+orders are `(p,s,r,q)` and `(s,p,q,r)`.  In both, `s={y}` may be kept fixed
+and a strict improvement of `p` is lexicographically decisive; the later
+agents need not weakly retain their base utilities.  Put
+
+\[
+L^r_j=((T_q\setminus\{h\})+f)+G_j,
+\qquad
+L^q_j=(F\setminus\{h\})+G_j,
+\tag{16ba.2}
+\]
+
+and define the exact EFX payment thresholds
+
+\[
+\theta^r_j=\max\{\tau_r(P_j),\tau_r(F)\},
+\qquad
+\theta^q_j=\max\{\tau_q(P_j),\tau_q(T_q+f)\}.
+\tag{16ba.3}
+\]
+
+If a set `Z_r subseteq L^r_j` has `v_r(Z_r)>=theta^r_j` and
+
+\[
+\tau_p(Z_r)\le v_p(P_j),\quad
+\tau_q(Z_r)\le v_q(F),\quad
+\tau_s(Z_r)\le b_s,
+\tag{16ba.4}
+\]
+
+then `(P_j,Z_r,F,{y})` is EFX and lexicographically improves either
+surviving order.  If a set `Z_q subseteq L^q_j` has
+`v_q(Z_q)>=theta^q_j` and
+
+\[
+\tau_p(Z_q)\le v_p(P_j),\quad
+\tau_r(Z_q)\le v_r(T_q+f),\quad
+\tau_s(Z_q)\le b_s,
+\tag{16ba.5}
+\]
+
+then `(P_j,T_q+f,Z_q,{y})` does the same.  These statements are direct EFX
+checks.  The first gives the pivot to `q` as part of `F`; the second gives
+it to `r` as part of `T_q+f`.  The recipient thresholds in (16ba.3) are
+exactly their comparisons to the other displayed bundles.  All comparisons
+made by `p` and `s` are (16ba.4) or (16ba.5), while (16ap)--(16ar) protect
+the remaining comparisons.  No individual-rationality or Pareto premise is
+needed after the first changed lexicographic coordinate.
+
+Consequently, if total value alone defeats both lexicographic roundings,
+the exact residual certificate is
+
+\[
+v_r(L^r_j)<\theta^r_j,
+\qquad
+v_q(L^q_j)<\theta^q_j.
+\tag{16ba.6}
+\]
+
+This strictly sharpens (16be): `theta^r_j<=b_r` and
+`theta^q_j<=b_q`, and the two losing-pivot pools include all goods that can
+be transferred without disturbing `P_j`, the winning desired set, or
+`{y}`.  If a total threshold is met but a minimal payment violates one of
+the displayed ceilings, reversing the violating deletion again supplies an
+explicit desired set.  Thus the remaining analytic gate inside the
+fractionally feasible branch is the two-row tail deficit (16ba.6) plus
+those minimal-payment reversals, not base-utility compensation.
+
+For comparison with the earlier Pareto-strength formulation, the residual
+currency disjoint from `P_j`, `F`, and `T_q+f` is
 
 \[
 G_j=(T\setminus\{j\})+\bigl((B+B_q)\setminus F\bigr).
@@ -1695,9 +1866,11 @@ the `r`-compensation side its source is in `{p,q,s}`; on the
 `q`-compensation side it is in `{p,r,s}`.  Source `s` switches `y` to `r`,
 sources `p,q` feed the strictly increasing dual-mode pair potential, and
 the remaining `r` source returns to the two-demand overlap uncrossing.
-Consequently (16be), the `r`-source reversal, and the scalar
-ratio-separation alternative when even fractional sharing fails are the
-three final outputs of the canonical `q` wall.
+Consequently the Pareto-strength outputs (16be) and the `r`-source reversal
+are subsumed, for the two surviving orders in the fractionally feasible
+branch, by the sharper tail deficit (16ba.6) and its minimal-payment
+reversals.  The fractionally infeasible ratio-separation output remains
+separate.
 
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
@@ -1936,10 +2109,11 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. closure of the canonical relative-`q` overlap after the joint split:
-   defeat the fractional ratio separator, the two-row boundary deficit
-   (16be), and the `r`-source safety reversal, or route each to a shorter
-   or adjacent basic cycle;
+1. closure of the global tail-mode certificate (16ak.5), either directly
+   or by routing its released bundle and minimal-payment deletion to a
+   shorter or adjacent basic cycle.  Equivalently, the canonical fallback
+   must defeat the fractionally infeasible ratio-separation branch and the
+   two-row tail deficit (16ba.6) with its minimal-payment reversals;
 2. composition of the other charity-swap sources with independently proved
    length-two and adjacent/alternate length-four cycle lemmas;
 3. an explicit statement of what the result proves inside the

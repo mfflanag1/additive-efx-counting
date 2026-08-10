@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import itertools
 import json
+import tempfile
 from pathlib import Path
 
 try:
@@ -15,6 +16,7 @@ try:
         payment_owner,
         subset_tables,
     )
+    from .analyze_length_three_lex_tail_profiles import run as run_lex_tail
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -24,6 +26,7 @@ except ImportError:
         payment_owner,
         subset_tables,
     )
+    from analyze_length_three_lex_tail_profiles import run as run_lex_tail
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -53,6 +56,18 @@ def test_adversarial_audit():
         for record in result["profiles"]
         if record["label"] != "pareto_maximal_vstar"
     )
+
+
+def test_lex_tail_adversarial_audit():
+    frozen = ROOT / "results/length_three_lex_tail_adversarial_audit.json"
+    result = json.loads(frozen.read_text())
+    assert result["profile_count"] == 26
+    assert result["p_first_escape_count"] == 26
+    assert result["s_then_p_escape_count"] == 26
+    with tempfile.TemporaryDirectory() as directory:
+        replay = Path(directory) / frozen.name
+        run_lex_tail(replay)
+        assert replay.read_bytes() == frozen.read_bytes()
 
 
 def test_atomic_decisions():
@@ -86,6 +101,7 @@ def test_split_refutation():
 
 if __name__ == "__main__":
     test_adversarial_audit()
+    test_lex_tail_adversarial_audit()
     test_atomic_decisions()
     test_split_refutation()
     print("length-three dual-mode tests passed")
