@@ -160,13 +160,14 @@ narrow.
 ## Canonical arm-owner star is also too narrow
 
 A fourth exact gate blocks every improving complete two-leaf split from arm
-owner `c` in addition to all preceding moves. It remains SAT. All six
-eligible `c`-splits expose open or internally wall-free targets; none is EFX
-or closes a PI cycle through `c`. The nearest complete escape is instead a
+owner `c` in addition to all preceding moves. It remains SAT, so none of its
+six eligible `c`-splits is EFX. Exact most-envious-source enumeration then
+finds two full response matchings (hence PI), two open champion sources, and
+two internal Hall deficiencies. The nearest complete EFX endpoint is a
 five-good component spanning `q,c,s,charity`. See
 [`ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md`](ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md).
-Thus hub splitting is a branching step inside component growth, not a fixed
-final topology.
+Thus direct hub splitting is not a fixed EFX endpoint, but the corrected
+EFX-or-response-Hall selector remains viable.
 
 ## Claim boundary
 

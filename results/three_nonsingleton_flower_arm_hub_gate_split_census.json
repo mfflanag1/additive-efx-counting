@@ -1,87 +1,268 @@
 {
-  "by_hub": {
-    "c": {
-      "eligible": 6,
-      "open_external_wall": 2,
-      "terminal_internal_target": 4
-    },
-    "q": {
-      "eligible": 6,
-      "open_external_wall": 2,
-      "pi_hub_cycle": 4
-    },
-    "r": {
-      "eligible": 5424,
-      "leaf_mutual_trap": 64,
-      "open_external_wall": 3412,
-      "pi_hub_cycle": 347,
-      "terminal_internal_target": 1601
-    },
-    "s": {}
-  },
-  "claim_boundary": "exact census of improving complete two-leaf hub splits in one frozen bounded flower profile; classifications use the analytic hub-wall lemma but do not prove a cap-free selector",
-  "counts": {
-    "eligible": 5436,
-    "leaf_mutual_trap": 64,
-    "open_external_wall": 3416,
-    "pi_hub_cycle": 351,
-    "terminal_internal_target": 1605
-  },
-  "integer_scale": 4096,
-  "minimal_examples": {
-    "leaf_mutual_trap": {
-      "allocation": {
+  "arm_owner_candidates": [
+    {
+      "champion_sources": {
         "c": [
-          "bc_0",
-          "bc_1",
-          "tc_0",
-          "tc_1",
-          "tr_rest_0"
+          "r"
         ],
         "q": [
-          "aq_tq_0",
-          "aq_tq_1",
-          "ar_bq_0",
-          "ar_bq_1",
-          "tr_rest_1"
+          "c",
+          "r",
+          "s"
         ],
         "r": [
-          "aq_br_0",
-          "aq_br_1",
-          "ar_tr_0",
-          "ar_tr_1",
-          "br_rest_0",
-          "br_rest_1",
-          "f"
-        ],
-        "s": [
-          "z"
+          "r",
+          "s"
         ]
       },
-      "hub": "r",
+      "classification": "response_hall_deficient",
       "leaves": [
-        "q",
-        "c"
+        "r",
+        "q"
       ],
-      "packet": [
-        "tr_rest_0",
-        "tr_rest_1"
-      ],
-      "wall_sources": {
+      "packet_parts": {
+        "q": [
+          "tc_0"
+        ],
+        "r": [
+          "bc_1"
+        ]
+      },
+      "wall_observers": {
+        "c": [],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "r": []
+      }
+    },
+    {
+      "champion_sources": {
         "c": [
-          "q"
+          "r"
         ],
         "q": [
           "c",
+          "r",
           "s"
         ],
         "r": [
-          "c",
+          "r",
           "s"
+        ]
+      },
+      "classification": "response_hall_deficient",
+      "leaves": [
+        "r",
+        "q"
+      ],
+      "packet_parts": {
+        "q": [
+          "bc_1"
+        ],
+        "r": [
+          "tc_0"
+        ]
+      },
+      "wall_observers": {
+        "c": [],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "r": []
+      }
+    },
+    {
+      "champion_sources": {
+        "c": [
+          "r"
+        ],
+        "r": [
+          "r",
+          "s"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      },
+      "classification": "pi_response_matching",
+      "leaves": [
+        "r",
+        "s"
+      ],
+      "packet_parts": {
+        "r": [
+          "bc_1"
+        ],
+        "s": [
+          "tc_0"
+        ]
+      },
+      "wall_observers": {
+        "c": [],
+        "r": [],
+        "s": [
+          "c",
+          "q"
         ]
       }
     },
-    "open_external_wall": {
+    {
+      "champion_sources": {
+        "c": [
+          "r"
+        ],
+        "r": [
+          "r",
+          "s"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      },
+      "classification": "pi_response_matching",
+      "leaves": [
+        "r",
+        "s"
+      ],
+      "packet_parts": {
+        "r": [
+          "tc_0"
+        ],
+        "s": [
+          "bc_1"
+        ]
+      },
+      "wall_observers": {
+        "c": [],
+        "r": [],
+        "s": [
+          "c",
+          "q"
+        ]
+      }
+    },
+    {
+      "champion_sources": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      },
+      "classification": "open_champion_source",
+      "leaves": [
+        "q",
+        "s"
+      ],
+      "packet_parts": {
+        "q": [
+          "bc_1"
+        ],
+        "s": [
+          "tc_0"
+        ]
+      },
+      "wall_observers": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      }
+    },
+    {
+      "champion_sources": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      },
+      "classification": "open_champion_source",
+      "leaves": [
+        "q",
+        "s"
+      ],
+      "packet_parts": {
+        "q": [
+          "tc_0"
+        ],
+        "s": [
+          "bc_1"
+        ]
+      },
+      "wall_observers": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      }
+    }
+  ],
+  "by_hub": {
+    "c": {
+      "eligible": 6,
+      "open_champion_source": 2,
+      "pi_response_matching": 2,
+      "response_hall_deficient": 2
+    },
+    "q": {
+      "eligible": 6,
+      "open_champion_source": 4,
+      "pi_response_matching": 2
+    },
+    "r": {
+      "eligible": 5424,
+      "open_champion_source": 1886,
+      "pi_response_matching": 3538
+    },
+    "s": {}
+  },
+  "claim_boundary": "exact census of improving complete two-leaf hub splits in one frozen bounded flower profile; response sources are enumerated from exact common-safe desired subsets relative to the base allocation, but the census does not prove a cap-free selector",
+  "counts": {
+    "eligible": 5436,
+    "open_champion_source": 1892,
+    "pi_response_matching": 3542,
+    "response_hall_deficient": 2
+  },
+  "integer_scale": 4096,
+  "minimal_examples": {
+    "open_champion_source": {
       "allocation": {
         "c": [
           "bc_0",
@@ -110,6 +291,20 @@
           "z"
         ]
       },
+      "champion_sources": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      },
       "hub": "c",
       "leaves": [
         "q",
@@ -119,7 +314,7 @@
         "bc_1",
         "tc_0"
       ],
-      "wall_sources": {
+      "wall_observers": {
         "c": [
           "r"
         ],
@@ -133,57 +328,67 @@
         ]
       }
     },
-    "pi_hub_cycle": {
+    "pi_response_matching": {
       "allocation": {
         "c": [
-          "aq_tq_0",
           "bc_0",
-          "bc_1",
-          "tc_0",
+          "f",
           "tc_1"
         ],
         "q": [
+          "aq_tq_0",
           "aq_tq_1",
           "ar_bq_0",
-          "f"
+          "ar_bq_1"
         ],
         "r": [
           "aq_br_0",
           "aq_br_1",
           "ar_tr_0",
           "ar_tr_1",
+          "bc_1",
           "br_rest_0",
           "br_rest_1",
           "tr_rest_0",
           "tr_rest_1"
         ],
         "s": [
-          "ar_bq_1",
+          "tc_0",
           "z"
         ]
       },
-      "hub": "q",
-      "leaves": [
-        "c",
-        "s"
-      ],
-      "packet": [
-        "aq_tq_0",
-        "ar_bq_1"
-      ],
-      "wall_sources": {
+      "champion_sources": {
         "c": [
           "r"
         ],
-        "q": [
+        "r": [
+          "r",
           "s"
         ],
         "s": [
+          "c",
+          "q"
+        ]
+      },
+      "hub": "c",
+      "leaves": [
+        "r",
+        "s"
+      ],
+      "packet": [
+        "bc_1",
+        "tc_0"
+      ],
+      "wall_observers": {
+        "c": [],
+        "r": [],
+        "s": [
+          "c",
           "q"
         ]
       }
     },
-    "terminal_internal_target": {
+    "response_hall_deficient": {
       "allocation": {
         "c": [
           "bc_0",
@@ -212,6 +417,20 @@
           "z"
         ]
       },
+      "champion_sources": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "r": [
+          "r",
+          "s"
+        ]
+      },
       "hub": "c",
       "leaves": [
         "r",
@@ -221,7 +440,7 @@
         "bc_1",
         "tc_0"
       ],
-      "wall_sources": {
+      "wall_observers": {
         "c": [],
         "q": [
           "c",
@@ -234,7 +453,7 @@
   },
   "provenance": {
     "script": "tracks/parkability/analyze_two_leaf_hub_split_census.py",
-    "script_sha256": "1e982bc2454806b5005bab8c1d177519d2493aca1e59899c524b3bde8380a67d",
+    "script_sha256": "0b34cd484534966a535d4ace23226ac2a7220a5e987dfdf0de1dc1fc2926df06",
     "witness": "results/three_nonsingleton_flower_full_capture_arm_hub_gate.json",
     "witness_sha256": "1e9a4fe1c50ef58b5daf5fbd043bf6b8ea940ba0e8a08f33e1a9fcbbca4cf308"
   },

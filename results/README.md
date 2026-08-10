@@ -893,10 +893,16 @@ both encodings.
 - [`ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md`](ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md)
   — exact full-capture model surviving blockage of every improving two-leaf
   split from the external arm owner, in addition to all earlier exchange,
-  path, and packet gates. Its arm-owner splits terminate at open or
-  internally wall-free targets; the nearest complete escape is instead a
-  five-good `q,c,s,charity` component. This replaces the one-star selector
-  with an arm-rooted component-growing selector.
+  path, and packet gates. None of its arm-owner splits is itself EFX, but two
+  have full most-envious response matchings and are PI; two are open and two
+  Hall deficient. This preserves the corrected EFX-or-response-Hall selector
+  while rejecting a one-star EFX endpoint.
+- [`HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
+  — cap-free conversion of each proposed hub/leaf target into its exact set
+  of most-envious generalized-edge sources relative to the base allocation.
+  A hub self-source is PI, and any internal system of distinct representatives
+  is a release-compatible PI edge set. This corrects the invalid shortcut of
+  treating strong-envy observers as edge sources.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

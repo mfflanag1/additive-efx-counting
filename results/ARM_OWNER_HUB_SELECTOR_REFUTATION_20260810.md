@@ -1,9 +1,9 @@
-# Arm-owner hub selector refutation
+# Arm-owner direct-EFX selector refutation
 
 **Date:** 2026-08-10
 
-**Status:** exact bounded refutation of the canonical one-star selector;
-component-growing selector remains open
+**Status:** exact bounded refutation of the direct-EFX endpoint; the corrected
+response-Hall selector survives
 
 ## Refuted selector
 
@@ -11,7 +11,7 @@ In the full-`X_q` three-packet flower, the first hub-split escape found by
 exact optimization uses the external large arm owner `c`: `c` receives `f`
 and sends one top good and one bottom good to two distinct recipients.  This
 suggested the cap-free shortcut that some improving two-leaf split from `c`
-must be EFX or immediately yield a release-compatible PI cycle.
+must itself be EFX.
 
 The direct EFX part is false even after all earlier local gates are imposed.
 The strengthened full-capture solver blocks:
@@ -28,27 +28,30 @@ The cell remains SAT under Z3 5.0.0 and 4.15.3.  The exact profile is
 
 ## Exact hub census
 
-The strengthened profile has six improving two-leaf splits from `c`.  All
-six fail EFX: two expose an external wall at a target with no internal wall,
-and four have a target with no internal wall and no external wall.  None is
-a leaf-mutual trap or a PI cycle through `c`.
+The strengthened profile has six improving two-leaf splits from `c`, and all
+six fail EFX. Exact enumeration of common-safe desired subsets relative to
+the base allocation gives a different and more useful response picture: two
+splits already have a full internal response matching and hence a PI edge
+set, two have an external champion source, and two are internally Hall
+deficient.
 
 Across all possible hubs, the exact census is:
 
 | classification | count |
 |---|---:|
 | eligible improving splits | 5,436 |
-| PI wall cycle through the hub | 351 |
-| external/open target | 3,416 |
-| internally terminal target | 1,605 |
-| leaf-mutual trap | 64 |
+| PI response matching | 3,542 |
+| external/open champion source | 1,892 |
+| response-Hall deficient | 2 |
 | complete EFX | 0 |
 
 The frozen replay is
 [`three_nonsingleton_flower_arm_hub_gate_split_census.json`](three_nonsingleton_flower_arm_hub_gate_split_census.json).
-The 351 PI classifications also make the claim boundary important: this
-bounded profile is not globally PI-free and therefore does not refute a
-broader selector whose outcome is “EFX or PI.”
+The 3,542 PI classifications make the positive boundary important: this
+bounded profile is not globally PI-free and therefore supports rather than
+refutes the corrected selector whose outcome is “EFX or response-Hall PI.”
+In particular, two of the six arm-owner splits already close by response
+matching.
 
 ## Smallest escapes
 
@@ -59,20 +62,20 @@ The nearest complete improvement moves five goods in one component spanning
 `q`, `s` sends `z` to `c`, and charity sends `f` to `s`.  See
 [`three_nonsingleton_flower_full_capture_arm_hub_gate_improvement.json`](three_nonsingleton_flower_full_capture_arm_hub_gate_improvement.json).
 
-Thus the arm-owner star is a valid *starting component*, not a universal
-endpoint.  Its wall-free/open targets must be spliced to another flower
-component, and the final endpoint may contain a cycle plus a charity edge
-rather than retain star topology.
+Thus the arm-owner star is a valid *starting component*, not necessarily an
+EFX endpoint. Its actual generalized champion sources—not merely the strong-
+envy observers—must be matched first. Only response-Hall-deficient or open
+cases need to be spliced to another flower component.
 
 ## Corrected analytic target
 
-Prove an arm-rooted **component-growing selector**.  Begin with the finite
+Prove an arm-rooted **response-Hall selector**. Begin with the finite
 family of packet partitions induced by `T_c,B_c`.  For each failed split:
 
-- a hub-containing wall cycle is immediately PI;
-- an external wall grows through the fourth owner;
-- an internally wall-free target is frozen as a safe endpoint; and
-- the leaf-mutual family triggers an alternate hub or repartition.
+- enumerate the most-envious source sets of the three proposed targets;
+- a full internal matching is immediately PI;
+- an external champion source grows through the fourth owner; and
+- an internal Hall witness triggers an alternate hub or repartition.
 
 Show that with four owners this growth either closes a release-compatible PI
 edge set or joins safe endpoints into a lex-improving EFX allocation.  The
@@ -81,7 +84,7 @@ statement must permit.
 
 ## Claim boundary
 
-This is a bounded countermodel to one proof mechanism, not to EFX.  It does
-not show that all hub choices avoid PI closure, and the modeled base state is
-not asserted globally maximal.  General additive EFX and the
-three-nonsingleton flower remain open.
+This is a bounded countermodel only to requiring the arm-owner star itself to
+be EFX. It does not refute EFX-or-PI response matching; the frozen profile
+contains thousands of such PI matchings and is not globally maximal. General
+additive EFX and the three-nonsingleton flower remain open.

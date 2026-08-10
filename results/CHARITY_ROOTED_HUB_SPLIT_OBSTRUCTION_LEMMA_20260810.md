@@ -59,7 +59,8 @@ polarity then forces
 v_i(f)>v_i(R). \tag{2}
 \]
 
-Taking a most-envious subset gives a generalized `(f|R)` edge into `h`; if
+Taking a most-envious subset gives some source `a` of a generalized `(f|R)`
+edge into `h`; `a` need not be the observer `i` witnessing (2). If
 the desired subset discards `f`, it also gives the parallel ordinary envy
 consequence. The edge releases all of `R`, plus any further discard.
 If `X_h\R` is empty, the new hub target is the singleton `{f}`, whose EFX
@@ -94,8 +95,9 @@ The wall is therefore possible only if
 \kappa_i(k,R_k)>\gamma_i+s_{ik}. \tag{4}
 \]
 
-Taking a most-envious subset gives the generalized `(R_k|empty)` edge into
-`k`. In BCFF Definition 3.1 the label records the whole offered set `R_k`;
+Taking a most-envious subset gives some source `a` of a generalized
+`(R_k|empty)` edge into `k`; again `a` need not equal the wall observer. In
+BCFF Definition 3.1 the label records the whole offered set `R_k`;
 the corresponding discard set may contain goods from either `X_k` or `R_k`.
 If the desired subset discards all of `R_k`, it also gives the parallel
 ordinary envy consequence into `k`.
@@ -113,13 +115,14 @@ sets are disjoint and every one is initially unallocated or released by an
 edge in the set. Ordinary envy edges have empty incoming sets and cause no
 conflict.
 
-Thus a blocked hub split leaves a sharply defined combinatorial remainder.
-A directed wall cycle contradicts global maximality. Otherwise either a
-wall source lies outside the current target set and must be added to the
-transfer component, or the target-to-source incidence relation has a strict
-Hall-deficient subset. A system of distinct representatives alone is not
-claimed to be a PI cycle: its sources must close on the same target set.
-This is the branching analogue of following one blocker along a path.
+Thus a blocked hub split leaves a sharply defined combinatorial remainder,
+but the graph vertices must be the actual most-envious sources, not the
+strong-envy observers used in (2)--(4). The cap-free
+[`HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
+defines those response sets relative to the base allocation. A hub
+self-source is PI; a system of distinct internal response representatives
+forms vertex-disjoint cycles and is a PI edge set. Otherwise an external
+response source or a strict Hall-deficient subset drives component growth.
 
 For a hub with exactly two leaves, the finite internal-source remainder is
 classified in
@@ -137,10 +140,10 @@ The scalar implications replay as QF_LRA-UNSAT in
 After all one-recipient charity packet replacements are blocked, the exact
 full-capture gate escapes by precisely this motif: `c` receives `f` and
 sends one good to `r` and one to `s`. The lemma now converts every failure of
-that motif into a hub edge, a leaf overload edge, an open wall source, or a
-strict Hall-deficient wall-source set. The remaining proof obligation is
-selecting `h,R`, and its partition from the flower's arbitrary packets so
-that neither open-source growth nor Hall deficiency can persist.
+that motif into exact observer inequalities and generalized response edges.
+The remaining proof obligation is selecting `h,R`, and its partition from
+the flower's arbitrary packets so that the response relation has an internal
+matching or its open/Hall-deficient remainder can be grown to closure.
 
 ## Claim boundary
 

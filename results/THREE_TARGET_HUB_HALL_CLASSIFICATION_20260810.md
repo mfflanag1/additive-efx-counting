@@ -8,10 +8,12 @@
 
 Consider a charity-rooted hub split with hub `h` and two leaves `r,s`.  For
 each changed target `j in {h,r,s}`, let `N(j)` be the set of *internal*
-owners in `{h,r,s}` that can source a wall edge into `j`.  Self walls are
-impossible, so `j notin N(j)`.  Sources outside this three-owner component
-are deliberately omitted from `N(j)` and constitute open component-growth
-edges.
+owners in `{h,r,s}` that actually source generalized champion edges produced
+by blocked targets. Self wall observers are impossible, so this auxiliary
+blocked-target graph has `j notin N(j)`. Sources outside this three-owner
+component are deliberately omitted from `N(j)` and constitute open
+component-growth edges. Strong-envy observers are not substituted for these
+most-envious sources.
 
 Any directed internal cycle containing `h` is PI.  The hub edge releases the
 union of the two disjoint leaf packets, while `{f}` is unallocated, so both a
@@ -71,6 +73,9 @@ champion identities or an alternate hub/partition are essential.
 ## Claim boundary
 
 This is a cap-free graph-theoretic classification once a two-leaf improving
-hub split has been selected.  It neither proves that the flower supplies
-such a split nor eliminates the leaf-mutual trap.  It therefore does not
-close the three-packet flower or general additive EFX.
+hub split has been selected and all three response edges are nonself. The
+more general response relation, including self sources for common-safe
+targets, is handled by
+[`HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
+Neither lemma proves that the flower supplies a successful split, so they do
+not close the three-packet flower or general additive EFX.

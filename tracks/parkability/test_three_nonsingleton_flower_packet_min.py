@@ -185,15 +185,15 @@ def main() -> None:
     assert run_hub_split_census(arm_hub_gate_path) == arm_hub_census
     assert arm_hub_census["counts"] == {
         "eligible": 5436,
-        "leaf_mutual_trap": 64,
-        "open_external_wall": 3416,
-        "pi_hub_cycle": 351,
-        "terminal_internal_target": 1605,
+        "open_champion_source": 1892,
+        "pi_response_matching": 3542,
+        "response_hall_deficient": 2,
     }
     assert arm_hub_census["by_hub"]["c"] == {
         "eligible": 6,
-        "open_external_wall": 2,
-        "terminal_internal_target": 4,
+        "open_champion_source": 2,
+        "pi_response_matching": 2,
+        "response_hall_deficient": 2,
     }
     arm_hub_improvement = json.loads(
         (
@@ -241,8 +241,13 @@ def main() -> None:
         ROOT / "results" / "CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md"
     ).read_text()
     assert "label records the whole offered set" in hub_split_theorem
-    assert "system of distinct representatives alone is not" in hub_split_theorem
-    assert "open wall source" in hub_split_theorem
+    assert "actual most-envious sources" in hub_split_theorem
+    assert "need not equal the wall observer" in hub_split_theorem
+    response_hall_theorem = (
+        ROOT / "results" / "HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md"
+    ).read_text()
+    assert "Strong-envy observers" in response_hall_theorem
+    assert "system of distinct representatives" in response_hall_theorem
 
     hub_hall = json.loads(
         (ROOT / "results" / "three_target_hub_hall_pattern_audit.json").read_text()
