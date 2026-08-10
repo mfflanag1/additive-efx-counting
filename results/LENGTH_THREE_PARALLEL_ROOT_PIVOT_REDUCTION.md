@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-09
 
-**Status:** cap-free analytic reduction of the parallel-root recurrence
+**Status:** cap-free analytic closure of the parallel-root safety recurrence;
+residual payment remains
 
 ## Setup
 
@@ -101,19 +102,68 @@ for a base-desired set.  Indeed, a set not containing `g` lies inside the
 base-safe deletion remainder `E'-z`, while inclusion-minimality makes every
 deletion of `A` base-safe.
 
+This last pivot family routes completely.  Since
+`E'+g subseteq X_r+f`, there are two cases.
+
+1. If `f notin A`, then the source of `A` envies a subset of `X_r` and
+   therefore envies `X_r` itself.  Source `q` creates the PI cycle
+   `q -> r -f-> q`; source `s` creates
+   `s -> r -f-> q -> s` in the external-`q` cell; source `r` cannot envy a
+   subset of her own bundle.  The recipient `p` is not an external
+   observer.
+2. If `f in A`, common safety makes its source an `f`-champion of `r` using
+   the `A` decomposition.  Source `r` is a forbidden self-champion, source
+   `q` enters the length-two residual, and source `s` enters the swapped
+   length-three cell routed in the adaptive-singleton theorem.
+
+Thus every pivot-containing safety failure either is already PI or exits to
+an explicitly named residual class.  In the branch that remains in the
+original length-three cell, `E'+g` is externally safe.
+
 ## Consequence
 
-The external-`q` recurrence is reduced to a strict augmented-root potential
-with one contested good.  A compatible payment for `E'+g` contradicts the
-extremal `p` coordinate by (4); a failure is localized to the pivot family
-(6).  No arbitrary packet intersection or second free observer remains.
+The external-`q` parallel-root recurrence is closed at the safety level.  A
+new augmented root strictly raises `p` by (4), and every failure of its
+external safety routes to a PI cycle, the swapped length-three cell, or the
+length-two residual.  No root cycle or contested safety pivot remains.
 
-The remaining theorem must route (6) through a cross-reservoir/alternating
-operation or exhibit an exact unrestricted state in which every compatible
-payment fails.  This reduction alone does not assert that such a payment
-always exists.
+The live same-cell obligation is now only to pay `r` from the complement of
+the externally safe augmented root while assigning the two singleton goods.
+This reduction does not assert that the residual always meets that payment
+threshold.
 
-The three scalar implications (1), (3), and (4) replay independently as
+The total-capacity failure has one scalar form.  Write
+`E'=T'+f`, \(X_r=T'\mathbin{\dot\cup}B'\); the pivot `g` belongs to `B'`.
+The residual
+of `E'+g` after reserving the two singleton goods is
+
+\[
+U=(B'-g)+X_q.
+\tag{7}
+\]
+
+Applying (1) to the new parallel root gives `v_r(T_q)>v_r(T')`, and hence
+
+\[
+v_r(U)>b_r+v_r(B_q)-v_r(g).
+\tag{8}
+\]
+
+The established external safety of `E'+g` gives
+`tau_r(E'+g)<=b_r`.  Consequently
+
+\[
+v_r(U)<\tau_r(E'+g)
+\quad\Longrightarrow\quad
+v_r(g)>v_r(B_q).
+\tag{9}
+
+Thus packet-wide capacity cannot fail diffusely: it fails only when the
+single returned pivot outweighs the entire released `q`-bottom packet.
+When (9) is false, total `r`-capacity exists and only safety of a minimal
+payment remains to be routed.
+
+The four scalar implications (1), (3), (4), and (9) replay independently as
 QF_LRA-UNSAT when negated in
 [`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json).
 This audit checks the displayed algebra; the champion-source routing remains

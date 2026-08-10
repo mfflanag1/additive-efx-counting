@@ -43,6 +43,20 @@ def run():
             positive + [peminus <= bp, peprime > bp],
             peprime + pg > peminus + pg,
         ),
+        forced(
+            "augmented_residual_deficit_forces_pivot_above_q_bottom",
+            positive
+            + [
+                rtq > rt,
+                rb > rg,
+                rt + rb == z3.Real("pivot_br"),
+                z3.Real("pivot_bq") > 0,
+                rb - rg + rtq + z3.Real("pivot_bq")
+                < z3.Real("pivot_tail"),
+                z3.Real("pivot_tail") <= z3.Real("pivot_br"),
+            ],
+            rg > z3.Real("pivot_bq"),
+        ),
     ]
     root = Path(__file__).resolve().parents[2]
     script = Path(__file__).resolve()

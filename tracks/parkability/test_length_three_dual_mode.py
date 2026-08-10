@@ -128,7 +128,7 @@ def test_atomic_decisions():
     assert len(canonical["records"]) == 16
     pivot = run_parallel_pivot()
     assert pivot["status"] == "ALL_FORCED"
-    assert len(pivot["records"]) == 3
+    assert len(pivot["records"]) == 4
 
 
 def test_split_refutation():
