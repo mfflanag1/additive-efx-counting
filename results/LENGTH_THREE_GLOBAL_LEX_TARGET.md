@@ -1505,6 +1505,66 @@ require `v_r(R)>=b_r`.  It does not apply to the two `a=r` types
 `(s,r,p,q)` and `(s,r,q,p)`, where `r` is earlier than both improving pair
 owners.
 
+The sole `a=p` residual type has a sharper source-valid canonical form.
+Its priority order is `(s,p,r,q)`.  Take
+
+\[
+P=E=T_r+f,\qquad Q=\{x\},\qquad
+\vartheta_r(P,Q)=\tau_r(E).
+\tag{16ak.0a}
+\]
+
+The residual `B_r+X_q` has `r`-value above `b_r` by (16x), so choose an
+inclusion-minimal payment `R` at `tau_r(E)`.  If `(E,R,{x},{y})` is unsafe,
+reverse a violating deletion to an inclusion-minimal base-desired set
+`F`.  It is common-safe and
+
+\[
+v_r(F)<\tau_r(E).
+\tag{16ak.0b}
+\]
+
+Two sources close immediately:
+
+\[
+\begin{array}{c|c}
+\text{source of }F & (p,r,q,s)\\ \hline
+p & (F,E,\{x\},\{y\})\\
+s & (\{y\},E,\{x\},F).
+\end{array}
+\tag{16ak.0c}
+\]
+
+Both rows are EFX.  In the first, `p` receives her desired `F`; in the
+second, `p` receives the singleton she envies and `s` receives her desired
+`F`.  Agent `r` can hold `E` because (16ak.0b) pays her only nontrivial
+comparison; `q={x}` and common safety settle the rest.  Each allocation
+lexicographically improves `(s,p,r,q)`.  Consequently the `a=p` row has
+only a `q`-sourced tail boundary left; arbitrary `p`- and `s`-observer walls
+are analytically eliminated without changing roots or bounding packets.
+
+For `a=q`, use the same canonical payment and boundary `F`.  A `p`-source
+again closes all four residual orders through `(F,E,{x},{y})`.  If `F` is
+`s`-desired, then
+
+\[
+(p,r,q,s)=(\{x\},E,\{y\},F)
+\tag{16ak.0d}
+\]
+
+is EFX: `q` receives the singleton she envies, `s` receives her desired
+set, and (16ak.0b) lets `r` hold `E`.  It closes `(p,s,r,q)` and
+`(s,p,r,q)`, where the improving `s` precedes any possible loss of `r`.
+It need not close `(p,r,q,s)` or `(p,r,s,q)`, because `p` is fixed and `r`
+may be below base.  Thus the four `a=q` types reduce source-validly to:
+
+- a `q`-sourced tail boundary in all four orders; and
+- an additional `s`-sourced boundary only in the two orders where `r`
+  precedes `s` after the fixed `p`.
+
+This priority distinction is why ownership of `{y}` cannot be treated as a
+source-independent mode switch.
+
 Otherwise the only possible failure is an external comparison to a
 deletion of `R`.  Within such a deletion perform the same simultaneous
 minimal-threshold extraction at
