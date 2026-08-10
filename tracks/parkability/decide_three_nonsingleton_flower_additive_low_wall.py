@@ -56,6 +56,7 @@ def checked_cell(index: int, key: dict) -> dict:
         for agent in AGENTS
     }
     total = {}
+    packet = {}
     for agent in AGENTS:
         aq = component["aq_tq", agent] + component["aq_br", agent]
         ar = component["ar_tr", agent] + component["ar_bq", agent]
@@ -63,6 +64,15 @@ def checked_cell(index: int, key: dict) -> dict:
         br = component["aq_br", agent] + component["br_rest", agent]
         tr = component["ar_tr", agent] + component["tr_rest", agent]
         bq = component["ar_bq", agent] + component["bq_rest", agent]
+        packet.update({
+            ("T_q", agent): tq,
+            ("B_r", agent): br,
+            ("T_r", agent): tr,
+            ("B_q", agent): bq,
+            ("T_c", agent): component["tc", agent],
+            ("B_c", agent): component["bc", agent],
+            ("f", agent): component["f", agent],
+        })
         total.update({
             ("A_q", agent): aq,
             ("A_r", agent): ar,
@@ -94,6 +104,16 @@ def checked_cell(index: int, key: dict) -> dict:
             solver.add(tail[name, agent] < total[name, agent])
             solver.add(tail[name, agent] <= base[agent])
         solver.add(tail["Z", agent] == 0)
+        for bundle, left_packet, right_packet in (
+            ("D_r", "T_q", "f"),
+            ("D_q", "T_r", "f"),
+            ("D_c", "T_c", "f"),
+            ("X_r", "T_r", "B_r"),
+            ("X_q", "T_q", "B_q"),
+            ("X_c", "T_c", "B_c"),
+        ):
+            solver.add(tail[bundle, agent] >= packet[left_packet, agent])
+            solver.add(tail[bundle, agent] >= packet[right_packet, agent])
         solver.add(total[BASE[agent], agent] == base[agent])
         solver.add(component["f", agent] <= base[agent])
         solver.add(total["X_c", agent] <= base[agent])
@@ -150,13 +170,14 @@ def run() -> dict:
     root = Path(__file__).resolve().parents[2]
     script = Path(__file__).resolve()
     return {
-        "schema": "three-nonsingleton-flower-additive-low-wall-v1",
+        "schema": "three-nonsingleton-flower-additive-low-wall-v2",
         "status": "COMPLETE" if len(records) == 432 and not counts["unknown"] else "INCOMPLETE",
         "counts": counts,
         "records": records,
         "claim_boundary": (
-            "sound additive packet relaxation linking A_q,A_r to the six top/bottom packets, with arbitrary "
-            "common-safe tails; SAT models need not realize packet minima or a globally maximal EFX state"
+            "sound additive packet relaxation linking A_q,A_r to the six top/bottom packets and enforcing "
+            "the cap-free lower bound that every two-packet bundle tail dominates either packet; SAT models "
+            "need not realize exact packet minima or a globally maximal EFX state"
         ),
         "provenance": {
             "cover_script_sha256": cover["provenance"]["script_sha256"],

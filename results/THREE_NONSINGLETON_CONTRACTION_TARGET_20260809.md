@@ -69,8 +69,8 @@ independent-total/tail abstraction. A true-tail atomic audit reduces this to
 one-good transfers are blocked. This rules out continuing by fixed radius.
 The next research output should be either:
 
-- a cap-free connected exchange-component/PI routing that contradicts every
-  low-payment wall and closes the flower; or
+- a cap-free crossing-capture exchange/PI lemma, beginning with the
+  full-`X_q` capture normal form isolated by the packet-minimum theorem; or
 - one exact component-level countermodel, followed by a corrected global
   potential stated on connected slot components rather than item radius.
 

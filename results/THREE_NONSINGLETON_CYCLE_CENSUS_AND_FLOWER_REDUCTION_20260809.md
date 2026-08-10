@@ -278,11 +278,60 @@ routing must enter.
 ## Additive and true-tail boundary
 
 Linking `A_q,A_r` additively to the six top/bottom packets, while retaining
-arbitrary common-safe tail variables, does not close another cell: the
+arbitrary common-safe tail variables, does not close another cell. This
+remains true after imposing the cap-free lower bound that the tail of a
+bundle split into two nonempty packets dominates either entire packet: the
 sound relaxation again returns 148 impossible and 284 satisfiable cells.
 See
 [`three_nonsingleton_flower_additive_low_wall_audit.json`](three_nonsingleton_flower_additive_low_wall_audit.json).
 Thus bundle-total additivity alone is not the missing invariant.
+
+### Cap-free packet-minimum support theorem
+
+The exact minimum of a union of nonempty packets is the minimum of their
+packet minima. Introducing one arbitrary total and one arbitrary positive
+minimum per nonempty packet therefore represents every displayed EFX tail
+exactly, without bounding packet cardinality.
+
+Write
+
+\[
+A_q=(A_q\cap T_q)\mathbin{\dot\cup}(A_q\cap B_r),\qquad
+A_r=(A_r\cap T_r)\mathbin{\dot\cup}(A_r\cap B_q),
+\]
+
+and call a desired bundle **crossing** when both intersections are nonempty.
+Say the pair **fully captures `X_q`** when
+`T_q subseteq A_q` and `B_q subseteq A_r`, and **fully captures `X_r`**
+when `B_r subseteq A_q` and `T_r subseteq A_r`.
+
+> **Theorem 8 (packet-minimum normal form).** In the flower family with arm
+> source `r` and singleton envier `c`, simultaneous failure of every
+> lex-valid common-safe cover has the following necessary form.
+>
+> 1. If the two bottom-edge sources are opposite (`c,s` or `s,c`), both
+>    `A_q` and `A_r` are crossing.
+> 2. If both bottom edges are sourced by `c`, both bundles are crossing and
+>    either they fully capture `X_q`, or `c` precedes `r` and they fully
+>    capture `X_r`.
+> 3. If both bottom edges are sourced by `s`, both bundles are crossing and
+>    either they fully capture `X_q`, or `s` precedes both `r,c` and they
+>    fully capture `X_r`.
+>
+> Swapping `r,q` gives the four arm-source-`q` statements.
+
+The proof exhausts the nine possible nonempty support types of `A_q,A_r`,
+all feasible empty/nonempty residual masks, and all 24 priorities. Each cell
+uses arbitrary packet totals and exact packet minima. Across the four
+arm-source-`r` patterns, 5,124 of 6,144 support/order cells are QF_LRA-UNSAT;
+the remaining 1,020 agree exactly with the three clauses above. The compact
+replay is
+[`three_nonsingleton_flower_packet_min_family_audit.json`](three_nonsingleton_flower_packet_min_family_audit.json).
+
+This is a cap-free computer-assisted structural theorem, subject to an
+independent encoding audit. It does not close the crossing/capture normal
+forms. Those forms are now the analytic exchange-component gate; arbitrary
+desired subsets outside them are eliminated.
 
 The exact one-good-per-displayed-component cell adds the true
 minimum-good formula for every tail. In that bounded cell 316 of the 432
@@ -337,15 +386,15 @@ third champion arm in any cap-free proof.
 
 ## Next analytic gate
 
-Prove a **flower exchange-component lemma** for the remaining 284 cap-free
-walls. From a failed cover, grow the generalized one-in/one-out exchange
-exposed by its attaining tail. Show that either the connected exchange union
-becomes EFX with a positive lexicographic gain, or its crossing walls close
-an explicit PI cycle with one of the three genuine flower edges. The argument
-must allow arbitrary packet sizes and must use connected slot components,
-not a bound on the number of moved goods. An equal-vector contraction is
-unavailable under nondegeneracy: equality of every owner's utility forces
-every assigned bundle to be unchanged.
+Prove a **crossing-capture exchange lemma** for the normal forms in Theorem 8.
+Start with the full-`X_q` capture case, which survives every priority and
+bottom-source pattern. Use the two crossing desired sets as one connected
+exchange component and show that it either becomes EFX with positive
+lexicographic gain or closes an explicit PI cycle with one of the three
+genuine flower edges. Then handle the priority-restricted full-`X_r` dual
+and the opposite-source crossing case. The argument must allow arbitrary
+packet sizes and must use connected slot components, not a bound on moved
+goods.
 
 Closing the flower settles only the `GG` row of the eight-class census. It
 does not by itself eliminate the other seven three-nonsingleton classes.

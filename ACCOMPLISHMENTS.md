@@ -189,6 +189,16 @@ confirming that the next invariant must be an exchange component rather than
 item radius. This is a sharp frontier reduction, not closure of the flower
 and not general EFX.
 
+A cap-free packet-total/minimum audit now sharpens the largest surviving
+source family further. For all eight patterns in which the external large
+owner envies the singleton, every surviving desired-set configuration must
+cross both source packets. With common bottom sources, survival additionally
+requires full capture of one mutual-cycle bundle, with an exact priority
+condition for the dual capture. The arm-source-`r` audit classifies all 6,144
+support/order cells (5,124 UNSAT); arm-source `q` follows by relabeling. This
+is a new computer-assisted normal-form theorem, not closure of the capture
+cases.
+
 ## Bottom-line assessment
 
 The existing counting paper remains a focused package of six exact witnesses,

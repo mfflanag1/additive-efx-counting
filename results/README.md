@@ -835,8 +835,10 @@ both encodings.
   `q`. Four-cover strict-cycle menus close another 148 cells, leaving 284
   cap-free low-wall cells. A true-tail atomic audit leaves 116 bounded cells
   and extracts a two-good generalized exchange after all one-good transfers
-  are blocked, directing the next proof toward connected transfer components.
-  The flower remains open; this is not a general-EFX proof.
+  are blocked. A cap-free packet-total/minimum theorem then reduces all eight
+  `a=c` source patterns to crossing desired sets and two explicit full-bundle
+  capture alternatives. The flower remains open; this is not a general-EFX
+  proof.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

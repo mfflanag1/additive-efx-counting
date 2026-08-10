@@ -1,5 +1,5 @@
 {
-  "claim_boundary": "sound additive packet relaxation linking A_q,A_r to the six top/bottom packets, with arbitrary common-safe tails; SAT models need not realize packet minima or a globally maximal EFX state",
+  "claim_boundary": "sound additive packet relaxation linking A_q,A_r to the six top/bottom packets and enforcing the cap-free lower bound that every two-packet bundle tail dominates either packet; SAT models need not realize exact packet minima or a globally maximal EFX state",
   "counts": {
     "IMPOSSIBLE": 148,
     "sat": 284,
@@ -8,7 +8,7 @@
   "provenance": {
     "cover_script_sha256": "412350a768dab3799311092b4b42042c2be28cf3d74d906795d53ba7d2ddb5f8",
     "script": "tracks/parkability/decide_three_nonsingleton_flower_additive_low_wall.py",
-    "script_sha256": "097e4a2678766410052e77e5b801feb31d4af0025e8d6ce6be2da154fea6303a",
+    "script_sha256": "f453991eb3d0f7e57a2ae9fb3a32b8643be33fac4c13f9c11c71a658f1780286",
     "z3_version": "5.0.0"
   },
   "records": [
@@ -6061,6 +6061,6 @@
       "status": "IMPOSSIBLE"
     }
   ],
-  "schema": "three-nonsingleton-flower-additive-low-wall-v1",
+  "schema": "three-nonsingleton-flower-additive-low-wall-v2",
   "status": "COMPLETE"
 }
