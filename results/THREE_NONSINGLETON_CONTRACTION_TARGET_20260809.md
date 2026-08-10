@@ -104,6 +104,14 @@ therefore release-compatible PI edge sets. The exact remaining selector gate
 is to choose the hub and partition so that an open wall source or a strict
 Hall-deficient target set cannot persist under component growth.
 
+The canonical one-star selector is now exactly refuted as well. A bounded
+full-capture cell survives after every improving two-leaf split from arm
+owner `c` is blocked. Its arm-owner splits expose only open or internally
+wall-free targets, while its nearest complete escape is a five-good component
+on `q,c,s,charity`. The live theorem must therefore grow and splice star
+components; it cannot require one arm-rooted star to be the final EFX
+allocation.
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

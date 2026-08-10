@@ -124,9 +124,10 @@ This is the branching analogue of following one blocker along a path.
 For a hub with exactly two leaves, the finite internal-source remainder is
 classified in
 [`THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md`](THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md).
-The only inclusion-minimal full-target Hall trap not already containing a PI
-two-cycle through the hub is the leaf-mutual pattern: the leaves block each
-other, both block the hub, and the hub is absent as an internal wall source.
+The only fully internally blocked family not already containing a PI cycle
+through the hub is the leaf-mutual pattern: the leaves block each other, at
+least one leaf blocks the hub, and the hub is absent as an internal wall
+source.
 
 The scalar implications replay as QF_LRA-UNSAT in
 [`charity_rooted_hub_split_obstruction_audit.json`](charity_rooted_hub_split_obstruction_audit.json).

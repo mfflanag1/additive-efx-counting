@@ -879,17 +879,24 @@ both encodings.
   component-growth remainders.
 - [`THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md`](THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md)
   — exhaustive 64-graph classification of the internal wall-source relation
-  for one hub and two leaves. Hall witnesses of size one and two force an
-  open or shared-source growth direction. Among the three full-target Hall
-  patterns, two contain a PI two-cycle through the hub; the sole PI-free
-  remainder has mutually blocking leaves, both blocking the hub, and no hub
-  wall source. This isolates the next analytic inequality case.
+  for one hub and two leaves. Thirty-two graphs contain a PI cycle through
+  the hub, 29 expose a target with no internal wall, and the remaining three
+  form one leaf-mutual family: the leaves block each other, at least one
+  blocks the hub, and the hub never blocks a leaf. This isolates the only
+  fully internally blocked analytic case.
 - [`LEAF_MUTUAL_TRAP_SCALAR_GATE_REFUTATION_20260810.md`](LEAF_MUTUAL_TRAP_SCALAR_GATE_REFUTATION_20260810.md)
   — positive cap-six additive realization of the sole closed three-target
   Hall trap. Base EFX, charity dominance, hub improvement, both mutual leaf
   walls, both leaf-to-hub walls, and absence of hub-to-leaf walls coexist.
   Therefore the trap cannot be eliminated by summing local wall signs; the
   next proof must use flower champion identities or an alternate hub.
+- [`ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md`](ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md)
+  — exact full-capture model surviving blockage of every improving two-leaf
+  split from the external arm owner, in addition to all earlier exchange,
+  path, and packet gates. Its arm-owner splits terminate at open or
+  internally wall-free targets; the nearest complete escape is instead a
+  five-good `q,c,s,charity` component. This replaces the one-star selector
+  with an arm-rooted component-growing selector.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

@@ -49,29 +49,56 @@ def directed_two_cycle(neighborhoods, left, right) -> bool:
     return right in neighborhoods[left] and left in neighborhoods[right]
 
 
+def has_hub_cycle(neighborhoods) -> bool:
+    if directed_two_cycle(neighborhoods, "h", "r"):
+        return True
+    if directed_two_cycle(neighborhoods, "h", "s"):
+        return True
+    return (
+        "h" in neighborhoods["r"]
+        and "r" in neighborhoods["s"]
+        and "s" in neighborhoods["h"]
+    ) or (
+        "h" in neighborhoods["s"]
+        and "s" in neighborhoods["r"]
+        and "r" in neighborhoods["h"]
+    )
+
+
 def run() -> dict:
     choices = {target: powerset(vertex for vertex in VERTICES if vertex != target) for target in VERTICES}
     counts = Counter()
+    size_two_patterns = []
     size_three_patterns = []
 
     for selected in itertools.product(*(choices[target] for target in VERTICES)):
         neighborhoods = dict(zip(VERTICES, selected))
-        if has_perfect_matching(neighborhoods):
-            counts["perfect_matching"] += 1
+        if has_hub_cycle(neighborhoods):
+            counts["pi_hub_cycle"] += 1
             continue
+        if has_perfect_matching(neighborhoods):
+            raise AssertionError("a three-target perfect matching must be a hub cycle")
 
         witnesses = minimal_hall_witnesses(neighborhoods)
         minimum_size = min(map(len, witnesses))
         counts[f"minimum_hall_size_{minimum_size}"] += 1
 
+        if minimum_size == 2:
+            size_two_patterns.append(
+                {
+                    "neighborhoods": {
+                        target: sorted(neighborhoods[target]) for target in VERTICES
+                    },
+                    "minimal_witnesses": [
+                        list(witness) for witness in witnesses if len(witness) == 2
+                    ],
+                }
+            )
+
         if minimum_size == 3:
             union = set().union(*neighborhoods.values())
             missing_source = next(vertex for vertex in VERTICES if vertex not in union)
             cycle_avoids_hub = directed_two_cycle(neighborhoods, "r", "s")
-            cycle_contains_hub = (
-                directed_two_cycle(neighborhoods, "h", "r")
-                or directed_two_cycle(neighborhoods, "h", "s")
-            )
             size_three_patterns.append(
                 {
                     "missing_source": missing_source,
@@ -79,16 +106,13 @@ def run() -> dict:
                         target: sorted(neighborhoods[target]) for target in VERTICES
                     },
                     "two_cycle_avoids_hub": cycle_avoids_hub,
-                    "two_cycle_contains_hub": cycle_contains_hub,
                 }
             )
 
-    assert len(size_three_patterns) == 3
-    assert {entry["missing_source"] for entry in size_three_patterns} == set(VERTICES)
-    hard = [entry for entry in size_three_patterns if not entry["two_cycle_contains_hub"]]
-    assert len(hard) == 1
-    assert hard[0]["missing_source"] == "h"
-    assert hard[0]["two_cycle_avoids_hub"]
+    assert len(size_three_patterns) == 1
+    assert size_three_patterns[0]["missing_source"] == "h"
+    assert size_three_patterns[0]["two_cycle_avoids_hub"]
+    assert len(size_two_patterns) == 2
 
     script = Path(__file__).resolve()
     root = script.parents[2]
@@ -98,8 +122,9 @@ def run() -> dict:
         "target_order": list(VERTICES),
         "graph_count": sum(counts.values()),
         "counts": dict(sorted(counts.items())),
+        "minimum_size_two_patterns": size_two_patterns,
         "minimum_size_three_patterns": size_three_patterns,
-        "pi_free_size_three_remainder": hard[0],
+        "pi_free_size_three_remainder": size_three_patterns[0],
         "claim_boundary": (
             "finite directed-incidence census for one hub and two leaves; it classifies the internal "
             "Hall remainder but does not prove that flower inequalities select a hub split"

@@ -67,6 +67,12 @@ next theorem must select the hub and partition so that component growth
 cannot preserve either remainder. See
 [THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
 
+The fixed arm-owner endpoint is now refuted in the bounded full-capture cell:
+every improving two-leaf split from `c` can be blocked while a five-good
+`q,c,s,charity` complete escape survives. The cap-free target is therefore an
+arm-rooted component-growing selector that splices terminal/open star
+branches and permits the endpoint topology to change.
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

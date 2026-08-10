@@ -61,6 +61,7 @@ def run(
     block_pair_exchanges: bool = False,
     block_three_good_paths: bool = False,
     block_charity_packet_replacements: bool = False,
+    block_arm_owner_hub_splits: bool = False,
 ) -> dict:
     atom_names = {
         component: (
@@ -233,6 +234,32 @@ def run(
                         *charity_walls,
                     ))
 
+    if block_arm_owner_hub_splits:
+        hub = "c"
+        hub_goods = old_atoms[hub]
+        for leaves in itertools.combinations((agent for agent in AGENTS if agent != hub), 2):
+            for assignment in itertools.product((0, 1, 2), repeat=len(hub_goods)):
+                if 1 not in assignment or 2 not in assignment:
+                    continue
+                packet = tuple(
+                    atom for atom, destination in zip(hub_goods, assignment) if destination
+                )
+                split = dict(old_atoms)
+                split[hub] = tuple(
+                    atom for atom, destination in zip(hub_goods, assignment) if not destination
+                ) + ("f",)
+                for index, leaf in enumerate(leaves, start=1):
+                    split[leaf] = old_atoms[leaf] + tuple(
+                        atom for atom, destination in zip(hub_goods, assignment)
+                        if destination == index
+                    )
+                solver.add(z3.Or(
+                    value["f", hub] <= z3.Sum(*(
+                        value[atom, hub] for atom in packet
+                    )),
+                    *(failure["formula"] for failure in efx_failures(split)),
+                ))
+
     covers = candidate_covers("r", "c", "c", "c", tuple(AGENTS))
     one_unpaid = [cover for cover in covers if cover["unpaid_agent"] is not None]
     for cover in one_unpaid:
@@ -318,6 +345,8 @@ def run(
                 "source_safe": safe,
                 "blockers": blockers,
             })
+    if block_arm_owner_hub_splits:
+        result["block_arm_owner_hub_splits"] = True
     return result
 
 
@@ -327,6 +356,7 @@ def main() -> None:
     parser.add_argument("--block-pair-exchanges", action="store_true")
     parser.add_argument("--block-three-good-paths", action="store_true")
     parser.add_argument("--block-charity-packet-replacements", action="store_true")
+    parser.add_argument("--block-arm-owner-hub-splits", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     result = run(
@@ -334,6 +364,7 @@ def main() -> None:
         args.block_pair_exchanges,
         args.block_three_good_paths,
         args.block_charity_packet_replacements,
+        args.block_arm_owner_hub_splits,
     )
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"status": result["status"], "pairs": result["pair_count"]}, indent=2))

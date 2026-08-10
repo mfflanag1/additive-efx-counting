@@ -157,6 +157,17 @@ source/Hall-deficient component.
 Linear paths and one-recipient packet replacements are both strictly too
 narrow.
 
+## Canonical arm-owner star is also too narrow
+
+A fourth exact gate blocks every improving complete two-leaf split from arm
+owner `c` in addition to all preceding moves. It remains SAT. All six
+eligible `c`-splits expose open or internally wall-free targets; none is EFX
+or closes a PI cycle through `c`. The nearest complete escape is instead a
+five-good component spanning `q,c,s,charity`. See
+[`ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md`](ARM_OWNER_HUB_SELECTOR_REFUTATION_20260810.md).
+Thus hub splitting is a branching step inside component growth, not a fixed
+final topology.
+
 ## Claim boundary
 
 This is an exact countermodel to one proposed proof mechanism, not to EFX

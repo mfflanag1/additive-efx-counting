@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 try:
+    from .analyze_two_leaf_hub_split_census import run as run_hub_split_census
     from .audit_charity_rooted_hub_split import run as run_hub_split_audit
     from .audit_packet_charity_replacement import run as run_packet_charity_audit
     from .audit_three_target_hub_hall_patterns import run as run_hub_hall_audit
@@ -14,6 +15,7 @@ try:
     )
     from .decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 except ImportError:
+    from analyze_two_leaf_hub_split_census import run as run_hub_split_census
     from audit_charity_rooted_hub_split import run as run_hub_split_audit
     from audit_packet_charity_replacement import run as run_packet_charity_audit
     from audit_three_target_hub_hall_patterns import run as run_hub_hall_audit
@@ -164,6 +166,47 @@ def main() -> None:
     assert packet_complete_graph["nontrivial_components"][0]["slots"] == [
         "r", "c", "s", "_"
     ]
+    arm_hub_gate_path = (
+        ROOT / "results" / "three_nonsingleton_flower_full_capture_arm_hub_gate.json"
+    )
+    arm_hub_gate = json.loads(arm_hub_gate_path.read_text())
+    arm_hub_replay = run_swap_gate(True, True, True, True, True)
+    assert arm_hub_replay["status"] == arm_hub_gate["status"] == "sat"
+    assert arm_hub_replay["block_arm_owner_hub_splits"]
+    assert arm_hub_gate["status"] == "sat"
+    assert arm_hub_gate["block_arm_owner_hub_splits"]
+    arm_hub_census = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_arm_hub_gate_split_census.json"
+        ).read_text()
+    )
+    assert run_hub_split_census(arm_hub_gate_path) == arm_hub_census
+    assert arm_hub_census["counts"] == {
+        "eligible": 5436,
+        "leaf_mutual_trap": 64,
+        "open_external_wall": 3416,
+        "pi_hub_cycle": 351,
+        "terminal_internal_target": 1605,
+    }
+    assert arm_hub_census["by_hub"]["c"] == {
+        "eligible": 6,
+        "open_external_wall": 2,
+        "terminal_internal_target": 4,
+    }
+    arm_hub_improvement = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_full_capture_arm_hub_gate_improvement.json"
+        ).read_text()
+    )
+    assert arm_hub_improvement["nearest_partial_improvement"]["minimum_moved_goods"] == 2
+    assert arm_hub_improvement["nearest_complete_improvement"]["minimum_moved_goods"] == 5
+    assert arm_hub_improvement["nearest_complete_improvement"]["transfer_multigraph"][
+        "nontrivial_components"
+    ][0]["slots"] == ["q", "c", "s", "_"]
     gate_note = (
         ROOT / "results" / "FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md"
     ).read_text()
@@ -208,10 +251,10 @@ def main() -> None:
     assert hub_hall["status"] == "CLASSIFIED"
     assert hub_hall["graph_count"] == 64
     assert hub_hall["counts"] == {
-        "minimum_hall_size_1": 37,
-        "minimum_hall_size_2": 9,
-        "minimum_hall_size_3": 3,
-        "perfect_matching": 15,
+        "minimum_hall_size_1": 29,
+        "minimum_hall_size_2": 2,
+        "minimum_hall_size_3": 1,
+        "pi_hub_cycle": 32,
     }
     assert hub_hall["pi_free_size_three_remainder"]["missing_source"] == "h"
 

@@ -1,0 +1,255 @@
+{
+  "by_hub": {
+    "c": {
+      "eligible": 6,
+      "open_external_wall": 2,
+      "terminal_internal_target": 4
+    },
+    "q": {
+      "eligible": 6,
+      "open_external_wall": 2,
+      "pi_hub_cycle": 4
+    },
+    "r": {
+      "eligible": 5424,
+      "leaf_mutual_trap": 64,
+      "open_external_wall": 3412,
+      "pi_hub_cycle": 347,
+      "terminal_internal_target": 1601
+    },
+    "s": {}
+  },
+  "claim_boundary": "exact census of improving complete two-leaf hub splits in one frozen bounded flower profile; classifications use the analytic hub-wall lemma but do not prove a cap-free selector",
+  "counts": {
+    "eligible": 5436,
+    "leaf_mutual_trap": 64,
+    "open_external_wall": 3416,
+    "pi_hub_cycle": 351,
+    "terminal_internal_target": 1605
+  },
+  "integer_scale": 4096,
+  "minimal_examples": {
+    "leaf_mutual_trap": {
+      "allocation": {
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "f"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "hub": "r",
+      "leaves": [
+        "q",
+        "c"
+      ],
+      "packet": [
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "wall_sources": {
+        "c": [
+          "q"
+        ],
+        "q": [
+          "c",
+          "s"
+        ],
+        "r": [
+          "c",
+          "s"
+        ]
+      }
+    },
+    "open_external_wall": {
+      "allocation": {
+        "c": [
+          "bc_0",
+          "f",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "tc_0",
+          "z"
+        ]
+      },
+      "hub": "c",
+      "leaves": [
+        "q",
+        "s"
+      ],
+      "packet": [
+        "bc_1",
+        "tc_0"
+      ],
+      "wall_sources": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "c",
+          "r"
+        ],
+        "s": [
+          "c",
+          "q"
+        ]
+      }
+    },
+    "pi_hub_cycle": {
+      "allocation": {
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "ar_bq_1",
+          "z"
+        ]
+      },
+      "hub": "q",
+      "leaves": [
+        "c",
+        "s"
+      ],
+      "packet": [
+        "aq_tq_0",
+        "ar_bq_1"
+      ],
+      "wall_sources": {
+        "c": [
+          "r"
+        ],
+        "q": [
+          "s"
+        ],
+        "s": [
+          "q"
+        ]
+      }
+    },
+    "terminal_internal_target": {
+      "allocation": {
+        "c": [
+          "bc_0",
+          "f",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "hub": "c",
+      "leaves": [
+        "r",
+        "q"
+      ],
+      "packet": [
+        "bc_1",
+        "tc_0"
+      ],
+      "wall_sources": {
+        "c": [],
+        "q": [
+          "c",
+          "r",
+          "s"
+        ],
+        "r": []
+      }
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/analyze_two_leaf_hub_split_census.py",
+    "script_sha256": "1e982bc2454806b5005bab8c1d177519d2493aca1e59899c524b3bde8380a67d",
+    "witness": "results/three_nonsingleton_flower_full_capture_arm_hub_gate.json",
+    "witness_sha256": "1e9a4fe1c50ef58b5daf5fbd043bf6b8ea940ba0e8a08f33e1a9fcbbca4cf308"
+  },
+  "schema": "two-leaf-hub-split-census-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "CLASSIFIED"
+}
