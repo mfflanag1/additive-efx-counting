@@ -62,6 +62,7 @@ def run(
     block_three_good_paths: bool = False,
     block_charity_packet_replacements: bool = False,
     block_arm_owner_hub_splits: bool = False,
+    block_arm_owner_response_matchings: bool = False,
 ) -> dict:
     atom_names = {
         component: (
@@ -133,6 +134,27 @@ def run(
             )
             for position, agent in enumerate(AGENTS)
         ))
+
+    champion_cache = {}
+
+    def champion_formula(source, offered):
+        offered = tuple(sorted(offered))
+        key = (source, offered)
+        if key not in champion_cache:
+            witnesses = []
+            for size in range(1, len(offered) + 1):
+                for desired in itertools.combinations(offered, size):
+                    witnesses.append(z3.And(
+                        z3.Sum(*(value[atom, source] for atom in desired)) > base[source],
+                        *(
+                            base[observer] >= true_tail([
+                                value[atom, observer] for atom in desired
+                            ])
+                            for observer in AGENTS
+                        ),
+                    ))
+            champion_cache[key] = z3.Or(*witnesses)
+        return champion_cache[key]
 
     # A globally lex-maximal state cannot admit an EFX insertion of f, an
     # owner-improving f-for-item swap, or a one-good transfer from a later
@@ -234,7 +256,7 @@ def run(
                         *charity_walls,
                     ))
 
-    if block_arm_owner_hub_splits:
+    if block_arm_owner_hub_splits or block_arm_owner_response_matchings:
         hub = "c"
         hub_goods = old_atoms[hub]
         for leaves in itertools.combinations((agent for agent in AGENTS if agent != hub), 2):
@@ -253,12 +275,24 @@ def run(
                         atom for atom, destination in zip(hub_goods, assignment)
                         if destination == index
                     )
-                solver.add(z3.Or(
-                    value["f", hub] <= z3.Sum(*(
-                        value[atom, hub] for atom in packet
-                    )),
-                    *(failure["formula"] for failure in efx_failures(split)),
+                not_improving = value["f", hub] <= z3.Sum(*(
+                    value[atom, hub] for atom in packet
                 ))
+                if block_arm_owner_hub_splits:
+                    solver.add(z3.Or(
+                        not_improving,
+                        *(failure["formula"] for failure in efx_failures(split)),
+                    ))
+                if block_arm_owner_response_matchings:
+                    targets = (hub,) + leaves
+                    for sources in itertools.permutations(targets):
+                        solver.add(z3.Or(
+                            not_improving,
+                            z3.Not(z3.And(*(
+                                champion_formula(source, split[target])
+                                for target, source in zip(targets, sources)
+                            ))),
+                        ))
 
     covers = candidate_covers("r", "c", "c", "c", tuple(AGENTS))
     one_unpaid = [cover for cover in covers if cover["unpaid_agent"] is not None]
@@ -347,6 +381,8 @@ def run(
             })
     if block_arm_owner_hub_splits:
         result["block_arm_owner_hub_splits"] = True
+    if block_arm_owner_response_matchings:
+        result["block_arm_owner_response_matchings"] = True
     return result
 
 
@@ -357,6 +393,7 @@ def main() -> None:
     parser.add_argument("--block-three-good-paths", action="store_true")
     parser.add_argument("--block-charity-packet-replacements", action="store_true")
     parser.add_argument("--block-arm-owner-hub-splits", action="store_true")
+    parser.add_argument("--block-arm-owner-response-matchings", action="store_true")
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()
     result = run(
@@ -365,6 +402,7 @@ def main() -> None:
         args.block_three_good_paths,
         args.block_charity_packet_replacements,
         args.block_arm_owner_hub_splits,
+        args.block_arm_owner_response_matchings,
     )
     args.output.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"status": result["status"], "pairs": result["pair_count"]}, indent=2))

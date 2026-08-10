@@ -74,6 +74,12 @@ enumeration nevertheless finds PI matchings in two of the six arm-owner
 splits. The cap-free target is therefore an EFX-or-response-Hall selector,
 with component growth needed only for open or deficient response sets.
 
+The arm-rooted premise itself is now exactly refuted: a full-capture model
+can make every `c`-hub two-leaf packet ineligible while a mutual-cycle owner
+`q` has an EFX hub split. The live cap-free statement must therefore range
+over all three nonsingleton hubs and derive either an eligible EFX/response-
+matching packet or a simultaneous low-floater inequality contradiction.
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

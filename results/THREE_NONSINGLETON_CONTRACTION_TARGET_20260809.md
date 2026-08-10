@@ -112,6 +112,13 @@ Hall-deficient cases. Thus the corrected EFX-or-response-Hall selector
 survives; only its unmatched cases require component growth. The nearest
 complete EFX endpoint is a five-good component on `q,c,s,charity`.
 
+A stronger exact gate now forbids both EFX arm-owner splits and internal
+arm-owner response matchings. It remains SAT by making every two-leaf split
+from `c` ineligible. The same model has an outright EFX split from mutual-
+cycle owner `q`. Hence the next selector must range across all nonsingleton
+hubs and prove a cross-owner eligibility dichotomy; flower championship does
+not privilege `c` in its own valuation row.
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

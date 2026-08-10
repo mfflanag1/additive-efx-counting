@@ -207,6 +207,28 @@ def main() -> None:
     assert arm_hub_improvement["nearest_complete_improvement"]["transfer_multigraph"][
         "nontrivial_components"
     ][0]["slots"] == ["q", "c", "s", "_"]
+    arm_response_gate_path = (
+        ROOT / "results" / "three_nonsingleton_flower_full_capture_arm_response_gate.json"
+    )
+    arm_response_gate = json.loads(arm_response_gate_path.read_text())
+    assert arm_response_gate["status"] == "sat"
+    assert arm_response_gate["block_arm_owner_hub_splits"]
+    assert arm_response_gate["block_arm_owner_response_matchings"]
+    arm_response_census = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_arm_response_gate_split_census.json"
+        ).read_text()
+    )
+    assert run_hub_split_census(arm_response_gate_path) == arm_response_census
+    assert arm_response_census["by_hub"]["c"] == {}
+    assert arm_response_census["by_hub"]["q"] == {
+        "efx": 1,
+        "eligible": 6,
+        "open_champion_source": 4,
+        "response_hall_deficient": 1,
+    }
     gate_note = (
         ROOT / "results" / "FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md"
     ).read_text()

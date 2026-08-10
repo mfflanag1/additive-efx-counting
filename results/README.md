@@ -903,6 +903,11 @@ both encodings.
   A hub self-source is PI, and any internal system of distinct representatives
   is a release-compatible PI edge set. This corrects the invalid shortcut of
   treating strong-envy observers as edge sources.
+- [`ARM_RESPONSE_SELECTOR_GATE_REFUTATION_20260810.md`](ARM_RESPONSE_SELECTOR_GATE_REFUTATION_20260810.md)
+  — exact full-capture model in which the external arm owner has no eligible
+  two-leaf split, so every arm-rooted EFX/response-matching implication is
+  vacuous. A mutual-cycle owner nevertheless has an outright EFX split. This
+  replaces the fixed-arm selector by an alternate-hub eligibility dichotomy.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

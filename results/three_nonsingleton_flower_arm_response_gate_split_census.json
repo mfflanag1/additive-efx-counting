@@ -1,0 +1,210 @@
+{
+  "arm_owner_candidates": [],
+  "by_hub": {
+    "c": {},
+    "q": {
+      "efx": 1,
+      "eligible": 6,
+      "open_champion_source": 4,
+      "response_hall_deficient": 1
+    },
+    "r": {},
+    "s": {}
+  },
+  "claim_boundary": "exact census of improving complete two-leaf hub splits in one frozen bounded flower profile; response sources are enumerated from exact common-safe desired subsets relative to the base allocation, but the census does not prove a cap-free selector",
+  "counts": {
+    "efx": 1,
+    "eligible": 6,
+    "open_champion_source": 4,
+    "response_hall_deficient": 1
+  },
+  "integer_scale": 2048,
+  "minimal_examples": {
+    "efx": {
+      "allocation": {
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "ar_bq_1",
+          "z"
+        ]
+      },
+      "champion_sources": {},
+      "hub": "q",
+      "leaves": [
+        "c",
+        "s"
+      ],
+      "packet": [
+        "aq_tq_1",
+        "ar_bq_1"
+      ],
+      "wall_observers": {
+        "c": [],
+        "q": [],
+        "s": []
+      }
+    },
+    "open_champion_source": {
+      "allocation": {
+        "c": [
+          "ar_bq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "champion_sources": {
+        "c": [
+          "c",
+          "s"
+        ],
+        "q": [
+          "s"
+        ],
+        "r": [
+          "c",
+          "s"
+        ]
+      },
+      "hub": "q",
+      "leaves": [
+        "r",
+        "c"
+      ],
+      "packet": [
+        "aq_tq_1",
+        "ar_bq_1"
+      ],
+      "wall_observers": {
+        "c": [
+          "s"
+        ],
+        "q": [
+          "s"
+        ],
+        "r": [
+          "s"
+        ]
+      }
+    },
+    "response_hall_deficient": {
+      "allocation": {
+        "c": [
+          "ar_bq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "aq_tq_1",
+          "z"
+        ]
+      },
+      "champion_sources": {
+        "c": [
+          "c",
+          "s"
+        ],
+        "q": [
+          "s"
+        ],
+        "s": [
+          "c"
+        ]
+      },
+      "hub": "q",
+      "leaves": [
+        "c",
+        "s"
+      ],
+      "packet": [
+        "aq_tq_1",
+        "ar_bq_1"
+      ],
+      "wall_observers": {
+        "c": [
+          "r"
+        ],
+        "q": [],
+        "s": []
+      }
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/analyze_two_leaf_hub_split_census.py",
+    "script_sha256": "0b34cd484534966a535d4ace23226ac2a7220a5e987dfdf0de1dc1fc2926df06",
+    "witness": "results/three_nonsingleton_flower_full_capture_arm_response_gate.json",
+    "witness_sha256": "754852dda55f1e4bbe46334433e7cfd97eb80591909296d2acbc4eec87f6d32b"
+  },
+  "schema": "two-leaf-hub-split-census-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "CLASSIFIED"
+}
