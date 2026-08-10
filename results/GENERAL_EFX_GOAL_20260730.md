@@ -59,7 +59,12 @@ opposite-sign target-wall/charity-wall dichotomy. The unresolved step is
 endpoint selection from the flower's champion packets. Blocking every such
 one-recipient charity replacement still leaves a bounded cell whose nearest
 escape is a three-edge hub split, so the selector must allow a released
-packet to be partitioned among multiple recipients. See
+packet to be partitioned among multiple recipients. The cap-free hub-split
+obstruction lemma now turns each failed hub/leaf target into generalized
+edges with disjoint incoming subsets. A directed wall cycle is PI; the live
+remainder is an open wall source or a strict Hall-deficient target set. The
+next theorem must select the hub and partition so that component growth
+cannot preserve either remainder. See
 [THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even

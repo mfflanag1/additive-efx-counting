@@ -869,6 +869,14 @@ both encodings.
   An exact strengthening blocks every such packet replacement and survives;
   its nearest escapes are three-edge hub-splitting components, identifying
   packet partition among multiple recipients as the next primitive.
+- [`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
+  — cap-free classification of every EFX failure after an improving owner
+  replaces a packet by the charity good and partitions the released packet
+  among several recipients. Hub walls and leaf walls yield exact generalized
+  edges with disjoint incoming subsets. A directed closure is a BCFF PI edge
+  set; otherwise the obstruction exposes an open source or a strict Hall
+  deficiency. The lemma does not yet select a split or eliminate those two
+  component-growth remainders.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

@@ -5,9 +5,11 @@ import json
 from pathlib import Path
 
 try:
+    from .audit_charity_rooted_hub_split import run as run_hub_split_audit
     from .audit_packet_charity_replacement import run as run_packet_charity_audit
     from .decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 except ImportError:
+    from audit_charity_rooted_hub_split import run as run_hub_split_audit
     from audit_packet_charity_replacement import run as run_packet_charity_audit
     from decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 
@@ -175,6 +177,19 @@ def main() -> None:
     ).read_text()
     assert "opposite aggregate signs" in packet_charity_theorem
     assert "arbitrary-packet and cap-free" in packet_charity_theorem
+
+    hub_split = json.loads(
+        (ROOT / "results" / "charity_rooted_hub_split_obstruction_audit.json").read_text()
+    )
+    assert run_hub_split_audit() == hub_split
+    assert hub_split["status"] == "ALL_FORCED"
+    assert len(hub_split["records"]) == 4
+    hub_split_theorem = (
+        ROOT / "results" / "CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md"
+    ).read_text()
+    assert "actual incoming set" in hub_split_theorem
+    assert "system of distinct representatives alone is not" in hub_split_theorem
+    assert "open wall source" in hub_split_theorem
 
     theorem = (
         ROOT

@@ -1,0 +1,28 @@
+{
+  "claim_boundary": "aggregate QF_LRA audit of the exact leaf insertion charge, overload implication, hub target polarity, and empty-residual case; the arbitrary-packet EFX exhaustion and generalized edges are analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_charity_rooted_hub_split.py",
+    "script_sha256": "17dcfab8cd1b0625fa3ea5f40069a0534c5807a2d7145138c00fab9e588f1f6f",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "leaf_insertion_charge_is_exact",
+      "status": "unsat"
+    },
+    {
+      "claim": "leaf_wall_forces_charge_over_gain_plus_slack",
+      "status": "unsat"
+    },
+    {
+      "claim": "hub_target_wall_forces_floater_above_released_packet",
+      "status": "unsat"
+    },
+    {
+      "claim": "empty_hub_residual_has_no_target_wall",
+      "status": "unsat"
+    }
+  ],
+  "schema": "charity-rooted-hub-split-obstruction-audit-v1",
+  "status": "ALL_FORCED"
+}

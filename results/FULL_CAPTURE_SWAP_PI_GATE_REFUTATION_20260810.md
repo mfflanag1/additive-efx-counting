@@ -148,8 +148,14 @@ and
 
 Thus the next primitive is a **hub-splitting component**: one slot receives
 an incoming good or packet while releasing a packet partitioned among two or
-more recipients. Linear paths and one-recipient packet replacements are both
-strictly too narrow.
+more recipients. The cap-free
+[`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
+now converts every failed charity-rooted split into exact hub/leaf generalized
+edges. The live remainder is selecting the split so that its wall graph
+either closes a release-compatible directed cycle or cannot sustain its open
+source/Hall-deficient component.
+Linear paths and one-recipient packet replacements are both strictly too
+narrow.
 
 ## Claim boundary
 
