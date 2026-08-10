@@ -137,8 +137,9 @@ R_j&=(T_r\setminus\{j\})+J_r+(T_q\setminus H).
 \tag{12}
 \]
 
-These three bundles and `{y}` are pairwise disjoint.  Suppose `Q_j` and
-`R_j` are common-safe and
+These three bundles and `{y}` are pairwise disjoint.  Suppose `Q_j` is
+base-safe for every agent other than its intended owner `q`, `R_j` is
+base-safe for every agent other than its intended owner `r`, and
 
 \[
 v_q(Q_j)\ge v_q(x),\qquad v_r(R_j)\ge b_r.
@@ -160,11 +161,12 @@ in (13), and `v_q(j)<=b_q<v_q(x)` by base EFX.  Agent `r` cannot envy `{x}`:
 otherwise `r -> p -f-> r` is a PI cycle.  Agent `s` cannot envy `{x}`:
 otherwise `s -> p -f-> r -> s` is a PI cycle.  Both agents value `{j}` at
 most their base utilities by base EFX.  Thus `P_j` is safe for every new
-recipient.  Common safety of `Q_j,R_j`, together with (13), protects all
-remaining comparisons.  Agent `s` is fixed, `r` is weakly preserved, and
-`p` strictly improves, proving the lexicographic claim.
+recipient.  External safety of `Q_j,R_j`, together with (13), protects all
+remaining cross-bundle comparisons; their owners' self-comparisons are
+automatic.  Agent `s` is fixed, `r` is weakly preserved, and `p` strictly
+improves, proving the lexicographic claim.
 
-Ignoring the common-safety selector for the moment, the two recipient
+Ignoring the external-safety selector for the moment, the two recipient
 conditions in (13) are exactly a two-demand partition of `J`.  Put
 
 \[
@@ -185,7 +187,7 @@ v_r(J_r)\ge\delta_r^j.
 For each `j`, fractional knapsack decides (16) with at most one split good.
 Thus failure of the joint-suffix escape has only two possible sources: a
 scalar `q/r` price separator on `J`, or one indivisible boundary good,
-together with failure of common safety after the corresponding rounding.
+together with failure of external safety after the corresponding rounding.
 It is not an unrestricted three-bundle packing problem.
 
 The minimum escape in the frozen `(2,2,2,2)` dual-mode counterprofile is an
