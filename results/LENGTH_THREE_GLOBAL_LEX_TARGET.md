@@ -2,8 +2,9 @@
 
 **Date:** 2026-08-09
 
-**Status:** BCFF basic-cycle classification reconstructed; easy priority
-types closed cap-free; contested-top packet-safety gate open
+**Status:** BCFF basic-cycle classification reconstructed; arbitrary
+observer walls reduced cap-free to one dual-mode, two-budget-crossing
+minimal bundle; final integral compensation/routing gate open
 
 ## Source-valid starting point
 
