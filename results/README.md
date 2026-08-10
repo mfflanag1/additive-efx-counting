@@ -825,6 +825,14 @@ both encodings.
   without assuming a chordless champion graph, so a globally lex-maximal
   noncomplete state cannot have exactly two nonsingleton bundles. This is a
   theorem for one branch of the BCFF normal form, not general additive EFX.
+- [`THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md`](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md)
+  — exact eight-class census for selected cycles with three nonsingleton
+  bundles, plus a cap-free reduction of the length-two class to a
+  three-packet champion flower. An exact positive nondegenerate local profile
+  shows why the singleton return lemma cannot be extended to the external
+  large owner. An exhaustive 864-cell cover then closes half the cells
+  directly and reduces every other cell to one low-payment wall for `r` or
+  `q`. The flower remains an open topology, not a general-EFX proof.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

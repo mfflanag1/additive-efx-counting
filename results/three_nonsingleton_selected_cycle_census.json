@@ -1,0 +1,160 @@
+{
+  "claim_boundary": "directed-cycle census up to rotation; it classifies selected simple cycles but proves no EFX escape",
+  "class_count": 8,
+  "classes": [
+    {
+      "cycle_length": 2,
+      "cycle_pattern": "GG",
+      "external_types": [
+        "L",
+        "S"
+      ],
+      "genuine_count": 2,
+      "labeled_configuration_count": 3,
+      "representative_cycle": [
+        "a",
+        "b"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "cycle_length": 3,
+      "cycle_pattern": "GGL",
+      "external_types": [
+        "S"
+      ],
+      "genuine_count": 2,
+      "labeled_configuration_count": 6,
+      "representative_cycle": [
+        "a",
+        "b",
+        "c"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "cycle_length": 3,
+      "cycle_pattern": "GGS",
+      "external_types": [
+        "L"
+      ],
+      "genuine_count": 2,
+      "labeled_configuration_count": 6,
+      "representative_cycle": [
+        "a",
+        "b",
+        "s"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "cycle_length": 3,
+      "cycle_pattern": "GGG",
+      "external_types": [
+        "S"
+      ],
+      "genuine_count": 3,
+      "labeled_configuration_count": 2,
+      "representative_cycle": [
+        "a",
+        "b",
+        "c"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    {
+      "cycle_length": 4,
+      "cycle_pattern": "GGLS",
+      "external_types": [],
+      "genuine_count": 2,
+      "labeled_configuration_count": 6,
+      "representative_cycle": [
+        "a",
+        "b",
+        "c",
+        "s"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "cycle_length": 4,
+      "cycle_pattern": "GGSL",
+      "external_types": [],
+      "genuine_count": 2,
+      "labeled_configuration_count": 6,
+      "representative_cycle": [
+        "a",
+        "b",
+        "c",
+        "s"
+      ],
+      "representative_genuine_targets": [
+        "b",
+        "c"
+      ]
+    },
+    {
+      "cycle_length": 4,
+      "cycle_pattern": "GLGS",
+      "external_types": [],
+      "genuine_count": 2,
+      "labeled_configuration_count": 6,
+      "representative_cycle": [
+        "a",
+        "b",
+        "c",
+        "s"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "c"
+      ]
+    },
+    {
+      "cycle_length": 4,
+      "cycle_pattern": "GGGS",
+      "external_types": [],
+      "genuine_count": 3,
+      "labeled_configuration_count": 6,
+      "representative_cycle": [
+        "a",
+        "b",
+        "c",
+        "s"
+      ],
+      "representative_genuine_targets": [
+        "a",
+        "b",
+        "c"
+      ]
+    }
+  ],
+  "labeled_configuration_count": 41,
+  "notation": {
+    "G": "nonsingleton target of a genuine selected champion edge",
+    "L": "nonsingleton target of an ordinary selected envy edge",
+    "S": "the singleton target of an ordinary selected envy edge"
+  },
+  "provenance": {
+    "script": "tracks/parkability/decide_three_nonsingleton_cycle_census.py",
+    "script_sha256": "8e1411a2412d1aeddd03a6e23ee18439fb5d0e2109c8582e58f8cbfb5c4f2069"
+  },
+  "schema": "three-nonsingleton-selected-cycle-census-v1",
+  "status": "EXHAUSTIVE"
+}

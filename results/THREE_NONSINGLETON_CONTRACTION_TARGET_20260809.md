@@ -2,7 +2,8 @@
 
 **Date:** 2026-08-09
 
-**Status:** proposed next general-EFX gate; no theorem is claimed here
+**Status:** active general-EFX gate; the eight selected-cycle classes are
+now exhaustive and the length-two class is reduced to a three-packet flower
 
 ## Target theorem
 
@@ -15,14 +16,13 @@ Prove that the selected basic-cycle structure yields at least one of:
 
 1. a complete EFX allocation;
 2. a partial EFX allocation with strictly larger fixed-order lexicographic
-   potential; or
-3. a partial EFX allocation with the same lexicographic potential and at
-   most two nonsingleton bundles.
+   potential, preferably one with at most two nonsingleton bundles.
 
 The first outcome proves existence for the instance, the second contradicts
-global maximality, and the third contradicts the proved exactly-two-
-nonsingleton composition theorem after selecting, among lexicographic
-maxima, a state with the fewest nonsingleton bundles.
+global maximality. There is no separate equal-potential contraction outcome:
+nondegeneracy makes every agent's bundle utility injective, so equality of
+the full ordered utility vector forces every assigned bundle to remain the
+same and cannot reduce the number of nonsingletons.
 
 ## Why this is the highest-leverage next gate
 
@@ -52,15 +52,23 @@ precise obstruction preventing that contraction.
 
 ## First bounded milestone
 
-Build the selected-cycle census for three genuine target bundles. For each
-cycle class, record whether an existing length-two, length-three, adjacent,
-or alternating lemma applies after contracting one ordinary edge. The first
-research output should be either:
+The first milestone is complete. The exact census has eight directed classes,
+and none is a direct instance of an exactly-two-nonsingleton theorem. The
+length-two `GG` class now reduces cap-free to a three-packet flower: the
+external large owner has no incoming ordinary envy edge and therefore has a
+nonself genuine incoming `f`-champion arm. See
+[`THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md`](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
 
-- a proof that every class contracts to the exactly-two theorem; or
-- one minimal named residual topology, together with an exact countermodel
-  refuting the most natural contraction and a sharply stated replacement
-  lemma.
+The length-two flower is now further reduced by an exhaustive common-safe
+cover theorem. All 864 source/priority cells have either a direct improving
+cover or a cover with one unpaid mutual-cycle owner placed after a strict
+improver. The only residual is the strict scalar failure of that owner's
+external-bottom payment. The next research output should be either:
+
+- a cap-free desired-subset/PI routing that contradicts every low-payment
+  wall and closes the flower; or
+- one exact aggregate countermodel to that routing, followed by the smallest
+  corrected two-cover potential that survives the model.
 
 ## Claim boundary
 

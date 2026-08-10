@@ -1,0 +1,241 @@
+{
+  "allocation": {
+    "c": [
+      "c1",
+      "c2"
+    ],
+    "q": [
+      "bq",
+      "tq"
+    ],
+    "r": [
+      "br",
+      "tr"
+    ],
+    "s": [
+      "z"
+    ]
+  },
+  "checks": {
+    "c_is_sole_envier_of_singleton": true,
+    "charity_unenvied": true,
+    "external_c_to_q": true,
+    "external_c_to_r": true,
+    "external_large_c_has_no_incoming_envy": true,
+    "genuine_q_to_r": true,
+    "genuine_r_to_c": true,
+    "genuine_r_to_q": true,
+    "nondegenerate_rows": true,
+    "partial_efx": true,
+    "positive": true
+  },
+  "claim_boundary": "exact positive nondegenerate partial-EFX local profile refuting only the shortcut that the external nonsingleton owner in the length-two class must have an incoming ordinary envy edge; it is not asserted globally maximal and is not an EFX counterexample",
+  "displayed_edges": {
+    "c_generalized_champions_q_with_desired_set": [
+      "br",
+      "tq"
+    ],
+    "c_generalized_champions_r_with_desired_set": [
+      "bq",
+      "tr"
+    ],
+    "ordinary_envy": "c -> s",
+    "q_f_champions_r_with_desired_set": [
+      "f",
+      "tr"
+    ],
+    "r_f_champions_c_with_desired_set": [
+      "c1",
+      "f"
+    ],
+    "r_f_champions_q_with_desired_set": [
+      "f",
+      "tq"
+    ]
+  },
+  "full_good_level_improvement_census": {
+    "complete_efx_lex_improvement_count": 152,
+    "efx_lex_improvement_count": 1038,
+    "minimum_moved_goods": 2,
+    "minimum_nonsingleton_bundles": 1,
+    "nearest_improvements": [
+      {
+        "allocation": {
+          "c": [
+            "br",
+            "c2"
+          ],
+          "q": [
+            "bq",
+            "tq"
+          ],
+          "r": [
+            "c1",
+            "tr"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "moved_goods": 2,
+        "nonsingleton_bundles": 3,
+        "unallocated": [
+          "f"
+        ],
+        "utility_vector": [
+          12305,
+          10400,
+          10280,
+          10368
+        ]
+      },
+      {
+        "allocation": {
+          "c": [
+            "c1",
+            "c2"
+          ],
+          "q": [
+            "bq",
+            "tr"
+          ],
+          "r": [
+            "br",
+            "tq"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "moved_goods": 2,
+        "nonsingleton_bundles": 3,
+        "unallocated": [
+          "f"
+        ],
+        "utility_vector": [
+          12294,
+          12418,
+          10376,
+          10368
+        ]
+      },
+      {
+        "allocation": {
+          "c": [
+            "c2",
+            "tr"
+          ],
+          "q": [
+            "bq",
+            "tq"
+          ],
+          "r": [
+            "br",
+            "c1"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "moved_goods": 2,
+        "nonsingleton_bundles": 3,
+        "unallocated": [
+          "f"
+        ],
+        "utility_vector": [
+          12306,
+          10400,
+          11276,
+          10368
+        ]
+      },
+      {
+        "allocation": {
+          "c": [
+            "c1",
+            "c2"
+          ],
+          "q": [
+            "bq"
+          ],
+          "r": [
+            "br",
+            "tq"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "moved_goods": 2,
+        "nonsingleton_bundles": 2,
+        "unallocated": [
+          "f",
+          "tr"
+        ],
+        "utility_vector": [
+          12294,
+          5248,
+          10376,
+          10368
+        ]
+      }
+    ],
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_three_nonsingleton_length_two_return_wall.py",
+    "script_sha256": "cc04d7b3714c4cb503dccbe9ca26ccc512bd551da1d98653395e684de4935b12"
+  },
+  "schema": "three-nonsingleton-length-two-return-wall-v1",
+  "status": "VERIFIED",
+  "unallocated": [
+    "f"
+  ],
+  "values": {
+    "c": {
+      "bq": 5136,
+      "br": 5152,
+      "c1": 5248,
+      "c2": 5128,
+      "f": 3074,
+      "tq": 6145,
+      "tr": 6148,
+      "z": 12352
+    },
+    "q": {
+      "bq": 5248,
+      "br": 1032,
+      "c1": 3073,
+      "c2": 3076,
+      "f": 4160,
+      "tq": 5152,
+      "tr": 7170,
+      "z": 8208
+    },
+    "r": {
+      "bq": 1032,
+      "br": 5122,
+      "c1": 7184,
+      "c2": 1056,
+      "f": 4224,
+      "tq": 7172,
+      "tr": 5121,
+      "z": 8256
+    },
+    "s": {
+      "bq": 3076,
+      "br": 3073,
+      "c1": 3104,
+      "c2": 3074,
+      "f": 2064,
+      "tq": 4160,
+      "tr": 4104,
+      "z": 10368
+    }
+  }
+}
