@@ -66,6 +66,7 @@ def checked_mask(
     aq_support: str,
     ar_support: str,
     empty_rest: tuple[str, ...],
+    forbid_single_replacement_owner: str | None = None,
 ):
     present = present_components(aq_support, ar_support, empty_rest)
     total_component = {
@@ -121,6 +122,17 @@ def checked_mask(
     for bundle, source in desired.items():
         solver.add(total[bundle, source] > base[source])
 
+    if forbid_single_replacement_owner is not None:
+        owners = AGENTS if forbid_single_replacement_owner == "all" else (forbid_single_replacement_owner,)
+        for owner in owners:
+            solver.add(
+                total_component["f", owner]
+                <= minimum([
+                    minimum_component[component, owner]
+                    for component in bundle_parts[BASE[owner]]
+                ])
+            )
+
     covers = candidate_covers(
         arm_source, "c", left_bottom_source, right_bottom_source, order
     )
@@ -138,6 +150,7 @@ def checked_mask(
         "aq_support": aq_support,
         "ar_support": ar_support,
         "empty_rest": list(empty_rest),
+        "forbid_single_replacement_owner": forbid_single_replacement_owner,
         "status": "IMPOSSIBLE" if checked == z3.unsat else str(checked),
     }
 

@@ -119,6 +119,24 @@ cycle owner `q`. Hence the next selector must range across all nonsingleton
 hubs and prove a cross-owner eligibility dichotomy; flower championship does
 not privilege `c` in its own valuation row.
 
+That endpoint-selection gate is now closed in a simpler form.  In every hard
+packet-minimum flower cell, the later owner on the mutual `r,q` champion
+cycle values `f` above at least one good of her current bundle.  Replacing
+that good by `f` is therefore an improving singleton packet-for-charity
+operation.  The analytic proof uses three lex-valid common-safe covers; an
+exact arbitrary-packet audit checks all 1,020 surviving source/support/order
+cells, with the later owner individually forced in every cell.  See
+[`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md).
+
+The live flower gate is no longer selection of a first packet.  It is the
+termination of the dependency exposed by the packet-for-charity obstruction
+lemma: an EFX replacement closes immediately, a target wall supplies a
+generalized `({f}|{g})` edge into the later mutual owner, and a charity wall
+has the opposite strict polarity.  Exact adversarial profiles realize only
+the open-source response branch after all one-leaf completions are tested,
+so the next theorem must grow that released-good dependency to an EFX
+allocation or a release-compatible PI edge set.
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

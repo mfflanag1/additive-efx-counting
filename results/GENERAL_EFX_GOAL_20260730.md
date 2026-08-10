@@ -80,6 +80,16 @@ can make every `c`-hub two-leaf packet ineligible while a mutual-cycle owner
 over all three nonsingleton hubs and derive either an eligible EFX/response-
 matching packet or a simultaneous low-floater inequality contradiction.
 
+The all-hub eligibility target has now been superseded by an analytic
+later-owner selector.  Across every one of the 1,020 hard packet-minimum
+flower cells, the later owner on the mutual champion cycle values `f` above
+some good of her bundle, so an improving singleton packet-for-charity start
+always exists.  The exhaustive cap-free replay forces `q` in all 501 cells
+with `r` earlier and forces `r` in all 519 cells with `q` earlier.  The live
+gap is now only dependency termination after that selected replacement, not
+endpoint selection.  See
+[FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

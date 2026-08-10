@@ -14,6 +14,15 @@ try:
         run as run_leaf_mutual_gate,
     )
     from .decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
+    from .decide_three_nonsingleton_flower_single_replacement_selector_family import (
+        run as run_single_replacement_selector,
+    )
+    from .audit_full_capture_single_replacement_selector import (
+        run as run_single_replacement_scalar_audit,
+    )
+    from .analyze_single_replacement_dependency_census import (
+        run as run_single_replacement_census,
+    )
 except ImportError:
     from analyze_two_leaf_hub_split_census import run as run_hub_split_census
     from audit_charity_rooted_hub_split import run as run_hub_split_audit
@@ -24,6 +33,15 @@ except ImportError:
         run as run_leaf_mutual_gate,
     )
     from decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
+    from decide_three_nonsingleton_flower_single_replacement_selector_family import (
+        run as run_single_replacement_selector,
+    )
+    from audit_full_capture_single_replacement_selector import (
+        run as run_single_replacement_scalar_audit,
+    )
+    from analyze_single_replacement_dependency_census import (
+        run as run_single_replacement_census,
+    )
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -303,6 +321,48 @@ def main() -> None:
     assert "fully captures `X_q`" in theorem
     assert "5,124 of 6,144" in theorem
     assert "component-growth lemma" in theorem
+
+    singleton_selector = json.loads(
+        (
+            ROOT
+            / "results"
+            / "three_nonsingleton_flower_single_replacement_selector_family_audit.json"
+        ).read_text()
+    )
+    assert run_single_replacement_selector() == singleton_selector
+    assert singleton_selector["status"] == "ALL_FORCED"
+    assert singleton_selector["hard_cell_count"] == 1020
+    assert singleton_selector["counts"] == {"IMPOSSIBLE": 1020}
+    assert singleton_selector["disjunctive_only_count"] == 0
+    assert singleton_selector["individually_forced_owner_counts"] == {
+        "q": 622,
+        "r": 519,
+    }
+
+    singleton_scalar = json.loads(
+        (ROOT / "results" / "full_capture_single_replacement_selector_audit.json").read_text()
+    )
+    assert run_single_replacement_scalar_audit() == singleton_scalar
+    assert singleton_scalar["status"] == "ALL_FORCED"
+    assert len(singleton_scalar["records"]) == 2
+    singleton_theorem = (
+        ROOT
+        / "results"
+        / "FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md"
+    ).read_text()
+    assert "later owner on the mutual `r,q` champion" in singleton_theorem
+    assert "1,020" in singleton_theorem
+
+    replacement_census_path = (
+        ROOT / "results" / "three_nonsingleton_flower_single_replacement_arm_response_census.json"
+    )
+    replacement_census = json.loads(replacement_census_path.read_text())
+    assert run_single_replacement_census(arm_response_gate_path, "q") == replacement_census
+    assert replacement_census["eligible_count"] == 2
+    assert replacement_census["counts"] == {
+        "one_leaf_open_response_source": 6,
+        "target_dependency": 2,
+    }
     print("three-nonsingleton flower packet-minimum tests passed")
 
 

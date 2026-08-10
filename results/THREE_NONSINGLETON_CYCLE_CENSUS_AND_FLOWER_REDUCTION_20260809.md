@@ -436,6 +436,15 @@ Together with the variable-charity hybrid-wall theorem, this reduces the
 live gap to selecting a first improving packet/component from the flower's
 champion data.
 
+The first-component selection step is now solved.  In every hard
+packet-minimum cell, the later mutual-cycle owner values `f` above an
+individual good of her bundle.  The resulting singleton
+packet-for-charity replacement is improving, and all 1,020 hard cells are
+covered by the same three-cover wall-cycle argument and its exact replay.
+The remaining gap is terminating the target/charity dependency generated
+when that selected replacement is not EFX; see
+[`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md).
+
 The exact model and nearest three-good escape establishing this correction
 are documented in
 [`FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md`](FULL_CAPTURE_SWAP_PI_GATE_REFUTATION_20260810.md).

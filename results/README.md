@@ -869,6 +869,15 @@ both encodings.
   An exact strengthening blocks every such packet replacement and survives;
   its nearest escapes are three-edge hub-splitting components, identifying
   packet partition among multiple recipients as the next primitive.
+- [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
+  — cap-free analytic selection of a first improving packet-for-charity
+  operation in every hard three-nonsingleton flower cell. The later owner on
+  the mutual champion cycle must value `f` above some good of her bundle;
+  otherwise three lex-valid common-safe cover walls form an impossible
+  strict cycle. An exact packet-total/minimum replay checks all 1,020 hard
+  source/support/order cells under two Z3 versions. This closes first-packet
+  selection, but the target/charity wall dependency still needs a termination
+  theorem before the `GG` flower is closed.
 - [`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
   — cap-free classification of every EFX failure after an improving owner
   replaces a packet by the charity good and partitions the released packet

@@ -1,0 +1,221 @@
+{
+  "claim_boundary": "exact dependency and one-leaf completion census for improving singleton packet-for-charity replacements in one frozen bounded flower profile; it does not prove cap-free dependency termination",
+  "counts": {
+    "one_leaf_open_response_source": 6,
+    "target_dependency": 2
+  },
+  "eligible_count": 2,
+  "hub": "q",
+  "integer_scale": 2048,
+  "provenance": {
+    "script": "tracks/parkability/analyze_single_replacement_dependency_census.py",
+    "script_sha256": "b1fa13e414165beccb7663b087ec537bb935a420c03f7cea610d8fd45687b742",
+    "witness": "results/three_nonsingleton_flower_full_capture_arm_response_gate.json",
+    "witness_sha256": "754852dda55f1e4bbe46334433e7cfd97eb80591909296d2acbc4eec87f6d32b"
+  },
+  "records": [
+    {
+      "charity_wall_observers": [],
+      "hub_target_champion_sources": [
+        "r",
+        "s"
+      ],
+      "one_leaf_completions": [
+        {
+          "champion_sources": {
+            "q": [
+              "r",
+              "s"
+            ],
+            "r": [
+              "c",
+              "s"
+            ]
+          },
+          "classification": "open_response_source",
+          "leaf": "r",
+          "wall_observers": {
+            "c": [],
+            "q": [
+              "s"
+            ],
+            "r": [
+              "c",
+              "s"
+            ],
+            "s": []
+          }
+        },
+        {
+          "champion_sources": {
+            "c": [
+              "c",
+              "s"
+            ],
+            "q": [
+              "r",
+              "s"
+            ]
+          },
+          "classification": "open_response_source",
+          "leaf": "c",
+          "wall_observers": {
+            "c": [
+              "s"
+            ],
+            "q": [
+              "r",
+              "s"
+            ],
+            "r": [],
+            "s": []
+          }
+        },
+        {
+          "champion_sources": {
+            "q": [
+              "r",
+              "s"
+            ],
+            "s": [
+              "c"
+            ]
+          },
+          "classification": "open_response_source",
+          "leaf": "s",
+          "wall_observers": {
+            "c": [],
+            "q": [
+              "r",
+              "s"
+            ],
+            "r": [],
+            "s": [
+              "c"
+            ]
+          }
+        }
+      ],
+      "partial_classification": "target_dependency",
+      "released": "aq_tq_1",
+      "target_wall_observers": {
+        "c": [],
+        "q": [
+          "r",
+          "s"
+        ],
+        "r": [],
+        "s": []
+      }
+    },
+    {
+      "charity_wall_observers": [],
+      "hub_target_champion_sources": [
+        "r",
+        "s"
+      ],
+      "one_leaf_completions": [
+        {
+          "champion_sources": {
+            "q": [
+              "r",
+              "s"
+            ],
+            "r": [
+              "c",
+              "s"
+            ]
+          },
+          "classification": "open_response_source",
+          "leaf": "r",
+          "wall_observers": {
+            "c": [],
+            "q": [
+              "s"
+            ],
+            "r": [
+              "c",
+              "s"
+            ],
+            "s": []
+          }
+        },
+        {
+          "champion_sources": {
+            "c": [
+              "c",
+              "s"
+            ],
+            "q": [
+              "r",
+              "s"
+            ]
+          },
+          "classification": "open_response_source",
+          "leaf": "c",
+          "wall_observers": {
+            "c": [
+              "r",
+              "s"
+            ],
+            "q": [
+              "r",
+              "s"
+            ],
+            "r": [],
+            "s": []
+          }
+        },
+        {
+          "champion_sources": {
+            "q": [
+              "r",
+              "s"
+            ],
+            "s": [
+              "c"
+            ]
+          },
+          "classification": "open_response_source",
+          "leaf": "s",
+          "wall_observers": {
+            "c": [],
+            "q": [
+              "r",
+              "s"
+            ],
+            "r": [],
+            "s": [
+              "c"
+            ]
+          }
+        }
+      ],
+      "partial_classification": "target_dependency",
+      "released": "ar_bq_1",
+      "target_wall_observers": {
+        "c": [],
+        "q": [
+          "r",
+          "s"
+        ],
+        "r": [],
+        "s": []
+      }
+    }
+  ],
+  "schema": "single-replacement-dependency-census-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "CLASSIFIED"
+}

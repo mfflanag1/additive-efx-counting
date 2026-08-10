@@ -1,0 +1,20 @@
+{
+  "claim_boundary": "aggregate QF_LRA audit: if q has no improving single-good packet-for-charity replacement, D_q desire puts X_r above the D_r tail, making the three remaining q-unpaid cover walls inconsistent; wall-to-component routing after selecting the good is separate",
+  "provenance": {
+    "script": "tracks/parkability/audit_full_capture_single_replacement_selector.py",
+    "script_sha256": "8e702b24d4e57cd386de9d80da75a25842b96e01d340ab2da74ccd24726a2351",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "no_single_replacement_and_dual_desire_force_xr_over_dr_tail",
+      "status": "unsat"
+    },
+    {
+      "claim": "three_q_unpaid_cover_walls_are_inconsistent",
+      "status": "unsat"
+    }
+  ],
+  "schema": "full-capture-single-replacement-selector-audit-v1",
+  "status": "ALL_FORCED"
+}
