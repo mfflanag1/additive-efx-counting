@@ -116,20 +116,97 @@ cycle.  If `J` is empty, additivity gives
 Hence neither surviving wall is a diffuse observer failure: it is a
 genuinely cross-packet desired set using goods from both large bundles.
 
+## Joint-suffix escape
+
+The split-profile escape has an arbitrary-packet formulation.  Fix any
+good `j in T_r` and any partition
+
+\[
+J=J_q\mathbin{\dot\cup}J_r.
+\tag{11}
+\]
+
+Define
+
+\[
+\begin{aligned}
+P_j&=\{x,j\},\\
+Q_j&=H+J_q+B_q,\\
+R_j&=(T_r\setminus\{j\})+J_r+(T_q\setminus H).
+\end{aligned}
+\tag{12}
+\]
+
+These three bundles and `{y}` are pairwise disjoint.  Suppose `Q_j` and
+`R_j` are common-safe and
+
+\[
+v_q(Q_j)\ge v_q(x),\qquad v_r(R_j)\ge b_r.
+\tag{13}
+\]
+
+Then
+
+\[
+(Y_p,Y_r,Y_q,Y_s)=(P_j,R_j,Q_j,\{y\})
+\tag{14}
+\]
+
+is EFX and lexicographically improves both orders in (2).
+
+To prove this, positivity gives `v_p(P_j)>v_p(x)=b_p`.  Every deletion of
+`P_j` leaves `{x}` or `{j}`.  Agent `q` is protected by the first inequality
+in (13), and `v_q(j)<=b_q<v_q(x)` by base EFX.  Agent `r` cannot envy `{x}`:
+otherwise `r -> p -f-> r` is a PI cycle.  Agent `s` cannot envy `{x}`:
+otherwise `s -> p -f-> r -> s` is a PI cycle.  Both agents value `{j}` at
+most their base utilities by base EFX.  Thus `P_j` is safe for every new
+recipient.  Common safety of `Q_j,R_j`, together with (13), protects all
+remaining comparisons.  Agent `s` is fixed, `r` is weakly preserved, and
+`p` strictly improves, proving the lexicographic claim.
+
+Ignoring the common-safety selector for the moment, the two recipient
+conditions in (13) are exactly a two-demand partition of `J`.  Put
+
+\[
+\delta_q^j=v_q(x)-v_q(H+B_q),\qquad
+\delta_r^j=b_r-v_r((T_r\setminus\{j\})+(T_q\setminus H)).
+\tag{15}
+\]
+
+Then (13) is equivalent to
+
+\[
+v_q(J_q)\ge\delta_q^j,
+\qquad
+v_r(J_r)\ge\delta_r^j.
+\tag{16}
+\]
+
+For each `j`, fractional knapsack decides (16) with at most one split good.
+Thus failure of the joint-suffix escape has only two possible sources: a
+scalar `q/r` price separator on `J`, or one indivisible boundary good,
+together with failure of common safety after the corresponding rounding.
+It is not an unrestricted three-bundle packing problem.
+
+The minimum escape in the frozen `(2,2,2,2)` dual-mode counterprofile is an
+instance of (14): `j=tr1`, `J_q={br1}`, `J_r={br0}`, and `H={tq1}`.  This
+explains that counterprofile but is not used as evidence that (16) always
+has an integral solution.
+
 ## Sharper `q`-source bottleneck
 
 Suppose `A=J+H` is sourced by `q`.  Since `v_q(A)>b_q`, additivity yields
 
 \[
 v_q(J)>v_q(B_q)+v_q(T_q\setminus H)>v_q(B_q).
-\tag{11}
+\tag{17}
 \]
 
 Moreover global maximality forces
 
 \[
 v_r(J)\ge v_r(B_q).
-\tag{12}
+\tag{18}
 \]
 
 Indeed, if `v_r(B_q)>v_r(J)`, the set
@@ -152,7 +229,7 @@ q\xrightarrow{B_q\mid J}r\xrightarrow f q.
 
 The incoming sets `B_q` and `{f}` are disjoint, and `B_q` is released by
 the selected edge into `q`.  Every possible source is therefore
-impossible, proving (12).
+impossible, proving (18).
 
 ## Exact theorem boundary
 
@@ -162,14 +239,14 @@ one of exactly two objects:
 1. a `p`-desired cross-packet set `A=J+H` satisfying (7), with nonempty
    `J subseteq B_r` and `H subseteq T_q`; or
 2. a `q`-desired cross-packet set with the same geometry and the joint
-   bottleneck (11)--(12).
+   bottleneck (17)--(18).
 
 This reduction does not route those two objects.  In particular, it does
 not claim the early-`r` orders or the full length-three topology are closed.
-It supplies the exact interface for a dual-base operation: preserve `s` at
-`{y}` and pay `r` at `b_r`, or transfer `{y}` to `r` while compensating
-`s`, using a cross-packet boundary whose `r`-value is strictly below
-`b_r`.
+It supplies two exact interfaces for a dual-base operation: find the
+joint-suffix partition (16), preserving `s` and `r` before improving `p`,
+or transfer `{y}` to `r` while compensating `s`, using a cross-packet
+boundary whose `r`-value is strictly below `b_r`.
 
 The displayed scalar implications are replayed independently in
 [`length_three_early_r_dual_base_scalar_audit.json`](length_three_early_r_dual_base_scalar_audit.json).
