@@ -2,17 +2,17 @@
 
 **Date:** 2026-08-09
 
-**Status:** conditional cap-free composition theorem; the length-three
-external-`q` payment gate remains open
+**Status:** cap-free composition theorem for the exactly-two-nonsingleton
+branch; independent referee audit remains required
 
-## Conditional theorem
+## Theorem
 
 Consider four positive, nondegenerate additive agents.  Let `X` be a
 globally lexicographically maximal noncomplete partial EFX allocation in the
 BCFF one-charity normal form, and suppose exactly two allocated bundles are
 nonsingletons.
 
-Assume the following four cycle-class statements:
+The following four proved cycle-class statements apply:
 
 1. the length-two trapped-source return theorem;
 2. the cap-free length-three global-lex escape theorem for every external
@@ -20,9 +20,8 @@ Assume the following four cycle-class statements:
 3. the adjacent-large length-four global-lex escape theorem; and
 4. the alternating length-four global-lex escape theorem.
 
-Then `X` cannot exist.  Equivalently, conditional on item 2, a globally
-maximal noncomplete four-agent EFX state cannot have exactly two
-nonsingleton bundles.
+Then `X` cannot exist.  Equivalently, a globally maximal noncomplete
+four-agent EFX state cannot have exactly two nonsingleton bundles.
 
 ## Selected-cycle classification
 
@@ -55,7 +54,7 @@ the two nonsingleton bundles.  Its length is two, three, or four:
 
 These possibilities are exhaustive up to relabeling.  Applying the
 corresponding item 1--4 contradicts global maximality in every case, proving
-the conditional theorem.
+the theorem.
 
 ## Why extra edges do not create a fifth class
 
@@ -76,7 +75,7 @@ and transported order.
 | class | authoritative artifact | current boundary |
 |---|---|---|
 | length two | [`TRAPPED_SOURCE_RETURN_LENGTH_TWO_CLOSURE_THEOREM.md`](TRAPPED_SOURCE_RETURN_LENGTH_TWO_CLOSURE_THEOREM.md) | analytic, conditional on the BCFF Theorem 3.16 external-bottom-edge interface; independent review still required |
-| length three | [`LENGTH_THREE_GLOBAL_LEX_TARGET.md`](LENGTH_THREE_GLOBAL_LEX_TARGET.md) | incomplete; the external-`q` augmented-root compensation remains |
+| length three | [`LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md`](LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md) and [`LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md`](LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md) | all 24 priority orders and all three external singleton sources closed cap-free; exact packet audit replays all 24 indexed cases |
 | adjacent length four | [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md) | all 24 orders closed cap-free |
 | alternating length four | [`ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md`](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md) | all 24 orders closed cap-free |
 
@@ -85,15 +84,13 @@ it had been cited by the roadmap but was absent from the repository history.
 Capturing it here repairs that provenance gap.  Its use of BCFF Theorem 3.16
 is the most important external interface to audit independently.
 
-## Current unconditional consequence
+## Current consequence and boundary
 
-The composition does not yet establish the exactly-two-nonsingleton theorem,
-because the length-three theorem is not complete.  It does prove that no
-other cycle topology can survive: any counterexample in the exactly-two
-nonsingleton reduction must realize the remaining length-three payment
-obstruction or invalidate one of the stated BCFF interfaces.
-
-Even after the length-three gate closes, this gives only the
-exactly-two-nonsingleton theorem.  Complete four-agent additive EFX will
-still require contraction/augmentation theorems for states with three and
-four nonsingleton bundles, followed by the nonnegative/tie wrapper.
+This establishes the exactly-two-nonsingleton theorem within the positive,
+nondegenerate BCFF one-charity normal form.  It is not a proof of complete
+four-agent additive EFX.  That result still requires
+contraction/augmentation theorems for states with three and four
+nonsingleton bundles, followed by the nonnegative/tie wrapper.  The
+length-two BCFF interface and the new length-three composition should be
+checked by an independent human referee before either is used as a published
+lemma.

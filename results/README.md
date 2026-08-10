@@ -820,10 +820,11 @@ both encodings.
   recovered from the original research worktree and now makes its BCFF
   Theorem 3.16 internal-to-external reduction explicit.
 - [`TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md`](TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md)
-  — conditional composition of the length-two, length-three, adjacent, and
-  alternating selected-cycle classes. It proves that the four classes are
-  exhaustive without assuming a chordless champion graph. The theorem is
-  still conditional on closing the remaining length-three payment gate.
+  — cap-free composition of the length-two, length-three, adjacent, and
+  alternating selected-cycle classes. The four classes are exhaustive
+  without assuming a chordless champion graph, so a globally lex-maximal
+  noncomplete state cannot have exactly two nonsingleton bundles. This is a
+  theorem for one branch of the BCFF normal form, not general additive EFX.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

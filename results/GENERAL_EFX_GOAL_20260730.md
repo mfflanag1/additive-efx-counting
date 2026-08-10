@@ -20,6 +20,17 @@ and
 This is a genuine residual-topology theorem, not a proof of general additive
 EFX; states with more nonsingleton bundles remain outside it.
 
+**August 9 composition consequence:** combining the new length-three theorem
+with the proved length-two, adjacent length-four, and alternating length-four
+cycle classes exhausts every selected simple cycle when exactly two allocated
+bundles are nonsingletons. Therefore a globally lexicographically maximal
+noncomplete state in the positive, nondegenerate BCFF one-charity normal form
+cannot have exactly two nonsingleton bundles. See
+[TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md](TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md).
+The shortest next frontier is the exactly-three-nonsingleton branch, where
+only one singleton anchor remains; the four-nonsingleton branch and the
+nonnegative/tie wrapper remain later gates.
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item
