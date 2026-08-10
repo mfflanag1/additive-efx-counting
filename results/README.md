@@ -720,6 +720,14 @@ both encodings.
   `p` coordinate; every augmentation failure containing the pivot is either
   an ordinary PI cycle or a champion handoff. Only a compatible residual
   payment remains.
+- [`LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md`](LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md)
+  — cap-free routing of every minimal-payment source for an externally safe
+  augmented root. A `p` source closes directly; a `q` or `s` source uses
+  the appropriate singleton plus the least-`p` root good to compensate
+  `r`. Only failure of that explicit two-good compensation remains.
+- [`length_three_augmented_root_payment_audit.json`](length_three_augmented_root_payment_audit.json)
+  — exact five-case QF_LRA replay of the candidate-allocation algebra in
+  the augmented-root payment reduction.
 - [`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json)
   — exact QF_LRA replay of the owner/selected-edge top ordering, the failed-
   fallback charity-versus-pivot inequality, and the strict augmented-root

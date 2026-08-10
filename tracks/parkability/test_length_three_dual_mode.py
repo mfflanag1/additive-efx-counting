@@ -23,6 +23,7 @@ try:
     from .decide_length_three_ap_suffix_atom import run as run_ap_suffix_atom
     from .decide_length_three_canonical_packet import run as run_canonical_packet
     from .decide_length_three_parallel_pivot import run as run_parallel_pivot
+    from .decide_length_three_augmented_payment import run as run_augmented_payment
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -39,6 +40,7 @@ except ImportError:
     from decide_length_three_ap_suffix_atom import run as run_ap_suffix_atom
     from decide_length_three_canonical_packet import run as run_canonical_packet
     from decide_length_three_parallel_pivot import run as run_parallel_pivot
+    from decide_length_three_augmented_payment import run as run_augmented_payment
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -129,6 +131,9 @@ def test_atomic_decisions():
     pivot = run_parallel_pivot()
     assert pivot["status"] == "ALL_FORCED"
     assert len(pivot["records"]) == 4
+    payment = run_augmented_payment()
+    assert payment["status"] == "ALL_FORCED"
+    assert len(payment["records"]) == 5
 
 
 def test_split_refutation():
