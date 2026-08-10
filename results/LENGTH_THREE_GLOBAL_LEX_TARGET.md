@@ -2,10 +2,10 @@
 
 **Date:** 2026-08-09
 
-**Status:** BCFF basic-cycle classification reconstructed; the seven
-`p/q`-before-`r` residual types admit exact tail-mode reduction, with an
-asymmetric hybrid repair when `a=r`; the two `r`-before-`p,q` types retain
-the dual-base overlap gate; final source-sensitive routing remains open
+**Status:** BCFF basic-cycle classification reconstructed; the external-`p`
+row and the two external-`r`, `p`-before-`r` rows are closed cap-free by a
+canonical minimal-payment dichotomy; four external-`q` rows and two
+external-`r` dual-base rows remain; final source-sensitive routing is open
 
 ## Source-valid starting point
 
@@ -459,8 +459,8 @@ Combining the easy-priority lemma, the all-source `W` return, and the rotated
 
 | source of `a -> s` | priority orders not yet closed |
 |---|---|
-| `a=p` | `(s,p,r,q)` |
-| `a=r` | `(p,s,r,q)`, `(s,p,r,q)`, `(s,r,p,q)`, `(s,r,q,p)` |
+| `a=p` | closed by the canonical escape lemma below |
+| `a=r` | `(s,r,p,q)`, `(s,r,q,p)`; the two `p`-before-`r` rows are now closed |
 | `a=q` | `(p,r,q,s)`, `(p,r,s,q)`, `(p,s,r,q)`, `(s,p,r,q)` |
 
 For `a=p` or `a=q`, the rotated theorem closes every order beginning with
@@ -468,7 +468,7 @@ For `a=p` or `a=q`, the rotated theorem closes every order beginning with
 which `q` precedes `r`.  For `a=r`, direct transfer of `y` closes `r`-first
 and `(p,r,...)` orders, while the `W` theorem again closes `q` before `r`.
 
-In every row above, a hypothetical failure forces the `W` extraction onto
+In every still-open row above, a hypothetical failure forces the `W` extraction onto
 its `q`-source handoff while `r` precedes `q`.  In the `(s,p,r,q)` column it
 also forces the rotated `U` extraction away from its `p`, `q`, and `s`
 desired-source outputs.  This paired `q`-source/`r`-source wall—not the
@@ -1470,6 +1470,47 @@ is adversarial evidence for the global potential, not a proof of its final
 uncrossing step.
 
 ### Lexicographic tail-mode extremal reduction
+
+#### Canonical closure of the external-`p` row
+
+The sole `a=p` order `(s,p,r,q)` is now closed without an extremal pair.
+Take the structural pair `(E,{x})`, choose a minimal `r`-payment at
+`theta=tau_r(E)`, and reverse an unsafe deletion at the simultaneous
+ceilings
+
+\[
+\min\{v_p(E),v_p(y)\},\qquad v_q(x),\qquad b_s.
+\]
+
+A `p`- or `s`-sourced boundary gives the direct allocations in (16ak.0c).
+For a `q`-sourced boundary `F`, if `v_r(x)>=theta`, the allocation
+`(E,{x},F,{y})` is EFX.  Otherwise, for a least-`r` good `h in E`,
+
+\[
+(p,r,q,s)=(\{x,h\},E-h,F,\{y\})
+\]
+
+is EFX and improves `p` while fixing `s`.  The full packet-safe proof is
+[`LENGTH_THREE_AP_CANONICAL_ESCAPE_LEMMA.md`](LENGTH_THREE_AP_CANONICAL_ESCAPE_LEMMA.md).
+
+This dichotomy supersedes the maximizing-`Q` anchor analysis below for the
+`a=p` row.  That analysis is retained as proof-mining history and remains
+potentially relevant to the external-`q` row; it is no longer a completion
+gate for `a=p`.
+
+#### Canonical closure of the external-`r` tail rows
+
+The same minimal-payment dichotomy closes `(p,s,r,q)` and `(s,p,r,q)` when
+`a=r`.  A boundary sourced by `p` reverses to `(F,E,{x},{y})`; one sourced
+by `s` gives `(E,{y},{x},F)`; and a `q` boundary uses the same direct-
+singleton/least-pivot split as above.  The external edge `r -> s` excludes
+the sole suffix observer wall `s -> p` by a one-charity-edge PI cycle.
+See
+[`LENGTH_THREE_AR_TAIL_ESCAPE_LEMMA.md`](LENGTH_THREE_AR_TAIL_ESCAPE_LEMMA.md).
+
+Consequently the asymmetric hybrid potential below is no longer needed for
+the two `p`-before-`r` rows.  Its exact models remain useful adversarial
+evidence for the still-open dual-base operation.
 
 For the seven residual priority/source types in which `p` or `q` precedes
 `r` after any unchanged initial `s`, the `r`-mode feasibility threshold can
@@ -2720,10 +2761,9 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. closure of all nine source/order types at the correct priority threshold:
-   the source-specific `R`-tail return for the five `a=p/q` types, the
-   asymmetric hybrid certificate (16ak.18) for the two `a=r` types with
-   `p` before `r`, and the dual-base certificate (16ak) for
+1. closure of the remaining external-`q` and external-`r` source/order
+   types at the correct priority threshold: the source-specific `R`-tail
+   return for the external-`q` types and the dual-base certificate (16ak) for
    `(s,r,p,q)` and `(s,r,q,p)`.  Equivalently, the canonical tail fallback
    must defeat the fractionally infeasible ratio-separation branch and the
    two-row tail deficit (16ba.6), while the earlier-`r` fallback must retain

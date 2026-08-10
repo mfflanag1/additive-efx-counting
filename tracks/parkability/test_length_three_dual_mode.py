@@ -21,6 +21,7 @@ try:
     from .analyze_length_three_hybrid_extremal_profiles import run as run_hybrid_extremal
     from .decide_length_three_hybrid_atom import run as run_hybrid_atom
     from .decide_length_three_ap_suffix_atom import run as run_ap_suffix_atom
+    from .decide_length_three_canonical_packet import run as run_canonical_packet
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -35,6 +36,7 @@ except ImportError:
     from analyze_length_three_hybrid_extremal_profiles import run as run_hybrid_extremal
     from decide_length_three_hybrid_atom import run as run_hybrid_atom
     from decide_length_three_ap_suffix_atom import run as run_ap_suffix_atom
+    from decide_length_three_canonical_packet import run as run_canonical_packet
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -119,6 +121,9 @@ def test_atomic_decisions():
     suffix = run_ap_suffix_atom(120)
     assert suffix["status"] == "SUFFIX_FORCED"
     assert suffix["case_count"] == 14
+    canonical = run_canonical_packet()
+    assert canonical["status"] == "ALL_FORCED"
+    assert len(canonical["records"]) == 8
 
 
 def test_split_refutation():

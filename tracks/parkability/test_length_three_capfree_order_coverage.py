@@ -6,10 +6,8 @@ import itertools
 
 AGENTS = ("p", "r", "q", "s")
 EXPECTED_REMAINDER = {
-    "p": {("s", "p", "r", "q")},
+    "p": set(),
     "r": {
-        ("p", "s", "r", "q"),
-        ("s", "p", "r", "q"),
         ("s", "r", "p", "q"),
         ("s", "r", "q", "p"),
     },
@@ -34,6 +32,10 @@ def covered(source, order):
     if easy(source, order):
         return True
     if order.index("q") < order.index("r"):
+        return True
+    if source == "p" and order == ("s", "p", "r", "q"):
+        return True
+    if source == "r" and order in {("p", "s", "r", "q"), ("s", "p", "r", "q")}:
         return True
     return source in {"p", "q"} and order.index("r") < order.index("p")
 

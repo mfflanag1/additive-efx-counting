@@ -686,6 +686,18 @@ both encodings.
   external singleton-source wall is closed; the remaining gate is the
   `q`-source handoff when `r` has earlier priority, together with a two-wall
   mixed-pool uncrossing. No two-large or general EFX closure is yet claimed.
+- [`LENGTH_THREE_AP_CANONICAL_ESCAPE_LEMMA.md`](LENGTH_THREE_AP_CANONICAL_ESCAPE_LEMMA.md)
+  — cap-free analytic closure of the sole external-`p` priority row
+  `(s,p,r,q)`. A minimal-payment boundary sourced by `p` or `s` reverses
+  directly; a `q` boundary is paid either by the singleton `x` or by the
+  least-`r` suffix rotation `({x,h},E-h,F,{y})`. No maximizing bundle,
+  packet-size cap, or anchor-safety case remains in this row.
+- [`LENGTH_THREE_AR_TAIL_ESCAPE_LEMMA.md`](LENGTH_THREE_AR_TAIL_ESCAPE_LEMMA.md)
+  — cap-free analytic closure of the external-`r` orders `(p,s,r,q)` and
+  `(s,p,r,q)`. The same canonical minimal-payment dichotomy works because
+  the edge `r -> s` rules out the suffix allocation's sole external
+  observer wall. Only the two `r`-before-`p,q` dual-base rows remain for
+  this source type.
 - [`length_three_global_lex_atomic_sweep.json`](length_three_global_lex_atomic_sweep.json)
   and [`length_three_global_lex_atomic_sweep_audit.json`](length_three_global_lex_atomic_sweep_audit.json)
   — exact motif audit of all 72 atomic external-source/priority cells. Every
@@ -734,7 +746,13 @@ both encodings.
   — exact 14-case QF_LRA audit of the trimmed suffix rotation in the atomic
   `a=p`, external-`q` source motif, including tied least-`r` pivots. Every
   case is UNSAT. This corroborates the cap-free packet proof's local algebra;
-  it does not replace that proof or decide the remaining unsafe-payment wall.
+  it does not replace that proof. The later canonical dichotomy eliminates
+  the former unsafe-payment wall for this source type.
+- [`length_three_canonical_packet_audit.json`](length_three_canonical_packet_audit.json)
+  — exact QF_LRA replay of all eight aggregate packet calculations in the
+  external-`p` canonical lemma and external-`r` tail lemma. Every negated
+  EFX conclusion is UNSAT. The audit verifies the local algebra; the
+  structural derivation of its inequalities remains analytic.
 - [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
   [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
   and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)
