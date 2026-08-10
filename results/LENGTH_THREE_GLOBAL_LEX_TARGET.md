@@ -1814,6 +1814,68 @@ place where the already-proved alternating reservoir exchange may compose
 after a root/half-turn transition.  Proving that composition, rather than
 another fixed cell, is the remaining global-potential task.
 
+The return lemma has an exact two-row scalar sufficient condition.  It is
+enough to search inside the certified endpoint `B_l`.  Put
+
+\[
+A=U-F+B_k,\qquad
+T_r=v_r(A+B_l),\qquad T_s=v_s(A+B_l),
+\tag{16ak.23}
+\]
+
+and
+
+\[
+\alpha=\min\{T_r/2,\ T_r-\tau_r(F)\},
+\qquad
+\beta=T_s-b_s.
+\tag{16ak.24}
+\]
+
+Every `C subseteq B_l` with `v_l(C)>b_l` and
+`v_l(C)>=tau_l(F)` is automatically admissible: all four safety conditions
+are downward closed from `B_l`, and the source `k` now owns the strictly
+better bundle `F`.  If such a `C` satisfies
+
+\[
+v_r(C)\le\alpha,
+\tag{16ak.25}
+\]
+
+then
+
+\[
+v_r(U_C)=T_r-v_r(C)
+ \ge\max\{\tau_r(F),v_r(C)\}
+ \ge\max\{\tau_r(F),\tau_r(C)\},
+\]
+
+so `R`-mode survives.  If instead
+
+\[
+v_s(C)\le\beta,
+\tag{16ak.26}
+\]
+
+then `v_s(U_C)=T_s-v_s(C)>=b_s`, so `S`-mode survives.
+
+Therefore a hybrid crossing can remain only if **every** `l`-sufficient
+subset of `B_l` is simultaneously expensive in both rows:
+
+\[
+v_r(C)>\alpha,\qquad v_s(C)>\beta.
+\tag{16ak.27}
+\]
+
+This is a one-demand/two-cost threshold obstruction.  Minimizing either
+cost subject to the additive `l` threshold is a fractional knapsack with at
+most one boundary good.  Hence the only remaining outputs are two scalar
+price separators or one critical good in each cost row; an arbitrary Hall
+family or a growing solver pool is no longer needed.  The analytic task is
+to use the parallel-root/bottom-pool inequalities to rule out the joint
+price certificate, or to route either critical good through the alternating
+reservoir theorem.
+
 ### Joint-split completion of a canonical `q` blocker
 
 The three-good suffix cycle has a cap-free formulation.  Return to the
