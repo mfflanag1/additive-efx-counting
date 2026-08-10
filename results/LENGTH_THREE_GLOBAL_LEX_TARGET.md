@@ -2,10 +2,9 @@
 
 **Date:** 2026-08-09
 
-**Status:** BCFF basic-cycle classification reconstructed; the external-`p`
-row and the two external-`r`, `p`-before-`r` rows are closed cap-free; the
-four external-`q` rows reduce to two scalar singleton-preference walls; two
-external-`r` dual-base rows remain; final source-sensitive routing is open
+**Status:** cap-free global-lex escape theorem proved for the length-three
+residual; the earlier wall reductions below are retained as proof-mining
+history and are superseded by the two reservoir-order orientations
 
 ## Source-valid starting point
 
@@ -462,6 +461,30 @@ Combining the easy-priority lemma, the all-source `W` return, and the rotated
 | `a=p` | closed by the canonical escape lemma below |
 | `a=r` | `(s,r,p,q)`, `(s,r,q,p)`; the two `p`-before-`r` rows are now closed |
 | `a=q` | `(p,r,q,s)`, `(p,r,s,q)`, `(p,s,r,q)`, `(s,p,r,q)` |
+
+### Final reservoir-order closure
+
+The table above is now closed without the later extremal-pair machinery.
+The two recipient orders partition all priorities:
+
+1. If `q` precedes `r`, apply minimal-threshold extraction to
+   `D_p=T_r+f` and `W=X_q+B_r` at `tau_r(D_p)`. The high branch pays `r`;
+   every low desired source has one of the six explicit all-source
+   allocations already displayed above.
+2. If `r` precedes `q`, apply extraction to `D_r=T_q+f` and
+   `U=X_r+B_q` at `tau_q(D_r)`. The high branch pays `q`. In the low
+   branch, sources `p` and `q` would form PI cycles through
+   `r -f-> q`, so the desired reversal is sourced by `r` or `s`; both
+   sources have explicit EFX allocations for each external source
+   `a in {p,r,q}`.
+
+The full proof is
+[`LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md`](LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md).
+It covers all 24 orders, all three external sources, and arbitrary packet
+sizes. Consequently the adaptive-singleton, parallel-root, augmented-root,
+hybrid-pair, and fractional-pivot sections below are no longer completion
+gates. They remain useful falsification history for narrower candidate
+families.
 
 For `a=p` or `a=q`, the rotated theorem closes every order beginning with
 `r` and every `(s,r,...)` order.  The `W` theorem closes every order in
@@ -2797,25 +2820,21 @@ most one `f` edge are already PI certificates; other extra edges must either
 be routed by the all-source lemmas above or assigned to a different residual
 topology in the final graph classification.
 
-## Completion requirements
+## Completion boundary
 
-The target is complete only after all of the following are proved:
+The length-three residual itself is closed by the reservoir-order theorem.
+The BCFF classification at the start of this document proves that every
+selected length-three basic cycle in the exactly-two-nonsingleton reduction
+has precisely the theorem's normal form, without a chordless-graph or
+selected-decomposition assumption. Extra compatible edges only produce PI
+cycles used by the proof.
 
-1. closure of the remaining external-`q` and external-`r` source/order
-   types at the correct priority threshold: defeat the two adaptive-
-   singleton walls (13)--(14) for the external-`q` types and prove the
-   dual-base certificate (16ak) for
-   `(s,r,p,q)` and `(s,r,q,p)`.  Equivalently, the canonical tail fallback
-   must defeat the fractionally infeasible ratio-separation branch and the
-   two-row tail deficit (16ba.6), while the earlier-`r` fallback must retain
-   the base threshold;
-2. composition of the other charity-swap sources with independently proved
-   length-two and adjacent/alternate length-four cycle lemmas;
-3. an explicit statement of what the result proves inside the
-   exactly-two-nonsingleton reduction and what cases remain outside it.
-
-Until these items are discharged, neither the exactly-two-nonsingleton
-closure nor complete four-agent additive EFX is claimed.
+This establishes the length-three branch of the BCFF reduction. It does not
+by itself assert complete four-agent additive EFX: the separate length-two,
+adjacent-large, and alternating cycle classes must be supplied by their own
+theorems before one may claim the entire exactly-two-nonsingleton case, and
+the cases with three or four nonsingleton bundles remain outside this
+theorem.
 
 ## Nonnegative and tie wrapper
 

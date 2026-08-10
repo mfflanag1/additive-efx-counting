@@ -81,8 +81,9 @@ All branches contradict lexicographic maximality in both orders. \(\square\)
 
 The proof relies on `p` preceding `r`.  In orders `(s,r,p,q)` and
 `(s,r,q,p)`, a tail payment or the bundle `E-h` may lower `r` before the
-later improvement of `p` or `q`.  Those two rows genuinely require the
-base-level dual-mode/dual-base operation and remain open.
+later improvement of `p` or `q`. Those two rows are now closed by the
+independent cap-free reservoir extraction in
+[`LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md`](LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md).
 
 The four source/scalar packet calculations used here are included in the
 exact aggregate audit

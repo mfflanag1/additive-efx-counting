@@ -24,6 +24,7 @@ try:
     from .decide_length_three_canonical_packet import run as run_canonical_packet
     from .decide_length_three_parallel_pivot import run as run_parallel_pivot
     from .decide_length_three_augmented_payment import run as run_augmented_payment
+    from .decide_length_three_reservoir_order import run as run_reservoir_order
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -41,6 +42,7 @@ except ImportError:
     from decide_length_three_canonical_packet import run as run_canonical_packet
     from decide_length_three_parallel_pivot import run as run_parallel_pivot
     from decide_length_three_augmented_payment import run as run_augmented_payment
+    from decide_length_three_reservoir_order import run as run_reservoir_order
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -134,6 +136,9 @@ def test_atomic_decisions():
     payment = run_augmented_payment()
     assert payment["status"] == "ALL_FORCED"
     assert len(payment["records"]) == 5
+    reservoir_order = run_reservoir_order()
+    assert reservoir_order["status"] == "ALL_FORCED"
+    assert len(reservoir_order["records"]) == 24
 
 
 def test_split_refutation():

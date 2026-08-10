@@ -679,13 +679,10 @@ both encodings.
   refuting the strict anchored-or-original-offer bridge. This is not an EFX
   counterexample.
 - [`LENGTH_THREE_GLOBAL_LEX_TARGET.md`](LENGTH_THREE_GLOBAL_LEX_TARGET.md)
-  — source-valid reconstruction of the BCFF two-large length-three residual.
-  It proves the singleton-absorption and easy-priority lemmas cap-free,
-  proves all-source primal and rotated reservoir lemmas, closes every
-  `r`-first order, and proves two three-promotion/payment reductions. The
-  external singleton-source wall is closed; the remaining gate is the
-  `q`-source handoff when `r` has earlier priority, together with a two-wall
-  mixed-pool uncrossing. No two-large or general EFX closure is yet claimed.
+  — source-valid reconstruction and completed cap-free closure of the BCFF
+  two-large length-three residual. The final reservoir-order theorem
+  supersedes the retained extremal-pair and pivot-wall proof-mining history.
+  This closes one residual topology, not general additive EFX.
 - [`LENGTH_THREE_AP_CANONICAL_ESCAPE_LEMMA.md`](LENGTH_THREE_AP_CANONICAL_ESCAPE_LEMMA.md)
   — cap-free analytic closure of the sole external-`p` priority row
   `(s,p,r,q)`. A minimal-payment boundary sourced by `p` or `s` reverses
@@ -696,28 +693,42 @@ both encodings.
   — cap-free analytic closure of the external-`r` orders `(p,s,r,q)` and
   `(s,p,r,q)`. The same canonical minimal-payment dichotomy works because
   the edge `r -> s` rules out the suffix allocation's sole external
-  observer wall. Only the two `r`-before-`p,q` dual-base rows remain for
-  this source type.
+  observer wall. The later reservoir-order theorem closes the two formerly
+  open dual-base rows as well.
 - [`LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md`](LENGTH_THREE_AQ_ADAPTIVE_SINGLETON_REDUCTION.md)
   — cap-free reduction of all four external-`q` rows. Assigning the two
   singleton roots adaptively closes every minimal-payment source except two
   explicit cases where `y` is simultaneously too small to anchor `p` and
   to pay `r`; the remaining witness is one strict `s`- or `q`-preference
-  for `x`. This is a reduction, not yet the full external-`q` theorem.
+  for `x`. This remains a valid reduction but is superseded as a completion
+  gate by the reservoir-order theorem.
 - [`LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md`](LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md)
   — cap-free safety closure of the remaining parallel-root recurrence. Returning
   the charity-swap pivot to a newly exposed `p`-root strictly improves the
   `p` coordinate; every augmentation failure containing the pivot is either
-  an ordinary PI cycle or a champion handoff. Only a compatible residual
-  payment remains.
+  an ordinary PI cycle or a champion handoff. The later reservoir-order
+  theorem bypasses the compatible-payment residual entirely.
 - [`LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md`](LENGTH_THREE_AUGMENTED_ROOT_PAYMENT_REDUCTION.md)
   — cap-free routing of every minimal-payment source for an externally safe
   augmented root. A `p` source closes directly; a `q` or `s` source uses
   the appropriate singleton plus the least-`p` root good to compensate
-  `r`. Only failure of that explicit two-good compensation remains.
+  `r`. The explicit compensation deficit is no longer a completion gate.
 - [`length_three_augmented_root_payment_audit.json`](length_three_augmented_root_payment_audit.json)
   — exact five-case QF_LRA replay of the candidate-allocation algebra in
   the augmented-root payment reduction.
+- [`LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md`](LENGTH_THREE_RESERVOIR_ORDER_ESCAPE_THEOREM.md)
+  — cap-free analytic closure of all length-three priority/source types.
+  The two reservoir orientations partition the 24 orders according to
+  whether `q` or `r` comes first; low reversals in the second orientation
+  can only be sourced by `r` or `s`.
+- [`LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md`](LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md)
+  — requirement-by-requirement proof that the BCFF length-three branch
+  supplies every premise of the reservoir-order theorem, including packet
+  nonemptiness, the external singleton edge, and the generalized PI source
+  wall; no chordless or exact-graph assumption is used.
+- [`length_three_reservoir_order_packet_audit.json`](length_three_reservoir_order_packet_audit.json)
+  — exact 24-case QF_LRA replay of both reservoir orientations for all
+  three external sources.
 - [`length_three_parallel_pivot_scalar_audit.json`](length_three_parallel_pivot_scalar_audit.json)
   — exact QF_LRA replay of the owner/selected-edge top ordering, the failed-
   fallback charity-versus-pivot inequality, and the strict augmented-root
