@@ -1298,6 +1298,123 @@ residual and has `r`-value below `b_r`, so it cannot satisfy the strict
 budget crossing (16ag).  Therefore only `p`- and `q`-sourced boundary
 blockers survive, and the selected triple has the exact form `(P,Q,{y})`.
 
+### Dual-mode adaptive-root potential
+
+The root choice can be included in the extremal potential.  Call a
+disjoint pair `(P,Q)`, with `y` in neither bundle, **compatible** when
+
+\[
+v_p(P)>b_p,\qquad v_q(Q)>b_q,
+\tag{16ah}
+\]
+
+\[
+\tau_p(Q)\le v_p(P),\qquad
+\tau_q(P)\le v_q(Q),
+\tag{16ai}
+\]
+
+and both bundles are base-safe for `r` and `s`.  Put
+
+\[
+U(P,Q)=M\setminus(P\cup Q\cup\{y\}).
+\]
+
+The pair is feasible in **`r` mode** if `v_r(U(P,Q))>=b_r`, and feasible
+in **`s` mode** if `v_s(U(P,Q))>=b_s`.  In `r` mode the intended allocation
+keeps `s={y}` and pays `r` from `U`; in `s` mode it gives `r={y}` and pays
+`s` from `U`.
+
+The union of the two mode families is nonempty.  The structural pair
+`(E,{x})` is compatible and is `r`-mode feasible by (16x).  Choose over the
+union a pair `(P,Q)` whose utility vector `(v_p(P),v_q(Q))` is
+coordinatewise Pareto-maximal, and fix a mode in which it is feasible.
+Let `d` be that mode's payment agent and choose an inclusion-minimal
+`d`-threshold set `R subseteq U(P,Q)`.
+
+If the corresponding allocation `(P,R,Q,{y})` in `r` mode, or
+`(P,{y},Q,R)` in `s` mode, is EFX, it Pareto improves the base.  Otherwise
+choose in a violating deletion of `R` an inclusion-minimal set `F`
+exceeding one of the thresholds
+
+\[
+c_p=v_p(P),\qquad c_q=v_q(Q),\qquad c_r=b_r,
+\qquad c_s=b_s.
+\tag{16aj}
+\]
+
+Every deletion of `F` is below all four thresholds.  The payment agent
+cannot be the source by minimality of `R`.  If the other member of
+`{r,s}` is the source, switch the ownership of `y`: in `r` mode an
+`s`-source gives `(P,{y},Q,F)`, while in `s` mode an `r`-source gives
+`(P,F,Q,{y})`.  Both are EFX Pareto improvements.
+
+It remains to consider source `k in {p,q}`.  Replace `k`'s provisional
+bundle `B_k` by `F`.  The new pair is compatible and strictly improves one
+coordinate.  Hence it can belong to neither mode, or it would contradict
+the global choice of `(P,Q)`.  Writing
+
+\[
+U'=\bigl(U(P,Q)\setminus F\bigr)+B_k,
+\]
+
+every surviving blocker therefore satisfies the simultaneous deficit
+
+\[
+v_r(U')<b_r,
+\qquad
+v_s(U')<b_s.
+\tag{16ak}
+\]
+
+Equivalently, it crosses both additive budgets:
+
+\[
+v_i(F)-v_i(B_k)>v_i(U(P,Q))-b_i
+\qquad(i=r,s).
+\tag{16al}
+\]
+
+The right side need not be nonnegative for the mode not originally
+selected, but (16ak) is unconditional.  This is an exact adaptive-root
+certificate.  A one-bundle replacement cannot preserve either possible
+owner of the contested singleton `y`; the smallest remaining operation
+must change both provisional bundles jointly, or expose a shorter/adjacent
+cycle while repartitioning `U'`.  The six fixed-order countermodels do not
+invalidate this statement because they optimize within one mode only.
+
+The boundary set itself is indivisible in a stronger sense.  Let `t` be
+the nonpayment member of `{r,s}`: `t=s` in `r` mode and `t=r` in `s` mode.
+If
+
+\[
+\tau_t(F)\ge b_t,
+\tag{16am}
+\]
+
+choose a deletion remainder `H=F-g` attaining `tau_t(F)`.  By the minimal
+choice of `F`, its total value is below every other current owner threshold.
+In `r` mode,
+
+\[
+(P,\{y\},Q,H)
+\]
+
+is therefore EFX: the original compatible pair stays assigned, `r`
+strictly improves to `{y}`, and `s` weakly improves to `H`.  In `s` mode
+the symmetric allocation `(P,H,Q,{y})` is EFX.  Consequently every
+surviving boundary blocker satisfies
+
+\[
+\tau_t(F)<b_t.
+\tag{16an}
+\]
+
+Thus no proper part of `F` can compensate the owner displaced from `y`,
+while the whole of `F` is required to cross the `p`- or `q`-source
+threshold.  The remaining integral obstruction is one contested minimal
+bundle, not an arbitrary family of observer failures.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
