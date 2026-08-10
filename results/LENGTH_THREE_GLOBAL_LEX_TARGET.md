@@ -1622,9 +1622,36 @@ a desired set contained in one deletion of precisely that bundle.
 Thus (16ak.9), not another root choice or a larger fixed menu, is the
 smallest operation still missing from the analytic bridge.  It is the
 cap-free analogue of the anchored three-good suffix cycle in (16ao).  The
-remaining proof obligation is to show that its augmented-bundle wall closes
-a shorter/adjacent basic cycle, or to produce an exact state in which every
-such pivot rotation fails while (16ak.5) holds.
+augmented-bundle wall localizes exactly to the pivot.  Write
+
+\[
+C=B_k+h.
+\tag{16ak.12}
+\]
+
+If deleting `h` from `C` causes an EFX failure, the only possible observer
+is `s`.  The source `k` prefers `F` to `B_k`; agent `r` has
+`v_r(B_k)<vartheta_r(P,Q)` by (16ak.7); and the other provisional owner is
+the recipient of `C`.  If `s` desires `B_k`, assign `F` to `k`, the original
+`B_l` to its owner, `{y}` to `r`, and `B_k` to `s`.  This is EFX: the
+replacement pair `(F,B_l)` is compatible, the old pair protects every
+comparison to `B_k`, and `r` strictly improves to the singleton she envies.
+
+Now delete a good `z in B_k`.  Any desired set exposed inside
+`C-z=(B_k-z)+h` must contain `h`.  Indeed, a subset of `B_k-z` is below the
+current bundle of source `k`, below `r`'s value in (16ak.8), and base-safe
+for `s`; the recipient of `C` cannot envy her own deletion.  Therefore every
+unresolved pivot-rotation failure supplies
+
+\[
+h\in A\subseteq (B_k-z)+h
+\tag{16ak.13}
+\]
+
+for an explicit desired set `A`.  The remaining proof obligation is to
+route this one-pivot desired edge to a shorter/adjacent basic cycle, or to
+produce an exact state in which every such pivot rotation fails through
+(16ak.13) while (16ak.5) holds.
 
 ### Joint-split completion of a canonical `q` blocker
 
