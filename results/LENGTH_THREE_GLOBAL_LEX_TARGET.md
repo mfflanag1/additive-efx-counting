@@ -979,6 +979,325 @@ swap wall.  It produces one budget-crossing pivot `h`, while every cheaper
 good in `J` is released by the alternative root in case 4.  This is the
 integral counterpart of the fractional price-or-pivot lemma.
 
+### Parallel-root residual-payment lemma
+
+The alternative root in case 4 couples directly to the persistent `q` wall.
+Write its desired bundle as
+
+\[
+E=T+f,
+\qquad B=X_r\setminus T,
+\]
+
+so `E` is desired by `p`.  Let `A subseteq T_q+B` be the `q`-desired set
+forced by failure of the all-source return, and put
+
+\[
+A_q=A\cap T_q,
+\qquad K=A\cap B,
+\qquad
+Z_0=(B\setminus K)+(T_q\setminus A_q)+B_q.
+\tag{16p}
+\]
+
+Then `E`, `A`, `Z_0`, and `{y}` are pairwise disjoint.  More importantly,
+
+\[
+v_q(Z_0)<v_q(B)\le v_q(T_q)<b_q.
+\tag{16q}
+\]
+
+Indeed, `A` being desired by `q` gives
+
+\[
+v_q(K)>v_q(B_q)+v_q(T_q\setminus A_q).
+\]
+
+Substitution in (16p) gives the strict first inequality in (16q).  The
+bottom-pool exclusion, reapplied to the valid parallel root `E=T+f`, gives
+`v_q(B+B_q)<=b_q`, and hence `v_q(B)<=v_q(T_q)`.  Finally positivity gives
+`v_q(T_q)<b_q=v_q(T_q+B_q)`.
+
+For the seven residual priority/source types in which `p` precedes `r`
+after any fixed initial `s`, define
+
+\[
+\theta=\max\{\tau_r(E),\tau_r(A)\}.
+\]
+
+For the two types with `a=r` and priority `(s,r,p,q)` or `(s,r,q,p)`, put
+`theta=b_r`.  In every case, if there is a common-safe `Z subseteq Z_0`
+with
+
+\[
+v_r(Z)\ge\theta,
+\tag{16r}
+\]
+
+then
+
+\[
+(Y_p,Y_r,Y_q,Y_s)=(E,Z,A,\{y\})
+\tag{16s}
+\]
+
+is EFX and lexicographically improves the base.  The desired bundles `E`
+and `A` protect their recipients, `{y}` is unchanged, and (16r) is exactly
+the only nonautomatic pair of comparisons made by `r`.  In the seven easy
+orders `p` is the first changed priority agent and strictly improves.  In
+the two hard orders `s` is unchanged, `r` weakly improves, and if `r` is
+unchanged then the later agent `p` strictly improves.
+
+This payment test has an exact source reduction.  If `v_r(Z_0)>=theta`,
+choose an inclusion-minimal `Z subseteq Z_0` satisfying (16r).  If `Z` is
+unsafe, reverse a violating deletion to a desired set `F subseteq Z-g`.
+Minimality and (16q) give
+
+\[
+v_r(F)<\theta\le b_r,
+\qquad
+v_q(F)<b_q.
+\tag{16t}
+\]
+
+Therefore the source of `F` is in `{p,s}`; neither large owner can be the
+source.  In the two hard `a=r` orders, source `s` closes immediately via
+
+\[
+(E,\{y\},A,F),
+\tag{16u}
+\]
+
+because `r` strictly envies `{y}` and all four displayed recipient bundles
+are desired or singleton-safe.  Consequently a surviving hard-order state
+has exactly one of the following two certificates:
+
+1. the scalar payment deficit `v_r(Z_0)<b_r`; or
+2. a `p`-desired `F subseteq Z-g`, disjoint from both the parallel-root
+   bundle `E` and the `q`-desired bundle `A`.
+
+The second certificate is a duplicate-source Hall obstruction: two
+pairwise-disjoint bundles `E` and `F` are both desired by `p`, while `A` is
+desired by `q`.  It is strictly smaller than the former arbitrary
+external-observer wall.  A final augmenting argument must either turn this
+second `p` demand into a compatible generalized cycle or use the scalar
+deficit to pay the unique budget-crossing pivot.  No fixed cardinality or
+bounded-value premise occurs in the reduction.
+
+The duplicate-source wall admits a global-potential reduction that does not
+freeze either desired bundle.  Call a disjoint ordered pair `(P,Q)`
+**`r`-residual-feasible** when `y` belongs to neither member,
+
+\[
+v_p(P)>b_p,qquad v_q(Q)>b_q,
+\tag{16v}
+\]
+
+the two bundles are mutually safe at their proposed owners,
+
+\[
+\begin{array}{ll}
+\tau_p(Q)\le v_p(P),&\tau_q(P)\le v_q(Q),\\
+\tau_s(P),\tau_s(Q)\le b_s,&
+\tau_r(P),\tau_r(Q)\le b_r,
+\end{array}
+\tag{16w}
+\]
+
+and the residual pool
+
+\[
+U(P,Q)=M\setminus(P\cup Q\cup\{y\})
+\]
+
+satisfies `v_r(U(P,Q))>=b_r`.
+
+This family is nonempty.  Take `P=E=T+f` from any valid parallel
+`p -f-> r` root and `Q={x}`.  The desired set `E` is common-safe, while
+`q` strictly envies `{x}`.  The residual pool is `B+X_q`, and
+
+\[
+v_r(B+X_q)>v_r(B)+v_r(T)=b_r
+\tag{16x}
+\]
+
+because the no-chord inequality for the parallel root gives
+`v_r(T_q)>v_r(T)`.
+
+Choose an `r`-residual-feasible pair `(P,Q)` lexicographically maximizing
+`(v_p(P),v_q(Q))`.  Inside its residual pool choose an inclusion-minimal
+`R` with `v_r(R)>=b_r`.  If `(P,R,Q,{y})` is EFX, it improves both hard
+orders: `s` is fixed, `r` is weakly improved, and `p` strictly improves if
+`r` ties.
+
+Otherwise only an external comparison to `R` can fail.  Choose inside a
+violating deletion `R-g` an inclusion-minimal set `F` whose value exceeds
+one of the four current thresholds
+
+\[
+c_p=v_p(P),\qquad c_q=v_q(Q),\qquad c_r=b_r,
+\qquad c_s=b_s.
+\]
+
+Then for every agent `i` and every `h in F`,
+
+\[
+v_i(F-h)\le c_i.
+\tag{16y}
+\]
+
+The source cannot be `r`, since inclusion-minimality of `R` gives
+`v_r(F)<=v_r(R-g)<b_r`.  If the source is `s`, (16y) makes
+
+\[
+(P,\{y\},Q,F)
+\tag{16z}
+\]
+
+EFX: `r` strictly improves to the singleton she envies, `s` strictly
+improves to `F`, and (16w)--(16y) protect `p` and `q`.
+
+If the source is `p`, the pair `(F,Q)` satisfies all compatibility
+inequalities in (16v)--(16w) and strictly raises the first extremal
+coordinate.  Its residual `r`-value is
+
+\[
+v_r(U(F,Q))=v_r(U(P,Q))-v_r(F)+v_r(P).
+\]
+
+Maximality therefore forces `v_r(F)>v_r(P)`; otherwise `(F,Q)` would remain
+`r`-residual-feasible and contradict the choice of `(P,Q)`.  Similarly, a
+`q`-source forces
+
+\[
+v_r(F)>v_r(Q).
+\tag{16aa}
+\]
+
+Writing `sigma=v_r(U(P,Q))-b_r` for the residual slack sharpens these to
+
+\[
+v_r(F)-v_r(P)>\sigma
+\quad\hbox{or}\quad
+v_r(F)-v_r(Q)>\sigma,
+\tag{16ab}
+\]
+
+respectively: otherwise the replacement pair would still leave residual
+`r`-value at least `b_r`.  This is the exact budget-crossing inequality,
+not merely a qualitative failure of an exchange.
+
+There is also an immediate top-up escape.  In the `p`-source case, if
+`v_s(P)>=b_s`, then
+
+\[
+(F,\{y\},Q,P)
+\tag{16ac}
+\]
+
+is EFX.  Agent `p` prefers `F` to `P`; `q` retains `Q`; `r` receives the
+envied singleton; and (16w)--(16y) give every deletion comparison.  Thus a
+surviving `p` blocker additionally forces `v_s(P)<b_s`.  Symmetrically, a
+surviving `q` blocker forces `v_s(Q)<b_s`, since otherwise
+`(P,{y},F,Q)` is EFX.  The missing compensation may therefore be stated as
+one externally safe top-up of the replaced low-`s` bundle, after which `y`
+can pay `r` and the boundary blocker can pay its own source.
+
+Thus the adaptive-pair potential eliminates every nonnumeric observer
+wall in the two hard orders.  A surviving state supplies a single
+inclusion-minimal blocker that improves `p` or `q` but crosses the residual
+`r` budget by being strictly more expensive to `r` than the bundle it
+would replace.  Proving that the charity good or a released suffix pays
+this strict cost, or routing the boundary blocker to a shorter/adjacent
+cycle, is the remaining hard-order operation.
+
+The same potential has a symmetric formulation that absorbs the remaining
+source/order mismatch.  Call a triple `(P,Q,S)`, provisionally assigned to
+`p,q,s`, **`r`-budget-feasible** if its members are pairwise disjoint,
+`y` belongs to neither `P` nor `Q`,
+
+\[
+v_p(P)>b_p,qquad v_q(Q)>b_q,qquad v_s(S)\ge b_s,
+\tag{16ad}
+\]
+
+each provisional owner is EFX-safe against the other two bundles,
+
+\[
+\tau_i(B_j)\le v_i(B_i)
+\quad(i,j\in\{p,q,s\},\ i\ne j),
+\tag{16ae}
+\]
+
+agent `r` is base-safe against all three, and the residual pool has enough
+total `r`-value:
+
+\[
+\tau_r(P),\tau_r(Q),\tau_r(S)\le b_r,
+\qquad
+v_r\bigl(M\setminus(P\cup Q\cup S)\bigr)\ge b_r.
+\tag{16af}
+\]
+
+This family is nonempty: `(E,{x},{y})` satisfies (16ad)--(16af), and its
+residual is again `B+X_q`, whose `r`-value is strictly above `b_r` by
+(16x).
+
+Choose a coordinatewise Pareto-maximal `r`-budget-feasible triple and let
+`U` be its residual pool.  Choose an inclusion-minimal `R subseteq U` with
+`v_r(R)>=b_r`.  If `(P,R,Q,S)` is EFX, it is already a Pareto improvement
+of the base: `p,q` strictly improve and `r,s` weakly improve.
+
+Otherwise an agent `k in {p,q,s}` blocks a deletion of `R`.  Inside that
+deletion choose an inclusion-minimal set `F` exceeding one of the current
+owner thresholds
+
+\[
+c_i=v_i(B_i)\quad(i\in\{p,q,s\}),
+\qquad c_r=b_r.
+\]
+
+As in (16y), every deletion of `F` is below every corresponding threshold,
+and `r` cannot be its source because `v_r(F)<b_r`.  If `k` is the source,
+replace `B_k` by `F`.  All inequalities (16ad)--(16ae) and the first part
+of (16af) remain true, while agent `k` strictly improves and nobody else's
+provisional utility changes.  Therefore Pareto maximality forces the new
+residual to violate the last inequality in (16af).  With
+
+\[
+\sigma=v_r(U)-b_r,
+\]
+
+this is exactly
+
+\[
+v_r(F)-v_r(B_k)>\sigma.
+\tag{16ag}
+\]
+
+Hence the length-three source table no longer leaves different `p`, `q`,
+and external-singleton safety walls.  After the global triple is selected,
+every one of them is an instance of the same strict `r`-budget crossing
+(16ag).  The only remaining information carried by the source is which
+provisional bundle `B_k` becomes available for compensating `r` or topping
+up the owner of the envied singleton.
+
+In fact the `s` source disappears in the hard `a=r` branch.  If `y` is not
+in `S`, it lies in the residual pool, and
+
+\[
+(P,\{y\},Q,S)
+\]
+
+is EFX by (16ae)--(16af); `r` strictly improves to the envied singleton.
+Thus an obstruction forces `y in S`.  But `tau_r(S)<=b_r` while
+`v_r(y)>b_r`.  Positivity then forces `S={y}`: if `S` contained another
+good, deleting that good would leave a set containing `y` and violate
+`r`-safety.  A putative `s`-source replacement releases `{y}` into the
+residual and has `r`-value below `b_r`, so it cannot satisfy the strict
+budget crossing (16ag).  Therefore only `p`- and `q`-sourced boundary
+blockers survive, and the selected triple has the exact form `(P,Q,{y})`.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits
@@ -1216,9 +1535,10 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. a cap-free extremal choice among parallel `p -> r` decompositions that
-   closes the scalar-price/pivot `q`-wall in the nine contested
-   source/order types;
+1. a cap-free payment of the strict adaptive-pair/triple budget crossings
+   (16ab) and (16ag), equivalently an externally safe top-up of the
+   replaced bundle, or a proof that each surviving `p`/`q` boundary
+   blocker routes to a shorter or adjacent basic cycle;
 2. composition of the other charity-swap sources with independently proved
    length-two and adjacent/alternate length-four cycle lemmas;
 3. an explicit statement of what the result proves inside the
