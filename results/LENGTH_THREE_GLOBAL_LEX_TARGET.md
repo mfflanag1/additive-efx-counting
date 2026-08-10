@@ -1416,6 +1416,58 @@ while the whole of `F` is required to cross the `p`- or `q`-source
 threshold.  The remaining integral obstruction is one contested minimal
 bundle, not an arbitrary family of observer failures.
 
+### Exact falsification boundary for fixed roots
+
+The dual-mode potential must optimize over arbitrary compatible pairs.
+Freezing it at the structural pair `(E,{x})` is false for genuine packets,
+even in the exact chordless length-three cell.
+
+In the seven-good atom, the fixed pair has opposite behavior in two exact
+formulas.  Under only the selected edges it is SAT-refuted; the model has
+many additional envy/champion chords and unrestricted escapes.  Under the
+exact atomic envy/champion graph, blocking all fourteen `r`- and `s`-mode
+payments is QF_LRA-UNSAT.  This explains the atomic cores but proves no
+packet statement.
+
+In the `(2,2,2,2)` split cell, the exact chordless formula is SAT after all
+126 fixed-root payments are blocked.  The frozen positive-integer model is
+recorded in
+[`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json).
+Its minimum escape in the unrestricted dual-mode family changes three goods:
+
+\[
+\begin{aligned}
+Y_p&=\{x,tr_1\},\\
+Y_r&=\{tr_0,br_0,tq_0\},\\
+Y_q&=\{br_1,tq_1,bq_0,bq_1\},\\
+Y_s&=\{y\},
+\end{aligned}
+\tag{16ao}
+\]
+
+with `f` still unallocated.  Relative to the base, `tr_1` moves from `r`
+to `p`, `tq_0` from `q` to `r`, and `br_1` from `r` to `q`.  Every moving
+recipient strictly improves and the allocation is EFX.  Thus the smallest
+missing fixed-root operation is an anchored three-agent suffix cycle, not a
+larger payment bundle.
+
+The broader compatible-pair quantifier in (16ah)--(16al) already contains
+this suffix cycle and its charity-paid variants.  The countermodel therefore
+rules out further fixed-root casework without weakening the global
+dual-mode target.
+
+The adversarial replay in
+[`length_three_dual_mode_adversarial_audit.json`](length_three_dual_mode_adversarial_audit.json)
+tests the unrestricted dual-mode family on 26 frozen profiles: the six
+strict hard-order countermodels, the eighteen eleven-good profiles, the
+augmented-`q`-face countermodel, and the Pareto-maximal profile `V*`.  It
+finds an exact dual-mode Pareto escape in all 25 profiles having a feasible
+mode.  `V*` is the sole failure, and has no mode-feasible compatible pair;
+in particular it lacks the length-three residual-capacity consequence
+(16x).  No tested profile realizes the simultaneous deficit (16ak).  This
+is adversarial evidence for the global potential, not a proof of its final
+uncrossing step.
+
 There is a sharper exact uncrossing criterion.  Let `A` be desired by `q`
 and `B` desired by `r`, put $H=A\cap B$, and define the strict additive
 deficits

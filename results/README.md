@@ -697,6 +697,21 @@ both encodings.
   nonselected envy/champion exclusion. All remain UNSAT, showing that the
   chordless normalization is not carrying the atomic result; packet closure
   still requires the contested-top lemma.
+- [`length_three_dual_mode_adversarial_audit.json`](length_three_dual_mode_adversarial_audit.json)
+  — exact census of the adaptive `r`-payment/`s`-payment potential on 26
+  adversarial profiles. All 25 profiles with a feasible mode have a direct
+  EFX Pareto escape; the sole failure is the known Pareto-maximal `V*`, which
+  lacks the length-three residual-capacity premise. This is corpus evidence,
+  not a packet theorem.
+- [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
+  [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
+  and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)
+  — targeted fixed-root falsification boundary. The exact chordless atom
+  forces one of fourteen canonical payments, while the selected-edge atom
+  and the exact `(2,2,2,2)` packet cell refute that fixed-root strengthening.
+  The packet model's minimum unrestricted dual-mode escape is a three-good
+  anchored suffix cycle. These decisions motivate the arbitrary compatible-
+  pair potential and do not establish the cap-free length-three theorem.
 - [`ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`](ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md)
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the

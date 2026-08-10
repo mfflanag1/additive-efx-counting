@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""Regression checks for the length-three dual-mode reductions and probes."""
+
+from __future__ import annotations
+
+import itertools
+import json
+from pathlib import Path
+
+try:
+    from .decide_length_three_dual_mode_atom import run as run_atom
+    from .decide_length_three_dual_mode_split import (
+        find_alternative_dual_mode,
+        make_cell,
+        payment_owner,
+        subset_tables,
+    )
+    from .run_alternating_global_lex_cegar import bundles
+except ImportError:
+    from decide_length_three_dual_mode_atom import run as run_atom
+    from decide_length_three_dual_mode_split import (
+        find_alternative_dual_mode,
+        make_cell,
+        payment_owner,
+        subset_tables,
+    )
+    from run_alternating_global_lex_cegar import bundles
+
+
+ROOT = Path(__file__).resolve().parents[2]
+
+
+def numeric_efx(totals, tails, owner):
+    assigned = bundles(owner)
+    masks = tuple(sum(1 << good for good in bundle) for bundle in assigned)
+    return all(
+        totals[observer][masks[observer]] >= tails[observer][masks[target]]
+        for observer in range(4)
+        for target in range(4)
+    )
+
+
+def test_adversarial_audit():
+    result = json.loads((ROOT / "results/length_three_dual_mode_adversarial_audit.json").read_text())
+    assert result["profile_count"] == 26
+    assert result["direct_escape_profile_count"] == 25
+    failures = [record for record in result["profiles"] if record["direct_dual_mode_escape"] is None]
+    assert [record["label"] for record in failures] == ["pareto_maximal_vstar"]
+    assert not failures[0]["mode_feasible_pair_counts"]["r"]
+    assert not failures[0]["mode_feasible_pair_counts"]["s"]
+    assert all(
+        record["canonical_pair"]["escape"] is not None
+        for record in result["profiles"]
+        if record["label"] != "pareto_maximal_vstar"
+    )
+
+
+def test_atomic_decisions():
+    assert run_atom("exact")["status"] == "FIXED_ROOT_DUAL_MODE_FORCED"
+    assert run_atom("selected")["status"] == "SAT"
+
+
+def test_split_refutation():
+    result = json.loads((ROOT / "results/length_three_dual_mode_split_refutation.json").read_text())
+    assert result["status"] == "FIXED_ROOT_DUAL_MODE_REFUTED"
+    cell = make_cell(tuple(result["packet_sizes"]))
+    values = tuple(tuple(row) for row in result["values"])
+    totals, tails = subset_tables(values, cell["m"])
+    base_masks = tuple(
+        sum(1 << good for good in bundle) for bundle in cell["base_bundles"]
+    )
+    base = tuple(totals[agent][base_masks[agent]] for agent in range(4))
+    _tr, br, tq, bq = cell["packets"]
+    residual = br + tq + bq
+    for size in range(1, len(residual) + 1):
+        for payment in itertools.combinations(residual, size):
+            for mode, recipient in (("r", 1), ("s", 3)):
+                owner = payment_owner(cell, payment, mode)
+                payment_value = sum(values[recipient][good] for good in payment)
+                assert payment_value < base[recipient] or not numeric_efx(totals, tails, owner)
+
+    minimum = find_alternative_dual_mode(values, cell)
+    assert minimum == result["minimum_alternative_dual_mode_escape"]
+    assert minimum["changed_good_count"] == 3
+
+
+if __name__ == "__main__":
+    test_adversarial_audit()
+    test_atomic_decisions()
+    test_split_refutation()
+    print("length-three dual-mode tests passed")
