@@ -3,7 +3,7 @@
 **Date:** 2026-08-09
 
 **Status:** BCFF basic-cycle classification reconstructed; the two hard
-orders reduce cap-free to one global lexicographic tail-budget crossing;
+orders reduce cap-free to one asymmetric hybrid crossing certificate;
 the canonical feasible-overlap branch also collapses to one contested good;
 the final crossing/cycle routing remains open
 
@@ -1614,15 +1614,22 @@ if `k=q`, it is
 where the displayed order is `(p,r,q,s)`.  Equations (16ak.6)--(16ak.8)
 settle `r`'s comparison to `F`, and compatibility/minimality settle every
 comparison between `F` and the unaugmented old bundles.  The only new EFX
-walls are comparisons involving the single augmented bundle `B_k+h`; in
-the `q`-source case it must also keep `p` above `b_p` to improve the two
-target priority orders.  Reversing a failed comparison to `B_k+h` exposes
-a desired set contained in one deletion of precisely that bundle.
+walls involve the single augmented bundle `B_k+h`; in the `q`-source case
+it must also keep `p` above `b_p` to improve the two target priority orders.
+There are two orientations to check: the displayed rotation assigns
+`B_l-h` to `r` and `B_k+h` to the other provisional owner, while the
+reverse matching exchanges those two recipients.  The displayed
+orientation can fail either because an external observer sees a deletion of
+`B_k+h`, or because its recipient values `B_k+h` below a deletion remainder
+of `F` or `B_l-h`.  The latter **recipient-deficit wall** is not implied by
+an observer of the augmented bundle and must be retained in the matching
+problem.
 
 Thus (16ak.9), not another root choice or a larger fixed menu, is the
 smallest operation still missing from the analytic bridge.  It is the
 cap-free analogue of the anchored three-good suffix cycle in (16ao).  The
-augmented-bundle wall localizes exactly to the pivot.  Write
+external-observer half of its augmented-bundle wall localizes exactly to the
+pivot.  Write
 
 \[
 C=B_k+h.
@@ -1648,10 +1655,164 @@ h\in A\subseteq (B_k-z)+h
 \tag{16ak.13}
 \]
 
-for an explicit desired set `A`.  The remaining proof obligation is to
-route this one-pivot desired edge to a shorter/adjacent basic cycle, or to
-produce an exact state in which every such pivot rotation fails through
-(16ak.13) while (16ak.5) holds.
+for an explicit desired set `A`.
+
+This leaves an exact two-bundle matching gate.  With `F` fixed at its source
+and `{y}` fixed at `s`, match
+
+\[
+B_l-h,qquad B_k+h
+\tag{16ak.14}
+\]
+
+to `r` and the other provisional owner.  A failure of the displayed
+matching is either the one-pivot desired edge (16ak.13), the closing
+`s`-wall above, or a recipient deficit.  A failure of the reverse matching
+has the symmetric recipient/observer form.  The remaining proof obligation
+is to prove that one matching works, reverse either failure into the
+cap-free two-safe-bundle theorem, or produce an exact state in which both
+matchings fail while (16ak.5) holds.  The earlier one-pivot statement alone
+does not close the recipient-deficit wall.
+
+### Exact refutation of the one-mode bridge and hybrid repair
+
+The `r`-tail extremal pair by itself is not a universal selector.  The exact
+audit
+[`length_three_tail_extremal_adversarial_audit.json`](length_three_tail_extremal_adversarial_audit.json)
+contains 57 Pareto-maximal `r`-tail pairs across the 26 frozen adversarial
+profiles and two exact length-three models.
+Nine have no direct `r`-payment EFX allocation.  Seven reverse through an
+`s`-source as above, but two have genuine `p/q` boundary blockers and no
+recorded pivot orientation succeeds.  These profiles are adversarial tests
+of the abstract compatible-pair argument; they are not asserted to satisfy
+the length-three topology.
+
+One of the two is the strict atomic profile `fixed_hard_order_3`.  Its unique
+Pareto-maximal `r`-tail pair is
+
+\[
+P=\{tr,f\},\qquad Q=\{br,tq\},\qquad U=\{bq,x\},
+\qquad v_r(U)=\vartheta_r(P,Q)=12.
+\tag{16ak.15}
+\]
+
+No subset of `U` yields EFX in `r` mode.  The exact reversal exposes
+`F={x}` sourced by `q`; the binding-side pivot is `h=f`.  Both orientations
+in (16ak.14) fail, and neither gives `p` more than her base.  This is an
+exact counterexample to deriving the **one-mode/pivot bridge** from the
+compatible-pair inequalities alone, not to a possible length-three
+structural strengthening and not to the full escape theorem: the same
+profile has an `s`-payment escape.
+Thus the smallest missing operation is ownership reversal of `{y}` together
+with a base-level payment to `s`.
+
+The correct global family is consequently asymmetric.  A compatible pair
+is feasible in
+
+\[
+\begin{array}{ll}
+R\text{-mode} & v_r(U(P,Q))\ge
+  \vartheta_r(P,Q)=\max\{\tau_r(P),\tau_r(Q)\},\\[2mm]
+S\text{-mode} & v_s(U(P,Q))\ge b_s.
+\end{array}
+\tag{16ak.16}
+
+In `R`-mode keep `s={y}` and pay `r` only at her exact EFX tail threshold.
+In `S`-mode give `r={y}` and pay `s` at base.  Either completed allocation
+contradicts both surviving orders: in `R`-mode `s` is fixed and `p`
+improves; in `S`-mode `s` weakly improves, and if she ties then `p`
+improves.  The family is nonempty because `(E,{x})` is `R`-feasible by
+(16x).
+
+Choose a Pareto-maximal compatible pair over the union of the two modes and
+test an inclusion-minimal payment in each mode in which it is feasible.  If
+any resulting allocation is EFX, it closes the two orders.  Otherwise fix a
+failing feasible mode and perform simultaneous minimal-threshold reversal at
+
+\[
+v_p(P),\qquad v_q(Q),\qquad b_r,\qquad b_s.
+\tag{16ak.17}
+
+The payment agent cannot be the source.  The other member of `{r,s}` closes
+by exchanging `{y}` with the desired boundary set: in `R`-mode an
+`s`-source gives `(P,{y},Q,F)`; in `S`-mode an `r`-source gives
+`(P,F,Q,{y})`.  For source `k in {p,q}`, replacement by `F` preserves
+compatibility and strictly raises one extremal coordinate.  Maximality then
+forces the replacement residual `U'=U-F+B_k` to fail both modes:
+
+\[
+v_r(U')<\max\{\tau_r(F),\tau_r(B_l)\},
+\qquad
+v_s(U')<b_s.
+\tag{16ak.18}
+
+This is the exact cap-free **hybrid crossing certificate**.  It supersedes
+the one-mode claim as the live global potential.  The exact audit
+[`length_three_hybrid_extremal_adversarial_audit.json`](length_three_hybrid_extremal_adversarial_audit.json)
+tests all 54 Pareto-maximal hybrid pairs on the expanded 28-profile corpus.
+Every one has a direct EFX payment: the strict countermodel (16ak.15) closes
+in `S`-mode, while `V*` closes in `R`-mode.  The zero-failure census is
+evidence for (16ak.16), not a packet proof that (16ak.18) is impossible.
+In the exact seven-good length-three atom, blocking all 8,192 allocations in
+the two hybrid forms is QF_LRA-UNSAT; see
+[`length_three_hybrid_atom_exact.json`](length_three_hybrid_atom_exact.json).
+That decision is a discovery/falsification check on the motif only and is
+not used as a packet theorem.
+
+The hybrid crossing has a pure packing formulation.  In (16ak.18), let `l`
+be the other provisional owner and put
+
+\[
+W=B_k+B_l,
+\qquad
+t_l=\max\{b_l,\tau_l(F)\}.
+\tag{16ak.19}
+\]
+
+Call `C subseteq W` an admissible return to `l` when
+
+\[
+v_l(C)>b_l,quad v_l(C)\ge\tau_l(F),quad
+\tau_k(C)\le v_k(F),quad
+\tau_r(C)le b_r,quad
+\tau_s(C)le b_s.
+\tag{16ak.20}
+\]
+
+The admissible family is nonempty: `C=B_l` satisfies (16ak.20) by
+compatibility of the old pair and simultaneous minimality of `F`.  For any
+admissible `C`, `(F,C)` is a compatible pair that strictly improves source
+`k` while preserving the other provisional owner's improvement.  Its
+residual is
+
+\[
+U_C=U-F+(W\setminus C).
+\tag{16ak.21}
+\]
+
+Thus maximality says every admissible return simultaneously violates
+
+\[
+v_r(U_C)\ge\max\{\tau_r(F),\tau_r(C)\}
+\quad\hbox{and}\quad
+v_s(U_C)\ge b_s.
+\tag{16ak.22}
+
+Conversely, one admissible `C` satisfying either inequality in (16ak.22)
+contradicts the extremal choice and completes the hybrid augment.  The live
+analytic statement is therefore the following cap-free packing lemma:
+
+> **Hybrid return lemma.** For the boundary set `F` generated by a minimal
+> failed payment at a hybrid-extremal pair, the pool `B_k+B_l` contains an
+> admissible return `C` for which at least one mode in (16ak.22) survives,
+> or an unsafe minimal return reverses to a shorter/adjacent basic cycle.
+
+This is narrower than arbitrary two-bundle matching: one bundle is fixed at
+the minimal boundary source, `B_l` is a certified endpoint, and the only
+budgets are the exact `r` tail and the `s` base.  It is also the precise
+place where the already-proved alternating reservoir exchange may compose
+after a root/half-turn transition.  Proving that composition, rather than
+another fixed cell, is the remaining global-potential task.
 
 ### Joint-split completion of a canonical `q` blocker
 
@@ -2212,9 +2373,9 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. closure of the global tail-mode certificate (16ak.5), either directly
-   or by proving that the forced three-way pivot (16ak.9) routes every
-   augmented-bundle wall to a shorter or adjacent basic cycle.  Equivalently,
+1. closure of the hybrid crossing certificate (16ak.18), either directly
+   or by proving that its mode switch/two-bundle matching routes every
+   boundary wall to a shorter or adjacent basic cycle.  Equivalently,
    the canonical fallback
    must defeat the fractionally infeasible ratio-separation branch and the
    two-row tail deficit (16ba.6) with its minimal-payment reversals;

@@ -709,6 +709,20 @@ both encodings.
   `s`-then-`p` tail-payment families escape all 26 frozen adversarial
   profiles, including `V*`. This removes a corpus obstruction but is not a
   cap-free theorem.
+- [`length_three_tail_extremal_adversarial_audit.json`](length_three_tail_extremal_adversarial_audit.json)
+  — exact falsification audit for the one-mode extremal selector. Among 57
+  Pareto-maximal `r`-tail pairs on 28 adversarial/length-three profiles, nine
+  lack a direct payment; seven reverse through `s`, while two retain a
+  `p/q` boundary blocker. This refutes only the abstract one-mode inference.
+- [`length_three_hybrid_extremal_adversarial_audit.json`](length_three_hybrid_extremal_adversarial_audit.json)
+  — byte-replayable exact audit of the asymmetric `r`-tail/`s`-base
+  potential. Every one of 54 Pareto-maximal hybrid pairs has a direct EFX
+  payment on the expanded 28-profile corpus, including the two exact
+  length-three models. This is adversarial evidence, not a cap-free theorem.
+- [`length_three_hybrid_atom_exact.json`](length_three_hybrid_atom_exact.json)
+  — exact QF_LRA decision blocking all 8,192 `r`-tail/`s`-base allocation
+  forms in the seven-good length-three atom. The formula is UNSAT, supporting
+  the hybrid motif only; it is not an arbitrary-packet proof.
 - [`length_three_dual_mode_atom_exact.json`](length_three_dual_mode_atom_exact.json),
   [`length_three_dual_mode_atom_selected.json`](length_three_dual_mode_atom_selected.json),
   and [`length_three_dual_mode_split_refutation.json`](length_three_dual_mode_split_refutation.json)

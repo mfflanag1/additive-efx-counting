@@ -17,6 +17,9 @@ try:
         subset_tables,
     )
     from .analyze_length_three_lex_tail_profiles import run as run_lex_tail
+    from .analyze_length_three_tail_extremal_profiles import run as run_tail_extremal
+    from .analyze_length_three_hybrid_extremal_profiles import run as run_hybrid_extremal
+    from .decide_length_three_hybrid_atom import run as run_hybrid_atom
     from .run_alternating_global_lex_cegar import bundles
 except ImportError:
     from decide_length_three_dual_mode_atom import run as run_atom
@@ -27,6 +30,9 @@ except ImportError:
         subset_tables,
     )
     from analyze_length_three_lex_tail_profiles import run as run_lex_tail
+    from analyze_length_three_tail_extremal_profiles import run as run_tail_extremal
+    from analyze_length_three_hybrid_extremal_profiles import run as run_hybrid_extremal
+    from decide_length_three_hybrid_atom import run as run_hybrid_atom
     from run_alternating_global_lex_cegar import bundles
 
 
@@ -70,9 +76,36 @@ def test_lex_tail_adversarial_audit():
         assert replay.read_bytes() == frozen.read_bytes()
 
 
+def test_extremal_adversarial_audits():
+    cases = (
+        (
+            "length_three_tail_extremal_adversarial_audit.json",
+            run_tail_extremal,
+            {"profile_count": 28, "pareto_pair_count": 57, "pareto_pair_failure_count": 9},
+        ),
+        (
+            "length_three_hybrid_extremal_adversarial_audit.json",
+            run_hybrid_extremal,
+            {"profile_count": 28, "pareto_pair_count": 54, "pareto_pair_failure_count": 0},
+        ),
+    )
+    with tempfile.TemporaryDirectory() as directory:
+        for name, replay_function, expected in cases:
+            frozen = ROOT / "results" / name
+            result = json.loads(frozen.read_text())
+            for key, value in expected.items():
+                assert result[key] == value
+            replay = Path(directory) / name
+            replay_function(replay)
+            assert replay.read_bytes() == frozen.read_bytes()
+
+
 def test_atomic_decisions():
     assert run_atom("exact")["status"] == "FIXED_ROOT_DUAL_MODE_FORCED"
     assert run_atom("selected")["status"] == "SAT"
+    hybrid = run_hybrid_atom(120)
+    assert hybrid["status"] == "HYBRID_ATOM_FORCED"
+    assert hybrid["candidate_count"] == 8192
 
 
 def test_split_refutation():
@@ -102,6 +135,7 @@ def test_split_refutation():
 if __name__ == "__main__":
     test_adversarial_audit()
     test_lex_tail_adversarial_audit()
+    test_extremal_adversarial_audits()
     test_atomic_decisions()
     test_split_refutation()
     print("length-three dual-mode tests passed")

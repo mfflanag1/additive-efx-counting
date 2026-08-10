@@ -1,0 +1,27 @@
+{
+  "candidate_count": 8192,
+  "claim_boundary": {
+    "sat": "an exact atomic countermodel to the hybrid family, not necessarily to all EFX escapes",
+    "unsat": "the hybrid escape family in the exact seven-good length-three atom only"
+  },
+  "provenance": {
+    "dependencies": [
+      {
+        "path": "tracks/parkability/decide_length_three_dual_mode_split.py",
+        "sha256": "f0883c4e465e23e90390b949187d851d7629bc559cace8de70769447f458730e"
+      },
+      {
+        "path": "tracks/parkability/run_alternating_global_lex_cegar.py",
+        "sha256": "66f291257e03f5f7eb7636cd603cd8d336d53932090ad63c5febac28ea737fbe"
+      }
+    ],
+    "script": "tracks/parkability/decide_length_three_hybrid_atom.py",
+    "script_sha256": "29e74b5cddc77b64fd900ef53b023537a8f92cd57b36efa42ad54710d0cef969",
+    "z3_version": "5.0.0"
+  },
+  "reason_unknown": null,
+  "schema": "length-three-hybrid-atom-v1",
+  "solver_status": "unsat",
+  "status": "HYBRID_ATOM_FORCED",
+  "values": null
+}
