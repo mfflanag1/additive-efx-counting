@@ -1532,6 +1532,12 @@ See
 
 Thus the former four-row external-`q` table is now one two-scalar anchor
 deficit with two possible witnesses, not an unrestricted tail-payment wall.
+If the atomic fallback `(E,T_q, singleton, singleton)` fails, the charity-
+swap transition routes every new source except a parallel `p -> r` root or
+the length-two topology: a new `s -> r` root either enters the now-closed
+external-`p` row or reverses the singleton preference and closes on the
+next adaptive-singleton pass.  The live external-`q` object is therefore a
+parallel-root recurrence, not a free observer failure.
 
 For the seven residual priority/source types in which `p` or `q` precedes
 `r` after any unchanged initial `s`, the `r`-mode feasibility threshold can

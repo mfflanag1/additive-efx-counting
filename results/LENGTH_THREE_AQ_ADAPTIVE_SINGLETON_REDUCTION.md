@@ -153,3 +153,66 @@ replay as QF_LRA-UNSAT in
 [`length_three_canonical_packet_audit.json`](length_three_canonical_packet_audit.json).
 The audit verifies the local algebra, not the structural derivation or the
 final exclusion of (13)--(14).
+
+## Charity-swap routing of the two walls
+
+Both walls have the same first fallback.  The selected-cycle inequalities
+give `v_r(T_q)>v_r(T_r)`.  In wall (13), where `s` prefers `x`, test
+
+\[
+(E,T_q,\{y\},\{x\});
+\tag{15}
+\]
+
+in wall (14), test
+
+\[
+(E,T_q,\{x\},\{y\}).
+\tag{16}
+
+\]
+
+Either allocation is EFX whenever
+
+\[
+v_r(T_q)\ge\theta.
+\tag{17}
+
+\]
+
+The singleton recipients strictly improve in the applicable wall, `p`
+gets the desired set `E`, and (17) is `r`'s only nonautomatic comparison.
+
+Suppose (17) fails.  Since `v_r(T_q)>v_r(T_r)`, a deletion attaining
+`theta=tau_r(T_r+f)` cannot remove `f`.  It removes a good `g in T_r`, and
+
+\[
+v_r(f)>v_r(g).
+\tag{18}
+
+\]
+
+Replace `g` in `X_r` by `f`.  If the resulting allocation is EFX, it
+Pareto-improves `r`.  Otherwise the charity-swap transition produces a new
+genuine edge `k -f-> r`, with a desired set omitting `g` and one additional
+deletion witness.  Its source routes as follows.
+
+1. `k=r` is a forbidden self-champion.
+2. `k=q` enters the two-genuine-edge length-two residual.
+3. `k=p` is a parallel root into `r`; it is the only branch that stays in
+   the same rooted wall.
+4. `k=s` closes after changing the selected length-three cycle.  In wall
+   (13), the new cycle is `s -f-> r -f-> q -> s`, with old `p` external;
+   the edge `s -> p` from (13) makes its external source the new `p`, so the
+   cap-free external-`p` theorem applies.  In wall (14), the same new cycle
+   has external source `q`.  Swapping the singleton roles reverses the
+   strict `q` preference in (14), while old `p` does not prefer `y` to its
+   own `x` unless the already-closed external-`p` source is also present.
+   Hence neither scalar wall survives in the renamed cell, and the adaptive-
+   singleton reduction closes it.
+
+Consequently the external-`q` obstruction is no longer an arbitrary
+singleton wall.  It is exactly a finite-family parallel-`p` root recurrence,
+with a possible handoff to the length-two topology.  A global potential on
+parallel `p -f-> r` decompositions, or an independently composed length-two
+escape, is the remaining operation.
