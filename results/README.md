@@ -704,6 +704,11 @@ both encodings.
   explicit cases where `y` is simultaneously too small to anchor `p` and
   to pay `r`; the remaining witness is one strict `s`- or `q`-preference
   for `x`. This is a reduction, not yet the full external-`q` theorem.
+- [`LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md`](LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md)
+  — cap-free reduction of the remaining parallel-root recurrence. Returning
+  the charity-swap pivot to a newly exposed `p`-root strictly improves the
+  `p` coordinate; every surviving augmentation failure contains that one
+  pivot. A compatible payment or pivot routing is still required.
 - [`length_three_global_lex_atomic_sweep.json`](length_three_global_lex_atomic_sweep.json)
   and [`length_three_global_lex_atomic_sweep_audit.json`](length_three_global_lex_atomic_sweep_audit.json)
   — exact motif audit of all 72 atomic external-source/priority cells. Every

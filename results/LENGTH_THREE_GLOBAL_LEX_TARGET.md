@@ -1538,6 +1538,11 @@ the length-two topology: a new `s -> r` root either enters the now-closed
 external-`p` row or reverses the singleton preference and closes on the
 next adaptive-singleton pass.  The live external-`q` object is therefore a
 parallel-root recurrence, not a free observer failure.
+The recurrence has a strict augmented-root potential: a new parallel root
+`E'` exposed after removing pivot `g` satisfies
+`v_p(E'+g)>v_p(E)`, and every surviving safety failure of `E'+g` contains
+that single pivot.  See
+[`LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md`](LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md).
 
 For the seven residual priority/source types in which `p` or `q` precedes
 `r` after any unchanged initial `s`, the `r`-mode feasibility threshold can

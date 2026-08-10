@@ -216,3 +216,10 @@ singleton wall.  It is exactly a finite-family parallel-`p` root recurrence,
 with a possible handoff to the length-two topology.  A global potential on
 parallel `p -f-> r` decompositions, or an independently composed length-two
 escape, is the remaining operation.
+
+The parallel branch itself admits a strict refinement.  If a failed
+charity swap exposes a new `p`-root `E'` after removing pivot `g`, then
+`E'+g` is strictly better for `p` than the old root.  Every external failure
+of this augmentation either creates a non-`p` champion and routes out, or
+is a desired set containing the single pivot `g`.  See
+[`LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md`](LENGTH_THREE_PARALLEL_ROOT_PIVOT_REDUCTION.md).
