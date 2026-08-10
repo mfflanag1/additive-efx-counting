@@ -1936,10 +1936,10 @@ topology in the final graph classification.
 
 The target is complete only after all of the following are proved:
 
-1. a cap-free payment of the strict adaptive-pair/triple budget crossings
-   (16ab) and (16ag), equivalently an externally safe top-up of the
-   replaced bundle, or a proof that each surviving `p`/`q` boundary
-   blocker routes to a shorter or adjacent basic cycle;
+1. closure of the canonical relative-`q` overlap after the joint split:
+   defeat the fractional ratio separator, the two-row boundary deficit
+   (16be), and the `r`-source safety reversal, or route each to a shorter
+   or adjacent basic cycle;
 2. composition of the other charity-swap sources with independently proved
    length-two and adjacent/alternate length-four cycle lemmas;
 3. an explicit statement of what the result proves inside the
