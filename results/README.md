@@ -795,6 +795,16 @@ both encodings.
   — the complete eight-order classification: two cap-free theorems and six
   exact strict countermodels, with the distinction between failure of the
   anchored candidate and availability of other rival forms made explicit.
+- [`TRAPPED_SOURCE_RETURN_LENGTH_TWO_CLOSURE_THEOREM.md`](TRAPPED_SOURCE_RETURN_LENGTH_TWO_CLOSURE_THEOREM.md)
+  — cap-free closure of the two-genuine-edge length-two cycle, including
+  distinct and shared external bottom-edge sources. The artifact was
+  recovered from the original research worktree and now makes its BCFF
+  Theorem 3.16 internal-to-external reduction explicit.
+- [`TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md`](TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md)
+  — conditional composition of the length-two, length-three, adjacent, and
+  alternating selected-cycle classes. It proves that the four classes are
+  exhaustive without assuming a chordless champion graph. The theorem is
+  still conditional on closing the remaining length-three payment gate.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an
