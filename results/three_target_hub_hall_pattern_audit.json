@@ -1,0 +1,91 @@
+{
+  "claim_boundary": "finite directed-incidence census for one hub and two leaves; it classifies the internal Hall remainder but does not prove that flower inequalities select a hub split",
+  "counts": {
+    "minimum_hall_size_1": 37,
+    "minimum_hall_size_2": 9,
+    "minimum_hall_size_3": 3,
+    "perfect_matching": 15
+  },
+  "graph_count": 64,
+  "minimum_size_three_patterns": [
+    {
+      "missing_source": "s",
+      "neighborhoods": {
+        "h": [
+          "r"
+        ],
+        "r": [
+          "h"
+        ],
+        "s": [
+          "h",
+          "r"
+        ]
+      },
+      "two_cycle_avoids_hub": false,
+      "two_cycle_contains_hub": true
+    },
+    {
+      "missing_source": "r",
+      "neighborhoods": {
+        "h": [
+          "s"
+        ],
+        "r": [
+          "h",
+          "s"
+        ],
+        "s": [
+          "h"
+        ]
+      },
+      "two_cycle_avoids_hub": false,
+      "two_cycle_contains_hub": true
+    },
+    {
+      "missing_source": "h",
+      "neighborhoods": {
+        "h": [
+          "r",
+          "s"
+        ],
+        "r": [
+          "s"
+        ],
+        "s": [
+          "r"
+        ]
+      },
+      "two_cycle_avoids_hub": true,
+      "two_cycle_contains_hub": false
+    }
+  ],
+  "pi_free_size_three_remainder": {
+    "missing_source": "h",
+    "neighborhoods": {
+      "h": [
+        "r",
+        "s"
+      ],
+      "r": [
+        "s"
+      ],
+      "s": [
+        "r"
+      ]
+    },
+    "two_cycle_avoids_hub": true,
+    "two_cycle_contains_hub": false
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_three_target_hub_hall_patterns.py",
+    "script_sha256": "ecab9b5a8bc2533d2408ec5fb10fe84ad7235c89a2760a7652da7e92484801d6"
+  },
+  "schema": "three-target-hub-hall-pattern-audit-v1",
+  "status": "CLASSIFIED",
+  "target_order": [
+    "h",
+    "r",
+    "s"
+  ]
+}

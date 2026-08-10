@@ -1,0 +1,115 @@
+{
+  "base_allocation": {
+    "h": [
+      "hc1",
+      "hc2",
+      "a",
+      "b"
+    ],
+    "q": [
+      "q1",
+      "q2"
+    ],
+    "r": [
+      "r1",
+      "r2"
+    ],
+    "s": [
+      "z"
+    ]
+  },
+  "candidate_allocation": {
+    "h": [
+      "hc1",
+      "hc2",
+      "f"
+    ],
+    "q": [
+      "q1",
+      "q2"
+    ],
+    "r": [
+      "r1",
+      "r2",
+      "a"
+    ],
+    "s": [
+      "z",
+      "b"
+    ]
+  },
+  "cap": 6,
+  "claim_boundary": "tests compatibility of base EFX, charity dominance, hub improvement, the four hard-trap walls, and absence of hub-to-leaf walls; it omits the flower champion constraints and does not refute the hub selector or EFX",
+  "diagnostics": {
+    "hub_owner_gain": 1,
+    "hub_to_leaf_safety_slacks": {
+      "r": 6,
+      "s": 7
+    },
+    "minimum_base_charity_slack": 0,
+    "minimum_base_efx_slack": 0,
+    "strict_wall_margins": {
+      "r_to_h": 1,
+      "r_to_s": 1,
+      "s_to_h": 1,
+      "s_to_r": 1
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/decide_three_target_leaf_mutual_trap.py",
+    "script_sha256": "b533129dfb4c0d3c2af03bb16155355c0a17c4403a57adb8cc7df4cc2c0a3482",
+    "z3_version": "5.0.0"
+  },
+  "schema": "three-target-leaf-mutual-trap-v1",
+  "status": "sat",
+  "values": {
+    "h": {
+      "a": 2,
+      "b": 2,
+      "f": 5,
+      "hc1": 2,
+      "hc2": 2,
+      "q1": 3,
+      "q2": 3,
+      "r1": 1,
+      "r2": 1,
+      "z": 1
+    },
+    "q": {
+      "a": 1,
+      "b": 5,
+      "f": 6,
+      "hc1": 1,
+      "hc2": 1,
+      "q1": 4,
+      "q2": 4,
+      "r1": 1,
+      "r2": 1,
+      "z": 1
+    },
+    "r": {
+      "a": 1,
+      "b": 1,
+      "f": 4,
+      "hc1": 2,
+      "hc2": 1,
+      "q1": 1,
+      "q2": 1,
+      "r1": 1,
+      "r2": 3,
+      "z": 6
+    },
+    "s": {
+      "a": 2,
+      "b": 1,
+      "f": 5,
+      "hc1": 1,
+      "hc2": 2,
+      "q1": 1,
+      "q2": 1,
+      "r1": 1,
+      "r2": 5,
+      "z": 5
+    }
+  }
+}

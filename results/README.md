@@ -873,10 +873,23 @@ both encodings.
   — cap-free classification of every EFX failure after an improving owner
   replaces a packet by the charity good and partitions the released packet
   among several recipients. Hub walls and leaf walls yield exact generalized
-  edges with disjoint incoming subsets. A directed closure is a BCFF PI edge
+  edges with disjoint incoming packets. A directed closure is a BCFF PI edge
   set; otherwise the obstruction exposes an open source or a strict Hall
   deficiency. The lemma does not yet select a split or eliminate those two
   component-growth remainders.
+- [`THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md`](THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md)
+  — exhaustive 64-graph classification of the internal wall-source relation
+  for one hub and two leaves. Hall witnesses of size one and two force an
+  open or shared-source growth direction. Among the three full-target Hall
+  patterns, two contain a PI two-cycle through the hub; the sole PI-free
+  remainder has mutually blocking leaves, both blocking the hub, and no hub
+  wall source. This isolates the next analytic inequality case.
+- [`LEAF_MUTUAL_TRAP_SCALAR_GATE_REFUTATION_20260810.md`](LEAF_MUTUAL_TRAP_SCALAR_GATE_REFUTATION_20260810.md)
+  — positive cap-six additive realization of the sole closed three-target
+  Hall trap. Base EFX, charity dominance, hub improvement, both mutual leaf
+  walls, both leaf-to-hub walls, and absence of hub-to-leaf walls coexist.
+  Therefore the trap cannot be eliminated by summing local wall signs; the
+  next proof must use flower champion identities or an alternate hub.
 - [`ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md`](ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md)
   — analytic cap-free closure of all 24 priority orders in the adjacent-large
   length-four residual. The final five `p`-first types are closed by an

@@ -61,7 +61,7 @@ one-recipient charity replacement still leaves a bounded cell whose nearest
 escape is a three-edge hub split, so the selector must allow a released
 packet to be partitioned among multiple recipients. The cap-free hub-split
 obstruction lemma now turns each failed hub/leaf target into generalized
-edges with disjoint incoming subsets. A directed wall cycle is PI; the live
+edges with disjoint incoming packets. A directed wall cycle is PI; the live
 remainder is an open wall source or a strict Hall-deficient target set. The
 next theorem must select the hub and partition so that component growth
 cannot preserve either remainder. See

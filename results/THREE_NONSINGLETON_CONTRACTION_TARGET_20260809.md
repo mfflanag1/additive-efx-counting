@@ -99,7 +99,7 @@ packet partitions at a hub, not just subsets sent to charity.
 The charity-rooted hub-split obstruction lemma now classifies every failure
 of such a split cap-free. A failed hub target supplies an incoming subset of
 `{f}` while releasing the whole hub packet; every failed leaf target supplies
-an incoming subset of its disjoint packet cell. Directed wall cycles are
+its disjoint packet cell as an incoming set. Directed wall cycles are
 therefore release-compatible PI edge sets. The exact remaining selector gate
 is to choose the hub and partition so that an open wall source or a strict
 Hall-deficient target set cannot persist under component growth.

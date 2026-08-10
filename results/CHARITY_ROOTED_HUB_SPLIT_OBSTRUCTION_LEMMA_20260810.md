@@ -94,29 +94,24 @@ The wall is therefore possible only if
 \kappa_i(k,R_k)>\gamma_i+s_{ik}. \tag{4}
 \]
 
-Taking a most-envious subset `D subseteq X_k+R_k` gives a generalized edge
-into `k` with actual incoming set
-
-\[
-H=D\cap R_k\subseteq R_k
-\]
-
-and prescribed release `S=X_k\setminus D`. If `H` is empty, the same wall
-already gives ordinary envy into `k`; otherwise it gives the generalized
-`(H|S)` edge. Any discarded part of `R_k` is simply unused, and every
-incoming good still lies in the hub packet `R`.
+Taking a most-envious subset gives the generalized `(R_k|empty)` edge into
+`k`. In BCFF Definition 3.1 the label records the whole offered set `R_k`;
+the corresponding discard set may contain goods from either `X_k` or `R_k`.
+If the desired subset discards all of `R_k`, it also gives the parallel
+ordinary envy consequence into `k`.
 
 If no hub or leaf wall occurs, `Y` is complete EFX and Pareto improves `X`.
 
 ## Release compatibility and the Hall remainder
 
-The actual incoming sets `H subseteq R_k` of distinct leaf edges are
-disjoint, and the hub edge releases all of `R`. The only other possible
-incoming set is `{f}`, which is initially unallocated. Consequently, if a
-selection of hub/leaf wall edges forms directed cycles on its target owners,
-those cycles are automatically BCFF PI edge sets: their incoming sets are
-disjoint and every one is initially unallocated or released by the hub
-edge. Ordinary envy edges have empty incoming sets and cause no conflict.
+The incoming sets `R_k` of distinct leaf edges are disjoint, and the hub edge
+releases all of `R`. The only other possible incoming set is `{f}`, which is
+initially unallocated. Consequently, if a selection containing the hub edge
+and the chosen leaf edges forms vertex-disjoint directed cycles on its target
+owners, those cycles are automatically a BCFF PI edge set: their incoming
+sets are disjoint and every one is initially unallocated or released by an
+edge in the set. Ordinary envy edges have empty incoming sets and cause no
+conflict.
 
 Thus a blocked hub split leaves a sharply defined combinatorial remainder.
 A directed wall cycle contradicts global maximality. Otherwise either a
@@ -125,6 +120,13 @@ transfer component, or the target-to-source incidence relation has a strict
 Hall-deficient subset. A system of distinct representatives alone is not
 claimed to be a PI cycle: its sources must close on the same target set.
 This is the branching analogue of following one blocker along a path.
+
+For a hub with exactly two leaves, the finite internal-source remainder is
+classified in
+[`THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md`](THREE_TARGET_HUB_HALL_CLASSIFICATION_20260810.md).
+The only inclusion-minimal full-target Hall trap not already containing a PI
+two-cycle through the hub is the leaf-mutual pattern: the leaves block each
+other, both block the hub, and the hub is absent as an internal wall source.
 
 The scalar implications replay as QF_LRA-UNSAT in
 [`charity_rooted_hub_split_obstruction_audit.json`](charity_rooted_hub_split_obstruction_audit.json).

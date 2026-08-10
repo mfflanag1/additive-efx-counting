@@ -7,10 +7,20 @@ from pathlib import Path
 try:
     from .audit_charity_rooted_hub_split import run as run_hub_split_audit
     from .audit_packet_charity_replacement import run as run_packet_charity_audit
+    from .audit_three_target_hub_hall_patterns import run as run_hub_hall_audit
+    from .decide_three_target_leaf_mutual_trap import (
+        audit_frozen as audit_leaf_mutual_frozen,
+        run as run_leaf_mutual_gate,
+    )
     from .decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 except ImportError:
     from audit_charity_rooted_hub_split import run as run_hub_split_audit
     from audit_packet_charity_replacement import run as run_packet_charity_audit
+    from audit_three_target_hub_hall_patterns import run as run_hub_hall_audit
+    from decide_three_target_leaf_mutual_trap import (
+        audit_frozen as audit_leaf_mutual_frozen,
+        run as run_leaf_mutual_gate,
+    )
     from decide_three_nonsingleton_flower_full_capture_swap_gate import run as run_swap_gate
 
 
@@ -187,9 +197,32 @@ def main() -> None:
     hub_split_theorem = (
         ROOT / "results" / "CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md"
     ).read_text()
-    assert "actual incoming set" in hub_split_theorem
+    assert "label records the whole offered set" in hub_split_theorem
     assert "system of distinct representatives alone is not" in hub_split_theorem
     assert "open wall source" in hub_split_theorem
+
+    hub_hall = json.loads(
+        (ROOT / "results" / "three_target_hub_hall_pattern_audit.json").read_text()
+    )
+    assert run_hub_hall_audit() == hub_hall
+    assert hub_hall["status"] == "CLASSIFIED"
+    assert hub_hall["graph_count"] == 64
+    assert hub_hall["counts"] == {
+        "minimum_hall_size_1": 37,
+        "minimum_hall_size_2": 9,
+        "minimum_hall_size_3": 3,
+        "perfect_matching": 15,
+    }
+    assert hub_hall["pi_free_size_three_remainder"]["missing_source"] == "h"
+
+    leaf_mutual = json.loads(
+        (ROOT / "results" / "three_target_leaf_mutual_trap_cap6.json").read_text()
+    )
+    assert run_leaf_mutual_gate(6)["status"] == "sat"
+    assert audit_leaf_mutual_frozen(leaf_mutual)
+    assert leaf_mutual["status"] == "sat"
+    assert min(leaf_mutual["diagnostics"]["strict_wall_margins"].values()) > 0
+    assert min(leaf_mutual["diagnostics"]["hub_to_leaf_safety_slacks"].values()) >= 0
 
     theorem = (
         ROOT
