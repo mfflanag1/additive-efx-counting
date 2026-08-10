@@ -62,13 +62,17 @@ nonself genuine incoming `f`-champion arm. See
 The length-two flower is now further reduced by an exhaustive common-safe
 cover theorem. All 864 source/priority cells have either a direct improving
 cover or a cover with one unpaid mutual-cycle owner placed after a strict
-improver. The only residual is the strict scalar failure of that owner's
-external-bottom payment. The next research output should be either:
+improver. A four-cover strict-cycle lemma closes another 148 cells, leaving
+284 cells in which simultaneous failure is consistent only in the relaxed
+independent-total/tail abstraction. A true-tail atomic audit reduces this to
+116 bounded cells but supplies an exact two-good exchange witness after all
+one-good transfers are blocked. This rules out continuing by fixed radius.
+The next research output should be either:
 
-- a cap-free desired-subset/PI routing that contradicts every low-payment
-  wall and closes the flower; or
-- one exact aggregate countermodel to that routing, followed by the smallest
-  corrected two-cover potential that survives the model.
+- a cap-free connected exchange-component/PI routing that contradicts every
+  low-payment wall and closes the flower; or
+- one exact component-level countermodel, followed by a corrected global
+  potential stated on connected slot components rather than item radius.
 
 ## Claim boundary
 

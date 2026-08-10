@@ -8,6 +8,8 @@ try:
     from .decide_three_nonsingleton_flower_source_grid import run as run_source_grid
     from .decide_three_nonsingleton_flower_one_unpaid_cover import run as run_one_unpaid
     from .decide_three_nonsingleton_flower_one_unpaid_lra import run as run_one_unpaid_lra
+    from .decide_three_nonsingleton_flower_abstract_low_wall import run as run_low_wall
+    from .decide_three_nonsingleton_flower_payment_menu import run as run_payment_menu
 except ImportError:
     from decide_three_nonsingleton_cycle_census import run as run_census
     from audit_three_nonsingleton_length_two_return_wall import run as run_return_wall
@@ -15,6 +17,8 @@ except ImportError:
     from decide_three_nonsingleton_flower_source_grid import run as run_source_grid
     from decide_three_nonsingleton_flower_one_unpaid_cover import run as run_one_unpaid
     from decide_three_nonsingleton_flower_one_unpaid_lra import run as run_one_unpaid_lra
+    from decide_three_nonsingleton_flower_abstract_low_wall import run as run_low_wall
+    from decide_three_nonsingleton_flower_payment_menu import run as run_payment_menu
 
 from pathlib import Path
 
@@ -75,6 +79,16 @@ def main() -> None:
     assert one_unpaid_lra["status"] == "ALL_FORCED"
     assert one_unpaid_lra["case_count"] == 864
 
+    low_wall = run_low_wall()
+    assert low_wall["status"] == "COMPLETE"
+    assert low_wall["counts"] == {"IMPOSSIBLE": 148, "sat": 284, "unknown": 0}
+
+    payment_menu = run_payment_menu()
+    assert payment_menu["status"] == "ALL_MINIMAL"
+    assert payment_menu["record_count"] == 148
+    assert payment_menu["menu_sizes"] == {"4": 148}
+    assert sorted(entry["count"] for entry in payment_menu["canonical_menu_types"]) == [12, 12, 18, 18, 44, 44]
+
     theorem = (
         ROOT
         / "results"
@@ -88,6 +102,8 @@ def main() -> None:
     assert "Four-source packet matching" in theorem
     assert "One-unpaid cover theorem" in theorem
     assert "432" in theorem
+    assert "Four-cover strict-cycle lemma" in theorem
+    assert "284" in theorem
     assert "not asserted globally maximal" in theorem
     print("three-nonsingleton cycle census tests passed")
 

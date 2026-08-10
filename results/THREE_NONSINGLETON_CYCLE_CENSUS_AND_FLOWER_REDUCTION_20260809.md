@@ -229,9 +229,93 @@ v_u(A)<\theta_u,
 \qquad u\in\{r,q\},\quad A\in\{A_q,A_r\}.
 \]
 
-This is the only remaining gate in the length-two flower topology. The
-finite cover does not prove that the wall is impossible; that requires a
-cap-free desired-subset extraction and an explicit generalized PI routing.
+At the level of a single selected cover, this low-payment family is the
+remaining gate. Comparing alternative covers closes part of it immediately.
+
+## Four-cover strict-cycle lemma
+
+The one-unpaid theorem selected one cover per cell, but many cells admit
+several covers with the same unpaid recipient. Those alternatives close a
+further 148 source/order cells without any additive packet identity.
+
+> **Lemma 7 (payment menu).** Fix an agent `u` and a finite menu of
+> lex-valid one-unpaid covers, all with unpaid recipient `u`. If, for every
+> strict ordering of the non-singleton bundles appearing in the menu, some
+> cover assigns `u` a bundle maximal among that cover's assigned bundles,
+> then at least one cover is EFX and lexicographically improving.
+
+**Proof.** Suppose every cover fails EFX. All fixed or improving recipients
+meet every tail because the assigned bundles are common-safe, so only `u`
+can fail. If `P` is her payment in a failed cover, then
+
+\[
+v_u(P)<\tau_u(W)<v_u(W)
+\]
+
+for some other nonsingleton bundle `W` in that cover; a singleton has zero
+tail and cannot witness failure. Thus every menu row forces its payment
+strictly below another displayed bundle. But in the row whose payment is
+maximal under the actual strict `u`-ordering, no such inequality is
+possible. \(\square\)
+
+The exact low-wall audit asserts simultaneous failure of every lex-valid
+one-unpaid cover. It finds 148 UNSAT and 284 SAT cells in the deliberately
+relaxed independent-total/tail abstraction. Every UNSAT cell has a
+deletion-minimal four-cover payment menu, and the 148 certificates reduce to
+only six canonical clause types, with deterministic multiplicities
+`44,44,18,18,12,12`.
+See
+[`three_nonsingleton_flower_abstract_low_wall_audit.json`](three_nonsingleton_flower_abstract_low_wall_audit.json)
+and
+[`three_nonsingleton_flower_payment_menu_audit.json`](three_nonsingleton_flower_payment_menu_audit.json).
+
+Combining Theorem 5 and Lemma 7 closes 580 of the 864 flower source/priority
+cells. The remaining 284 cells admit an abstract simultaneous-wall model.
+Those models are not asserted additively realizable, so they refute no EFX
+claim; they identify exactly where packet additivity or generalized PI
+routing must enter.
+
+## Additive and true-tail boundary
+
+Linking `A_q,A_r` additively to the six top/bottom packets, while retaining
+arbitrary common-safe tail variables, does not close another cell: the
+sound relaxation again returns 148 impossible and 284 satisfiable cells.
+See
+[`three_nonsingleton_flower_additive_low_wall_audit.json`](three_nonsingleton_flower_additive_low_wall_audit.json).
+Thus bundle-total additivity alone is not the missing invariant.
+
+The exact one-good-per-displayed-component cell adds the true
+minimum-good formula for every tail. In that bounded cell 316 of the 432
+one-unpaid cases are impossible and 116 remain satisfiable. The surviving
+cases occupy only eight source patterns. Ninety-six of them have
+`a=c`, arm source `r` or `q`, and opposite bottom-edge sources; the other 20
+are smaller same-source or singleton-arm boundary families.
+
+The atomic master also blocks every owner-improving one-floater swap and
+every priority-directed one-good transfer. These extra maximality constraints
+do not change the `316/116` split. Therefore the 116 models are not artifacts
+of omitting either local move. The frozen audit is
+[`three_nonsingleton_flower_atomic_low_wall_audit.json`](three_nonsingleton_flower_atomic_low_wall_audit.json).
+This is bounded proof-mining evidence, not a cap-free theorem.
+
+One representative SAT model has source/order key
+
+\[
+(h,a,\alpha,\beta;\pi)=(r,c,c,s; r,q,c,s).
+\]
+
+Exhaustive exact optimization finds its nearest lex-improving EFX move at
+distance two: transfer the atomic good `tq_rest` from `q` to `r`, release
+`aq_br` from `r`, keep `f` unallocated, and leave `c,s` fixed. Agent `r`
+improves before the losing agent `q`. This move lies outside the common-safe
+cover menu and is a generalized one-in/one-out exchange, not another
+one-good transfer. See
+[`three_nonsingleton_flower_atomic_witness_improvement.json`](three_nonsingleton_flower_atomic_witness_improvement.json).
+
+This witness is the stopping rule against a fixed-radius search. Blocking
+radius one merely exposes a radius-two exchange, just as the earlier general
+campaign found larger connected transfer components. The correct next
+object is the component or generalized-edge structure of the exchange.
 
 ## Exact wall witness
 
@@ -253,13 +337,15 @@ third champion arm in any cap-free proof.
 
 ## Next analytic gate
 
-Close the strict low-payment wall in Corollary 6. Extract a minimal desired
-subset from the union of the unpaid external bundle and the tail attaining
-`theta_u`, then route every possible source through an explicit generalized
-PI cycle or a second one-unpaid cover. The argument must allow extra graph
-edges and arbitrary packet sizes. An equal-vector contraction is unavailable
-under nondegeneracy: equality of every owner's utility forces every assigned
-bundle to be unchanged.
+Prove a **flower exchange-component lemma** for the remaining 284 cap-free
+walls. From a failed cover, grow the generalized one-in/one-out exchange
+exposed by its attaining tail. Show that either the connected exchange union
+becomes EFX with a positive lexicographic gain, or its crossing walls close
+an explicit PI cycle with one of the three genuine flower edges. The argument
+must allow arbitrary packet sizes and must use connected slot components,
+not a bound on the number of moved goods. An equal-vector contraction is
+unavailable under nondegeneracy: equality of every owner's utility forces
+every assigned bundle to be unchanged.
 
 Closing the flower settles only the `GG` row of the eight-class census. It
 does not by itself eliminate the other seven three-nonsingleton classes.

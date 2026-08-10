@@ -1,0 +1,161 @@
+{
+  "claim_boundary": "exact optimization on the frozen 12-good atomic witness; improvements show only that a new allocation family exists outside the current common-safe cover menu",
+  "integer_scale": 16,
+  "nearest_complete_improvement": {
+    "allocation": {
+      "c": [
+        "bc",
+        "br_rest",
+        "tc"
+      ],
+      "q": [
+        "aq_tq",
+        "ar_bq",
+        "bq_rest"
+      ],
+      "r": [
+        "aq_br",
+        "ar_tr",
+        "tq_rest",
+        "tr_rest"
+      ],
+      "s": [
+        "f",
+        "z"
+      ]
+    },
+    "base_utility_vector": [
+      24,
+      166,
+      40,
+      27
+    ],
+    "minimum_moved_goods": 3,
+    "status": "SAT",
+    "utility_vector": [
+      26,
+      153,
+      46,
+      32
+    ]
+  },
+  "nearest_partial_improvement": {
+    "allocation": {
+      "_": [
+        "aq_br",
+        "f"
+      ],
+      "c": [
+        "bc",
+        "tc"
+      ],
+      "q": [
+        "aq_tq",
+        "ar_bq",
+        "bq_rest"
+      ],
+      "r": [
+        "ar_tr",
+        "br_rest",
+        "tq_rest",
+        "tr_rest"
+      ],
+      "s": [
+        "z"
+      ]
+    },
+    "base_utility_vector": [
+      24,
+      166,
+      40,
+      27
+    ],
+    "minimum_moved_goods": 2,
+    "status": "SAT",
+    "utility_vector": [
+      27,
+      153,
+      40,
+      27
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/analyze_three_nonsingleton_flower_atomic_witness.py",
+    "script_sha256": "11cbc7c8fe15bf5b977dbd63538d1cbd910b869ca76102e901122b12ba80e1e2",
+    "witness": "results/three_nonsingleton_flower_atomic_low_wall_audit.json",
+    "witness_sha256": "1ed0a551f4cf6dc9849baef3c2c0dfc16ab8933bbad3d13dda1e49fcdcffefb2",
+    "z3_version": "5.0.0"
+  },
+  "schema": "three-nonsingleton-flower-atomic-witness-improvement-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "s",
+    "singleton_envier": "c"
+  },
+  "status": "COMPLETE",
+  "values": {
+    "c": {
+      "aq_br": 10,
+      "aq_tq": 31,
+      "ar_bq": 4,
+      "ar_tr": 12,
+      "bc": 38,
+      "bq_rest": 3,
+      "br_rest": 6,
+      "f": 1,
+      "tc": 2,
+      "tq_rest": 5,
+      "tr_rest": 11,
+      "z": 41
+    },
+    "q": {
+      "aq_br": 46,
+      "aq_tq": 74,
+      "ar_bq": 75,
+      "ar_tr": 48,
+      "bc": 2,
+      "bq_rest": 4,
+      "br_rest": 3,
+      "f": 74,
+      "tc": 145,
+      "tq_rest": 13,
+      "tr_rest": 47,
+      "z": 1
+    },
+    "r": {
+      "aq_br": 4,
+      "aq_tq": 15,
+      "ar_bq": 2,
+      "ar_tr": 7,
+      "bc": 3,
+      "bq_rest": 1,
+      "br_rest": 5,
+      "f": 6,
+      "tc": 21,
+      "tq_rest": 7,
+      "tr_rest": 8,
+      "z": 2
+    },
+    "s": {
+      "aq_br": 2,
+      "aq_tq": 12,
+      "ar_bq": 11,
+      "ar_tr": 17,
+      "bc": 6,
+      "bq_rest": 3,
+      "br_rest": 1,
+      "f": 5,
+      "tc": 7,
+      "tq_rest": 4,
+      "tr_rest": 6,
+      "z": 27
+    }
+  }
+}

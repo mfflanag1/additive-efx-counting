@@ -31,6 +31,17 @@ The shortest next frontier is the exactly-three-nonsingleton branch, where
 only one singleton anchor remains; the four-nonsingleton branch and the
 nonnegative/tie wrapper remain later gates.
 
+**August 9 three-nonsingleton frontier:** the selected-cycle census is now
+exactly eight directed classes. The length-two class reduces cap-free to a
+three-packet champion flower. A common-safe cover plus four-cover
+strict-cycle theorem closes 580 of its 864 source/priority cells and reduces
+the other 284 to named low-payment walls. Exact true-tail proof mining leaves
+116 bounded cells after all one-floater swaps and priority-directed one-good
+transfers are blocked; their representative escape is a connected two-good
+generalized exchange. The live target is therefore a flower-specific
+exchange-component/PI closure, not another bounded-radius menu. See
+[THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md](THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

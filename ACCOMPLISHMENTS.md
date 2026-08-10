@@ -166,6 +166,29 @@ and source exclusions from BCFF. It closes the length-three residual only;
 it is not a proof of complete four-agent additive EFX and has not yet been
 externally refereed.
 
+## 9. Exactly-two composition and three-nonsingleton flower frontier
+
+Combining the length-three theorem with the length-two, adjacent, and
+alternating cycle theorems now eliminates every globally lex-maximal
+noncomplete BCFF state with exactly two nonsingleton bundles. The selected
+cycle classification allows extra graph edges and is cap-free, but its BCFF
+interfaces still require independent expert review.
+
+For exactly three nonsingletons, an exact directed census leaves eight cycle
+classes. The first, a mutual two-edge genuine cycle, reduces analytically to
+a three-packet flower with a third genuine arm. Across its 36 source cells
+and 24 priority orders, a common-safe cover theorem closes 432 cases
+directly; minimal four-cover strict-order menus close another 148. The
+remaining 284 cap-free low-wall cells survive a sound additive relaxation.
+
+In a true-tail atomic proof-mining cell, 316 of the 432 initial low-cover
+cases are impossible and 116 survive. Those models remain after blocking all
+one-floater swaps and priority-directed one-good transfers. A representative
+model's nearest improvement is a two-good connected generalized exchange,
+confirming that the next invariant must be an exchange component rather than
+item radius. This is a sharp frontier reduction, not closure of the flower
+and not general EFX.
+
 ## Bottom-line assessment
 
 The existing counting paper remains a focused package of six exact witnesses,
