@@ -1280,6 +1280,14 @@ both encodings.
 - [`same_source_top_switch_margin_descent_audit.json`](same_source_top_switch_margin_descent_audit.json)
   — symbolic replay of the margin identity, strict fresh-support descent,
   and the capture alternative.
+- [`REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md`](REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md)
+  — eliminates fixed-source full-bottom reused-top cycling. At fixed removed
+  support, the admissible external core minimizing root value maximizes the
+  root's complement. A continuation must add fresh support or change source
+  or core shape.
+- [`reused_top_canonical_core_selector_audit.json`](reused_top_canonical_core_selector_audit.json)
+  — symbolic replay of complement cancellation, root-pool maximality, and
+  propagation of the canonical deficit.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow

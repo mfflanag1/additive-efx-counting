@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "QF_LRA audit of root-pool maximization within one fixed-source full-bottom reused-top family; changes of family are outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_reused_top_canonical_core_selector.py",
+    "script_sha256": "db91f5c89db368ba68fb4899c20309bfd8283c3071b79c8ad9f9c934c48923c0",
+    "theorem": "results/REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "4837b42887786ef50f9889ecfbbfefa671ba963a8a16950492a0a4323090ca3c",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {"claim": "complement_cancellation", "status": "unsat"},
+    {"claim": "minimum_root_core_maximizes_complement", "status": "unsat"},
+    {"claim": "canonical_deficit_propagates_to_every_reused_core", "status": "unsat"}
+  ],
+  "schema": "reused-top-canonical-core-selector-audit-v1",
+  "status": "ALL_FORCED"
+}
