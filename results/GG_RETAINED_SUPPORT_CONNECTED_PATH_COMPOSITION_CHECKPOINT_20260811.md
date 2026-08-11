@@ -143,9 +143,13 @@ desired mutual core `D(U)=(T_r\setminus U)+f` remains available even when its
 goods are split across several targets.  Reassembling this split-support
 response and applying universal reset gives protected `q` coverage, strict
 growth of `U`, captured-margin rotation, or an explicit `q`- or external-
-source margin packet.  A proof must now convert that named source-margin/
-root-critical packet, or an unsafe/hitting-set augmentation, into a release-
-compatible PI component or a surplus-budgeted connected transfer component.
+source margin packet.  The root-budget frontier then maximizes compensation
+for that source under the exact amount the root can return.  It either
+restores the source or proves that every unused pool good is individually too
+expensive for the remaining root budget.  A proof must now split/replace the
+root packet at that pointwise blockade or enlist a third owner in a surplus-
+budgeted connected fork; unsafe/hitting-set augmentation remains the other
+route.
 The initially proposed lexicographic potential was
 
 \[
@@ -192,7 +196,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 60 tests spanning the retained-support,
+The focused dependency replay currently passes 62 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

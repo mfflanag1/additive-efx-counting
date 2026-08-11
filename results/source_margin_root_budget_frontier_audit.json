@@ -1,0 +1,23 @@
+{
+  "claim_boundary": "symbolic audit of the cap-free same-source compensation frontier; it does not eliminate the terminal blockade or prove GG closure",
+  "outcomes": [
+    "source restored under root budget",
+    "unsafe restored target response augmentation",
+    "full-pool source exhaustion",
+    "pointwise root-budget blockade requiring split packet or third-owner fork"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_source_margin_root_budget_frontier.py",
+    "script_sha256": "4361c2538568742053abeec749c64a5418cd18bea50f479f47ab9bf046800286",
+    "theorem": "results/SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md",
+    "theorem_sha256": "a5bcc0cd4e8fe1201e44d0bba02518f7bd58f55b622b7aa49c79b6c107da8617"
+  },
+  "schema": "source-margin-root-budget-frontier-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "root_payment_identity": "unsat",
+    "source_blockade_margin": "unsat",
+    "source_restoration_identity": "unsat",
+    "unused_good_feasibility_contradicts_maximality": "unsat"
+  }
+}

@@ -1447,6 +1447,13 @@ both encodings.
   path; reassembling it yields protected `q` coverage, retained-support
   growth, captured-margin rotation, or a named source-margin packet. The
   latter packet and unsafe/root-critical handoffs remain open.
+- [`SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md`](SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md)
+  ([symbolic audit](source_margin_root_budget_frontier_audit.json))
+  — gives every captured-source packet an exact root return budget and
+  maximizes same-source compensation inside it. Either the source is restored
+  or every unused pool good is individually too expensive for the remaining
+  root budget. The surviving operation is now precise: split/replace the root
+  packet or enlist a third owner in a connected fork.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
