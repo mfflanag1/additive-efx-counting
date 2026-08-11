@@ -1468,6 +1468,13 @@ both encodings.
   nonroot repair, and nonroot J-exhaustion all strictly improve that hole's
   own residual, so active and response-silent external cuts are forced to the
   root-facing handoff.
+- [`GLOBAL_RESIDUAL_ROOT_FACING_RIGIDITY_LEMMA_20260811.md`](GLOBAL_RESIDUAL_ROOT_FACING_RIGIDITY_LEMMA_20260811.md)
+  ([composition audit](global_residual_root_facing_rigidity_audit.json))
+  — at the arbitrary-hole residual maximum, every distinct common-safe
+  root-preserving repartition would strictly improve the same residual and is
+  impossible. The original partition is therefore item-critical, and its
+  alternating frontier terminates in a top packet or `f`-only captured-bottom
+  handoff.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

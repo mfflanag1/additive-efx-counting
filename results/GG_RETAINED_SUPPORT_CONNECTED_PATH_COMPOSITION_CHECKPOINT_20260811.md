@@ -169,6 +169,13 @@ descent, successful nonroot repair, and nonroot J-exhaustion all strictly
 increase that same quantity.  Thus neither an active nor a response-silent
 external source can circulate through the other nonroot cores: both are
 forced to unsafe augmentation, EFX/PI, or the root-facing handoff.
+
+At that handoff, residual maximality also rigidifies the root-preserving
+partition.  The old root-core/residual split is feasible; every distinct
+common-safe selected split would strictly improve the same hole residual and
+is impossible.  An unsafe root target augments immediately.  The remaining
+original split has an item-critical least good, and the finite compensator
+frontier ends in exactly a top packet or the `f`-only captured-bottom packet.
 The initially proposed lexicographic potential was
 
 \[
@@ -215,7 +222,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 66 tests spanning the retained-support,
+The focused dependency replay currently passes 68 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "composition audit for rigidity of common-safe root-facing partitions; top/captured-bottom fork closure and GG remain open",
+  "dependency_count": 4,
+  "provenance": {
+    "script": "tracks/parkability/audit_global_residual_root_facing_rigidity.py",
+    "script_sha256": "0718132fbf20a9f4ed2d0b6fd34dc40388cd3fdb933e4e0f660bf63f1f1e5ea2",
+    "theorem": "results/GLOBAL_RESIDUAL_ROOT_FACING_RIGIDITY_LEMMA_20260811.md",
+    "theorem_sha256": "93ab20911913920eb1f21bf34eb44a97b7d788e65ee2a96ce0f5faad7bed6fcf"
+  },
+  "records": [
+    {
+      "audit": "results/fixed_u_arbitrary_hole_residual_selector_audit.json",
+      "audit_sha256": "e939f67ef3d0c6682e7a75e57124651029e941a980d1f2dd0af691c340a21bc1",
+      "audit_status": "DEPENDENCIES_REPLAYABLE",
+      "theorem": "results/FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "00219d044b900b4fd3efe197300cf9b36c16dcfe801dc262340f67c9e95aab68"
+    },
+    {
+      "audit": "results/root_preserving_two_hole_selector_audit.json",
+      "audit_sha256": "73317112c82853f0ba51edf8a9fff74f81fe2ca01ef771864331c9da0c4bdaeb",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "e61e01ad0fd1271e615f91463b4b0f3e3ed2d86f35474dd1a6866bb7e2142ffd"
+    },
+    {
+      "audit": "results/root_critical_compensator_dichotomy_audit.json",
+      "audit_sha256": "e2fda491405d4270963afa42e7c85336d0338d6760d8f2e806583add6adced75",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/ROOT_CRITICAL_COMPENSATOR_DICHOTOMY_LEMMA_20260811.md",
+      "theorem_sha256": "b5fdbc98dd693c991810d54f784c6aee600df2f786eca1cf66b57681eb5d3e1f"
+    },
+    {
+      "audit": "results/root_critical_alternating_frontier_audit.json",
+      "audit_sha256": "7075f716febce8ff21178faebb7fa7587ae08a522a9026b1d7f3b7c0af0f6be8",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/ROOT_CRITICAL_ALTERNATING_FRONTIER_LEMMA_20260811.md",
+      "theorem_sha256": "a634863a88bcd4654f02c8820c5d03bd18ebeac1cfa69f993b56d824554568a6"
+    }
+  ],
+  "schema": "global-residual-root-facing-rigidity-audit-v1",
+  "status": "DEPENDENCIES_REPLAYABLE",
+  "symbolic_checks": {
+    "distinct_nondegenerate_selected_residual_strictly_improves": "unsat",
+    "old_partition_root_feasible": "unsat"
+  },
+  "terminal_supports": [
+    "top packet",
+    "f-only captured bottom"
+  ]
+}
