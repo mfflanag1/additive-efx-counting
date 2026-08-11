@@ -1,0 +1,17 @@
+{
+  "claim_boundary": "QF_LRA audit of fresh-packet response-margin descent; it does not eliminate reuse of previously removed top support",
+  "provenance": {
+    "script": "tracks/parkability/audit_same_source_top_switch_margin_descent.py",
+    "script_sha256": "2a88cc8b4c28bd8da660c4f91f65dbc937ac44a1082df5e8cee137540ce64bbf",
+    "theorem": "results/SAME_SOURCE_TOP_SWITCH_MARGIN_DESCENT_LEMMA_20260811.md",
+    "theorem_sha256": "5e3956d072310694a1dcb6043f0d7af11aa6943aa1ffaf2c539540d2442c8840",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {"claim": "fresh_switch_margin_identity", "status": "unsat"},
+    {"claim": "successful_fresh_switch_strictly_descends_margin", "status": "unsat"},
+    {"claim": "failed_fresh_switch_captures_current_margin", "status": "unsat"}
+  ],
+  "schema": "same-source-top-switch-margin-descent-audit-v1",
+  "status": "ALL_FORCED"
+}

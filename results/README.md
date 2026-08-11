@@ -1271,6 +1271,15 @@ both encodings.
   have release-supported internal response matchings; five profiles realize
   the strict-separated `q` order. This is bounded adversarial evidence, not
   the cap-free response theorem.
+- [`SAME_SOURCE_TOP_SWITCH_MARGIN_DESCENT_LEMMA_20260811.md`](SAME_SOURCE_TOP_SWITCH_MARGIN_DESCENT_LEMMA_20260811.md)
+  — gives the same-source top switch a genuine global potential. Every
+  switch using a fresh root-top good strictly enlarges removed support and
+  decreases the later mutual owner's positive response margin; failure
+  captures that whole margin. Only reuse of already removed top support can
+  recur.
+- [`same_source_top_switch_margin_descent_audit.json`](same_source_top_switch_margin_descent_audit.json)
+  — symbolic replay of the margin identity, strict fresh-support descent,
+  and the capture alternative.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
