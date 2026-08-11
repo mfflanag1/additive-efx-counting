@@ -137,6 +137,31 @@ the open-source response branch after all one-leaf completions are tested,
 so the next theorem must grow that released-good dependency to an EFX
 allocation or a release-compatible PI edge set.
 
+The charity-wall branch is now absorbed into that same response component.
+If an owner envies the released packet `R`, then `R subseteq X_q` is
+automatically common-safe and that owner strictly desires it.  Her
+self-absorption edge consumes exactly what the replacement edge releases.
+If `q` sources the replacement target the pair is PI; otherwise a PI-free
+survivor exposes a new owner or a two-target Hall defect missing `q`.  See
+[`PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md`](PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md).
+
+The target-wall branch also has a cap-free full-complement return.  Every
+external desired response to `X_q-R+f` must retain `f`, so it is `K+f` and
+releases exactly `X_q\K`.  Giving that whole release with `X_a` back to the
+source closes a PI two-cycle whenever `q` responds.  A PI-free survivor must
+instead satisfy the strict core-capture interval
+`q(X_a)<q(K)<q(X_q)-q(f)`, or expose another named Hall source.  See
+[`PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md`](PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md).
+The other mutual owner `r` cannot satisfy this interval, because
+`q(T_r+f)>q(X_q)` and positivity imply
+`q(X_r)>q(X_q)-q(f)`.  Thus only `c,s` remain as terminal sources.
+For either external survivor, `T_r` always contains a minimal packet paying
+`q`'s capture deficit.  The canonical root flip gives `K+f` to the source,
+the released complement plus `X_a` and that packet to `q`, and compensates
+`r` from a disjoint part of `X_q\K`.  Its internal response SDR is PI.  The
+live selector is now the two-row compensation system (13) in the cited
+lemma, rather than existence of a first payment packet.
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps

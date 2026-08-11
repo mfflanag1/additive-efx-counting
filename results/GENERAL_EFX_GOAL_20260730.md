@@ -167,6 +167,26 @@ margin, and the discarded complement must fit inside the remaining return
 deficit.  See
 [FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md](FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md).
 
+The initial packet-replacement charity wall is no longer a separate terminal
+case.  Its released packet is a common-safe subset of `X_q` and is strictly
+desired by the wall owner, giving a self-absorption edge.  A `q`-sourced
+replacement closes PI with that edge; otherwise the component exposes a new
+owner or the same missing-`q` Hall defect.  See
+[PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md](PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md).
+
+Likewise, every external target response to the selected replacement has
+form `K+f`: omitting `f` would make it a proper subset of the old EFX bundle.
+The edge releases `X_q\K`, whose full return with `X_a` closes PI whenever
+`q` is a source.  The surviving target branch is therefore the strict
+core-capture interval `q(X_a)<q(K)<q(X_q)-q(f)`, or a named Hall defect.  See
+[PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md](PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md).
+The mutual owner `r` is excluded from that interval by the desired bundle
+`T_r+f`; only external sources `c,s` survive.
+Moreover `T_r` always pays the external capture deficit.  A complete
+three-owner root flip is therefore canonical; the sole packet gate is to
+choose a disjoint compensation packet for `r` satisfying the two valuation
+inequalities in (13).  Every internal response matching for that flip is PI.
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,

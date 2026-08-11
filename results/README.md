@@ -869,6 +869,24 @@ both encodings.
   An exact strengthening blocks every such packet replacement and survives;
   its nearest escapes are three-edge hub-splitting components, identifying
   packet partition among multiple recipients as the next primitive.
+- [`PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md`](PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md)
+  — cap-free closure of an isolated charity wall. The wall owner absorbs the
+  released common-safe packet and releases her old bundle; a `q`-sourced
+  replacement is immediately PI, while every survivor is a new-owner edge
+  or a Hall defect missing `q`.
+- [`packet_replacement_charity_absorption_audit.json`](packet_replacement_charity_absorption_audit.json)
+  — dual-solver symbolic replay of the absorption edge's packet support and
+  strict-desire implication.
+- [`PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md`](PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md)
+  — cap-free return theorem for an external response `K+f` to the selected
+  replacement. Returning the entire released complement closes PI; every
+  survivor obeys `q(X_a)<q(K)<q(X_q)-q(f)` or names a Hall source. The other
+  mutual owner is excluded analytically, leaving only `c,s`. The theorem
+  also selects a `T_r` payment packet and reduces the root flip to one
+  two-row compensation system with exact response-Hall support.
+- [`packet_replacement_complement_return_audit.json`](packet_replacement_complement_return_audit.json)
+  — dual-solver symbolic replay of the two-edge packet support and strict
+  core-capture interval.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on

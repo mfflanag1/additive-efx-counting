@@ -1,0 +1,82 @@
+{
+  "claim_boundary": "finite symbolic support plus QF_LRA capture implications; floater retention, nondegenerate strictness, and source growth are analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_packet_replacement_complement_return.py",
+    "script_sha256": "cc6fadaa72751aad5827c152ff346e58093a155fd401862a4d49ebaf5217f98b",
+    "z3_version": "5.0.0"
+  },
+  "root_flip_support_record": {
+    "incoming": {
+      "a": [
+        "K",
+        "f"
+      ],
+      "q": [
+        "P",
+        "Xa"
+      ],
+      "r": [
+        "H"
+      ]
+    },
+    "initially_unallocated": [
+      "f"
+    ],
+    "internal_response_permutations_supported": 6,
+    "released": {
+      "a": [
+        "Xa"
+      ],
+      "q": [
+        "H",
+        "K"
+      ],
+      "r": [
+        "P"
+      ]
+    }
+  },
+  "scalar_records": [
+    {
+      "claim": "strict_complement_low_forces_core_above_external",
+      "status": "unsat"
+    },
+    {
+      "claim": "no_direct_source_and_complement_low_force_capture_interval",
+      "status": "unsat"
+    },
+    {
+      "claim": "mutual_owner_cannot_satisfy_capture_interval",
+      "status": "unsat"
+    },
+    {
+      "claim": "mutual_top_strictly_covers_external_capture_deficit",
+      "status": "unsat"
+    }
+  ],
+  "schema": "packet-replacement-complement-return-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "incoming": {
+      "a": [
+        "Oq"
+      ],
+      "q": [
+        "f"
+      ]
+    },
+    "initially_unallocated": [
+      "f"
+    ],
+    "released": {
+      "a": [],
+      "q": [
+        "Oq"
+      ]
+    },
+    "sources": {
+      "a": "q",
+      "q": "a"
+    }
+  }
+}

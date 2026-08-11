@@ -27,6 +27,12 @@ try:
     from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from .audit_minimal_flower_flexible_gate import run as run_core_audit
     from .audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
+    from .audit_packet_replacement_charity_absorption import (
+        run as run_charity_absorption_audit,
+    )
+    from .audit_packet_replacement_complement_return import (
+        run as run_replacement_return_audit,
+    )
     from .audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -57,6 +63,12 @@ except ImportError:
     from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from audit_minimal_flower_flexible_gate import run as run_core_audit
     from audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
+    from audit_packet_replacement_charity_absorption import (
+        run as run_charity_absorption_audit,
+    )
+    from audit_packet_replacement_complement_return import (
+        run as run_replacement_return_audit,
+    )
     from audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -273,6 +285,54 @@ def main():
     assert "whole unused complement" in complement_return_theorem
     assert "strict capture system" in complement_return_theorem
     assert "does not yet eliminate" in complement_return_theorem
+    charity_absorption_path = (
+        ROOT / "results" / "packet_replacement_charity_absorption_audit.json"
+    )
+    charity_absorption = json.loads(charity_absorption_path.read_text())
+    charity_absorption_replay = run_charity_absorption_audit()
+    assert charity_absorption_replay["status"] == "ALL_FORCED"
+    assert (
+        charity_absorption_replay["support_record"]
+        == charity_absorption["support_record"]
+    )
+    assert (
+        charity_absorption_replay["scalar_records"]
+        == charity_absorption["scalar_records"]
+    )
+    charity_absorption_theorem = (
+        ROOT
+        / "results"
+        / "PACKET_REPLACEMENT_CHARITY_ABSORPTION_LEMMA_20260810.md"
+    ).read_text()
+    assert "isolated charity wall cannot survive" in charity_absorption_theorem
+    assert "missing source is `q`" in charity_absorption_theorem
+    assert "does not eliminate that Hall defect" in charity_absorption_theorem
+    replacement_return_path = (
+        ROOT / "results" / "packet_replacement_complement_return_audit.json"
+    )
+    replacement_return = json.loads(replacement_return_path.read_text())
+    replacement_return_replay = run_replacement_return_audit()
+    assert replacement_return_replay["status"] == "ALL_FORCED"
+    assert (
+        replacement_return_replay["support_record"]
+        == replacement_return["support_record"]
+    )
+    assert (
+        replacement_return_replay["root_flip_support_record"]
+        == replacement_return["root_flip_support_record"]
+    )
+    assert (
+        replacement_return_replay["scalar_records"]
+        == replacement_return["scalar_records"]
+    )
+    replacement_return_theorem = (
+        ROOT
+        / "results"
+        / "PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810.md"
+    ).read_text()
+    assert "Every such external response has the form" in replacement_return_theorem
+    assert "strict interval" in replacement_return_theorem
+    assert "two-row compensation system (13)" in replacement_return_theorem
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())
