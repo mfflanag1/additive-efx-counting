@@ -161,6 +161,14 @@ reset preserves the protected prefix, grows `U`, or captures the `q` margin.
 The third-owner gate is consequently physical rather than graph-theoretic:
 close the terminal root-facing/J-exhausted handoff or the response-silent
 unsafe-overlap cut with one connected fork.
+
+The fixed-`U` residual selector now applies to any distinguished nonroot
+hole, not only `q`.  It ranges over every root-anchored response rank and
+maximizes the hole's residual in that owner's own valuation row.  Successful
+nonroot repair and nonroot J-exhaustion both strictly increase that same
+quantity, so a response-silent external source cannot circulate through the
+other nonroot cores.  It too is forced to response activation, unsafe
+augmentation, EFX/PI, or the root-facing handoff.
 The initially proposed lexicographic potential was
 
 \[
@@ -207,7 +215,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 64 tests spanning the retained-support,
+The focused dependency replay currently passes 66 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

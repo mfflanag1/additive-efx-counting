@@ -1461,6 +1461,12 @@ both encodings.
   to a target occupied by an earlier source, so blocker chains are triangular
   and acyclic. Simultaneous retained-core reset preserves the protected
   prefix, grows `U`, or captures the remaining `q` margin.
+- [`FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md`](FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md)
+  ([composition audit](fixed_u_arbitrary_hole_residual_selector_audit.json))
+  — generalizes the fixed-`U` same-row selector from `q` to any distinguished
+  nonroot hole and across every response rank. Successful nonroot repair and
+  nonroot J-exhaustion strictly improve that hole's own residual, so every
+  response-silent external cut is forced to the root-facing handoff.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
