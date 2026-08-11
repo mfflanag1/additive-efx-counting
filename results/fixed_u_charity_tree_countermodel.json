@@ -1,0 +1,351 @@
+{
+  "claim_boundary": "exact CEGAR over every labeled charity-rooted tree through four owners and arbitrary nonempty disjoint one-edge packets in the frozen two-atom fixed-U flower; a SAT terminal refutes sufficiency in this exact flower cell, while UNSAT proves only the bounded flower conditional",
+  "countermodel_iteration": 5,
+  "iterations": [
+    {
+      "blocking_cut": {
+        "allocation": {
+          "_": [],
+          "c": [
+            "ar_bq_1",
+            "bc_0",
+            "bc_1",
+            "tc_0",
+            "tc_1"
+          ],
+          "q": [
+            "aq_tq_1",
+            "ar_bq_0",
+            "f"
+          ],
+          "r": [
+            "aq_br_0",
+            "aq_br_1",
+            "aq_tq_0",
+            "ar_tr_0",
+            "ar_tr_1",
+            "br_rest_0",
+            "br_rest_1",
+            "tr_rest_0",
+            "tr_rest_1"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "parent": {
+          "c": "q",
+          "r": "q"
+        },
+        "participants": [
+          "r",
+          "q",
+          "c"
+        ],
+        "root": "q"
+      },
+      "iteration": 0,
+      "master_status": "sat",
+      "topologies_checked": 21
+    },
+    {
+      "blocking_cut": {
+        "allocation": {
+          "_": [],
+          "c": [
+            "f",
+            "tc_0",
+            "tc_1"
+          ],
+          "q": [
+            "aq_tq_0",
+            "aq_tq_1",
+            "ar_bq_0",
+            "ar_bq_1"
+          ],
+          "r": [
+            "aq_br_0",
+            "aq_br_1",
+            "ar_tr_0",
+            "ar_tr_1",
+            "bc_0",
+            "bc_1",
+            "br_rest_0",
+            "br_rest_1",
+            "tr_rest_0",
+            "tr_rest_1"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "parent": {
+          "r": "c"
+        },
+        "participants": [
+          "r",
+          "c"
+        ],
+        "root": "c"
+      },
+      "iteration": 1,
+      "master_status": "sat",
+      "topologies_checked": 8
+    },
+    {
+      "blocking_cut": {
+        "allocation": {
+          "_": [],
+          "c": [
+            "ar_bq_1",
+            "bc_1",
+            "tc_0",
+            "tc_1"
+          ],
+          "q": [
+            "aq_tq_0",
+            "aq_tq_1",
+            "ar_bq_0",
+            "f"
+          ],
+          "r": [
+            "aq_br_0",
+            "aq_br_1",
+            "ar_tr_0",
+            "ar_tr_1",
+            "bc_0",
+            "br_rest_0",
+            "br_rest_1",
+            "tr_rest_0",
+            "tr_rest_1"
+          ],
+          "s": [
+            "z"
+          ]
+        },
+        "parent": {
+          "c": "q",
+          "r": "c"
+        },
+        "participants": [
+          "r",
+          "q",
+          "c"
+        ],
+        "root": "q"
+      },
+      "iteration": 2,
+      "master_status": "sat",
+      "topologies_checked": 22
+    },
+    {
+      "blocking_cut": {
+        "allocation": {
+          "_": [],
+          "c": [
+            "ar_tr_1",
+            "tc_0",
+            "tc_1"
+          ],
+          "q": [
+            "aq_tq_0",
+            "aq_tq_1",
+            "ar_bq_0",
+            "ar_bq_1"
+          ],
+          "r": [
+            "aq_br_0",
+            "aq_br_1",
+            "ar_tr_0",
+            "br_rest_0",
+            "br_rest_1",
+            "f",
+            "tr_rest_0",
+            "tr_rest_1"
+          ],
+          "s": [
+            "bc_0",
+            "bc_1",
+            "z"
+          ]
+        },
+        "parent": {
+          "c": "r",
+          "s": "c"
+        },
+        "participants": [
+          "r",
+          "c",
+          "s"
+        ],
+        "root": "r"
+      },
+      "iteration": 3,
+      "master_status": "sat",
+      "topologies_checked": 36
+    },
+    {
+      "blocking_cut": {
+        "allocation": {
+          "_": [],
+          "c": [
+            "aq_tq_1",
+            "ar_bq_1",
+            "bc_0",
+            "bc_1",
+            "tc_1"
+          ],
+          "q": [
+            "aq_tq_0",
+            "ar_bq_0",
+            "ar_tr_1"
+          ],
+          "r": [
+            "aq_br_0",
+            "aq_br_1",
+            "ar_tr_0",
+            "br_rest_0",
+            "br_rest_1",
+            "f",
+            "tr_rest_0",
+            "tr_rest_1"
+          ],
+          "s": [
+            "tc_0",
+            "z"
+          ]
+        },
+        "parent": {
+          "c": "q",
+          "q": "r",
+          "s": "c"
+        },
+        "participants": [
+          "r",
+          "q",
+          "c",
+          "s"
+        ],
+        "root": "r"
+      },
+      "iteration": 4,
+      "master_status": "sat",
+      "topologies_checked": 58
+    },
+    {
+      "iteration": 5,
+      "master_status": "sat",
+      "topologies_checked": 116
+    }
+  ],
+  "schema": "fixed-u-charity-tree-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_margin_certificate": {
+    "desired_core": [
+      "ar_tr_0",
+      "ar_tr_1",
+      "tr_rest_0",
+      "tr_rest_1",
+      "f"
+    ],
+    "exchange_implication_count": 512,
+    "root": "r",
+    "root_pool": [
+      "aq_br_0",
+      "aq_br_1",
+      "br_rest_0",
+      "br_rest_1"
+    ],
+    "source": "q"
+  },
+  "status": "sat_countermodel",
+  "topology_count": 116,
+  "topology_count_by_owner_count": {
+    "1": 4,
+    "2": 12,
+    "3": 36,
+    "4": 64
+  },
+  "values": {
+    "c": {
+      "aq_br_0": "31/128",
+      "aq_br_1": "1/128",
+      "aq_tq_0": "1/4",
+      "aq_tq_1": "65/256",
+      "ar_bq_0": "63/256",
+      "ar_bq_1": "43/256",
+      "ar_tr_0": "1/8",
+      "ar_tr_1": "55/256",
+      "bc_0": "45/256",
+      "bc_1": "9/256",
+      "br_rest_0": "3/256",
+      "br_rest_1": "1/256",
+      "f": "61/256",
+      "tc_0": "19/64",
+      "tc_1": "31/128",
+      "tr_rest_0": "33/256",
+      "tr_rest_1": "3/256",
+      "z": "225/256"
+    },
+    "q": {
+      "aq_br_0": "1/128",
+      "aq_br_1": "3/256",
+      "aq_tq_0": "217/512",
+      "aq_tq_1": "17/512",
+      "ar_bq_0": "15/512",
+      "ar_bq_1": "13/512",
+      "ar_tr_0": "9/64",
+      "ar_tr_1": "35/256",
+      "bc_0": "3/128",
+      "bc_1": "1/256",
+      "br_rest_0": "3/256",
+      "br_rest_1": "1/256",
+      "f": "45/512",
+      "tc_0": "13/128",
+      "tc_1": "97/256",
+      "tr_rest_0": "49/512",
+      "tr_rest_1": "47/512",
+      "z": "19/32"
+    },
+    "r": {
+      "aq_br_0": "13/256",
+      "aq_br_1": "3/64",
+      "aq_tq_0": "21/256",
+      "aq_tq_1": "79/256",
+      "ar_bq_0": "1/16",
+      "ar_bq_1": "17/256",
+      "ar_tr_0": "21/256",
+      "ar_tr_1": "15/256",
+      "bc_0": "1/128",
+      "bc_1": "1/256",
+      "br_rest_0": "11/256",
+      "br_rest_1": "5/128",
+      "f": "5/64",
+      "tc_0": "115/512",
+      "tc_1": "113/512",
+      "tr_rest_0": "7/128",
+      "tr_rest_1": "21/256",
+      "z": "123/256"
+    },
+    "s": {
+      "aq_br_0": "1/64",
+      "aq_br_1": "3/256",
+      "aq_tq_0": "41/256",
+      "aq_tq_1": "3/128",
+      "ar_bq_0": "11/256",
+      "ar_bq_1": "5/256",
+      "ar_tr_0": "11/256",
+      "ar_tr_1": "5/128",
+      "bc_0": "1/256",
+      "bc_1": "1/128",
+      "br_rest_0": "1/128",
+      "br_rest_1": "1/256",
+      "f": "1/256",
+      "tc_0": "13/64",
+      "tc_1": "1/128",
+      "tr_rest_0": "11/256",
+      "tr_rest_1": "11/256",
+      "z": "29/128"
+    }
+  }
+}
