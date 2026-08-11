@@ -65,7 +65,10 @@ def desired_subsets(values, base, source, offered):
                 values, base, group
             ):
                 desired.append(group)
-    return [group for group in desired if not any(other < group for other in desired)]
+    minimal = [
+        group for group in desired if not any(other < group for other in desired)
+    ]
+    return sorted(minimal, key=lambda group: (len(group), tuple(sorted(group))))
 
 
 def run(profile_path):

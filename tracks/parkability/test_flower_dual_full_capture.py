@@ -507,7 +507,16 @@ def main():
     hardened_sink_replay = run_hardened_sink_pi_audit(
         ROOT / "results" / "flexible_lex_basic_pi_free_hardened_countermodel.json"
     )
-    assert hardened_sink_replay == hardened_sink
+    def normalize_response_subset_order(payload):
+        normalized = json.loads(json.dumps(payload))
+        for target_sources in normalized["response_sources"].values():
+            for subsets in target_sources.values():
+                subsets.sort(key=lambda subset: (len(subset), subset))
+        return normalized
+
+    assert normalize_response_subset_order(
+        hardened_sink_replay
+    ) == normalize_response_subset_order(hardened_sink)
     assert hardened_sink["status"] == "PI_RESPONSE_MATCHING"
     assert hardened_sink["internal_matching"] == {
         "q": "s",

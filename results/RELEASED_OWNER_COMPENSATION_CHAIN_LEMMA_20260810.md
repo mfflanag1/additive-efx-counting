@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-10
 
-**Status:** cap-free adaptive strengthening; only the full released-reservoir
-R-wall and response-Hall boundaries remain
+**Status:** cap-free adaptive strengthening; only the full released-reservoir R-wall
+and response-Hall boundaries remain
 
 ## Expanded compensation reservoir
 
@@ -112,8 +112,8 @@ the Q-exhaustion root-switch lemma.  The extra unused external packet
 `E_a` only strengthens the strict root margin; it need not be moved in the
 root-switch allocation.
 
-Thus expanding the compensation reservoir introduces no new Q-terminal
-case.  Every leaf is either:
+Thus expanding the compensation reservoir introduces no new Q-terminal case.
+Every leaf is either:
 
 1. a successful three-owner component (2);
 2. a q-rooted transfer-tree component forced by (4); or

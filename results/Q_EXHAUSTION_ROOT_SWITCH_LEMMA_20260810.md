@@ -71,8 +71,7 @@ for the entire terminal external bundle.
 
 ## Response-Hall composition
 
-For nonempty `E`, equations (4)--(5) form the one-edge charity-rooted
-transfer tree
+For nonempty `E`, equations (4)--(5) form the one-edge charity-rooted transfer tree
 
 \[
 q\longrightarrow a:E.

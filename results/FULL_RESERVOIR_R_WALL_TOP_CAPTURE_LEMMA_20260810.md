@@ -121,7 +121,7 @@ The scalar implication replays in
 ## Claim boundary
 
 This lemma eliminates full-reservoir R-walls for bottom-only response cores
-and sharply orients every survivor.  It does not eliminate the strict top-
-core inequality (5), select the final root/order flip in that branch,
+and sharply orients every survivor.  It does not eliminate the strict top-core inequality
+(5), select the final root/order flip in that branch,
 eliminate all-owner Hall defects, close the `GG` flower, or prove four-agent
 additive EFX.

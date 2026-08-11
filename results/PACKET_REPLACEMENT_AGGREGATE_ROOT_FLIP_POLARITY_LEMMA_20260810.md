@@ -121,7 +121,7 @@ The scalar implication replays in
 
 ## Claim boundary
 
-This lemma closes the full-packet root flip unless a named `R-wall` or
-`Q-wall` holds.  It does not rule out those walls, prove that a smaller
+This lemma closes the full-packet root flip unless the named `R-wall` or `Q-wall`
+holds.  It does not rule out those walls, prove that a smaller
 compensating pair exists, eliminate an external response-Hall defect, close
 the `GG` flower, or prove four-agent additive EFX.

@@ -67,8 +67,8 @@ v_a(X_b)+v_a(E\setminus J)>v_a(S). \tag{6}
 
 \]
 
-If (6) holds, (5) is an owner-improving component on the strictly larger
-owner set `{q,a,b}`.
+If (6) holds, (5) is an owner-improving component on the strictly larger owner set
+`{q,a,b}`.
 
 If it fails, nondegeneracy gives the strict capture wall
 
