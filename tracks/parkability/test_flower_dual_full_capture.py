@@ -8,11 +8,15 @@ import z3
 
 try:
     from .audit_flower_dual_full_escape import run as run_scalar_audit
+    from .audit_flower_three_rotation_polarity import run as run_rotation_audit
     from .audit_minimal_flower_flexible_gate import run as run_core_audit
+    from .analyze_residual_top_champion_sources import run as run_source_census
     from .run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 except ImportError:
     from audit_flower_dual_full_escape import run as run_scalar_audit
+    from audit_flower_three_rotation_polarity import run as run_rotation_audit
     from audit_minimal_flower_flexible_gate import run as run_core_audit
+    from analyze_residual_top_champion_sources import run as run_source_census
     from run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 
 
@@ -27,6 +31,12 @@ def main():
     assert scalar_replay["records"] == scalar["records"]
     assert scalar["status"] == "ALL_FORCED"
     assert {record["status"] for record in scalar["records"]} == {"unsat"}
+
+    rotation_path = ROOT / "results" / "flower_three_rotation_polarity_audit.json"
+    rotation = json.loads(rotation_path.read_text())
+    rotation_replay = run_rotation_audit()
+    assert rotation_replay["status"] == rotation["status"] == "ALL_FORCED"
+    assert rotation_replay["records"] == rotation["records"]
 
     gate_path = ROOT / "results" / "minimal_flower_flexible_completion_gate.json"
     core_path = ROOT / "results" / "minimal_flower_flexible_completion_audit.json"
@@ -65,6 +75,20 @@ def main():
     assert "arbitrary-packet" in theorem
     assert "residual top packet `J`" in theorem
     assert "does **not** force" in theorem
+    rotation_theorem = (
+        ROOT / "results" / "FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md"
+    ).read_text()
+    assert "independent of the numbers of goods" in rotation_theorem
+    assert "opposite ranking" in rotation_theorem
+
+    source_path = ROOT / "results" / "residual_top_champion_source_census.json"
+    source_census = json.loads(source_path.read_text())
+    assert run_source_census(ROOT) == source_census
+    assert len(source_census["records"]) == 7
+    assert not any(
+        record["survives_live_rotation_gate"]
+        for record in source_census["records"]
+    )
     print("flower dual-full-capture theorem tests passed")
 
 

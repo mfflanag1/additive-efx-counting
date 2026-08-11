@@ -110,6 +110,13 @@ therefore residual retention/recapture rather than fixed replacement or
 fixed transfer radius. See
 [FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md](FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md).
 
+Three universal mutual-owner rotations further reduce that residual gate.
+If none is an EFX escape preserving the earlier owner and improving the
+later owner, the two rows rank `f` and `B_q` in opposite directions, while
+the later row also satisfies `T_r>T_q` and `B_q>B_r`. The adaptive proof may
+therefore work entirely inside this single polarity cell. See
+[FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

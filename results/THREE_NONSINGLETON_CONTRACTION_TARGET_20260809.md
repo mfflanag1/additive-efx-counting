@@ -165,6 +165,15 @@ is not yet a monotone potential.  The next theorem must force residual
 retention/recapture, maintain a Hall-augmentable family of alternative
 desired bundles, or exactly refute all such adaptive operations.
 
+Three additional cap-free rotations now force every such residual state
+into one aggregate polarity cell.  The earlier mutual owner ranks `f` above
+the later owner's bottom `B_q`, while the later owner ranks `B_q` above `f`,
+`T_r` above `T_q`, and `B_q` above `B_r`.  Any failure of one of these signs
+is already the required flexible EFX escape.  Thus residual recapture may
+assume this opposite-sign orientation rather than handling arbitrary owner
+rows.  See
+[`FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md`](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

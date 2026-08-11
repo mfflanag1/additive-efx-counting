@@ -895,6 +895,12 @@ both encodings.
   allocations without nondegeneracy assumptions. The surviving general
   gate is now a nonempty residual top packet whose reinsertion can recreate
   the original generalized edge instead of making monotone progress.
+- [`FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md`](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md)
+  — cap-free three-allocation reduction valid before choosing an external
+  bottom edge. If none is a flexible EFX escape, the mutual owners must rank
+  `f` versus `B_q` in opposite directions, and the later owner must rank
+  `T_r>T_q` and `B_q>B_r`. This confines the residual-recapture problem to
+  one aggregate orientation; it does not yet contradict that orientation.
 - [`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
   — cap-free classification of every EFX failure after an improving owner
   replaces a packet by the charity good and partitions the released packet
