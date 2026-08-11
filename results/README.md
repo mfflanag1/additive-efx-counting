@@ -1634,6 +1634,18 @@ both encodings.
   owners, so one recruitment saturates all four. The irreducible survivor is
   now the full-owner decorated response with a base-margin separator and no
   direct-safe sacrificed-source endpoint.
+- [`FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md`](FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md)
+  ([exact global audit](fixed_u_global_lex_premise_audit.json))
+  — excludes the exact fixed-U tree countermodel from the full GG premise.
+  A global allocation decision finds a noncomplete EFX allocation strictly
+  improving all four owners. Its eight transfers form one connected directed
+  cyclic component that swaps charity good `f` for `bc_0`.
+- [`SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md`](SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md)
+  ([symbolic/witness audit](surplus_budgeted_charity_exchange_component_audit.json))
+  — extends the connected endpoint theorem from charity donation to charity
+  exchange. The final charity bundle is charged against each observer's
+  realized surplus. This is the smallest operation separating the full global
+  premise from the local rooted-tree countermodel.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

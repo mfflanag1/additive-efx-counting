@@ -1,0 +1,31 @@
+{
+  "claim_boundary": "charity-exchange endpoint and one exact global exclusion; universal repeated-support GG closure and EFX remain open",
+  "exact_witness": {
+    "all_agents_strict": true,
+    "audit": "results/fixed_u_global_lex_premise_audit.json",
+    "audit_sha256": "7f552e3c9a91a7839dc89e8ae3691557ca850e243da843bba354b8f4fff653ad",
+    "has_directed_cycle": true,
+    "new_charity": [
+      "bc_0"
+    ],
+    "old_charity": [
+      "f"
+    ],
+    "single_connected_transfer_component": true
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_surplus_budgeted_charity_exchange_component.py",
+    "script_sha256": "157b29e3ebc2aff6d26b6fa51d98f50089f4af7d9c47ff4a7def774c61866940",
+    "theorem": "results/SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md",
+    "theorem_sha256": "5feda3186116098d2bb9c6506a1027590684da488f124fedd213ae4ead2812ad"
+  },
+  "remaining_gate": "extract a charity-exchange component from every full-owner repeated GG base-margin/direct-safety terminal",
+  "schema": "surplus-budgeted-charity-exchange-component-audit-v1",
+  "smallest_missing_operation": "charity donates its old good and receives a replacement good inside the same surplus-budgeted connected cyclic component",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "changed_target_surplus_budget": "unsat",
+    "exchanged_charity_surplus_budget": "unsat",
+    "unchanged_target_base_safety": "unsat"
+  }
+}

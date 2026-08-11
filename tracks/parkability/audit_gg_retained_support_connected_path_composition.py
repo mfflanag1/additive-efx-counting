@@ -61,6 +61,8 @@ DEPENDENCIES = (
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
+    ("FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md", "fixed_u_global_lex_premise_audit.json"),
+    ("SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md", "surplus_budgeted_charity_exchange_component_audit.json"),
 )
 
 
@@ -82,7 +84,7 @@ def run(root: Path) -> dict:
             "audit_sha256": sha256(audit),
             "audit_status": payload.get("status"),
         })
-    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "COMPOSED", "DEPENDENCIES_REPLAYABLE", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU", "EXACT_BOTTOM_TAIL_PLATEAU"}
+    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "COMPOSED", "DEPENDENCIES_REPLAYABLE", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU", "EXACT_BOTTOM_TAIL_PLATEAU", "BASE_EXCLUDED"}
     verified = all(record["audit_status"] in accepted for record in records)
     script = Path(__file__).resolve()
     checkpoint = result_dir / "GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md"
@@ -91,7 +93,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 110,
+        "focused_test_count": 114,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

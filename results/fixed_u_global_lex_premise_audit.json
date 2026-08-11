@@ -1,0 +1,135 @@
+{
+  "all_agents_strict": true,
+  "base_utility": {
+    "c": "3/4",
+    "q": "131/256",
+    "r": "117/256",
+    "s": "29/128"
+  },
+  "charity_exchange": true,
+  "claim_boundary": "exact global EFX-with-charity lex-improvement decision for the fixed-U tree countermodel under priority (r,q,c,s); UNSAT would promote this profile to the global-lex premise, while SAT exactly excludes it and identifies a missing non-tree topology",
+  "first_improver": "r",
+  "frozen_flower_master": "VERIFIED",
+  "lex_improving_allocation": {
+    "_": [
+      "bc_0"
+    ],
+    "c": [
+      "ar_bq_0",
+      "z"
+    ],
+    "q": [
+      "aq_tq_0",
+      "aq_tq_1",
+      "tc_1"
+    ],
+    "r": [
+      "aq_br_0",
+      "aq_br_1",
+      "ar_tr_0",
+      "ar_tr_1",
+      "br_rest_0",
+      "br_rest_1",
+      "f",
+      "tr_rest_0",
+      "tr_rest_1"
+    ],
+    "s": [
+      "ar_bq_1",
+      "bc_1",
+      "tc_0"
+    ]
+  },
+  "lex_improving_utility": {
+    "c": "9/8",
+    "q": "107/128",
+    "r": "137/256",
+    "s": "59/256"
+  },
+  "new_charity": [
+    "bc_0"
+  ],
+  "noncomplete_required": true,
+  "old_charity": [
+    "f"
+  ],
+  "positive_additive": true,
+  "priority": [
+    "r",
+    "q",
+    "c",
+    "s"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_fixed_u_global_lex_premise.py",
+    "script_sha256": "4b8643aa4051b77e946135c5571cac252a478a34c4b5026acffb47cdfaa9280d",
+    "source": "results/fixed_u_charity_tree_countermodel.json",
+    "source_sha256": "aa6cfe55b87211370bcaba0b3a5950675a124f519e359657f951b44a248a90a1",
+    "z3": "5.0.0"
+  },
+  "schema": "fixed-u-global-lex-premise-audit-v1",
+  "single_connected_transfer_component": true,
+  "solver_status": "sat",
+  "status": "BASE_EXCLUDED",
+  "strict_pareto_witness_available": true,
+  "transfer_topology": {
+    "directed_edges": [
+      {
+        "count": 1,
+        "source": "_",
+        "target": "r"
+      },
+      {
+        "count": 1,
+        "source": "c",
+        "target": "_"
+      },
+      {
+        "count": 1,
+        "source": "c",
+        "target": "q"
+      },
+      {
+        "count": 2,
+        "source": "c",
+        "target": "s"
+      },
+      {
+        "count": 1,
+        "source": "q",
+        "target": "c"
+      },
+      {
+        "count": 1,
+        "source": "q",
+        "target": "s"
+      },
+      {
+        "count": 1,
+        "source": "s",
+        "target": "c"
+      }
+    ],
+    "has_directed_cycle": true,
+    "moved_good_count": 8,
+    "moved_goods": [
+      "ar_bq_0",
+      "ar_bq_1",
+      "bc_0",
+      "bc_1",
+      "f",
+      "tc_0",
+      "tc_1",
+      "z"
+    ],
+    "nontrivial_components": [
+      [
+        "_",
+        "c",
+        "q",
+        "r",
+        "s"
+      ]
+    ]
+  }
+}

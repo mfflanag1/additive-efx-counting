@@ -428,6 +428,24 @@ the global base-margin separator and failed sacrificed-source direct safety;
 see
 [`FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md`](FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md).
 
+The strongest new local countermodel does not survive the full global
+premise.  An exact solver decision over every noncomplete allocation finds an
+EFX allocation that strictly improves all four owners.  Its eight moved
+goods form one connected directed cyclic component on charity and all owners.
+Crucially, charity donates `f` and receives a replacement c-good.  This lies
+outside every charity-rooted outward tree and outside the former endpoint
+assumption `P' subseteq P`; see
+[`FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md`](FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md).
+
+The endpoint theorem now allows that exact missing operation.  When charity
+receives replacement goods, charge its final value against every observer's
+realized surplus exactly as for a changed owner target.  These charity-budget
+inequalities, the existing changed-target budgets, and direct checks for any
+sacrificed owners prove EFX and lexicographic improvement for an arbitrary
+connected cyclic packet graph.  Universal extraction of such a charity
+exchange from the saturated separator is the live gate; see
+[`SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md`](SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -446,7 +464,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 110 tests spanning the retained-support,
+The focused dependency replay currently passes 114 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is
