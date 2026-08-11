@@ -1299,6 +1299,15 @@ both encodings.
 - [`flower_removed_top_retention_potential_audit.json`](flower_removed_top_retention_potential_audit.json)
   — symbolic replay of the persistent margin identity, strict fresh-packet
   descent, and terminal capture.
+- [`CAPTURED_Q_MARGIN_ANCHORED_RESIDUAL_ROTATION_LEMMA_20260811.md`](CAPTURED_Q_MARGIN_ANCHORED_RESIDUAL_ROTATION_LEMMA_20260811.md)
+  — converts terminal failure of the reduced q-core without resetting the
+  support potential. Extend the retained packet only enough to replace
+  `T_q`, rotate to `T_q+f` and `B_q+L`, and park the unused root goods. Both
+  mutual owners improve and every failure is the existing evolved-target
+  response/Hall boundary.
+- [`captured_q_margin_anchored_residual_rotation_audit.json`](captured_q_margin_anchored_residual_rotation_audit.json)
+  — symbolic replay of both-owner payment, charity containment, strict
+  support growth, and relative minimality.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
