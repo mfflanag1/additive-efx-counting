@@ -1,0 +1,139 @@
+{
+  "checks": {
+    "all_candidate_supports_pairwise_disjoint": true,
+    "deletion_weakly_lowers_every_observer_threshold": true,
+    "failed_q_residual_forces_incoming_self_response": true,
+    "target_owner_deletion_remainder_strictly_pays_base": true
+  },
+  "claim_boundary": "q-source role collision only; non-q-source continuation, mixed-margin closure, GG, and EFX remain open",
+  "cycle_length_counts": {
+    "2": 2,
+    "3": 2,
+    "4": 2
+  },
+  "old_q_target_counts": {
+    "charity": 2,
+    "external_owner": 4
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_q_closing_source_residual_reassignment.py",
+    "script_sha256": "290d73f01fe90558cf050e77b6e14cb8ef29afebc1e918c81ab3b600f806935b",
+    "theorem": "results/Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md",
+    "theorem_sha256": "87d705fe9195d5c5e2aabeb516faf2ae840b7884cf83ca67b341bf31b2ceb5bb",
+    "z3_version": "5.0.0"
+  },
+  "q_source_pivot_count": 6,
+  "records": [
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "cycle_length": 2,
+      "hole": "r",
+      "incoming_q_source": "r",
+      "old_q_target": "c",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "cycle_length": 2,
+      "hole": "r",
+      "incoming_q_source": "r",
+      "old_q_target": "s",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "cycle_length": 3,
+      "hole": "c",
+      "incoming_q_source": "r",
+      "old_q_target": "s",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "prefix_cycle": [
+        "c",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "cycle_length": 4,
+      "hole": "c",
+      "incoming_q_source": "r",
+      "old_q_target": "charity",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "cycle_length": 3,
+      "hole": "s",
+      "incoming_q_source": "r",
+      "old_q_target": "c",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "prefix_cycle": [
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "cycle_length": 4,
+      "hole": "s",
+      "incoming_q_source": "r",
+      "old_q_target": "charity",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    }
+  ],
+  "remaining_separator": "non-q-source donor/rank-two continuation",
+  "schema": "q-closing-source-residual-reassignment-audit-v1",
+  "status": "ALL_FORCED"
+}

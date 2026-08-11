@@ -1,0 +1,1110 @@
+{
+  "checks": {
+    "all_candidate_supports_pairwise_disjoint": true,
+    "deletion_weakly_lowers_every_observer_threshold": true,
+    "failed_source_residual_forces_incoming_self_response": true,
+    "nonowner_payment_against_D_inherits_payment_against_deletion": true,
+    "old_core_plus_residual_stays_strictly_above_base": true,
+    "target_owner_deletion_remainder_strictly_pays_base": true
+  },
+  "claim_boundary": "mixed-margin Hamiltonian-path payment only; broader GG closure and four-agent/general EFX remain open",
+  "cycle_length_counts": {
+    "2": 24,
+    "3": 24,
+    "4": 24
+  },
+  "hamiltonian_path_count": 24,
+  "mixed_margin_separator_eliminated": true,
+  "nonself_pivot_count": 72,
+  "provenance": {
+    "script": "tracks/parkability/audit_closing_source_deletion_return_residual_completion.py",
+    "script_sha256": "e2d312b4c489e0c485a5f29612a8feca938fb969ea809738f230bc2752bd9564",
+    "theorem": "results/CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md",
+    "theorem_sha256": "623717bb8e17b9485a7f57a06b01286cbc4e80897e97fce6e35d1bd70c699539",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 2,
+      "displaced_source_target": "c",
+      "hole": "r",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "q",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 3,
+      "displaced_source_target": "s",
+      "hole": "r",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "c",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "r",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "s",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 2,
+      "displaced_source_target": "s",
+      "hole": "r",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "q",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 3,
+      "displaced_source_target": "c",
+      "hole": "r",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "s",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "r",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "c",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 2,
+      "displaced_source_target": "q",
+      "hole": "r",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "c",
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 3,
+      "displaced_source_target": "s",
+      "hole": "r",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "q",
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "r",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "s",
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 2,
+      "displaced_source_target": "s",
+      "hole": "r",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "c",
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 3,
+      "displaced_source_target": "q",
+      "hole": "r",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "s",
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "r",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "q",
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 2,
+      "displaced_source_target": "q",
+      "hole": "r",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "s",
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 3,
+      "displaced_source_target": "c",
+      "hole": "r",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "q",
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "r",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "c",
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 2,
+      "displaced_source_target": "c",
+      "hole": "r",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "s",
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 3,
+      "displaced_source_target": "q",
+      "hole": "r",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "c",
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "r",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "q",
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 2,
+      "displaced_source_target": "c",
+      "hole": "q",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "r",
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 3,
+      "displaced_source_target": "s",
+      "hole": "q",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "c",
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "q",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "s",
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 2,
+      "displaced_source_target": "s",
+      "hole": "q",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "r",
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 3,
+      "displaced_source_target": "c",
+      "hole": "q",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "s",
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "q",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "c",
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 2,
+      "displaced_source_target": "r",
+      "hole": "q",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "c",
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 3,
+      "displaced_source_target": "s",
+      "hole": "q",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "r",
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "q",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "s",
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 2,
+      "displaced_source_target": "s",
+      "hole": "q",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "c",
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 3,
+      "displaced_source_target": "r",
+      "hole": "q",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "s",
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "q",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "r",
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 2,
+      "displaced_source_target": "r",
+      "hole": "q",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "s",
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 3,
+      "displaced_source_target": "c",
+      "hole": "q",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "r",
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "q",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "c",
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 2,
+      "displaced_source_target": "c",
+      "hole": "q",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "s",
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 3,
+      "displaced_source_target": "r",
+      "hole": "q",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "c",
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "q",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "r",
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 2,
+      "displaced_source_target": "q",
+      "hole": "c",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "r",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 3,
+      "displaced_source_target": "s",
+      "hole": "c",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "q",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "c",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "s",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 2,
+      "displaced_source_target": "s",
+      "hole": "c",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "r",
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 3,
+      "displaced_source_target": "q",
+      "hole": "c",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "s",
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "c",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "q",
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 2,
+      "displaced_source_target": "r",
+      "hole": "c",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "q",
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 3,
+      "displaced_source_target": "s",
+      "hole": "c",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "r",
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "c",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "s",
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 2,
+      "displaced_source_target": "s",
+      "hole": "c",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "q",
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 3,
+      "displaced_source_target": "r",
+      "hole": "c",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "s",
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "c",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "r",
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 2,
+      "displaced_source_target": "r",
+      "hole": "c",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "s",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 3,
+      "displaced_source_target": "q",
+      "hole": "c",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "r",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "c",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "q",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "s",
+      "cycle_length": 2,
+      "displaced_source_target": "q",
+      "hole": "c",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "s",
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 3,
+      "displaced_source_target": "r",
+      "hole": "c",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "q",
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "c",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "r",
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 2,
+      "displaced_source_target": "q",
+      "hole": "s",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "r",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 3,
+      "displaced_source_target": "c",
+      "hole": "s",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "q",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "s",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "c",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 2,
+      "displaced_source_target": "c",
+      "hole": "s",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "r",
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 3,
+      "displaced_source_target": "q",
+      "hole": "s",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "c",
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "s",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "q",
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 2,
+      "displaced_source_target": "r",
+      "hole": "s",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "q",
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 3,
+      "displaced_source_target": "c",
+      "hole": "s",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "r",
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "s",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "c",
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 2,
+      "displaced_source_target": "c",
+      "hole": "s",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "q",
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 3,
+      "displaced_source_target": "r",
+      "hole": "s",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "c",
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "s",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "r",
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 2,
+      "displaced_source_target": "r",
+      "hole": "s",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "c",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 3,
+      "displaced_source_target": "q",
+      "hole": "s",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "r",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "s",
+      "incoming_source_predecessor": "r",
+      "incoming_source_target": "q",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "c",
+      "cycle_length": 2,
+      "displaced_source_target": "q",
+      "hole": "s",
+      "incoming_source_predecessor": "s",
+      "incoming_source_target": "c",
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "q",
+      "cycle_length": 3,
+      "displaced_source_target": "r",
+      "hole": "s",
+      "incoming_source_predecessor": "c",
+      "incoming_source_target": "q",
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "candidate_supports_pairwise_disjoint": true,
+      "closing_source": "r",
+      "cycle_length": 4,
+      "displaced_source_target": "charity",
+      "hole": "s",
+      "incoming_source_predecessor": "q",
+      "incoming_source_target": "r",
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ]
+    }
+  ],
+  "schema": "closing-source-deletion-return-residual-completion-audit-v1",
+  "status": "ALL_FORCED"
+}

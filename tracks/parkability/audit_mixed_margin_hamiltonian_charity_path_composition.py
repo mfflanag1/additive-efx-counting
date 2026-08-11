@@ -11,6 +11,8 @@ from pathlib import Path
 
 DEPENDENCIES = (
     ("FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md", "full_signed_transfer_state_reconstruction_audit.json"),
+    ("CHARITY_AUGMENTED_FIVE_TARGET_HOLE_PIVOT_CYCLE_LEMMA_20260811.md", "charity_augmented_five_target_hole_pivot_cycle_audit.json"),
+    ("PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md", "paid_splice_observer_failure_current_response_audit.json"),
     ("CURRENT_SAFE_FULL_RESPONSE_MATCHING_ENDPOINT_LEMMA_20260811.md", "current_safe_full_response_matching_endpoint_audit.json"),
     ("PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md", "pi_free_five_target_charity_path_hole_edge_audit.json"),
     ("ARBITRARY_CHARITY_PACKET_BLOCKER_COLLAPSE_LEMMA_20260811.md", "arbitrary_charity_packet_blocker_collapse_audit.json"),
@@ -22,6 +24,8 @@ DEPENDENCIES = (
     ("ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md", "anchored_q_donor_or_source_collision_audit.json"),
     ("MUTUAL_FLOATER_DELETION_OR_DOUBLE_CRITICAL_LEMMA_20260811.md", "mutual_floater_deletion_or_double_critical_audit.json"),
     ("RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md", "retained_q_bq_floater_substitution_handoff_audit.json"),
+    ("Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md", "q_closing_source_residual_reassignment_audit.json"),
+    ("CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md", "closing_source_deletion_return_residual_completion_audit.json"),
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
@@ -63,17 +67,16 @@ def run(root: Path) -> dict:
         "dependency_count": len(records),
         "records": records,
         "proved_reduction": (
-            "all mixed-margin states reduce to EFX/lex, PI, support/response "
-            "progress, or the six-clause full-owner critical-top-up separator"
+            "all mixed-margin Hamiltonian-path states reduce to EFX/lex, PI, "
+            "support growth, or permanent full-decorated response augmentation"
         ),
         "exact_surviving_separator": (
-            "anchor-containing full-owner target-critical top-up failure after "
-            "Bq floater substitution and root-source anchor return, with the "
-            "remaining physical role obstruction at q-source collision"
+            "none inside mixed-margin observer payment; broader GG response/Hall "
+            "continuations remain outside this theorem"
         ),
         "claim_boundary": (
-            "integrity and reduction manifest only; the critical-top-up separator, "
-            "mixed-margin theorem, GG, and EFX remain open"
+            "mixed-margin Hamiltonian-path payment only; broader GG closure and "
+            "four-agent/general EFX remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

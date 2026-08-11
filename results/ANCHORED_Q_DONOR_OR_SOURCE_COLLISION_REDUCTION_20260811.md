@@ -97,6 +97,13 @@ selector: all other owners' pools and floors have already been exhausted,
 and the only unresolved collision is that `q` is both proposed donor and
 closing source.
 
+This role collision is now eliminated without duplicating q.  Return a
+least-t deletion remainder `D-g` to the hole owner, keep q on its displaced
+path core, and add the residual released by the incoming anchor `r -> q`.
+Residual success pays q against the smaller target; residual failure forces
+the incoming q-target core to be a strict q self-response.  See
+[`Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md`](Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md).
+
 ## Consequence
 
 The anchor-containing critical-top-up separator has two, not one, physical
@@ -105,8 +112,8 @@ interfaces:
 1. six **q-donor-role-available** pivots, whose shared-floater conflict is
    removed by the `B_q` substitution and whose continuation is the existing
    donor/rank-two machinery; and
-2. six **q-source-collision** pivots, whose remaining gate is the two-core q
-   rerouting selector.
+2. six **q-source-collision** pivots, now eliminated by deletion-remainder
+   return plus the incoming-anchor residual dichotomy.
 
 Accordingly, the root/q reservoir does close the physical floater conflict,
 but it does not identify q's two logical roles.  Any claimed mixed-margin
@@ -122,7 +129,7 @@ and the twelve stable anchor cycles.  It verifies the 6/6 role split, all
 cycle-length counts, distinct-donor role eligibility in every non-q-source
 case, and the exact singleton-floater intersection (1).
 
-This is a graph/role reduction.  The cited `B_q` lemma supplies the physical
-floater repair but does not construct the two-core q rerouting, eliminate the
-q-source payment separator, produce a globally maximal countermodel, close
-GG, or prove four-agent/general additive EFX.
+This is a graph/role reduction.  The cited `B_q` and q-source residual lemmas
+supply the physical floater and role repairs.  The remaining non-q-source
+donor/rank-two continuation, globally maximal countermodel alternative, GG,
+and four-agent/general additive EFX remain open.

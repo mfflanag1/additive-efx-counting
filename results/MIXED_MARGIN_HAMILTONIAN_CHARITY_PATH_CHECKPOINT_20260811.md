@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-11
 
-**Status:** cap-free reduction of the mixed-margin goal to one full-owner
-critical-top-up substitution separator; the goal is not yet closed
+**Status:** mixed-margin Hamiltonian-path observer payment closed cap-free;
+broader GG and additive EFX remain open
 
 ## Authoritative state
 
@@ -127,7 +127,24 @@ nonroot rank-two edge.  Thus neither double floater criticality nor root
 monopoly survives as an independent terminal.  See
 [`RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md`](RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md).
 
-## Exact surviving separator
+The six cases where q itself closes the prefix cycle also admit a direct
+residual repair.  Return `D-g` for a least-t good to the hole owner, retain
+q's displaced path core, and give q the residual released by the incoming
+anchor.  If that residual pays q, every row is paid against the smaller
+target; if it fails, cancellation makes the incoming anchor core a strict q
+self-response.  Hence the q-source role collision is eliminated; see
+[`Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md`](Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md).
+
+The deletion-return residual argument is source-independent.  For every one
+of the 72 nonself pivots on all 24 Hamiltonian paths, return `D-g` to the hole
+owner, keep the closing source on its displaced path core, and add the
+residual released by the incoming edge into that source's target.  Success
+pays the source; failure makes the incoming core a strict self-response.
+Together with the nonowner lemma this eliminates the mixed-margin separator
+entirely.  See
+[`CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md`](CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md).
+
+## Resolved separator
 
 After source/core saturation and full-owner recruitment, the sole unproved
 state has all of the following simultaneously:
@@ -143,13 +160,12 @@ state has all of the following simultaneously:
 6. no new response core, source/root, signed transfer, supplier, or release
    label.
 
-This is the exact anchor-containing full-owner **critical-top-up substitution
-separator**.  To finish the goal one must prove that the globally lex-maximal
-GG inequalities and support geometry force the q-core selection above, a
-third-owner substitute for `K`, a source/root change, or a new core;
-otherwise one must instantiate all six clauses and the applicable q-role
-separator in an exact globally maximal GG countermodel.  Local scalar
-margins, another history ledger, and bounded cells cannot decide it.
+The former anchor-containing full-owner **critical-top-up substitution
+separator** is resolved by returning a least-good deletion remainder rather
+than preserving the decorated assignment of all `D`.  No third-owner
+substitute for `K`, q-donor duplication, or globally maximal mixed-margin
+countermodel is needed.  The proof exits through EFX/lex, PI/self-response,
+physical support growth, or a changed full decorated response record.
 
 ## Verification and claim boundary
 
@@ -158,6 +174,6 @@ records and hashes every dependency in this reduction.  Its audits verify
 the algebraic implications, exact finite selectors, matching classification,
 and component-cardinality exhaustion.
 
-The manifest establishes a replayable reduction.  It does not eliminate the
-six-clause separator, prove the mixed-margin theorem, close GG, or prove
+The manifest establishes the replayable mixed-margin theorem.  It does not
+close every other GG response/Hall continuation, close GG, or prove
 four-agent/general additive EFX.
