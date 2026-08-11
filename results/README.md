@@ -1149,3 +1149,16 @@ both encodings.
   one-wall normal form and has one exact margin inequality. The scalar and
   weak-duality implications replay under two Z3 versions; elimination of the
   dual certificate remains open.
+- [`LEX_SACRIFICED_RESPONSE_COMPRESSION_LEMMA_20260811.md`](LEX_SACRIFICED_RESPONSE_COMPRESSION_LEMMA_20260811.md)
+  — exact priority-sensitive interpretation of an unpaid compression. Its
+  cores capture part of the missing owner's base bundle above all unused
+  external goods. For a non-`r` missing source, the resulting allocation is
+  still a valid flexible/lex candidate and every EFX failure lies in one
+  two-sided wall star; the singleton case captures its unique good.
+- [`ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md`](ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md)
+  — proves that `r` is always a response source through the contained
+  common-safe root core `T_q+f`, so the missing source is never the earlier
+  root. An aligned residual-response/core-wall pair strictly increases a
+  finite recapture potential. A maximal obstruction must therefore be a
+  disjoint cross-star with one strict four-level value order; eliminating
+  that cross-star remains open.

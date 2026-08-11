@@ -376,6 +376,22 @@ proof obligation is to contradict the weighted dual/recapture orientation
 using the flower inequalities or use it to force the final root change. See
 [`WEIGHTED_RESPONSE_COMPRESSION_DUAL_LEMMA_20260811.md`](WEIGHTED_RESPONSE_COMPRESSION_DUAL_LEMMA_20260811.md).
 
+The priority-sensitive endpoint is sharper still.  An unpaid compression
+means its response cores captured a packet `C` from the missing source's
+own base bundle worth more, in that row, than every unselected external good
+`E`.  The missing source cannot be `r`: every root target contains the
+common-safe desired core `T_q+f`, so `r` is always a response source.  Hence
+every unpaid state is sacrifice-eligible.  Its EFX failures form only a
+two-sided star between the missing owner and the three common-safe cores,
+and between the source owners and the residual.  Whenever the same source
+appears on both sides, one recapture strictly increases the missing owner's
+residual utility; finite maximality eliminates all such aligned pairs.  The
+sole terminal architecture is now a disjoint cross-star with the strict
+four-level order recorded in (10), plus its one-sided degenerations. See
+[`LEX_SACRIFICED_RESPONSE_COMPRESSION_LEMMA_20260811.md`](LEX_SACRIFICED_RESPONSE_COMPRESSION_LEMMA_20260811.md)
+and
+[`ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md`](ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

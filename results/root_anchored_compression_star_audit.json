@@ -1,0 +1,36 @@
+{
+  "claim_boundary": "QF_LRA audit of aligned/cross-star scalar implications and exact root-core containment; response-source membership uses the analytic common-safe desired-core definition",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_anchored_compression_star.py",
+    "script_sha256": "21778b22f920178a6a27c8b358e28fd5f2c0f585dec062a277e0b76c070a892f",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "aligned_wall_core_exceeds_residual_response",
+      "status": "unsat"
+    },
+    {
+      "claim": "aligned_recapture_strictly_increases_residual",
+      "status": "unsat"
+    },
+    {
+      "claim": "maximal_cross_star_has_strict_four_level_order",
+      "status": "unsat"
+    }
+  ],
+  "schema": "root-anchored-compression-star-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "common_safe_desired_root_core": [
+      "T_q",
+      "f"
+    ],
+    "root_is_response_source": true,
+    "root_target": [
+      "R_r",
+      "T_q",
+      "f"
+    ]
+  }
+}
