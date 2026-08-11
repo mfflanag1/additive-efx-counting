@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "two-owner bridge payment selector; observer safety, multi-donor closure, globally maximal GG, and EFX remain open",
+  "feasibility_checks": {
+    "selector_family_nonempty": "unsat"
+  },
+  "outcomes": [
+    "paid two-edge physical component bridge",
+    "exact direct-return separator requiring a multi-donor or priority handoff"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_cross_component_return_compensation_selector.py",
+    "script_sha256": "b16cc483f9a3c5fd226bbbe4dd8f114ec120d688aa000abc45e92d852fbdbd5a",
+    "theorem": "results/CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "bb01d3c03e6903becc3591b1428ecf36ef3165b337d4d3c7c63f3f0628ce786d"
+  },
+  "remaining_gate": "terminate the multi-donor chain or prove a priority-valid base-floor handoff",
+  "schema": "cross-component-return-compensation-selector-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "global_maximum_failure_separates_every_pair": "unsat",
+    "observer_floor_equivalence": "unsat",
+    "source_response_equivalence": "unsat",
+    "successful_pair_beats_failure_boundary": "unsat",
+    "uncompensated_bridge_specialization": "unsat"
+  }
+}

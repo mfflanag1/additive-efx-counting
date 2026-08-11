@@ -374,6 +374,40 @@ physical response.  Only the last case reaches the connected-return gate;
 see
 [`PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md`](PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md).
 
+A surplus decoration in another physical component now has an exact bridge
+dichotomy.  Delete from the response core a globally source-cheapest packet
+that removes one external observer's base-safety debt.  If its source value
+is below the current response margin, the trimmed core still strictly
+improves its source and sending the deleted packet to the observer physically
+merges the two components without increasing any threshold.  Otherwise every
+debt-removing packet exhausts that source margin, and the exact missing edge
+is a return-compensation packet from the observer component to the source.
+Thus the remaining universal gate is simultaneous return compensation, not
+an unnamed safety failure; see
+[`CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md`](CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md).
+
+Return compensation for that bridge is now globally selected over both
+packets at once.  For every debt-removing `J` from the response core and
+every direct return `L` from the observer's current packet pool, retain the
+observer's full protected utility floor and maximize `s(L)-s(J)`.  Success
+pays the observer and strictly improves the response source while physically
+joining the components.  Failure proves that every such pair consumes the
+entire source margin, so the next edge must recruit another owner on the
+observer's signed-transfer component or use an explicit priority-valid base-
+floor handoff; see
+[`CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md`](CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md).
+
+Internal donor ordering is now eliminated entirely.  Instead of following a
+packet path inside the observer's already connected signed-transfer
+component, globally repartition its complete goods pool together with the
+debt-removing bridge packet while retaining every component owner's protected
+floor.  Maximize the response source's returned value net of deleted core
+value.  Success gives one paid physical component; failure separates every
+possible internal path and branching donor scheme at once.  A survivor must
+therefore recruit a different physical component, invoke a priority-valid
+base-floor sacrifice, or replace the response core; see
+[`COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md`](COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -392,7 +426,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 100 tests spanning the retained-support,
+The focused dependency replay currently passes 106 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

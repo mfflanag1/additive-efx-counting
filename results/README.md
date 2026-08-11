@@ -1599,6 +1599,27 @@ both encodings.
   base common safety; the exact gap is funded by signed physical surplus
   transfers, which must decorate the persistent response. Only recurrence of
   the same decorated response reaches the remaining connected-return gate.
+- [`CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md`](CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md)
+  ([symbolic audit](cross_component_safety_debt_bridge_audit.json))
+  — physically joins a response target to any external observer-surplus
+  component whenever the source-cheapest debt-removing packet is smaller than
+  the source's current response margin. Failure is an exact separator: every
+  such bridge exhausts the margin, so the smallest missing operation is one
+  named return-compensation packet from the observer component to the source.
+- [`CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md`](CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md)
+  ([symbolic audit](cross_component_return_compensation_selector_audit.json))
+  — jointly optimizes the debt-removing packet and every direct return packet
+  under the observer's complete protected utility floor. Success gives a paid
+  physical component merge; failure is a global separator forcing a donor
+  chain inside the observer component or an explicit priority-valid base-floor
+  handoff.
+- [`COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md`](COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md)
+  ([symbolic/graph audit](component_wide_return_compensation_selector_audit.json))
+  — replaces every internal donor chain by one global partition of the
+  observer component's complete goods pool. Success pays all component owners
+  and physically joins the response; failure rules out every internal path or
+  branch, forcing outside-component recruitment, a priority-valid sacrifice,
+  or response-core replacement.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

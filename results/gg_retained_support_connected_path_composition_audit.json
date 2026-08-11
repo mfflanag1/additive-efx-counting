@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 46,
-  "focused_test_count": 100,
+  "dependency_count": 49,
+  "focused_test_count": 106,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "879db45081574ea5ef8686936ca20da50855ec08e5d7879f20ab3823063ae574",
+    "checkpoint_sha256": "d53745306a7d916e7ef4cccb40dfcb9fbf033be095a8e50d59fc69c8a4629c9f",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "636a8c0baaa565cf6f19367e8b5c9b70dcab2c2fed506c99a40614cff32defb4"
+    "script_sha256": "be047c70e49d229a187616374f7d82bc43f7346aadc9f7827a2ef291f3455fd2"
   },
   "records": [
     {
@@ -330,6 +330,27 @@
       "audit_status": "ALL_FORCED",
       "theorem": "results/PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md",
       "theorem_sha256": "b964aa5d45d16561cc2636af3c8fc75f6464c9c7b864deb657125151d3c06623"
+    },
+    {
+      "audit": "results/cross_component_safety_debt_bridge_audit.json",
+      "audit_sha256": "c34c0f7271a64041d9fc04cdaf6901ca8e6a4c33ebebf81c1d75cc0b8f2cf4d3",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md",
+      "theorem_sha256": "1ef0d7f638dea6347b387ed06437dcc66bcfa3fe229c1840acc990de438032fb"
+    },
+    {
+      "audit": "results/cross_component_return_compensation_selector_audit.json",
+      "audit_sha256": "ed4f402e4d52ea9b9bcd0c3498950e4e57e00b22c28154c79c6bb4bf6e6e217e",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "bb01d3c03e6903becc3591b1428ecf36ef3165b337d4d3c7c63f3f0628ce786d"
+    },
+    {
+      "audit": "results/component_wide_return_compensation_selector_audit.json",
+      "audit_sha256": "e5c201ea212d1dd039222693e7123aa58796954ec4c4d68f7114b625d387ea86",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "04e1eed93446cd5f965516fde7d6a9ec1680ddc76afbca36f9041276e6531040"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",
