@@ -55,6 +55,7 @@ DEPENDENCIES = (
     ("PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md", "paid_anchor_current_wall_recurrence_audit.json"),
     ("PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md", "paid_anchor_least_good_consumption_audit.json"),
     ("UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md", "universal_paid_anchor_support_reset_audit.json"),
+    ("PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md", "paid_splice_observer_failure_current_response_audit.json"),
 )
 
 
@@ -85,7 +86,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 98,
+        "focused_test_count": 100,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

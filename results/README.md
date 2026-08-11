@@ -1591,6 +1591,14 @@ both encodings.
   has an exact plateau. This resolves that objective, not GG or EFX; the next
   target is universal feasibility and safety of the repeated-support connected
   splice.
+- [`PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md`](PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md)
+  ([symbolic audit](paid_splice_observer_failure_current_response_audit.json))
+  — converts every observer-surplus failure after an all-owner-paid splice
+  into a core that strictly improves its source over her current bundle and
+  is safe relative to every current paid bundle. Current safety need not be
+  base common safety; the exact gap is funded by signed physical surplus
+  transfers, which must decorate the persistent response. Only recurrence of
+  the same decorated response reaches the remaining connected-return gate.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

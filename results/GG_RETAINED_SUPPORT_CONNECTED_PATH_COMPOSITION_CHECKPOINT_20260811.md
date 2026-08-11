@@ -361,6 +361,19 @@ is retained; releasing it creates a named connected return handoff.  Thus a
 fixed physical paid anchor cannot support an unrecorded reset cycle; see
 [`UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md`](UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md).
 
+Observer failure after a fully paid splice is now localized at the current
+allocation.  Globally minimal extraction from any failed target produces a
+core strictly preferred by its source to her current bundle and EFX-safe
+relative to every current paid bundle.  This current safety need not be base
+common safety: its exact excess is funded by the observers' realized
+surpluses.  Hence the persistent response object must retain the signed
+incoming/outgoing transfers that certify those surpluses.  Every failure
+therefore gives an ordinary response augmentation, a surplus-decorated
+response, same-owner current progress, or recurrence of one exact decorated
+physical response.  Only the last case reaches the connected-return gate;
+see
+[`PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md`](PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -379,7 +392,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 98 tests spanning the retained-support,
+The focused dependency replay currently passes 100 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is
