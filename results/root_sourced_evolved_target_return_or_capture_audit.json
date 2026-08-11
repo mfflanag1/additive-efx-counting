@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "QF_LRA audit of the root anchor-return payment and strict capture alternative; compensation-chain termination is outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_sourced_evolved_target_return_or_capture.py",
+    "script_sha256": "a2de220e3f4897ccc036cbc72e5f5743cefca3cd54644b3ab35173281d0a1556",
+    "theorem": "results/ROOT_SOURCED_EVOLVED_TARGET_RETURN_OR_CAPTURE_LEMMA_20260811.md",
+    "theorem_sha256": "79a80373eb3fcba172dced39144434bc319c6f5a6ca7edacf78e3b0245e19bb0",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "anchor_return_gain_identity",
+      "status": "unsat"
+    },
+    {
+      "claim": "strict_gap_pays_q",
+      "status": "unsat"
+    },
+    {
+      "claim": "failed_return_forces_capture_cancellation",
+      "status": "unsat"
+    },
+    {
+      "claim": "capture_packet_is_nonempty",
+      "status": "unsat"
+    },
+    {
+      "claim": "packet_capture_identity",
+      "status": "unsat"
+    },
+    {
+      "claim": "charity_containment",
+      "status": "unsat"
+    }
+  ],
+  "schema": "root-sourced-evolved-target-return-or-capture-audit-v1",
+  "status": "ALL_FORCED"
+}

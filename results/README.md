@@ -1308,6 +1308,15 @@ both encodings.
 - [`captured_q_margin_anchored_residual_rotation_audit.json`](captured_q_margin_anchored_residual_rotation_audit.json)
   — symbolic replay of both-owner payment, charity containment, strict
   support growth, and relative minimality.
+- [`ROOT_SOURCED_EVOLVED_TARGET_RETURN_OR_CAPTURE_LEMMA_20260811.md`](ROOT_SOURCED_EVOLVED_TARGET_RETURN_OR_CAPTURE_LEMMA_20260811.md)
+  — converts a common-safe root response to the evolved `q` target into an
+  anchor-return allocation. Either that return pays both mutual owners and
+  leaves only one response wall, or the root core contains a nonempty
+  `B_q` packet dominating the omitted retained packet plus `f` in `q`'s
+  row.
+- [`root_sourced_evolved_target_return_or_capture_audit.json`](root_sourced_evolved_target_return_or_capture_audit.json)
+  — symbolic replay of the return-payment identity, strict capture
+  cancellation, nonempty packet support, and charity containment.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
