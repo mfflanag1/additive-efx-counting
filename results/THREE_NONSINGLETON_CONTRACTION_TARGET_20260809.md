@@ -208,6 +208,16 @@ a named non-`q` response source.  Only the other external owner can be new,
 so at most one augmentation remains before the relation is closed.  See
 [`FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md`](FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md).
 
+Keeping the unused complement of the external desired bundle strengthens
+this reduction.  If `A subseteq W` is the external source's response bundle,
+the return target is `X_a+R+(W\A)`.  Its edge has disjoint, internally
+supplied incoming packets and therefore closes PI whenever `q` is its
+source.  A PI-free survivor must satisfy the strict capture system
+`q(W\A)<q(X_q)-q(X_a+R)` and
+`q(X_a+R)<q(X_q)-(q(W)-q(X_q))`, or expose a named internal Hall defect.
+See
+[`FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md`](FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md).
+
 The component library now also covers owner-rooted exchange stars, not only
 charity-rooted hubs. A hub may receive a packet from one donor while
 partitioning its released packet among that donor and other leaves. Any

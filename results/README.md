@@ -951,6 +951,14 @@ both encodings.
   produces a low-return inequality or one named non-`q` source. With four
   owners only one genuinely new external augmentation is possible, leaving
   a closed Hall defect rather than an indefinite blocker chain.
+- [`FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md`](FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md)
+  — cap-free strengthening that routes the unused part of the blocked
+  `q` target back with the external owner's base bundle and the residual.
+  The resulting three incoming sets are disjoint and internally supplied;
+  every surviving low-return branch obeys a strict deep-capture inequality.
+- [`flower_complement_return_augmentation_audit.json`](flower_complement_return_augmentation_audit.json)
+  — dual-solver symbolic replay of complement-return release support and
+  both scalar capture implications.
 - [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
   — cap-free response-Hall theorem for an owner-supplied exchange star. The
   hub receives a donor packet and partitions its own released packet among

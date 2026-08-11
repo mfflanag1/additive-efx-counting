@@ -1,0 +1,83 @@
+{
+  "claim_boundary": "finite symbolic support audit plus QF_LRA capture implications; most-envious-source existence and four-owner termination are analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_flower_complement_return_augmentation.py",
+    "script_sha256": "b73d989253e8aec5d8957d06f369ec8088b5cd4c8c0279f21c2dacbd5a16c8a3",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "complement_low_forces_capture",
+      "status": "unsat"
+    },
+    {
+      "claim": "strict_capture_and_no_direct_q_source_force_deep_gap",
+      "status": "unsat"
+    }
+  ],
+  "schema": "flower-complement-return-augmentation-audit-v1",
+  "status": "ALL_FORCED",
+  "support_records": [
+    {
+      "case": "direct_q_source",
+      "incoming": {
+        "q": [
+          "A_L"
+        ],
+        "r": [
+          "Tq",
+          "f"
+        ]
+      },
+      "released": {
+        "q": [
+          "Bq_minus_A",
+          "Tq"
+        ],
+        "r": [
+          "A_L",
+          "L_minus_A",
+          "R"
+        ]
+      },
+      "sources": {
+        "q": "q",
+        "r": "r"
+      }
+    },
+    {
+      "case": "complement_return",
+      "incoming": {
+        "a": [
+          "Bq_minus_A",
+          "L_minus_A",
+          "R"
+        ],
+        "q": [
+          "A_L"
+        ],
+        "r": [
+          "Tq",
+          "f"
+        ]
+      },
+      "released": {
+        "a": [],
+        "q": [
+          "Bq_minus_A",
+          "Tq"
+        ],
+        "r": [
+          "A_L",
+          "L_minus_A",
+          "R"
+        ]
+      },
+      "sources": {
+        "a": "q",
+        "q": "a",
+        "r": "r"
+      }
+    }
+  ]
+}

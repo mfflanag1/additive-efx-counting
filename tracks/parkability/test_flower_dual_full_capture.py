@@ -11,6 +11,9 @@ try:
     from .audit_flower_early_root_charity_rotation import (
         run as run_root_rotation_audit,
     )
+    from .audit_flower_complement_return_augmentation import (
+        run as run_complement_return_audit,
+    )
     from .audit_flower_minimal_payment_residual_rotation import (
         run as run_minimal_payment_audit,
     )
@@ -37,6 +40,9 @@ except ImportError:
     from audit_flower_dual_full_escape import run as run_scalar_audit
     from audit_flower_early_root_charity_rotation import (
         run as run_root_rotation_audit,
+    )
+    from audit_flower_complement_return_augmentation import (
+        run as run_complement_return_audit,
     )
     from audit_flower_minimal_payment_residual_rotation import (
         run as run_minimal_payment_audit,
@@ -251,6 +257,22 @@ def main():
     assert "independent of `|R|`" in return_augmentation_theorem
     assert "There is no fifth owner" in return_augmentation_theorem
     assert "does not yet close `GG`" in return_augmentation_theorem
+    complement_return_path = (
+        ROOT / "results" / "flower_complement_return_augmentation_audit.json"
+    )
+    complement_return = json.loads(complement_return_path.read_text())
+    complement_return_replay = run_complement_return_audit()
+    assert complement_return_replay["status"] == "ALL_FORCED"
+    assert complement_return_replay["support_records"] == complement_return["support_records"]
+    assert complement_return_replay["scalar_records"] == complement_return["scalar_records"]
+    complement_return_theorem = (
+        ROOT
+        / "results"
+        / "FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md"
+    ).read_text()
+    assert "whole unused complement" in complement_return_theorem
+    assert "strict capture system" in complement_return_theorem
+    assert "does not yet eliminate" in complement_return_theorem
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())

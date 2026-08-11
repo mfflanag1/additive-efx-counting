@@ -159,6 +159,14 @@ gate is therefore reduced to a low-return inequality for `c,s` or a closed
 Hall defect missing `q`, rather than an unbounded dependency chain.  See
 [FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md](FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md).
 
+The complement-return strengthening also reuses every good of the blocked
+target that its external response bundle discards.  This closes a larger
+three-edge PI family and replaces the coarse low-return branch by a strict
+capture inequality: the external response must absorb `q`'s whole payment
+margin, and the discarded complement must fit inside the remaining return
+deficit.  See
+[FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md](FLOWER_COMPLEMENT_RETURN_AUGMENTATION_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,
