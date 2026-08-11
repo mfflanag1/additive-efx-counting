@@ -1325,6 +1325,15 @@ both encodings.
 - [`root_response_floater_substitution_dichotomy_audit.json`](root_response_floater_substitution_dichotomy_audit.json)
   — symbolic replay of support conservation, mutual-owner payment, and the
   two-row joint-capture certificate.
+- [`CANONICAL_ROOT_RESPONSE_TWO_STAGE_SELECTOR_LEMMA_20260811.md`](CANONICAL_ROOT_RESPONSE_TWO_STAGE_SELECTOR_LEMMA_20260811.md)
+  — globally selects over every common-safe root response at a fixed
+  retained state: first maximize anchor-return payment, then maximize
+  floater substitution. If neither operation succeeds, all root responses
+  fail both tests and one canonical nonempty `B_q` packet is critical in
+  both mutual-owner rows.
+- [`canonical_root_response_two_stage_selector_audit.json`](canonical_root_response_two_stage_selector_audit.json)
+  — symbolic replay of both extremal-propagation implications and the
+  selected joint-capture inequalities.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
