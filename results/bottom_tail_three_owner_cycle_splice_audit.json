@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "endpoint and exact witness for the cycle splice; universal selector feasibility, reverse-support closure, GG, and four-agent EFX remain open",
+  "exact_plateau_escape": {
+    "_": [],
+    "c": [
+      "q2",
+      "h"
+    ],
+    "q": [
+      "c1",
+      "s2",
+      "f"
+    ],
+    "r": [
+      "q1",
+      "c2",
+      "s1"
+    ],
+    "s": [
+      "r1",
+      "r2",
+      "k"
+    ]
+  },
+  "exact_plateau_escape_is_efx": true,
+  "exact_plateau_escape_root_strict_over_base": true,
+  "generic_endpoint_check": "unsat",
+  "provenance": {
+    "plateau_script": "tracks/parkability/audit_retained_bottom_ledger_stagnation_refutation.py",
+    "plateau_script_sha256": "2d67a4e2befc2bf5bb85dad055af14a6d5a648146b856acbc0088b6ee8810466",
+    "script": "tracks/parkability/audit_bottom_tail_three_owner_cycle_splice.py",
+    "script_sha256": "84235b9c80f6da482d810f2b9cba3efea8f38207202f8828f8105b8d26546f5f",
+    "theorem": "results/BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md",
+    "theorem_sha256": "b1a0657d875136f7d8d275a6d8eb611043f3c00faf9fe44c65d26ced65a6068d"
+  },
+  "remaining_gate": "force selector feasibility from GG inequalities",
+  "schema": "bottom-tail-three-owner-cycle-splice-audit-v1",
+  "status": "ALL_FORCED",
+  "supplier_edges": [
+    "r->d:H",
+    "d->r:G_r",
+    "d->q:G_q",
+    "q->d:K"
+  ],
+  "supplier_graph_connected_when_all_three_owners_change": true,
+  "support_conserved": true
+}

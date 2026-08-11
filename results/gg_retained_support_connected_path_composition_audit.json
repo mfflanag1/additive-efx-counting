@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 35,
-  "focused_test_count": 78,
+  "dependency_count": 36,
+  "focused_test_count": 80,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "9b9c96c84d7b2ead3e68be001e4ad391b08c6a15cc9dba997792bcc69b3b00aa",
+    "checkpoint_sha256": "8ca7dc0a1b4335e2b010fc992807d659c7f1ae01fba057e384e389a7ec60a80d",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "86a34b42fd54b591044c0567854a20a259cd6644ef9be673197f484ae1e10875"
+    "script_sha256": "a0cdd00da9c1a5eeb5a88dd790d51dc73ef898e647e110a37e0d8327f5d0397a"
   },
   "records": [
     {
@@ -249,10 +249,17 @@
     },
     {
       "audit": "results/retained_bottom_ledger_stagnation_refutation_audit.json",
-      "audit_sha256": "2d07a0e5218740c36b18cf468179f9cd6e984f2d7cf8bd57cb22e5bc57f3f6a1",
+      "audit_sha256": "479c74375ae66437e8afa4482091674154978088f20501e92c26cfcc5249a340",
       "audit_status": "EXACT_BOTTOM_TAIL_PLATEAU",
       "theorem": "results/RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md",
-      "theorem_sha256": "32d47a9d5e706fac6fcce32698a1c29d7f0579b502b2bf9cf5071e4697b135fe"
+      "theorem_sha256": "855f7e27d9a681f2d373262ad72098a79ced5ce1455405252465fab3a9869e37"
+    },
+    {
+      "audit": "results/bottom_tail_three_owner_cycle_splice_audit.json",
+      "audit_sha256": "cb62394b2e8c46111e5587477954ddaa95a4bb344c39d49bc5ebb036b0bf0613",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md",
+      "theorem_sha256": "b1a0657d875136f7d8d275a6d8eb611043f3c00faf9fe44c65d26ced65a6068d"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",

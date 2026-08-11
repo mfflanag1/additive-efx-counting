@@ -67,6 +67,12 @@ The smallest operation already indicated by the hard flower geometry is a
 surplus-budgeted connected component that splices the repeated root-facing
 return with the retained bottom tail instead of restarting the compression.
 
+The audit also exhibits such an escape from the canonical state
+`(A_r,q,c,W)`. It moves `h` from the root to `c`, splits `W` between the root
+and `q`, and returns one packet from `q` to `c`. The resulting allocation is
+EFX and strictly improves the root over the base. Thus the witness refutes the
+ledger but supports, rather than refutes, the connected-splice route.
+
 ## Verification and boundary
 
 [`retained_bottom_ledger_stagnation_refutation_audit.json`](retained_bottom_ledger_stagnation_refutation_audit.json)

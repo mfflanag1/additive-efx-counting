@@ -252,6 +252,17 @@ current-state selector or a surplus-budgeted connected component that splices
 the repeated root-facing return with the bottom tail.  See
 [`RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md`](RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md).
 
+That smallest operation is now explicit.  Split the external residual `W`
+between the root and protected `q`, return a packet from `q` to the external
+hole, and release the retained bottom tail from the root to that hole.  The
+supplier graph is `r->d`, `d->{r,q}`, `q->d`.  A finite global selector over
+these splits either satisfies the surplus-budget endpoint or returns a named
+failed row inequality.  The exact eleven-good canonical plateau has an EFX,
+root-strict member of this selector.  The remaining analytic gate is to force
+selector feasibility from the GG root-concentration and minimal Hall-defect
+inequalities, not to invent another potential coordinate.  See
+[`BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md`](BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -270,7 +281,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 78 tests spanning the retained-support,
+The focused dependency replay currently passes 80 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

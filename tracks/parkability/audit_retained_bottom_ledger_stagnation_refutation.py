@@ -144,6 +144,24 @@ def run(root: Path) -> dict:
         "consumed_bottom_support": [],
     }
 
+    escape = {
+        "r": ("q1", "c2", "s1"),
+        "q": ("c1", "s2", "f"),
+        "c": ("q2", "h"),
+        "s": ("r1", "r2", "k"),
+        "_": (),
+    }
+    escape_violations = [
+        (observer, target)
+        for observer in AGENTS
+        for target in AGENTS
+        if value(values, observer, escape[observer])
+        < value(values, observer, escape[target])
+        - min((values[observer][good] for good in escape[target]), default=0)
+    ]
+    assert is_efx(values, escape), escape_violations
+    assert value(values, "r", escape["r"]) > base["r"]
+
     theorem = root / "results/RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md"
     script = Path(__file__).resolve()
     source = root / "tracks/parkability/audit_gg_rank_reset_raw_potential_refutation.py"
@@ -165,6 +183,9 @@ def run(root: Path) -> dict:
         "expanded_ledger": ledger,
         "ledger_identical_across_all_states": True,
         "support_disjoint": True,
+        "explicit_tail_consuming_efx_escape": {
+            agent: list(bundle) for agent, bundle in escape.items()
+        },
         "claim_boundary": (
             "exact local plateau with fixed absorbed and consumed bottom support; "
             "not global lex maximality, generalized PI-freeness, GG failure, or "

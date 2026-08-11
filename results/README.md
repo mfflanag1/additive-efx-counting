@@ -1513,6 +1513,14 @@ both encodings.
   historical ledger is not a strict termination potential. This is a local
   potential refutation, not a GG or EFX counterexample; it isolates a current-
   state selector or connected cycle-splicing operation as the missing step.
+- [`BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md`](BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md)
+  ([exact audit](bottom_tail_three_owner_cycle_splice_audit.json))
+  — gives that smallest operation an exact finite selector: release the
+  retained tail to the external hole, split its old residual between the root
+  and protected `q`, and return a `q` packet to the hole. The exact canonical
+  plateau has an EFX root-strict splice. The live theorem is now to force one
+  feasible split from the GG inequalities or obtain a full-premise separating
+  countermodel.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
