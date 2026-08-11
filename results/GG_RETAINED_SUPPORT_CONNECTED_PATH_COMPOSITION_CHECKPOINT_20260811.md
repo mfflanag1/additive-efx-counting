@@ -176,6 +176,14 @@ common-safe selected split would strictly improve the same hole residual and
 is impossible.  An unsafe root target augments immediately.  The remaining
 original split has an item-critical least good, and the finite compensator
 frontier ends in exactly a top packet or the `f`-only captured-bottom packet.
+
+The required third-owner fork now has a necessary-and-sufficient packet
+selector.  Return the captured packet to its source, replace its root value
+with `K` from a protected donor core, and compensate that donor with `G` from
+the root pool.  The fork succeeds exactly when the root replacement gap is
+met without consuming the donor's whole response margin.  Failure is no
+longer schematic: either the donor's entire core cannot replace the root
+packet, or every root-feasible `(K,G)` pair captures the donor margin.
 The initially proposed lexicographic potential was
 
 \[
@@ -222,7 +230,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 68 tests spanning the retained-support,
+The focused dependency replay currently passes 70 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

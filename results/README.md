@@ -1475,6 +1475,12 @@ both encodings.
   impossible. The original partition is therefore item-critical, and its
   alternating frontier terminates in a top packet or `f`-only captured-bottom
   handoff.
+- [`THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md`](THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md)
+  ([symbolic audit](third_owner_root_replacement_fork_audit.json))
+  — gives the final fork an exact necessary-and-sufficient packet selector:
+  return the captured packet, replace its root value from a protected donor
+  core, and compensate that donor from the root pool. Failure is exactly
+  aggregate root concentration or a donor-margin blockade.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

@@ -40,6 +40,7 @@ DEPENDENCIES = (
     ("ANCHOR_CONSTRAINED_FULL_PRIORITY_MATCHING_LEMMA_20260811.md", "anchor_constrained_full_priority_matching_audit.json"),
     ("FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md", "fixed_u_arbitrary_hole_residual_selector_audit.json"),
     ("GLOBAL_RESIDUAL_ROOT_FACING_RIGIDITY_LEMMA_20260811.md", "global_residual_root_facing_rigidity_audit.json"),
+    ("THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md", "third_owner_root_replacement_fork_audit.json"),
 )
 
 
@@ -70,7 +71,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 68,
+        "focused_test_count": 70,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "
