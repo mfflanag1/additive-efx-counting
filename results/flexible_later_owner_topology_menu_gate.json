@@ -1,0 +1,200 @@
+{
+  "claim_boundary": "bounded two-atom representative full-capture flower decision for the mined slot-topology menu; UNSAT would cover this bounded cell only, while SAT identifies a missing topology",
+  "nearest_flexible_escape": {
+    "allocation": {
+      "_": [
+        "f"
+      ],
+      "c": [
+        "aq_br_1",
+        "tc_0",
+        "tc_1",
+        "bc_0"
+      ],
+      "q": [
+        "aq_tq_1",
+        "ar_bq_0",
+        "ar_bq_1",
+        "bc_1"
+      ],
+      "r": [
+        "aq_tq_0",
+        "aq_br_0",
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1",
+        "br_rest_0",
+        "br_rest_1"
+      ],
+      "s": [
+        "z"
+      ]
+    },
+    "minimum_moved_goods": 3,
+    "topology": {
+      "edge_counts": [
+        {
+          "count": 1,
+          "source": "c",
+          "target": "q"
+        },
+        {
+          "count": 1,
+          "source": "q",
+          "target": "r"
+        },
+        {
+          "count": 1,
+          "source": "r",
+          "target": "c"
+        }
+      ],
+      "moved_goods": [
+        "aq_br_1",
+        "aq_tq_0",
+        "bc_1"
+      ],
+      "nontrivial_components": [
+        [
+          "c",
+          "q",
+          "r"
+        ]
+      ],
+      "signature": "c->q:1;q->r:1;r->c:1"
+    },
+    "utilities": {
+      "base_utilities": {
+        "c": "1677/256",
+        "q": "1625/256",
+        "r": "4045/256",
+        "s": "9/8"
+      },
+      "owner_utilities": {
+        "c": "261/32",
+        "q": "2219/256",
+        "r": "2327/128",
+        "s": "9/8"
+      }
+    }
+  },
+  "schema": "flexible-later-owner-topology-menu-v1",
+  "signature_allocation_counts": {
+    "_->q:1;q->_:1": 4,
+    "_->q:1;q->_:2": 6,
+    "_->q:1;q->_:3": 4,
+    "_->q:1;q->c:1;q->s:1": 12,
+    "c->_:1;c->q:1;q->c:1": 48,
+    "c->q:1;q->_:1": 16,
+    "c->q:1;q->_:1;q->c:1": 48,
+    "c->q:1;q->_:2": 24,
+    "c->q:1;q->_:3": 16,
+    "c->q:1;q->c:1": 16,
+    "c->q:1;q->c:2": 24,
+    "q->r:1;r->_:1;r->q:1": 224,
+    "q->r:1;r->c:1;r->q:1": 224,
+    "q->r:1;r->q:1;r->s:1": 224
+  },
+  "signatures": [
+    "_->q:1;q->_:1",
+    "_->q:1;q->_:2",
+    "_->q:1;q->_:3",
+    "_->q:1;q->c:1;q->s:1",
+    "c->_:1;c->q:1;q->c:1",
+    "c->q:1;q->_:1",
+    "c->q:1;q->_:2",
+    "c->q:1;q->_:3",
+    "c->q:1;q->_:1;q->c:1",
+    "c->q:1;q->c:1",
+    "c->q:1;q->c:2",
+    "q->r:1;r->c:1;r->q:1",
+    "q->r:1;r->_:1;r->q:1",
+    "q->r:1;r->q:1;r->s:1"
+  ],
+  "solver": "Z3 5.0.0",
+  "status": "sat",
+  "unique_allocation_count": 890,
+  "values": {
+    "c": {
+      "aq_br_0": "815/256",
+      "aq_br_1": "207/128",
+      "aq_tq_0": "413/256",
+      "aq_tq_1": "15/64",
+      "ar_bq_0": "59/256",
+      "ar_bq_1": "1203/256",
+      "ar_tr_0": "49/32",
+      "ar_tr_1": "3/32",
+      "bc_0": "237/256",
+      "bc_1": "3/256",
+      "br_rest_0": "15/256",
+      "br_rest_1": "7/256",
+      "f": "535/256",
+      "tc_0": "571/128",
+      "tc_1": "295/256",
+      "tr_rest_0": "5/256",
+      "tr_rest_1": "1/64",
+      "z": "2881/256"
+    },
+    "q": {
+      "aq_br_0": "349/128",
+      "aq_br_1": "47/256",
+      "aq_tq_0": "1/128",
+      "aq_tq_1": "325/128",
+      "ar_bq_0": "81/64",
+      "ar_bq_1": "649/256",
+      "ar_tr_0": "43/256",
+      "ar_tr_1": "137/64",
+      "bc_0": "41/256",
+      "bc_1": "149/64",
+      "br_rest_0": "41/256",
+      "br_rest_1": "37/256",
+      "f": "973/256",
+      "tc_0": "37/16",
+      "tc_1": "289/256",
+      "tr_rest_0": "33/256",
+      "tr_rest_1": "29/256",
+      "z": "1/256"
+    },
+    "r": {
+      "aq_br_0": "803/128",
+      "aq_br_1": "21/8",
+      "aq_tq_0": "1281/256",
+      "aq_tq_1": "129/64",
+      "ar_bq_0": "1465/256",
+      "ar_bq_1": "5",
+      "ar_tr_0": "97/256",
+      "ar_tr_1": "955/256",
+      "bc_0": "651/128",
+      "bc_1": "1303/256",
+      "br_rest_0": "305/128",
+      "br_rest_1": "3/8",
+      "f": "691/64",
+      "tc_0": "3/256",
+      "tc_1": "1279/256",
+      "tr_rest_0": "5/256",
+      "tr_rest_1": "1/64",
+      "z": "2567/128"
+    },
+    "s": {
+      "aq_br_0": "17/256",
+      "aq_br_1": "7/128",
+      "aq_tq_0": "11/256",
+      "aq_tq_1": "9/16",
+      "ar_bq_0": "3/64",
+      "ar_bq_1": "33/64",
+      "ar_tr_0": "9/128",
+      "ar_tr_1": "17/256",
+      "bc_0": "9/16",
+      "bc_1": "1/64",
+      "br_rest_0": "1/16",
+      "br_rest_1": "13/256",
+      "f": "1/128",
+      "tc_0": "3/256",
+      "tc_1": "61/128",
+      "tr_rest_0": "15/256",
+      "tr_rest_1": "7/128",
+      "z": "9/8"
+    }
+  }
+}

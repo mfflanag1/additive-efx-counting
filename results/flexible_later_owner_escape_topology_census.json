@@ -1,0 +1,627 @@
+{
+  "claim_boundary": "exact minimum-radius flexible EFX escape census for frozen bounded flower profiles; it does not prove that radius four or the displayed topologies suffice cap-free",
+  "maximum_minimum_moved_goods": 3,
+  "profile_count": 7,
+  "provenance": {
+    "script": "tracks/parkability/analyze_flexible_later_owner_escape_topologies.py",
+    "script_sha256": "d81a174e4b65c39260bcf67669f1736e3d91bf70cffebd0563699b78a762b904",
+    "solver": "Z3 5.0.0"
+  },
+  "records": [
+    {
+      "allocation": {
+        "_": [
+          "bc_1",
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 3,
+      "profile": "three_nonsingleton_flower_full_capture_swap_gate.json",
+      "profile_sha256": "082ad256d054a31b97f691cb21c9654b7219edb6e7580e675f7614ea5846dc28",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->_:1;c->q:1;q->c:1"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "109/256",
+          "q": "45/64",
+          "r": "107/128",
+          "s": "123/256"
+        },
+        "owner_utilities": {
+          "c": "129/256",
+          "q": "181/256",
+          "r": "107/128",
+          "s": "123/256"
+        }
+      }
+    },
+    {
+      "allocation": {
+        "_": [
+          "ar_bq_1",
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 3,
+      "profile": "three_nonsingleton_flower_full_capture_path_gate.json",
+      "profile_sha256": "bc2bf048d9753a0ce8f0f17a46df6bddea45c48a954acab310d1218bb57ff0a8",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:1;q->_:1;q->c:1"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "247/64",
+          "q": "9759/256",
+          "r": "45/8",
+          "s": "499/128"
+        },
+        "owner_utilities": {
+          "c": "961/256",
+          "q": "11733/256",
+          "r": "45/8",
+          "s": "499/128"
+        }
+      }
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 3,
+      "profile": "three_nonsingleton_flower_full_capture_packet_gate.json",
+      "profile_sha256": "dbe54c2ad41c1ba4e38ea406fdb473d48fbffc36e971aaa8437307472a9999f6",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->c:1;r->q:1"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "963/1024",
+          "q": "107/256",
+          "r": "69/128",
+          "s": "189/512"
+        },
+        "owner_utilities": {
+          "c": "643/512",
+          "q": "463/1024",
+          "r": "75/128",
+          "s": "189/512"
+        }
+      }
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 3,
+      "profile": "three_nonsingleton_flower_full_capture_arm_hub_gate.json",
+      "profile_sha256": "465e865c98d8a15dc9448090aba7f240965fa997bafb4599589d086fafb05243",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 2,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:1;q->c:2"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "1/2",
+          "q": "1605/2048",
+          "r": "1277/2048",
+          "s": "89/512"
+        },
+        "owner_utilities": {
+          "c": "1045/2048",
+          "q": "4915/4096",
+          "r": "1277/2048",
+          "s": "89/512"
+        }
+      }
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "ar_bq_1",
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 3,
+      "profile": "three_nonsingleton_flower_full_capture_arm_response_gate.json",
+      "profile_sha256": "754852dda55f1e4bbe46334433e7cfd97eb80591909296d2acbc4eec87f6d32b",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "s"
+          ]
+        ],
+        "signature": "_->q:1;q->c:1;q->s:1"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "847/2048",
+          "q": "227/512",
+          "r": "17/64",
+          "s": "369/1024"
+        },
+        "owner_utilities": {
+          "c": "141/256",
+          "q": "1137/2048",
+          "r": "17/64",
+          "s": "115/256"
+        }
+      }
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 2,
+      "profile": "fixed_replacement_lex_completion_refutation.json",
+      "profile_sha256": "3182f1fa1671d2136afc4174c9cbfefb28ed99f12ec0d3690db2deb219dcb5ed",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "970036",
+          "q": "39303243/8",
+          "r": "517927639/8",
+          "s": "26930579/8"
+        },
+        "owner_utilities": {
+          "c": "20097165/16",
+          "q": "111501585/16",
+          "r": "517927639/8",
+          "s": "26930579/8"
+        }
+      }
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "minimum_moved_goods": 2,
+      "profile": "maximal_packet_replacement_lex_completion_refutation.json",
+      "profile_sha256": "3825a50cd65d2f7de0bd6c18c80346ab3a6196c23fa271f5b65c9ac96e5e25b2",
+      "radius_statuses": [
+        "unsat",
+        "unsat",
+        "sat"
+      ],
+      "topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "bc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1"
+      },
+      "utilities": {
+        "base_utilities": {
+          "c": "38032503/8",
+          "q": "449/4",
+          "r": "11438973/16",
+          "s": "187370779/16"
+        },
+        "owner_utilities": {
+          "c": "79852473/16",
+          "q": "2373/16",
+          "r": "11438973/16",
+          "s": "187370779/16"
+        }
+      }
+    }
+  ],
+  "schema": "flexible-later-owner-escape-topology-census-v1",
+  "status": "CLASSIFIED",
+  "topology_counts": [
+    {
+      "count": 1,
+      "signature": "_->q:1;q->c:1;q->s:1"
+    },
+    {
+      "count": 1,
+      "signature": "c->_:1;c->q:1;q->c:1"
+    },
+    {
+      "count": 1,
+      "signature": "c->q:1;q->_:1;q->c:1"
+    },
+    {
+      "count": 2,
+      "signature": "c->q:1;q->c:1"
+    },
+    {
+      "count": 1,
+      "signature": "c->q:1;q->c:2"
+    },
+    {
+      "count": 1,
+      "signature": "q->r:1;r->c:1;r->q:1"
+    }
+  ]
+}

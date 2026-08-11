@@ -29,6 +29,9 @@ try:
     from .analyze_three_nonsingleton_flower_single_replacement_location import (
         run as run_single_replacement_location,
     )
+    from .audit_flexible_later_owner_rooted_connected_transfer_refutation import (
+        run as run_rooted_connected_refutation,
+    )
 except ImportError:
     from analyze_two_leaf_hub_split_census import run as run_hub_split_census
     from audit_charity_rooted_hub_split import run as run_hub_split_audit
@@ -53,6 +56,9 @@ except ImportError:
     )
     from analyze_three_nonsingleton_flower_single_replacement_location import (
         run as run_single_replacement_location,
+    )
+    from audit_flexible_later_owner_rooted_connected_transfer_refutation import (
+        run as run_rooted_connected_refutation,
     )
 
 
@@ -403,6 +409,20 @@ def main() -> None:
     assert location_census["hard_cell_count"] == 1020
     assert location_census["bottom_forced_count"] == 754
     assert location_census["top_or_bottom_disjunction_count"] == 266
+    rooted_refutation_path = (
+        ROOT / "results" / "flexible_later_owner_rooted_connected_transfer_refutation.json"
+    )
+    rooted_refutation_audit = json.loads(
+        (
+            ROOT
+            / "results"
+            / "flexible_later_owner_rooted_connected_transfer_refutation_audit.json"
+        ).read_text()
+    )
+    assert run_rooted_connected_refutation(rooted_refutation_path) == rooted_refutation_audit
+    assert rooted_refutation_audit["status"] == "VERIFIED"
+    assert rooted_refutation_audit["rooted_candidate_count"] == 78
+    assert rooted_refutation_audit["minimum_flexible_escape_radius"] == 2
     print("three-nonsingleton flower packet-minimum tests passed")
 
 
