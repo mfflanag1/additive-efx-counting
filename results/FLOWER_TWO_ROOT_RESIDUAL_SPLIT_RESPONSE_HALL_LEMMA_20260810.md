@@ -99,10 +99,36 @@ This eliminates the earlier release-support problem: unlike unrelated
 bilateral edges, every response incoming packet is supplied by the same
 two-root component.
 
+## Return-response corollary
+
+Start with `R_r=empty` and suppose an external owner `a in {c,s}` is a
+most-envious response source for the sole wall target `B_q+L`.  If some
+nonempty `H subseteq R` makes `q` a most-envious response source for
+`X_a+H`, choose the one-leaf partition `R_a=H`, leaving the rest in charity.
+For targets `(r,q,a)`, select sources `(r,a,q)`:
+
+- `r` sources the common-safe target `T_q+f`;
+- `a` sources the evolved `q` target; and
+- `q` supplies the return response into `a`.
+
+These are distinct internal representatives, so the response-Hall theorem
+gives a release-compatible PI edge set.  Thus an external wall closes as
+soon as one residual packet creates a return response from `q`.  The live
+analytic failure is now precise: every external response source must reject
+all such return packets, or every attempted return target must itself route
+to a different most-envious source.
+
 The finite support audit
 [`flower_two_root_residual_split_release_audit.json`](flower_two_root_residual_split_release_audit.json)
 checks every internal response permutation with zero, one, and two leaves.
 The proof itself is for arbitrary positive packet cardinalities.
+
+The solver-free exact census
+[`residual_flower_two_root_partition_census.json`](residual_flower_two_root_partition_census.json)
+tests all 16 partitions of the nondegenerate packet-lift adversary.  Three
+partitions have exactly the return-response SDR above, so the new component
+closes the profile that refuted the finite aggregate candidate family.  This
+is adversarial validation, not a universal selector proof.
 
 ## Claim boundary
 

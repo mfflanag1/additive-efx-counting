@@ -927,7 +927,11 @@ both encodings.
   — cap-free response-Hall composition for partitioning the released
   residual among the root and up to two external leaves. The two root edges
   release each other's incoming packets and supply every leaf cell, so all
-  2, 6, and 24 internal response permutations are PI-compatible.
+  2, 6, and 24 internal response permutations are PI-compatible. Its
+  return-response corollary closes an external wall whenever `q` responds to
+  one augmented blocker bundle. The exact 16-partition census in
+  [`residual_flower_two_root_partition_census.json`](residual_flower_two_root_partition_census.json)
+  finds three such SDRs and closes the nondegenerate packet-lift adversary.
 - [`FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md`](FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md)
   — cap-free proof that the earlier root can always be paid from the released
   residual. Any observer unpayable even by the whole residual must rank

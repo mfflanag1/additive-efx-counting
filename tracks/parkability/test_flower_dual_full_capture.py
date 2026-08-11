@@ -29,6 +29,9 @@ try:
     )
     from .audit_residual_flower_packet_core import run as run_packet_core_audit
     from .analyze_residual_top_champion_sources import run as run_source_census
+    from .analyze_residual_flower_two_root_partitions import (
+        run as run_two_root_partition_census,
+    )
     from .run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 except ImportError:
     from audit_flower_dual_full_escape import run as run_scalar_audit
@@ -53,6 +56,9 @@ except ImportError:
     )
     from audit_residual_flower_packet_core import run as run_packet_core_audit
     from analyze_residual_top_champion_sources import run as run_source_census
+    from analyze_residual_flower_two_root_partitions import (
+        run as run_two_root_partition_census,
+    )
     from run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 
 
@@ -122,6 +128,21 @@ def main():
     packet_countermodel_path = (
         ROOT / "results" / "residual_flower_packet_countermodel.json"
     )
+    partition_census_path = (
+        ROOT / "results" / "residual_flower_two_root_partition_census.json"
+    )
+    partition_census = json.loads(partition_census_path.read_text())
+    partition_census_replay = run_two_root_partition_census(
+        packet_countermodel_path
+    )
+    assert partition_census_replay == partition_census
+    assert partition_census["status"] == "RESPONSE_CLOSURE_FOUND"
+    assert partition_census["counts"] == {
+        "EFX": 0,
+        "HALL_DEFICIENT": 13,
+        "INTERNAL_SDR": 3,
+    }
+
     packet_core_path = (
         ROOT / "results" / "residual_flower_packet_candidate_audit.json"
     )
