@@ -362,6 +362,20 @@ four-target Hall relation.  The live termination problem is therefore a
 single residual payment/root-change/recapture potential. See
 [`ALL_OWNER_HALL_RESPONSE_COMPRESSION_LEMMA_20260811.md`](ALL_OWNER_HALL_RESPONSE_COMPRESSION_LEMMA_20260811.md).
 
+The compressed endpoint now has a canonical cap-free selector.  Give each
+response edge the value, in the missing source's row, of its cheapest
+common-safe desired core and add one zero-cost dummy source.  A
+minimum-cost perfect matching pays the unique residual owner exactly when
+its cost is at most the value of all other base bundles plus `f`.  If every
+matching is too expensive, assignment duality supplies explicit source and
+target potentials certifying the obstruction.  Once paid, the three cores
+are common-safe, so only the residual bundle can be an EFX wall; swapping
+its response core with the corresponding source-owned core preserves this
+one-wall normal form or yields one strict recapture inequality.  The next
+proof obligation is to contradict the weighted dual/recapture orientation
+using the flower inequalities or use it to force the final root change. See
+[`WEIGHTED_RESPONSE_COMPRESSION_DUAL_LEMMA_20260811.md`](WEIGHTED_RESPONSE_COMPRESSION_DUAL_LEMMA_20260811.md).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

@@ -1142,3 +1142,10 @@ both encodings.
   source receives every residual good, reducing the endpoint to one payment
   or recapture certificate. All 50,625 nonempty four-by-four response
   relations are exhaustively audited; residual payment is not asserted.
+- [`WEIGHTED_RESPONSE_COMPRESSION_DUAL_LEMMA_20260811.md`](WEIGHTED_RESPONSE_COMPRESSION_DUAL_LEMMA_20260811.md)
+  — cap-free minimum-cost selector for the compressed Hall endpoint. A paid
+  matching leaves at most one residual wall; failure has an exact weighted
+  assignment-dual certificate. The associated core recapture preserves the
+  one-wall normal form and has one exact margin inequality. The scalar and
+  weak-duality implications replay under two Z3 versions; elimination of the
+  dual certificate remains open.

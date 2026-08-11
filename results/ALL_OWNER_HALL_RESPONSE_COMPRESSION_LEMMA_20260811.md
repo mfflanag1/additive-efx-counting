@@ -77,16 +77,27 @@ This is a complete allocation.  Every source in `S` strictly improves by
 (3).  The sole remaining payment condition is
 
 \[
-v_d(W)>v_d(X_d). \tag{6}
+v_d(W)\ge v_d(X_d). \tag{6}
 \]
 
-If (6) holds, all four owners strictly improve.  If `Z` is EFX, it closes
-immediately.  If its recomputed response relation has an SDR, the incoming
-packets are disjoint and internally supplied because (5) is a complete
-reallocation of all four base bundles and the charity good, so the SDR is a
-generalized PI edge set.
+If (6) holds, the three sources strictly improve and the missing source is
+weakly nonworse. This is enough for the required flower lexicographic
+objective: if `d=r`, then `r` is fixed and `q in S` strictly improves; if
+`d!=r`, then `r in S` strictly improves.
 
-If (6) fails, nondegeneracy gives the exact aggregate capture certificate
+Moreover, every `A_i` is common-safe relative to `X`. Since every observer
+is weakly nonworse in `Z`, no observer can newly fail EFX against any of the
+three core targets. Thus **the only possible EFX wall after a paid
+compression is against `W`**. If no such wall exists, `Z` is the required
+EFX lexicographic improvement. Otherwise a most-envious response to `W` is
+the single recapture dependency.
+
+If the recomputed response relation has an SDR, the incoming packets are
+disjoint and internally supplied because (5) is a complete reallocation of
+all four base bundles and the charity good, so the SDR is a generalized PI
+edge set.
+
+If (6) fails, the strict inequality gives the exact aggregate capture
 
 \[
 \sum_{i\in S}v_d(A_i)
@@ -95,10 +106,10 @@ v_d(f)+\sum_{k\ne d}v_d(X_k), \tag{7}
 \]
 
 where the displayed form uses that the pre-compression targets partition
-all base goods together with `f`.  If (6) holds but neither EFX nor an SDR
+all base goods together with `f`. If (6) holds but neither EFX nor an SDR
 results, every response source is still internal and the new obstruction is
-a **missing-source recapture** of `W` or one of the three source-owned cores;
-there is no longer an arbitrary four-target Hall defect.
+a **missing-source recapture** of the sole wall target `W`; there is no
+longer an arbitrary four-target Hall defect.
 
 ## Anchored sink-capture corollary
 

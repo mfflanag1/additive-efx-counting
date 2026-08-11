@@ -1,0 +1,32 @@
+{
+  "claim_boundary": "QF_LRA audit of payment, recapture, one-wall, and weak-duality identities; minimum-cost assignment integrality/strong duality is the standard bipartite assignment theorem",
+  "provenance": {
+    "script": "tracks/parkability/audit_weighted_response_compression_dual.py",
+    "script_sha256": "8b25571d55d030640b567263ffcfa3c4fa3f33ed1fa8762af9eae9ce70996f5b",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "cost_at_most_budget_pays_residual",
+      "status": "unsat"
+    },
+    {
+      "claim": "unpaid_residual_forces_cost_above_budget",
+      "status": "unsat"
+    },
+    {
+      "claim": "recapture_margin_is_exact",
+      "status": "unsat"
+    },
+    {
+      "claim": "assignment_dual_is_bounded_by_every_matching",
+      "status": "unsat"
+    },
+    {
+      "claim": "common_safe_cores_leave_only_residual_wall",
+      "status": "unsat"
+    }
+  ],
+  "schema": "weighted-response-compression-dual-audit-v1",
+  "status": "ALL_FORCED"
+}
