@@ -174,6 +174,16 @@ assume this opposite-sign orientation rather than handling arbitrary owner
 rows.  See
 [`FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md`](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md).
 
+The component library now also covers owner-rooted exchange stars, not only
+charity-rooted hubs. A hub may receive a packet from one donor while
+partitioning its released packet among that donor and other leaves. Any
+internal response SDR is automatically a release-compatible PI edge set;
+otherwise the exact remainder is open or Hall deficient. This is the
+smallest operation required by the surviving connected-transfer profiles.
+The live task is selection from the polarity/residual data, not another wall
+classification. See
+[`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

@@ -10,12 +10,14 @@ try:
     from .audit_flower_dual_full_escape import run as run_scalar_audit
     from .audit_flower_three_rotation_polarity import run as run_rotation_audit
     from .audit_minimal_flower_flexible_gate import run as run_core_audit
+    from .audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
     from .analyze_residual_top_champion_sources import run as run_source_census
     from .run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 except ImportError:
     from audit_flower_dual_full_escape import run as run_scalar_audit
     from audit_flower_three_rotation_polarity import run as run_rotation_audit
     from audit_minimal_flower_flexible_gate import run as run_core_audit
+    from audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
     from analyze_residual_top_champion_sources import run as run_source_census
     from run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 
@@ -89,6 +91,12 @@ def main():
         record["survives_live_rotation_gate"]
         for record in source_census["records"]
     )
+
+    owner_hub_path = ROOT / "results" / "owner_rooted_hub_split_release_audit.json"
+    owner_hub = json.loads(owner_hub_path.read_text())
+    assert run_owner_hub_audit() == owner_hub
+    assert owner_hub["status"] == "ALL_RELEASE_COMPATIBLE"
+    assert [record["response_permutations_checked"] for record in owner_hub["records"]] == [6, 24]
     print("flower dual-full-capture theorem tests passed")
 
 

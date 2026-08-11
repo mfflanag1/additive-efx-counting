@@ -901,6 +901,13 @@ both encodings.
   `f` versus `B_q` in opposite directions, and the later owner must rank
   `T_r>T_q` and `B_q>B_r`. This confines the residual-recapture problem to
   one aggregate orientation; it does not yet contradict that orientation.
+- [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
+  — cap-free response-Hall theorem for an owner-supplied exchange star. The
+  hub receives a donor packet and partitions its own released packet among
+  that donor and other leaves. The donor and hub release each other's
+  incoming sets, so every internal response SDR is a BCFF PI edge set. This
+  adds the repeated-owner primitive missing from the charity-rooted lemma;
+  flower-specific packet selection and deficient/open responses remain.
 - [`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
   — cap-free classification of every EFX failure after an improving owner
   replaces a packet by the charity good and partitions the released packet

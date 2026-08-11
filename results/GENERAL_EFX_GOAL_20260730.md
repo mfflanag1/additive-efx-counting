@@ -117,6 +117,15 @@ the later row also satisfies `T_r>T_q` and `B_q>B_r`. The adaptive proof may
 therefore work entirely inside this single polarity cell. See
 [FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md).
 
+The response-Hall library now includes owner-rooted exchange stars: a hub
+can receive a packet from a donor while splitting its own packet among that
+donor and additional leaves. The donor/hub releases are mutually compatible,
+so an internal response SDR is a PI edge set. This is the cap-free primitive
+required by the connected transfer motifs that survive charity-rooted hubs;
+the remaining `GG` gate is to select its packets from the residual/polarity
+data. See
+[OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item
