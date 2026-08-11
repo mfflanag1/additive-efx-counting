@@ -30,6 +30,10 @@ try:
     from .audit_charity_rooted_transfer_tree_release import (
         run as run_transfer_tree_audit,
     )
+    from .audit_cross_star_hole_pivot import run as run_hole_pivot_audit
+    from .audit_source_inactive_core_residual_repair import (
+        run as run_source_inactive_repair_audit,
+    )
     from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from .audit_maximal_replacement_frontier_exchange import (
         run as run_maximal_frontier_audit,
@@ -96,6 +100,10 @@ except ImportError:
     )
     from audit_charity_rooted_transfer_tree_release import (
         run as run_transfer_tree_audit,
+    )
+    from audit_cross_star_hole_pivot import run as run_hole_pivot_audit
+    from audit_source_inactive_core_residual_repair import (
+        run as run_source_inactive_repair_audit,
     )
     from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from audit_maximal_replacement_frontier_exchange import (
@@ -629,6 +637,51 @@ def main():
     assert run_owner_hub_audit() == owner_hub
     assert owner_hub["status"] == "ALL_RELEASE_COMPATIBLE"
     assert [record["response_permutations_checked"] for record in owner_hub["records"]] == [6, 24]
+    hole_pivot_path = ROOT / "results" / "cross_star_hole_pivot_audit.json"
+    hole_pivot = json.loads(hole_pivot_path.read_text())
+    hole_pivot_replay = run_hole_pivot_audit(ROOT)
+    for field in (
+        "status",
+        "set_partition_valid",
+        "set_partition_membership_cases",
+        "wall_localization",
+        "source_inactive_loss_band",
+        "priority_split",
+        "claim_boundary",
+        "provenance",
+    ):
+        assert hole_pivot_replay[field] == hole_pivot[field]
+    assert hole_pivot["status"] == "VERIFIED"
+    assert hole_pivot["set_partition_valid"]
+    assert hole_pivot["wall_localization"]["remaining_wall_types"] == [
+        "missing_owner_to_selected_core",
+        "represented_source_to_residual",
+    ]
+    hole_pivot_theorem = (
+        ROOT / "results" / "CROSS_STAR_HOLE_PIVOT_LEMMA_20260811.md"
+    ).read_text()
+    assert "alternating matching pivot" in hole_pivot_theorem.replace("\n", " ")
+    assert "root-facing star" in hole_pivot_theorem
+    source_inactive_path = (
+        ROOT / "results" / "source_inactive_core_residual_repair_audit.json"
+    )
+    source_inactive = json.loads(source_inactive_path.read_text())
+    source_inactive_replay = run_source_inactive_repair_audit(ROOT)
+    for field in (
+        "status",
+        "support_partition_valid",
+        "support_membership_cases",
+        "scalar_records",
+        "claim_boundary",
+        "provenance",
+    ):
+        assert source_inactive_replay[field] == source_inactive[field]
+    assert set(source_inactive["scalar_records"].values()) == {"unsat"}
+    source_inactive_theorem = (
+        ROOT / "results" / "SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md"
+    ).read_text()
+    assert "J-exhaustion is the only terminal failure" in source_inactive_theorem
+    assert "two-row unanimous orientation" in source_inactive_theorem
     print("flower dual-full-capture theorem tests passed")
 
 

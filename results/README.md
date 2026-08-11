@@ -1162,6 +1162,27 @@ both encodings.
   finite recapture potential. A maximal obstruction must therefore be a
   disjoint cross-star with one strict four-level value order; eliminating
   that cross-star remains open.
+- [`CROSS_STAR_HOLE_PIVOT_LEMMA_20260811.md`](CROSS_STAR_HOLE_PIVOT_LEMMA_20260811.md)
+  — gives the cap-free alternating-matching pivot for a disjoint cross-star
+  whose missing owner is also a base-response source for the envied core.
+  The pivot preserves all goods, moves the unique residual hole, and
+  localizes every new EFX failure to the same two-sided-star form. When the
+  wall is not a base response, positivity and nondegeneracy instead force a
+  strict source-inactive loss band. Root-facing stars and hole recurrence
+  remain the analytic termination boundary.
+- [`cross_star_hole_pivot_audit.json`](cross_star_hole_pivot_audit.json)
+  — dual-version replay of the pivot's set partition, wall localization,
+  priority split, and source-inactive loss band.
+- [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
+  — cap-free alternating packet repair for a sacrificed-owner wall that is
+  not a base response. Core-to-residual and residual-to-core packets grow
+  monotonically; every successful common-safe repair strictly increases the
+  missing owner's residual potential. The only exhaustion is an exact
+  two-row orientation in which one critical core packet dominates the
+  entire residual by the core source's improvement margin.
+- [`source_inactive_core_residual_repair_audit.json`](source_inactive_core_residual_repair_audit.json)
+  — dual-version support and scalar replay of repair existence, residual
+  advance, old-wall preservation, and the exhaustion margin.
 - [`MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md`](MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md)
   — generalizes deficiency-one response compression from the all-owner case
   to every inclusion-minimal two-, three-, or four-target Hall defect. All

@@ -114,7 +114,14 @@ def run(
     selected_indices = []
     if resume_path is not None:
         resume = json.loads(resume_path.read_text())
-        for index in resume.get("selected_candidate_indices", ()):
+        resume_indices = list(resume.get("selected_candidate_indices", ()))
+        if not resume_indices:
+            resume_indices = [
+                index
+                for record in resume.get("iterations", ())
+                for index in record.get("added_candidate_indices", ())
+            ]
+        for index in resume_indices:
             allocation = candidates[index]
             key = allocation_key(allocation)
             if key in selected:

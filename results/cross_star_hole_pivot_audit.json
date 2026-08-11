@@ -1,0 +1,58 @@
+{
+  "claim_boundary": "cap-free set/support and scalar audit of one cross-star hole pivot; it does not prove termination of repeated pivots or PI release support",
+  "priority_split": {
+    "external_hole_flexible": "unsat",
+    "q_hole_r_first_lex": "unsat"
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_cross_star_hole_pivot.py",
+    "script_sha256": "ac86ef6f86dadd9c5fe51eed5bff177ff7aab4681e8c2d1b3f03f009ab47edcd",
+    "theorem": "results/CROSS_STAR_HOLE_PIVOT_LEMMA_20260811.md",
+    "theorem_sha256": "82a7ab8f72477b79cba5dcc83d90dde466c54249869cfd96c6f387993ddf2ce7"
+  },
+  "schema": "cross-star-hole-pivot-audit-v1",
+  "set_partition_membership_cases": [
+    {
+      "destination": "j",
+      "origin": "W",
+      "selected_into_response_core": false
+    },
+    {
+      "destination": "i",
+      "origin": "W",
+      "selected_into_response_core": true
+    },
+    {
+      "destination": "j",
+      "origin": "A_i",
+      "selected_into_response_core": false
+    },
+    {
+      "destination": "j",
+      "origin": "A_j",
+      "selected_into_response_core": false
+    },
+    {
+      "destination": "d",
+      "origin": "A_j",
+      "selected_into_response_core": true
+    },
+    {
+      "destination": "k",
+      "origin": "A_k",
+      "selected_into_response_core": false
+    }
+  ],
+  "set_partition_valid": true,
+  "solver": "Z3 4.15.3",
+  "source_inactive_loss_band": "unsat",
+  "status": "VERIFIED",
+  "wall_localization": {
+    "missing_owner_to_own_residual_impossible": "unsat",
+    "remaining_wall_types": [
+      "missing_owner_to_selected_core",
+      "represented_source_to_residual"
+    ],
+    "represented_source_to_selected_core_impossible": "unsat"
+  }
+}

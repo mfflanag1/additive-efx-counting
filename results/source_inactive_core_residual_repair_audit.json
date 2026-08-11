@@ -1,0 +1,41 @@
+{
+  "claim_boundary": "cap-free finite repair and exhaustion-polarity audit; it does not eliminate J-exhaustion or close the flower",
+  "provenance": {
+    "script": "tracks/parkability/audit_source_inactive_core_residual_repair.py",
+    "script_sha256": "176cf8c4255937f9935a6503fe9d5e22c29db954816eb1e1054fd3c579accdc2",
+    "theorem": "results/SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md",
+    "theorem_sha256": "ad0f00528f124ed7d2d80bc9548d73a8fff30c4e9209192963228ea840c8c5c3"
+  },
+  "scalar_records": {
+    "full_core_repairs_missing_owner": "unsat",
+    "j_exhaustion_forces_unanimous_margin": "unsat",
+    "nondegenerate_monotone_exchange_advances_residual": "unsat",
+    "old_missing_owner_core_safety_is_preserved": "unsat"
+  },
+  "schema": "source-inactive-core-residual-repair-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_membership_cases": [
+    {
+      "destination": "A_prime",
+      "origin": "A",
+      "selected_for_exchange": false
+    },
+    {
+      "destination": "W_prime",
+      "origin": "A",
+      "selected_for_exchange": true
+    },
+    {
+      "destination": "W_prime",
+      "origin": "W",
+      "selected_for_exchange": false
+    },
+    {
+      "destination": "A_prime",
+      "origin": "W",
+      "selected_for_exchange": true
+    }
+  ],
+  "support_partition_valid": true
+}
