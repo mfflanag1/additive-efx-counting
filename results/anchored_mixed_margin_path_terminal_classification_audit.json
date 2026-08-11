@@ -1,0 +1,311 @@
+{
+  "anchored_path_count": 6,
+  "claim_boundary": "anchored path/source classification only; anchor-cycle payment, mixed-margin closure, and EFX remain open",
+  "nonself_hole_pivot_count": 18,
+  "outcome_counts": {
+    "anchor_cycle": 12,
+    "anchor_release": 4,
+    "external_cycle": 2
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_anchored_mixed_margin_path_terminal_classification.py",
+    "script_sha256": "c24381ca72a57db4ad1f50ae11690f2b0bda5230e2c38c88d7bd1fa43b4e23f8",
+    "theorem": "results/ANCHORED_MIXED_MARGIN_PATH_TERMINAL_CLASSIFICATION_LEMMA_20260811.md",
+    "theorem_sha256": "40ad1c8e16d0be3a405a295dd3910e56f18712eeaabb031c5f029b188073a6da"
+  },
+  "q_hole_excluded": true,
+  "records": [
+    {
+      "hole": "r",
+      "outcome": "anchor_cycle",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "hole": "r",
+      "outcome": "anchor_cycle",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "hole": "r",
+      "outcome": "anchor_cycle",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "hole": "r",
+      "outcome": "anchor_cycle",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "hole": "r",
+      "outcome": "anchor_cycle",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "hole": "r",
+      "outcome": "anchor_cycle",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "hole": "c",
+      "outcome": "anchor_release",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "prefix_cycle": [
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "hole": "c",
+      "outcome": "anchor_cycle",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "prefix_cycle": [
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "hole": "c",
+      "outcome": "anchor_cycle",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "prefix_cycle": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "hole": "c",
+      "outcome": "external_cycle",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "hole": "c",
+      "outcome": "anchor_release",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "c",
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "hole": "c",
+      "outcome": "anchor_cycle",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "hole": "s",
+      "outcome": "anchor_release",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "prefix_cycle": [
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "hole": "s",
+      "outcome": "anchor_cycle",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "prefix_cycle": [
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "hole": "s",
+      "outcome": "anchor_cycle",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "prefix_cycle": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "hole": "s",
+      "outcome": "external_cycle",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "hole": "s",
+      "outcome": "anchor_release",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "s",
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "hole": "s",
+      "outcome": "anchor_cycle",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    }
+  ],
+  "remaining_gate": "use the GG root/q reservoir to pay the critical top-up on an anchor-containing cycle",
+  "schema": "anchored-mixed-margin-path-terminal-classification-audit-v1",
+  "stable_full_owner_terminal": "anchor-containing prefix cycle",
+  "status": "ALL_EXHAUSTED"
+}

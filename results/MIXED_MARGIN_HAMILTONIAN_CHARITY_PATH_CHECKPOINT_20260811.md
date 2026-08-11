@@ -87,6 +87,13 @@ retaining its owners' protected floors.  Recruiting one owner grows coverage
 to three; recruiting once more saturates all four owners.  A new source,
 core, signed packet, or release label is permanent augmentation.
 
+The permanent GG anchor further collapses the source/root cases.  Exactly six
+Hamiltonian paths contain `r -> q`.  Across their eighteen nonself hole
+pivots, four explicitly release the anchor, two create an external `c/s`
+two-cycle whose next recruitment grows into the anchored suffix, and twelve
+already close a cycle containing the anchor.  Hence the saturated exact
+terminal always contains `r -> q`, and its hole is in `{r,c,s}`, never `q`.
+
 ## Exact surviving separator
 
 After source/core saturation and full-owner recruitment, the sole unproved
@@ -103,7 +110,8 @@ state has all of the following simultaneously:
 6. no new response core, source/root, signed transfer, supplier, or release
    label.
 
-This is the exact full-owner **critical-top-up substitution separator**.  To
+This is the exact anchor-containing full-owner **critical-top-up substitution
+separator**.  To
 finish the goal one must prove that the globally lex-maximal GG inequalities
 force a third-owner substitute for `K`, a source/root change, or a new core;
 otherwise one must instantiate all six clauses in an exact globally maximal

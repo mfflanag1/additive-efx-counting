@@ -18,6 +18,7 @@ DEPENDENCIES = (
     ("DIRECT_SAFE_TARGET_SUBBUNDLE_OR_CRITICAL_TOPUP_LEMMA_20260811.md", "direct_safe_target_subbundle_or_critical_topup_audit.json"),
     ("DECORATED_TARGET_OWNER_COMPLEMENT_RETURN_SELECTOR_LEMMA_20260811.md", "decorated_target_owner_complement_return_selector_audit.json"),
     ("SOURCE_BUNDLE_CHARITY_COMPLEMENT_EXCHANGE_SELECTOR_LEMMA_20260811.md", "source_bundle_charity_complement_exchange_selector_audit.json"),
+    ("ANCHORED_MIXED_MARGIN_PATH_TERMINAL_CLASSIFICATION_LEMMA_20260811.md", "anchored_mixed_margin_path_terminal_classification_audit.json"),
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
@@ -63,8 +64,8 @@ def run(root: Path) -> dict:
             "progress, or the six-clause full-owner critical-top-up separator"
         ),
         "exact_surviving_separator": (
-            "full-owner failure to substitute a target-critical top-up while "
-            "preserving every priority/direct-safety floor"
+            "anchor-containing full-owner failure to substitute a target-critical "
+            "top-up while preserving every priority/direct-safety floor"
         ),
         "claim_boundary": (
             "integrity and reduction manifest only; the critical-top-up separator, "
