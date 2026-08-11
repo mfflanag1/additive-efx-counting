@@ -162,6 +162,18 @@ the released complement plus `X_a` and that packet to `q`, and compensates
 live selector is now the two-row compensation system (13) in the cited
 lemma, rather than existence of a first payment packet.
 
+A value-maximal choice among **all** eligible replacement packets supplies
+a further cap-free invariant. Writing `sigma=q(f)-q(R)`, every nonempty
+packet left in `X_q-R` crosses that slack, and every improving exchange from
+the selected side to the residual side jumps by more than `sigma`. Thus a
+surviving core capture leaves a nonempty threshold-crossing pivot and the
+replacement cannot drift through a sequence of smaller positive gains.
+This is a global frontier potential, not the refuted fixed-bundle endpoint;
+the live task is to prove that external-owner augmentation increases the
+component before this frontier can fall, or to extract the resulting strict
+item-order cycle. See
+[`MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md`](MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md).
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps

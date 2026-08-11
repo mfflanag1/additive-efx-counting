@@ -187,6 +187,17 @@ three-owner root flip is therefore canonical; the sole packet gate is to
 choose a disjoint compensation packet for `r` satisfying the two valuation
 inequalities in (13).  Every internal response matching for that flip is PI.
 
+Choosing the released packet globally by maximum `q`-value below `f` now
+adds a cap-free discrete potential. If `R` is selected this way and
+`sigma=q(f)-q(R)`, every nonempty residual packet has `q`-value greater than
+`sigma`; more generally every beneficial exchange across the selected
+frontier jumps by more than `sigma`. A surviving core capture consequently
+leaves a nonempty complement whose union with `R` is already worth more
+than `f`. This rules out infinitesimal or equality-preserving replacement
+drift, but it deliberately does not assert the false one-row shortcut that
+frontier maximality alone solves the two-row compensation problem. See
+[MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md](MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,

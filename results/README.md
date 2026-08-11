@@ -887,6 +887,18 @@ both encodings.
 - [`packet_replacement_complement_return_audit.json`](packet_replacement_complement_return_audit.json)
   — dual-solver symbolic replay of the two-edge packet support and strict
   core-capture interval.
+- [`MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md`](MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md)
+  — cap-free global selection of a value-maximal packet below `f`. Every
+  residual packet crosses the remaining `q`-slack, and every beneficial
+  exchange across the frontier jumps a strict forbidden band. A surviving
+  core capture therefore leaves a nonempty threshold-crossing pivot. This
+  supplies a discrete potential for adaptive replacement growth but does
+  not by itself solve the two-row compensation/Hall gate.
+- [`maximal_replacement_frontier_exchange_audit.json`](maximal_replacement_frontier_exchange_audit.json)
+  and [`maximal_replacement_frontier_profile_census.json`](maximal_replacement_frontier_profile_census.json)
+  — dual-solver scalar replay plus an exact adversarial census of the seven
+  frozen flower profiles. All four displayed external responses return or
+  compensate; this is regression evidence, not a cap-free exhaustion.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on

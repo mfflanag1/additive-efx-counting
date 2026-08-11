@@ -1,0 +1,202 @@
+{
+  "claim_boundary": "exact adversarial replay on seven frozen two-atom profiles, including their unperturbed equality boundaries; this is not a cap-free exhaustion or a proof of the selector lemma",
+  "profiles": [
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 5,
+      "frontier_tie_count": 0,
+      "frontiers": [
+        [
+          "aq_tq_0",
+          "ar_bq_1"
+        ]
+      ],
+      "maximum_q_value": "1/4",
+      "profile": "three_nonsingleton_flower_full_capture_swap_gate.json",
+      "profile_sha256": "082ad256d054a31b97f691cb21c9654b7219edb6e7580e675f7614ea5846dc28",
+      "response_records": []
+    },
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 6,
+      "frontier_tie_count": 1,
+      "frontiers": [
+        [
+          "aq_tq_1",
+          "ar_bq_0"
+        ]
+      ],
+      "maximum_q_value": "3721/256",
+      "profile": "three_nonsingleton_flower_full_capture_path_gate.json",
+      "profile_sha256": "bc2bf048d9753a0ce8f0f17a46df6bddea45c48a954acab310d1218bb57ff0a8",
+      "response_records": [
+        {
+          "compensation_count": 0,
+          "core": [
+            "aq_tq_0",
+            "ar_bq_1"
+          ],
+          "desired": [
+            "aq_tq_0",
+            "ar_bq_1",
+            "f"
+          ],
+          "direct_q_desire": true,
+          "frontier": [
+            "aq_tq_1",
+            "ar_bq_0"
+          ],
+          "q_desires_full_return": true,
+          "source": "c",
+          "strict_core_capture": false
+        }
+      ]
+    },
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 7,
+      "frontier_tie_count": 0,
+      "frontiers": [
+        [
+          "aq_tq_0",
+          "aq_tq_1"
+        ]
+      ],
+      "maximum_q_value": "149/1024",
+      "profile": "three_nonsingleton_flower_full_capture_packet_gate.json",
+      "profile_sha256": "dbe54c2ad41c1ba4e38ea406fdb473d48fbffc36e971aaa8437307472a9999f6",
+      "response_records": []
+    },
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 3,
+      "frontier_tie_count": 0,
+      "frontiers": [
+        [
+          "aq_tq_0",
+          "ar_bq_1"
+        ]
+      ],
+      "maximum_q_value": "61/512",
+      "profile": "three_nonsingleton_flower_full_capture_arm_hub_gate.json",
+      "profile_sha256": "465e865c98d8a15dc9448090aba7f240965fa997bafb4599589d086fafb05243",
+      "response_records": [
+        {
+          "compensation_count": 78,
+          "core": [
+            "ar_bq_0"
+          ],
+          "desired": [
+            "ar_bq_0",
+            "f"
+          ],
+          "direct_q_desire": false,
+          "frontier": [
+            "aq_tq_0",
+            "ar_bq_1"
+          ],
+          "q_desires_full_return": true,
+          "source": "s",
+          "strict_core_capture": false
+        }
+      ]
+    },
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 3,
+      "frontier_tie_count": 0,
+      "frontiers": [
+        [
+          "aq_tq_1",
+          "ar_bq_1"
+        ]
+      ],
+      "maximum_q_value": "149/2048",
+      "profile": "three_nonsingleton_flower_full_capture_arm_response_gate.json",
+      "profile_sha256": "754852dda55f1e4bbe46334433e7cfd97eb80591909296d2acbc4eec87f6d32b",
+      "response_records": [
+        {
+          "compensation_count": 1,
+          "core": [
+            "ar_bq_0"
+          ],
+          "desired": [
+            "ar_bq_0",
+            "f"
+          ],
+          "direct_q_desire": false,
+          "frontier": [
+            "aq_tq_1",
+            "ar_bq_1"
+          ],
+          "q_desires_full_return": false,
+          "source": "s",
+          "strict_core_capture": true
+        }
+      ]
+    },
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 5,
+      "frontier_tie_count": 0,
+      "frontiers": [
+        [
+          "aq_tq_1",
+          "ar_bq_0"
+        ]
+      ],
+      "maximum_q_value": "15806737/16",
+      "profile": "fixed_replacement_lex_completion_refutation.json",
+      "profile_sha256": "3182f1fa1671d2136afc4174c9cbfefb28ed99f12ec0d3690db2deb219dcb5ed",
+      "response_records": []
+    },
+    {
+      "all_displayed_responses_return_or_compensate": true,
+      "eligible_packet_count": 3,
+      "frontier_tie_count": 0,
+      "frontiers": [
+        [
+          "aq_tq_1",
+          "ar_bq_0"
+        ]
+      ],
+      "maximum_q_value": "85/16",
+      "profile": "maximal_packet_replacement_lex_completion_refutation.json",
+      "profile_sha256": "3825a50cd65d2f7de0bd6c18c80346ab3a6196c23fa271f5b65c9ac96e5e25b2",
+      "response_records": [
+        {
+          "compensation_count": 81,
+          "core": [
+            "ar_bq_1"
+          ],
+          "desired": [
+            "ar_bq_1",
+            "f"
+          ],
+          "direct_q_desire": false,
+          "frontier": [
+            "aq_tq_1",
+            "ar_bq_0"
+          ],
+          "q_desires_full_return": true,
+          "source": "s",
+          "strict_core_capture": false
+        }
+      ]
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_maximal_replacement_frontier_profiles.py",
+    "script_sha256": "fe9f91e2c545e594b873bb6a91fedd1242639fa114231014e65989f86ad8ade7"
+  },
+  "schema": "maximal-replacement-frontier-profile-census-v1",
+  "status": "ALL_FROZEN_RESPONSES_RETURN_OR_COMPENSATE",
+  "totals": {
+    "external_response_count": 4,
+    "frontier_count": 7,
+    "frontier_tie_count": 1,
+    "profile_count": 7,
+    "strict_capture_count": 1,
+    "uncompensated_strict_capture_count": 0
+  }
+}

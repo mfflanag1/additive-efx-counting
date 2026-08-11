@@ -1,0 +1,34 @@
+{
+  "analytic_premises": [
+    "finite value-maximal eligible packet",
+    "positive charity dominance",
+    "subset-sum nondegeneracy",
+    "packet-replacement strict core-capture interval"
+  ],
+  "claim_boundary": "QF_LRA scalar implication audit; existence of the finite frontier and application of packet maximality are analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_maximal_replacement_frontier_exchange.py",
+    "script_sha256": "2e5fcaa4dd723b6561d2bf4d788e7b44841f53fab572b17716b72dee00cbdc04",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "nonempty_residual_crosses_frontier_slack",
+      "status": "unsat"
+    },
+    {
+      "claim": "beneficial_exchange_crosses_forbidden_band",
+      "status": "unsat"
+    },
+    {
+      "claim": "strict_core_capture_leaves_more_than_slack",
+      "status": "unsat"
+    },
+    {
+      "claim": "released_complement_crosses_charity",
+      "status": "unsat"
+    }
+  ],
+  "schema": "maximal-replacement-frontier-exchange-audit-v1",
+  "status": "ALL_FORCED"
+}

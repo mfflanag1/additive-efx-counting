@@ -25,6 +25,13 @@ try:
         run as run_two_root_audit,
     )
     from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
+    from .audit_maximal_replacement_frontier_exchange import (
+        run as run_maximal_frontier_audit,
+    )
+    from .audit_maximal_replacement_frontier_profiles import (
+        DEFAULT_PROFILES as MAXIMAL_FRONTIER_PROFILES,
+        run as run_maximal_frontier_census,
+    )
     from .audit_minimal_flower_flexible_gate import run as run_core_audit
     from .audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
     from .audit_packet_replacement_charity_absorption import (
@@ -61,6 +68,13 @@ except ImportError:
         run as run_two_root_audit,
     )
     from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
+    from audit_maximal_replacement_frontier_exchange import (
+        run as run_maximal_frontier_audit,
+    )
+    from audit_maximal_replacement_frontier_profiles import (
+        DEFAULT_PROFILES as MAXIMAL_FRONTIER_PROFILES,
+        run as run_maximal_frontier_census,
+    )
     from audit_minimal_flower_flexible_gate import run as run_core_audit
     from audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
     from audit_packet_replacement_charity_absorption import (
@@ -333,6 +347,39 @@ def main():
     assert "Every such external response has the form" in replacement_return_theorem
     assert "strict interval" in replacement_return_theorem
     assert "two-row compensation system (13)" in replacement_return_theorem
+    maximal_frontier_path = (
+        ROOT / "results" / "maximal_replacement_frontier_exchange_audit.json"
+    )
+    maximal_frontier = json.loads(maximal_frontier_path.read_text())
+    maximal_frontier_replay = run_maximal_frontier_audit()
+    assert maximal_frontier_replay["status"] == "ALL_FORCED"
+    assert (
+        maximal_frontier_replay["scalar_records"]
+        == maximal_frontier["scalar_records"]
+    )
+    maximal_frontier_theorem = (
+        ROOT
+        / "results"
+        / "MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md"
+    ).read_text()
+    assert "forbidden band `(0,sigma]`" in maximal_frontier_theorem
+    assert "genuinely two-row indivisible exchange" in maximal_frontier_theorem
+    frontier_census_path = (
+        ROOT / "results" / "maximal_replacement_frontier_profile_census.json"
+    )
+    frontier_census = json.loads(frontier_census_path.read_text())
+    frontier_profiles = [
+        ROOT / "results" / name for name in MAXIMAL_FRONTIER_PROFILES
+    ]
+    assert run_maximal_frontier_census(frontier_profiles) == frontier_census
+    assert frontier_census["totals"] == {
+        "external_response_count": 4,
+        "frontier_count": 7,
+        "frontier_tie_count": 1,
+        "profile_count": 7,
+        "strict_capture_count": 1,
+        "uncompensated_strict_capture_count": 0,
+    }
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())
