@@ -3,7 +3,8 @@
 **Date:** 2026-08-11
 
 **Status:** cap-free elimination of the root-facing priority exception; the
-resulting root-critical polarity and 2-by-2 Hall boundary remain open
+resulting root-critical compensator chain now terminates in a top-reset or
+captured-bottom handoff, while those recurrences remain open
 
 ## Setting
 
@@ -81,13 +82,15 @@ endpoint is priority-valid because `r` retains at least `v_r(A)>v_r(X_r)`.
 
 If (4) holds, equations (4)--(6) replace the formerly priority-invalid
 root-facing branch by a strict, item-named cross-row polarity.  The next
-operation must either use `g` in a root-preserving transfer component or
-show that its return contradicts the minimal-payment/root choice.
+operation uses the root-critical compensator dichotomy and its finite
+alternating frontier.  They either expose a top packet and enter the
+top-core exchange/reset, or expose an old-core charity packet dominating a
+strict residual complement and enter the captured-bottom handoff.
 
 ## Claim boundary
 
 This lemma eliminates root-facing J-exhaustion as a priority exception and
 is valid for arbitrary positive additive packets.  It does not prove that
-the root-critical polarity (6) contradicts flower minimality, close a
-deficient 2-by-2 response block, terminate hole-pivot recurrence, close the
-`GG` flower class, or prove four-agent/general additive EFX.
+the resulting top-reset/captured-bottom handoff terminates globally, close
+the surviving empty-target response form, terminate hole-pivot recurrence,
+close the `GG` flower class, or prove four-agent/general additive EFX.

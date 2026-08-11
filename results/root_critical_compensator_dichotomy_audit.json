@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "cap-free compensator/no-compensator dichotomy; the strict compensator dependency terminates through the separately audited alternating-frontier lemma, while its resulting handoffs remain open",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_critical_compensator_dichotomy.py",
+    "script_sha256": "12ad3d35f44235fb717bb1f27f2454b9905d21d12df88d51ff8d4f0ec5d4f314",
+    "theorem": "results/ROOT_CRITICAL_COMPENSATOR_DICHOTOMY_LEMMA_20260811.md",
+    "theorem_sha256": "b5fdbc98dd693c991810d54f784c6aee600df2f786eca1cf66b57681eb5d3e1f"
+  },
+  "scalar_records": {
+    "compensator_preserves_root_constraint": "unsat",
+    "maximality_forces_opposite_row_order": "unsat",
+    "no_compensator_beats_old_residual": "unsat",
+    "old_residual_membership_is_impossible": "unsat",
+    "support_identity": "unsat"
+  },
+  "schema": "root-critical-compensator-dichotomy-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_cases": [
+    {
+      "compatible_with_r_g_gt_r_W": true,
+      "critical_good_origin": "A"
+    },
+    {
+      "compatible_with_r_g_gt_r_W": false,
+      "critical_good_origin": "W"
+    }
+  ]
+}

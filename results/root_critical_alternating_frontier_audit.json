@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "cap-free termination of the root-critical compensator chain; top-reset, captured-bottom, and nonroot recurrences remain open",
+  "finite_growth": {
+    "addition_bound": "|H|+|L|",
+    "r_packet": "strict_inclusion_each_round",
+    "s_packet": "strict_inclusion_each_round"
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_root_critical_alternating_frontier.py",
+    "script_sha256": "07271ed2f24750851c68b358165f4bdaaf73befc5824930bb7c8c6b64286c793",
+    "theorem": "results/ROOT_CRITICAL_ALTERNATING_FRONTIER_LEMMA_20260811.md",
+    "theorem_sha256": "a634863a88bcd4654f02c8820c5d03bd18ebeac1cfa69f993b56d824554568a6"
+  },
+  "scalar_records": {
+    "compensator_exchange_preserves_root": "unsat",
+    "full_root_cell_forces_termination": "unsat",
+    "old_s_cannot_compensate_strict_r_extension": "unsat",
+    "selector_maximality_forces_s_order": "unsat",
+    "terminal_packet_beats_old_residual": "unsat",
+    "terminal_support_cancellation": "unsat"
+  },
+  "schema": "root-critical-alternating-frontier-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED"
+}

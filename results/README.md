@@ -1217,6 +1217,24 @@ both encodings.
 - [`root_preserving_two_hole_selector_audit.json`](root_preserving_two_hole_selector_audit.json)
   — dual-version replay of root envy-freeness, selector criticality, and the
   exact residual-deficit identity.
+- [`ROOT_CRITICAL_COMPENSATOR_DICHOTOMY_LEMMA_20260811.md`](ROOT_CRITICAL_COMPENSATOR_DICHOTOMY_LEMMA_20260811.md)
+  — splits a failed root-preserving selector cap-free. Any residual packet
+  that can compensate the root for its critical good is forced by selector
+  maximality to have a strict opposite-row value order. If no such packet
+  exists, the critical good lies in the original flower root core and routes
+  to either the top-core exchange/reset or captured-bottom handoff.
+- [`root_critical_compensator_dichotomy_audit.json`](root_critical_compensator_dichotomy_audit.json)
+  — dual-version replay of the compensator exchange, forced packet order,
+  residual-domination inequality, and old-core support conclusion.
+- [`ROOT_CRITICAL_ALTERNATING_FRONTIER_LEMMA_20260811.md`](ROOT_CRITICAL_ALTERNATING_FRONTIER_LEMMA_20260811.md)
+  — terminates the strict root-compensator dependency cap-free. Alternating
+  minimal packets grow on both sides until a root-side packet exceeds the
+  entire old residual; its old-core portion then dominates the exact
+  residual complement and routes to a top exchange/reset or an enlarged
+  captured-bottom handoff.
+- [`root_critical_alternating_frontier_audit.json`](root_critical_alternating_frontier_audit.json)
+  — dual-version replay of alternating packet growth, forced termination,
+  and the terminal support cancellation.
 - [`TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md`](TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md)
   — classifies both residual 2-by-2 response blocks cap-free. If neither
   block has an empty target, then either both match or their cross-block
