@@ -1,0 +1,30 @@
+{
+  "analytic_records": [
+    {
+      "claim": "monotone_chain_terminates",
+      "reason": "each repair strictly enlarges P or H inside finite disjoint reservoirs"
+    },
+    {
+      "claim": "repair_packets_are_deletion_critical",
+      "reason": "each repair packet is selected inclusion-minimally"
+    }
+  ],
+  "claim_boundary": "QF_LRA terminal-wall audit plus finite-set analytic termination; existence of the initial payment packet is inherited from the packet-replacement complement-return lemma",
+  "provenance": {
+    "script": "tracks/parkability/audit_alternating_payment_compensation_chain.py",
+    "script_sha256": "e1629f9551d44ac1f40006fe92ea278b36c14714fd334b84333ea31a9a6f56f7",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "q_exhaustion_forces_external_below_floater",
+      "status": "unsat"
+    },
+    {
+      "claim": "r_exhaustion_is_stronger_than_aggregate_r_wall",
+      "status": "unsat"
+    }
+  ],
+  "schema": "alternating-payment-compensation-chain-audit-v1",
+  "status": "ALL_FORCED"
+}

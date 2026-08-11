@@ -31,6 +31,7 @@
       "profile_sha256": "bc2bf048d9753a0ce8f0f17a46df6bddea45c48a954acab310d1218bb57ff0a8",
       "response_records": [
         {
+          "alternating_chain_outcomes": null,
           "compensation_count": 0,
           "core": [
             "aq_tq_0",
@@ -82,6 +83,7 @@
       "profile_sha256": "465e865c98d8a15dc9448090aba7f240965fa997bafb4599589d086fafb05243",
       "response_records": [
         {
+          "alternating_chain_outcomes": null,
           "compensation_count": 78,
           "core": [
             "ar_bq_0"
@@ -116,6 +118,12 @@
       "profile_sha256": "754852dda55f1e4bbe46334433e7cfd97eb80591909296d2acbc4eec87f6d32b",
       "response_records": [
         {
+          "alternating_chain_outcomes": {
+            "Q_EXHAUSTED": 1,
+            "R_EXHAUSTED": 0,
+            "SUCCESS": 1,
+            "state_count": 3
+          },
           "compensation_count": 1,
           "core": [
             "ar_bq_0"
@@ -165,6 +173,7 @@
       "profile_sha256": "3825a50cd65d2f7de0bd6c18c80346ab3a6196c23fa271f5b65c9ac96e5e25b2",
       "response_records": [
         {
+          "alternating_chain_outcomes": null,
           "compensation_count": 81,
           "core": [
             "ar_bq_1"
@@ -187,7 +196,7 @@
   ],
   "provenance": {
     "script": "tracks/parkability/audit_maximal_replacement_frontier_profiles.py",
-    "script_sha256": "fe9f91e2c545e594b873bb6a91fedd1242639fa114231014e65989f86ad8ade7"
+    "script_sha256": "ac100efc3503eb468a3cabbfb85c1fb3b3edb63badf2fd6aec6fc3338229ad16"
   },
   "schema": "maximal-replacement-frontier-profile-census-v1",
   "status": "ALL_FROZEN_RESPONSES_RETURN_OR_COMPENSATE",

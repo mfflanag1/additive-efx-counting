@@ -174,6 +174,32 @@ component before this frontier can fall, or to extract the resulting strict
 item-order cycle. See
 [`MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md`](MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md).
 
+Testing the whole payment reservoir against the whole released complement
+also turns root-flip failure into a signed dichotomy. Unless the aggregate
+flip already closes, either `r(T_r)>r(X_q-K)` or
+`q(X_q-K)>q(f)>q(X_a)`. Thus the remaining augmentation no longer begins
+from an unstructured two-row subset-sum failure: it begins from one of two
+explicit root/external polarities. See
+[`PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md`](PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md).
+
+The full two-row selector now has a cap-free adaptive implementation. Grow
+a minimal `q`-payment packet in `T_r` and a minimal `r`-compensation packet
+in `X_q-K` only when the opposite inequality breaks. Each repair strictly
+enlarges one packet, so the finite repair tree terminates. A successful leaf
+is the canonical root flip; an exhausted leaf carries either a payment-
+critical root wall or the strict external order
+`q(X_q-K)>q(f)>q(X_a)`. See
+[`ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md`](ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md).
+
+The required multi-owner continuation now has a single cap-free support
+theorem. Orient any packet-transfer tree away from the owner receiving `f`.
+Every child packet is released by its parent target, so any internal
+response SDR is PI; an EFX endpoint closes directly, and every other state
+names an open source or minimal Hall defect. This covers the observed
+depth-two escapes `r -> {q,c}, c -> s` and `q -> c -> s` without a move-
+radius assumption. See
+[`CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md`](CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md).
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps

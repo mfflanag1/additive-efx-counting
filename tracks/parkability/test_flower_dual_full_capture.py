@@ -24,6 +24,12 @@ try:
     from .audit_flower_two_root_residual_split_release import (
         run as run_two_root_audit,
     )
+    from .audit_alternating_payment_compensation_chain import (
+        run as run_alternating_chain_audit,
+    )
+    from .audit_charity_rooted_transfer_tree_release import (
+        run as run_transfer_tree_audit,
+    )
     from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from .audit_maximal_replacement_frontier_exchange import (
         run as run_maximal_frontier_audit,
@@ -36,6 +42,9 @@ try:
     from .audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
     from .audit_packet_replacement_charity_absorption import (
         run as run_charity_absorption_audit,
+    )
+    from .audit_packet_replacement_aggregate_root_flip_polarity import (
+        run as run_aggregate_root_flip_audit,
     )
     from .audit_packet_replacement_complement_return import (
         run as run_replacement_return_audit,
@@ -67,6 +76,12 @@ except ImportError:
     from audit_flower_two_root_residual_split_release import (
         run as run_two_root_audit,
     )
+    from audit_alternating_payment_compensation_chain import (
+        run as run_alternating_chain_audit,
+    )
+    from audit_charity_rooted_transfer_tree_release import (
+        run as run_transfer_tree_audit,
+    )
     from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from audit_maximal_replacement_frontier_exchange import (
         run as run_maximal_frontier_audit,
@@ -79,6 +94,9 @@ except ImportError:
     from audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
     from audit_packet_replacement_charity_absorption import (
         run as run_charity_absorption_audit,
+    )
+    from audit_packet_replacement_aggregate_root_flip_polarity import (
+        run as run_aggregate_root_flip_audit,
     )
     from audit_packet_replacement_complement_return import (
         run as run_replacement_return_audit,
@@ -347,6 +365,55 @@ def main():
     assert "Every such external response has the form" in replacement_return_theorem
     assert "strict interval" in replacement_return_theorem
     assert "two-row compensation system (13)" in replacement_return_theorem
+    aggregate_root_path = (
+        ROOT
+        / "results"
+        / "packet_replacement_aggregate_root_flip_polarity_audit.json"
+    )
+    aggregate_root = json.loads(aggregate_root_path.read_text())
+    aggregate_root_replay = run_aggregate_root_flip_audit()
+    assert aggregate_root_replay["status"] == "ALL_FORCED"
+    assert aggregate_root_replay["scalar_records"] == aggregate_root["scalar_records"]
+    aggregate_root_theorem = (
+        ROOT
+        / "results"
+        / "PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md"
+    ).read_text()
+    assert "strict three-level order" in aggregate_root_theorem
+    assert "named `R-wall` or `Q-wall`" in aggregate_root_theorem
+    alternating_chain_path = (
+        ROOT / "results" / "alternating_payment_compensation_chain_audit.json"
+    )
+    alternating_chain = json.loads(alternating_chain_path.read_text())
+    alternating_chain_replay = run_alternating_chain_audit()
+    assert alternating_chain_replay["status"] == "ALL_FORCED"
+    assert (
+        alternating_chain_replay["scalar_records"]
+        == alternating_chain["scalar_records"]
+    )
+    alternating_chain_theorem = (
+        ROOT
+        / "results"
+        / "ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md"
+    ).read_text()
+    assert "finite repair tree" in alternating_chain_theorem
+    assert "never ends in an unnamed two-row failure" in alternating_chain_theorem
+    transfer_tree_path = (
+        ROOT / "results" / "charity_rooted_transfer_tree_release_audit.json"
+    )
+    transfer_tree = json.loads(transfer_tree_path.read_text())
+    assert run_transfer_tree_audit() == transfer_tree
+    assert transfer_tree["total_tree_permutation_pairs"] == 405
+    assert [
+        record["rooted_tree_count"] for record in transfer_tree["records"]
+    ] == [1, 1, 3, 16]
+    transfer_tree_theorem = (
+        ROOT
+        / "results"
+        / "CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md"
+    ).read_text()
+    assert "Stars, paths, and a hub followed by a donating leaf" in transfer_tree_theorem
+    assert "exactly three outcomes" in transfer_tree_theorem
     maximal_frontier_path = (
         ROOT / "results" / "maximal_replacement_frontier_exchange_audit.json"
     )
@@ -380,6 +447,21 @@ def main():
         "strict_capture_count": 1,
         "uncompensated_strict_capture_count": 0,
     }
+    strict_frontier_responses = [
+        response
+        for profile in frontier_census["profiles"]
+        for response in profile["response_records"]
+        if response["strict_core_capture"]
+    ]
+    assert [
+        response["alternating_chain_outcomes"]
+        for response in strict_frontier_responses
+    ] == [{
+        "Q_EXHAUSTED": 1,
+        "R_EXHAUSTED": 0,
+        "SUCCESS": 1,
+        "state_count": 3,
+    }]
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())

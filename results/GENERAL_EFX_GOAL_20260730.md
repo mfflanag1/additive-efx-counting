@@ -205,6 +205,27 @@ signed reduction. It succeeds whenever `r(X_q-K)>=r(T_r)` and
 frontier the latter strengthens to `q(X_q-K)>q(f)>q(X_a)`. See
 [PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md](PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md).
 
+The arbitrary two-row subset search is now replaced by a finite adaptive
+repair tree. Starting from a minimal `q`-payment packet in `T_r`, alternately
+add a minimal `r`-compensation packet from `X_q-K` and a minimal restoring
+`q`-payment packet. Both sets grow monotonically. Every successful leaf is
+the canonical root flip; every exhausted leaf is labeled either by
+`r(X_q-K)<r(P)` or by `q(X_q-K)>q(f)>q(X_a)`. The remaining proof obligation
+is to route those signed leaves through the external-owner component, not to
+solve an unnamed knapsack problem. See
+[ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md](ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md).
+
+The connected escape topology is now lifted cap-free as well. Any
+charity-rooted tree of packet transfers has pairwise-disjoint incoming
+packets, and every nonroot incoming packet is released by its parent target.
+Thus an EFX tree endpoint is an immediate lex/Pareto improvement, every
+internal response matching is PI, and every survivor is an open source or
+minimal Hall defect. The theorem includes both hardened radius-four motifs:
+`r -> {q,c}, c -> s` and `q -> c -> s`. The live selector question is now
+whether every signed exhaustion leaf supplies an owner-improving tree, not
+whether the observed topology can be lifted beyond four goods. See
+[CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md](CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,

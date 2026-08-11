@@ -84,10 +84,65 @@ def minimal_desired(values, base, source, offered):
         if value(values, source, group) > base[source]
         and common_safe(values, base, group)
     ]
+    return inclusion_minimal(desired)
+
+
+def inclusion_minimal(groups):
     return [
-        group for group in desired
-        if not any(other < group for other in desired)
+        group for group in groups
+        if not any(other < group for other in groups)
     ]
+
+
+def alternating_outcomes(values, tr, released, delta):
+    initial = inclusion_minimal([
+        packet for packet in subsets(tuple(tr), nonempty=True)
+        if value(values, "q", packet) > delta
+    ])
+    pending = [(packet, frozenset()) for packet in initial]
+    seen = set()
+    outcomes = {"SUCCESS": 0, "R_EXHAUSTED": 0, "Q_EXHAUSTED": 0}
+    while pending:
+        payment, compensation = pending.pop()
+        state = (payment, compensation)
+        if state in seen:
+            continue
+        seen.add(state)
+        q_paid = value(values, "q", payment) > (
+            delta + value(values, "q", compensation)
+        )
+        r_paid = value(values, "r", compensation) >= value(
+            values, "r", payment
+        )
+        if q_paid and r_paid:
+            outcomes["SUCCESS"] += 1
+            continue
+        if not r_paid:
+            if value(values, "r", released) < value(values, "r", payment):
+                outcomes["R_EXHAUSTED"] += 1
+                continue
+            additions = inclusion_minimal([
+                packet for packet in subsets(
+                    tuple(released - compensation), nonempty=True
+                )
+                if value(values, "r", compensation | packet)
+                >= value(values, "r", payment)
+            ])
+            pending.extend((payment, compensation | packet) for packet in additions)
+            continue
+        assert not q_paid
+        if value(values, "q", tr) <= delta + value(
+            values, "q", compensation
+        ):
+            outcomes["Q_EXHAUSTED"] += 1
+            continue
+        additions = inclusion_minimal([
+            packet for packet in subsets(tuple(tr - payment), nonempty=True)
+            if value(values, "q", payment | packet)
+            > delta + value(values, "q", compensation)
+        ])
+        pending.extend((payment | packet, compensation) for packet in additions)
+    return {"state_count": len(seen), **outcomes}
 
 
 def inspect_profile(path):
@@ -152,6 +207,10 @@ def inspect_profile(path):
                     "q_desires_full_return": return_desired,
                     "strict_core_capture": delta > 0 and not return_desired,
                     "compensation_count": compensations,
+                    "alternating_chain_outcomes": (
+                        alternating_outcomes(values, tr, released, delta)
+                        if delta > 0 and not return_desired else None
+                    ),
                 })
     assert all(
         item["direct_q_desire"]

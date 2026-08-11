@@ -907,6 +907,25 @@ both encodings.
   strict order `q(O)>q(f)>q(X_a)`.
 - [`packet_replacement_aggregate_root_flip_polarity_audit.json`](packet_replacement_aggregate_root_flip_polarity_audit.json)
   — dual-solver scalar replay of the aggregate payment implication.
+- [`ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md`](ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md)
+  — cap-free adaptive solution of the packet-selection search. Minimal
+  `q`-payment and `r`-compensation repairs alternately enlarge two disjoint
+  packets, so every repair branch terminates. A successful leaf is the
+  canonical root flip; exhaustion forces either an explicit root wall or
+  `q(O)>q(f)>q(X_a)`, with every inserted packet deletion-critical.
+- [`alternating_payment_compensation_chain_audit.json`](alternating_payment_compensation_chain_audit.json)
+  — dual-solver replay of both exhaustion implications. The frozen strict-
+  capture profile has a three-state repair tree with one successful leaf,
+  confirming that minimal-repair ties must remain adaptive.
+- [`CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md`](CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md)
+  — cap-free component theorem covering every charity-rooted packet tree,
+  including stars, paths, and hubs whose leaves donate onward. If the
+  selected endpoint is not already EFX, every internal response SDR is PI;
+  otherwise an open source or minimal Hall defect is named. This lifts both
+  hardened radius-four escape topologies to arbitrary packets.
+- [`charity_rooted_transfer_tree_release_audit.json`](charity_rooted_transfer_tree_release_audit.json)
+  — exact release-support replay of all 405 labeled rooted-tree/internal-
+  response-permutation pairs through four owners.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on
