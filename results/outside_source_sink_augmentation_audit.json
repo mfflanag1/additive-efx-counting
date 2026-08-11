@@ -1,0 +1,41 @@
+{
+  "claim_boundary": "QF_LRA capture implication and abstract one-step support preservation; induction over a finite source chain is analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_outside_source_sink_augmentation.py",
+    "script_sha256": "82a6a1104d10c7bcfd528c92cee0cf9f6121a2b3f2014894073e277ba8b93402",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "failed_sink_payment_captures_source_plus_margin",
+      "status": "unsat"
+    }
+  ],
+  "schema": "outside-source-sink-augmentation-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "incoming": {
+      "a": [
+        "I_minus_B_I",
+        "Xb"
+      ],
+      "b": [
+        "B_I",
+        "B_X"
+      ]
+    },
+    "released_or_previously_supplied": {
+      "a": [
+        "B_X",
+        "O_a"
+      ],
+      "b": [
+        "Xb"
+      ],
+      "old_component": [
+        "B_I",
+        "I_minus_B_I"
+      ]
+    }
+  }
+}

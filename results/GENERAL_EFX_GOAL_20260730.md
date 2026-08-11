@@ -251,6 +251,19 @@ the growth branch from `{q,s}` to `{q,c,s}` and then exposes `r`; this is the
 first exact realization of the desired represented-owner potential. See
 [OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md](OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md).
 
+The rotation now iterates through a general sink-augmentation theorem. If
+an outside owner `b` sources the current sink target `Y_a`, rotate its desired
+subset `B` to `b` and give `X_b+(Y_a-B)` to the sink. Either the represented
+owner set grows, or the sink satisfies
+`a(B)>a(X_b)+(a(Y_a)-a(X_a))`; release compatibility is preserved under
+every successful step. With four owners this growth is finite. On the
+hardened Q-wall adversary two augmentations represent all four owners, and
+the final exact response relation has an internally supplied PI matching.
+See
+[OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md](OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md)
+and
+[hardened_q_wall_sink_augmentation_pi_audit.json](hardened_q_wall_sink_augmentation_pi_audit.json).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,

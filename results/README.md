@@ -950,6 +950,21 @@ both encodings.
   `q,c,s` and then exposes `r`.
 - [`open_leaf_source_rotation_audit.json`](open_leaf_source_rotation_audit.json)
   — dual-solver scalar and release-support replay of the source rotation.
+- [`OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md`](OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md)
+  — general cap-free induction behind repeated source rotations. An outside
+  source takes a desired subset of the current sink target and the sink gets
+  its complement plus the source's old bundle. Either the represented owner
+  set grows, or the sink values the captured subset above the source bundle
+  plus its entire accumulated improvement margin. Release compatibility is
+  preserved at every successful step.
+- [`outside_source_sink_augmentation_audit.json`](outside_source_sink_augmentation_audit.json)
+  — dual-solver capture and abstract support-preservation replay.
+- [`hardened_q_wall_sink_augmentation_pi_audit.json`](hardened_q_wall_sink_augmentation_pi_audit.json)
+  — solver-free exact end-to-end closure of the hardened Q-wall profile.
+  Two successful augmentations represent all four owners; the final response
+  relation has matching `q<-s,c<-c,r<-r,s<-q`, whose disjoint incoming
+  packets are internally supplied. This is a generalized PI certificate,
+  not merely a nearby EFX witness.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on

@@ -54,6 +54,12 @@ try:
         run as run_released_owner_chain_audit,
     )
     from .audit_open_leaf_source_rotation import run as run_open_leaf_audit
+    from .audit_outside_source_sink_augmentation import (
+        run as run_sink_augmentation_audit,
+    )
+    from .audit_hardened_q_wall_sink_augmentation_pi import (
+        run as run_hardened_sink_pi_audit,
+    )
     from .audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -111,6 +117,12 @@ except ImportError:
         run as run_released_owner_chain_audit,
     )
     from audit_open_leaf_source_rotation import run as run_open_leaf_audit
+    from audit_outside_source_sink_augmentation import (
+        run as run_sink_augmentation_audit,
+    )
+    from audit_hardened_q_wall_sink_augmentation_pi import (
+        run as run_hardened_sink_pi_audit,
+    )
     from audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -461,6 +473,42 @@ def main():
     ).read_text()
     assert "strictly larger owner set" in open_leaf_theorem
     assert "cannot remain an unnamed dependency" in open_leaf_theorem
+    sink_augmentation_path = (
+        ROOT / "results" / "outside_source_sink_augmentation_audit.json"
+    )
+    sink_augmentation = json.loads(sink_augmentation_path.read_text())
+    sink_augmentation_replay = run_sink_augmentation_audit()
+    assert sink_augmentation_replay["status"] == "ALL_FORCED"
+    assert (
+        sink_augmentation_replay["scalar_records"]
+        == sink_augmentation["scalar_records"]
+    )
+    assert (
+        sink_augmentation_replay["support_record"]
+        == sink_augmentation["support_record"]
+    )
+    sink_augmentation_theorem = (
+        ROOT / "results" / "OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md"
+    ).read_text()
+    assert "represented owner set strictly grows" in sink_augmentation_theorem
+    assert "cannot run indefinitely" in sink_augmentation_theorem
+    hardened_sink_path = (
+        ROOT / "results" / "hardened_q_wall_sink_augmentation_pi_audit.json"
+    )
+    hardened_sink = json.loads(hardened_sink_path.read_text())
+    hardened_sink_replay = run_hardened_sink_pi_audit(
+        ROOT / "results" / "flexible_lex_basic_pi_free_hardened_countermodel.json"
+    )
+    assert hardened_sink_replay == hardened_sink
+    assert hardened_sink["status"] == "PI_RESPONSE_MATCHING"
+    assert hardened_sink["internal_matching"] == {
+        "q": "s",
+        "c": "c",
+        "r": "r",
+        "s": "q",
+    }
+    assert hardened_sink["incoming_disjoint"]
+    assert hardened_sink["all_incoming_supplied"]
     maximal_frontier_path = (
         ROOT / "results" / "maximal_replacement_frontier_exchange_audit.json"
     )

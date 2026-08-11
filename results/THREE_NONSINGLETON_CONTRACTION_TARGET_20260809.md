@@ -221,6 +221,18 @@ hardened profile the sequence is `{q,s}->{q,c,s}` and then exposes `r`.
 See
 [`OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md`](OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md).
 
+This source rotation now iterates. At each open-source step, either the old
+sink remains improved and the represented owner set grows, or it captures
+the desired subset above the new source bundle plus the sink's whole prior
+improvement margin. Successful steps preserve disjoint/internal release
+support. The hardened Q-wall grows through all four owners and then closes
+by the exact PI matching `q<-s,c<-c,r<-r,s<-q`. The universal residual is
+therefore the strict sink-capture branch or an all-owner Hall defect, not the
+previous bounded adversary. See
+[`OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md`](OUTSIDE_SOURCE_SINK_AUGMENTATION_LEMMA_20260810.md)
+and
+[`hardened_q_wall_sink_augmentation_pi_audit.json`](hardened_q_wall_sink_augmentation_pi_audit.json).
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps
