@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "QF_LRA/support audit of the complete transfer path, owner payment, and target-wall polarities; sacrificed-owner Hall termination is outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_joint_packet_charity_completed_transfer_path.py",
+    "script_sha256": "4e2fe44466501e030e03f795129c8b49bcdbdfad989dfd135eab3de33f005433",
+    "theorem": "results/JOINT_PACKET_CHARITY_COMPLETED_TRANSFER_PATH_LEMMA_20260811.md",
+    "theorem_sha256": "e1f9c889d8e47b40fc356c113fe272221c25c927f48a5023674525a38706c264",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "complete_path_conserves_goods_with_external_sink",
+      "status": "unsat"
+    },
+    {
+      "claim": "complete_path_conserves_goods_without_external_sink",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_strictly_improves",
+      "status": "unsat"
+    },
+    {
+      "claim": "joint_packet_gives_exact_q_loss",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_target_wall_forces_threshold_increase",
+      "status": "unsat"
+    },
+    {
+      "claim": "sink_target_wall_forces_threshold_increase",
+      "status": "unsat"
+    }
+  ],
+  "schema": "joint-packet-charity-completed-transfer-path-audit-v1",
+  "status": "ALL_FORCED"
+}

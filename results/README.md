@@ -1367,6 +1367,14 @@ both encodings.
 - [`joint_packet_external_sink_rerouting_audit.json`](joint_packet_external_sink_rerouting_audit.json)
   — symbolic replay of connected support, root/sink improvement, and both
   target-threshold polarities.
+- [`JOINT_PACKET_CHARITY_COMPLETED_TRANSFER_PATH_LEMMA_20260811.md`](JOINT_PACKET_CHARITY_COMPLETED_TRANSFER_PATH_LEMMA_20260811.md)
+  — assigns `f` to the losing later owner, sends the joint packet to the
+  root, and optionally sends a root packet to an external sink. This always
+  gives a complete connected path `charity -> q -> r (-> external)` and
+  reduces failure to a release-supported sacrificed-owner Hall boundary.
+- [`joint_packet_charity_completed_transfer_path_audit.json`](joint_packet_charity_completed_transfer_path_audit.json)
+  — symbolic replay of complete support, root payment, the exact donor loss,
+  and all changed-target polarities.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
