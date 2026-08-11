@@ -74,6 +74,35 @@ def find_sdr(targets, response):
     return None
 
 
+def find_matching(targets, response, sources):
+    targets = tuple(targets)
+    for selected in itertools.permutations(sources, len(targets)):
+        if all(
+            selected[index] in response[target]
+            for index, target in enumerate(targets)
+        ):
+            return dict(zip(targets, selected))
+    return None
+
+
+def minimal_hall_defects(targets, response):
+    defects = []
+    for size in range(1, len(targets) + 1):
+        for subset in itertools.combinations(targets, size):
+            neighborhood = set().union(*(set(response[target]) for target in subset))
+            if len(neighborhood) >= len(subset):
+                continue
+            if any(
+                len(set().union(*(set(response[target]) for target in proper)))
+                < len(proper)
+                for proper_size in range(1, size)
+                for proper in itertools.combinations(subset, proper_size)
+            ):
+                continue
+            defects.append((subset, tuple(sorted(neighborhood))))
+    return defects
+
+
 def run(source_path):
     payload = json.loads(source_path.read_text())
     values = {
@@ -85,6 +114,7 @@ def run(source_path):
     payments = minimal_payment_packets(values)
     counts = Counter()
     matching_signatures = Counter()
+    full_boundary_signatures = Counter()
     partition_shapes = Counter()
     examples = {}
     response_cache = {}
@@ -117,8 +147,12 @@ def run(source_path):
             targets = ("r", "q") + tuple(
                 owner for owner in ("c", "s") if cells[owner]
             )
+            full_response = {
+                target: response_sources(allocation[target])
+                for target in targets
+            }
             response = {
-                target: sorted(set(response_sources(allocation[target])).intersection(targets))
+                target: sorted(set(full_response[target]).intersection(targets))
                 for target in targets
             }
             matching = find_sdr(targets, response)
@@ -128,6 +162,21 @@ def run(source_path):
                 classification = "INTERNAL_SDR"
             else:
                 classification = "HALL_DEFICIENT"
+                full_matching = find_matching(targets, full_response, AGENTS)
+                if full_matching is not None:
+                    signature = ";".join(
+                        f"{target}<-{full_matching[target]}" for target in targets
+                    )
+                    full_boundary_signatures[("OPEN_MATCHING", signature)] += 1
+                else:
+                    defects = minimal_hall_defects(targets, full_response)
+                    assert defects
+                    for defect_targets, defect_sources in defects:
+                        signature = (
+                            f"{','.join(defect_targets)}"
+                            f"<-{','.join(defect_sources) or 'EMPTY'}"
+                        )
+                        full_boundary_signatures[("MINIMAL_DEFECT", signature)] += 1
             counts[classification] += 1
             counts[f"TARGETS_{len(targets)}"] += 1
             shape = tuple(len(cells[recipient]) for recipient in ("r", "c", "s", "_"))
@@ -150,6 +199,7 @@ def run(source_path):
                     },
                     "targets": list(targets),
                     "internal_response_sets": response,
+                    "full_response_sets": full_response,
                     "internal_sdr": matching,
                 }
     script = Path(__file__).resolve()
@@ -252,6 +302,10 @@ def run(source_path):
         "matching_signatures": [
             {"signature": signature, "count": count}
             for signature, count in sorted(matching_signatures.items())
+        ],
+        "full_boundary_signatures": [
+            {"kind": kind, "signature": signature, "count": count}
+            for (kind, signature), count in sorted(full_boundary_signatures.items())
         ],
         "partition_shapes": [
             {

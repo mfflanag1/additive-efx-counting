@@ -41,6 +41,9 @@ try:
         add_no_self_champions,
         add_no_single_genuine_cycles,
     )
+    from .analyze_weighted_hall_owner_union_compressions import (
+        find_owner_union_closure,
+    )
 except ImportError:
     from analyze_flexible_lex_radius3_hardness_gap import desired_subsets
     from analyze_flexible_two_external_weighted_hall import (
@@ -70,6 +73,9 @@ except ImportError:
         add_no_envy_cycles,
         add_no_self_champions,
         add_no_single_genuine_cycles,
+    )
+    from analyze_weighted_hall_owner_union_compressions import (
+        find_owner_union_closure,
     )
 
 
@@ -284,6 +290,18 @@ def run(
         closure = find_closure(values, old)
         record["closure_kind"] = closure["kind"]
         record["examined_partitions"] = closure["examined_partitions"]
+        if closure["kind"] == "NONE":
+            owner_union_closure = find_owner_union_closure(values, old)
+            if owner_union_closure["kind"] != "NONE":
+                closure = owner_union_closure
+                record["closure_kind"] = closure["kind"]
+                record["owner_union_path"] = closure["path"]
+                record["recapture_states_examined"] = closure.get(
+                    "states_examined", 0
+                )
+                record["owner_union_growth_steps"] = closure.get(
+                    "growth_steps", 0
+                )
         if closure["kind"] == "NONE":
             connected_escape = next(
                 (

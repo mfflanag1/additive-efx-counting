@@ -7,6 +7,48 @@
     "TARGETS_3": 130,
     "TARGETS_4": 110
   },
+  "full_boundary_signatures": [
+    {
+      "count": 19,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "c,s<-c"
+    },
+    {
+      "count": 27,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "q,c<-c"
+    },
+    {
+      "count": 175,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "q,s<-c"
+    },
+    {
+      "count": 31,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "r,c,s<-c,r"
+    },
+    {
+      "count": 40,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "r,q,c<-c,r"
+    },
+    {
+      "count": 16,
+      "kind": "OPEN_MATCHING",
+      "signature": "r<-r;q<-c"
+    },
+    {
+      "count": 21,
+      "kind": "OPEN_MATCHING",
+      "signature": "r<-r;q<-c;c<-s"
+    },
+    {
+      "count": 9,
+      "kind": "OPEN_MATCHING",
+      "signature": "r<-s;q<-c;c<-r"
+    }
+  ],
   "matching_signatures": [
     {
       "count": 18,
@@ -49,6 +91,17 @@
         "aq_br_1": "r",
         "br_rest_0": "r",
         "br_rest_1": "r"
+      },
+      "full_response_sets": {
+        "q": [
+          "c"
+        ],
+        "r": [
+          "c",
+          "q",
+          "r",
+          "s"
+        ]
       },
       "internal_response_sets": {
         "q": [],
@@ -110,6 +163,21 @@
         "aq_br_1": "r",
         "br_rest_0": "r",
         "br_rest_1": "c"
+      },
+      "full_response_sets": {
+        "c": [
+          "c",
+          "r"
+        ],
+        "q": [
+          "c"
+        ],
+        "r": [
+          "c",
+          "q",
+          "r",
+          "s"
+        ]
       },
       "internal_response_sets": {
         "c": [
@@ -611,12 +679,113 @@
       "unpayable_bottom_polarity": {
         "c": true,
         "s": true
-      }
+      },
+      "weighted_payment_patterns": [
+        {
+          "count": 12,
+          "example": {
+            "aq_br_0": "_",
+            "aq_br_1": "c",
+            "br_rest_0": "s",
+            "br_rest_1": "s"
+          },
+          "paid_demands": []
+        },
+        {
+          "count": 24,
+          "example": {
+            "aq_br_0": "c",
+            "aq_br_1": "c",
+            "br_rest_0": "c",
+            "br_rest_1": "c"
+          },
+          "paid_demands": [
+            "c"
+          ]
+        },
+        {
+          "count": 66,
+          "example": {
+            "aq_br_0": "r",
+            "aq_br_1": "r",
+            "br_rest_0": "r",
+            "br_rest_1": "r"
+          },
+          "paid_demands": [
+            "r"
+          ]
+        },
+        {
+          "count": 28,
+          "example": {
+            "aq_br_0": "s",
+            "aq_br_1": "c",
+            "br_rest_0": "s",
+            "br_rest_1": "s"
+          },
+          "paid_demands": [
+            "s"
+          ]
+        },
+        {
+          "count": 17,
+          "example": {
+            "aq_br_0": "c",
+            "aq_br_1": "s",
+            "br_rest_0": "c",
+            "br_rest_1": "c"
+          },
+          "paid_demands": [
+            "c",
+            "s"
+          ]
+        },
+        {
+          "count": 42,
+          "example": {
+            "aq_br_0": "r",
+            "aq_br_1": "r",
+            "br_rest_0": "c",
+            "br_rest_1": "c"
+          },
+          "paid_demands": [
+            "r",
+            "c"
+          ]
+        },
+        {
+          "count": 56,
+          "example": {
+            "aq_br_0": "r",
+            "aq_br_1": "s",
+            "br_rest_0": "r",
+            "br_rest_1": "r"
+          },
+          "paid_demands": [
+            "r",
+            "s"
+          ]
+        },
+        {
+          "count": 11,
+          "example": {
+            "aq_br_0": "r",
+            "aq_br_1": "s",
+            "br_rest_0": "c",
+            "br_rest_1": "c"
+          },
+          "paid_demands": [
+            "r",
+            "c",
+            "s"
+          ]
+        }
+      ]
     }
   ],
   "provenance": {
     "script": "tracks/parkability/analyze_flexible_two_external_weighted_hall.py",
-    "script_sha256": "11a534ef49a268e68f22082aea14c682c87835214eedee69a233e817b8c85642",
+    "script_sha256": "db8efd8cad5f98c18e2eecb181339897ce7a0cfc2776657f4eb33cb94ee066a2",
     "source": "results/flexible_lex_basic_pi_free_hardened_countermodel.json",
     "source_sha256": "4cc4bb3eab57a053f0bbde307da1e3f343fb6379ae06787e61f9612f39ba25d5"
   },

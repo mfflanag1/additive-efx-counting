@@ -6,6 +6,38 @@
     "TARGETS_3": 422,
     "TARGETS_4": 570
   },
+  "full_boundary_signatures": [
+    {
+      "count": 317,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "c,s<-c"
+    },
+    {
+      "count": 157,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "r,c,s<-c,r"
+    },
+    {
+      "count": 96,
+      "kind": "MINIMAL_DEFECT",
+      "signature": "r,q,c,s<-c,r,s"
+    },
+    {
+      "count": 32,
+      "kind": "OPEN_MATCHING",
+      "signature": "r<-r;q<-c"
+    },
+    {
+      "count": 211,
+      "kind": "OPEN_MATCHING",
+      "signature": "r<-r;q<-s;c<-c"
+    },
+    {
+      "count": 211,
+      "kind": "OPEN_MATCHING",
+      "signature": "r<-r;q<-s;s<-c"
+    }
+  ],
   "matching_signatures": [],
   "minimal_examples": {
     "HALL_DEFICIENT": {
@@ -44,6 +76,17 @@
         "br_rest_0": "r",
         "br_rest_1": "r",
         "tr_rest_0": "r"
+      },
+      "full_response_sets": {
+        "q": [
+          "c",
+          "s"
+        ],
+        "r": [
+          "c",
+          "r",
+          "s"
+        ]
       },
       "internal_response_sets": {
         "q": [],
@@ -827,7 +870,7 @@
   ],
   "provenance": {
     "script": "tracks/parkability/analyze_flexible_two_external_weighted_hall.py",
-    "script_sha256": "6914a25a7fb314eafde1b38b5ff22b98b5dead21a9722a7c23f78cddadf543eb",
+    "script_sha256": "db8efd8cad5f98c18e2eecb181339897ce7a0cfc2776657f4eb33cb94ee066a2",
     "source": "results/two_external_weighted_hall_hardened_countermodel.json",
     "source_sha256": "ac42cf5812b8916b91900daf3b094105b4928aced983cc713252520a464862ff"
   },

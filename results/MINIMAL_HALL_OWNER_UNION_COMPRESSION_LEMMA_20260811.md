@@ -80,10 +80,13 @@ removed from source owners are retained in the residual pool. Thus (7) is a
 release-compatible owner component for every packet cardinality.
 
 If every unmatched owner is weakly nonworse, no observer can newly fail EFX
-against a selected core; only residual-pool targets `P_m` can be walls. If
-some unmatched owner is sacrificed, the priority check and loss-band
-localization must be applied separately to every losing owner; the
-single-residual sacrifice lemma is only the `|M|=1` special case.
+against a selected core.  Among targets changed by this compression, only
+the residual-pool targets `P_m` can be new walls.  A wall already present
+against a target fixed outside `V` remains present; eliminating those
+inherited walls requires compressing a maximum matching of the entire active
+target relation. If some unmatched owner is sacrificed, the priority check
+and loss-band localization must be applied separately to every losing
+owner; the single-residual sacrifice lemma is only the `|M|=1` special case.
 
 ## Four-agent specialization
 
@@ -92,7 +95,8 @@ For a two-target/one-source defect there are only two forms.
 1. If the source owner lies in `U`, then `|V|=2` and `M` is a singleton;
    all leftovers go to one residual owner.
 2. If the source owner lies outside `U`, then `|V|=3` and `M` has two owners;
-   the entire remaining problem is a two-way partition of `P`.
+   the compression itself reduces to a two-way partition of `P`, together
+   with any inherited walls against active targets outside `V`.
 
 This second form is exactly the terminal witness missed by all-owner
 compression in the bounded weighted-Hall adversary: the three signatures are
@@ -119,7 +123,9 @@ replay in
 ## Claim boundary
 
 This lemma generalizes response compression to every minimal Hall defect and
-identifies a two-way residual partition as the exact live bounded endpoint.
-It does not prove that partition exists with all required utility and EFX
-thresholds, eliminate the cross-star in every flower, close the `GG` class,
-or prove four-agent additive EFX.
+identifies its owner-union residual partition.  It does not eliminate walls
+against fixed active targets outside that union.  The maximum-matching
+owner-union compression lemma is the correct global composition.  Neither
+lemma proves that every residual partition meets all utility and EFX
+thresholds, eliminates the cross-star in every flower, closes the `GG`
+class, or proves four-agent additive EFX.

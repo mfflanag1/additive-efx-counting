@@ -1,0 +1,223 @@
+{
+  "claim_boundary": "solver-free exact-Fraction census of every no-charity residual split and every owner-union compression in one bounded flower; closure is adversarial evidence, not a cap-free partition theorem",
+  "counts": {
+    "BOUNDARIES": 81,
+    "COMPRESSIONS_EXAMINED": 81,
+    "INTERNAL_SDR": 17,
+    "RECAPTURE_INTERNAL_SDR": 64,
+    "RECAPTURE_STATES_EXAMINED": 904
+  },
+  "examples": {
+    "INTERNAL_SDR": {
+      "boundary_targets": [
+        "r",
+        "q"
+      ],
+      "candidate": {
+        "_": [],
+        "c": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1",
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "f"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "cores": {
+        "c": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "f"
+        ]
+      },
+      "efx": false,
+      "internal_sdr": {
+        "c": "c",
+        "q": "q",
+        "r": "r"
+      },
+      "kind": "FULL_MATCHING",
+      "matching": {
+        "q": "c",
+        "r": "r"
+      },
+      "owner_union": [
+        "r",
+        "q",
+        "c"
+      ],
+      "paid": true,
+      "sources": [
+        "r",
+        "c"
+      ],
+      "unmatched": [
+        "q"
+      ]
+    },
+    "RECAPTURE_INTERNAL_SDR": {
+      "boundary_targets": [
+        "r",
+        "q",
+        "c"
+      ],
+      "candidate": {
+        "_": [],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "br_rest_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_br_1",
+          "br_rest_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "z"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "f"
+        ],
+        "s": [
+          "ar_bq_0",
+          "tr_rest_1"
+        ]
+      },
+      "cores": {
+        "c": [
+          "bc_0",
+          "bc_1",
+          "br_rest_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "f"
+        ],
+        "s": [
+          "ar_bq_0",
+          "tr_rest_1"
+        ]
+      },
+      "efx": false,
+      "internal_sdr": null,
+      "kind": "FULL_MATCHING",
+      "matching": {
+        "c": "c",
+        "q": "s",
+        "r": "r"
+      },
+      "owner_union": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "paid": true,
+      "recapture": {
+        "allocation": {
+          "_": [],
+          "c": [
+            "ar_bq_1",
+            "tc_1"
+          ],
+          "q": [
+            "aq_br_1",
+            "aq_tq_0",
+            "ar_tr_1",
+            "tr_rest_0",
+            "ar_tr_0",
+            "bc_0",
+            "bc_1",
+            "tc_0",
+            "br_rest_0",
+            "br_rest_1",
+            "z"
+          ],
+          "r": [
+            "aq_br_0",
+            "aq_tq_1",
+            "f"
+          ],
+          "s": [
+            "ar_bq_0",
+            "tr_rest_1"
+          ]
+        },
+        "growth_steps": 0,
+        "kind": "INTERNAL_SDR",
+        "matching": {
+          "c": "c",
+          "q": "q",
+          "r": "r",
+          "s": "s"
+        },
+        "owner_union": [
+          "r",
+          "q",
+          "c",
+          "s"
+        ],
+        "states_examined": 9
+      },
+      "sources": [
+        "r",
+        "c",
+        "s"
+      ],
+      "unmatched": [
+        "q"
+      ]
+    }
+  },
+  "minimal_payment_packets": [
+    [
+      "ar_tr_0",
+      "ar_tr_1",
+      "tr_rest_0",
+      "tr_rest_1"
+    ]
+  ],
+  "provenance": {
+    "script": "tracks/parkability/analyze_weighted_hall_owner_union_compressions.py",
+    "script_sha256": "ee9f5c513afde24062b624e91134276c92a28cbe9ed29b3d4010430e6cdeaa14",
+    "source": "results/two_external_weighted_hall_radius2_hardened_countermodel.json",
+    "source_sha256": "f226051925264a3de00ea3e5319d948fda49b3dada8b2fbbcadbf114f9f4f5a8"
+  },
+  "schema": "weighted-hall-owner-union-compression-census-v1",
+  "status": "ALL_CLOSED"
+}
