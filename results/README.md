@@ -1411,6 +1411,15 @@ both encodings.
   per-hole residual maxima, and used-support history. This does not prove a
   particular deterministic repair rule cycles; it forces either a new
   current-state invariant or direct component extraction.
+- [`PERMANENT_ANCHOR_Q_ACTIVITY_DICHOTOMY_LEMMA_20260811.md`](PERMANENT_ANCHOR_Q_ACTIVITY_DICHOTOMY_LEMMA_20260811.md)
+  ([exact audit](permanent_anchor_q_activity_dichotomy_audit.json))
+  — removes the response-active sacrificed-`q` recurrence without assuming
+  that the permanent anchor preserves unrestricted maximum rank. Among all
+  anchor-constrained maximum matchings, an active `q` can always be
+  represented by one edge replacement; hence a sacrificed `q` has degree
+  zero against every active target. All `2^14` four-by-four response graphs
+  replay exactly. The remaining gate is the genuinely source-inactive
+  degree-zero repair.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

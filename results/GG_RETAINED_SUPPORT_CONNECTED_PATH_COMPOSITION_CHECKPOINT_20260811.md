@@ -131,12 +131,14 @@ captures a nonempty `B_q` packet and enters the same complete charity path.
 Top-only resets preserve, strictly enlarge, or capture the retained support,
 and a floater-consuming reset is routed by its source.
 
-The sole remaining terminal is the **fixed-`U`, root-anchored sacrificed-
-`q` Hall recurrence**.  After owner-union saturation, a local Hall repair may
-return to a lower-rank root anchor without forcing fresh `T_r` support.  A
-proof must turn every repeated `(missing owner, physical support)` state into
-a release-compatible PI component or a surplus-budgeted connected transfer
-component.  The initially proposed lexicographic potential was
+The sole remaining terminal is the **fixed-`U`, root-anchored degree-zero-`q`
+source-inactive recurrence**.  The permanent-anchor activity dichotomy shows
+that every response-active `q` can be represented by an anchor-constrained
+maximum matching, even when the anchor costs unrestricted rank.  Therefore
+`q` is sacrificed only when she has no response edge to any active target.
+A proof must turn that degree-zero repair into `q`-activity, a release-
+compatible PI component, or a surplus-budgeted connected transfer component.
+The initially proposed lexicographic potential was
 
 \[
  (|U|,\ \text{response rank},\ \text{represented owner union},\
@@ -155,8 +157,10 @@ potential.  An exact rank-three response system has four distinct non-EFX
 maximum-matching compressions on which every historical coordinate is
 already saturated; see
 [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md).
-Thus the remaining proof must use a deterministic current-state invariant or
-exit the recompression plateau by a global component.  For endpoint
+Thus arbitrary recompression still needs a deterministic current-state
+invariant or a global component, but the protected matching rule avoids this
+plateau for response-active `q`: she is never selected as its hole.  For
+endpoint
 extraction, the required safety inequalities are now the
 observer-indexed surplus balances of
 [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md),

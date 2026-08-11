@@ -1,0 +1,106 @@
+{
+  "claim_boundary": "exhaustive four-source/four-target graph theorem; degree-zero source-inactive closure, residual payment, physical release support, GG closure, and general EFX remain open",
+  "counts": {
+    "active_q_anchor_maximum_representable": 14336,
+    "anchor_rank_gap": 2603,
+    "anchor_rank_gap_q_active": 2344,
+    "q_active": 14336,
+    "q_degree_zero": 2048,
+    "relations": 16384,
+    "uncovered": 0
+  },
+  "forbidden_q_anchor_edge": [
+    "q",
+    "h"
+  ],
+  "forced_anchor": [
+    "r",
+    "h"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_permanent_anchor_q_activity_dichotomy.py",
+    "script_sha256": "07df80432eee4deccc1f76e388821b74c9de0a0198e40a6d19dc6f84494066c2",
+    "theorem": "results/PERMANENT_ANCHOR_Q_ACTIVITY_DICHOTOMY_LEMMA_20260811.md",
+    "theorem_sha256": "854f74edd7ca29fc9ba7394e984ca936fe561c22b3f34c03993af5acaafe9d3e"
+  },
+  "rank_gap_examples": [
+    {
+      "anchor_rank": 1,
+      "edges": [
+        [
+          "c",
+          "h"
+        ],
+        [
+          "r",
+          "h"
+        ],
+        [
+          "r",
+          "t1"
+        ]
+      ],
+      "q_active": false,
+      "q_anchor_maximum_representable": false,
+      "rank": 2
+    },
+    {
+      "anchor_rank": 1,
+      "edges": [
+        [
+          "c",
+          "h"
+        ],
+        [
+          "r",
+          "h"
+        ],
+        [
+          "r",
+          "t2"
+        ]
+      ],
+      "q_active": false,
+      "q_anchor_maximum_representable": false,
+      "rank": 2
+    },
+    {
+      "anchor_rank": 1,
+      "edges": [
+        [
+          "c",
+          "h"
+        ],
+        [
+          "r",
+          "h"
+        ],
+        [
+          "r",
+          "t1"
+        ],
+        [
+          "r",
+          "t2"
+        ]
+      ],
+      "q_active": false,
+      "q_anchor_maximum_representable": false,
+      "rank": 2
+    }
+  ],
+  "schema": "permanent-anchor-q-activity-dichotomy-audit-v1",
+  "sources": [
+    "r",
+    "q",
+    "c",
+    "s"
+  ],
+  "status": "ALL_CLASSIFIED",
+  "targets": [
+    "h",
+    "t1",
+    "t2",
+    "t3"
+  ]
+}
