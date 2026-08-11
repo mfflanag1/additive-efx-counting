@@ -1,0 +1,21 @@
+{
+  "checks": {
+    "anchor_return_pays_or_same_core_is_q_response": true,
+    "anchor_return_q_gain_identity": true,
+    "bq_substitution_strictly_pays_q": true,
+    "root_response_forces_nonempty_bq_capture": true
+  },
+  "claim_boundary": "Bq substitution and root-source anchor return only; rank-two termination, q-source collision, mixed-margin closure, and EFX remain open",
+  "provenance": {
+    "script": "tracks/parkability/audit_retained_q_bq_floater_substitution_handoff.py",
+    "script_sha256": "e0d64563287c17408ccc0e7f6682e9849e63e78f478e09410acbecf263d70752",
+    "theorem": "results/RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md",
+    "theorem_sha256": "5f0f283ef1655bd3c577948a481f4d9adceea4110029208e4fd28e55b0b8a28c",
+    "z3_version": "5.0.0"
+  },
+  "remaining_separator": "q-source role collision and rank-two continuation",
+  "root_anchor_and_substituted_q_target_disjoint": true,
+  "root_anchor_releases_complete_bq": true,
+  "schema": "retained-q-bq-floater-substitution-handoff-audit-v1",
+  "status": "ALL_FORCED"
+}

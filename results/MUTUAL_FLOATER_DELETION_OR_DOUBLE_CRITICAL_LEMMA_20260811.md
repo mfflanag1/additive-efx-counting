@@ -86,6 +86,13 @@ the root/q response.  Failure must certify that every root-paying substitute
 captures q's remaining margin and every q-paying substitute exceeds the
 root budget at the same globally maximal state.
 
+In the GG flower this substitute is now canonical.  The root anchor releases
+all of `B_q`, and `v_q(B_q)>=v_q(f)`, so `(T_r-U)+B_q` strictly pays q and is
+disjoint from `T_q+f`.  Minimal response extraction gives a nonroot rank-two
+core or a root-held nonempty `B_q` capture packet.  Thus (6) is not an
+independent terminal; see
+[`RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md`](RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md).
+
 ## Consequence for the anchored role split
 
 For the six q-donor-role-available pivots, arbitrary protected-core
@@ -105,7 +112,9 @@ checks support intersection, hereditary safety under deletion, exhaustiveness
 of the two deletion branches, and both implications in (6) in exact linear
 arithmetic.
 
-This lemma does not produce the substitute packet in the double-critical
-branch, eliminate the q-source role collision, discharge the donor selector's
-root-concentration/blockade outcomes, produce a globally maximal
-countermodel, close GG, or prove four-agent/general additive EFX.
+This lemma alone does not produce the substitute packet in the double-
+critical branch; the cited Bq handoff supplies it but leaves bottom-capture
+compensation open.  It also does not eliminate the q-source role collision,
+discharge the donor selector's root-concentration/blockade outcomes, produce
+a globally maximal countermodel, close GG, or prove four-agent/general
+additive EFX.

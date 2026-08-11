@@ -66,10 +66,11 @@ that support operation, fork success pays the component; strict q-donor
 blockade enters captured-q-margin handoff; aggregate root concentration
 enters the existing bottom-absorption rotation.
 
-This branch therefore has no anonymous donor choice.  Its sole unresolved
-premise is **floater-compatible q-core availability**: find a floater-free
-q-core, substitute for `f`, or release/re-root the permanent anchor while
-respecting the exact signed transfers and retained support.
+This branch therefore has no anonymous donor choice.  Floater-compatible
+q-core availability is now supplied by the canonical `B_q` substitution:
+`(T_r-U)+B_q` is desired by q and disjoint from the anchor; minimal response
+extraction gives a nonroot rank-two edge or a root-source anchor return.  See
+[`RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md`](RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md).
 
 ### 2. q is the closing source
 
@@ -101,17 +102,17 @@ closing source.
 The anchor-containing critical-top-up separator has two, not one, physical
 interfaces:
 
-1. six **q-donor-role-available** pivots, whose remaining gate is floater-
-   compatible protected split-core availability; and
+1. six **q-donor-role-available** pivots, whose shared-floater conflict is
+   removed by the `B_q` substitution and whose continuation is the existing
+   donor/rank-two machinery; and
 2. six **q-source-collision** pivots, whose remaining gate is the two-core q
-   rerouting plus floater-substitution selector.
+   rerouting selector.
 
-Accordingly, root/q reservoir inequalities alone cannot be applied as a
-scalar payment bound.  They must first be accompanied by a support-conserving
-q-core/floater selection theorem.  Any claimed mixed-margin closure that
-applies the q-donor blockade directly skips the mandatory intersection (1),
-and applying it to all twelve pivots additionally skips the six source-role
-collisions.
+Accordingly, the root/q reservoir does close the physical floater conflict,
+but it does not identify q's two logical roles.  Any claimed mixed-margin
+closure that applies the q-donor blockade directly skips the mandatory
+intersection (1); after the `B_q` repair, applying it to all twelve pivots
+still skips the six source-role collisions.
 
 ## Verification and boundary
 
@@ -121,7 +122,7 @@ and the twelve stable anchor cycles.  It verifies the 6/6 role split, all
 cycle-length counts, distinct-donor role eligibility in every non-q-source
 case, and the exact singleton-floater intersection (1).
 
-This is a graph/role reduction.  It does not prove physical availability of
-`D(U)`, construct the two-core q rerouting, eliminate either payment
-separator, produce a globally maximal countermodel, close GG, or prove
-four-agent/general additive EFX.
+This is a graph/role reduction.  The cited `B_q` lemma supplies the physical
+floater repair but does not construct the two-core q rerouting, eliminate the
+q-source payment separator, produce a globally maximal countermodel, close
+GG, or prove four-agent/general additive EFX.

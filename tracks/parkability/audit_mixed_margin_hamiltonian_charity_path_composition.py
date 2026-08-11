@@ -21,6 +21,7 @@ DEPENDENCIES = (
     ("ANCHORED_MIXED_MARGIN_PATH_TERMINAL_CLASSIFICATION_LEMMA_20260811.md", "anchored_mixed_margin_path_terminal_classification_audit.json"),
     ("ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md", "anchored_q_donor_or_source_collision_audit.json"),
     ("MUTUAL_FLOATER_DELETION_OR_DOUBLE_CRITICAL_LEMMA_20260811.md", "mutual_floater_deletion_or_double_critical_audit.json"),
+    ("RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md", "retained_q_bq_floater_substitution_handoff_audit.json"),
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
@@ -66,9 +67,9 @@ def run(root: Path) -> dict:
             "progress, or the six-clause full-owner critical-top-up separator"
         ),
         "exact_surviving_separator": (
-            "anchor-containing full-owner failure to substitute a target-critical "
-            "top-up while preserving every priority/direct-safety floor, split "
-            "between q-donor availability and q-source role collision"
+            "anchor-containing full-owner target-critical top-up failure after "
+            "Bq floater substitution and root-source anchor return, with the "
+            "remaining physical role obstruction at q-source collision"
         ),
         "claim_boundary": (
             "integrity and reduction manifest only; the critical-top-up separator, "

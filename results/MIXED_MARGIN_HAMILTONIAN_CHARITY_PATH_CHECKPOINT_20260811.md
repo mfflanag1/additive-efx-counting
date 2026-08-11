@@ -115,6 +115,18 @@ the full protected q-core becomes disjoint.  Only when both deletions fail is
 availability has collapsed to the double-floater-critical separator; see
 [`MUTUAL_FLOATER_DELETION_OR_DOUBLE_CRITICAL_LEMMA_20260811.md`](MUTUAL_FLOATER_DELETION_OR_DOUBLE_CRITICAL_LEMMA_20260811.md).
 
+That double criticality is not itself terminal.  The permanent root anchor
+releases all of `B_q`, and the live bottom polarity makes
+`(T_r-U)+B_q` a floater-free target strictly desired by q and disjoint from
+`T_q+f`.  Global minimal response extraction either restores a nonroot
+rank-two core or gives a root-sourced core `E`.  In the latter case, assigning
+`E` to the root and its complement beside the old anchor to q has exact q
+gain `v_q(D(U))-v_q(E)`: a nonnegative gain is a paid anchor return, while a
+negative gain makes the same common-safe `E` desired by q and restores a
+nonroot rank-two edge.  Thus neither double floater criticality nor root
+monopoly survives as an independent terminal.  See
+[`RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md`](RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md).
+
 ## Exact surviving separator
 
 After source/core saturation and full-owner recruitment, the sole unproved

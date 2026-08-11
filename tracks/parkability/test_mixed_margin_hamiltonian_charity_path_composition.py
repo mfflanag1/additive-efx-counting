@@ -17,5 +17,5 @@ def test_mixed_margin_hamiltonian_charity_path_composition_replays():
 def test_mixed_margin_hamiltonian_charity_path_dependencies_replay():
     result = run(ROOT)
     assert result["status"] == "DEPENDENCIES_REPLAYABLE"
-    assert result["dependency_count"] == 14
+    assert result["dependency_count"] == 15
     assert all(record["audit_status"] in {"ALL_FORCED", "ALL_EXHAUSTED", "DEPENDENCIES_REPLAYABLE"} for record in result["records"])
