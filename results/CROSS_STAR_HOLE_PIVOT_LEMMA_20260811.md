@@ -17,9 +17,9 @@ Suppose two distinct nonmissing owners `i,j` form a cross-star pair:
 
 1. `i` responds to the residual with a common-safe desired core
    \(D_i\subseteq W\); and
-2. `d` is a **base-response source** for `j`'s core, with a common-safe
-   desired core
-   \(C_d\subseteq A_j\).
+2. `d` is a **base-response source** for `j`'s core.  By common-safe target
+   response rigidity, its desired response is the whole core:
+   \(C_d=A_j\).
 
 The indices are genuinely crossed: `i != j`.  The aligned case `i=j` is
 already handled by the monotone recapture lemma.
@@ -30,15 +30,14 @@ Define
 
 \[
  Z'_i=D_i,
- \qquad Z'_d=C_d,
+ \qquad Z'_d=A_j,
  \qquad Z'_k=A_k\quad(k\notin\{d,i,j\}),                 \tag{1}
 \]
 
 and give the new residual
 
 \[
- W'=(W\setminus D_i)\mathbin{\dot\cup}A_i
-       \mathbin{\dot\cup}(A_j\setminus C_d)             \tag{2}
+ W'=(W\setminus D_i)\mathbin{\dot\cup}A_i.              \tag{2}
 \]
 
 to owner `j`.
@@ -100,6 +99,11 @@ They are the two edges of an alternating path through the unmatched target
 owner-union residual produced by that augmentation.  This is the operation
 missing from aligned recapture: a disjoint response/core wall should move
 the matching hole, not be treated as a scalar contradiction.
+
+Whole-target rigidity is important for recurrence: core-side pivots move an
+intact common-safe core, while only the residual-side response `D_i` can
+discard goods.  Thus later support overlap must be traced through the
+residual side or through the return of the same whole core.
 
 ## New terminal boundary
 

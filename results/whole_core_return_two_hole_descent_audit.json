@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "cap-free priority-valid whole-core descent to the classified two-hole boundary; rank-one and residual-side termination are open",
+  "provenance": {
+    "script": "tracks/parkability/audit_whole_core_return_two_hole_descent.py",
+    "script_sha256": "179f22bc4d6bc0a59b1f1b0d5e716470b232e807adcc6a08cb12d028d5c731e8",
+    "theorem": "results/WHOLE_CORE_RETURN_TWO_HOLE_DESCENT_LEMMA_20260811.md",
+    "theorem_sha256": "21289ea073906ff40ccf04403e0001b7adca5903e794348e2db28f960cdf0daf"
+  },
+  "scalar_records": {
+    "common_safe_response_is_whole_core": "unsat",
+    "nonroot_release_preserves_root_priority": "unsat",
+    "strong_envy_trial_has_strict_old_hole_gain": "unsat"
+  },
+  "schema": "whole-core-return-two-hole-descent-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_partition": [
+    {
+      "destination": "fixed_source_1",
+      "origin": "fixed_core_1"
+    },
+    {
+      "destination": "fixed_source_2",
+      "origin": "fixed_core_2"
+    },
+    {
+      "destination": "two_hole_pool",
+      "origin": "A_j"
+    },
+    {
+      "destination": "two_hole_pool",
+      "origin": "W"
+    }
+  ],
+  "support_partition_valid": true,
+  "two_by_two_relation_count": 16,
+  "two_by_two_uncovered_count": 0
+}

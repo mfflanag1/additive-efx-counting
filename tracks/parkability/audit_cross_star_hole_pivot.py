@@ -27,14 +27,13 @@ def check_unsat(*constraints) -> str:
 
 
 def run(root: Path) -> dict:
-    # Exhaust the membership types of one arbitrary good.  Disjointness of
-    # W,A_i,A_j and the untouched cores leaves exactly these six cases.
+    # Exhaust the membership types of one arbitrary good.  Whole-target
+    # response rigidity sends every A_j good to d, leaving five cases.
     support_cases = []
     for origin, selected in (
         ("W", False),
         ("W", True),
         ("A_i", False),
-        ("A_j", False),
         ("A_j", True),
         ("A_k", False),
     ):
@@ -46,7 +45,6 @@ def run(root: Path) -> dict:
         if (
             (origin == "W" and not selected)
             or origin == "A_i"
-            or (origin == "A_j" and not selected)
         ):
             destinations.append("j")
         if origin == "A_k":
@@ -57,7 +55,17 @@ def run(root: Path) -> dict:
             "selected_into_response_core": selected,
             "destination": destinations[0],
         })
-    set_partition_valid = len(support_cases) == 6
+    set_partition_valid = len(support_cases) == 5
+
+    desired, deletion, threshold, response_base = z3.Reals(
+        "desired_subset containing_deletion threshold response_base"
+    )
+    whole_core_response_rigidity = check_unsat(
+        desired <= deletion,
+        deletion <= threshold,
+        threshold <= response_base,
+        desired > response_base,
+    )
 
     envied_core_owner = "c"
     base = {agent: z3.Real(f"base_{agent}") for agent in AGENTS}
@@ -133,6 +141,7 @@ def run(root: Path) -> dict:
         "solver": f"Z3 {z3.get_version_string()}",
         "set_partition_valid": set_partition_valid,
         "set_partition_membership_cases": support_cases,
+        "whole_core_response_rigidity": whole_core_response_rigidity,
         "wall_localization": {
             "represented_source_to_selected_core_impossible": represented_to_core,
             "missing_owner_to_own_residual_impossible": missing_to_self,

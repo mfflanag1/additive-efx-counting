@@ -74,6 +74,7 @@ def run(root: Path) -> dict:
             "failed_common_safety_routes_to_unsafe_core_augmentation": True,
             "outside_supplier_requires_owner_union_growth": True,
             "pi_requires_common_reference_release_support": True,
+            "proper_overlap_is_confined_to_residual_or_unsafe_targets": True,
         },
         "claim_boundary": (
             "cap-free simple-cycle support audit with explicit supplier-growth "

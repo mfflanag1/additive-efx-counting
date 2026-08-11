@@ -1,0 +1,43 @@
+{
+  "claim_boundary": "cap-free whole-target response rigidity and simplified pivot support; residual-side recurrence termination is not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_common_safe_target_response_rigidity.py",
+    "script_sha256": "250772386b839668202f53169b91cd8f571217f0126b1123c7adaccc2dc51016",
+    "theorem": "results/COMMON_SAFE_TARGET_RESPONSE_RIGIDITY_LEMMA_20260811.md",
+    "theorem_sha256": "b14aa757fd7bffd9242c8f1e2db0ff32c839baffe39127b9830c1cfa5a7cb5f9"
+  },
+  "scalar_records": {
+    "proper_desired_subset_of_common_safe_target_impossible": "unsat"
+  },
+  "schema": "common-safe-target-response-rigidity-audit-v1",
+  "simplified_pivot_partition_valid": true,
+  "simplified_pivot_support": [
+    {
+      "destination": "j",
+      "origin": "W",
+      "selected_into_residual_response": false
+    },
+    {
+      "destination": "i",
+      "origin": "W",
+      "selected_into_residual_response": true
+    },
+    {
+      "destination": "j",
+      "origin": "A_i",
+      "selected_into_residual_response": false
+    },
+    {
+      "destination": "d",
+      "origin": "A_j",
+      "selected_into_residual_response": false
+    },
+    {
+      "destination": "k",
+      "origin": "A_k",
+      "selected_into_residual_response": false
+    }
+  ],
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED"
+}

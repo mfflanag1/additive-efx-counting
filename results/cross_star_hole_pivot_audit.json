@@ -6,9 +6,9 @@
   },
   "provenance": {
     "script": "tracks/parkability/audit_cross_star_hole_pivot.py",
-    "script_sha256": "ac86ef6f86dadd9c5fe51eed5bff177ff7aab4681e8c2d1b3f03f009ab47edcd",
+    "script_sha256": "28a20f9d91ce44e16728ce6976e7dff747c2d80bc1b297ee80cf6213ae69ae71",
     "theorem": "results/CROSS_STAR_HOLE_PIVOT_LEMMA_20260811.md",
-    "theorem_sha256": "82a7ab8f72477b79cba5dcc83d90dde466c54249869cfd96c6f387993ddf2ce7"
+    "theorem_sha256": "5bab146514b8d96bf0bf9f72a1e21dbed0903b85a794b008d06e7a441c2cda63"
   },
   "schema": "cross-star-hole-pivot-audit-v1",
   "set_partition_membership_cases": [
@@ -25,11 +25,6 @@
     {
       "destination": "j",
       "origin": "A_i",
-      "selected_into_response_core": false
-    },
-    {
-      "destination": "j",
-      "origin": "A_j",
       "selected_into_response_core": false
     },
     {
@@ -54,5 +49,6 @@
       "represented_source_to_residual"
     ],
     "represented_source_to_selected_core_impossible": "unsat"
-  }
+  },
+  "whole_core_response_rigidity": "unsat"
 }

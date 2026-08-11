@@ -1173,6 +1173,21 @@ both encodings.
 - [`cross_star_hole_pivot_audit.json`](cross_star_hole_pivot_audit.json)
   — dual-version replay of the pivot's set partition, wall localization,
   priority split, and source-inactive loss band.
+- [`COMMON_SAFE_TARGET_RESPONSE_RIGIDITY_LEMMA_20260811.md`](COMMON_SAFE_TARGET_RESPONSE_RIGIDITY_LEMMA_20260811.md)
+  — proves that every strict base-response contained in a common-safe target
+  is the whole target. Consequently a cross-star pivot moves its core side
+  intact; all proper-subset support evolution occurs on the residual side.
+- [`common_safe_target_response_rigidity_audit.json`](common_safe_target_response_rigidity_audit.json)
+  — dual-version replay of the proper-subset contradiction and simplified
+  five-case pivot support partition.
+- [`WHOLE_CORE_RETURN_TWO_HOLE_DESCENT_LEMMA_20260811.md`](WHOLE_CORE_RETURN_TWO_HOLE_DESCENT_LEMMA_20260811.md)
+  — replaces every priority-valid base-active nonroot core pivot by cap-free
+  rank descent. Releasing the whole core with the residual gives two holes,
+  strictly improves the old hole, and enters the fully classified 2-by-2
+  response boundary. Core-side hole recurrence is thereby eliminated.
+- [`whole_core_return_two_hole_descent_audit.json`](whole_core_return_two_hole_descent_audit.json)
+  — dual-version replay of response rigidity, strict inherited gain,
+  priority preservation, support partition, and the 16-relation continuation.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow

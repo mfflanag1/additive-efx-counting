@@ -752,7 +752,7 @@ def main():
     root_selector_theorem = (
         ROOT / "results" / "ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md"
     ).read_text()
-    assert "root-critical polarity" in root_selector_theorem
+    assert "root-critical compensator chain" in root_selector_theorem.replace("\n", " ")
     normal_form = run_two_by_two_normal_form_audit(ROOT)
     assert normal_form["status"] == "ALL_EXHAUSTED"
     assert normal_form["uncovered_pair_count"] == 0

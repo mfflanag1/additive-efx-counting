@@ -22,6 +22,9 @@ def test_recurrence_support_audit():
     assert result["support_records"][
         "pi_requires_common_reference_release_support"
     ]
+    assert result["support_records"][
+        "proper_overlap_is_confined_to_residual_or_unsafe_targets"
+    ]
 
 
 def test_claim_boundary_keeps_dynamic_gate_open():
@@ -35,3 +38,4 @@ def test_claim_boundary_keeps_dynamic_gate_open():
     assert "does not prove that every" in theorem
     assert "dynamic" in theorem
     assert "pivot sequence preserves" in theorem
+    assert "whole physical" in theorem

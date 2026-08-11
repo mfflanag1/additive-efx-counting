@@ -27,6 +27,14 @@ chosen from the `T_t` need not be physically disjoint.  This is the only
 support issue preventing the owner cycle (1) from immediately being a PI
 component.
 
+The common-safe target response-rigidity lemma sharpens where this support
+issue can arise.  Every response into a selected common-safe core is the
+whole target, so a core-side hole pivot moves an intact core.  Proper-subset
+overlap can only be created by a response extracted from an evolving
+residual or by an unsafe-core augmentation.  A recurrence overlap involving
+only core-side edges is therefore the return of the same whole physical
+core, not two independently truncated versions of it.
+
 ## Disjoint-core exploration
 
 Process the edges of (1) in cyclic order.  After choosing pairwise-disjoint
@@ -119,8 +127,8 @@ use different valuation rows.
 This lemma proves disjoint PI closure or strict supplier growth,
 unsafe-core augmentation, or an exact strict overlap certificate for every
 simple repeated-hole owner cycle.  It does not prove that every dynamic
-pivot sequence preserves the same target packets, close the response
-relation after owner-union growth, terminate repeated unsafe-core
-augmentations, reverse the hitting-set polarity, eliminate a
+pivot sequence preserves the same residual-side target packets, close the
+response relation after owner-union growth, terminate repeated unsafe-core
+augmentations, reverse the residual-side hitting-set polarity, eliminate a
 source-inactive loss band, close `GG`, or prove four-agent/general additive
 EFX.
