@@ -1,0 +1,56 @@
+{
+  "claim_boundary": "cap-free sufficient-condition lemma with two exact exemplars; terminal-polarity packet selection is not proved",
+  "profile_records": [
+    {
+      "changed_owners": [
+        "r",
+        "c"
+      ],
+      "connected": true,
+      "escape": "two_external_weighted_hall_hardened_countermodel_escape.json",
+      "escape_sha256": "0a5a703b8625e74e4e7815957a514220816eba7633e85a7cfc3f0219a5c09785",
+      "external_safety_failures": [],
+      "lex_endpoint": true,
+      "paid_non_source": {
+        "r": true
+      },
+      "path_source": "c",
+      "signature": "c->r:1",
+      "source": "two_external_weighted_hall_hardened_countermodel.json",
+      "source_direct_efx": true,
+      "source_sha256": "ac42cf5812b8916b91900daf3b094105b4928aced983cc713252520a464862ff"
+    },
+    {
+      "changed_owners": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "escape": "two_external_weighted_hall_radius2_hardened_countermodel_escape.json",
+      "escape_sha256": "4820631adb841aeff67cde31852579d93a175ff16f386930a623dd77aa26e516",
+      "external_safety_failures": [],
+      "lex_endpoint": true,
+      "paid_non_source": {
+        "c": true,
+        "r": true
+      },
+      "path_source": "q",
+      "signature": "q->r:1;r->c:2",
+      "source": "two_external_weighted_hall_radius2_hardened_countermodel.json",
+      "source_direct_efx": true,
+      "source_sha256": "f226051925264a3de00ea3e5319d948fda49b3dada8b2fbbcadbf114f9f4f5a8"
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_externally_safe_connected_path_transfer.py",
+    "script_sha256": "6725836e069dac362495787a3bf4dc470c14eaf2ab18ff01203870195a751182",
+    "theorem": "results/EXTERNALLY_SAFE_CONNECTED_PATH_TRANSFER_LEMMA_20260811.md",
+    "theorem_sha256": "899dc435423ddbca93ae9f8bb339fe0b8ada8be4ccfb8cbbc3f0a3672af56c4a"
+  },
+  "scalar_records": {
+    "external_safety_lifts_through_weak_payment": "unsat"
+  },
+  "schema": "externally-safe-connected-path-transfer-audit-v1",
+  "status": "ALL_FORCED"
+}

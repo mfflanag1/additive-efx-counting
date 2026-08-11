@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "cap-free one-edge global blocker localization; compensating-packet selection and dependency-path termination are not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_donation_global_blocker.py",
+    "script_sha256": "2468bfc59b931b2ea0a6f98ff2476c6cae4df32e60852451fa8e50e3988282e5",
+    "theorem": "results/ROOT_DONATION_GLOBAL_BLOCKER_LEMMA_20260811.md",
+    "theorem_sha256": "6c832bfb9b88249806926c8cf67712c8aa06ce9e8938783b42f5f07c02a2cfa7"
+  },
+  "scalar_records": {
+    "donor_charity_failure_exhausts_slack": "unsat",
+    "donor_unchanged_target_exhausts_slack": "unsat",
+    "unchanged_observer_sees_strict_root_threshold_increase": "unsat"
+  },
+  "schema": "root-donation-global-blocker-audit-v1",
+  "status": "ALL_FORCED",
+  "wall_localization": {
+    "donor_targets": [
+      "enlarged_root",
+      "unchanged_owner",
+      "charity"
+    ],
+    "root_observer_failure": "impossible",
+    "unchanged_observer_targets": [
+      "enlarged_root_only"
+    ]
+  }
+}
