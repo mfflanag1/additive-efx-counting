@@ -1,0 +1,30 @@
+{
+  "all_two_owner_pool_partitions_checked": 966,
+  "at_most_one_nontrivial_transfer_component": true,
+  "bilateral_partitions_checked": 114,
+  "charity_exchange_conservation": true,
+  "charity_exchange_partitions_checked": 399,
+  "claim_boundary": "two-owner-plus-charity exhaustion only; mixed-margin closure and EFX remain open",
+  "core_partition_conservation": true,
+  "failure_excludes_pool": "every partition of Y_t disjoint-union Y_s disjoint-union P",
+  "final_charity_singleton": true,
+  "initial_final_transfer_pairs_checked": 57099,
+  "provenance": {
+    "script": "tracks/parkability/audit_source_bundle_charity_complement_exchange_selector.py",
+    "script_sha256": "0754f1882e5f31c17907bb1cebabfca78192cbfdcce9e28632f1c355c13fff93",
+    "theorem": "results/SOURCE_BUNDLE_CHARITY_COMPLEMENT_EXCHANGE_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "995b6b8177603abfefb4f08a75374a186fb1f933888c944da8f8d884062a4c19"
+  },
+  "remaining_gate": "force one of the three outside-pool progress operations or realize the separator at a globally maximal GG state",
+  "schema": "source-bundle-charity-complement-exchange-selector-audit-v1",
+  "smallest_remaining_operations": [
+    "third-owner signed-transfer packet",
+    "decorated source or root change",
+    "decorated core replacement"
+  ],
+  "status": "ALL_EXHAUSTED",
+  "symbolic_checks": {
+    "candidate_success_or_named_floor_failure": "unsat",
+    "numeric_floors_imply_boolean_feasibility": "unsat"
+  }
+}

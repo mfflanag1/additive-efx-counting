@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "nonowner debt only; target-owner payment, mixed-margin closure, and EFX remain open",
+  "excluded_roles": [
+    "decorated target owner",
+    "decorated source"
+  ],
+  "outcomes": [
+    "released own residual pays decorated debt",
+    "unsafe enlarged target gives current-response augmentation",
+    "old incoming core gives self-response PI, support growth, or augmentation"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_mixed_margin_nonowner_residual_or_self_response.py",
+    "script_sha256": "4bb46a04030116a05171827aeacd46598af2604a7d61e3647fa50b7f2448a6a3",
+    "theorem": "results/MIXED_MARGIN_NONOWNER_RESIDUAL_OR_SELF_RESPONSE_LEMMA_20260811.md",
+    "theorem_sha256": "8e17f852136498da970908791fb39efea46db85d6cdc8565f63368f8493f971a"
+  },
+  "remaining_gate": "decorated-target-owner complement-return selector",
+  "schema": "mixed-margin-nonowner-residual-or-self-response-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "failed_residual_forces_incoming_core_order": "unsat",
+    "incoming_core_becomes_base_response": "unsat",
+    "released_residual_payment_covers_debt": "unsat"
+  }
+}

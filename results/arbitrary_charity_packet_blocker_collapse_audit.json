@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "arbitrary charity safety only; mixed owner-target payment, repeated-support GG, and EFX remain open",
+  "connected_exchange": true,
+  "conservation": "owner loses parked singleton and receives the entire old charity packet",
+  "final_charity_is_singleton": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_arbitrary_charity_packet_blocker_collapse.py",
+    "script_sha256": "4f5195e69b0904db75d18d26286d28b9707d1c84d4b053a4baf2844c8b6c20e8",
+    "theorem": "results/ARBITRARY_CHARITY_PACKET_BLOCKER_COLLAPSE_LEMMA_20260811.md",
+    "theorem_sha256": "561861279e6d0bd93bbef79b24afcdf2aff67758b25d17d0a2e8453bcd711c5f"
+  },
+  "remaining_gate": "owner-target direct-floor payment after a decorated-target trim",
+  "schema": "arbitrary-charity-packet-blocker-collapse-audit-v1",
+  "singleton_walk_dependency": {
+    "audit": "results/charity_blocker_exchange_walk_audit.json",
+    "audit_sha256": "c7ea84c0455a033c4dc7e0b31adc0135ac2eff63d772eca5e29be08ffdd43898",
+    "audit_status": "ALL_FORCED",
+    "theorem": "results/CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md",
+    "theorem_sha256": "cbf67334b4ae5a2577aee93cf3a086866cfc89864bb0d73a034e994c21bbf99e"
+  },
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "exchange_utility_identity": "unsat",
+    "other_owner_unchanged": "unsat",
+    "unsafe_packet_strictly_improves_blocker": "unsat"
+  }
+}

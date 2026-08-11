@@ -1,0 +1,25 @@
+{
+  "claim_boundary": "direct-safe subbundle selector only; critical-top-up substitution, mixed-margin closure, and EFX remain open",
+  "critical_set_records": 77700,
+  "minimal_feasible_sets_every_good_critical": true,
+  "outcomes": [
+    "partial EFX lex endpoint",
+    "permanent current-response or release augmentation",
+    "exact old response plus nonempty target-owner-critical top-up packet"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_direct_safe_target_subbundle_or_critical_topup.py",
+    "script_sha256": "e53ab446cbcafb187303bc77853bafc9a7ef749b445cd21ac9ab8aab31d62ed4",
+    "theorem": "results/DIRECT_SAFE_TARGET_SUBBUNDLE_OR_CRITICAL_TOPUP_LEMMA_20260811.md",
+    "theorem_sha256": "6bbb04cab79c30c7548a8d1f889b2e832004386666c4a74741906ecb5fdeb59f"
+  },
+  "remaining_gate": "substitute or compensate the recurrent critical top-up packet using the full signed-transfer component",
+  "schema": "direct-safe-target-subbundle-or-critical-topup-audit-v1",
+  "status": "ALL_EXHAUSTED",
+  "symbolic_checks": {
+    "old_core_feasibility_is_exact_floor_test": "unsat",
+    "recurrent_old_core_below_floor": "unsat",
+    "safe_branch_other_observer": "unsat",
+    "safe_branch_target_owner_direct_floor": "unsat"
+  }
+}
