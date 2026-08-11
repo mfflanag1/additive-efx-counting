@@ -1,0 +1,30 @@
+{
+  "claim_boundary": "QF_LRA audit of root gain, maximal-frontier criticality, and blocker polarities; connected-component termination is outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_joint_packet_maximal_lex_donation_frontier.py",
+    "script_sha256": "5d5e25d71ab3c497267c71c84c2e6052395987e947a37d7036197b11827e7e92",
+    "theorem": "results/JOINT_PACKET_MAXIMAL_LEX_DONATION_FRONTIER_LEMMA_20260811.md",
+    "theorem_sha256": "c7294c9044a67c9681e7425f7397ae1ab2cab9548a8951eaa112e568b39db661",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "joint_packet_strictly_improves_root",
+      "status": "unsat"
+    },
+    {
+      "claim": "maximal_donation_marks_every_unused_good_critical",
+      "status": "unsat"
+    },
+    {
+      "claim": "external_root_wall_forces_threshold_increase",
+      "status": "unsat"
+    },
+    {
+      "claim": "external_charity_wall_forces_donation_deficit",
+      "status": "unsat"
+    }
+  ],
+  "schema": "joint-packet-maximal-lex-donation-frontier-audit-v1",
+  "status": "ALL_FORCED"
+}

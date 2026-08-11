@@ -1342,6 +1342,15 @@ both encodings.
 - [`evolved_target_minimal_source_trichotomy_audit.json`](evolved_target_minimal_source_trichotomy_audit.json)
   — symbolic replay of minimal-core safety and exhaustive source routing;
   physical release support is inherited from the prior two-root audit.
+- [`JOINT_PACKET_MAXIMAL_LEX_DONATION_FRONTIER_LEMMA_20260811.md`](JOINT_PACKET_MAXIMAL_LEX_DONATION_FRONTIER_LEMMA_20260811.md)
+  — turns the canonical joint `B_q` packet into a connected lexicographic
+  transfer beginning `q -> r` and extending to charity when its maximal
+  root donation is nonempty, while allowing the later donor to lose. The
+  frontier leaves only donor, root-target, or charity blockers and makes
+  every unused root good payment-critical.
+- [`joint_packet_maximal_lex_donation_frontier_audit.json`](joint_packet_maximal_lex_donation_frontier_audit.json)
+  — symbolic replay of root gain, maximal-donation criticality, and the
+  external target/charity blocker polarities.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
