@@ -1,0 +1,493 @@
+{
+  "candidate_allocation_count": 2514,
+  "claim_boundary": "exact structural classification of the frozen bounded 37-class lex gate; later-compatible is necessary rather than sufficient for preserving r and improving q",
+  "earlier_only_allocation_count": 1220,
+  "earlier_only_topology_class_count": 20,
+  "later_compatible_allocation_count": 1294,
+  "later_compatible_topology_class_count": 17,
+  "provenance": {
+    "script": "tracks/parkability/analyze_flexible_lex_topology_shapes.py",
+    "script_sha256": "b12ea80592dc98b6c5cbf75e644f080c1b91f4a307a6e45fb7f9bcf579c486dc",
+    "seed": "results/flexible_lex_topology_cegar_seed37.json",
+    "seed_sha256": "fbba7d07539c2cea9c36b10fc8a4a70cb90c17914e1529b3cfddb9ca84d7575b"
+  },
+  "records": [
+    {
+      "allocation_count": 12,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "_->c:1;c->_:1;c->r:1"
+    },
+    {
+      "allocation_count": 12,
+      "earliest_incoming_owner": "c",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "_->c:1;c->_:1;c->s:1"
+    },
+    {
+      "allocation_count": 6,
+      "earliest_incoming_owner": "c",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel3",
+      "signature": "_->c:1;c->_:2"
+    },
+    {
+      "allocation_count": 12,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "star3",
+      "signature": "_->c:1;c->r:1;c->s:1"
+    },
+    {
+      "allocation_count": 6,
+      "earliest_incoming_owner": "c",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "_->c:1;c->s:2"
+    },
+    {
+      "allocation_count": 12,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "_->q:1;q->_:1;q->c:1"
+    },
+    {
+      "allocation_count": 6,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "parallel3",
+      "signature": "_->q:1;q->_:2"
+    },
+    {
+      "allocation_count": 12,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "star3",
+      "signature": "_->q:1;q->c:1;q->s:1"
+    },
+    {
+      "allocation_count": 4,
+      "earliest_incoming_owner": "c",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "_->s:1;c->s:1;s->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "c->_:1;c->q:1;q->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "star3",
+      "signature": "c->_:1;c->r:1;q->c:1"
+    },
+    {
+      "allocation_count": 96,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "c->_:1;c->r:1;r->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->q:1;c->r:1;q->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->q:1;c->s:1;q->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "c->q:1;q->_:1;q->c:1"
+    },
+    {
+      "allocation_count": 16,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2",
+      "signature": "c->q:1;q->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->q:1;q->c:1;q->r:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "q",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->q:1;q->c:1;q->s:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "triangle",
+      "signature": "c->q:1;q->r:1;r->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "star3",
+      "signature": "c->r:1;c->s:1;q->c:1"
+    },
+    {
+      "allocation_count": 96,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->r:1;c->s:1;r->c:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "path3",
+      "signature": "c->r:1;q->_:1;r->_:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "path3",
+      "signature": "c->r:1;q->_:1;r->q:1"
+    },
+    {
+      "allocation_count": 16,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "path2",
+      "signature": "c->r:1;q->c:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "path3",
+      "signature": "c->r:1;q->c:1;r->_:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->r:1;q->c:1;r->c:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "triangle",
+      "signature": "c->r:1;q->c:1;r->q:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "path3",
+      "signature": "c->r:1;q->c:1;r->s:1"
+    },
+    {
+      "allocation_count": 128,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "c->r:1;q->r:1;r->c:1"
+    },
+    {
+      "allocation_count": 32,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "parallel2",
+      "signature": "c->r:1;r->c:1"
+    },
+    {
+      "allocation_count": 48,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "owners",
+      "shape": "parallel3",
+      "signature": "c->r:2;r->c:1"
+    },
+    {
+      "allocation_count": 96,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "q->c:1;q->r:1;r->q:1"
+    },
+    {
+      "allocation_count": 32,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "path2",
+      "signature": "q->r:1;r->_:1"
+    },
+    {
+      "allocation_count": 224,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "q->r:1;r->_:1;r->q:1"
+    },
+    {
+      "allocation_count": 112,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": false,
+      "scope": "charity",
+      "shape": "parallel2+pendant",
+      "signature": "q->r:1;r->_:2"
+    },
+    {
+      "allocation_count": 224,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2+pendant",
+      "signature": "q->r:1;r->c:1;r->q:1"
+    },
+    {
+      "allocation_count": 32,
+      "earliest_incoming_owner": "r",
+      "later_transfer_structurally_compatible": true,
+      "scope": "owners",
+      "shape": "parallel2",
+      "signature": "q->r:1;r->q:1"
+    }
+  ],
+  "schema": "flexible-lex-topology-shape-census-v1",
+  "status": "CLASSIFIED",
+  "summary": [
+    {
+      "allocation_count": 16,
+      "branch": "later-compatible",
+      "class_count": 1,
+      "earliest_incoming_owner": "q",
+      "scope": "owners",
+      "shape": "parallel2"
+    },
+    {
+      "allocation_count": 32,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "parallel2"
+    },
+    {
+      "allocation_count": 32,
+      "branch": "later-compatible",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "parallel2"
+    },
+    {
+      "allocation_count": 22,
+      "branch": "earlier-only",
+      "class_count": 3,
+      "earliest_incoming_owner": "c",
+      "scope": "charity",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 108,
+      "branch": "later-compatible",
+      "class_count": 3,
+      "earliest_incoming_owner": "q",
+      "scope": "charity",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 220,
+      "branch": "earlier-only",
+      "class_count": 3,
+      "earliest_incoming_owner": "r",
+      "scope": "charity",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 224,
+      "branch": "later-compatible",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "charity",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 96,
+      "branch": "later-compatible",
+      "class_count": 2,
+      "earliest_incoming_owner": "q",
+      "scope": "owners",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 352,
+      "branch": "earlier-only",
+      "class_count": 3,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 416,
+      "branch": "later-compatible",
+      "class_count": 4,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "parallel2+pendant"
+    },
+    {
+      "allocation_count": 6,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "c",
+      "scope": "charity",
+      "shape": "parallel3"
+    },
+    {
+      "allocation_count": 6,
+      "branch": "later-compatible",
+      "class_count": 1,
+      "earliest_incoming_owner": "q",
+      "scope": "charity",
+      "shape": "parallel3"
+    },
+    {
+      "allocation_count": 48,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "parallel3"
+    },
+    {
+      "allocation_count": 32,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "charity",
+      "shape": "path2"
+    },
+    {
+      "allocation_count": 16,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "path2"
+    },
+    {
+      "allocation_count": 256,
+      "branch": "earlier-only",
+      "class_count": 2,
+      "earliest_incoming_owner": "r",
+      "scope": "charity",
+      "shape": "path3"
+    },
+    {
+      "allocation_count": 128,
+      "branch": "later-compatible",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "charity",
+      "shape": "path3"
+    },
+    {
+      "allocation_count": 128,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "path3"
+    },
+    {
+      "allocation_count": 12,
+      "branch": "later-compatible",
+      "class_count": 1,
+      "earliest_incoming_owner": "q",
+      "scope": "charity",
+      "shape": "star3"
+    },
+    {
+      "allocation_count": 60,
+      "branch": "earlier-only",
+      "class_count": 2,
+      "earliest_incoming_owner": "r",
+      "scope": "charity",
+      "shape": "star3"
+    },
+    {
+      "allocation_count": 48,
+      "branch": "earlier-only",
+      "class_count": 1,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "star3"
+    },
+    {
+      "allocation_count": 256,
+      "branch": "later-compatible",
+      "class_count": 2,
+      "earliest_incoming_owner": "r",
+      "scope": "owners",
+      "shape": "triangle"
+    }
+  ],
+  "topology_class_count": 37
+}

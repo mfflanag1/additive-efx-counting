@@ -65,6 +65,38 @@ Its census replay
 verifies all 37 classes and all 2,514 allocations against the complete
 41,394-allocation universe.
 
+## Structural decomposition and live slice
+
+The exact shape census
+[`flexible_lex_topology_shape_census.json`](flexible_lex_topology_shape_census.json)
+splits the gate into two proof branches:
+
+- 17 structurally later-compatible classes containing 1,294 allocations;
+- 20 earlier-only classes containing 1,220 allocations.
+
+Here later-compatible means that `q` receives a good and `r` does not lose a
+good without receiving one.  This is necessary, not sufficient, for the
+desired `r`-preserving/`q`-improving endpoint.  In a globally lex-maximal
+state the earlier-only completions are forbidden, so the analytic task is to
+show that simultaneous failure of both branches is impossible.
+
+The cap-free early-root charity rotation lemma further narrows the live
+residual to
+
+\[
+v_r(B_r)\ge v_r(f)>v_r(B_q),
+\qquad
+v_q(B_q)>v_q(B_r).
+\]
+
+These inequalities, together with eight sound global packet-item symmetry
+cuts, define a reproducible 37-class QF_LRA export.  Z3 5.0.0 and official
+cvc5 1.3.4 both time out on a 60-second bounded replay; neither returns a
+mathematical verdict.  Exact hashes and solver provenance are recorded in
+[`flexible_lex_gate37_live_solver_portfolio.json`](flexible_lex_gate37_live_solver_portfolio.json)
+and
+[`flexible_lex_gate37_live_export.json`](flexible_lex_gate37_live_export.json).
+
 The relaxed countermodel and its exact audit are
 [`flexible_later_owner_connected_radius3_refutation.json`](flexible_later_owner_connected_radius3_refutation.json)
 and
