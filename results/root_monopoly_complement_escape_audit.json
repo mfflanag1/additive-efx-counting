@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "cap-free termination of repeated root monopoly; terminal two-row bottom-capture compensation is not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_monopoly_complement_escape.py",
+    "script_sha256": "531dec4d5beeb8f51acfb9da41f1e1cf9f95eec0413c65c86b1a7001c99ad1e2",
+    "theorem": "results/ROOT_MONOPOLY_COMPLEMENT_ESCAPE_LEMMA_20260811.md",
+    "theorem_sha256": "93e45cf3a9849550ed3fdbda639676cf6dd4cae6d2289f5d72de9ec63394761c"
+  },
+  "scalar_records": {
+    "base_efx_bounds_live_target_below_twice_root_base": "unsat",
+    "root_capture_cancels_selected_top": "unsat",
+    "terminal_core_captures_q_target_surplus": "unsat",
+    "two_disjoint_root_desired_cores_are_impossible": "unsat"
+  },
+  "schema": "root-monopoly-complement-escape-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "D_and_O_disjoint": true,
+    "D_union_O": "T_r+B_q",
+    "complement_desired_outcome": "nonroot response source restores rank two",
+    "complement_inactive_outcome": "two-row bottom-capture polarity"
+  }
+}

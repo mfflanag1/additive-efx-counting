@@ -1,0 +1,31 @@
+{
+  "claim_boundary": "cap-free rank-two-or-root-bottom-capture handoff; compensation and recurrence termination are not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_flower_rank_one_root_monopoly_handoff.py",
+    "script_sha256": "ca5779ac3bf8603f7409c7d4ae75e8c2c9bb6d0d00c0156a03bdefc38778ed30",
+    "theorem": "results/FLOWER_RANK_ONE_ROOT_MONOPOLY_HANDOFF_LEMMA_20260811.md",
+    "theorem_sha256": "e1b47a87d625c63ec7948c3ac21ca455b7180e71ba6a5703337c29dbcf64c2ba"
+  },
+  "rank_two_relation_count": 14,
+  "response_relation_count": 15,
+  "root_monopoly_relation_count": 1,
+  "scalar_records": {
+    "live_branch_forces_q_desired_disjoint_target": "unsat",
+    "root_desired_subset_forces_nonempty_bottom_capture": "unsat"
+  },
+  "schema": "flower-rank-one-root-monopoly-handoff-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "anchored_root_target": [
+      "T_q",
+      "f"
+    ],
+    "live_q_target": [
+      "T_r",
+      "B_q"
+    ],
+    "root_monopoly_capture": "nonempty subset of B_q",
+    "targets_disjoint": true
+  }
+}

@@ -1188,6 +1188,43 @@ both encodings.
 - [`whole_core_return_two_hole_descent_audit.json`](whole_core_return_two_hole_descent_audit.json)
   — dual-version replay of response rigidity, strict inherited gain,
   priority preservation, support partition, and the 16-relation continuation.
+- [`ONE_CORE_THREE_HOLE_EXTERNAL_STAR_NORMAL_FORM_20260811.md`](ONE_CORE_THREE_HOLE_EXTERNAL_STAR_NORMAL_FORM_20260811.md)
+  — applies three-agent EFX existence after a second rank descent and
+  localizes every remaining failure to a root-centered signed star.
+  Base-active reciprocal signs close by a two-owner PI component or
+  unsafe-core augmentation; inactive reciprocal signs carry an exact loss
+  band. The 64 signs split into 27 nonreciprocal and 37
+  reciprocal-containing patterns.
+- [`one_core_three_hole_external_star_normal_form_audit.json`](one_core_three_hole_external_star_normal_form_audit.json)
+  — dual-version replay of wall localization, rigidity/loss-band polarity,
+  reciprocal release support, and the complete 64-pattern split.
+- [`FLOWER_RANK_ONE_ROOT_MONOPOLY_HANDOFF_LEMMA_20260811.md`](FLOWER_RANK_ONE_ROOT_MONOPOLY_HANDOFF_LEMMA_20260811.md)
+  — uses the live mutual-edge payment polarity to produce a second target
+  `T_r+B_q`. Any nonroot response source restores rank two; the unique
+  rank-one response defect makes the root capture a nonempty packet of
+  `B_q`. Thus the generic three-hole selector is replaced by an explicit
+  flower bottom-capture handoff.
+- [`flower_rank_one_root_monopoly_handoff_audit.json`](flower_rank_one_root_monopoly_handoff_audit.json)
+  — dual-version replay of the live target inequality, all 15 nonempty
+  response-source relations, disjoint target support, and forced bottom
+  capture.
+- [`ROOT_MONOPOLY_COMPLEMENT_ESCAPE_LEMMA_20260811.md`](ROOT_MONOPOLY_COMPLEMENT_ESCAPE_LEMMA_20260811.md)
+  — terminates repeated root monopoly after one complement check. A desired
+  complement cannot again be sourced by the root because two disjoint
+  root-desired cores contradict base EFX; otherwise the first core captures
+  all of `q`'s target surplus and its `B_q` packet dominates the root's
+  omitted top plus whole bottom.
+- [`root_monopoly_complement_escape_audit.json`](root_monopoly_complement_escape_audit.json)
+  — dual-version replay of the root-row cancellation, twice-base exclusion,
+  forced nonroot complement source, and terminal `q`-surplus capture.
+- [`FLOWER_EXTERNAL_BOTTOM_EDGE_RANK_TWO_ANCHOR_LEMMA_20260811.md`](FLOWER_EXTERNAL_BOTTOM_EDGE_RANK_TWO_ANCHOR_LEMMA_20260811.md)
+  — excludes rank-one termination in `GG`. The anchored root core and the
+  known external bottom-edge core have disjoint support and distinct
+  sources, so every attempted second descent resets canonically to the
+  classified two-core/two-hole boundary.
+- [`flower_external_bottom_edge_rank_two_anchor_audit.json`](flower_external_bottom_edge_rank_two_anchor_audit.json)
+  — solver-independent replay of permanent matching, packet disjointness,
+  complete reset support, and all 16 two-hole response relations.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
