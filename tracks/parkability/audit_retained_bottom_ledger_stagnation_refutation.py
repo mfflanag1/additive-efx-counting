@@ -161,6 +161,22 @@ def run(root: Path) -> dict:
     ]
     assert is_efx(values, escape), escape_violations
     assert value(values, "r", escape["r"]) > base["r"]
+    escape_certificate = {}
+    for observer in AGENTS:
+        utility = value(values, observer, escape[observer])
+        target_thresholds = {
+            target: value(values, observer, escape[target])
+            - min((values[observer][good] for good in escape[target]), default=0)
+            for target in AGENTS if target != observer
+        }
+        escape_certificate[observer] = {
+            "base": str(base[observer]),
+            "utility": str(utility),
+            "weakly_paid": utility >= base[observer],
+            "strictly_paid": utility > base[observer],
+            "maximum_external_threshold": str(max(target_thresholds.values())),
+            "directly_efx": all(utility >= amount for amount in target_thresholds.values()),
+        }
 
     theorem = root / "results/RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md"
     script = Path(__file__).resolve()
@@ -186,6 +202,7 @@ def run(root: Path) -> dict:
         "explicit_tail_consuming_efx_escape": {
             agent: list(bundle) for agent, bundle in escape.items()
         },
+        "explicit_escape_certificate": escape_certificate,
         "claim_boundary": (
             "exact local plateau with fixed absorbed and consumed bottom support; "
             "not global lex maximality, generalized PI-freeness, GG failure, or "

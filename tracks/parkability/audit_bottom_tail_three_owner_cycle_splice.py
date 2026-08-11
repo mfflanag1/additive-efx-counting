@@ -92,6 +92,7 @@ def run(root: Path) -> dict:
         "supplier_graph_connected_when_all_three_owners_change": True,
         "generic_endpoint_check": endpoint_check,
         "exact_plateau_escape": escape,
+        "exact_plateau_escape_certificate": plateau["explicit_escape_certificate"],
         "exact_plateau_escape_is_efx": True,
         "exact_plateau_escape_root_strict_over_base": True,
         "remaining_gate": "force selector feasibility from GG inequalities",
