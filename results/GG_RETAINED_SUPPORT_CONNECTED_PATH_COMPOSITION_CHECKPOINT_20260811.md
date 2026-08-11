@@ -309,6 +309,16 @@ failed-target response augmentation cannot return to the same separator;
 see
 [`COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md`](COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md).
 
+Paid-input recompression also removes the old aggregate residual-payment
+failure.  In a minimal full four-target Hall defect, omit the current target
+of the unique missing source `d` and match the other three targets to the
+three response sources.  The compressed residual then contains all of
+`Y_d`; because the splice already paid `d`, residual payment is automatic.
+An exhaustive audit of all `2^16` response graphs finds 4,036 minimal full
+defects and verifies the prescribed omission in every one.  Only a
+represented-source recapture of the already paid residual survives; see
+[`PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md`](PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -327,7 +337,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 88 tests spanning the retained-support,
+The focused dependency replay currently passes 90 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

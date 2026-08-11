@@ -1550,6 +1550,13 @@ both encodings.
   remaining q-budget. Success pays every owner and canonically splits the
   rest between q and root; failure is the exact final two-row residual
   separator. Only observer-surplus safety and augmentation recurrence remain.
+- [`PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md`](PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md)
+  ([exhaustive Hall audit](paid_input_omitted_hole_compression_audit.json))
+  — eliminates missing-source payment failure after a paid splice. In every
+  minimal full Hall defect, omit the unique missing source's own target; the
+  residual contains that entire already-paid bundle. All 4,036 minimal
+  defects among `2^16` response graphs pass. Only represented-source
+  recapture of the paid residual remains.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
