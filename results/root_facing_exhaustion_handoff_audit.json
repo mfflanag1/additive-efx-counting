@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "cap-free root-facing split and captured-bottom handoff audit; captured-bottom compensation and recurrence are not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_facing_exhaustion_handoff.py",
+    "script_sha256": "63114e906b3ada2037b211d613215b6bca7d88b606c2e46a55bf30604c9d953e",
+    "theorem": "results/ROOT_FACING_EXHAUSTION_HANDOFF_LEMMA_20260811.md",
+    "theorem_sha256": "53f9751526c962d114c10bc6a9e5cf42162ab520a874f5ad8bc66a995cb1afe3"
+  },
+  "scalar_records": {
+    "captured_root_bottom_packet_nonempty": "unsat",
+    "charity_strictly_above_residual": "unsat",
+    "f_only_exhaustion_cancels_to_root_bound": "unsat",
+    "root_bottom_strictly_above_residual": "unsat",
+    "top_packet_enters_root_exchange": "unsat"
+  },
+  "schema": "root-facing-exhaustion-handoff-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "bottom_containment_would_imply_value_containment": true,
+    "top_containing_packet_routes_to_existing_exchange": true,
+    "top_empty_nonempty_packet_is_charity_singleton": true
+  }
+}

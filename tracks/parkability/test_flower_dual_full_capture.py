@@ -34,6 +34,18 @@ try:
     from .audit_source_inactive_core_residual_repair import (
         run as run_source_inactive_repair_audit,
     )
+    from .audit_nonroot_unconditional_recapture import (
+        run as run_unconditional_recapture_audit,
+    )
+    from .audit_root_facing_exhaustion_handoff import (
+        run as run_root_facing_handoff_audit,
+    )
+    from .audit_root_preserving_two_hole_selector import (
+        run as run_root_preserving_selector_audit,
+    )
+    from .audit_two_by_two_response_hall_normal_form import (
+        run as run_two_by_two_normal_form_audit,
+    )
     from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from .audit_maximal_replacement_frontier_exchange import (
         run as run_maximal_frontier_audit,
@@ -104,6 +116,18 @@ except ImportError:
     from audit_cross_star_hole_pivot import run as run_hole_pivot_audit
     from audit_source_inactive_core_residual_repair import (
         run as run_source_inactive_repair_audit,
+    )
+    from audit_nonroot_unconditional_recapture import (
+        run as run_unconditional_recapture_audit,
+    )
+    from audit_root_facing_exhaustion_handoff import (
+        run as run_root_facing_handoff_audit,
+    )
+    from audit_root_preserving_two_hole_selector import (
+        run as run_root_preserving_selector_audit,
+    )
+    from audit_two_by_two_response_hall_normal_form import (
+        run as run_two_by_two_normal_form_audit,
     )
     from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from audit_maximal_replacement_frontier_exchange import (
@@ -682,6 +706,62 @@ def main():
     ).read_text()
     assert "J-exhaustion is the only terminal failure" in source_inactive_theorem
     assert "two-row unanimous orientation" in source_inactive_theorem
+    unconditional_path = (
+        ROOT / "results" / "nonroot_unconditional_recapture_audit.json"
+    )
+    unconditional = json.loads(unconditional_path.read_text())
+    unconditional_replay = run_unconditional_recapture_audit(ROOT)
+    for field in (
+        "status",
+        "support_partition_valid",
+        "support_cases",
+        "scalar_records",
+        "remaining_unpaid_wall_types",
+        "claim_boundary",
+        "provenance",
+    ):
+        assert unconditional_replay[field] == unconditional[field]
+    assert set(unconditional["scalar_records"].values()) == {"unsat"}
+    unconditional_theorem = (
+        ROOT / "results" / "NONROOT_UNCONDITIONAL_RECAPTURE_LEMMA_20260811.md"
+    ).read_text()
+    assert "without any payment premise" in unconditional_theorem.replace("\n", " ")
+    assert "is no longer a terminal alternative" in unconditional_theorem
+    root_facing_path = (
+        ROOT / "results" / "root_facing_exhaustion_handoff_audit.json"
+    )
+    root_facing = json.loads(root_facing_path.read_text())
+    root_facing_replay = run_root_facing_handoff_audit(ROOT)
+    for field in (
+        "status",
+        "scalar_records",
+        "support_record",
+        "claim_boundary",
+        "provenance",
+    ):
+        assert root_facing_replay[field] == root_facing[field]
+    assert set(root_facing["scalar_records"].values()) == {"unsat"}
+    root_facing_theorem = (
+        ROOT / "results" / "ROOT_FACING_EXHAUSTION_HANDOFF_LEMMA_20260811.md"
+    ).read_text()
+    assert "f-only branch" in root_facing_theorem
+    assert "captured-bottom handoff" in root_facing_theorem
+    root_selector = run_root_preserving_selector_audit(ROOT)
+    assert root_selector["status"] == "ALL_FORCED"
+    assert set(root_selector["scalar_records"].values()) == {"unsat"}
+    root_selector_theorem = (
+        ROOT / "results" / "ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md"
+    ).read_text()
+    assert "root-critical polarity" in root_selector_theorem
+    normal_form = run_two_by_two_normal_form_audit(ROOT)
+    assert normal_form["status"] == "ALL_EXHAUSTED"
+    assert normal_form["uncovered_pair_count"] == 0
+    assert normal_form["paired_two_cycle_count"] > 0
+    normal_form_theorem = (
+        ROOT / "results" / "TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md"
+    ).read_text()
+    assert "two-owner response cycle" in normal_form_theorem
+    assert "empty-target/source-inactive form" in normal_form_theorem
     print("flower dual-full-capture theorem tests passed")
 
 

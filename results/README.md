@@ -1183,6 +1183,50 @@ both encodings.
 - [`source_inactive_core_residual_repair_audit.json`](source_inactive_core_residual_repair_audit.json)
   — dual-version support and scalar replay of repair existence, residual
   advance, old-wall preservation, and the exhaustion margin.
+- [`TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md`](TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md)
+  — converts every non-root J-exhaustion into a cap-free two-hole component.
+  A maximin divider and chooser make the two residual cells mutually EFX;
+  because the old hole strongly envied the exhausted core, both cells are
+  strictly more valuable to that hole than its previous residual. The only
+  remainder is a localized two-core/two-residual response-Hall boundary.
+- [`two_hole_cut_and_choose_response_hall_audit.json`](two_hole_cut_and_choose_response_hall_audit.json)
+  — dual-version scalar and exhaustive 2-by-2 response replay, including the
+  strict inherited maximin-potential gain.
+- [`NONROOT_UNCONDITIONAL_RECAPTURE_LEMMA_20260811.md`](NONROOT_UNCONDITIONAL_RECAPTURE_LEMMA_20260811.md)
+  — observes that a rank-three flower recapture need not preserve the
+  missing owner's base payment. Root anchoring excludes `r` as the hole, so
+  an unpaid recapture remains priority-valid and enters the sacrificed-owner
+  star machinery. This removes the strict unpayable-recapture polarity as a
+  separate terminal case.
+- [`nonroot_unconditional_recapture_audit.json`](nonroot_unconditional_recapture_audit.json)
+  — dual-version replay of recapture support, the exact payment identity,
+  priority validity, and paid/unpaid wall localization.
+- [`ROOT_FACING_EXHAUSTION_HANDOFF_LEMMA_20260811.md`](ROOT_FACING_EXHAUSTION_HANDOFF_LEMMA_20260811.md)
+  — splits the priority-invalid root-facing exhaustion. Any critical packet
+  containing a top good enters the existing top-core exchange/reset. The
+  only new survivor has critical packet `{f}`; it forces the charity and
+  the root's entire bottom packet above the residual, hence exposes a
+  nonempty root-bottom packet captured in a nonroot desired core.
+- [`root_facing_exhaustion_handoff_audit.json`](root_facing_exhaustion_handoff_audit.json)
+  — dual-version replay of the top/root factorization, f-only cancellation,
+  strict bottom polarity, and captured-bottom support.
+- [`ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md`](ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md)
+  — removes the root-facing priority exception without an item cap. A
+  root-constrained partition either makes the two holes mutually EFX or
+  identifies one least good with an exact root-critical deficit polarity.
+- [`root_preserving_two_hole_selector_audit.json`](root_preserving_two_hole_selector_audit.json)
+  — dual-version replay of root envy-freeness, selector criticality, and the
+  exact residual-deficit identity.
+- [`TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md`](TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md)
+  — classifies both residual 2-by-2 response blocks cap-free. If neither
+  block has an empty target, then either both match or their cross-block
+  edges contain a release-compatible two-owner PI cycle. Consequently the
+  only PI-free survivor is an empty-target/source-inactive wall followed by
+  a lower-dimensional pivot or repair recurrence.
+- [`two_by_two_response_hall_normal_form_audit.json`](two_by_two_response_hall_normal_form_audit.json)
+  — exhaustive replay of all 16 labeled 2-by-2 relations and all 256 paired
+  blocks; every pair is classified as a full SDR, cross-block two-cycle, or
+  empty-target survivor.
 - [`MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md`](MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md)
   — generalizes deficiency-one response compression from the all-owner case
   to every inclusion-minimal two-, three-, or four-target Hall defect. All

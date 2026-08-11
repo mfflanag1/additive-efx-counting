@@ -1,0 +1,42 @@
+{
+  "claim_boundary": "cap-free unconditional nonroot recapture audit; rank-two residual selection and terminal star recurrence are not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_nonroot_unconditional_recapture.py",
+    "script_sha256": "fa46c5ec82cddd5eba49a4e75cad5b10b7a7612735ebbcf752aae5e5ef755af1",
+    "theorem": "results/NONROOT_UNCONDITIONAL_RECAPTURE_LEMMA_20260811.md",
+    "theorem_sha256": "b9e06428d56aee8bf5207e22534d9f3514913c6209e9f651157324610169d36e"
+  },
+  "remaining_unpaid_wall_types": [
+    "missing_owner_to_selected_core",
+    "represented_source_to_residual"
+  ],
+  "scalar_records": {
+    "external_hole_flexible_priority": "unsat",
+    "missing_owner_to_own_residual_impossible": "unsat",
+    "payment_identity": "unsat",
+    "q_hole_r_first_priority": "unsat",
+    "represented_source_to_core_impossible": "unsat"
+  },
+  "schema": "nonroot-unconditional-recapture-audit-v1",
+  "solver": "Z3 4.15.3",
+  "status": "ALL_FORCED",
+  "support_cases": [
+    {
+      "destination": "new_residual",
+      "origin": "A_i"
+    },
+    {
+      "destination": "new_residual",
+      "origin": "W\\D_i"
+    },
+    {
+      "destination": "source_i",
+      "origin": "D_i"
+    },
+    {
+      "destination": "same_source",
+      "origin": "other_core"
+    }
+  ],
+  "support_partition_valid": true
+}
