@@ -1,18 +1,21 @@
 {
-  "claim_boundary": "exact graph classification only; elimination of the empty-target and common-singleton star forms is not proved",
+  "claim_boundary": "exact graph and cross-block PI classification; elimination of the surviving empty-target and lower-dimensional forms is not proved",
   "classification_counts": {
     "COMMON_SINGLETON": 2,
     "COVERING_MATCHING": 7,
     "EMPTY_TARGET": 7
   },
+  "paired_empty_target_count": 175,
   "paired_full_sdr_count": 49,
+  "paired_two_cycle_count": 175,
   "provenance": {
     "script": "tracks/parkability/audit_two_by_two_response_hall_normal_form.py",
-    "script_sha256": "2f830f66379dd3f858e7e212c3ec7f54f5760720cd5686c2b4c32ec78db8464b",
+    "script_sha256": "acff6aa236d51725bc6d59e6e9fb6bfb922d386c5b55197e93ff7a77061e5761",
     "theorem": "results/TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md",
-    "theorem_sha256": "062276100bb7d54cdb261fae4a5e1837a7a0aadfba80b331bdc8461d2a45ed27"
+    "theorem_sha256": "25559d7180d4533e7663c5bf4bcaa839eef57688e10470f19b9322bc2aa36aff"
   },
   "relation_count": 16,
   "schema": "two-by-two-response-hall-normal-form-audit-v1",
-  "status": "ALL_EXHAUSTED"
+  "status": "ALL_EXHAUSTED",
+  "uncovered_pair_count": 0
 }

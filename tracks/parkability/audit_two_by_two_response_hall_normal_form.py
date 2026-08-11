@@ -35,6 +35,15 @@ def classify(edges: set[tuple[int, int]]) -> str:
     return "COMMON_SINGLETON"
 
 
+def has_cross_block_two_cycle(
+    forward: set[tuple[int, int]], reverse: set[tuple[int, int]]
+) -> bool:
+    return any(
+        (source, target) in forward and (target, source) in reverse
+        for source, target in itertools.product(range(2), repeat=2)
+    )
+
+
 def run(root: Path) -> dict:
     universe = tuple(itertools.product(range(2), repeat=2))
     records = []
@@ -62,14 +71,34 @@ def run(root: Path) -> dict:
     }
 
     paired_full_sdr = 0
+    paired_two_cycle = 0
+    paired_empty_target = 0
+    uncovered_pairs = []
     for left in records:
         for right in records:
-            if (
+            left_edges = {tuple(edge) for edge in left["edges"]}
+            right_edges = {tuple(edge) for edge in right["edges"]}
+            full_sdr = (
                 left["classification"] == "COVERING_MATCHING"
                 and right["classification"] == "COVERING_MATCHING"
+            )
+            two_cycle = has_cross_block_two_cycle(left_edges, right_edges)
+            empty_target = (
+                left["classification"] == "EMPTY_TARGET"
+                or right["classification"] == "EMPTY_TARGET"
+            )
+            if not (full_sdr or two_cycle or empty_target):
+                uncovered_pairs.append([left["mask"], right["mask"]])
+            if (
+                full_sdr
             ):
                 paired_full_sdr += 1
+            if two_cycle:
+                paired_two_cycle += 1
+            if empty_target:
+                paired_empty_target += 1
     assert paired_full_sdr == 49
+    assert not uncovered_pairs
 
     script = Path(__file__).resolve()
     theorem = root / "results/TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md"
@@ -79,9 +108,12 @@ def run(root: Path) -> dict:
         "relation_count": len(records),
         "classification_counts": counts,
         "paired_full_sdr_count": paired_full_sdr,
+        "paired_two_cycle_count": paired_two_cycle,
+        "paired_empty_target_count": paired_empty_target,
+        "uncovered_pair_count": len(uncovered_pairs),
         "claim_boundary": (
-            "exact graph classification only; elimination of the empty-target "
-            "and common-singleton star forms is not proved"
+            "exact graph and cross-block PI classification; elimination of "
+            "the surviving empty-target and lower-dimensional forms is not proved"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

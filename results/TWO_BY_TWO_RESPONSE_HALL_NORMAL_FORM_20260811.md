@@ -2,8 +2,9 @@
 
 **Date:** 2026-08-11
 
-**Status:** exact cap-free classification; termination of the two surviving
-star forms remains open
+**Status:** exact cap-free classification and cross-block PI closure;
+termination of the surviving empty-target/lower-dimensional forms remains
+open
 
 ## Graph theorem
 
@@ -27,49 +28,73 @@ matching and nine do not.  Of the nine deficient relations, seven have an
 empty target and the remaining two are the two possible common-singleton
 stars.
 
-## Application to the two-hole state
+## Cross-block PI theorem
 
-After the two-hole selector, retain only targets participating in an actual
-EFX wall.  The wall localization gives two opposite response blocks:
+After the two-hole selector, the wall localization gives two opposite
+response blocks on the four displayed targets:
 
 - represented core sources responding to the two residual targets; and
 - the two holes responding to the two fixed core targets.
 
 If both blocks have covering matchings, their disjoint union is the
 release-compatible four-target SDR already proved by the two-hole lemma.
-If not, a deficient block has one of the following named forms.
+Suppose instead that neither block has an empty target.  Each block is then
+either matching or a common-singleton star.  If one block is deficient, let
+`u` be its common unique source.  The target owned by `u` is nonempty in the
+opposite block, so some opposite-side source `v` responds to it.  Since `u`
+responds to both opposite-side targets, it responds in particular to the
+target owned by `v`.  Hence
 
-### Empty-target form
+\[
+ u\longrightarrow v\longrightarrow u
+\]
 
-An actual wall target has no response source on the opposite side.  The
-wall is therefore source-inactive relative to that side.  For a hole
-strongly envying a core while remaining below base, this is exactly the
-strict loss-band branch of the cross-star and core/residual repair lemmas.
+is a two-owner response cycle.  Its desired cores lie in the two distinct
+owner bundles, so they are disjoint and internally supplied.  It is a
+release-compatible PI component.
 
-### Common-singleton form
+Therefore every two-hole boundary has one of three outcomes:
 
-One opposite-side source `u` responds to both wall targets and the other
-source is inactive for both.  The obstruction is a single-source,
-two-target star.  Choosing either response edge leaves the other target as
-the unique unmatched target of that block; there is no higher-rank Hall
-defect.
+1. both blocks match, giving the full four-target SDR;
+2. a cross-block two-owner response cycle gives a PI component; or
+3. at least one displayed target has empty opposite-side response
+   neighborhood.
+
+This statement exhausts all 256 ordered pairs of labeled two-by-two
+relations.  The exact audit finds no pair outside the three outcomes.
+
+## Surviving empty-target reduction
+
+If an empty target participates in an actual wall, the wall is
+source-inactive relative to the opposite side.  For a hole strongly envying
+a core while remaining below base, this is exactly the strict loss-band
+branch of the cross-star and core/residual repair lemmas.
+
+If the empty target participates in no wall, it is already irrelevant to
+the EFX obstruction and can be deleted from the response boundary.  What
+remains is a lower-dimensional aligned or disjoint star.  The aligned case
+enters recapture; a source-active disjoint pair enters the cross-star hole
+pivot; a source-inactive pair enters the repair chain.
 
 Thus the two-hole conversion reduces every PI-free non-EFX survivor to a
-source-inactive wall or a single-source two-target star, possibly together
-with the root-critical polarity produced by the root-preserving selector.
+source-inactive wall or a lower-dimensional pivot/recurrence, possibly
+together with the root-critical polarity produced by the root-preserving
+selector.  The full single-source two-target star cannot survive on its own.
 
 ## Why this is not yet closure
 
 The graph theorem supplies no inequality reversing a source-inactive loss
-band, and the common-singleton star may choose different desired subsets in
-its two targets.  A valid termination proof must use one of the flower's
-global facts—minimal payment, root criticality, lexicographic maximality, or
-generalized PI-freeness—to turn the named inactive source into a connected
-transfer or to make a revisited star close a response cycle.
+band and does not itself terminate the lower-dimensional hole pivot.  A
+valid termination proof must use one of the flower's global facts—minimal
+payment, root criticality, lexicographic maximality, or generalized
+PI-freeness—to turn the named inactive source into a connected transfer or
+to make a revisit close a response cycle.
 
 ## Claim boundary
 
-This result completely classifies the residual 2-by-2 Hall combinatorics.
-It does not eliminate either normal form, prove recurrence termination,
-convert the root-critical polarity into a contradiction, close `GG`, or
-prove four-agent/general additive EFX.
+This result completely classifies the residual 2-by-2 Hall combinatorics and
+eliminates the common-singleton star by a release-compatible PI cycle.  It
+does not eliminate the empty-target/source-inactive form, terminate the
+lower-dimensional pivot, prove recurrence termination, convert the
+root-critical polarity into a contradiction, close `GG`, or prove
+four-agent/general additive EFX.

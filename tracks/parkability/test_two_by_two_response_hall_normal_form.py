@@ -21,12 +21,15 @@ def test_two_by_two_hall_normal_form_is_exhaustive():
         "COMMON_SINGLETON": 2,
     }
     assert result["paired_full_sdr_count"] == 49
+    assert result["paired_two_cycle_count"] > 0
+    assert result["uncovered_pair_count"] == 0
 
 
 def test_claim_boundary_keeps_star_elimination_open():
     theorem = (
         ROOT / "results/TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md"
     ).read_text()
-    assert "single-source" in theorem
-    assert "two-target star" in theorem
-    assert "does not eliminate either normal form" in theorem
+    assert "two-owner response cycle" in theorem
+    assert "single-source two-target star" in theorem
+    assert "does not eliminate the empty-target" in theorem
+    assert "lower-dimensional pivot" in theorem
