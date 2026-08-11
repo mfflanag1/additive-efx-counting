@@ -1,0 +1,34 @@
+{
+  "claim_boundary": "QF_LRA audit of connected rerouting support, owner payment, and target-wall polarities; sacrificed-owner Hall termination is outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_joint_packet_external_sink_rerouting.py",
+    "script_sha256": "a81e9c12b17af2f56a21c33d6527883f767f064a99d8ff4963997639a5537968",
+    "theorem": "results/JOINT_PACKET_EXTERNAL_SINK_REROUTING_LEMMA_20260811.md",
+    "theorem_sha256": "06e730ea70f93690da7ee3c3ce8452e37a1266c298ef07aac61170a9249562f3",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "rerouting_conserves_owner_pool",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_strictly_improves",
+      "status": "unsat"
+    },
+    {
+      "claim": "external_sink_strictly_improves",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_target_wall_forces_threshold_increase",
+      "status": "unsat"
+    },
+    {
+      "claim": "sink_target_wall_forces_threshold_increase",
+      "status": "unsat"
+    }
+  ],
+  "schema": "joint-packet-external-sink-rerouting-audit-v1",
+  "status": "ALL_FORCED"
+}

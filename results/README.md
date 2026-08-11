@@ -1359,6 +1359,14 @@ both encodings.
 - [`joint_packet_bilateral_or_lex_donation_selector_audit.json`](joint_packet_bilateral_or_lex_donation_selector_audit.json)
   — symbolic replay of bilateral payment and global maximum-failure
   propagation.
+- [`JOINT_PACKET_EXTERNAL_SINK_REROUTING_LEMMA_20260811.md`](JOINT_PACKET_EXTERNAL_SINK_REROUTING_LEMMA_20260811.md)
+  — reroutes a nonempty root-affordable packet to either external owner,
+  producing the cap-free connected path `q -> r -> external` required by
+  the hardened profiles. Every non-donor wall is localized to the root or
+  sink target and enters sacrificed-owner response compression.
+- [`joint_packet_external_sink_rerouting_audit.json`](joint_packet_external_sink_rerouting_audit.json)
+  — symbolic replay of connected support, root/sink improvement, and both
+  target-threshold polarities.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
