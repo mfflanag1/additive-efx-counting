@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "QF_LRA audit of bilateral owner payment and extremal failure propagation; donor/external blocker termination is outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_joint_packet_bilateral_or_lex_donation_selector.py",
+    "script_sha256": "cd5a6013d86d5eeb2f1bd504a3721297bac2f3e2437dd1b3d8c4fe54658f7715",
+    "theorem": "results/JOINT_PACKET_BILATERAL_OR_LEX_DONATION_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "5880c7a1c3f313c1346d6b05f6f854fd77b11b7df26801343dec1f2cf144b11c",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "bilateral_exchange_strictly_improves_root",
+      "status": "unsat"
+    },
+    {
+      "claim": "paying_exchange_keeps_q_nonworse",
+      "status": "unsat"
+    },
+    {
+      "claim": "maximum_failure_propagates_to_every_affordable_packet",
+      "status": "unsat"
+    }
+  ],
+  "schema": "joint-packet-bilateral-or-lex-donation-selector-audit-v1",
+  "status": "ALL_FORCED"
+}

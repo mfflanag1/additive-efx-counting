@@ -1351,6 +1351,14 @@ both encodings.
 - [`joint_packet_maximal_lex_donation_frontier_audit.json`](joint_packet_maximal_lex_donation_frontier_audit.json)
   — symbolic replay of root gain, maximal-donation criticality, and the
   external target/charity blocker polarities.
+- [`JOINT_PACKET_BILATERAL_OR_LEX_DONATION_SELECTOR_LEMMA_20260811.md`](JOINT_PACKET_BILATERAL_OR_LEX_DONATION_SELECTOR_LEMMA_20260811.md)
+  — first maximizes `q`-payment over every root-affordable packet. Either a
+  bilateral swap pays both mutual owners, or every root-improving exchange
+  has the same strict order in both rows, proving that the later-owner loss
+  in the connected lex donation is structurally necessary.
+- [`joint_packet_bilateral_or_lex_donation_selector_audit.json`](joint_packet_bilateral_or_lex_donation_selector_audit.json)
+  — symbolic replay of bilateral payment and global maximum-failure
+  propagation.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
