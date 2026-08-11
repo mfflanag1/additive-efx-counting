@@ -63,6 +63,7 @@ try:
     from .audit_full_reservoir_r_wall_top_capture import (
         run as run_r_wall_top_capture_audit,
     )
+    from .audit_top_core_root_exchange import run as run_top_core_exchange_audit
     from .audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -129,6 +130,7 @@ except ImportError:
     from audit_full_reservoir_r_wall_top_capture import (
         run as run_r_wall_top_capture_audit,
     )
+    from audit_top_core_root_exchange import run as run_top_core_exchange_audit
     from audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -527,6 +529,25 @@ def main():
     ).read_text()
     assert "impossible when" in r_wall_top_theorem
     assert "strict top-core inequality" in r_wall_top_theorem
+    top_core_exchange_path = (
+        ROOT / "results" / "top_core_root_exchange_audit.json"
+    )
+    top_core_exchange = json.loads(top_core_exchange_path.read_text())
+    top_core_exchange_replay = run_top_core_exchange_audit()
+    assert top_core_exchange_replay["status"] == "ALL_FORCED"
+    assert (
+        top_core_exchange_replay["scalar_records"]
+        == top_core_exchange["scalar_records"]
+    )
+    assert (
+        top_core_exchange_replay["support_record"]
+        == top_core_exchange["support_record"]
+    )
+    top_core_exchange_theorem = (
+        ROOT / "results" / "TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md"
+    ).read_text()
+    assert "deletion-minimal payment" in top_core_exchange_theorem
+    assert "critical reverse order" in top_core_exchange_theorem
     maximal_frontier_path = (
         ROOT / "results" / "maximal_replacement_frontier_exchange_audit.json"
     )

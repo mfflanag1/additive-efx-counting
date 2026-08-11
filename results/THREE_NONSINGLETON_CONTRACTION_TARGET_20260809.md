@@ -241,6 +241,14 @@ root/order selector need address only this sharply oriented top-core branch.
 See
 [`FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md`](FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md).
 
+For that top core, transfer `K_T` to `r`, give `f` to `q`, and return a
+minimal packet `P' subseteq T_r` with `q(P')+q(f)>q(K_T)`. This closes unless
+the strict critical order
+`r(P')>r(K_T)>r(B_q-K_B)+r(X_a)` holds. Hence the remaining R-side selector
+is an explicit reverse-order exchange cell with deletion-critical `P'`.
+See
+[`TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md`](TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md).
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps

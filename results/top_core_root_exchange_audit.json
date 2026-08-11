@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "QF_LRA payment existence and exact two-edge support; finite inclusion-minimal selection and reverse-order strictness are analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_top_core_root_exchange.py",
+    "script_sha256": "12ef4207691ab44963e01b2d59593cfe09baca3fcc9de61e0bf2cde262b7a3af",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "full_top_plus_floater_pays_top_core",
+      "status": "unsat"
+    }
+  ],
+  "schema": "top-core-root-exchange-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "incoming": {
+      "q": [
+        "P",
+        "f"
+      ],
+      "r": [
+        "K_T"
+      ]
+    },
+    "initially_unallocated": [
+      "f"
+    ],
+    "released": {
+      "q": [
+        "K_T"
+      ],
+      "r": [
+        "P"
+      ]
+    }
+  }
+}

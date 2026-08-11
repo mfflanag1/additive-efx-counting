@@ -973,6 +973,13 @@ both encodings.
   current strict-capture adversaries—cannot realize this wall.
 - [`full_reservoir_r_wall_top_capture_audit.json`](full_reservoir_r_wall_top_capture_audit.json)
   — dual-solver scalar replay of the strict top-capture implication.
+- [`TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md`](TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md)
+  — adaptive root/order flip for the remaining top core. Transfer `K_T` to
+  `r`, give `f` to `q`, and return a deletion-minimal `q`-payment packet
+  from `T_r`. The exchange closes unless `r` has the critical reverse order
+  `r(P')>r(K_T)>r(B_q-K_B)+r(X_a)`.
+- [`top_core_root_exchange_audit.json`](top_core_root_exchange_audit.json)
+  — dual-solver payment-existence and two-edge release-support replay.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on

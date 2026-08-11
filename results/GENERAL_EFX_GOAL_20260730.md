@@ -273,6 +273,15 @@ R-exhaustion; all current strict-capture adversaries are eliminated from
 this branch. See
 [FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md](FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md).
 
+The surviving top core now has a canonical root/order exchange. Give `K_T`
+to `r`, give `f` to `q`, and return an inclusion-minimal packet
+`P' subseteq T_r` satisfying `q(P')+q(f)>q(K_T)`. Existence is automatic.
+The exchange closes unless
+`r(P')>r(K_T)>r(B_q-K_B)+r(X_a)`; every good of `P'` is critical in `q`'s
+row. Thus the final R branch is a named two-row reverse-order cell, not a
+free packet selector. See
+[TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md](TOP_CORE_ROOT_EXCHANGE_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,
