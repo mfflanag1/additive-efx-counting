@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-11
 
-**Status:** cap-free finite repair theorem; the unanimous core-dominance
-exhaustion branch remains open
+**Status:** cap-free finite repair theorem; non-root exhaustion now converts
+to a two-hole response component, while root-facing exhaustion remains open
 
 ## Setting
 
@@ -134,10 +134,13 @@ Every two-sided compression star now has one of four outcomes:
 4. the explicit J-exhausted unanimous core-dominance state (6)--(7), or a
    priority-invalid root-facing pivot.
 
-Thus arbitrary source-inactive core walls are no longer terminal.  The
-remaining analytic target is to use the critical packet `H` in a root flip
-or owner-rooted hub split, and to show that a revisit creates a
-release-compatible PI cycle.
+If the exhausted core source is not `r`, stop requiring that source to
+remain represented.  Keep the other two cores and repartition `A+W` between
+the old hole and the exhausted source by the two-hole cut-and-choose lemma.
+This converts J-exhaustion into a cap-free two-core/two-residual response
+component.  The remaining analytic targets are its 2-by-2 Hall-deficient
+boundary, the root-facing case, and hole-pivot recurrence.  See
+[`TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md`](TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md).
 
 ## Verification and claim boundary
 
@@ -146,6 +149,7 @@ checks the exchange partition, nonexhaustion of the d-repair, strict
 residual-potential increase, preservation of old d-core safety, and the
 J-exhaustion margin under Z3 5.0.0 and 4.15.3.
 
-The lemma does not eliminate J-exhaustion, prove that every unsafe repaired
-core closes its new Hall boundary, eliminate a root-facing pivot, close the
-`GG` flower class, or prove four-agent additive EFX.
+The lemma and its two-hole continuation do not eliminate the resulting
+2-by-2 Hall deficiency, prove that every unsafe repaired core closes its new
+Hall boundary, eliminate root-facing exhaustion, close the `GG` flower
+class, or prove four-agent additive EFX.
