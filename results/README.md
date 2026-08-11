@@ -1403,6 +1403,11 @@ both encodings.
   response relation while a row rescaling reverses the residual comparison.
   The corrected target uses an owner-indexed normalized residual ledger and
   historical rank/supplier support; GG closure remains open.
+- [`gg_rank_reset_raw_potential_globality_gap_audit.json`](gg_rank_reset_raw_potential_globality_gap_audit.json)
+  — complete exact `5^9` allocation census of the raw-coordinate witness.
+  Its base is not globally lex maximal under any of the 24 priority orders,
+  so the witness refutes the coordinate but cannot serve as a counterexample
+  to the full GG bridge.
 - [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md)
   ([exact audit](gg_historical_support_ledger_stagnation_audit.json))
   — shows that the corrected historical ledger is nondecreasing but not a

@@ -83,6 +83,14 @@ hole-changing operation.  It is not a counterexample to GG closure: it does
 not assert global lex maximality or absence of every larger generalized PI
 component.
 
+The complete exact globality census
+[`gg_rank_reset_raw_potential_globality_gap_audit.json`](gg_rank_reset_raw_potential_globality_gap_audit.json)
+checks all `5^9` allocations, including charity, and all 24 priority orders.
+There are 4,126 EFX-with-charity allocations, and the displayed base is not
+globally lex maximal under any priority.  Thus this witness cannot be promoted
+to a counterexample to the full GG bridge; its valid claim is exactly the
+scale obstruction to the raw cross-owner coordinate.
+
 ## Smallest viable repair
 
 Two changes are forced rather than optional.
