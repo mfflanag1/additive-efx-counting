@@ -22,8 +22,8 @@ def checked(name: str, constraints) -> dict:
 
 
 def run(root: Path) -> dict:
-    root_base, packet, donation, good, root_new = z3.Reals(
-        "root_base packet donation good root_new"
+    root_base, packet, donation, good, root_new, root_floater = z3.Reals(
+        "root_base packet donation good root_new root_floater"
     )
     old_threshold, new_threshold, owner_base = z3.Reals(
         "old_threshold new_threshold owner_base"
@@ -34,19 +34,46 @@ def run(root: Path) -> dict:
         packet > 0,
         donation >= 0,
         good > 0,
+        root_floater > 0,
         owner_base > 0,
         floater > 0,
         external_donation >= 0,
     ]
     records = [
         checked(
+            "empty_donation_is_root_charity_feasible",
+            positive + [root_base >= root_floater, root_base + packet < root_floater],
+        ),
+        checked(
             "joint_packet_strictly_improves_root",
             positive
             + [packet > donation, root_new == root_base - donation + packet, root_new <= root_base],
         ),
         checked(
-            "maximal_donation_marks_every_unused_good_critical",
-            positive + [donation + good > packet, donation + good <= packet],
+            "selected_root_dominates_enlarged_charity",
+            positive
+            + [
+                root_new == root_base - donation + packet,
+                root_new >= root_floater + donation,
+                root_new < root_floater + donation,
+            ],
+        ),
+        checked(
+            "maximality_forces_gain_or_charity_criticality",
+            positive
+            + [
+                z3.Not(
+                    z3.And(
+                        donation + good < packet,
+                        root_base - donation - good + packet
+                        >= root_floater + donation + good,
+                    )
+                ),
+                donation + good <= packet,
+                donation + good != packet,
+                root_base - donation - good + packet
+                >= root_floater + donation + good,
+            ],
         ),
         checked(
             "external_root_wall_forces_threshold_increase",
@@ -66,8 +93,9 @@ def run(root: Path) -> dict:
         "status": "ALL_FORCED" if all(r["status"] == "unsat" for r in records) else "OPEN",
         "records": records,
         "claim_boundary": (
-            "QF_LRA audit of root gain, maximal-frontier criticality, and blocker "
-            "polarities; connected-component termination is outside scope"
+            "QF_LRA audit of constrained-frontier feasibility, root gain, "
+            "maximality criticality, and blocker polarities; connected-component "
+            "termination is outside scope"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

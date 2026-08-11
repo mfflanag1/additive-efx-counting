@@ -1,19 +1,27 @@
 {
-  "claim_boundary": "QF_LRA audit of root gain, maximal-frontier criticality, and blocker polarities; connected-component termination is outside scope",
+  "claim_boundary": "QF_LRA audit of constrained-frontier feasibility, root gain, maximality criticality, and blocker polarities; connected-component termination is outside scope",
   "provenance": {
     "script": "tracks/parkability/audit_joint_packet_maximal_lex_donation_frontier.py",
-    "script_sha256": "5d5e25d71ab3c497267c71c84c2e6052395987e947a37d7036197b11827e7e92",
+    "script_sha256": "50dafffe81be7ea32485205779608968cfb9d32493c783de6f486e9dfa02e138",
     "theorem": "results/JOINT_PACKET_MAXIMAL_LEX_DONATION_FRONTIER_LEMMA_20260811.md",
-    "theorem_sha256": "c7294c9044a67c9681e7425f7397ae1ab2cab9548a8951eaa112e568b39db661",
+    "theorem_sha256": "32789e055325842dad7d8bca7f852858f3dbebcaeeefa6f4f7e94a9ad5c25fab",
     "z3_version": "5.0.0"
   },
   "records": [
+    {
+      "claim": "empty_donation_is_root_charity_feasible",
+      "status": "unsat"
+    },
     {
       "claim": "joint_packet_strictly_improves_root",
       "status": "unsat"
     },
     {
-      "claim": "maximal_donation_marks_every_unused_good_critical",
+      "claim": "selected_root_dominates_enlarged_charity",
+      "status": "unsat"
+    },
+    {
+      "claim": "maximality_forces_gain_or_charity_criticality",
       "status": "unsat"
     },
     {
