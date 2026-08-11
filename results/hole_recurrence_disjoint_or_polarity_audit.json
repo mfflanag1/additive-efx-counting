@@ -1,0 +1,94 @@
+{
+  "claim_boundary": "cap-free simple-cycle support audit; dynamic target persistence and termination after unsafe-core augmentation or overlap polarity are not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_hole_recurrence_disjoint_or_polarity.py",
+    "script_sha256": "ac3bd53303cf63ca6433999245039b8225f2daf3f399ef66cb30de430bde1ea1",
+    "theorem": "results/HOLE_RECURRENCE_DISJOINT_OR_POLARITY_LEMMA_20260811.md",
+    "theorem_sha256": "f05b363462d8d606bec2b3ec00aa8b01dc68a56fac395dd3c1beca4d065787ed"
+  },
+  "scalar_records": {
+    "failed_disjoint_response_forces_hitting_set_polarity": "unsat",
+    "shared_minimal_core_good_is_critical": "unsat"
+  },
+  "schema": "hole-recurrence-disjoint-or-polarity-audit-v1",
+  "simple_cycle_records": [
+    {
+      "edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "c"
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "edges": [
+        [
+          "c",
+          "s"
+        ],
+        [
+          "s",
+          "c"
+        ]
+      ],
+      "length": 2
+    },
+    {
+      "edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "c"
+        ]
+      ],
+      "length": 3
+    },
+    {
+      "edges": [
+        [
+          "c",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "q",
+          "c"
+        ]
+      ],
+      "length": 3
+    }
+  ],
+  "status": "ALL_FORCED",
+  "support_records": {
+    "above_base_disjoint_remainder_has_minimal_desired_subset": true,
+    "failed_common_safety_routes_to_unsafe_core_augmentation": true
+  }
+}
