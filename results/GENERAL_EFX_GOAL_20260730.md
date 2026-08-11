@@ -99,6 +99,17 @@ completion or an adaptive transfer-component theorem in which the
 distinguished bundle can evolve. See
 [FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md](FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md).
 
+The first flexible subcase is now closed cap-free. If the external
+`(B_q|B_r)` edge into the earlier mutual owner retains all of `T_r` as well
+as all of `B_q`, a two-allocation payment dichotomy gives the required EFX
+escape. Hence every surviving flexible `GG` obstruction has a nonempty
+residual top packet omitted by that desired edge. Reinserting the residual
+localizes the sole possible wall, but the resulting most-envious desired
+subset may discard the residual again. The live termination invariant is
+therefore residual retention/recapture rather than fixed replacement or
+fixed transfer radius. See
+[FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md](FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

@@ -1,0 +1,67 @@
+{
+  "claim_boundary": "exact QF_LRA replay and deletion-minimal allocation core for the eight-good representative full-capture flower; this is a bounded proof-mining certificate, not the cap-free flexible completion lemma",
+  "core": [
+    {
+      "allocation": {
+        "_": [
+          "br"
+        ],
+        "c": [
+          "tc",
+          "bc"
+        ],
+        "q": [
+          "tr",
+          "bq"
+        ],
+        "r": [
+          "tq",
+          "f"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->r:f;q->r:tq;r->_:br;r->q:tr"
+    },
+    {
+      "allocation": {
+        "_": [
+          "bq"
+        ],
+        "c": [
+          "tc",
+          "bc"
+        ],
+        "q": [
+          "tq",
+          "f"
+        ],
+        "r": [
+          "tr",
+          "br"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->q:f;q->_:bq"
+    }
+  ],
+  "core_rival_count": 2,
+  "deletion_check_statuses": [
+    "sat",
+    "sat"
+  ],
+  "full_replay_status": "unsat",
+  "provenance": {
+    "gate": "/private/tmp/efx-length-three-dual-base-20260809/results/minimal_flower_flexible_completion_gate.json",
+    "gate_sha256": "100b4144aacd4533025fb91ac7002f0271b1b6e7f5756521fa691ac7bdeeb905"
+  },
+  "recorded_rival_count": 256,
+  "recorded_tie_count": 442,
+  "schema": "minimal-flower-flexible-completion-audit-v1",
+  "solver": "Z3 5.0.0",
+  "status": "DELETION_MINIMAL_UNSAT_CORE",
+  "without_nondegeneracy_status": "unsat"
+}

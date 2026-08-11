@@ -887,6 +887,14 @@ both encodings.
   earlier owner. Both witnesses still have a two-good flexible EFX lex
   escape, so the corrected `GG` target must allow the distinguished bundle
   to evolve during dependency growth.
+- [`FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md`](FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md)
+  — cap-free flexible-completion theorem when the external bottom edge into
+  the earlier mutual owner retains her entire top packet. Either the later
+  owner replaces her bottom by `f`, or a dual rotation strictly improves
+  both mutual owners. An exact symbolic gate reduces to precisely these two
+  allocations without nondegeneracy assumptions. The surviving general
+  gate is now a nonempty residual top packet whose reinsertion can recreate
+  the original generalized edge instead of making monotone progress.
 - [`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md`](CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810.md)
   — cap-free classification of every EFX failure after an improving owner
   replaces a packet by the charity good and partitions the released packet

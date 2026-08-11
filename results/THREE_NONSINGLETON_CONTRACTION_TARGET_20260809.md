@@ -149,6 +149,22 @@ the later mutual owner strictly better; the cap-free proof target remains an
 adaptive component construction. See
 [`FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md`](FIXED_REPLACEMENT_LEX_COMPLETION_REFUTATIONS_20260810.md).
 
+The first cap-free flexible-completion subcase is now closed.  If the
+external `(B_q|B_r)` desired bundle captures all of both `B_q` and `T_r`,
+two allocations suffice: either `q` replaces `B_q` by `f`, or `r` receives
+`T_q+f` while `q` receives `T_r+B_q`.  Failure of the first operation forces
+the payment inequality needed by the second.  This is an arbitrary-packet
+theorem mined from a deletion-minimal two-allocation QF_LRA core.  See
+[`FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md`](FLOWER_DUAL_FULL_CAPTURE_ESCAPE_LEMMA_20260810.md).
+
+Consequently the flexible `GG` gate now requires a nonempty residual top
+packet `J=T_r\(A_r\cap T_r)`.  The dual rotation localizes every remaining EFX failure
+to strong envy of `A_r+J`.  The associated generalized edge may discard all
+of `J` and reproduce the original bottom edge, so retained-top cardinality
+is not yet a monotone potential.  The next theorem must force residual
+retention/recapture, maintain a Hall-augmentable family of alternative
+desired bundles, or exactly refute all such adaptive operations.
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.
