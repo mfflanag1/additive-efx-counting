@@ -211,6 +211,15 @@ def inspect_profile(path):
                         alternating_outcomes(values, tr, released, delta)
                         if delta > 0 and not return_desired else None
                     ),
+                    "released_owner_chain_outcomes": (
+                        alternating_outcomes(
+                            values,
+                            tr,
+                            released | frozenset(old[source]),
+                            delta,
+                        )
+                        if delta > 0 and not return_desired else None
+                    ),
                 })
     assert all(
         item["direct_q_desire"]

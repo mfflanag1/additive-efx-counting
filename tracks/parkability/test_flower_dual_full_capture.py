@@ -49,6 +49,11 @@ try:
     from .audit_packet_replacement_complement_return import (
         run as run_replacement_return_audit,
     )
+    from .audit_q_exhaustion_root_switch import run as run_q_root_switch_audit
+    from .audit_released_owner_compensation_chain import (
+        run as run_released_owner_chain_audit,
+    )
+    from .audit_open_leaf_source_rotation import run as run_open_leaf_audit
     from .audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -101,6 +106,11 @@ except ImportError:
     from audit_packet_replacement_complement_return import (
         run as run_replacement_return_audit,
     )
+    from audit_q_exhaustion_root_switch import run as run_q_root_switch_audit
+    from audit_released_owner_compensation_chain import (
+        run as run_released_owner_chain_audit,
+    )
+    from audit_open_leaf_source_rotation import run as run_open_leaf_audit
     from audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -414,6 +424,43 @@ def main():
     ).read_text()
     assert "Stars, paths, and a hub followed by a donating leaf" in transfer_tree_theorem
     assert "exactly three outcomes" in transfer_tree_theorem
+    q_root_switch_path = (
+        ROOT / "results" / "q_exhaustion_root_switch_audit.json"
+    )
+    q_root_switch = json.loads(q_root_switch_path.read_text())
+    q_root_switch_replay = run_q_root_switch_audit()
+    assert q_root_switch_replay["status"] == "ALL_FORCED"
+    assert q_root_switch_replay["scalar_records"] == q_root_switch["scalar_records"]
+    assert q_root_switch_replay["support_record"] == q_root_switch["support_record"]
+    q_root_switch_theorem = (
+        ROOT / "results" / "Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md"
+    ).read_text()
+    assert "stronger margin" in q_root_switch_theorem
+    assert "one-edge charity-rooted transfer tree" in q_root_switch_theorem
+    released_owner_path = (
+        ROOT / "results" / "released_owner_compensation_chain_audit.json"
+    )
+    released_owner = json.loads(released_owner_path.read_text())
+    released_owner_replay = run_released_owner_chain_audit()
+    assert released_owner_replay["status"] == "ALL_FORCED"
+    assert released_owner_replay["scalar_records"] == released_owner["scalar_records"]
+    assert released_owner_replay["support_record"] == released_owner["support_record"]
+    released_owner_theorem = (
+        ROOT / "results" / "RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md"
+    ).read_text()
+    assert "full released-reservoir" in released_owner_theorem
+    assert "introduces no new Q-terminal case" in released_owner_theorem
+    open_leaf_path = ROOT / "results" / "open_leaf_source_rotation_audit.json"
+    open_leaf = json.loads(open_leaf_path.read_text())
+    open_leaf_replay = run_open_leaf_audit()
+    assert open_leaf_replay["status"] == "ALL_FORCED"
+    assert open_leaf_replay["scalar_records"] == open_leaf["scalar_records"]
+    assert open_leaf_replay["support_record"] == open_leaf["support_record"]
+    open_leaf_theorem = (
+        ROOT / "results" / "OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md"
+    ).read_text()
+    assert "strictly larger owner set" in open_leaf_theorem
+    assert "cannot remain an unnamed dependency" in open_leaf_theorem
     maximal_frontier_path = (
         ROOT / "results" / "maximal_replacement_frontier_exchange_audit.json"
     )
@@ -461,6 +508,15 @@ def main():
         "R_EXHAUSTED": 0,
         "SUCCESS": 1,
         "state_count": 3,
+    }]
+    assert [
+        response["released_owner_chain_outcomes"]
+        for response in strict_frontier_responses
+    ] == [{
+        "Q_EXHAUSTED": 5,
+        "R_EXHAUSTED": 0,
+        "SUCCESS": 2,
+        "state_count": 16,
     }]
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"

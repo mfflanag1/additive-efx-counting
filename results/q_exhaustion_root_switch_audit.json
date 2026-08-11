@@ -1,0 +1,35 @@
+{
+  "claim_boundary": "QF_LRA root-switch implication and one-edge support; EFX and response-Hall alternatives use the transfer-tree theorem",
+  "provenance": {
+    "script": "tracks/parkability/audit_q_exhaustion_root_switch.py",
+    "script_sha256": "077e0b08da43f360cb1caaa3ed56db2c4c04dbabf637a79691b3695c31bf0b3f",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "q_exhaustion_forces_f_above_escape_plus_external",
+      "status": "unsat"
+    }
+  ],
+  "schema": "q-exhaustion-root-switch-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "incoming": {
+      "a": [
+        "E"
+      ],
+      "q": [
+        "f"
+      ]
+    },
+    "initially_unallocated": [
+      "f"
+    ],
+    "released": {
+      "a": [],
+      "q": [
+        "E"
+      ]
+    }
+  }
+}

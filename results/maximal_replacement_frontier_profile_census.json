@@ -48,6 +48,7 @@
             "ar_bq_0"
           ],
           "q_desires_full_return": true,
+          "released_owner_chain_outcomes": null,
           "source": "c",
           "strict_core_capture": false
         }
@@ -98,6 +99,7 @@
             "ar_bq_1"
           ],
           "q_desires_full_return": true,
+          "released_owner_chain_outcomes": null,
           "source": "s",
           "strict_core_capture": false
         }
@@ -138,6 +140,12 @@
             "ar_bq_1"
           ],
           "q_desires_full_return": false,
+          "released_owner_chain_outcomes": {
+            "Q_EXHAUSTED": 5,
+            "R_EXHAUSTED": 0,
+            "SUCCESS": 2,
+            "state_count": 16
+          },
           "source": "s",
           "strict_core_capture": true
         }
@@ -188,6 +196,7 @@
             "ar_bq_0"
           ],
           "q_desires_full_return": true,
+          "released_owner_chain_outcomes": null,
           "source": "s",
           "strict_core_capture": false
         }
@@ -196,7 +205,7 @@
   ],
   "provenance": {
     "script": "tracks/parkability/audit_maximal_replacement_frontier_profiles.py",
-    "script_sha256": "ac100efc3503eb468a3cabbfb85c1fb3b3edb63badf2fd6aec6fc3338229ad16"
+    "script_sha256": "93d6e965e6ead4c7ccbe8cacfd79a2f83897a5d0cf843af42242c7d2478fa609"
   },
   "schema": "maximal-replacement-frontier-profile-census-v1",
   "status": "ALL_FROZEN_RESPONSES_RETURN_OR_COMPENSATE",

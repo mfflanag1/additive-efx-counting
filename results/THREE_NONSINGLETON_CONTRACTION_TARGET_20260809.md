@@ -200,6 +200,27 @@ depth-two escapes `r -> {q,c}, c -> s` and `q -> c -> s` without a move-
 radius assumption. See
 [`CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md`](CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md).
 
+The Q-exhausted leaf now canonically changes the root. Writing
+`E=(X_q-K)-H`, exhaustion forces `q(f)>q(E)+q(X_a)`. Therefore `q` can
+replace `E` by `f` and transfer `E` to `a`, keeping `r` fixed and improving
+`q`. This is a complete one-edge transfer tree; it either closes directly,
+closes through PI, or exposes the next owner/Hall boundary. See
+[`Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md`](Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md).
+
+The responder's released old bundle is now part of the compensation
+reservoir as well. Alternating minimal repairs over
+`(X_q-K)+X_a` either close, root-switch on Q-exhaustion, or force the single
+strong wall `r((X_q-K)+X_a)<r(P)`. See
+[`RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md`](RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md).
+
+When a root-switch leaf exposes a new source `b`, rotate its desired subset
+to `b` and the unused offer plus `X_b` back to the old leaf. This either
+strictly grows the represented-owner set or forces an exact old-leaf capture
+wall, with release-compatible response support in the growth branch. On the
+hardened profile the sequence is `{q,s}->{q,c,s}` and then exposes `r`.
+See
+[`OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md`](OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md).
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps

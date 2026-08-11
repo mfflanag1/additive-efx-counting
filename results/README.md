@@ -926,6 +926,30 @@ both encodings.
 - [`charity_rooted_transfer_tree_release_audit.json`](charity_rooted_transfer_tree_release_audit.json)
   — exact release-support replay of all 405 labeled rooted-tree/internal-
   response-permutation pairs through four owners.
+- [`Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md`](Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md)
+  — converts every Q-exhausted compensation leaf into a canonical complete
+  transfer tree. If `E` is the uncompensated released remainder, exhaustion
+  forces `q(f)>q(E)+q(X_a)`; root `q` replaces `E` by `f` and sends `E` to
+  the external owner. Thus Q-exhaustion now ends only at an EFX endpoint,
+  PI matching, open source, or named Hall defect.
+- [`q_exhaustion_root_switch_audit.json`](q_exhaustion_root_switch_audit.json)
+  — dual-solver scalar and release-support replay of the root switch.
+- [`RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md`](RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md)
+  — expands the alternating compensation reservoir from `X_q-K` to
+  `(X_q-K)+X_a`, using the entire bundle released when the responder receives
+  `K+f`. Successful leaves are release-compatible components; Q-exhaustion
+  still root-switches, and only the sharper wall `r((X_q-K)+X_a)<r(P)`
+  survives.
+- [`released_owner_compensation_chain_audit.json`](released_owner_compensation_chain_audit.json)
+  — dual-solver exhaustion and packet-support replay for the expanded chain.
+- [`OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md`](OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md)
+  — cap-free growth step for a new source `b` responding to leaf `X_a+E`.
+  Rotate its desired subset to `b` and the complement plus `X_b` back to
+  `a`; either the improving component gains an owner or an exact strict
+  capture wall is forced. The hardened adversary grows from `q,s` to
+  `q,c,s` and then exposes `r`.
+- [`open_leaf_source_rotation_audit.json`](open_leaf_source_rotation_audit.json)
+  — dual-solver scalar and release-support replay of the source rotation.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on

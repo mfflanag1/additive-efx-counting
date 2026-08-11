@@ -1,0 +1,52 @@
+{
+  "claim_boundary": "QF_LRA terminal implications and exact packet support; finite alternating termination is analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_released_owner_compensation_chain.py",
+    "script_sha256": "0d308de3e1a5eda097297309d3b1d556b81f63dcac90a8aad8ff348469250830",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "expanded_q_exhaustion_forces_root_switch_margin",
+      "status": "unsat"
+    },
+    {
+      "claim": "expanded_r_exhaustion_is_full_reservoir_wall",
+      "status": "unsat"
+    }
+  ],
+  "schema": "released-owner-compensation-chain-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "incoming": {
+      "a": [
+        "K",
+        "f"
+      ],
+      "q": [
+        "P",
+        "Xa_minus_G"
+      ],
+      "r": [
+        "G",
+        "H"
+      ]
+    },
+    "initially_unallocated": [
+      "f"
+    ],
+    "released": {
+      "a": [
+        "G",
+        "Xa_minus_G"
+      ],
+      "q": [
+        "H",
+        "K"
+      ],
+      "r": [
+        "P"
+      ]
+    }
+  }
+}

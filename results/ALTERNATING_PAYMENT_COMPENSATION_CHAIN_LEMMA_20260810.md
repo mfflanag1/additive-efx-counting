@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-10
 
-**Status:** cap-free finite adaptive selector; the two exhaustion walls
-remain open
+**Status:** cap-free finite adaptive selector; Q-exhaustion now root-switches
+to a transfer tree, while R-exhaustion and the new tree's Hall boundary remain
 
 ## Setting
 
@@ -120,6 +120,11 @@ either selects a working root flip or produces one of the explicit signed
 states (R*) and (Q*), together with the full history of critical repair
 packets.
 
+The Q-exhausted state is no longer terminal.  With `E=O\H`, its inequalities
+force `q(f)>q(E)+q(X_a)`, so replacing `E` by `f` at root `q` and transferring
+`E` to `a` gives a complete improving transfer tree.  See
+[`Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md`](Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md).
+
 The scalar exhaustion implications replay in
 [`alternating_payment_compensation_chain_audit.json`](alternating_payment_compensation_chain_audit.json).
 On the sole strict-capture response among the seven frozen frontier
@@ -130,7 +135,7 @@ ties between minimal repairs must remain adaptive rather than be frozen.
 ## Claim boundary
 
 This lemma proves finite adaptive selection and eliminates blind search over
-`(P,H)`.  It does not eliminate the R-exhausted or Q-exhausted wall, prove
-that their blocker history yields an augmenting owner component, close the
-remaining external Hall defect, close the `GG` flower, or prove four-agent
-additive EFX.
+`(P,H)`.  Together with the root-switch lemma, Q-exhaustion supplies an
+improving component but its open/Hall response boundary remains.  The lemma
+does not eliminate R-exhaustion, close either remaining response boundary,
+close the `GG` flower, or prove four-agent additive EFX.

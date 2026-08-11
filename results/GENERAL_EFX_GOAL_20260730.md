@@ -226,6 +226,31 @@ whether every signed exhaustion leaf supplies an owner-improving tree, not
 whether the observed topology can be lifted beyond four goods. See
 [CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md](CHARITY_ROOTED_TRANSFER_TREE_RESPONSE_HALL_LEMMA_20260810.md).
 
+Q-exhaustion is now converted rather than left as a polarity. If `H` is the
+last compensation packet and `E=(X_q-K)-H`, the exhausted inequality and
+the original desired `T_r+f` bundle force
+`q(f)>q(E)+q(X_a)`. Hence `q` replaces `E` by `f` and sends `E` to `a`,
+giving a complete improving one-edge transfer tree with `r` fixed. The only
+survivors are its open/Hall response boundary; the remaining signed branch
+outside that boundary is R-exhaustion. See
+[Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md](Q_EXHAUSTION_ROOT_SWITCH_LEMMA_20260810.md).
+
+The compensation reservoir now includes the responder's released old bundle
+`X_a`, not only `X_q-K`. Minimal repairs may partition both packets between
+`q` and `r`. Success gives a release-compatible component; Q-exhaustion
+still forces a q-root switch; the only stronger compensation wall is
+`r((X_q-K)+X_a)<r(P)`. On the hardened adversary this expanded tree has a
+successful branch, although its response relation then exposes `c`. See
+[RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md](RELEASED_OWNER_COMPENSATION_CHAIN_LEMMA_20260810.md).
+
+An exposed leaf source can now be rotated in cap-free form. If `b` desires
+`B subseteq X_a+E`, give `B` to `b` and return `X_b+(X_a+E)\B` to `a`.
+Either `a` remains improved and the represented owner set strictly grows,
+or `a` satisfies one explicit capture inequality. The hardened Q-wall takes
+the growth branch from `{q,s}` to `{q,c,s}` and then exposes `r`; this is the
+first exact realization of the desired represented-owner potential. See
+[OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md](OPEN_LEAF_SOURCE_ROTATION_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,

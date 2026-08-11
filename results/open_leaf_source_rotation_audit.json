@@ -1,0 +1,46 @@
+{
+  "claim_boundary": "QF_LRA old-leaf capture implication and exact packet support; source desire and nondegenerate strictness are analytic",
+  "provenance": {
+    "script": "tracks/parkability/audit_open_leaf_source_rotation.py",
+    "script_sha256": "19acd8e73d3db3e29fb60a3218ebcc4bfd171b27e1eea1889e21c40786db440a",
+    "z3_version": "5.0.0"
+  },
+  "scalar_records": [
+    {
+      "claim": "failed_old_leaf_payment_forces_strict_capture",
+      "status": "unsat"
+    }
+  ],
+  "schema": "open-leaf-source-rotation-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "incoming": {
+      "a": [
+        "E_minus_J",
+        "Xb"
+      ],
+      "b": [
+        "J",
+        "S"
+      ],
+      "q": [
+        "f"
+      ]
+    },
+    "initially_unallocated": [
+      "f"
+    ],
+    "released": {
+      "a": [
+        "S"
+      ],
+      "b": [
+        "Xb"
+      ],
+      "q": [
+        "E_minus_J",
+        "J"
+      ]
+    }
+  }
+}
