@@ -133,26 +133,33 @@ It does **not** yet close two terminals.
 
 These are two presentations of the same global issue: a local Hall repair
 can return to a lower-rank root anchor without yet forcing fresh `T_r`
-support.  The next theorem should use the lexicographic potential
+support.  The initially proposed lexicographic potential was
 
 \[
  (|U|,\ \text{response rank},\ \text{represented owner union},\
    \text{missing-owner residual value})             \tag{4}
 \]
 
-or exactly refute its monotonicity.  A valid proof must specify how every
-rank-lowering reset increases an earlier coordinate; finiteness alone does
-not suffice.
+Its raw fourth coordinate is now exactly refuted: it compares utilities
+from different valuation rows after a hole change and is reversed by a
+positive rescaling that preserves every EFX/response premise.  At rank two
+there are also two holes, so the coordinate is not single-valued.  See
+[`GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md`](GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md).
+
+The live replacement is an owner-indexed normalized residual ledger together
+with historical (rather than instantaneous) rank and supplier-union maxima.
+A valid proof must still show that every rank-lowering reset advances that
+ledger or its physical-support history; finiteness alone does not suffice.
 
 ## Verification and claim boundary
 
-The focused replay currently passes 45 tests spanning the retained-support,
+The focused dependency replay currently passes 43 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is
 [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json).
 
-That manifest proves artifact integrity and replay status, not the missing
-global monotonicity assertion in (4).  This checkpoint does not close `GG`,
+That manifest proves artifact integrity and replay status, not the corrected
+support-ledger monotonicity theorem.  This checkpoint does not close `GG`,
 the other seven three-nonsingleton classes, the four-nonsingleton branch, the
 tie/zero wrapper, or four-agent/general additive EFX.

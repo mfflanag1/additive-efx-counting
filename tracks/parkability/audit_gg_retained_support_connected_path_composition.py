@@ -23,6 +23,7 @@ DEPENDENCIES = (
     ("SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md", "source_inactive_core_residual_repair_audit.json"),
     ("TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md", "two_hole_cut_and_choose_response_hall_audit.json"),
     ("TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md", "two_by_two_response_hall_normal_form_audit.json"),
+    ("GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md", "gg_rank_reset_raw_potential_refutation_audit.json"),
 )
 
 
@@ -44,7 +45,7 @@ def run(root: Path) -> dict:
             "audit_sha256": sha256(audit),
             "audit_status": payload.get("status"),
         })
-    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "VERIFIED", "PASS", "CLASSIFIED"}
+    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "VERIFIED", "PASS", "CLASSIFIED", "EXACT_SCALE_REFUTATION"}
     verified = all(record["audit_status"] in accepted for record in records)
     script = Path(__file__).resolve()
     checkpoint = result_dir / "GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md"
@@ -53,10 +54,11 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 45,
+        "focused_test_count": 43,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
-            "the open global rank-reset potential, GG closure, or four-agent EFX"
+            "the corrected support-ledger monotonicity theorem, GG closure, or "
+            "four-agent EFX"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

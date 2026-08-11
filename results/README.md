@@ -1391,8 +1391,16 @@ both encodings.
   their rank-lowering resets still need one global potential.
 - [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json)
   — integrity/replay manifest for thirteen cap-free dependencies and the
-  focused 45-test suite; it is not a proof of the remaining global reset
+  focused 43-test dependency suite; it is not a proof of the corrected global reset
   potential.
+- [`GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md`](GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md)
+  ([exact audit](gg_rank_reset_raw_potential_refutation_audit.json))
+  — exactly refutes the raw `missing-owner residual value` coordinate across
+  hole changes. A positive subset-sum-injective additive witness preserves
+  retained support, maximum response rank, owner-union size, and the entire
+  response relation while a row rescaling reverses the residual comparison.
+  The corrected target uses an owner-indexed normalized residual ledger and
+  historical rank/supplier support; GG closure remains open.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
