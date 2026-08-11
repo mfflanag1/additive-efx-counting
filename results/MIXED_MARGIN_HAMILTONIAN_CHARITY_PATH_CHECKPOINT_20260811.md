@@ -94,6 +94,17 @@ two-cycle whose next recruitment grows into the anchored suffix, and twelve
 already close a cycle containing the anchor.  Hence the saturated exact
 terminal always contains `r -> q`, and its hole is in `{r,c,s}`, never `q`.
 
+The twelve stable anchor cycles split evenly by q's physical role.  In six,
+q is distinct from the root, hole, and closing response source and is
+therefore the named protected third-donor candidate.  In the other six, q is
+itself the closing response source, so applying the q-donor blockade theorem
+would identify incompatible roles.  The exact remaining interface is a
+support-conserving q-core selection: make the protected split-support core
+available in the first six cases, and in the latter six globally reroute
+between q's closing core, displaced path core, and protected split-support
+core.  See
+[`ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md`](ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md).
+
 ## Exact surviving separator
 
 After source/core saturation and full-owner recruitment, the sole unproved
@@ -111,12 +122,12 @@ state has all of the following simultaneously:
    label.
 
 This is the exact anchor-containing full-owner **critical-top-up substitution
-separator**.  To
-finish the goal one must prove that the globally lex-maximal GG inequalities
-force a third-owner substitute for `K`, a source/root change, or a new core;
-otherwise one must instantiate all six clauses in an exact globally maximal
-GG countermodel.  Local scalar margins, another history ledger, and bounded
-cells cannot decide it.
+separator**.  To finish the goal one must prove that the globally lex-maximal
+GG inequalities and support geometry force the q-core selection above, a
+third-owner substitute for `K`, a source/root change, or a new core;
+otherwise one must instantiate all six clauses and the applicable q-role
+separator in an exact globally maximal GG countermodel.  Local scalar
+margins, another history ledger, and bounded cells cannot decide it.
 
 ## Verification and claim boundary
 

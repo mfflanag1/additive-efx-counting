@@ -1,0 +1,252 @@
+{
+  "all_non_q_source_cases_have_distinct_q_donor": true,
+  "anchored_path_count": 6,
+  "claim_boundary": "role classification only; q-core availability, q-source collision payment, mixed-margin closure, and EFX remain open",
+  "cycle_length_counts": {
+    "q_donor_available": {
+      "3": 2,
+      "4": 4
+    },
+    "q_source_collision": {
+      "2": 2,
+      "3": 2,
+      "4": 2
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_anchored_q_donor_or_source_collision.py",
+    "script_sha256": "55decdec1203e2fb9e1e1debc98a8ffc5a8f1ac0dc9dcab192cc0dd4061087ac",
+    "theorem": "results/ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md",
+    "theorem_sha256": "a41c53b6fdbc3c0f008e06dce1dc71733d6bc32423134a3891672eccda4a211c"
+  },
+  "records": [
+    {
+      "closing_source": "q",
+      "cycle_length": 2,
+      "hole": "r",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q"
+      ],
+      "q_distinct_donor_eligible": false,
+      "q_role": "q_source_collision"
+    },
+    {
+      "closing_source": "c",
+      "cycle_length": 3,
+      "hole": "r",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "c"
+      ],
+      "q_distinct_donor_eligible": true,
+      "q_role": "q_donor_available"
+    },
+    {
+      "closing_source": "s",
+      "cycle_length": 4,
+      "hole": "r",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "q_distinct_donor_eligible": true,
+      "q_role": "q_donor_available"
+    },
+    {
+      "closing_source": "q",
+      "cycle_length": 2,
+      "hole": "r",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q"
+      ],
+      "q_distinct_donor_eligible": false,
+      "q_role": "q_source_collision"
+    },
+    {
+      "closing_source": "s",
+      "cycle_length": 3,
+      "hole": "r",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "s"
+      ],
+      "q_distinct_donor_eligible": true,
+      "q_role": "q_donor_available"
+    },
+    {
+      "closing_source": "c",
+      "cycle_length": 4,
+      "hole": "r",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "prefix_cycle": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "q_distinct_donor_eligible": true,
+      "q_role": "q_donor_available"
+    },
+    {
+      "closing_source": "q",
+      "cycle_length": 3,
+      "hole": "c",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "prefix_cycle": [
+        "c",
+        "r",
+        "q"
+      ],
+      "q_distinct_donor_eligible": false,
+      "q_role": "q_source_collision"
+    },
+    {
+      "closing_source": "s",
+      "cycle_length": 4,
+      "hole": "c",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "prefix_cycle": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "q_distinct_donor_eligible": true,
+      "q_role": "q_donor_available"
+    },
+    {
+      "closing_source": "q",
+      "cycle_length": 4,
+      "hole": "c",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "q_distinct_donor_eligible": false,
+      "q_role": "q_source_collision"
+    },
+    {
+      "closing_source": "q",
+      "cycle_length": 3,
+      "hole": "s",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "prefix_cycle": [
+        "s",
+        "r",
+        "q"
+      ],
+      "q_distinct_donor_eligible": false,
+      "q_role": "q_source_collision"
+    },
+    {
+      "closing_source": "c",
+      "cycle_length": 4,
+      "hole": "s",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "prefix_cycle": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "q_distinct_donor_eligible": true,
+      "q_role": "q_donor_available"
+    },
+    {
+      "closing_source": "q",
+      "cycle_length": 4,
+      "hole": "s",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "prefix_cycle": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "q_distinct_donor_eligible": false,
+      "q_role": "q_source_collision"
+    }
+  ],
+  "role_counts": {
+    "q_donor_available": 6,
+    "q_source_collision": 6
+  },
+  "schema": "anchored-q-donor-or-source-collision-audit-v1",
+  "smallest_missing_operation": "support-conserving two-core q rerouting across the closing, displaced-path, and protected split-support cores",
+  "stable_anchor_cycle_count": 12,
+  "status": "ALL_EXHAUSTED"
+}
