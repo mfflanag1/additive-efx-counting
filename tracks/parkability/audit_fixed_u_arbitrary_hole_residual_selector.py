@@ -12,6 +12,8 @@ import z3
 
 
 DEPENDENCIES = (
+    ("COMMON_SAFE_TARGET_RESPONSE_RIGIDITY_LEMMA_20260811.md", "common_safe_target_response_rigidity_audit.json"),
+    ("WHOLE_CORE_RETURN_TWO_HOLE_DESCENT_LEMMA_20260811.md", "whole_core_return_two_hole_descent_audit.json"),
     ("SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md", "source_inactive_core_residual_repair_audit.json"),
     ("TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md", "two_hole_cut_and_choose_response_hall_audit.json"),
     ("ANCHOR_CONSTRAINED_FULL_PRIORITY_MATCHING_LEMMA_20260811.md", "anchor_constrained_full_priority_matching_audit.json"),
@@ -36,7 +38,10 @@ def run(root: Path) -> dict:
             "audit_status": payload["status"],
         })
 
-    old, repaired, exhausted = z3.Reals("old repaired exhausted")
+    old, active, repaired, exhausted = z3.Reals("old active repaired exhausted")
+    solver = z3.Solver()
+    solver.add(active > old, active <= old)
+    assert solver.check() == z3.unsat
     solver = z3.Solver()
     solver.add(repaired > old, repaired <= old)
     assert solver.check() == z3.unsat
@@ -54,6 +59,7 @@ def run(root: Path) -> dict:
         "dependency_count": len(records),
         "records": records,
         "same_row_checks": {
+            "whole_core_descent_strictly_exceeds_selected_residual": "unsat",
             "successful_repair_strictly_exceeds_selected_residual": "unsat",
             "nonroot_exhaustion_strictly_exceeds_selected_residual": "unsat",
         },

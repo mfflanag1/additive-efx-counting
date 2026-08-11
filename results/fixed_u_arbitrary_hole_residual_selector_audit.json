@@ -1,13 +1,27 @@
 {
   "claim_boundary": "composition audit for arbitrary-hole nonroot source-inactive elimination; root-facing/fork closure and GG remain open",
-  "dependency_count": 3,
+  "dependency_count": 5,
   "provenance": {
     "script": "tracks/parkability/audit_fixed_u_arbitrary_hole_residual_selector.py",
-    "script_sha256": "175f30a38ca71f3248475f27dfd06d8e45b4ae2e56c6438eb042617bfbf27d7b",
+    "script_sha256": "9f562e7c71b9939ecc80a1386510169d81aa16629d763be510ddad600d381d90",
     "theorem": "results/FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md",
-    "theorem_sha256": "144dd91dd6904597b0303cbbb4f2339e484f8af92d27bae493f042fdbf156ab8"
+    "theorem_sha256": "00219d044b900b4fd3efe197300cf9b36c16dcfe801dc262340f67c9e95aab68"
   },
   "records": [
+    {
+      "audit": "results/common_safe_target_response_rigidity_audit.json",
+      "audit_sha256": "df9ab86305d9c52af34754b24fb46d50f4cd2e2e875fd21b3edc252f1d36e7d0",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMMON_SAFE_TARGET_RESPONSE_RIGIDITY_LEMMA_20260811.md",
+      "theorem_sha256": "b14aa757fd7bffd9242c8f1e2db0ff32c839baffe39127b9830c1cfa5a7cb5f9"
+    },
+    {
+      "audit": "results/whole_core_return_two_hole_descent_audit.json",
+      "audit_sha256": "cb90256bd64001d3b8634f449131139b315c80d18a2b7cc5b8be4fecbbf5c075",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/WHOLE_CORE_RETURN_TWO_HOLE_DESCENT_LEMMA_20260811.md",
+      "theorem_sha256": "21289ea073906ff40ccf04403e0001b7adca5903e794348e2db28f960cdf0daf"
+    },
     {
       "audit": "results/source_inactive_core_residual_repair_audit.json",
       "audit_sha256": "50a8c6d71cb2965913a5ef8b7f192cae468e963e6d05a8eae8e357098b744325",
@@ -32,7 +46,8 @@
   ],
   "same_row_checks": {
     "nonroot_exhaustion_strictly_exceeds_selected_residual": "unsat",
-    "successful_repair_strictly_exceeds_selected_residual": "unsat"
+    "successful_repair_strictly_exceeds_selected_residual": "unsat",
+    "whole_core_descent_strictly_exceeds_selected_residual": "unsat"
   },
   "schema": "fixed-u-arbitrary-hole-residual-selector-audit-v1",
   "status": "DEPENDENCIES_REPLAYABLE"

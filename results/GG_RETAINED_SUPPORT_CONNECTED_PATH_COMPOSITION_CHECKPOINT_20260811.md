@@ -159,16 +159,16 @@ points only to the root anchor or to an earlier protected source, so its
 blocker chain is strictly priority-decreasing.  Simultaneous retained-core
 reset preserves the protected prefix, grows `U`, or captures the `q` margin.
 The third-owner gate is consequently physical rather than graph-theoretic:
-close the terminal root-facing/J-exhausted handoff or the response-silent
-unsafe-overlap cut with one connected fork.
+close the terminal root-facing/J-exhausted handoff or unsafe-overlap cut with
+one connected fork.
 
 The fixed-`U` residual selector now applies to any distinguished nonroot
 hole, not only `q`.  It ranges over every root-anchored response rank and
-maximizes the hole's residual in that owner's own valuation row.  Successful
-nonroot repair and nonroot J-exhaustion both strictly increase that same
-quantity, so a response-silent external source cannot circulate through the
-other nonroot cores.  It too is forced to response activation, unsafe
-augmentation, EFX/PI, or the root-facing handoff.
+maximizes the hole's residual in that owner's own valuation row.  Whole-core
+descent, successful nonroot repair, and nonroot J-exhaustion all strictly
+increase that same quantity.  Thus neither an active nor a response-silent
+external source can circulate through the other nonroot cores: both are
+forced to unsafe augmentation, EFX/PI, or the root-facing handoff.
 The initially proposed lexicographic potential was
 
 \[

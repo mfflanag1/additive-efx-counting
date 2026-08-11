@@ -17,4 +17,4 @@ def test_fixed_u_arbitrary_hole_residual_selector_replays():
 def test_fixed_u_arbitrary_hole_residual_selector_is_composed():
     result = run(ROOT)
     assert result["status"] == "DEPENDENCIES_REPLAYABLE"
-    assert result["dependency_count"] == 3
+    assert result["dependency_count"] == 5
