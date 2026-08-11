@@ -13,11 +13,15 @@
       "4": 2
     }
   },
+  "direct_protected_q_donor_is_physically_disjoint": false,
+  "protected_q_core_and_root_anchor_intersection": [
+    "f"
+  ],
   "provenance": {
     "script": "tracks/parkability/audit_anchored_q_donor_or_source_collision.py",
-    "script_sha256": "55decdec1203e2fb9e1e1debc98a8ffc5a8f1ac0dc9dcab192cc0dd4061087ac",
+    "script_sha256": "b6d8945c4d8422af4d4f81b2c3db36e8f187521b1d1e2078d55f8642ffabcde1",
     "theorem": "results/ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md",
-    "theorem_sha256": "a41c53b6fdbc3c0f008e06dce1dc71733d6bc32423134a3891672eccda4a211c"
+    "theorem_sha256": "7459664ad3764b0007e8413c2481c96e7d98933cabe0886eecc67e2fd8044292"
   },
   "records": [
     {
@@ -246,7 +250,7 @@
     "q_source_collision": 6
   },
   "schema": "anchored-q-donor-or-source-collision-audit-v1",
-  "smallest_missing_operation": "support-conserving two-core q rerouting across the closing, displaced-path, and protected split-support cores",
+  "smallest_missing_operation": "support-conserving floater substitution and two-core q rerouting across the closing, displaced-path, and protected split-support cores",
   "stable_anchor_cycle_count": 12,
   "status": "ALL_EXHAUSTED"
 }

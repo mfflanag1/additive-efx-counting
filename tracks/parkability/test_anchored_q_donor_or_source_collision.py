@@ -28,6 +28,8 @@ def test_anchored_q_role_split_is_exact():
         "q_source_collision": {"2": 2, "3": 2, "4": 2},
     }
     assert result["all_non_q_source_cases_have_distinct_q_donor"]
+    assert result["protected_q_core_and_root_anchor_intersection"] == ["f"]
+    assert not result["direct_protected_q_donor_is_physically_disjoint"]
 
 
 def test_q_role_claim_boundary_stays_open():

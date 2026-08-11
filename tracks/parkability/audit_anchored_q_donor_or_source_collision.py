@@ -21,6 +21,10 @@ def sha256(path: Path) -> str:
 
 
 def run(root: Path) -> dict:
+    retained = {"tr0", "tr1", "f"}
+    anchor = {"tq0", "tq1", "f"}
+    protected_anchor_intersection = retained & anchor
+    assert protected_anchor_intersection == {"f"}
     paths = tuple(
         path
         for path in itertools.permutations(OWNERS)
@@ -99,10 +103,14 @@ def run(root: Path) -> dict:
             for record in records
             if record["q_role"] == "q_donor_available"
         ),
+        "protected_q_core_and_root_anchor_intersection": sorted(
+            protected_anchor_intersection
+        ),
+        "direct_protected_q_donor_is_physically_disjoint": False,
         "records": records,
         "smallest_missing_operation": (
-            "support-conserving two-core q rerouting across the closing, "
-            "displaced-path, and protected split-support cores"
+            "support-conserving floater substitution and two-core q rerouting "
+            "across the closing, displaced-path, and protected split-support cores"
         ),
         "claim_boundary": (
             "role classification only; q-core availability, q-source collision "

@@ -98,12 +98,22 @@ The twelve stable anchor cycles split evenly by q's physical role.  In six,
 q is distinct from the root, hole, and closing response source and is
 therefore the named protected third-donor candidate.  In the other six, q is
 itself the closing response source, so applying the q-donor blockade theorem
-would identify incompatible roles.  The exact remaining interface is a
-support-conserving q-core selection: make the protected split-support core
-available in the first six cases, and in the latter six globally reroute
-between q's closing core, displaced path core, and protected split-support
-core.  See
+would identify incompatible roles.  Even in the first six, the canonical
+protected q-core `(T_r-U)+f` meets the permanent root anchor `T_q+f` in the
+unique floater `f`, so it is not yet a physically disjoint donor core.  The
+exact remaining interface is a support-conserving q-core/floater selection:
+find a floater-free q-core or substitute/release the anchor in the first six
+cases, and in the latter six additionally reroute between q's closing core,
+displaced path core, and protected split-support core.  See
 [`ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md`](ANCHORED_Q_DONOR_OR_SOURCE_COLLISION_REDUCTION_20260811.md).
+
+Deleting `f` from either canonical mutual core gives an exact trichotomy.  If
+`T_r-U` still pays q, it is a disjoint protected donor core.  If `T_q` still
+pays the root, the root has a new or already recorded floater-free anchor and
+the full protected q-core becomes disjoint.  Only when both deletions fail is
+`f` simultaneously critical to root and q.  Thus arbitrary q-core
+availability has collapsed to the double-floater-critical separator; see
+[`MUTUAL_FLOATER_DELETION_OR_DOUBLE_CRITICAL_LEMMA_20260811.md`](MUTUAL_FLOATER_DELETION_OR_DOUBLE_CRITICAL_LEMMA_20260811.md).
 
 ## Exact surviving separator
 
