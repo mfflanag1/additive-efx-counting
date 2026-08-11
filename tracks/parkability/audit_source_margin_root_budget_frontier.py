@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Symbolic audit of the source-margin root-budget frontier."""
+"""Symbolic audit of the source-margin global two-row frontier."""
 
 from __future__ import annotations
 
@@ -15,63 +15,50 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def prove(assumptions, negated_conclusion) -> str:
+    solver = z3.Solver()
+    solver.add(*assumptions, negated_conclusion)
+    assert solver.check() == z3.unsat
+    return "unsat"
+
+
 def run(root: Path) -> dict:
     rp, xr, rc, rb = z3.Reals("rp xr rc rb")
-    aa, xa, ac, ab = z3.Reals("aa xa ac ab")
-    delta = xr - rp
-    mu = aa - xa
-    beta = rc - delta
-    assumptions = [
-        delta > 0,
-        mu > 0,
-        rc >= delta,
-        ac >= mu,
-        rb >= 0,
-        rb <= beta,
-        ab >= 0,
-    ]
-
-    solver = z3.Solver()
-    solver.add(*assumptions)
-    solver.add(rp - rb + rc < xr)
-    assert solver.check() == z3.unsat
-
-    solver = z3.Solver()
-    solver.add(*assumptions, ab > ac - mu)
-    solver.add(aa - ac + ab <= xa)
-    assert solver.check() == z3.unsat
-
-    solver = z3.Solver()
-    solver.add(*assumptions, ab <= ac - mu)
-    solver.add(ac - ab < mu)
-    assert solver.check() == z3.unsat
-
-    remaining, ag = z3.Reals("remaining ag")
-    solver = z3.Solver()
-    solver.add(remaining >= 0, ag > 0, ag <= remaining)
-    solver.add(z3.Not(ag <= remaining))
-    assert solver.check() == z3.unsat
+    cr, gr, br, cr2, hr, gr2 = z3.Reals("cr gr br cr2 hr gr2")
+    sigma = rp - rb + rc - xr
+    paid = [sigma >= 0]
+    checks = {
+        "root_surplus_identity": prove([rp - rb + rc >= xr], sigma < 0),
+        "return_extracted_good_root_change": prove(
+            paid + [cr <= sigma], rp - rb + rc - cr < xr
+        ),
+        "add_unused_pool_good_root_change": prove(
+            paid + [gr <= sigma], rp - rb + rc - gr < xr
+        ),
+        "return_swap_root_change": prove(
+            paid + [br >= cr2], rp - rb + rc + br - cr2 < xr
+        ),
+        "cross_swap_root_change": prove(
+            paid + [hr >= gr2], rp - rb + rc + hr - gr2 < xr
+        ),
+    }
 
     theorem = root / "results/SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md"
     script = Path(__file__).resolve()
     return {
-        "schema": "source-margin-root-budget-frontier-audit-v1",
+        "schema": "source-margin-root-budget-frontier-audit-v2",
         "status": "ALL_FORCED",
-        "symbolic_checks": {
-            "root_payment_identity": "unsat",
-            "source_restoration_identity": "unsat",
-            "source_blockade_margin": "unsat",
-            "unused_good_feasibility_contradicts_maximality": "unsat",
-        },
-        "outcomes": [
-            "source restored under root budget",
-            "unsafe restored target response augmentation",
-            "full-pool source exhaustion",
-            "pointwise root-budget blockade requiring split packet or third-owner fork",
+        "symbolic_checks": checks,
+        "frontier_certificates": [
+            "every extracted boundary good exceeds root slack",
+            "every unused pool good exceeds root slack",
+            "root-affordable returned-good swap has aligned source order",
+            "root-affordable cross-cut swap has aligned source order",
         ],
+        "remaining_operation": "third-owner surplus-budgeted connected fork",
         "claim_boundary": (
-            "symbolic audit of the cap-free same-source compensation frontier; "
-            "it does not eliminate the terminal blockade or prove GG closure"
+            "symbolic audit of exchange identities for the cap-free global "
+            "two-row selector; it does not force the third-owner fork or GG closure"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

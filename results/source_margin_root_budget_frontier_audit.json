@@ -1,23 +1,25 @@
 {
-  "claim_boundary": "symbolic audit of the cap-free same-source compensation frontier; it does not eliminate the terminal blockade or prove GG closure",
-  "outcomes": [
-    "source restored under root budget",
-    "unsafe restored target response augmentation",
-    "full-pool source exhaustion",
-    "pointwise root-budget blockade requiring split packet or third-owner fork"
+  "claim_boundary": "symbolic audit of exchange identities for the cap-free global two-row selector; it does not force the third-owner fork or GG closure",
+  "frontier_certificates": [
+    "every extracted boundary good exceeds root slack",
+    "every unused pool good exceeds root slack",
+    "root-affordable returned-good swap has aligned source order",
+    "root-affordable cross-cut swap has aligned source order"
   ],
   "provenance": {
     "script": "tracks/parkability/audit_source_margin_root_budget_frontier.py",
-    "script_sha256": "4361c2538568742053abeec749c64a5418cd18bea50f479f47ab9bf046800286",
+    "script_sha256": "b68015016c7251176045c5a889dcaa723e29dfa1f0d2209f6e5fe717617971f5",
     "theorem": "results/SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md",
-    "theorem_sha256": "a5bcc0cd4e8fe1201e44d0bba02518f7bd58f55b622b7aa49c79b6c107da8617"
+    "theorem_sha256": "b29a2742f6a762b60ffac5faf1172e4b74039cf7c3e382320551d23d41794e60"
   },
-  "schema": "source-margin-root-budget-frontier-audit-v1",
+  "remaining_operation": "third-owner surplus-budgeted connected fork",
+  "schema": "source-margin-root-budget-frontier-audit-v2",
   "status": "ALL_FORCED",
   "symbolic_checks": {
-    "root_payment_identity": "unsat",
-    "source_blockade_margin": "unsat",
-    "source_restoration_identity": "unsat",
-    "unused_good_feasibility_contradicts_maximality": "unsat"
+    "add_unused_pool_good_root_change": "unsat",
+    "cross_swap_root_change": "unsat",
+    "return_extracted_good_root_change": "unsat",
+    "return_swap_root_change": "unsat",
+    "root_surplus_identity": "unsat"
   }
 }

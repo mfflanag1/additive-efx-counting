@@ -17,4 +17,5 @@ def test_source_margin_root_budget_frontier_replays():
 def test_source_margin_root_budget_frontier_is_forced():
     result = run(ROOT)
     assert result["status"] == "ALL_FORCED"
-    assert len(result["outcomes"]) == 4
+    assert len(result["frontier_certificates"]) == 4
+    assert result["remaining_operation"] == "third-owner surplus-budgeted connected fork"

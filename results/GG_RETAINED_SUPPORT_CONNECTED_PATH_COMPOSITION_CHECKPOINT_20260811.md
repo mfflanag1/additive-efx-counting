@@ -143,11 +143,12 @@ desired mutual core `D(U)=(T_r\setminus U)+f` remains available even when its
 goods are split across several targets.  Reassembling this split-support
 response and applying universal reset gives protected `q` coverage, strict
 growth of `U`, captured-margin rotation, or an explicit `q`- or external-
-source margin packet.  The root-budget frontier then maximizes compensation
-for that source under the exact amount the root can return.  It either
-restores the source or proves that every unused pool good is individually too
-expensive for the remaining root budget.  A proof must now split/replace the
-root packet at that pointwise blockade or enlist a third owner in a surplus-
+source margin packet.  The root-budget frontier then maximizes that source's
+final utility over every root-paid split and replacement inside the complete
+two-row pool.  It either restores the source or produces an exchange-stable
+cut: every boundary good exceeds the root slack and every root-affordable
+swap has the opposite source order.  Since all two-row packet choices have
+already been optimized, a proof must now enlist a third owner in a surplus-
 budgeted connected fork; unsafe/hitting-set augmentation remains the other
 route.
 The initially proposed lexicographic potential was
