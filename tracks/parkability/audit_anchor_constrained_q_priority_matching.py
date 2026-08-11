@@ -30,6 +30,40 @@ def matchings(edges: set[tuple[str, str]]):
                     yield matching
 
 
+def anchor_component_balance(anchored_matching, maximum_matching):
+    anchored_edges = set(anchored_matching)
+    maximum_edges = set(maximum_matching)
+    symmetric = anchored_edges ^ maximum_edges
+    adjacency = {}
+    for source, target in symmetric:
+        left, right = ("source", source), ("target", target)
+        adjacency.setdefault(left, set()).add(right)
+        adjacency.setdefault(right, set()).add(left)
+    start = ("source", ANCHOR[0])
+    stack = [start]
+    component_nodes = set()
+    while stack:
+        node = stack.pop()
+        if node in component_nodes:
+            continue
+        component_nodes.add(node)
+        stack.extend(adjacency.get(node, ()))
+    component_edges = {
+        edge for edge in symmetric
+        if ("source", edge[0]) in component_nodes
+        and ("target", edge[1]) in component_nodes
+    }
+    degrees = [len(adjacency[node]) for node in component_nodes]
+    return {
+        "maximum_minus_anchor_edges": (
+            len(component_edges & maximum_edges)
+            - len(component_edges & anchored_edges)
+        ),
+        "is_path": bool(component_edges) and max(degrees, default=0) <= 2
+        and sum(degree == 1 for degree in degrees) == 2,
+    }
+
+
 def run(root: Path) -> dict:
     optional_edges = tuple(
         edge
@@ -39,6 +73,8 @@ def run(root: Path) -> dict:
     counts = {
         "relations": 0,
         "anchor_rank_gap": 0,
+        "anchor_rank_gap_exactly_one": 0,
+        "anchor_rank_gap_path_witness": 0,
         "anchor_rank_equal_q_representable": 0,
         "anchor_rank_equal_q_unmatched": 0,
         "uncovered": 0,
@@ -59,6 +95,24 @@ def run(root: Path) -> dict:
         counts["relations"] += 1
         if anchor_rank < rank:
             counts["anchor_rank_gap"] += 1
+            if rank == anchor_rank + 1:
+                counts["anchor_rank_gap_exactly_one"] += 1
+            anchored_maximum = next(
+                matching for matching in anchored
+                if len(matching) == anchor_rank
+            )
+            path_witness = any(
+                (record := anchor_component_balance(
+                    anchored_maximum, maximum_matching
+                ))["is_path"]
+                and record["maximum_minus_anchor_edges"] == 1
+                for maximum_matching in all_matchings
+                if len(maximum_matching) == rank
+            )
+            if path_witness:
+                counts["anchor_rank_gap_path_witness"] += 1
+            else:
+                counts["uncovered"] += 1
             if len(rank_gap_examples) < 3:
                 rank_gap_examples.append({
                     "edges": [list(edge) for edge in sorted(edges)],
@@ -77,6 +131,8 @@ def run(root: Path) -> dict:
         if q_neighbors:
             counts["uncovered"] += 1
     assert counts["relations"] == 1 << 14
+    assert counts["anchor_rank_gap_exactly_one"] == counts["anchor_rank_gap"]
+    assert counts["anchor_rank_gap_path_witness"] == counts["anchor_rank_gap"]
     assert counts["uncovered"] == 0
 
     script = Path(__file__).resolve()

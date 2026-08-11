@@ -39,11 +39,15 @@ the maximum rank among matchings required to contain (1).
 
 Exactly one of the following holds.
 
-1. **Anchor gap:** `nu_h<nu`.  The symmetric difference between an
-   unrestricted maximum matching and an anchor-constrained maximum matching
-   contains an alternating path through (1).  This is the exact response
-   path whose physical release support must be composed with the permanent
-   `B_q` release.
+1. **Anchor gap:** `nu_h<nu`.  In fact `nu_h=nu-1`.  Adding the anchor to an
+   unrestricted maximum matching and deleting its at most two incident
+   matching edges always leaves an anchored matching of size at least
+   `nu-1`.  The symmetric difference between suitable unrestricted and
+   anchor-constrained maxima contains a unique rank-gaining alternating path
+   through (1).  Any augmenting component disjoint from (1) would contradict
+   maximality within the anchored family.  This is both a strict response-
+   rank increase and the exact path whose physical release support must be
+   composed with the permanent `B_q` release.
 2. **Anchor-compatible maximum rank:** `nu_h=nu`.  Among maximum matchings
    containing (1), first prefer a matching that represents `q`.  If one
    exists, `q` is not the residual owner.  If none exists, then `q` has no
@@ -97,8 +101,9 @@ missing-owner valuation row.
 [`anchor_constrained_q_priority_matching_audit.json`](anchor_constrained_q_priority_matching_audit.json)
 exhausts all `2^14` response relations on four sources and four targets with
 (1) forced and (3) forbidden.  Every relation is classified as an anchor
-rank gap, an anchor-compatible matching representing `q`, or an
-anchor-compatible state in which `q` has degree zero.
+rank gap of exactly one with an alternating-path witness, an anchor-
+compatible matching representing `q`, or an anchor-compatible state in
+which `q` has degree zero.
 
 The lemma does not prove that the anchor-gap alternating path is
 release-compatible, show that every source-inactive rank-two reset preserves

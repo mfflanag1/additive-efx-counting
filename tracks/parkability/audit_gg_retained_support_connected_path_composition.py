@@ -32,6 +32,10 @@ DEPENDENCIES = (
     ("SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md", "surplus_budgeted_connected_component_transfer_audit.json"),
     ("GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md", "gg_historical_support_ledger_stagnation_audit.json"),
     ("ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md", "anchor_constrained_q_priority_matching_audit.json"),
+    ("PERMANENT_ANCHOR_Q_ACTIVITY_DICHOTOMY_LEMMA_20260811.md", "permanent_anchor_q_activity_dichotomy_audit.json"),
+    ("FIXED_U_Q_RESIDUAL_GLOBAL_MAX_SELECTOR_LEMMA_20260811.md", "fixed_u_q_residual_global_max_selector_audit.json"),
+    ("PROTECTED_Q_RESPONSE_RETENTION_LEMMA_20260811.md", "protected_q_response_retention_audit.json"),
+    ("DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md", "degree_zero_q_split_core_root_flip_audit.json"),
 )
 
 
@@ -53,7 +57,7 @@ def run(root: Path) -> dict:
             "audit_sha256": sha256(audit),
             "audit_status": payload.get("status"),
         })
-    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU"}
+    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "COMPOSED", "DEPENDENCIES_REPLAYABLE", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU"}
     verified = all(record["audit_status"] in accepted for record in records)
     script = Path(__file__).resolve()
     checkpoint = result_dir / "GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md"
@@ -62,7 +66,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 51,
+        "focused_test_count": 60,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

@@ -1428,6 +1428,20 @@ both encodings.
   must instead activate `q`, augment through an unsafe core, close by EFX/PI,
   or contradict the selector. Only the root-facing and unsafe/hitting-set
   handoffs remain.
+- [`PROTECTED_Q_RESPONSE_RETENTION_LEMMA_20260811.md`](PROTECTED_Q_RESPONSE_RETENTION_LEMMA_20260811.md)
+  ([exact audit](protected_q_response_retention_audit.json))
+  — shows that once the permanent-anchor selector represents `q`, the
+  selected `q` core is floater-free. A later top-only orientation reset must
+  preserve `q` coverage, strictly enlarge retained support, or capture the
+  remaining `q` margin; it cannot silently sacrifice `q` again at the same
+  retained state.
+- [`DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md`](DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md)
+  ([composition audit](degree_zero_q_split_core_root_flip_audit.json))
+  — removes degree-zero `q` as an untyped one-target Hall terminal. The known
+  desired mutual core remains a split-support response across the connected
+  path; reassembling it yields protected `q` coverage, retained-support
+  growth, captured-margin rotation, or a named source-margin packet. The
+  latter packet and unsafe/root-critical handoffs remain open.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

@@ -131,17 +131,21 @@ captures a nonempty `B_q` packet and enters the same complete charity path.
 Top-only resets preserve, strictly enlarge, or capture the retained support,
 and a floater-consuming reset is routed by its source.
 
-The sole remaining terminal is the **fixed-`U`, root-facing/unsafe degree-
-zero-`q` recurrence**.  The permanent-anchor activity dichotomy shows
+The sole remaining terminal is the **source-margin/root-critical handoff
+after a fixed-`U` split-core root flip**.  The permanent-anchor activity dichotomy shows
 that every response-active `q` can be represented by an anchor-constrained
 maximum matching, even when the anchor costs unrestricted rank.  Therefore
 `q` is sacrificed only when she has no response edge to any active target.
 The fixed-`U` global q-residual selector then eliminates every nonroot
 source-inactive wall: successful repair and nonroot J-exhaustion both
-strictly raise the same q-row residual across all response ranks.  A proof
-must now convert the root-facing root-critical handoff or unsafe/hitting-set
-augmentation into a release-compatible PI component or a surplus-budgeted
-connected transfer component.
+strictly raise the same q-row residual across all response ranks.  The known
+desired mutual core `D(U)=(T_r\setminus U)+f` remains available even when its
+goods are split across several targets.  Reassembling this split-support
+response and applying universal reset gives protected `q` coverage, strict
+growth of `U`, captured-margin rotation, or an explicit `q`- or external-
+source margin packet.  A proof must now convert that named source-margin/
+root-critical packet, or an unsafe/hitting-set augmentation, into a release-
+compatible PI component or a surplus-budgeted connected transfer component.
 The initially proposed lexicographic potential was
 
 \[
@@ -175,16 +179,20 @@ the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
 Require the permanent edge into the changed `q` target, maximize response
 rank subject to that edge, and then prioritize representation of `q`.  On
-the plateau this chooses exactly one of the four states.  In general it
-gives an exhaustive trichotomy: higher unrestricted rank, protected `q`
-coverage, or degree-zero/source-inactive `q`.  The live analytic gate is now
-to compose an anchor-rank-gap alternating path with physical releases, or
-to prevent a degree-zero `q` repair from returning through different
-physical cores at the same fixed `U`.
+the plateau this chooses exactly one of the four states.  In general it gives
+an exhaustive graph-level trichotomy: higher unrestricted rank, protected
+`q` coverage, or degree-zero/source-inactive `q`.  An active `q` can always
+be represented in an anchor-constrained maximum matching, whether or not the
+anchor costs unrestricted rank; once represented, universal reset preserves
+that coverage, grows `U`, or captures the remaining margin.  A degree-zero
+`q` invokes the split-support root flip rather than another ordinary Hall
+reset.  The live analytic gate is therefore physical termination of the
+resulting source-margin/root-critical packet and unsafe/hitting-set
+augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 51 tests spanning the retained-support,
+The focused dependency replay currently passes 60 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

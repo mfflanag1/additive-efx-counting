@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 22,
-  "focused_test_count": 51,
+  "dependency_count": 26,
+  "focused_test_count": 60,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "6916f3fca91ab28131522ebdbad9218faa41c3e49d75fbf8f2bd37951e99b2be",
+    "checkpoint_sha256": "60537af31aab0033fb78e23cba8e6f094c1c85771d1803668e51168b226c955d",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "5e151dd9f1e9accb003118bfff7a708d538ca687dda219bc1f983f66ffa95498"
+    "script_sha256": "569d0237c74971a7444fa9e78269895ecc328dc5a3bcc6b8d2c388536566e59b"
   },
   "records": [
     {
@@ -158,10 +158,38 @@
     },
     {
       "audit": "results/anchor_constrained_q_priority_matching_audit.json",
-      "audit_sha256": "8bd7d678bdfcda017e58d7b7ab104202e2de0529b61a835e2291daef0c27e2f5",
+      "audit_sha256": "ca864fa6df25c04be8d20137f23051429d61dd4ef211ca9d2a774feb5eac76f9",
       "audit_status": "ALL_CLASSIFIED",
       "theorem": "results/ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md",
-      "theorem_sha256": "c353c3fbbcee5843030f3f2ee89f391f536573c28ee2f6db07ad81ebedcf2563"
+      "theorem_sha256": "f925d62fc2095862ff0088d25bb6d9ce89d3ab86037fc5f626f3b3be6e631488"
+    },
+    {
+      "audit": "results/permanent_anchor_q_activity_dichotomy_audit.json",
+      "audit_sha256": "ac2a08e982edd7e0b50498e63a739e90414e8324516f5338f80f9cb63a4a77c2",
+      "audit_status": "ALL_CLASSIFIED",
+      "theorem": "results/PERMANENT_ANCHOR_Q_ACTIVITY_DICHOTOMY_LEMMA_20260811.md",
+      "theorem_sha256": "854f74edd7ca29fc9ba7394e984ca936fe561c22b3f34c03993af5acaafe9d3e"
+    },
+    {
+      "audit": "results/fixed_u_q_residual_global_max_selector_audit.json",
+      "audit_sha256": "a7c895f0e0d58213b9701207c8350ea66a54d9044c7effa591cde339a00af565",
+      "audit_status": "COMPOSED",
+      "theorem": "results/FIXED_U_Q_RESIDUAL_GLOBAL_MAX_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "af07f14f08b820c3274db5bcf28188cd936c913ff3249dc6df3a4ec717ed7355"
+    },
+    {
+      "audit": "results/protected_q_response_retention_audit.json",
+      "audit_sha256": "b1896bb444d887af3304db0252b84335269013abe60b827e52b90b146fbf13e4",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/PROTECTED_Q_RESPONSE_RETENTION_LEMMA_20260811.md",
+      "theorem_sha256": "a296c0d4ce8ecb7f32fe8b60935257d1e9c4fd45cb76c101d42f34c598d52c41"
+    },
+    {
+      "audit": "results/degree_zero_q_split_core_root_flip_audit.json",
+      "audit_sha256": "48886692b1b9f40e8d78bb471446aa79ae56359fbee55222dd16037d46424f43",
+      "audit_status": "DEPENDENCIES_REPLAYABLE",
+      "theorem": "results/DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md",
+      "theorem_sha256": "5fa9e32b0302dd05abc221ee58f17a37d4c7d838d72a2593119b6c3a511dfaf4"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",
