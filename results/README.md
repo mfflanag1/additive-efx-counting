@@ -1334,6 +1334,14 @@ both encodings.
 - [`canonical_root_response_two_stage_selector_audit.json`](canonical_root_response_two_stage_selector_audit.json)
   — symbolic replay of both extremal-propagation implications and the
   selected joint-capture inequalities.
+- [`EVOLVED_TARGET_MINIMAL_SOURCE_TRICHOTOMY_LEMMA_20260811.md`](EVOLVED_TARGET_MINIMAL_SOURCE_TRICHOTOMY_LEMMA_20260811.md)
+  — globally minimizes any unsafe desired subset of the evolved target to
+  obtain a common-safe core. Its source is exhaustively `q` (immediate PI),
+  external (return/Hall augmentation), or `r` (the canonical two-stage root
+  selector), so an unnamed unsafe evolved-target branch no longer remains.
+- [`evolved_target_minimal_source_trichotomy_audit.json`](evolved_target_minimal_source_trichotomy_audit.json)
+  — symbolic replay of minimal-core safety and exhaustive source routing;
+  physical release support is inherited from the prior two-root audit.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow

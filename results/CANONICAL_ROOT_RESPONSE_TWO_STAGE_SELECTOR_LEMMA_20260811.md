@@ -21,11 +21,13 @@ Let `R(L)` be the finite family of all nonempty common-safe bundles
 \[
  A\subseteq W
  \quad\text{such that}\quad
- v_r(A)>v_r(D_r).                                   \tag{1}
+ v_r(A)>v_r(X_r).                                   \tag{1}
 \]
 
-If the root creates an evolved-target wall and has a common-safe response,
-this family is nonempty.  For `A in R(L)`, write
+If the root creates an evolved-target wall, global inclusion-minimization
+of desired subsets produces a common-safe core.  Whenever its source is the
+root, it belongs to this family even if its value lies below the temporary
+anchor `D_r`.  For `A in R(L)`, write
 
 \[
  K_A=A\cap B_q,
@@ -122,7 +124,8 @@ value cap.
 checks propagation of the stage-one minimum, propagation of the stage-two
 maximum, and both selected capture inequalities under Z3 5.0.0.
 
-This lemma canonicalizes the common-safe root-response family.  It does not
-eliminate unsafe root walls, terminate the joint packet (9), prove that a
-subsequent response preserves `L`, close the remaining Hall boundary, close
-`GG`, or prove four-agent/general additive EFX.
+This lemma canonicalizes the common-safe root-response family, including
+root-sourced cores extracted from unsafe targets.  It does not classify the
+non-root source cases of every unsafe target, terminate the joint packet
+(9), prove that a subsequent response preserves `L`, close the remaining
+Hall boundary, close `GG`, or prove four-agent/general additive EFX.

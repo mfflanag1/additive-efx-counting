@@ -25,7 +25,8 @@ where
 `A` is a common-safe root response satisfying
 
 \[
- v_r(A)>v_r(D_r)>v_r(X_r),                          \tag{1}
+ v_r(A)>v_r(X_r),
+ \qquad v_r(D_r)>v_r(X_r),                         \tag{1}
 \]
 
 and failed anchor return gives

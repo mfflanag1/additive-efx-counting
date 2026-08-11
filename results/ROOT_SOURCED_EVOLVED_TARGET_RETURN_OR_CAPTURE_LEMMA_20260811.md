@@ -33,11 +33,13 @@ Suppose the sole evolved-target wall has a **common-safe root response**
 
 \[
  A\subseteq W,
- \qquad v_r(A)>v_r(D_r).                            \tag{2}
+ \qquad v_r(A)>v_r(X_r).                            \tag{2}
 \]
 
-The stronger threshold in (2), rather than merely `v_r(A)>v_r(X_r)`, is
-available whenever the root is the actual observer creating the wall.
+This includes both a core directly extracted from the root's actual wall
+and a root-sourced core obtained by globally minimizing an unsafe desired
+target.  The latter need not beat the temporary anchor `D_r`; payment above
+the base bundle is exactly what the lexicographic objective requires.
 
 ## Anchor-return allocation
 
@@ -51,8 +53,8 @@ Exchange the root response core with the old root anchor:
 \]
 
 and retain `R` as charity.  This is a complete reallocation of the same
-goods.  The root strictly improves over both `D_r` and her base bundle.  The
-later mutual owner has exact gain
+goods.  The root remains strictly above her base bundle.  The later mutual
+owner has exact gain
 
 \[
  v_q(Z_q)-v_q(X_q)
@@ -137,7 +139,8 @@ checks the exact payment identity, the successful-return implication, the
 capture cancellation, the nonempty-`B_q` support conclusion, and charity
 containment under Z3 5.0.0.
 
-This lemma eliminates an unstructured common-safe root response.  It does
-not build the alternating compensation chain for (7), eliminate an unsafe
-root wall, close the resulting response/Hall augmentation, close `GG`, or
-prove four-agent/general additive EFX.
+This lemma eliminates an unstructured common-safe root response, including
+one extracted from an unsafe target.  It does not build the alternating
+compensation chain for (7), classify non-root sources of every unsafe
+target, close the resulting response/Hall augmentation, close `GG`, or prove
+four-agent/general additive EFX.

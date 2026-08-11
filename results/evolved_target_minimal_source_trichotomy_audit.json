@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "QF_LRA/source audit of global minimal-core safety and source routing; release compatibility is covered by the prior two-root audit",
+  "provenance": {
+    "script": "tracks/parkability/audit_evolved_target_minimal_source_trichotomy.py",
+    "script_sha256": "2e2d8176d371777da7a39ca284bd1005964315381692b59c8560122e0768a5fe",
+    "theorem": "results/EVOLVED_TARGET_MINIMAL_SOURCE_TRICHOTOMY_LEMMA_20260811.md",
+    "theorem_sha256": "259271f1a0c3f08d5e1d119076f9dc3c1404fac167ae79357c9e7e24d2965e0c",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "minimality_forces_every_deleted_subset_below_base",
+      "status": "unsat"
+    },
+    {
+      "claim": "four_source_labels_are_exhaustive",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_source_is_strictly_above_root_base",
+      "status": "unsat"
+    }
+  ],
+  "schema": "evolved-target-minimal-source-trichotomy-audit-v1",
+  "status": "ALL_FORCED"
+}
