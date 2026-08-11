@@ -60,6 +60,9 @@ try:
     from .audit_hardened_q_wall_sink_augmentation_pi import (
         run as run_hardened_sink_pi_audit,
     )
+    from .audit_full_reservoir_r_wall_top_capture import (
+        run as run_r_wall_top_capture_audit,
+    )
     from .audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
     )
@@ -122,6 +125,9 @@ except ImportError:
     )
     from audit_hardened_q_wall_sink_augmentation_pi import (
         run as run_hardened_sink_pi_audit,
+    )
+    from audit_full_reservoir_r_wall_top_capture import (
+        run as run_r_wall_top_capture_audit,
     )
     from audit_residual_flower_packet_countermodel import (
         run as run_packet_countermodel_audit,
@@ -509,6 +515,18 @@ def main():
     }
     assert hardened_sink["incoming_disjoint"]
     assert hardened_sink["all_incoming_supplied"]
+    r_wall_top_path = (
+        ROOT / "results" / "full_reservoir_r_wall_top_capture_audit.json"
+    )
+    r_wall_top = json.loads(r_wall_top_path.read_text())
+    r_wall_top_replay = run_r_wall_top_capture_audit()
+    assert r_wall_top_replay["status"] == "ALL_FORCED"
+    assert r_wall_top_replay["scalar_records"] == r_wall_top["scalar_records"]
+    r_wall_top_theorem = (
+        ROOT / "results" / "FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md"
+    ).read_text()
+    assert "impossible when" in r_wall_top_theorem
+    assert "strict top-core inequality" in r_wall_top_theorem
     maximal_frontier_path = (
         ROOT / "results" / "maximal_replacement_frontier_exchange_audit.json"
     )

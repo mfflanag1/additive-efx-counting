@@ -233,6 +233,14 @@ previous bounded adversary. See
 and
 [`hardened_q_wall_sink_augmentation_pi_audit.json`](hardened_q_wall_sink_augmentation_pi_audit.json).
 
+The full-reservoir R-wall is possible only for a top-capturing response.
+Writing `K_T=K intersect T_q` and `K_B=K intersect B_q`, the wall forces
+`r(K_T)>r(B_q-K_B)+r(X_a)`. In particular every bottom-only response core
+closes through compensation or root-switch/component growth. The residual
+root/order selector need address only this sharply oriented top-core branch.
+See
+[`FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md`](FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md).
+
 Two natural ways of freezing the selected operation are now exactly refuted.
 Neither fixing the selected singleton replacement nor first enlarging it to
 an inclusion-maximal packet below `f` guarantees an EFX completion that keeps

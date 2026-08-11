@@ -965,6 +965,14 @@ both encodings.
   relation has matching `q<-s,c<-c,r<-r,s<-q`, whose disjoint incoming
   packets are internally supplied. This is a generalized PI certificate,
   not merely a nearby EFX witness.
+- [`FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md`](FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md)
+  — localizes the only compensation wall not converted to a component.
+  Combining full-reservoir failure with `r`'s desired `T_q+f` bundle forces
+  the response core's top portion to dominate the omitted bottom plus the
+  external owner's entire bundle in `r`'s row. Bottom-only cores—used by all
+  current strict-capture adversaries—cannot realize this wall.
+- [`full_reservoir_r_wall_top_capture_audit.json`](full_reservoir_r_wall_top_capture_audit.json)
+  — dual-solver scalar replay of the strict top-capture implication.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on

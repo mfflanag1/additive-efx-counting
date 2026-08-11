@@ -264,6 +264,15 @@ See
 and
 [hardened_q_wall_sink_augmentation_pi_audit.json](hardened_q_wall_sink_augmentation_pi_audit.json).
 
+The remaining full-reservoir R-wall is now confined to a strict top-core
+state. If `K_T=K intersect T_q` and `K_B=K intersect B_q`, failure to pay `r`
+even with `(X_q-K)+X_a`, together with `r(T_q+f)>r(X_r)` and
+`r(B_r)>=r(f)`, forces
+`r(K_T)>r(B_q-K_B)+r(X_a)`. Thus a bottom-only response core can never reach
+R-exhaustion; all current strict-capture adversaries are eliminated from
+this branch. See
+[FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md](FULL_RESERVOIR_R_WALL_TOP_CAPTURE_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,
