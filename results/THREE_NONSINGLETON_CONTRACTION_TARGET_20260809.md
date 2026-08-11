@@ -201,6 +201,13 @@ live selector is reduced to simultaneous payment/Hall augmentation for only
 and
 [`FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md`](FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md).
 
+The external response chain is now proved finite without an item cap.  A
+response source `a` either admits an ordinary/residual return from `q`, which
+closes PI, satisfies the low-return inequality `q(X_a+R)<=q(X_q)`, or exposes
+a named non-`q` response source.  Only the other external owner can be new,
+so at most one augmentation remains before the relation is closed.  See
+[`FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md`](FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md).
+
 The component library now also covers owner-rooted exchange stars, not only
 charity-rooted hubs. A hub may receive a packet from one donor while
 partitioning its released packet among that donor and other leaves. Any

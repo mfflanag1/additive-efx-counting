@@ -150,6 +150,15 @@ See
 and
 [FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md](FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md).
 
+External-source growth is also finite cap-free.  If `a in {c,s}` responds to
+the evolved `q` target, either `q` has an ordinary or residual return response
+into `a` and the three responses close PI, or `q(X_a+R)<=q(X_q)`, or the
+return target names a non-`q` response source.  The latter can add only the
+other external owner; after that no open owner remains.  The universal flower
+gate is therefore reduced to a low-return inequality for `c,s` or a closed
+Hall defect missing `q`, rather than an unbounded dependency chain.  See
+[FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md](FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,

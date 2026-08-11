@@ -937,6 +937,12 @@ both encodings.
   residual. Any observer unpayable even by the whole residual must rank
   `B_q` above that residual, leaving only the two external-owner payment/Hall
   deficiency or a polarity-driven root flip.
+- [`FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md`](FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md)
+  — cap-free finite-growth theorem for an external response source. An
+  ordinary or residual return from `q` closes PI; otherwise the process
+  produces a low-return inequality or one named non-`q` source. With four
+  owners only one genuinely new external augmentation is possible, leaving
+  a closed Hall defect rather than an indefinite blocker chain.
 - [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
   — cap-free response-Hall theorem for an owner-supplied exchange star. The
   hub receives a donor packet and partitions its own released packet among

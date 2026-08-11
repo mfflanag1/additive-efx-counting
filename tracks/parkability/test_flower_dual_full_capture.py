@@ -242,7 +242,15 @@ def main():
         / "results"
         / "FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md"
     ).read_text()
-    assert "every root wall can be repaired" in wall_payment_theorem
+    assert "root wall can be repaired" in wall_payment_theorem
+    return_augmentation_theorem = (
+        ROOT
+        / "results"
+        / "FLOWER_EXTERNAL_RETURN_AUGMENTATION_LEMMA_20260810.md"
+    ).read_text()
+    assert "independent of `|R|`" in return_augmentation_theorem
+    assert "There is no fifth owner" in return_augmentation_theorem
+    assert "does not yet close `GG`" in return_augmentation_theorem
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())
