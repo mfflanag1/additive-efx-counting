@@ -1392,8 +1392,8 @@ both encodings.
   recurrence; its rank-lowering resets still need one global potential or
   connected-component extraction.
 - [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json)
-  — integrity/replay manifest for thirteen cap-free dependencies and the
-  focused 43-test dependency suite; it is not a proof of the corrected global reset
+  — integrity/replay manifest for twenty-two cap-free dependencies and the
+  focused 51-test dependency suite; it is not a proof of the corrected global reset
   potential.
 - [`GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md`](GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md)
   ([exact audit](gg_rank_reset_raw_potential_refutation_audit.json))
@@ -1411,6 +1411,14 @@ both encodings.
   per-hole residual maxima, and used-support history. This does not prove a
   particular deterministic repair rule cycles; it forces either a new
   current-state invariant or direct component extraction.
+- [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
+  ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
+  — supplies that current-state invariant at the response-graph level. Force
+  the permanent root anchor, maximize rank, and then prioritize `q`. Across
+  all `2^14` four-owner response relations, either the anchor costs rank,
+  `q` is represented, or unmatched `q` has degree zero. It collapses the
+  exact four-state ledger plateau to one matching label; physical-core
+  recurrence and anchor-gap release remain open.
 - [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md)
   ([exact audit](surplus_budgeted_connected_component_transfer_audit.json))
   — lifts the externally-safe path endpoint to arbitrary connected packet

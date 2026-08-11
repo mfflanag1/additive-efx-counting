@@ -24,6 +24,14 @@ DEPENDENCIES = (
     ("TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md", "two_hole_cut_and_choose_response_hall_audit.json"),
     ("TWO_BY_TWO_RESPONSE_HALL_NORMAL_FORM_20260811.md", "two_by_two_response_hall_normal_form_audit.json"),
     ("GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md", "gg_rank_reset_raw_potential_refutation_audit.json"),
+    ("EXTERNALLY_SAFE_CONNECTED_PATH_TRANSFER_LEMMA_20260811.md", "externally_safe_connected_path_transfer_audit.json"),
+    ("ROOT_DONATION_GLOBAL_BLOCKER_LEMMA_20260811.md", "root_donation_global_blocker_audit.json"),
+    ("ROOT_MONOPOLY_CHARITY_PATH_HANDOFF_LEMMA_20260811.md", "root_monopoly_charity_path_handoff_audit.json"),
+    ("UNIVERSAL_RETAINED_SUPPORT_RESET_LEMMA_20260811.md", "universal_retained_support_reset_audit.json"),
+    ("FLOATER_CONSUMING_RESET_SOURCE_TRICHOTOMY_20260811.md", "floater_consuming_reset_source_trichotomy_audit.json"),
+    ("SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md", "surplus_budgeted_connected_component_transfer_audit.json"),
+    ("GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md", "gg_historical_support_ledger_stagnation_audit.json"),
+    ("ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md", "anchor_constrained_q_priority_matching_audit.json"),
 )
 
 
@@ -45,7 +53,7 @@ def run(root: Path) -> dict:
             "audit_sha256": sha256(audit),
             "audit_status": payload.get("status"),
         })
-    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "VERIFIED", "PASS", "CLASSIFIED", "EXACT_SCALE_REFUTATION"}
+    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU"}
     verified = all(record["audit_status"] in accepted for record in records)
     script = Path(__file__).resolve()
     checkpoint = result_dir / "GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md"
@@ -54,7 +62,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 43,
+        "focused_test_count": 51,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

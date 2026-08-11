@@ -162,9 +162,21 @@ observer-indexed surplus balances of
 [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md),
 not zero-overshoot external common safety.
 
+The exact four-state plateau is eliminated at the matching-label level by
+the current-state selector in
+[`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
+Require the permanent edge into the changed `q` target, maximize response
+rank subject to that edge, and then prioritize representation of `q`.  On
+the plateau this chooses exactly one of the four states.  In general it
+gives an exhaustive trichotomy: higher unrestricted rank, protected `q`
+coverage, or degree-zero/source-inactive `q`.  The live analytic gate is now
+to compose an anchor-rank-gap alternating path with physical releases, or
+to prevent a degree-zero `q` repair from returning through different
+physical cores at the same fixed `U`.
+
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 43 tests spanning the retained-support,
+The focused dependency replay currently passes 51 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

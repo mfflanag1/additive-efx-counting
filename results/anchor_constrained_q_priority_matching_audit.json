@@ -1,0 +1,98 @@
+{
+  "claim_boundary": "exhaustive four-source response-graph theorem: an anchor-compatible maximum matching either represents q or an unmatched sacrificed q has degree zero; release-compatible closure of the anchor-rank-gap alternating path and source-inactive reset recurrence remain open",
+  "counts": {
+    "anchor_rank_equal_q_representable": 11992,
+    "anchor_rank_equal_q_unmatched": 1789,
+    "anchor_rank_gap": 2603,
+    "relations": 16384,
+    "uncovered": 0
+  },
+  "forbidden_sacrificed_q_anchor_edge": [
+    "q",
+    "h"
+  ],
+  "forced_anchor": [
+    "r",
+    "h"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_anchor_constrained_q_priority_matching.py",
+    "script_sha256": "00bc310d52e068c46e3dfd9dcd02512674cbf02b628942b48a9e9227bd774dd8",
+    "theorem": "results/ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md",
+    "theorem_sha256": "c353c3fbbcee5843030f3f2ee89f391f536573c28ee2f6db07ad81ebedcf2563"
+  },
+  "rank_gap_examples": [
+    {
+      "anchor_rank": 1,
+      "edges": [
+        [
+          "c",
+          "h"
+        ],
+        [
+          "r",
+          "h"
+        ],
+        [
+          "r",
+          "t1"
+        ]
+      ],
+      "rank": 2
+    },
+    {
+      "anchor_rank": 1,
+      "edges": [
+        [
+          "c",
+          "h"
+        ],
+        [
+          "r",
+          "h"
+        ],
+        [
+          "r",
+          "t2"
+        ]
+      ],
+      "rank": 2
+    },
+    {
+      "anchor_rank": 1,
+      "edges": [
+        [
+          "c",
+          "h"
+        ],
+        [
+          "r",
+          "h"
+        ],
+        [
+          "r",
+          "t1"
+        ],
+        [
+          "r",
+          "t2"
+        ]
+      ],
+      "rank": 2
+    }
+  ],
+  "schema": "anchor-constrained-q-priority-matching-audit-v1",
+  "sources": [
+    "r",
+    "q",
+    "c",
+    "s"
+  ],
+  "status": "ALL_CLASSIFIED",
+  "targets": [
+    "h",
+    "t1",
+    "t2",
+    "t3"
+  ]
+}
