@@ -186,15 +186,30 @@ a losing later donor.  The exhaustive wall classification for that primitive
 is
 [`LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md`](LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md).
 
+The residual payment threshold now selects a stronger operation without any
+item cap.  A minimal `q`-paying packet `L subseteq T_r` produces a rotation
+that strictly improves both mutual owners, parks the complement safely, and
+can fail only at the evolved target `B_q+L`.  Partitioning the released
+residual among the root and external blockers has exact response-Hall release
+support; every internal response matching is PI.  The earlier root is always
+payable from the residual.  Any external owner unpayable even by the full
+residual must satisfy the sharp reverse polarity `B_q>R`.  Consequently the
+live selector is reduced to simultaneous payment/Hall augmentation for only
+`c,s`, or a root flip driven by that explicit polarity.  See
+[`FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md`](FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md),
+[`FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md),
+and
+[`FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md`](FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md).
+
 The component library now also covers owner-rooted exchange stars, not only
 charity-rooted hubs. A hub may receive a packet from one donor while
 partitioning its released packet among that donor and other leaves. Any
 internal response SDR is automatically a release-compatible PI edge set;
 otherwise the exact remainder is open or Hall deficient. This is the
 smallest operation required by the surviving connected-transfer profiles.
-The live task is selection from the polarity/residual data followed by
-termination of the donor-payment or external-charity branch, not another
-fixed packet core. See
+The live task is elimination of the remaining two-external-owner weighted
+payment/Hall deficiency, not selection of a first residual component or
+another fixed packet core. See
 [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
 ## Claim boundary

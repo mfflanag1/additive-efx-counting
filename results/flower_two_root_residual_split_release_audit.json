@@ -1,0 +1,107 @@
+{
+  "claim_boundary": "finite support/permutation audit for zero to two leaves; utility eligibility and flower-specific partition selection are analytic",
+  "records": [
+    {
+      "cycle_size_multiset_counts": {
+        "[1, 1]": 1,
+        "[2]": 1
+      },
+      "incoming_sets": {
+        "0": [
+          "Tq",
+          "f"
+        ],
+        "1": [
+          "L"
+        ]
+      },
+      "leaf_count": 0,
+      "released_sets": {
+        "0": [
+          "L"
+        ],
+        "1": [
+          "Tq"
+        ]
+      },
+      "response_permutations_checked": 2,
+      "root_retained_cell_optional": true,
+      "target_count": 2
+    },
+    {
+      "cycle_size_multiset_counts": {
+        "[1, 1, 1]": 1,
+        "[1, 2]": 3,
+        "[3]": 2
+      },
+      "incoming_sets": {
+        "0": [
+          "Tq",
+          "f"
+        ],
+        "1": [
+          "L"
+        ],
+        "2": [
+          "R2"
+        ]
+      },
+      "leaf_count": 1,
+      "released_sets": {
+        "0": [
+          "L",
+          "R2"
+        ],
+        "1": [
+          "Tq"
+        ],
+        "2": []
+      },
+      "response_permutations_checked": 6,
+      "root_retained_cell_optional": true,
+      "target_count": 3
+    },
+    {
+      "cycle_size_multiset_counts": {
+        "[1, 1, 1, 1]": 1,
+        "[1, 1, 2]": 6,
+        "[1, 3]": 8,
+        "[2, 2]": 3,
+        "[4]": 6
+      },
+      "incoming_sets": {
+        "0": [
+          "Tq",
+          "f"
+        ],
+        "1": [
+          "L"
+        ],
+        "2": [
+          "R2"
+        ],
+        "3": [
+          "R3"
+        ]
+      },
+      "leaf_count": 2,
+      "released_sets": {
+        "0": [
+          "L",
+          "R2",
+          "R3"
+        ],
+        "1": [
+          "Tq"
+        ],
+        "2": [],
+        "3": []
+      },
+      "response_permutations_checked": 24,
+      "root_retained_cell_optional": true,
+      "target_count": 4
+    }
+  ],
+  "schema": "flower-two-root-residual-split-release-audit-v1",
+  "status": "ALL_RELEASE_COMPATIBLE"
+}

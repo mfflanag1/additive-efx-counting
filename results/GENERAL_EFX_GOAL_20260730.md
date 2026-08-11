@@ -133,13 +133,31 @@ cardinality to grow.  See
 and
 [LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md](LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md).
 
+The live payment-critical residual now has a canonical cap-free component.
+Choose an inclusion-minimal `L subseteq T_r` with `q(L)>q(T_q)`, give
+`r` the common-safe desired bundle `T_q+f`, give `q` `B_q+L`, and release
+`R=(T_r\L)+B_r`. Both owners strictly improve and base EFX automatically
+dominates the whole released packet as charity, so every failure is a single
+wall against the evolved `q` target. Partitioning `R` among the root and the
+two external leaves yields a two-root response family whose internal SDR is
+always release-compatible: the `r` edge supplies `L` and every residual cell,
+the `q` edge supplies `T_q`, and charity supplies `f`. Moreover every wall by
+`r` can always be paid from `R`; an observer not payable even by all of `R`
+must rank `B_q>R`, which confines the remaining payment obstruction to `c,s`.
+See
+[FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md](FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md),
+[FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md](FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md),
+and
+[FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md](FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,
 so an internal response SDR is a PI edge set. This is the cap-free primitive
 required by the connected transfer motifs that survive charity-rooted hubs;
-the remaining `GG` gate is to select its packets from the residual/polarity
-data and terminate the one-defect lex-rooted branch exposed above. See
+the remaining `GG` gate is now to eliminate the two-external-owner weighted
+payment/Hall deficiency or use its forced `B_q>R` polarity to flip the root.
+See
 [OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even

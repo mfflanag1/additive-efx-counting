@@ -11,7 +11,16 @@ try:
     from .audit_flower_early_root_charity_rotation import (
         run as run_root_rotation_audit,
     )
+    from .audit_flower_minimal_payment_residual_rotation import (
+        run as run_minimal_payment_audit,
+    )
+    from .audit_flower_residual_wall_payment_polarity import (
+        run as run_wall_payment_audit,
+    )
     from .audit_flower_three_rotation_polarity import run as run_rotation_audit
+    from .audit_flower_two_root_residual_split_release import (
+        run as run_two_root_audit,
+    )
     from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from .audit_minimal_flower_flexible_gate import run as run_core_audit
     from .audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
@@ -26,7 +35,16 @@ except ImportError:
     from audit_flower_early_root_charity_rotation import (
         run as run_root_rotation_audit,
     )
+    from audit_flower_minimal_payment_residual_rotation import (
+        run as run_minimal_payment_audit,
+    )
+    from audit_flower_residual_wall_payment_polarity import (
+        run as run_wall_payment_audit,
+    )
     from audit_flower_three_rotation_polarity import run as run_rotation_audit
+    from audit_flower_two_root_residual_split_release import (
+        run as run_two_root_audit,
+    )
     from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from audit_minimal_flower_flexible_gate import run as run_core_audit
     from audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
@@ -73,6 +91,33 @@ def main():
     donation_replay = run_donation_audit()
     assert donation_replay["status"] == donation["status"] == "ALL_FORCED"
     assert donation_replay["records"] == donation["records"]
+
+    minimal_payment_path = (
+        ROOT / "results" / "flower_minimal_payment_residual_rotation_audit.json"
+    )
+    minimal_payment = json.loads(minimal_payment_path.read_text())
+    minimal_payment_replay = run_minimal_payment_audit()
+    assert minimal_payment_replay["status"] == minimal_payment["status"] == "FORCED"
+    assert minimal_payment_replay["record"] == minimal_payment["record"]
+
+    wall_payment_path = (
+        ROOT / "results" / "flower_residual_wall_payment_polarity_audit.json"
+    )
+    wall_payment = json.loads(wall_payment_path.read_text())
+    wall_payment_replay = run_wall_payment_audit()
+    assert wall_payment_replay["status"] == wall_payment["status"] == "FORCED"
+    assert wall_payment_replay["record"] == wall_payment["record"]
+
+    two_root_path = (
+        ROOT / "results" / "flower_two_root_residual_split_release_audit.json"
+    )
+    two_root = json.loads(two_root_path.read_text())
+    two_root_replay = run_two_root_audit()
+    assert two_root_replay == two_root
+    assert two_root["status"] == "ALL_RELEASE_COMPATIBLE"
+    assert [
+        record["response_permutations_checked"] for record in two_root["records"]
+    ] == [2, 6, 24]
 
     packet_countermodel_path = (
         ROOT / "results" / "residual_flower_packet_countermodel.json"
@@ -159,6 +204,24 @@ def main():
         ROOT / "results" / "LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md"
     ).read_text()
     assert "later donor to lose" in donation_theorem
+    minimal_payment_theorem = (
+        ROOT
+        / "results"
+        / "FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md"
+    ).read_text()
+    assert "exactly one of the following occurs" in minimal_payment_theorem
+    two_root_theorem = (
+        ROOT
+        / "results"
+        / "FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md"
+    ).read_text()
+    assert "Every incoming set is supplied" in two_root_theorem
+    wall_payment_theorem = (
+        ROOT
+        / "results"
+        / "FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md"
+    ).read_text()
+    assert "every root wall can be repaired" in wall_payment_theorem
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())

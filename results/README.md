@@ -919,6 +919,20 @@ both encodings.
   nine-good residual cell. This is proof-mining evidence, not an
   arbitrary-packet theorem; the packet countermodel above explains the exact
   failure of that lift.
+- [`FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md`](FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md)
+  — cap-free selector using an inclusion-minimal `q`-paying packet from
+  `T_r`. Both mutual owners improve, the entire complement is safe charity,
+  and every failure is localized to one evolved-target wall.
+- [`FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](FLOWER_TWO_ROOT_RESIDUAL_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
+  — cap-free response-Hall composition for partitioning the released
+  residual among the root and up to two external leaves. The two root edges
+  release each other's incoming packets and supply every leaf cell, so all
+  2, 6, and 24 internal response permutations are PI-compatible.
+- [`FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md`](FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810.md)
+  — cap-free proof that the earlier root can always be paid from the released
+  residual. Any observer unpayable even by the whole residual must rank
+  `B_q` above that residual, leaving only the two external-owner payment/Hall
+  deficiency or a polarity-driven root flip.
 - [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
   — cap-free response-Hall theorem for an owner-supplied exchange star. The
   hub receives a donor packet and partitions its own released packet among
