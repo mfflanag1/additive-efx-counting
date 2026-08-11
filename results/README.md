@@ -1162,3 +1162,15 @@ both encodings.
   finite recapture potential. A maximal obstruction must therefore be a
   disjoint cross-star with one strict four-level value order; eliminating
   that cross-star remains open.
+- [`MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md`](MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md)
+  — generalizes deficiency-one response compression from the all-owner case
+  to every inclusion-minimal two-, three-, or four-target Hall defect. All
+  50,625 nonempty four-by-four relations, 64,272 response edges, and every
+  minimal defect replay exactly. A two-target/one-outside-source defect
+  reduces cap-free to one two-way residual-pool partition.
+- [`owner_union_compression_hardened_profile_audit.json`](owner_union_compression_hardened_profile_audit.json)
+  — solver-independent replay of a positive subset-sum-injective flower
+  profile whose local residual partitions end in `{q,s}->{c}`. Giving `c`
+  its desired singleton core `{z}` and repartitioning the `q,s,c` owner union
+  yields a complete EFX lex improvement. This closes the adversary, not the
+  universal two-way partition gate.

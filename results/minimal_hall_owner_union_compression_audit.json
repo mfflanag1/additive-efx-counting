@@ -1,0 +1,51 @@
+{
+  "claim_boundary": "complete enumeration of all nonempty four-by-four response relations and every inclusion-minimal deficient target subset; existence of a flower-specific residual payment/EFX partition is not asserted",
+  "provenance": {
+    "script": "tracks/parkability/audit_minimal_hall_owner_union_compression.py",
+    "script_sha256": "3a97b8fb042be55a92f2f3e0e102362730624aa778f1d22f6b398e84e00d83bc"
+  },
+  "relation_records": {
+    "deficiency_one_failures": 0,
+    "edge_extension_failures": 0,
+    "minimal_defects_by_target_size_and_overlap": [
+      {
+        "count": 2700,
+        "target_size": 2,
+        "target_source_overlap": 0
+      },
+      {
+        "count": 2700,
+        "target_size": 2,
+        "target_source_overlap": 1
+      },
+      {
+        "count": 2340,
+        "target_size": 3,
+        "target_source_overlap": 1
+      },
+      {
+        "count": 2340,
+        "target_size": 3,
+        "target_source_overlap": 2
+      },
+      {
+        "count": 4036,
+        "target_size": 4,
+        "target_source_overlap": 3
+      }
+    ],
+    "near_perfect_matching_failures": 0,
+    "nonempty_relations_checked": 50625,
+    "response_edges_checked": 64272
+  },
+  "schema": "minimal-hall-owner-union-compression-audit-v1",
+  "status": "ALL_FORCED",
+  "support_record": {
+    "complete_after_residual_partition": true,
+    "outside_owner_targets_fixed": true,
+    "residual_pool": "all_unselected_goods_in_owner_union",
+    "selected_cells": [
+      "desired_core_for_each_source"
+    ]
+  }
+}

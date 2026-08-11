@@ -392,6 +392,23 @@ four-level order recorded in (10), plus its one-sided degenerations. See
 and
 [`ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md`](ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md).
 
+The response-compression theorem now covers the earlier closed Hall leaves,
+not only a defect containing all four targets.  Every inclusion-minimal
+deficient target set `U` has exactly `|U|-1` response sources, every
+prescribed response edge extends to a near-perfect matching, and the union
+of target owners and source owners can be recompressed into common-safe
+desired cores plus a residual pool for the unmatched owners.  In the live
+two-target/one-outside-source case, the remaining selector is exactly a
+two-way partition of that pool.  A newly hardened subset-sum-injective
+adversary has only the defects `{q,s}->{c}`, `{q,c}->{c}`, and
+`{c,s}->{c}`; the first owner-union compression, using core `{z}`, has an
+exact complete EFX lex endpoint.  Thus the previous targeted countermodel is
+escaped, while the cap-free two-way residual partition theorem remains the
+live gate. See
+[`MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md`](MINIMAL_HALL_OWNER_UNION_COMPRESSION_LEMMA_20260811.md)
+and
+[`owner_union_compression_hardened_profile_audit.json`](owner_union_compression_hardened_profile_audit.json).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.
