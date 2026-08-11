@@ -169,6 +169,18 @@ payment/Hall deficiency or use its forced `B_q>R` polarity to flip the root.
 See
 [OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
+The proposed mechanism-independent three-good endpoint is now exactly
+refuted on the audited representative live-polarity flower master.  A
+positive subset-sum-injective 19-good valuation satisfies every encoded
+flower, failed-cover, and opposite-bottom-polarity premise, yet none of all
+41,394 connected redistributions through radius three is an EFX lex
+improvement; in particular none preserves `r` and strictly improves `q`.
+Its minimum connected later-owner escape has radius four and follows the
+five-vertex path `charity -> c -> q -> r -> s`.  Thus the continuation must
+use the cap-free response-Hall/component machinery above or an explicit
+stronger global-selection premise, not a universal three-good bound.  See
+[MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md](MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md).
+
 **August 3 primary gate:** the fixed-radius exchange program is retired even
 inside the four-agent identity/unique-defect/full-Hall branch. An exact
 positive profile has no improving EFX-with-charity state within three item

@@ -919,6 +919,14 @@ both encodings.
   nine-good residual cell. This is proof-mining evidence, not an
   arbitrary-packet theorem; the packet countermodel above explains the exact
   failure of that lift.
+- [`MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md`](MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md)
+  — exact refutation of the local three-good endpoint target on the bounded
+  representative live-polarity flower master. The hardened positive
+  subset-sum-injective profile has zero EFX lex endpoints among all 41,394
+  connected allocations through radius three. Its minimum connected
+  later-owner escape has radius four, with topology
+  `charity -> c -> q -> r -> s`. The result retires the three-good bound; it
+  does not refute EFX existence or the cap-free component program.
 - [`FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md`](FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md)
   — cap-free selector using an inclusion-minimal `q`-paying packet from
   `T_r`. Both mutual owners improve, the entire complement is safe charity,

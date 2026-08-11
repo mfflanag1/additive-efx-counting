@@ -1,0 +1,89 @@
+{
+  "allocation": {
+    "_": [
+      "aq_br_1",
+      "ar_tr_0",
+      "tr_rest_1"
+    ],
+    "c": [
+      "bc_0",
+      "bc_1",
+      "tc_0",
+      "tc_1"
+    ],
+    "q": [
+      "aq_tq_0",
+      "aq_tq_1",
+      "ar_bq_0",
+      "ar_bq_1"
+    ],
+    "r": [
+      "aq_br_0",
+      "ar_tr_1",
+      "br_rest_0",
+      "br_rest_1",
+      "f",
+      "tr_rest_0"
+    ],
+    "s": [
+      "z"
+    ]
+  },
+  "base_utilities": {
+    "c": "9646554394673193/1073741824",
+    "q": "415687872905241/1073741824",
+    "r": "34628218125/268435456",
+    "s": "23559905281/16384"
+  },
+  "claim_boundary": "exact connected lex EFX witness for the frozen profile; minimality through radius three is supplied by the separate complete exact census audit",
+  "minimum_connected_radius": 4,
+  "objective": "lex",
+  "owner_utilities": {
+    "c": "9646554394673193/1073741824",
+    "q": "415687872905241/1073741824",
+    "r": "35064423561/268435456",
+    "s": "23559905281/16384"
+  },
+  "provenance": {
+    "script": "tracks/parkability/find_flexible_lex_connected_escape.py",
+    "script_sha256": "e9b5e1d1e869f0b5b8ea7433f85d2657e6726f8ccc539f643d1a0a764cf24a2f",
+    "source": "results/flexible_lex_radius3_hardened_countermodel.json",
+    "source_sha256": "6a4db8b388ecb986bf4c5466a0f0d07c27e4a01fb8b3fb8ca2592b5d9ecebe14"
+  },
+  "radius_statuses": [
+    "unsat",
+    "unsat",
+    "unsat",
+    "sat"
+  ],
+  "schema": "flexible-connected-escape-v1",
+  "solver": "Z3 5.0.0",
+  "status": "FOUND",
+  "topology": {
+    "edge_counts": [
+      {
+        "count": 1,
+        "source": "_",
+        "target": "r"
+      },
+      {
+        "count": 3,
+        "source": "r",
+        "target": "_"
+      }
+    ],
+    "moved_goods": [
+      "aq_br_1",
+      "ar_tr_0",
+      "f",
+      "tr_rest_1"
+    ],
+    "nontrivial_components": [
+      [
+        "_",
+        "r"
+      ]
+    ],
+    "signature": "_->r:1;r->_:3"
+  }
+}

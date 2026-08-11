@@ -1,0 +1,106 @@
+{
+  "claim_boundary": "solver-independent exact-Fraction verification of a positive subset-sum-injective bounded representative hard-flower valuation with no connected EFX lex improvement through radius three; it refutes the local at-most-three-good lemma under these premises, not complete EFX existence or arbitrary transfer components",
+  "connected_candidate_counts": {
+    "1": 72,
+    "2": 1770,
+    "3": 39552
+  },
+  "connected_candidate_total": 41394,
+  "flower_master_valid": true,
+  "later_owner_endpoint_count": 0,
+  "later_owner_radius4_escape": {
+    "source": "results/flexible_later_radius3_hardened_countermodel_escape.json",
+    "source_sha256": "4d21c786363d6a356787959d06453a71f607baa9c7223af07ea4c3040fe658dd",
+    "topology": {
+      "edge_counts": [
+        {
+          "count": 1,
+          "source": "_",
+          "target": "c"
+        },
+        {
+          "count": 1,
+          "source": "c",
+          "target": "q"
+        },
+        {
+          "count": 1,
+          "source": "q",
+          "target": "r"
+        },
+        {
+          "count": 1,
+          "source": "r",
+          "target": "s"
+        }
+      ],
+      "moved_goods": [
+        "ar_bq_1",
+        "ar_tr_0",
+        "f",
+        "tc_0"
+      ],
+      "nontrivial_components": [
+        [
+          "_",
+          "c",
+          "q",
+          "r",
+          "s"
+        ]
+      ],
+      "signature": "_->c:1;c->q:1;q->r:1;r->s:1"
+    }
+  },
+  "lex_endpoint_count": 0,
+  "lex_radius4_escape": {
+    "source": "results/flexible_lex_radius3_hardened_countermodel_escape.json",
+    "source_sha256": "ea8df96b4256f8223f9e6b624e754cdd7c92c0e398210116f9cfa2c58878008e",
+    "topology": {
+      "edge_counts": [
+        {
+          "count": 1,
+          "source": "_",
+          "target": "r"
+        },
+        {
+          "count": 3,
+          "source": "r",
+          "target": "_"
+        }
+      ],
+      "moved_goods": [
+        "aq_br_1",
+        "ar_tr_0",
+        "f",
+        "tr_rest_1"
+      ],
+      "nontrivial_components": [
+        [
+          "_",
+          "r"
+        ]
+      ],
+      "signature": "_->r:1;r->_:3"
+    }
+  },
+  "live_polarity_valid": true,
+  "minimum_connected_later_owner_radius": 4,
+  "minimum_connected_lex_radius": 4,
+  "positive_additive": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_flexible_lex_radius3_hardened_countermodel.py",
+    "script_sha256": "3052be2ef8fffabd3a882baf54729ac2fc5eb3568acc887bcfacee0c821e602b",
+    "source": "results/flexible_lex_radius3_hardened_countermodel.json",
+    "source_sha256": "6a4db8b388ecb986bf4c5466a0f0d07c27e4a01fb8b3fb8ca2592b5d9ecebe14"
+  },
+  "schema": "flexible-lex-radius3-hardened-countermodel-audit-v1",
+  "status": "VERIFIED",
+  "subset_sum_counts": {
+    "c": 262144,
+    "q": 262144,
+    "r": 262144,
+    "s": 262144
+  },
+  "subset_sum_injective": true
+}
