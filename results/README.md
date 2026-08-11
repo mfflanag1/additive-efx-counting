@@ -1753,3 +1753,19 @@ both encodings.
   its desired singleton core `{z}` and repartitioning the `q,s,c` owner union
   yields a complete EFX lex improvement. This closes the adversary, not the
   universal two-way partition gate.
+- [`FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md`](FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md)
+  ([exact audit](full_signed_transfer_state_reconstruction_audit.json))
+  — proves that all-owner signed incoming/outgoing packets uniquely recover
+  the exact allocation, charity, and physical transfer graph. This closes
+  dynamic response-label ambiguity without a scalar history ledger.
+- [`CURRENT_SAFE_FULL_RESPONSE_MATCHING_ENDPOINT_LEMMA_20260811.md`](CURRENT_SAFE_FULL_RESPONSE_MATCHING_ENDPOINT_LEMMA_20260811.md)
+  ([symbolic audit](current_safe_full_response_matching_endpoint_audit.json))
+  — shows that four disjoint current-desired/current-safe cores immediately
+  give a partial EFX Pareto improvement and isolates the only mixed-matching
+  failure as an old-core margin below a newer target's safety debt.
+- [`PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md`](PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md)
+  ([exact graph audit](pi_free_five_target_charity_path_hole_edge_audit.json))
+  — classifies all 120 rank-four matchings into owner-cycle cases or 24
+  Hamiltonian owner-to-charity paths. Any edge into a surviving owner hole
+  closes a directed owner cycle in one pivot; decorated payment is the
+  remaining interface.

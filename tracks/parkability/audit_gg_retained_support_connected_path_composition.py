@@ -64,6 +64,10 @@ DEPENDENCIES = (
     ("FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md", "fixed_u_global_lex_premise_audit.json"),
     ("SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md", "surplus_budgeted_charity_exchange_component_audit.json"),
     ("CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md", "charity_blocker_exchange_walk_audit.json"),
+    ("CHARITY_AUGMENTED_FIVE_TARGET_HOLE_PIVOT_CYCLE_LEMMA_20260811.md", "charity_augmented_five_target_hole_pivot_cycle_audit.json"),
+    ("FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md", "full_signed_transfer_state_reconstruction_audit.json"),
+    ("CURRENT_SAFE_FULL_RESPONSE_MATCHING_ENDPOINT_LEMMA_20260811.md", "current_safe_full_response_matching_endpoint_audit.json"),
+    ("PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md", "pi_free_five_target_charity_path_hole_edge_audit.json"),
 )
 
 
@@ -94,7 +98,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 116,
+        "focused_test_count": 124,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

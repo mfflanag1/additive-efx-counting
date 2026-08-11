@@ -87,13 +87,13 @@ def run(root: Path) -> dict:
         "current_safe_but_not_base_safe_witness": base_safety_gap,
         "exact_response_checks": triple_checks,
         "outcomes": [
-            "permanent ordinary-or-decorated response augmentation",
+            "permanent ordinary-or-full-decorated response augmentation",
             "same-owner current-utility progress before reset",
-            "exact repeated decorated response connected-return gate",
+            "exact repeated full physical state connected-return gate",
         ],
         "remaining_gate": (
-            "release-compatible closure of an exact repeated decorated response "
-            "whose signed physical compensation transfers lie in one component"
+            "observer-safe payment of the release-compatible cycle at an exact "
+            "reconstructed full signed-transfer state"
         ),
         "claim_boundary": (
             "observer failure extraction and recurrence localization; full repeated-"

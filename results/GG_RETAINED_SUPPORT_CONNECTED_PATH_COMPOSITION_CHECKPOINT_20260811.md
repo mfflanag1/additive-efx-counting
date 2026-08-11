@@ -456,6 +456,31 @@ ground set.  The walk ends in an EFX/lex allocation, an owner-target response
 augmentation, or further strict current progress; see
 [`CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md`](CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md).
 
+Exact physical recurrence is now well-defined.  The complete vector of
+signed incoming/outgoing transfers for all four owners reconstructs every
+owner bundle, charity, and the moved-good supplier graph.  Therefore a
+changed full record is finite permanent augmentation, while an exact repeat
+really does preserve every response/release label; see
+[`FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md`](FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md).
+
+At one reconstructed paid state, four disjoint cores that are all
+current-desired and current-safe already form a partial EFX Pareto
+improvement.  A surviving mixed matching has one exact obstruction: an old
+assigned core's margin is smaller than the base-safety debt of a newer
+current-safe target.  This is now the sole observer-payment inequality, not
+an untyped safety failure; see
+[`CURRENT_SAFE_FULL_RESPONSE_MATCHING_ENDPOINT_LEMMA_20260811.md`](CURRENT_SAFE_FULL_RESPONSE_MATCHING_ENDPOINT_LEMMA_20260811.md).
+
+The five-target matching recurrence has also collapsed.  Among all 120
+rank-four matchings, every PI-free graph-level survivor is one of only 24
+Hamiltonian owner-to-charity paths.  Any response edge into its owner hole
+closes an owner cycle in one pivot; a new label augments, an outside packet
+supplier grows the physical component, and a stable full-owner cycle leaves
+only the mixed observer-payment separator above.  See
+[`PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md`](PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md)
+and the more general matching recurrence audit in
+[`CHARITY_AUGMENTED_FIVE_TARGET_HOLE_PIVOT_CYCLE_LEMMA_20260811.md`](CHARITY_AUGMENTED_FIVE_TARGET_HOLE_PIVOT_CYCLE_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -474,7 +499,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 116 tests spanning the retained-support,
+The focused dependency replay currently passes 124 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

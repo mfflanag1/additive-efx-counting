@@ -106,22 +106,26 @@ base as
  \qquad \Delta_h=v_h(I_h)-v_h(O_h).                \tag{11}
 \]
 
-Otherwise the persistent object must be the **decorated response**
+For recurrence, the persistent object must use the **full decorated
+response**
 
 \[
  (s,\operatorname{supp}(Y_j),D;
-   (I_h,O_h)_{\beta_h(D)>0}),                      \tag{12}
+   (I_h,O_h)_{h\in N}),                            \tag{12}
 
 \]
 
-where each signed physical transfer certifies net gain at least
-`beta_h(D)`.  Recording only the edge `s -> j:D` would be unsound: a later
-reset could undo part of `(I_h,O_h)` and destroy observer safety without
-changing the response graph.
+where the positive-debt rows certify net gain at least `beta_h(D)` and the
+zero-debt rows make the physical allocation reconstructible.  Recording
+only the edge `s -> j:D`, or only the positive-debt rows, would be unsound:
+a later reset could change a zero-debt owner's bundle or undo part of a
+compensation transfer without changing the coarse response graph.
 
-Use (10) as the record when every `beta_h(D)=0`, and (12) otherwise.  In the
-latter case the failed observer has exposed the smallest missing packet
-operation: the response must retain its signed compensation transfers.
+Use (10) for the ordinary response relation when every `beta_h(D)=0`, but
+attach the full signed state (12) whenever exact physical recurrence is
+tested.  In the positive-debt case the failed observer has exposed the
+smallest missing packet operation: the response must retain its signed
+compensation transfers.
 At a fixed returning `(hole, paid anchor, consumed support)` state, exactly
 one of the following occurs.
 
@@ -133,11 +137,11 @@ one of the following occurs.
    `v_s(D)` before any reset.  The paid-anchor current-wall and support-reset
    lemmas then give fixed-state source progress, fresh anchor consumption,
    or captured payment margin.
-3. The exact source, target support, desired core, source bundle, and every
-   required signed physical compensation transfer recur.  This is no longer an
-   observer-safety problem.  It is the explicit repeated-support connected-
-   splice terminal: the intervening released-core packet walk must be closed
-   as a release-compatible component.
+3. The exact source, target support, desired core, and the complete signed
+   physical state recur.  The allocation, charity, moved-packet graph, and
+   response/release labels are then fixed by reconstruction.  This is the
+   explicit repeated-support connected-splice terminal: the released-core
+   packet walk must be closed as a release-compatible component.
 
 There are finitely many exact decorated physical responses on a finite ground
 set.  Hence observer failure cannot generate an untyped infinite family.  It
