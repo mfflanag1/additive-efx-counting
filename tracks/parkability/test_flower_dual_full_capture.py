@@ -8,16 +8,32 @@ import z3
 
 try:
     from .audit_flower_dual_full_escape import run as run_scalar_audit
+    from .audit_flower_early_root_charity_rotation import (
+        run as run_root_rotation_audit,
+    )
     from .audit_flower_three_rotation_polarity import run as run_rotation_audit
+    from .audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from .audit_minimal_flower_flexible_gate import run as run_core_audit
     from .audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
+    from .audit_residual_flower_packet_countermodel import (
+        run as run_packet_countermodel_audit,
+    )
+    from .audit_residual_flower_packet_core import run as run_packet_core_audit
     from .analyze_residual_top_champion_sources import run as run_source_census
     from .run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 except ImportError:
     from audit_flower_dual_full_escape import run as run_scalar_audit
+    from audit_flower_early_root_charity_rotation import (
+        run as run_root_rotation_audit,
+    )
     from audit_flower_three_rotation_polarity import run as run_rotation_audit
+    from audit_lex_rooted_owner_charity_donation import run as run_donation_audit
     from audit_minimal_flower_flexible_gate import run as run_core_audit
     from audit_owner_rooted_hub_split_release import run as run_owner_hub_audit
+    from audit_residual_flower_packet_countermodel import (
+        run as run_packet_countermodel_audit,
+    )
+    from audit_residual_flower_packet_core import run as run_packet_core_audit
     from analyze_residual_top_champion_sources import run as run_source_census
     from run_minimal_flower_global_lex_cegar import build_master, rival_blocker
 
@@ -39,6 +55,56 @@ def main():
     rotation_replay = run_rotation_audit()
     assert rotation_replay["status"] == rotation["status"] == "ALL_FORCED"
     assert rotation_replay["records"] == rotation["records"]
+
+    root_rotation_path = (
+        ROOT / "results" / "flower_early_root_charity_rotation_audit.json"
+    )
+    root_rotation = json.loads(root_rotation_path.read_text())
+    root_rotation_replay = run_root_rotation_audit()
+    assert root_rotation_replay["status"] == root_rotation["status"] == "FORCED"
+    assert root_rotation_replay["record"] == root_rotation["record"]
+
+    donation_path = (
+        ROOT
+        / "results"
+        / "lex_rooted_owner_charity_donation_obstruction_audit.json"
+    )
+    donation = json.loads(donation_path.read_text())
+    donation_replay = run_donation_audit()
+    assert donation_replay["status"] == donation["status"] == "ALL_FORCED"
+    assert donation_replay["records"] == donation["records"]
+
+    packet_countermodel_path = (
+        ROOT / "results" / "residual_flower_packet_countermodel.json"
+    )
+    packet_core_path = (
+        ROOT / "results" / "residual_flower_packet_candidate_audit.json"
+    )
+    packet_core = json.loads(packet_core_path.read_text())
+    packet_core_replay = run_packet_core_audit()
+    assert (
+        packet_core_replay["status"]
+        == packet_core["status"]
+        == "PACKET_LIFT_REFUTED"
+    )
+    assert packet_core_replay["atomic_candidate_core_status"] == "unsat"
+    assert packet_core_replay["candidate_core_status"] == "sat"
+
+    packet_countermodel_audit_path = (
+        ROOT / "results" / "residual_flower_packet_countermodel_audit.json"
+    )
+    packet_countermodel_audit = json.loads(packet_countermodel_audit_path.read_text())
+    packet_countermodel_replay = run_packet_countermodel_audit(packet_countermodel_path)
+    for key in (
+        "status",
+        "candidate_count",
+        "all_candidates_blocked",
+        "subset_sum_injective",
+        "displayed_escape_efx_and_lex_better",
+        "minimum_moved_goods",
+        "one_move_allocations_excluded",
+    ):
+        assert packet_countermodel_replay[key] == packet_countermodel_audit[key]
 
     gate_path = ROOT / "results" / "minimal_flower_flexible_completion_gate.json"
     core_path = ROOT / "results" / "minimal_flower_flexible_completion_audit.json"
@@ -82,6 +148,17 @@ def main():
     ).read_text()
     assert "independent of the numbers of goods" in rotation_theorem
     assert "opposite ranking" in rotation_theorem
+    root_rotation_theorem = (
+        ROOT / "results" / "FLOWER_EARLY_ROOT_CHARITY_ROTATION_LEMMA_20260810.md"
+    ).read_text()
+    assert (
+        "strictly rank the two bottom packets in opposite orders"
+        in root_rotation_theorem
+    )
+    donation_theorem = (
+        ROOT / "results" / "LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md"
+    ).read_text()
+    assert "later donor to lose" in donation_theorem
 
     source_path = ROOT / "results" / "residual_top_champion_source_census.json"
     source_census = json.loads(source_path.read_text())

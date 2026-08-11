@@ -901,6 +901,24 @@ both encodings.
   `f` versus `B_q` in opposite directions, and the later owner must rank
   `T_r>T_q` and `B_q>B_r`. This confines the residual-recapture problem to
   one aggregate orientation; it does not yet contradict that orientation.
+- [`FLOWER_EARLY_ROOT_CHARITY_ROTATION_LEMMA_20260810.md`](FLOWER_EARLY_ROOT_CHARITY_ROTATION_LEMMA_20260810.md)
+  — cap-free fourth rotation showing that global lex maximality additionally
+  forces `r(B_r)>=r(f)>r(B_q)`. Together with the later-owner polarity this
+  makes the two mutual owners rank `B_r,B_q` in strict opposite orders.
+- [`LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md`](LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md)
+  — cap-free wall classification for the newly isolated operation in which
+  the earlier root receives one donor good, the later donor may lose, and one
+  root good joins charity. External root walls supply a generalized exchange
+  edge; external charity walls must consume the released root good. The exact
+  nondegenerate profile and solver-free replay are
+  [`residual_flower_packet_countermodel.json`](residual_flower_packet_countermodel.json)
+  and
+  [`residual_flower_packet_countermodel_audit.json`](residual_flower_packet_countermodel_audit.json).
+- [`residual_flower_global_lex_gate_audit.json`](residual_flower_global_lex_gate_audit.json)
+  — dual-solver deletion-minimal five-allocation UNSAT core for the exact
+  nine-good residual cell. This is proof-mining evidence, not an
+  arbitrary-packet theorem; the packet countermodel above explains the exact
+  failure of that lift.
 - [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md)
   — cap-free response-Hall theorem for an owner-supplied exchange star. The
   hub receives a donor packet and partitions its own released packet among

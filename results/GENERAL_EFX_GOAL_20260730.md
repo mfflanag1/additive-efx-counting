@@ -117,13 +117,29 @@ the later row also satisfies `T_r>T_q` and `B_q>B_r`. The adaptive proof may
 therefore work entirely inside this single polarity cell. See
 [FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md).
 
+An additional early-root rotation is now closed cap-free.  Global lexicographic
+maximality forces `r(B_r)>=r(f)>r(B_q)`, while the existing polarity gives
+`q(B_q)>q(B_r)`.  Thus the live flower has a strict opposite ordering of its
+two bottom packets in the mutual owners' rows.  A fresh exact global-lex CEGAR
+for the minimal residual cell is UNSAT under two Z3 versions and reduces to a
+five-allocation core, but its arbitrary-packet lift is false: an exact positive,
+subset-sum-injective 15-good state blocks a nine-candidate aggregate family and
+escapes only after splitting packets at individual goods.  Its minimum move
+sends one `B_q` good to the earlier root and one `K` good to charity.  The new
+lex-rooted donation lemma classifies every failure of that operation and shows
+why the final component theorem must allow a later donor to lose and charity
+cardinality to grow.  See
+[FLOWER_EARLY_ROOT_CHARITY_ROTATION_LEMMA_20260810.md](FLOWER_EARLY_ROOT_CHARITY_ROTATION_LEMMA_20260810.md)
+and
+[LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md](LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,
 so an internal response SDR is a PI edge set. This is the cap-free primitive
 required by the connected transfer motifs that survive charity-rooted hubs;
 the remaining `GG` gate is to select its packets from the residual/polarity
-data. See
+data and terminate the one-defect lex-rooted branch exposed above. See
 [OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even

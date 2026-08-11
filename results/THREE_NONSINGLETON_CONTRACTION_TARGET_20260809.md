@@ -174,14 +174,27 @@ assume this opposite-sign orientation rather than handling arbitrary owner
 rows.  See
 [`FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md`](FLOWER_THREE_ROTATION_POLARITY_LEMMA_20260810.md).
 
+A fourth, early-root charity rotation strengthens this to a strict opposite
+bottom ordering: `r(B_r)>r(B_q)` but `q(B_q)>q(B_r)`.  The minimal residual
+global-lex master is exactly UNSAT and has a dual-solver five-allocation core,
+but aggregate packet lifting does not close the cell.  A solver-free exact
+audit gives a positive nondegenerate 15-good state blocking a nine-candidate
+aggregate family; its first lex escape splits `K` and `B_q`, transfers the
+`B_q` good to `r`, and sends the `K` good to charity.  This establishes that
+the next cap-free primitive must permit a strictly improving earlier root and
+a losing later donor.  The exhaustive wall classification for that primitive
+is
+[`LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md`](LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810.md).
+
 The component library now also covers owner-rooted exchange stars, not only
 charity-rooted hubs. A hub may receive a packet from one donor while
 partitioning its released packet among that donor and other leaves. Any
 internal response SDR is automatically a release-compatible PI edge set;
 otherwise the exact remainder is open or Hall deficient. This is the
 smallest operation required by the surviving connected-transfer profiles.
-The live task is selection from the polarity/residual data, not another wall
-classification. See
+The live task is selection from the polarity/residual data followed by
+termination of the donor-payment or external-charity branch, not another
+fixed packet core. See
 [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
 ## Claim boundary

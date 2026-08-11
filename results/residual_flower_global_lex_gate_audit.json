@@ -1,0 +1,140 @@
+{
+  "claim_boundary": "exact QF_LRA replay and deletion-minimal allocation core for the nine-good residual-top flower cell; UNSAT is proof-mining evidence, not the cap-free flower theorem",
+  "core": [
+    {
+      "allocation": {
+        "_": [
+          "bq"
+        ],
+        "c": [
+          "tc",
+          "bc"
+        ],
+        "q": [
+          "k",
+          "j",
+          "br"
+        ],
+        "r": [
+          "tq",
+          "f"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->r:f;q->_:bq;q->r:tq;r->q:br;r->q:j;r->q:k"
+    },
+    {
+      "allocation": {
+        "_": [
+          "k",
+          "br"
+        ],
+        "c": [
+          "tc",
+          "bc"
+        ],
+        "q": [
+          "j",
+          "bq"
+        ],
+        "r": [
+          "tq",
+          "f"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->r:f;q->r:tq;r->_:br;r->_:k;r->q:j"
+    },
+    {
+      "allocation": {
+        "_": [
+          "bq"
+        ],
+        "c": [
+          "tq",
+          "tc"
+        ],
+        "q": [
+          "bc",
+          "f"
+        ],
+        "r": [
+          "k",
+          "j",
+          "br"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->q:f;c->q:bc;q->_:bq;q->c:tq"
+    },
+    {
+      "allocation": {
+        "_": [
+          "bc"
+        ],
+        "c": [
+          "tq",
+          "bq"
+        ],
+        "q": [
+          "tc",
+          "f"
+        ],
+        "r": [
+          "k",
+          "j",
+          "br"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->q:f;c->_:bc;c->q:tc;q->c:bq;q->c:tq"
+    },
+    {
+      "allocation": {
+        "_": [
+          "k",
+          "j"
+        ],
+        "c": [
+          "br",
+          "bc"
+        ],
+        "q": [
+          "tq",
+          "bq"
+        ],
+        "r": [
+          "tc",
+          "f"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "topology": "_->r:f;c->r:tc;r->_:j;r->_:k;r->c:br"
+    }
+  ],
+  "core_rival_count": 5,
+  "deletion_check_statuses": [
+    "sat",
+    "sat",
+    "sat",
+    "sat",
+    "sat"
+  ],
+  "full_replay_status": "unsat",
+  "recorded_rival_count": 512,
+  "recorded_tie_count": 773,
+  "schema": "residual-flower-global-lex-gate-audit-v1",
+  "solver": "Z3 5.0.0",
+  "status": "DELETION_MINIMAL_UNSAT_CORE",
+  "without_nondegeneracy_status": "unsat"
+}
