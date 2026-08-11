@@ -1281,10 +1281,11 @@ both encodings.
   — symbolic replay of the margin identity, strict fresh-support descent,
   and the capture alternative.
 - [`REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md`](REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md)
-  — eliminates reused-top cycling across both external sources and every
-  common-safe subcore of the removed-top/`B_q` reservoir. The admissible
-  core minimizing root value maximizes the root's complement; a continuation
-  must add fresh support, leave the reservoir, or become unsafe.
+  — canonicalizes every common-safe external core disjoint from the current
+  mutual core, across both external sources, both bottom families, proper
+  cores, and residual responses. The core minimizing root value maximizes
+  the root's complement; a continuation must remove fresh mutual-core
+  support, become unsafe, or change to a root-sourced response.
 - [`reused_top_canonical_core_selector_audit.json`](reused_top_canonical_core_selector_audit.json)
   — symbolic replay of complement cancellation, root-pool maximality, and
   propagation of the canonical deficit.

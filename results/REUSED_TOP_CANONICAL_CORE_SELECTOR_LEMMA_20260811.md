@@ -2,9 +2,9 @@
 
 **Date:** 2026-08-11
 
-**Status:** cap-free elimination of every common-safe reused-top response
-inside the removed-top/bottom reservoir; opposite-support and unsafe changes
-remain open
+**Status:** cap-free canonicalization of every common-safe external response
+disjoint from the current mutual core; fresh mutual-core removal, unsafe
+augmentation, and root-sourced responses remain open
 
 ## Fixed removed support
 
@@ -15,16 +15,19 @@ Let the later mutual owner hold the desired core
  \qquad U\subseteq T_r.
 \]
 
-Let the nonempty finite response family be
+Let `C(U)` be the full complement of `D(U)` in the complete owner union plus
+`f`.  Define the nonempty finite response family
 
 \[
  \mathcal A(U)=\{(a,A):a\in\{c,s\},
- \ \varnothing\ne A\subseteq U+B_q,
+ \ \varnothing\ne A\subseteq C(U),
  A\text{ is common-safe and desired by }a\}.         \tag{1}
 \]
 
-It includes full-`B_q`, proper-bottom, and changed-external-source cores.
-Every member is disjoint from `D(U)`.
+The known external bottom edge makes the family nonempty.  It includes both
+external sources, full- and proper-bottom cores, the opposite `T_q+B_r`
+family, residual-response cores, and every other common-safe external core
+disjoint from `D(U)`.
 
 Choose
 
@@ -51,21 +54,22 @@ Therefore
 \]
 
 If `P(A^*)` pays `r`'s base utility, the root-paid dual selector applies.
-If it does not, (4) shows that every reused-top core in the same family
-underpays the root. Switching among them cannot help and is discarded.
+If it does not, (4) shows that every common-safe external core disjoint from
+`D(U)` underpays the root. Switching source, bottom packet, residual target,
+or opposite-bottom family cannot help and is discarded simultaneously.
 
 Any continuation must instead enlarge `U` with a fresh top good, leave the
-support reservoir `U+B_q`, use an unsafe augmentation, or expose the
-existing capture certificate.
+external-source family by using the root as source, use an unsafe
+augmentation, or expose the existing capture certificate.
 
 ## Well-founded consequence
 
 Combine (2)--(4) with fresh-switch margin descent. A fresh switch strictly
 enlarges `U` and decreases `q`'s positive response margin. At fixed `U`,
-one canonical response core maximizes root payment across both external
-sources and every common-safe subcore of `U+B_q`. Since `T_r` is finite,
-this whole reused-reservoir branch cannot cycle. No item or value cap is
-used.
+one canonical response core maximizes root payment across every common-safe
+external response disjoint from `D(U)`. Since `T_r` is finite, the external
+rank-two repair/reset branch cannot cycle while removed support is retained.
+No item or value cap is used.
 
 ## Verification and claim boundary
 
@@ -73,6 +77,6 @@ used.
 checks complement cancellation, root-pool maximality, and propagation of a
 canonical deficit.
 
-This lemma does not eliminate an unsafe core, a target supported outside
-`U+B_q`, later return through the opposite `T_q+B_r` family, close `GG`, or
-prove four-agent/general additive EFX.
+This lemma does not prove that every later operation retains `U`, eliminate
+an unsafe or root-sourced core, terminate the fresh-packet `q`-capture
+handoff, close `GG`, or prove four-agent/general additive EFX.

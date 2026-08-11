@@ -22,5 +22,5 @@ def test_claim_boundary_requires_a_real_support_change():
         ROOT / "results/REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md"
     ).read_text()
     assert "cannot cycle" in theorem.replace("\n", " ")
-    assert "does not eliminate an unsafe core" in theorem.replace("\n", " ")
-    assert "outside" in theorem
+    assert "does not prove that every later operation retains" in theorem.replace("\n", " ")
+    assert "root-sourced" in theorem

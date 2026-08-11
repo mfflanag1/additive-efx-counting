@@ -34,6 +34,12 @@ fourth owner and put
 Thus `P` contains every good not used by the two dual cores, including the
 whole old bundle `X_e`.
 
+The selector below uses only that the two cores are disjoint, common-safe,
+strictly desired by distinct nonroot sources `q,a`, and that the other two
+owners are `r,e`.  Hence the same proof applies verbatim to any replacement
+cores with those properties, including a deletion of `D_q` and any
+common-safe external response core in its complement.
+
 ## Root-payment feasibility
 
 If
