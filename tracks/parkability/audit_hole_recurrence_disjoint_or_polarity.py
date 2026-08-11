@@ -72,11 +72,13 @@ def run(root: Path) -> dict:
         "support_records": {
             "above_base_disjoint_remainder_has_minimal_desired_subset": True,
             "failed_common_safety_routes_to_unsafe_core_augmentation": True,
+            "outside_supplier_requires_owner_union_growth": True,
+            "pi_requires_common_reference_release_support": True,
         },
         "claim_boundary": (
-            "cap-free simple-cycle support audit; dynamic target persistence "
-            "and termination after unsafe-core augmentation or overlap polarity "
-            "are not proved"
+            "cap-free simple-cycle support audit with explicit supplier-growth "
+            "qualification; dynamic target persistence and termination after "
+            "growth, unsafe-core augmentation, or overlap polarity are not proved"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

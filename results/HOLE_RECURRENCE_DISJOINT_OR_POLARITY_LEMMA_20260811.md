@@ -44,9 +44,16 @@ choices.
 ### Disjoint completion
 
 All `D_t` are pairwise disjoint.  Every cycle source receives a common-safe
-bundle strictly preferred to her base bundle, and every incoming good is
-supplied by an owner in the cycle component.  The cores therefore form a
-release-compatible PI component.
+bundle strictly preferred to her base bundle.  Inspect the suppliers of the
+physical goods in one fixed release reference state.
+
+If every incoming good is supplied by an owner in the cycle component, the
+cores form a release-compatible PI component.  If some incoming good is
+supplied outside that component, adjoining its supplier strictly grows the
+owner union.  This qualification is essential because the response edges
+of a dynamic recurrence may have been exposed in different pivot states;
+the target labels alone do not prove common release support.  With four
+owners, strict supplier growth can occur only finitely many times.
 
 ### First overlap obstruction
 
@@ -96,9 +103,10 @@ Combine this lemma with the two-by-two response-Hall normal form.  Every
 priority-valid lower-dimensional hole recurrence now yields either:
 
 1. a release-compatible PI component;
-2. a response augmentation from an unsafe disjoint desired subset;
-3. a source-inactive loss band from an empty wall target; or
-4. the overlap/hitting-set polarity (3), possibly accompanied by the
+2. strict owner-union growth from an outside physical supplier;
+3. a response augmentation from an unsafe disjoint desired subset;
+4. a source-inactive loss band from an empty wall target; or
+5. the overlap/hitting-set polarity (3), possibly accompanied by the
    root-critical least-good polarity from the root-preserving selector.
 
 No item bound occurs.  The remaining theorem step is to use minimal payment,
@@ -108,9 +116,11 @@ use different valuation rows.
 
 ## Claim boundary
 
-This lemma proves disjoint PI closure, unsafe-core augmentation, or an exact
-strict overlap certificate for every simple repeated-hole owner cycle.  It
-does not prove that every dynamic pivot sequence preserves the same target
-packets, terminate repeated unsafe-core augmentations, reverse the
-hitting-set polarity, eliminate a source-inactive loss band, close `GG`, or
-prove four-agent/general additive EFX.
+This lemma proves disjoint PI closure or strict supplier growth,
+unsafe-core augmentation, or an exact strict overlap certificate for every
+simple repeated-hole owner cycle.  It does not prove that every dynamic
+pivot sequence preserves the same target packets, close the response
+relation after owner-union growth, terminate repeated unsafe-core
+augmentations, reverse the hitting-set polarity, eliminate a
+source-inactive loss band, close `GG`, or prove four-agent/general additive
+EFX.

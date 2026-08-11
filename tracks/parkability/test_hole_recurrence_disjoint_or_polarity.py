@@ -19,6 +19,9 @@ def test_recurrence_support_audit():
     assert result["support_records"][
         "failed_common_safety_routes_to_unsafe_core_augmentation"
     ]
+    assert result["support_records"][
+        "pi_requires_common_reference_release_support"
+    ]
 
 
 def test_claim_boundary_keeps_dynamic_gate_open():
@@ -28,5 +31,7 @@ def test_claim_boundary_keeps_dynamic_gate_open():
     assert "release-compatible PI component" in theorem
     assert "different valuation rows" in theorem
     assert "value above base alone" in theorem
+    assert "target labels alone do not prove common release support" in theorem
     assert "does not prove that every" in theorem
-    assert "dynamic pivot sequence preserves" in theorem
+    assert "dynamic" in theorem
+    assert "pivot sequence preserves" in theorem
