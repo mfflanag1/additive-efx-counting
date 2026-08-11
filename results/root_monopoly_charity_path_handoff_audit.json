@@ -1,0 +1,35 @@
+{
+  "claim_boundary": "cap-free root-monopoly-to-complete-path handoff; termination of the sacrificed-q Hall reset is not proved",
+  "permanent_root_anchor_retained": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_root_monopoly_charity_path_handoff.py",
+    "script_sha256": "1aa89aed99aa7f4bcf5ad9edc27ff0d564a85babc0245385f6bfd3a603dfc449",
+    "theorem": "results/ROOT_MONOPOLY_CHARITY_PATH_HANDOFF_LEMMA_20260811.md",
+    "theorem_sha256": "4b86c42aa39f9d1dee1584516ac6e3c1e6f6b47a2ea2e80e8ee4be8e4a234b95"
+  },
+  "scalar_records": {
+    "desired_root_core_forces_nonempty_affordable_capture": "unsat",
+    "q_change_is_f_minus_K": "unsat"
+  },
+  "schema": "root-monopoly-charity-path-handoff-audit-v1",
+  "status": "ALL_FORCED",
+  "support_cases": [
+    {
+      "destination": "q",
+      "origin": "charity_f"
+    },
+    {
+      "destination": "r",
+      "origin": "X_q_K"
+    },
+    {
+      "destination": "external_sink_or_empty",
+      "origin": "X_r_G"
+    },
+    {
+      "destination": "original_owner",
+      "origin": "all_other_goods"
+    }
+  ],
+  "support_partition_valid": true
+}
