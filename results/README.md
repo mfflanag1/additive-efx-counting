@@ -899,6 +899,14 @@ both encodings.
   — dual-solver scalar replay plus an exact adversarial census of the seven
   frozen flower profiles. All four displayed external responses return or
   compensate; this is regression evidence, not a cap-free exhaustion.
+- [`PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md`](PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md)
+  — cap-free full-packet instance of the canonical root flip. It closes
+  whenever the earlier root accepts the entire released complement and the
+  external bundle is worth at least `f` to `q`; failure forces a named
+  `R-wall` or `Q-wall`. With a maximal frontier, the latter becomes the
+  strict order `q(O)>q(f)>q(X_a)`.
+- [`packet_replacement_aggregate_root_flip_polarity_audit.json`](packet_replacement_aggregate_root_flip_polarity_audit.json)
+  — dual-solver scalar replay of the aggregate payment implication.
 - [`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md`](FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810.md)
   — cap-free analytic selection of a first improving packet-for-charity
   operation in every hard three-nonsingleton flower cell. The later owner on
@@ -951,12 +959,13 @@ both encodings.
   failure of that lift.
 - [`MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md`](MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md)
   — exact refutation of the local three-good endpoint target on the bounded
-  representative live-polarity flower master. The hardened positive
-  subset-sum-injective profile has zero EFX lex endpoints among all 41,394
-  connected allocations through radius three. Its minimum connected
-  later-owner escape has radius four, with topology
-  `charity -> c -> q -> r -> s`. The result retires the three-good bound; it
-  does not refute EFX existence or the cap-free component program.
+  representative live-polarity flower master. The first profile has a self
+  PI edge; a second hardened positive subset-sum-injective profile survives
+  exclusion of self champions, ordinary envy cycles, and one-genuine PI
+  cycles while retaining zero EFX lex endpoints among all 41,394 connected
+  allocations through radius three. Its first radius-four response has a
+  Hall defect. Generalized multi-genuine PI-freeness and global maximality
+  remain open, so the literal hard-state theorem is not refuted.
 - [`FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md`](FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810.md)
   — cap-free selector using an inclusion-minimal `q`-paying packet from
   `T_r`. Both mutual owners improve, the entire complement is safe charity,

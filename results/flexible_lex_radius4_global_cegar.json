@@ -1,0 +1,7254 @@
+{
+  "basic_pi_free_constraints": {
+    "ordinary_envy_cycles": 20,
+    "self_champion_subsets": 290,
+    "single_genuine_cycles": 60
+  },
+  "claim_boundary": "bounded two-atom representative hard-flower CEGAR excluding basic PI cycles and every discovered connected lex endpoint through radius four; UNSAT would prove only the bounded conditional that absence of radius-four endpoints forces an earlier contradiction",
+  "iterations": [
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_0"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1",
+          "ar_tr_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_tr_0",
+          "bc_0",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;q->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 28,
+      "iteration": 0,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_0",
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "ar_tr_0"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_tr_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->c:1;q->r:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 29,
+      "iteration": 1,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "br_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 30,
+      "iteration": 2,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "ar_tr_1"
+        ],
+        "c": [
+          "aq_br_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1",
+          "f",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "_->r:1;r->_:2;r->c:1"
+      },
+      "installed_endpoint_cut_count": 31,
+      "iteration": 3,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_0",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "tr_rest_0",
+          "tr_rest_1",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "ar_tr_0",
+          "bc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "c->r:1;r->c:1;r->s:2"
+      },
+      "installed_endpoint_cut_count": 32,
+      "iteration": 4,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_0",
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "tr_rest_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "q->r:1;r->c:1;r->q:1;r->s:1"
+      },
+      "installed_endpoint_cut_count": 33,
+      "iteration": 5,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:2;r->c:2"
+      },
+      "installed_endpoint_cut_count": 34,
+      "iteration": 6,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "bc_0",
+          "f",
+          "tr_rest_0"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_tr_1",
+          "bc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 35,
+      "iteration": 7,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "tc_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->r:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 36,
+      "iteration": 8,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "bc_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "bc_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 37,
+      "iteration": 9,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1",
+          "br_rest_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_0",
+          "aq_tq_1",
+          "br_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->c:1;q->r:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 38,
+      "iteration": 10,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "bc_1",
+          "br_rest_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tc_0",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "bc_0",
+          "br_rest_1",
+          "tc_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:2;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 39,
+      "iteration": 11,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_0"
+        ],
+        "c": [
+          "aq_br_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_0"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "bc_0",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->q:1;q->r:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 40,
+      "iteration": 12,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "ar_bq_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;q->s:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 41,
+      "iteration": 13,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_tr_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_1",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 42,
+      "iteration": 14,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_0",
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;r->_:2;r->c:1"
+      },
+      "installed_endpoint_cut_count": 43,
+      "iteration": 15,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_1",
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "br_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;q->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 44,
+      "iteration": 16,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "bc_0",
+          "br_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 45,
+      "iteration": 17,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "ar_tr_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "q->r:1;r->c:1;r->q:1;r->s:1"
+      },
+      "installed_endpoint_cut_count": 46,
+      "iteration": 18,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->c:1;r->q:2"
+      },
+      "installed_endpoint_cut_count": 47,
+      "iteration": 19,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_0",
+          "bc_0",
+          "br_rest_0",
+          "tc_0",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 3,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "bc_1",
+          "br_rest_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;r->c:3"
+      },
+      "installed_endpoint_cut_count": 48,
+      "iteration": 20,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_1",
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_1",
+          "bc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;q->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 49,
+      "iteration": 21,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "ar_tr_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "ar_tr_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;c->r:1;q->c:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 50,
+      "iteration": 22,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "bc_0",
+          "f"
+        ],
+        "c": [
+          "aq_br_0",
+          "aq_tq_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_0",
+          "bc_0",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;q->c:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 51,
+      "iteration": 23,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_0",
+          "ar_tr_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "ar_bq_1",
+          "ar_tr_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->r:1;r->c:2"
+      },
+      "installed_endpoint_cut_count": 52,
+      "iteration": 24,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "br_rest_1"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "f",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_0",
+          "br_rest_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "_->r:1;q->r:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 53,
+      "iteration": 25,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "f"
+        ],
+        "c": [
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 54,
+      "iteration": 26,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "br_rest_0",
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_1",
+          "br_rest_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 55,
+      "iteration": 27,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_1",
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_1",
+          "bc_1",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 56,
+      "iteration": 28,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "bc_0",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 2,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_0",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:2;q->c:2"
+      },
+      "installed_endpoint_cut_count": 57,
+      "iteration": 29,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;c->r:1;q->c:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 58,
+      "iteration": 30,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "bc_1",
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_bq_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_1",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 59,
+      "iteration": 31,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "ar_tr_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "c->r:1;r->c:2;r->s:1"
+      },
+      "installed_endpoint_cut_count": 60,
+      "iteration": 32,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_1",
+          "tc_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 61,
+      "iteration": 33,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_bq_0",
+          "ar_tr_1"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_tr_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "_->q:1;q->_:1;q->r:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 62,
+      "iteration": 34,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_0"
+        ],
+        "c": [
+          "ar_bq_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->_:1;c->q:1;q->c:1"
+      },
+      "installed_endpoint_cut_count": 63,
+      "iteration": 35,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_tr_1",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:2;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 64,
+      "iteration": 36,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_1"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_br_0",
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;q->r:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 65,
+      "iteration": 37,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "bc_1"
+        ],
+        "c": [
+          "f",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "_->c:1;c->_:1;c->q:1;q->_:1"
+      },
+      "installed_endpoint_cut_count": 66,
+      "iteration": 38,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_bq_1",
+          "bc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 67,
+      "iteration": 39,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_0",
+          "f"
+        ],
+        "c": [
+          "ar_tr_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "br_rest_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 68,
+      "iteration": 40,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "tc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_1",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 69,
+      "iteration": 41,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "bc_1",
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_0",
+          "bc_0",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;q->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 70,
+      "iteration": 42,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "br_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_0",
+          "bc_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->r:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 71,
+      "iteration": 43,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "bc_0",
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_1",
+          "bc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 2,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "bc_0",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->_:1;c->q:1;q->c:2"
+      },
+      "installed_endpoint_cut_count": 72,
+      "iteration": 44,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_1",
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_tr_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:2;r->q:1"
+      },
+      "installed_endpoint_cut_count": 73,
+      "iteration": 45,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->_:1;q->r:1;r->q:2"
+      },
+      "installed_endpoint_cut_count": 74,
+      "iteration": 46,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "bc_0",
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;q->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 75,
+      "iteration": 47,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "bc_1",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_0",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "tc_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 76,
+      "iteration": 48,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_1"
+        ],
+        "c": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;q->c:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 77,
+      "iteration": 49,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "br_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 78,
+      "iteration": 50,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_1"
+        ],
+        "c": [
+          "ar_tr_0",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;q->r:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 79,
+      "iteration": 51,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->r:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 80,
+      "iteration": 52,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_0",
+          "ar_bq_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_1",
+          "ar_tr_0"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_tr_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->_:1;q->r:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 81,
+      "iteration": 53,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "br_rest_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->r:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 82,
+      "iteration": 54,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_1"
+        ],
+        "c": [
+          "ar_bq_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "bc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;q->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 83,
+      "iteration": 55,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_0",
+          "f"
+        ],
+        "c": [
+          "bc_1",
+          "br_rest_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_bq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "ar_bq_0",
+          "bc_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->r:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 84,
+      "iteration": 56,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->r:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 85,
+      "iteration": 57,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_br_1",
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_0",
+          "bc_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 86,
+      "iteration": 58,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_1",
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "br_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "br_rest_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 87,
+      "iteration": 59,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "bc_0",
+          "tc_0",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "tc_1",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "s"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "bc_1",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "c->r:1;c->s:1;q->c:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 88,
+      "iteration": 60,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:2;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 89,
+      "iteration": 61,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_bq_0",
+          "bc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_bq_1",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 90,
+      "iteration": 62,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "br_rest_0",
+          "f"
+        ],
+        "c": [
+          "aq_br_0",
+          "bc_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_bq_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "ar_bq_0",
+          "br_rest_0",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->r:1;r->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 91,
+      "iteration": 63,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "br_rest_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "br_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 92,
+      "iteration": 64,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_bq_1",
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:2;q->_:1;q->c:1"
+      },
+      "installed_endpoint_cut_count": 93,
+      "iteration": 65,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f",
+          "tr_rest_0"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "ar_tr_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:2;r->q:1"
+      },
+      "installed_endpoint_cut_count": 94,
+      "iteration": 66,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "ar_tr_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->_:1;q->r:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 95,
+      "iteration": 67,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "br_rest_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_br_0",
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "ar_bq_1",
+          "br_rest_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 96,
+      "iteration": 68,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 97,
+      "iteration": 69,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1",
+          "br_rest_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "br_rest_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->c:1;q->r:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 98,
+      "iteration": 70,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "bc_0",
+          "br_rest_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "bc_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;r->_:1;r->c:2"
+      },
+      "installed_endpoint_cut_count": 99,
+      "iteration": 71,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_1",
+          "f"
+        ],
+        "c": [
+          "ar_tr_0",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_br_0",
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 100,
+      "iteration": 72,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_bq_1",
+          "tc_1"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "f",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "_->q:1;c->_:1;q->_:1;q->c:1"
+      },
+      "installed_endpoint_cut_count": 101,
+      "iteration": 73,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [],
+        "c": [
+          "aq_br_1",
+          "ar_bq_0",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1",
+          "f"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "ar_bq_0",
+          "bc_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "_->q:1;c->r:1;q->c:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 102,
+      "iteration": 74,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_1",
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_1",
+          "bc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_0",
+          "ar_tr_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;c->r:1;q->c:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 103,
+      "iteration": 75,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "aq_br_0",
+          "ar_tr_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_tq_1",
+          "ar_tr_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:1;r->c:2"
+      },
+      "installed_endpoint_cut_count": 104,
+      "iteration": 76,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 3,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;r->c:3"
+      },
+      "installed_endpoint_cut_count": 105,
+      "iteration": 77,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "ar_tr_1",
+          "bc_1",
+          "tc_0",
+          "tc_1",
+          "tr_rest_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_1",
+          "bc_0",
+          "tr_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->c:2"
+      },
+      "installed_endpoint_cut_count": 106,
+      "iteration": 78,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_1",
+          "ar_tr_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "ar_bq_1",
+          "ar_tr_1",
+          "bc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->c:1;r->c:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 107,
+      "iteration": 79,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_0",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "bc_1",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 2,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:2;q->c:2"
+      },
+      "installed_endpoint_cut_count": 108,
+      "iteration": 80,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_0",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "br_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "br_rest_1",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "q->r:1;r->c:1;r->q:1;r->s:1"
+      },
+      "installed_endpoint_cut_count": 109,
+      "iteration": 81,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_bq_0",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_1",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 110,
+      "iteration": 82,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "tr_rest_1"
+        ],
+        "c": [
+          "bc_1",
+          "f",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "tc_1",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "s"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "bc_0",
+          "f",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "_->c:1;c->r:1;c->s:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 111,
+      "iteration": 83,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "tc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;q->c:1;q->r:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 112,
+      "iteration": 84,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [],
+        "c": [
+          "bc_0",
+          "f",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "br_rest_1",
+          "tc_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "s"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "bc_1",
+          "br_rest_1",
+          "f",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "_->c:1;c->r:1;c->s:1;r->s:1"
+      },
+      "installed_endpoint_cut_count": 113,
+      "iteration": 85,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [],
+        "c": [
+          "bc_0",
+          "f",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "aq_br_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "c"
+          },
+          {
+            "count": 2,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "bc_1",
+          "f",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "_->c:1;c->r:2;r->s:1"
+      },
+      "installed_endpoint_cut_count": 114,
+      "iteration": 86,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_1",
+          "br_rest_1",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "tc_0",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "br_rest_1",
+          "tc_0",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;q->_:1;r->_:1;r->q:1"
+      },
+      "installed_endpoint_cut_count": 115,
+      "iteration": 87,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_1",
+          "bc_0"
+        ],
+        "c": [
+          "f",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "ar_tr_1",
+          "bc_0",
+          "bc_1",
+          "f"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "_->c:1;c->_:1;c->r:1;r->_:1"
+      },
+      "installed_endpoint_cut_count": 116,
+      "iteration": 88,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "ar_tr_0",
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "s"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "signature": "q->r:1;r->c:2;r->s:1"
+      },
+      "installed_endpoint_cut_count": 117,
+      "iteration": 89,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_1",
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "q",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "q"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "q->r:1;r->_:2;r->q:1"
+      },
+      "installed_endpoint_cut_count": 118,
+      "iteration": 90,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_0"
+        ],
+        "c": [
+          "aq_tq_0",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->_:1;c->q:1;q->c:1"
+      },
+      "installed_endpoint_cut_count": 119,
+      "iteration": 91,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_1"
+        ],
+        "c": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 2,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->_:1;c->q:1;q->c:2"
+      },
+      "installed_endpoint_cut_count": 120,
+      "iteration": 92,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "ar_tr_0",
+          "f",
+          "tr_rest_1"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_1",
+          "bc_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "ar_tr_0",
+          "bc_1",
+          "tr_rest_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->r:1;r->_:2;r->c:1"
+      },
+      "installed_endpoint_cut_count": 121,
+      "iteration": 93,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_0"
+        ],
+        "c": [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_1",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_0",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;r->c:2"
+      },
+      "installed_endpoint_cut_count": 122,
+      "iteration": 94,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_0",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 2,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 2,
+            "source": "q",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "bc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:2;q->c:2"
+      },
+      "installed_endpoint_cut_count": 123,
+      "iteration": 95,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "f",
+          "tc_0"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_1",
+          "br_rest_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 2,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "bc_0",
+          "br_rest_0",
+          "tc_0"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "c->_:1;c->r:1;r->c:2"
+      },
+      "installed_endpoint_cut_count": 124,
+      "iteration": 96,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "bc_0"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "c"
+          }
+        ],
+        "moved_goods": [
+          "aq_br_1",
+          "aq_tq_0",
+          "bc_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q",
+            "r"
+          ]
+        ],
+        "signature": "c->q:1;c->r:1;q->_:1;r->c:1"
+      },
+      "installed_endpoint_cut_count": 125,
+      "iteration": 97,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "aq_tq_0",
+          "f"
+        ],
+        "c": [
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1",
+          "tc_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "c",
+            "target": "q"
+          },
+          {
+            "count": 1,
+            "source": "q",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "aq_tq_0",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "q"
+          ]
+        ],
+        "signature": "c->q:1;q->_:1"
+      },
+      "installed_endpoint_cut_count": 126,
+      "iteration": 98,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    },
+    {
+      "added_allocation": {
+        "_": [
+          "br_rest_1"
+        ],
+        "c": [
+          "bc_1",
+          "f",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "added_topology": {
+        "edge_counts": [
+          {
+            "count": 1,
+            "source": "_",
+            "target": "c"
+          },
+          {
+            "count": 2,
+            "source": "c",
+            "target": "r"
+          },
+          {
+            "count": 1,
+            "source": "r",
+            "target": "_"
+          }
+        ],
+        "moved_goods": [
+          "bc_0",
+          "br_rest_1",
+          "f",
+          "tc_1"
+        ],
+        "nontrivial_components": [
+          [
+            "_",
+            "c",
+            "r"
+          ]
+        ],
+        "signature": "_->c:1;c->r:2;r->_:1"
+      },
+      "installed_endpoint_cut_count": 127,
+      "iteration": 99,
+      "master_status": "sat",
+      "oracle_status": "sat"
+    }
+  ],
+  "live_polarity": true,
+  "maximum_connected_radius": 4,
+  "objective": "lex",
+  "provenance": {
+    "script": "tracks/parkability/run_flexible_lex_radius4_global_cegar.py",
+    "script_sha256": "628bdd71ebcd962109b04d0ab5fb12b25ff2729ee8f501c0874806a69bd43f4b",
+    "seed": "results/flexible_lex_basic_pi_free_cegar.json",
+    "seed_sha256": "d37f23c1417bc6d9cdc85667aa57fe2de97dc4997db4af74e07f0ce61223e595"
+  },
+  "schema": "flexible-lex-radius4-global-cegar-v1",
+  "seed_radius3_cut_count": 28,
+  "solver": "Z3 5.0.0",
+  "status": "iteration_limit",
+  "symmetry_constraint_count": 8
+}

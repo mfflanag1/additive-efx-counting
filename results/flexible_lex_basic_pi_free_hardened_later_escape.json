@@ -1,0 +1,95 @@
+{
+  "allocation": {
+    "_": [],
+    "c": [
+      "aq_tq_0",
+      "ar_bq_1",
+      "bc_0",
+      "tc_0",
+      "tc_1"
+    ],
+    "q": [
+      "aq_tq_1",
+      "ar_bq_0",
+      "f"
+    ],
+    "r": [
+      "aq_br_0",
+      "aq_br_1",
+      "ar_tr_0",
+      "ar_tr_1",
+      "br_rest_0",
+      "br_rest_1",
+      "tr_rest_0",
+      "tr_rest_1"
+    ],
+    "s": [
+      "bc_1",
+      "z"
+    ]
+  },
+  "base_utilities": {
+    "c": "21485240467467/33554432",
+    "q": "3246754766915/2097152",
+    "r": "5527089231745/16777216",
+    "s": "28726065/256"
+  },
+  "claim_boundary": "exact connected lex EFX witness for the frozen profile; minimality through radius three is supplied by the separate complete exact census audit",
+  "minimum_connected_radius": 4,
+  "objective": "later",
+  "owner_utilities": {
+    "c": "32233356280899/33554432",
+    "q": "4245756969091/2097152",
+    "r": "5527089231745/16777216",
+    "s": "38240109569/262144"
+  },
+  "provenance": {
+    "script": "tracks/parkability/find_flexible_lex_connected_escape.py",
+    "script_sha256": "e9b5e1d1e869f0b5b8ea7433f85d2657e6726f8ccc539f643d1a0a764cf24a2f",
+    "source": "results/flexible_lex_basic_pi_free_hardened_countermodel.json",
+    "source_sha256": "4cc4bb3eab57a053f0bbde307da1e3f343fb6379ae06787e61f9612f39ba25d5"
+  },
+  "radius_statuses": [
+    "unsat",
+    "unsat",
+    "unsat",
+    "sat"
+  ],
+  "schema": "flexible-connected-escape-v1",
+  "solver": "Z3 5.0.0",
+  "status": "FOUND",
+  "topology": {
+    "edge_counts": [
+      {
+        "count": 1,
+        "source": "_",
+        "target": "q"
+      },
+      {
+        "count": 1,
+        "source": "c",
+        "target": "s"
+      },
+      {
+        "count": 2,
+        "source": "q",
+        "target": "c"
+      }
+    ],
+    "moved_goods": [
+      "aq_tq_0",
+      "ar_bq_1",
+      "bc_1",
+      "f"
+    ],
+    "nontrivial_components": [
+      [
+        "_",
+        "c",
+        "q",
+        "s"
+      ]
+    ],
+    "signature": "_->q:1;c->s:1;q->c:2"
+  }
+}

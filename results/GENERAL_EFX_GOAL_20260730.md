@@ -198,6 +198,13 @@ drift, but it deliberately does not assert the false one-row shortcut that
 frontier maximality alone solves the two-row compensation problem. See
 [MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md](MAXIMAL_REPLACEMENT_FRONTIER_EXCHANGE_LEMMA_20260810.md).
 
+The full-packet instance of the canonical root flip now gives a second
+signed reduction. It succeeds whenever `r(X_q-K)>=r(T_r)` and
+`q(X_a)>=q(f)`. Failure therefore forces either the earlier-root wall
+`r(T_r)>r(X_q-K)` or the external-bundle wall `q(f)>q(X_a)`; at a maximal
+frontier the latter strengthens to `q(X_q-K)>q(f)>q(X_a)`. See
+[PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md](PACKET_REPLACEMENT_AGGREGATE_ROOT_FLIP_POLARITY_LEMMA_20260810.md).
+
 The response-Hall library now includes owner-rooted exchange stars: a hub
 can receive a packet from a donor while splitting its own packet among that
 donor and additional leaves. The donor/hub releases are mutually compatible,
@@ -208,16 +215,21 @@ payment/Hall deficiency or use its forced `B_q>R` polarity to flip the root.
 See
 [OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
-The proposed mechanism-independent three-good endpoint is now exactly
-refuted on the audited representative live-polarity flower master.  A
-positive subset-sum-injective 19-good valuation satisfies every encoded
-flower, failed-cover, and opposite-bottom-polarity premise, yet none of all
-41,394 connected redistributions through radius three is an EFX lex
-improvement; in particular none preserves `r` and strictly improves `q`.
-Its minimum connected later-owner escape has radius four and follows the
-five-vertex path `charity -> c -> q -> r -> s`.  Thus the continuation must
-use the cap-free response-Hall/component machinery above or an explicit
-stronger global-selection premise, not a universal three-good bound.  See
+The proposed mechanism-independent three-good endpoint is exactly false on
+the representative live-polarity master, but the first countermodel is not a
+literal hard state: it has a genuine self-champion PI edge.  After excluding
+every self champion, ordinary envy cycle, and simple one-genuine PI cycle, a
+second positive subset-sum-injective 19-good full-capture flower still has
+zero EFX lex improvements among all 41,394 connected redistributions through
+radius three.  Its minimum later-owner escape has radius four, and its exact
+response relation has a Hall defect rather than an internal PI matching.
+This second profile is only basic PI-free and is not globally lex maximal;
+generalized multi-genuine PI-freeness remains unaudited.  A 100-iteration
+radius-four global-maximality CEGAR remained SAT without reaching a verdict.
+Thus the literal globally hard-state three-good theorem remains open, but it
+must use a stronger generalized-PI/global consequence than every currently
+encoded local premise.  The cap-free response-Hall/component route remains
+the better-supported continuation.  See
 [MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md](MECHANISM_INDEPENDENT_RADIUS3_GATE_20260810.md).
 
 **August 3 primary gate:** the fixed-radius exchange program is retired even

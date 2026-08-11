@@ -1,0 +1,223 @@
+{
+  "candidate_allocation_count": 41394,
+  "claim_boundary": "bounded two-atom representative live-polarity flower decision excluding every genuine self-champion subset and every simple cycle with exactly one genuine edge; UNSAT is a bounded hard-state theorem candidate, while SAT still requires an audit of PI edge sets with at least two genuine edges",
+  "countermodel_iteration": 4,
+  "envy_cycle_constraint_count": 20,
+  "genuine_self_champions_excluded": true,
+  "global_item_symmetry": true,
+  "iterations": [
+    {
+      "added_candidate_indices": [
+        946,
+        4769,
+        15995,
+        949,
+        4782,
+        4785,
+        4806,
+        4809
+      ],
+      "iteration": 0,
+      "selected_allocation_count": 0,
+      "status": "sat",
+      "successful_allocation_count": 62,
+      "successful_bucket_counts": {
+        "q:radius3": 5,
+        "r:radius2": 2,
+        "r:radius3": 55
+      }
+    },
+    {
+      "added_candidate_indices": [
+        162,
+        3073,
+        551,
+        3019,
+        6531,
+        172,
+        528,
+        531
+      ],
+      "iteration": 1,
+      "selected_allocation_count": 8,
+      "status": "sat",
+      "successful_allocation_count": 331,
+      "successful_bucket_counts": {
+        "c:radius3": 5,
+        "q:radius2": 4,
+        "q:radius3": 9,
+        "r:radius2": 24,
+        "r:radius3": 289
+      }
+    },
+    {
+      "added_candidate_indices": [
+        15718,
+        15939,
+        15949,
+        32936,
+        32937
+      ],
+      "iteration": 2,
+      "selected_allocation_count": 16,
+      "status": "sat",
+      "successful_allocation_count": 5,
+      "successful_bucket_counts": {
+        "q:radius3": 2,
+        "r:radius3": 3
+      }
+    },
+    {
+      "added_candidate_indices": [
+        6734,
+        16422,
+        16370,
+        7126,
+        8282,
+        28660,
+        29004
+      ],
+      "iteration": 3,
+      "selected_allocation_count": 21,
+      "status": "sat",
+      "successful_allocation_count": 7,
+      "successful_bucket_counts": {
+        "c:radius3": 1,
+        "q:radius3": 3,
+        "r:radius3": 3
+      }
+    },
+    {
+      "iteration": 4,
+      "selected_allocation_count": 28,
+      "status": "sat",
+      "successful_allocation_count": 0
+    }
+  ],
+  "live_polarity": true,
+  "objective": "lex",
+  "ordinary_envy_cycles_excluded": true,
+  "provenance": {
+    "script": "tracks/parkability/run_flexible_lex_self_pi_free_cegar.py",
+    "script_sha256": "70ac62034a6ca885e3051060f8e0b9b0667c93bfea2b02c4e32ff1298d4b2e33"
+  },
+  "schema": "flexible-lex-basic-pi-free-cegar-v1",
+  "selected_candidate_indices": [
+    946,
+    4769,
+    15995,
+    949,
+    4782,
+    4785,
+    4806,
+    4809,
+    162,
+    3073,
+    551,
+    3019,
+    6531,
+    172,
+    528,
+    531,
+    15718,
+    15939,
+    15949,
+    32936,
+    32937,
+    6734,
+    16422,
+    16370,
+    7126,
+    8282,
+    28660,
+    29004
+  ],
+  "self_champion_subset_constraint_count": 290,
+  "single_genuine_cycle_constraint_count": 60,
+  "single_genuine_pi_cycles_excluded": true,
+  "solver": "Z3 5.0.0",
+  "status": "sat",
+  "symmetry_constraint_count": 8,
+  "values": {
+    "c": {
+      "aq_br_0": "1792825/4",
+      "aq_br_1": "1747/16",
+      "aq_tq_0": "255993/2",
+      "aq_tq_1": "1023971/16",
+      "ar_bq_0": "1023971/16",
+      "ar_bq_1": "3586523/8",
+      "ar_tr_0": "255993/4",
+      "ar_tr_1": "1023973/16",
+      "bc_0": "3073663/16",
+      "bc_1": "4095889/16",
+      "br_rest_0": "340741/16",
+      "br_rest_1": "340741/16",
+      "f": "1536831/8",
+      "tc_0": "192104",
+      "tc_1": "1745/16",
+      "tr_rest_0": "873/8",
+      "tr_rest_1": "85185/4",
+      "z": "14344345/16"
+    },
+    "q": {
+      "aq_br_0": "2858167/16",
+      "aq_br_1": "1429083/8",
+      "aq_tq_0": "119089/4",
+      "aq_tq_1": "2024535/4",
+      "ar_bq_0": "8098139/16",
+      "ar_bq_1": "4049069/8",
+      "ar_tr_0": "2858165/16",
+      "ar_tr_1": "1429085/16",
+      "bc_0": "476355/16",
+      "bc_1": "188505/8",
+      "br_rest_0": "714543/8",
+      "br_rest_1": "4287249/8",
+      "f": "4049069/4",
+      "tc_0": "3810887/16",
+      "tc_1": "2381805/8",
+      "tr_rest_0": "714541/4",
+      "tr_rest_1": "357271/4",
+      "z": "377009/16"
+    },
+    "r": {
+      "aq_br_0": "1568159/16",
+      "aq_br_1": "1568159/16",
+      "aq_tq_0": "13155/8",
+      "aq_tq_1": "797233/8",
+      "ar_bq_0": "1/16",
+      "ar_bq_1": "13155/8",
+      "ar_tr_0": "26311/16",
+      "ar_tr_1": "540257/16",
+      "bc_0": "1594467/16",
+      "bc_1": "2082109/16",
+      "br_rest_0": "60955/2",
+      "br_rest_1": "32122",
+      "f": "3676577/16",
+      "tc_0": "26309/16",
+      "tc_1": "784079/8",
+      "tr_rest_0": "26307/16",
+      "tr_rest_1": "270129/8",
+      "z": "5271043/16"
+    },
+    "s": {
+      "aq_br_0": "89767/16",
+      "aq_br_1": "718155/8",
+      "aq_tq_0": "44883/4",
+      "aq_tq_1": "179537/16",
+      "ar_bq_0": "718153/8",
+      "ar_bq_1": "11221",
+      "ar_tr_0": "89765/16",
+      "ar_tr_1": "44883/8",
+      "bc_0": "538613/16",
+      "bc_1": "134653/4",
+      "br_rest_0": "3/16",
+      "br_rest_1": "1/16",
+      "f": "179537/8",
+      "tc_0": "89769/4",
+      "tc_1": "359075/16",
+      "tr_rest_0": "1/8",
+      "tr_rest_1": "22441/4",
+      "z": "1795379/16"
+    }
+  }
+}

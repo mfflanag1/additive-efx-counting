@@ -1,0 +1,267 @@
+{
+  "champion_offers": {
+    "c": {
+      "r": {
+        "minimal_desired_subsets": [
+          [
+            "bc_0",
+            "f"
+          ],
+          [
+            "bc_1",
+            "f"
+          ],
+          [
+            "f",
+            "tc_0",
+            "tc_1"
+          ]
+        ],
+        "modes": [
+          "genuine"
+        ]
+      }
+    },
+    "q": {
+      "c": {
+        "minimal_desired_subsets": [
+          [
+            "ar_bq_1",
+            "f"
+          ],
+          [
+            "aq_tq_0",
+            "aq_tq_1",
+            "ar_bq_0",
+            "ar_bq_1"
+          ]
+        ],
+        "modes": [
+          "genuine",
+          "ordinary"
+        ]
+      },
+      "r": {
+        "minimal_desired_subsets": [
+          [
+            "aq_tq_0",
+            "aq_tq_1",
+            "f"
+          ]
+        ],
+        "modes": [
+          "genuine"
+        ]
+      },
+      "s": {
+        "minimal_desired_subsets": [
+          [
+            "ar_bq_0",
+            "f"
+          ],
+          [
+            "aq_tq_0",
+            "aq_tq_1",
+            "ar_bq_0",
+            "ar_bq_1"
+          ]
+        ],
+        "modes": [
+          "genuine",
+          "ordinary"
+        ]
+      }
+    },
+    "r": {
+      "c": {
+        "minimal_desired_subsets": [
+          [
+            "aq_br_0",
+            "f"
+          ]
+        ],
+        "modes": [
+          "genuine"
+        ]
+      },
+      "q": {
+        "minimal_desired_subsets": [
+          [
+            "br_rest_1",
+            "f"
+          ],
+          [
+            "ar_tr_0",
+            "ar_tr_1",
+            "br_rest_0",
+            "f",
+            "tr_rest_0"
+          ],
+          [
+            "ar_tr_0",
+            "ar_tr_1",
+            "f",
+            "tr_rest_0",
+            "tr_rest_1"
+          ],
+          [
+            "ar_tr_0",
+            "br_rest_0",
+            "f",
+            "tr_rest_0",
+            "tr_rest_1"
+          ]
+        ],
+        "modes": [
+          "genuine"
+        ]
+      },
+      "s": {
+        "minimal_desired_subsets": [
+          [
+            "aq_br_1",
+            "f"
+          ]
+        ],
+        "modes": [
+          "genuine"
+        ]
+      }
+    },
+    "s": {
+      "c": {
+        "minimal_desired_subsets": [
+          [
+            "z"
+          ]
+        ],
+        "modes": [
+          "ordinary"
+        ]
+      }
+    }
+  },
+  "claim_boundary": "exact structural diagnostic of one bounded profile; it identifies which explicitly checkable PI-free flower premises fail but does not decide all generalized PI edge sets",
+  "displayed_minimal_desired_sets": {
+    "A_q": {
+      "minimal_desired_subsets": [
+        [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_0",
+          "aq_tq_1"
+        ]
+      ],
+      "offer": [
+        "aq_tq_0",
+        "aq_tq_1",
+        "aq_br_0",
+        "aq_br_1"
+      ],
+      "source": "c"
+    },
+    "A_r": {
+      "minimal_desired_subsets": [
+        [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1"
+        ]
+      ],
+      "offer": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "ar_bq_0",
+        "ar_bq_1"
+      ],
+      "source": "c"
+    },
+    "D_c": {
+      "minimal_desired_subsets": [
+        [
+          "f",
+          "tc_0",
+          "tc_1"
+        ]
+      ],
+      "offer": [
+        "tc_0",
+        "tc_1",
+        "f"
+      ],
+      "source": "r"
+    },
+    "D_q": {
+      "minimal_desired_subsets": [
+        [
+          "ar_tr_0",
+          "ar_tr_1",
+          "f",
+          "tr_rest_0",
+          "tr_rest_1"
+        ]
+      ],
+      "offer": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1",
+        "f"
+      ],
+      "source": "q"
+    },
+    "D_r": {
+      "minimal_desired_subsets": [
+        [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f"
+        ]
+      ],
+      "offer": [
+        "aq_tq_0",
+        "aq_tq_1",
+        "f"
+      ],
+      "source": "r"
+    },
+    "Z": {
+      "minimal_desired_subsets": [
+        [
+          "z"
+        ]
+      ],
+      "offer": [
+        "z"
+      ],
+      "source": "c"
+    }
+  },
+  "genuine_self_champions": [],
+  "global_maximality_witness": "results/flexible_lex_radius3_hardened_countermodel_escape.json",
+  "globally_lex_maximal": false,
+  "ordinary_envy_cycles": [],
+  "ordinary_envy_edges": [
+    [
+      "c",
+      "q"
+    ],
+    [
+      "c",
+      "s"
+    ],
+    [
+      "s",
+      "q"
+    ]
+  ],
+  "provenance": {
+    "script": "tracks/parkability/analyze_flexible_lex_radius3_hardness_gap.py",
+    "script_sha256": "225127c11745847b6235d66f51e1247458fe5fa29e1371a5b1ce8abaf066df16",
+    "source": "results/flexible_lex_basic_pi_free_hardened_countermodel.json",
+    "source_sha256": "4cc4bb3eab57a053f0bbde307da1e3f343fb6379ae06787e61f9612f39ba25d5"
+  },
+  "schema": "flexible-lex-radius3-hardness-gap-v1",
+  "status": "CLASSIFIED"
+}

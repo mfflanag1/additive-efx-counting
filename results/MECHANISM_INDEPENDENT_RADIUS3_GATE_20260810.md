@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-10
 
-**Status:** bounded local statement refuted in the live polarity cell; a
-radius-four/component replacement remains open
+**Status:** relaxed and basic-PI-free local statements refuted; the literal
+globally hard-state statement remains open
 
 ## Target and semantic correction
 
@@ -49,6 +49,55 @@ The exact radius-four witnesses are
 [`flexible_later_radius3_hardened_countermodel_escape.json`](flexible_later_radius3_hardened_countermodel_escape.json)
 and
 [`flexible_lex_radius3_hardened_countermodel_escape.json`](flexible_lex_radius3_hardened_countermodel_escape.json).
+
+## Hard-state audit and corrected boundary
+
+The first hardened model is not a literal hard state.  Exact enumeration of
+all common-safe desired subsets finds a genuine self-champion edge
+
+\[
+r\xrightarrow{\{f\}}r
+\]
+
+using the desired subset `{aq_br_1,f}`.  This is a one-edge PI cycle and is
+forbidden at the PI-free globally maximal base of the actual flower theorem.
+The diagnostic is frozen in
+[`flexible_lex_radius3_hardened_countermodel_hardness_gap.json`](flexible_lex_radius3_hardened_countermodel_hardness_gap.json).
+
+Adding all 290 no-self-champion constraints, all 20 ordinary-envy-cycle
+constraints, and all 60 simple one-genuine-cycle constraints still does not
+force a radius-three endpoint.  A second binary perturbation gives a positive
+subset-sum-injective full-capture flower with:
+
+- no genuine self-champion;
+- no ordinary envy cycle;
+- no simple PI cycle containing exactly one genuine champion edge; and
+- zero EFX lex endpoints among all 41,394 connected transfers through radius
+  three.
+
+Its first later-owner endpoint has radius four and topology
+
+\[
+\mathrm{charity}\to q,qquad q\to c\text{ twice},qquad c\to s.
+\]
+
+The corresponding response relation has disjoint, internally supplied
+incoming packets but no internal SDR, so it realizes the expected Hall-defect
+branch rather than an immediate PI closure.  The exact profile and independent
+audit are
+[`flexible_lex_basic_pi_free_hardened_countermodel.json`](flexible_lex_basic_pi_free_hardened_countermodel.json)
+and
+[`flexible_lex_basic_pi_free_hardened_countermodel_audit.json`](flexible_lex_basic_pi_free_hardened_countermodel_audit.json).
+
+This second model is only **basic** PI-free.  Generalized PI edge sets with
+two or more genuine edges have not been exhaustively excluded, and the base
+has a radius-four lex improvement, so it is not globally lex maximal.  A
+radius-four global-maximality CEGAR installed 100 further endpoint cuts and
+reached its iteration limit while remaining SAT; it is a resumable search,
+not a verdict.  The exact trace is
+[`flexible_lex_radius4_global_cegar.json`](flexible_lex_radius4_global_cegar.json).
+Thus the literal theorem for a genuinely PI-free, globally
+maximal hard state is neither proved nor refuted.
 
 The first exact master imposed the representative full-`X_q` flower
 relations, positivity, common safety, desired bundles, and failure of every
@@ -143,18 +192,19 @@ and
 
 ## Mathematical consequence
 
-No proof using only the current hard-flower premises can force a connected
-three-good endpoint: the theorem is exactly false already for two-atom
-packets.  The next viable local target must allow at least four moved goods,
-or replace item radius by adaptive transfer-component growth.  If an intended
-notion of “hard” includes additional global-maximality consequences absent
-from the audited master, those consequences must be stated explicitly and
-shown to exclude the frozen model before a radius-three claim can be revived.
+No proof using only the flower/cover/live-polarity premises, even augmented
+by the basic PI-cycle exclusions above, can force a connected three-good
+endpoint: that local theorem is exactly false already for two-atom packets.
+The radius-three claim can survive only by using a genuinely stronger
+generalized-PI or global-maximality consequence.  Otherwise the viable target
+must allow at least four moved goods or replace item radius by adaptive
+transfer-component growth.
 
 ## Claim boundary
 
-The exact model refutes the bounded local radius-three implication from the
-audited representative flower/cover/live-polarity premises.  It does not
-refute complete EFX existence, the BCFF global program, a theorem with a
-genuinely stronger explicit global-selection premise, or an unrestricted
-transfer-component lemma.  No four-agent or general EFX theorem is claimed.
+The exact models refute the bounded local radius-three implication from the
+audited representative flower/cover/live-polarity premises and from its basic
+PI-free strengthening.  They do not refute the literal theorem at a fully
+PI-free globally maximal state, complete EFX existence, the BCFF global
+program, or an unrestricted transfer-component lemma.  No four-agent or
+general EFX theorem is claimed.

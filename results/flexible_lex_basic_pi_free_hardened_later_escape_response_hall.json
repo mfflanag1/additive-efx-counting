@@ -1,0 +1,117 @@
+{
+  "all_incoming_supplied": true,
+  "changed_owners": [
+    "q",
+    "c",
+    "s"
+  ],
+  "claim_boundary": "exact response-source and release-support audit for one frozen connected escape; a matching proves this profile is not PI-free, while no matching would not exclude other generalized PI edge sets",
+  "incoming_disjoint": true,
+  "incoming_packets": {
+    "c": [
+      "aq_tq_0",
+      "ar_bq_1"
+    ],
+    "q": [
+      "f"
+    ],
+    "s": [
+      "bc_1"
+    ]
+  },
+  "internal_matchings": [],
+  "internal_response_sources": {
+    "c": [
+      "c"
+    ],
+    "q": [
+      "s"
+    ],
+    "s": [
+      "c"
+    ]
+  },
+  "provenance": {
+    "escape": "results/flexible_lex_basic_pi_free_hardened_later_escape.json",
+    "escape_sha256": "3f92337df9932f2e1577c23ae2fbcd4e1d22adf89be260933aee0b915bff81a0",
+    "profile": "results/flexible_lex_basic_pi_free_hardened_countermodel.json",
+    "profile_sha256": "4cc4bb3eab57a053f0bbde307da1e3f343fb6379ae06787e61f9612f39ba25d5",
+    "script": "tracks/parkability/analyze_connected_escape_response_hall.py",
+    "script_sha256": "8029a16c984fc26e714d9d852382e0ae48ae868ccb750a61e25c1d694ffb19ca"
+  },
+  "released_packets": {
+    "c": [
+      "bc_1"
+    ],
+    "q": [
+      "aq_tq_0",
+      "ar_bq_1"
+    ],
+    "s": []
+  },
+  "response_sources": {
+    "c": {
+      "c": [
+        [
+          "ar_bq_1",
+          "bc_0"
+        ],
+        [
+          "ar_bq_1",
+          "tc_0"
+        ]
+      ]
+    },
+    "q": {
+      "s": [
+        [
+          "ar_bq_0",
+          "f"
+        ]
+      ]
+    },
+    "s": {
+      "c": [
+        [
+          "z"
+        ]
+      ]
+    }
+  },
+  "schema": "connected-escape-response-hall-v1",
+  "status": "NO_INTERNAL_SDR",
+  "topology": {
+    "edge_counts": [
+      {
+        "count": 1,
+        "source": "_",
+        "target": "q"
+      },
+      {
+        "count": 1,
+        "source": "c",
+        "target": "s"
+      },
+      {
+        "count": 2,
+        "source": "q",
+        "target": "c"
+      }
+    ],
+    "moved_goods": [
+      "aq_tq_0",
+      "ar_bq_1",
+      "bc_1",
+      "f"
+    ],
+    "nontrivial_components": [
+      [
+        "_",
+        "c",
+        "q",
+        "s"
+      ]
+    ],
+    "signature": "_->q:1;c->s:1;q->c:2"
+  }
+}
