@@ -1,0 +1,39 @@
+{
+  "claim_boundary": "cap-free top-only reset monotonicity; floater-consuming resets and fixed-support recurrence termination are not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_universal_retained_support_reset.py",
+    "script_sha256": "c2c1620ec736cb433c33981be66896df46f787a73c39031783e703768d0f965e",
+    "theorem": "results/UNIVERSAL_RETAINED_SUPPORT_RESET_LEMMA_20260811.md",
+    "theorem_sha256": "3be873eccb058c2633a660d70e4f697a44740110c0140f3c57c35777b8ee2df2"
+  },
+  "scalar_records": {
+    "failed_reset_forces_full_margin_capture": "unsat",
+    "fresh_overlap_strictly_descends_positive_margin": "unsat",
+    "reset_margin_identity": "unsat"
+  },
+  "schema": "universal-retained-support-reset-audit-v1",
+  "status": "ALL_FORCED",
+  "support_cases": [
+    {
+      "good_origin": "previously_removed_U",
+      "in_reset_core": false,
+      "in_updated_U": true
+    },
+    {
+      "good_origin": "fresh_overlap_K",
+      "in_reset_core": false,
+      "in_updated_U": true
+    },
+    {
+      "good_origin": "unselected_T_r_remainder",
+      "in_reset_core": true,
+      "in_updated_U": false
+    },
+    {
+      "good_origin": "floater_f",
+      "in_reset_core": true,
+      "in_updated_U": false
+    }
+  ],
+  "support_partition_valid": true
+}
