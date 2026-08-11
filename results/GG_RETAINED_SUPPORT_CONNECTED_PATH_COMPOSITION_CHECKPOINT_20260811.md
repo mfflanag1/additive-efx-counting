@@ -408,6 +408,26 @@ therefore recruit a different physical component, invoke a priority-valid
 base-floor sacrifice, or replace the response core; see
 [`COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md`](COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md).
 
+The component selector now spends the response source's own realized splice
+surplus before declaring failure.  Its exact optimum has three ranges: it
+strictly preserves the current response; it lowers the source relative to the
+intermediate splice but keeps her strictly above the original GG base; or it
+fails even after crediting the entire same-row surplus.  The middle range is
+already priority-valid because the original earlier root gain survives.  Only
+the final base-margin separator may invoke sacrificed-source direct safety,
+outside-component recruitment, or response replacement; see
+[`COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md`](COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md).
+
+Outside-component recruitment cannot itself recur in the four-owner problem.
+The response target and source occupy one physical component and an external
+surplus observer occupies a disjoint one, so their union already contains at
+least three owners.  Recruiting outside this union, when possible, saturates
+owner coverage at four in one step.  After response-record saturation, the
+only live state is therefore a full-owner repeated decorated response with
+the global base-margin separator and failed sacrificed-source direct safety;
+see
+[`FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md`](FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -426,7 +446,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 106 tests spanning the retained-support,
+The focused dependency replay currently passes 110 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

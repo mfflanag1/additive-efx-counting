@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 49,
-  "focused_test_count": 106,
+  "dependency_count": 51,
+  "focused_test_count": 110,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "d53745306a7d916e7ef4cccb40dfcb9fbf033be095a8e50d59fc69c8a4629c9f",
+    "checkpoint_sha256": "46657c50d52c7baf43cf6e64940ff665a1c5da9b019fca1ab6b6c4c8bb35b1da",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "be047c70e49d229a187616374f7d82bc43f7346aadc9f7827a2ef291f3455fd2"
+    "script_sha256": "f149dadc37e414a5304fe56a348d13c125503314ec7ab35a44e66d01d262069f"
   },
   "records": [
     {
@@ -333,10 +333,10 @@
     },
     {
       "audit": "results/cross_component_safety_debt_bridge_audit.json",
-      "audit_sha256": "c34c0f7271a64041d9fc04cdaf6901ca8e6a4c33ebebf81c1d75cc0b8f2cf4d3",
+      "audit_sha256": "0d014b34e317c73eb16e9406e6b13dd9a498f5668134bcf862fe859aa5a0b4df",
       "audit_status": "ALL_FORCED",
       "theorem": "results/CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md",
-      "theorem_sha256": "1ef0d7f638dea6347b387ed06437dcc66bcfa3fe229c1840acc990de438032fb"
+      "theorem_sha256": "3a6011e83f98bd7ccbf5f263fa5c06e625a7442539c549077f3678c2bb59847d"
     },
     {
       "audit": "results/cross_component_return_compensation_selector_audit.json",
@@ -351,6 +351,20 @@
       "audit_status": "ALL_FORCED",
       "theorem": "results/COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
       "theorem_sha256": "04e1eed93446cd5f965516fde7d6a9ec1680ddc76afbca36f9041276e6531040"
+    },
+    {
+      "audit": "results/component_wide_current_or_base_floor_handoff_audit.json",
+      "audit_sha256": "38a017225f27c280f6d1234f12058314493299135e742b2c668a863eda15a782",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md",
+      "theorem_sha256": "dc88619282c7e694b15f2c12f5ac83b6a9dcea0361610d23d9fdccff37c9f822"
+    },
+    {
+      "audit": "results/four_owner_decorated_component_exhaustion_audit.json",
+      "audit_sha256": "b886594faeabf89f61c6b290b7101bf4655ec965a58829eb346fa3bcb6a5c0ae",
+      "audit_status": "ALL_EXHAUSTED",
+      "theorem": "results/FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md",
+      "theorem_sha256": "1d32214b0396b29a0d980da6b11e2da79ef8611ad4a69d04e6e8837e06fffd4d"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",

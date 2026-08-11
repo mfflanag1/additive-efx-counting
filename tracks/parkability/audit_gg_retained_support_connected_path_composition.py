@@ -59,6 +59,8 @@ DEPENDENCIES = (
     ("CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md", "cross_component_safety_debt_bridge_audit.json"),
     ("CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "cross_component_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
+    ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
+    ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
 )
 
 
@@ -89,7 +91,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 106,
+        "focused_test_count": 110,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

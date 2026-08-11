@@ -1620,6 +1620,20 @@ both encodings.
   and physically joins the response; failure rules out every internal path or
   branch, forcing outside-component recruitment, a priority-valid sacrifice,
   or response-core replacement.
+- [`COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md`](COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md)
+  ([symbolic audit](component_wide_current_or_base_floor_handoff_audit.json))
+  — credits the response source's entire realized splice surplus. The global
+  component optimum either preserves her current improvement, keeps her
+  strictly above the original GG base in a priority-valid handoff, or proves
+  the stronger base-margin separator that alone may require sacrifice,
+  outside recruitment, or core replacement.
+- [`FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md`](FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md)
+  ([exact owner-set audit](four_owner_decorated_component_exhaustion_audit.json))
+  — proves outside-component recruitment is a one-time event: the response
+  target/source plus one external observer already represent at least three
+  owners, so one recruitment saturates all four. The irreducible survivor is
+  now the full-owner decorated response with a base-margin separator and no
+  direct-safe sacrificed-source endpoint.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
