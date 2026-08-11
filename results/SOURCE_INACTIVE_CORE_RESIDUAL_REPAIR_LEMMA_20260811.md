@@ -2,8 +2,9 @@
 
 **Date:** 2026-08-11
 
-**Status:** cap-free finite repair theorem; non-root exhaustion now converts
-to a two-hole response component, while root-facing exhaustion remains open
+**Status:** cap-free finite repair theorem; every exhaustion branch now
+converts to a two-hole response component, with a root-critical polarity in
+the root-facing orientation
 
 ## Setting
 
@@ -137,10 +138,17 @@ Every two-sided compression star now has one of four outcomes:
 If the exhausted core source is not `r`, stop requiring that source to
 remain represented.  Keep the other two cores and repartition `A+W` between
 the old hole and the exhausted source by the two-hole cut-and-choose lemma.
-This converts J-exhaustion into a cap-free two-core/two-residual response
-component.  The remaining analytic targets are its 2-by-2 Hall-deficient
-boundary, the root-facing case, and hole-pivot recurrence.  See
-[`TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md`](TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md).
+If the exhausted source is `r`, use the root-preserving two-hole selector;
+(7) supplies its hypothesis `v_r(A)>v_r(W)`.  It either gives a mutually EFX
+two-hole partition while keeping `r` strictly above base, or names a
+root-critical least good with an exact strict polarity.  Thus every
+J-exhaustion converts into a cap-free two-core/two-residual response
+component or the root-critical polarity.  The remaining analytic targets
+are its 2-by-2 Hall-deficient boundary, polarity-to-transfer conversion, and
+hole-pivot recurrence.  See
+[`TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md`](TWO_HOLE_CUT_AND_CHOOSE_RESPONSE_HALL_LEMMA_20260811.md)
+and
+[`ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md`](ROOT_PRESERVING_TWO_HOLE_SELECTOR_LEMMA_20260811.md).
 
 ## Verification and claim boundary
 
@@ -149,7 +157,7 @@ checks the exchange partition, nonexhaustion of the d-repair, strict
 residual-potential increase, preservation of old d-core safety, and the
 J-exhaustion margin under Z3 5.0.0 and 4.15.3.
 
-The lemma and its two-hole continuation do not eliminate the resulting
-2-by-2 Hall deficiency, prove that every unsafe repaired core closes its new
-Hall boundary, eliminate root-facing exhaustion, close the `GG` flower
-class, or prove four-agent additive EFX.
+The lemma and its two-hole continuations do not eliminate the resulting
+2-by-2 Hall deficiency, convert the root-critical polarity into a closing
+transfer, prove that every unsafe repaired core closes its new Hall
+boundary, close the `GG` flower class, or prove four-agent additive EFX.

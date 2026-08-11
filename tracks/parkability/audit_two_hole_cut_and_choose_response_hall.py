@@ -43,6 +43,21 @@ def run(root):
         chooser_own < chooser_tail,
     )
 
+    old_residual, least, core_tail, optimum = z3.Reals(
+        "old_residual least core_tail optimum"
+    )
+    trial_minimum = z3.If(
+        old_residual + least <= core_tail,
+        old_residual + least,
+        core_tail,
+    )
+    strict_inherited_potential = check_unsat(
+        least > 0,
+        core_tail > old_residual,
+        optimum >= trial_minimum,
+        optimum <= old_residual,
+    )
+
     source_own, source_base, core_tail = z3.Reals(
         "source_own source_base core_tail"
     )
@@ -102,6 +117,9 @@ def run(root):
         "scalar_records": {
             "maximin_strong_envy_exchange_improves_minimum": maximin_exchange,
             "chooser_envy_freeness_implies_efx": chooser_efx,
+            "strong_envy_seed_strictly_raises_divider_floor": (
+                strict_inherited_potential
+            ),
             "represented_source_safe_against_common_safe_core": represented_to_core,
         },
         "response_block_records": {

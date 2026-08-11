@@ -2,8 +2,9 @@
 
 **Date:** 2026-08-11
 
-**Status:** cap-free conversion of non-root J-exhaustion; root-facing and
-2-by-2 Hall-deficient termination remain open
+**Status:** cap-free conversion of non-root J-exhaustion; the root-facing
+orientation is handled by the root-preserving selector, while 2-by-2
+Hall-deficient termination remains open
 
 ## Two-source/two-hole state
 
@@ -43,6 +44,34 @@ Moving `g` from `H` to `L` makes both new cell values strictly exceed
 The chooser weakly prefers her selected cell to the other cell, so she is
 envy-free and therefore EFX.
 
+## Strict inherited potential
+
+Suppose the pool comes from a one-hole state with old residual `W` and a
+core `A` strongly envied by the divider `d`:
+
+\[
+v_d(W)<\tau_d(A).
+\]
+
+Let `g` be a least-valued good of `A`.  The trial partition
+
+\[
+(W+g,\ A-g)
+\]
+
+has both cells strictly above `v_d(W)`: positivity gives the first strict
+inequality and strong envy gives the second.  Therefore the optimum in (1)
+is strictly larger than `v_d(W)`.  Both cells of every maximizing partition
+have value at least that optimum, so whichever cell the chooser leaves to
+`d` satisfies
+
+\[
+v_d(P_d)>v_d(W).                                      \tag{3}
+\]
+
+Thus the conversion from a strongly envied one-hole state to two holes is
+not potential-neutral.  It strictly increases the old hole's own value.
+
 ## Exact wall localization
 
 Give `A_t` to `p_t` and the two cut-and-choose cells to `d,j`.  Then:
@@ -74,6 +103,10 @@ exactly `A+W`.  Stop requiring `j` to remain represented.  Keep the other
 two desired cores fixed and apply the cut-and-choose construction to
 `P=A+W` with holes `d,j`.
 
+The source-inactive premise contains `v_d(W)<tau_d(A)`, so (3) applies:
+the old hole's cut-and-choose cell is strictly more valuable to her than
+the residual she held before J-exhaustion.
+
 If `j != r`, the anchored root `r` remains represented and strictly above
 base.  Hence an EFX cut-and-choose endpoint is a valid strict lexicographic
 flower improvement even if both holes are below base.  An SDR is PI; every
@@ -82,13 +115,18 @@ priority-sensitive exception is `j=r`, exactly the previously named
 root-facing star.
 
 No item cap is used.  The maximin partition exists because the allocation
-set is finite.
+set is finite.  When `j=r`, the root-preserving two-hole selector replaces
+this unconstrained partition: it preserves `r` above base and yields either
+a mutually EFX two-hole partition or an exact root-critical polarity.
 
 ## Claim boundary
 
 This lemma removes non-root J-exhaustion as an unstructured unanimous
 core-dominance terminal and replaces it by a cap-free two-hole
-cut-and-choose response component.  It does not prove that either 2-by-2
-response block has a matching, eliminate source-inactive walls created by
-the repartition, eliminate the root-facing case, close `GG`, or prove
-four-agent/general additive EFX.
+cut-and-choose response component with a strict inherited potential gain for
+the old hole.  Together with the root-preserving selector, priority-valid
+conversion now covers every exhausted source.  It does not prove that either 2-by-2
+response block has a matching, show that every later compression
+preserves that gain, eliminate source-inactive walls created by the
+repartition, convert the root-critical polarity into a closing transfer,
+close `GG`, or prove four-agent/general additive EFX.
