@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 36,
-  "focused_test_count": 80,
+  "dependency_count": 38,
+  "focused_test_count": 84,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "8ca7dc0a1b4335e2b010fc992807d659c7f1ae01fba057e384e389a7ec60a80d",
+    "checkpoint_sha256": "cf476cad6edb75d7bcbe6532f33c661440951c3eb0c22cd8b8710e37d9e66b25",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "a0cdd00da9c1a5eeb5a88dd790d51dc73ef898e647e110a37e0d8327f5d0397a"
+    "script_sha256": "cf0015589b2ae5ae52dc87e51793aa8228e636c3f73b6fa65390792f47a923e4"
   },
   "records": [
     {
@@ -256,10 +256,24 @@
     },
     {
       "audit": "results/bottom_tail_three_owner_cycle_splice_audit.json",
-      "audit_sha256": "f5fc6265370b4400b8ab210021de8b17188afb81a876b0e73b809cba878cc3d5",
+      "audit_sha256": "af884c6712a8375691edab4fa7fccd9b855c70100e2197841c947c3594b02c2c",
       "audit_status": "ALL_FORCED",
       "theorem": "results/BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md",
-      "theorem_sha256": "b1a0657d875136f7d8d275a6d8eb611043f3c00faf9fe44c65d26ced65a6068d"
+      "theorem_sha256": "409a8ac81c628329eff81470c4ba3281f6a8969b6ac56c769c78af6d8d64f733"
+    },
+    {
+      "audit": "results/bottom_tail_q_budget_canonical_split_audit.json",
+      "audit_sha256": "1f40e0cb7221336217ffd781f85a84f9fc683d637abf3536201b2c817e501bc4",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md",
+      "theorem_sha256": "e7dc7831c0e2c1133b8b21dfdb7f6ae85fa5319d552381dc1ae54739458d739b"
+    },
+    {
+      "audit": "results/blocked_hole_minimal_k_q_budget_dichotomy_audit.json",
+      "audit_sha256": "422bda7aae5916e770d26695d2e76490444c6d960d1c6f2708216400bd678ec8",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md",
+      "theorem_sha256": "40e349cafe4ccab517b01ab57a6db4f028dbaf8270687a88ab9019da98dcecb0"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",

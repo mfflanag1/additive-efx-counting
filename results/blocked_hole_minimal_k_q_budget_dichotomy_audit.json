@@ -1,0 +1,30 @@
+{
+  "alternatives": [
+    "fully paid three-owner cycle before observer-safety check",
+    "minimal hole packet exceeds q margin even after all residual compensation"
+  ],
+  "claim_boundary": "payment-layer dichotomy for a hole blocked on Q; observer safety, fourth-owner separator, response-silent holes, GG, and EFX remain open",
+  "exact_separator": [
+    "d(K+H)>d(X_d)",
+    "d(K-k+H)<=d(X_d) for every k in K",
+    "q(K)-q(W)>mu_q"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_blocked_hole_minimal_k_q_budget_dichotomy.py",
+    "script_sha256": "1568782693f8fcc52d5af623e6f7202d4cddb563512d9d84077ec18183f85693",
+    "theorem": "results/BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md",
+    "theorem_sha256": "40e349cafe4ccab517b01ab57a6db4f028dbaf8270687a88ab9019da98dcecb0"
+  },
+  "remaining_gate": "observer surplus or fourth-owner compensation",
+  "schema": "blocked-hole-minimal-k-q-budget-dichotomy-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "admissible_full_residual_pays_q": "unsat",
+    "critical_deletion_boundary": "unsat",
+    "full_core_plus_tail_restores_hole": "unsat",
+    "minimal_compensator_pays_q": "unsat",
+    "minimal_packet_is_strict": "unsat",
+    "root_remains_strict": "unsat",
+    "separator_exceeds_whole_q_margin": "unsat"
+  }
+}

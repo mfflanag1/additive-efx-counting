@@ -1521,6 +1521,21 @@ both encodings.
   plateau has an EFX root-strict splice. The live theorem is now to force one
   feasible split from the GG inequalities or obtain a full-premise separating
   countermodel.
+- [`BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md`](BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md)
+  ([symbolic audit](bottom_tail_q_budget_canonical_split_audit.json))
+  — removes two payment degrees of freedom from that selector. The desired
+  root core makes root payment automatic. For a proposed hole packet `K`, a
+  q-preserving residual split exists exactly when
+  `q(K)<=mu_q+q(W)`; an inclusion-minimal q compensator canonically fixes the
+  split. The remaining gate is to select a hole-safe admissible `K` and pay
+  every observer threshold.
+- [`BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md`](BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md)
+  ([symbolic audit](blocked_hole_minimal_k_q_budget_dichotomy_audit.json))
+  — supplies that packet when the hole is blocked on `Q`: take an inclusion-
+  minimal `K` for which `K+H` restores the hole. Either the canonical split
+  pays root, q, and the hole before safety checking, or the same critical `K`
+  exceeds q's response margin even after crediting all of `W`. The latter is
+  the exact fourth-owner/augmentation separator.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

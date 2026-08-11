@@ -263,6 +263,28 @@ selector feasibility from the GG root-concentration and minimal Hall-defect
 inequalities, not to invent another potential coordinate.  See
 [`BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md`](BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md).
 
+The splice's payment layer is now one-dimensional.  The permanent root core
+is already strictly desired, so releasing the tail creates no root-payment
+deficit.  For a proposed hole packet `K subseteq Q`, a residual compensation
+split preserving protected `q` exists exactly when
+`v_q(K)<=mu_q+v_q(W)`.  An inclusion-minimal `G_q subseteq W` then determines
+the canonical split and makes every transferred residual good payment-
+critical.  Failure means `K` captures the whole q margin even after crediting
+all of `W`.  The live choice is therefore a hole-safe admissible `K`, followed
+by observer-surplus checks; see
+[`BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md`](BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md).
+
+When the external hole is blocked on the protected `q` core `Q`, its
+candidate `K` is also canonical.  Choose an inclusion-minimal packet with
+`v_d(K+H)>v_d(X_d)`.  Either it satisfies the q-budget inequality, producing
+a three-owner splice in which root and hole are strict and q is weakly paid
+before the observer-safety check, or
+`v_q(K)-v_q(W)>mu_q`.  The latter is an exact two-row separator: every good
+of `K` is critical to the hole, while even all of `W` cannot compensate q.
+Thus the remaining failed-payment operation must recruit the fourth owner's
+surplus or augment the response relation; see
+[`BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md`](BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -281,7 +303,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 80 tests spanning the retained-support,
+The focused dependency replay currently passes 84 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

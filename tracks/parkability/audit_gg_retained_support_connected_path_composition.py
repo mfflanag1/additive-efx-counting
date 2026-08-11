@@ -46,6 +46,8 @@ DEPENDENCIES = (
     ("UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md", "universal_retained_bottom_support_reset_audit.json"),
     ("RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md", "retained_bottom_ledger_stagnation_refutation_audit.json"),
     ("BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md", "bottom_tail_three_owner_cycle_splice_audit.json"),
+    ("BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md", "bottom_tail_q_budget_canonical_split_audit.json"),
+    ("BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md", "blocked_hole_minimal_k_q_budget_dichotomy_audit.json"),
 )
 
 
@@ -76,7 +78,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 80,
+        "focused_test_count": 84,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

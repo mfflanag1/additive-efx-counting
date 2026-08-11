@@ -11,7 +11,8 @@ from all GG inequalities remains open
 Consider the canonical support-disjoint state in which the root holds
 `A+H`, a protected source `q` holds `Q`, and the distinguished external hole
 `d` holds residual `W`.  The retained bottom tail `H` is nonempty and is not
-used by any selected response core.
+used by any selected response core. The permanent cores are desired:
+`v_r(A)>v_r(X_r)` and `v_q(Q)>v_q(X_q)`.
 
 Choose
 
@@ -45,15 +46,10 @@ without restarting the same response compression.
 ## Exact endpoint selector
 
 Let `C(H,A,Q,W)` be the finite family of triples `(K,G_r,G_q)` satisfying
-(1), root-first lexicographic improvement
-
-\[
- v_r(A+G_r)>v_r(X_r),                              \tag{4}
-\]
-
-and the observer-indexed surplus conditions of the connected-component
+(1) and the observer-indexed surplus conditions of the connected-component
 endpoint theorem for (2). An owner below base may instead be placed in `L`
 only after directly satisfying every final EFX and charity comparison.
+Root-first strict improvement is automatic from the desired core `A`.
 
 Exactly one of the following occurs.
 
@@ -61,14 +57,18 @@ Exactly one of the following occurs.
    lexicographically dominates the base in root-first priority, and has the
    connected supplier graph (3).
 2. The family is empty. Because all packet supports are finite, every split
-   has a named failed inequality: root replacement (4), weak payment for an
-   owner outside `L`, one observer-target surplus budget, or one direct
+   has a named failed inequality: weak payment for an owner outside `L`, one
+   observer-target surplus budget, or one direct
    comparison for an owner in `L`. A globally maximizing split therefore
    supplies an exact separating certificate and identifies which extra
    packet or gain the analytic GG argument must force.
 
 This is stronger than another support counter: it tests the whole branching
 operation at once and permits realized gains to pay for unsafe target tails.
+For any fixed `K`, the q-budget canonical-split lemma removes the residual-
+split degree of freedom: q compensation exists exactly when
+`v_q(K)<=mu_q+v_q(W)`, and an inclusion-minimal compensator canonically
+determines `(G_r,G_q)`.
 
 ## Exact adversarial witness
 
