@@ -63,7 +63,7 @@ Put the exact root replacement requirement
  \delta_r=v_r(X_r)-v_r(R-C).                       \tag{4}
 \]
 
-Then (3) pays all three affected sources exactly when
+Then (3) weakly pays all three affected sources exactly when
 
 \[
  v_r(K)-v_r(G)\ge\delta_r                           \tag{R}
@@ -72,11 +72,13 @@ Then (3) pays all three affected sources exactly when
 and
 
 \[
- v_b(K)-v_b(G)<\mu_b.                               \tag{B}
+ v_b(K)-v_b(G)\le\mu_b.                              \tag{B}
 \]
 
-Equation (1) pays `a`; (R) pays the root; and (B) is equivalent to
-`v_b(D-K+G)>v_b(X_b)`.
+Equation (1) pays `a` strictly; (R) pays the root weakly; and (B) is
+equivalent to `v_b(D-K+G)>=v_b(X_b)`.  Equality in (B) is sufficient:
+the restored source `a` already supplies the strict lexicographic gain
+needed by a certified endpoint.
 
 ## Global selector and exact failure
 
@@ -97,19 +99,19 @@ There are exactly three alternatives.
    v_r(D)<\delta_r.                                 \tag{6}
    \]
 2. **Fork success.** Some pair in `F_b` satisfies (B). Then all three
-   affected sources are strictly or weakly paid. If their changed targets
+   affected sources are weakly paid and `a` is strict. If their changed targets
    satisfy the surplus-budget inequalities, the connected-component theorem
    gives an EFX lexicographic improvement. Otherwise a failed threshold
    supplies the named response augmentation.
 3. **Donor blockade.** `F_b` is nonempty but every root-feasible replacement
    captures the donor's whole margin:
    \[
-   v_b(K)-v_b(G)\ge\mu_b
+   v_b(K)-v_b(G)>\mu_b
    \qquad((K,G)\in\mathcal F_b).                    \tag{7}
    \]
 
 Equivalently, choose a root-feasible pair maximizing
-`v_b(G)-v_b(K)`. It succeeds precisely when that maximum is greater than
+`v_b(G)-v_b(K)`. It succeeds precisely when that maximum is at least
 `-mu_b`; otherwise (7) is the exact separating certificate.
 
 ## Consequence
@@ -130,8 +132,9 @@ root-concentration inequality.
 ## Verification and boundary
 
 [`third_owner_root_replacement_fork_audit.json`](third_owner_root_replacement_fork_audit.json)
-checks support conservation, all three payment equivalences, emptiness of the
-root-feasible family, and the donor-separation alternative symbolically.
+checks support conservation, all three payment equivalences, acceptance of
+the weak-donor equality boundary, emptiness of the root-feasible family, and
+the donor-separation alternative symbolically.
 
 This lemma identifies the exact smallest operation outside the globally
 exhausted two-row frontier. It does not contradict (6) or (7) from the GG

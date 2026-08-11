@@ -41,7 +41,10 @@ DEPENDENCIES = (
     ("FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md", "fixed_u_arbitrary_hole_residual_selector_audit.json"),
     ("GLOBAL_RESIDUAL_ROOT_FACING_RIGIDITY_LEMMA_20260811.md", "global_residual_root_facing_rigidity_audit.json"),
     ("THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md", "third_owner_root_replacement_fork_audit.json"),
+    ("Q_DONOR_BLOCKADE_CAPTURED_MARGIN_HANDOFF_LEMMA_20260811.md", "q_donor_blockade_captured_margin_handoff_audit.json"),
     ("ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md", "root_concentration_bottom_absorption_rotation_audit.json"),
+    ("UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md", "universal_retained_bottom_support_reset_audit.json"),
+    ("RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md", "retained_bottom_ledger_stagnation_refutation_audit.json"),
 )
 
 
@@ -63,7 +66,7 @@ def run(root: Path) -> dict:
             "audit_sha256": sha256(audit),
             "audit_status": payload.get("status"),
         })
-    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "COMPOSED", "DEPENDENCIES_REPLAYABLE", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU"}
+    accepted = {"ALL_FORCED", "ALL_EXHAUSTED", "ALL_CLASSIFIED", "VERIFIED", "PASS", "CLASSIFIED", "COMPOSED", "DEPENDENCIES_REPLAYABLE", "EXACT_SCALE_REFUTATION", "EXACT_PLATEAU", "EXACT_BOTTOM_TAIL_PLATEAU"}
     verified = all(record["audit_status"] in accepted for record in records)
     script = Path(__file__).resolve()
     checkpoint = result_dir / "GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md"
@@ -72,7 +75,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 72,
+        "focused_test_count": 78,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

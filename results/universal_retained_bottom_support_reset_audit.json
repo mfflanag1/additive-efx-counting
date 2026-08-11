@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "bottom-overlap resets preserve the live anchor, grow S, or capture root margin; reverse-support components and support-disjoint repeated Hall closure remain open",
+  "finite_set_audit": {
+    "cases": 1024,
+    "universe_size": 5,
+    "violations": []
+  },
+  "potential": [
+    "absorbed bottom support |V|",
+    "consumed bottom support |S|"
+  ],
+  "precondition": "retained cores avoid permanent top/floater anchor T_q+f",
+  "provenance": {
+    "script": "tracks/parkability/audit_universal_retained_bottom_support_reset.py",
+    "script_sha256": "4f3bd49aeff1ee7341c48833cea5858a7f7ffafc41c119fc93ad945e71662c4d",
+    "theorem": "results/UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md",
+    "theorem_sha256": "923fa5bcfe832fc841db0dcb4d02ace3d169eac27596f3e027220b7145ed3937"
+  },
+  "remaining_gate": "support-disjoint repeated-bottom Hall state",
+  "schema": "universal-retained-bottom-support-reset-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "captured_packet_covers_margin": "unsat",
+    "fresh_consumption_preserves_margin": "unsat",
+    "reset_trichotomy_exhaustive": "unsat"
+  }
+}

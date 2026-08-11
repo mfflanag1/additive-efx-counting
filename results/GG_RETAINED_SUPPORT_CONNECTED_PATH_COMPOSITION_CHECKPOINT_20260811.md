@@ -177,21 +177,38 @@ is impossible.  An unsafe root target augments immediately.  The remaining
 original split has an item-critical least good, and the finite compensator
 frontier ends in exactly a top packet or the `f`-only captured-bottom packet.
 
-The required third-owner fork now has a necessary-and-sufficient packet
-selector.  Return the captured packet to its source, replace its root value
+The required third-owner fork now has a necessary-and-sufficient weak-payment
+packet selector.  Return the captured packet to its source, replace its root value
 with `K` from a protected donor core, and compensate that donor with `G` from
 the root pool.  The fork succeeds exactly when the root replacement gap is
-met without consuming the donor's whole response margin.  Failure is no
+met without consuming more than the donor's whole response margin; equality
+weakly pays the donor and is sufficient because the restored captured source
+is already strict.  Failure is no
 longer schematic: either the donor's entire core cannot replace the root
 packet, or every root-feasible `(K,G)` pair captures the donor margin.
+
+When the protected donor is `q` and its donor core is the known split-support
+core `D(U)`, the strict donor blockade is no longer terminal.  Every root-
+feasible pair removes a nonempty packet `K` with `v_q(K)>mu_q`; `K` captures
+the whole remaining `q` response margin.  A floater-free `K` strictly grows
+retained top support and enters captured-margin rotation, while a floater-
+containing `K` enters the floater-source trichotomy.  What remains open is
+ensuring that this protected `q` core is always the available third donor,
+or routing an arbitrary protected donor's captured packet.
 
 The aggregate root-concentration alternative now has a canonical rotation:
 retain the concentrated `H subseteq B_r` with `T_q+f`, give `T_r+B_q` to
 `q`, fix both external owners, and leave `B_r\setminus H` as dominated
 charity.  Both mutual owners strictly improve, and only their changed targets
-can create walls.  Record `V <- V union H` as retained root-bottom support.
-A fresh `H` is finite combinatorial progress; a repeated `H subseteq V` is
-the final retained-bottom Hall gate.
+can create walls.  Record `V <- V union H` as absorbed root-bottom support.
+A nested set `S subseteq V` records bottom goods subsequently consumed by
+disjoint retained response cores.  The universal bottom reset preserves
+`(V,S)`, strictly grows `S`, or exposes a packet capturing the remaining root
+margin.  A fresh `H` grows `V`.  The formerly broad repetition
+`H subseteq V` is reduced to a support-disjoint gate
+`H subseteq V\setminus S`, where all retained response cores avoid the live
+bottom tail, plus an explicit reverse-support component when a repetition
+meets `S`.
 The initially proposed lexicographic potential was
 
 \[
@@ -213,8 +230,10 @@ already saturated; see
 [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md).
 The root-concentration branch also shows that retained top support alone is
 incomplete: a terminal fork may have to keep a root-expensive bottom packet.
-The smallest additional combinatorial coordinate is therefore `|V|`, where
-`V subseteq B_r` is retained bottom support.  Thus arbitrary recompression still needs a deterministic current-state
+The smallest additional combinatorial coordinate is therefore the nested
+pair `(|V|,|S|)`, where `V subseteq B_r` is absorbed bottom support and
+`S subseteq V` is committed to retained response cores.  Thus arbitrary
+recompression still needs a deterministic current-state
 invariant or a global component, but the protected matching rule avoids this
 plateau for response-active `q`: she is never selected as its hole.  For
 endpoint
@@ -222,6 +241,16 @@ extraction, the required safety inequalities are now the
 observer-indexed surplus balances of
 [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md),
 not zero-overshoot external common safety.
+
+The nested bottom ledger is locally monotone but is not itself a strict inner
+potential.  An exact eleven-good tail lift of the four-state response plateau
+keeps `V={h}`, `S=empty`, historical rank, owner union, owner-indexed residual
+ratios, and used residual supports fixed while all four compressed states are
+non-EFX.  The selected root cores avoid `h`.  Hence the support-disjoint gate
+cannot be closed by another historical support counter; it requires a
+current-state selector or a surplus-budgeted connected component that splices
+the repeated root-facing return with the bottom tail.  See
+[`RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md`](RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md).
 
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
@@ -241,7 +270,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 72 tests spanning the retained-support,
+The focused dependency replay currently passes 78 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

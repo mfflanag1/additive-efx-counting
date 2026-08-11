@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 32,
-  "focused_test_count": 72,
+  "dependency_count": 35,
+  "focused_test_count": 78,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "a8743d0733cb92afaa029fdefaae13a9193d08d86bd82ec5a5ed136e1717d1f4",
+    "checkpoint_sha256": "9b9c96c84d7b2ead3e68be001e4ad391b08c6a15cc9dba997792bcc69b3b00aa",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "815d718c4f76fac9325a35604cb71a264bbaa3f5e39a038e59031b0e9e8bead4"
+    "script_sha256": "86a34b42fd54b591044c0567854a20a259cd6644ef9be673197f484ae1e10875"
   },
   "records": [
     {
@@ -221,17 +221,38 @@
     },
     {
       "audit": "results/third_owner_root_replacement_fork_audit.json",
-      "audit_sha256": "1c04c9c7a0d3c7748a3cdcbd235e61b231f8b5320752e28c1bb50c66abcdd5cf",
+      "audit_sha256": "caec824bb26925734d474c2b16fa3317ec278378bc456cde187f4ba0196ad3ca",
       "audit_status": "ALL_FORCED",
       "theorem": "results/THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md",
-      "theorem_sha256": "fbd38c4810f61ef3c37faf1199749f2472371027e095dc661ac3543ba8b66194"
+      "theorem_sha256": "cade828fc7d684a9950c8cdbdbadb1c020286d74368e2492725e3a52a34176f9"
+    },
+    {
+      "audit": "results/q_donor_blockade_captured_margin_handoff_audit.json",
+      "audit_sha256": "53f9ad5ec4520a57c5bf9a18f8f25c43c0bd0ac1178ae353bb77a9b439d3f2bd",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/Q_DONOR_BLOCKADE_CAPTURED_MARGIN_HANDOFF_LEMMA_20260811.md",
+      "theorem_sha256": "30684f2d040595412d713a122deecd9813f428d5ecbc6d817d2312ba7abe4f34"
     },
     {
       "audit": "results/root_concentration_bottom_absorption_rotation_audit.json",
-      "audit_sha256": "5a88f85b4f7094bfc5734e219ddcafa56c2e2f3b26f3cafac42bfc1bb438226a",
+      "audit_sha256": "7c4d8f995eb14f557a52bdf71a8e4cdd1c11cc5376a3c0a692f82a5765d1db73",
       "audit_status": "ALL_FORCED",
       "theorem": "results/ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md",
-      "theorem_sha256": "c1b13d70a628eb54edf3a365f78fcb12a422c9a538ad87bdd656f7305a699626"
+      "theorem_sha256": "8a13665978eaaa954e945b675312a19477530793d7d6b7574604aa21d2fd18e2"
+    },
+    {
+      "audit": "results/universal_retained_bottom_support_reset_audit.json",
+      "audit_sha256": "60d795cfb7753e57730041b8c1a7859a661ac1a66c471c4d82cb36dce0d72ee4",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md",
+      "theorem_sha256": "923fa5bcfe832fc841db0dcb4d02ace3d169eac27596f3e027220b7145ed3937"
+    },
+    {
+      "audit": "results/retained_bottom_ledger_stagnation_refutation_audit.json",
+      "audit_sha256": "2d07a0e5218740c36b18cf468179f9cd6e984f2d7cf8bd57cb22e5bc57f3f6a1",
+      "audit_status": "EXACT_BOTTOM_TAIL_PLATEAU",
+      "theorem": "results/RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md",
+      "theorem_sha256": "32d47a9d5e706fac6fcce32698a1c29d7f0579b502b2bf9cf5071e4697b135fe"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",

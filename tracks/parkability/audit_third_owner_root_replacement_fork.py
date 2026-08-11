@@ -32,8 +32,11 @@ def run(root: Path) -> dict:
         "root_payment_equivalence": prove(
             [rk - rg >= delta], rr - rc - rg + rk < xr
         ),
-        "donor_payment_equivalence": prove(
-            [mu > 0, bk - bg < mu], bd - bk + bg <= xb
+        "donor_weak_payment_equivalence": prove(
+            [mu > 0, bk - bg <= mu], bd - bk + bg < xb
+        ),
+        "donor_equality_is_accepted": prove(
+            [mu > 0, bk - bg == mu], bd - bk + bg != xb
         ),
         "captured_source_restoration": prove(
             [aa > xa, ab >= 0], aa - ac + ab + ac <= xa
@@ -47,7 +50,7 @@ def run(root: Path) -> dict:
     theorem = root / "results/THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md"
     script = Path(__file__).resolve()
     return {
-        "schema": "third-owner-root-replacement-fork-audit-v1",
+        "schema": "third-owner-root-replacement-fork-audit-v2",
         "status": "ALL_FORCED",
         "symbolic_checks": checks,
         "alternatives": [

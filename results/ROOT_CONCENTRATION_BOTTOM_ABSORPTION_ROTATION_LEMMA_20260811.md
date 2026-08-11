@@ -109,15 +109,17 @@ route the opposite mutual top to `q`. Record
  V'=V\cup H\subseteq B_r                            \tag{9}
 \]
 
-as retained bottom support. If `H` contains a good not previously in `V`,
-this is strict finite support growth. If `H subseteq V`, the canonical
-response and arbitrary-hole residual selectors apply at the already retained
-bottom state; the proof may not treat the same captured packet as new.
+as absorbed bottom support. If `H` contains a good not previously in `V`,
+this is strict finite support growth. At fixed `V`, the universal retained-
+bottom reset records in `S subseteq V` every live bottom good consumed by a
+disjoint retained response core. Such a reset preserves support, strictly
+grows `S`, or captures the remaining root response margin. The proof may not
+treat a packet contained in `V` as newly absorbed.
 
 This shows why retained top support `U` alone is insufficient at the final
-fork. The smallest additional combinatorial coordinate is the retained
-root-bottom support `V`, or equivalently the operation (4) that absorbs a
-new captured-bottom packet before response compression.
+fork. The smallest additional combinatorial coordinate is the nested pair
+`(V,S)`: bottom support absorbed by (4), and the portion later committed to
+retained response cores.
 
 ## Verification and boundary
 
@@ -126,7 +128,8 @@ checks support conservation, both strict mutual improvements, charity
 dominance, and exact wall localization symbolically.
 
 This lemma converts aggregate root concentration to a canonical partial
-allocation and a finite bottom-support update. It does not prove that every
-response continuation preserves `V`, terminate a repeated `H subseteq V`
-Hall boundary, close the donor-margin blockade, close `GG`, or prove four-
-agent/general additive EFX.
+allocation and a finite bottom-support update. Together with the universal
+retained-bottom reset, only the support-disjoint repeated-bottom Hall state
+and reverse-support component remain. It does not terminate either state,
+close every donor choice, close `GG`, or prove four-agent/general additive
+EFX.

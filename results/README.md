@@ -1479,15 +1479,40 @@ both encodings.
   ([symbolic audit](third_owner_root_replacement_fork_audit.json))
   — gives the final fork an exact necessary-and-sufficient packet selector:
   return the captured packet, replace its root value from a protected donor
-  core, and compensate that donor from the root pool. Failure is exactly
-  aggregate root concentration or a donor-margin blockade.
+  core, and compensate that donor from the root pool. A donor exactly at base
+  is correctly accepted because the restored captured source is strict.
+  Failure is exactly aggregate root concentration or a strict donor-margin
+  blockade.
+- [`Q_DONOR_BLOCKADE_CAPTURED_MARGIN_HANDOFF_LEMMA_20260811.md`](Q_DONOR_BLOCKADE_CAPTURED_MARGIN_HANDOFF_LEMMA_20260811.md)
+  ([symbolic audit](q_donor_blockade_captured_margin_handoff_audit.json))
+  — shows that a strict blockade against the protected split-support `q`
+  donor removes a nonempty packet worth more than the entire remaining `q`
+  margin. A floater-free packet strictly grows `U` and enters captured-margin
+  rotation; a floater-containing packet enters the named floater-source
+  trichotomy. Availability of `q` as the third donor in every terminal state
+  remains open.
 - [`ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md`](ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md)
   ([symbolic audit](root_concentration_bottom_absorption_rotation_audit.json))
   — converts aggregate root concentration by retaining the captured bottom
   packet with `T_q+f`, routing `T_r+B_q` to `q`, and leaving the uncaptured
   bottom as dominated charity. Both mutual owners strictly improve. The
-  operation exposes retained bottom support `V` as the smallest additional
-  combinatorial coordinate beyond retained top support `U`.
+  operation exposes absorbed bottom support `V` as an additional coordinate
+  beyond retained top support `U`.
+- [`UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md`](UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md)
+  ([symbolic/set audit](universal_retained_bottom_support_reset_audit.json))
+  — adds nested consumed support `S subseteq V`. After top/floater overlap is
+  routed separately, every bottom-overlap reset preserves `(V,S)`, strictly
+  grows `S`, or captures the remaining root margin. The only unchanged case
+  is a support-disjoint repeated-bottom Hall state, plus an explicit reverse-
+  support component.
+- [`RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md`](RETAINED_BOTTOM_LEDGER_STAGNATION_REFUTATION_20260811.md)
+  ([exact audit](retained_bottom_ledger_stagnation_refutation_audit.json))
+  — gives an exact eleven-good positive-additive tail lift of the four-state
+  response plateau. `V`, `S`, rank, owner coverage, and every residual-history
+  coordinate are identical across four non-EFX states, so the expanded
+  historical ledger is not a strict termination potential. This is a local
+  potential refutation, not a GG or EFX counterexample; it isolates a current-
+  state selector or connected cycle-splicing operation as the missing step.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
