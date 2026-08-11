@@ -78,7 +78,7 @@ def moved_allocation(base, moves):
     return {recipient: sorted(goods) for recipient, goods in allocation.items()}
 
 
-def enumerate_connected(old, radius=3, rooted=False):
+def enumerate_connected(old, radius=3, rooted=False, structural_reductions=True):
     base = base_allocation(old)
     base_owner = {
         good: recipient for recipient, goods in base.items() for good in goods
@@ -97,16 +97,17 @@ def enumerate_connected(old, radius=3, rooted=False):
                 edges = tuple((source, target) for _, source, target in moves)
                 if not connected(edges):
                     continue
-                incoming = {target for _, target in edges}
-                outgoing = {source for source, _ in edges}
-                # Positivity makes these necessary for the required utility
-                # signs, independently of the cardinal values.
-                if "q" not in incoming:
-                    continue
-                if "r" in outgoing and "r" not in incoming:
-                    continue
-                if "s" in outgoing and "s" not in incoming:
-                    continue
+                if structural_reductions:
+                    incoming = {target for _, target in edges}
+                    outgoing = {source for source, _ in edges}
+                    # Positivity makes these necessary for the required utility
+                    # signs, independently of the cardinal values.
+                    if "q" not in incoming:
+                        continue
+                    if "r" in outgoing and "r" not in incoming:
+                        continue
+                    if "s" in outgoing and "s" not in incoming:
+                        continue
                 if rooted:
                     if count < 2 or ("f", "_", "q") not in moves:
                         continue
@@ -118,6 +119,10 @@ def enumerate_connected(old, radius=3, rooted=False):
 
 
 def completion_formula(allocation, old, value, base):
+    return endpoint_formula(allocation, old, value, base, "later")
+
+
+def endpoint_formula(allocation, old, value, base, objective):
     base_allocation = base_allocation_for(old)
     changed = {
         recipient
@@ -128,7 +133,18 @@ def completion_formula(allocation, old, value, base):
         agent: z3.Sum(*(value[good, agent] for good in allocation[agent]))
         for agent in AGENTS
     }
-    conditions = [own["r"] >= base["r"], own["q"] > base["q"]]
+    if objective == "later":
+        conditions = [own["r"] >= base["r"], own["q"] > base["q"]]
+    elif objective == "lex":
+        conditions = [z3.Or(*(
+            z3.And(
+                *(own[earlier] == base[earlier] for earlier in AGENTS[:position]),
+                own[agent] > base[agent],
+            )
+            for position, agent in enumerate(AGENTS)
+        ))]
+    else:
+        raise ValueError(f"unknown objective: {objective}")
     for observer in AGENTS:
         for target in AGENTS:
             if observer in changed or target in changed:

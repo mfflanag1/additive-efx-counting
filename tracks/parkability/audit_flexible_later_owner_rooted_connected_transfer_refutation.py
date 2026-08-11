@@ -144,6 +144,61 @@ def endpoint_succeeds(values, old, allocation):
     return True
 
 
+def lex_endpoint_succeeds(values, old, allocation):
+    base = {agent: value(values, agent, old[agent]) for agent in AGENTS}
+    own = {agent: value(values, agent, allocation[agent]) for agent in AGENTS}
+    lex_improves = any(
+        all(own[AGENTS[index]] == base[AGENTS[index]] for index in range(position))
+        and own[agent] > base[agent]
+        for position, agent in enumerate(AGENTS)
+    )
+    if not lex_improves:
+        return False
+    for observer in AGENTS:
+        for target in AGENTS:
+            if own[observer] < tail(values, observer, allocation[target]):
+                return False
+        if own[observer] < value(values, observer, allocation["_"]):
+            return False
+    return True
+
+
+def validate_flower_master(values):
+    assert all(amount > 0 for row in values.values() for amount in row.values())
+    bundles = {
+        name: tuple(good for component in parts for good in atom_names(component))
+        for name, parts in COMPONENT_BUNDLES.items()
+    }
+    old = old_bundles()
+    base = {agent: value(values, agent, old[agent]) for agent in AGENTS}
+    for agent in AGENTS:
+        for goods in bundles.values():
+            assert tail(values, agent, goods) <= base[agent]
+        assert values[agent]["f"] <= base[agent]
+        assert value(values, agent, old["c"]) <= base[agent]
+    for name, owner in {
+        "D_r": "r",
+        "D_q": "q",
+        "D_c": "r",
+        "Z": "c",
+        "A_q": "c",
+        "A_r": "c",
+    }.items():
+        assert value(values, owner, bundles[name]) > base[owner]
+    for cover in candidate_covers("r", "c", "c", "c", tuple(AGENTS)):
+        if cover["unpaid_agent"] is None:
+            continue
+        unpaid = cover["unpaid_agent"]
+        payment = bundles[cover["assignment"][unpaid]]
+        assert any(
+            value(values, unpaid, payment)
+            < tail(values, unpaid, bundles[cover["assignment"][target]])
+            for target in AGENTS if target != unpaid
+        )
+    assert any(values["q"]["f"] > values["q"][good] for good in old["q"])
+    return old
+
+
 def allocation_key(allocation):
     return tuple(tuple(sorted(allocation[recipient])) for recipient in (*AGENTS, "_"))
 
@@ -196,38 +251,7 @@ def run(source_path):
         agent: {good: Fraction(amount) for good, amount in row.items()}
         for agent, row in source["values"].items()
     }
-    assert all(amount > 0 for row in values.values() for amount in row.values())
-    bundles = {
-        name: tuple(good for component in parts for good in atom_names(component))
-        for name, parts in COMPONENT_BUNDLES.items()
-    }
-    old = old_bundles()
-    base = {agent: value(values, agent, old[agent]) for agent in AGENTS}
-    for agent in AGENTS:
-        for goods in bundles.values():
-            assert tail(values, agent, goods) <= base[agent]
-        assert values[agent]["f"] <= base[agent]
-        assert value(values, agent, old["c"]) <= base[agent]
-    for name, owner in {
-        "D_r": "r",
-        "D_q": "q",
-        "D_c": "r",
-        "Z": "c",
-        "A_q": "c",
-        "A_r": "c",
-    }.items():
-        assert value(values, owner, bundles[name]) > base[owner]
-    for cover in candidate_covers("r", "c", "c", "c", tuple(AGENTS)):
-        if cover["unpaid_agent"] is None:
-            continue
-        unpaid = cover["unpaid_agent"]
-        payment = bundles[cover["assignment"][unpaid]]
-        assert any(
-            value(values, unpaid, payment)
-            < tail(values, unpaid, bundles[cover["assignment"][target]])
-            for target in AGENTS if target != unpaid
-        )
-    assert any(values["q"]["f"] > values["q"][good] for good in old["q"])
+    old = validate_flower_master(values)
 
     rooted = rooted_allocations(old)
     assert len(rooted) == source["candidate_allocation_count"]

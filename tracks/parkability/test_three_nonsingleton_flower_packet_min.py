@@ -32,6 +32,10 @@ try:
     from .audit_flexible_later_owner_rooted_connected_transfer_refutation import (
         run as run_rooted_connected_refutation,
     )
+    from .audit_flexible_later_owner_connected_radius3_refutation import (
+        run as run_connected_radius3_refutation,
+    )
+    from .audit_flexible_lex_topology_seed import run as run_lex_topology_seed
 except ImportError:
     from analyze_two_leaf_hub_split_census import run as run_hub_split_census
     from audit_charity_rooted_hub_split import run as run_hub_split_audit
@@ -60,6 +64,10 @@ except ImportError:
     from audit_flexible_later_owner_rooted_connected_transfer_refutation import (
         run as run_rooted_connected_refutation,
     )
+    from audit_flexible_later_owner_connected_radius3_refutation import (
+        run as run_connected_radius3_refutation,
+    )
+    from audit_flexible_lex_topology_seed import run as run_lex_topology_seed
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -423,6 +431,29 @@ def main() -> None:
     assert rooted_refutation_audit["status"] == "VERIFIED"
     assert rooted_refutation_audit["rooted_candidate_count"] == 78
     assert rooted_refutation_audit["minimum_flexible_escape_radius"] == 2
+    relaxed_radius3_path = (
+        ROOT / "results" / "flexible_later_owner_connected_radius3_refutation.json"
+    )
+    relaxed_radius3_audit = json.loads(
+        (
+            ROOT
+            / "results"
+            / "flexible_later_owner_connected_radius3_refutation_audit.json"
+        ).read_text()
+    )
+    assert run_connected_radius3_refutation(relaxed_radius3_path) == relaxed_radius3_audit
+    assert relaxed_radius3_audit["status"] == "VERIFIED_RELAXED_REFUTATION"
+    assert relaxed_radius3_audit["full_connected_candidate_count"] == 41394
+    assert relaxed_radius3_audit["minimum_connected_escape_radius"] == 4
+    assert relaxed_radius3_audit["minimum_lexicographic_escape_radius"] == 2
+    lex_seed_path = ROOT / "results" / "flexible_lex_topology_cegar_seed37.json"
+    lex_seed_audit = json.loads(
+        (ROOT / "results" / "flexible_lex_topology_cegar_seed37_audit.json").read_text()
+    )
+    assert run_lex_topology_seed(lex_seed_path) == lex_seed_audit
+    assert lex_seed_audit["status"] == "VERIFIED_GATE"
+    assert lex_seed_audit["selected_topology_class_count"] == 37
+    assert lex_seed_audit["selected_candidate_allocation_count"] == 2514
     print("three-nonsingleton flower packet-minimum tests passed")
 
 
