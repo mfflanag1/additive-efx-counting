@@ -1225,6 +1225,41 @@ both encodings.
 - [`flower_external_bottom_edge_rank_two_anchor_audit.json`](flower_external_bottom_edge_rank_two_anchor_audit.json)
   — solver-independent replay of permanent matching, packet disjointness,
   complete reset support, and all 16 two-hole response relations.
+- [`FLOWER_DUAL_ANCHOR_ROOT_PAID_SELECTOR_LEMMA_20260811.md`](FLOWER_DUAL_ANCHOR_ROOT_PAID_SELECTOR_LEMMA_20260811.md)
+  — replaces an idempotent fixed-anchor reset by the opposite mutual/bottom
+  anchor whenever its complement can pay the earlier root. A maximal
+  root-safe partition either reaches the two-hole response boundary or
+  exposes an item-named root-payment/root-envy critical good; infeasibility
+  is the exact aggregate dual-pool deficit.
+- [`flower_dual_anchor_root_paid_selector_audit.json`](flower_dual_anchor_root_paid_selector_audit.json)
+  — symbolic replay of dual-root feasibility, root safety, the least-good
+  move, and both critical-value rewrites.
+- [`DUAL_POOL_MINIMAL_CORE_EXTRACTION_LEMMA_20260811.md`](DUAL_POOL_MINIMAL_CORE_EXTRACTION_LEMMA_20260811.md)
+  — converts failure to pay the earlier root from the dual-anchor complement
+  into an inclusion-minimal packet extracted from the two dual cores. If
+  both sources survive the deletion the root-paid selector applies; otherwise
+  the same packet captures a source's full strict response margin. In the
+  full-capture cell the deficit cancels to a root-top/captured-bottom order.
+- [`dual_pool_minimal_core_extraction_audit.json`](dual_pool_minimal_core_extraction_audit.json)
+  — symbolic replay of minimality, root criticality, source-margin capture,
+  and the full-capture support cancellation.
+- [`CAPTURED_BOTTOM_EXTERNAL_COMPENSATION_CHAIN_LEMMA_20260811.md`](CAPTURED_BOTTOM_EXTERNAL_COMPENSATION_CHAIN_LEMMA_20260811.md)
+  — lifts the strict full-capture `q -> external -> r` owner path to an
+  arbitrary-packet alternating chain. It terminates in a root-payable dual
+  selector, a root-top concentration certificate, or an opposite-order
+  external-source capture; a same-source capture switches to the other
+  bottom core or captures the later mutual owner's response margin.
+- [`captured_bottom_external_compensation_chain_audit.json`](captured_bottom_external_compensation_chain_audit.json)
+  — symbolic replay of support conservation, both exhaustion identities,
+  opposite packet order, and the same-source top-switch dichotomy.
+- [`FULL_CAPTURE_SOURCE_SAFE_HUB_ELIGIBILITY_LEMMA_20260810.md`](FULL_CAPTURE_SOURCE_SAFE_HUB_ELIGIBILITY_LEMMA_20260810.md)
+  — splits the representative full-capture cell cap-free. A source-safe
+  bottom pair forces a later-owner hub split or an immediate cover; the
+  complementary strict-separated order is the input to the captured-bottom
+  external-compensation chain.
+- [`full_capture_source_safe_hub_eligibility_audit.json`](full_capture_source_safe_hub_eligibility_audit.json)
+  — symbolic replay of the source-safe payment and failed-cover
+  contradiction.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow

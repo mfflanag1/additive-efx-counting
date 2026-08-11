@@ -1,0 +1,42 @@
+{
+  "claim_boundary": "QF_LRA audit of minimal root-payment extraction and source-margin capture; it does not compensate a displaced source",
+  "provenance": {
+    "script": "tracks/parkability/audit_dual_pool_minimal_core_extraction.py",
+    "script_sha256": "6811bb4f0156a99b4601f0a7d2c3297df9b5b0cfa1ebf70857eaca0a2f33c679",
+    "theorem": "results/DUAL_POOL_MINIMAL_CORE_EXTRACTION_LEMMA_20260811.md",
+    "theorem_sha256": "e0e92f98e9b27abe272f63a2527acc3adde28ed258f4586e3bf6eebbb75e3db8",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "full_dual_union_always_pays_root",
+      "status": "unsat"
+    },
+    {
+      "claim": "minimal_extraction_is_nonempty",
+      "status": "unsat"
+    },
+    {
+      "claim": "minimal_good_is_root_critical",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_threshold_rewrite",
+      "status": "unsat"
+    },
+    {
+      "claim": "q_source_failure_captures_margin",
+      "status": "unsat"
+    },
+    {
+      "claim": "external_source_failure_captures_margin",
+      "status": "unsat"
+    },
+    {
+      "claim": "full_capture_deficit_cancellation",
+      "status": "unsat"
+    }
+  ],
+  "schema": "dual-pool-minimal-core-extraction-audit-v1",
+  "status": "ALL_FORCED"
+}

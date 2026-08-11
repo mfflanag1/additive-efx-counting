@@ -1,0 +1,46 @@
+{
+  "claim_boundary": "QF_LRA audit of root-payment feasibility and the two exact critical-good certificates; it does not prove payment in the dual-pool-deficit branch or terminate the subsequent response boundary",
+  "provenance": {
+    "script": "tracks/parkability/audit_flower_dual_anchor_root_paid_selector.py",
+    "script_sha256": "a13ecbac7ba286a1ee6acce5dd9025933428f0f40c704f2689b1ffce40f836f1",
+    "theorem": "results/FLOWER_DUAL_ANCHOR_ROOT_PAID_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "599401a423946b5f503d7b206026f5b382c480ff574985d6433c8df5181d3c8f",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "dual_core_parent_supports_are_disjoint",
+      "status": "unsat"
+    },
+    {
+      "claim": "whole_pool_partition_is_feasible_when_root_payable",
+      "status": "unsat"
+    },
+    {
+      "claim": "selected_root_is_nonworse_and_residual_envy_free",
+      "status": "unsat"
+    },
+    {
+      "claim": "least_good_move_strictly_improves_external_hole",
+      "status": "unsat"
+    },
+    {
+      "claim": "maximality_forces_payment_or_envy_constraint_failure",
+      "status": "unsat"
+    },
+    {
+      "claim": "payment_critical_rewrite",
+      "status": "unsat"
+    },
+    {
+      "claim": "envy_critical_rewrite",
+      "status": "unsat"
+    },
+    {
+      "claim": "strong_envy_is_exact_least_good_inequality",
+      "status": "unsat"
+    }
+  ],
+  "schema": "flower-dual-anchor-root-paid-selector-audit-v1",
+  "status": "ALL_FORCED"
+}

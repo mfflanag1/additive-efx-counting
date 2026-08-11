@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "QF_LRA audit of the finite bottom-transfer chain endpoints; it does not terminate the resulting top-switch or source-capture handoff",
+  "provenance": {
+    "script": "tracks/parkability/audit_captured_bottom_external_compensation_chain.py",
+    "script_sha256": "fc1cd449680c5f6d244ed7c59ab91f2f321baba2a0a8d5cbe5252df6445669ad",
+    "theorem": "results/CAPTURED_BOTTOM_EXTERNAL_COMPENSATION_CHAIN_LEMMA_20260811.md",
+    "theorem_sha256": "072e3cd5ac75cfd574a67bebecff490c118529d51c425a63a9f35d34d39be33e",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "exchange_targets_conserve_support",
+      "status": "unsat"
+    },
+    {
+      "claim": "c_exhaustion_cancels_to_root_top_concentration",
+      "status": "unsat"
+    },
+    {
+      "claim": "b_exhaustion_captures_external_margin",
+      "status": "unsat"
+    },
+    {
+      "claim": "live_q_order_reverses_external_capture",
+      "status": "unsat"
+    },
+    {
+      "claim": "same_source_switch_prefers_root_top",
+      "status": "unsat"
+    },
+    {
+      "claim": "q_switch_failure_captures_margin",
+      "status": "unsat"
+    }
+  ],
+  "schema": "captured-bottom-external-compensation-chain-audit-v1",
+  "status": "ALL_FORCED"
+}
