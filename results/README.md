@@ -1563,6 +1563,25 @@ both encodings.
   disjoint from `Y_d` preserves hole payment automatically; at global
   residual maximum it has a strict d-row packet order. Otherwise an unsafe
   response augments, or overlap with `Y_d` captures the full response margin.
+- [`PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md`](PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md)
+  ([symbolic/finite audit](paid_anchor_current_wall_recurrence_audit.json))
+  — uses the actual residual wall to eliminate fixed-hole disjoint recurrence.
+  A common-safe outside-anchor residual strictly raises exactly one entry of
+  the represented-source utility vector while preserving hole payment; an
+  unsafe one augments. Every survivor is quantitatively anchor-driven.
+- [`PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md`](PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md)
+  ([symbolic/set audit](paid_anchor_least_good_consumption_audit.json))
+  — converts every anchor-driven wall into nonempty paid-anchor support
+  consumption. The least-good complement strictly improves the walling
+  source and must intersect the anchor; if unsafe it augments. Only an
+  explicit restoration of consumed support or a hole/source change can recur.
+- [`UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md`](UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md)
+  ([symbolic/set audit](universal_paid_anchor_support_reset_audit.json))
+  — makes paid-anchor restoration monotone. Fresh retained-core overlap either
+  preserves the anchor, strictly grows consumed support while the hole stays
+  paid, or captures the remaining hole-payment margin and enters the explicit
+  sacrificed-owner branch. Released cores must return through a named connected
+  handoff; captured-margin termination and physical-anchor changes remain open.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

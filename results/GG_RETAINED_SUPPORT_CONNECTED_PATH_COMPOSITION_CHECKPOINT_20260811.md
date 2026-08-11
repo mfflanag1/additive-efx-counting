@@ -330,6 +330,37 @@ the interaction of that strict d-order with a paid-anchor hitting set remains;
 see
 [`PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md`](PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md).
 
+Using the actual strong-envy wall eliminates the fixed-hole disjoint
+recurrence entirely.  With `W=Y_d+R`, if a walling represented source `i`
+values `R` above its current core and `R` is common-safe, give all of `R` to
+`i` and return `A_i` beside `Y_d`.  The hole remains paid, only `i` changes
+among represented sources, and `v_i(A_i)` strictly increases.  The fixed
+represented-source utility vector has finite range and cannot recur.  If
+`R` is unsafe it augments; otherwise the wall satisfies the quantitative
+anchor inequality
+`v_i(Y_d)>v_i(A_i)-v_i(R)+v_i(g)`.  Thus only an anchor-driven splice or a
+hole/source/support change survives; see
+[`PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md`](PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md).
+
+An anchor-driven wall now forces physical support progress.  For a least-
+value good `g` of `W`, the complement `B=W-g` strictly improves the walling
+source over its current core.  Under the anchor-driven inequality `v_i(R)<=
+v_i(A_i)`, `B` must meet `Y_d`; otherwise `Y_d={g}` and `B=R`, a
+contradiction.  A common-safe recapture therefore consumes a nonempty paid-
+anchor packet and records it in a finite support set; an unsafe `B` augments.
+Only explicit restoration of already consumed anchor support or a hole/source
+change can recur; see
+[`PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md`](PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md).
+
+That restoration is now itself a monotone reset.  Record consumed paid-anchor
+support as `T subseteq Y_d`.  Any retained core's fresh overlap `K` with the
+live anchor either is empty, strictly grows `T` while leaving the hole paid,
+or exceeds the entire remaining hole-payment margin and enters the explicit
+sacrificed-owner branch.  A core cannot silently restore its packet while it
+is retained; releasing it creates a named connected return handoff.  Thus a
+fixed physical paid anchor cannot support an unrecorded reset cycle; see
+[`UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md`](UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -348,7 +379,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 92 tests spanning the retained-support,
+The focused dependency replay currently passes 98 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

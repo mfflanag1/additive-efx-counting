@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 42,
-  "focused_test_count": 92,
+  "dependency_count": 45,
+  "focused_test_count": 98,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "19aedc8f35f9a76b4b0d736692ab2b7f3a61181391354b17b53b5a78eb10e0bf",
+    "checkpoint_sha256": "7a2f209ba4a41ec17faea80bb4300001b641ccdeff4a5cf969ca99d8613873d5",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "59006eb5754b4db13e49c080cf72e07647d2f0a25bf7607ae4d17f89818862af"
+    "script_sha256": "29b0caba7bd730f9f9a1517a313a9c26cc32f296425da1af6cdb72ec58168fb2"
   },
   "records": [
     {
@@ -302,6 +302,27 @@
       "audit_status": "ALL_FORCED",
       "theorem": "results/PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md",
       "theorem_sha256": "7cdf4ef16f6bc50c3cb98c01a325f0274f16ea22b47ac7fdc93a19aa5769f137"
+    },
+    {
+      "audit": "results/paid_anchor_current_wall_recurrence_audit.json",
+      "audit_sha256": "5bf06c4ba4419926db1e2b7f6c96983bfd494f6b3fa6449940354bc415c6027b",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md",
+      "theorem_sha256": "c9bd2518bea64ac95398b5190c22eb8efea9680bb693483b68ef3ba926e18ba7"
+    },
+    {
+      "audit": "results/paid_anchor_least_good_consumption_audit.json",
+      "audit_sha256": "cb425fa933ff319ebe81d5c4b973ba5e191411e521fcabd38c80688ea201989f",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md",
+      "theorem_sha256": "b4bacb6dacbfee414778e3ac60400dcca62f5c106bc5cfd73f65e7eef3eefe89"
+    },
+    {
+      "audit": "results/universal_paid_anchor_support_reset_audit.json",
+      "audit_sha256": "ad5f34fb41c780ecc418fb85bd8e37c6e43f4b975ae626c68e8cd06a49faeae7",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md",
+      "theorem_sha256": "a95aeae307be112d14e23fa52ecfd44c9811eaa7b73cdbcc8196c74fa4ad4c54"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",

@@ -52,6 +52,9 @@ DEPENDENCIES = (
     ("COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md", "compensated_fourth_owner_residual_selector_audit.json"),
     ("PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md", "paid_input_omitted_hole_compression_audit.json"),
     ("PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md", "paid_anchor_disjoint_recapture_dichotomy_audit.json"),
+    ("PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md", "paid_anchor_current_wall_recurrence_audit.json"),
+    ("PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md", "paid_anchor_least_good_consumption_audit.json"),
+    ("UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md", "universal_paid_anchor_support_reset_audit.json"),
 )
 
 
@@ -82,7 +85,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 92,
+        "focused_test_count": 98,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

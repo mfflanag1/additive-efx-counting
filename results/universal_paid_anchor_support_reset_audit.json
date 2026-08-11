@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "paid-anchor reset monotonicity; released-core component, captured-margin termination, anchor changes, GG, and EFX remain open",
+  "finite_set_audit": {
+    "cases": 729,
+    "universe_size": 6,
+    "violations": []
+  },
+  "outcomes": [
+    "preserved paid anchor",
+    "strict consumed-support growth with hole paid",
+    "captured hole-payment margin"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_universal_paid_anchor_support_reset.py",
+    "script_sha256": "71b68ad66b6bd954ef9ea30dd76256251dada9197499dfe8d3910ad7b992d2a5",
+    "theorem": "results/UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md",
+    "theorem_sha256": "a95aeae307be112d14e23fa52ecfd44c9811eaa7b73cdbcc8196c74fa4ad4c54"
+  },
+  "remaining_gate": "sacrificed-owner continuation after captured margin",
+  "schema": "universal-paid-anchor-support-reset-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "captured_branch_exhausts_margin": "unsat",
+    "paid_branch_preserves_payment": "unsat",
+    "reset_trichotomy_exhaustive": "unsat"
+  }
+}

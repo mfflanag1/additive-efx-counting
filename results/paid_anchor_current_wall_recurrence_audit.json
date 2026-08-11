@@ -1,0 +1,30 @@
+{
+  "claim_boundary": "fixed-hole disjoint recurrence termination; unsafe augmentation, anchor splice, hole changes, GG, and EFX remain open",
+  "finite_vector_audit": {
+    "coordinate_values": 4,
+    "dimensions": 3,
+    "strict_transitions": 288,
+    "violations": []
+  },
+  "outcomes": [
+    "strict represented-source utility-vector growth",
+    "unsafe response augmentation",
+    "anchor-driven wall"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_paid_anchor_current_wall_recurrence.py",
+    "script_sha256": "09647014c656a48976a4ec37aa05de410c9f121433e9a63c65fb47e2f92d8758",
+    "theorem": "results/PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md",
+    "theorem_sha256": "c9bd2518bea64ac95398b5190c22eb8efea9680bb693483b68ef3ba926e18ba7"
+  },
+  "remaining_gate": "anchor-driven splice or hole-changing reset",
+  "schema": "paid-anchor-current-wall-recurrence-audit-v1",
+  "status": "ALL_FORCED",
+  "support_identity": "A_i + Y_d + R = R + A_i + Y_d",
+  "symbolic_checks": {
+    "anchor_contribution_positive": "unsat",
+    "anchor_drives_remaining_wall": "unsat",
+    "anchor_keeps_hole_paid": "unsat",
+    "current_source_strictly_improves": "unsat"
+  }
+}
