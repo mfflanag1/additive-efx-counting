@@ -117,10 +117,12 @@ Together, (2) and (5) make `K` a simultaneous strict capture packet:
 The obstruction is therefore no longer an arbitrary unsafe allocation or
 root response.  Both mutual owners need the same nonempty physical packet
 from the original `B_q`, and in both rows its strict surplus pays for the
-charity good.  Any external response core avoiding `K` remains available
-for the canonical disjoint-core selector; every surviving external core
-must hit `K`, producing an explicit common hitting packet for the next Hall
-augmentation.
+charity good.  An external response core disjoint from the full response
+`A=K+J` remains available for a disjoint-core selector.  If no such core
+exists, `A` is a hitting set for the external family.  Equation (6)
+identifies the joint-critical part `K` inside that hitting set, but does not
+by itself prove that an intersecting external core meets `K` rather than
+`J`.
 
 ## Verification and claim boundary
 
@@ -131,6 +133,6 @@ used by the analytic common-safety argument under Z3 5.0.0.
 
 This lemma converts failed root anchor return into either an EFX/response
 endpoint or the joint packet (6).  It does not prove that an external
-desired core avoids `K`, eliminate the common hitting-packet branch, close
-the subsequent Hall augmentation, close `GG`, or prove four-agent/general
-additive EFX.
+desired core is disjoint from `A`, force an intersecting core to meet `K`
+rather than `J`, eliminate the hitting-set branch, close the subsequent Hall
+augmentation, close `GG`, or prove four-agent/general additive EFX.
