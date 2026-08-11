@@ -1582,6 +1582,15 @@ both encodings.
   paid, or captures the remaining hole-payment margin and enters the explicit
   sacrificed-owner branch. Released cores must return through a named connected
   handoff; captured-margin termination and physical-anchor changes remain open.
+- [`GG_RANK_RESET_MONOTONICITY_OBJECTIVE_RESOLUTION_20260811.md`](GG_RANK_RESET_MONOTONICITY_OBJECTIVE_RESOLUTION_20260811.md)
+  ([resolution audit](gg_rank_reset_monotonicity_objective_resolution_audit.json))
+  — exactly refutes the requested potential `(|U|, rank, owner union,
+  raw missing-owner residual)`. Independent row scaling reverses its final
+  comparison, and an exact positive-additive root-monopoly/sacrificed-hole
+  transition realizes the obstruction. The corrected historical ledger also
+  has an exact plateau. This resolves that objective, not GG or EFX; the next
+  target is universal feasibility and safety of the repeated-support connected
+  splice.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
