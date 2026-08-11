@@ -1481,6 +1481,13 @@ both encodings.
   return the captured packet, replace its root value from a protected donor
   core, and compensate that donor from the root pool. Failure is exactly
   aggregate root concentration or a donor-margin blockade.
+- [`ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md`](ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md)
+  ([symbolic audit](root_concentration_bottom_absorption_rotation_audit.json))
+  — converts aggregate root concentration by retaining the captured bottom
+  packet with `T_q+f`, routing `T_r+B_q` to `q`, and leaving the uncaptured
+  bottom as dominated charity. Both mutual owners strictly improve. The
+  operation exposes retained bottom support `V` as the smallest additional
+  combinatorial coordinate beyond retained top support `U`.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

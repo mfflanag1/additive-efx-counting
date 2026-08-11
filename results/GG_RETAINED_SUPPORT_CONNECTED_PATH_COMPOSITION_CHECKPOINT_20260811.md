@@ -184,6 +184,14 @@ the root pool.  The fork succeeds exactly when the root replacement gap is
 met without consuming the donor's whole response margin.  Failure is no
 longer schematic: either the donor's entire core cannot replace the root
 packet, or every root-feasible `(K,G)` pair captures the donor margin.
+
+The aggregate root-concentration alternative now has a canonical rotation:
+retain the concentrated `H subseteq B_r` with `T_q+f`, give `T_r+B_q` to
+`q`, fix both external owners, and leave `B_r\setminus H` as dominated
+charity.  Both mutual owners strictly improve, and only their changed targets
+can create walls.  Record `V <- V union H` as retained root-bottom support.
+A fresh `H` is finite combinatorial progress; a repeated `H subseteq V` is
+the final retained-bottom Hall gate.
 The initially proposed lexicographic potential was
 
 \[
@@ -203,7 +211,10 @@ potential.  An exact rank-three response system has four distinct non-EFX
 maximum-matching compressions on which every historical coordinate is
 already saturated; see
 [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md).
-Thus arbitrary recompression still needs a deterministic current-state
+The root-concentration branch also shows that retained top support alone is
+incomplete: a terminal fork may have to keep a root-expensive bottom packet.
+The smallest additional combinatorial coordinate is therefore `|V|`, where
+`V subseteq B_r` is retained bottom support.  Thus arbitrary recompression still needs a deterministic current-state
 invariant or a global component, but the protected matching rule avoids this
 plateau for response-active `q`: she is never selected as its hole.  For
 endpoint
@@ -230,7 +241,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 70 tests spanning the retained-support,
+The focused dependency replay currently passes 72 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is
