@@ -1317,6 +1317,14 @@ both encodings.
 - [`root_sourced_evolved_target_return_or_capture_audit.json`](root_sourced_evolved_target_return_or_capture_audit.json)
   — symbolic replay of the return-payment identity, strict capture
   cancellation, nonempty packet support, and charity containment.
+- [`ROOT_RESPONSE_FLOATER_SUBSTITUTION_DICHOTOMY_LEMMA_20260811.md`](ROOT_RESPONSE_FLOATER_SUBSTITUTION_DICHOTOMY_LEMMA_20260811.md)
+  — substitutes `f` into a captured root response while returning its
+  `B_q` packet and `T_q` to the later owner. Success closes or leaves one
+  evolved wall; failure makes the same nonempty `B_q` packet strictly
+  margin-critical for both mutual owners.
+- [`root_response_floater_substitution_dichotomy_audit.json`](root_response_floater_substitution_dichotomy_audit.json)
+  — symbolic replay of support conservation, mutual-owner payment, and the
+  two-row joint-capture certificate.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
