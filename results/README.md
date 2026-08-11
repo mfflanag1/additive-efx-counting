@@ -1383,6 +1383,16 @@ both encodings.
   survivor is an explicit two-target root-monopoly defect.
 - [`charity_completed_path_root_response_anchor_audit.json`](charity_completed_path_root_response_anchor_audit.json)
   — exact support and source-label replay for the permanent root edge.
+- [`GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md`](GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md)
+  — composes retained-support capture, exhaustive evolved-target source
+  routing, the canonical root selector, joint-packet bilateral exhaustion,
+  and the complete connected path. The only remaining terminals are an
+  explicit root-monopoly pair and a root-anchored sacrificed-`q` Hall defect;
+  their rank-lowering resets still need one global potential.
+- [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json)
+  — integrity/replay manifest for thirteen cap-free dependencies and the
+  focused 45-test suite; it is not a proof of the remaining global reset
+  potential.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
