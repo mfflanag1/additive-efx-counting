@@ -1420,6 +1420,14 @@ both encodings.
   zero against every active target. All `2^14` four-by-four response graphs
   replay exactly. The remaining gate is the genuinely source-inactive
   degree-zero repair.
+- [`FIXED_U_Q_RESIDUAL_GLOBAL_MAX_SELECTOR_LEMMA_20260811.md`](FIXED_U_Q_RESIDUAL_GLOBAL_MAX_SELECTOR_LEMMA_20260811.md)
+  ([composition audit](fixed_u_q_residual_global_max_selector_audit.json))
+  — globally maximizes the degree-zero hole's residual in `q`'s own row over
+  every fixed-`U`, root-anchored response rank. A successful source-inactive
+  repair or nonroot J-exhaustion strictly raises that same quantity, so it
+  must instead activate `q`, augment through an unsafe core, close by EFX/PI,
+  or contradict the selector. Only the root-facing and unsafe/hitting-set
+  handoffs remain.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

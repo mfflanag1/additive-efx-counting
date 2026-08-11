@@ -131,13 +131,17 @@ captures a nonempty `B_q` packet and enters the same complete charity path.
 Top-only resets preserve, strictly enlarge, or capture the retained support,
 and a floater-consuming reset is routed by its source.
 
-The sole remaining terminal is the **fixed-`U`, root-anchored degree-zero-`q`
-source-inactive recurrence**.  The permanent-anchor activity dichotomy shows
+The sole remaining terminal is the **fixed-`U`, root-facing/unsafe degree-
+zero-`q` recurrence**.  The permanent-anchor activity dichotomy shows
 that every response-active `q` can be represented by an anchor-constrained
 maximum matching, even when the anchor costs unrestricted rank.  Therefore
 `q` is sacrificed only when she has no response edge to any active target.
-A proof must turn that degree-zero repair into `q`-activity, a release-
-compatible PI component, or a surplus-budgeted connected transfer component.
+The fixed-`U` global q-residual selector then eliminates every nonroot
+source-inactive wall: successful repair and nonroot J-exhaustion both
+strictly raise the same q-row residual across all response ranks.  A proof
+must now convert the root-facing root-critical handoff or unsafe/hitting-set
+augmentation into a release-compatible PI component or a surplus-budgeted
+connected transfer component.
 The initially proposed lexicographic potential was
 
 \[
