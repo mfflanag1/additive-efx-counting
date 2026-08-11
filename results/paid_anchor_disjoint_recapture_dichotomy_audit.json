@@ -1,0 +1,40 @@
+{
+  "claim_boundary": "recapture reduction at a paid anchor; strict polarity reversal, augmentation recurrence, GG, and four-agent EFX remain open",
+  "outcomes": [
+    "paid anchor-preserving recapture with strict d-order",
+    "unsafe disjoint response augmentation",
+    "paid-anchor hitting set captures full response margin"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_paid_anchor_disjoint_recapture_dichotomy.py",
+    "script_sha256": "9cb7f69453d3e2853c480b591f1a7ae85008d70778a4643b2f993749b8e4fb71",
+    "theorem": "results/PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md",
+    "theorem_sha256": "7cdf4ef16f6bc50c3cb98c01a325f0274f16ea22b47ac7fdc93a19aa5769f137"
+  },
+  "remaining_gate": "reverse strict d-order or paid-anchor hitting set",
+  "schema": "paid-anchor-disjoint-recapture-dichotomy-audit-v1",
+  "status": "ALL_FORCED",
+  "support_conservation_schema": {
+    "conserved": true,
+    "identity": "Y_d + R + A_i = D + A_i + Y_d + (R-D)",
+    "new": [
+      "A_i",
+      "D",
+      "R-D",
+      "Y_d"
+    ],
+    "old": [
+      "A_i",
+      "D",
+      "R-D",
+      "Y_d"
+    ]
+  },
+  "symbolic_checks": {
+    "anchor_overlap_covers_response_margin": "unsat",
+    "anchor_overlap_is_positive": "unsat",
+    "anchor_preserves_hole_payment": "unsat",
+    "maximality_forces_response_above_old_core": "unsat",
+    "residual_gain_if_old_core_beats_response": "unsat"
+  }
+}

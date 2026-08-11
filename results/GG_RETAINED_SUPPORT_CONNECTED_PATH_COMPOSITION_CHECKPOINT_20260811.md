@@ -319,6 +319,17 @@ defects and verifies the prescribed omission in every one.  Only a
 represented-source recapture of the already paid residual survives; see
 [`PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md`](PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md).
 
+The surviving recapture now preserves payment unless it consumes the paid
+anchor itself.  Write the residual as `W=Y_d+R`.  A common-safe response core
+inside `R` can be recaptured while retaining all of `Y_d`, so the hole stays
+paid automatically.  At a global `d(W)` maximum, a nonclosing disjoint
+recapture has the strict order `v_d(D)>v_d(A_i)`.  If `R` has no common-safe
+response, either it contains an unsafe desired subset (augmentation) or the
+overlap with `Y_d` captures the entire responding source's margin.  Thus only
+the interaction of that strict d-order with a paid-anchor hitting set remains;
+see
+[`PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md`](PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -337,7 +348,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 90 tests spanning the retained-support,
+The focused dependency replay currently passes 92 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

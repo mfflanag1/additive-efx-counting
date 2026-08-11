@@ -1557,6 +1557,12 @@ both encodings.
   residual contains that entire already-paid bundle. All 4,036 minimal
   defects among `2^16` response graphs pass. Only represented-source
   recapture of the paid residual remains.
+- [`PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md`](PAID_ANCHOR_DISJOINT_RECAPTURE_DICHOTOMY_20260811.md)
+  ([symbolic audit](paid_anchor_disjoint_recapture_dichotomy_audit.json))
+  — splits that final recapture at the protected paid target `Y_d`. A response
+  disjoint from `Y_d` preserves hole payment automatically; at global
+  residual maximum it has a strict d-row packet order. Otherwise an unsafe
+  response augments, or overlap with `Y_d` captures the full response margin.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force
