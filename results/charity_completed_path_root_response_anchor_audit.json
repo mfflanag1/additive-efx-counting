@@ -1,0 +1,30 @@
+{
+  "claim_boundary": "Exact integer/support audit of the permanent root edge and source split; root-monopoly/Hall termination is outside scope",
+  "provenance": {
+    "script": "tracks/parkability/audit_charity_completed_path_root_response_anchor.py",
+    "script_sha256": "542e8278e29488af509a7234ab5e2119720a1fd10f9334ed139ef23ad4bbaa67",
+    "theorem": "results/CHARITY_COMPLETED_PATH_ROOT_RESPONSE_ANCHOR_LEMMA_20260811.md",
+    "theorem_sha256": "cd91d28ce5d5ad12ec62c3d4d6a701fd49414826331f0b5494f15bcbe11a090e",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "claim": "root_anchor_is_contained_in_completed_q_target",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_anchor_releases_full_bottom_packet",
+      "status": "unsat"
+    },
+    {
+      "claim": "root_target_incoming_is_supplied_by_anchor_release",
+      "status": "unsat"
+    },
+    {
+      "claim": "four_root_target_source_labels_are_exhaustive",
+      "status": "unsat"
+    }
+  ],
+  "schema": "charity-completed-path-root-response-anchor-audit-v1",
+  "status": "ALL_FORCED"
+}

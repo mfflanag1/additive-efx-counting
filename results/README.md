@@ -1375,6 +1375,14 @@ both encodings.
 - [`joint_packet_charity_completed_transfer_path_audit.json`](joint_packet_charity_completed_transfer_path_audit.json)
   — symbolic replay of complete support, root payment, the exact donor loss,
   and all changed-target polarities.
+- [`CHARITY_COMPLETED_PATH_ROOT_RESPONSE_ANCHOR_LEMMA_20260811.md`](CHARITY_COMPLETED_PATH_ROOT_RESPONSE_ANCHOR_LEMMA_20260811.md)
+  — observes that the completed `q` target still contains the original
+  common-safe root core `T_q+f`, whose response edge releases all of `B_q`
+  and supplies the joint packet consumed by the root target. A `q` source
+  closes PI, an external source grows a root-anchored matching, and the only
+  survivor is an explicit two-target root-monopoly defect.
+- [`charity_completed_path_root_response_anchor_audit.json`](charity_completed_path_root_response_anchor_audit.json)
+  — exact support and source-label replay for the permanent root edge.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
