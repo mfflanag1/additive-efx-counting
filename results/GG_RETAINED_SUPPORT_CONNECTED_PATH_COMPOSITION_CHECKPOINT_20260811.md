@@ -446,6 +446,16 @@ connected cyclic packet graph.  Universal extraction of such a charity
 exchange from the saturated separator is the live gate; see
 [`SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md`](SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md).
 
+Singleton-charity safety is now forced rather than assumed.  If a proposed
+charity good `g` is unsafe to owner `i`, then `i` values `g` above her entire
+current paid bundle.  Give her `g` and park any one of her goods instead; she
+strictly improves, all other owner utilities are unchanged, and the two moves
+form a connected charity exchange.  Repeating on the next blocker cannot
+cycle because one same-owner utility strictly rises at every step on a finite
+ground set.  The walk ends in an EFX/lex allocation, an owner-target response
+augmentation, or further strict current progress; see
+[`CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md`](CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -464,7 +474,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 114 tests spanning the retained-support,
+The focused dependency replay currently passes 116 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

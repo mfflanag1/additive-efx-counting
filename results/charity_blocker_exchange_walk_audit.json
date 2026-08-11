@@ -1,0 +1,29 @@
+{
+  "claim_boundary": "singleton-charity exchange termination on paid inputs; universal paid-splice extraction, repeated-support GG, and EFX remain open",
+  "monotonicity": "one owner utility strictly rises per exchange; every other owner utility is unchanged; finite bundle state forbids recurrence",
+  "outcomes": [
+    "EFX lexicographic charity-exchange endpoint",
+    "ordinary or surplus-decorated owner-target response augmentation",
+    "new singleton-charity response or strict same-owner progress"
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_charity_blocker_exchange_walk.py",
+    "script_sha256": "d8115b1de18adcaf17ba8bba9f643e3202a4e6e7d903241d63c0e68b37f46e82",
+    "theorem": "results/CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md",
+    "theorem_sha256": "cbf67334b4ae5a2577aee93cf3a086866cfc89864bb0d73a034e994c21bbf99e"
+  },
+  "remaining_gate": "owner-target decorated-response recurrence after charity safety",
+  "schema": "charity-blocker-exchange-walk-audit-v1",
+  "status": "ALL_FORCED",
+  "symbolic_checks": {
+    "blocker_is_base_response": "unsat",
+    "exchange_identity": "unsat",
+    "exchange_preserves_base_payment": "unsat",
+    "exchange_strictly_improves_blocker": "unsat",
+    "singleton_threshold_is_zero": "unsat"
+  },
+  "terminal_checks": {
+    "terminal_classification": "unsat",
+    "unsafe_charity_continues_or_augments": "unsat"
+  }
+}

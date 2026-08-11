@@ -1646,6 +1646,13 @@ both encodings.
   exchange. The final charity bundle is charged against each observer's
   realized surplus. This is the smallest operation separating the full global
   premise from the local rooted-tree countermodel.
+- [`CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md`](CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md)
+  ([symbolic audit](charity_blocker_exchange_walk_audit.json))
+  — enforces singleton-charity safety cap-free. An unsafe charity good is
+  worth more to its blocker than her entire current paid bundle, so exchanging
+  it for any one of her goods strictly improves that owner. The connected
+  charity-token walk cannot recur and terminates in EFX/lex, response
+  augmentation, or strict same-owner progress.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

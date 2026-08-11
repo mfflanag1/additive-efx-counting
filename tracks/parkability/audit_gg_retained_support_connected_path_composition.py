@@ -63,6 +63,7 @@ DEPENDENCIES = (
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
     ("FIXED_U_GLOBAL_LEX_CHARITY_EXCHANGE_EXCLUSION_20260811.md", "fixed_u_global_lex_premise_audit.json"),
     ("SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md", "surplus_budgeted_charity_exchange_component_audit.json"),
+    ("CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md", "charity_blocker_exchange_walk_audit.json"),
 )
 
 
@@ -93,7 +94,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 114,
+        "focused_test_count": 116,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "
