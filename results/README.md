@@ -1386,9 +1386,11 @@ both encodings.
 - [`GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md`](GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md)
   — composes retained-support capture, exhaustive evolved-target source
   routing, the canonical root selector, joint-packet bilateral exhaustion,
-  and the complete connected path. The only remaining terminals are an
-  explicit root-monopoly pair and a root-anchored sacrificed-`q` Hall defect;
-  their rank-lowering resets still need one global potential.
+  and the complete connected path. Subsequent handoffs eliminate the root-
+  monopoly pair and preserve or capture every top/floater reset. The sole
+  remaining terminal is the fixed-`U`, root-anchored sacrificed-`q` Hall
+  recurrence; its rank-lowering resets still need one global potential or
+  connected-component extraction.
 - [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json)
   — integrity/replay manifest for thirteen cap-free dependencies and the
   focused 43-test dependency suite; it is not a proof of the corrected global reset
@@ -1401,6 +1403,14 @@ both encodings.
   response relation while a row rescaling reverses the residual comparison.
   The corrected target uses an owner-indexed normalized residual ledger and
   historical rank/supplier support; GG closure remains open.
+- [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md)
+  ([exact audit](surplus_budgeted_connected_component_transfer_audit.json))
+  — lifts the externally-safe path endpoint to arbitrary connected packet
+  graphs and lets each observer's realized gain pay for changed-target
+  threshold overshoot. The exact four-owner branching repair
+  `charity->r, r->{q,c}, c->s` has five positive threshold overshoots but all
+  are covered by the corresponding owner surplus. Packet extraction from
+  every terminal Hall polarity remains open.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow

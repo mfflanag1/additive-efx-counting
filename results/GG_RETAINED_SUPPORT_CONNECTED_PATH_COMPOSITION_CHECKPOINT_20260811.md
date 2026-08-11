@@ -3,7 +3,8 @@
 **Date:** 2026-08-11
 
 **Status:** cap-free composition through every root-sourced/unsafe evolved-
-target branch; two root-anchored Hall terminals remain, so `GG` is not closed
+target branch; one fixed-`U` support-sensitive Hall recurrence remains, so
+`GG` is not closed
 
 ## Starting state
 
@@ -94,6 +95,13 @@ strict global lexicographic improvement.  Every non-EFX target has an exact
 packet-replacement or target-threshold polarity, and the path's response
 incoming packets are internally supplied.
 
+The path is a sufficient geometry, not an exhaustive one.  The exact hard
+profile also requires a four-owner fork.  The surplus-budgeted connected-
+component lemma now permits any connected supplier graph and allows an
+observer's realized gain to pay for a changed target's threshold overshoot.
+Thus later recurrence closure may branch and need not preserve every old
+common-safety threshold separately.
+
 ### 5. Permanent root response anchor
 
 The completed `q` target contains the original common-safe desired root core
@@ -111,29 +119,24 @@ root-anchored matching.  The only source collision is the explicit pair
  \{Y_q,Y_r\}\longleftarrow\{r\}.                   \tag{3}
 \]
 
-## Exact remaining terminals
+## Exact remaining terminal
 
 The chain above removes the former unnamed branches: q-margin reset,
 switching among root responses, unsafe evolved targets, absence of a
 nonempty compensation packet, fixed bilateral choice, and disconnected
 release support.
 
-It does **not** yet close two terminals.
+The root-monopoly pair (3) is no longer a terminal: its unique root response
+captures a nonempty `B_q` packet and enters the same complete charity path.
+Top-only resets preserve, strictly enlarge, or capture the retained support,
+and a floater-consuming reset is routed by its source.
 
-1. **Root-monopoly pair.** In (3), prove a complement has a nonroot source,
-   or derive a fresh retained-support increase/root change.  A reset to the
-   permanent external-bottom anchor is available but is not progress unless
-   it preserves a strictly larger global potential.
-2. **Root-anchored sacrificed-`q` Hall defect.** After an external source or
-   sink response grows the matching, maximum-matching owner-union
-   compression may leave `q` as a sacrificed residual owner.  Existing
-   recapture, source-inactive repair, and two-hole selectors terminate their
-   local chains, but a proof must show their reset cannot decrease the outer
-   retained-support/response-rank potential.
-
-These are two presentations of the same global issue: a local Hall repair
-can return to a lower-rank root anchor without yet forcing fresh `T_r`
-support.  The initially proposed lexicographic potential was
+The sole remaining terminal is the **fixed-`U`, root-anchored sacrificed-
+`q` Hall recurrence**.  After owner-union saturation, a local Hall repair may
+return to a lower-rank root anchor without forcing fresh `T_r` support.  A
+proof must turn every repeated `(missing owner, physical support)` state into
+a release-compatible PI component or a surplus-budgeted connected transfer
+component.  The initially proposed lexicographic potential was
 
 \[
  (|U|,\ \text{response rank},\ \text{represented owner union},\
@@ -150,6 +153,10 @@ The live replacement is an owner-indexed normalized residual ledger together
 with historical (rather than instantaneous) rank and supplier-union maxima.
 A valid proof must still show that every rank-lowering reset advances that
 ledger or its physical-support history; finiteness alone does not suffice.
+For endpoint extraction, the required safety inequalities are now the
+observer-indexed surplus balances of
+[`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md),
+not zero-overshoot external common safety.
 
 ## Verification and claim boundary
 

@@ -1,0 +1,88 @@
+{
+  "base_efx": true,
+  "changed_owners": [
+    "r",
+    "q",
+    "c",
+    "s"
+  ],
+  "charity_only_donates": true,
+  "claim_boundary": "exact branching exemplar plus cap-free endpoint implication; terminal-polarity packet selection and GG closure remain open",
+  "final_efx": true,
+  "positive_threshold_overshoots": {
+    "c->q": "1023971/16",
+    "c->s": "512423/2",
+    "q->r": "2858169/16",
+    "s->q": "44883/4",
+    "s->r": "269303/16"
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_surplus_budgeted_connected_component_transfer.py",
+    "script_sha256": "38b30494bc0e610b0c0aaf3fe40f3be0015fcc6ab57f6e0797e205c7ea8aca4f",
+    "source": "results/flexible_lex_basic_pi_free_cegar.json",
+    "source_sha256": "d37f23c1417bc6d9cdc85667aa57fe2de97dc4997db4af74e07f0ce61223e595",
+    "theorem": "results/SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md",
+    "theorem_sha256": "06a9ae8f8c108937432bf95644ac02e41b53ed33f005e1080b592447209bb0ec"
+  },
+  "schema": "surplus-budgeted-connected-component-transfer-audit-v1",
+  "status": "VERIFIED",
+  "strictly_paid": {
+    "c": true,
+    "q": true,
+    "r": true,
+    "s": true
+  },
+  "surplus_budget_failures": [],
+  "surpluses": {
+    "c": "7169555/16",
+    "q": "4287249/8",
+    "r": "797233/8",
+    "s": "359075/16"
+  },
+  "topology": {
+    "edge_counts": [
+      {
+        "count": 1,
+        "source": "_",
+        "target": "r"
+      },
+      {
+        "count": 1,
+        "source": "c",
+        "target": "s"
+      },
+      {
+        "count": 1,
+        "source": "r",
+        "target": "c"
+      },
+      {
+        "count": 1,
+        "source": "r",
+        "target": "q"
+      }
+    ],
+    "moved_goods": [
+      "aq_br_0",
+      "br_rest_1",
+      "f",
+      "tc_1"
+    ],
+    "nontrivial_components": [
+      [
+        "_",
+        "c",
+        "q",
+        "r",
+        "s"
+      ]
+    ],
+    "signature": "_->r:1;c->s:1;r->c:1;r->q:1"
+  },
+  "weakly_paid": {
+    "c": true,
+    "q": true,
+    "r": true,
+    "s": true
+  }
+}
