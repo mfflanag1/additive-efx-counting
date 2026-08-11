@@ -341,6 +341,27 @@ payment/Hall deficiency, not selection of a first residual component or
 another fixed packet core. See
 [`OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md`](OWNER_ROOTED_HUB_SPLIT_RESPONSE_HALL_LEMMA_20260810.md).
 
+The strict top-core reverse-order leaf now factors back into that same
+response-Hall architecture.  The root's desired `T_q+f` bundle and
+`B_r>=f` force `r(T_q)>r(T_r)`; if the direct core exchange also has
+`r(P')>r(K_T)`, the complementary top packets satisfy the reverse strict
+order.  Meanwhile the live `q`-bottom polarity forces `q(T_r)>q(T_q)`, so
+the minimal-payment residual rotation always restarts.  This does not yet
+exclude a later revisit, but it removes top-core exchange as an independent
+terminal mechanism. See
+[`TOP_CORE_RESIDUAL_RESET_LEMMA_20260811.md`](TOP_CORE_RESIDUAL_RESET_LEMMA_20260811.md).
+
+An inclusion-minimal all-four-owner response Hall defect is now also reduced
+cap-free: its source neighborhood has size exactly three, and those three
+sources match three distinct targets.  Giving each source its disjoint
+desired core and consolidating every leftover good with the unique missing
+source converts the defect to one residual-payment inequality.  Failure is
+the explicit aggregate capture certificate (7); success leaves an EFX/PI
+check or a missing-source recapture, rather than another arbitrary
+four-target Hall relation.  The live termination problem is therefore a
+single residual payment/root-change/recapture potential. See
+[`ALL_OWNER_HALL_RESPONSE_COMPRESSION_LEMMA_20260811.md`](ALL_OWNER_HALL_RESPONSE_COMPRESSION_LEMMA_20260811.md).
+
 ## Claim boundary
 
 Closing this target would eliminate the exactly-three-nonsingleton branch.

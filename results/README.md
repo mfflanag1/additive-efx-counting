@@ -1130,3 +1130,15 @@ both encodings.
   one-packet splits, and the full binary cell, plus a 28-rival
   binary solver core. The exact cells are diagnostics; the cap-free result is
   the analytic theorem above.
+- [`TOP_CORE_RESIDUAL_RESET_LEMMA_20260811.md`](TOP_CORE_RESIDUAL_RESET_LEMMA_20260811.md)
+  — cap-free factorization of the critical top-core reverse-order leaf into
+  the existing minimal-payment two-root response-Hall component. The strict
+  complementary top-packet order and residual-rotation payment are
+  dual-version QF_LRA audited; response termination and prevention of a
+  later revisit remain open.
+- [`ALL_OWNER_HALL_RESPONSE_COMPRESSION_LEMMA_20260811.md`](ALL_OWNER_HALL_RESPONSE_COMPRESSION_LEMMA_20260811.md)
+  — cap-free deficiency-one reduction for a minimal all-owner response Hall
+  defect. Three sources take disjoint desired cores and the unique missing
+  source receives every residual good, reducing the endpoint to one payment
+  or recapture certificate. All 50,625 nonempty four-by-four response
+  relations are exhaustively audited; residual payment is not asserted.
