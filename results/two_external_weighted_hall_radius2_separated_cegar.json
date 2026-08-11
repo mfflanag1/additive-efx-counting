@@ -1,0 +1,1270 @@
+{
+  "basic_pi_free_constraints": {
+    "ordinary_envy_cycles": 20,
+    "self_champion_subsets": 290,
+    "single_genuine_cycles": 60
+  },
+  "claim_boundary": "bounded two-atom representative decision for closure over every minimal-payment residual partition; UNSAT is only a bounded theorem candidate, while SAT requires an exact nondegenerate audit",
+  "countermodel_diagnostics": {
+    "examined_partitions": 256,
+    "minimal_payment_packets": [
+      [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ]
+    ],
+    "response_offer_cache_size": 47
+  },
+  "countermodel_iteration": 24,
+  "excluded_connected_lex_allocation_count": 0,
+  "excluded_connected_lex_radius": 0,
+  "iterations": [
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 1,
+      "installed_closure_count": 0,
+      "iteration": 0,
+      "master_status": "sat",
+      "matching": {
+        "q": "q",
+        "r": "r"
+      },
+      "payment_packet": [
+        "tr_rest_0"
+      ],
+      "targets": [
+        "r",
+        "q"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 1,
+      "installed_closure_count": 1,
+      "iteration": 1,
+      "master_status": "sat",
+      "matching": {
+        "q": "q",
+        "r": "r"
+      },
+      "payment_packet": [
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "tr_rest_1",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 2,
+      "installed_closure_count": 2,
+      "iteration": 2,
+      "master_status": "sat",
+      "matching": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "tr_rest_1",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 5,
+      "installed_closure_count": 3,
+      "iteration": 3,
+      "master_status": "sat",
+      "matching": {
+        "c": "q",
+        "q": "c",
+        "r": "r"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_1",
+          "tr_rest_1",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 1,
+      "installed_closure_count": 4,
+      "iteration": 4,
+      "master_status": "sat",
+      "matching": {
+        "q": "q",
+        "r": "r"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "tr_rest_0"
+      ],
+      "targets": [
+        "r",
+        "q"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 2,
+      "installed_closure_count": 5,
+      "iteration": 5,
+      "master_status": "sat",
+      "matching": {
+        "c": "q",
+        "q": "c",
+        "r": "r"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "aq_br_1",
+          "br_rest_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "tr_rest_1",
+          "aq_br_0",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 18,
+      "installed_closure_count": 6,
+      "iteration": 6,
+      "master_status": "sat",
+      "matching": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 2,
+      "installed_closure_count": 7,
+      "iteration": 7,
+      "master_status": "sat",
+      "matching": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 5,
+      "installed_closure_count": 8,
+      "iteration": 8,
+      "master_status": "sat",
+      "matching": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 5,
+      "installed_closure_count": 9,
+      "iteration": 9,
+      "master_status": "sat",
+      "matching": {
+        "c": "q",
+        "q": "c",
+        "r": "r"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_1",
+          "aq_br_0",
+          "aq_br_1"
+        ],
+        "s": [
+          "z",
+          "br_rest_1"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 7,
+      "installed_closure_count": 10,
+      "iteration": 10,
+      "master_status": "sat",
+      "matching": {
+        "c": "q",
+        "q": "s",
+        "r": "r",
+        "s": "c"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "tr_rest_0",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 2,
+      "installed_closure_count": 11,
+      "iteration": 11,
+      "master_status": "sat",
+      "matching": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [
+          "br_rest_1"
+        ],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "aq_br_0",
+          "aq_br_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "tr_rest_0"
+        ],
+        "s": [
+          "z",
+          "br_rest_0"
+        ]
+      },
+      "closure_kind": "EFX",
+      "examined_partitions": 92,
+      "installed_closure_count": 12,
+      "iteration": 12,
+      "master_status": "sat",
+      "matching": null,
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [
+          "br_rest_1"
+        ],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "tr_rest_0",
+          "aq_br_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_1"
+        ],
+        "s": [
+          "z",
+          "br_rest_0"
+        ]
+      },
+      "closure_kind": "EFX",
+      "examined_partitions": 332,
+      "installed_closure_count": 13,
+      "iteration": 13,
+      "master_status": "sat",
+      "matching": null,
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [
+          "br_rest_1"
+        ],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "tr_rest_0",
+          "aq_br_0",
+          "aq_br_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f"
+        ],
+        "s": [
+          "z",
+          "br_rest_0"
+        ]
+      },
+      "closure_kind": "EFX",
+      "examined_partitions": 348,
+      "installed_closure_count": 14,
+      "iteration": 14,
+      "master_status": "sat",
+      "matching": null,
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "aq_br_1",
+          "br_rest_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "tr_rest_0",
+          "aq_br_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 21,
+      "installed_closure_count": 15,
+      "iteration": 15,
+      "master_status": "sat",
+      "matching": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "tr_rest_0",
+          "aq_br_0",
+          "br_rest_0"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "br_rest_1"
+        ],
+        "s": [
+          "z",
+          "aq_br_1"
+        ]
+      },
+      "closure_kind": "EFX",
+      "examined_partitions": 357,
+      "installed_closure_count": 16,
+      "iteration": 16,
+      "master_status": "sat",
+      "matching": null,
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "GLOBAL_LEX_ESCAPE",
+      "examined_partitions": 1024,
+      "installed_closure_count": 17,
+      "iteration": 17,
+      "master_status": "sat",
+      "moved_good_count": 1
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "GLOBAL_LEX_ESCAPE",
+      "examined_partitions": 256,
+      "installed_closure_count": 18,
+      "iteration": 18,
+      "master_status": "sat",
+      "moved_good_count": 2
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_1",
+          "tr_rest_0",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "INTERNAL_SDR",
+      "examined_partitions": 1,
+      "installed_closure_count": 19,
+      "iteration": 19,
+      "master_status": "sat",
+      "matching": {
+        "q": "q",
+        "r": "r"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "ar_tr_1",
+          "aq_br_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_0",
+          "tr_rest_0",
+          "aq_br_0",
+          "br_rest_0"
+        ],
+        "s": [
+          "z",
+          "br_rest_1"
+        ]
+      },
+      "closure_kind": "EFX",
+      "examined_partitions": 1043,
+      "installed_closure_count": 20,
+      "iteration": 20,
+      "master_status": "sat",
+      "matching": null,
+      "payment_packet": [
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "ar_tr_1",
+          "aq_br_0",
+          "aq_br_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "ar_tr_0",
+          "tr_rest_0",
+          "br_rest_0"
+        ],
+        "s": [
+          "z",
+          "br_rest_1"
+        ]
+      },
+      "closure_kind": "EFX",
+      "examined_partitions": 1107,
+      "installed_closure_count": 21,
+      "iteration": 21,
+      "master_status": "sat",
+      "matching": null,
+      "payment_packet": [
+        "tr_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "aq_br_1",
+          "bc_0",
+          "bc_1",
+          "tc_0"
+        ],
+        "q": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "ar_tr_0",
+          "ar_tr_1",
+          "br_rest_0",
+          "br_rest_1",
+          "tc_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "GLOBAL_LEX_ESCAPE",
+      "examined_partitions": 16384,
+      "installed_closure_count": 22,
+      "iteration": 22,
+      "master_status": "sat",
+      "moved_good_count": 2
+    },
+    {
+      "allocation": {
+        "_": [
+          "f"
+        ],
+        "c": [
+          "ar_tr_1",
+          "bc_0",
+          "bc_1",
+          "tc_0",
+          "tc_1"
+        ],
+        "q": [
+          "aq_tq_1",
+          "ar_bq_0",
+          "ar_bq_1"
+        ],
+        "r": [
+          "aq_br_0",
+          "aq_br_1",
+          "aq_tq_0",
+          "ar_tr_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "closure_kind": "GLOBAL_LEX_ESCAPE",
+      "examined_partitions": 16384,
+      "installed_closure_count": 23,
+      "iteration": 23,
+      "master_status": "sat",
+      "moved_good_count": 2
+    },
+    {
+      "closure_kind": "NONE",
+      "examined_partitions": 256,
+      "installed_closure_count": 24,
+      "iteration": 24,
+      "master_status": "sat"
+    }
+  ],
+  "live_polarity": true,
+  "provenance": {
+    "script": "tracks/parkability/run_two_external_weighted_hall_cegar.py",
+    "script_sha256": "6fb085c689980fdee177b152610dec35f8303cddcbe4adf73316bc4fc3fc7cbf"
+  },
+  "schema": "two-external-weighted-hall-cegar-v1",
+  "separated_connected_lex_allocation_count": 1842,
+  "separated_connected_lex_radius": 2,
+  "solver": "Z3 4.15.3",
+  "status": "sat_no_closure",
+  "symmetry_constraint_count": 8,
+  "values": {
+    "c": {
+      "aq_br_0": "203771/8",
+      "aq_br_1": "4846399/4",
+      "aq_tq_0": "378395/2",
+      "aq_tq_1": "378395/2",
+      "ar_bq_0": "378395/2",
+      "ar_bq_1": "9896567/8",
+      "ar_tr_0": "203773/8",
+      "ar_tr_1": "163726",
+      "bc_0": "3230931/8",
+      "bc_1": "3230933/8",
+      "br_rest_0": "101885/4",
+      "br_rest_1": "1/8",
+      "f": "1615465/4",
+      "tc_0": "3230931/8",
+      "tc_1": "807733/2",
+      "tr_rest_0": "327451/4",
+      "tr_rest_1": "654903/8",
+      "z": "24130105/8"
+    },
+    "q": {
+      "aq_br_0": "210797/8",
+      "aq_br_1": "210797/8",
+      "aq_tq_0": "421591/8",
+      "aq_tq_1": "52701/4",
+      "ar_bq_0": "526995/8",
+      "ar_bq_1": "526995/8",
+      "ar_tr_0": "105403/8",
+      "ar_tr_1": "105403/8",
+      "bc_0": "210799/8",
+      "bc_1": "105399/4",
+      "br_rest_0": "158093/4",
+      "br_rest_1": "105403/8",
+      "f": "263497/2",
+      "tc_0": "105399/4",
+      "tc_1": "316187/8",
+      "tr_rest_0": "105403/8",
+      "tr_rest_1": "158093/4",
+      "z": "1370177/8"
+    },
+    "r": {
+      "aq_br_0": "381527/8",
+      "aq_br_1": "381527/2",
+      "aq_tq_0": "381527/8",
+      "aq_tq_1": "763053/4",
+      "ar_bq_0": "238454",
+      "ar_bq_1": "238454",
+      "ar_tr_0": "381527/8",
+      "ar_tr_1": "381527/8",
+      "bc_0": "572289/8",
+      "bc_1": "1526107/8",
+      "br_rest_0": "572289/8",
+      "br_rest_1": "1526105/8",
+      "f": "3815269/8",
+      "tc_0": "286145/4",
+      "tc_1": "763053/4",
+      "tr_rest_0": "381527/8",
+      "tr_rest_1": "286145/4",
+      "z": "238454"
+    },
+    "s": {
+      "aq_br_0": "214655/4",
+      "aq_br_1": "113077/8",
+      "aq_tq_0": "9423",
+      "aq_tq_1": "1717245/8",
+      "ar_bq_0": "2240787/4",
+      "ar_bq_1": "9423",
+      "ar_tr_0": "429311/8",
+      "ar_tr_1": "195809/4",
+      "bc_0": "28269/2",
+      "bc_1": "97905/2",
+      "br_rest_0": "195809/4",
+      "br_rest_1": "662813/2",
+      "f": "452869",
+      "tc_0": "391619/8",
+      "tc_1": "188465/8",
+      "tr_rest_0": "37693/4",
+      "tr_rest_1": "896315/4",
+      "z": "6274203/8"
+    }
+  }
+}

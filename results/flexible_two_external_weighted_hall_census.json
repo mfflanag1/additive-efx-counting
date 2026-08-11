@@ -1,0 +1,626 @@
+{
+  "claim_boundary": "solver-free exact-Fraction census of all minimal-payment residual partitions in one hardened atomized flower; closure supports the cap-free response-Hall lemma but does not prove a universal selector",
+  "counts": {
+    "HALL_DEFICIENT": 238,
+    "INTERNAL_SDR": 18,
+    "TARGETS_2": 16,
+    "TARGETS_3": 130,
+    "TARGETS_4": 110
+  },
+  "matching_signatures": [
+    {
+      "count": 18,
+      "signature": "r<-q;q<-c;c<-r"
+    }
+  ],
+  "minimal_examples": {
+    "HALL_DEFICIENT": {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "destinations": {
+        "aq_br_0": "r",
+        "aq_br_1": "r",
+        "br_rest_0": "r",
+        "br_rest_1": "r"
+      },
+      "internal_response_sets": {
+        "q": [],
+        "r": [
+          "q",
+          "r"
+        ]
+      },
+      "internal_sdr": null,
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "residual": [
+        "aq_br_0",
+        "aq_br_1",
+        "br_rest_0",
+        "br_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q"
+      ]
+    },
+    "INTERNAL_SDR": {
+      "allocation": {
+        "_": [],
+        "c": [
+          "tc_0",
+          "tc_1",
+          "bc_0",
+          "bc_1",
+          "br_rest_1"
+        ],
+        "q": [
+          "ar_bq_0",
+          "ar_bq_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        "r": [
+          "aq_tq_0",
+          "aq_tq_1",
+          "f",
+          "aq_br_0",
+          "aq_br_1",
+          "br_rest_0"
+        ],
+        "s": [
+          "z"
+        ]
+      },
+      "destinations": {
+        "aq_br_0": "r",
+        "aq_br_1": "r",
+        "br_rest_0": "r",
+        "br_rest_1": "c"
+      },
+      "internal_response_sets": {
+        "c": [
+          "c",
+          "r"
+        ],
+        "q": [
+          "c"
+        ],
+        "r": [
+          "c",
+          "q",
+          "r"
+        ]
+      },
+      "internal_sdr": {
+        "c": "r",
+        "q": "c",
+        "r": "q"
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "residual": [
+        "aq_br_0",
+        "aq_br_1",
+        "br_rest_0",
+        "br_rest_1"
+      ],
+      "targets": [
+        "r",
+        "q",
+        "c"
+      ]
+    }
+  },
+  "minimal_payment_packets": [
+    [
+      "ar_tr_0",
+      "ar_tr_1",
+      "tr_rest_0",
+      "tr_rest_1"
+    ]
+  ],
+  "partition_count": 256,
+  "partition_shapes": [
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        0,
+        0,
+        4
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 1
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        0,
+        1,
+        3
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        0,
+        2,
+        2
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 6
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        0,
+        3,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        0,
+        4,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 1
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        1,
+        0,
+        3
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        1,
+        1,
+        2
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        1,
+        2,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        1,
+        3,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        2,
+        0,
+        2
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 6
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        2,
+        1,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        2,
+        2,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 6
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        3,
+        0,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        3,
+        1,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        0,
+        4,
+        0,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 1
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        0,
+        0,
+        3
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        0,
+        1,
+        2
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        0,
+        2,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        0,
+        3,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 10
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 24
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        1,
+        2,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 8
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        2,
+        1,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        3,
+        0,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 2
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        0,
+        0,
+        2
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 6
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        0,
+        1,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        0,
+        2,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 6
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 8
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 12
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 2
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        3,
+        0,
+        0,
+        1
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        3,
+        0,
+        1,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 2
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        4,
+        0,
+        0,
+        0
+      ],
+      "classification": "HALL_DEFICIENT",
+      "count": 1
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "classification": "INTERNAL_SDR",
+      "count": 2
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        2,
+        0,
+        1
+      ],
+      "classification": "INTERNAL_SDR",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        1,
+        3,
+        0,
+        0
+      ],
+      "classification": "INTERNAL_SDR",
+      "count": 2
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        1,
+        0,
+        1
+      ],
+      "classification": "INTERNAL_SDR",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        2,
+        2,
+        0,
+        0
+      ],
+      "classification": "INTERNAL_SDR",
+      "count": 4
+    },
+    {
+      "cell_sizes_r_c_s_charity": [
+        3,
+        1,
+        0,
+        0
+      ],
+      "classification": "INTERNAL_SDR",
+      "count": 2
+    }
+  ],
+  "payment_diagnostics": [
+    {
+      "evolved_q_response_sources": {
+        "c": [
+          [
+            "ar_bq_0",
+            "ar_bq_1",
+            "ar_tr_0",
+            "ar_tr_1"
+          ]
+        ]
+      },
+      "full_residual_payability": {
+        "c": true,
+        "s": true
+      },
+      "payment_packet": [
+        "ar_tr_0",
+        "ar_tr_1",
+        "tr_rest_0",
+        "tr_rest_1"
+      ],
+      "q_full_root_payment": true,
+      "q_root_payment_margin": "16483526579315/16777216",
+      "residual": [
+        "aq_br_0",
+        "aq_br_1",
+        "br_rest_0",
+        "br_rest_1"
+      ],
+      "rotation_wall_margins": {
+        "c": "714585787525/33554432",
+        "s": "188236080145/33554432"
+      },
+      "rotation_wall_observers": [
+        "c",
+        "s"
+      ],
+      "unpayable_bottom_polarity": {
+        "c": true,
+        "s": true
+      }
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/analyze_flexible_two_external_weighted_hall.py",
+    "script_sha256": "11a534ef49a268e68f22082aea14c682c87835214eedee69a233e817b8c85642",
+    "source": "results/flexible_lex_basic_pi_free_hardened_countermodel.json",
+    "source_sha256": "4cc4bb3eab57a053f0bbde307da1e3f343fb6379ae06787e61f9612f39ba25d5"
+  },
+  "response_offer_cache_size": 47,
+  "schema": "flexible-two-external-weighted-hall-census-v1",
+  "status": "RESPONSE_CLOSURE_FOUND"
+}

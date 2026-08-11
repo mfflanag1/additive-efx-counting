@@ -1,0 +1,144 @@
+{
+  "all_incoming_supplied": true,
+  "changed_owners": [
+    "r",
+    "c"
+  ],
+  "claim_boundary": "exact response-source and release-support audit for one frozen connected escape; a matching proves this profile is not PI-free, while no matching would not exclude other generalized PI edge sets",
+  "incoming_disjoint": true,
+  "incoming_packets": {
+    "c": [],
+    "r": [
+      "bc_0"
+    ]
+  },
+  "internal_matchings": [],
+  "internal_response_sources": {
+    "c": [],
+    "r": [
+      "r"
+    ]
+  },
+  "provenance": {
+    "escape": "results/two_external_weighted_hall_hardened_countermodel_escape.json",
+    "escape_sha256": "0a5a703b8625e74e4e7815957a514220816eba7633e85a7cfc3f0219a5c09785",
+    "profile": "results/two_external_weighted_hall_hardened_countermodel.json",
+    "profile_sha256": "ac42cf5812b8916b91900daf3b094105b4928aced983cc713252520a464862ff",
+    "script": "tracks/parkability/analyze_connected_escape_response_hall.py",
+    "script_sha256": "8029a16c984fc26e714d9d852382e0ae48ae868ccb750a61e25c1d694ffb19ca"
+  },
+  "released_packets": {
+    "c": [
+      "bc_0"
+    ],
+    "r": []
+  },
+  "response_sources": {
+    "c": {},
+    "r": {
+      "r": [
+        [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1"
+        ],
+        [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        [
+          "aq_br_0",
+          "aq_br_1",
+          "bc_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        [
+          "aq_br_0",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        [
+          "aq_br_0",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        [
+          "aq_br_0",
+          "bc_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        [
+          "aq_br_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0"
+        ],
+        [
+          "aq_br_1",
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_1"
+        ],
+        [
+          "aq_br_1",
+          "bc_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        [
+          "bc_0",
+          "br_rest_0",
+          "br_rest_1",
+          "tr_rest_0",
+          "tr_rest_1"
+        ],
+        [
+          "aq_br_0",
+          "aq_br_1",
+          "ar_tr_0",
+          "ar_tr_1",
+          "bc_0",
+          "br_rest_0",
+          "tr_rest_0",
+          "tr_rest_1"
+        ]
+      ]
+    }
+  },
+  "schema": "connected-escape-response-hall-v1",
+  "status": "NO_INTERNAL_SDR",
+  "topology": {
+    "edge_counts": [
+      {
+        "count": 1,
+        "source": "c",
+        "target": "r"
+      }
+    ],
+    "moved_goods": [
+      "bc_0"
+    ],
+    "nontrivial_components": [
+      [
+        "c",
+        "r"
+      ]
+    ],
+    "signature": "c->r:1"
+  }
+}

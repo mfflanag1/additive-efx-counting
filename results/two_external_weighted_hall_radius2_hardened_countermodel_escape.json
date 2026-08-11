@@ -1,0 +1,88 @@
+{
+  "allocation": {
+    "_": [
+      "f"
+    ],
+    "c": [
+      "ar_tr_1",
+      "bc_0",
+      "bc_1",
+      "tc_0",
+      "tc_1",
+      "tr_rest_1"
+    ],
+    "q": [
+      "aq_tq_0",
+      "ar_bq_0",
+      "ar_bq_1"
+    ],
+    "r": [
+      "aq_br_0",
+      "aq_br_1",
+      "aq_tq_1",
+      "ar_tr_0",
+      "br_rest_0",
+      "br_rest_1",
+      "tr_rest_0"
+    ],
+    "s": [
+      "z"
+    ]
+  },
+  "base_utilities": {
+    "c": "1693938750469/1048576",
+    "q": "3315561677857/16777216",
+    "r": "3000447846151/4194304",
+    "s": "200774497/256"
+  },
+  "claim_boundary": "exact connected lex EFX witness for the frozen profile; minimality through radius three is supplied by the separate complete exact census audit",
+  "minimum_connected_radius": 3,
+  "objective": "lex",
+  "owner_utilities": {
+    "c": "1951457350797/1048576",
+    "q": "96703676961/524288",
+    "r": "3300492069639/4194304",
+    "s": "200774497/256"
+  },
+  "provenance": {
+    "script": "tracks/parkability/find_flexible_lex_connected_escape.py",
+    "script_sha256": "e9b5e1d1e869f0b5b8ea7433f85d2657e6726f8ccc539f643d1a0a764cf24a2f",
+    "source": "results/two_external_weighted_hall_radius2_hardened_countermodel.json",
+    "source_sha256": "f226051925264a3de00ea3e5319d948fda49b3dada8b2fbbcadbf114f9f4f5a8"
+  },
+  "radius_statuses": [
+    "unsat",
+    "unsat",
+    "sat"
+  ],
+  "schema": "flexible-connected-escape-v1",
+  "solver": "Z3 4.15.3",
+  "status": "FOUND",
+  "topology": {
+    "edge_counts": [
+      {
+        "count": 1,
+        "source": "q",
+        "target": "r"
+      },
+      {
+        "count": 2,
+        "source": "r",
+        "target": "c"
+      }
+    ],
+    "moved_goods": [
+      "aq_tq_1",
+      "ar_tr_1",
+      "tr_rest_1"
+    ],
+    "nontrivial_components": [
+      [
+        "c",
+        "q",
+        "r"
+      ]
+    ],
+    "signature": "q->r:1;r->c:2"
+  }
+}
