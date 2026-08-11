@@ -285,6 +285,30 @@ Thus the remaining failed-payment operation must recruit the fourth owner's
 surplus or augment the response relation; see
 [`BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md`](BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md).
 
+The fourth-owner substitution is also canonical.  Return a q-sufficient
+`J subseteq K`, and replace its value to the hole with an s-affordable
+`L subseteq E` from the fourth protected core.  Independently minimize
+`v_d(J)` and maximize `v_d(L)` over those two finite families.  If
+`nu_d+v_d(L)-v_d(J)>0`, all four owners are paid before observer-safety
+checking.  Otherwise every such pair satisfies
+`v_d(J)-v_d(L)>=nu_d`, an exact two-knapsack certificate showing that the
+fourth donor itself must be compensated or a response augmentation used.
+See
+[`FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md`](FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md).
+
+Compensation of that fourth donor is now an exact residual selector rather
+than a fifth schematic operation.  For fixed hole substitution `(J,L)`, let
+`B_q` be the q-value of `W` that may be diverted without destroying q
+payment, and let `kappa_s` be the value needed to restore the fourth donor.
+Choose `M subseteq W` maximizing `v_s(M)` subject to `v_q(M)<=B_q`.  Success
+pays all four owners and leaves a canonical q-compensation packet in
+`W\setminus M`; failure proves that every q-compatible residual packet is
+insufficient for `s`.  The complete payment layer is therefore finite and
+global.  The remaining gate is observer-surplus safety or proving that a
+failed-target response augmentation cannot return to the same separator;
+see
+[`COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md`](COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md).
+
 The exact four-state plateau is eliminated at the matching-label level by
 the current-state selector in
 [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md).
@@ -303,7 +327,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 84 tests spanning the retained-support,
+The focused dependency replay currently passes 88 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is

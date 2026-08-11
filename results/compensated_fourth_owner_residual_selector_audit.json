@@ -1,0 +1,32 @@
+{
+  "canonical_M": "maximize s(M) subject to M subset W and q(M)<=B_q",
+  "claim_boundary": "complete payment selector for the four-owner packet geometry; observer safety, augmentation recurrence, GG, and EFX remain open",
+  "exact_failure": "q(M)<=B_q implies s(M)<kappa_s for every M subset W",
+  "provenance": {
+    "script": "tracks/parkability/audit_compensated_fourth_owner_residual_selector.py",
+    "script_sha256": "362535de6832afa919272893d87468b68425333307f1217ac688743868be146d",
+    "theorem": "results/COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "23242568f7bc2d28c0ec984941b234885088a2be297486c51d86aa28788cd503"
+  },
+  "remaining_gate": "observer-surplus safety or response-augmentation recurrence",
+  "schema": "compensated-fourth-owner-residual-selector-audit-v1",
+  "status": "ALL_FORCED",
+  "success_test": "s(M_star)>=max(0,s(L)-mu_s)",
+  "supplier_edges": [
+    "r->d:H",
+    "q->d:K-J",
+    "s->d:L",
+    "d->r:G_r",
+    "d->q:G_q",
+    "d->s:M"
+  ],
+  "support_conserved": true,
+  "symbolic_checks": {
+    "fourth_owner_compensated": "unsat",
+    "hole_remains_strict": "unsat",
+    "maximizer_failure_is_global": "unsat",
+    "minimal_q_packet_pays_q": "unsat",
+    "remaining_residual_pays_q": "unsat",
+    "root_remains_strict": "unsat"
+  }
+}

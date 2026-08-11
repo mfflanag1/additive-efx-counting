@@ -1536,6 +1536,20 @@ both encodings.
   pays root, q, and the hole before safety checking, or the same critical `K`
   exceeds q's response margin even after crediting all of `W`. The latter is
   the exact fourth-owner/augmentation separator.
+- [`FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md`](FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md)
+  ([symbolic audit](fourth_owner_margin_substitution_selector_audit.json))
+  — resolves the uncompensated fourth-owner choice by two independent finite
+  optimizations: a q-sufficient returned packet minimizing the hole's loss,
+  and an s-affordable donor packet maximizing its replacement value. Success
+  pays all four owners; failure proves the exact two-knapsack separation that
+  forces compensation of the fourth donor or response augmentation.
+- [`COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md`](COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md)
+  ([symbolic audit](compensated_fourth_owner_residual_selector_audit.json))
+  — completes the four-owner payment selector. For fixed hole substitution,
+  choose residual compensation `M` maximizing fourth-owner value under the
+  remaining q-budget. Success pays every owner and canonically splits the
+  rest between q and root; failure is the exact final two-row residual
+  separator. Only observer-surplus safety and augmentation recurrence remain.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

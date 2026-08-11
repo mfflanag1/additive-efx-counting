@@ -1,0 +1,26 @@
+{
+  "claim_boundary": "exact uncompensated fourth-owner selector; compensated donor, observer safety, response-silent fourth owner, GG, and EFX remain open",
+  "exact_failure": "d(J)-d(L)>=nu_d for every q-sufficient J and s-affordable L",
+  "provenance": {
+    "script": "tracks/parkability/audit_fourth_owner_margin_substitution_selector.py",
+    "script_sha256": "cf2000cd8fc33de24d380eefee7dd279ce3ce6a3fd66069f48ac3fb617398069",
+    "theorem": "results/FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md",
+    "theorem_sha256": "6b0e43eaa3515016fc7a54aa3b822fe8d4b22fc0a57f89213260722c6cca66dd"
+  },
+  "remaining_operation": "compensate fourth owner or augment response relation",
+  "schema": "fourth-owner-margin-substitution-selector-audit-v1",
+  "selectors": {
+    "J_star": "minimize d(J) subject to q(J)>=theta_q",
+    "L_star": "maximize d(L) subject to s(L)<=mu_s"
+  },
+  "status": "ALL_FORCED",
+  "success_test": "nu_d + d(L_star) - d(J_star) > 0",
+  "symbolic_checks": {
+    "extremal_failure_is_global": "unsat",
+    "fourth_owner_weak_payment": "unsat",
+    "hole_payment_after_substitution": "unsat",
+    "q_cover_family_nonempty": "unsat",
+    "returned_J_makes_remaining_K_admissible": "unsat",
+    "root_strict_payment": "unsat"
+  }
+}

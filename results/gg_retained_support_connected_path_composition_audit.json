@@ -1,12 +1,12 @@
 {
   "claim_boundary": "integrity/replay manifest for proved local lemmas; it does not prove the corrected support-ledger monotonicity theorem, GG closure, or four-agent EFX",
-  "dependency_count": 38,
-  "focused_test_count": 84,
+  "dependency_count": 40,
+  "focused_test_count": 88,
   "provenance": {
     "checkpoint": "results/GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "cf476cad6edb75d7bcbe6532f33c661440951c3eb0c22cd8b8710e37d9e66b25",
+    "checkpoint_sha256": "d0ccdb12f557e9359ab7f352e55940652ebcfbb6e69181dedd1845c930c5a2fc",
     "script": "tracks/parkability/audit_gg_retained_support_connected_path_composition.py",
-    "script_sha256": "cf0015589b2ae5ae52dc87e51793aa8228e636c3f73b6fa65390792f47a923e4"
+    "script_sha256": "433968f7a2f0eb54fdc59ad22e1dda622141bec9e6228a74be6876d3bda93e1f"
   },
   "records": [
     {
@@ -274,6 +274,20 @@
       "audit_status": "ALL_FORCED",
       "theorem": "results/BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md",
       "theorem_sha256": "40e349cafe4ccab517b01ab57a6db4f028dbaf8270687a88ab9019da98dcecb0"
+    },
+    {
+      "audit": "results/fourth_owner_margin_substitution_selector_audit.json",
+      "audit_sha256": "8e5128cd4a32830d45ab94227a20d6d3b93fcd0b0a107c4da95bb04a29c0c555",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "6b0e43eaa3515016fc7a54aa3b822fe8d4b22fc0a57f89213260722c6cca66dd"
+    },
+    {
+      "audit": "results/compensated_fourth_owner_residual_selector_audit.json",
+      "audit_sha256": "b4caceff42216fc825a0043e72c345c8567eade283cf61cce710e08ecc541629",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "23242568f7bc2d28c0ec984941b234885088a2be297486c51d86aa28788cd503"
     }
   ],
   "schema": "gg-retained-support-connected-path-composition-audit-v1",
