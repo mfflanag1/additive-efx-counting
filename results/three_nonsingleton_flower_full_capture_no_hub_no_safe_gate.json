@@ -1,0 +1,181 @@
+{
+  "block_all_two_good_hub_eligibility": true,
+  "block_charity_packet_replacements": false,
+  "block_priority_directed_pair_exchanges": false,
+  "block_three_good_owner_paths": false,
+  "claim_boundary": "exact two-good-per-component full-X_q capture cell with every priority-directed bottom swap blocked after excluding EFX f-insertions, owner-improving f-for-item swaps, and priority-directed one-good transfers; SAT is proof-mining evidence, not a globally maximal state or an EFX counterexample",
+  "component_atom_count": 2,
+  "pair_count": 4,
+  "pair_diagnostics": [
+    {
+      "b": "ar_bq_0",
+      "blockers": [
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_0",
+      "improves_r": true,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_1",
+      "blockers": [
+        {
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "observer": "r",
+          "target": "c"
+        },
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_0",
+      "improves_r": false,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_0",
+      "blockers": [
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_1",
+      "improves_r": true,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_1",
+      "blockers": [
+        {
+          "observer": "c",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_1",
+      "improves_r": true,
+      "source_safe": false
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_three_nonsingleton_flower_full_capture_swap_gate.py",
+    "script_sha256": "b38623b4a4a10463b6aef5f2a08fd161ad724e6af049aa69e979dae3692a34d1",
+    "z3_version": "5.0.0"
+  },
+  "require_source_safe_improving_pair": false,
+  "schema": "three-nonsingleton-flower-full-capture-swap-gate-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "sat",
+  "values": {
+    "c": {
+      "aq_br_0": "101/128",
+      "aq_br_1": "43/128",
+      "aq_tq_0": "113/128",
+      "aq_tq_1": "7/8",
+      "ar_bq_0": "143/128",
+      "ar_bq_1": "111/128",
+      "ar_tr_0": "1/16",
+      "ar_tr_1": "107/128",
+      "bc_0": "7/128",
+      "bc_1": "55/64",
+      "br_rest_0": "5/64",
+      "br_rest_1": "9/128",
+      "f": "117/128",
+      "tc_0": "63/64",
+      "tc_1": "125/128",
+      "tr_rest_0": "45/128",
+      "tr_rest_1": "11/32",
+      "z": "369/128"
+    },
+    "q": {
+      "aq_br_0": "3/128",
+      "aq_br_1": "5/128",
+      "aq_tq_0": "45/128",
+      "aq_tq_1": "21/16",
+      "ar_bq_0": "23/64",
+      "ar_bq_1": "11/32",
+      "ar_tr_0": "13/64",
+      "ar_tr_1": "35/32",
+      "bc_0": "1/64",
+      "bc_1": "7/64",
+      "br_rest_0": "1/64",
+      "br_rest_1": "1/128",
+      "f": "89/128",
+      "tc_0": "25/16",
+      "tc_1": "13/128",
+      "tr_rest_0": "3/16",
+      "tr_rest_1": "25/128",
+      "z": "19/8"
+    },
+    "r": {
+      "aq_br_0": "7/64",
+      "aq_br_1": "11/128",
+      "aq_tq_0": "79/128",
+      "aq_tq_1": "15/128",
+      "ar_bq_0": "1/8",
+      "ar_bq_1": "3/32",
+      "ar_tr_0": "9/64",
+      "ar_tr_1": "17/128",
+      "bc_0": "1/128",
+      "bc_1": "17/128",
+      "br_rest_0": "5/64",
+      "br_rest_1": "9/128",
+      "f": "19/128",
+      "tc_0": "11/128",
+      "tc_1": "81/128",
+      "tr_rest_0": "1/8",
+      "tr_rest_1": "15/128",
+      "z": "13/128"
+    },
+    "s": {
+      "aq_br_0": "7/64",
+      "aq_br_1": "11/128",
+      "aq_tq_0": "119/256",
+      "aq_tq_1": "117/256",
+      "ar_bq_0": "1/16",
+      "ar_bq_1": "9/128",
+      "ar_tr_0": "9/64",
+      "ar_tr_1": "17/128",
+      "bc_0": "7/128",
+      "bc_1": "1/128",
+      "br_rest_0": "13/128",
+      "br_rest_1": "3/32",
+      "f": "5/64",
+      "tc_0": "107/128",
+      "tc_1": "9/128",
+      "tr_rest_0": "1/8",
+      "tr_rest_1": "15/128",
+      "z": "33/32"
+    }
+  }
+}

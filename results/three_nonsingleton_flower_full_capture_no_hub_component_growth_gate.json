@@ -1,0 +1,207 @@
+{
+  "block_all_two_good_hub_eligibility": true,
+  "block_charity_packet_replacements": false,
+  "block_priority_directed_pair_exchanges": true,
+  "block_three_edge_owner_hubs": true,
+  "block_three_good_owner_paths": false,
+  "block_two_edge_owner_paths": true,
+  "claim_boundary": "exact two-good-per-component full-X_q capture cell with every priority-directed bottom swap blocked after excluding EFX f-insertions, owner-improving f-for-item swaps, and priority-directed one-good transfers; SAT is proof-mining evidence, not a globally maximal state or an EFX counterexample",
+  "component_atom_count": 2,
+  "pair_count": 4,
+  "pair_diagnostics": [
+    {
+      "b": "ar_bq_0",
+      "blockers": [
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "r"
+        },
+        {
+          "observer": "s",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_0",
+      "improves_r": true,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_1",
+      "blockers": [
+        {
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "observer": "r",
+          "target": "c"
+        },
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "r"
+        },
+        {
+          "observer": "s",
+          "target": "q"
+        }
+      ],
+      "h": "aq_br_0",
+      "improves_r": false,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_0",
+      "blockers": [
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "s",
+          "target": "r"
+        }
+      ],
+      "h": "aq_br_1",
+      "improves_r": true,
+      "source_safe": false
+    },
+    {
+      "b": "ar_bq_1",
+      "blockers": [
+        {
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "observer": "r",
+          "target": "c"
+        },
+        {
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "observer": "c",
+          "target": "q"
+        },
+        {
+          "observer": "s",
+          "target": "q"
+        }
+      ],
+      "h": "aq_br_1",
+      "improves_r": false,
+      "source_safe": false
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/decide_three_nonsingleton_flower_full_capture_swap_gate.py",
+    "script_sha256": "e6611bf125c74a12e5c19abb5e22e8a2dba2af6f28b5008c3e42c74e7f584148",
+    "z3_version": "5.0.0"
+  },
+  "require_source_safe_improving_pair": false,
+  "schema": "three-nonsingleton-flower-full-capture-swap-gate-v1",
+  "source_order_key": {
+    "arm_source": "r",
+    "left_bottom_source": "c",
+    "priority_order": [
+      "r",
+      "q",
+      "c",
+      "s"
+    ],
+    "right_bottom_source": "c",
+    "singleton_envier": "c"
+  },
+  "status": "sat",
+  "values": {
+    "c": {
+      "aq_br_0": "5/1024",
+      "aq_br_1": "39/512",
+      "aq_tq_0": "179/512",
+      "aq_tq_1": "133/4096",
+      "ar_bq_0": "165/2048",
+      "ar_bq_1": "133/4096",
+      "ar_tr_0": "1313/4096",
+      "ar_tr_1": "135/4096",
+      "bc_0": "21/4096",
+      "bc_1": "181/4096",
+      "br_rest_0": "9/1024",
+      "br_rest_1": "5/1024",
+      "f": "79/2048",
+      "tc_0": "1047/4096",
+      "tc_1": "647/4096",
+      "tr_rest_0": "37/4096",
+      "tr_rest_1": "21/4096",
+      "z": "827/1024"
+    },
+    "q": {
+      "aq_br_0": "1/4096",
+      "aq_br_1": "19/4096",
+      "aq_tq_0": "31/256",
+      "aq_tq_1": "191/4096",
+      "ar_bq_0": "151/4096",
+      "ar_bq_1": "75/2048",
+      "ar_tr_0": "151/4096",
+      "ar_tr_1": "151/4096",
+      "bc_0": "1/1024",
+      "bc_1": "1/512",
+      "br_rest_0": "5/4096",
+      "br_rest_1": "39/2048",
+      "f": "301/4096",
+      "tc_0": "1/1024",
+      "tc_1": "407/4096",
+      "tr_rest_0": "3/2048",
+      "tr_rest_1": "385/4096",
+      "z": "1/4096"
+    },
+    "r": {
+      "aq_br_0": "25/512",
+      "aq_br_1": "199/4096",
+      "aq_tq_0": "229/4096",
+      "aq_tq_1": "521/1024",
+      "ar_bq_0": "359/4096",
+      "ar_bq_1": "63/4096",
+      "ar_tr_0": "1247/4096",
+      "ar_tr_1": "57/1024",
+      "bc_0": "5/256",
+      "bc_1": "259/4096",
+      "br_rest_0": "99/2048",
+      "br_rest_1": "197/4096",
+      "f": "45/512",
+      "tc_0": "2297/4096",
+      "tc_1": "29/4096",
+      "tr_rest_0": "101/2048",
+      "tr_rest_1": "201/4096",
+      "z": "2445/2048"
+    },
+    "s": {
+      "aq_br_0": "33/4096",
+      "aq_br_1": "1/128",
+      "aq_tq_0": "15/4096",
+      "aq_tq_1": "59/2048",
+      "ar_bq_0": "519/2048",
+      "ar_bq_1": "9/2048",
+      "ar_tr_0": "19/4096",
+      "ar_tr_1": "17/2048",
+      "bc_0": "353/4096",
+      "bc_1": "335/4096",
+      "br_rest_0": "15/2048",
+      "br_rest_1": "29/4096",
+      "f": "1/256",
+      "tc_0": "167/2048",
+      "tc_1": "17/4096",
+      "tr_rest_0": "105/512",
+      "tr_rest_1": "39/1024",
+      "z": "1175/4096"
+    }
+  }
+}

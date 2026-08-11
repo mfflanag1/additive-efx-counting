@@ -1260,6 +1260,17 @@ both encodings.
 - [`full_capture_source_safe_hub_eligibility_audit.json`](full_capture_source_safe_hub_eligibility_audit.json)
   — symbolic replay of the source-safe payment and failed-cover
   contradiction.
+- [`dual_anchor_strict_separated_profile_audit.json`](dual_anchor_strict_separated_profile_audit.json)
+  — exact-Fraction adversarial replay on the frozen strict-separated
+  full-capture profile. Its dual root-paid selector is not EFX, but all four
+  intended owners improve and its response relation has a release-supported
+  internal matching, so the profile closes by generalized PI.
+- [`dual_anchor_frozen_profile_census.json`](dual_anchor_frozen_profile_census.json)
+  — repeats the dual selector on ten hardened full-capture profiles. All ten
+  complement pools pay the earlier root and all ten selected allocations
+  have release-supported internal response matchings; five profiles realize
+  the strict-separated `q` order. This is bounded adversarial evidence, not
+  the cap-free response theorem.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
