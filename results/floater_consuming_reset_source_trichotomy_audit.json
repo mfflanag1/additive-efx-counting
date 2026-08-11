@@ -1,0 +1,33 @@
+{
+  "claim_boundary": "cap-free floater deletion/source trichotomy; termination of the three routed response branches is not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_floater_consuming_reset_source_trichotomy.py",
+    "script_sha256": "b7956bd460adc4a175b260f838cb61842ac62eb78dcd7caba49a3c9c1816992c",
+    "theorem": "results/FLOATER_CONSUMING_RESET_SOURCE_TRICHOTOMY_20260811.md",
+    "theorem_sha256": "3c1246f287cba9eeb2655e1e68ec35fbe25eceb2be9946b973bc4fa42ee31d96"
+  },
+  "scalar_records": {
+    "failed_floater_deletion_forces_criticality": "unsat"
+  },
+  "schema": "floater-consuming-reset-source-trichotomy-audit-v1",
+  "source_cases": [
+    {
+      "route": "root_floater_or_owner_union",
+      "source": "r"
+    },
+    {
+      "route": "q_floater_owner_union",
+      "source": "q"
+    },
+    {
+      "route": "external_charity_owner_union",
+      "source": "c"
+    },
+    {
+      "route": "external_charity_owner_union",
+      "source": "s"
+    }
+  ],
+  "source_labels_exhaustive": true,
+  "status": "ALL_FORCED"
+}
