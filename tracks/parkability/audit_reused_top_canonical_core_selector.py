@@ -52,8 +52,9 @@ def run(root: Path) -> dict:
         "status": "ALL_FORCED" if all(r["status"] == "unsat" for r in records) else "OPEN",
         "records": records,
         "claim_boundary": (
-            "QF_LRA audit of root-pool maximization within one fixed-source "
-            "full-bottom reused-top family; changes of family are outside scope"
+            "QF_LRA audit of root-pool maximization across the common-safe "
+            "removed-top/bottom response family; opposite-support and unsafe "
+            "cores are outside scope"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

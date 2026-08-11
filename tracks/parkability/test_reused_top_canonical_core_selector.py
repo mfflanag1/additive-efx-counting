@@ -17,9 +17,10 @@ def test_reused_top_selector_replays():
     assert expected["status"] == "ALL_FORCED"
 
 
-def test_claim_boundary_requires_a_real_family_change():
+def test_claim_boundary_requires_a_real_support_change():
     theorem = (
         ROOT / "results/REUSED_TOP_CANONICAL_CORE_SELECTOR_LEMMA_20260811.md"
     ).read_text()
     assert "cannot cycle" in theorem.replace("\n", " ")
-    assert "does not eliminate a change of source" in theorem.replace("\n", " ")
+    assert "does not eliminate an unsafe core" in theorem.replace("\n", " ")
+    assert "outside" in theorem
