@@ -37,6 +37,7 @@ DEPENDENCIES = (
     ("PROTECTED_Q_RESPONSE_RETENTION_LEMMA_20260811.md", "protected_q_response_retention_audit.json"),
     ("DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md", "degree_zero_q_split_core_root_flip_audit.json"),
     ("SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md", "source_margin_root_budget_frontier_audit.json"),
+    ("ANCHOR_CONSTRAINED_FULL_PRIORITY_MATCHING_LEMMA_20260811.md", "anchor_constrained_full_priority_matching_audit.json"),
 )
 
 
@@ -67,7 +68,7 @@ def run(root: Path) -> dict:
         "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
         "dependency_count": len(records),
         "records": records,
-        "focused_test_count": 62,
+        "focused_test_count": 64,
         "claim_boundary": (
             "integrity/replay manifest for proved local lemmas; it does not prove "
             "the corrected support-ledger monotonicity theorem, GG closure, or "

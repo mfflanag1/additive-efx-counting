@@ -1454,6 +1454,13 @@ both encodings.
   restored or the resulting cut is exchange-stable: every boundary good
   exceeds root slack and every root-affordable swap has the opposite source
   order. The smallest surviving operation is a third-owner connected fork.
+- [`ANCHOR_CONSTRAINED_FULL_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_FULL_PRIORITY_MATCHING_LEMMA_20260811.md)
+  ([exact graph audit](anchor_constrained_full_priority_matching_audit.json))
+  — lexicographically protects the entire nonroot source priority under the
+  permanent anchor. Every unmatched source can point only to the anchor or
+  to a target occupied by an earlier source, so blocker chains are triangular
+  and acyclic. Simultaneous retained-core reset preserves the protected
+  prefix, grows `U`, or captures the remaining `q` margin.
 - [`ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md`](ANCHOR_CONSTRAINED_Q_PRIORITY_MATCHING_LEMMA_20260811.md)
   ([exact graph audit](anchor_constrained_q_priority_matching_audit.json))
   — supplies that current-state invariant at the response-graph level. Force

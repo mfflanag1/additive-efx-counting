@@ -151,6 +151,16 @@ swap has the opposite source order.  Since all two-row packet choices have
 already been optimized, a proof must now enlist a third owner in a surplus-
 budgeted connected fork; unsafe/hitting-set augmentation remains the other
 route.
+
+Full-priority anchor selection prevents that augmentation from opening a new
+matching-label cycle.  Among anchor-constrained maximum matchings, protect
+the complete nonroot source-priority vector.  Every unmatched source then
+points only to the root anchor or to an earlier protected source, so its
+blocker chain is strictly priority-decreasing.  Simultaneous retained-core
+reset preserves the protected prefix, grows `U`, or captures the `q` margin.
+The third-owner gate is consequently physical rather than graph-theoretic:
+close the terminal root-facing/J-exhausted handoff or the response-silent
+unsafe-overlap cut with one connected fork.
 The initially proposed lexicographic potential was
 
 \[
@@ -197,7 +207,7 @@ augmentation.
 
 ## Verification and claim boundary
 
-The focused dependency replay currently passes 62 tests spanning the retained-support,
+The focused dependency replay currently passes 64 tests spanning the retained-support,
 dual-anchor frozen-profile census, response compression, two-hole/root-
 critical machinery, and the new connected-path chain.  The dependency
 manifest is
