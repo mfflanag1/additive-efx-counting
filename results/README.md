@@ -1289,6 +1289,16 @@ both encodings.
 - [`reused_top_canonical_core_selector_audit.json`](reused_top_canonical_core_selector_audit.json)
   — symbolic replay of complement cancellation, root-pool maximality, and
   propagation of the canonical deficit.
+- [`FLOWER_REMOVED_TOP_RETENTION_POTENTIAL_LEMMA_20260811.md`](FLOWER_REMOVED_TOP_RETENTION_POTENTIAL_LEMMA_20260811.md)
+  — makes removed root-top support persistent across q-oriented and
+  root-oriented resets. Every fresh removal strictly grows that support and
+  lowers the later mutual owner's positive response margin; failure captures
+  the whole original margin. Together with global external-core
+  canonicalization, this rules out reset cycling while the reduced mutual
+  core remains desired.
+- [`flower_removed_top_retention_potential_audit.json`](flower_removed_top_retention_potential_audit.json)
+  — symbolic replay of the persistent margin identity, strict fresh-packet
+  descent, and terminal capture.
 - [`SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md`](SOURCE_INACTIVE_CORE_RESIDUAL_REPAIR_LEMMA_20260811.md)
   — cap-free alternating packet repair for a sacrificed-owner wall that is
   not a base response. Core-to-residual and residual-to-core packets grow
