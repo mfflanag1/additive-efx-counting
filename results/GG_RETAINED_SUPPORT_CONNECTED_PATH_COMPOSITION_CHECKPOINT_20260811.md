@@ -149,11 +149,15 @@ positive rescaling that preserves every EFX/response premise.  At rank two
 there are also two holes, so the coordinate is not single-valued.  See
 [`GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md`](GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md).
 
-The live replacement is an owner-indexed normalized residual ledger together
-with historical (rather than instantaneous) rank and supplier-union maxima.
-A valid proof must still show that every rank-lowering reset advances that
-ledger or its physical-support history; finiteness alone does not suffice.
-For endpoint extraction, the required safety inequalities are now the
+The owner-indexed normalized residual ledger together with historical rank,
+supplier-union, and support maxima is also insufficient as a strict
+potential.  An exact rank-three response system has four distinct non-EFX
+maximum-matching compressions on which every historical coordinate is
+already saturated; see
+[`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md).
+Thus the remaining proof must use a deterministic current-state invariant or
+exit the recompression plateau by a global component.  For endpoint
+extraction, the required safety inequalities are now the
 observer-indexed surplus balances of
 [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md),
 not zero-overshoot external common safety.

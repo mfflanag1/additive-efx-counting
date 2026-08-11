@@ -1403,6 +1403,14 @@ both encodings.
   response relation while a row rescaling reverses the residual comparison.
   The corrected target uses an owner-indexed normalized residual ledger and
   historical rank/supplier support; GG closure remains open.
+- [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md)
+  ([exact audit](gg_historical_support_ledger_stagnation_audit.json))
+  — shows that the corrected historical ledger is nondecreasing but not a
+  strict termination potential. Four distinct non-EFX rank-three
+  compressions share the same saturated rank, owner union, normalized
+  per-hole residual maxima, and used-support history. This does not prove a
+  particular deterministic repair rule cycles; it forces either a new
+  current-state invariant or direct component extraction.
 - [`SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md`](SURPLUS_BUDGETED_CONNECTED_COMPONENT_TRANSFER_LEMMA_20260811.md)
   ([exact audit](surplus_budgeted_connected_component_transfer_audit.json))
   — lifts the externally-safe path endpoint to arbitrary connected packet

@@ -1,0 +1,98 @@
+{
+  "all_states_non_efx": true,
+  "claim_boundary": "exact plateau for the proposed historical coordinates; it does not prove that an arbitrary deterministic repair rule cycles, global lex maximality, generalized PI-freeness, or failure of GG closure",
+  "common_safe_partition": {
+    "A_c": [
+      "q2",
+      "s2",
+      "f"
+    ],
+    "A_r": [
+      "q1",
+      "c2"
+    ],
+    "A_s": [
+      "r1",
+      "r2"
+    ],
+    "W": [
+      "c1",
+      "s1"
+    ]
+  },
+  "full_response_sdr": false,
+  "ledger_identical_across_all_states": true,
+  "maximum_response_rank": 3,
+  "positive_additive": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_gg_historical_support_ledger_stagnation.py",
+    "script_sha256": "a419d17e85c51670422b9727b5de6b8ab56e4fe1e04a92656cc31fc12cd6069d",
+    "source_script": "tracks/parkability/audit_gg_rank_reset_raw_potential_refutation.py",
+    "source_script_sha256": "f42bb2a4046ff73ee6731b2af4b14426ea77606b9e03ee24fb5c88e897b9c5a6",
+    "theorem": "results/GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md",
+    "theorem_sha256": "e869108faebe28970ce1184a1f78058142be622aebc08363f2489e4e422905ee"
+  },
+  "response_neighborhoods": {
+    "A_c": [
+      "q",
+      "c"
+    ],
+    "A_r": [
+      "r"
+    ],
+    "A_s": [
+      "s"
+    ],
+    "W": [
+      "r"
+    ]
+  },
+  "saturated_ledger": {
+    "historical_maximum_rank": 3,
+    "historical_owner_union_size": 4,
+    "retained_support_size": 0,
+    "rho_c": "1879048197/2684354563",
+    "rho_q": "3848290697236/5497558138883",
+    "rho_s": null,
+    "used_residual_supports": [
+      "A_r",
+      "W"
+    ]
+  },
+  "schema": "gg-historical-support-ledger-stagnation-v1",
+  "states": [
+    {
+      "A_c_source": "q",
+      "efx": false,
+      "hole": "c",
+      "normalized_residual": "1879048197/2684354563",
+      "residual": "W",
+      "root_target": "A_r"
+    },
+    {
+      "A_c_source": "c",
+      "efx": false,
+      "hole": "q",
+      "normalized_residual": "3848290697236/5497558138883",
+      "residual": "W",
+      "root_target": "A_r"
+    },
+    {
+      "A_c_source": "q",
+      "efx": false,
+      "hole": "c",
+      "normalized_residual": "5368709129/10737418252",
+      "residual": "A_r",
+      "root_target": "W"
+    },
+    {
+      "A_c_source": "c",
+      "efx": false,
+      "hole": "q",
+      "normalized_residual": "3848290697225/5497558138883",
+      "residual": "A_r",
+      "root_target": "W"
+    }
+  ],
+  "status": "EXACT_PLATEAU"
+}
