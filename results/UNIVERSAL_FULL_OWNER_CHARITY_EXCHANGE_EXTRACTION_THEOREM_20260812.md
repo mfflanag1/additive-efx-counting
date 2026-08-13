@@ -73,9 +73,10 @@ the paid path state, their nontrivial supplier edges include
  \qquad h_0\to c.                                 \tag{4}
 \]
 
-Thus the construction is one connected charity-exchange component and is
-genuinely cyclic.  Charity both donates `A_{h_3}` and receives replacement
-packets.  Packet sizes are unrestricted.
+Thus the incremental operation from the reconstructed paid path state to the
+candidate is one connected charity-exchange component and is genuinely
+cyclic. Charity both donates `A_{h_3}` and receives replacement packets.
+Packet sizes are unrestricted.
 
 ## Payment and safety
 
@@ -141,10 +142,10 @@ surplus-budgeted charity-exchange endpoint theorem.
 There is no positive additive rational or real countermodel to the exact
 saturated full-owner decorated-response/base-margin separator together with
 the complete GG continuation premises above.  Every such terminal extracts
-an EFX lexicographic improvement supported by a connected charity-exchange
-component; before optional blocker repair, the canonical component is the
-cyclic graph (4).  Therefore the putative saturated terminal contradicts
-global lexicographic maximality.
+an EFX lexicographic improvement reached by a connected charity-exchange
+operation; before optional blocker repair, the canonical incremental
+component is the cyclic graph (4). Therefore the putative saturated terminal
+contradicts global lexicographic maximality.
 
 The argument is cap-free: it uses four owners, but no bound on goods, packet
 cardinalities, values, or moved-good radius.  Cycles and replacement packets
@@ -161,7 +162,13 @@ surplus-budget, and saturated-outcome implications in QF_LRA/Boolean logic.
 The resulting exact manifest is
 [`universal_full_owner_charity_exchange_extraction_audit.json`](universal_full_owner_charity_exchange_extraction_audit.json).
 
-This theorem closes **the declared saturated full-owner separator**.  It
+The audit's connectivity statement is for the incremental operation from the
+exact reconstructed paid state. It does not separately assert that, after
+cancelling every transfer against the earlier GG base, the net base-to-final
+supplier graph retains every edge of (4); connectivity is not used in the
+EFX or lexicographic contradiction.
+
+This theorem closes **the declared saturated full-owner separator**. It
 does not prove that every other GG/Hall branch reaches this separator, close
 the outstanding fixed-`U` retained-support recurrence, prove the full GG
 theorem, or prove four-agent/general additive EFX.  Those statements remain

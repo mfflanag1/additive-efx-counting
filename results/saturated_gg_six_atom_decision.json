@@ -1,0 +1,62 @@
+{
+  "allocation_count": 15625,
+  "atomization": {
+    "atoms": [
+      "P",
+      "g",
+      "A_r",
+      "A_q",
+      "A_c",
+      "A_s"
+    ],
+    "current_holder": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "hamiltonian_path": [
+      "r",
+      "q",
+      "c",
+      "s",
+      "charity"
+    ],
+    "path_cores_are_single_atoms": true
+  },
+  "candidate_universal_inequality": "In the six-atom Hamiltonian normal form, exact current-response saturation implies u_i(Y_i) >= max{v_i(P),v_i(g),v_i(A_s)} for every owner i.  Every other owner target is a singleton, so Y is EFX with charity; weak payment and one strict first-row payment then contradict global lex maximality.",
+  "claim_boundary": "exact UNSAT theorem for the declared six-atom singleton-core normal form only; it is not a cap-free saturated-separator theorem and does not exclude split or multi-good path cores",
+  "deletion_minimal_group_core": [
+    "positive_normalized",
+    "current_payment",
+    "response_saturation",
+    "global_lex_all_allocations"
+  ],
+  "noncomplete_allocation_count": 11529,
+  "packet_graph_scope": "every induced net atom-transfer graph; no topology or moved-radius restriction",
+  "premise_groups": {
+    "base_allocation": 11,
+    "base_efx_charity": 76,
+    "complete_pi_free": 20,
+    "current_payment": 5,
+    "decorated_response": 7,
+    "failed_direct_charity_safety": 1,
+    "global_lex_all_allocations": 11529,
+    "observer_surplus": 5,
+    "positive_normalized": 28,
+    "response_saturation": 28,
+    "selected_path_cores": 4,
+    "signed_transfer_owner_coverage": 14,
+    "source_margin_separator": 72
+  },
+  "provenance": {
+    "python": "3.14.3",
+    "script": "tracks/parkability/decide_saturated_gg_six_atom.py",
+    "script_sha256": "7cd33334cd84c2a1eac537e9b6ad15c1c749de9c65505f147c59d2b6dc45bde4",
+    "z3": "5.0.0"
+  },
+  "schema": "saturated-gg-six-atom-decision-v1",
+  "status": "UNSAT_SIX_ATOM_SEPARATOR"
+}

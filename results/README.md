@@ -67,6 +67,21 @@ in exact solver logic.  This closes that declared terminal only: reachability
 from every other GG/Hall branch, the fixed-`U` recurrence, full GG, and
 four-agent/general additive EFX remain open.
 
+The follow-on exact finite decision
+[`SATURATED_GG_SIX_ATOM_DECISION_THEOREM_20260812.md`](SATURATED_GG_SIX_ATOM_DECISION_THEOREM_20260812.md)
+enumerates all 15,625 allocations of a declared six-atom Hamiltonian normal
+form and is UNSAT. Its independently checked inclusion-minimal core says
+that current-response saturation already makes the displayed paid allocation
+EFX with charity, contradicting global lex maximality. This is explicitly a
+bounded-atom theorem, not a cap-free theorem; split and multi-good targets
+remain the next adversarial cells.
+
+During that encoding, the component-wide return selector received a
+correction: its returned packet `L` must lie in the pre-existing component
+pool `P_C`. Allowing `L` to contain the newly deleted packet permits a
+pass-through transfer whose joining edge cancels in the net graph. The
+corrected theorem and audit record this physical-origin condition.
+
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
 It freezes the diminishing-return completion-cut branch and promotes a

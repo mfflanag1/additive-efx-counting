@@ -54,12 +54,18 @@ Partition the complete pool `P_C+J` as
 
 \]
 
-where `L` is returned to source `s`, subject to
+where `L` is returned to source `s`, subject to `L subseteq P_C` and
 
 \[
- v_a(Z_a)\ge b_aqquad(a\in C).                   \tag{6}
+ v_a(Z_a)\ge b_a\qquad(a\in C).                  \tag{6}
 
 \]
+
+The restriction `L subseteq P_C` is a physical-origin condition: every good
+of `J` remains on the component side of the final partition.  It prevents a
+deleted good from being passed through the component and immediately
+returned to `s`, which would cancel the purported joining edge in the net
+transfer graph.
 
 The family is nonempty: take `J=D`, `L=empty`, keep `Z_a=Y_a` for `a!=h`,
 and set `Z_h=Y_h+D`.  Among all feasible choices maximize
@@ -105,6 +111,12 @@ with deterministic physical tie-breaking.
 The selector is finite for every finite instance but imposes no item or
 value cap.  It optimizes the complete operation rather than enumerating a
 bounded family of GG cells.
+
+**Correction (2026-08-12).** The original display did not explicitly state
+`L subseteq P_C`. Without it, the connectivity sentence is false after
+cancellation. The restriction above is the intended physical return-packet
+condition already present in the direct two-owner selector. No later result
+may use the uncorrected larger feasible family.
 
 ## Verification and boundary
 

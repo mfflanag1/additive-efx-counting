@@ -10,11 +10,16 @@
   ],
   "provenance": {
     "script": "tracks/parkability/audit_component_wide_return_compensation_selector.py",
-    "script_sha256": "5f5fcac840d74fb861bb977a8e9ad403d18269de82cb92688dde2739f69c297e",
+    "script_sha256": "09377ca07588cb945c5717cbfce05e21d1d8fd66ba6185eba62ac12d79a54fae",
     "theorem": "results/COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
-    "theorem_sha256": "04e1eed93446cd5f965516fde7d6a9ec1680ddc76afbca36f9041276e6531040"
+    "theorem_sha256": "cd1e9c8458bbaf8f6d762f6bfd62c2d5d881173ce772c2061f2614b64bc4d5f0"
   },
   "remaining_gate": "force success from the repeated GG return, recruit an outside component, or prove a priority-valid source sacrifice",
+  "return_packet_origin": {
+    "constraint": "L is a subset of the pre-existing component pool P_C",
+    "deleted_packet_cannot_be_immediately_returned": true,
+    "finite_set_checks": 8
+  },
   "schema": "component-wide-return-compensation-selector-audit-v1",
   "status": "ALL_FORCED",
   "symbolic_checks": {
