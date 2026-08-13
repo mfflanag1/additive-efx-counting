@@ -1,0 +1,100 @@
+{
+  "claim_boundary": "cap-free priority-valid handoff; enlarged-root-target/residual response recurrence and root-critical good remain open",
+  "full_pool_failure_consistent": true,
+  "physical_records": [
+    {
+      "response_residual_mask": 0,
+      "retained_cores": [
+        "C",
+        "S"
+      ],
+      "root_bundle": [
+        "anchor",
+        "overlap",
+        "response_only"
+      ],
+      "sacrificed_owner_residual": [
+        "A_only",
+        "R0",
+        "R1"
+      ]
+    },
+    {
+      "response_residual_mask": 1,
+      "retained_cores": [
+        "C",
+        "S"
+      ],
+      "root_bundle": [
+        "R0",
+        "anchor",
+        "overlap",
+        "response_only"
+      ],
+      "sacrificed_owner_residual": [
+        "A_only",
+        "R1"
+      ]
+    },
+    {
+      "response_residual_mask": 2,
+      "retained_cores": [
+        "C",
+        "S"
+      ],
+      "root_bundle": [
+        "R1",
+        "anchor",
+        "overlap",
+        "response_only"
+      ],
+      "sacrificed_owner_residual": [
+        "A_only",
+        "R0"
+      ]
+    },
+    {
+      "response_residual_mask": 3,
+      "retained_cores": [
+        "C",
+        "S"
+      ],
+      "root_bundle": [
+        "R0",
+        "R1",
+        "anchor",
+        "overlap",
+        "response_only"
+      ],
+      "sacrificed_owner_residual": [
+        "A_only"
+      ]
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_root_sourced_anchor_retaining_sacrifice_handoff.py",
+    "script_sha256": "d7810d4dafdea04a20c1ec28871235f0e86981f5f30095399ee7530710f0323a",
+    "theorem": "results/ROOT_SOURCED_ANCHOR_RETAINING_SACRIFICE_HANDOFF_LEMMA_20260813.md",
+    "theorem_sha256": "cccc0b42fb502ac333f7f37f283dd104b7994fe52bcd13ce831a56030a3244a5",
+    "z3_version": "5.0.0"
+  },
+  "root_strict_after_anchor_response_union": true,
+  "sample_full_pool_failure": {
+    "A": "3/4",
+    "floor": "1/2",
+    "overlap": "1/2",
+    "pool": "1/4",
+    "remainder": "1/4"
+  },
+  "schema": "root-sourced-anchor-retaining-sacrifice-handoff-audit-v1",
+  "status": "FULL_POOL_PAYMENT_SUPERSEDED_BY_PRIORITY_VALID_SACRIFICE",
+  "surviving_wall_forms": [
+    "sacrificed owner to retained core or enlarged root target",
+    "represented source to residual",
+    "represented nonroot source to enlarged root target"
+  ],
+  "wall_exclusions": {
+    "represented_to_retained_core": true,
+    "sacrificed_owner_to_own_residual": true
+  }
+}

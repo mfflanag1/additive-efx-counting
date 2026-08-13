@@ -49,6 +49,8 @@ DEPENDENCIES = (
     ("ONE_HEAD_NONROOT_COMPRESSION_STAR_HANDOFF_LEMMA_20260813.md", "one_head_nonroot_compression_star_handoff_audit.json"),
     ("ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md", "alternating_two_head_root_covered_compression_audit.json"),
     ("ROOT_ANCHORED_ONE_HEAD_TWO_HOLE_SELECTOR_LEMMA_20260813.md", "root_anchored_one_head_two_hole_selector_audit.json"),
+    ("ROOT_SOURCED_ANCHOR_RETAINING_SACRIFICE_HANDOFF_LEMMA_20260813.md", "root_sourced_anchor_retaining_sacrifice_handoff_audit.json"),
+    ("ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md", "enlarged_root_target_anchor_hitting_trichotomy_audit.json"),
 )
 
 
@@ -102,7 +104,7 @@ def run(root: Path) -> dict:
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "ALL_HEAD_HALL_REDUCED_OPEN_CRITICAL_STAR_CAPTURE" if recruitment_goal_resolved else (
+        "status": "PAYMENT_GATES_SUPERSEDED_OPEN_ANCHOR_HITTING_RECURRENCE" if recruitment_goal_resolved else (
             "RESPONSE_GEOMETRY_COMPLETE_OPEN_MIXED_PAYMENT" if response_geometry_complete else (
             "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE" if recruitment_complete else (
             "INTERFACE_REFUTED" if interface_refuted else (
@@ -116,7 +118,7 @@ def run(root: Path) -> dict:
             "responses from at most two decorated heads; all one- and two-head "
             "Hall failures compress to one/two-residual stars or exact root/anchor criticality"
         ),
-        "exact_surviving_separator": "anchor/root-critical least good, compressed-star recurrence, or root-sourced complete-residual-pool capture",
+        "exact_surviving_separator": "mixed permanent-anchor hitting set, source-inactive loss band, or exact response-side recurrence",
         "claim_boundary": (
             "generic supplier saturation does not force payment and R_q-only "
             "accounting is false; global GG recurrence remains separate"

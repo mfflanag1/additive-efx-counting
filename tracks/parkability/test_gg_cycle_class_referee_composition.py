@@ -18,9 +18,9 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "ALL_HEAD_HALL_REDUCED_OPEN_GG_CRITICAL_STAR_CAPTURE"
+    assert result["status"] == "PAYMENT_GATES_SUPERSEDED_OPEN_GG_ANCHOR_HITTING_RECURRENCE"
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
-    assert result["smallest_named_terminal"] == "anchor/root-critical good, compressed-star recurrence, or complete-pool capture"
+    assert result["smallest_named_terminal"] == "mixed permanent-anchor hitting set or source-inactive/exact response recurrence"
     assert result["stated_four_old_core_normal_form_vacuous"]
     assert result["frozen_witnesses_escape_by_efx_rotation"]
     assert result["local_recurrence_response_rank"] == 1

@@ -301,6 +301,24 @@ is exhausted. The surviving global work is reversal of that critical-good
 certificate, termination of the already-recorded compressed-star recurrence,
 and root-sourced complete-pool capture.
 
+The complete-pool capture is now demoted from a terminal as well. A
+root-sourced collision admits an anchor-retaining sacrifice handoff: the root
+takes `K_r+E`, the two unaffected sources retain protected cores, and the
+displaced later source receives the exact complement. Because the root is
+strict, displaced-owner payment is unnecessary for an EFX lexicographic
+endpoint. Full-pool failure merely enters an explicitly labeled enlarged-
+root-target/residual response recurrence. The remaining global obligations
+are now the anchor/root-critical least-good polarity and termination of that
+compressed recurrence.
+
+Minimal response extraction localizes that recurrence further. Every
+response to `K_r+E` is response-side, anchor-side, or mixed. Response-side
+cores give nested support descent/repetition; anchor-side cores give an old
+nested edge or source-inactive loss band; and a mixed core makes every used
+anchor good individually response-critical. The current smallest terminal
+is therefore a permanent-anchor hitting-set recurrence (plus the already
+named source-inactive case), not a residual-payment inequality.
+
 The exact objective “recruit the signed surplus or make a strict finite GG
 transition” is closed in
 [`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).

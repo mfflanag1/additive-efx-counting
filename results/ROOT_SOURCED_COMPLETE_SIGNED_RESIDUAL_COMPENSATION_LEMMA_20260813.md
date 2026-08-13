@@ -5,6 +5,12 @@
 **Status:** cap-free correction of the alleged `R_q`-only anchor gate; the
 complete signed residual pool is the minimal physical compensation family
 
+**Supersession note (2026-08-13):** complete-pool compensation remains a
+valid paid shortcut, but it is no longer a prerequisite. The
+root-sourced anchor-retaining sacrifice handoff keeps the first-priority root
+strictly improved, retains the permanent anchor, and sends full-pool failure
+to an explicit sacrificed-owner/root-target response boundary.
+
 ## Root-sourced collision
 
 Use a selected Hamiltonian matching containing the permanent root anchor

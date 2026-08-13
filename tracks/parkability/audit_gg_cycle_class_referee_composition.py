@@ -95,6 +95,10 @@ def run(root: Path) -> dict:
         "alternating_two_head_root_covered_compression_audit.json",
         "ROOT_ANCHORED_ONE_HEAD_TWO_HOLE_SELECTOR_LEMMA_20260813.md",
         "root_anchored_one_head_two_hole_selector_audit.json",
+        "ROOT_SOURCED_ANCHOR_RETAINING_SACRIFICE_HANDOFF_LEMMA_20260813.md",
+        "root_sourced_anchor_retaining_sacrifice_handoff_audit.json",
+        "ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md",
+        "enlarged_root_target_anchor_hitting_trichotomy_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -174,12 +178,12 @@ def run(root: Path) -> dict:
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "ALL_HEAD_HALL_REDUCED_OPEN_GG_CRITICAL_STAR_CAPTURE",
+        "status": "PAYMENT_GATES_SUPERSEDED_OPEN_GG_ANCHOR_HITTING_RECURRENCE",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "anchor/root-critical good, compressed-star recurrence, or complete-pool capture",
+        "smallest_named_terminal": "mixed permanent-anchor hitting set or source-inactive/exact response recurrence",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,
@@ -189,11 +193,10 @@ def run(root: Path) -> dict:
         "local_recurrence_response_rank": 1,
         "residual_partition_family_size": 4096,
         "efx_floor_feasible_residual_partitions": 0,
-        "uncovered_premise_count": 3,
+        "uncovered_premise_count": 2,
         "open_obligations": [
-            "reverse the anchor/root-critical least-good certificate",
-            "root-sourced complete-residual-pool capture",
-            "termination of an already-recorded compressed response/star recurrence",
+            "reverse the mixed permanent-anchor hitting-set certificate",
+            "terminate the source-inactive or exact response-side recurrence",
         ],
         "dependencies": records,
         "claim_boundary": (

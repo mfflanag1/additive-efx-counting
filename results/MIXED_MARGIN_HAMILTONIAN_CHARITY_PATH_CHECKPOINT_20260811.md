@@ -283,3 +283,20 @@ same `2 x 2` response boundary, or exposes a least head-valued good that is
 anchor-critical, root-floor-critical, or root-EFX-critical. Hence all
 decorated-head Hall topologies now enter existing compression recurrences or
 one exact root/anchor critical-good polarity.
+
+Root-sourced complete-pool capture is also no longer a payment prerequisite.
+Assign the root its current response together with the disjoint permanent
+anchor, retain the other two protected cores, and give the exact complement
+to the displaced later owner. The root is strictly improved, so an EFX
+endpoint is lexicographically valid without paying that owner. Every failure
+is a sacrificed-owner core/root wall, a represented-source residual wall, or
+a represented-source wall against the single enlarged root target. The
+full-pool inequality is therefore diagnostic; the live task is termination
+of this labeled response recurrence.
+
+A minimal response to the enlarged root target `K_r+E` has only three
+support types. It lies inside `E` (support descent or an exact repeated
+label), lies inside `K_r` (an old nested edge or a source-inactive loss
+band), or intersects both. In the mixed case every used anchor good is
+individually critical to the response margin. Thus the terminal recurrence
+is an atomic permanent-anchor hitting set, not an arbitrary response graph.

@@ -1,0 +1,38 @@
+{
+  "anchor_side_checks": {
+    "represented_anchor_response_is_old": true,
+    "sacrificed_anchor_response_loss_band": true
+  },
+  "claim_boundary": "cap-free response localization; repeated support labels, source-inactive loss bands, and mixed anchor hitting remain open",
+  "mixed_checks": {
+    "anchor_capture": true,
+    "individual_good_critical": true,
+    "response_capture": true
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_enlarged_root_target_anchor_hitting_trichotomy.py",
+    "script_sha256": "f1f2bda3c1f276c1ebddbe7698c1670c9fb54392981ff8071c1e964e8e82813f",
+    "theorem": "results/ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md",
+    "theorem_sha256": "0bb5cd80254c616f7793465bbdee62dada1e2909bcc2f38a74b7438f4d5d4144",
+    "z3_version": "5.0.0"
+  },
+  "schema": "enlarged-root-target-anchor-hitting-trichotomy-audit-v1",
+  "status": "ROOT_TARGET_RESPONSES_REDUCED_TO_SUPPORT_OR_ANCHOR_HITTING",
+  "support_types": [
+    {
+      "anchor_present": false,
+      "kind": "response_side",
+      "response_present": true
+    },
+    {
+      "anchor_present": true,
+      "kind": "anchor_side",
+      "response_present": false
+    },
+    {
+      "anchor_present": true,
+      "kind": "mixed_anchor_hitting",
+      "response_present": true
+    }
+  ]
+}

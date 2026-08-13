@@ -16,9 +16,9 @@ def test_mixed_margin_hamiltonian_charity_path_composition_replays():
 
 def test_mixed_margin_hamiltonian_charity_path_dependencies_replay():
     result = run(ROOT)
-    assert result["status"] == "ALL_HEAD_HALL_REDUCED_OPEN_CRITICAL_STAR_CAPTURE"
-    assert result["dependency_count"] == 39
-    assert result["exact_surviving_separator"] == "anchor/root-critical least good, compressed-star recurrence, or root-sourced complete-residual-pool capture"
+    assert result["status"] == "PAYMENT_GATES_SUPERSEDED_OPEN_ANCHOR_HITTING_RECURRENCE"
+    assert result["dependency_count"] == 41
+    assert result["exact_surviving_separator"] == "mixed permanent-anchor hitting set, source-inactive loss band, or exact response-side recurrence"
     assert any(record["audit_status"] == "TERMINATION_GAP_FOUND" for record in result["records"])
     assert any(
         record["audit_status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"

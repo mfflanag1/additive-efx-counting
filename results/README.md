@@ -113,6 +113,17 @@ headlines:
   handles the three exceptional rows `N(h)={r}` without cutting the permanent
   anchor. It yields mutually EFX root/head cells or an exact anchor-, root-
   floor-, or root-EFX-critical least good.
+- [`ROOT_SOURCED_ANCHOR_RETAINING_SACRIFICE_HANDOFF_LEMMA_20260813.md`](ROOT_SOURCED_ANCHOR_RETAINING_SACRIFICE_HANDOFF_LEMMA_20260813.md)
+  ([symbolic/support audit](root_sourced_anchor_retaining_sacrifice_handoff_audit.json))
+  shows that complete-residual-pool payment is optional in a root-sourced
+  collision. Giving `K_r+E` to the first-priority root and the exact
+  complement to the displaced later source preserves the anchor and turns
+  every failure into one of three labeled response-star walls.
+- [`ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md`](ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md)
+  ([symbolic audit](enlarged_root_target_anchor_hitting_trichotomy_audit.json))
+  classifies every minimal response to `K_r+E` as response-side, anchor-side,
+  or mixed. Only the mixed form consumes both supports, and every anchor good
+  it uses is individually critical to the strict response margin.
 
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
