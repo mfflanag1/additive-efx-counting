@@ -18,9 +18,9 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "PAYMENT_GATES_SUPERSEDED_OPEN_GG_ANCHOR_HITTING_RECURRENCE"
+    assert result["status"] == "ANCHOR_HITTING_GATE_RESOLVED_OTHER_GG_TERMINALS_OPEN"
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
-    assert result["smallest_named_terminal"] == "mixed permanent-anchor hitting set or source-inactive/exact response recurrence"
+    assert result["smallest_named_terminal"] == "generic rank-completing paid-response splice outside the enlarged-root contract"
     assert result["stated_four_old_core_normal_form_vacuous"]
     assert result["frozen_witnesses_escape_by_efx_rotation"]
     assert result["local_recurrence_response_rank"] == 1

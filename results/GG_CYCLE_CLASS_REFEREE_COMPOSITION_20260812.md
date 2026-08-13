@@ -312,19 +312,26 @@ are now the anchor/root-critical least-good polarity and termination of that
 compressed recurrence.
 
 Minimal response extraction localizes that recurrence further. Every
-response to `K_r+E` is response-side, anchor-side, or mixed. Response-side
-cores give nested support descent/repetition; anchor-side cores give an old
-nested edge or source-inactive loss band; and a mixed core makes every used
-anchor good individually response-critical. The current smallest terminal
-is therefore a permanent-anchor hitting-set recurrence (plus the already
-named source-inactive case), not a residual-payment inequality.
+response to `K_r+E` is response-side, anchor-side, or mixed. The formerly
+live mixed/source-inactive terminal is now closed by
+[`PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md`](PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md).
+A globally minimum response is proper and safe at the complete handoff
+state. If its root value exceeds the base root floor, it becomes a valid
+current-phase root anchor; otherwise the strict old-anchor surplus pays for
+peeling it while leaving the root above the pre-recruitment floor. The
+second branch strictly grows a globally monotone retired-support ledger.
+Thus this recurrence yields outcome 4 or 3 without a PI or Hall case split.
+The remaining composition must carry that ledger and close the other
+pre-existing residual/GG state classes; it may not silently rebuild an old
+root target from retired goods.
 
 The narrower post-recruitment observer-payment objective is now formally
 closed as a refutation in
 [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md).
-That verdict should not be misread as closure of this stronger GG
-composition: global recurrence/maximality still has to eliminate or escape
-the permanent-anchor hitting set.
+That verdict should not be misread as closure of the full GG composition.
+The permanent-anchor hitting set is now eliminated, but other residual and
+state-class terminals in this referee composition remain outside the new
+local theorem.
 
 The exact objective “recruit the signed surplus or make a strict finite GG
 transition” is closed in

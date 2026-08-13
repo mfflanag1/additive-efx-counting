@@ -60,6 +60,17 @@ in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 The August 13 post-recruitment audit corrects two overstrong intermediate
 headlines:
 
+- [`PERMANENT_ANCHOR_HITTING_RECURRENCE_RESOLUTION_20260813.md`](PERMANENT_ANCHOR_HITTING_RECURRENCE_RESOLUTION_20260813.md)
+  ([primary exact audit](permanent_anchor_minimal_response_peel_or_reselect_audit.json),
+  [independent replay](permanent_anchor_minimal_response_peel_or_reselect_independent_audit.json))
+  closes the named enlarged-root hitting-set recurrence. A globally minimum
+  response is proper and safe at the exact handoff state. If its root value
+  exceeds the base root floor, it is a valid current-phase anchor; otherwise
+  the old anchor surplus pays a permanent peel while the root stays above
+  its pre-recruitment floor. This proves outcomes 4 or 3 respectively and
+  also removes the associated source-inactive loss-band recurrence. It does
+  not close the remaining GG state classes or prove general EFX.
+
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))
   gives the requirement-by-requirement final verdict: the generic supplier-
@@ -131,6 +142,9 @@ headlines:
   classifies every minimal response to `K_r+E` as response-side, anchor-side,
   or mixed. Only the mixed form consumes both supports, and every anchor good
   it uses is individually critical to the strict response margin.
+  The previously live mixed/source-inactive recurrence is resolved by the
+  peel-or-reselect theorem above; future composition must carry its monotone
+  retired-root-support ledger.
 
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).

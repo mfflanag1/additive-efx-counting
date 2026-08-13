@@ -99,6 +99,10 @@ def run(root: Path) -> dict:
         "root_sourced_anchor_retaining_sacrifice_handoff_audit.json",
         "ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md",
         "enlarged_root_target_anchor_hitting_trichotomy_audit.json",
+        "PERMANENT_ANCHOR_HITTING_RECURRENCE_CONTRACT_20260813.md",
+        "PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md",
+        "permanent_anchor_minimal_response_peel_or_reselect_audit.json",
+        "permanent_anchor_minimal_response_peel_or_reselect_independent_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -173,17 +177,23 @@ def run(root: Path) -> dict:
         (result_dir / "selected_pool_signed_surplus_recruitment_resolution_audit.json").read_text()
     )
     assert resolution["status"] == "SELECTED_POOL_RECRUITMENT_GOAL_RESOLVED"
+    anchor_resolution = json.loads(
+        (result_dir / "permanent_anchor_minimal_response_peel_or_reselect_audit.json").read_text()
+    )
+    assert anchor_resolution["status"] == (
+        "PERMANENT_ANCHOR_RECURRENCE_RESOLVED_BY_OUTCOMES_3_OR_4"
+    )
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "PAYMENT_GATES_SUPERSEDED_OPEN_GG_ANCHOR_HITTING_RECURRENCE",
+        "status": "ANCHOR_HITTING_GATE_RESOLVED_OTHER_GG_TERMINALS_OPEN",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "mixed permanent-anchor hitting set or source-inactive/exact response recurrence",
+        "smallest_named_terminal": "generic rank-completing paid-response splice outside the enlarged-root contract",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,
@@ -195,8 +205,8 @@ def run(root: Path) -> dict:
         "efx_floor_feasible_residual_partitions": 0,
         "uncovered_premise_count": 2,
         "open_obligations": [
-            "reverse the mixed permanent-anchor hitting-set certificate",
-            "terminate the source-inactive or exact response-side recurrence",
+            "carry the monotone retired-root-support ledger through the outer GG state graph",
+            "close generic T* states lacking the permanent-anchor plus recruited-response surplus inequalities",
         ],
         "dependencies": records,
         "claim_boundary": (

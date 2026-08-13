@@ -1,0 +1,193 @@
+{
+  "claim_boundary": "properness and scalar partition verified; response-side safety branch used an unavailable post-handoff premise and is superseded",
+  "proper_descent_count": 8,
+  "provenance": {
+    "contract": "results/PERMANENT_ANCHOR_HITTING_RECURRENCE_CONTRACT_20260813.md",
+    "contract_sha256": "bbe26c88b78d919dd5c908a3b2c1d0a098558a38f4356407489a678b32122cee",
+    "script": "tracks/parkability/audit_anchor_trim_or_whole_target_response.py",
+    "script_sha256": "e39f139a9c9a44f17b0d7eaff746224cafb3cf6a4725e613d53cab8c4c2f9029",
+    "theorem": "results/ANCHOR_TRIM_OR_WHOLE_TARGET_RESPONSE_LEMMA_20260813.md",
+    "theorem_sha256": "01bcc6e60d0a88ed41cd9b939fff42cc5830faa5a58eac2d9340fe08020be556",
+    "z3_version": "5.0.0"
+  },
+  "schema": "anchor-trim-or-whole-target-response-audit-v1",
+  "status": "PROPER_RESPONSE_REDUCTION_VERIFIED_SUPERSEDED_BRANCHING",
+  "support_record_count": 9,
+  "support_records": [
+    {
+      "C": [
+        "e1",
+        "k1"
+      ],
+      "D": [
+        "e0",
+        "k0"
+      ],
+      "H": [
+        "k0"
+      ],
+      "J": [
+        "e0"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "e0",
+        "k1"
+      ],
+      "D": [
+        "e1",
+        "k0"
+      ],
+      "H": [
+        "k0"
+      ],
+      "J": [
+        "e1"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "k1"
+      ],
+      "D": [
+        "e0",
+        "e1",
+        "k0"
+      ],
+      "H": [
+        "k0"
+      ],
+      "J": [
+        "e0",
+        "e1"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "e1",
+        "k0"
+      ],
+      "D": [
+        "e0",
+        "k1"
+      ],
+      "H": [
+        "k1"
+      ],
+      "J": [
+        "e0"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "e0",
+        "k0"
+      ],
+      "D": [
+        "e1",
+        "k1"
+      ],
+      "H": [
+        "k1"
+      ],
+      "J": [
+        "e1"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "k0"
+      ],
+      "D": [
+        "e0",
+        "e1",
+        "k1"
+      ],
+      "H": [
+        "k1"
+      ],
+      "J": [
+        "e0",
+        "e1"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "e1"
+      ],
+      "D": [
+        "e0",
+        "k0",
+        "k1"
+      ],
+      "H": [
+        "k0",
+        "k1"
+      ],
+      "J": [
+        "e0"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [
+        "e0"
+      ],
+      "D": [
+        "e1",
+        "k0",
+        "k1"
+      ],
+      "H": [
+        "k0",
+        "k1"
+      ],
+      "J": [
+        "e1"
+      ],
+      "proper_descent": true,
+      "whole_target": false
+    },
+    {
+      "C": [],
+      "D": [
+        "e0",
+        "e1",
+        "k0",
+        "k1"
+      ],
+      "H": [
+        "k0",
+        "k1"
+      ],
+      "J": [
+        "e0",
+        "e1"
+      ],
+      "proper_descent": false,
+      "whole_target": true
+    }
+  ],
+  "symbolic_checks": {
+    "old_trim_strict_margin": true,
+    "partition_identity": true,
+    "response_trim_strict_support": true,
+    "root_capture_when_complement_fails": true
+  },
+  "wall_derived_response_is_proper": true,
+  "whole_target_count": 1
+}
