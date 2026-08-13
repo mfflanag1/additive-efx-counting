@@ -27,7 +27,7 @@
     "path_cores_are_single_atoms": true
   },
   "candidate_universal_inequality": "In the six-atom Hamiltonian normal form, exact current-response saturation implies u_i(Y_i) >= max{v_i(P),v_i(g),v_i(A_s)} for every owner i.  Every other owner target is a singleton, so Y is EFX with charity; weak payment and one strict first-row payment then contradict global lex maximality.",
-  "claim_boundary": "exact UNSAT theorem for the declared six-atom singleton-core normal form only; it is not a cap-free saturated-separator theorem and does not exclude split or multi-good path cores",
+  "claim_boundary": "exact UNSAT theorem for the declared six-atom singleton-core normal form only; complete generalized release-compatible PI was not separately encoded because the deletion-minimal UNSAT relaxation omits every PI constraint, so adding that stronger premise cannot restore SAT; this is not cap-free and does not exclude split or multi-good path cores",
   "deletion_minimal_group_core": [
     "positive_normalized",
     "current_payment",
@@ -39,7 +39,7 @@
   "premise_groups": {
     "base_allocation": 11,
     "base_efx_charity": 76,
-    "complete_pi_free": 20,
+    "complete_ordinary_pi_free": 20,
     "current_payment": 5,
     "decorated_response": 7,
     "failed_direct_charity_safety": 1,
@@ -54,7 +54,7 @@
   "provenance": {
     "python": "3.14.3",
     "script": "tracks/parkability/decide_saturated_gg_six_atom.py",
-    "script_sha256": "7cd33334cd84c2a1eac537e9b6ad15c1c749de9c65505f147c59d2b6dc45bde4",
+    "script_sha256": "a1a3d4a8a24b4373b47d5dc7365b3287847665742cbae8aef6289bb3a81271c6",
     "z3": "5.0.0"
   },
   "schema": "saturated-gg-six-atom-decision-v1",

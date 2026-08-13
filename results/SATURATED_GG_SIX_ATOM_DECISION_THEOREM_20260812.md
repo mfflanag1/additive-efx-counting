@@ -48,6 +48,13 @@ premise groups:
 The other complete premise blocks are encoded but unnecessary for this
 atomization.
 
+Generalized release-compatible PI-freeness is not separately enumerated in
+the solver. This does not weaken the UNSAT conclusion for instances satisfying
+it: the deletion-minimal core omits **all** PI constraints, so the relaxed
+formula is already inconsistent and adding the stronger generalized PI-free
+premise cannot restore satisfiability. The artifact therefore does not claim
+to be an independent executable definition of generalized PI.
+
 ## Extracted inequality
 
 Current target `r` has the only nonsingleton owner bundle, `P+g`. Every
@@ -89,7 +96,9 @@ independently reconstructs the four-group proof without Z3 and independently
 enumerates the 15,625 allocation words; its output is
 [`saturated_gg_six_atom_audit.json`](saturated_gg_six_atom_audit.json).
 
-This is a **bounded six-atom theorem**. It is not the cap-free extraction
+This is a **bounded six-atom theorem**. Complete generalized PI-free instances
+are excluded because an even weaker PI-unrestricted relaxation is UNSAT, not
+because generalized PI was independently encoded. It is not the cap-free extraction
 theorem, does not cover a target other than `P+g` with multiple atomic goods,
 and does not exclude split or multi-good path cores. The shortest next
 adversarial atomization must therefore split at least one singleton owner

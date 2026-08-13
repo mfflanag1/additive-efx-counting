@@ -164,7 +164,7 @@ def build() -> tuple[z3.Solver, dict[str, z3.BoolRef], dict]:
                     )
                 )
             edge[source, target] = z3.Or(*candidates)
-    groups["complete_pi_free"] = [
+    groups["complete_ordinary_pi_free"] = [
         z3.Not(
             z3.And(
                 *(edge[cycle[index], cycle[(index + 1) % len(cycle)]] for index in range(len(cycle)))
@@ -347,8 +347,10 @@ def run(root: Path) -> dict:
         ),
         "claim_boundary": (
             "exact UNSAT theorem for the declared six-atom singleton-core normal "
-            "form only; it is not a cap-free saturated-separator theorem and does "
-            "not exclude split or multi-good path cores"
+            "form only; complete generalized release-compatible PI was not separately "
+            "encoded because the deletion-minimal UNSAT relaxation omits every PI "
+            "constraint, so adding that stronger premise cannot restore SAT; this is "
+            "not cap-free and does not exclude split or multi-good path cores"
         ),
         "provenance": {
             "python": __import__("platform").python_version(),
