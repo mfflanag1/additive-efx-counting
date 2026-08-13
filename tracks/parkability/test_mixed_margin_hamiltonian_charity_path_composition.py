@@ -16,7 +16,11 @@ def test_mixed_margin_hamiltonian_charity_path_composition_replays():
 
 def test_mixed_margin_hamiltonian_charity_path_dependencies_replay():
     result = run(ROOT)
-    assert result["status"] == "REFEREE_GAP_FOUND"
-    assert result["dependency_count"] == 20
-    assert result["exact_surviving_separator"].startswith("rank-completing paid-response")
+    assert result["status"] == "INTERFACE_REFUTED"
+    assert result["dependency_count"] == 21
+    assert result["exact_surviving_separator"] == "correct mixed-edge Hamiltonian import"
     assert any(record["audit_status"] == "TERMINATION_GAP_FOUND" for record in result["records"])
+    assert any(
+        record["audit_status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"
+        for record in result["records"]
+    )

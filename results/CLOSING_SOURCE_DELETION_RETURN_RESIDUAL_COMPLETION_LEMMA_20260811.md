@@ -2,13 +2,17 @@
 
 **Date:** 2026-08-11
 
-**Status:** **referee correction (2026-08-12): payment reduction proved, but
-termination refuted under the stated local premises.**  An unsafe candidate
-may return an already recorded rank-one decorated response; PI or permanent
-support progress does not follow without a rank-completing transition.
+**Status:** **interface refutation (2026-08-13).** The 2026-08-12 referee
+correction proved the scalar payment reduction and found a termination gap.
+A subsequent definition audit found that the stated global normal form is
+itself impossible: four pairwise-disjoint base-common-safe desired path
+cores already give a Pareto-improving partial EFX allocation. The actual
+mixed-edge GG state must be reconstructed before this lemma can be applied.
 
 See
 [`CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md`](CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md).
+The superseding interface result is
+[`FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md`](FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md).
 
 ## Universal nonself pivot
 

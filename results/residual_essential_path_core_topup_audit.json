@@ -1,0 +1,24 @@
+{
+  "claim_boundary": "source payment and target-surplus cancellation only; no universal compensation theorem or GG closure",
+  "endpoint_joint_gate": "jointly compensate target-1 residual top-up J and exchange a desired middle core against the returned hole packet P",
+  "order_outcomes_after_target_payment": {
+    "endpoint_hole_core_exchange": 1,
+    "internally_supplied_segment_cycle": 3,
+    "rank_four": 2
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_residual_essential_path_core_topup.py",
+    "script_sha256": "dbe4eb30239bfa27ef1385fd3218432e2734b97fdf4c1f1d0bcdc447c8a4e43f",
+    "theorem": "results/RESIDUAL_ESSENTIAL_PATH_CORE_TOPUP_LEMMA_20260813.md",
+    "theorem_sha256": "2042d5089ea5e07a97bd351735cf10be9c919d39cb8b144e9880c6e6c26c4013",
+    "z3_version": "5.0.0"
+  },
+  "schema": "residual-essential-path-core-topup-audit-v1",
+  "status": "ALL_RESPONSES_REDUCED_TO_TARGET_COMPENSATION_OR_CORE_ROTATION",
+  "surviving_separator": "the minimal residual part J needed by the response source exceeds the restored target owner's complete protected surplus",
+  "symbolic_checks": {
+    "empty_residual_part_reduces_to_core_case": true,
+    "failed_target_payment_captures_surplus": true,
+    "mixed_response_pays_source": true
+  }
+}

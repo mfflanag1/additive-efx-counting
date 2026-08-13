@@ -1,0 +1,98 @@
+{
+  "claim_boundary": "cap-free selector and local countermodel only; not a globally lex-maximal GG countermodel",
+  "local_positive_rational_separator": {
+    "A_2": [
+      "a0",
+      "a1"
+    ],
+    "P": [
+      "p0",
+      "p1"
+    ],
+    "R_2": [
+      "r"
+    ],
+    "base_utilities": {
+      "hole": "10",
+      "middle": "10",
+      "observer_a": "10",
+      "observer_b": "10"
+    },
+    "desired_core_count": 1,
+    "goods": [
+      "a0",
+      "a1",
+      "p0",
+      "p1",
+      "r"
+    ],
+    "hole_floor": "10",
+    "hole_packet_inclusion_minimal": true,
+    "middle_core_inclusion_minimal_for_floor": true,
+    "middle_feasible_exchange_count": 1,
+    "middle_feasible_exchanges": [
+      {
+        "H": [
+          "a0",
+          "a1"
+        ],
+        "K": [
+          "p0",
+          "p1"
+        ],
+        "hole_value": "1/5",
+        "middle_value": "121/10"
+      }
+    ],
+    "middle_floor": "10",
+    "separator": "hole",
+    "successful_exchange_count": 0,
+    "valuations": {
+      "hole": {
+        "a0": "1/10",
+        "a1": "1/10",
+        "p0": "6",
+        "p1": "6",
+        "r": "1/10"
+      },
+      "middle": {
+        "a0": "6",
+        "a1": "6",
+        "p0": "6",
+        "p1": "6",
+        "r": "1/10"
+      },
+      "observer_a": {
+        "a0": "1/10",
+        "a1": "1/10",
+        "p0": "1/10",
+        "p1": "1/10",
+        "r": "1/10"
+      },
+      "observer_b": {
+        "a0": "1/10",
+        "a1": "1/10",
+        "p0": "1/10",
+        "p1": "1/10",
+        "r": "1/10"
+      }
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_endpoint_hole_core_exchange_selector.py",
+    "script_sha256": "a5f831a256034f47ebb0192e87aa0c186427c2458dd241372623e1eb010fe457",
+    "theorem": "results/ENDPOINT_HOLE_CORE_EXCHANGE_SELECTOR_LEMMA_20260813.md",
+    "theorem_sha256": "e502bbdfc876665e7cb5a5556cd273662542e18bdd9b1db34288bc70ca4aad22",
+    "z3_version": "5.0.0"
+  },
+  "schema": "endpoint-hole-core-exchange-selector-audit-v1",
+  "smallest_remaining_operation": "eliminate the hole/middle two-row separator using an anchored GG inequality, priority-valid floor sacrifice, or an outside packet",
+  "status": "EXACT_TRICHOTOMY_WITH_LOCAL_HOLE_SEPARATOR",
+  "symbolic_checks": {
+    "hole_failure_separator": true,
+    "middle_exhaustion_separator": true,
+    "pool_conservation": true,
+    "success_pays_hole": true,
+    "success_pays_middle": true
+  }
+}

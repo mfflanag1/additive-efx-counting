@@ -30,6 +30,7 @@ DEPENDENCIES = (
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
+    ("FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md", "four_old_core_shortcut_interface_audit.json"),
 )
 
 
@@ -62,27 +63,29 @@ def run(root: Path) -> dict:
     referee_gap = any(
         record["audit_status"] == "TERMINATION_GAP_FOUND" for record in records
     )
+    interface_refuted = any(
+        record["audit_status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"
+        for record in records
+    )
 
     script = Path(__file__).resolve()
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "REFEREE_GAP_FOUND" if referee_gap else (
+        "status": "INTERFACE_REFUTED" if interface_refuted else (
+            "REFEREE_GAP_FOUND" if referee_gap else (
             "DEPENDENCIES_REPLAYABLE" if verified else "OPEN"
-        ),
+        )),
         "dependency_count": len(records),
         "records": records,
         "proved_reduction": (
             "all mixed-margin Hamiltonian-path states pay every row or yield an "
             "incoming-core self-response/current-safe decorated response"
         ),
-        "exact_surviving_separator": (
-            "rank-completing paid-response splice for an already recorded "
-            "unsafe deletion-return response at response rank below four"
-        ),
+        "exact_surviving_separator": "correct mixed-edge Hamiltonian import",
         "claim_boundary": (
-            "payment reduction only; mixed-margin termination, GG closure, and "
-            "four-agent/general EFX remain open"
+            "the all-old-core splice normal form is vacuous; reconstruct the "
+            "mixed current-safe edge before asserting mixed-margin termination"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

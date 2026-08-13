@@ -53,6 +53,14 @@ def run(root: Path) -> dict:
         "gg_rank_reset_raw_potential_refutation_audit.json",
         "GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md",
         "gg_historical_support_ledger_stagnation_audit.json",
+        "PAID_RESPONSE_PATH_CORE_ROTATION_LEMMA_20260813.md",
+        "paid_response_path_core_rotation_audit.json",
+        "RESIDUAL_ESSENTIAL_PATH_CORE_TOPUP_LEMMA_20260813.md",
+        "residual_essential_path_core_topup_audit.json",
+        "ENDPOINT_HOLE_CORE_EXCHANGE_SELECTOR_LEMMA_20260813.md",
+        "endpoint_hole_core_exchange_selector_audit.json",
+        "FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md",
+        "four_old_core_shortcut_interface_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -74,21 +82,52 @@ def run(root: Path) -> dict:
     assert referee["minimal_trimmed_countermodel"]["residual_partition_family_size"] == 4096
     assert referee["minimal_trimmed_countermodel"]["efx_floor_feasible_residual_partitions"] == 0
 
+    rotation = json.loads(
+        (result_dir / "paid_response_path_core_rotation_audit.json").read_text()
+    )
+    assert rotation["outcome_counts"] == {
+        "internally_supplied_segment_cycle": 3,
+        "rank_four": 2,
+        "endpoint_hole_core_exchange": 1,
+    }
+    assert all(
+        replay["efx"] for replay in rotation["frozen_witness_replays"].values()
+    )
+    mixed = json.loads(
+        (result_dir / "residual_essential_path_core_topup_audit.json").read_text()
+    )
+    assert mixed["status"] == (
+        "ALL_RESPONSES_REDUCED_TO_TARGET_COMPENSATION_OR_CORE_ROTATION"
+    )
+    exchange = json.loads(
+        (result_dir / "endpoint_hole_core_exchange_selector_audit.json").read_text()
+    )
+    assert exchange["status"] == "EXACT_TRICHOTOMY_WITH_LOCAL_HOLE_SEPARATOR"
+    shortcut = json.loads(
+        (result_dir / "four_old_core_shortcut_interface_audit.json").read_text()
+    )
+    assert shortcut["status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"
+
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "SMALLEST_TERMINAL_ISOLATED",
+        "status": "STATED_GG_SPLICE_INTERFACE_REFUTED",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "rank-completing paid-response splice",
+        "smallest_named_terminal": "correct mixed-edge Hamiltonian import",
+        "stated_four_old_core_normal_form_vacuous": True,
+        "core_rotation_outcome_counts": rotation["outcome_counts"],
+        "frozen_witnesses_escape_by_efx_rotation": True,
+        "residual_essential_separator": mixed["surviving_separator"],
+        "endpoint_exchange_separator": exchange["smallest_remaining_operation"],
         "well_founded_order_status": "REFUTED_FOR_CURRENT_COORDINATES",
         "local_recurrence_response_rank": 1,
         "residual_partition_family_size": 4096,
         "efx_floor_feasible_residual_partitions": 0,
-        "uncovered_premise_count": 6,
+        "uncovered_premise_count": 7,
         "dependencies": records,
         "claim_boundary": (
             "branch-complete reduction of the current GG architecture, not a GG "

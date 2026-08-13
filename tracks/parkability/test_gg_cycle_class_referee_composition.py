@@ -18,9 +18,11 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "SMALLEST_TERMINAL_ISOLATED"
+    assert result["status"] == "STATED_GG_SPLICE_INTERFACE_REFUTED"
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
-    assert result["smallest_named_terminal"] == "rank-completing paid-response splice"
+    assert result["smallest_named_terminal"] == "correct mixed-edge Hamiltonian import"
+    assert result["stated_four_old_core_normal_form_vacuous"]
+    assert result["frozen_witnesses_escape_by_efx_rotation"]
     assert result["local_recurrence_response_rank"] == 1
     assert result["residual_partition_family_size"] == 4096
     assert result["efx_floor_feasible_residual_partitions"] == 0

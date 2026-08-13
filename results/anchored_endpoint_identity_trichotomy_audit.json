@@ -1,0 +1,104 @@
+{
+  "claim_boundary": "identity enumeration only; no flower-specific reverse inequality or GG closure",
+  "endpoint_count": 6,
+  "identity_type_counts": {
+    "III_root_middle_q_source": 2,
+    "II_root_target_q_middle": 2,
+    "I_root_hole_q_target": 2
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_anchored_endpoint_identity_trichotomy.py",
+    "script_sha256": "526ee08808639d90d65effb55aed4a678224f756d934054cf821d3c7d50b8b75",
+    "source": "results/anchored_mixed_margin_path_terminal_classification_audit.json",
+    "source_sha256": "131b22820720d37578fbc4fb044afbb4b5c260579bd5933dc48bf93a403296a3",
+    "theorem": "results/ANCHORED_ENDPOINT_IDENTITY_TRICHOTOMY_20260813.md",
+    "theorem_sha256": "b91599cc0e089becdada7c87f75e2e8616780e0f07a9687266ca0d909d0bec8d"
+  },
+  "records": [
+    {
+      "failed_target": "q",
+      "hole": "r",
+      "identity_type": "I_root_hole_q_target",
+      "middle": "c",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "failed_target": "q",
+      "hole": "r",
+      "identity_type": "I_root_hole_q_target",
+      "middle": "s",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "failed_target": "r",
+      "hole": "c",
+      "identity_type": "II_root_target_q_middle",
+      "middle": "q",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "failed_target": "s",
+      "hole": "c",
+      "identity_type": "III_root_middle_q_source",
+      "middle": "r",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "failed_target": "r",
+      "hole": "s",
+      "identity_type": "II_root_target_q_middle",
+      "middle": "q",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "failed_target": "c",
+      "hole": "s",
+      "identity_type": "III_root_middle_q_source",
+      "middle": "r",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    }
+  ],
+  "remaining_gates": {
+    "III_root_middle_q_source": "root-preserving two-external-hole selector",
+    "II_root_target_q_middle": "root/q compensation fork with external sink",
+    "I_root_hole_q_target": "simultaneous root-hole and q-target blockade"
+  },
+  "schema": "anchored-endpoint-identity-trichotomy-audit-v1",
+  "status": "SIX_ENDPOINTS_REDUCED_TO_THREE_IDENTITY_TYPES"
+}

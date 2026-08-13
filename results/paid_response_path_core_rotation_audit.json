@@ -1,0 +1,229 @@
+{
+  "claim_boundary": "cap-free path/core combinatorics and payment only; residual-essential responses and feasibility of the endpoint hole/core exchange remain open",
+  "frozen_witness_replays": {
+    "first": {
+      "charity": [
+        "a3",
+        "d0",
+        "x3"
+      ],
+      "efx": true,
+      "rotated_allocation": {
+        "s": [
+          "a1",
+          "x1"
+        ],
+        "t": [
+          "d1"
+        ],
+        "u": [
+          "a0",
+          "x0"
+        ],
+        "w": [
+          "a2",
+          "x2"
+        ]
+      },
+      "utilities": {
+        "s": "5",
+        "t": "3",
+        "u": "2",
+        "w": "2"
+      }
+    },
+    "trimmed": {
+      "charity": [
+        "a3",
+        "d0",
+        "x3"
+      ],
+      "efx": true,
+      "rotated_allocation": {
+        "s": [
+          "a1",
+          "x1"
+        ],
+        "t": [
+          "d1",
+          "d2"
+        ],
+        "u": [
+          "a0",
+          "x0"
+        ],
+        "w": [
+          "a2",
+          "x2"
+        ]
+      },
+      "utilities": {
+        "s": "5",
+        "t": "5",
+        "u": "31/10",
+        "w": "31/10"
+      }
+    }
+  },
+  "order_count": 6,
+  "orders": [
+    {
+      "cycle_sources": [
+        1,
+        2
+      ],
+      "locations": {
+        "A_0": "charity",
+        "A_1": 2,
+        "A_2": 1,
+        "A_3": 3
+      },
+      "nonself_sources": [
+        0,
+        1,
+        2
+      ],
+      "outcome": "internally_supplied_segment_cycle",
+      "response_rank": 3,
+      "source_position": 1,
+      "target_position": 2
+    },
+    {
+      "cycle_sources": [
+        1,
+        2,
+        3
+      ],
+      "locations": {
+        "A_0": "charity",
+        "A_1": 2,
+        "A_2": 3,
+        "A_3": 1
+      },
+      "nonself_sources": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "outcome": "internally_supplied_segment_cycle",
+      "response_rank": 4,
+      "source_position": 1,
+      "target_position": 3
+    },
+    {
+      "cycle_sources": [],
+      "locations": {
+        "A_0": 1,
+        "A_1": 2,
+        "A_2": 3,
+        "A_3": "charity"
+      },
+      "nonself_sources": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "outcome": "rank_four",
+      "response_rank": 4,
+      "source_position": 2,
+      "target_position": 1
+    },
+    {
+      "cycle_sources": [
+        2,
+        3
+      ],
+      "locations": {
+        "A_0": "charity",
+        "A_1": 1,
+        "A_2": 3,
+        "A_3": 2
+      },
+      "nonself_sources": [
+        0,
+        2,
+        3
+      ],
+      "outcome": "internally_supplied_segment_cycle",
+      "response_rank": 3,
+      "source_position": 2,
+      "target_position": 3
+    },
+    {
+      "cycle_sources": [],
+      "locations": {
+        "A_0": 1,
+        "A_1": 3,
+        "A_2": 2,
+        "A_3": "charity"
+      },
+      "nonself_sources": [
+        0,
+        1,
+        3
+      ],
+      "outcome": "endpoint_hole_core_exchange",
+      "response_rank": 3,
+      "source_position": 3,
+      "target_position": 1
+    },
+    {
+      "cycle_sources": [],
+      "locations": {
+        "A_0": 1,
+        "A_1": 2,
+        "A_2": 3,
+        "A_3": "charity"
+      },
+      "nonself_sources": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "outcome": "rank_four",
+      "response_rank": 4,
+      "source_position": 3,
+      "target_position": 2
+    }
+  ],
+  "outcome_counts": {
+    "endpoint_hole_core_exchange": 1,
+    "internally_supplied_segment_cycle": 3,
+    "rank_four": 2
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_paid_response_path_core_rotation.py",
+    "script_sha256": "9873bdbdb8767e5a6cf5f7a1b753217554151294762d578a91629bd14c1797ab",
+    "theorem": "results/PAID_RESPONSE_PATH_CORE_ROTATION_LEMMA_20260813.md",
+    "theorem_sha256": "5bd676e6aa02641f89b9a4d7c8bec3ffaa3abef28237fad759327896fc282350",
+    "z3_version": "5.0.0"
+  },
+  "schema": "paid-response-path-core-rotation-audit-v1",
+  "status": "CORE_SUPPORTED_REDUCED_TO_ONE_ENDPOINT_EXCHANGE",
+  "symbolic_payment_checks": {
+    "restored_target_preserves_floor": true,
+    "source_strictly_paid": true,
+    "unchanged_target_preserves_floor": true
+  },
+  "unique_survivor": {
+    "cycle_sources": [],
+    "locations": {
+      "A_0": 1,
+      "A_1": 3,
+      "A_2": 2,
+      "A_3": "charity"
+    },
+    "nonself_sources": [
+      0,
+      1,
+      3
+    ],
+    "outcome": "endpoint_hole_core_exchange",
+    "response_rank": 3,
+    "source_position": 3,
+    "target_position": 1
+  }
+}

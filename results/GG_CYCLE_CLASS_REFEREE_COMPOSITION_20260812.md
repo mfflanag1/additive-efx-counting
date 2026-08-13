@@ -2,8 +2,12 @@
 
 **Date:** 2026-08-12
 
-**Status:** branch-complete reduction of the current GG proof architecture to
-one smallest named terminal; no cap-free GG closure theorem is established
+**Status:** **superseded interface audit (2026-08-13).** The former branch
+graph reaches a locally meaningful splice, but its G9--G10 import asserts
+four disjoint old base-common-safe desired cores. That family itself is an
+immediate partial EFX Pareto improvement. Therefore the stated splice is
+vacuous at a globally maximal GG base and the actual mixed-edge interface
+must be reconstructed; no cap-free GG closure theorem is established
 
 ## Claim boundary
 
@@ -140,12 +144,43 @@ next operation must move or replace a desired core, alter the returned hole
 packet `P`, or invoke a genuinely stronger GG inequality.  Residual-only
 top-up is not the missing theorem.
 
+### Sharpened splice boundary (2026-08-13)
+
+The path geometry resolves most of `T*` without another bounded search.
+For a response inside the failed target's assigned path core, rotate that
+core to the response source and restore every displaced old path target.
+Of the six nonself source/target orders, three expose an internally supplied
+core cycle and two produce a paid rank-four matching.  Both frozen rational
+countermodels reach EFX under this operation.
+
+Only the endpoint order `(target position,source position)=(1,3)` remains.
+There the core rotation has rank three, with the middle core still assigned
+to its own source.  Moving a desired subcore of that middle core into the
+returned hole and compensating the middle owner from `P` either completes
+rank four or yields an exact two-row hole-surplus separator.
+
+No core-supported assumption is ultimately required.  For a mixed response
+`E subseteq A_l+R_l`, give its source the full `A_l` plus
+`J=E intersect R_l`.  This always strictly pays the source.  Failure can
+occur only because removing `J` consumes more than the restored target
+owner's protected surplus.  Thus the sharpened terminal is:
+
+> jointly compensate the minimal residual top-up `J` and, in the unique
+> endpoint order, exchange a desired middle core against the returned hole
+> packet `P`; otherwise contradict the resulting explicit target-surplus or
+> hole-surplus inequality using the anchored GG flower.
+
+This is still not a GG closure theorem, but it removes the generic
+rank-completion ambiguity and shows that the earlier frozen witnesses do
+not survive the allowed core move.
+
 ## Uncovered premises
 
-1. **Rank completion:** one repeated safe response at `Z` need not extend to
-   a rank-four response matching.
-2. **Budget-preserving completion:** even if graph rank can be increased, the
-   added cores must preserve every decorated observer surplus.
+1. **Residual compensation:** the minimal residual part `J` needed by the
+   response source can exceed the restored target owner's protected surplus.
+2. **Endpoint hole/core exchange:** in the unique order `(1,3)`, every packet
+   compensating the displaced middle owner can exceed the hole surplus after
+   crediting the moved desired core.
 3. **Internal supply:** the completed response cores' incoming packets must
    be released within the selected component before PI is invoked.
 4. **Global state order:** no single order is proved monotone across root,
@@ -160,9 +195,12 @@ top-up is not the missing theorem.
 
 There is no referee-grade cap-free GG closure theorem yet.  The payment part
 of the Hamiltonian mixed-margin move is useful and correct, but the former
-closure claim skipped `T*`.  The highest-leverage next theorem is rank
-completion at the paid deletion-return state, not another packet-size cell,
-support counter, or fixed response order.
+closure claim skipped `T*`.  Path-core rotation now resolves five of six
+orders and reduces mixed responses to a named residual payment.  The
+highest-leverage next theorem is the joint compensation selector at the
+endpoint order, followed by an identity-specific use of the GG root/q
+inequalities—not another packet-size cell, support counter, or fixed
+response order.
 
 Primary evidence:
 
@@ -172,3 +210,27 @@ Primary evidence:
 - [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json)
 - [`GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md`](GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md)
 - [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md)
+- [`PAID_RESPONSE_PATH_CORE_ROTATION_LEMMA_20260813.md`](PAID_RESPONSE_PATH_CORE_ROTATION_LEMMA_20260813.md)
+- [`RESIDUAL_ESSENTIAL_PATH_CORE_TOPUP_LEMMA_20260813.md`](RESIDUAL_ESSENTIAL_PATH_CORE_TOPUP_LEMMA_20260813.md)
+- [`ENDPOINT_HOLE_CORE_EXCHANGE_SELECTOR_LEMMA_20260813.md`](ENDPOINT_HOLE_CORE_EXCHANGE_SELECTOR_LEMMA_20260813.md)
+
+## Interface supersession (2026-08-13)
+
+The four-old-core shortcut exposes a premise conflict earlier than `T*`.
+The deletion-return state cannot simultaneously have four pairwise-disjoint
+base-common-safe desired path cores and a globally lex-maximal partial EFX
+base. Assigning those cores to their four response sources is already EFX
+and strictly Pareto improving.
+
+Accordingly, the branch graph above audits the manuscripts as written, but
+is not a valid import from the underlying GG definitions. The smallest
+unresolved interface is now:
+
+> reconstruct the Hamiltonian path with its actual mixed edge: identify
+> which selected core is only current-safe, its positive base-debt rows, and
+> which three old cores remain simultaneously physical and disjoint.
+
+Only after this import is fixed can the residual-compensation and endpoint
+hole/core selectors be composed. The conditional path rotation and its
+three anchored identity types remain useful proof templates, but they do
+not close the corrected mixed observer budgets.

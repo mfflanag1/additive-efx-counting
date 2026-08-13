@@ -2,10 +2,12 @@
 
 **Date:** 2026-08-11
 
-**Status:** **referee-corrected 2026-08-12.**  Payment reduction is cap-free,
-but an unsafe deletion-return candidate can reach an already recorded
-rank-one response.  Mixed-margin termination remains open at the
-rank-completing paid-response splice.
+**Status:** **interface-refuted 2026-08-13.** The 2026-08-12 referee audit
+found a rank-completion gap, but the stated deletion-return import is itself
+inconsistent with global maximality: four disjoint base-common-safe desired
+path cores give an immediate partial EFX Pareto improvement. The actual
+mixed current-safe path edge must be reconstructed before this checkpoint
+can support a GG theorem.
 
 ## Authoritative state
 
@@ -182,3 +184,6 @@ The original manifest established only replayability of its dependencies, not
 the missing implication.  The independent referee audit is
 [`CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md`](CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md).
 Mixed-margin recurrence, GG, and four-agent/general additive EFX remain open.
+
+The superseding interface audit is
+[`FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md`](FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md).

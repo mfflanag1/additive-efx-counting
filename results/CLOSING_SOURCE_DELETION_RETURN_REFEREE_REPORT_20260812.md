@@ -168,3 +168,21 @@ owner's complete direct-safety floor against the other three candidate
 targets.  Consequently the terminal also survives spending any proper
 subpacket of `P`: removing one good immediately violates the hole owner's
 required floor.
+
+## Subsequent splice refinement (2026-08-13)
+
+The two rational witnesses above refute the former logical implication, but
+they are **not** countermodels to the broader rank-completing bridge.  In
+both, the repeated response lies in the failed target's assigned path core.
+The deterministic path-core rotation restores the prefix and suffix old
+targets, moves that core to the response source, and produces an exact EFX
+allocation.  See
+[`PAID_RESPONSE_PATH_CORE_ROTATION_LEMMA_20260813.md`](PAID_RESPONSE_PATH_CORE_ROTATION_LEMMA_20260813.md).
+
+For all six source/target orders, three rotations expose an internally
+supplied segment cycle, two reach rank four, and only the endpoint order
+`(target position,source position)=(1,3)` remains.  A response that also
+uses target residual goods reduces to one named target-owner surplus
+capture; it is not a separate untyped case.  The surviving operation is now
+the joint residual-compensation/endpoint hole-core exchange, rather than the
+generic rank-completion phrase used in the original verdict.
