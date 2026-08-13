@@ -1,0 +1,90 @@
+{
+  "anchor_case_refutation": {
+    "a_after_Rq": "5",
+    "a_after_complete_pool": "11",
+    "anchor": [
+      "k1",
+      "k2"
+    ],
+    "anchor_response_disjoint": true,
+    "overlap": [
+      "j"
+    ],
+    "response": [
+      "e",
+      "j"
+    ],
+    "root_anchor_response_value": "25",
+    "root_base": "10",
+    "sacrifice_handoff_partitions_pool": true
+  },
+  "dependencies": [
+    {
+      "path": "results/SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md",
+      "sha256": "a7f01bc196363de090551c671c8f35f66acb455134e8597c86d15568ca4c7d49"
+    },
+    {
+      "path": "results/supplier_saturation_does_not_force_mixed_cycle_payment_audit.json",
+      "sha256": "4f1a7004ac7a1ddb946ad1c08e971b2dc8b738ad2b5ff814e70fa6a8497674b4"
+    },
+    {
+      "path": "results/supplier_saturated_payment_refutation_independent_audit.json",
+      "sha256": "936b0579d548945081e3dbc844a17d26637dc241a18e53a5a83089ffa994e64b"
+    },
+    {
+      "path": "results/ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md",
+      "sha256": "b2ed3185e3960245af41724e5d2b149bfe304724c011e1e05a010fc5a7ff4b76"
+    },
+    {
+      "path": "results/root_sourced_complete_signed_residual_compensation_audit.json",
+      "sha256": "0424d939ec3a670a548ba636260f7a0876cca53ed148ba286b698ea8bbf9123e"
+    },
+    {
+      "path": "results/ROOT_SOURCED_ANCHOR_RETAINING_SACRIFICE_HANDOFF_LEMMA_20260813.md",
+      "sha256": "cccc0b42fb502ac333f7f37f283dd104b7994fe52bcd13ce831a56030a3244a5"
+    },
+    {
+      "path": "results/root_sourced_anchor_retaining_sacrifice_handoff_audit.json",
+      "sha256": "c4e3ba0d8b7e72be40a12e3010181b615104e208b3f2e917449b3df39c3d064b"
+    },
+    {
+      "path": "results/ENLARGED_ROOT_TARGET_ANCHOR_HITTING_TRICHOTOMY_20260813.md",
+      "sha256": "0bb5cd80254c616f7793465bbdee62dada1e2909bcc2f38a74b7438f4d5d4144"
+    },
+    {
+      "path": "results/enlarged_root_target_anchor_hitting_trichotomy_audit.json",
+      "sha256": "373e778e8e1f61d7d925b668286b6eeabbbfa8d4668f0bf8c0d6706e73706982"
+    }
+  ],
+  "excluded_claims": [
+    "globally recurrent GG closure",
+    "four-agent additive EFX",
+    "general additive EFX"
+  ],
+  "generic_payment_refutation": {
+    "blocked_full_pool_value": "57/5",
+    "decorated_threshold": "12",
+    "efx_all_paid_count": 0,
+    "permanent_anchor_retained": true,
+    "residual_assignment_count": 625,
+    "supplier_closure": [
+      "r",
+      "q",
+      "a",
+      "b"
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_post_recruitment_observer_payment_resolution_independent.py",
+    "script_sha256": "443b20811a0ed38d52c9ce2e20a9df1362f138d128ed745cf273350ae234f94e",
+    "theorem": "results/POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md",
+    "theorem_sha256": "0211588f1c12d0ef04eda549266ea3e9fcfad416573fe9620a1fcf298f83f079"
+  },
+  "resolved_claims": [
+    "supplier saturation does not force mixed-cycle observer payment",
+    "R_q is not the complete anchor-preserving compensation reservoir",
+    "complete-pool payment is not required before a priority-valid sacrifice handoff"
+  ],
+  "schema": "post-recruitment-observer-payment-resolution-independent-audit-v1",
+  "status": "POST_RECRUITMENT_PAYMENT_OBJECTIVE_EXACTLY_REFUTED"
+}

@@ -60,6 +60,13 @@ in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 The August 13 post-recruitment audit corrects two overstrong intermediate
 headlines:
 
+- [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
+  ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))
+  gives the requirement-by-requirement final verdict: the generic supplier-
+  saturated observer-payment implication and its `R_q`-only anchor case are
+  exactly refuted. The stronger globally recurrent GG closure remains a
+  separate open theorem.
+
 - [`SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md`](SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md)
   ([exact audit](supplier_saturation_does_not_force_mixed_cycle_payment_audit.json),
   [independent replay](supplier_saturated_payment_refutation_independent_audit.json))

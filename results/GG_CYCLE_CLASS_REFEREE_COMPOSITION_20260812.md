@@ -319,6 +319,13 @@ anchor good individually response-critical. The current smallest terminal
 is therefore a permanent-anchor hitting-set recurrence (plus the already
 named source-inactive case), not a residual-payment inequality.
 
+The narrower post-recruitment observer-payment objective is now formally
+closed as a refutation in
+[`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md).
+That verdict should not be misread as closure of this stronger GG
+composition: global recurrence/maximality still has to eliminate or escape
+the permanent-anchor hitting set.
+
 The exact objective “recruit the signed surplus or make a strict finite GG
 transition” is closed in
 [`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).
