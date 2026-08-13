@@ -65,6 +65,8 @@ def run(root: Path) -> dict:
         "genuine_mixed_edge_hamiltonian_interface_audit.json",
         "GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md",
         "general_mixed_edge_deletion_return_composition_audit.json",
+        "SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md",
+        "signed_surplus_prefix_recruitment_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -118,18 +120,22 @@ def run(root: Path) -> dict:
     general = json.loads(
         (result_dir / "general_mixed_edge_deletion_return_composition_audit.json").read_text()
     )
-    assert general["status"] == "ALL_KAPPA_REDUCED_TO_DECORATED_POOL_SEPARATOR"
+    assert general["status"] == "ALL_KAPPA_SCALAR_REDUCTION_POOL_WITNESS_NOT_TERMINAL"
+    recruitment = json.loads(
+        (result_dir / "signed_surplus_prefix_recruitment_audit.json").read_text()
+    )
+    assert recruitment["status"] == "RECRUITMENT_WELL_FOUNDED_POOL_SEPARATOR_SUPERSEDED"
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "MIXED_INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR",
+        "status": "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "signed-surplus participant-pool compensation",
+        "smallest_named_terminal": "full-prefix recurrent current response",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,

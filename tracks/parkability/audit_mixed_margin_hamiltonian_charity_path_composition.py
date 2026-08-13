@@ -34,6 +34,7 @@ DEPENDENCIES = (
     ("GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md", "genuine_mixed_edge_hamiltonian_interface_audit.json"),
     ("CORRECTED_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md", "corrected_mixed_edge_deletion_return_composition_audit.json"),
     ("GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md", "general_mixed_edge_deletion_return_composition_audit.json"),
+    ("SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md", "signed_surplus_prefix_recruitment_audit.json"),
 )
 
 
@@ -70,8 +71,8 @@ def run(root: Path) -> dict:
         record["audit_status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"
         for record in records
     )
-    interface_reconstructed = any(
-        record["audit_status"] == "ALL_KAPPA_REDUCED_TO_DECORATED_POOL_SEPARATOR"
+    recruitment_complete = any(
+        record["audit_status"] == "RECRUITMENT_WELL_FOUNDED_POOL_SEPARATOR_SUPERSEDED"
         for record in records
     )
 
@@ -79,7 +80,7 @@ def run(root: Path) -> dict:
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR" if interface_reconstructed else (
+        "status": "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE" if recruitment_complete else (
             "INTERFACE_REFUTED" if interface_refuted else (
             "REFEREE_GAP_FOUND" if referee_gap else (
                 "DEPENDENCIES_REPLAYABLE" if verified else "OPEN"
@@ -90,10 +91,10 @@ def run(root: Path) -> dict:
             "all mixed-margin Hamiltonian-path states pay every row or yield an "
             "incoming-core self-response/current-safe decorated response"
         ),
-        "exact_surviving_separator": "selected-core/hole-pool compensation separator",
+        "exact_surviving_separator": "full-prefix recurrent current response",
         "claim_boundary": (
-            "the mixed interface is reconstructed for kappa 1,2,3; signed "
-            "component surplus is still needed to contradict the pool separator"
+            "the mixed interface and cap-free prefix recruitment are proved; "
+            "mixed-cycle payment/forward-chord conversion remains open"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

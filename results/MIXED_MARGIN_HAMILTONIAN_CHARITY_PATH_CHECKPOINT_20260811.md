@@ -2,12 +2,15 @@
 
 **Date:** 2026-08-11
 
-**Status:** **interface reconstructed; pool separator open (2026-08-13).**
+**Status:** **interface reconstructed; signed-surplus recruitment completed,
+recurrent-response terminal open (2026-08-13).**
 The four-old-core import was indeed inconsistent with global maximality.
 The genuine definition-level interface has now been reconstructed for every
 mixed count `kappa in {1,2,3}` and the paid deletion-return argument re-run.
-It terminates at the selected-core/hole-pool compensation separator, not at a
-four-agent EFX theorem.
+The apparent selected-core/hole-pool terminal used a witness that misses two
+preceding branch premises. Predecessor-prefix retention now recruits every
+underfunded old source cap-free; the remaining terminal is a full-prefix
+recurrent current response, not a four-agent EFX theorem.
 
 ## Authoritative state
 
@@ -201,12 +204,16 @@ each decorated core `D`, its exact base debt is
 
 The cap-free payment re-run is
 [`GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md`](GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md).
-It covers all 1,008 mixed path/decoration/closing-position cases. Atomic
-deletion-return, old-recipient residual return, and incoming-core rotation
-resolve every branch except a finite but unbounded-by-packet-size partition
-of the complete hole/selected-core participant pool. An exact positive-
-rational local interface instance rejects all 262,144 such partitions.
-Consequently current safety alone is insufficient: the next GG operation
-must retain or recruit the signed component realizing the blocking
-observer's surplus. The local separator is not a globally maximal GG
-counterexample.
+It covers all 1,008 mixed path/decoration/closing-position cases. Its finite
+pool selector remains sufficient, but the 262,144-partition null table does
+not satisfy its advertised post-residual premises: the fixed old observer is
+already unsafe against the original decorated core and the required hole-row
+inequality is false.
+
+The superseding
+[`SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md`](SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md)
+retains the predecessor-closed current-target prefix through each old
+blocker. The prefix increases at most three times while preserving target
+provenance and the permanent anchor. The live endpoint is a supplier-
+saturated mixed backward cycle or an anchor-preserving forward-chord
+conversion.

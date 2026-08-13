@@ -16,9 +16,9 @@ def test_mixed_margin_hamiltonian_charity_path_composition_replays():
 
 def test_mixed_margin_hamiltonian_charity_path_dependencies_replay():
     result = run(ROOT)
-    assert result["status"] == "INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR"
-    assert result["dependency_count"] == 24
-    assert result["exact_surviving_separator"] == "selected-core/hole-pool compensation separator"
+    assert result["status"] == "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE"
+    assert result["dependency_count"] == 25
+    assert result["exact_surviving_separator"] == "full-prefix recurrent current response"
     assert any(record["audit_status"] == "TERMINATION_GAP_FOUND" for record in result["records"])
     assert any(
         record["audit_status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"

@@ -2,8 +2,9 @@
 
 **Date:** 2026-08-13
 
-**Status:** cap-free re-run for every genuine mixed Hamiltonian matching;
-the exact survivor is a decorated-core-pool compensation separator
+**Status:** scalar re-run for every genuine mixed Hamiltonian matching;
+the claimed pool-separator terminal is superseded by the signed-surplus
+predecessor-prefix recruitment audit
 
 ## Input
 
@@ -157,15 +158,19 @@ one-decorated theorem is therefore always a strict subfamily. For
 precisely, the smaller direct selector is only a subfamily: its local
 countermodel has 89 feasible allocations once `g` and `K_t` are restored.
 
-The audit also gives a separate positive-rational local separator for the
-complete pool (13). Every pool cell that pays the decorated source contains
-at least three pool goods; an old-core observer values every such deletion
-remainder above her selected-core margin. The decorated cores are nevertheless
-current-safe because that observer has larger realized surplus at `Y`.
-All 262,144 pool partitions fail. Thus current safety alone cannot force the
-selector: the next operation must retain or recruit the signed component
-that realizes the blocking observer's surplus. This is a local interface
-countermodel, not a globally maximal GG state.
+The audit gives a positive-rational table in which all 262,144 pool
+partitions fail. That census is correct, but the table is **not** in the
+post-residual terminal claimed here: its fixed old observer has utility `11`
+against threshold `12` for the original decorated core, and its alleged hole
+row has `v_t(P)=12` against decorated threshold `8`. Thus the old observer
+must already enter the residual/incoming-core branch and the required hole
+separator is absent. The table cannot certify the final pool obstruction.
+
+The superseding operation is predecessor-closed target retention in
+[`SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md`](SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md).
+It recruits the physical target realizing an underfunded old source's current
+surplus, together with every predecessor target needed to avoid the incoming-
+core collision. The prefix coordinate increases strictly at most three times.
 
 ## Exact result
 
@@ -175,18 +180,20 @@ Every mixed Hamiltonian deletion-return state now has one of four outcomes:
 2. a paid old-recipient residual whose unsafe target yields a fully labeled
    current response;
 3. an incoming-core alternating pivot/source change by (11); or
-4. a feasible special-pool EFX allocation, or the selected-core/hole-pool
-   compensation separator.
+4. a feasible special-pool EFX allocation, or failure of this selector as a
+   nonterminal signal to invoke predecessor-prefix recruitment.
 
-The old four-common-core shortcut and the old rank-completing splice are
-both superseded.  The remaining flower-specific task is to contradict the
-pool separator using the root/q reservoir and signed component inequalities,
-or realize it at a globally maximal GG state.
+The old four-common-core shortcut, old rank-completing splice, and claimed
+local pool terminal are all superseded. The surviving flower-specific task
+is a full-prefix recurrent current response: pay a supplier-saturated mixed
+backward cycle, or convert a forward chord into an anchor-preserving strict
+matching transition using the root/q inequalities.
 
 ## Claim boundary
 
-This theorem re-runs payment and observer safety for `|C|=1,2,3` without
-assuming four old cores.  It does not force a feasible pool partition,
-terminate an exact repeated response created by an unsafe residual target,
+This theorem re-runs the scalar payment and observer classification for
+`|C|=1,2,3` without assuming four old cores. Its pool selector remains a
+valid sufficient family, but its archived null witness does not satisfy the
+terminal premises. It does not terminate the full-prefix repeated response,
 derive the GG root/q reverse inequality, close GG, or prove four-agent/
 general additive EFX.

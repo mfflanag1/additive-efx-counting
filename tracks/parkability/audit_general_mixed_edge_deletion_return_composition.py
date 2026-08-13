@@ -164,22 +164,42 @@ def run(root: Path) -> dict:
     }
     assert participant_count_distribution == {"2": 216, "3": 576, "4": 216}
     local_separator = full_pool_local_separator()
+    rows = {
+        agent: {good: Fraction(number) for good, number in row.items()}
+        for agent, row in local_separator["valuations"].items()
+    }
+    old_observer_prepaid = rows["a"]["aa"] >= (
+        sum((rows["a"][good] for good in local_separator["D"]), Fraction())
+        - min(rows["a"][good] for good in local_separator["D"])
+    )
+    hole_row_separator = sum(
+        (rows["t"][good] for good in local_separator["P"]), Fraction()
+    ) < (
+        sum((rows["t"][good] for good in local_separator["D"]), Fraction())
+        - min(rows["t"][good] for good in local_separator["D"])
+    )
+    assert not old_observer_prepaid
+    assert not hole_row_separator
 
     script = Path(__file__).resolve()
     theorem = root / "results/GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md"
     return {
         "schema": "general-mixed-edge-deletion-return-composition-audit-v1",
-        "status": "ALL_KAPPA_REDUCED_TO_DECORATED_POOL_SEPARATOR",
+        "status": "ALL_KAPPA_SCALAR_REDUCTION_POOL_WITNESS_NOT_TERMINAL",
         "symbolic_checks": symbolic,
         "mixed_interface_case_count": len(records),
         "counts_by_kappa": counts_by_kappa,
         "participant_count_distribution": participant_count_distribution,
         "records": records,
         "local_selected_pool_separator": local_separator,
-        "smallest_terminal": "selected-core/hole-pool compensation separator",
+        "post_residual_premise_checks": {
+            "old_observer_prepaid": old_observer_prepaid,
+            "hole_row_separator": hole_row_separator,
+        },
+        "smallest_terminal": "signed-surplus predecessor-prefix recruitment",
         "claim_boundary": (
-            "complete kappa=1,2,3 scalar/support interface; no GG inequality "
-            "forcing pool feasibility"
+            "complete kappa=1,2,3 scalar classification; the archived pool "
+            "null witness misses two terminal premises"
         ),
         "provenance": {
             "z3_version": z3.get_version_string(),

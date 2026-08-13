@@ -18,9 +18,9 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "MIXED_INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR"
+    assert result["status"] == "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE"
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
-    assert result["smallest_named_terminal"] == "signed-surplus participant-pool compensation"
+    assert result["smallest_named_terminal"] == "full-prefix recurrent current response"
     assert result["stated_four_old_core_normal_form_vacuous"]
     assert result["frozen_witnesses_escape_by_efx_rotation"]
     assert result["local_recurrence_response_rank"] == 1

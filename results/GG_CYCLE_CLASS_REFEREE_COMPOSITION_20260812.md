@@ -2,12 +2,14 @@
 
 **Date:** 2026-08-12
 
-**Status:** **superseded interface audit (2026-08-13).** The former branch
+**Status:** **mixed interface and signed-surplus recruitment reconstructed
+(2026-08-13).** The former branch
 graph reaches a locally meaningful splice, but its G9--G10 import asserts
 four disjoint old base-common-safe desired cores. That family itself is an
 immediate partial EFX Pareto improvement. Therefore the stated splice is
-vacuous at a globally maximal GG base and the actual mixed-edge interface
-must be reconstructed; no cap-free GG closure theorem is established
+vacuous at a globally maximal GG base. The actual mixed-edge interface and
+cap-free old-source recruitment are now reconstructed; no cap-free GG closure
+theorem is established.
 
 ## Claim boundary
 
@@ -242,10 +244,13 @@ That import is now fixed in
 and composed in
 [`GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md`](GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md).
 The genuine matching has `kappa in {1,2,3}` current-only selected cores; the
-closing response is a separate subset of the unmatched hole. Every branch
-reduces to EFX/progress or the selected-core/hole-pool compensation
-separator. A complete local pool obstruction shows that current-safety
-budgets alone do not force the last selector. The smallest remaining GG
-operation is therefore signed-surplus component retention or recruitment,
-followed by the root/q inequalities. No GG closure or four-agent EFX theorem
-is claimed.
+closing response is a separate subset of the unmatched hole. The formerly
+advertised local pool obstruction misses both the old-observer payment
+premise and the hole-row premise, so it is not terminal.
+
+[`SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md`](SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md)
+recruits each underfunded old source while strictly increasing a four-state
+prefix coordinate. The smallest remaining GG operation is now to pay a
+supplier-saturated mixed backward cycle or convert an old forward chord into
+an anchor-preserving strict matching transition using the root/q inequalities.
+No GG closure or four-agent EFX theorem is claimed.
