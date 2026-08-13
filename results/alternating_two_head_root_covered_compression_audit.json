@@ -1,0 +1,46 @@
+{
+  "anchored_topology": {
+    "decorated_heads": [
+      0,
+      2
+    ],
+    "edge_word": [
+      "O",
+      "D",
+      "O",
+      "D"
+    ],
+    "root_is_head": true
+  },
+  "claim_boundary": "cap-free graph/compression handoff; root-facing one-head row, compressed recurrence, and complete-pool capture remain open",
+  "graph_census": {
+    "all_deficient_graphs_have_root_covered_maximum_matching": true,
+    "deficient_relation_count": 860,
+    "rank_distribution": {
+      "2": 48,
+      "3": 812
+    },
+    "root_covered_maximum_matching_count": {
+      "2": 132,
+      "3": 3008
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_alternating_two_head_root_covered_compression.py",
+    "script_sha256": "619bce2949bb029c53603b1abaebd93b2257a7eaa230b0dd418d4725c7da7bd5",
+    "theorem": "results/ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md",
+    "theorem_sha256": "427a6ef19420b13072647e9af1da2c2996be8d90873cad46709537aaaef25c81",
+    "z3_version": "5.0.0"
+  },
+  "rank_three_wall_check": {
+    "missing_self_wall_excluded": true,
+    "represented_to_core_walls_excluded": true,
+    "root_strict": true
+  },
+  "rank_two_wall_check": {
+    "hole_to_residual_walls_excluded": true,
+    "represented_to_core_walls_excluded": true
+  },
+  "schema": "alternating-two-head-root-covered-compression-audit-v1",
+  "status": "TWO_HEAD_HALL_REDUCED_TO_ROOT_COVERED_COMPRESSION"
+}

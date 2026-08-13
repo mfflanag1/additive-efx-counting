@@ -1,0 +1,49 @@
+{
+  "claim_boundary": "cap-free one-head handoff; compressed-star recurrence, root-facing row, two-head Hall cut, and complete-pool capture remain open",
+  "graph_census": {
+    "nonroot_handoff_count": 25,
+    "root_facing_count": 3,
+    "root_facing_rows": [
+      {
+        "accepted_targets": [
+          "r"
+        ],
+        "head": "q",
+        "nonroot_handoff": false,
+        "root_facing": true
+      },
+      {
+        "accepted_targets": [
+          "r"
+        ],
+        "head": "a",
+        "nonroot_handoff": false,
+        "root_facing": true
+      },
+      {
+        "accepted_targets": [
+          "r"
+        ],
+        "head": "b",
+        "nonroot_handoff": false,
+        "root_facing": true
+      }
+    ],
+    "row_count": 28
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_one_head_nonroot_compression_star_handoff.py",
+    "script_sha256": "7b1f598f6495dedd8a7cb55cd40b455a6c2f3f9e1a3ccdb8328eb44dd298d64f",
+    "theorem": "results/ONE_HEAD_NONROOT_COMPRESSION_STAR_HANDOFF_LEMMA_20260813.md",
+    "theorem_sha256": "30f88d1ae7c539a5d5a2911e72c58cfcf54babebd0c1b5e46dcc5dc843f40344",
+    "z3_version": "5.0.0"
+  },
+  "schema": "one-head-nonroot-compression-star-handoff-audit-v1",
+  "status": "ONE_HEAD_REDUCED_TO_ROOT_FACING_OR_COMPRESSION_STAR",
+  "symbolic_checks": {
+    "head_target_interfaces": 9,
+    "missing_self_residual_wall_excluded": true,
+    "represented_core_wall_excluded": true,
+    "root_strictly_improved": true
+  }
+}

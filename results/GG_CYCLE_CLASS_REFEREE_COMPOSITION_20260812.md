@@ -281,6 +281,26 @@ shows that even the complete residual pool can fail while the permanent
 anchor is retained. The surviving global step is therefore packet-level
 Hall completion/response-star termination, not generic cycle payment.
 
+The one-head branch is now sharper. Whenever the protected head accepts a
+nonroot target, a three-core/one-residual compression keeps the root
+represented and converts every failure into the standard two-sided wall
+star. Paying the displaced later owner is unnecessary for a lexicographic
+endpoint. Across all 28 nonempty one-head acceptance rows, 25 admit this
+handoff; the only three exceptions are `N(h)={r}` for `h!=r`. Therefore the
+one-head terminal is an exact root-facing row or an already-named compressed
+star recurrence, rather than simultaneous capture across every target.
+
+The two remaining head topologies now have exact handoffs as well. In the
+alternating two-head cycle, the permanent old edge forces `r` to be a head;
+every deficient protected graph has a root-covered maximum matching and
+therefore enters the rank-three single-residual or rank-two cut-and-choose
+compression normal form. In the exceptional one-head row `N(h)={r}`, an
+anchor-preserving root/head repartition either produces mutually EFX hole
+cells or an anchor/root-critical least good. Thus the head-Hall layer itself
+is exhausted. The surviving global work is reversal of that critical-good
+certificate, termination of the already-recorded compressed-star recurrence,
+and root-sourced complete-pool capture.
+
 The exact objective “recruit the signed surplus or make a strict finite GG
 transition” is closed in
 [`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).

@@ -89,6 +89,12 @@ def run(root: Path) -> dict:
         "decorated_head_protected_bundle_hall_dichotomy_audit.json",
         "ONE_HEAD_PROTECTED_SPLIT_OR_CAPTURE_LEMMA_20260813.md",
         "one_head_protected_split_or_capture_audit.json",
+        "ONE_HEAD_NONROOT_COMPRESSION_STAR_HANDOFF_LEMMA_20260813.md",
+        "one_head_nonroot_compression_star_handoff_audit.json",
+        "ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md",
+        "alternating_two_head_root_covered_compression_audit.json",
+        "ROOT_ANCHORED_ONE_HEAD_TWO_HOLE_SELECTOR_LEMMA_20260813.md",
+        "root_anchored_one_head_two_hole_selector_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -168,12 +174,12 @@ def run(root: Path) -> dict:
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "GENERIC_PAYMENT_REFUTED_HEAD_HALL_REDUCED_OPEN_GG_PACKET_CAPTURE",
+        "status": "ALL_HEAD_HALL_REDUCED_OPEN_GG_CRITICAL_STAR_CAPTURE",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "one-head simultaneous capture or two-head Hall cut/full-pool capture",
+        "smallest_named_terminal": "anchor/root-critical good, compressed-star recurrence, or complete-pool capture",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,
@@ -183,10 +189,9 @@ def run(root: Path) -> dict:
         "local_recurrence_response_rank": 1,
         "residual_partition_family_size": 4096,
         "efx_floor_feasible_residual_partitions": 0,
-        "uncovered_premise_count": 4,
+        "uncovered_premise_count": 3,
         "open_obligations": [
-            "one-head simultaneous capture across every accepted target",
-            "alternating two-head protected Hall cut",
+            "reverse the anchor/root-critical least-good certificate",
             "root-sourced complete-residual-pool capture",
             "termination of an already-recorded compressed response/star recurrence",
         ],

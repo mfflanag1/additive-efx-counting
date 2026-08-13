@@ -256,3 +256,30 @@ a head. The one-head two-bundle selector either repairs that witness or
 produces simultaneous packet capture. Hence the current live boundary is
 packet-level Hall completion and compressed response-star recurrence,
 coupled to root-preserving complete-pool capture.
+
+The one-head capture inequality is not itself terminal once the fixed
+priority is used. If the head accepts any nonroot target, assign a minimal
+protected packet from that target to the head, retain the two unaffected
+nonhead bundles, and give the exact complement to the displaced target
+owner. The root remains represented and strictly above the base, so an EFX
+endpoint is lex-improving even if the displaced later owner is unpaid. A
+non-EFX endpoint has exactly the existing two-sided three-core/one-residual
+compression star. The only one-head acceptance row not admitting this
+handoff is `N(h)={r}` with `h!=r`. Thus simultaneous one-head payment is
+removed as an independent gate; root-facing exchange and compressed-star
+termination remain.
+
+The alternating two-head Hall cut is also no longer independent. Because
+the permanent edge leaving `r` is old, the alternating `D,O,D,O` word makes
+`r` one of the two heads. Every deficient protected graph has a root-covered
+maximum matching: rank three gives the priority-valid single-residual star,
+while rank two gives the cut-and-choose two-residual Hall boundary. The exact
+graph audit checks all 860 deficient two-head relations (48 rank two and 812
+rank three).
+
+Finally, the exceptional one-head row `N(h)={r}` admits an anchor-preserving
+two-hole selector. It either produces mutually EFX root/head cells and the
+same `2 x 2` response boundary, or exposes a least head-valued good that is
+anchor-critical, root-floor-critical, or root-EFX-critical. Hence all
+decorated-head Hall topologies now enter existing compression recurrences or
+one exact root/anchor critical-good polarity.

@@ -185,6 +185,30 @@
     {
       "path": "results/one_head_protected_split_or_capture_audit.json",
       "sha256": "fc975d17f4e64898ea70400262b70fff54a37a4b954f550ea007cc0b927adab3"
+    },
+    {
+      "path": "results/ONE_HEAD_NONROOT_COMPRESSION_STAR_HANDOFF_LEMMA_20260813.md",
+      "sha256": "30f88d1ae7c539a5d5a2911e72c58cfcf54babebd0c1b5e46dcc5dc843f40344"
+    },
+    {
+      "path": "results/one_head_nonroot_compression_star_handoff_audit.json",
+      "sha256": "57470910ca4fc2fbe2579142720e8a4f28b8a85fa1420e9bff176b9125b5ff9b"
+    },
+    {
+      "path": "results/ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md",
+      "sha256": "427a6ef19420b13072647e9af1da2c2996be8d90873cad46709537aaaef25c81"
+    },
+    {
+      "path": "results/alternating_two_head_root_covered_compression_audit.json",
+      "sha256": "c965d8a01242fa59b06e6d6a706c67197721447eb3010ac137d4a9ba3b90c51a"
+    },
+    {
+      "path": "results/ROOT_ANCHORED_ONE_HEAD_TWO_HOLE_SELECTOR_LEMMA_20260813.md",
+      "sha256": "00e5a452f7626facaef3f77c922a97589d4bae0913a35ccbe35171d136053d31"
+    },
+    {
+      "path": "results/root_anchored_one_head_two_hole_selector_audit.json",
+      "sha256": "ac7c81caca6001e5b4a91ff80fc10b32b5f104bf1b19b92f9fd74d3a3daf43bc"
     }
   ],
   "edge_count": 27,
@@ -194,16 +218,15 @@
   "local_recurrence_response_rank": 1,
   "node_count": 14,
   "open_obligations": [
-    "one-head simultaneous capture across every accepted target",
-    "alternating two-head protected Hall cut",
+    "reverse the anchor/root-critical least-good certificate",
     "root-sourced complete-residual-pool capture",
     "termination of an already-recorded compressed response/star recurrence"
   ],
   "provenance": {
     "script": "tracks/parkability/audit_gg_cycle_class_referee_composition.py",
-    "script_sha256": "b46574be2cceed637a68cc0b1ee1d4be75c8f400cfa946eb8265bcd7b9e057aa",
+    "script_sha256": "9469bbdca5748d12c39f099f9a457fdc6739c0cf64957eec5798bf6eaf3a2b3c",
     "theorem": "results/GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md",
-    "theorem_sha256": "4015bb9ff47694cdfcd81e1acaf145ff05e386b0766eec18d0873e7c2d597e37"
+    "theorem_sha256": "d804c86ee052fb626676eb0e9aec43880992fff8b5886e71fc5a3f52e08fac7b"
   },
   "reachable_nodes": [
     "EFX",
@@ -224,14 +247,14 @@
   "residual_essential_separator": "the minimal residual part J needed by the response source exceeds the restored target owner's complete protected surplus",
   "residual_partition_family_size": 4096,
   "schema": "gg-cycle-class-referee-composition-audit-v1",
-  "smallest_named_terminal": "one-head simultaneous capture or two-head Hall cut/full-pool capture",
+  "smallest_named_terminal": "anchor/root-critical good, compressed-star recurrence, or complete-pool capture",
   "stated_four_old_core_normal_form_vacuous": true,
-  "status": "GENERIC_PAYMENT_REFUTED_HEAD_HALL_REDUCED_OPEN_GG_PACKET_CAPTURE",
+  "status": "ALL_HEAD_HALL_REDUCED_OPEN_GG_CRITICAL_STAR_CAPTURE",
   "terminal_nodes": [
     "EFX",
     "PI",
     "T*"
   ],
-  "uncovered_premise_count": 4,
+  "uncovered_premise_count": 3,
   "well_founded_order_status": "REFUTED_FOR_CURRENT_COORDINATES"
 }

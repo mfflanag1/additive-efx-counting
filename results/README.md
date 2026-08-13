@@ -95,6 +95,24 @@ headlines:
   capture the displaced owner's entire protected slack plus the head's
   released bundle. An exact positive stress profile also defeats the full
   residual pool while retaining the permanent anchor.
+- [`ONE_HEAD_NONROOT_COMPRESSION_STAR_HANDOFF_LEMMA_20260813.md`](ONE_HEAD_NONROOT_COMPRESSION_STAR_HANDOFF_LEMMA_20260813.md)
+  ([symbolic/graph audit](one_head_nonroot_compression_star_handoff_audit.json))
+  removes that capture inequality as an independent terminal whenever the
+  head accepts a nonroot target: sacrifice the later target owner, retain a
+  strictly improved root, and enter the exact two-sided compression star.
+  The audit checks nine labeled interfaces and all 28 nonempty one-head
+  rows; only the three rows `N(h)={r}` survive as genuinely root-facing.
+- [`ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md`](ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md)
+  ([exact graph/symbolic audit](alternating_two_head_root_covered_compression_audit.json))
+  uses the permanent old root edge to show that `r` is a head in the sole
+  alternating topology. Every one of the 860 deficient protected graphs has
+  a root-covered maximum matching: 812 have rank three and 48 rank two, so
+  all enter existing one-/two-residual compression normal forms.
+- [`ROOT_ANCHORED_ONE_HEAD_TWO_HOLE_SELECTOR_LEMMA_20260813.md`](ROOT_ANCHORED_ONE_HEAD_TWO_HOLE_SELECTOR_LEMMA_20260813.md)
+  ([symbolic audit](root_anchored_one_head_two_hole_selector_audit.json))
+  handles the three exceptional rows `N(h)={r}` without cutting the permanent
+  anchor. It yields mutually EFX root/head cells or an exact anchor-, root-
+  floor-, or root-EFX-critical least good.
 
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
