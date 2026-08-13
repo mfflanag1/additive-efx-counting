@@ -57,6 +57,16 @@ as an internally verified hybrid theorem rather than a peer-reviewed theorem.
 The general problem remains open. Current exact status and proof gates are
 in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 
+The August 12 cap-free composition
+[`UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md`](UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md)
+excludes the exact saturated four-owner decorated-response/base-margin
+terminal.  Its standalone audit enumerates all 24 Hamiltonian paths and 72
+nonself response sources, verifies the explicit connected cyclic
+charity-exchange partition, and checks the payment and surplus implications
+in exact solver logic.  This closes that declared terminal only: reachability
+from every other GG/Hall branch, the fixed-`U` recurrence, full GG, and
+four-agent/general additive EFX remain open.
+
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
 It freezes the diminishing-return completion-cut branch and promotes a

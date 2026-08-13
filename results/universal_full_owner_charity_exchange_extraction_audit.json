@@ -1,0 +1,7036 @@
+{
+  "checks": {
+    "all_24_hamiltonian_paths": true,
+    "all_72_nonself_sources": true,
+    "charity_donates_and_receives": true,
+    "connected_five_target_exchange": true,
+    "deletion_inherits_observer_payment": true,
+    "directed_cycle_through_charity": true,
+    "efx_implies_charity_surplus_budget": true,
+    "efx_implies_target_surplus_budget": true,
+    "exact_atom_conservation": true,
+    "saturation_excludes_all_non_efx_exits": true,
+    "source_failure_forces_self_response": true,
+    "target_owner_payment": true
+  },
+  "claim_boundary": "cap-free exclusion of the declared exact saturated four-owner decorated/base-margin terminal; reachability from every GG branch, full GG, four-agent EFX, and general additive EFX remain open",
+  "dependencies": {
+    "results/ARBITRARY_CHARITY_PACKET_BLOCKER_COLLAPSE_LEMMA_20260811.md": "542d4882d83e12b3e9ef619c27af192cf425d89002ef644ada769a2417fb6a70",
+    "results/CHARITY_BLOCKER_EXCHANGE_WALK_LEMMA_20260811.md": "cbf67334b4ae5a2577aee93cf3a086866cfc89864bb0d73a034e994c21bbf99e",
+    "results/CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md": "623717bb8e17b9485a7f57a06b01286cbc4e80897e97fce6e35d1bd70c699539",
+    "results/FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md": "b7ae238060ffac52e6daa8915ec3c4d852750b9376ff7d079a4a5ccf4d1a4ca2",
+    "results/MIXED_MARGIN_NONOWNER_RESIDUAL_OR_SELF_RESPONSE_LEMMA_20260811.md": "8e17f852136498da970908791fb39efea46db85d6cdc8565f63368f8493f971a",
+    "results/PI_FREE_FIVE_TARGET_CHARITY_PATH_HOLE_EDGE_LEMMA_20260811.md": "b641d44fdad7e0ec1a8ca0eac0b0c1c94bf795b66b0ff2139260af0cf36c1b1b",
+    "results/SURPLUS_BUDGETED_CHARITY_EXCHANGE_COMPONENT_LEMMA_20260811.md": "8bedf29aea7c90cf156fdd13c524055c8ca2101cc4df01f57a5166e85667b114"
+  },
+  "nonself_source_count": 72,
+  "path_count": 24,
+  "provenance": {
+    "python": "3.14.3",
+    "script": "tracks/parkability/audit_universal_full_owner_charity_exchange_extraction.py",
+    "script_sha256": "b20853072656abaf45a57fbb57bff4040e00f3bc6cdec4797d045eeadab95fb4",
+    "theorem": "results/UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md",
+    "theorem_sha256": "96faa295182a0e077e04037ae993e96889c3b47e740df81968942f8c4a8164b0",
+    "z3": "5.0.0"
+  },
+  "records": [
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:r"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:r"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:r"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:r"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:r"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:r"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "charity",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "charity",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "charity",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "charity",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "charity",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity",
+          "R:r",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "P"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "P",
+          "R:r",
+          "g"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "R:r"
+        ],
+        [
+          "r",
+          "charity",
+          "g"
+        ],
+        [
+          "s",
+          "charity",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "charity",
+          "A:q"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "charity",
+          "A:q"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "charity",
+          "A:q"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "charity",
+          "A:q"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "charity",
+          "A:q"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "charity",
+          "A:q"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:q"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:q"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:q"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:q"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:q"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:q"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "c",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity",
+          "R:q",
+          "g"
+        ],
+        "q": [
+          "P"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "P",
+          "R:q",
+          "g"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "s",
+          "A:s"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "R:q"
+        ],
+        [
+          "q",
+          "charity",
+          "g"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "A:c"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "A:c"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "A:c"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "A:c"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "A:c"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "charity",
+          "A:c"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "A:c"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "A:c"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:r",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "s",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "s",
+          "A:s"
+        ],
+        [
+          "q",
+          "charity",
+          "A:c"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "r",
+          "A:r"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "A:c"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "A:c"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:q",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "A:c"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "q",
+          "A:q"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "s",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "response_source": "s",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "P"
+        ],
+        "charity": [
+          "A:c",
+          "R:c",
+          "R:charity",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "A:s",
+          "R:s"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "P",
+          "R:c",
+          "g"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "A:c",
+          "R:s"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "R:c"
+        ],
+        [
+          "c",
+          "charity",
+          "g"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "s",
+          "A:s"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "A:c"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "charity",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:s",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "charity",
+          "A:s"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "A:s"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "A:s"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:r",
+          "R:c"
+        ],
+        "charity": [
+          "A:c",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "c",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "r",
+          "A:r"
+        ],
+        [
+          "charity",
+          "c",
+          "A:c"
+        ],
+        [
+          "q",
+          "charity",
+          "A:s"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "A:s"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "A:s"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:q",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:s",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "q",
+          "A:q"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "charity",
+          "A:s"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:s"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:s"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:q",
+          "R:charity"
+        ],
+        "q": [
+          "A:r",
+          "R:q"
+        ],
+        "r": [
+          "A:c",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "q",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:s"
+        ],
+        [
+          "charity",
+          "q",
+          "A:q"
+        ],
+        [
+          "q",
+          "r",
+          "A:r"
+        ],
+        [
+          "r",
+          "c",
+          "A:c"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "response_source": "c",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:s"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "response_source": "q",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:s"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    },
+    {
+      "candidate_partition": {
+        "c": [
+          "A:c",
+          "R:c"
+        ],
+        "charity": [
+          "A:s",
+          "R:charity",
+          "R:s",
+          "g"
+        ],
+        "q": [
+          "A:q",
+          "R:q"
+        ],
+        "r": [
+          "A:r",
+          "R:r"
+        ],
+        "s": [
+          "P"
+        ]
+      },
+      "charity_donates_and_receives": true,
+      "connected_on_all_five_targets": true,
+      "current_partition": {
+        "c": [
+          "A:s",
+          "R:c"
+        ],
+        "charity": [
+          "A:r",
+          "R:charity"
+        ],
+        "q": [
+          "A:c",
+          "R:q"
+        ],
+        "r": [
+          "A:q",
+          "R:r"
+        ],
+        "s": [
+          "P",
+          "R:s",
+          "g"
+        ]
+      },
+      "directed_charity_cycle": [
+        "charity",
+        "r",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "response_source": "r",
+      "transfers": [
+        [
+          "c",
+          "charity",
+          "A:s"
+        ],
+        [
+          "charity",
+          "r",
+          "A:r"
+        ],
+        [
+          "q",
+          "c",
+          "A:c"
+        ],
+        [
+          "r",
+          "q",
+          "A:q"
+        ],
+        [
+          "s",
+          "charity",
+          "R:s"
+        ],
+        [
+          "s",
+          "charity",
+          "g"
+        ]
+      ]
+    }
+  ],
+  "schema": "universal-full-owner-charity-exchange-extraction-audit-v1",
+  "scope": {
+    "good_cap": null,
+    "moved_good_radius_cap": null,
+    "owners": 4,
+    "packet_cardinality_cap": null,
+    "positive_additive_values": true
+  },
+  "source_position_counts": {
+    "1": 24,
+    "2": 24,
+    "3": 24
+  },
+  "status": "SATURATED_TERMINAL_EXCLUDED"
+}

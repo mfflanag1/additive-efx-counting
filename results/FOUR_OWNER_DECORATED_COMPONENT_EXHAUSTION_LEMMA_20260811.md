@@ -5,6 +5,11 @@
 **Status:** cap-free elimination of repeated outside-component recruitment;
 the full-owner base-margin/direct-safety terminal remains open
 
+**Superseded status (2026-08-12):** the exact saturated terminal named here
+is excluded by
+[`UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md`](UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md).
+Other GG/Hall branches and general EFX remain open.
+
 ## Two physical components already use three owners
 
 In a surplus-decorated response, the changed target owner `j` and response

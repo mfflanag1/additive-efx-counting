@@ -5,6 +5,11 @@
 **Status:** cap-free reduction of every unsafe multi-good charity packet to
 the singleton exchange walk; owner-target mixed-margin payment remains open
 
+**Superseded status (2026-08-12):** the owner-target mixed-margin payment
+gate was subsequently closed by the deletion-return residual-completion
+lemma, and the composed exact saturated terminal is excluded by
+[`UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md`](UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md).
+
 ## Unsafe charity packet
 
 Let `(Y,P)` be a noncomplete paid splice candidate, where `P` is any

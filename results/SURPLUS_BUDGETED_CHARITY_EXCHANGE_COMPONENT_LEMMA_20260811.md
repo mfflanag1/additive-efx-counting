@@ -5,6 +5,11 @@
 **Status:** cap-free endpoint theorem allowing charity to receive replacement
 goods; universal extraction from the full-owner separator remains open
 
+**Superseded status (2026-08-12):** universal extraction from the exact
+saturated four-owner separator is proved in
+[`UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md`](UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md).
+This does not close every GG/Hall branch or general additive EFX.
+
 ## Exchange component
 
 Let `(X,P)` be an EFX-with-charity allocation.  Reallocate pairwise-disjoint
