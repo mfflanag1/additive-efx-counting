@@ -71,6 +71,10 @@ def run(root: Path) -> dict:
         "forward_chord_core_split_or_anchor_capture_audit.json",
         "BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md",
         "backward_response_cycle_or_boundary_capture_audit.json",
+        "ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md",
+        "anchor_target_nonoverlap_growth_or_nested_edge_audit.json",
+        "SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md",
+        "selected_pool_signed_surplus_recruitment_resolution_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -137,17 +141,25 @@ def run(root: Path) -> dict:
         (result_dir / "backward_response_cycle_or_boundary_capture_audit.json").read_text()
     )
     assert backward["status"] == "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT"
+    anchor_target = json.loads(
+        (result_dir / "anchor_target_nonoverlap_growth_or_nested_edge_audit.json").read_text()
+    )
+    assert anchor_target["status"] == "ANCHOR_TARGET_INEQUALITY_ELIMINATED_TO_NESTED_EDGE"
+    resolution = json.loads(
+        (result_dir / "selected_pool_signed_surplus_recruitment_resolution_audit.json").read_text()
+    )
+    assert resolution["status"] == "SELECTED_POOL_RECRUITMENT_GOAL_RESOLVED"
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "RESPONSE_GEOMETRY_COMPLETE_OPEN_MIXED_PAYMENT",
+        "status": "SELECTED_POOL_RECRUITMENT_RESOLVED",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "supplier-saturated mixed-cycle/root-q payment",
+        "smallest_named_terminal": "post-recruitment mixed-cycle/root-source payment",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,

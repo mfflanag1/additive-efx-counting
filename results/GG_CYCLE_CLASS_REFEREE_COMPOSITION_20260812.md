@@ -265,3 +265,16 @@ response-critical overlap with the q-target anchor and a root-sourced
 compensation that must use `R_q=Y_q-K_r` remain anchor-specific. The backward
 side additionally leaves the supplier-saturated mixed-cycle observer-payment
 inequality. These are the current load-bearing gates.
+
+The exact objective “recruit the signed surplus or make a strict finite GG
+transition” is closed in
+[`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).
+The deterministic prefix phase is part of the complete signed-state record,
+so it cannot reset at an exact recurrence. Supplier closure either strictly
+grows the owner union or certifies internal supply.
+
+Moreover,
+[`ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md`](ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md)
+removes the anchor-target overlap as an independent inequality. The remaining
+post-recruitment theorem is now only supplier-saturated mixed-cycle payment
+and root-sourced compensation from the q residual.

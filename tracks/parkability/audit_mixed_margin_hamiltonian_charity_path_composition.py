@@ -37,6 +37,8 @@ DEPENDENCIES = (
     ("SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md", "signed_surplus_prefix_recruitment_audit.json"),
     ("FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md", "forward_chord_core_split_or_anchor_capture_audit.json"),
     ("BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md", "backward_response_cycle_or_boundary_capture_audit.json"),
+    ("ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md", "anchor_target_nonoverlap_growth_or_nested_edge_audit.json"),
+    ("SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md", "selected_pool_signed_surplus_recruitment_resolution_audit.json"),
 )
 
 
@@ -81,27 +83,32 @@ def run(root: Path) -> dict:
         "FORWARD_CHORD_REDUCED_TO_TWO_ANCHOR_INTERFACES",
         "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT",
     }.issubset({record["audit_status"] for record in records})
+    recruitment_goal_resolved = any(
+        record["audit_status"] == "SELECTED_POOL_RECRUITMENT_GOAL_RESOLVED"
+        for record in records
+    )
 
     script = Path(__file__).resolve()
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "RESPONSE_GEOMETRY_COMPLETE_OPEN_MIXED_PAYMENT" if response_geometry_complete else (
+        "status": "SELECTED_POOL_RECRUITMENT_RESOLVED" if recruitment_goal_resolved else (
+            "RESPONSE_GEOMETRY_COMPLETE_OPEN_MIXED_PAYMENT" if response_geometry_complete else (
             "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE" if recruitment_complete else (
             "INTERFACE_REFUTED" if interface_refuted else (
             "REFEREE_GAP_FOUND" if referee_gap else (
                 "DEPENDENCIES_REPLAYABLE" if verified else "OPEN"
-        )))),
+        ))))),
         "dependency_count": len(records),
         "records": records,
         "proved_reduction": (
             "all mixed-margin Hamiltonian-path states pay every row or yield an "
             "incoming-core self-response/current-safe decorated response"
         ),
-        "exact_surviving_separator": "supplier-saturated mixed-cycle observer payment and two anchor reverse inequalities",
+        "exact_surviving_separator": "post-recruitment mixed-cycle payment and root-sourced q-residual compensation",
         "claim_boundary": (
-            "the mixed interface, cap-free recruitment, and response support "
-            "geometry are proved; mixed-cycle/root-q payment remains open"
+            "the selected-pool recruitment objective is proved by a strict "
+            "finite prefix transition; later GG payment remains separate"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

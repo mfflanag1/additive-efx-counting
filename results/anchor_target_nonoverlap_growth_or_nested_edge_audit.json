@@ -1,0 +1,192 @@
+{
+  "anchor_target_order_count": 12,
+  "claim_boundary": "q-target overlap eliminated as surplus inequality; root-facing handoff and root-sourced R_q compensation remain open",
+  "direction_counts": {
+    "backward": 6,
+    "forward": 6
+  },
+  "provenance": {
+    "dependencies": [
+      {
+        "path": "results/FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md",
+        "sha256": "7f73601c15f87a9655d8087b90642be8c650de42bfd6444de97470c453b9c436"
+      },
+      {
+        "path": "results/BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md",
+        "sha256": "ba1caf08ba41a3519283cce50dcb584755b3f55568344b6d6fed41d5bedcc2b0"
+      }
+    ],
+    "script": "tracks/parkability/audit_anchor_target_nonoverlap_growth_or_nested_edge.py",
+    "script_sha256": "6c69827e2c8c9c50f6fd0387efe6735b60723c5aae59a97c309a254ddbd71953",
+    "theorem": "results/ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md",
+    "theorem_sha256": "ddb04c90b0ce400cd0dcc20678b7659dabe98bb2d4a8a44e345af4684d71bf42",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "direction": "backward",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 2,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "direction": "backward",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "direction": "backward",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 2,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "direction": "backward",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "direction": "forward",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "direction": "backward",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "direction": "forward",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "direction": "forward",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 1,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "direction": "forward",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "direction": "backward",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "direction": "forward",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "direction": "forward",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 1,
+      "target": "q",
+      "target_position": 3
+    }
+  ],
+  "schema": "anchor-target-nonoverlap-growth-or-nested-edge-audit-v1",
+  "smallest_terminal": "old nested root-facing response edge",
+  "status": "ANCHOR_TARGET_INEQUALITY_ELIMINATED_TO_NESTED_EDGE",
+  "symbolic_checks": {
+    "current_desire_implies_base_desire": true,
+    "nested_core_inherits_base_safety": true,
+    "nonempty_positive_support_strictly_grows_source": true,
+    "selected_core_plus_nonanchor_support_stays_paid": true
+  }
+}

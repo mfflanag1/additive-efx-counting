@@ -227,3 +227,18 @@ anchor-source q-residual compensation. The
 reduces all 36 backward orders to 18 hole cycles and 18 exact boundary
 splits. The remaining scalar gate is supplier-saturated mixed-cycle observer
 payment together with the two named root/q reverse inequalities.
+
+For the selected-pool recruitment goal itself, the authoritative endpoint is
+[`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).
+It installs the fixed signed-state phase order `-1<0<1<2<3`, explicitly
+checks all 1,008 genuine interfaces, all 24 anchored prefix placements, and
+all 3,840 owner-supplier closures. The first retention step is already a
+strict finite GG transition, so the selected-pool recruitment gate is closed.
+
+The q-target overlap formerly listed as an anchor reverse inequality is also
+eliminated by
+[`ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md`](ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md):
+nonanchor response support gives strict retained-support growth, while exact
+recurrence makes the response a base-common-safe core nested in the old
+anchor. The post-recruitment program therefore has one anchor-specific scalar
+gate—the root-sourced q-residual compensation—plus mixed-cycle payment.
