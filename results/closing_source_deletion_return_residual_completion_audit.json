@@ -7,20 +7,20 @@
     "old_core_plus_residual_stays_strictly_above_base": true,
     "target_owner_deletion_remainder_strictly_pays_base": true
   },
-  "claim_boundary": "mixed-margin Hamiltonian-path payment only; broader GG closure and four-agent/general EFX remain open",
+  "claim_boundary": "mixed-margin Hamiltonian-path scalar payment reduction only; repeated-response termination, broader GG closure, and four-agent/general EFX remain open",
   "cycle_length_counts": {
     "2": 24,
     "3": 24,
     "4": 24
   },
   "hamiltonian_path_count": 24,
-  "mixed_margin_separator_eliminated": true,
+  "mixed_margin_termination_verified": false,
   "nonself_pivot_count": 72,
   "provenance": {
     "script": "tracks/parkability/audit_closing_source_deletion_return_residual_completion.py",
-    "script_sha256": "e2d312b4c489e0c485a5f29612a8feca938fb969ea809738f230bc2752bd9564",
+    "script_sha256": "3ae530afac37307c871735732c70730b93297a015a55a512a8edac8818646e78",
     "theorem": "results/CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md",
-    "theorem_sha256": "623717bb8e17b9485a7f57a06b01286cbc4e80897e97fce6e35d1bd70c699539",
+    "theorem_sha256": "bef4207a7ada0607d38929e00012515961fa820104673ad33f1d8b26b182cabf",
     "z3_version": "5.0.0"
   },
   "records": [
@@ -1105,6 +1105,8 @@
       ]
     }
   ],
+  "scalar_payment_reduction_verified": true,
   "schema": "closing-source-deletion-return-residual-completion-audit-v1",
-  "status": "ALL_FORCED"
+  "status": "ALL_FORCED",
+  "surviving_terminal": "rank-completing paid-response splice"
 }

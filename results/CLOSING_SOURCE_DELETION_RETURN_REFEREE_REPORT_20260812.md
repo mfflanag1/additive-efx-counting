@@ -143,3 +143,28 @@ either complete it to a rank-four internally supplied matching while
 preserving all four payment budgets, or prove a strict increase in one fixed
 finite state order.  Without that operation the mixed-margin theorem and the
 entire GG cycle class remain open.
+
+### Robustness against the two smallest repairs
+
+The audit includes a second positive rational witness with a three-good
+decorated core.  After deleting the target owner's least good, the unsafe
+target is already inclusion-minimal for its owner's base/payment floor.
+Parking its residual underpays that owner.  Giving the deleted good—or the
+entire remaining charity—to the blocker still does not pay the EFX debt.
+The only safe response source is again one owner.  Thus the named terminal is
+not an artifact of failing to trim the target or failing to spend the
+deleted good.
+
+The strengthened witness also exhausts every redistribution of all released
+residuals and charity among the three nonhole owners while each owner retains
+its old desired core and its direct floor against `P`.  The feasible family
+is nonempty, but it has no EFX member.  Hence a universal residual-only
+handoff is false under the local premises: the missing splice must move or
+replace a desired core, alter `P`, or use an additional GG inequality not
+present in the Hamiltonian lemma.
+
+The returned hole packet is additionally inclusion-minimal for the hole
+owner's complete direct-safety floor against the other three candidate
+targets.  Consequently the terminal also survives spending any proper
+subpacket of `P`: removing one good immediately violates the hole owner's
+required floor.

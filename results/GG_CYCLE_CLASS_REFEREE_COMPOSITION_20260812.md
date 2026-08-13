@@ -132,6 +132,14 @@ The existing hole-pivot theorem begins only after alternative 1 has supplied
 rank four.  Full signed-state reconstruction proves equality of repeated
 states, not alternatives 1--3.
 
+The strengthened rational witness rules out the two smallest reductions of
+`T*`: its unsafe target is already inclusion-minimal for its owner's direct
+floor, and all 4,096 partitions of released residuals/charity have been
+checked.  Sixty-four preserve every owner floor; none is EFX.  Therefore the
+next operation must move or replace a desired core, alter the returned hole
+packet `P`, or invoke a genuinely stronger GG inequality.  Residual-only
+top-up is not the missing theorem.
+
 ## Uncovered premises
 
 1. **Rank completion:** one repeated safe response at `Z` need not extend to

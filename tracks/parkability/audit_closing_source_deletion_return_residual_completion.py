@@ -167,10 +167,13 @@ def run(root: Path) -> dict:
         "cycle_length_counts": {str(key): value for key, value in sorted(cycle_counts.items())},
         "checks": checks,
         "records": records,
-        "mixed_margin_separator_eliminated": True,
+        "scalar_payment_reduction_verified": True,
+        "mixed_margin_termination_verified": False,
+        "surviving_terminal": "rank-completing paid-response splice",
         "claim_boundary": (
-            "mixed-margin Hamiltonian-path payment only; broader GG closure "
-            "and four-agent/general EFX remain open"
+            "mixed-margin Hamiltonian-path scalar payment reduction only; "
+            "repeated-response termination, broader GG closure, and "
+            "four-agent/general EFX remain open"
         ),
         "provenance": {
             "z3_version": z3.get_version_string(),
@@ -195,8 +198,11 @@ def main() -> None:
                 "status": result["status"],
                 "hamiltonian_path_count": result["hamiltonian_path_count"],
                 "nonself_pivot_count": result["nonself_pivot_count"],
-                "mixed_margin_separator_eliminated": result[
-                    "mixed_margin_separator_eliminated"
+                "scalar_payment_reduction_verified": result[
+                    "scalar_payment_reduction_verified"
+                ],
+                "mixed_margin_termination_verified": result[
+                    "mixed_margin_termination_verified"
                 ],
             },
             indent=2,

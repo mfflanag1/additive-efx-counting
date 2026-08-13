@@ -163,6 +163,177 @@ def rational_witness() -> dict:
     }
 
 
+def trimmed_rational_witness() -> dict:
+    goods = ("d0", "d1", "d2", "a0", "a1", "a2", "a3", "x0", "x1", "x2", "x3")
+    tenth = Fraction(1, 10)
+    rows = {
+        "t": dict(zip(goods, map(Fraction, (1, 3, 2, 2, 0, 0, 0, 1, 0, 0, 0)), strict=True)),
+        "u": dict(zip(goods, map(Fraction, (0, 3, 1, 3, 2, 0, 0, 1, 1, 0, 0)), strict=True)),
+        "s": dict(zip(goods, map(Fraction, (0, 3, 2, 0, 4, 2, 0, 0, 1, 1, 0)), strict=True)),
+        "w": dict(zip(goods, map(Fraction, (0, 3, 0, 0, 0, 0, 2, 0, 0, 1, 1)), strict=True)),
+    }
+    for row in rows.values():
+        for good in goods:
+            if row[good] == 0:
+                row[good] = tenth
+    rows["u"]["x0"] = Fraction(29, 10)
+    rows["u"]["a0"] = Fraction(1, 5)
+    rows["u"]["d2"] = tenth
+    rows["w"]["d2"] = tenth
+    rows["w"]["a2"] = Fraction(21, 10)
+    rows["w"]["a3"] = Fraction(11, 5)
+    rows["w"]["x3"] = tenth
+    rows["t"]["a1"] = Fraction(5)
+
+    base = {
+        "t": frozenset({"x0"}), "u": frozenset({"x1"}),
+        "s": frozenset({"x2"}), "w": frozenset({"x3"}),
+    }
+    old_core = {
+        "t": frozenset({"a0"}), "u": frozenset({"a1"}),
+        "s": frozenset({"a2"}), "w": frozenset({"a3"}),
+    }
+    current = {
+        "t": frozenset({"d0", "d1", "d2"}),
+        "u": frozenset({"a0", "x0"}),
+        "s": frozenset({"a1", "x1"}),
+        "w": frozenset({"a2", "x2"}),
+    }
+    decorated = current["t"]
+    deleted_good = "d0"
+    returned = decorated - {deleted_good}
+    candidate = {
+        "t": returned,
+        "u": frozenset({"a1", "x0"}),
+        "s": frozenset({"a2", "x1"}),
+        "w": frozenset({"a3", "x2"}),
+    }
+    floor_u = max(value(rows["u"], base["u"]), threshold(rows["u"], returned))
+    assert value(rows["u"], candidate["u"]) >= floor_u == 3
+    assert all(
+        value(rows["u"], candidate["u"] - {good}) < floor_u
+        for good in candidate["u"]
+    )
+    direct_floor_t = max(
+        value(rows["t"], base["t"]),
+        *(threshold(rows["t"], candidate[owner]) for owner in ("u", "s", "w")),
+    )
+    assert value(rows["t"], returned) >= direct_floor_t == 5
+    assert all(
+        value(rows["t"], returned - {good}) < direct_floor_t for good in returned
+    )
+    assert value(rows["s"], candidate["s"] | {deleted_good}) < threshold(
+        rows["s"], candidate["u"]
+    )
+    charity = frozenset(goods) - frozenset().union(*candidate.values())
+    assert value(rows["s"], candidate["s"] | charity) < threshold(
+        rows["s"], candidate["u"]
+    )
+
+    residual_pool = frozenset({"x0", "x1", "x2"}) | charity
+    fixed_cores = {
+        "u": frozenset({"a1"}),
+        "s": frozenset({"a2"}),
+        "w": frozenset({"a3"}),
+    }
+    floors = {
+        owner: max(value(rows[owner], base[owner]), threshold(rows[owner], returned))
+        for owner in ("u", "s", "w")
+    }
+    feasible_residual_partitions = 0
+    efx_residual_partitions = 0
+    first_efx_residual_partition = None
+    ordered_pool = sorted(residual_pool)
+    for code in range(4 ** len(ordered_pool)):
+        allocation = {owner: set(fixed_cores[owner]) for owner in ("u", "s", "w")}
+        cursor = code
+        for good in ordered_pool:
+            recipient = cursor % 4
+            cursor //= 4
+            if recipient < 3:
+                allocation[("u", "s", "w")[recipient]].add(good)
+        bundles = {"t": returned} | {
+            owner: frozenset(bundle) for owner, bundle in allocation.items()
+        }
+        if any(
+            value(rows[owner], bundles[owner]) < floors[owner]
+            for owner in ("u", "s", "w")
+        ):
+            continue
+        feasible_residual_partitions += 1
+        if all(
+            value(rows[observer], bundles[observer])
+            >= threshold(rows[observer], bundles[target])
+            for observer in AGENTS
+            for target in AGENTS
+            if observer != target
+        ):
+            efx_residual_partitions += 1
+            if first_efx_residual_partition is None:
+                first_efx_residual_partition = {
+                    owner: sorted(bundle) for owner, bundle in bundles.items()
+                }
+    assert feasible_residual_partitions > 0
+    assert efx_residual_partitions == 0
+
+    edges = []
+    targets = dict(candidate)
+    targets["charity"] = charity
+    for source in AGENTS:
+        source_value = value(rows[source], candidate[source])
+        for target, bundle in targets.items():
+            if source == target:
+                continue
+            ordered = sorted(bundle)
+            for mask in range(1, 1 << len(ordered)):
+                core = frozenset(
+                    ordered[index] for index in range(len(ordered)) if mask >> index & 1
+                )
+                if value(rows[source], core) <= source_value:
+                    continue
+                if all(
+                    threshold(rows[observer], core) <= value(rows[observer], candidate[observer])
+                    for observer in AGENTS
+                ):
+                    edges.append((source, target, tuple(sorted(core))))
+    edges.sort()
+    distinct_sources = sorted({source for source, _, _ in edges})
+    assert distinct_sources == ["s"]
+    assert ("s", "u", ("a1",)) in edges
+
+    return {
+        "goods": list(goods),
+        "valuations": {
+            agent: {good: str(rows[agent][good]) for good in goods} for agent in AGENTS
+        },
+        "candidate": {agent: sorted(bundle) for agent, bundle in candidate.items()},
+        "charity": sorted(charity),
+        "deleted_good": deleted_good,
+        "owner_u_floor": str(floor_u),
+        "owner_u_target_is_inclusion_minimal": True,
+        "hole_packet_direct_floor": str(direct_floor_t),
+        "hole_packet_is_inclusion_minimal": True,
+        "deleted_good_topup_fails": True,
+        "whole_charity_topup_fails": True,
+        "residual_partition_family_size": 4 ** len(ordered_pool),
+        "floor_feasible_residual_partitions": feasible_residual_partitions,
+        "efx_floor_feasible_residual_partitions": efx_residual_partitions,
+        "first_efx_residual_partition": first_efx_residual_partition,
+        "current_response_edges": [
+            [source, target, list(core)] for source, target, core in edges
+        ],
+        "response_source_rank": len(distinct_sources),
+        "interpretation": (
+            "The unsafe target is already inclusion-minimal for its owner's "
+            "base/P floor. Parking its residual underpays that owner, while "
+            "giving the deleted good or the whole charity to the blocker does "
+            "not pay the EFX debt. Exhausting every floor-preserving partition "
+            "of all residuals and charity yields no EFX member. The repeated "
+            "safe-response graph still has only one source."
+        ),
+    }
+
+
 def run(root: Path) -> dict:
     t_old, t_res, t_tau, t_base = z3.Reals("t_old t_res t_tau t_base")
     a_old, a_res, p_tau, d_tau, incoming, a_base = z3.Reals(
@@ -195,6 +366,7 @@ def run(root: Path) -> dict:
     assert all(scalar_checks.values())
 
     witness = rational_witness()
+    trimmed_witness = trimmed_rational_witness()
     script = Path(__file__).resolve()
     theorem = root / "results/CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md"
     report = root / "results/CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md"
@@ -212,6 +384,7 @@ def run(root: Path) -> dict:
             },
         },
         "rational_local_countermodel": witness,
+        "minimal_trimmed_countermodel": trimmed_witness,
         "smallest_gap": (
             "an unsafe deletion-return target yields one current-safe response, "
             "but neither a rank-four matching at that candidate state nor a "

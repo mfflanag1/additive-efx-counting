@@ -24,6 +24,14 @@ def test_scalar_parts_hold_but_termination_fails():
     assert witness["response_source_rank"] == 1
     assert witness["failed_efx"]["observer_utility"] == "3"
     assert witness["failed_efx"]["target_threshold"] == "4"
+    trimmed = result["minimal_trimmed_countermodel"]
+    assert trimmed["owner_u_target_is_inclusion_minimal"]
+    assert trimmed["hole_packet_is_inclusion_minimal"]
+    assert trimmed["deleted_good_topup_fails"]
+    assert trimmed["whole_charity_topup_fails"]
+    assert trimmed["response_source_rank"] == 1
+    assert trimmed["floor_feasible_residual_partitions"] > 0
+    assert trimmed["efx_floor_feasible_residual_partitions"] == 0
 
 
 def test_report_does_not_claim_full_gg_counterexample():

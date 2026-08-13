@@ -70,6 +70,9 @@ def run(root: Path) -> dict:
     )
     assert referee["status"] == "TERMINATION_GAP_FOUND"
     assert referee["rational_local_countermodel"]["response_source_rank"] == 1
+    assert referee["minimal_trimmed_countermodel"]["response_source_rank"] == 1
+    assert referee["minimal_trimmed_countermodel"]["residual_partition_family_size"] == 4096
+    assert referee["minimal_trimmed_countermodel"]["efx_floor_feasible_residual_partitions"] == 0
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
@@ -83,6 +86,8 @@ def run(root: Path) -> dict:
         "smallest_named_terminal": "rank-completing paid-response splice",
         "well_founded_order_status": "REFUTED_FOR_CURRENT_COORDINATES",
         "local_recurrence_response_rank": 1,
+        "residual_partition_family_size": 4096,
+        "efx_floor_feasible_residual_partitions": 0,
         "uncovered_premise_count": 6,
         "dependencies": records,
         "claim_boundary": (
