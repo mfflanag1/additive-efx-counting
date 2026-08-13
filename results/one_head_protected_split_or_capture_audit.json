@@ -1,0 +1,70 @@
+{
+  "claim_boundary": "cap-free two-bundle selector and exact capture; simultaneous multi-target capture and global GG recurrence remain open",
+  "frozen_countermodel_replay": {
+    "blockers": [
+      "a"
+    ],
+    "complete_residual_return_fails": true,
+    "complete_residual_return_to_decorated_source": [
+      "rq",
+      "ka",
+      "ra",
+      "rr",
+      "rb"
+    ],
+    "complete_residual_source_value": "7/5",
+    "direct_source_floor_after_anchor_retaining_split": "7",
+    "efx_split_count": 0,
+    "one_head_entry_premise": true,
+    "paid_split_count": 0,
+    "protected_thresholds": {
+      "a": "13",
+      "b": "13",
+      "q": "13",
+      "r": "13"
+    },
+    "raw_generic_blockers": [
+      "a",
+      "b",
+      "r"
+    ],
+    "records": [
+      {
+        "efx": false,
+        "new_return_wall_observers": [],
+        "packet": [
+          "d1",
+          "d2"
+        ],
+        "returned": [
+          "rq",
+          "ka",
+          "ra"
+        ],
+        "target": "q",
+        "target_paid": false
+      }
+    ],
+    "selector_record_count": 1,
+    "source": "results/supplier_saturation_does_not_force_mixed_cycle_payment_audit.json",
+    "source_sha256": "4f1a7004ac7a1ddb946ad1c08e971b2dc8b738ad2b5ff814e70fa6a8497674b4",
+    "terminalizing_overrides": {
+      "b.kb": "13",
+      "r.kr": "13"
+    }
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_one_head_protected_split_or_capture.py",
+    "script_sha256": "0fe3bde4c2aad8972aff50b35600a9f0314bc7ad622011a3fd1fc1d7b3507e01",
+    "theorem": "results/ONE_HEAD_PROTECTED_SPLIT_OR_CAPTURE_LEMMA_20260813.md",
+    "theorem_sha256": "e366c12ec61c3e2199b2bbb639ca4693461453e8bac90cda8302fbb03842f3d5",
+    "z3_version": "5.0.0"
+  },
+  "schema": "one-head-protected-split-or-capture-audit-v1",
+  "status": "EXACT_TWO_BUNDLE_SPLIT_OR_CAPTURE",
+  "symbolic_checks": {
+    "capture_equals_bundle_plus_slack": true,
+    "failed_return_forces_capture": true,
+    "subtarget_preserves_old_safety": true
+  }
+}

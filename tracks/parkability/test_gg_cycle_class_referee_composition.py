@@ -18,9 +18,9 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "GENERIC_PAYMENT_REFUTED_BLOCKERS_LOCALIZED_OPEN_GG_HEAD_EXCHANGE"
+    assert result["status"] == "GENERIC_PAYMENT_REFUTED_HEAD_HALL_REDUCED_OPEN_GG_PACKET_CAPTURE"
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
-    assert result["smallest_named_terminal"] == "one-head or alternating two-head GG exchange/full-pool capture"
+    assert result["smallest_named_terminal"] == "one-head simultaneous capture or two-head Hall cut/full-pool capture"
     assert result["stated_four_old_core_normal_form_vacuous"]
     assert result["frozen_witnesses_escape_by_efx_rotation"]
     assert result["local_recurrence_response_rank"] == 1

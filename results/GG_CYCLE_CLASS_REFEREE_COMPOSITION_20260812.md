@@ -267,6 +267,20 @@ accounting was incomplete. The backward side reaches a supplier-saturated
 mixed cycle, but supplier saturation alone does not imply observer payment.
 These are the current load-bearing gates.
 
+The payment failure is now recompressed rather than attacked row by row.
+[`MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md`](MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md)
+places every terminal blocker at one of at most two decorated heads.
+Alternating minimal extraction then gives every wall target a response core
+safe relative to the complete paid candidate and sourced by one of those
+heads. The protected whole-bundle graph either has a perfect matching—an EFX
+Pareto contradiction—or a deficiency-one Hall witness containing a head.
+For one head, every two-bundle repair either succeeds with one possible new
+target wall or yields an exact capture of the displaced owner's protected
+slack plus the head's released bundle. The local one-head stress profile
+shows that even the complete residual pool can fail while the permanent
+anchor is retained. The surviving global step is therefore packet-level
+Hall completion/response-star termination, not generic cycle payment.
+
 The exact objective “recruit the signed surplus or make a strict finite GG
 transition” is closed in
 [`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).

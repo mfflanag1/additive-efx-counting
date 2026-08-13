@@ -247,3 +247,12 @@ gate—the root-sourced complete-residual-pool capture—plus a decorated-head
 exchange. Generic supplier saturation does not force mixed-cycle payment,
 and `R_q` alone is not the complete compensation pool; both former headlines
 are superseded by the 2026-08-13 exact countermodels.
+
+The corrected continuation first localizes every blocker to one of at most
+two decorated heads, then alternates minimal response extraction until every
+wall has a candidate-safe head-sourced core. A protected whole-bundle perfect
+matching closes by EFX; failure is a deficiency-one Hall witness containing
+a head. The one-head two-bundle selector either repairs that witness or
+produces simultaneous packet capture. Hence the current live boundary is
+packet-level Hall completion and compressed response-star recurrence,
+coupled to root-preserving complete-pool capture.

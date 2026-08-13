@@ -43,6 +43,9 @@ DEPENDENCIES = (
     ("SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md", "supplier_saturation_does_not_force_mixed_cycle_payment_audit.json"),
     ("SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md", "supplier_saturated_payment_refutation_independent_audit.json"),
     ("MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md", "mixed_cycle_decorated_head_localization_audit.json"),
+    ("DECORATED_HEAD_ALTERNATING_MINIMAL_RESPONSE_LEMMA_20260813.md", "decorated_head_alternating_minimal_response_audit.json"),
+    ("DECORATED_HEAD_PROTECTED_BUNDLE_HALL_DICHOTOMY_20260813.md", "decorated_head_protected_bundle_hall_dichotomy_audit.json"),
+    ("ONE_HEAD_PROTECTED_SPLIT_OR_CAPTURE_LEMMA_20260813.md", "one_head_protected_split_or_capture_audit.json"),
 )
 
 
@@ -96,7 +99,7 @@ def run(root: Path) -> dict:
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "GENERIC_PAYMENT_REFUTED_BLOCKERS_LOCALIZED_OPEN_HEAD_EXCHANGE" if recruitment_goal_resolved else (
+        "status": "GENERIC_PAYMENT_REFUTED_HEAD_HALL_REDUCED_OPEN_PACKET_CAPTURE" if recruitment_goal_resolved else (
             "RESPONSE_GEOMETRY_COMPLETE_OPEN_MIXED_PAYMENT" if response_geometry_complete else (
             "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE" if recruitment_complete else (
             "INTERFACE_REFUTED" if interface_refuted else (
@@ -106,10 +109,11 @@ def run(root: Path) -> dict:
         "dependency_count": len(records),
         "records": records,
         "proved_reduction": (
-            "all mixed-margin Hamiltonian-path states pay every row or yield an "
-            "incoming-core self-response/current-safe decorated response"
+            "mixed-cycle walls yield old self-response progress or candidate-safe "
+            "responses sourced by at most two decorated heads; protected whole-"
+            "bundle matching closes or gives a head-containing deficiency-one cut"
         ),
-        "exact_surviving_separator": "one-head or alternating two-head GG exchange plus root-sourced complete-residual-pool capture",
+        "exact_surviving_separator": "one-head simultaneous packet capture or two-head protected Hall cut, coupled to root-sourced complete-residual-pool capture",
         "claim_boundary": (
             "generic supplier saturation does not force payment and R_q-only "
             "accounting is false; global GG recurrence remains separate"

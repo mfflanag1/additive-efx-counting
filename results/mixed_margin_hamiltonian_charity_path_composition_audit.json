@@ -1,13 +1,13 @@
 {
   "claim_boundary": "generic supplier saturation does not force payment and R_q-only accounting is false; global GG recurrence remains separate",
-  "dependency_count": 33,
-  "exact_surviving_separator": "one-head or alternating two-head GG exchange plus root-sourced complete-residual-pool capture",
-  "proved_reduction": "all mixed-margin Hamiltonian-path states pay every row or yield an incoming-core self-response/current-safe decorated response",
+  "dependency_count": 36,
+  "exact_surviving_separator": "one-head simultaneous packet capture or two-head protected Hall cut, coupled to root-sourced complete-residual-pool capture",
+  "proved_reduction": "mixed-cycle walls yield old self-response progress or candidate-safe responses sourced by at most two decorated heads; protected whole-bundle matching closes or gives a head-containing deficiency-one cut",
   "provenance": {
     "checkpoint": "results/MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "d49a0f418975e722bd31232348ecf77f2f904b014940e79f7081e91b8c5851ed",
+    "checkpoint_sha256": "30b870dfac161fc9d802370fe8b6cd801fc4572a366e9a7f5a4300565cb455d7",
     "script": "tracks/parkability/audit_mixed_margin_hamiltonian_charity_path_composition.py",
-    "script_sha256": "abf9e6b5b3e1b51a7a97718bd288105c1bf58b83b900ecc2b636235c05d09250"
+    "script_sha256": "730d24d5dd35ce9b0fcd50a78344108e6052ca5f4b8b82665346623c63b81cda"
   },
   "records": [
     {
@@ -240,8 +240,29 @@
       "audit_status": "TERMINAL_BLOCKERS_LOCALIZED_TO_AT_MOST_TWO_DECORATED_HEADS",
       "theorem": "results/MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md",
       "theorem_sha256": "e7e2716464280436cc99cbca4fc14712748f85957e331190cd203637f526f8a4"
+    },
+    {
+      "audit": "results/decorated_head_alternating_minimal_response_audit.json",
+      "audit_sha256": "e623a54b0a7dde19db628a0af6bf876dd1760312900b35619e2d6cbf4d4723da",
+      "audit_status": "EVERY_WALL_HAS_CANDIDATE_SAFE_ONE_OR_TWO_HEAD_RESPONSE",
+      "theorem": "results/DECORATED_HEAD_ALTERNATING_MINIMAL_RESPONSE_LEMMA_20260813.md",
+      "theorem_sha256": "a7bbe21dc3b961614a2cc28d903067c1b667697a450b179514d1b1ad7cd7972d"
+    },
+    {
+      "audit": "results/decorated_head_protected_bundle_hall_dichotomy_audit.json",
+      "audit_sha256": "8afec80c40f237a105e8ef91ea7965f773d088a6ea6500f1cc83dd79aba50b21",
+      "audit_status": "ALL_PROTECTED_GRAPHS_MATCH_OR_HAVE_HEAD_DEFICIENCY_ONE",
+      "theorem": "results/DECORATED_HEAD_PROTECTED_BUNDLE_HALL_DICHOTOMY_20260813.md",
+      "theorem_sha256": "60c02bd1e4b0a315d3094d1d853483d27ea2ff8cb8f4957f6a6fe072ef9027b4"
+    },
+    {
+      "audit": "results/one_head_protected_split_or_capture_audit.json",
+      "audit_sha256": "fc975d17f4e64898ea70400262b70fff54a37a4b954f550ea007cc0b927adab3",
+      "audit_status": "EXACT_TWO_BUNDLE_SPLIT_OR_CAPTURE",
+      "theorem": "results/ONE_HEAD_PROTECTED_SPLIT_OR_CAPTURE_LEMMA_20260813.md",
+      "theorem_sha256": "e366c12ec61c3e2199b2bbb639ca4693461453e8bac90cda8302fbb03842f3d5"
     }
   ],
   "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-  "status": "GENERIC_PAYMENT_REFUTED_BLOCKERS_LOCALIZED_OPEN_HEAD_EXCHANGE"
+  "status": "GENERIC_PAYMENT_REFUTED_HEAD_HALL_REDUCED_OPEN_PACKET_CAPTURE"
 }

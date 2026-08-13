@@ -79,6 +79,22 @@ headlines:
   Twelve of the fourteen mixed four-cycle patterns have one such head; only
   the two cyclic orientations of `D,O,D,O` have two. The remaining payment
   problem is therefore a one-head exchange or one coupled two-head exchange.
+- [`DECORATED_HEAD_ALTERNATING_MINIMAL_RESPONSE_LEMMA_20260813.md`](DECORATED_HEAD_ALTERNATING_MINIMAL_RESPONSE_LEMMA_20260813.md)
+  ([audit](decorated_head_alternating_minimal_response_audit.json))
+  converts every wall into a response safe relative to the paid candidate
+  and sourced by one of the at most two heads, using strict nested-support
+  descent when the heads alternately block one another.
+- [`DECORATED_HEAD_PROTECTED_BUNDLE_HALL_DICHOTOMY_20260813.md`](DECORATED_HEAD_PROTECTED_BUNDLE_HALL_DICHOTOMY_20260813.md)
+  ([exact graph audit](decorated_head_protected_bundle_hall_dichotomy_audit.json))
+  checks all 3,584 one-head and 3,136 two-head protected graphs. A perfect
+  matching gives EFX; every minimal obstruction contains a head and has
+  deficiency exactly one.
+- [`ONE_HEAD_PROTECTED_SPLIT_OR_CAPTURE_LEMMA_20260813.md`](ONE_HEAD_PROTECTED_SPLIT_OR_CAPTURE_LEMMA_20260813.md)
+  ([symbolic/stress audit](one_head_protected_split_or_capture_audit.json))
+  exhausts every two-bundle one-head repair. Failure makes the head packet
+  capture the displaced owner's entire protected slack plus the head's
+  released bundle. An exact positive stress profile also defeats the full
+  residual pool while retaining the permanent anchor.
 
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
