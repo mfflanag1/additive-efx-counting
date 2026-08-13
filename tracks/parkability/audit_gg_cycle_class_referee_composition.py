@@ -61,6 +61,10 @@ def run(root: Path) -> dict:
         "endpoint_hole_core_exchange_selector_audit.json",
         "FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md",
         "four_old_core_shortcut_interface_audit.json",
+        "GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md",
+        "genuine_mixed_edge_hamiltonian_interface_audit.json",
+        "GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md",
+        "general_mixed_edge_deletion_return_composition_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -107,17 +111,25 @@ def run(root: Path) -> dict:
         (result_dir / "four_old_core_shortcut_interface_audit.json").read_text()
     )
     assert shortcut["status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"
+    genuine = json.loads(
+        (result_dir / "genuine_mixed_edge_hamiltonian_interface_audit.json").read_text()
+    )
+    assert genuine["status"] == "INTERFACE_RECONSTRUCTED_WITH_KAPPA_BRANCH"
+    general = json.loads(
+        (result_dir / "general_mixed_edge_deletion_return_composition_audit.json").read_text()
+    )
+    assert general["status"] == "ALL_KAPPA_REDUCED_TO_DECORATED_POOL_SEPARATOR"
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "STATED_GG_SPLICE_INTERFACE_REFUTED",
+        "status": "MIXED_INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "correct mixed-edge Hamiltonian import",
+        "smallest_named_terminal": "signed-surplus participant-pool compensation",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,

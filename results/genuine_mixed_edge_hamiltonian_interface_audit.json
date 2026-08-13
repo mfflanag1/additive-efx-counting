@@ -1,0 +1,6882 @@
+{
+  "abstract_kappa2_countermodel": {
+    "edges": [
+      {
+        "source": 0,
+        "target": 1,
+        "type": "decorated"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "type": "old"
+      },
+      {
+        "source": 2,
+        "target": 3,
+        "type": "decorated"
+      },
+      {
+        "source": 3,
+        "target": "charity",
+        "type": "old"
+      }
+    ],
+    "full_rank": 4,
+    "interpretation": "The BCFF old/current edge definitions and Hamiltonian graph shape alone do not force a rank-four matching with exactly one decorated edge.",
+    "minimum_decorated_edges_in_rank4_matching": 2,
+    "old_rank": 2,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      "charity"
+    ]
+  },
+  "all_mixed_and_closing_supports_disjoint": true,
+  "all_own_core_residual_pairs_disjoint": true,
+  "anchored_nonanchor_mixed_location_count": 18,
+  "anchored_nonanchor_mixed_locations": [
+    {
+      "anchor_position": 0,
+      "mixed_position": 1,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "anchor_position": 0,
+      "mixed_position": 2,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "anchor_position": 0,
+      "mixed_position": 3,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ]
+    },
+    {
+      "anchor_position": 0,
+      "mixed_position": 1,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "anchor_position": 0,
+      "mixed_position": 2,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "anchor_position": 0,
+      "mixed_position": 3,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ]
+    },
+    {
+      "anchor_position": 1,
+      "mixed_position": 0,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "anchor_position": 1,
+      "mixed_position": 2,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "anchor_position": 1,
+      "mixed_position": 3,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "anchor_position": 2,
+      "mixed_position": 0,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "anchor_position": 2,
+      "mixed_position": 1,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "anchor_position": 2,
+      "mixed_position": 3,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "anchor_position": 1,
+      "mixed_position": 0,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "anchor_position": 1,
+      "mixed_position": 2,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "anchor_position": 1,
+      "mixed_position": 3,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ]
+    },
+    {
+      "anchor_position": 2,
+      "mixed_position": 0,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "anchor_position": 2,
+      "mixed_position": 1,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    },
+    {
+      "anchor_position": 2,
+      "mixed_position": 3,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ]
+    }
+  ],
+  "anchored_path_count": 6,
+  "claim_boundary": "exact graph/support/debt interface; kappa=1 is not proved universal, and no decorated observer budgets are closed",
+  "decorated_edge_count_classification": {
+    "0": "four old cores: immediate base-safe EFX/Pareto shortcut",
+    "1": "three old cores and one decorated core",
+    "2": "two old cores and two decorated cores",
+    "3": "one old core and three decorated cores",
+    "4": "four current-desired/current-safe cores: immediate EFX/Pareto shortcut"
+  },
+  "mixed_survivor_kappa": [
+    1,
+    2,
+    3
+  ],
+  "one_decorated_closing_pivot_count": 288,
+  "one_decorated_path_count": 96,
+  "prefix_membership_counts": {
+    "mixed_inside_prefix": 144,
+    "mixed_outside_prefix": 144
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_genuine_mixed_edge_hamiltonian_interface.py",
+    "script_sha256": "0f6d2921829d8504f5b6cda95253cc33b0536b0f0c55f0aa4289bbc828b03c57",
+    "theorem": "results/GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md",
+    "theorem_sha256": "8b8fe652f4acb7c5650abe64edc10bf32a7eed24e9722342c2718b64610043ee",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "r",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "q",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "s",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "s",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "c",
+      "mixed_target": "s",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "s",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "c",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "c",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "q",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "r",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "q",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "c",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 0,
+      "mixed_source": "s",
+      "mixed_target": "c",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "q",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 1,
+      "mixed_source": "c",
+      "mixed_target": "q",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": "r",
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 2,
+      "mixed_source": "q",
+      "mixed_target": "r",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": true
+    },
+    {
+      "closing_position": 1,
+      "closing_source": "c",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 2,
+      "closing_source": "q",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    },
+    {
+      "closing_position": 3,
+      "closing_source": "r",
+      "closing_target": "s",
+      "incoming_mixed_owner": null,
+      "mixed_and_closing_supports_disjoint": true,
+      "mixed_position": 3,
+      "mixed_source": "r",
+      "mixed_target": "charity",
+      "own_core_residual_disjoint": {
+        "c": true,
+        "q": true,
+        "r": true,
+        "s": true
+      },
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "selected_mixed_edge_in_prefix_cycle": false
+    }
+  ],
+  "schema": "genuine-mixed-edge-hamiltonian-interface-audit-v1",
+  "status": "INTERFACE_RECONSTRUCTED_WITH_KAPPA_BRANCH",
+  "symbolic_debt_checks": {
+    "mixed_separator_identifies_positive_debt": true,
+    "old_margin_pays_zero_debt": true,
+    "positive_debt_requires_positive_current_surplus": true
+  }
+}

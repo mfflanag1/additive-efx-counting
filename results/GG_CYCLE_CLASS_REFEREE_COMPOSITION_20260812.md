@@ -234,3 +234,18 @@ Only after this import is fixed can the residual-compensation and endpoint
 hole/core selectors be composed. The conditional path rotation and its
 three anchored identity types remain useful proof templates, but they do
 not close the corrected mixed observer budgets.
+
+### Reconstructed mixed interface (2026-08-13)
+
+That import is now fixed in
+[`GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md`](GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md)
+and composed in
+[`GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md`](GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md).
+The genuine matching has `kappa in {1,2,3}` current-only selected cores; the
+closing response is a separate subset of the unmatched hole. Every branch
+reduces to EFX/progress or the selected-core/hole-pool compensation
+separator. A complete local pool obstruction shows that current-safety
+budgets alone do not force the last selector. The smallest remaining GG
+operation is therefore signed-surplus component retention or recruitment,
+followed by the root/q inequalities. No GG closure or four-agent EFX theorem
+is claimed.

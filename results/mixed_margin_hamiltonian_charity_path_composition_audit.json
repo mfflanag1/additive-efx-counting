@@ -1,13 +1,13 @@
 {
-  "claim_boundary": "the all-old-core splice normal form is vacuous; reconstruct the mixed current-safe edge before asserting mixed-margin termination",
-  "dependency_count": 21,
-  "exact_surviving_separator": "correct mixed-edge Hamiltonian import",
+  "claim_boundary": "the mixed interface is reconstructed for kappa 1,2,3; signed component surplus is still needed to contradict the pool separator",
+  "dependency_count": 24,
+  "exact_surviving_separator": "selected-core/hole-pool compensation separator",
   "proved_reduction": "all mixed-margin Hamiltonian-path states pay every row or yield an incoming-core self-response/current-safe decorated response",
   "provenance": {
     "checkpoint": "results/MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "4b4230f3786fc374b0745135aca5a8200a802ef3d459c0c343f4a16d53acc682",
+    "checkpoint_sha256": "d29ba4eae0241f109c306c8734556c721749fd8c7c5c51c4671895858ab5fb81",
     "script": "tracks/parkability/audit_mixed_margin_hamiltonian_charity_path_composition.py",
-    "script_sha256": "8f0127d251e88e7e336e296ffc7dff771a8e4f82afbee20259c55aabe8e0bfda"
+    "script_sha256": "df519425af499b974793f10f7d67aed8f4b7a1fbe791def55f83f86adf26eb60"
   },
   "records": [
     {
@@ -156,8 +156,29 @@
       "audit_status": "STATED_SPLICE_NORMAL_FORM_VACUOUS",
       "theorem": "results/FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md",
       "theorem_sha256": "bcccf578f1f01d34d47efca05fe8b4f1101f7dbad24342080a5d2cb87ce1573c"
+    },
+    {
+      "audit": "results/genuine_mixed_edge_hamiltonian_interface_audit.json",
+      "audit_sha256": "8b4d0f5933cfe4671ea661dc6c0b42c64608b00a0a7413658487a389d8d278b7",
+      "audit_status": "INTERFACE_RECONSTRUCTED_WITH_KAPPA_BRANCH",
+      "theorem": "results/GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md",
+      "theorem_sha256": "8b8fe652f4acb7c5650abe64edc10bf32a7eed24e9722342c2718b64610043ee"
+    },
+    {
+      "audit": "results/corrected_mixed_edge_deletion_return_composition_audit.json",
+      "audit_sha256": "66dc9ba9b92a5ad8cac27a166f584ecbaa24ce2a1d96c16c017e7720221c6242",
+      "audit_status": "KAPPA1_REDUCED_TO_CROSS_DECORATED_EXCHANGE",
+      "theorem": "results/CORRECTED_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md",
+      "theorem_sha256": "e90b974f2bb30f6535aeee004aff09f269ab7243a85f74b7aa8876e143722d6f"
+    },
+    {
+      "audit": "results/general_mixed_edge_deletion_return_composition_audit.json",
+      "audit_sha256": "1837d5c4c602ce0e87be0798aec2b2bde643fa2d7773b6bba7d55257fd5f2db1",
+      "audit_status": "ALL_KAPPA_REDUCED_TO_DECORATED_POOL_SEPARATOR",
+      "theorem": "results/GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md",
+      "theorem_sha256": "7e29f7118dfcbb45990d426b35f8eae78117118637eb60d8d551d2707aeaca55"
     }
   ],
   "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-  "status": "INTERFACE_REFUTED"
+  "status": "INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR"
 }

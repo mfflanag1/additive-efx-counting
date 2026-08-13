@@ -2,12 +2,12 @@
 
 **Date:** 2026-08-11
 
-**Status:** **interface-refuted 2026-08-13.** The 2026-08-12 referee audit
-found a rank-completion gap, but the stated deletion-return import is itself
-inconsistent with global maximality: four disjoint base-common-safe desired
-path cores give an immediate partial EFX Pareto improvement. The actual
-mixed current-safe path edge must be reconstructed before this checkpoint
-can support a GG theorem.
+**Status:** **interface reconstructed; pool separator open (2026-08-13).**
+The four-old-core import was indeed inconsistent with global maximality.
+The genuine definition-level interface has now been reconstructed for every
+mixed count `kappa in {1,2,3}` and the paid deletion-return argument re-run.
+It terminates at the selected-core/hole-pool compensation separator, not at a
+four-agent EFX theorem.
 
 ## Authoritative state
 
@@ -187,3 +187,26 @@ Mixed-margin recurrence, GG, and four-agent/general additive EFX remain open.
 
 The superseding interface audit is
 [`FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md`](FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md).
+
+## Reconstructed interface supersession (2026-08-13)
+
+The authoritative replacement is
+[`GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md`](GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md).
+A rank-four Hamiltonian matching may contain one, two, or three selected
+cores that are only current-safe. The later closing response enters the
+unmatched hole and is physically distinct from those selected cores. For
+each decorated core `D`, its exact base debt is
+`beta_h(D)=(tau_h(D)-v_h(X_h))_+`, bounded by the signed current surplus
+`v_h(Y_h)-v_h(X_h)`.
+
+The cap-free payment re-run is
+[`GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md`](GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md).
+It covers all 1,008 mixed path/decoration/closing-position cases. Atomic
+deletion-return, old-recipient residual return, and incoming-core rotation
+resolve every branch except a finite but unbounded-by-packet-size partition
+of the complete hole/selected-core participant pool. An exact positive-
+rational local interface instance rejects all 262,144 such partitions.
+Consequently current safety alone is insufficient: the next GG operation
+must retain or recruit the signed component realizing the blocking
+observer's surplus. The local separator is not a globally maximal GG
+counterexample.

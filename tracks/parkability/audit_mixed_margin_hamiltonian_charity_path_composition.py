@@ -31,6 +31,9 @@ DEPENDENCIES = (
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
     ("FOUR_OLD_CORE_SHORTCUT_AND_INTERFACE_REFUTATION_20260813.md", "four_old_core_shortcut_interface_audit.json"),
+    ("GENUINE_MIXED_EDGE_HAMILTONIAN_INTERFACE_20260813.md", "genuine_mixed_edge_hamiltonian_interface_audit.json"),
+    ("CORRECTED_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md", "corrected_mixed_edge_deletion_return_composition_audit.json"),
+    ("GENERAL_MIXED_EDGE_DELETION_RETURN_COMPOSITION_20260813.md", "general_mixed_edge_deletion_return_composition_audit.json"),
 )
 
 
@@ -67,25 +70,30 @@ def run(root: Path) -> dict:
         record["audit_status"] == "STATED_SPLICE_NORMAL_FORM_VACUOUS"
         for record in records
     )
+    interface_reconstructed = any(
+        record["audit_status"] == "ALL_KAPPA_REDUCED_TO_DECORATED_POOL_SEPARATOR"
+        for record in records
+    )
 
     script = Path(__file__).resolve()
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "INTERFACE_REFUTED" if interface_refuted else (
+        "status": "INTERFACE_RECONSTRUCTED_OPEN_POOL_SEPARATOR" if interface_reconstructed else (
+            "INTERFACE_REFUTED" if interface_refuted else (
             "REFEREE_GAP_FOUND" if referee_gap else (
-            "DEPENDENCIES_REPLAYABLE" if verified else "OPEN"
-        )),
+                "DEPENDENCIES_REPLAYABLE" if verified else "OPEN"
+        ))),
         "dependency_count": len(records),
         "records": records,
         "proved_reduction": (
             "all mixed-margin Hamiltonian-path states pay every row or yield an "
             "incoming-core self-response/current-safe decorated response"
         ),
-        "exact_surviving_separator": "correct mixed-edge Hamiltonian import",
+        "exact_surviving_separator": "selected-core/hole-pool compensation separator",
         "claim_boundary": (
-            "the all-old-core splice normal form is vacuous; reconstruct the "
-            "mixed current-safe edge before asserting mixed-margin termination"
+            "the mixed interface is reconstructed for kappa 1,2,3; signed "
+            "component surplus is still needed to contradict the pool separator"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),
