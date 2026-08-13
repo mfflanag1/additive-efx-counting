@@ -145,6 +145,15 @@ transition: prove observer payment for a supplier-saturated mixed cycle and
 the remaining root-sourced q-residual capture inequality. Those obligations
 do not invalidate or remain inside the recruitment lemma proved here.
 
+## Verification
+
+The primary completion audit checks the payment implications symbolically,
+all 1,008 path/decoration/closing-source interfaces, all 24 anchored prefix
+placements, and all 3,840 owner-supplier closures. A second implementation
+reconstructs the target/core atoms independently, checks 4,032 prefix
+allocations and 2,304 admissible old-blocker relations, and does not import
+the primary audit.
+
 ## Claim boundary
 
 This theorem resolves signed-surplus recruitment from the selected-pool

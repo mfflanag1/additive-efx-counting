@@ -345,17 +345,20 @@
   "maximum_supplier_growth_steps": 3,
   "next_separate_goal": "supplier-saturated mixed-cycle observer payment and root-sourced q-residual capture",
   "provenance": {
+    "independent_audit": "results/selected_pool_recruitment_independent_audit.json",
+    "independent_audit_sha256": "7b627bda23f719c5ee2e12033d1cb60a24483c3bf596a19f30f5d90a7bd51175",
     "recruitment_dependency": "results/SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md",
     "recruitment_dependency_sha256": "972fcdb217161d96adc20532b34a7aa7b6cd0ec2cba912c335eab7b12e3c74be",
     "script": "tracks/parkability/audit_selected_pool_signed_surplus_recruitment_resolution.py",
-    "script_sha256": "84e454c4157e895b6be81dc2341a6058e074fae273eab368f05c515937511cbd",
+    "script_sha256": "14c05c13bdedc35d1d67d414baa3554dc2fa3e8862950377c12a5d8ecb8cdd31",
     "theorem": "results/SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md",
-    "theorem_sha256": "74c4c42493057a2ed232f9cf62a257b8a0c0ae2b41bf2c689e378db8ab9f77b7",
+    "theorem_sha256": "b206aa31b609b297f027d26ab25b6d664a4258353f778c06fe1dfdb159062808",
     "z3_version": "5.0.0"
   },
   "requirements": {
     "all_blocking_old_observers": "PROVED_BY_OLD_SUFFIX_CLASSIFICATION",
     "cap_free_recruitment": "PROVED_BY_FIVE_LEVEL_PREFIX_ORDER",
+    "independent_reconstruction": "PASSED_WITHOUT_IMPORTING_PRIMARY_AUDIT",
     "internal_supplier_closure": "PROVED_BY_FINITE_OWNER_UNION_CLOSURE",
     "owner_floors": "PROVED_SYMBOLICALLY",
     "permanent_root_q_anchor": "PRESERVED_AS_UNCUT_PHYSICAL_CORE",

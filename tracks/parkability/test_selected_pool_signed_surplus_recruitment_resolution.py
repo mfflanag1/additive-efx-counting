@@ -19,6 +19,7 @@ def test_recruitment_goal_requirements_are_all_discharged() -> None:
         "internal_supplier_closure": "PROVED_BY_FINITE_OWNER_UNION_CLOSURE",
         "permitted_output": "STRICT_FINITE_GG_PREFIX_TRANSITION",
         "recurrence_persistence": "MAX_PHASE_LEDGER_PER_EXACT_SIGNED_RECORD",
+        "independent_reconstruction": "PASSED_WITHOUT_IMPORTING_PRIMARY_AUDIT",
     }
 
 

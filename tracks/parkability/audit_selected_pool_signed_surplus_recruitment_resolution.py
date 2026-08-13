@@ -150,6 +150,11 @@ def run(root: Path) -> dict:
         "old_observer_prepaid": False,
         "hole_row_separator": False,
     }
+    independent_path = root / "results/selected_pool_recruitment_independent_audit.json"
+    independent = json.loads(independent_path.read_text())
+    assert independent["status"] == "INDEPENDENT_PREFIX_RECONSTRUCTION_PASSED"
+    assert independent["interface_states"] == 1008
+    assert independent["prefix_level_checks"] == 4032
 
     requirements = {
         "cap_free_recruitment": "PROVED_BY_FIVE_LEVEL_PREFIX_ORDER",
@@ -161,6 +166,7 @@ def run(root: Path) -> dict:
         "internal_supplier_closure": "PROVED_BY_FINITE_OWNER_UNION_CLOSURE",
         "permitted_output": "STRICT_FINITE_GG_PREFIX_TRANSITION",
         "recurrence_persistence": "MAX_PHASE_LEDGER_PER_EXACT_SIGNED_RECORD",
+        "independent_reconstruction": "PASSED_WITHOUT_IMPORTING_PRIMARY_AUDIT",
     }
 
     script = Path(__file__).resolve()
@@ -194,6 +200,8 @@ def run(root: Path) -> dict:
             "theorem_sha256": sha256(theorem),
             "recruitment_dependency": str(recruitment_path.relative_to(root)),
             "recruitment_dependency_sha256": sha256(recruitment_path),
+            "independent_audit": str(independent_path.relative_to(root)),
+            "independent_audit_sha256": sha256(independent_path),
             "z3_version": z3.get_version_string(),
         },
     }
