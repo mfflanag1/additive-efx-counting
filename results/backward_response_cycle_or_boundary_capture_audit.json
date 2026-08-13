@@ -1,0 +1,701 @@
+{
+  "anchored_path_count": 6,
+  "backward_order_count": 36,
+  "claim_boundary": "cap-free support classification only; mixed-cycle payment/root-q reverse inequality remains open",
+  "identity_class_counts": {
+    "generic_nonhole_boundary_split": 10,
+    "nonhole_anchor_source_release": 2,
+    "nonhole_anchor_target_collision": 6,
+    "owner_hole_cycle": 18
+  },
+  "provenance": {
+    "dependency": "results/SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md",
+    "dependency_sha256": "972fcdb217161d96adc20532b34a7aa7b6cd0ec2cba912c335eab7b12e3c74be",
+    "script": "tracks/parkability/audit_backward_response_cycle_or_boundary_capture.py",
+    "script_sha256": "7a897121fcdb35d346079ffb16ecc845428a565138e486457d19dbbc61d784d8",
+    "theorem": "results/BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md",
+    "theorem_sha256": "ba1caf08ba41a3519283cce50dcb584755b3f55568344b6d6fed41d5bedcc2b0",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "q",
+      "source_position": 1,
+      "target": "r",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 2,
+      "target": "r",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2
+      ],
+      "identity_class": "nonhole_anchor_target_collision",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 2,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "r",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2,
+        3
+      ],
+      "identity_class": "nonhole_anchor_target_collision",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": 1,
+      "cycle_positions": [
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "c",
+      "target_position": 2
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "q",
+      "source_position": 1,
+      "target": "r",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 2,
+      "target": "r",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2
+      ],
+      "identity_class": "nonhole_anchor_target_collision",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 2,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "r",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2,
+        3
+      ],
+      "identity_class": "nonhole_anchor_target_collision",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": 1,
+      "cycle_positions": [
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "s",
+      "target_position": 2
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "r",
+      "source_position": 1,
+      "target": "c",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "q",
+      "source_position": 2,
+      "target": "c",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "q",
+      "source_position": 2,
+      "target": "r",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "c",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "r",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": 1,
+      "cycle_positions": [
+        2,
+        3
+      ],
+      "identity_class": "nonhole_anchor_target_collision",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 1,
+      "target": "c",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "r",
+      "source_position": 2,
+      "target": "c",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2
+      ],
+      "identity_class": "nonhole_anchor_source_release",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "r",
+      "source_position": 2,
+      "target": "s",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q",
+      "source_position": 3,
+      "target": "c",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q",
+      "source_position": 3,
+      "target": "s",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": 1,
+      "cycle_positions": [
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q",
+      "source_position": 3,
+      "target": "r",
+      "target_position": 2
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "r",
+      "source_position": 1,
+      "target": "s",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "q",
+      "source_position": 2,
+      "target": "s",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "q",
+      "source_position": 2,
+      "target": "r",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "s",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "r",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": 1,
+      "cycle_positions": [
+        2,
+        3
+      ],
+      "identity_class": "nonhole_anchor_target_collision",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c",
+      "source_position": 3,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 1,
+      "target": "s",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "r",
+      "source_position": 2,
+      "target": "s",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2
+      ],
+      "identity_class": "nonhole_anchor_source_release",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "r",
+      "source_position": 2,
+      "target": "c",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": null,
+      "cycle_positions": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "identity_class": "owner_hole_cycle",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q",
+      "source_position": 3,
+      "target": "s",
+      "target_position": 0
+    },
+    {
+      "boundary_source_position": 0,
+      "cycle_positions": [
+        1,
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q",
+      "source_position": 3,
+      "target": "c",
+      "target_position": 1
+    },
+    {
+      "boundary_source_position": 1,
+      "cycle_positions": [
+        2,
+        3
+      ],
+      "identity_class": "generic_nonhole_boundary_split",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q",
+      "source_position": 3,
+      "target": "r",
+      "target_position": 2
+    }
+  ],
+  "schema": "backward-response-cycle-or-boundary-capture-audit-v1",
+  "smallest_terminal": "supplier-saturated mixed-cycle observer payment",
+  "status": "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT",
+  "symbolic_checks": {
+    "boundary_failure_forces_overlap_capture": true,
+    "capture_is_strict": true
+  }
+}

@@ -254,3 +254,14 @@ prefix coordinate. The smallest remaining GG operation is now to pay a
 supplier-saturated mixed backward cycle or convert an old forward chord into
 an anchor-preserving strict matching transition using the root/q inequalities.
 No GG closure or four-agent EFX theorem is claimed.
+
+The forward/backward response geometry is now complete in
+[`FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md`](FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md)
+and
+[`BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md`](BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md).
+Generic nonadjacent overlaps have a cap-free whole-core compensation selector;
+failure captures the displaced source's entire strict margin. Only a
+response-critical overlap with the q-target anchor and a root-sourced
+compensation that must use `R_q=Y_q-K_r` remain anchor-specific. The backward
+side additionally leaves the supplier-saturated mixed-cycle observer-payment
+inequality. These are the current load-bearing gates.

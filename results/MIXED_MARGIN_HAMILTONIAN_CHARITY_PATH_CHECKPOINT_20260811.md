@@ -217,3 +217,13 @@ blocker. The prefix increases at most three times while preserving target
 provenance and the permanent anchor. The live endpoint is a supplier-
 saturated mixed backward cycle or an anchor-preserving forward-chord
 conversion.
+
+Both response directions are now physically classified. The
+[`FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md`](FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md)
+reduces all 36 anchored forward orders to same-source replacement, generic
+whole-core compensation, or six instances each of anchor-target overlap and
+anchor-source q-residual compensation. The
+[`BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md`](BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md)
+reduces all 36 backward orders to 18 hole cycles and 18 exact boundary
+splits. The remaining scalar gate is supplier-saturated mixed-cycle observer
+payment together with the two named root/q reverse inequalities.

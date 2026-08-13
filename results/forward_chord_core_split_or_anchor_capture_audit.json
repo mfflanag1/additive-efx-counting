@@ -1,0 +1,575 @@
+{
+  "anchored_path_count": 6,
+  "claim_boundary": "cap-free split/capture reduction only; root/q reverse inequalities and backward mixed-cycle payment remain open",
+  "forward_order_count": 36,
+  "identity_class_counts": {
+    "adjacent_same_source_replacement": 18,
+    "generic_nonadjacent_split": 6,
+    "nonadjacent_anchor_source_release": 6,
+    "nonadjacent_anchor_target_collision": 6
+  },
+  "provenance": {
+    "dependency": "results/SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md",
+    "dependency_sha256": "972fcdb217161d96adc20532b34a7aa7b6cd0ec2cba912c335eab7b12e3c74be",
+    "script": "tracks/parkability/audit_forward_chord_core_split_or_anchor_capture.py",
+    "script_sha256": "1feecac4b0d2b01000d652014eb7b618754431c3101018b633b6c8d7738d7b27",
+    "theorem": "results/FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md",
+    "theorem_sha256": "7f73601c15f87a9655d8087b90642be8c650de42bfd6444de97470c453b9c436",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 0,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "r",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 1,
+      "identity_class": "nonadjacent_anchor_source_release",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "r",
+      "source_position": 0,
+      "target": "c",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_source_release",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "r",
+      "source_position": 0,
+      "target": "s",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 1,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "q",
+      "source_position": 1,
+      "target": "c",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 2,
+      "identity_class": "generic_nonadjacent_split",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "q",
+      "source_position": 1,
+      "target": "s",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 2,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 2,
+      "target": "s",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 0,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "r",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 1
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 1,
+      "identity_class": "nonadjacent_anchor_source_release",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "r",
+      "source_position": 0,
+      "target": "s",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_source_release",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "r",
+      "source_position": 0,
+      "target": "c",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 1,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "q",
+      "source_position": 1,
+      "target": "s",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 2,
+      "identity_class": "generic_nonadjacent_split",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "q",
+      "source_position": 1,
+      "target": "c",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 2,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 2,
+      "target": "c",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 0,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "r",
+      "target_position": 1
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 1,
+      "identity_class": "nonadjacent_anchor_target_collision",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 2,
+      "identity_class": "generic_nonadjacent_split",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "s",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 1,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "r",
+      "source_position": 1,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_source_release",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "r",
+      "source_position": 1,
+      "target": "s",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 2,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "q",
+      "source_position": 2,
+      "target": "s",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 0,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "s",
+      "target_position": 1
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 1,
+      "identity_class": "generic_nonadjacent_split",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "r",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_target_collision",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 1,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 1,
+      "target": "r",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_target_collision",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 1,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 2,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "r",
+      "source_position": 2,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 0,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "r",
+      "target_position": 1
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 1,
+      "identity_class": "nonadjacent_anchor_target_collision",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 2,
+      "identity_class": "generic_nonadjacent_split",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "c",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 1,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "r",
+      "source_position": 1,
+      "target": "q",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_source_release",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "r",
+      "source_position": 1,
+      "target": "c",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "q",
+      "displaced_source_position": 2,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "q",
+      "source_position": 2,
+      "target": "c",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "s",
+      "displaced_source_position": 0,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "c",
+      "target_position": 1
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 1,
+      "identity_class": "generic_nonadjacent_split",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "r",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_target_collision",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "s",
+      "source_position": 0,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "c",
+      "displaced_source_position": 1,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 1,
+      "target": "r",
+      "target_position": 2
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 2,
+      "identity_class": "nonadjacent_anchor_target_collision",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "c",
+      "source_position": 1,
+      "target": "q",
+      "target_position": 3
+    },
+    {
+      "displaced_source": "r",
+      "displaced_source_position": 2,
+      "identity_class": "adjacent_same_source_replacement",
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "r",
+      "source_position": 2,
+      "target": "q",
+      "target_position": 3
+    }
+  ],
+  "schema": "forward-chord-core-split-or-anchor-capture-audit-v1",
+  "smallest_terminals": {
+    "anchor_source": "q-reservoir compensation disjoint from protected anchor",
+    "anchor_target": "nonempty response/anchor overlap hitting set"
+  },
+  "status": "FORWARD_CHORD_REDUCED_TO_TWO_ANCHOR_INTERFACES",
+  "symbolic_checks": {
+    "anchor_overlap_captures_current_response_margin": true,
+    "capture_is_strict": true,
+    "response_source_paid_without_old_core": true,
+    "whole_core_failure_forces_capture": true,
+    "whole_q_reservoir_failure_forces_anchor_source_capture": true
+  }
+}
