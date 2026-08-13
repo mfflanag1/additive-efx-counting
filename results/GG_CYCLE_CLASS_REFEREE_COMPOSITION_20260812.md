@@ -1,0 +1,166 @@
+# GG cycle-class referee composition
+
+**Date:** 2026-08-12
+
+**Status:** branch-complete reduction of the current GG proof architecture to
+one smallest named terminal; no cap-free GG closure theorem is established
+
+## Claim boundary
+
+This document composes the existing positive, nondegenerate GG flower chain
+without treating audit manifests as mathematical proofs.  Each cited local
+lemma retains its own hypotheses and claim boundary.  The composition finds
+one missing transition, not a counterexample to four-agent additive EFX.
+
+## Starting normal form
+
+Assume the original BCFF/GG contradiction setup:
+
+1. `X` is a positive, nondegenerate, noncomplete partial EFX allocation with
+   one charity good `f`;
+2. `X` is globally maximal in the fixed owner-priority lexicographic order;
+3. the selected GG flower has mutual owners `r,q`, external owners `c,s`,
+   and the named top/bottom decomposition; and
+4. every local selector below is invoked only while its protected anchor,
+   retained support, source, and floor premises remain true.
+
+The fourth item is an interface obligation, not automatically implied by an
+integrity manifest.
+
+## Branch-complete dependency graph
+
+The graph below contracts local algebraic sublemmas into ten proof states.
+Every arrow has either a closed leaf or the next named state.
+
+| State | Input | Exhaustive exits | Continuing state |
+|---|---|---|---|
+| `G0` | globally lex-maximal GG flower | immediate EFX/PI; retained-top orientation | `G1` |
+| `G1` | retained `U subseteq T_r` | EFX; support growth/captured-q rotation; evolved target wall | `G2` |
+| `G2` | minimal evolved-target response | q-source PI; external source; root source | `G3` or `G4` |
+| `G3` | root-sourced joint packet | paid anchor return; bilateral exchange; complete charity path | `G4` |
+| `G4` | root-anchored response/Hall compression | EFX/PI; protected q; degree-zero split-core flip; root-facing handoff | `G5` |
+| `G5` | fixed-U source-margin/root-critical handoff | residual-max contradiction; unsafe response; third-owner fork | `G6` |
+| `G6` | third-owner or retained-bottom fork | paid connected component; captured margin; bottom absorption/cycle splice | `G7` |
+| `G7` | fully paid connected splice | EFX/lex; charity exchange; failed observer target | `G8` |
+| `G8` | exact full signed response state | four current-safe cores; rank-four matching; lower-rank repeated response | `G9` or `T*` |
+| `G9` | PI-free rank-four matching | owner cycle/PI; Hamiltonian path and closing response | `G10` |
+| `G10` | mixed-margin Hamiltonian path | paid deletion-return EFX leaf; incoming-core self-response; unsafe repeated response | `T*` |
+
+The cited dependency manifest contains 58 local GG lemmas through `G9`.
+The corrected mixed-margin manifest contains the path payment algebra through
+`G10`.  The referee audit shows that the final `G10 -> EFX/PI/progress` edge
+does not follow when the unsafe response is old and current response rank is
+below four.
+
+## Closed leaves, stated without proxy words
+
+The composition accepts only the following terminal leaves.
+
+1. **EFX/lex:** an explicit allocation is EFX and its fixed-priority utility
+   vector strictly exceeds that of `X`.
+2. **PI:** a specified set of pairwise-disjoint desired cores has an
+   internally supplied release-compatible directed cycle.
+3. **Strict finite-coordinate transition:** the source and target states stay
+   inside one declared selector family and one of its explicitly ordered
+   finite coordinates strictly increases.
+
+Words such as “augmentation,” “support growth,” “current progress,” and
+“changed record” are not leaves by themselves.  They are shorthand only when
+the relevant lemma identifies the finite family and proves a strict change.
+
+## Attempted global well-founded order
+
+All existing monotone data can be assembled into
+
+\[
+ \Omega=(U,V,S,\mathcal R,
+         \text{anchor-constrained rank},
+         \text{protected source prefix},
+         \text{same-row selected residual}),       \tag{1}
+\]
+
+where:
+
+- `U` is retained root-top support;
+- `V` is absorbed root-bottom support;
+- `S subseteq V` is bottom support committed to retained cores;
+- `mathcal R` is the set of complete signed response records already seen;
+- rank and protected-prefix coordinates belong to one fixed anchored
+  response graph; and
+- the residual coordinate is evaluated in the fixed missing owner's row.
+
+The local lemmas prove strict movement of individual coordinates only while
+their selector family is fixed.  They do not prove that (1) is globally
+lexicographically monotone.  Two exact refutations are already in the
+archive:
+
+1. the raw residual coordinate reverses under hole changes and independent
+   row scaling; and
+2. historical rank/support/residual coordinates can all be saturated on a
+   four-state non-EFX plateau.
+
+The deletion-return referee witness adds a final self-loop.  At its unsafe
+candidate:
+
+- all owners are strictly above base but the allocation is not EFX;
+- the failed-target response may already belong to `mathcal R`;
+- `U,V,S` and the full signed allocation record do not change;
+- the current response graph has source rank one; and
+- there is no release-compatible owner cycle.
+
+Thus the transition “record the response and continue” can leave every
+coordinate of (1) unchanged.  It is an exact one-state recurrence in the
+local transition system.  It is not yet a globally maximal GG countermodel;
+the missing GG theorem would have to exclude or escape it.
+
+## Smallest named terminal
+
+The entire current GG cycle-class architecture reduces to:
+
+> **`T*` — rank-completing paid-response splice.** Start with a paid
+> deletion-return candidate `Z`, every owner strictly above the GG base, and
+> an unsafe changed target.  Let `E` be a globally minimal current-safe
+> response whose complete signed record is already present.  When the current
+> response relation containing `E` has rank below four, either:
+> 1. extend `E` to four pairwise-disjoint current-safe/current-desired cores,
+>    preserving all observer surplus budgets and internal release supply; or
+> 2. construct a connected charity/owner packet splice that is EFX and
+>    lex-improving; or
+> 3. prove a strict increase in one explicitly fixed finite state order.
+
+The existing hole-pivot theorem begins only after alternative 1 has supplied
+rank four.  Full signed-state reconstruction proves equality of repeated
+states, not alternatives 1--3.
+
+## Uncovered premises
+
+1. **Rank completion:** one repeated safe response at `Z` need not extend to
+   a rank-four response matching.
+2. **Budget-preserving completion:** even if graph rank can be increased, the
+   added cores must preserve every decorated observer surplus.
+3. **Internal supply:** the completed response cores' incoming packets must
+   be released within the selected component before PI is invoked.
+4. **Global state order:** no single order is proved monotone across root,
+   hole, source, rank, and retained-support changes.
+5. **Interface preservation:** the 58 local selectors do not by their hashes
+   alone prove that every output satisfies the next selector's full GG
+   premises.
+6. **Original normal-form import:** the BCFF-to-GG reduction and fixed
+   lexicographic priority are assumed here, not re-proved.
+
+## Verdict
+
+There is no referee-grade cap-free GG closure theorem yet.  The payment part
+of the Hamiltonian mixed-margin move is useful and correct, but the former
+closure claim skipped `T*`.  The highest-leverage next theorem is rank
+completion at the paid deletion-return state, not another packet-size cell,
+support counter, or fixed response order.
+
+Primary evidence:
+
+- [`CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md`](CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md)
+- [`closing_source_deletion_return_referee_audit.json`](closing_source_deletion_return_referee_audit.json)
+- [`GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md`](GG_RETAINED_SUPPORT_CONNECTED_PATH_COMPOSITION_CHECKPOINT_20260811.md)
+- [`gg_retained_support_connected_path_composition_audit.json`](gg_retained_support_connected_path_composition_audit.json)
+- [`GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md`](GG_RANK_RESET_RAW_POTENTIAL_REFUTATION_20260811.md)
+- [`GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md`](GG_HISTORICAL_SUPPORT_LEDGER_STAGNATION_REFUTATION_20260811.md)

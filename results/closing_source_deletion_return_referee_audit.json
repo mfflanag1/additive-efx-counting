@@ -1,0 +1,197 @@
+{
+  "current_safe_not_base_safe": {
+    "example": {
+      "base_utility": "1",
+      "current_utility": "5",
+      "decorated_threshold": "4"
+    },
+    "status": "SAT"
+  },
+  "physical_disjointness": "proved from target partition, not synthetic labels",
+  "provenance": {
+    "report": "results/CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md",
+    "report_sha256": "4e9bb74f2e0bd2c4c77b39a1d1182ec185b5b99d877a4539ebb8e3fe450b4948",
+    "script": "tracks/parkability/audit_closing_source_deletion_return_referee.py",
+    "script_sha256": "f4bd4f20143caf944d4297753e04154fec2d2fd9383ee3c5d0afaa3b5b8cb165",
+    "theorem": "results/CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md",
+    "theorem_sha256": "bef4207a7ada0607d38929e00012515961fa820104673ad33f1d8b26b182cabf",
+    "z3_version": "5.0.0"
+  },
+  "rational_local_countermodel": {
+    "base": {
+      "s": [
+        "x2"
+      ],
+      "t": [
+        "x0"
+      ],
+      "u": [
+        "x1"
+      ],
+      "w": [
+        "x3"
+      ]
+    },
+    "base_utilities": {
+      "s": "1",
+      "t": "1",
+      "u": "1",
+      "w": "1"
+    },
+    "candidate": {
+      "s": [
+        "a2",
+        "x1"
+      ],
+      "t": [
+        "d1"
+      ],
+      "u": [
+        "a1",
+        "x0"
+      ],
+      "w": [
+        "a3",
+        "x2"
+      ]
+    },
+    "candidate_utilities": {
+      "s": "3",
+      "t": "3",
+      "u": "3",
+      "w": "3"
+    },
+    "current": {
+      "s": [
+        "a1",
+        "x1"
+      ],
+      "t": [
+        "d0",
+        "d1"
+      ],
+      "u": [
+        "a0",
+        "x0"
+      ],
+      "w": [
+        "a2",
+        "x2"
+      ]
+    },
+    "current_response_edges": [
+      [
+        "s",
+        "charity",
+        [
+          "a0",
+          "d0"
+        ]
+      ],
+      [
+        "s",
+        "charity",
+        [
+          "d0",
+          "x3"
+        ]
+      ],
+      [
+        "s",
+        "u",
+        [
+          "a1"
+        ]
+      ]
+    ],
+    "decorated_core": [
+      "d0",
+      "d1"
+    ],
+    "deleted_good": "d0",
+    "failed_efx": {
+      "observer": "s",
+      "observer_utility": "3",
+      "target": "u",
+      "target_threshold": "4"
+    },
+    "interpretation": "All local payment and disjointness premises hold, but the improving candidate is non-EFX. Its failed-target response may already be in history while the current response graph has only one source, so repetition alone implies neither a rank-four hole pivot nor PI.",
+    "old_cores": {
+      "s": [
+        "a2"
+      ],
+      "t": [
+        "a0"
+      ],
+      "u": [
+        "a1"
+      ],
+      "w": [
+        "a3"
+      ]
+    },
+    "repeated_response_core": [
+      "a1"
+    ],
+    "response_source_rank": 1,
+    "valuations": {
+      "s": {
+        "a0": "1/10",
+        "a1": "4",
+        "a2": "2",
+        "a3": "1/10",
+        "d0": "4",
+        "d1": "2",
+        "x0": "1",
+        "x1": "1",
+        "x2": "1",
+        "x3": "1/10"
+      },
+      "t": {
+        "a0": "11/10",
+        "a1": "1/10",
+        "a2": "1/10",
+        "a3": "1/10",
+        "d0": "6/5",
+        "d1": "3",
+        "x0": "1",
+        "x1": "1/10",
+        "x2": "1/10",
+        "x3": "1/10"
+      },
+      "u": {
+        "a0": "1",
+        "a1": "2",
+        "a2": "1/10",
+        "a3": "1/10",
+        "d0": "1",
+        "d1": "1",
+        "x0": "1",
+        "x1": "1",
+        "x2": "1/10",
+        "x3": "1/10"
+      },
+      "w": {
+        "a0": "1/10",
+        "a1": "1/10",
+        "a2": "1",
+        "a3": "2",
+        "d0": "1",
+        "d1": "1",
+        "x0": "1/10",
+        "x1": "1/10",
+        "x2": "1",
+        "x3": "1"
+      }
+    }
+  },
+  "scalar_checks": {
+    "nonowner_payment_survives_deletion": true,
+    "residual_failure_forces_self_response_value": true,
+    "strict_candidate_gain": true,
+    "target_owner_payment": true
+  },
+  "schema": "closing-source-deletion-return-referee-audit-v1",
+  "smallest_gap": "an unsafe deletion-return target yields one current-safe response, but neither a rank-four matching at that candidate state nor a strict finite state-order increase is proved; an already recorded rank-one response need not be PI or support progress",
+  "status": "TERMINATION_GAP_FOUND"
+}

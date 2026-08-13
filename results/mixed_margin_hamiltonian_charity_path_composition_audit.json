@@ -1,13 +1,13 @@
 {
-  "claim_boundary": "mixed-margin Hamiltonian-path payment only; broader GG closure and four-agent/general EFX remain open",
-  "dependency_count": 19,
-  "exact_surviving_separator": "none inside mixed-margin observer payment; broader GG response/Hall continuations remain outside this theorem",
-  "proved_reduction": "all mixed-margin Hamiltonian-path states reduce to EFX/lex, PI, support growth, or permanent full-decorated response augmentation",
+  "claim_boundary": "payment reduction only; mixed-margin termination, GG closure, and four-agent/general EFX remain open",
+  "dependency_count": 20,
+  "exact_surviving_separator": "rank-completing paid-response splice for an already recorded unsafe deletion-return response at response rank below four",
+  "proved_reduction": "all mixed-margin Hamiltonian-path states pay every row or yield an incoming-core self-response/current-safe decorated response",
   "provenance": {
     "checkpoint": "results/MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "4aa8b11902b63ec59abb503e25be1b1dfa013dfcbeaa5a6188335b1e94ca705b",
+    "checkpoint_sha256": "a5fc2acef51ee87163f0c9b651845ab625170b2f5fc5a7578a3ed7f3a940a37d",
     "script": "tracks/parkability/audit_mixed_margin_hamiltonian_charity_path_composition.py",
-    "script_sha256": "78b8de6e223bbba11d1eebed0f23fd45dee7f7478861ecb9bd9586c803d50a03"
+    "script_sha256": "8798acae5e094b49e3e14bb3dd9a3a9401906f7be4e5f14e975722deebda25bb"
   },
   "records": [
     {
@@ -120,7 +120,14 @@
       "audit_sha256": "a58a06782d1a4fc8e538e877d49e74ef9bde715fe39d76438faf8d1f30ff4921",
       "audit_status": "ALL_FORCED",
       "theorem": "results/CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md",
-      "theorem_sha256": "623717bb8e17b9485a7f57a06b01286cbc4e80897e97fce6e35d1bd70c699539"
+      "theorem_sha256": "bef4207a7ada0607d38929e00012515961fa820104673ad33f1d8b26b182cabf"
+    },
+    {
+      "audit": "results/closing_source_deletion_return_referee_audit.json",
+      "audit_sha256": "af93ae7ae0611e7bd4e28ac944f80def72cddc34dfa3a24ff8289a2d39cc2139",
+      "audit_status": "TERMINATION_GAP_FOUND",
+      "theorem": "results/CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md",
+      "theorem_sha256": "4e9bb74f2e0bd2c4c77b39a1d1182ec185b5b99d877a4539ebb8e3fe450b4948"
     },
     {
       "audit": "results/component_wide_return_compensation_selector_audit.json",
@@ -145,5 +152,5 @@
     }
   ],
   "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-  "status": "DEPENDENCIES_REPLAYABLE"
+  "status": "REFEREE_GAP_FOUND"
 }

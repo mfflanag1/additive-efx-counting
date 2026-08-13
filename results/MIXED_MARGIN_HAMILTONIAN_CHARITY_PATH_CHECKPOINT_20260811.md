@@ -2,8 +2,10 @@
 
 **Date:** 2026-08-11
 
-**Status:** mixed-margin Hamiltonian-path observer payment closed cap-free;
-broader GG and additive EFX remain open
+**Status:** **referee-corrected 2026-08-12.**  Payment reduction is cap-free,
+but an unsafe deletion-return candidate can reach an already recorded
+rank-one response.  Mixed-margin termination remains open at the
+rank-completing paid-response splice.
 
 ## Authoritative state
 
@@ -140,11 +142,13 @@ of the 72 nonself pivots on all 24 Hamiltonian paths, return `D-g` to the hole
 owner, keep the closing source on its displaced path core, and add the
 residual released by the incoming edge into that source's target.  Success
 pays the source; failure makes the incoming core a strict self-response.
-Together with the nonowner lemma this eliminates the mixed-margin separator
-entirely.  See
+Together with the nonowner lemma this pays every row or produces a
+current-safe decorated response.  It does **not** eliminate recurrence when
+that response record is old but does not extend to a rank-four internally
+supplied matching.  See
 [`CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md`](CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md).
 
-## Resolved separator
+## Referee-corrected surviving terminal
 
 After source/core saturation and full-owner recruitment, the sole unproved
 state has all of the following simultaneously:
@@ -160,12 +164,12 @@ state has all of the following simultaneously:
 6. no new response core, source/root, signed transfer, supplier, or release
    label.
 
-The former anchor-containing full-owner **critical-top-up substitution
-separator** is resolved by returning a least-good deletion remainder rather
-than preserving the decorated assignment of all `D`.  No third-owner
-substitute for `K`, q-donor duplication, or globally maximal mixed-margin
-countermodel is needed.  The proof exits through EFX/lex, PI/self-response,
-physical support growth, or a changed full decorated response record.
+Returning a least-good deletion remainder resolves the scalar critical-top-up
+payment.  If the resulting paid candidate is unsafe, minimal extraction can
+produce an already recorded response at a state whose current response graph
+has rank below four.  Neither full-state reconstruction nor the five-target
+hole-pivot lemma completes that response to a paid matching.  The smallest
+surviving operation is therefore the **rank-completing paid-response splice**.
 
 ## Verification and claim boundary
 
@@ -174,6 +178,7 @@ records and hashes every dependency in this reduction.  Its audits verify
 the algebraic implications, exact finite selectors, matching classification,
 and component-cardinality exhaustion.
 
-The manifest establishes the replayable mixed-margin theorem.  It does not
-close every other GG response/Hall continuation, close GG, or prove
-four-agent/general additive EFX.
+The original manifest established only replayability of its dependencies, not
+the missing implication.  The independent referee audit is
+[`CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md`](CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md).
+Mixed-margin recurrence, GG, and four-agent/general additive EFX remain open.

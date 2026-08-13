@@ -2,8 +2,13 @@
 
 **Date:** 2026-08-11
 
-**Status:** cap-free closure of the mixed-margin observer-payment separator
-on every PI-free Hamiltonian charity path
+**Status:** **referee correction (2026-08-12): payment reduction proved, but
+termination refuted under the stated local premises.**  An unsafe candidate
+may return an already recorded rank-one decorated response; PI or permanent
+support progress does not follow without a rank-completing transition.
+
+See
+[`CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md`](CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md).
 
 ## Universal nonself pivot
 
@@ -124,7 +129,7 @@ old internally supplied self-edge is PI; and an outside supplier or changed
 release strictly grows the physical support record.  Thus source residual
 failure cannot remain a mixed-payment separator.
 
-## Theorem
+## Corrected theorem
 
 For every nonself decorated response into the owner hole of a PI-free
 rank-four Hamiltonian charity path, all underfunded rows yield at least one
@@ -133,13 +138,13 @@ of:
 1. a partial EFX lexicographic improvement;
 2. a release-compatible PI/self-response component;
 3. strict physical support/component growth; or
-4. permanent full-decorated response augmentation.
+4. a current-safe decorated response at the deletion-return candidate.
 
-There is no residual globally maximal mixed-margin countermodel.  The
-target-critical top-up, protected-q donor, floater substitution, and source-
-role collision were artifacts of insisting that the closing source receive
-all of `D`; returning the deletion remainder `D-g` to the hole owner exposes
-the ordinary residual dichotomy for that source as well.
+The fourth outcome is new augmentation only when its complete physical record
+was not already present.  If it was present, the proof reaches the named
+**rank-completing paid-response splice terminal**.  A single repeated response
+does not supply the rank-four matching or strict finite state-order increase
+needed for PI/support termination.
 
 ## Verification and claim boundary
 
@@ -149,6 +154,9 @@ cycles of each length two, three, and four.  It verifies path-core/residual
 support disjointness, target-owner payment, threshold monotonicity under
 deletion, and the source self-response cancellation in exact arithmetic.
 
-This theorem closes the mixed-margin observer-payment objective.  It does
-not by itself close every response/Hall continuation elsewhere in GG, the
-other GG flower branches, four-agent additive EFX, or general additive EFX.
+The audit re-proves the scalar and support implications but does not prove the
+last termination sentence in the original version.  The exact rational
+referee witness has a strictly improving non-EFX candidate, an already
+recorded failed-target response, response-source rank one, and no forced PI
+cycle or support change.  Therefore this theorem does not close mixed-margin
+recurrence, GG, four-agent additive EFX, or general additive EFX.

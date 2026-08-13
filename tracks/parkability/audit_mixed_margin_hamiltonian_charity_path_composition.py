@@ -26,6 +26,7 @@ DEPENDENCIES = (
     ("RETAINED_Q_BQ_FLOATER_SUBSTITUTION_HANDOFF_LEMMA_20260811.md", "retained_q_bq_floater_substitution_handoff_audit.json"),
     ("Q_CLOSING_SOURCE_RESIDUAL_REASSIGNMENT_LEMMA_20260811.md", "q_closing_source_residual_reassignment_audit.json"),
     ("CLOSING_SOURCE_DELETION_RETURN_RESIDUAL_COMPLETION_LEMMA_20260811.md", "closing_source_deletion_return_residual_completion_audit.json"),
+    ("CLOSING_SOURCE_DELETION_RETURN_REFEREE_REPORT_20260812.md", "closing_source_deletion_return_referee_audit.json"),
     ("COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md", "component_wide_return_compensation_selector_audit.json"),
     ("COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md", "component_wide_current_or_base_floor_handoff_audit.json"),
     ("FOUR_OWNER_DECORATED_COMPONENT_EXHAUSTION_LEMMA_20260811.md", "four_owner_decorated_component_exhaustion_audit.json"),
@@ -58,24 +59,29 @@ def run(root: Path) -> dict:
             "audit_status": payload.get("status"),
         })
     verified = all(record["audit_status"] in ACCEPTED for record in records)
+    referee_gap = any(
+        record["audit_status"] == "TERMINATION_GAP_FOUND" for record in records
+    )
 
     script = Path(__file__).resolve()
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "DEPENDENCIES_REPLAYABLE" if verified else "OPEN",
+        "status": "REFEREE_GAP_FOUND" if referee_gap else (
+            "DEPENDENCIES_REPLAYABLE" if verified else "OPEN"
+        ),
         "dependency_count": len(records),
         "records": records,
         "proved_reduction": (
-            "all mixed-margin Hamiltonian-path states reduce to EFX/lex, PI, "
-            "support growth, or permanent full-decorated response augmentation"
+            "all mixed-margin Hamiltonian-path states pay every row or yield an "
+            "incoming-core self-response/current-safe decorated response"
         ),
         "exact_surviving_separator": (
-            "none inside mixed-margin observer payment; broader GG response/Hall "
-            "continuations remain outside this theorem"
+            "rank-completing paid-response splice for an already recorded "
+            "unsafe deletion-return response at response rank below four"
         ),
         "claim_boundary": (
-            "mixed-margin Hamiltonian-path payment only; broader GG closure and "
+            "payment reduction only; mixed-margin termination, GG closure, and "
             "four-agent/general EFX remain open"
         ),
         "provenance": {
