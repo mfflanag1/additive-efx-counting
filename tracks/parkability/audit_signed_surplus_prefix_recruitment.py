@@ -180,7 +180,7 @@ def run(root: Path) -> dict:
         ),
         "claim_boundary": (
             "cap-free physical recruitment and finite prefix progress; no proof "
-            "of saturated mixed-cycle payment, forward-chord conversion, GG, or EFX"
+            "of decorated-head exchange, forward-chord conversion, GG, or EFX"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

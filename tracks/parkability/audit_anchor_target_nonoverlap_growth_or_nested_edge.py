@@ -85,7 +85,7 @@ def run(root: Path) -> dict:
         "smallest_terminal": "old nested root-facing response edge",
         "claim_boundary": (
             "q-target overlap eliminated as surplus inequality; root-facing "
-            "handoff and root-sourced R_q compensation remain open"
+            "handoff and root-sourced complete-pool capture remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

@@ -88,16 +88,16 @@ def run(root: Path) -> dict:
     dependency = root / "results/SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md"
     return {
         "schema": "backward-response-cycle-or-boundary-capture-audit-v1",
-        "status": "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT",
+        "status": "BACKWARD_RESPONSE_REDUCED_TO_DECORATED_HEAD_EXCHANGE",
         "symbolic_checks": symbolic,
         "anchored_path_count": len(paths),
         "backward_order_count": len(records),
         "identity_class_counts": counts,
         "records": records,
-        "smallest_terminal": "supplier-saturated mixed-cycle observer payment",
+        "smallest_terminal": "GG-recurrent decorated-head exchange",
         "claim_boundary": (
-            "cap-free support classification only; mixed-cycle payment/root-q "
-            "reverse inequality remains open"
+            "cap-free support classification and generic payment refutation; "
+            "GG recurrence/full-pool capture remains open"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

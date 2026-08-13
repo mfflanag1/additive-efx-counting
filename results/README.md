@@ -57,6 +57,29 @@ as an internally verified hybrid theorem rather than a peer-reviewed theorem.
 The general problem remains open. Current exact status and proof gates are
 in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 
+The August 13 post-recruitment audit corrects two overstrong intermediate
+headlines:
+
+- [`SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md`](SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md)
+  ([exact audit](supplier_saturation_does_not_force_mixed_cycle_payment_audit.json),
+  [independent replay](supplier_saturated_payment_refutation_independent_audit.json))
+  gives an anchored four-owner mixed cycle whose supplier closure is already
+  all four owners, but none of the 625 residual assignments pays every EFX
+  observer debt. This refutes the generic payment implication, not the
+  stronger globally recurrent GG statement.
+- [`ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md`](ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md)
+  ([exact audit](root_sourced_complete_signed_residual_compensation_audit.json))
+  refutes the claim that `R_q` is the sole anchor-preserving compensation
+  reservoir. The correct failure certificate uses the complete signed
+  residual pool. The live GG gate is a decorated-head exchange plus
+  full-pool capture, not supplier payment plus an `R_q` reverse inequality.
+- [`MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md`](MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md)
+  ([symbolic/cyclic audit](mixed_cycle_decorated_head_localization_audit.json))
+  proves that every terminal blocker lies at a decorated-to-old boundary.
+  Twelve of the fourteen mixed four-cycle patterns have one such head; only
+  the two cyclic orientations of `D,O,D,O` have two. The remaining payment
+  problem is therefore a one-head exchange or one coupled two-head exchange.
+
 The August 3 anti-local-minimum checkpoint is
 [`EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md`](EFX_BREAKTHROUGH_ROUTE_AUDIT_20260803.md).
 It freezes the diminishing-return completion-cut branch and promotes a

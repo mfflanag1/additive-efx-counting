@@ -1,13 +1,13 @@
 {
-  "claim_boundary": "the selected-pool recruitment objective is proved by a strict finite prefix transition; later GG payment remains separate",
-  "dependency_count": 29,
-  "exact_surviving_separator": "post-recruitment mixed-cycle payment and root-sourced q-residual compensation",
+  "claim_boundary": "generic supplier saturation does not force payment and R_q-only accounting is false; global GG recurrence remains separate",
+  "dependency_count": 33,
+  "exact_surviving_separator": "one-head or alternating two-head GG exchange plus root-sourced complete-residual-pool capture",
   "proved_reduction": "all mixed-margin Hamiltonian-path states pay every row or yield an incoming-core self-response/current-safe decorated response",
   "provenance": {
     "checkpoint": "results/MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md",
-    "checkpoint_sha256": "4f9d614ae2705010cde8912436e62d904e8a4e88ccf70de30abe2c3f112784cb",
+    "checkpoint_sha256": "d49a0f418975e722bd31232348ecf77f2f904b014940e79f7081e91b8c5851ed",
     "script": "tracks/parkability/audit_mixed_margin_hamiltonian_charity_path_composition.py",
-    "script_sha256": "6b552e6d1143ae9be8b87b43dd22f7d5e155106df95e39be5eb7b15f14cd76c9"
+    "script_sha256": "abf9e6b5b3e1b51a7a97718bd288105c1bf58b83b900ecc2b636235c05d09250"
   },
   "records": [
     {
@@ -180,40 +180,68 @@
     },
     {
       "audit": "results/signed_surplus_prefix_recruitment_audit.json",
-      "audit_sha256": "adb9aaad0e837bbbcae64c72a263239ea975495c7a411c8370d130b0d755ba9d",
+      "audit_sha256": "6e3ce1ff91b917a9465d50d7a4f10e527f07430fb793afd31b5a83bc903667bf",
       "audit_status": "RECRUITMENT_WELL_FOUNDED_POOL_SEPARATOR_SUPERSEDED",
       "theorem": "results/SIGNED_SURPLUS_PREFIX_RECRUITMENT_LEMMA_20260813.md",
-      "theorem_sha256": "972fcdb217161d96adc20532b34a7aa7b6cd0ec2cba912c335eab7b12e3c74be"
+      "theorem_sha256": "f926152e7f76c7e2d347c590625514c3886747c4d10fe8d7f2a94130af582597"
     },
     {
       "audit": "results/forward_chord_core_split_or_anchor_capture_audit.json",
-      "audit_sha256": "11126c3490423568893917563a16b48153a04dd4ea291aaf6546a6e6132e7ef4",
+      "audit_sha256": "58501203afb70df29e7826aaab383f1f475eb0dbe36f9ca0f071d1cdb8d1e117",
       "audit_status": "FORWARD_CHORD_REDUCED_TO_TWO_ANCHOR_INTERFACES",
       "theorem": "results/FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md",
-      "theorem_sha256": "7f73601c15f87a9655d8087b90642be8c650de42bfd6444de97470c453b9c436"
+      "theorem_sha256": "f83adfb1f4bd878bbdf9ff69500eead35494f54c24b2335346723c5a1ba4cb15"
     },
     {
       "audit": "results/backward_response_cycle_or_boundary_capture_audit.json",
-      "audit_sha256": "9ffcc90c7800641d6868da7d1a7467cfc4d1a598887e5f44f4931c0655ac2938",
-      "audit_status": "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT",
+      "audit_sha256": "3b69095bf850f4e839eb3deb04d356e4c2f014780997ff4ee7e083ba9e06a617",
+      "audit_status": "BACKWARD_RESPONSE_REDUCED_TO_DECORATED_HEAD_EXCHANGE",
       "theorem": "results/BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md",
-      "theorem_sha256": "ba1caf08ba41a3519283cce50dcb584755b3f55568344b6d6fed41d5bedcc2b0"
+      "theorem_sha256": "563e7cf217a36f166af36148d0c5be86afabceed09ce54802800040f61806042"
     },
     {
       "audit": "results/anchor_target_nonoverlap_growth_or_nested_edge_audit.json",
-      "audit_sha256": "2376d4557897ec80b4e8b8df9c862b26426d439d80cdeceb1a308cdfc311241c",
+      "audit_sha256": "89fbafc67329f02949d9d376bc850c7c045cc7cac3b1d55fc3b97c7bee355ca8",
       "audit_status": "ANCHOR_TARGET_INEQUALITY_ELIMINATED_TO_NESTED_EDGE",
       "theorem": "results/ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md",
-      "theorem_sha256": "ddb04c90b0ce400cd0dcc20678b7659dabe98bb2d4a8a44e345af4684d71bf42"
+      "theorem_sha256": "4e474ff73c44278b8cea310e843e6116a581a99947ff6f046db8a732f1ddc744"
     },
     {
       "audit": "results/selected_pool_signed_surplus_recruitment_resolution_audit.json",
-      "audit_sha256": "843a4b624156db5417e23f932284533286cb8ecd54f28262d35de5c393bee65b",
+      "audit_sha256": "109fbfa56737168c1017ada5fef9d5fa258c363d1f79b59ce2d6eb88cfc7f62f",
       "audit_status": "SELECTED_POOL_RECRUITMENT_GOAL_RESOLVED",
       "theorem": "results/SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md",
-      "theorem_sha256": "b206aa31b609b297f027d26ab25b6d664a4258353f778c06fe1dfdb159062808"
+      "theorem_sha256": "9815f9e3c8186e0165767827978bb8af55920a0f812ee09eef14711603415661"
+    },
+    {
+      "audit": "results/root_sourced_complete_signed_residual_compensation_audit.json",
+      "audit_sha256": "0424d939ec3a670a548ba636260f7a0876cca53ed148ba286b698ea8bbf9123e",
+      "audit_status": "RQ_ONLY_GATE_STRICTLY_SUPERSEDED_BY_COMPLETE_RESIDUAL_POOL",
+      "theorem": "results/ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md",
+      "theorem_sha256": "f5d1302ecd40ee896026bf945ecf4810bf84e10a68b53084ba5fcb081f8b777a"
+    },
+    {
+      "audit": "results/supplier_saturation_does_not_force_mixed_cycle_payment_audit.json",
+      "audit_sha256": "4f1a7004ac7a1ddb946ad1c08e971b2dc8b738ad2b5ff814e70fa6a8497674b4",
+      "audit_status": "GENERIC_SUPPLIER_SATURATED_PAYMENT_IMPLICATION_REFUTED",
+      "theorem": "results/SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md",
+      "theorem_sha256": "a7f01bc196363de090551c671c8f35f66acb455134e8597c86d15568ca4c7d49"
+    },
+    {
+      "audit": "results/supplier_saturated_payment_refutation_independent_audit.json",
+      "audit_sha256": "936b0579d548945081e3dbc844a17d26637dc241a18e53a5a83089ffa994e64b",
+      "audit_status": "INDEPENDENT_EXACT_REPLAY_PASSED",
+      "theorem": "results/SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md",
+      "theorem_sha256": "a7f01bc196363de090551c671c8f35f66acb455134e8597c86d15568ca4c7d49"
+    },
+    {
+      "audit": "results/mixed_cycle_decorated_head_localization_audit.json",
+      "audit_sha256": "d8303002e3be6e2d2343679d4bdf617de6c3c251e46cb6373d1920967d642305",
+      "audit_status": "TERMINAL_BLOCKERS_LOCALIZED_TO_AT_MOST_TWO_DECORATED_HEADS",
+      "theorem": "results/MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md",
+      "theorem_sha256": "e7e2716464280436cc99cbca4fc14712748f85957e331190cd203637f526f8a4"
     }
   ],
   "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-  "status": "SELECTED_POOL_RECRUITMENT_RESOLVED"
+  "status": "GENERIC_PAYMENT_REFUTED_BLOCKERS_LOCALIZED_OPEN_HEAD_EXCHANGE"
 }

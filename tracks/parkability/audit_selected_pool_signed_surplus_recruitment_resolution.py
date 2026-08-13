@@ -187,8 +187,8 @@ def run(root: Path) -> dict:
         "supplier_closure_records": closure_records,
         "anchor_records": anchor_records,
         "next_separate_goal": (
-            "supplier-saturated mixed-cycle observer payment and root-sourced "
-            "q-residual capture"
+            "one/two decorated-head exchange and root-sourced complete-"
+            "residual-pool capture"
         ),
         "claim_boundary": (
             "recruitment goal complete; GG closure and four-agent/general EFX open"

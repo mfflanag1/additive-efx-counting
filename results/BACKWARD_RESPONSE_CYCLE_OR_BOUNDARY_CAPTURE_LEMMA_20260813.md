@@ -3,7 +3,8 @@
 **Date:** 2026-08-13
 
 **Status:** cap-free physical classification of every full-prefix backward
-response; mixed observer payment of the resulting cycle remains open
+response; generic supplier-saturated payment is refuted and the stronger GG
+decorated-head exchange remains open
 
 ## Geometry
 
@@ -82,11 +83,17 @@ split into:
 For an anchor-target collision, delete `J=E intersect K_r`. If `E-J` remains
 current-desired, the exact anchor survives; otherwise `J` is simultaneously
 response-critical and anchor-consuming. For a nonhole root-sourced response,
-retain `K_r` and replace the compensation pool `K_k` in (4) by the released
-q-target residual `R_q=Y_q-K_r`. Whole-residual failure gives
+retain `K_r`. The complete physical compensation pool is
 
 \[
- v_a(J)-v_a(R_q)\ge v_a(A)-F_a>0.                \tag{6}
+ \mathcal R_E=(\mathop{\dot\bigcup}_{i\in N}R_i)\setminus E,
+\]
+
+not only the released q-target residual `R_q=Y_q-K_r`. Complete-pool failure
+gives
+
+\[
+ v_a(J)-v_a(\mathcal R_E)\ge v_a(A)-F_a>0.       \tag{6}
 \]
 
 These are the same two physical root/q interfaces as in the forward-chord
@@ -99,13 +106,17 @@ After disjoint completion, boundary compensation, or component growth, the
 backward branch is a supplier-saturated mixed cycle. Applying residual return
 to an underfunded old cycle source either pays its decorated debts or makes
 the incoming cycle core strictly better than its outgoing selected core in
-that source's row. The unresolved theorem is therefore a simultaneous
-mixed-cycle payment/root-q reverse inequality, not physical core selection.
+that source's row. Supplier saturation alone does not force the first branch:
+the exact anchored countermodel in
+[`SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md`](SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md)
+survives all 625 residual assignments. Failure localizes at the head of a
+decorated edge. The stronger unresolved GG operation is therefore a
+decorated-head exchange together with the full-pool capture above.
 
 ## Claim boundary
 
 This lemma proves the cycle/boundary geometry, disjointness, component-growth
 alternative, overlap-capture inequalities, and anchored identity counts. It
-does not pay every old cycle source, reverse (5)--(6), prove that every
-supplier-saturated mixed cycle is PI, close GG, or prove four-agent/general
-additive EFX.
+also records the exact refutation of generic supplier-saturated payment. It
+does not derive the decorated-head exchange from global GG recurrence,
+reverse (5)--(6), close GG, or prove four-agent/general additive EFX.

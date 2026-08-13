@@ -141,9 +141,11 @@ The old 262,144-partition null witness is irrelevant to this theorem and was
 already shown to violate two entry premises.
 
 The next, separate GG research problem begins only after this successful
-transition: prove observer payment for a supplier-saturated mixed cycle and
-the remaining root-sourced q-residual capture inequality. Those obligations
-do not invalidate or remain inside the recruitment lemma proved here.
+transition. Generic supplier saturation does not force observer payment;
+terminal blockers localize to at most two decorated heads. The remaining
+operations are the one/two-head exchange and the root-sourced
+complete-residual-pool capture. Those obligations do not invalidate or remain
+inside the recruitment lemma proved here.
 
 ## Verification
 

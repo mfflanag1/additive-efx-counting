@@ -94,14 +94,14 @@ one of four outcomes:
 4. an exact nested base-common-safe root-facing edge.
 
 Therefore the q-target overlap itself is not a terminal root/q reverse
-inequality. The only anchor-specific scalar gate left by the response-
-geometry composition is the root-sourced compensation branch that must use
-`R_q` while retaining `K_r`.
+inequality. The remaining anchor-specific scalar gate is root-sourced
+compensation while retaining `K_r`, but its physical selector must use the
+complete signed residual pool, not only `R_q`.
 
 ## Claim boundary
 
 This lemma proves physical disjointness, payment, support growth, hereditary
 base safety, and the nested-edge conversion. It does not terminate the old
-root-facing handoff, prove the remaining root-sourced `R_q` compensation,
-pay the supplier-saturated mixed cycle, close GG, or prove four-agent/general
+root-facing handoff, eliminate root-sourced complete-pool capture, force the
+one/two decorated-head exchange, close GG, or prove four-agent/general
 additive EFX.

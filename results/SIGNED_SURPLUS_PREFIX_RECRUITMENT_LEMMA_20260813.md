@@ -140,7 +140,7 @@ survivor is narrower than the former pool separator:
 ## Claim boundary
 
 This lemma proves the recruitment, disjointness, floor, provenance, anchor,
-and finite-prefix assertions.  It does not prove observer payment of a
-supplier-saturated mixed cycle, convert every old forward chord into a strict
-anchored transition, derive the final root/q inequality, close GG, or prove
-four-agent/general additive EFX.
+and finite-prefix assertions. It does not force the localized one/two
+decorated-head exchange, convert every old forward chord into a strict
+anchored transition, eliminate the full-residual-pool capture, close GG, or
+prove four-agent/general additive EFX.

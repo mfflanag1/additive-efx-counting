@@ -1,0 +1,113 @@
+{
+  "base_floors": {
+    "a": "10",
+    "b": "10",
+    "q": "10",
+    "r": "10"
+  },
+  "blocked_observer_full_residual_value": "57/5",
+  "blocked_observer_threshold": "12",
+  "claim_boundary": "refutes payment from mixed response safety plus supplier saturation; not a globally recurrent or globally lex-maximal GG countermodel",
+  "current_targets": {
+    "a": [
+      "d1",
+      "d2",
+      "ra"
+    ],
+    "b": [
+      "ka",
+      "rb"
+    ],
+    "q": [
+      "kr",
+      "rq"
+    ],
+    "r": [
+      "kb",
+      "rr"
+    ]
+  },
+  "current_utilities": {
+    "a": "131/10",
+    "b": "121/10",
+    "q": "12",
+    "r": "121/10"
+  },
+  "cycle": [
+    "r->q:K_r(old anchor)",
+    "q->a:D(decorated)",
+    "a->b:K_a(old)",
+    "b->r:K_b(old)"
+  ],
+  "decorated_core": [
+    "d1",
+    "d2"
+  ],
+  "decorated_source_value": "13",
+  "permanent_anchor_retained": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_supplier_saturation_does_not_force_mixed_cycle_payment.py",
+    "script_sha256": "a9949e11ec125a409e9fddb9696f42f316c5776a82f0a75542edd714005103d6",
+    "theorem": "results/SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md",
+    "theorem_sha256": "a7f01bc196363de090551c671c8f35f66acb455134e8597c86d15568ca4c7d49",
+    "z3_version": "5.0.0"
+  },
+  "residual_assignment_count": 625,
+  "residual_only_efx_payment_count": 0,
+  "row_cancellation_forces_incoming_over_outgoing": true,
+  "schema": "supplier-saturation-mixed-cycle-payment-refutation-v1",
+  "smallest_missing_operation": "decorated-head exchange: split/replace D, change its source, or release another selected core while preserving q's current floor",
+  "status": "GENERIC_SUPPLIER_SATURATED_PAYMENT_IMPLICATION_REFUTED",
+  "supplier_closure": [
+    "r",
+    "q",
+    "a",
+    "b"
+  ],
+  "values": {
+    "a": {
+      "d1": "12",
+      "d2": "1",
+      "ka": "11",
+      "kb": "1/10",
+      "kr": "1/10",
+      "ra": "1/10",
+      "rb": "1/10",
+      "rq": "1/10",
+      "rr": "1/10"
+    },
+    "b": {
+      "d1": "1/10",
+      "d2": "1/10",
+      "ka": "12",
+      "kb": "11",
+      "kr": "1/10",
+      "ra": "1/10",
+      "rb": "1/10",
+      "rq": "1/10",
+      "rr": "1/10"
+    },
+    "q": {
+      "d1": "7",
+      "d2": "6",
+      "ka": "1/10",
+      "kb": "1/10",
+      "kr": "11",
+      "ra": "1/10",
+      "rb": "1/10",
+      "rq": "1",
+      "rr": "1/10"
+    },
+    "r": {
+      "d1": "1/10",
+      "d2": "1/10",
+      "ka": "1/10",
+      "kb": "12",
+      "kr": "11",
+      "ra": "1/10",
+      "rb": "1/10",
+      "rq": "1/10",
+      "rr": "1/10"
+    }
+  }
+}

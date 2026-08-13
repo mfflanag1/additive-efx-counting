@@ -4,7 +4,8 @@
 
 **Status:** cap-free reduction of every full-prefix forward response to a
 same-source replacement, a paid two-core split, or one of two exact
-root-anchor capture interfaces
+root-anchor capture interfaces; the former `R_q`-only reservoir is corrected
+to the complete signed residual pool
 
 ## Forward response geometry
 
@@ -94,15 +95,22 @@ Assume the selected path contains the permanent edge `r -> q`.
    hitting set `J`; the smallest operation is a replacement response in
    `R_q`, or explicit anchor release and reconstruction.
 2. **Anchor-source release.** If `b=r` and `l>position(q)`, then the freed
-   core `K_k=K_r` is the permanent anchor. Retain it with the root response
-   and instead run the compensation selector over `L subseteq R_q`. This
-   reservoir is disjoint from the anchor, the later response target, and all
-   other selected cores. If no `L` pays `a`, the whole-reservoir failure is
+   core `K_k=K_r` is the permanent anchor. Retain it with the root response.
+   In the selected-core allocation every target residual is unallocated, so
+   the physical compensation family is not just `R_q`. After removing any
+   residual atoms consumed by `E`, put
    \[
-    v_a(J)-v_a(R_q)\ge v_a(A)-F_a>0.              \tag{8}
+    \mathcal R_E=(\mathop{\dot\bigcup}_{i\in N}R_i)\setminus E.
    \]
-   Thus the remaining q-reservoir obligation is a precise reverse inequality,
-   not an unspecified packet search.
+   It is disjoint from the anchor, response, and retained selected cores and
+   contains `R_q`. Run the compensation selector over
+   `L subseteq mathcal R_E`. If no `L` pays `a`, complete-pool failure is
+   \[
+    v_a(J)-v_a(\mathcal R_E)\ge v_a(A)-F_a>0.     \tag{8}
+   \]
+   The `R_q`-only formulation is strictly false: another target residual can
+   repair a collision that `R_q` cannot. Thus the remaining obligation is
+   full-pool capture, not a q-only reverse inequality.
 
 These are the only anchor exceptions. Across the six Hamiltonian paths
 containing adjacent `r -> q`, the 36 forward source/target orders split as:
@@ -115,14 +123,16 @@ containing adjacent `r -> q`, the 36 forward source/target orders split as:
 | generic nonadjacent split | 6 |
 
 Thus the forward-chord problem no longer requires an anonymous adaptive
-root/order theorem. Its only unresolved inputs are two explicit root/q
-support operations, each with a named physical overlap or scalar deficit.
+root/order theorem. Its only unresolved inputs are the response/anchor
+hitting set and the complete-residual-pool capture.
 
 ## Claim boundary
 
 This lemma proves the path indexing, disjoint split, source/displaced-owner
-payment identities, whole-core and whole-reservoir failure inequalities, and
-exhaustive anchored identity classification. It does not force a generic
-compensation packet to exist, eliminate the two anchor exceptions with the GG reservoir
-inequalities, pay every external observer of the changed target, close the
-backward-cycle branch, close GG, or prove four-agent/general additive EFX.
+payment identities, whole-core and complete-residual-pool failure
+inequalities, and exhaustive anchored identity classification. It does not
+force a compensation packet to exist, eliminate the two anchor exceptions
+with GG maximality, pay every external observer of the changed target, close
+the backward-cycle branch, close GG, or prove four-agent/general additive
+EFX. See
+[`ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md`](ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md).

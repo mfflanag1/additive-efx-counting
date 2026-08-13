@@ -24,5 +24,5 @@ def test_forward_chord_capture_algebra() -> None:
     assert all(result["symbolic_checks"].values())
     assert result["smallest_terminals"] == {
         "anchor_target": "nonempty response/anchor overlap hitting set",
-        "anchor_source": "q-reservoir compensation disjoint from protected anchor",
+        "anchor_source": "complete-residual-pool capture disjoint from protected anchor",
     }

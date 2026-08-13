@@ -1,0 +1,27 @@
+{
+  "blocked_observer_full_pool_value": "57/5",
+  "blocked_observer_threshold": "12",
+  "checks": {
+    "all_values_positive": true,
+    "anchor_retained": true,
+    "current_state_paid": true,
+    "decorated_current_safe": true,
+    "decorated_source_minimal": true,
+    "decorated_source_strict": true,
+    "old_cores_base_safe": true,
+    "old_cores_desired": true,
+    "supplier_closure_all_owners": true
+  },
+  "implementation_relation": "independent parser and allocation census; does not import the primary audit",
+  "provenance": {
+    "script": "tracks/parkability/audit_supplier_saturated_payment_refutation_independent.py",
+    "script_sha256": "39b37ce425cac911859aa20c0f4eb253faf09f6eb0eefc737a2632e0a28de37c",
+    "source": "results/supplier_saturation_does_not_force_mixed_cycle_payment_audit.json",
+    "source_sha256": "4f1a7004ac7a1ddb946ad1c08e971b2dc8b738ad2b5ff814e70fa6a8497674b4"
+  },
+  "residual_assignment_count": 625,
+  "residual_only_efx_payment_count": 0,
+  "schema": "supplier-saturated-payment-refutation-independent-audit-v1",
+  "status": "INDEPENDENT_EXACT_REPLAY_PASSED",
+  "strict_floor_feasible_assignment_count": 625
+}

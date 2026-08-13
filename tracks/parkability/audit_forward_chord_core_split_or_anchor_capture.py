@@ -48,7 +48,7 @@ def run(root: Path) -> dict:
              response_remainder <= current],
             overlap >= E - current,
         ),
-        "whole_q_reservoir_failure_forces_anchor_source_capture": prove(
+        "whole_complete_residual_pool_failure_forces_anchor_source_capture": prove(
             [A == remainder + overlap, A > floor,
              remainder + reservoir <= floor, reservoir >= 0],
             overlap - reservoir >= A - floor,
@@ -121,11 +121,11 @@ def run(root: Path) -> dict:
         "records": records,
         "smallest_terminals": {
             "anchor_target": "nonempty response/anchor overlap hitting set",
-            "anchor_source": "q-reservoir compensation disjoint from protected anchor",
+            "anchor_source": "complete-residual-pool capture disjoint from protected anchor",
         },
         "claim_boundary": (
-            "cap-free split/capture reduction only; root/q reverse inequalities "
-            "and backward mixed-cycle payment remain open"
+            "cap-free split/capture reduction only; full-pool capture "
+            "and the backward GG decorated-head exchange remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

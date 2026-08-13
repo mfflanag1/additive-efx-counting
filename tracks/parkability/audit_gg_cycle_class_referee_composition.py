@@ -75,6 +75,14 @@ def run(root: Path) -> dict:
         "anchor_target_nonoverlap_growth_or_nested_edge_audit.json",
         "SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md",
         "selected_pool_signed_surplus_recruitment_resolution_audit.json",
+        "ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md",
+        "root_sourced_complete_signed_residual_compensation_audit.json",
+        "SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md",
+        "supplier_saturation_does_not_force_mixed_cycle_payment_audit.json",
+        "SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md",
+        "supplier_saturated_payment_refutation_independent_audit.json",
+        "MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md",
+        "mixed_cycle_decorated_head_localization_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -140,7 +148,7 @@ def run(root: Path) -> dict:
     backward = json.loads(
         (result_dir / "backward_response_cycle_or_boundary_capture_audit.json").read_text()
     )
-    assert backward["status"] == "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT"
+    assert backward["status"] == "BACKWARD_RESPONSE_REDUCED_TO_DECORATED_HEAD_EXCHANGE"
     anchor_target = json.loads(
         (result_dir / "anchor_target_nonoverlap_growth_or_nested_edge_audit.json").read_text()
     )
@@ -154,12 +162,12 @@ def run(root: Path) -> dict:
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "SELECTED_POOL_RECRUITMENT_RESOLVED",
+        "status": "GENERIC_PAYMENT_REFUTED_BLOCKERS_LOCALIZED_OPEN_GG_HEAD_EXCHANGE",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
-        "smallest_named_terminal": "post-recruitment mixed-cycle/root-source payment",
+        "smallest_named_terminal": "one-head or alternating two-head GG exchange/full-pool capture",
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,

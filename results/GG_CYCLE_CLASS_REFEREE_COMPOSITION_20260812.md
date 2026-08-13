@@ -262,9 +262,10 @@ and
 Generic nonadjacent overlaps have a cap-free whole-core compensation selector;
 failure captures the displaced source's entire strict margin. Only a
 response-critical overlap with the q-target anchor and a root-sourced
-compensation that must use `R_q=Y_q-K_r` remain anchor-specific. The backward
-side additionally leaves the supplier-saturated mixed-cycle observer-payment
-inequality. These are the current load-bearing gates.
+complete-residual-pool capture remain anchor-specific. The former `R_q`-only
+accounting was incomplete. The backward side reaches a supplier-saturated
+mixed cycle, but supplier saturation alone does not imply observer payment.
+These are the current load-bearing gates.
 
 The exact objective “recruit the signed surplus or make a strict finite GG
 transition” is closed in
@@ -275,6 +276,8 @@ grows the owner union or certifies internal supply.
 
 Moreover,
 [`ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md`](ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md)
-removes the anchor-target overlap as an independent inequality. The remaining
-post-recruitment theorem is now only supplier-saturated mixed-cycle payment
-and root-sourced compensation from the q residual.
+removes the anchor-target overlap as an independent inequality. The generic
+post-recruitment payment implication and the alleged `R_q`-only anchor gate
+are now exactly refuted. The surviving stronger GG task is to derive a
+decorated-head exchange or contradiction from global recurrence, together
+with the root-sourced complete-residual-pool capture.

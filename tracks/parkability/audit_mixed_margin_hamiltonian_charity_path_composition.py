@@ -39,6 +39,10 @@ DEPENDENCIES = (
     ("BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md", "backward_response_cycle_or_boundary_capture_audit.json"),
     ("ANCHOR_TARGET_NONOVERLAP_GROWTH_OR_NESTED_EDGE_LEMMA_20260813.md", "anchor_target_nonoverlap_growth_or_nested_edge_audit.json"),
     ("SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md", "selected_pool_signed_surplus_recruitment_resolution_audit.json"),
+    ("ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md", "root_sourced_complete_signed_residual_compensation_audit.json"),
+    ("SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md", "supplier_saturation_does_not_force_mixed_cycle_payment_audit.json"),
+    ("SUPPLIER_SATURATION_DOES_NOT_FORCE_MIXED_CYCLE_PAYMENT_20260813.md", "supplier_saturated_payment_refutation_independent_audit.json"),
+    ("MIXED_CYCLE_DECORATED_HEAD_LOCALIZATION_LEMMA_20260813.md", "mixed_cycle_decorated_head_localization_audit.json"),
 )
 
 
@@ -81,7 +85,7 @@ def run(root: Path) -> dict:
     )
     response_geometry_complete = {
         "FORWARD_CHORD_REDUCED_TO_TWO_ANCHOR_INTERFACES",
-        "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT",
+        "BACKWARD_RESPONSE_REDUCED_TO_DECORATED_HEAD_EXCHANGE",
     }.issubset({record["audit_status"] for record in records})
     recruitment_goal_resolved = any(
         record["audit_status"] == "SELECTED_POOL_RECRUITMENT_GOAL_RESOLVED"
@@ -92,7 +96,7 @@ def run(root: Path) -> dict:
     checkpoint = result_dir / "MIXED_MARGIN_HAMILTONIAN_CHARITY_PATH_CHECKPOINT_20260811.md"
     return {
         "schema": "mixed-margin-hamiltonian-charity-path-composition-audit-v1",
-        "status": "SELECTED_POOL_RECRUITMENT_RESOLVED" if recruitment_goal_resolved else (
+        "status": "GENERIC_PAYMENT_REFUTED_BLOCKERS_LOCALIZED_OPEN_HEAD_EXCHANGE" if recruitment_goal_resolved else (
             "RESPONSE_GEOMETRY_COMPLETE_OPEN_MIXED_PAYMENT" if response_geometry_complete else (
             "SIGNED_SURPLUS_RECRUITED_OPEN_RECURRENT_RESPONSE" if recruitment_complete else (
             "INTERFACE_REFUTED" if interface_refuted else (
@@ -105,10 +109,10 @@ def run(root: Path) -> dict:
             "all mixed-margin Hamiltonian-path states pay every row or yield an "
             "incoming-core self-response/current-safe decorated response"
         ),
-        "exact_surviving_separator": "post-recruitment mixed-cycle payment and root-sourced q-residual compensation",
+        "exact_surviving_separator": "one-head or alternating two-head GG exchange plus root-sourced complete-residual-pool capture",
         "claim_boundary": (
-            "the selected-pool recruitment objective is proved by a strict "
-            "finite prefix transition; later GG payment remains separate"
+            "generic supplier saturation does not force payment and R_q-only "
+            "accounting is false; global GG recurrence remains separate"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

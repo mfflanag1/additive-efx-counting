@@ -222,11 +222,13 @@ Both response directions are now physically classified. The
 [`FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md`](FORWARD_CHORD_CORE_SPLIT_OR_ANCHOR_CAPTURE_LEMMA_20260813.md)
 reduces all 36 anchored forward orders to same-source replacement, generic
 whole-core compensation, or six instances each of anchor-target overlap and
-anchor-source q-residual compensation. The
+anchor-source complete-residual-pool capture. The
 [`BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md`](BACKWARD_RESPONSE_CYCLE_OR_BOUNDARY_CAPTURE_LEMMA_20260813.md)
 reduces all 36 backward orders to 18 hole cycles and 18 exact boundary
-splits. The remaining scalar gate is supplier-saturated mixed-cycle observer
-payment together with the two named root/q reverse inequalities.
+splits. Generic supplier-saturated payment is false. The localization lemma
+reduces every saturated cycle to one decorated head, except for the
+alternating `D,O,D,O` topology with two heads; the separate anchor gate is
+complete-residual-pool capture.
 
 For the selected-pool recruitment goal itself, the authoritative endpoint is
 [`SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md`](SELECTED_POOL_SIGNED_SURPLUS_RECRUITMENT_RESOLUTION_20260813.md).
@@ -241,4 +243,7 @@ eliminated by
 nonanchor response support gives strict retained-support growth, while exact
 recurrence makes the response a base-common-safe core nested in the old
 anchor. The post-recruitment program therefore has one anchor-specific scalar
-gate—the root-sourced q-residual compensation—plus mixed-cycle payment.
+gate—the root-sourced complete-residual-pool capture—plus a decorated-head
+exchange. Generic supplier saturation does not force mixed-cycle payment,
+and `R_q` alone is not the complete compensation pool; both former headlines
+are superseded by the 2026-08-13 exact countermodels.

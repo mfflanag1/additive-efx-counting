@@ -1,0 +1,239 @@
+{
+  "claim_boundary": "R_q-only gate refuted and corrected; full-pool capture and mixed cycle payment remain open",
+  "correct_separator": "full signed-residual pool capture",
+  "provenance": {
+    "script": "tracks/parkability/audit_root_sourced_complete_signed_residual_compensation.py",
+    "script_sha256": "b8f295add6daa3796d952d920536368908435dee24ba2ba1adc969d418b639e1",
+    "theorem": "results/ROOT_SOURCED_COMPLETE_SIGNED_RESIDUAL_COMPENSATION_LEMMA_20260813.md",
+    "theorem_sha256": "f5d1302ecd40ee896026bf945ecf4810bf84e10a68b53084ba5fcb081f8b777a",
+    "z3_version": "5.0.0"
+  },
+  "schema": "root-sourced-complete-signed-residual-compensation-audit-v1",
+  "smallest_additional_operation_after_failure": "split/replace the root response, release another selected core, or change a protected floor through a third owner",
+  "status": "RQ_ONLY_GATE_STRICTLY_SUPERSEDED_BY_COMPLETE_RESIDUAL_POOL",
+  "strictness_witness": {
+    "A": [
+      "j",
+      "u"
+    ],
+    "E": [
+      "e",
+      "j"
+    ],
+    "J": [
+      "j"
+    ],
+    "R_q": [
+      "rq"
+    ],
+    "R_r": [
+      "rr"
+    ],
+    "a_A": "12",
+    "a_after_Rq": "5",
+    "a_after_complete_residual": "11",
+    "anchor": [
+      "k1",
+      "k2"
+    ],
+    "current_utilities": {
+      "a": "11",
+      "b": "10",
+      "q": "11",
+      "r": "12"
+    },
+    "floors": {
+      "a": "10",
+      "b": "10",
+      "q": "10",
+      "r": "10"
+    },
+    "goods": [
+      "k1",
+      "k2",
+      "rq",
+      "j",
+      "u",
+      "e",
+      "rr"
+    ],
+    "root_E": "13",
+    "root_E_thresholds": {
+      "a": "8",
+      "b": "1",
+      "q": "1",
+      "r": "8"
+    },
+    "valuations": {
+      "a": {
+        "e": "1",
+        "j": "8",
+        "k1": "1",
+        "k2": "1",
+        "rq": "1",
+        "rr": "6",
+        "u": "4"
+      },
+      "b": {
+        "e": "1",
+        "j": "1",
+        "k1": "1",
+        "k2": "1",
+        "rq": "1",
+        "rr": "1",
+        "u": "1"
+      },
+      "q": {
+        "e": "1",
+        "j": "1",
+        "k1": "1",
+        "k2": "1",
+        "rq": "1",
+        "rr": "1",
+        "u": "1"
+      },
+      "r": {
+        "e": "5",
+        "j": "8",
+        "k1": "6",
+        "k2": "6",
+        "rq": "1",
+        "rr": "1",
+        "u": "1"
+      }
+    }
+  },
+  "support_records": [
+    {
+      "available_residuals": [
+        "R0",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 0
+    },
+    {
+      "available_residuals": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 1
+    },
+    {
+      "available_residuals": [
+        "R0",
+        "R2",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 2
+    },
+    {
+      "available_residuals": [
+        "R2",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 3
+    },
+    {
+      "available_residuals": [
+        "R0",
+        "R1",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 4
+    },
+    {
+      "available_residuals": [
+        "R1",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 5
+    },
+    {
+      "available_residuals": [
+        "R0",
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 6
+    },
+    {
+      "available_residuals": [
+        "R3"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 7
+    },
+    {
+      "available_residuals": [
+        "R0",
+        "R1",
+        "R2"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 8
+    },
+    {
+      "available_residuals": [
+        "R1",
+        "R2"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 9
+    },
+    {
+      "available_residuals": [
+        "R0",
+        "R2"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 10
+    },
+    {
+      "available_residuals": [
+        "R2"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 11
+    },
+    {
+      "available_residuals": [
+        "R0",
+        "R1"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 12
+    },
+    {
+      "available_residuals": [
+        "R1"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 13
+    },
+    {
+      "available_residuals": [
+        "R0"
+      ],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 14
+    },
+    {
+      "available_residuals": [],
+      "disjoint_from_selected_cores": true,
+      "response_residual_mask": 15
+    }
+  ],
+  "symbolic_checks": {
+    "full_pool_capture_is_strict": true,
+    "full_pool_failure_forces_capture": true
+  }
+}

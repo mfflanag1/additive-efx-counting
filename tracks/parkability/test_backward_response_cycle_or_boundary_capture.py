@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_backward_response_identity_partition() -> None:
     result = run(ROOT)
-    assert result["status"] == "BACKWARD_RESPONSE_REDUCED_TO_MIXED_CYCLE_PAYMENT"
+    assert result["status"] == "BACKWARD_RESPONSE_REDUCED_TO_DECORATED_HEAD_EXCHANGE"
     assert result["anchored_path_count"] == 6
     assert result["backward_order_count"] == 36
     assert result["identity_class_counts"] == {
@@ -22,4 +22,4 @@ def test_backward_response_identity_partition() -> None:
 def test_backward_capture_algebra() -> None:
     result = run(ROOT)
     assert all(result["symbolic_checks"].values())
-    assert result["smallest_terminal"] == "supplier-saturated mixed-cycle observer payment"
+    assert result["smallest_terminal"] == "GG-recurrent decorated-head exchange"
