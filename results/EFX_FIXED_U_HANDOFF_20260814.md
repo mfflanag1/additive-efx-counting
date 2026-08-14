@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `9c3b1d5`
-(`research: close same-source root-response replacement`)
+**Latest research checkpoint before this note update:** `e1e1830`
+(`research: classify two-source root-response topology`)
 
 ## Frozen objective
 
@@ -554,6 +554,33 @@ Files:
 - `results/permanent_anchor_same_source_root_response_replacement_audit.json`
 - `tracks/parkability/audit_permanent_anchor_same_source_root_response_replacement.py`
 
+### 20. Two-source root responses have one irreducible cross
+
+Conditional on transporting two distinct-source, disjoint safe desired cores
+to the same permanent-anchor root state, their simultaneous topology is now
+exact.  Across 96 two-supplier presence signatures, 76 already fit within
+four edges.  Returning the complete residual anchor cell to `q` repairs 16
+of the 20 overflows.
+
+The only four survivors are the same `2 x 2` cross: sources `d,s` each need
+nonempty support from both the root-origin and anchor-supplier cells.  If one
+source still desires one pure supplier portion, replace its mixed core by a
+minimal pure subcore and return the recomputed anchor residual; this uses
+three owner pairs plus charity.  Otherwise all four source/cell portions
+capture their respective source's complete response margin.
+
+Thus different-source topology reduces to a four-edge probe, root capture,
+or a two-source/two-supplier cross-capture certificate.  The load-bearing
+gap is now cross-state transport: responses extracted at two different
+bilateral probes are not yet proved simultaneously safe and desired at one
+fixed state.
+
+Files:
+
+- `results/PERMANENT_ANCHOR_TWO_SOURCE_ROOT_RESPONSE_TOPOLOGY_OR_CROSS_CAPTURE_LEMMA_20260814.md`
+- `results/permanent_anchor_two_source_root_response_topology_or_cross_capture_audit.json`
+- `tracks/parkability/audit_permanent_anchor_two_source_root_response_topology_or_cross_capture.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -587,12 +614,19 @@ displayed raw filenames first.
 
 The shortest live continuation on the permanent-anchor route is now:
 
-> Starting from the exact direct-safety wall
-> `v_r(B_i)+v_r(p)<=v_r(X_r)` and the universal bilateral separator, prove
-> that a non-EFX full-bundle-swap probe enters the represented-component
-> base-margin/direct-safety terminal or generalized PI/progress; otherwise
-> produce a complete positive-rational fixed-`U` countermodel satisfying the
-> full signed saturation ledger.
+> For two consecutive different-source root responses at permanent-anchor
+> bilateral probes, transport or uncross two physical cores so that they are
+> simultaneously safe and desired at one fixed `B` state.  Then apply the
+> exact two-source topology theorem, or prove that failure of transport is
+> itself a signed observer-surplus/base-margin separator.  Otherwise produce
+> a complete positive-rational fixed-`U` countermodel satisfying the full
+> cross-state saturation ledger.
+
+The scalar survivors that this transport must carry are the direct-safety
+wall `v_r(B_i)+v_r(p)<=v_r(X_r)`, simultaneous incoming-cell/root-residual
+capture, and the two-source/two-supplier cross-capture inequalities.  A
+scalar-only proof is impossible because the bilateral separator has an exact
+positive-additive local witness.
 
 The hitting branch must be handled separately through the nonroot
 singleton-hit envelope descent.  Do not identify the changed descent endpoint
@@ -698,10 +732,10 @@ cancellation, root-compensated direct return, and singleton-retained partial
 return, universal incoming-cell return, and permanent-anchor nonroot response
 transfer, root-target minimum-good diversion, and the exact bilateral
 compensator frontier, incoming-root cell diversion, and same-source
-root-response replacement:
+root-response replacement and two-source topology/cross capture:
 
 ```text
-22 passed in 22.84s
+23 passed in 20.94s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
