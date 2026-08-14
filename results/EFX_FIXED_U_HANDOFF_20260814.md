@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `36d9e1a`
-(`research: add root-compensated singleton return`)
+**Latest pushed research checkpoint before this note update:** `65eb355`
+(`research: trim singleton-source return within four edges`)
 
 ## Frozen objective
 
@@ -331,6 +331,28 @@ Files:
 - `results/r3_singleton_source_root_compensated_direct_return_audit.json`
 - `tracks/parkability/audit_r3_singleton_source_root_compensated_direct_return.py`
 
+### 13. Singleton-retained partial return
+
+Keeping the singleton at `z` removes the need for the returned packet to stay
+desired: any nonempty addition strictly improves `z`.  A subpacket of the
+root response fits in four edges exactly when it can be chosen from displaced
+`z` support, or when the response contains the whole `y`-supplied cell so
+that `y -> x` is replaced by `y -> z`.
+
+This produces a partial-return topology for 21 of the 26 nonempty response
+signatures, including 11 signatures whose whole-core direct return exceeds
+the edge budget.  Only five uncompensated signatures remain.  Choose the
+least root-valued packet among every available displaced-`z` singleton and
+the whole `y` cell.  Either its root value is below the strict root margin and
+it gives a four-edge probe, or every such packet captures the entire root
+margin.
+
+Files:
+
+- `results/R3_SINGLETON_RETAINED_PARTIAL_RETURN_TOPOLOGY_OR_ROOT_CAPTURE_LEMMA_20260814.md`
+- `results/r3_singleton_retained_partial_return_audit.json`
+- `tracks/parkability/audit_r3_singleton_retained_partial_return.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -454,10 +476,11 @@ Focused verification across the three- and nine-topology menus, independent
 menu audit/core extraction, payment identities, spanning frontier,
 cancellation theorem, all-target-change frontier, repeat-rank no-go, and
 root-star leaf liquidation, two-target root-path repair, and foreign-import
-cancellation and root-compensated direct return:
+cancellation, root-compensated direct return, and singleton-retained partial
+return:
 
 ```text
-15 passed in 25.31s
+16 passed in 25.56s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
