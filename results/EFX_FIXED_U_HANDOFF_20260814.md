@@ -638,14 +638,91 @@ The exact remaining obstruction is semantic: if the probe is non-EFX, the
 frozen response/collision argument still has to handle a nonroot holder
 whose repeated normalized response avoids the retired packet.  The
 corollary therefore closes physical routing and payment only; it does not
-close `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.  Before using
-it as universal coverage, independently check the symbol-level interface
-from the canonical forced `d -> r` response to nonemptiness of this precise
-`Y_r` cell.
+close `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 
 File:
 
 - `results/PERMANENT_ANCHOR_FULL_RESIDUAL_LIQUIDATION_COROLLARY_20260814.md`
+
+### 23. The frozen target always has nonempty original-root residual
+
+The symbol-level interface left open in section 22 is now resolved.  Premise
+ledger item 4 mandates the response `d -> r`; item 5 gives that decorated
+response a nonempty desired core inside its literal physical target support.
+That target is `Y_r`, so every frozen target state has `Y_r != empty`.
+
+Consequently every target state—not merely a conditional face—admits the
+complete three-edge liquidation probe with root bundle exactly `A`.  The
+audit checks the strict-margin algebra and all nine anchor-source/residual-
+recipient role combinations.
+
+Files:
+
+- `results/FIXED_U_ROOT_RESIDUAL_NONEMPTY_LIQUIDATION_REDUCTION_LEMMA_20260814.md`
+- `results/fixed_u_root_residual_nonempty_liquidation_audit.json`
+- `tracks/parkability/audit_fixed_u_root_residual_nonempty_liquidation.py`
+
+### 24. Direct three-placement continuation avoids collision/reset semantics
+
+Fix any nonroot recipient `k` for `Y_r` and place the charity singleton in
+turn at the three nonroot owners.  All probes have pure root target `A`, a
+strict root, and at most three edges.  A globally smallest response that
+avoids `p` is safe at all three probes and desired at a placement away from
+its own source.
+
+Every nonroot-target response can then be executed within four edges.  If
+the response targets the mixed residual holder, transferring the complete
+`Y_r` cell deletes the only possible fifth edge.  A root-target response can
+be executed within three edges after returning `Y_r` and `p` to the root,
+unless
+
+```text
+v_r(E) >= delta_r + v_r(p).
+```
+
+Thus the direct route has no packet-size or topology survivor and does not
+use the controlled floor reset or the disputed collision theorem.  Its
+remaining branches are singleton-hit descent, a non-EFX transfer's exact
+decorated recurrence, or the displayed p-augmented root capture.
+
+Files:
+
+- `results/FIXED_U_LIQUIDATED_ROOT_THREE_PLACEMENT_RESPONSE_FRONTIER_LEMMA_20260814.md`
+- `results/fixed_u_liquidated_root_three_placement_response_frontier_audit.json`
+- `tracks/parkability/audit_fixed_u_liquidated_root_three_placement_response_frontier.py`
+
+### 25. Root capture repairs by a full-source swap or becomes direct safety
+
+For a captured root response `E subseteq A` with source cell `S_i`, transfer
+all of `S_i` to the root, return `Y_r`, give the charity singleton to the
+root, and give `E` to its source.  Desire above the source's complete probe
+bundle pays the source even when it was holding `Y_r`.  The allocation uses
+at most four edges.
+
+It preserves the strict root exactly when
+
+```text
+v_r(E)-v_r(S_i) < delta_r+v_r(p).
+```
+
+Failure strengthens to
+
+```text
+v_r(S_i)+v_r(p) <= v_r(E)-delta_r
+                 <= v_r(X_r)-v_r(Y_r)
+                 <  v_r(X_r).
+```
+
+Raw aggregate capture is therefore no longer the terminal.  The live scalar
+branch is strict direct safety of the response source's entire ordinary cell
+together with charity; the other live branch is the exact decorated response
+after a priority-valid full-source swap.
+
+Files:
+
+- `results/LIQUIDATED_ROOT_RESPONSE_FULL_SOURCE_SWAP_FRONTIER_LEMMA_20260814.md`
+- `results/liquidated_root_response_full_source_swap_frontier_audit.json`
+- `tracks/parkability/audit_liquidated_root_response_full_source_swap_frontier.py`
 
 ## Critical resume correction
 
@@ -677,6 +754,22 @@ starting from a clean clone, expand the two committed `.json.gz` files to the
 displayed raw filenames first.
 
 ## Exact next theorem target
+
+The direct liquidated-root route now supersedes the collision-based shortcut
+as the first attack.  Its shortest live implication is:
+
+> In the frozen saturated record, simultaneous failure of the three
+> liquidated-root singleton placements and their direct response transfers
+> forces either the nonroot singleton-hit terminal, a new decorated record,
+> release-compatible generalized PI/progress, or the represented-component
+> terminal.  In the root-response branch, combine the strict direct-safety
+> wall `v_r(S_i)+v_r(p)<v_r(X_r)` with the other signed observer/source rows;
+> otherwise construct a full-premise positive-rational countermodel.
+
+Do not treat the two-edge charity relay as unconditional.  Its reset-
+admission theorem exists at commit `34709c9`, outside this branch's ancestry,
+and explicitly requires a separate physical progress argument.  The direct
+three-placement route above does not depend on it.
 
 The shortest live continuation on the permanent-anchor route is now:
 

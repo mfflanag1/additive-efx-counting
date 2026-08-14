@@ -1965,3 +1965,24 @@ both encodings.
   fail simultaneously.  It is not a saturated fixed-U countermodel; it
   proves the remaining contradiction must use signed saturation or PI rather
   than scalar payment inequalities alone.
+- [`FIXED_U_ROOT_RESIDUAL_NONEMPTY_LIQUIDATION_REDUCTION_LEMMA_20260814.md`](FIXED_U_ROOT_RESIDUAL_NONEMPTY_LIQUIDATION_REDUCTION_LEMMA_20260814.md)
+  ([exact audit](fixed_u_root_residual_nonempty_liquidation_audit.json))
+  resolves the frozen-record interface: the mandatory nonempty `d -> r`
+  response core lies in `Y_r`, so every target state has a nonempty original-
+  root residual.  Moving that residual to a nonroot owner while retaining
+  only the strict permanent anchor at the root gives a complete cap-free
+  three-edge probe.
+- [`FIXED_U_LIQUIDATED_ROOT_THREE_PLACEMENT_RESPONSE_FRONTIER_LEMMA_20260814.md`](FIXED_U_LIQUIDATED_ROOT_THREE_PLACEMENT_RESPONSE_FRONTIER_LEMMA_20260814.md)
+  ([252-case audit](fixed_u_liquidated_root_three_placement_response_frontier_audit.json))
+  tests the singleton at all three nonroot owners after liquidation.  Every
+  singleton-disjoint nonroot-target response executes within four edges;
+  completing the entire residual cell removes the only mixed-target
+  overflow.  A root-target response likewise executes within three edges
+  unless it captures `delta_r+v_r(p)`.
+- [`LIQUIDATED_ROOT_RESPONSE_FULL_SOURCE_SWAP_FRONTIER_LEMMA_20260814.md`](LIQUIDATED_ROOT_RESPONSE_FULL_SOURCE_SWAP_FRONTIER_LEMMA_20260814.md)
+  ([108-case audit](liquidated_root_response_full_source_swap_frontier_audit.json))
+  repairs that root-capture branch by swapping the response source's entire
+  ordinary cell into the root.  Either the resulting complete allocation is
+  a strict-root at-most-four-edge probe, or failure forces the stronger
+  direct-safety wall `v_r(S_i)+v_r(p)<v_r(X_r)`.  Decorated recurrence and
+  the other signed rows remain open.

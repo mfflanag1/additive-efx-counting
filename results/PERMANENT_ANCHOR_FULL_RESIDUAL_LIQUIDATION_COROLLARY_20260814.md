@@ -78,8 +78,8 @@ edge-count obstruction on the nonempty-residual face.  It does **not** prove
 that the probe is EFX, close the normalization bypass, prove the saturated
 fixed-`U` theorem, or prove additive EFX.
 
-The canonical rank-three application also requires a careful symbol-level
-check that its forced nonempty response into the root lies in the `Y_r`
-cell used here.  The graph lemma records such a root-facing response, but
-that interface should be checked independently before this corollary is
-advertised as covering every frozen target state.
+The canonical rank-three interface is discharged in
+`FIXED_U_ROOT_RESIDUAL_NONEMPTY_LIQUIDATION_REDUCTION_LEMMA_20260814.md`:
+premise-ledger items 4--5 record a nonempty desired core for the mandatory
+`d -> r` response inside its literal physical target `Y_r`.  Thus the
+nonempty-residual hypothesis holds throughout the frozen target domain.
