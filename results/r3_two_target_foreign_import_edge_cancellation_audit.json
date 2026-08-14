@@ -1,0 +1,3977 @@
+{
+  "claim_boundary": "cap-free edge identity and margin separator; incompatible foreign packets are not yet routed to PI/progress/base-margin admission",
+  "edge_distribution": {
+    "3": 11,
+    "4": 58,
+    "5": 93,
+    "6": 46
+  },
+  "foreign_margin_capture": true,
+  "four_edge_feasible": 69,
+  "four_edge_feasible_own_support_only": 16,
+  "four_edge_feasible_with_foreign_support": 53,
+  "provenance": {
+    "script": "tracks/parkability/audit_r3_two_target_foreign_import_edge_cancellation.py",
+    "script_sha256": "35a9aabe30317bee98a3359d8e02246b0e630c3ba2e92157e049b98928a1e4b4",
+    "theorem": "results/R3_TWO_TARGET_FOREIGN_IMPORT_EDGE_CANCELLATION_AND_MARGIN_LEMMA_20260814.md",
+    "theorem_sha256": "c92b73abef0b5ad20635e187ad2362f5733156fec3dc9258c10f3e5aa01c213c",
+    "z3": "5.0.0"
+  },
+  "rows": [
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        0,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": false
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        1,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        0,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        1,
+        2,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        0,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        1,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        1,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        0,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        0,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        1,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        1,
+        2
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": true
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        2,
+        1
+      ],
+      "uses_foreign_support": true
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true,
+        "z_to_y": false
+      },
+      "signature": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "uses_foreign_support": true
+    }
+  ],
+  "schema": "r3-two-target-foreign-import-edge-cancellation-v1",
+  "signature_count": 208,
+  "status": "EXACT_FIVE_INDICATOR_EDGE_CRITERION"
+}
