@@ -1,0 +1,30 @@
+{
+  "claim_boundary": "cap-free frontier; current-only d payment, observer safety, and double-capture reversal remain open",
+  "provenance": {
+    "script": "tracks/parkability/audit_form2_root_star_disjoint_or_double_capture.py",
+    "script_sha256": "39c3b8e04da68b50137552921721c9d97ae02259df6910a9831455ef7d945669",
+    "theorem": "results/FORM2_ROOT_STAR_DISJOINT_OR_DOUBLE_CAPTURE_FRONTIER_20260814.md",
+    "theorem_sha256": "a4ac6e365960685314fb806c0009bad60b1d6c71cbcf6ff7d7bfa1ee34fe972f"
+  },
+  "scalar_checks": {
+    "d_payment_identity": "unsat",
+    "root_payment_identity": "unsat",
+    "single_margin_capture_schema": "unsat"
+  },
+  "schema": "form2-root-star-disjoint-double-capture-v1",
+  "status": "DISJOINT_ROOT_STAR_OR_DOUBLE_MARGIN_CAPTURE",
+  "support_edges": [
+    [
+      "charity",
+      "r"
+    ],
+    [
+      "r",
+      "d"
+    ],
+    [
+      "r",
+      "s"
+    ]
+  ]
+}

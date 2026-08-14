@@ -328,3 +328,12 @@ can be unpaid.  The failure inequality is a single root-capture separator;
 see `FORM0_FULL_OWNER_HAMILTONIAN_PATH_PAYMENT_LEMMA_20260814.md`.  This
 places form 0 directly at the existing full-owner signed-interface audit.
 The surviving form-2 R3 cycle remains the genuinely distinct branch.
+
+Its first explicit compensation topology is now cap-free as well.  Two
+responses into the root either uncross into a three-edge supplier star, with
+only the `r,d` payment identities left, or their overlap captures both source
+margins.  See
+`FORM2_ROOT_STAR_DISJOINT_OR_DOUBLE_CAPTURE_FRONTIER_20260814.md`.  Hence the
+R3 terminal is no longer a generic shared-target overlap: it is a
+double-margin physical packet coupled to the root/current-only-`d` two-hole
+separator.

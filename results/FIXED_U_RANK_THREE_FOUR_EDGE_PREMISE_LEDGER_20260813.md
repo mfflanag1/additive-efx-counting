@@ -98,6 +98,17 @@ full-owner continuation, while failure of every path redistribution is the
 component-wide base-margin separator.  Verifying that exact interface is
 still required before promoting form 0 as unconditionally closed.
 
+For form 2, the first candidate topology now has an exact cap-free frontier.
+The `d->r` and `s->r` responses can be uncrossed into disjoint root cores and
+reversed using only `charity->r`, `r->d`, and `r->s`.  Owners `q,s` are then
+paid automatically; the only payment holes are the protected root and the
+current-only `d` row.  If neither response can be uncrossed, their common
+physical packet captures both strict response margins.  See
+`FORM2_ROOT_STAR_DISJOINT_OR_DOUBLE_CAPTURE_FRONTIER_20260814.md`.  The live
+form-2 obligation is therefore simultaneous reversal of that double-margin
+packet or repair of the exact `{r,d}` payment pair through the other menu
+topologies.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

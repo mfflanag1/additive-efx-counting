@@ -1936,3 +1936,9 @@ both encodings.
   inequality can prevent an all-owner-paid four-edge candidate.  Composition
   with the saturated full-owner extraction theorem still requires the
   complete signed-interface audit.
+- [`FORM2_ROOT_STAR_DISJOINT_OR_DOUBLE_CAPTURE_FRONTIER_20260814.md`](FORM2_ROOT_STAR_DISJOINT_OR_DOUBLE_CAPTURE_FRONTIER_20260814.md)
+  ([exact audit](form2_root_star_disjoint_or_double_capture_audit.json))
+  proves the cap-free first topology of the form-2 menu: disjoint root
+  responses reverse on three edges, with only `r,d` payment holes; failure of
+  both uncrossings forces one physical overlap packet to capture both strict
+  response margins.  Reversal of that double capture remains open.
