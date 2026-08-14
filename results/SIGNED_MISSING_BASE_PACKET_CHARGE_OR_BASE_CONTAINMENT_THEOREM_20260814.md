@@ -5,6 +5,10 @@
 **Status:** cap-free reduction of every root-held retired packet to a
 base-contained packet or an exact blocker of the signed missing-base return
 
+**Composition update.**  The base-contained branch is further reduced by
+`BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md` to
+the exterior-dominance inequalities `v_r(G-X_r)<v_r(g)` for every `g in K`.
+
 ## Signed root support
 
 Let the current first-priority root bundle be `Y_r`, with base bundle `X_r`,
@@ -106,7 +110,7 @@ classes:
  \boxed{S^-\text{ has a named retired/anchor/release blocker}.} \tag{6}
 \]
 
-The first is the **base-contained retired-anchor face**.  The second is a
+The first enters the **base-contained exterior-dominance face**. The second is a
 directed charge edge from `K` to another physical ledger/anchor coordinate.
 There is no remaining root packet that merely straddles the base boundary
 while the signed missing-base return is available.

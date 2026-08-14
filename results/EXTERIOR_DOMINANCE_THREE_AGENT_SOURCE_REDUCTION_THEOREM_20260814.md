@@ -5,6 +5,12 @@
 **Status:** cap-free elimination of the three-source face and reduction of
 the two-source face to an exact root-threshold debt; one-source face remains
 
+**Composition update (2026-08-14).**  The exterior-dominance premise is now
+an unconditional survivor of the admitted global-exterior sacrifice theorem.
+Consequently the source topology below is part of the live root-held
+collision reduction, not merely a conditional analysis of a proposed test
+allocation.
+
 ## Input
 
 Let `X=(X_r,X_1,X_2,X_3;{f})` be the positive, bundle-nondegenerate,

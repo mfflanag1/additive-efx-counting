@@ -2,9 +2,15 @@
 
 **Date:** 2026-08-14
 
-**Status:** conditional exterior-donation dichotomy. The arithmetic and
-support cut are exact, but the global pooling allocation is not yet an
-admissible transition from the frozen collision state.
+**Status:** strict exterior donation is admitted by the global-exterior
+sacrifice theorem; the exterior-dominance cut is unconditional
+
+**Admission update (2026-08-14).**  The separate
+`BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md`
+implements (3) as an explicit root-strict supplier-star sacrifice and adopts
+the resulting proper packet response. The historical conditional arithmetic
+below is therefore promoted in its strict branch; equality is excluded by
+bundle nondegeneracy.
 
 ## Input
 
@@ -66,11 +72,9 @@ candidate.  It is current-safe.  Its retired intersection obeys
 
 For `|K|>=2`, every nonempty hit is therefore proper. For `K={g}`, every
 response is ledger-free. Thus (5) gives the displayed EFX endpoint or a
-response whose intersection with `K` is proper/empty. Calling the latter
-strict progress requires an admissible operation that adopts (3) and its
-response. The current contract contains no theorem allowing arbitrary
-pooling of all exterior goods into the root while sacrificing three nonroot
-assignments, so this step remains conditional.
+response whose intersection with `K` is proper/empty. The cited global-
+exterior sacrifice theorem supplies the signed operation and adoption rule,
+so the latter is strict packet progress.
 
 ## Exact exterior-dominance survivor
 
@@ -104,8 +108,8 @@ individual retired atom.
 
 ## Composition consequence
 
-Conditional on admissibility of both global test allocations, combining
-supplier-aligned packet spreading with this dichotomy would reduce the
+Combining the admitted base-contained operation with supplier-aligned packet
+spreading reduces the
 protected-root direct branch to:
 
 1. the exterior-dominance cut (7)--(9) for `K subseteq X_r`; or
@@ -113,15 +117,13 @@ protected-root direct branch to:
    off-packet donation good; under the frozen GG base-cardinality premises,
    the base-crossing equality face cannot satisfy this second alternative.
 
-Without that admission theorem, (7)--(9) is the exact scalar obstruction to
-this proposed exterior-pooling route, not the sole remaining collision
+Thus (7)--(9) is the exact surviving scalar obstruction to this admitted
+exterior-pooling route, though not yet the sole multi-label collision
 obstruction.
 
 ## Claim boundary
 
-This lemma proves physical feasibility of (3) as a bare allocation, wall
-localization there, the proper/empty intersection property, and the
-conditional cut (7)--(9). It does not establish (3) as an admissible
-GG/ledger transition, preserve the sacrificed owners' typed floors, close
-their suppliers, or make its extracted response a finite progress step.
-Therefore it does not yet reduce the actual `T_{L,times}^*` terminal.
+Together with the cited admission theorem, this lemma proves physical
+feasibility, wall localization, the proper/empty intersection property, and
+the unconditional cut (7)--(9). It does not contradict exterior dominance,
+prove multi-label well-foundedness, or close `T_{L,times}^*`.

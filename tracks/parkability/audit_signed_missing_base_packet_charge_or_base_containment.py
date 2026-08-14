@@ -76,7 +76,7 @@ def run() -> dict[str, object]:
     contract = ROOT / "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md"
     script = Path(__file__).resolve()
     theorem_text = theorem.read_text()
-    assert "base-contained retired-anchor face" in theorem_text
+    assert "base-contained exterior-dominance face" in theorem_text
     assert "global multi-label recurrence" in theorem_text
 
     return {

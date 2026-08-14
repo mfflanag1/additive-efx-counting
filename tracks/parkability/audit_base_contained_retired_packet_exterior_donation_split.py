@@ -69,24 +69,26 @@ def run() -> dict[str, object]:
 
     theorem = ROOT / "results/BASE_CONTAINED_RETIRED_PACKET_EXTERIOR_DONATION_SPLIT_THEOREM_20260814.md"
     spread = ROOT / "results/SUPPLIER_ALIGNED_BASE_DONATION_PACKET_SPREAD_THEOREM_20260814.md"
+    admission = ROOT / "results/BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md"
     return {
         "schema": "base-contained-retired-packet-exterior-donation-split-audit-v1",
-        "status": "EXTERIOR_DONATION_GEOMETRY_VERIFIED_ADMISSION_OPEN",
+        "status": "EXTERIOR_DONATION_STRICT_ADMITTED_DOMINANCE_REMAINS",
         "support_cases_checked": support_cases,
         "whole_hits_confined_to_safe_singleton_target": whole_hits,
         "singleton_root_target_ledger_hits": singleton_ledger_hits,
         "exact_charge_cases_checked": charge_cases,
         "remaining_root_terminal": "base_contained_exterior_dominant_packet",
-        "admissible_transition_proved": False,
+        "admissible_transition_proved": True,
         "claim_boundary": (
-            "support and arithmetic audit of the proposed pooling allocation; "
-            "does not prove its protected floors, supplier releases, or admission "
-            "as a G0--G10 transition"
+            "support and arithmetic audit plus the separate explicit global-"
+            "exterior sacrifice admission; exterior dominance and multi-label "
+            "well-foundedness remain open"
         ),
         "full_T_L_times_theorem_closed": False,
         "sources": {
             str(theorem.relative_to(ROOT)): sha256(theorem),
             str(spread.relative_to(ROOT)): sha256(spread),
+            str(admission.relative_to(ROOT)): sha256(admission),
         },
     }
 

@@ -33,7 +33,7 @@ reaches that allocation.
 | Candidate | Exact part that survives | Missing admission premise | Current use |
 |---|---|---|---|
 | base restoration plus one-good root donation | every target has proper/empty `K` intersection in the stated on/off-packet geometries | generic restoration can move retired goods away from recorded holders; the unique admitted equality return now supplies a local decomposition only on the equality face | conditional in general; equality face closed |
-| exterior pooling `(X_r-g)+O`, singleton `{g}` | wall localization and atomwise exterior-dominance inequality are exact at that allocation | pooling all exterior goods into the root sacrifices three assignments and is not an established paid splice or sacrifice return | conditional scalar no-go cut |
+| exterior pooling `(X_r-g)+O`, singleton `{g}` | wall localization and atomwise exterior-dominance inequality are exact at that allocation | the explicit global supplier-star sacrifice now admits every strict instance; exterior dominance remains | admitted strict branch |
 | singleton isolation plus arbitrary two-agent EFX complement | singleton target is universally safe and all test-allocation responses avoid `{g}` | no admitted operation implements the complement repartition with its supplier/floor handoff | conditional wall-localization lemma |
 | proper nonroot split inside the stated strict-root sacrifice interface | target locality puts `T` and `K-T` in different cells | valid only under the theorem's explicit strict-root, protected-target, and compression premises; it is not a generic state rewrite | retain as a typed conditional transition theorem |
 

@@ -6,7 +6,8 @@
 whole-hit recurrences and every root packet-price equality mode are
 eliminated; the direct root-held terminal is strict atomwise aggregate
 underpayment, further reduced to a base-contained retired packet or a named
-blocker of the signed missing-base return.
+blocker of the signed missing-base return. The base-contained branch in turn
+obeys complete exterior dominance.
 
 **Correction and repair (2026-08-14).**  Historical provenance alone does
 not admit reversal. The strict branch is independently repaired by a clean
@@ -140,6 +141,51 @@ state is either a **base-contained retired-anchor face** or a directed charge
 to a different physical ledger/anchor coordinate. The latter is not progress
 by itself; global well-foundedness or a PI conversion is still required.
 
+For the base-contained branch, the admitted global-exterior sacrifice gives
+
+\[
+ v_r(G-X_r)<v_r(g)\qquad(g\in K).
+\]
+
+Otherwise pooling the complete base exterior into the root while releasing
+`g` as a singleton makes the root strict and forces a proper/zero packet
+response. Thus the remaining base-contained packet is atomwise more valuable
+to the root than her entire base exterior.
+
+The existing three-agent source reduction then makes the exterior-dominant
+face acyclic and eliminates its three-source topology. In the frozen `GG`
+identity, the only surviving nonroot source sets are
+
+\[
+ \{c\},\qquad\{c,q\},\qquad\{c,s\}.
+\]
+
+The two-source cases carry an exact owner `i` whose three-agent completion
+falls below `tau_i(X_r)`; the one-source case has unique source `c`. Thus the
+base-contained side is now a named source/debt interface, not an anonymous
+valuation cut.
+
+If the signed missing-base packet is admitted, a root-preserving reset puts
+this side in the exact one-good form `Y_r=X_r+g`. A whole-`K` response then
+has one of two supports:
+
+\[
+ D=(X_r-L)+g,
+ \quad\varnothing\ne L\subseteq X_r-K,
+ \quad v_r(L)>v_r(g),
+\]
+
+unless it is a safe root reselection; or
+
+\[
+ D=X_r-L,
+ \quad L\subseteq X_r-K.
+\]
+
+The second includes the exact source-inactive base-root response `D=X_r`
+when `L` is empty. If the signed reset is blocked, the state is already on
+the multi-label charge side.
+
 ## Typed branch audit
 
 | Branch | Current status |
@@ -151,18 +197,22 @@ by itself; global well-foundedness or a PI conversion is still required.
 
 ## Smallest remaining theorem
 
-Starting from the base-contained/charged fork, use the retirement-time floor
+Starting from the exterior-dominant/charged fork, use the retirement-time floor
 snapshot and exact originating `G0--G10` transition to prove one of:
 
-1. a base-contained retired packet forces a root/anchor exchange or violates
-   its retirement-time floor;
-2. a signed-return charge cycle is release-compatible PI or has a strict
+1. eliminate the on-good loss band `v_r(L)>v_r(g)` or use `D` as an anchor;
+2. eliminate the off-good base-root/source-inactive response;
+3. in source set `{c}`, the retirement supplier/current response source
+   forces a root/anchor exchange or PI;
+4. in source set `{c,q}` or `{c,s}`, route the exact root-threshold debt owner
+   through the retirement supplier or contradict its retirement-time floor;
+5. a signed-return charge cycle is release-compatible PI or has a strict
    finite label descent;
-3. some admitted compatible exterior packet violates the strict packet-price
+6. some admitted compatible exterior packet violates the strict packet-price
    cut;
-4. a root/anchor exchange leaves `K` at the root while strictly changing the
+7. a root/anchor exchange leaves `K` at the root while strictly changing the
    physical anchor label; or
-5. the complete signed recurrence is impossible.
+8. the complete signed recurrence is impossible.
 
 If none holds, a refutation must realize the strict cuts (2)--(4), global GG
 maximality, multi-label recurrence, and every signed transition/release premise in
@@ -175,5 +225,7 @@ This checkpoint does not prove or refute `T_{L,times}^*`, GG, four-agent EFX,
 or general additive EFX. Its unconditional result is the nonroot closure,
 strict clean subpacket release, equality packet spread, and the strict
 atomwise cut. The live root face is now base-contained or charged to another
-exact label. Base-contained anchor conversion and global multi-label
+exact label, with the base-contained side satisfying complete exterior
+dominance and one of three named source topologies. Source/debt-to-anchor
+conversion, the one-good on/off response split, and global multi-label
 well-foundedness remain, so this is not yet a mathematical breakthrough.
