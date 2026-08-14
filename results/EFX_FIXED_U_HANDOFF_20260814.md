@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `3efe664`
-(`research: identify root complement-safety wall`)
+**Latest research checkpoint before this note update:** `a56ce46`
+(`research: eliminate incoming-root cell topology`)
 
 ## Frozen objective
 
@@ -497,6 +497,34 @@ Files:
 - `results/permanent_anchor_root_target_bilateral_compensator_frontier_audit.json`
 - `tracks/parkability/audit_permanent_anchor_root_target_bilateral_compensator_frontier.py`
 
+### 18. Incoming-root cells never create an edge obstruction
+
+At any strict-root allocation already using at most four supplier pairs,
+move a complete nonroot-supplied root cell to any nonroot owner.  The move
+deletes `supplier -> root` and replaces it by at most
+`supplier -> recipient`; if the recipient is the supplier, the cell simply
+returns.  The edge count never increases, and the recipient strictly
+improves by positivity.
+
+Therefore every incoming root cell gives either another named four-edge
+probe or the exact capture inequality
+
+```text
+v_r(K_s) >= current root margin.
+```
+
+At a permanent-anchor bilateral probe this applies independently to the
+residual anchor cell, the returned compensator cell, and the charity
+singleton.  Topology is now eliminated for all of them.  Only root-origin
+residual support can require a fifth edge; simultaneous full-margin capture
+and decorated-response recurrence remain open.
+
+Files:
+
+- `results/STRICT_ROOT_INCOMING_CELL_DIVERSION_OR_CAPTURE_LEMMA_20260814.md`
+- `results/strict_root_incoming_cell_diversion_or_capture_audit.json`
+- `tracks/parkability/audit_strict_root_incoming_cell_diversion_or_capture.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -640,10 +668,10 @@ root-star leaf liquidation, two-target root-path repair, and foreign-import
 cancellation, root-compensated direct return, and singleton-retained partial
 return, universal incoming-cell return, and permanent-anchor nonroot response
 transfer, root-target minimum-good diversion, and the exact bilateral
-compensator frontier:
+compensator frontier and incoming-root cell diversion:
 
 ```text
-20 passed in 22.69s
+21 passed in 22.39s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
