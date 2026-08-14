@@ -1,0 +1,182 @@
+{
+  "case_count": 9,
+  "cases": [
+    {
+      "diverted_good": "yr",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "source": "q"
+    },
+    {
+      "diverted_good": "a0",
+      "edge_count": 2,
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "source": "q"
+    },
+    {
+      "diverted_good": "a1",
+      "edge_count": 2,
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "source": "q"
+    },
+    {
+      "diverted_good": "yr",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "source": "d"
+    },
+    {
+      "diverted_good": "a0",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "source": "d"
+    },
+    {
+      "diverted_good": "a1",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "source": "d"
+    },
+    {
+      "diverted_good": "yr",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "source": "s"
+    },
+    {
+      "diverted_good": "a0",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "source": "s"
+    },
+    {
+      "diverted_good": "a1",
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "source": "s"
+    }
+  ],
+  "claim_boundary": "cap-free minimum-good diversion; item-critical envelope and exact response recurrence remain open",
+  "itemwise_capture": true,
+  "maximum_edge_count": 3,
+  "provenance": {
+    "script": "tracks/parkability/audit_permanent_anchor_root_target_minimum_good_diversion.py",
+    "script_sha256": "eb3dbf68572fe0c34a7f64d88eefae09232f3725e647ba7e0be9a271a95ae1e2",
+    "theorem": "results/PERMANENT_ANCHOR_ROOT_TARGET_MINIMUM_GOOD_DIVERSION_LEMMA_20260814.md",
+    "theorem_sha256": "df26ea4ed6b5844dbe6231c4c1a7b7ab74fc75737a9622c5e66635cc75087c6b",
+    "z3": "5.0.0"
+  },
+  "root_payment_equivalence": true,
+  "schema": "permanent-anchor-root-target-minimum-good-diversion-v1",
+  "source_strict": true,
+  "status": "THREE_EDGE_PROBE_OR_ITEMWISE_ROOT_CAPTURE"
+}
