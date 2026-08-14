@@ -1391,3 +1391,26 @@ files; they were deliberately neither staged nor reverted.
 
 The active `/goal` should remain open.  The fixed rank-three theorem, general
 four-agent additive EFX, and general additive EFX are all unresolved.
+
+## 41. Cap-free physical-minimum whole-role boundary
+
+The final checkpoint replaces the bounded atom tail by an exact cap-free
+totals/minima abstraction for every named role.  A role is jointly either a
+singleton for all observers or a multi-good packet satisfying `T >= 2M` for
+all observers; either case is physically realizable with at most two goods.
+
+Exact response form 2 has a positive-rational profile with no complete EFX
+allocation in the exhaustive whole-role menu using at most four frozen-
+support supplier pairs.  This is **not** an EFX counterexample: the active
+theorem permits splitting a named role.  It decisively rules out finishing
+the proof with an indivisible named-role selector and supplies a concrete
+separation target for the missing within-role split lemma.  Form 0 reached a
+ten-round iteration limit with 63 cuts.
+
+See `PHYSICAL_MINIMUM_ROLE_UNION_CHECKPOINT_20260814.md`.  The three focused
+encoding/realizability tests pass.  No solver remains intentionally live.
+
+The immediate continuation is to minimize a within-role split repairing the
+form-2 terminal obstruction, then prove that its frozen supplier provenance
+fits four pairs or triggers signed PI/component/progress.  Observer EFX and
+chart-coverage remain separate gates.

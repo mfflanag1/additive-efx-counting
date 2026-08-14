@@ -2104,3 +2104,9 @@ both encodings.
   predecessor-duplicate maps.  The exact survivor is a three-corner
   predecessor-cost separator.  Frozen-supplier compression and observer
   EFX remain open.
+- [`PHYSICAL_MINIMUM_ROLE_UNION_CHECKPOINT_20260814.md`](PHYSICAL_MINIMUM_ROLE_UNION_CHECKPOINT_20260814.md)
+  replaces bounded atom tails by an exact cap-free totals/minima abstraction
+  for each named role.  Exact response form 2 refutes every whole-role
+  complete-EFX selector using at most four frozen-support pairs.  This is not
+  an EFX counterexample: arbitrary within-role packet splits remain available,
+  and are now the sharply identified next proof gate.
