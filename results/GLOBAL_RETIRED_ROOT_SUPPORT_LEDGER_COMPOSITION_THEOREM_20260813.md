@@ -29,12 +29,15 @@ Then every transition has at least one of the following outcomes:
    label; or
 5. an exact state in
    `T^dagger=T_0^* dot-union T_L^*`: either the pre-ledger exact `T_0^*`
-   recurrence, or a typed `T_L^*` state carrying a nonempty retired packet,
-   its retirement supplier and current holder, and either a repeated
-   retired-hitting response, a repeated normalization-bypass response, or an
+   recurrence, a parked-support `T_{L,perp}^*` recurrence whose complete
+   active selector/release pool avoids nonempty `L`, or a collision
+   `T_{L,times}^*` state carrying a named retired packet, its retirement
+   supplier and current holder, and either a repeated retired-hitting
+   response, a repeated normalization-bypass response, or an
    equality-critical/base-floor separator for which no typed handoff is
    admissible, together with rank deficiency or the explicit
-   observer-payment/release wall.
+   observer-payment/release wall. Here
+   `T_L^*=T_{L,perp}^* dot-union T_{L,times}^*`.
 
 In particular, no retired good is executed as a required input of a later
 selector under the same anchor label. A later preference or proposed cell
@@ -52,7 +55,13 @@ would move away from their current holders.
 ### A. No collision
 
 If `K` is empty, execute the original proved transition. Its old
-EFX/PI/progress/continuation classification is unchanged.
+EFX/PI/progress/continuation classification is unchanged. If it reaches an
+exact `T*` recurrence while `L` is empty, record `T_0^*`. If `L` is nonempty,
+audit the complete active selector/release pool, not only the chosen move. A
+member that meets `L_alpha` is processed by B--D. If every member is
+disjoint, all retired goods stay with their recorded holders and the exact
+recurrence is the parked-support subtype `T_{L,perp}^*`. Thus a collision-free
+post-ledger terminal is not omitted.
 
 ### B. Ledger-free realization
 
@@ -164,12 +173,19 @@ The global surviving class is
 T^\dagger=T_0^*\mathbin{\dot\cup}T_L^*,
 \]
 
-where `T_0^*` is an exact generic `T*` recurrence with empty ledger. The
-post-ledger component is the more structured class below.
+where `T_0^*` is an exact generic `T*` recurrence with empty ledger and
+
+\[
+T_L^*=T_{L,\perp}^*\mathbin{\dot\cup}T_{L,\times}^*.
+\]
+
+The parked-support subtype `T_{L,perp}^*` has nonempty `L` and a complete
+active selector/release pool disjoint from it. The collision subtype is the
+more structured class below.
 
 The post-ledger open node is
 
-> **`T_L^*`: retired-packet saturated splice.** The complete signed state,
+> **`T_{L,times}^*`: retired-packet saturated splice.** The complete signed state,
 > typed floors, physical root/anchor label, retirement and collision histories repeat;
 > the canonical ledger-free realization of the active selector fails a floor,
 > EFX comparison, or release test; and a globally minimal protected-floor
@@ -180,10 +196,10 @@ The post-ledger open node is
 > otherwise the state carries the explicit base-floor observer-payment or
 > release separator.
 
-The post-ledger component is strictly narrower than generic `T*`: it requires nonempty retired
-support, exact retirement/current-holder provenance, selector exhaustion,
-and a repeated hitting/bypass response or typed payment separator. Empty-ledger rank-deficient `T*` instances are
-not in `T_L^*`.
+The other post-ledger subtype `T_{L,perp}^*` carries nonempty retired support,
+exact current holders, and complete selector-pool avoidance. Both are more
+structured than an untyped generic `T*` record. Empty-ledger rank-deficient
+`T*` instances are not in `T_L^*`.
 
 The updated local graph is
 
@@ -196,8 +212,11 @@ G0 -> ... -> G10
                         |
               ledger-normalize every return
                  /       |          \
-              EFX/PI  finite record  T_L^*
+              EFX/PI  finite record  T_{L,times}^*
 ```
+
+A post-ledger exact recurrence whose whole active pool avoids `L` enters
+`T_{L,perp}^*` from the collision-free branch.
 
 The base-to-peel prefix has the unchanged additional exit `T_0^*`. Thus the
 global graph has the single typed union terminal `T^dagger`, with its empty-

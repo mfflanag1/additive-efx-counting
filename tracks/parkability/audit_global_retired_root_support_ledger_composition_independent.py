@@ -63,11 +63,17 @@ def run(repo: Path) -> dict:
     collision_cases = 0
     capture_cases = 0
     equality_critical_cases = 0
+    nonempty_ledger_collision_free_proposal_cases = 0
     for current in allocations:
         current_masks = masks(current)
         for proposed in allocations:
             proposed_masks = masks(proposed)
             for ledger_mask in range(1 << len(tuple(GOODS))):
+                if ledger_mask and all(
+                    not (ledger_mask >> g & 1) or proposed[g] == current[g]
+                    for g in GOODS
+                ):
+                    nonempty_ledger_collision_free_proposal_cases += 1
                 normalized = list(proposed)
                 for g in GOODS:
                     if ledger_mask >> g & 1 and proposed[g] != current[g]:
@@ -119,6 +125,9 @@ def run(repo: Path) -> dict:
         "retired_transfer_collision_cases": collision_cases,
         "failed_floor_capture_cases": capture_cases,
         "weak_floor_equality_critical_cases": equality_critical_cases,
+        "nonempty_ledger_collision_free_proposal_cases": (
+            nonempty_ledger_collision_free_proposal_cases
+        ),
         "physical_conservation": True,
         "signed_reconstruction_injective": True,
         "semantic_note": (

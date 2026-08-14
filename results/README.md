@@ -81,11 +81,13 @@ headlines:
   typed retired-packet terminal `T_L^*`, including normalization-bypass and
   weak-floor equality-critical cells. The physical anchor label is separated
   from the floor vector, so a floor change cannot relabel retired support.
+  A collision-free post-ledger recurrence is separately certified as the
+  complete-pool parked-support subtype `T_{L,perp}^*`.
   The independent implementation checks 15,625
   signed reconstruction pairs and 125,000 physical normalization cases.
   The exact global terminal is the typed union
   `T^dagger=T_0^* dot-union T_L^*`; its empty-ledger component, typed
-  `T_L^*` payment, GG closure, and general EFX remain open.
+  `T_L^*` parked/collision components, GG closure, and general EFX remain open.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))

@@ -86,6 +86,9 @@ def run(repo: Path) -> dict:
                 "retired_support_persists_across_floor_changes"
             ],
         },
+        "no_collision_terminal_guard": contract[
+            "no_collision_T_star_requires_complete_pool_audit"
+        ],
         "scalar_collision_checks": contract["scalar_checks"],
         "collision_normalization_checks": {
             "capture": collision["capture_inequality"],
@@ -117,14 +120,14 @@ def run(repo: Path) -> dict:
         "surviving_terminal": "T^dagger = T_0^* dot-union T_L^*",
         "pre_ledger_terminal": "T_0^*",
         "post_ledger_terminal": "T_L^*",
+        "post_ledger_terminal_subtypes": ["T_{L,perp}^*", "T_{L,times}^*"],
         "surviving_terminal_requirements": [
             "nonempty retired packet",
             "retirement supplier and current holder",
             "fixed typed protected floors",
-            "failed canonical ledger-free realization",
-            "repeated retired-hitting or normalization-bypass response",
-            "or equality-critical/base-floor separator with no admissible typed handoff",
-            "rank deficiency or observer-payment/release separator",
+            "complete-pool parked-support certificate or collision certificate",
+            "collision subtype has repeated hitting/bypass response or typed separator",
+            "typed rank deficiency or observer-payment/release separator",
         ],
         "generic_empty_ledger_T_star_closed": False,
         "augmented_generic_T_star_strictly_narrowed": True,

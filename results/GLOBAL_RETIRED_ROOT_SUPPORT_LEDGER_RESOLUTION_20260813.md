@@ -41,21 +41,28 @@ without auditing the failed selector was explicitly avoided.
 
 1. **`T_0^*`**, the exact generic recurrence reached while the ledger is
    empty, before a permanent peel.
-2. **`T_L^*`**, the post-ledger retired-packet saturated splice: nonempty
-   retired support, fixed provenance/holders/floors, failed canonical
-   ledger-free realization, a repeated hitting/bypass response or an
-   equality-critical/base-floor typed-operation separator, and rank or
-   observer-payment separator.
+2. **`T_L^*=T_{L,perp}^* dot-union T_{L,times}^*`**, with two post-ledger
+   subtypes:
+
+   - `T_{L,perp}^*`: nonempty retired support stays with its holders and the
+     complete active selector/release pool avoids it;
+   - `T_{L,times}^*`: fixed packet provenance/holders/floors, failed canonical
+     ledger-free realization, a repeated hitting/bypass response or an
+     equality-critical/base-floor typed-operation separator, and rank or
+     observer-payment separator.
 
 Together these form the single typed global terminal
-`T^dagger=T_0^* dot-union T_L^*`. The union is proper inside the augmented
-generic `T*` record space because nonempty-ledger records lacking the exact
-collision/provenance certificate are excluded.
+`T^dagger=T_0^* dot-union T_L^*`. The union is a proper certified subclass of
+the augmented generic `T*` record space because a nonempty-ledger record must
+carry either a complete-pool avoidance certificate or the exact
+collision/provenance certificate.
 
 Thus the named global ledger gate is closed, but GG and four-agent EFX are
-not. The next analytic target is payment or anchor conversion inside
-`T_L^*`, preferably by using the exact capture packet and known holder; the
-separate pre-ledger target is closure of `T_0^*`.
+not. The next analytic target is payment or anchor conversion inside the
+collision subtype `T_{L,times}^*`, preferably using the exact capture packet
+and known holder. The parked subtype `T_{L,perp}^*` instead needs a projection
+or induction that removes inert retired support. The separate pre-ledger
+target is closure of `T_0^*`.
 
 ## Artifacts and replay
 

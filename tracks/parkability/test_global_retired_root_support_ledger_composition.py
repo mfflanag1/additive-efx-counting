@@ -19,6 +19,10 @@ def test_global_retired_root_support_ledger_composition_replays() -> None:
     assert result["surviving_terminal"] == "T^dagger = T_0^* dot-union T_L^*"
     assert result["pre_ledger_terminal"] == "T_0^*"
     assert result["post_ledger_terminal"] == "T_L^*"
+    assert result["post_ledger_terminal_subtypes"] == [
+        "T_{L,perp}^*", "T_{L,times}^*"
+    ]
+    assert result["no_collision_terminal_guard"]
     assert result["augmented_generic_T_star_strictly_narrowed"]
     assert not result["generic_empty_ledger_T_star_closed"]
     assert not result["gg_closed"]
@@ -33,5 +37,6 @@ def test_global_retired_root_support_ledger_composition_independent() -> None:
     assert result["retired_transfer_collision_cases"] > 0
     assert result["failed_floor_capture_cases"] > 0
     assert result["weak_floor_equality_critical_cases"] > 0
+    assert result["nonempty_ledger_collision_free_proposal_cases"] > 0
     assert result["physical_conservation"]
     assert result["signed_reconstruction_injective"]

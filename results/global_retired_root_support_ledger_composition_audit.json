@@ -26,11 +26,11 @@
   "dependencies": [
     {
       "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md",
-      "sha256": "fc527e5d903b949afcd0ffd77cb24f3fb095cf8fbed8d0bbaa1730450ae031d9"
+      "sha256": "4760d994a8f966f8d59a86a02db827ef992d14c5749815d7a66b33928dc60ccc"
     },
     {
       "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_G0_G10_TRANSITION_AUDIT_20260813.md",
-      "sha256": "95ddd10cd47ae4dee10644a335b3a430270da75ce6938f7ae22b49af08a597f2"
+      "sha256": "71fad7e448b374687ca4ddfbe9616278d703445d2db1d04b18d3fb7f98c5a16e"
     },
     {
       "path": "results/RETIRED_PACKET_SELECTOR_COLLISION_NORMALIZATION_LEMMA_20260813.md",
@@ -38,19 +38,19 @@
     },
     {
       "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
-      "sha256": "b6f8a55736b520946095c029ded2bf9fa3f36288f7e39f756818c4fc9ff8f870"
+      "sha256": "183facc26cf73a448ce5ed3e5c5b42ab464a26ef28dfad15e45537871c73e96e"
     },
     {
       "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPLETION_AUDIT_20260813.md",
-      "sha256": "ffb27285f31f4e02f9ffff063f67c2d303503e5c487ac081004417a3339c50df"
+      "sha256": "f58b2d7af78253cf18e62a03781f20327bff9c681d4fc2a0a2c59236e00b9ec1"
     },
     {
       "path": "results/global_retired_root_support_transition_contract_audit.json",
-      "sha256": "7f5ed8559ceffae8708721a47b29bb4c4784bf981f1c89a4b818e853a554a1a3"
+      "sha256": "323d416a521b181b89fab02eb19e8b9b1b5afe04bec6542c50ec9c7026ea1b3e"
     },
     {
       "path": "results/retired_packet_selector_collision_normalization_audit.json",
-      "sha256": "eca550e9c87d83759f66975bd39914f993cba0dec8e26e055adac55ea9060052"
+      "sha256": "da22ef85b43865087eb1108d30c43eafd79e19b792c015c35c77faf6c5667b0e"
     },
     {
       "path": "results/FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md",
@@ -96,17 +96,22 @@
   ],
   "generic_empty_ledger_T_star_closed": false,
   "gg_closed": false,
+  "no_collision_terminal_guard": true,
   "physical_label_floor_separation": {
     "label_excludes_current_floor": true,
     "retirement_persists_across_floor_changes": true
   },
   "post_ledger_terminal": "T_L^*",
+  "post_ledger_terminal_subtypes": [
+    "T_{L,perp}^*",
+    "T_{L,times}^*"
+  ],
   "pre_ledger_terminal": "T_0^*",
   "provenance": {
     "script": "tracks/parkability/audit_global_retired_root_support_ledger_composition.py",
-    "script_sha256": "a0d708379ed9e8bff13f12a019f57557ab6f8136b351a5c5b21bcc831b4654e7",
+    "script_sha256": "afaae632922c6ef657146d3c4a4fdfa53924c4d24d89ef961f0fe57b9a5324e7",
     "theorem": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
-    "theorem_sha256": "b6f8a55736b520946095c029ded2bf9fa3f36288f7e39f756818c4fc9ff8f870"
+    "theorem_sha256": "183facc26cf73a448ce5ed3e5c5b42ab464a26ef28dfad15e45537871c73e96e"
   },
   "scalar_collision_checks": {
     "deletion_or_capture_exhaustive": true,
@@ -120,10 +125,9 @@
     "nonempty retired packet",
     "retirement supplier and current holder",
     "fixed typed protected floors",
-    "failed canonical ledger-free realization",
-    "repeated retired-hitting or normalization-bypass response",
-    "or equality-critical/base-floor separator with no admissible typed handoff",
-    "rank deficiency or observer-payment/release separator"
+    "complete-pool parked-support certificate or collision certificate",
+    "collision subtype has repeated hitting/bypass response or typed separator",
+    "typed rank deficiency or observer-payment/release separator"
   ],
   "transition_routes": {
     "G0": [

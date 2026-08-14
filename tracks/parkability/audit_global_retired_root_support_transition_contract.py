@@ -70,6 +70,7 @@ def run(repo: Path) -> dict:
         ],
         "physical_anchor_label_excludes_current_floor": True,
         "retired_support_persists_across_floor_changes": True,
+        "no_collision_T_star_requires_complete_pool_audit": True,
         "scalar_checks": {
             "deletion_or_capture_exhaustive": deletion_exhaustion,
             "failed_deletion_captures_margin": capture,

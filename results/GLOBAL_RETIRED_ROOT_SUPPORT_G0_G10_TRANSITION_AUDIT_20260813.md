@@ -60,3 +60,10 @@ core. Ledger-free cores use the old current/base-floor handoffs, while
 retired-hitting cores strictly augment the collision/state histories or
 enter `T_L^*` at exact repetition. The surviving terminal remains open, but
 there is no longer an untyped selector-availability gap.
+
+For a collision-free exact terminal with nonempty `L`, the audit ranges over
+the complete active selector/release pool. If any member meets retired
+support, the corresponding collision row applies; if none does, the retired
+goods are physically parked at their recorded holders and the state enters
+`T_{L,perp}^*`. This completes the no-collision branch rather than silently
+assuming every post-ledger terminal reuses a retired good.

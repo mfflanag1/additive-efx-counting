@@ -344,8 +344,10 @@ valuations prevent agents from preferring retired goods. The surviving proof
 graph now has one typed union terminal
 `T^dagger=T_0^* dot-union T_L^*`, with two explicitly separated components:
 the exact empty-ledger recurrence outside the enlarged-root interface, and
-the strictly narrower post-ledger `T_L^*` class. Neither component is closed
-here.
+the post-ledger class
+`T_L^*=T_{L,perp}^* dot-union T_{L,times}^*`. The first certifies complete-
+pool avoidance of the retired support; the second carries the exact collision
+packet. Neither component is closed here.
 
 The narrower post-recruitment observer-payment objective is now formally
 closed as a refutation in

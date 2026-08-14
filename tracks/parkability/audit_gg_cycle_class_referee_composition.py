@@ -213,6 +213,9 @@ def run(root: Path) -> dict:
         "global_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
         "pre_ledger_terminal": "T_0^*",
         "post_ledger_terminal": "T_L^*",
+        "post_ledger_terminal_subtypes": ledger_resolution[
+            "post_ledger_terminal_subtypes"
+        ],
         "post_ledger_terminal_requirements": ledger_resolution[
             "surviving_terminal_requirements"
         ],

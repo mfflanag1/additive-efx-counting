@@ -13,5 +13,6 @@ def test_global_retired_root_support_transition_contract_replays() -> None:
     assert len(result["cross_cutting_operations"]) == 8
     assert result["physical_anchor_label_excludes_current_floor"]
     assert result["retired_support_persists_across_floor_changes"]
+    assert result["no_collision_T_star_requires_complete_pool_audit"]
     assert all(result["scalar_checks"].values())
     assert result["collision_interface"] == "resolved_by_selector_collision_normalization"

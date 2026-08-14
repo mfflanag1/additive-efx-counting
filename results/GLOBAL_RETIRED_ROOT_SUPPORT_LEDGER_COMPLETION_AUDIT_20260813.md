@@ -37,7 +37,7 @@ review or proof-assistant formalization.
 | Selector availability after deletion | theorem B--C; selector-collision lemma | canonical ledger-free realization is tested; every failure retains an exact floor/EFX/release witness |
 | Specialized sacrifice/anchor handoff premise fidelity | selector-collision lemma equality and base-floor branches | guarded; unavailable handoffs enter typed `T_L^*` rather than being assumed |
 | New root/anchor return is finite progress or exact recurrence | selector-collision lemma, new-label section | proved; a floor-only change is explicitly not a new label |
-| Strictly smaller explicit splice class | contract and theorem, exact surviving class | `T^dagger=T_0^* dot-union T_L^*`; every nonempty-ledger member must satisfy the typed packet/provenance/collision conditions |
+| Strictly smaller explicit splice class | contract and theorem, exact surviving class | `T^dagger=T_0^* dot-union T_L^*`; post-ledger states are split exhaustively into complete-pool parked support `T_{L,perp}^*` and certified collision `T_{L,times}^*` |
 | Transition-by-transition premise table | `GLOBAL_RETIRED_ROOT_SUPPORT_G0_G10_TRANSITION_AUDIT_20260813.md` | delivered |
 | Independently replayable signed-state audit | independent audit script and JSON | 15,625 reconstruction pairs and 125,000 normalization cases |
 | Updated proof graph | theorem and GG referee composition | delivered |
@@ -56,6 +56,9 @@ review or proof-assistant formalization.
 5. The pre-ledger and post-ledger terminals were unified as `T^dagger`, so the
    theorem covers the full base-to-G10 trajectory rather than only the phase
    after the first peel.
+6. The no-collision branch was completed: a post-ledger exact `T*` recurrence
+   must audit the whole active pool and enters the parked-support subtype
+   `T_{L,perp}^*` when every selector/release avoids retired support.
 
 ## Replay
 
@@ -75,4 +78,3 @@ reconstruction, cancellation accounting, strict capture, and equality
 criticality. It does not independently prove the cap-free semantic mapping
 of every GG operation; that mapping remains the conventional manuscript
 argument and is the main target for external referee review.
-

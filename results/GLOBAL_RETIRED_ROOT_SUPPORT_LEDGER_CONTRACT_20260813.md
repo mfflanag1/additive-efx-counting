@@ -83,9 +83,12 @@ least one of:
    finite label transition;
 5. entry into the explicitly typed global splice class
    `T^dagger=T_0^* dot-union T_L^*`, where `T_0^*` is an exact generic `T*`
-   recurrence reached before any retirement and `T_L^*` is the proper
-   post-ledger subclass carrying a nonempty retired packet, its supplier, and
-   an exact payment-capture or response-collision certificate.
+   recurrence reached before any retirement and
+   `T_L^*=T_{L,perp}^* dot-union T_{L,times}^*` is the post-ledger class. The
+   parked subtype `T_{L,perp}^*` has nonempty retired support disjoint from
+   every active selector/release support; the collision subtype
+   `T_{L,times}^*` carries a named retired packet, its supplier, and an exact
+   payment-capture or response-collision certificate.
 
 The theorem must show selector availability. It may not define a transition
 away by forbidding a retired good.
@@ -125,8 +128,14 @@ owner-target comparison must be recomputed because cancellation can change
 both incoming and outgoing retired transfers in one row.
 Equation (4) is a **retired-packet capture**, not by itself a closing leaf.
 
-Define `T_0^*` as a generic exact `T*` record with `L` empty. Define `T_L^*`
-to require, in addition to the generic exact `T*` record:
+Define `T_0^*` as a generic exact `T*` record with `L` empty. For nonempty
+`L`, define the parked-support subtype `T_{L,perp}^*` to require an exact
+generic `T*` recurrence in which every member of the complete active
+selector/release pool is disjoint from `L_alpha`; all retired goods therefore
+remain with their recorded current holders throughout the recurrent move.
+
+Define the collision subtype `T_{L,times}^*` to require, in addition to the
+generic exact `T*` record:
 
 1. a nonempty `K` with retirement provenance
    `(alpha,K,s_0,F_ret)` under the same physical label, irrespective of the
@@ -143,8 +152,16 @@ to require, in addition to the generic exact `T*` record:
 4. failure of the original canonical ledger-free realization at the same
    protected floors, whether by a floor, EFX-comparison, or release wall.
 
-This is a proper subclass of `T*`: generic `T*` records with empty `L` do not
-belong to `T_L^*`.
+Put
+
+\[
+T_L^*=T_{L,\perp}^*\mathbin{\dot\cup}T_{L,\times}^*.
+\]
+
+Each post-ledger subtype is strictly structured: the first certifies a
+nonempty inert parked support against the complete selector pool, and the
+second carries the exact collision certificate. Generic `T*` records with
+empty `L` belong to neither.
 
 The global output class is
 
@@ -152,12 +169,13 @@ The global output class is
  T^\dagger=T_0^*\mathbin{\dot\cup}T_L^*.
 \]
 
-It is a proper subclass of the augmented generic `T*` record space: a
-nonempty-ledger generic record belongs only when it carries the packet,
-provenance, failed canonical normalization, and one of the typed certificates
-above. Before the first peel, the ledger condition is vacuous and an original
-exact `T*` terminal is recorded as `T_0^*`; after the peel, only `T_L^*` is
-allowed.
+It is a proper **certified** subclass of the augmented generic `T*` record
+space: a nonempty-ledger generic record belongs only after the complete active
+pool is audited and either (i) every selector/release avoids the ledger, or
+(ii) a collision carries the packet, provenance, failed canonical
+normalization, and typed certificate above. Before the first peel, the ledger
+condition is vacuous and an original exact `T*` terminal is recorded as
+`T_0^*`; after the peel, only `T_L^*` is allowed.
 
 ## Counterexample standard
 
