@@ -76,6 +76,15 @@ closed: compose a shared safe response with one of the two exact five-edge
 rank-three relations, or eliminate the simultaneous `r/d` critical bands
 from the full saturation premises.
 
+Testing the singleton at all four owners strictly improves this boundary
+without adding an edge to any endpoint.  A globally smallest response across
+the four probes is safe everywhere and can lose desire only when `p` is
+parked at its own source.  See
+`FOUR_PLACEMENT_SINGLETON_RESPONSE_TRANSPORT_LEMMA_20260814.md`.  Hence the
+two-row safety bands are not terminal; the exact live gate is Hall/matching
+compression of the universally safe minimum cores accumulated by source
+parking, together with the separate `p`-hitting branch.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

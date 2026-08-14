@@ -172,3 +172,20 @@ rank-three relation, or eliminate the simultaneous `r/d` singleton-critical
 separator using the saturated response/support record.  No response sourced
 by `q` or `s`, and no unbounded residual packet, creates another scalar
 branch.  This sharpens but does not close the theorem.
+
+## Four-placement upgrade (2026-08-14)
+
+The two critical safety bands disappear if the singleton is tested at all
+four owners.  Each test still uses the same three reversed matching pairs
+plus one charity pair, so the four-edge bound is unchanged.  Choose a failed
+response of globally minimum cardinality across the four complete probes.
+By `FOUR_PLACEMENT_SINGLETON_RESPONSE_TRANSPORT_LEMMA_20260814.md`, every
+response avoiding `p` is safe at all four probes and remains desired at all
+but possibly the placement that parks `p` at its own source.
+
+Thus observer-safety transport is no longer the live scalar gate.  The
+remaining obstruction is a source-parking/matching problem for universally
+safe minimum cores: either parking neutralizes the current core and raises
+minimum response size, another source supplies a same-size core, or a
+response hits `p`.  A Hall-compression lemma for the accumulated cores would
+complete the relay route; it is not proved here.

@@ -1844,3 +1844,11 @@ both encodings.
   an exact singleton-width interval in the root or unmatched-source row.
   The isolated interval separator is rationally feasible, so the remaining
   closure must use the saturated rank-three response/support premises.
+- [`FOUR_PLACEMENT_SINGLETON_RESPONSE_TRANSPORT_LEMMA_20260814.md`](FOUR_PLACEMENT_SINGLETON_RESPONSE_TRANSPORT_LEMMA_20260814.md)
+  ([exact audit](four_placement_singleton_response_transport_audit.json))
+  strengthens the relay by testing the singleton at every owner, still using
+  at most four edges per endpoint.  A globally smallest failed-response core
+  is safe at all four probes and desired everywhere except possibly when the
+  singleton is parked at its own source.  This removes the cross-state
+  observer-safety bands and leaves a source-parking Hall/matching gate plus
+  the whole-hit branch.
