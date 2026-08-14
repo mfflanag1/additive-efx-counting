@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `18050ae`
-(`research: transfer disjoint anchor-relay responses within four edges`)
+**Latest research checkpoint before this note update:** `7a6f112`
+(`research: reduce root capture to itemwise criticality`)
 
 ## Frozen objective
 
@@ -407,6 +407,40 @@ Files:
 - `results/permanent_anchor_nonroot_three_placement_response_transfer_audit.json`
 - `tracks/parkability/audit_permanent_anchor_nonroot_three_placement_response_transfer.py`
 
+### 16. Root-target aggregate capture reduced to itemwise criticality
+
+For a disjoint transported response `E` targeting the permanent-anchor root,
+choose a good `g` of minimum root value.  Instead of transferring all of `E`,
+give only `g` and the charity singleton to the nonroot response source.  The
+source strictly improves by positivity.  Relative to the current support,
+the allocation uses at most three supplier pairs whether `g` came from the
+old root cell or from the anchor-supplier cell.
+
+The root stays strictly above its base exactly when
+
+```text
+v_r(g) < delta_r.
+```
+
+If that inequality fails, minimality of `g` implies the stronger itemwise
+envelope
+
+```text
+v_r(e) >= delta_r for every physical good e in E.
+```
+
+Thus the former aggregate root-capture survivor is now either an explicit
+three-edge priority probe or a response in which every good individually
+consumes the full root margin.  A non-EFX probe again yields a fully decorated
+response/repeat continuation.  The item-critical envelope and exact-repeat
+recurrence are still open; this is not termination of the root-target branch.
+
+Files:
+
+- `results/PERMANENT_ANCHOR_ROOT_TARGET_MINIMUM_GOOD_DIVERSION_LEMMA_20260814.md`
+- `results/permanent_anchor_root_target_minimum_good_diversion_audit.json`
+- `tracks/parkability/audit_permanent_anchor_root_target_minimum_good_diversion.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -437,6 +471,20 @@ starting from a clean clone, expand the two committed `.json.gz` files to the
 displayed raw filenames first.
 
 ## Exact next theorem target
+
+The shortest live continuation on the permanent-anchor route is now:
+
+> In the root-target item-critical envelope, where every good in the exact
+> disjoint response has root value at least `delta_r`, either a single-good
+> diversion probe produces a new saturated record, its exact decorated
+> response repeat forces the represented-component base-margin/direct-safety
+> terminal or generalized PI/progress, or the complete GG premises admit an
+> exact positive-rational countermodel.
+
+The hitting branch must be handled separately through the nonroot
+singleton-hit envelope descent.  Do not identify the changed descent endpoint
+with one of the three original probes without proving the required
+cross-state localization.
 
 The highest-leverage cap-free statement is now:
 
@@ -516,8 +564,11 @@ External or genuinely independent review remains necessary for:
 3. the `UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md`
    proof, whose present audit checks its declared algebraic/graph identities
    but does not independently derive every GG continuation implication;
-4. an independent algebraic encoding of any future UNSAT core; and
-5. novelty and literature positioning after, not before, a cap-free lemma is
+4. the permanent-anchor response-transport and minimum-good-diversion
+   interfaces, especially the provenance edge count and the inference from a
+   non-EFX probe to a correctly scoped cross-state decorated response;
+5. an independent algebraic encoding of any future UNSAT core; and
+6. novelty and literature positioning after, not before, a cap-free lemma is
    obtained.
 
 Do not use the earlier EFX2 claim that commit `34709c9` closes every
@@ -532,10 +583,10 @@ cancellation theorem, all-target-change frontier, repeat-rank no-go, and
 root-star leaf liquidation, two-target root-path repair, and foreign-import
 cancellation, root-compensated direct return, and singleton-retained partial
 return, universal incoming-cell return, and permanent-anchor nonroot response
-transfer:
+transfer and root-target minimum-good diversion:
 
 ```text
-18 passed in 22.61s
+19 passed in 22.37s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
