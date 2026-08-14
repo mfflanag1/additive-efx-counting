@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `d0ca08d`
-(`research: liquidate root-star different-source leaf`)
+**Latest pushed research checkpoint before this note update:** `7743568`
+(`research: classify two-target root-path repair`)
 
 ## Frozen objective
 
@@ -253,6 +253,31 @@ Files:
 - `results/r3_root_star_different_source_leaf_liquidation_audit.json`
 - `tracks/parkability/audit_r3_root_star_different_source_leaf_liquidation.py`
 
+### 10. Two-target favorable root-path repair
+
+The two-target residual has exactly three Hall-matching shapes: the internal
+`x <-> y` cycle, a backward/root-loss path, and the favorable path
+`z -> x -> y`, where `x` is the strict root and `z` holds the singleton.  The
+internal cycle is PI.  In the favorable path, if the `z -> x` response core
+lies inside `z`'s displaced supplier cell, reversing both responses and
+parking the singleton at `y` creates no new owner pair.  The final support is
+contained in
+
+```text
+y -> x, z -> x, z -> y, charity -> y.
+```
+
+The root and singleton source are strict.  This gives another cap-free
+four-edge candidate.  The exact survivors are now the backward/root-capture
+path, the singleton-source two-target star, indispensable foreign-support
+import by `z`, or an exact repeated response at the explicit candidate.
+
+Files:
+
+- `results/R3_TWO_TARGET_ROOT_PATH_SUPPLIER_COMPATIBILITY_LEMMA_20260814.md`
+- `results/r3_two_target_root_path_supplier_compatibility_audit.json`
+- `tracks/parkability/audit_r3_two_target_root_path_supplier_compatibility.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -375,10 +400,10 @@ explicitly open in `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 Focused verification across the three- and nine-topology menus, independent
 menu audit/core extraction, payment identities, spanning frontier,
 cancellation theorem, all-target-change frontier, repeat-rank no-go, and
-root-star leaf liquidation:
+root-star leaf liquidation, and two-target root-path repair:
 
 ```text
-12 passed in 25.35s
+13 passed in 25.63s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
