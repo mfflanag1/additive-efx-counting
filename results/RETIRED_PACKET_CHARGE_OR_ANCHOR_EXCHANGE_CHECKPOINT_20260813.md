@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-13
 
-**Status:** theorem not yet proved or refuted; cap-free reduction to two
-explicit coupled-payment separator families
+**Status:** theorem not yet proved or refuted; cap-free reduction to one
+explicit holder-price separator family
 
 ## Headline boundary
 
@@ -14,9 +14,9 @@ proper-packet reduction, and normalization reversal now reduce the goal to:
 
 1. a **holder-price separator**, appearing either as an atomwise-critical
    whole retired packet or as its bounded root-facing specialization; or
-2. a **safe-center three-offer star**, after protected target-envelope
-   payment sends every other normalization pattern to PI or the existing
-   two-core/two-hole machinery.
+2. normalization branches that now return, through protected target
+   envelopes and ledger-normalized external-star ascent, to that same
+   holder-price family or strict rank/root progress.
 
 This is not a proof of `T_{L,times}^*`, GG, four-agent EFX, or general EFX,
 and it is not a complete-contract counterexample.
@@ -108,6 +108,19 @@ v_h(U_s)<\max\{F_h,\tau_h(O_h)\}
 \quad\text{for every leaf }h.
 \]
 
+The fixed-priority split then routes a nonroot center through its root leaf
+to the root-holder price/two-hole branch.  When the center is the root,
+canonical normalization first keeps all nonreleasable retired goods at the
+root.  An unsafe enlarged core returns to collision routing; if it is safe,
+the three-agent EFX theorem allocates the complement and all remaining walls
+are precisely the existing one-core/three-hole external-star signs.
+
+Those signs are no longer independent.  A root-to-hole sign yields strict
+finite root-value ascent, a distinct nonroot response, or retired collision.
+Once root-to-hole signs are exhausted, a hole-to-root sign gives a safe
+proper response inside the root core and hence root reselection, controlled
+release, retired collision, or the bounded root-holder price band.
+
 ## Typed branch status
 
 | Branch | Exact status |
@@ -119,21 +132,21 @@ v_h(U_s)<\max\{F_h,\tau_h(O_h)\}
 
 ## Smallest remaining theorem
 
-The next load-bearing statement is a **safe-center star allocation-or-price
-lemma**.  Starting with the three offers and their exact physical holders,
+The next load-bearing statement is now the **complete holder-price-or-anchor
+lemma**. Starting from either atomwise whole-packet capture or the bounded
+root-facing price band,
 it must prove one of:
 
-1. an EFX allocation of one offer to the center and protected bundles to the
-   three leaves;
+1. a physically admissible packet paying the losing holder/observer;
 2. a supplier-closed desired cycle and hence PI;
 3. a strict source/target-rank or proper-retired-packet reduction;
 4. a root/anchor operation; or
-5. an exact three-way holder-price separator for the offer suppliers.
+5. a contradiction to global lexicographic maximality or a typed floor.
 
-The target envelope resolves same-target observer debt.  The remaining
-difficulty is leaf allocation: all three safe offers have the same desired
-source, so response rank is one, while transferring any arm may require a
-different holder compensation.
+The target envelope and external-star ascent remove the independent
+normalization recurrence. The remaining difficulty is genuinely cross-row:
+recipient capture and root surplus still do not force the holder-price
+inequality.
 
 ## Reproduction
 
@@ -150,6 +163,8 @@ pytest -q \
   tracks/parkability/test_target_envelope_universal_payment_or_pi.py \
   tracks/parkability/test_target_envelope_protected_pair_or_star.py \
   tracks/parkability/test_safe_center_three_offer_return_or_rejection.py \
+  tracks/parkability/test_safe_center_three_offer_priority_split.py \
+  tracks/parkability/test_ledger_normalized_root_external_star_ascent_or_price.py \
   tracks/parkability/test_retired_packet_collision_atomic_normal_form.py \
   tracks/parkability/test_retired_packet_charge_anchor_checkpoint.py
 ```

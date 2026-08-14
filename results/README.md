@@ -100,8 +100,14 @@ headlines:
   sends every nondegenerate payment pattern to PI or two-hole response
   machinery; the sole new survivor is a safe center with three disjoint
   same-source offers whose three leaves all reject the canonical safe-center
-  return. This star still needs an allocation-or-holder-price
-  argument. The checkpoint does
+  return. A priority split sends a nonroot center back to the root-holder
+  gate; a root center first retains its retired support and, when that
+  enlarged core is safe, enters the existing one-core/three-hole external-
+  star normal form. Unsafe retention returns to collision routing. A new
+  ledger-normalized root-ascent theorem sends the remaining external-star
+  signs to strict finite root progress, rank/two-hole progress, or the same
+  bounded root-holder price gate. The only independent separator family is
+  now holder price. The checkpoint does
   not close `T_{L,times}^*`, GG, or general EFX.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)

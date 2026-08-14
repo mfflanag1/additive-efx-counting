@@ -89,6 +89,10 @@ def run(repo: Path) -> dict:
         "target_envelope_protected_pair_or_star_audit.json",
         "SAFE_CENTER_THREE_OFFER_RETURN_OR_REJECTION_LEMMA_20260813.md",
         "safe_center_three_offer_return_or_rejection_audit.json",
+        "SAFE_CENTER_THREE_OFFER_PRIORITY_SPLIT_REDUCTION_20260813.md",
+        "safe_center_three_offer_priority_split_audit.json",
+        "LEDGER_NORMALIZED_ROOT_EXTERNAL_STAR_ASCENT_OR_PRICE_THEOREM_20260813.md",
+        "ledger_normalized_root_external_star_ascent_or_price_audit.json",
         "retired_packet_charge_anchor_gate_audit.json",
     ]
     script = Path(__file__).resolve()
@@ -102,13 +106,13 @@ def run(repo: Path) -> dict:
         "atomic_survivors": [
             "atomwise_critical_whole_packet_bilateral_deadlock",
             "root_facing_anchor_critical_packet",
-            "safe_center_three_offer_same_source_star",
+            "external_star_routes_to_holder_price_or_progress",
         ],
         "full_T_L_times_theorem_closed": False,
         "smallest_missing_operations": [
             "controlled unretirement or proper packet split",
             "reverse root-surplus band or release anchor within it",
-            "safe-center star allocation or three-way holder payment",
+            "complete physical holder-price or anchor exchange",
         ],
         "dependencies": [
             {"path": f"results/{name}", "sha256": sha256(results / name)}

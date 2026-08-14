@@ -34,6 +34,10 @@ EXPECTED = {
         "SAFE_PAYMENT_WALL_REDUCED_TO_TWO_HOLE_OR_THREE_OFFER_STAR",
     "safe_center_three_offer_return_or_rejection_audit.json":
         "SAFE_CENTER_STAR_ENTERS_TWO_HOLE_OR_THREE_ROW_REJECTION",
+    "safe_center_three_offer_priority_split_audit.json":
+        "STAR_ROUTES_TO_ROOT_PRICE_OR_EXISTING_EXTERNAL_STAR",
+    "ledger_normalized_root_external_star_ascent_or_price_audit.json":
+        "EXTERNAL_STAR_SIGNS_ROUTE_TO_ASCENT_RANK_OR_ROOT_PRICE",
 }
 
 
@@ -63,20 +67,19 @@ def run(repo: Path) -> dict:
     script = Path(__file__).resolve()
     return {
         "schema": "retired-packet-charge-anchor-checkpoint-audit-v1",
-        "status": "T_L_TIMES_NARROWED_TO_HOLDER_PRICE_OR_SAFE_CENTER_STAR",
+        "status": "T_L_TIMES_NARROWED_TO_ONE_HOLDER_PRICE_SEPARATOR_FAMILY",
         "dependencies": dependencies,
         "all_unsafe_normalization_fan_closed": True,
         "strict_whole_packet_charge": "(|K|-1)*mu <= d",
         "root_holder_price": "0 <= pi_r(D) <= x-delta",
         "remaining_separator_families": [
             "holder_price_separator",
-            "safe_center_three_offer_star",
         ],
         "full_T_L_times_theorem_closed": False,
         "full_T_L_times_theorem_refuted": False,
         "claim_boundary": (
-            "verified cap-free reduction checkpoint; safe-center star "
-            "allocation and complete GG closure remain open"
+            "verified cap-free reduction checkpoint; the holder-price/anchor "
+            "gate and complete GG closure remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(repo)),

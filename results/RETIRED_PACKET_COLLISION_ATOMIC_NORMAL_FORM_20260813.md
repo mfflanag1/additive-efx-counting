@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-13
 
-**Status:** cap-free reduction of `T_{L,times}^*` to one holder-price family
-and one safe-center three-offer star; both remain open
+**Status:** cap-free reduction of `T_{L,times}^*` to one holder-price
+separator family; the payment/anchor gate remains open
 
 ## Input and branch order
 
@@ -190,6 +190,28 @@ v_h(U_s)<\max\{F_h,\tau_h(O_h)\}
 
 It is a three-row center-return rejection separator.
 
+Finally split on the first-priority root.  If the center is not the root,
+the root is one of the three offer suppliers, so its arm is exactly the
+root-holder price gate or a protected two-core/two-hole input.  If the center
+is the root, canonical normalization first retains every retired good that
+cannot leave the old root.  An unsafe enlarged root core returns to the named
+collision branches.  If the retained root core is safe, allocate the
+complement EFX among the other three agents; every remaining failure is
+exactly the already-certified one-core/three-hole external-star normal form.
+Thus C introduces no third independent separator.  Its residual content is
+the inherited root-centered external-star signs or the existing holder-price
+collision, both with retired-packet provenance intact.
+
+The ledger-normalized external-star ascent theorem eliminates those signs as
+an independent recurrence.  A root-to-hole wall gives a strictly higher safe
+root candidate, a distinct nonroot response, or a retired collision; the
+executed root value cannot rise indefinitely over the finite bundle set.  At
+a state with no root-to-hole wall, every hole-to-root wall extracts a safe
+proper response inside the root core and enters root reselection, controlled
+release, retired collision, or the bounded root-holder price band.  Thus C
+also returns to the holder-price family or already existing rank/two-hole
+progress.
+
 The smallest missing operation is now a star allocation or three-way holder-
 price argument: assign one offer to the center while protecting its supplier
 and the two remaining leaves, or show that all three failed arm transfers
@@ -229,21 +251,22 @@ cut belongs to B.
 ## Exact remaining theorem
 
 The original charge-or-anchor theorem is now equivalent, within the frozen
-`T_{L,times}^*` interface, to eliminating two separator families represented
-by A--C:
+`T_{L,times}^*` interface, to eliminating the one holder-price separator
+family represented by A and B:
 
 1. eliminate the atomwise-critical whole-packet bilateral deadlock, already
    localized by (2), through a rank-improving third response or a physically
    compensated transfer; and
 2. pay or contradict the bounded root-holder price (3), or construct a
    controlled release valid at its equality boundary; and
-3. allocate or holder-pay one arm of the safe-center three-offer star, or
-   prove that its three simultaneous holder-price failures contradict the
-   exact GG maximality/provenance premises.
+3. carry every normalization/two-hole return through the ledger-normalized
+   external-star ascent, which now routes back to 1--2 or strict rank/root
+   progress rather than forming a separate terminal.
 
 If one is false, the missing operation is respectively controlled
-unretirement/packet splitting, controlled anchor release with explicit
-observer debt, or adaptive selector commitment. A counterexample must still
+unretirement/packet splitting or controlled anchor release with explicit
+observer debt; normalization no longer adds a separate missing operation.
+A counterexample must still
 satisfy global GG maximality; the existing local payment witnesses do not.
 
 ## Dependencies and claim boundary
@@ -271,6 +294,10 @@ The complete-target envelope and protected pair/star reduction are in
 `TARGET_ENVELOPE_PROTECTED_PAIR_OR_SAME_SOURCE_STAR_LEMMA_20260813.md`.
 The star's direct return is resolved by
 `SAFE_CENTER_THREE_OFFER_RETURN_OR_REJECTION_LEMMA_20260813.md`.
+Its fixed-priority routing is
+`SAFE_CENTER_THREE_OFFER_PRIORITY_SPLIT_REDUCTION_20260813.md`.
+The inherited star signs are reduced to ascent/rank/root price by
+`LEDGER_NORMALIZED_ROOT_EXTERNAL_STAR_ASCENT_OR_PRICE_THEOREM_20260813.md`.
 
 The reduction is cap-free and performs no valuation-cell or residual-only
 search. It does not eliminate A--C, refute them under complete GG
