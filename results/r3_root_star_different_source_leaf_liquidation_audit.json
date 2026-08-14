@@ -1,0 +1,119 @@
+{
+  "checks": {
+    "conservation": true,
+    "exactly_four_supplier_edges": true,
+    "response_localization": true,
+    "singleton_cannot_be_efx_failure_target": true,
+    "strict_root_unchanged": true,
+    "whole_target_inherits_desire": true
+  },
+  "claim_boundary": "cap-free root-source star reduction; the two-target represented residual and later-source anchor-capture stars remain open",
+  "localized_response_count": 18,
+  "provenance": {
+    "script": "tracks/parkability/audit_r3_root_star_different_source_leaf_liquidation.py",
+    "script_sha256": "985a20c85c97872bbe4b37c0c0ec42deee3ddcad36fef06d16d0e85f3605c8a5",
+    "theorem": "results/R3_ROOT_STAR_DIFFERENT_SOURCE_LEAF_LIQUIDATION_LEMMA_20260814.md",
+    "theorem_sha256": "a02551e08d1f84c1cf7464cf9388d2013d12286f03eb6f12a4fb03948e7be5b6",
+    "z3": "5.0.0"
+  },
+  "schema": "r3-root-star-different-source-leaf-liquidation-v1",
+  "status": "DIFFERENT_SOURCE_REDUCED_TO_TWO_TARGETS_OR_RECRUITMENT",
+  "symmetric_cases": [
+    {
+      "different_source": "q",
+      "initial_singleton_holder": "q",
+      "liquidated_target": "s",
+      "liquidated_target_is_singleton": true,
+      "supplier_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ]
+    },
+    {
+      "different_source": "q",
+      "initial_singleton_holder": "s",
+      "liquidated_target": "s",
+      "liquidated_target_is_singleton": true,
+      "supplier_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ]
+    },
+    {
+      "different_source": "s",
+      "initial_singleton_holder": "s",
+      "liquidated_target": "q",
+      "liquidated_target_is_singleton": true,
+      "supplier_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ]
+    },
+    {
+      "different_source": "s",
+      "initial_singleton_holder": "q",
+      "liquidated_target": "q",
+      "liquidated_target_is_singleton": true,
+      "supplier_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ]
+    }
+  ]
+}
