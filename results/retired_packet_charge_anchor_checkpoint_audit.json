@@ -1,0 +1,57 @@
+{
+  "all_unsafe_normalization_fan_closed": true,
+  "claim_boundary": "verified cap-free reduction checkpoint; coupled-payment augmentation and complete GG closure remain open",
+  "dependencies": [
+    {
+      "path": "results/retired_packet_charge_anchor_gate_audit.json",
+      "sha256": "a9870253496238e1550177c9a67d14cc97e04ffc021e4fedfef0c68dc243f971",
+      "status": "RECIPIENT_CAPTURE_DOES_NOT_PAY_HOLDER_GATE_OPEN"
+    },
+    {
+      "path": "results/whole_retired_packet_atomwise_criticality_audit.json",
+      "sha256": "ceb8e5a0e73bb4413c6e4b49e307c2bdd63e569ba1341e64800afaed15012ad0",
+      "status": "PROPER_PACKET_REDUCTION_OR_ATOMWISE_CRITICAL_SURVIVOR"
+    },
+    {
+      "path": "results/root_facing_anchor_surplus_band_audit.json",
+      "sha256": "0fa85819d0134a3c55b2ee4e4099855953299587a59614e65e87d228676d64d9",
+      "status": "ROOT_FACING_SURVIVOR_REDUCED_TO_CLOSED_SURPLUS_BAND"
+    },
+    {
+      "path": "results/root_facing_holder_price_duality_audit.json",
+      "sha256": "69296f4a88774a3236826465b84a3e6c3e92fc36cef261bfcdb0d68b4378251e",
+      "status": "ROOT_BAND_IDENTIFIED_WITH_BOUNDED_HOLDER_PRICE_SEPARATOR"
+    },
+    {
+      "path": "results/normalization_bypass_reservoir_reversal_audit.json",
+      "sha256": "6189f31c231fc21eaf6cda02c236979be9ef70603a486cd8dfef475306f7f6f5",
+      "status": "BYPASS_REDUCED_TO_COLLISION_OR_SAFE_PAYMENT_WALL"
+    },
+    {
+      "path": "results/normalization_bypass_three_reservoir_fan_audit.json",
+      "sha256": "95790be5179b272bbb8e68895aedf6badde6448f1c3b1f2a19b92cb4e49cbc3c",
+      "status": "ALL_UNSAFE_FAN_ALWAYS_HAS_SUPPLIER_CLOSED_PI_CYCLE"
+    },
+    {
+      "path": "results/retired_packet_collision_atomic_normal_form_audit.json",
+      "sha256": "fc241370eadb8b10f064dec4d8d50241479b4bf78b1070e52bf0fe17eb162bb6",
+      "status": "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS"
+    }
+  ],
+  "full_T_L_times_theorem_closed": false,
+  "full_T_L_times_theorem_refuted": false,
+  "provenance": {
+    "checkpoint": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md",
+    "checkpoint_sha256": "744d31158a7a5065c88feb5397dea2a7617ce6d821879d4cb26affa9c8224c03",
+    "script": "tracks/parkability/audit_retired_packet_charge_anchor_checkpoint.py",
+    "script_sha256": "9eeb42256e83d52a8aaf90c0b7287883c1794206bd57eeb18361ebcb57473ae7"
+  },
+  "remaining_separator_families": [
+    "holder_price_separator",
+    "safe_payment_normalization_wall"
+  ],
+  "root_holder_price": "0 <= pi_r(D) <= x-delta",
+  "schema": "retired-packet-charge-anchor-checkpoint-audit-v1",
+  "status": "T_L_TIMES_NARROWED_TO_HOLDER_PRICE_OR_SAFE_PAYMENT_SEPARATOR",
+  "strict_whole_packet_charge": "(|K|-1)*mu <= d"
+}

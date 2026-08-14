@@ -89,6 +89,17 @@ headlines:
   `T^dagger=T_0^* dot-union T_L^*`; its empty-ledger component, typed
   `T_L^*` parked/collision components, GG closure, and general EFX remain open.
 
+- [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md)
+  ([exact checkpoint audit](retired_packet_charge_anchor_checkpoint_audit.json))
+  narrows the collision subtype `T_{L,times}^*` to two coupled-payment
+  separator families. Strict whole-packet capture is either reduced to a
+  proper retired subpacket or satisfies the atomwise charge
+  `(|K|-1)mu<=d`; the root-facing loss band is exactly the bounded holder
+  price `0<=pi_r(D)<=x-delta`; and the entire all-unsafe normalization fan
+  closes by a supplier-compatible PI cycle. The remaining safe-payment wall
+  still needs a simultaneous observer-debt augmenting argument. This does
+  not close `T_{L,times}^*`, GG, or general EFX.
+
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))
   gives the requirement-by-requirement final verdict: the generic supplier-

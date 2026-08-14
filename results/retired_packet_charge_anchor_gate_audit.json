@@ -1,0 +1,92 @@
+{
+  "base_floor_debt_countermodel": {
+    "base": "10",
+    "current": "13",
+    "decorated_threshold": "12",
+    "old_core": "11"
+  },
+  "capture_identity": true,
+  "claim_boundary": "exact symbolic no-go for recipient-row charging, base-floor promotion, root-band reversal, and unsupplied cycles; not a globally maximal GG counterexample",
+  "equality_critical_cross_row_countermodel": {
+    "a": "10",
+    "b": "8",
+    "deficit": "2",
+    "fh": "10",
+    "fs": "10",
+    "hh": "1",
+    "jmax": "2",
+    "kh": "9",
+    "ks": "2",
+    "mu": "0",
+    "slack": "0",
+    "yh": "10"
+  },
+  "full_T_L_times_theorem_refuted": false,
+  "holder_payment_identity": true,
+  "indivisible_whole_packet_deadlock": {
+    "holder_return_pool_underpays": true,
+    "packet_atoms": 1,
+    "recipient_requires_packet": true,
+    "values": {
+      "a": "12",
+      "b": "9",
+      "deficit": "1",
+      "fh": "10",
+      "fs": "10",
+      "hh": "1",
+      "jmax": "2",
+      "kh": "9",
+      "ks": "3",
+      "mu": "2",
+      "slack": "0",
+      "yh": "10"
+    }
+  },
+  "provenance": {
+    "contract": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CONTRACT_20260813.md",
+    "contract_sha256": "5fabff7a899999cd2b9cb3a01e5bc0f6d200fc095190be1bf0014e9d0dc438db",
+    "script": "tracks/parkability/audit_retired_packet_charge_anchor_gate.py",
+    "script_sha256": "5763f0f2e4c230bcd673064e7c2b3dd2e4d56ecf52da72b10ffe5d5bf9eaa066",
+    "z3_version": "5.0.0"
+  },
+  "release_closure_countermodel": {
+    "outside_suppliers": [
+      3
+    ],
+    "packet_suppliers": {
+      "0": 3,
+      "1": 0,
+      "2": 1
+    },
+    "selected_component": [
+      0,
+      1,
+      2
+    ]
+  },
+  "root_band_cross_row_countermodel": {
+    "coexists_with_strict_recipient_capture": true,
+    "complement": "9",
+    "delta": "4",
+    "response": "5",
+    "root_target": "14",
+    "x": "10"
+  },
+  "schema": "retired-packet-charge-anchor-gate-audit-v1",
+  "smallest_unproved_gate": "holder compensation from a physically releasable packet, or a separately valid root/anchor operation",
+  "status": "RECIPIENT_CAPTURE_DOES_NOT_PAY_HOLDER_GATE_OPEN",
+  "strict_capture_cross_row_countermodel": {
+    "a": "12",
+    "b": "9",
+    "deficit": "1",
+    "fh": "10",
+    "fs": "10",
+    "hh": "1",
+    "jmax": "2",
+    "kh": "9",
+    "ks": "3",
+    "mu": "2",
+    "slack": "0",
+    "yh": "10"
+  }
+}
