@@ -1877,3 +1877,8 @@ both encodings.
   the `2x1` star by a charity path.  The response must redirect the incoming
   matching packet, with one return-to-supplier exception; a generic mixed
   residual core provably creates a fifth edge.
+- [`THREE_TARGET_EXTERNAL_SOURCE_FORK_EDGE_CANCELLATION_FRONTIER_20260814.md`](THREE_TARGET_EXTERNAL_SOURCE_FORK_EDGE_CANCELLATION_FRONTIER_20260814.md)
+  ([720-pattern audit](three_target_external_source_fork_edge_cancellation_audit.json))
+  completes the signed-support census for the `3x2` fork.  Exactly 156
+  patterns—78 in each exact response form—meet the four-edge cancellation
+  inequality; 564 overflow before valuation constraints are considered.

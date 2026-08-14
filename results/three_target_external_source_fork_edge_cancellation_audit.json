@@ -1,0 +1,7502 @@
+{
+  "claim_boundary": "signed support and edge counts only; valuation feasibility, full saturation, fixed-U, GG, and EFX remain open",
+  "edge_cancellation_identity": "|E_final| = 4 + |E_added| - |E_deleted|",
+  "edge_distribution": {
+    "2": 3,
+    "3": 25,
+    "4": 128,
+    "5": 282,
+    "6": 225,
+    "7": 53,
+    "8": 4
+  },
+  "feasible_patterns": [
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "d",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "d",
+        "other_leaf": "r",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "q",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "r",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "d",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R2",
+      "roles": {
+        "external": "s",
+        "intermediate": "d",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 2,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "r",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 2,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "q",
+        "intermediate": "s",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "s",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "r",
+        "other_leaf": "q",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "s",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "q",
+        "other_leaf": "r",
+        "sacrificed_leaf": "s"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "q",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "d",
+        "intermediate": "s",
+        "other_leaf": "r",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "r",
+        "other_leaf": "d",
+        "sacrificed_leaf": "q"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 2,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "none",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "partial",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "partial",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 3,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": false
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "d",
+        "sacrificed_leaf": "r"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": true,
+        "leaf_incoming": "whole",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    },
+    {
+      "added_edges": [
+        [
+          "d",
+          "q"
+        ]
+      ],
+      "deleted_edges": [
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "edge_count": 4,
+      "final_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "roles": {
+        "external": "s",
+        "intermediate": "q",
+        "other_leaf": "r",
+        "sacrificed_leaf": "d"
+      },
+      "support": {
+        "intermediate_incoming": "whole",
+        "intermediate_residual_used": false,
+        "leaf_incoming": "none",
+        "leaf_residual_used": true
+      },
+      "within_four": true
+    }
+  ],
+  "feasible_role_counts": {
+    "R2": 18,
+    "R3": 15
+  },
+  "form_counts": {
+    "R2": {
+      "patterns": 360,
+      "within_four": 78
+    },
+    "R3": {
+      "patterns": 360,
+      "within_four": 78
+    }
+  },
+  "patterns_checked": 720,
+  "provenance": {
+    "script": "tracks/parkability/audit_three_target_external_source_fork_edge_cancellation.py",
+    "script_sha256": "572c50ae30d4667e7d4079996e1cd27ec80820e21c380187f4d94030858cf8ef",
+    "theorem": "results/THREE_TARGET_EXTERNAL_SOURCE_FORK_EDGE_CANCELLATION_FRONTIER_20260814.md",
+    "theorem_sha256": "f89f079c7a156f5af337c0d00f2598b9cde63bc75135fbbb9849f63649cb560f"
+  },
+  "remaining_gate": "decide desired/safety/global-maximality feasibility on the 156 edge-cancelling fork patterns together with the 2x1 frontier",
+  "schema": "three-target-external-source-fork-edge-cancellation-audit-v1",
+  "status": "EXACT_3X2_SUPPORT_CENSUS_COMPLETE"
+}

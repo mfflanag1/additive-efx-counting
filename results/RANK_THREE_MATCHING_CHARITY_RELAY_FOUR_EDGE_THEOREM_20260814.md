@@ -217,3 +217,14 @@ specified return-to-supplier exception allowing retained support.  A generic
 mixed residual response necessarily creates a fifth edge.  Thus the next
 analytic decision is whether saturation forces one of those compatible
 cores, or instead forces the `3x2` fork/matching change.
+
+The `3x2` fork is now completely classified at the signed-support level by
+`THREE_TARGET_EXTERNAL_SOURCE_FORK_EDGE_CANCELLATION_FRONTIER_20260814.md`.
+Across the two exact response forms and all role/support incidences, 156 of
+720 nonempty fork patterns use at most four original supplier pairs; the
+other 564 are excluded by edge count alone.  Every feasible fork satisfies
+the exact cancellation condition that each newly created supplier pair is
+offset by exhaustion/return of an old matching pair.  The remaining theorem
+is consequently a valuation/saturation decision on a finite 2x1-plus-156
+signed support menu, followed by a cap-free argument that overflowing mixed
+cores activate support refinement rather than recurrence.

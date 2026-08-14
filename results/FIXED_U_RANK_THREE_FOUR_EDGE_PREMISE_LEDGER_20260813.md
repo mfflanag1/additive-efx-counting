@@ -110,6 +110,15 @@ at least five original supplier-recipient pairs.  See
 universal gate is therefore existence of a compatible minimum core, or a
 forced switch to the `3x2` fork/another selected matching.
 
+The analogous `3x2` fork census is exact and cap-free in packet size.  It
+checks 720 signed support patterns over the two surviving matching forms;
+156 meet the four-edge cancellation inequality and 564 necessarily overflow.
+See `THREE_TARGET_EXTERNAL_SOURCE_FORK_EDGE_CANCELLATION_FRONTIER_20260814.md`.
+The live finite decision is now valuation/saturation feasibility on those
+156 fork signatures plus the explicit `2x1` return/redirection signatures.
+The cap-free lift must show that every overflowing physical mixed core is a
+strict signed support refinement or another saturated exit.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG
