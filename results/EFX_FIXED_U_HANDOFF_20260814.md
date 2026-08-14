@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `79839bf`
-(`research: exhaust root-source bilateral compensation`)
+**Latest research checkpoint before this note update:** `3efe664`
+(`research: identify root complement-safety wall`)
 
 ## Frozen objective
 
@@ -478,6 +478,18 @@ positive-additive local witness satisfies every bilateral failure inequality,
 so positivity and the two payment rows alone cannot finish the branch.  The
 next proof must connect this wall to the full signed base-margin/direct-safety
 terminal or use another observer/PI premise.
+
+Equivalently, failure with the empty compensator says
+
+```text
+v_r(B_r-H)+v_r(p) <= v_r(X_r)  for every nonempty H subseteq B_r.
+```
+
+Thus every one-good deletion of the current root target, after adding
+charity, is safe to the root at its old base floor.  Setting `H=A` gives the
+particularly clean permanent-anchor wall
+`v_r(Y_r)+v_r(p)<=v_r(X_r)`.  This complement-safety form is the sharpest
+current interface to the saturated extraction machinery.
 
 Files:
 
