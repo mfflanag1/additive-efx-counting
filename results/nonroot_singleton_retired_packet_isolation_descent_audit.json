@@ -1,0 +1,118 @@
+{
+  "admissible_transition_proved": false,
+  "claim_boundary": "cap-free singleton target safety and test-allocation wall census; the two-agent complement repartition is not yet an admitted transition",
+  "collision_hitting_multiplicity_strictly_reduced": false,
+  "full_T_L_times_theorem_closed": false,
+  "provenance": {
+    "proper_split_theorem": "results/NONROOT_DOUBLE_SACRIFICE_PROPER_SPLIT_COMPRESSION_THEOREM_20260814.md",
+    "proper_split_theorem_sha256": "b66e9ba6330426715f4d6e7e02bcffe25b6895ff69e45ecffefbdaeacfab4c7c",
+    "script": "tracks/parkability/audit_nonroot_singleton_retired_packet_isolation_descent.py",
+    "script_sha256": "704ed4a31bba892f012c6c494eccb3295f62f897b67b3a04372a95bb3cf7d425",
+    "theorem": "results/NONROOT_SINGLETON_RETIRED_PACKET_ISOLATION_DESCENT_THEOREM_20260814.md",
+    "theorem_sha256": "75ba5aa2dc5840cafc6d3dbf342bcfcb8bf6f00937337d99bdbb471bb3809334"
+  },
+  "remaining_direct_branch": "singleton_isolation_transition_admission",
+  "schema": "nonroot-singleton-retired-packet-isolation-descent-audit-v1",
+  "singleton_deletion_threshold": 0,
+  "singleton_target_walls": [],
+  "status": "SINGLETON_ISOLATION_WALLS_VERIFIED_ADMISSION_OPEN",
+  "test_allocation_responses_intersect_singleton": false,
+  "wall_routes": [
+    {
+      "observer": "r",
+      "route": "self_or_localized_safe",
+      "target": "root_core",
+      "wall_possible": false
+    },
+    {
+      "observer": "r",
+      "route": "singleton_threshold_zero",
+      "target": "singleton_K",
+      "wall_possible": false
+    },
+    {
+      "observer": "r",
+      "route": "root_to_hole_external_star",
+      "target": "hole_s",
+      "wall_possible": true
+    },
+    {
+      "observer": "r",
+      "route": "root_to_hole_external_star",
+      "target": "hole_q",
+      "wall_possible": true
+    },
+    {
+      "observer": "h",
+      "route": "holder_to_root_price_split",
+      "target": "root_core",
+      "wall_possible": true
+    },
+    {
+      "observer": "h",
+      "route": "singleton_threshold_zero",
+      "target": "singleton_K",
+      "wall_possible": false
+    },
+    {
+      "observer": "h",
+      "route": "holder_response_two_core_two_hole",
+      "target": "hole_s",
+      "wall_possible": true
+    },
+    {
+      "observer": "h",
+      "route": "holder_response_two_core_two_hole",
+      "target": "hole_q",
+      "wall_possible": true
+    },
+    {
+      "observer": "s",
+      "route": "hole_to_root_price_split",
+      "target": "root_core",
+      "wall_possible": true
+    },
+    {
+      "observer": "s",
+      "route": "singleton_threshold_zero",
+      "target": "singleton_K",
+      "wall_possible": false
+    },
+    {
+      "observer": "s",
+      "route": "two_agent_efx",
+      "target": "hole_s",
+      "wall_possible": false
+    },
+    {
+      "observer": "s",
+      "route": "two_agent_efx",
+      "target": "hole_q",
+      "wall_possible": false
+    },
+    {
+      "observer": "q",
+      "route": "hole_to_root_price_split",
+      "target": "root_core",
+      "wall_possible": true
+    },
+    {
+      "observer": "q",
+      "route": "singleton_threshold_zero",
+      "target": "singleton_K",
+      "wall_possible": false
+    },
+    {
+      "observer": "q",
+      "route": "two_agent_efx",
+      "target": "hole_s",
+      "wall_possible": false
+    },
+    {
+      "observer": "q",
+      "route": "two_agent_efx",
+      "target": "hole_q",
+      "wall_possible": false
+    }
+  ]
+}

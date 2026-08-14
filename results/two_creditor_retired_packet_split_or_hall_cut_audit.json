@@ -1,0 +1,99 @@
+{
+  "claim_boundary": "cap-free two-creditor payment/Hall normal form plus exact strict/equality scalar no-go; structural conversion and full theorem remain open",
+  "full_T_L_times_theorem_closed": false,
+  "hall_truth_table": [
+    {
+      "branch": "recipient_deficiency",
+      "compatible_edge_exists": false,
+      "holder_family_nonempty": false,
+      "recipient_family_nonempty": false
+    },
+    {
+      "branch": "recipient_deficiency",
+      "compatible_edge_exists": false,
+      "holder_family_nonempty": true,
+      "recipient_family_nonempty": false
+    },
+    {
+      "branch": "holder_deficiency",
+      "compatible_edge_exists": false,
+      "holder_family_nonempty": false,
+      "recipient_family_nonempty": true
+    },
+    {
+      "branch": "joint_incompatibility",
+      "compatible_edge_exists": false,
+      "holder_family_nonempty": true,
+      "recipient_family_nonempty": true
+    },
+    {
+      "branch": "joint_payment",
+      "compatible_edge_exists": true,
+      "holder_family_nonempty": true,
+      "recipient_family_nonempty": true
+    }
+  ],
+  "holder_floor_identity": true,
+  "holder_margin_identity": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_two_creditor_retired_packet_split_or_hall_cut.py",
+    "script_sha256": "995b2067924cefcf5433bbaf704c90b28fb4900e8a8bc87733f2e4ed294d4669",
+    "theorem": "results/TWO_CREDITOR_RETIRED_PACKET_SPLIT_OR_HALL_CUT_THEOREM_20260814.md",
+    "theorem_sha256": "3e32ced9ba778e1e5d93d2e3744e20459aa779c33a3466bb80845b3c332c5487",
+    "topup_theorem": "results/RECIPIENT_TOPUP_RETIRED_PACKET_SPLIT_OR_CUT_LEMMA_20260814.md",
+    "topup_theorem_sha256": "49b80579f3e6e67b1cd8985c550403958141066834c27c88e582cae52587ece5",
+    "z3_version": "5.0.0"
+  },
+  "recipient_floor_identity": true,
+  "recipient_margin_identity": true,
+  "representative_partitions_checked": 494,
+  "scalar_joint_incompatibility_models": [
+    {
+      "both_one_sided_families_nonempty": true,
+      "boundary_operations_underpay": true,
+      "branch": "strict",
+      "compatible_pair_exists": false,
+      "d": "3",
+      "mu": "1",
+      "recipient_outside_good": "1",
+      "recipient_packet_values": [
+        "2",
+        "2"
+      ],
+      "root_core_atomwise_minimal": true,
+      "root_outside_good": "1",
+      "root_packet_values": [
+        "2",
+        "2"
+      ]
+    },
+    {
+      "both_one_sided_families_nonempty": true,
+      "boundary_operations_underpay": true,
+      "branch": "equality",
+      "compatible_pair_exists": false,
+      "d": "4",
+      "mu": "0",
+      "recipient_outside_good": "2",
+      "recipient_packet_values": [
+        "2",
+        "2"
+      ],
+      "root_core_atomwise_minimal": true,
+      "root_outside_good": "1",
+      "root_packet_values": [
+        "2",
+        "2"
+      ]
+    }
+  ],
+  "scalar_models_verified": true,
+  "schema": "two-creditor-retired-packet-split-or-hall-cut-audit-v1",
+  "single_target_response_hits_only_proper_split": true,
+  "status": "TWO_SIDED_PAYMENT_REDUCED_TO_EXACT_HALL_CUT",
+  "terminal_branches": [
+    "recipient_deficiency",
+    "holder_deficiency",
+    "joint_incompatibility"
+  ]
+}
