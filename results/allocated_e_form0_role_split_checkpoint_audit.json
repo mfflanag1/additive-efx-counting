@@ -1,0 +1,51 @@
+{
+  "chain": [
+    {
+      "iteration_count": 1000,
+      "sha256": "64a84a710c7dd8f56d2bb1a7e3b338ec70988a2cd8871c185cc1af1d1dee57d9",
+      "source": "results/allocated_e_form0_role_split_pi_cegar.json",
+      "status": "ITERATION_LIMIT"
+    },
+    {
+      "iteration_count": 97,
+      "sha256": "35683384233f25a5ae3d6216e65c22f13abe41617784d06ce8f26ba6b68d1c7f",
+      "source": "results/allocated_e_form0_role_split_pi_cegar_resume1000.json",
+      "status": "UNKNOWN"
+    },
+    {
+      "iteration_count": 22,
+      "sha256": "487732f00291913969dad3400d284147c53e4dcc56adef00fede0b6d60feef44",
+      "source": "results/allocated_e_form0_role_split_pi_cegar_batch_resume1096.json",
+      "status": "UNKNOWN"
+    },
+    {
+      "iteration_count": 19,
+      "sha256": "061f2d2ec74fcffc7fea9a3d82d250e97182c5357b03c61cd899eeeb3bde67bf",
+      "source": "results/allocated_e_form0_role_split_pi_cegar_batch_resume6346.json",
+      "status": "UNKNOWN"
+    },
+    {
+      "iteration_count": 20,
+      "sha256": "652a6a9a8c08895e6054a3f6ab5ee1d22419544aa33466ad21f1465fc6cef00a",
+      "source": "results/allocated_e_form0_role_split_pi_cegar_resume15250.json",
+      "status": "UNKNOWN"
+    }
+  ],
+  "checks": {
+    "all_families_nonempty_disjoint_and_closed": true,
+    "resume_hashes_match": true,
+    "terminal_cut_count_matches_deduplicated_chain": true,
+    "terminal_is_fail_closed_unknown": true
+  },
+  "claim_boundary": "Integrity and structural-validity audit of 20,000 installed PI cuts; no SAT, UNSAT, cap-free, or fixed-U conclusion.",
+  "distinct_family_count": 20000,
+  "provenance": {
+    "script": "tracks/parkability/audit_allocated_e_form0_role_split_checkpoint.py",
+    "script_sha256": "8c92497ca18320dabc2e18fa2e1f023d59858c90217c203bcb722106356e1caf",
+    "theorem": "results/R2_ROLE_SPLIT_20000_CUT_CHECKPOINT_20260814.md",
+    "theorem_sha256": "a71cc981f1f017845b5503dcb1e6906c3a545f06e762a10edc0feb183a2acd91"
+  },
+  "raw_family_records_checked": 20096,
+  "schema": "allocated-e-form0-role-split-checkpoint-audit-v1",
+  "status": "ROLE_SPLIT_20000_CUT_CHAIN_VERIFIED"
+}
