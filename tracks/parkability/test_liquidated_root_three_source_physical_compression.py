@@ -92,6 +92,8 @@ def test_liquidated_root_three_source_physical_compression_replays():
     }
     assert independent_survivors == result["five_edge_mappings_by_anchor_supplier"]
     assert result["minimum_within_declared_normal_form_proved"]
+    assert not result["pure_cell_lift_proved"]
+    assert not result["accumulated_fan_application_proved"]
     assert not result["unrestricted_packet_graph_theorem_proved"]
     assert not result["observer_safety_proved"]
     assert not result["fixed_u_theorem_proved"]

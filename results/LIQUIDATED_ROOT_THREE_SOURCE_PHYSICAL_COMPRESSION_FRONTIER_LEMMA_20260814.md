@@ -2,13 +2,12 @@
 
 **Date:** 2026-08-14
 
-**Status:** exact cap-free packet-size census inside the declared whole-cell
-normal form; it isolates six five-edge source maps but does not prove the
-fixed-`U` theorem
+**Status:** exact conditional census inside a pure-cell liquidated-root
+normal form; applicability to the accumulated reservoir fan is not proved
 
 ## Setting
 
-Work at the liquidated-root state from
+Consider the liquidated-root cell basis suggested by
 `FIXED_U_ROOT_RESIDUAL_NONEMPTY_LIQUIDATION_REDUCTION_LEMMA_20260814.md`.
 Label the root `0`.  Its pure anchor cell is supplied by a fixed
 `q in {1,2,3}`; its residual `Y_0` is supplied by `0`; and each ordinary
@@ -18,6 +17,20 @@ Let `f(t)` be the nonself source desiring the common-safe core in target
 cell `t`.  Assume `f` has image size three.  Thus it has one missing source
 `m` and one duplicated source `a`.
 
+The census additionally assumes the following **pure-cell lift**, which is
+not supplied by the corrected reservoir-fan theorem:
+
+1. each selected core is contained in the displayed single original-
+   supplier cell for its target;
+2. enlarging it to that whole cell still pays its named source; and
+3. the source's desire does not depend jointly on a root-residual packet
+   that is routed to a different owner.
+
+These conditions hold for a response in an ordinary nonresidual target of a
+single liquidation probe.  They do not automatically hold for four fan
+cores accumulated across different probes or later decorated states.  Such
+cores may mix several original suppliers.
+
 The whole-cell normal form chooses one target cell for each represented
 source, sends that entire cell to its named source, retains the one omitted
 target cell, routes the entire root residual `Y_0` to any owner, and gives
@@ -25,9 +38,10 @@ target cell, routes the entire root residual `Y_0` to any owner, and gives
 `m`.  In the foreign-duplicate class, either of the two targets naming `a`
 may be omitted.
 
-Replacing a desired core by its whole target cell cannot hurt its recipient.
-Routing the disjoint whole residual `Y_0` to any already paid owner also
-cannot hurt payment.  These are packet-size-free monotonicity operations.
+Under the pure-cell lift, replacing a desired core by its whole displayed
+cell cannot hurt its recipient.  Routing the disjoint whole residual `Y_0`
+to an already paid owner also cannot hurt payment.  Without item 3, splitting
+the residual away from the named response source may destroy payment.
 
 ## Exact census
 
@@ -60,9 +74,9 @@ masks and reproduces both the histogram and the exact six survivor maps.
 ## Payment interpretation
 
 For the 18 nonroot-missing maps in the missing-supplies-duplicate class,
-the duplicate-omission argument already proves strict payment of all four
-owners, now with an unconditional at-most-four original-pair construction
-in this liquidated-root cell basis.
+the duplicate-omission argument proves strict payment of all four owners.
+The census supplies an at-most-four original-pair construction only when the
+additional pure-cell lift above is verified for those selected cores.
 
 The six root-missing maps in that class are likewise all-owner paid, but the
 normal form costs five pairs.  They are the sharp physical obstruction to
@@ -75,21 +89,22 @@ the census does not by itself produce an EFX endpoint.
 
 ## Claim boundary
 
-Proved: exhaustive minimality within the stated whole-cell normal form,
+Proved: exhaustive minimality within the stated conditional whole-cell normal form,
 uniformly in the anchor supplier and without a packet-size cap; 42/48 maps
 admit at most four physical pairs, and the remaining six are exactly the
 root-missing missing-supplies-duplicate maps.
 
-Not proved: minimality over arbitrary split packets or cyclic packet graphs;
+Not proved: the pure-cell lift for the accumulated reservoir fan; independent
+routing of `Y_0` when it contributes to a desired core; minimality over
+arbitrary split packets or cyclic packet graphs;
 payment closure of the foreign-duplicate class; observer EFX safety;
 decorated-repeat termination; the universal rank-three fixed-`U` theorem;
 four-agent additive EFX; or general additive EFX.
 
 ## Next exact target
 
-Attack only the six survivor maps.  Either split or cyclically reroute the
-root anchor so that one of the five pairs cancels while retaining root
-payment and represented-source margins, or prove from the full signed
-PI-free saturation ledger that one of their three nonroot source moves is
-release-compatible generalized PI.  A proof confined to whole cells cannot
-close this class.
+First prove or refute the pure-cell lift from the actual decorated response
+supports.  If it holds, attack the six survivor maps by splitting or
+cyclically rerouting the root anchor.  If it fails, the correct target is the
+original support set `Pi` in the duplicate-omission lemma, not this idealized
+cell census.

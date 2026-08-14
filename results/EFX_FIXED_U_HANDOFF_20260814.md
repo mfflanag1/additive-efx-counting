@@ -878,7 +878,7 @@ After sections 27--29 the corrected reservoir-fan target is:
 > a supplier completion/cancellation before invoking the all-owner-paid
 > observer continuation.
 
-## 29. Exact liquidated-root whole-cell physical frontier
+## 29. Conditional liquidated-root whole-cell physical frontier
 
 The final bounded topology census is recorded in
 `LIQUIDATED_ROOT_THREE_SOURCE_PHYSICAL_COMPRESSION_FRONTIER_LEMMA_20260814.md`
@@ -886,23 +886,43 @@ and its byte-replayed JSON audit.  For each fixed anchor supplier, all 48
 nonself image-three source maps were minimized over the allowed duplicate
 omission and all four destinations of the complete root residual `Y_r`.
 
-Exactly 42 maps use at most four original supplier-to-destination pairs.  The
+Inside this conditional normal form, exactly 42 maps use at most four
+original supplier-to-destination pairs.  The
 minimum distribution is 14 maps at three edges, 28 at four, and six at five.
 The six survivors are precisely the root-missing, missing-supplies-duplicate
 maps.  Their whole-cell construction has three nonroot source moves, the
 anchor-supplier return to the root, and charity to the root.  Rerouting `Y_r`
 cannot cancel one of those five pairs.
 
-This strengthens section 28 in the liquidated-root cell basis: the 18
-nonroot-missing duplicate-omission maps are now unconditionally all-owner
-paid within four original pairs.  All 24 foreign-duplicate maps also fit the
-four-pair topology, but still need the paid-hole trimming/double-capture
-continuation.  The six root-missing maps are paid but need a packet split,
-cycle, PI argument, or another cancellation to fall from five pairs to four.
+This does **not** unconditionally strengthen section 28.  The accumulated
+reservoir-fan cores may mix several original-`Y` suppliers, and a response
+core may depend jointly on the routed `Y_r` packet.  The census applies only
+after proving that each selected core lifts to its displayed pure cell and
+remains paying when `Y_r` is routed independently.  That lift is open.
 
-This is not a proof over arbitrary packet graphs and it does not establish
-observer EFX.  It is the sharp endpoint of the whole-cell route and the best
-place to resume.
+This is not a proof over the actual mixed-support fan or arbitrary packet
+graphs, and it does not establish observer EFX.  The immediate resume target
+is the pure-cell lift or a direct treatment of the exact support set `Pi` in
+section 28.
+
+### Correction: the generic pure-cell lift is false
+
+`PURE_CELL_RESPONSE_LIFT_LOCAL_REFUTATION_20260814.md` gives the exact
+two-good witness.  At source floor `10`, a mixed core with values `6` and `5`
+is desired and common-safe, while neither original-supplier component is
+desired.  Therefore routing `Y_r` independently can destroy the payment
+premise.  The pure-cell census remains a correct conditional combinatorial
+result, but it cannot be used to close any of the 48 actual fan maps without
+an additional saturation-derived support theorem.
+
+Inside that same conditional model,
+`ROOT_MISSING_ANCHOR_SUBSTITUTION_OR_CRITICAL_SPLIT_LEMMA_20260814.md`
+shows that the six idealized five-edge maps have a second four-edge probe:
+send the anchor to its duplicated source and omit the other target paying
+that source.  Only root payment can fail.  When the duplicated source equals
+the anchor supplier, a partial-anchor split gives a precise bicriteria
+critical packet.  This remains conditional and is not part of the universal
+fixed-`U` closure.
 
 The shortest live continuation on the permanent-anchor route is now:
 
@@ -1057,11 +1077,13 @@ duplicate-omission payment/support frontier, the combined chain reports:
 11 passed in 0.55s
 ```
 
-The final exact physical-compression census was replayed together with its
-six immediate liquidation/fan dependencies.  The focused chain reports:
+After correcting the physical-compression scope, the conditional census,
+independent edge-mask encoding, mixed-core counterexample, and conditional
+anchor-substitution frontier were replayed together with their six immediate
+liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-7 passed in 0.35s
+9 passed in 0.46s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization

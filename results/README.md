@@ -2014,5 +2014,19 @@ both encodings.
   resolves that original-supplier condition in the liquidated-root whole-cell
   basis for 42 of 48 image-three source maps.  The only five-edge survivors
   are six root-missing maps where the missing target supplies the duplicated
-  source.  This is minimal only inside the declared whole-cell normal form;
-  arbitrary packet splitting, observer safety, and fixed-`U` termination remain.
+  source.  This is a **conditional** pure-cell census: accumulated fan cores
+  may mix original suppliers or depend on the routed root residual, so the
+  needed lift from the actual fan is not proved.  Arbitrary packet splitting,
+  observer safety, and fixed-`U` termination remain.
+- [`PURE_CELL_RESPONSE_LIFT_LOCAL_REFUTATION_20260814.md`](PURE_CELL_RESPONSE_LIFT_LOCAL_REFUTATION_20260814.md)
+  ([exact arithmetic audit](pure_cell_response_lift_local_refutation_audit.json))
+  shows why that qualification is load-bearing: a mixed two-good core can be
+  common-safe and desired at value `6+5>10`, while neither original-supplier
+  component is desired.  Desire/common safety alone cannot justify routing
+  the root-residual component independently.
+- [`ROOT_MISSING_ANCHOR_SUBSTITUTION_OR_CRITICAL_SPLIT_LEMMA_20260814.md`](ROOT_MISSING_ANCHOR_SUBSTITUTION_OR_CRITICAL_SPLIT_LEMMA_20260814.md)
+  ([conditional topology audit](root_missing_anchor_substitution_or_critical_split_audit.json))
+  gives an anchor-substitution/root-wall frontier for the six idealized
+  pure-cell survivors and an exact critical split in the supplier-aligned
+  third.  It is conditional on the refuted-as-a-local-implication pure-cell
+  lift and is not presently applicable to the accumulated mixed-support fan.

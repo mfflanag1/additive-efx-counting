@@ -94,7 +94,7 @@ def run(root: Path = ROOT) -> dict[str, object]:
 
     return {
         "schema": "liquidated-root-three-source-physical-compression-audit-v1",
-        "status": "EXACT_WHOLE_CELL_NORMAL_FORM_FRONTIER",
+        "status": "CONDITIONAL_PURE_CELL_NORMAL_FORM_FRONTIER",
         "anchor_suppliers": list(NONROOT),
         "maps_per_anchor_supplier": {str(k): maps_per_anchor[k] for k in NONROOT},
         "minimum_edge_histogram_all_anchor_suppliers": {
@@ -113,6 +113,8 @@ def run(root: Path = ROOT) -> dict[str, object]:
         },
         "packet_size_bound_used": False,
         "minimum_within_declared_normal_form_proved": True,
+        "pure_cell_lift_proved": False,
+        "accumulated_fan_application_proved": False,
         "unrestricted_packet_graph_theorem_proved": False,
         "observer_safety_proved": False,
         "fixed_u_theorem_proved": False,
@@ -121,7 +123,8 @@ def run(root: Path = ROOT) -> dict[str, object]:
             for path in (theorem, parent, script)
         },
         "claim_boundary": (
-            "for each anchor supplier, 42 of 48 rank-three source maps admit "
+            "conditional on the unproved pure-cell lift, for each anchor "
+            "supplier 42 of 48 rank-three source maps admit "
             "a whole-cell liquidated-root routing with at most four physical "
             "supplier pairs; exactly the six root-missing, missing-supplies-"
             "duplicate maps need five pairs within this normal form"

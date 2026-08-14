@@ -1,7 +1,8 @@
 {
+  "accumulated_fan_application_proved": false,
   "anchor_suppliers": [1, 2, 3],
   "at_most_four_per_anchor_supplier": 42,
-  "claim_boundary": "for each anchor supplier, 42 of 48 rank-three source maps admit a whole-cell liquidated-root routing with at most four physical supplier pairs; exactly the six root-missing, missing-supplies-duplicate maps need five pairs within this normal form",
+  "claim_boundary": "conditional on the unproved pure-cell lift, for each anchor supplier 42 of 48 rank-three source maps admit a whole-cell liquidated-root routing with at most four physical supplier pairs; exactly the six root-missing, missing-supplies-duplicate maps need five pairs within this normal form",
   "class_histogram_all_anchor_suppliers": {
     "missing_root=false|foreign_duplicate|edges=3": 18,
     "missing_root=false|foreign_duplicate|edges=4": 36,
@@ -24,11 +25,12 @@
   "observer_safety_proved": false,
   "packet_size_bound_used": false,
   "provenance": {
-    "results/LIQUIDATED_ROOT_THREE_SOURCE_PHYSICAL_COMPRESSION_FRONTIER_LEMMA_20260814.md": "9738c01b173f11c8e2a9409153c37ddc14855156b28709ff85d0784187c2e7b4",
+    "results/LIQUIDATED_ROOT_THREE_SOURCE_PHYSICAL_COMPRESSION_FRONTIER_LEMMA_20260814.md": "b06429dd66e0324ee7e9901cc59c048bf868322eafca34e4095dd800584f00ff",
     "results/MISSING_SUPPLIER_DUPLICATE_OMISSION_FOUR_EDGE_PAYMENT_LEMMA_20260814.md": "feff31421e3e0aa1bec0ae06372512318a2898badf8cc5168f5a6e94ae38ea82",
-    "tracks/parkability/audit_liquidated_root_three_source_physical_compression.py": "7d5e855ad888e22e424d84eec9532a82027594f6012551ae1a34d805f3c64725"
+    "tracks/parkability/audit_liquidated_root_three_source_physical_compression.py": "53329b8472f208636cf840eb9ce4e306e5fb982a4c612ba2d50a3e19a3e62813"
   },
+  "pure_cell_lift_proved": false,
   "schema": "liquidated-root-three-source-physical-compression-audit-v1",
-  "status": "EXACT_WHOLE_CELL_NORMAL_FORM_FRONTIER",
+  "status": "CONDITIONAL_PURE_CELL_NORMAL_FORM_FRONTIER",
   "unrestricted_packet_graph_theorem_proved": false
 }
