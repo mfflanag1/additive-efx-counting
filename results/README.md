@@ -2037,3 +2037,9 @@ both encodings.
   represented-source PI subfamily yet require six frozen-supplier pairs to
   reverse.  Thus PI-free base-support Hall geometry alone cannot prove the
   physical four-edge theorem; the signed `X -> Y -> Z` ledger is essential.
+- [`IMAGE_THREE_FULL_OWNER_CONNECTED_RANK_DEFECT_LEMMA_20260814.md`](IMAGE_THREE_FULL_OWNER_CONNECTED_RANK_DEFECT_LEMMA_20260814.md)
+  ([48-map audit](image_three_full_owner_connected_rank_defect_audit.json))
+  proves that every nonself image-three fan is already connected on all four
+  owners.  Its surviving defect is rank, not owner recruitment: the component
+  has four owners but only three response sources, so the existing saturated
+  component-extraction theorem's rank-`|C|` path hypothesis is not available.

@@ -950,6 +950,27 @@ owner pairs.”  Any universal proof must now use the signed relation between
 `X`, `Y`, and the later probe—support return/cancellation, ledger growth, or
 decorated recurrence—not another owner-label Hall argument.
 
+## 31. Full-owner connectedness isolates a pure rank defect
+
+`IMAGE_THREE_FULL_OWNER_CONNECTED_RANK_DEFECT_LEMMA_20260814.md` proves that
+all 48 nonself image-three source maps are connected on all four owners.  A
+disconnected four-owner nonself map would have two two-owner components; each
+would be forced to swap its two vertices, making the map surjective and
+contradicting image size three.
+
+Therefore the accumulated fan does not need another owner-recruitment step.
+It already forms a full-owner current-holder/source component.  The exact
+obstruction is that the component has source rank three, while the saturated
+represented-component extraction theorem constructs its Hamiltonian path at
+rank `|C|=4`.  PI-freeness prevents the missing source's response from being
+added disjointly: its strict margin is captured by both represented-core
+choices.
+
+The shortest remaining interface is now precise: uncross the captured
+missing-source response to obtain rank four, or extend saturated component
+extraction to this connected rank-deficient full-owner component using the
+signed base-margin ledger.  Owner connectivity itself is completely closed.
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1105,12 +1126,13 @@ duplicate-omission payment/support frontier, the combined chain reports:
 
 After correcting the physical-compression scope, the conditional census,
 independent edge-mask encoding, mixed-core counterexample, and conditional
-anchor-substitution frontier, and three-color support obstruction were
+anchor-substitution frontier, three-color support obstruction, and full-owner
+connected-rank-defect census were
 replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-10 passed in 0.51s
+11 passed in 0.55s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization
