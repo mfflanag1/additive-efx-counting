@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `e1e1830`
-(`research: classify two-source root-response topology`)
+**Latest research checkpoint before this note update:** `4b964cc`
+(`research: normalize different-source responses at one probe`)
 
 ## Frozen objective
 
@@ -581,6 +581,33 @@ Files:
 - `results/permanent_anchor_two_source_root_response_topology_or_cross_capture_audit.json`
 - `tracks/parkability/audit_permanent_anchor_two_source_root_response_topology_or_cross_capture.py`
 
+### 21. Cross-state transport is closed by safe normalization
+
+Two consecutive different-source root responses are discovered at probes
+where their respective sources are unchanged, so both cores are desired
+above the fixed bundles `B_u,B_v`.  Place the singleton at the unique third
+nonroot owner.  This restores the complete root target `B_r` and leaves both
+sources at those fixed bundles, giving a common two-edge probe where both
+cores are simultaneously desired.
+
+If either core is unsafe there, an observer desires a one-good deletion.
+Replace the core and its source, and repeat.  Cardinality strictly decreases,
+so normalization terminates with a common-safe desired core.  Normalizing
+both initial cores ends either in a source collision, which returns to the
+one-source branch, or in two distinct safe cores at the same state.  The
+latter enter shared-target uncrossing and the exact two-source topology
+theorem.
+
+Thus cross-state safety and desire are no longer the missing implication.
+The remaining distinct-source alternatives are root capture, overlap double
+capture, or the two-source/two-supplier cross-capture certificate.
+
+Files:
+
+- `results/PERMANENT_ANCHOR_DIFFERENT_SOURCE_CROSS_STATE_NORMALIZATION_LEMMA_20260814.md`
+- `results/permanent_anchor_different_source_cross_state_normalization_audit.json`
+- `tracks/parkability/audit_permanent_anchor_different_source_cross_state_normalization.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -614,15 +641,15 @@ displayed raw filenames first.
 
 The shortest live continuation on the permanent-anchor route is now:
 
-> For two consecutive different-source root responses at permanent-anchor
-> bilateral probes, transport or uncross two physical cores so that they are
-> simultaneously safe and desired at one fixed `B` state.  Then apply the
-> exact two-source topology theorem, or prove that failure of transport is
-> itself a signed observer-surplus/base-margin separator.  Otherwise produce
-> a complete positive-rational fixed-`U` countermodel satisfying the full
-> cross-state saturation ledger.
+> Combine the exact p-augmented root-complement wall, incoming-cell capture,
+> overlap double capture, and two-source/two-supplier cross capture with the
+> signed PI/base-margin premises.  Prove that their simultaneous occurrence
+> forces release-compatible generalized PI or the saturated represented-
+> component extraction terminal; otherwise produce a complete positive-
+> rational fixed-`U` countermodel satisfying all four capture systems and the
+> full saturation ledger.
 
-The scalar survivors that this transport must carry are the direct-safety
+The scalar survivors that remain are the direct-safety
 wall `v_r(B_i)+v_r(p)<=v_r(X_r)`, simultaneous incoming-cell/root-residual
 capture, and the two-source/two-supplier cross-capture inequalities.  A
 scalar-only proof is impossible because the bilateral separator has an exact
@@ -732,10 +759,11 @@ cancellation, root-compensated direct return, and singleton-retained partial
 return, universal incoming-cell return, and permanent-anchor nonroot response
 transfer, root-target minimum-good diversion, and the exact bilateral
 compensator frontier, incoming-root cell diversion, and same-source
-root-response replacement and two-source topology/cross capture:
+root-response replacement, two-source topology/cross capture, and cross-state
+safe normalization:
 
 ```text
-23 passed in 20.94s
+24 passed in 20.35s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
