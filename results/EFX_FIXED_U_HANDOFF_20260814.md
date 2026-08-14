@@ -759,6 +759,63 @@ Files:
 - `results/normalization_bypass_three_reservoir_fan_correction_audit.json`
 - `tracks/parkability/audit_normalization_bypass_three_reservoir_fan_correction.py`
 
+### 27. The `3+1` missing-source defect forces double capture
+
+Write the duplicated source's disjoint fan cores as `D_1,D_2`, the other
+represented cores as `U,V`, and the missing source's response as `C` with
+strict margin `mu`.  Either choice
+
+```text
+U union V union D_j,   j in {1,2},
+```
+
+would combine with a disjoint remainder of `C` to give four-source
+generalized PI.  Hence PI-freeness forces capture for both choices.  With
+
+```text
+H = C intersect (U union V),
+P_j = C intersect D_j,
+```
+
+the exact inequalities are
+
+```text
+v_m(H)+v_m(P_1) >= mu,
+v_m(H)+v_m(P_2) >= mu.
+```
+
+Therefore either `H` already captures the whole missing-source margin, or
+the two pairwise-disjoint packets `P_1,P_2` each capture the same positive
+residual margin.  The 48 source maps split exactly 24/24 according to whether
+the missing owner supplies one duplicated-source core.
+
+Files:
+
+- `results/MISSING_SOURCE_TWO_CHOICE_FAN_DOUBLE_CAPTURE_LEMMA_20260814.md`
+- `results/missing_source_two_choice_fan_double_capture_audit.json`
+- `tracks/parkability/audit_missing_source_two_choice_fan_double_capture.py`
+
+### 28. Duplicate omission pays every owner in one 24-map class
+
+When the missing owner supplies one duplicated-source core, omit that core,
+use the duplicate's other core, transfer one core to each of the three
+represented sources, and give charity to the missing owner.  All represented
+sources strictly improve and the missing owner retains its whole bundle plus
+charity.
+
+This is unconditionally an all-owner-payment construction with three
+current-holder moves plus charity.  It is **not automatically** a four-edge
+construction in the objective's metric: a later-state target may mix several
+original-`Y` supplier cells.  Its exact physical condition is that the three
+selected cores induce at most three distinct original-supplier/source pairs.
+The other 24 maps and failure of this support condition remain live.
+
+Files:
+
+- `results/MISSING_SUPPLIER_DUPLICATE_OMISSION_FOUR_EDGE_PAYMENT_LEMMA_20260814.md`
+- `results/missing_supplier_duplicate_omission_four_edge_payment_audit.json`
+- `tracks/parkability/audit_missing_supplier_duplicate_omission_four_edge_payment.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -811,6 +868,15 @@ Likewise, do not import that commit's claim that every current-supplier cycle
 in the all-unsafe reservoir fan is generalized PI.  Section 26 gives an exact
 counterexample.  The correct continuation must handle the missing-source
 capture, not declare the repeated-source fan closed.
+
+After sections 27--28 the corrected reservoir-fan target is:
+
+> In the 24 foreign-duplicate-supplier maps, reverse the common-overlap or
+> two-packet residual capture while cancelling enough original supplier
+> pairs to stay within four edges.  In the other 24 maps, prove the three
+> selected fan cores satisfy the original-supplier support condition or use
+> a supplier completion/cancellation before invoking the all-owner-paid
+> observer continuation.
 
 The shortest live continuation on the permanent-anchor route is now:
 

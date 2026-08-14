@@ -1996,3 +1996,16 @@ both encodings.
   outside that cycle.  The exact survivor is a duplicated/missing-source
   Hall defect; a disjoint core for the missing source gives PI, while overlap
   yields the still-open full-margin capture branch.
+- [`MISSING_SOURCE_TWO_CHOICE_FAN_DOUBLE_CAPTURE_LEMMA_20260814.md`](MISSING_SOURCE_TWO_CHOICE_FAN_DOUBLE_CAPTURE_LEMMA_20260814.md)
+  ([48-map audit](missing_source_two_choice_fan_double_capture_audit.json))
+  sharpens the `3+1` defect.  PI-freeness for both choices of the duplicated
+  source's core forces either full capture by the two singly represented
+  cores or two disjoint duplicate-core packets that each cover the same
+  positive residual missing-source margin.  The maps split 24/24 by whether
+  the missing owner supplies a duplicate core.
+- [`MISSING_SUPPLIER_DUPLICATE_OMISSION_FOUR_EDGE_PAYMENT_LEMMA_20260814.md`](MISSING_SUPPLIER_DUPLICATE_OMISSION_FOUR_EDGE_PAYMENT_LEMMA_20260814.md)
+  ([payment/support audit](missing_supplier_duplicate_omission_four_edge_payment_audit.json))
+  closes owner payment in the first 24-map class by omitting the duplicate
+  core supplied by the missing owner.  The construction uses three current-
+  holder moves plus charity; it satisfies the objective's four-edge metric
+  only when those cores induce at most three original-supplier/source pairs.
