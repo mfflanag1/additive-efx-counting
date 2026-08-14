@@ -608,6 +608,45 @@ Files:
 - `results/permanent_anchor_different_source_cross_state_normalization_audit.json`
 - `tracks/parkability/audit_permanent_anchor_different_source_cross_state_normalization.py`
 
+### 22. Full original-root residual can always be liquidated
+
+There is no scalar or edge-count obstruction when the permanent-anchor root
+target has a nonempty original-root residual.  Write
+
+```text
+B_r = Y_r disjoint-union A,    v_r(A) > v_r(X_r).
+```
+
+Move all of `Y_r` to any nonroot owner, leave only `A` at the root, and give
+the charity singleton to that same owner.  Relative to the original current
+allocation this uses at most `q -> r`, `r -> i`, and `charity -> i`.  The
+root remains strictly above base and the recipient strictly improves.
+
+Algebraically,
+
+```text
+v_r(Y_r) = v_r(B_r)-v_r(A)
+         < v_r(B_r)-v_r(X_r) = delta_r,
+```
+
+so the universal bilateral-failure wall
+`v_r(Y_r) >= delta_r+v_r(p)` is impossible.  This is the `H=Y_r`, `D=empty`
+instance of the already recorded strict-root surplus probe, not a new global
+closure theorem.
+
+The exact remaining obstruction is semantic: if the probe is non-EFX, the
+frozen response/collision argument still has to handle a nonroot holder
+whose repeated normalized response avoids the retired packet.  The
+corollary therefore closes physical routing and payment only; it does not
+close `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.  Before using
+it as universal coverage, independently check the symbol-level interface
+from the canonical forced `d -> r` response to nonemptiness of this precise
+`Y_r` cell.
+
+File:
+
+- `results/PERMANENT_ANCHOR_FULL_RESIDUAL_LIQUIDATION_COROLLARY_20260814.md`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -765,6 +804,18 @@ safe normalization:
 ```text
 24 passed in 20.35s
 ```
+
+At the final pause, the five tests directly covering the bilateral frontier,
+incoming-cell diversion, same-source replacement, two-source topology, and
+cross-state normalization were rerun:
+
+```text
+5 passed in 0.27s
+```
+
+The full-residual liquidation corollary is a direct algebraic specialization
+of the already tested bilateral and strict-root-surplus constructions; it
+adds no solver-generated certificate.
 
 All solver processes launched after the checkpoint have exited.  Nothing
 campaign-critical is running.  The worktree contains many
