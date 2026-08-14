@@ -45,30 +45,32 @@ def run(root):
     maximum_left_size = 0
     for vertices in subsets(OWNERS, nonempty=True):
         vertex_set = set(vertices)
-        for unsafe in subsets(vertices, nonempty=True):
-            unsafe = tuple(unsafe)
-            stable = vertex_set - set(unsafe)
-            available = tuple(owner for owner in OWNERS if owner not in stable)
-            maximum_left_size = max(maximum_left_size, len(unsafe))
-            edge_slots = tuple(itertools.product(unsafe, available))
-            for bits in range(1 << len(edge_slots)):
-                adjacency = {source: set() for source in unsafe}
-                for index, (source, target) in enumerate(edge_slots):
-                    if bits & (1 << index):
-                        adjacency[source].add(target)
-                graph_count += 1
-                matching = covering_matching(unsafe, available, adjacency)
-                witness = hall_witness(unsafe, adjacency)
-                assert (matching is None) == (witness is not None)
-                if matching is None:
-                    deficient_count += 1
-                    continue
-                matching_count += 1
-                selected_sources = stable | set(matching.values())
-                dropped = vertex_set - selected_sources
-                # Since every selected good was originally closed in V,
-                # only a dropped old owner can obstruct closure in W.
-                assert dropped <= vertex_set
+        left = tuple(vertices)
+        available = OWNERS
+        maximum_left_size = max(maximum_left_size, len(left))
+        edge_slots = tuple(itertools.product(left, available))
+        for bits in range(1 << len(edge_slots)):
+            adjacency = {source: set() for source in left}
+            for index, (source, target) in enumerate(edge_slots):
+                if bits & (1 << index):
+                    adjacency[source].add(target)
+            # The mathematical construction gives every slot at least one
+            # physical response. Empty rows are outside the theorem input.
+            if any(not adjacency[source] for source in left):
+                continue
+            graph_count += 1
+            matching = covering_matching(left, available, adjacency)
+            witness = hall_witness(left, adjacency)
+            assert (matching is None) == (witness is not None)
+            if matching is None:
+                deficient_count += 1
+                continue
+            matching_count += 1
+            selected_sources = set(matching.values())
+            dropped = vertex_set - selected_sources
+            # Since every selected good was originally closed in V,
+            # only a dropped old owner can obstruct closure in W.
+            assert dropped <= vertex_set
 
     assert graph_count == matching_count + deficient_count
     script = Path(__file__).resolve()

@@ -5,39 +5,32 @@
 **Status:** cap-free physical-lift trichotomy; Hall-deficiency and captured
 owner packets still require four-edge conversion
 
-## Contracted family and unsafe slots
+## Contracted family and physical slot responses
 
 Let `(D_i)_{i in V}` be a closed pairwise-disjoint desired-core family in a
-contracted R2 instance.  Let `I subseteq V` be exactly the indices whose
-expanded physical cores are not common safe, and put
+contracted R2 instance.  Treat every expanded `D_i` as one physical **slot**.
+
+If `D_i` remains physical common safe, the slot has at least its old source
+`i`, using `F_{i,i}=D_i`.  If it is unsafe, some observer desires a one-good
+deletion `D_i-g`; a globally minimum-cardinality desired subcore inside such
+a deletion is physical common safe.  Let `N(i)` contain every owner `b` for
+which a physical common-safe desired core
 
 \[
-                         S=V\setminus I.          \tag{1}
+                         F_{i,b}\subseteq D_i      \tag{1}
 \]
 
-The cores indexed by `S` are already physical common-safe desired cores and
-will be retained.
-
-For each `i in I`, physical unsafety supplies an observer and a deleted good
-for which `D_i-g` is desired.  Choose any globally minimum-cardinality
-desired subcore inside such a deletion.  Global minimality makes it physical
-common safe.  More generally, let `N(i)` contain every owner
-
-\[
-                         b\in N\setminus S        \tag{2}
-\]
-
-for which some physical common-safe desired core `F_{i,b}` is contained in a
-one-good deletion of `D_i`.  Sources in `S` are excluded because their safe
-cores are already retained.
+has been extracted.  Thus every slot has a nonempty neighborhood.  Safe
+slots are not frozen: a matching may displace their old sources, which is
+the required alternating-core freedom.
 
 ## Matching branch
 
-Suppose the bipartite graph from unsafe slots `I` to available sources
-`N-S` has a matching `mu` covering `I`.  Retain `D_j` for `j in S` and use
+Suppose the bipartite graph from all slots `V` to all owners `N` has a
+matching `mu` covering `V`.  Use
 
 \[
-                         F_{i,\mu(i)}\subset D_i  \qquad(i\in I).            \tag{3}
+                         F_{i,\mu(i)}\subseteq D_i \qquad(i\in V).           \tag{2}
 
 \]
 
@@ -48,7 +41,7 @@ original `D_i` are disjoint and each replacement stays inside its own slot.
 Let
 
 \[
-                         W=S\cup\mu(I).           \tag{4}
+                         W=\mu(V).                 \tag{3}
 
 \]
 
@@ -64,24 +57,24 @@ The matching branch is cap-free and uses no valuation bound.
 
 ## Deficiency branch
 
-If no matching covers `I`, Hall's theorem gives a nonempty set
+If no matching covers `V`, Hall's theorem gives a nonempty set
 
 \[
-                         J\subseteq I,
-             \qquad |N(J)|<|J|.                 \tag{5}
+                         J\subseteq V,
+             \qquad |N(J)|<|J|.                 \tag{4}
 
 \]
 
-This includes the case `N(i)=emptyset`: every globally minimal physical
-response inside slot `i` uses a source in the already-retained set `S`, so
-the obstruction is an explicit stable-source collision.
+Every individual `N(i)` is nonempty, so a minimal deficient set has at least
+two slots.  The obstruction is a genuine simultaneous-source collision, not
+an artifact of freezing an already-safe source.
 
 Thus expansion of a contracted closed family has exactly three outcomes:
 
 1. a physical generalized PI family;
 2. a matched physical family carrying base support of a dropped owner; or
-3. a Hall-deficient set of unsafe slots competing for too few unoccupied
-   physical response sources.
+3. a Hall-deficient set of physical slots competing for too few response
+   sources.
 
 There is no fourth packet-cardinality failure mode.
 
