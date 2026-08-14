@@ -15,6 +15,7 @@ def test_permanent_anchor_root_target_bilateral_compensator_frontier():
     assert result["source_strict_equivalence"]
     assert result["maximizer_propagation"]
     assert result["empty_compensator_packet_wall"]
+    assert result["empty_compensator_complement_safety_equivalence"]
     assert result["full_swap_source_strict"]
     assert result["full_swap_direct_safety_equivalence"]
     assert result["local_separator_witness"]["response_desired"]

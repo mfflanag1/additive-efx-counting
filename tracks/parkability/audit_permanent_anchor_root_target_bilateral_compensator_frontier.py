@@ -114,6 +114,16 @@ def algebra_checks():
     solver.add(0 <= hp - delta - pr, hp < delta + pr)
     empty_implies_packet_wall = solver.check() == z3.unsat
 
+    complement = z3.Real("complement")
+    solver = z3.SolverFor("QF_LRA")
+    solver.add(complement == br - hp,
+               hp >= delta + pr, complement + pr > xr)
+    complement_safety_forward = solver.check() == z3.unsat
+    solver = z3.SolverFor("QF_LRA")
+    solver.add(complement == br - hp,
+               complement + pr <= xr, hp < delta + pr)
+    complement_safety_reverse = solver.check() == z3.unsat
+
     # A desired subcore of B_r makes the entire B_r strictly preferred by i.
     e_i, br_i, bi_i = z3.Reals("e_i br_i bi_i")
     solver = z3.SolverFor("QF_LRA")
@@ -135,6 +145,7 @@ def algebra_checks():
 
     assert all((root_forward, root_reverse, source_forward, source_reverse,
                 maximizer_propagation, empty_implies_packet_wall,
+                complement_safety_forward, complement_safety_reverse,
                 full_swap_source_strict, direct_safety_forward,
                 direct_safety_reverse))
     return {
@@ -142,6 +153,9 @@ def algebra_checks():
         "source_strict_equivalence": source_forward and source_reverse,
         "maximizer_propagation": maximizer_propagation,
         "empty_compensator_packet_wall": empty_implies_packet_wall,
+        "empty_compensator_complement_safety_equivalence": (
+            complement_safety_forward and complement_safety_reverse
+        ),
         "full_swap_source_strict": full_swap_source_strict,
         "full_swap_direct_safety_equivalence": (
             direct_safety_forward and direct_safety_reverse

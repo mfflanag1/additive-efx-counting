@@ -121,33 +121,59 @@ strictly cheaper to the source than `H` is too root-poor to compensate it.
 In the overflow pattern, only `D=emptyset` is edge-feasible, and (11) is the
 exact residual.
 
+### Equivalent complement-safety form
+
+Using `v_r(B_r)=v_r(X_r)+\delta_r`, the empty-compensator instance of
+(10) is equivalently
+
+\[
+ v_r(B_r\setminus H)+v_r(p)\le v_r(X_r)
+ \qquad(\varnothing\ne H\subseteq B_r).          \tag{12}
+\]
+
+It is enough to state (12) for singleton `H={g}`.  Positivity then gives it
+for every proper subbundle of `B_r`.  Thus universal bilateral failure makes
+the current root target **p-augmented EFX-safe in the root row at the old
+base floor**:
+
+\[
+ v_r(B_r-g)+v_r(p)\le v_r(X_r)
+ \qquad(g\in B_r).                                \tag{13}
+\]
+
+For the permanent anchor itself, `H=A` gives
+
+\[
+                         v_r(Y_r)+v_r(p)\le v_r(X_r).             \tag{14}
+\]
+
 ## Full-bundle swap reaches direct safety
 
 Now use the response premise.  If its desired core is `E subseteq B_r`, then
 positivity gives
 
 \[
-                         v_i(B_r)\ge v_i(E)>v_i(B_i).             \tag{12}
+                         v_i(B_r)\ge v_i(E)>v_i(B_i).             \tag{15}
 \]
 
-Take `H=B_r` and `D=B_i`.  This pair is admissible: (12) pays the source,
+Take `H=B_r` and `D=B_i`.  This pair is admissible: (15) pays the source,
 and `H_q=A` exhausts the anchor so the five-edge signature (5) is impossible.
 The corresponding probe simply swaps the complete root and source bundles
 and gives charity to the root.  Its root condition (7) reduces exactly to
 
 \[
-                         v_r(B_i)+v_r(p)>v_r(X_r).                \tag{13}
+                         v_r(B_i)+v_r(p)>v_r(X_r).                \tag{16}
 \]
 
 Consequently failure of every bilateral probe implies the direct-safety wall
 
 \[
-                         v_r(B_i)+v_r(p)\le v_r(X_r).             \tag{14}
+                         v_r(B_i)+v_r(p)\le v_r(X_r).             \tag{17}
 \]
 
 This is not merely a large-response inequality: the protected root's base
 bundle directly covers the response source's entire current bundle together
-with charity.  Equation (14) is the exact interface that must next be matched
+with charity.  Equation (17) is the exact interface that must next be matched
 against the sacrificed-source direct-safety/base-margin continuation; that
 interface is not asserted here without checking its other observer rows.
 
@@ -156,13 +182,13 @@ interface is not asserted here without checking its other observer rows.
 Let `k=|B_r|`.  Summing (11) over its singleton packets yields
 
 \[
- v_r(B_r)\ge k(\delta_r+v_r(p)).                  \tag{15}
+ v_r(B_r)\ge k(\delta_r+v_r(p)).                  \tag{18}
 \]
 
 Since `v_r(B_r)=v_r(X_r)+\delta_r`, this is equivalent to
 
 \[
- v_r(X_r)\ge k v_r(p)+(k-1)\delta_r.              \tag{16}
+ v_r(X_r)\ge k v_r(p)+(k-1)\delta_r.              \tag{19}
 \]
 
 Thus universal bilateral failure forces a quantitatively large old root
@@ -193,8 +219,9 @@ PI-free, saturated-GG, or general-EFX countermodel.
 Proved: conservation, the if-and-only-if support criterion (5), exact
 source/root inequalities, exhaustive maximization over the complete declared
 four-edge bilateral family, the universal separator (10)--(11), the
-full-bundle direct-safety alternative (14), and the cardinality inequality
-(16).  The exact local witness proves that the separator is scalar-feasible.
+complement-safety form (12)--(14), the full-bundle direct-safety alternative
+(17), and the cardinality inequality (19).  The exact local witness proves
+that the separator is scalar-feasible.
 Not proved: that these separators contradict generalized PI or all GG
 premises, satisfaction of the other observer rows required by the extraction
 theorem, observer safety of a probe, closure of its decorated-response
