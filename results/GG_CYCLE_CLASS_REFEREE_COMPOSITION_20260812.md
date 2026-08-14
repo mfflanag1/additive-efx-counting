@@ -325,6 +325,28 @@ The remaining composition must carry that ledger and close the other
 pre-existing residual/GG state classes; it may not silently rebuild an old
 root target from retired goods.
 
+That global ledger interface is now composed in
+[`GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md`](GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md).
+Every original transition is normalized by cancelling transfers of retired
+goods, leaving them with their current holders, and recomputing all typed
+floors and all EFX comparisons. Successful normalization uses the old
+transition. Failure yields an exact retired-packet capture and a globally
+minimal protected-floor core. Only an executed response/state/anchor change
+counts as strict finite progress; logging alone does not. Exact retired-
+hitting or normalization-bypass repetition, and equality/base-floor cases
+without an admissible typed handoff, enter `T_L^*` with a named nonempty
+packet, supplier, holder, and rank/payment separator. The physical anchor
+label excludes the current floor vector, so floor changes cannot reset the
+ledger.
+
+This proves no **silent** restoration. It does not assert that positive
+valuations prevent agents from preferring retired goods. The surviving proof
+graph now has one typed union terminal
+`T^dagger=T_0^* dot-union T_L^*`, with two explicitly separated components:
+the exact empty-ledger recurrence outside the enlarged-root interface, and
+the strictly narrower post-ledger `T_L^*` class. Neither component is closed
+here.
+
 The narrower post-recruitment observer-payment objective is now formally
 closed as a refutation in
 [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md).

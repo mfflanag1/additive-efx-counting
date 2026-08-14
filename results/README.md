@@ -70,6 +70,22 @@ headlines:
   its pre-recruitment floor. This proves outcomes 4 or 3 respectively and
   also removes the associated source-inactive loss-band recurrence. It does
   not close the remaining GG state classes or prove general EFX.
+- [`GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_RESOLUTION_20260813.md`](GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_RESOLUTION_20260813.md)
+  ([requirement audit](GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPLETION_AUDIT_20260813.md),
+  [primary composition audit](global_retired_root_support_ledger_composition_audit.json),
+  [independent signed-state replay](global_retired_root_support_ledger_composition_independent_audit.json))
+  carries the peel's retired-support history through every `G0--G10` state
+  and eight cross-cutting operations. It does not ban reuse: cancelling
+  retired transfers either preserves all floors, exposes an exact capture,
+  executes and records an actual response/state/anchor change, or reaches the
+  typed retired-packet terminal `T_L^*`, including normalization-bypass and
+  weak-floor equality-critical cells. The physical anchor label is separated
+  from the floor vector, so a floor change cannot relabel retired support.
+  The independent implementation checks 15,625
+  signed reconstruction pairs and 125,000 physical normalization cases.
+  The exact global terminal is the typed union
+  `T^dagger=T_0^* dot-union T_L^*`; its empty-ledger component, typed
+  `T_L^*` payment, GG closure, and general EFX remain open.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))

@@ -18,9 +18,13 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "ANCHOR_HITTING_GATE_RESOLVED_OTHER_GG_TERMINALS_OPEN"
+    assert result["status"] == "GLOBAL_LEDGER_COMPOSED_TYPED_T_DAGGER_OPEN"
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
     assert result["smallest_named_terminal"] == "generic rank-completing paid-response splice outside the enlarged-root contract"
+    assert result["global_typed_terminal"] == "T^dagger = T_0^* dot-union T_L^*"
+    assert result["pre_ledger_terminal"] == "T_0^*"
+    assert result["post_ledger_terminal"] == "T_L^*"
+    assert len(result["post_ledger_terminal_requirements"]) == 7
     assert result["stated_four_old_core_normal_form_vacuous"]
     assert result["frozen_witnesses_escape_by_efx_rotation"]
     assert result["local_recurrence_response_rank"] == 1

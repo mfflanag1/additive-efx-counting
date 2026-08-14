@@ -1,0 +1,51 @@
+{
+  "capture_inequality": true,
+  "capture_packet_positive": true,
+  "claim_boundary": "local universal normalization; transition-pool coverage and rank-deficient TL-star payment remain to compose",
+  "current_safety_requires_current_floor": true,
+  "equality_without_typed_handoff_routes_to_TL_star": true,
+  "exact_repeat_route_count": 1,
+  "finite_record_routes": [
+    {
+      "collision_provenance_recorded": false,
+      "response_coordinate_new": false,
+      "route": "exact_TL_star",
+      "state_new": false
+    },
+    {
+      "collision_provenance_recorded": false,
+      "response_coordinate_new": false,
+      "route": "complete_state_progress",
+      "state_new": true
+    },
+    {
+      "collision_provenance_recorded": true,
+      "response_coordinate_new": true,
+      "route": "response_coordinate_progress",
+      "state_new": false
+    },
+    {
+      "collision_provenance_recorded": true,
+      "response_coordinate_new": true,
+      "route": "response_coordinate_progress",
+      "state_new": true
+    }
+  ],
+  "history_only_progress_forbidden": true,
+  "ledger_free_exact_response_repeat_routes_to_TL_star": true,
+  "minimality_protected_floor_safety_step": true,
+  "no_silent_reuse": true,
+  "provenance": {
+    "contract": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md",
+    "contract_sha256": "fc527e5d903b949afcd0ffd77cb24f3fb095cf8fbed8d0bbaa1730450ae031d9",
+    "script": "tracks/parkability/audit_retired_packet_selector_collision_normalization.py",
+    "script_sha256": "bb9f3306d4dd691ff36cbb296db45a9c4ba94ebcd4912e9b1c86044f86407acc",
+    "theorem": "results/RETIRED_PACKET_SELECTOR_COLLISION_NORMALIZATION_LEMMA_20260813.md",
+    "theorem_sha256": "bbf4846eb3284eee2e95bb2de6944352123cf48e5d1087773b67f576eaeeebbb",
+    "z3_version": "5.0.0"
+  },
+  "schema": "retired-packet-selector-collision-normalization-audit-v2",
+  "specialized_handoff_requires_exact_premises": true,
+  "status": "COLLISION_NORMALIZED_TO_LEDGER_FREE_PROGRESS_ROOT_OR_TL_STAR",
+  "weak_floor_equality_critical": true
+}

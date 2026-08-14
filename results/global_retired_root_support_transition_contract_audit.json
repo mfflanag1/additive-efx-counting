@@ -1,0 +1,83 @@
+{
+  "collision_interface": "resolved_by_selector_collision_normalization",
+  "cross_cutting_operations": [
+    "orientation_reset",
+    "root_flip",
+    "recapture",
+    "hole_pivot",
+    "two_hole_normalization",
+    "paid_anchor_reset",
+    "root_anchor_exchange",
+    "enlarged_root_return"
+  ],
+  "dependencies": [
+    {
+      "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md",
+      "sha256": "fc527e5d903b949afcd0ffd77cb24f3fb095cf8fbed8d0bbaa1730450ae031d9"
+    },
+    {
+      "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_G0_G10_TRANSITION_AUDIT_20260813.md",
+      "sha256": "95ddd10cd47ae4dee10644a335b3a430270da75ce6938f7ae22b49af08a597f2"
+    },
+    {
+      "path": "results/GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md",
+      "sha256": "867a9bebccea18a02a224713f076cb3b798638fd79f401ee7bc0987d0564665d"
+    },
+    {
+      "path": "results/UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md",
+      "sha256": "a95aeae307be112d14e23fa52ecfd44c9811eaa7b73cdbcc8196c74fa4ad4c54"
+    },
+    {
+      "path": "results/CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+      "sha256": "bb01d3c03e6903becc3591b1428ecf36ef3165b337d4d3c7c63f3f0628ce786d"
+    },
+    {
+      "path": "results/FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md",
+      "sha256": "23f970c4ac3be694a7d08e7d12a2ff5784b7733e3e7317f85ddaa72be4e93950"
+    },
+    {
+      "path": "results/PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md",
+      "sha256": "061d7a01ae4e05a498c3bea8660efc44923a024481c0a18565eb6525f68ea0ff"
+    }
+  ],
+  "g_states_covered": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "G10"
+  ],
+  "physical_anchor_label_excludes_current_floor": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_global_retired_root_support_transition_contract.py",
+    "script_sha256": "6590dc3b7155d6cc9b50534e8405e48f857c4ba7ed84e2fcd91a986f4d7930c0",
+    "z3_version": "5.0.0"
+  },
+  "retired_support_persists_across_floor_changes": true,
+  "scalar_checks": {
+    "deletion_or_capture_exhaustive": true,
+    "failed_deletion_captures_margin": true,
+    "failed_deletion_uses_nonempty_packet": true
+  },
+  "schema": "global-retired-root-support-transition-contract-audit-v1",
+  "status": "CONTRACT_AND_G0_G10_COVERAGE_VERIFIED",
+  "transition_rows": {
+    "G0": "clear",
+    "G1": "delete_or_capture",
+    "G10": "peel_then_return_compensation",
+    "G2": "exact_hitting_response",
+    "G3": "delete_or_capture",
+    "G4": "delete_or_capture",
+    "G5": "delete_or_capture",
+    "G6": "delete_or_capture",
+    "G7": "component_return_selector",
+    "G8": "exact_state",
+    "G9": "delete_or_capture"
+  }
+}

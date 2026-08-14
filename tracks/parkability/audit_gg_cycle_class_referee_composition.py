@@ -103,6 +103,16 @@ def run(root: Path) -> dict:
         "PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md",
         "permanent_anchor_minimal_response_peel_or_reselect_audit.json",
         "permanent_anchor_minimal_response_peel_or_reselect_independent_audit.json",
+        "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md",
+        "GLOBAL_RETIRED_ROOT_SUPPORT_G0_G10_TRANSITION_AUDIT_20260813.md",
+        "RETIRED_PACKET_SELECTOR_COLLISION_NORMALIZATION_LEMMA_20260813.md",
+        "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
+        "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_RESOLUTION_20260813.md",
+        "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPLETION_AUDIT_20260813.md",
+        "global_retired_root_support_transition_contract_audit.json",
+        "retired_packet_selector_collision_normalization_audit.json",
+        "global_retired_root_support_ledger_composition_audit.json",
+        "global_retired_root_support_ledger_composition_independent_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -183,17 +193,29 @@ def run(root: Path) -> dict:
     assert anchor_resolution["status"] == (
         "PERMANENT_ANCHOR_RECURRENCE_RESOLVED_BY_OUTCOMES_3_OR_4"
     )
+    ledger_resolution = json.loads(
+        (result_dir / "global_retired_root_support_ledger_composition_audit.json").read_text()
+    )
+    assert ledger_resolution["status"] == (
+        "GLOBAL_LEDGER_COMPOSED_EXACT_T_DAGGER_SURVIVES"
+    )
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "ANCHOR_HITTING_GATE_RESOLVED_OTHER_GG_TERMINALS_OPEN",
+        "status": "GLOBAL_LEDGER_COMPOSED_TYPED_T_DAGGER_OPEN",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
         "smallest_named_terminal": "generic rank-completing paid-response splice outside the enlarged-root contract",
+        "global_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
+        "pre_ledger_terminal": "T_0^*",
+        "post_ledger_terminal": "T_L^*",
+        "post_ledger_terminal_requirements": ledger_resolution[
+            "surviving_terminal_requirements"
+        ],
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,
@@ -205,8 +227,8 @@ def run(root: Path) -> dict:
         "efx_floor_feasible_residual_partitions": 0,
         "uncovered_premise_count": 2,
         "open_obligations": [
-            "carry the monotone retired-root-support ledger through the outer GG state graph",
             "close generic T* states lacking the permanent-anchor plus recruited-response surplus inequalities",
+            "pay or anchor-convert the typed retired-packet T_L* separator",
         ],
         "dependencies": records,
         "claim_boundary": (

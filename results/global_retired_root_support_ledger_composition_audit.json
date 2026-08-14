@@ -1,0 +1,179 @@
+{
+  "augmented_generic_T_star_strictly_narrowed": true,
+  "claim_boundary": "global ledger composition through the current G0-G10 architecture; typed T-dagger, GG, and general EFX remain open",
+  "collision_normalization_checks": {
+    "capture": true,
+    "equality_without_typed_handoff_to_TL_star": true,
+    "history_only_progress_forbidden": true,
+    "ledger_free_exact_repeat_to_TL_star": true,
+    "no_silent_reuse": true,
+    "positive_packet": true,
+    "protected_floor_safety": true,
+    "specialized_handoff_premise_guard": true,
+    "typed_current_floor_guard": true,
+    "weak_floor_equality_critical": true
+  },
+  "cross_cutting_operations_covered": [
+    "orientation_reset",
+    "root_flip",
+    "recapture",
+    "hole_pivot",
+    "two_hole_normalization",
+    "paid_anchor_reset",
+    "root_anchor_exchange",
+    "enlarged_root_return"
+  ],
+  "dependencies": [
+    {
+      "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md",
+      "sha256": "fc527e5d903b949afcd0ffd77cb24f3fb095cf8fbed8d0bbaa1730450ae031d9"
+    },
+    {
+      "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_G0_G10_TRANSITION_AUDIT_20260813.md",
+      "sha256": "95ddd10cd47ae4dee10644a335b3a430270da75ce6938f7ae22b49af08a597f2"
+    },
+    {
+      "path": "results/RETIRED_PACKET_SELECTOR_COLLISION_NORMALIZATION_LEMMA_20260813.md",
+      "sha256": "bbf4846eb3284eee2e95bb2de6944352123cf48e5d1087773b67f576eaeeebbb"
+    },
+    {
+      "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
+      "sha256": "b6f8a55736b520946095c029ded2bf9fa3f36288f7e39f756818c4fc9ff8f870"
+    },
+    {
+      "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPLETION_AUDIT_20260813.md",
+      "sha256": "ffb27285f31f4e02f9ffff063f67c2d303503e5c487ac081004417a3339c50df"
+    },
+    {
+      "path": "results/global_retired_root_support_transition_contract_audit.json",
+      "sha256": "7f5ed8559ceffae8708721a47b29bb4c4784bf981f1c89a4b818e853a554a1a3"
+    },
+    {
+      "path": "results/retired_packet_selector_collision_normalization_audit.json",
+      "sha256": "eca550e9c87d83759f66975bd39914f993cba0dec8e26e055adac55ea9060052"
+    },
+    {
+      "path": "results/FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md",
+      "sha256": "23f970c4ac3be694a7d08e7d12a2ff5784b7733e3e7317f85ddaa72be4e93950"
+    },
+    {
+      "path": "results/CHARITY_AUGMENTED_FIVE_TARGET_HOLE_PIVOT_CYCLE_LEMMA_20260811.md",
+      "sha256": "29cb2f5cbe2ed4d98263ca78235787d91f315414978768363e75968b1fa701a1"
+    },
+    {
+      "path": "results/CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+      "sha256": "bb01d3c03e6903becc3591b1428ecf36ef3165b337d4d3c7c63f3f0628ce786d"
+    },
+    {
+      "path": "results/UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md",
+      "sha256": "a95aeae307be112d14e23fa52ecfd44c9811eaa7b73cdbcc8196c74fa4ad4c54"
+    },
+    {
+      "path": "results/PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md",
+      "sha256": "061d7a01ae4e05a498c3bea8660efc44923a024481c0a18565eb6525f68ea0ff"
+    }
+  ],
+  "finite_component_argument": {
+    "orientation_labels": "finite_alphabet_fixed_by_G0_G10_contract",
+    "physical_anchor_supports": "subsets_of_finite_ground_set",
+    "response_and_allocation_records": "finite_labeled_good_state_space",
+    "root_choices": "four",
+    "supplier_labels": "subsets_or_members_of_four_owners_plus_charity",
+    "typed_floors": "values_or_thresholds_induced_by_finitely_many_bundles"
+  },
+  "g_states_covered": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "G5",
+    "G6",
+    "G7",
+    "G8",
+    "G9",
+    "G10"
+  ],
+  "generic_empty_ledger_T_star_closed": false,
+  "gg_closed": false,
+  "physical_label_floor_separation": {
+    "label_excludes_current_floor": true,
+    "retirement_persists_across_floor_changes": true
+  },
+  "post_ledger_terminal": "T_L^*",
+  "pre_ledger_terminal": "T_0^*",
+  "provenance": {
+    "script": "tracks/parkability/audit_global_retired_root_support_ledger_composition.py",
+    "script_sha256": "a0d708379ed9e8bff13f12a019f57557ab6f8136b351a5c5b21bcc831b4654e7",
+    "theorem": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
+    "theorem_sha256": "b6f8a55736b520946095c029ded2bf9fa3f36288f7e39f756818c4fc9ff8f870"
+  },
+  "scalar_collision_checks": {
+    "deletion_or_capture_exhaustive": true,
+    "failed_deletion_captures_margin": true,
+    "failed_deletion_uses_nonempty_packet": true
+  },
+  "schema": "global-retired-root-support-ledger-composition-audit-v2",
+  "status": "GLOBAL_LEDGER_COMPOSED_EXACT_T_DAGGER_SURVIVES",
+  "surviving_terminal": "T^dagger = T_0^* dot-union T_L^*",
+  "surviving_terminal_requirements": [
+    "nonempty retired packet",
+    "retirement supplier and current holder",
+    "fixed typed protected floors",
+    "failed canonical ledger-free realization",
+    "repeated retired-hitting or normalization-bypass response",
+    "or equality-critical/base-floor separator with no admissible typed handoff",
+    "rank deficiency or observer-payment/release separator"
+  ],
+  "transition_routes": {
+    "G0": [
+      "original"
+    ],
+    "G1": [
+      "original",
+      "support_progress",
+      "collision_normalization"
+    ],
+    "G10": [
+      "anchor_reselection",
+      "retirement_growth",
+      "normalized_return"
+    ],
+    "G2": [
+      "ledger_free_core",
+      "retired_hitting_core"
+    ],
+    "G3": [
+      "connected_transfer",
+      "protected_floor_collision"
+    ],
+    "G4": [
+      "normalized_matching",
+      "rank_four_cycle",
+      "TL_star"
+    ],
+    "G5": [
+      "normalized_repair",
+      "typed_base_floor_separator"
+    ],
+    "G6": [
+      "normalized_fork",
+      "owner_growth",
+      "TL_star"
+    ],
+    "G7": [
+      "component_return",
+      "retired_capture_separator"
+    ],
+    "G8": [
+      "signed_state_progress",
+      "exact_repeat"
+    ],
+    "G9": [
+      "normalized_rotation",
+      "PI",
+      "supplier_progress",
+      "TL_star"
+    ]
+  }
+}
