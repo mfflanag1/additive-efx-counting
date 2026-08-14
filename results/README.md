@@ -1852,3 +1852,15 @@ both encodings.
   singleton is parked at its own source.  This removes the cross-state
   observer-safety bands and leaves a source-parking Hall/matching gate plus
   the whole-hit branch.
+- [`NONROOT_SINGLETON_HIT_SAFE_ENVELOPE_DESCENT_LEMMA_20260814.md`](NONROOT_SINGLETON_HIT_SAFE_ENVELOPE_DESCENT_LEMMA_20260814.md)
+  ([exact audit](nonroot_singleton_hit_safe_envelope_descent_audit.json))
+  gives the narrow self-contained whole-hit result needed here.  A
+  nonroot-held/nonroot-sourced singleton hit follows a strict nested envelope
+  chain; a root source is the named strict-anchor saturation exit.  It does
+  not import the disputed root-holder supplier-star argument.
+- [`NONROOT_THREE_PLACEMENT_RELAY_COLLISION_ELIMINATION_20260814.md`](NONROOT_THREE_PLACEMENT_RELAY_COLLISION_ELIMINATION_20260814.md)
+  ([dependency audit](nonroot_three_placement_relay_collision_elimination_audit.json))
+  tests the charity singleton only at nonroot owners, preserving the
+  four-edge bound.  Every hitting response is thereby eliminated by the
+  narrow descent/anchor exit, leaving only disjoint universally safe
+  source-parking Hall compression.

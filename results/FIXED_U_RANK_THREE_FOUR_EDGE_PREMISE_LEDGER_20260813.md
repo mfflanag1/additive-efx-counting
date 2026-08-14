@@ -85,6 +85,14 @@ two-row safety bands are not terminal; the exact live gate is Hall/matching
 compression of the universally safe minimum cores accumulated by source
 parking, together with the separate `p`-hitting branch.
 
+Restricting to the three nonroot placements closes that hitting branch
+without the disputed root-holder supplier star.  A root-sourced hit is the
+strict anchor-reselection saturation exit; a nonroot-sourced hit follows a
+strict nested safe-envelope chain until its response avoids `p`.  The active
+relay dependency is therefore only universally safe source-parking Hall
+compression.  See
+`NONROOT_THREE_PLACEMENT_RELAY_COLLISION_ELIMINATION_20260814.md`.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

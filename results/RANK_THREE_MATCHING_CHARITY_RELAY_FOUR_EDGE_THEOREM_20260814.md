@@ -189,3 +189,13 @@ safe minimum cores: either parking neutralizes the current core and raises
 minimum response size, another source supplies a same-size core, or a
 response hits `p`.  A Hall-compression lemma for the accumulated cores would
 complete the relay route; it is not proved here.
+
+The disputed root-holder collision theorem can also be removed from this
+route.  Test the three probes placing `p` at `q,d,s`.  A response hitting `p`
+then has a nonroot holder.  A root source is the saturated strict-anchor
+reselection exit; a nonroot source enters the strict safe-envelope descent.
+See `NONROOT_THREE_PLACEMENT_RELAY_COLLISION_ELIMINATION_20260814.md` and
+`NONROOT_SINGLETON_HIT_SAFE_ENVELOPE_DESCENT_LEMMA_20260814.md`.  Hence the
+only live relay branch is disjoint universally safe source-parking Hall
+compression; neither the root singleton supplier-star nor the overclaimed
+complete `T_{L,times}^*` composition is needed.
