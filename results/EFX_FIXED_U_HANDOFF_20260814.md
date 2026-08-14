@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `4b964cc`
-(`research: normalize different-source responses at one probe`)
+**Latest pushed research checkpoint before this note update:** `c805c5f`
+(`research: split terminal path cross-exchange cases`)
 
 ## Frozen objective
 
@@ -1056,6 +1056,52 @@ source, not the predecessor.  They retain the terminal bicriteria packet
 from section 33, plus the same disjoint-or-capture alternative at `q`.
 Frozen-supplier compression and observer safety remain open in both classes.
 
+## 35. Overlap capture is one exact bicriteria packet
+
+The overlap branch in the two predecessor-duplicate terminal maps is no
+longer an unnamed capture inequality.  If the missing-owner core `C` and
+predecessor core `E` overlap in `O`, split `O` into a packet `H` sent with
+`C minus E` to the missing owner and its complement sent with `E minus C` to the
+predecessor.
+
+The two payment conditions have opposite thresholds:
+
+```text
+missing owner paid     iff v_m(H) >= alpha
+predecessor paid       iff v_x(H) <= gamma.
+```
+
+The full overlap always satisfies the first threshold.  Hence an
+inclusion-minimal feasible `H_*` either satisfies the predecessor threshold,
+giving the paid cross exchange through at most four current-holder edges, or
+is an exact two-row critical packet:
+
+```text
+v_m(H_*) >= alpha,
+v_m(H_* - g) < alpha for every g in H_*,
+v_x(H_*) > gamma.
+```
+
+This reduction is cap-free and exact.  It does **not** show that the critical
+packet is impossible under the full signed fixed-`U` premises.  It also does
+not bound the number of frozen-supplier/recipient pairs induced by mixed
+provenance, and it does not prove observer EFX safety.
+
+Authoritative files:
+
+- `results/PREDECESSOR_CROSS_EXCHANGE_OVERLAP_BICRITERIA_LEMMA_20260814.md`
+- `results/predecessor_cross_exchange_overlap_bicriteria_audit.json`
+- `tracks/parkability/audit_predecessor_cross_exchange_overlap_bicriteria.py`
+- `tracks/parkability/test_predecessor_cross_exchange_overlap_bicriteria.py`
+
+The next analytic target is now narrower: combine this overlap critical
+packet with the terminal compensator packet and the frozen supplier labels.
+Either prove their simultaneous minimality forces a release-compatible
+generalized-PI family or a saturated represented-component terminal, or
+freeze an exact positive-rational full-premise countermodel.  Scalar payment
+inequalities alone are not enough; the signed `X -> Y -> Z` provenance ledger
+must be used.
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1213,13 +1259,13 @@ After correcting the physical-compression scope, the conditional census,
 independent edge-mask encoding, mixed-core counterexample, and conditional
 anchor-substitution frontier, three-color support obstruction, full-owner
 connected-rank-defect census, unique Hamiltonian-omission census, and
-canonical path-prefix/terminal-split reduction, and terminal omitted-core
-cross-exchange frontier were
+canonical path-prefix/terminal-split reduction, terminal omitted-core
+cross-exchange frontier, and predecessor-overlap bicriteria reduction were
 replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-14 passed in 0.70s
+15 passed in 0.82s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization

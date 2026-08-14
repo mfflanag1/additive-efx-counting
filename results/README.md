@@ -2064,3 +2064,11 @@ both encodings.
   base core, a four-edge `q`/predecessor exchange pays everyone.  Failure is
   exact full-margin overlap capture.  The other two retain the terminal
   bicriteria split together with the same uncrossing gate.
+- [`PREDECESSOR_CROSS_EXCHANGE_OVERLAP_BICRITERIA_LEMMA_20260814.md`](PREDECESSOR_CROSS_EXCHANGE_OVERLAP_BICRITERIA_LEMMA_20260814.md)
+  ([exact algebra audit](predecessor_cross_exchange_overlap_bicriteria_audit.json))
+  resolves that unnamed overlap capture into a cap-free dichotomy.  Splitting
+  the shared core gives either a paid exchange using at most four current-
+  holder edges or one inclusion-minimal packet simultaneously indispensable
+  in the missing-owner row and too costly in the predecessor row.  Elimination
+  of that packet from the signed fixed-`U` ledger, physical frozen-supplier
+  compression, and observer EFX safety remain open.
