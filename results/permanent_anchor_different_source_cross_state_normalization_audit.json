@@ -1,0 +1,77 @@
+{
+  "claim_boundary": "cross-state desire/safety normalization proved; root and multi-source capture inequalities remain open",
+  "common_probe_edge_count": 2,
+  "desire_transport": true,
+  "finite_cardinality_descent": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_permanent_anchor_different_source_cross_state_normalization.py",
+    "script_sha256": "346ccefefb21cd9a6eea0f5660bb12b04e291b671254b2cc80badc557feaf997",
+    "theorem": "results/PERMANENT_ANCHOR_DIFFERENT_SOURCE_CROSS_STATE_NORMALIZATION_LEMMA_20260814.md",
+    "theorem_sha256": "2a77f361d3965247612c9e15a71c3f9da61d702f977c588779439328232d6085",
+    "z3": "5.0.0"
+  },
+  "schema": "permanent-anchor-different-source-cross-state-normalization-v1",
+  "source_collision_or_distinct_exhaustive": true,
+  "source_pair_count": 3,
+  "source_pairs": [
+    {
+      "common_probe_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "left_bundle_unchanged": true,
+      "response_sources": [
+        "q",
+        "d"
+      ],
+      "right_bundle_unchanged": true,
+      "singleton_holder": "s"
+    },
+    {
+      "common_probe_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "left_bundle_unchanged": true,
+      "response_sources": [
+        "q",
+        "s"
+      ],
+      "right_bundle_unchanged": true,
+      "singleton_holder": "d"
+    },
+    {
+      "common_probe_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "left_bundle_unchanged": true,
+      "response_sources": [
+        "d",
+        "s"
+      ],
+      "right_bundle_unchanged": true,
+      "singleton_holder": "q"
+    }
+  ],
+  "status": "COMMON_PROBE_SAFE_NORMALIZATION_OR_SOURCE_COLLISION",
+  "unsafe_gives_desired_deletion": true
+}
