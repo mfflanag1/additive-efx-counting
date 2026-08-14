@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `245bc5b`
-(`research: isolate exact form2 record-repeat frontier`)
+**Latest pushed research checkpoint before this note update:** `6c5bf00`
+(`research: refute repeat-to-rank-four shortcut`)
 
 ## Frozen objective
 
@@ -201,6 +201,32 @@ Files:
 - `results/form2_six_branch_all_target_change_audit.json`
 - `tracks/parkability/audit_form2_six_branch_all_target_change.py`
 
+### 8. Exact repeat does not force rank four
+
+An exact positive-rational witness now combines an actual all-target-changing
+six-branch allocation with the canonical owner-only five-response relation
+
+```text
+r -> q, q -> s, s -> r, d -> q, d -> r.
+```
+
+The branch is a four-edge spanning tree, every owner is above a declared unit
+payment floor, its singleton desired cores are common-safe, and the complete
+allocation is non-EFX.  Nevertheless every response targets only `r,q,s`,
+so the maximum response matching has rank exactly three.  Repetition of the
+complete physical record does not change that fact.
+
+This refutes automatic admission through matching augmentation.  It is not a
+full saturated GG countermodel: the remaining proof must genuinely use the
+base-margin/direct-safety, generalized-PI, progress, supplier-capture, or
+double-margin premises.
+
+Files:
+
+- `results/FORM2_ALL_TARGET_CHANGE_EXACT_REPEAT_RANK_NO_GO_20260814.md`
+- `results/form2_all_target_change_exact_repeat_rank_no_go_audit.json`
+- `tracks/parkability/audit_form2_all_target_change_exact_repeat_rank_no_go.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -252,6 +278,10 @@ The immediate theorem target is therefore:
 > represented-component base-margin/direct-safety terminal, or forces
 > release-compatible generalized PI/progress; otherwise construct an exact
 > positive rational saturated countermodel to that implication.
+
+Do not attempt to discharge this statement by deriving rank four from exact
+repetition alone; the witness in section 8 rules out that shortcut in the
+applicable owner-only response geometry.
 
 This should be attacked using the complete signed support-drainage and
 response-saturation record.  Scalar inequalities alone cannot close it: the
@@ -311,10 +341,10 @@ explicitly open in `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 
 Focused verification across the three- and nine-topology menus, independent
 menu audit/core extraction, payment identities, spanning frontier,
-cancellation theorem, and all-target-change frontier:
+cancellation theorem, all-target-change frontier, and repeat-rank no-go:
 
 ```text
-10 passed in 27.84s
+11 passed in 26.94s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
