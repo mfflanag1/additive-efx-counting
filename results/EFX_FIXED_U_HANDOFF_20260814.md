@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `79f7126`
-(`research: eliminate residual two-target topology obstruction`)
+**Latest pushed research checkpoint before this note update:** `18050ae`
+(`research: transfer disjoint anchor-relay responses within four edges`)
 
 ## Frozen objective
 
@@ -376,6 +376,37 @@ Files:
 - `results/r3_singleton_retained_incoming_cell_return_audit.json`
 - `tracks/parkability/audit_r3_singleton_retained_incoming_cell_return.py`
 
+### 15. Global pivot: permanent-anchor disjoint-response transfer
+
+The higher-leverage permanent-anchor route now tests the singleton at only
+the three nonroot owners, avoiding the unresolved root-held hit branch.  If a
+globally minimum response is disjoint from the singleton, transport makes it
+safe across all three probes and desired away from its own-source placement.
+
+Transfer that response to its source and leave the singleton with its old
+nonroot target.  A nonroot target adds only one owner pair, so the candidate
+uses at most three edges.  A root target contains only the current-root and
+anchor-supplier cells, so its mixed response still uses at most four edges.
+Every nonroot-target response is priority-valid.  A root-target response is
+priority-valid unless it captures the complete strict root margin:
+
+```text
+v_r(E) >= delta_r.
+```
+
+Thus the disjoint normalization-bypass branch no longer needs Hall matching
+just to construct a bounded-edge probe.  Its survivors are root-margin
+capture or an exact repeated response after the explicit transfer.  A
+singleton-hitting response remains in the separately typed nonroot envelope
+descent; the lemma does not conflate its changed endpoint with an original
+probe.
+
+Files:
+
+- `results/PERMANENT_ANCHOR_NONROOT_THREE_PLACEMENT_RESPONSE_TRANSFER_LEMMA_20260814.md`
+- `results/permanent_anchor_nonroot_three_placement_response_transfer_audit.json`
+- `tracks/parkability/audit_permanent_anchor_nonroot_three_placement_response_transfer.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -500,10 +531,11 @@ menu audit/core extraction, payment identities, spanning frontier,
 cancellation theorem, all-target-change frontier, repeat-rank no-go, and
 root-star leaf liquidation, two-target root-path repair, and foreign-import
 cancellation, root-compensated direct return, and singleton-retained partial
-return and universal incoming-cell return:
+return, universal incoming-cell return, and permanent-anchor nonroot response
+transfer:
 
 ```text
-17 passed in 22.33s
+18 passed in 22.61s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
