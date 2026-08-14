@@ -12,6 +12,12 @@ frozen candidate-admissibility rule.  Until a controlled floor reset or
 floor-paying supplier star is proved, the root-held branch remains open. See
 `ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
 
+The subsequent floor-preserving localization theorem returns every
+off-anchor or noncritical anchor atom directly to its recorded retirement
+source.  Thus the remaining root-held packet is contained in the critical
+part of the permanent old anchor.  See
+`ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md`.
+
 Conditional on that missing admission operation, every named retired-packet collision yields an EFX lexicographic
 improvement, a release-compatible PI cycle, a valid root/anchor transition,
 strict packet/hitting/rank progress, or a contradiction to the typed floors

@@ -1,10 +1,11 @@
 {
   "augmented_generic_T_star_strictly_narrowed": true,
-  "claim_boundary": "global ledger composition through the current G0-G10 architecture; the collision root branch remains open at the declared-floor admission gate; typed T-dagger, GG, and general EFX remain open",
+  "claim_boundary": "global ledger composition through the current G0-G10 architecture; the collision root branch is localized to critical atoms of the old anchor; typed T-dagger, GG, and general EFX remain open",
   "closed_post_ledger_subtypes": [],
   "collision_T_L_times_closed": false,
   "collision_T_L_times_conditional_scalar_contradiction": true,
-  "collision_T_L_times_smallest_missing_operation": "controlled lexicographic floor reset or floor-paying supplier star",
+  "collision_T_L_times_root_packet_localized_to_critical_old_anchor": true,
+  "collision_T_L_times_smallest_missing_operation": "pay or anchor-exchange a critical retired atom of the old root core",
   "collision_normalization_checks": {
     "capture": true,
     "equality_without_typed_handoff_to_TL_star": true,
@@ -78,7 +79,7 @@
     },
     {
       "path": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md",
-      "sha256": "662d3cfb2a95f9344cc435ccc06e5042526474260ee727449aa664a8d411a098"
+      "sha256": "4c82eda6d06ca7b6903479eb8d6c169681352ce0eeeea6c6378c21cf3f5a35f9"
     },
     {
       "path": "results/GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md",
@@ -86,7 +87,7 @@
     },
     {
       "path": "results/retired_packet_charge_anchor_resolution_20260814_audit.json",
-      "sha256": "791adb2a685287a3587078b7934d7fa4e9d09ff8d285c19f123bda40b490bb4b"
+      "sha256": "f8ecfd398023031f90c4c14e2b97a8315a3807c9df2142b339e38cd8b740fb35"
     },
     {
       "path": "results/gg_old_root_core_exterior_dominance_audit.json",
@@ -94,15 +95,27 @@
     },
     {
       "path": "results/gg_old_root_core_exterior_dominance_independent_audit.json",
-      "sha256": "b352ed328e90ad15addfe415eeb618097aaa4188da098db05939d000fcc54656"
+      "sha256": "b334c638059b6598c420b2824f937f4cd5fcb8c242068d16edf66606dc265acb"
     },
     {
       "path": "results/ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md",
-      "sha256": "659a948e02641980d279f86f9f55aab6a9d59d005903ce32a259233600a49aca"
+      "sha256": "4b77fb0c5b5e1f9597ac2a7576d9e135a7d81e7c3eae4f3e315f974cd92069df"
     },
     {
       "path": "results/root_global_supplier_star_floor_admissibility_gap_audit.json",
-      "sha256": "715ac7a030edb68f86531ab597a3e4c3ad3a278cdb941540ece1c4962eb60c2b"
+      "sha256": "1e6f50933746dcecf7c4296152e5911809a62929509b2d8e8c6480a5ba111a1f"
+    },
+    {
+      "path": "results/ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md",
+      "sha256": "266e857fdd945b4d473c27967a726105814e28679aca461c0d2e7d92a10461fb"
+    },
+    {
+      "path": "results/root_retired_packet_old_anchor_critical_localization_audit.json",
+      "sha256": "4d17e7e5ee7cc35b602f3c97ad7e648584ec20f4d122e0d2cd40833a5dbe0c3f"
+    },
+    {
+      "path": "results/root_retired_packet_old_anchor_critical_localization_independent_audit.json",
+      "sha256": "787dcdeeda985209e7c45d1d7198c159fd410e9e150d3f687400223369213357"
     }
   ],
   "finite_component_argument": {
@@ -143,7 +156,7 @@
   "pre_ledger_terminal": "T_0^*",
   "provenance": {
     "script": "tracks/parkability/audit_global_retired_root_support_ledger_composition.py",
-    "script_sha256": "85a5927b42056de338911106884dca9285fda2bdf147ed932993423540d8fe8c",
+    "script_sha256": "deaab340d5dbf2af18029549e459405db41d59abe077ec05dac214137a549678",
     "theorem": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
     "theorem_sha256": "c8635102017bc041034fd5a68ca1244e618904fae5cfcb23cc68e7991f1702c6"
   },
@@ -153,7 +166,7 @@
     "failed_deletion_uses_nonempty_packet": true
   },
   "schema": "global-retired-root-support-ledger-composition-audit-v4",
-  "status": "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN",
+  "status": "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN",
   "surviving_terminal": "T^dagger = T_0^* dot-union T_L^*",
   "surviving_terminal_requirements": [
     "nonempty retired support",

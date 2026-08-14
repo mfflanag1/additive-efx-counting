@@ -18,7 +18,9 @@ def test_gg_referee_composition_replays():
 
 def test_branch_graph_has_one_open_terminal():
     result = run(ROOT)
-    assert result["status"] == "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN"
+    assert result["status"] == (
+        "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN"
+    )
     assert result["terminal_nodes"] == ["EFX", "PI", "T*"]
     assert result["smallest_named_terminal"] == "generic rank-completing paid-response splice outside the enlarged-root contract"
     assert result["historical_global_typed_terminal"] == (
@@ -33,6 +35,7 @@ def test_branch_graph_has_one_open_terminal():
     assert result["closed_post_ledger_subtypes"] == []
     assert not result["collision_T_L_times_closed"]
     assert result["collision_T_L_times_conditional_scalar_contradiction"]
+    assert result["collision_T_L_times_root_packet_localized_to_critical_old_anchor"]
     assert len(result["post_ledger_terminal_requirements"]) == 6
     assert result["stated_four_old_core_normal_form_vacuous"]
     assert result["frozen_witnesses_escape_by_efx_rotation"]

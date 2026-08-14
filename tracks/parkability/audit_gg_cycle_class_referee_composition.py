@@ -120,6 +120,9 @@ def run(root: Path) -> dict:
         "gg_old_root_core_exterior_dominance_independent_audit.json",
         "ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md",
         "root_global_supplier_star_floor_admissibility_gap_audit.json",
+        "ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md",
+        "root_retired_packet_old_anchor_critical_localization_audit.json",
+        "root_retired_packet_old_anchor_critical_localization_independent_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -203,14 +206,16 @@ def run(root: Path) -> dict:
     ledger_resolution = json.loads(
         (result_dir / "global_retired_root_support_ledger_composition_audit.json").read_text()
     )
-    assert ledger_resolution["status"] == "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN"
+    assert ledger_resolution["status"] == (
+        "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN"
+    )
     assert not ledger_resolution["collision_T_L_times_closed"]
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN",
+        "status": "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
@@ -231,6 +236,7 @@ def run(root: Path) -> dict:
         ],
         "collision_T_L_times_closed": False,
         "collision_T_L_times_conditional_scalar_contradiction": True,
+        "collision_T_L_times_root_packet_localized_to_critical_old_anchor": True,
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,
@@ -244,11 +250,11 @@ def run(root: Path) -> dict:
         "open_obligations": [
             "close the generic empty-ledger T_0^* recurrence",
             "project, activate, or otherwise close collision-free parked support T_{L,perp}^*",
-            "admit a controlled floor reset or floor-paying supplier star in root-held T_{L,times}^*",
+            "pay or anchor-exchange a critical old-anchor atom in root-held T_{L,times}^*",
         ],
         "dependencies": records,
         "claim_boundary": (
-            "conditional collision scalar reduction inside the branch-complete "
+            "critical-old-anchor collision localization inside the branch-complete "
             "GG reduction, not a GG closure theorem, collision theorem, or "
             "four-agent/general EFX proof"
         ),

@@ -67,3 +67,19 @@ Prove one of the following, without changing the frozen theorem:
 Absent one of these, `T_{L,times}^*` remains open.  This is a proof-gap
 diagnosis, not a counterexample to the theorem itself and not evidence
 against four-agent EFX.
+
+## Subsequent localization
+
+`ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md`
+removes every off-anchor or noncritical anchor atom without using the global
+supplier star.  It returns one atom to its recorded retirement source,
+preserves every declared floor, and retains or validly shrinks the old root
+anchor.  Hence the live root obstruction is now the narrower cell
+
+\[
+ \varnothing\ne K\subseteq
+ \{g\in D_r:v_r(D_r-g)<v_r(X_r)\}.
+\]
+
+The missing operation must pay or exchange one of these critical old-anchor
+atoms; it need not solve the unrestricted all-donor problem.

@@ -9,7 +9,9 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_global_retired_root_support_ledger_composition_replays() -> None:
     result = run(ROOT)
-    assert result["status"] == "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN"
+    assert result["status"] == (
+        "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN"
+    )
     assert result["g_states_covered"] == [f"G{i}" for i in range(11)]
     assert len(result["cross_cutting_operations_covered"]) == 8
     assert all(result["physical_label_floor_separation"].values())
@@ -28,6 +30,7 @@ def test_global_retired_root_support_ledger_composition_replays() -> None:
     assert result["closed_post_ledger_subtypes"] == []
     assert not result["collision_T_L_times_closed"]
     assert result["collision_T_L_times_conditional_scalar_contradiction"]
+    assert result["collision_T_L_times_root_packet_localized_to_critical_old_anchor"]
     assert not result["parked_T_L_perp_closed"]
     assert result["no_collision_terminal_guard"]
     assert result["augmented_generic_T_star_strictly_narrowed"]

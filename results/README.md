@@ -165,6 +165,17 @@ headlines:
   remains open at that exact operation; this also does not close parked
   support, the empty-ledger terminal, full `GG`, or general EFX.
 
+- [`ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md`](ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md)
+  ([primary audit](root_retired_packet_old_anchor_critical_localization_audit.json),
+  [independent replay](root_retired_packet_old_anchor_critical_localization_independent_audit.json))
+  bypasses the invalid all-donor supplier star for every removable root-held
+  atom. Returning one atom to its recorded retirement source preserves every
+  nonroot floor. The root either retains the permanent old anchor or replaces
+  it by a still-desired deletion. Exact recurrence therefore forces the
+  retired packet to consist entirely of critical atoms `g` satisfying
+  `v_r(D_r-g)<v_r(X_r)`. The live collision gate is payment or anchor exchange
+  for that critical-anchor packet, not generic exterior pooling.
+
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))
   gives the requirement-by-requirement final verdict: the generic supplier-

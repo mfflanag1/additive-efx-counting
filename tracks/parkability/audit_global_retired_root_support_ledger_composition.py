@@ -31,7 +31,9 @@ def run(repo: Path) -> dict:
     assert contract["g_states_covered"] == [f"G{i}" for i in range(11)]
     assert all(contract["scalar_checks"].values())
     assert collision["no_silent_reuse"]
-    assert collision_resolution["status"] == "ROOT_FLOOR_ADMISSIBILITY_GATE_OPEN"
+    assert collision_resolution["status"] == (
+        "ROOT_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN"
+    )
     assert not collision_resolution["full_T_L_times_theorem_closed"]
     assert not collision_resolution["parked_T_L_perp_closed"]
     assert not collision_resolution["empty_ledger_T0_closed"]
@@ -83,12 +85,15 @@ def run(repo: Path) -> dict:
         "gg_old_root_core_exterior_dominance_independent_audit.json",
         "ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md",
         "root_global_supplier_star_floor_admissibility_gap_audit.json",
+        "ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md",
+        "root_retired_packet_old_anchor_critical_localization_audit.json",
+        "root_retired_packet_old_anchor_critical_localization_independent_audit.json",
     ]
     script = Path(__file__).resolve()
     theorem = results / "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md"
     return {
         "schema": "global-retired-root-support-ledger-composition-audit-v4",
-        "status": "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN",
+        "status": "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN",
         "g_states_covered": list(transition_routes),
         "transition_routes": transition_routes,
         "cross_cutting_operations_covered": contract["cross_cutting_operations"],
@@ -147,6 +152,7 @@ def run(repo: Path) -> dict:
         ],
         "collision_T_L_times_closed": False,
         "collision_T_L_times_conditional_scalar_contradiction": True,
+        "collision_T_L_times_root_packet_localized_to_critical_old_anchor": True,
         "collision_T_L_times_smallest_missing_operation": collision_resolution[
             "smallest_missing_operation"
         ],
@@ -160,8 +166,8 @@ def run(repo: Path) -> dict:
         ],
         "claim_boundary": (
             "global ledger composition through the current G0-G10 architecture; "
-            "the collision root branch remains open at the declared-floor "
-            "admission gate; typed T-dagger, GG, and general EFX remain open"
+            "the collision root branch is localized to critical atoms of the "
+            "old anchor; typed T-dagger, GG, and general EFX remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(repo)),
