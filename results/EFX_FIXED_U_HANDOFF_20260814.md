@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `7743568`
-(`research: classify two-target root-path repair`)
+**Latest pushed research checkpoint before this note update:** `d2e8ce5`
+(`research: characterize two-target foreign-import cancellation`)
 
 ## Frozen objective
 
@@ -278,6 +278,34 @@ Files:
 - `results/r3_two_target_root_path_supplier_compatibility_audit.json`
 - `tracks/parkability/audit_r3_two_target_root_path_supplier_compatibility.py`
 
+### 11. Exact foreign-import cancellation and margin
+
+The favorable root path has now been decomposed into five original-supplier
+cells.  Its final edge count is exactly one charity edge plus five explicit
+Boolean owner-pair indicators.  At most three of those indicators may remain.
+This is an if-and-only-if four-edge criterion, not another sufficient menu.
+
+In the maximal nondegenerate signature there are 208 none/proper/all response
+patterns.  Exactly 69 meet the four-edge bound; 53 of those 69 genuinely use
+foreign support.  Thus restricting the singleton holder's response to its own
+support would incorrectly discard most edge-feasible foreign-import cases.
+
+If no own-support subcore is desired, the foreign portion `F` of an
+inclusion-minimal response carries its entire strict response margin:
+
+```text
+v_z(F) >= mu_z > 0, and v_z(g) >= mu_z for every good g in the core.
+```
+
+The surviving obstruction is therefore an edge-incompatible, item-critical
+foreign packet, suitable for the signed PI/base-margin machinery.
+
+Files:
+
+- `results/R3_TWO_TARGET_FOREIGN_IMPORT_EDGE_CANCELLATION_AND_MARGIN_LEMMA_20260814.md`
+- `results/r3_two_target_foreign_import_edge_cancellation_audit.json`
+- `tracks/parkability/audit_r3_two_target_foreign_import_edge_cancellation.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -400,10 +428,11 @@ explicitly open in `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 Focused verification across the three- and nine-topology menus, independent
 menu audit/core extraction, payment identities, spanning frontier,
 cancellation theorem, all-target-change frontier, repeat-rank no-go, and
-root-star leaf liquidation, and two-target root-path repair:
+root-star leaf liquidation, two-target root-path repair, and foreign-import
+cancellation:
 
 ```text
-13 passed in 25.63s
+14 passed in 26.18s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
