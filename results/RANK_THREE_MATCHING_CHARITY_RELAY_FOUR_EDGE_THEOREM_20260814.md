@@ -199,3 +199,12 @@ See `NONROOT_THREE_PLACEMENT_RELAY_COLLISION_ELIMINATION_20260814.md` and
 only live relay branch is disjoint universally safe source-parking Hall
 compression; neither the root singleton supplier-star nor the overclaimed
 complete `T_{L,times}^*` composition is needed.
+
+The surviving Hall relation is also sharply classified.  By
+`FOUR_OWNER_NONSELF_MINIMAL_HALL_DEFECT_CYCLE_LEMMA_20260814.md`, every
+internal inclusion-minimal defect contains a 2- or 3-cycle and is the
+generalized-PI exit after parking `p` outside that cycle.  Hence only two
+external-source shapes remain: two targets with one source, or three targets
+with two sources including one outside the target set.  The unresolved issue
+is now physical supplier compatibility/one-hole repair for those two stars,
+not an arbitrary rank-three response graph.

@@ -93,6 +93,14 @@ relay dependency is therefore only universally safe source-parking Hall
 compression.  See
 `NONROOT_THREE_PLACEMENT_RELAY_COLLISION_ELIMINATION_20260814.md`.
 
+The Hall side of that dependency has only two irreducible external-source
+shapes.  Every internally sourced minimal defect on four nonself current
+responses contains a directed 2- or 3-cycle, and parking `p` outside it makes
+the universally safe cores a release-compatible PI component.  See
+`FOUR_OWNER_NONSELF_MINIMAL_HALL_DEFECT_CYCLE_LEMMA_20260814.md`.  The live
+gate is now the signed packet/edge-budget repair of a `2 targets / 1 source`
+star or a `3 targets / 2 sources` fork.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

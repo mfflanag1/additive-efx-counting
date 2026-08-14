@@ -1864,3 +1864,10 @@ both encodings.
   four-edge bound.  Every hitting response is thereby eliminated by the
   narrow descent/anchor exit, leaving only disjoint universally safe
   source-parking Hall compression.
+- [`FOUR_OWNER_NONSELF_MINIMAL_HALL_DEFECT_CYCLE_LEMMA_20260814.md`](FOUR_OWNER_NONSELF_MINIMAL_HALL_DEFECT_CYCLE_LEMMA_20260814.md)
+  ([4,096-graph audit](four_owner_nonself_minimal_hall_defect_cycle_audit.json))
+  classifies every inclusion-minimal Hall defect with nonempty target
+  neighborhoods.  Closed defects contain an internally supplied 2- or
+  3-cycle and are PI exits after parking the singleton outside the cycle.
+  Only the external-source `2x1` star and `3x2` fork remain for signed
+  packet/edge-budget repair.
