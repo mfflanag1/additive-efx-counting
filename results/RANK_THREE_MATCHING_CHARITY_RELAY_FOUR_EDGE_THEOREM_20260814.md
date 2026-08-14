@@ -321,3 +321,10 @@ remaining cap-free theorem is therefore not arbitrary graph search: it is a
 three-cut path-partition lemma whose failure must activate closed PI or the
 full-owner base-margin separator.  The bounded result does not itself prove
 that lift or cover form 2.
+
+The cap-free algebra behind the form-0 path is also exact.  Its three reverse
+response cores strictly pay the three downstream owners, and only the root
+can be unpaid.  The failure inequality is a single root-capture separator;
+see `FORM0_FULL_OWNER_HAMILTONIAN_PATH_PAYMENT_LEMMA_20260814.md`.  This
+places form 0 directly at the existing full-owner signed-interface audit.
+The surviving form-2 R3 cycle remains the genuinely distinct branch.

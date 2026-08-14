@@ -82,6 +82,22 @@ bounded-atom theorem, not the cap-free lift.  It identifies the analytic
 target: prove that failure of every three-packet cut on this path forces a
 closed PI family or the full-owner separator.
 
+The cap-free payment identity behind that topology is now explicit.  The
+form-0 response chain supplies cores `C_q subseteq B_r`,
+`C_d subseteq B_q`, and `C_s subseteq B_d`.  Reversing them and sending the
+singleton to the root uses exactly the certified path and strictly pays
+`q,d,s`; the only payment failure is
+
+\[
+ v_r(C_q)>v_r(B_r)+v_r(p)-v_r(X_r).
+\]
+
+See `FORM0_FULL_OWNER_HAMILTONIAN_PATH_PAYMENT_LEMMA_20260814.md`.  Under the
+complete signed saturation interface, a paid candidate enters decorated
+full-owner continuation, while failure of every path redistribution is the
+component-wide base-margin separator.  Verifying that exact interface is
+still required before promoting form 0 as unconditionally closed.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

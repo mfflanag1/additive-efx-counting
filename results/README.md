@@ -1929,3 +1929,10 @@ both encodings.
   as `allocated_e_form0_hamiltonian_path_cegar.json.gz`.  This is a bounded
   theorem and a candidate cap-free path-partition selector, not the universal
   fixed-U result.
+- [`FORM0_FULL_OWNER_HAMILTONIAN_PATH_PAYMENT_LEMMA_20260814.md`](FORM0_FULL_OWNER_HAMILTONIAN_PATH_PAYMENT_LEMMA_20260814.md)
+  ([exact audit](form0_full_owner_hamiltonian_path_payment_audit.json))
+  gives the cap-free physical path construction.  The three reversed
+  response cores automatically pay `q,d,s`; only one explicit root-capture
+  inequality can prevent an all-owner-paid four-edge candidate.  Composition
+  with the saturated full-owner extraction theorem still requires the
+  complete signed-interface audit.
