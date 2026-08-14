@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `d2e8ce5`
-(`research: characterize two-target foreign-import cancellation`)
+**Latest pushed research checkpoint before this note update:** `36d9e1a`
+(`research: add root-compensated singleton return`)
 
 ## Frozen objective
 
@@ -306,6 +306,31 @@ Files:
 - `results/r3_two_target_foreign_import_edge_cancellation_audit.json`
 - `tracks/parkability/audit_r3_two_target_foreign_import_edge_cancellation.py`
 
+### 12. Root-compensated direct return
+
+A second selector omits the root's response transfer: return the singleton
+holder's desired core directly, give the singleton to the protected root, and
+leave the other target unchanged.  The singleton source is automatically
+strict.  The root remains strict exactly when
+
+```text
+v_x(D_z) < delta_x + v_x(p).
+```
+
+Failure is therefore the exact double-margin capture
+`v_x(D_z) >= delta_x + v_x(p)`, not an untyped payment hole.  The direct
+selector has an independent if-and-only-if four-edge criterion: 10 of 26
+nonempty three-cell signatures qualify.  Combined with the full root-path
+selector, it raises signed-support coverage from 69 to 102 of the 208
+five-cell signatures, rescuing 33 patterns that the first selector alone
+missed.
+
+Files:
+
+- `results/R3_SINGLETON_SOURCE_ROOT_COMPENSATED_DIRECT_RETURN_LEMMA_20260814.md`
+- `results/r3_singleton_source_root_compensated_direct_return_audit.json`
+- `tracks/parkability/audit_r3_singleton_source_root_compensated_direct_return.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -429,10 +454,10 @@ Focused verification across the three- and nine-topology menus, independent
 menu audit/core extraction, payment identities, spanning frontier,
 cancellation theorem, all-target-change frontier, repeat-rank no-go, and
 root-star leaf liquidation, two-target root-path repair, and foreign-import
-cancellation:
+cancellation and root-compensated direct return:
 
 ```text
-14 passed in 26.18s
+15 passed in 25.31s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
