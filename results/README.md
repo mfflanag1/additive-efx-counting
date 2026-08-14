@@ -1988,3 +1988,11 @@ both encodings.
   `v_r(S_i)+v_r(Q_i)+v_r(p)<v_r(X_r)`, where `Q_i` is the distinct anchor
   supplier's residual cell.  Decorated recurrence and the other signed rows
   remain open.
+- [`NORMALIZATION_BYPASS_THREE_RESERVOIR_FAN_CORRECTION_LEMMA_20260814.md`](NORMALIZATION_BYPASS_THREE_RESERVOIR_FAN_CORRECTION_LEMMA_20260814.md)
+  ([81-map audit](normalization_bypass_three_reservoir_fan_correction_audit.json))
+  corrects an unmerged claim from `34709c9`.  Four distinct sources do force
+  generalized PI by the closed disjoint-core theorem, but a cycle of current
+  suppliers is insufficient when its packets import base support from owners
+  outside that cycle.  The exact survivor is a duplicated/missing-source
+  Hall defect; a disjoint core for the missing source gives PI, while overlap
+  yields the still-open full-margin capture branch.

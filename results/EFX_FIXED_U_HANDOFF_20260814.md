@@ -727,6 +727,38 @@ Files:
 - `results/liquidated_root_response_full_source_swap_frontier_audit.json`
 - `tracks/parkability/audit_liquidated_root_response_full_source_swap_frontier.py`
 
+### 26. Unmerged all-unsafe reservoir-fan PI claim is corrected
+
+The unmerged collision branch at `34709c9` contains another implication that
+must not be imported as stated.  Four pairwise-disjoint safe desired cores
+with four distinct sources do force generalized PI: use the closed disjoint-
+core theorem on all four owners, for which base-owner closure is automatic.
+
+But when sources repeat, a cycle in the **current supplier** graph is not
+enough.  Generalized PI uses base ownership and released base packets.  An
+exact four-singleton response profile has the current cycle `0 <-> 1` while
+the two cycle packets are base-owned by `2,3`; sources `2,3` are missing, and
+no closed desired-core family exists.
+
+The exhaustive nonself source-map census is:
+
+```text
+image size 4:  9 maps   -> generalized PI
+image size 3: 48 maps   -> one missing and one duplicated source
+image size 2: 24 maps   -> multiplicity 2+2 or 3+1
+```
+
+Thus the corrected rank-three survivor is exactly a missing-source Hall
+defect.  Adding a disjoint core for the missing frozen source gives four-
+source PI; otherwise that source's complete response margin is captured by
+the fan union.  Reversing that capture within four edges is the live branch.
+
+Files:
+
+- `results/NORMALIZATION_BYPASS_THREE_RESERVOIR_FAN_CORRECTION_LEMMA_20260814.md`
+- `results/normalization_bypass_three_reservoir_fan_correction_audit.json`
+- `tracks/parkability/audit_normalization_bypass_three_reservoir_fan_correction.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -774,6 +806,11 @@ Do not treat the two-edge charity relay as unconditional.  Its reset-
 admission theorem exists at commit `34709c9`, outside this branch's ancestry,
 and explicitly requires a separate physical progress argument.  The direct
 three-placement route above does not depend on it.
+
+Likewise, do not import that commit's claim that every current-supplier cycle
+in the all-unsafe reservoir fan is generalized PI.  Section 26 gives an exact
+counterexample.  The correct continuation must handle the missing-source
+capture, not declare the repeated-source fan closed.
 
 The shortest live continuation on the permanent-anchor route is now:
 
@@ -880,6 +917,9 @@ External or genuinely independent review remains necessary for:
 5. an independent algebraic encoding of any future UNSAT core; and
 6. novelty and literature positioning after, not before, a cap-free lemma is
    obtained.
+
+It should additionally review the base-owner/current-supplier distinction in
+section 26 before relying on any theorem from the unmerged `34709c9` branch.
 
 Do not use the earlier EFX2 claim that commit `34709c9` closes every
 `T_{L,times}^*` collision.  Its nonroot normalization-bypass branch is
