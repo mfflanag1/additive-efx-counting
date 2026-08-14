@@ -20,6 +20,7 @@ def run() -> dict[str, object]:
     contract = ROOT / "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_CONTRACT_20260813.md"
     charge = ROOT / "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CONTRACT_20260813.md"
     audit = ROOT / "results/AUG14_COLLISION_CANDIDATE_TRANSITION_ADMISSIBILITY_AUDIT_20260814.md"
+    equality_admission = ROOT / "results/ROOT_EQUALITY_BASE_RESTORATION_PACKET_SPREAD_ADMISSION_THEOREM_20260814.md"
     candidates = {
         "base_donation": ROOT / "results/SUPPLIER_ALIGNED_BASE_DONATION_PACKET_SPREAD_THEOREM_20260814.md",
         "exterior_pooling": ROOT / "results/BASE_CONTAINED_RETIRED_PACKET_EXTERIOR_DONATION_SPLIT_THEOREM_20260814.md",
@@ -58,15 +59,16 @@ def run() -> dict[str, object]:
     assert all(conditional_boundaries_present.values())
 
     script = Path(__file__).resolve()
-    paths = [contract, charge, audit, *candidates.values(), script]
+    paths = [contract, charge, audit, equality_admission, *candidates.values(), script]
     return {
         "schema": "aug14-collision-candidate-transition-admissibility-audit-v1",
-        "status": "THREE_GLOBAL_CANDIDATES_CONDITIONAL_ADMISSION_GATE_OPEN",
+        "status": "GENERIC_CANDIDATES_CONDITIONAL_EQUALITY_FACE_ADMITTED",
         "governing_rules_present": governing_rules_present,
         "conditional_boundaries_present": conditional_boundaries_present,
         "admission_theorem_proved": False,
+        "equality_face_admission_theorem_proved": True,
         "full_T_L_times_theorem_closed": False,
-        "next_gate": "canonical_Z_minus_to_admitted_packet_spread_operation_or_countermodel",
+        "next_gate": "generic_candidate_admission_or_base_contained_multilabel_charge",
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path) for path in paths
         },

@@ -6,6 +6,14 @@
 cap-free, but the restoring donation has not been derived as an admissible
 transition from an arbitrary `T_{L,times}^*` state.
 
+**Equality-face update (2026-08-14).**  The transition-admissibility gate is
+now closed for the unique nondegenerate root-equality face by
+`ROOT_EQUALITY_BASE_RESTORATION_PACKET_SPREAD_ADMISSION_THEOREM_20260814.md`.
+That proof does not execute arbitrary full restoration: it reuses the already
+admitted equality return `S^-` and adds one strict clean release/donation.
+The general protected-root constructions below remain conditional outside
+that equality normal form.
+
 ## General protected-root packet-spread statement
 
 Let `K subseteq Y_r` be any named root-held retired packet and put
@@ -53,7 +61,8 @@ bundles are nonempty and base charity is the singleton `{f}`. Hence
 `U` is nonempty. If `|S^+|=1`, an off-packet `h` therefore exists; if
 `|S^+|>=2`, the on-packet argument applies. Thus the entire root equality
 base-restoration face satisfies the support-spread condition inside the exact
-`GG` contract. Closing it still requires the transition-admissibility gate.
+`GG` contract. The cited equality-spread admission theorem now closes that
+gate.
 
 ## Base-crossing input
 

@@ -102,10 +102,11 @@ def run() -> dict[str, object]:
 
     theorem = ROOT / "results/SUPPLIER_ALIGNED_BASE_DONATION_PACKET_SPREAD_THEOREM_20260814.md"
     dependency = ROOT / "results/NONDEGENERATE_ROOT_EQUALITY_BASE_RESTORATION_LEMMA_20260814.md"
+    equality_admission = ROOT / "results/ROOT_EQUALITY_BASE_RESTORATION_PACKET_SPREAD_ADMISSION_THEOREM_20260814.md"
     blocker = ROOT / "results/ROOT_DONATION_GLOBAL_BLOCKER_LEMMA_20260811.md"
     return {
         "schema": "supplier-aligned-base-donation-packet-spread-audit-v1",
-        "status": "SUPPORT_SPREAD_VERIFIED_TRANSITION_ADMISSION_OPEN",
+        "status": "SUPPORT_SPREAD_GENERAL_ADMISSION_OPEN_EQUALITY_FACE_ADMITTED",
         "multi_surplus_cases_checked": multi_cases,
         "multi_surplus_whole_target_hits": multi_whole_hits,
         "singleton_surplus_cases_checked": singleton_cases,
@@ -119,6 +120,7 @@ def run() -> dict[str, object]:
             "restoration_donation_transition_admission_then_root_price"
         ),
         "admissible_transition_proved": False,
+        "equality_face_transition_admitted": True,
         "claim_boundary": (
             "exact support census only; it proves no target contains the whole "
             "packet in the stated donation geometries, but does not prove that "
@@ -128,6 +130,7 @@ def run() -> dict[str, object]:
         "sources": {
             str(theorem.relative_to(ROOT)): sha256(theorem),
             str(dependency.relative_to(ROOT)): sha256(dependency),
+            str(equality_admission.relative_to(ROOT)): sha256(equality_admission),
             str(blocker.relative_to(ROOT)): sha256(blocker),
         },
     }

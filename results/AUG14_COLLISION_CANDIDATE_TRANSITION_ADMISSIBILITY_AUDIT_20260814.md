@@ -7,6 +7,13 @@ conditional geometries, but three of them do **not** presently establish an
 admissible transition of the frozen retired-support state graph. They cannot
 be used to claim closure or strict packet progress.
 
+**Equality-face update (2026-08-14).**  The base-donation row remains invalid
+as a generic full-restoration rewrite. Its unique nondegenerate root-equality
+specialization is now admitted by a different local construction: reuse the
+already admitted equality packet `S^-`, then leave one incoming packet good
+at the root or add one off-packet donation. See
+`ROOT_EQUALITY_BASE_RESTORATION_PACKET_SPREAD_ADMISSION_THEOREM_20260814.md`.
+
 ## Governing rule
 
 The frozen contracts impose two independent requirements:
@@ -25,7 +32,7 @@ reaches that allocation.
 
 | Candidate | Exact part that survives | Missing admission premise | Current use |
 |---|---|---|---|
-| base restoration plus one-good root donation | every target has proper/empty `K` intersection in the stated on/off-packet geometries | restoration can move retired goods away from recorded holders; no decomposition proves all releases, floors, and anchor labels | conditional support-spread lemma |
+| base restoration plus one-good root donation | every target has proper/empty `K` intersection in the stated on/off-packet geometries | generic restoration can move retired goods away from recorded holders; the unique admitted equality return now supplies a local decomposition only on the equality face | conditional in general; equality face closed |
 | exterior pooling `(X_r-g)+O`, singleton `{g}` | wall localization and atomwise exterior-dominance inequality are exact at that allocation | pooling all exterior goods into the root sacrifices three assignments and is not an established paid splice or sacrifice return | conditional scalar no-go cut |
 | singleton isolation plus arbitrary two-agent EFX complement | singleton target is universally safe and all test-allocation responses avoid `{g}` | no admitted operation implements the complement repartition with its supplier/floor handoff | conditional wall-localization lemma |
 | proper nonroot split inside the stated strict-root sacrifice interface | target locality puts `T` and `K-T` in different cells | valid only under the theorem's explicit strict-root, protected-target, and compression premises; it is not a generic state rewrite | retain as a typed conditional transition theorem |
