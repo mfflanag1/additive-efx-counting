@@ -1,0 +1,205 @@
+{
+  "branch_count": 6,
+  "branches": [
+    {
+      "connected_all_five_vertices": true,
+      "d_response_target": "r",
+      "degrees": {
+        "charity": 1,
+        "d": 1,
+        "q": 1,
+        "r": 3,
+        "s": 2
+      },
+      "edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "omitted_cycle_source": "r",
+      "spanning_tree": true
+    },
+    {
+      "connected_all_five_vertices": true,
+      "d_response_target": "r",
+      "degrees": {
+        "charity": 1,
+        "d": 1,
+        "q": 2,
+        "r": 3,
+        "s": 1
+      },
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "omitted_cycle_source": "q",
+      "spanning_tree": true
+    },
+    {
+      "connected_all_five_vertices": true,
+      "d_response_target": "r",
+      "degrees": {
+        "charity": 1,
+        "d": 1,
+        "q": 2,
+        "r": 2,
+        "s": 2
+      },
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "omitted_cycle_source": "s",
+      "spanning_tree": true
+    },
+    {
+      "connected_all_five_vertices": true,
+      "d_response_target": "q",
+      "degrees": {
+        "charity": 1,
+        "d": 1,
+        "q": 2,
+        "r": 2,
+        "s": 2
+      },
+      "edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "omitted_cycle_source": "r",
+      "spanning_tree": true
+    },
+    {
+      "connected_all_five_vertices": true,
+      "d_response_target": "q",
+      "degrees": {
+        "charity": 1,
+        "d": 1,
+        "q": 3,
+        "r": 2,
+        "s": 1
+      },
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "omitted_cycle_source": "q",
+      "spanning_tree": true
+    },
+    {
+      "connected_all_five_vertices": true,
+      "d_response_target": "q",
+      "degrees": {
+        "charity": 1,
+        "d": 1,
+        "q": 3,
+        "r": 1,
+        "s": 2
+      },
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "omitted_cycle_source": "s",
+      "spanning_tree": true
+    }
+  ],
+  "claim_boundary": "cap-free graph and minimum-response safety audit; signed base-margin admission and saturation composition are not proved",
+  "minimum_response_argument": {
+    "conclusion": "tail_k(C)<=u_k for every observer k",
+    "contradiction_step": "tail_k(C)>u_k implies some C-g is a smaller strictly desired subbundle for k",
+    "premise": "C has globally minimum cardinality among all subbundles strictly desired above an owner's probe utility"
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_form2_six_branch_full_owner_admission.py",
+    "script_sha256": "70d0912f5e763113a2d4c7991f720ea5655f17802dfc251b9804dd01b1c311d4",
+    "theorem": "results/FORM2_SIX_BRANCH_FULL_OWNER_ADMISSION_REDUCTION_20260814.md",
+    "theorem_sha256": "8258a009c6084ddd26d939492ad10f18375e87a93229ca42ef2536333abdc178"
+  },
+  "schema": "form2-six-branch-full-owner-admission-v1",
+  "status": "SIX_FOUR_EDGE_SPANNING_TREES"
+}
