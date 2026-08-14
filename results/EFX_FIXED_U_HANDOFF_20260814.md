@@ -971,6 +971,33 @@ missing-source response to obtain rank four, or extend saturated component
 extraction to this connected rank-deficient full-owner component using the
 signed base-margin ledger.  Owner connectivity itself is completely closed.
 
+## 32. Every image-three fan has one canonical Hamiltonian omission
+
+`IMAGE_THREE_UNIQUE_HAMILTONIAN_OMISSION_AND_HOLE_LEMMA_20260814.md`
+strengthens section 31.  Of the two targets feeding the duplicated source,
+exactly one can be omitted so that the remaining three response edges form
+an oriented spanning path
+
+```text
+missing source -> represented source -> represented source -> omitted target.
+```
+
+This holds in all 48 maps, with a unique omission in every case.  Reversing
+the three path cores and sending charity to the missing source pays all three
+represented sources.  The missing source is the unique possible payment
+hole because its first path-target core is removed.
+
+The complementary omission explains the previous tradeoff.  When the
+missing target supplies the duplicated source, omitting it preserves the
+missing owner's whole bundle and pays everyone, but leaves the short cycle
+and mixed-support edge problem.  The Hamiltonian omission removes the cycle
+but exposes the missing-owner deficit.
+
+Thus rank-three owner topology is now completely normalized.  The remaining
+local theorem is not path existence: it is repair of the sacrificed missing-
+owner hole using its captured mandatory response, while keeping the exact
+frozen-supplier pair count and observer budgets.
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1126,13 +1153,13 @@ duplicate-omission payment/support frontier, the combined chain reports:
 
 After correcting the physical-compression scope, the conditional census,
 independent edge-mask encoding, mixed-core counterexample, and conditional
-anchor-substitution frontier, three-color support obstruction, and full-owner
-connected-rank-defect census were
+anchor-substitution frontier, three-color support obstruction, full-owner
+connected-rank-defect census, and unique Hamiltonian-omission census were
 replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-11 passed in 0.55s
+12 passed in 0.59s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization
