@@ -1912,3 +1912,11 @@ both encodings.
   strict, or the moved response intersects the permanent anchor in enough
   root value to capture its entire strict base margin.  Conversion of that
   captured anchor packet remains the live universal gate.
+- [`R3_SINGLETON_COMPENSATED_ANCHOR_UNCROSSING_FRONTIER_20260814.md`](R3_SINGLETON_COMPENSATED_ANCHOR_UNCROSSING_FRONTIER_20260814.md)
+  ([exact audit](r3_singleton_compensated_anchor_uncrossing_audit.json))
+  retains a subpacket of the captured anchor at the root and uses the
+  singleton to compensate the response source.  It verifies 80 signed edge
+  cases and reduces failure to one inclusion-minimal bicriteria packet that
+  crosses the root deficit and covers the source response margin plus
+  charity.  A rational witness proves the separator is not contradictory
+  without the remaining signed saturation premises.

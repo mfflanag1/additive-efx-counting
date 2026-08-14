@@ -285,3 +285,23 @@ current-safe later-source response into the root whose physical anchor
 intersection covers the root's entire strict permanent-anchor margin.
 Converting that captured packet into a release-compatible PI/full-owner
 exchange or a strict replacement anchor remains unproved.
+
+The first uncrossing layer is now exact.  Retain a packet `H` from the
+captured anchor overlap, move the rest of the response, and give the charity
+singleton to the response source.  This preserves the four-edge bound.  It
+returns to the strict-root continuation whenever
+
+\[
+ v_r(H)>v_r(X_r)-v_r(A\setminus E_r),
+ \qquad
+ v_x(H)<v_x(E_r)-F_x+v_x(p).
+\]
+
+If no such packet exists, an inclusion-minimal root-feasible `H_*` satisfies
+a sharp bicriteria separator: deleting any one of its goods destroys the
+root threshold, while its source value covers the whole response margin plus
+the singleton.  See
+`R3_SINGLETON_COMPENSATED_ANCHOR_UNCROSSING_FRONTIER_20260814.md`.  The
+separator is scalar-feasible, so its elimination must use complete signed
+supplier/saturation data; the two valuation rows alone cannot finish the
+theorem.

@@ -48,6 +48,24 @@ This is the exact cap-free terminal in
 obligation is now conversion of that captured physical anchor packet; it is
 not another generic Hall or packet-size case.
 
+Singleton compensation gives the exact next interface.  Retaining a
+root-feasible subpacket `H` of the captured overlap and moving the remainder
+fits the same three owner pairs; charity can be assigned to the response
+source as the fourth edge.  Either this preserves both strict-root priority
+and source payment, or a minimal `H_*` obeys
+
+\[
+ v_r(H_*)>\rho,
+ \quad v_r(H_*-g)\le\rho\ (g\in H_*),
+ \quad v_x(H_*)\ge\mu_x+v_x(p).
+\]
+
+See `R3_SINGLETON_COMPENSATED_ANCHOR_UNCROSSING_FRONTIER_20260814.md`.
+An exact one-atom rational witness shows these scalar inequalities are
+jointly feasible.  The active proof obligation is therefore signed routing
+of this critical packet through the represented support/drainage component,
+not another scalar partition claim.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new
