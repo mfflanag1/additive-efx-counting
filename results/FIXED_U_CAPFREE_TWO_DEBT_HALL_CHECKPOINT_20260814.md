@@ -139,6 +139,41 @@ proper-`J`-split `{q,r}` cycles.  A 1,135-cut continuation is currently
 UNKNOWN, so this is structural evidence and a compressed target—not a
 physical UNSAT theorem.
 
+One of the three release allocations has a substantially stronger cap-free
+role.  The whole-`H`-to-`d` candidate
+
+\[
+(A,Q,H+L+W,(E-L)+P)
+\]
+
+is all-owner-paid under the endpoint-6 hard premises without using PI
+exclusion.  Its other targets `A`, `Q`, and `(E-L)+P=X_s` are physically
+common-safe.  Hence it is physical EFX or every failure extracts a single
+common-safe desired response inside `H+L+W`.  See
+`ALL_PAID_WHOLE_H_TO_D_DECORATED_RESPONSE_LEMMA_20260814.md`.  The universal
+gate is now exact repeated-response closure for that one changed target,
+rather than arbitrary physical expansion of all three endpoints.
+
+That endpoint-6 recurrence now has a conditional cap-free closure using the
+companion collision theorem.  Test the all-paid candidate `C_d` first and,
+if it fails, record the released nonempty root packet `H` at holder `d`.
+The second three-edge candidate `C_s` differs only by the relay `d->s:H`.
+Canonical cancellation of that later retired-packet transfer restores the
+already failed signed state `C_d` exactly, so a saturated failure is the
+normalization-bypass subtype `T_{L,times}^*`.  The relay is priority-valid:
+`r,q,s` are paid and, if `d` falls below base, `H` strictly captures its
+whole payment deficit.  See
+`SACRIFICED_H_RELAY_ADMISSION_LEMMA_20260814.md` and
+`ENDPOINT6_TWO_PROBE_H_RELAY_CLOSURE_THEOREM_20260814.md`.
+
+Subject to external semantic acceptance of the separately proved
+`T_{L,times}^*` collision closure, one of `C_d,C_s` is therefore a complete
+physical EFX allocation through three edges.  This closes the difficult R3
+endpoint-6 face, but not yet the full active theorem: the other exact
+rank-three response form R2 still has only a bounded twelve-atom PI
+exclusion.  Its arbitrary-packet alternating closure-or-transfer lemma
+remains the principal cap-free branch.
+
 The companion EFX-2 track has reduced the canonical whole-retired-packet
 current-response branch to five exact compensation paths and their path-Hall
 cut, with strict root overpayment closed and equality collapsed to a unique

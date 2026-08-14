@@ -1,0 +1,27 @@
+{
+  "c_d_all_owners_forced_paid": true,
+  "c_d_edge_count": 3,
+  "c_s_edge_count": 3,
+  "c_s_forced_paid_owners": [
+    "r",
+    "q",
+    "s"
+  ],
+  "c_s_only_possible_payment_hole": "d",
+  "canonical_cancellation_of_relay_equals": "C_d",
+  "claim_boundary": "Checks exact allocations, edges, payment rows, and relay identity. It does not independently certify the semantic admissibility of the sequential probe or reprove the imported collision theorem.",
+  "dependencies": {
+    "results/ENDPOINT6_TWO_PROBE_H_RELAY_CLOSURE_THEOREM_20260814.md": "5f74c44fe0dc0c0a8ee64c4fca9da1b286d380b087317265856d86b8d24690c0",
+    "results/allocated_e_form2_endpoint6_three_way_h_release_lift_audit.json": "5b0d9acb26691c33df8f0e9caf083fdc2016030a40340fb8be2060bf913f2b70",
+    "results/allocated_e_form2_endpoint6_three_way_h_release_payment_analysis.json": "0295bf356b840815249813ca0c53a1d3bd8377d06218c66ef6d19f07f2ec9178"
+  },
+  "imported_collision_theorem_commit": "34709c9ce22dbde23a5fa381a2ccea7898dfe1ca",
+  "relay_from_c_d_to_c_s": {
+    "edge": "d->s",
+    "packet": "H"
+  },
+  "retired_packet_nonempty": true,
+  "schema": "endpoint6-two-probe-h-relay-closure-audit-v1",
+  "source_sha256": "8792e96347afd42b198c8f38baba6b6f0551da8031628fcbe493919275e1bd52",
+  "status": "CONDITIONAL_COMPOSITION_AUDIT_PASSED"
+}
