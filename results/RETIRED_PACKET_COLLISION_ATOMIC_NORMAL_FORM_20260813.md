@@ -263,6 +263,18 @@ family represented by A and B:
    external-star ascent, which now routes back to 1--2 or strict rank/root
    progress rather than forming a separate terminal.
 
+The complete-pool threshold reversal sharpens 1--2.  If the complete
+downward-closed compatible compensation pool reaches the holder price, an
+inclusion-minimal crossing packet either pays safely or reverses into a
+genuine current-safe response.  Hence after response/rank routing the exact
+remaining scalar certificate is
+
+\[
+v_h(\mathcal R_h)<p_h
+\]
+
+for the complete compatible pool `mathcal R_h`.
+
 If one is false, the missing operation is respectively controlled
 unretirement/packet splitting or controlled anchor release with explicit
 observer debt; normalization no longer adds a separate missing operation.
@@ -298,6 +310,8 @@ Its fixed-priority routing is
 `SAFE_CENTER_THREE_OFFER_PRIORITY_SPLIT_REDUCTION_20260813.md`.
 The inherited star signs are reduced to ascent/rank/root price by
 `LEDGER_NORMALIZED_ROOT_EXTERNAL_STAR_ASCENT_OR_PRICE_THEOREM_20260813.md`.
+The final holder gate is sharpened by
+`COMPLETE_HOLDER_PRICE_POOL_REVERSAL_OR_UNDERPAYMENT_LEMMA_20260813.md`.
 
 The reduction is cap-free and performs no valuation-cell or residual-only
 search. It does not eliminate A--C, refute them under complete GG

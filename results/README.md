@@ -91,8 +91,8 @@ headlines:
 
 - [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md)
   ([exact checkpoint audit](retired_packet_charge_anchor_checkpoint_audit.json))
-  narrows the collision subtype `T_{L,times}^*` to two coupled-payment
-  separator families. Strict whole-packet capture is either reduced to a
+  narrows the collision subtype `T_{L,times}^*` to one holder-price
+  separator family. Strict whole-packet capture is either reduced to a
   proper retired subpacket or satisfies the atomwise charge
   `(|K|-1)mu<=d`; the root-facing loss band is exactly the bounded holder
   price `0<=pi_r(D)<=x-delta`; and the entire all-unsafe normalization fan
@@ -107,7 +107,8 @@ headlines:
   ledger-normalized root-ascent theorem sends the remaining external-star
   signs to strict finite root progress, rank/two-hole progress, or the same
   bounded root-holder price gate. The only independent separator family is
-  now holder price. The checkpoint does
+  now holder price; complete-pool threshold reversal further localizes it to
+  aggregate underpayment of the full compatible reservoir. The checkpoint does
   not close `T_{L,times}^*`, GG, or general EFX.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)

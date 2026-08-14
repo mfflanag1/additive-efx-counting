@@ -38,6 +38,8 @@ EXPECTED = {
         "STAR_ROUTES_TO_ROOT_PRICE_OR_EXISTING_EXTERNAL_STAR",
     "ledger_normalized_root_external_star_ascent_or_price_audit.json":
         "EXTERNAL_STAR_SIGNS_ROUTE_TO_ASCENT_RANK_OR_ROOT_PRICE",
+    "complete_holder_price_pool_reversal_or_underpayment_audit.json":
+        "HOLDER_GATE_REDUCED_TO_PAYMENT_RESPONSE_OR_AGGREGATE_UNDERPAYMENT",
 }
 
 
@@ -72,6 +74,7 @@ def run(repo: Path) -> dict:
         "all_unsafe_normalization_fan_closed": True,
         "strict_whole_packet_charge": "(|K|-1)*mu <= d",
         "root_holder_price": "0 <= pi_r(D) <= x-delta",
+        "final_aggregate_separator": "v_h(R_h) < p_h over complete compatible pool",
         "remaining_separator_families": [
             "holder_price_separator",
         ],

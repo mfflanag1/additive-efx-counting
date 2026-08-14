@@ -14,7 +14,7 @@
     },
     {
       "path": "results/root_facing_anchor_surplus_band_audit.json",
-      "sha256": "c6149f5a1911c85f57b93ccc3a487eabb5065c33c1b5f03cd7002555feb63868",
+      "sha256": "7a0470362f06eabf61ee02432ba0e8244d9e6cdb8e6b6b9b3f6a5c9c173cf16f",
       "status": "ROOT_FACING_SURVIVOR_REDUCED_TO_CLOSED_SURPLUS_BAND"
     },
     {
@@ -24,17 +24,17 @@
     },
     {
       "path": "results/normalization_bypass_reservoir_reversal_audit.json",
-      "sha256": "c1183fdb1b70254544045a834667d8f0835fa6c241ea6fba29ee2222b4231fce",
+      "sha256": "0b714bb4a15470a04632cd025c07c6da5f2122d9a9dfae6f13ab5d0c6febe0ce",
       "status": "BYPASS_REDUCED_TO_COLLISION_OR_SAFE_PAYMENT_WALL"
     },
     {
       "path": "results/normalization_bypass_three_reservoir_fan_audit.json",
-      "sha256": "a601c0e15447e5b2d2d971a0953162d26a219bf0223bca6179acb74e163e8e39",
+      "sha256": "6d8bb5cd191f12bb592d24a25fc6820a300da44ba8c0bb1507eedf5a0c916131",
       "status": "ALL_UNSAFE_FAN_ALWAYS_HAS_SUPPLIER_CLOSED_PI_CYCLE"
     },
     {
       "path": "results/retired_packet_collision_atomic_normal_form_audit.json",
-      "sha256": "1fb14f361b8ee429a7791412f68c87568818b388512c05b672999b245a6c9a37",
+      "sha256": "80c7e01e7111de1565bf1c46ddb28e8ead426b0a1471973606539799241bffbd",
       "status": "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS"
     },
     {
@@ -61,15 +61,21 @@
       "path": "results/ledger_normalized_root_external_star_ascent_or_price_audit.json",
       "sha256": "9fb692684eb675b802edee55734b395670e3de7e74e8e53cb58d6228eab2a704",
       "status": "EXTERNAL_STAR_SIGNS_ROUTE_TO_ASCENT_RANK_OR_ROOT_PRICE"
+    },
+    {
+      "path": "results/complete_holder_price_pool_reversal_or_underpayment_audit.json",
+      "sha256": "48eb3d71536109d5459bacb768b573b24f566e9b6285d76e2c0ca5b8c552f2d6",
+      "status": "HOLDER_GATE_REDUCED_TO_PAYMENT_RESPONSE_OR_AGGREGATE_UNDERPAYMENT"
     }
   ],
+  "final_aggregate_separator": "v_h(R_h) < p_h over complete compatible pool",
   "full_T_L_times_theorem_closed": false,
   "full_T_L_times_theorem_refuted": false,
   "provenance": {
     "checkpoint": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md",
-    "checkpoint_sha256": "a911c00b71394edcad40beeb36a7da5810f423f0e6a8143cce0899f52f1e781b",
+    "checkpoint_sha256": "ba9b0746603eb1c2104c0da0f3f47e8403b7268c9c175fc799150cc4df158048",
     "script": "tracks/parkability/audit_retired_packet_charge_anchor_checkpoint.py",
-    "script_sha256": "83fd034e08a2ea0ac3a864db91c40cfc48d57098d618098020b32e3ea4fc1ce7"
+    "script_sha256": "b37d53ce5320fdee51a8da1c1787fa3b6b64396ea705218d50c47e24969f8347"
   },
   "remaining_separator_families": [
     "holder_price_separator"

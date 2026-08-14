@@ -93,6 +93,8 @@ def run(repo: Path) -> dict:
         "safe_center_three_offer_priority_split_audit.json",
         "LEDGER_NORMALIZED_ROOT_EXTERNAL_STAR_ASCENT_OR_PRICE_THEOREM_20260813.md",
         "ledger_normalized_root_external_star_ascent_or_price_audit.json",
+        "COMPLETE_HOLDER_PRICE_POOL_REVERSAL_OR_UNDERPAYMENT_LEMMA_20260813.md",
+        "complete_holder_price_pool_reversal_or_underpayment_audit.json",
         "retired_packet_charge_anchor_gate_audit.json",
     ]
     script = Path(__file__).resolve()

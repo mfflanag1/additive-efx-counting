@@ -15,5 +15,8 @@ def test_retired_packet_charge_anchor_checkpoint_replays() -> None:
     assert result["remaining_separator_families"] == [
         "holder_price_separator",
     ]
+    assert result["final_aggregate_separator"] == (
+        "v_h(R_h) < p_h over complete compatible pool"
+    )
     assert not result["full_T_L_times_theorem_closed"]
     assert not result["full_T_L_times_theorem_refuted"]

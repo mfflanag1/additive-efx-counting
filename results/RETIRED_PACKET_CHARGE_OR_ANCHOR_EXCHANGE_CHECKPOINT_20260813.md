@@ -148,6 +148,19 @@ normalization recurrence. The remaining difficulty is genuinely cross-row:
 recipient capture and root surplus still do not force the holder-price
 inequality.
 
+The complete-pool threshold reversal removes failure of a particular return
+menu: when the compatible pool reaches the price, a minimal crossing packet
+either pays safely or exposes a genuine safe response.  The irreducible
+scalar survivor is therefore the aggregate certificate
+
+\[
+v_h(\mathcal R_h)<p_h
+\]
+
+over the complete downward-closed compatible pool.  A final proof must force
+anchor change/sacrifice from that certificate; a refutation must realize it
+inside the full globally maximal recurrent GG contract.
+
 ## Reproduction
 
 Run:
@@ -165,6 +178,7 @@ pytest -q \
   tracks/parkability/test_safe_center_three_offer_return_or_rejection.py \
   tracks/parkability/test_safe_center_three_offer_priority_split.py \
   tracks/parkability/test_ledger_normalized_root_external_star_ascent_or_price.py \
+  tracks/parkability/test_complete_holder_price_pool_reversal_or_underpayment.py \
   tracks/parkability/test_retired_packet_collision_atomic_normal_form.py \
   tracks/parkability/test_retired_packet_charge_anchor_checkpoint.py
 ```
