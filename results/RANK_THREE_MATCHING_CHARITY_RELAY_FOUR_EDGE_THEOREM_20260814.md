@@ -208,3 +208,12 @@ external-source shapes remain: two targets with one source, or three targets
 with two sources including one outside the target set.  The unresolved issue
 is now physical supplier compatibility/one-hole repair for those two stars,
 not an arbitrary rank-three response graph.
+
+For the `2x1` star, the signed edge budget is now exact; see
+`TWO_TARGET_EXTERNAL_SOURCE_FOUR_EDGE_SUPPORT_FRONTIER_20260814.md`.  The
+charity path stays within four original supplier pairs only when the chosen
+response redirects the target's incoming matching packet, with a narrowly
+specified return-to-supplier exception allowing retained support.  A generic
+mixed residual response necessarily creates a fifth edge.  Thus the next
+analytic decision is whether saturation forces one of those compatible
+cores, or instead forces the `3x2` fork/matching change.

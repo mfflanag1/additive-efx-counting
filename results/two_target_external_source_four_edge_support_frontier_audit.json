@@ -1,0 +1,87 @@
+{
+  "cases_checked": 10,
+  "claim_boundary": "supplier-pair feasibility only; response existence, observer EFX, 3x2 repair, fixed-U, GG, and EFX remain open",
+  "feasible_case_count": 4,
+  "no_incoming_packet_edge_count": 5,
+  "provenance": {
+    "script": "tracks/parkability/audit_two_target_external_source_four_edge_support_frontier.py",
+    "script_sha256": "f7e7f748dd2d4335ce2610e2e324cde703c2ea8e135e1adc69533084ee84a401",
+    "theorem": "results/TWO_TARGET_EXTERNAL_SOURCE_FOUR_EDGE_SUPPORT_FRONTIER_20260814.md",
+    "theorem_sha256": "bc165ec52eaf2d8372c2f1d257d22f4fb5888082bf00512792c7d89fedadd728"
+  },
+  "records": [
+    {
+      "final_edge_count": 5,
+      "incoming_state": "none",
+      "residual_used": true,
+      "source_is_incoming_supplier": false,
+      "within_four": false
+    },
+    {
+      "final_edge_count": 5,
+      "incoming_state": "partial",
+      "residual_used": false,
+      "source_is_incoming_supplier": false,
+      "within_four": false
+    },
+    {
+      "final_edge_count": 6,
+      "incoming_state": "partial",
+      "residual_used": true,
+      "source_is_incoming_supplier": false,
+      "within_four": false
+    },
+    {
+      "final_edge_count": 4,
+      "incoming_state": "whole",
+      "residual_used": false,
+      "source_is_incoming_supplier": false,
+      "within_four": true
+    },
+    {
+      "final_edge_count": 5,
+      "incoming_state": "whole",
+      "residual_used": true,
+      "source_is_incoming_supplier": false,
+      "within_four": false
+    },
+    {
+      "final_edge_count": 5,
+      "incoming_state": "none",
+      "residual_used": true,
+      "source_is_incoming_supplier": true,
+      "within_four": false
+    },
+    {
+      "final_edge_count": 4,
+      "incoming_state": "partial",
+      "residual_used": false,
+      "source_is_incoming_supplier": true,
+      "within_four": true
+    },
+    {
+      "final_edge_count": 5,
+      "incoming_state": "partial",
+      "residual_used": true,
+      "source_is_incoming_supplier": true,
+      "within_four": false
+    },
+    {
+      "final_edge_count": 3,
+      "incoming_state": "whole",
+      "residual_used": false,
+      "source_is_incoming_supplier": true,
+      "within_four": true
+    },
+    {
+      "final_edge_count": 4,
+      "incoming_state": "whole",
+      "residual_used": true,
+      "source_is_incoming_supplier": true,
+      "within_four": true
+    }
+  ],
+  "remaining_gate": "prove one target exposes an edge-compatible universally safe core, switch matching/fork, or construct a full-premise countermodel",
+  "schema": "two-target-external-source-four-edge-support-frontier-audit-v1",
+  "status": "EXACT_SUPPORT_FRONTIER_PROVED"
+}

@@ -101,6 +101,15 @@ the universally safe cores a release-compatible PI component.  See
 gate is now the signed packet/edge-budget repair of a `2 targets / 1 source`
 star or a `3 targets / 2 sources` fork.
 
+The `2x1` edge budget has an exact signed normal form.  A one-response
+charity path fits only by redirecting the target's incoming matching packet;
+retained target support may join only when that whole incoming packet returns
+to its original supplier and cancels the old edge.  Otherwise the path has
+at least five original supplier-recipient pairs.  See
+`TWO_TARGET_EXTERNAL_SOURCE_FOUR_EDGE_SUPPORT_FRONTIER_20260814.md`.  The
+universal gate is therefore existence of a compatible minimum core, or a
+forced switch to the `3x2` fork/another selected matching.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

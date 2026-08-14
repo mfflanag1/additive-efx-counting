@@ -1871,3 +1871,9 @@ both encodings.
   3-cycle and are PI exits after parking the singleton outside the cycle.
   Only the external-source `2x1` star and `3x2` fork remain for signed
   packet/edge-budget repair.
+- [`TWO_TARGET_EXTERNAL_SOURCE_FOUR_EDGE_SUPPORT_FRONTIER_20260814.md`](TWO_TARGET_EXTERNAL_SOURCE_FOUR_EDGE_SUPPORT_FRONTIER_20260814.md)
+  ([exact support audit](two_target_external_source_four_edge_support_frontier_audit.json))
+  gives the necessary-and-sufficient supplier-pair conditions for repairing
+  the `2x1` star by a charity path.  The response must redirect the incoming
+  matching packet, with one return-to-supplier exception; a generic mixed
+  residual core provably creates a fifth edge.
