@@ -14,22 +14,23 @@ price
 p_h>0.
 \]
 
-Let `R_h` be the union of the **complete physically releasable compensation
-pool** after supplier closure, excluding the packet being transferred and
-every good required by a retained protected core.  Every selected subpacket
-retains its full supplier labels.  The admissible compensation family is
-downward closed: deleting goods from a proposed return leaves them with their
-current holders or charity and cannot introduce a new supplier.  This lemma
-does not assume that `R_h` is safe or that its goods have one supplier.
+Let `mathfrak R_h` be the complete finite family of mutually compatible
+**maximal physically releasable compensation pools**, after supplier closure
+and after excluding the packet being transferred and every good required by
+a retained protected core. Every selected subpacket retains its full supplier
+labels. Each mode is downward closed: deleting goods from one admissible
+return leaves them with their current holders or charity and cannot introduce
+a new supplier. Different maximal modes are not silently unioned when their
+protected or supplier requirements are incompatible.
 
 ## Exact dichotomy
 
 ### 1. Aggregate underpayment
 
-If
+If every compatible mode satisfies
 
 \[
-v_h(R_h)<p_h,                                     \tag{1}
+\max_{R\in\mathfrak R_h}v_h(R)<p_h,              \tag{1}
 \]
 
 then no subpacket of the complete pool pays the holder, by positivity and
@@ -37,7 +38,8 @@ additivity.  Equation (1) is the exact aggregate holder-price separator.
 
 ### 2. Minimal price crossing
 
-Otherwise choose an inclusion-minimal packet `Q subseteq R_h` such that
+Otherwise choose a mode `R in mathfrak R_h` with `v_h(R)>=p_h`, and then an
+inclusion-minimal packet `Q subseteq R` such that
 
 \[
 v_h(Q)\ge p_h.                                    \tag{2}
@@ -52,7 +54,7 @@ globally minimum desired subset `A subseteq Q-g`.  It is current-safe and
 minimality of `Q` gives
 
 \[
-v_h(A)le v_h(Q-g)<p_h.                            \tag{3}
+v_h(A)\le v_h(Q-g)<p_h.                           \tag{3}
 \]
 
 Thus an unsafe price-crossing packet does not disappear as a failed payment:
@@ -64,8 +66,8 @@ repeat is processed by the target-envelope/external-star ascent chain.
 ## Consequence
 
 After the response/progress routes in branch 2 are exhausted, the sole
-scalar holder-price survivor is (1): even the complete compatible pool is
-worth less than the holder's price.  This is stronger than failure of a
+scalar holder-price survivor is (1): every complete compatible release mode
+is worth less than the holder's price. This is stronger than failure of a
 fixed packet menu or one residual component.  It is also compatible with
 independent additive valuation rows, so recipient capture alone cannot
 contradict it.

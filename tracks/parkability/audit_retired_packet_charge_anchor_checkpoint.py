@@ -27,7 +27,7 @@ EXPECTED = {
     "normalization_bypass_three_reservoir_fan_audit.json":
         "ALL_UNSAFE_FAN_ALWAYS_HAS_SUPPLIER_CLOSED_PI_CYCLE",
     "retired_packet_collision_atomic_normal_form_audit.json":
-        "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS",
+        "T_L_TIMES_REDUCED_TO_INDIVISIBLE_OR_ROOT_DOUBLE_ATOMIC_CUT",
     "target_envelope_universal_payment_or_pi_audit.json":
         "ONE_TARGET_HAS_UNIVERSAL_EXTERNAL_PAYER_OR_SUPPLIED_PI",
     "target_envelope_protected_pair_or_star_audit.json":
@@ -40,6 +40,14 @@ EXPECTED = {
         "EXTERNAL_STAR_SIGNS_ROUTE_TO_ASCENT_RANK_OR_ROOT_PRICE",
     "complete_holder_price_pool_reversal_or_underpayment_audit.json":
         "HOLDER_GATE_REDUCED_TO_PAYMENT_RESPONSE_OR_AGGREGATE_UNDERPAYMENT",
+    "retired_packet_birow_split_or_cut_audit.json":
+        "PROPER_PACKET_REDUCTION_OR_EXACT_BIROW_CUT",
+    "priority_sacrifice_proper_retired_packet_split_audit.json":
+        "SACRIFICE_SPLIT_ROUTES_TO_PROGRESS_OR_PROTECTED_CUT",
+    "retired_packet_birow_cut_scalar_realizability_audit.json":
+        "BIROW_CUT_CAPFREE_SCALAR_REALIZABILITY",
+    "minimal_safe_root_anchor_or_atomwise_core_audit.json":
+        "ROOT_RESELECTS_PROPER_SAFE_CORE_OR_IS_ATOMWISE_BASE_CRITICAL",
 }
 
 
@@ -66,22 +74,28 @@ def run(repo: Path) -> dict:
     assert fan["supplier_cycle_assignments"] == 324
 
     theorem = results / "RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md"
+    completion = results / "RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_COMPLETION_AUDIT_20260813.md"
     script = Path(__file__).resolve()
     return {
         "schema": "retired-packet-charge-anchor-checkpoint-audit-v1",
-        "status": "T_L_TIMES_NARROWED_TO_ONE_HOLDER_PRICE_SEPARATOR_FAMILY",
+        "status": "T_L_TIMES_NARROWED_TO_INDIVISIBLE_OR_ROOT_DOUBLE_ATOMIC_CUT",
         "dependencies": dependencies,
         "all_unsafe_normalization_fan_closed": True,
         "strict_whole_packet_charge": "(|K|-1)*mu <= d",
+        "strict_sacrifice_indivisibility_charge": "(|K|-1)*mu < d",
         "root_holder_price": "0 <= pi_r(D) <= x-delta",
-        "final_aggregate_separator": "v_h(R_h) < p_h over complete compatible pool",
+        "birow_cut_scalar_realizable_inside_root_band": True,
+        "final_aggregate_separator": (
+            "v_s(T)>=d implies v_h(T)>sigma+M_h(T) for every T subset K"
+        ),
         "remaining_separator_families": [
-            "holder_price_separator",
+            "recipient_indivisible_whole_packet",
+            "root_double_atomic_birow_cut",
         ],
         "full_T_L_times_theorem_closed": False,
         "full_T_L_times_theorem_refuted": False,
         "claim_boundary": (
-            "verified cap-free reduction checkpoint; the holder-price/anchor "
+            "verified cap-free reduction checkpoint; the indivisible/cut-to-anchor "
             "gate and complete GG closure remain open"
         ),
         "provenance": {
@@ -89,6 +103,8 @@ def run(repo: Path) -> dict:
             "script_sha256": sha256(script),
             "checkpoint": str(theorem.relative_to(repo)),
             "checkpoint_sha256": sha256(theorem),
+            "completion_audit": str(completion.relative_to(repo)),
+            "completion_audit_sha256": sha256(completion),
         },
     }
 

@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-13
 
-**Status:** theorem not yet proved or refuted; cap-free reduction to one
-explicit holder-price separator family
+**Status:** theorem not yet proved or refuted; cap-free reduction to a
+recipient-indivisible packet or protected/root-holder bi-row cut
 
 ## Headline boundary
 
@@ -12,11 +12,14 @@ identity does not by itself pay the current holder.  Direct compensation,
 priority-valid sacrifice, protected matching/compression, root reselection,
 proper-packet reduction, and normalization reversal now reduce the goal to:
 
-1. a **holder-price separator**, appearing either as an atomwise-critical
-   whole retired packet or as its bounded root-facing specialization; or
-2. normalization branches that now return, through protected target
+1. a **recipient-indivisible whole packet** when the current holder is a
+   later sacrifice-eligible owner;
+2. a **root double-atomic bi-row cut**, whose packet lies in the bounded
+   root-surplus loss band and whose safe root support is inclusion-minimal
+   above the base; or
+3. normalization branches that now return, through protected target
    envelopes and ledger-normalized external-star ascent, to that same
-   holder-price family or strict rank/root progress.
+   protected cut or strict rank/root progress.
 
 This is not a proof of `T_{L,times}^*`, GG, four-agent EFX, or general EFX,
 and it is not a complete-contract counterexample.
@@ -40,6 +43,12 @@ p_h(K)=\max\{0,v_h(K)-\sigma_h\}.
 Exact positive rational cross-row models satisfy recipient capture while
 every named return packet underpays the holder.  These refute only the
 capture-implies-payment proof route; they do not refute the GG theorem.
+
+The stronger cap-free parametric family realizes the final bi-row cut for
+every packet size, in strict and equality cases, even while every feasible
+packet lies strictly inside the root loss band. Thus neither packet
+cardinality nor the root-surplus scalar dichotomy can close the final gate
+without a structural anchor/external-observer operation.
 
 ### Strict whole-packet charge
 
@@ -125,16 +134,16 @@ release, retired collision, or the bounded root-holder price band.
 
 | Branch | Exact status |
 |---|---|
-| Strict capture | Proper packet reduction or atomwise-critical holder-price separator; `(|K|-1)mu<=d` |
-| Equality critical | No strict packet-size charge; separately valid sacrifice/root handoff still required |
+| Strict capture | A sacrifice-eligible proper split routes to progress or the protected gate; a nonroot recurrence is recipient-indivisible with `(|K|-1)mu<d`; a root holder may retain the exact double-atomic bi-row cut |
+| Equality critical | Every proper packet is recipient-infeasible; whole-packet cut requires a separately valid sacrifice/root handoff |
 | Base-floor debt | Protected matching/compression routes apply; a mixed observer-payment separator may remain |
 | Release failure | Supplier closure is mandatory; supplied cycle is PI, outside supplier grows the component, overlapping-core holder wall remains |
 
 ## Smallest remaining theorem
 
-The next load-bearing statement is now the **complete holder-price-or-anchor
-lemma**. Starting from either atomwise whole-packet capture or the bounded
-root-facing price band,
+The next load-bearing statement is now the **indivisible-packet/protected-
+cut-to-anchor lemma**. Starting from either atomwise whole-packet capture or
+the bounded root-facing price band,
 it must prove one of:
 
 1. a physically admissible packet paying the losing holder/observer;
@@ -149,17 +158,39 @@ recipient capture and root surplus still do not force the holder-price
 inequality.
 
 The complete-pool threshold reversal removes failure of a particular return
-menu: when the compatible pool reaches the price, a minimal crossing packet
-either pays safely or exposes a genuine safe response.  The irreducible
-scalar survivor is therefore the aggregate certificate
+menu: when a compatible mode reaches the price, a minimal crossing packet
+either pays safely or exposes a genuine safe response. The full-packet
+survivor therefore satisfies
 
 \[
-v_h(\mathcal R_h)<p_h
+\max_{R\in\mathfrak R_h}v_h(R)<p_h
 \]
 
-over the complete downward-closed compatible pool.  A final proof must force
-anchor change/sacrifice from that certificate; a refutation must realize it
-inside the full globally maximal recurrent GG contract.
+over the complete family of downward-closed compatible release modes. The
+bi-row split test sharpens this further. Any proper `T` paying both the
+recipient and holder floors physically separates `T` from `K-T`, so a later
+single-target response can hit only a proper collision support. A protected
+holder can therefore survive only with the exact certificate
+
+\[
+v_s(T)\ge d\Longrightarrow v_h(T)>\sigma+M_h(T)
+\qquad(T\subseteq K).
+\]
+
+For a later sacrifice-eligible holder, its auxiliary floor need not be paid:
+any proper recipient-feasible split already routes to proper collision
+support, PI/rank progress, or the protected/root gate. Hence the exact final
+alternatives are (i) a recipient-indivisible whole packet in the nonroot
+branch and (ii) the displayed bi-row cut for a protected/root holder. Root
+support minimization further shows that the latter root core is atomwise
+base-critical: every root good is worth at least its surplus and
+`(|A_r|-1)delta<=x`. A final
+proof must convert these into anchor change or contradiction; a refutation
+must realize them inside the full globally maximal recurrent GG contract.
+
+The cut itself has a cap-free positive-additive scalar realization for every
+packet size, in strict and equality cases. This rules out a purely row-local
+or cardinality-potential proof but is not a GG counterexample.
 
 ## Reproduction
 
@@ -179,6 +210,10 @@ pytest -q \
   tracks/parkability/test_safe_center_three_offer_priority_split.py \
   tracks/parkability/test_ledger_normalized_root_external_star_ascent_or_price.py \
   tracks/parkability/test_complete_holder_price_pool_reversal_or_underpayment.py \
+  tracks/parkability/test_retired_packet_birow_split_or_cut.py \
+  tracks/parkability/test_priority_sacrifice_proper_retired_packet_split.py \
+  tracks/parkability/test_retired_packet_birow_cut_scalar_realizability.py \
+  tracks/parkability/test_minimal_safe_root_anchor_or_atomwise_core.py \
   tracks/parkability/test_retired_packet_collision_atomic_normal_form.py \
   tracks/parkability/test_retired_packet_charge_anchor_checkpoint.py
 ```

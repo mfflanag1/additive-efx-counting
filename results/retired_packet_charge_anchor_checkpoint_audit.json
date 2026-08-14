@@ -1,6 +1,7 @@
 {
   "all_unsafe_normalization_fan_closed": true,
-  "claim_boundary": "verified cap-free reduction checkpoint; the holder-price/anchor gate and complete GG closure remain open",
+  "birow_cut_scalar_realizable_inside_root_band": true,
+  "claim_boundary": "verified cap-free reduction checkpoint; the indivisible/cut-to-anchor gate and complete GG closure remain open",
   "dependencies": [
     {
       "path": "results/retired_packet_charge_anchor_gate_audit.json",
@@ -34,8 +35,8 @@
     },
     {
       "path": "results/retired_packet_collision_atomic_normal_form_audit.json",
-      "sha256": "80c7e01e7111de1565bf1c46ddb28e8ead426b0a1471973606539799241bffbd",
-      "status": "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS"
+      "sha256": "62fc64adcd270a67aecd0c7975abc67f9d2fddbc7d73a2ab82e8e53870232a2f",
+      "status": "T_L_TIMES_REDUCED_TO_INDIVISIBLE_OR_ROOT_DOUBLE_ATOMIC_CUT"
     },
     {
       "path": "results/target_envelope_universal_payment_or_pi_audit.json",
@@ -64,24 +65,48 @@
     },
     {
       "path": "results/complete_holder_price_pool_reversal_or_underpayment_audit.json",
-      "sha256": "48eb3d71536109d5459bacb768b573b24f566e9b6285d76e2c0ca5b8c552f2d6",
+      "sha256": "2ecd7a511e7038604f703e08a57cd74f13593fe37c0b04742dd431372964379a",
       "status": "HOLDER_GATE_REDUCED_TO_PAYMENT_RESPONSE_OR_AGGREGATE_UNDERPAYMENT"
+    },
+    {
+      "path": "results/retired_packet_birow_split_or_cut_audit.json",
+      "sha256": "779d3ec82d09363e8d32a54aff78c3f12adc89a9fb2c14af4f3a3c1b0d709a29",
+      "status": "PROPER_PACKET_REDUCTION_OR_EXACT_BIROW_CUT"
+    },
+    {
+      "path": "results/priority_sacrifice_proper_retired_packet_split_audit.json",
+      "sha256": "7055b2a6301ba06635a2562a8dc4845e7e3ded8ac0588d5e912ddb34195b786a",
+      "status": "SACRIFICE_SPLIT_ROUTES_TO_PROGRESS_OR_PROTECTED_CUT"
+    },
+    {
+      "path": "results/retired_packet_birow_cut_scalar_realizability_audit.json",
+      "sha256": "eb11abc5e0baa6b045d832499ff22bfce95c9b6aff5803e4b4907c48c9d21fd9",
+      "status": "BIROW_CUT_CAPFREE_SCALAR_REALIZABILITY"
+    },
+    {
+      "path": "results/minimal_safe_root_anchor_or_atomwise_core_audit.json",
+      "sha256": "d45457687ed9d4cba3ac602a9b868d00e857f58380822117fa00caaf250f9fea",
+      "status": "ROOT_RESELECTS_PROPER_SAFE_CORE_OR_IS_ATOMWISE_BASE_CRITICAL"
     }
   ],
-  "final_aggregate_separator": "v_h(R_h) < p_h over complete compatible pool",
+  "final_aggregate_separator": "v_s(T)>=d implies v_h(T)>sigma+M_h(T) for every T subset K",
   "full_T_L_times_theorem_closed": false,
   "full_T_L_times_theorem_refuted": false,
   "provenance": {
     "checkpoint": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md",
-    "checkpoint_sha256": "ba9b0746603eb1c2104c0da0f3f47e8403b7268c9c175fc799150cc4df158048",
+    "checkpoint_sha256": "1004625d3d26b6f15e2d50347e61b327ee00edca1ef3612f92dc5fdacbb36f51",
+    "completion_audit": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_COMPLETION_AUDIT_20260813.md",
+    "completion_audit_sha256": "4905d1461102513e99811f0cf6ba7d404cd8148d2ee4e9d11c75356456a4ecfb",
     "script": "tracks/parkability/audit_retired_packet_charge_anchor_checkpoint.py",
-    "script_sha256": "b37d53ce5320fdee51a8da1c1787fa3b6b64396ea705218d50c47e24969f8347"
+    "script_sha256": "fbe554ea4c77113999b821c650f6ba8727d51a5abfdb3c3a9ec54e1b78a29e52"
   },
   "remaining_separator_families": [
-    "holder_price_separator"
+    "recipient_indivisible_whole_packet",
+    "root_double_atomic_birow_cut"
   ],
   "root_holder_price": "0 <= pi_r(D) <= x-delta",
   "schema": "retired-packet-charge-anchor-checkpoint-audit-v1",
-  "status": "T_L_TIMES_NARROWED_TO_ONE_HOLDER_PRICE_SEPARATOR_FAMILY",
+  "status": "T_L_TIMES_NARROWED_TO_INDIVISIBLE_OR_ROOT_DOUBLE_ATOMIC_CUT",
+  "strict_sacrifice_indivisibility_charge": "(|K|-1)*mu < d",
   "strict_whole_packet_charge": "(|K|-1)*mu <= d"
 }

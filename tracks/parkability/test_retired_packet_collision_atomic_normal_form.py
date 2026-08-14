@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_retired_packet_collision_atomic_normal_form_replays() -> None:
     result = run(ROOT)
-    assert result["status"] == "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS"
+    assert result["status"] == "T_L_TIMES_REDUCED_TO_INDIVISIBLE_OR_ROOT_DOUBLE_ATOMIC_CUT"
     assert result["recipient_capture_identity"]
     assert result["holder_payment_identity"]
     assert result["response_intersection_trichotomy"]

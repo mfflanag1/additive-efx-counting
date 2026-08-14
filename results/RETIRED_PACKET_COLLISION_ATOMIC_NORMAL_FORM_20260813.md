@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-13
 
-**Status:** cap-free reduction of `T_{L,times}^*` to one holder-price
-separator family; the payment/anchor gate remains open
+**Status:** cap-free reduction of `T_{L,times}^*` to a root double-atomic
+bi-row cut or a recipient-indivisible whole packet; cut-to-anchor remains open
 
 ## Input and branch order
 
@@ -267,18 +267,74 @@ The complete-pool threshold reversal sharpens 1--2.  If the complete
 downward-closed compatible compensation pool reaches the holder price, an
 inclusion-minimal crossing packet either pays safely or reverses into a
 genuine current-safe response.  Hence after response/rank routing the exact
-remaining scalar certificate is
+full-packet scalar certificate is
 
 \[
-v_h(\mathcal R_h)<p_h
+\max_{R\in\mathfrak R_h}v_h(R)<p_h
 \]
 
-for the complete compatible pool `mathcal R_h`.
+over the complete family of mutually compatible release modes
+`mathfrak R_h`.
 
-If one is false, the missing operation is respectively controlled
-unretirement/packet splitting or controlled anchor release with explicit
-observer debt; normalization no longer adds a separate missing operation.
-A counterexample must still
+For a root/protected holder, the bi-row split-or-cut lemma tests every
+nonempty subpacket `T subseteq K`. If
+
+\[
+v_s(T)\ge d,
+\qquad
+v_h(T)\le \sigma+M_h(T),                         \tag{5}
+\]
+
+the recipient and holder floors are both paid. Under full-packet
+underpayment, `T` is proper. The tested allocation places `T` and `K-T` in
+different targets, so every subsequently extracted single-target response
+meets only a proper subset of `K`; success, comparison failure, and supplier
+routing therefore all give packet/rank progress or PI. Consequently the
+protected-holder separator is the exact bi-row cut
+
+\[
+v_s(T)\ge d
+\quad\Longrightarrow\quad
+v_h(T)>\sigma+M_h(T)
+\qquad(T\subseteq K).                            \tag{6}
+\]
+
+The priority-sacrifice split theorem sharpens the nonroot case. If `h` is a
+later sacrifice-eligible owner, its auxiliary floor is not an endpoint
+requirement. Any proper recipient-feasible `T` may therefore be tested
+without holder compensation. Target locality again makes every retired
+response proper, while a ledger-free wall routes to progress or the already
+isolated root/protected gate. Thus a nonroot recurrent survivor has no proper
+recipient-feasible packet.
+
+For strict capture this separates recipient indivisibility from protected
+holder cost. If no proper packet even pays the recipient, then
+`(|K|-1)mu<d`, so `mu>=d` forces a singleton. In equality capture every
+proper packet is recipient-infeasible, and the whole packet is blocked by
+the same cut; controlled anchor release or a priority-valid sacrifice is
+therefore essential.
+
+The final alternatives are therefore:
+
+1. a recipient-indivisible whole packet in the sacrifice-eligible branch;
+   or
+2. the protected/root-holder bi-row cut (6).
+
+The minimal-safe-root-anchor lemma sharpens item 2. Choose an
+inclusion-minimal subcore of the current safe root target whose root value is
+strictly above the base. If it is proper, it gives a valid finite
+root-preserving anchor/support reduction. At recurrence, the whole root core
+must therefore be inclusion-minimal above the base: every root good is worth
+at least the root surplus `delta`, and
+`(|A_r|-1)delta<=x`. Hence item 2 is in fact a **root double-atomic bi-row
+cut**: root support cannot shrink, while every recipient-feasible retired
+subpacket costs more than root slack plus its compatible release mode.
+
+Eliminating them requires controlled anchor release/reselection or a global
+maximality argument coupling the independent recipient and holder rows. The
+bi-row cut is analytically realizable over arbitrary positive packet rows,
+so packet arithmetic alone cannot close it. Normalization no longer adds a
+separate missing operation. A counterexample must still
 satisfy global GG maximality; the existing local payment witnesses do not.
 
 ## Dependencies and claim boundary
@@ -312,7 +368,16 @@ The inherited star signs are reduced to ascent/rank/root price by
 `LEDGER_NORMALIZED_ROOT_EXTERNAL_STAR_ASCENT_OR_PRICE_THEOREM_20260813.md`.
 The final holder gate is sharpened by
 `COMPLETE_HOLDER_PRICE_POOL_REVERSAL_OR_UNDERPAYMENT_LEMMA_20260813.md`.
+Its proper-subpacket reduction and exact final cut are in
+`RETIRED_PACKET_BIROW_SPLIT_OR_CUT_LEMMA_20260813.md`.
+The priority-valid nonroot routing is
+`PRIORITY_SACRIFICE_PROPER_RETIRED_PACKET_SPLIT_THEOREM_20260813.md`, and the
+row-local no-go is
+`RETIRED_PACKET_BIROW_CUT_SCALAR_REALIZABILITY_20260813.md`.
+The root-support minimization is
+`MINIMAL_SAFE_ROOT_ANCHOR_OR_ATOMWISE_CORE_LEMMA_20260813.md`.
 
 The reduction is cap-free and performs no valuation-cell or residual-only
-search. It does not eliminate A--C, refute them under complete GG
-maximality, close `T_{L,times}^*`, close GG, or prove four-agent/general EFX.
+search. It does not eliminate recipient indivisibility or the root
+double-atomic bi-row cut under complete GG maximality,
+close `T_{L,times}^*`, close GG, or prove four-agent/general EFX.

@@ -53,7 +53,7 @@ def run(repo: Path) -> dict:
         "price_crossing_selector_nonempty": selector_nonempty,
         "safe_crossing_packet_pays_holder": holder_paid,
         "unsafe_reversal_below_holder_price": unsafe_reversal_below_price,
-        "remaining_separator": "v_h(R_h) < p_h over complete compatible pool",
+        "remaining_separator": "max_{R in compatible modes} v_h(R) < p_h",
         "full_T_L_times_theorem_closed": False,
         "claim_boundary": (
             "cap-free complete-pool threshold reversal; aggregate underpayment "
@@ -89,4 +89,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

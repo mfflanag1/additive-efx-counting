@@ -90,9 +90,10 @@ headlines:
   `T_L^*` parked/collision components, GG closure, and general EFX remain open.
 
 - [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md)
-  ([exact checkpoint audit](retired_packet_charge_anchor_checkpoint_audit.json))
-  narrows the collision subtype `T_{L,times}^*` to one holder-price
-  separator family. Strict whole-packet capture is either reduced to a
+  ([exact checkpoint audit](retired_packet_charge_anchor_checkpoint_audit.json),
+  [completion audit](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_COMPLETION_AUDIT_20260813.md))
+  narrows the collision subtype `T_{L,times}^*` to a recipient-indivisible
+  whole packet or a root double-atomic bi-row cut. Strict whole-packet capture is either reduced to a
   proper retired subpacket or satisfies the atomwise charge
   `(|K|-1)mu<=d`; the root-facing loss band is exactly the bounded holder
   price `0<=pi_r(D)<=x-delta`; and the entire all-unsafe normalization fan
@@ -106,10 +107,23 @@ headlines:
   star normal form. Unsafe retention returns to collision routing. A new
   ledger-normalized root-ascent theorem sends the remaining external-star
   signs to strict finite root progress, rank/two-hole progress, or the same
-  bounded root-holder price gate. The only independent separator family is
-  now holder price; complete-pool threshold reversal further localizes it to
-  aggregate underpayment of the full compatible reservoir. The checkpoint does
-  not close `T_{L,times}^*`, GG, or general EFX.
+  bounded root-holder price gate. Complete-mode threshold reversal first
+  localizes the full-packet wall to aggregate underpayment. The bi-row split
+  theorem then shows that any proper subpacket paying both recipient and
+  holder floors physically separates the retired packet, so every later
+  single-target response has proper collision support. The sole survivor is
+  therefore the exact cut
+  `v_s(T)>=d => v_h(T)>sigma+M_h(T)` for every `T subseteq K` when the holder
+  is protected. If the holder is later and sacrifice-eligible, no payment is
+  needed for a proper recipient-feasible split; target locality routes it to
+  proper collision support, PI/rank progress, or the protected/root gate.
+  Thus the nonroot survivor is recipient-indivisible. A cap-free parametric
+  family shows the protected bi-row cut is scalar-consistent, even inside
+  the root loss band. A minimal-safe-anchor reduction additionally makes the
+  surviving root support inclusion-minimal above base, with every root good
+  worth at least the root surplus. Global anchor structure is therefore
+  essential. The checkpoint does not eliminate these
+  two subcases, close `T_{L,times}^*`, GG, or general EFX.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))

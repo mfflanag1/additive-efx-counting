@@ -95,12 +95,20 @@ def run(repo: Path) -> dict:
         "ledger_normalized_root_external_star_ascent_or_price_audit.json",
         "COMPLETE_HOLDER_PRICE_POOL_REVERSAL_OR_UNDERPAYMENT_LEMMA_20260813.md",
         "complete_holder_price_pool_reversal_or_underpayment_audit.json",
+        "RETIRED_PACKET_BIROW_SPLIT_OR_CUT_LEMMA_20260813.md",
+        "retired_packet_birow_split_or_cut_audit.json",
+        "PRIORITY_SACRIFICE_PROPER_RETIRED_PACKET_SPLIT_THEOREM_20260813.md",
+        "priority_sacrifice_proper_retired_packet_split_audit.json",
+        "RETIRED_PACKET_BIROW_CUT_SCALAR_REALIZABILITY_20260813.md",
+        "retired_packet_birow_cut_scalar_realizability_audit.json",
+        "MINIMAL_SAFE_ROOT_ANCHOR_OR_ATOMWISE_CORE_LEMMA_20260813.md",
+        "minimal_safe_root_anchor_or_atomwise_core_audit.json",
         "retired_packet_charge_anchor_gate_audit.json",
     ]
     script = Path(__file__).resolve()
     return {
         "schema": "retired-packet-collision-atomic-normal-form-audit-v1",
-        "status": "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS",
+        "status": "T_L_TIMES_REDUCED_TO_INDIVISIBLE_OR_ROOT_DOUBLE_ATOMIC_CUT",
         "recipient_capture_identity": gate["capture_identity"],
         "holder_payment_identity": gate["holder_payment_identity"],
         "response_intersection_trichotomy": intersection_trichotomy,
@@ -112,9 +120,8 @@ def run(repo: Path) -> dict:
         ],
         "full_T_L_times_theorem_closed": False,
         "smallest_missing_operations": [
-            "controlled unretirement or proper packet split",
-            "reverse root-surplus band or release anchor within it",
-            "complete physical holder-price or anchor exchange",
+            "controlled anchor release for a recipient-indivisible packet",
+            "root conversion across the double-atomic bi-row cut",
         ],
         "dependencies": [
             {"path": f"results/{name}", "sha256": sha256(results / name)}
@@ -122,7 +129,7 @@ def run(repo: Path) -> dict:
         ],
         "claim_boundary": (
             "cap-free conventional reduction using existing lemma premises; "
-            "the three atomic survivors and the full theorem remain open"
+            "recipient indivisibility, the root double-atomic cut, and the full theorem remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(repo)),
