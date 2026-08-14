@@ -1,9 +1,18 @@
-# Form-2 six-branch full-owner admission reduction
+# Form-2 six-branch full-owner admission frontier
 
 **Date:** 2026-08-14
 
-**Status:** cap-free spanning-component and minimum-response reduction; the
-signed base-margin interface to the full-owner theorem remains to be audited
+**Status:** cap-free current-support spanning-tree and minimum-response
+reduction; net base-signed cancellation and the full-owner interface remain
+open
+
+**Correction:** the physical spanning-tree statement below is relative to
+the fixed current support state `Y`.  It does not by itself prove that the net
+signed transfer graph relative to the older GG base `X` is connected: an
+edge of the `Y`-relative tree can cancel against an earlier `X->Y` transfer.
+The original version of this note incorrectly called current-support
+connectivity immediate full-owner admission.  The corrected boundary is the
+explicit cancellation dichotomy below.
 
 ## Six physical branches
 
@@ -52,11 +61,17 @@ post-transfer utility vector.  It is a genuine decorated response, not only
 an unsafe blocker bundle.
 
 Because the physical transfer support of the branch is already the spanning
-tree (1), adjoining the source, target, core, release, and observer labels of
-`C` cannot leave an owner outside the decorated component.  Every paid
-non-EFX branch therefore enters the **full-owner** decorated-response layer
-immediately.  The external-Hall recruitment theorem is unnecessary on this
-route.
+tree (1), every current physical supplier label is present in one
+`Y`-relative component.  Adjoining the source, target, core, release, and
+observer labels of `C` therefore creates a current-support-spanning decorated
+response.
+
+This does **not** yet imply a full-owner GG decorated component.  The latter
+is computed after composing the old `X->Y` signed record with the branch and
+cancelling packets returned to their base holders.  Such cancellation can
+remove one or more edges of (1).  The external-Hall/full-owner theorem may be
+invoked only after this net base-signed connectivity is proved or the
+cancellation is converted into a separate saturated exit.
 
 ## Combined dichotomy
 
@@ -64,8 +79,8 @@ Together with `FORM2_SIX_BRANCH_PAYMENT_COMPRESSION_LEMMA_20260814.md`, every
 disjoint-core form-2 state satisfies one of the following:
 
 1. one of the six branches is complete EFX through exactly four edges;
-2. a paid branch produces a current-common-safe full-owner decorated
-   response on a four-edge spanning tree; or
+2. a paid branch produces a current-common-safe decorated response whose
+   `Y`-relative supplier graph is a four-edge spanning tree; or
 3. all six branches fail owner payment, which is equivalent to
 
 \[
@@ -79,31 +94,36 @@ v_s(Q)&>\Delta_s+v_s(p).
 Shared-target failure remains the previously certified double-margin capture
 alternative.
 
-## Exact remaining admission gate
+## Exact remaining admission gates
 
 The frozen saturation ledger excludes a new response label, support growth,
 release-compatible PI, and strict same-record progress.  To invoke
 `UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md` on
-outcome 2, one statement-integrity implication still has to be checked:
+outcome 2, two statement-integrity implications still have to be checked:
 
-> If the minimum response at the paid spanning-tree probe repeats an old
-> source/core/target/release label, then the probe's signed owner margins and
-> complete connected physical pool satisfy the exact component-wide
-> base-margin separator and direct-safety hypotheses of the full-owner
-> theorem at the same fixed record.
+1. **Cancellation dichotomy.**  Compose the `X->Y` signed record with the
+   four branch edges.  Either the net base-signed decorated component still
+   contains all four owners, or every canceled branch edge returns a complete
+   old packet in a way that forces support retirement, strict record
+   progress, or a release-compatible PI component.
+2. **Terminal admission.**  If the minimum response at the probe repeats an
+   old source/core/target/release label in the connected branch, then its
+   signed owner margins and net connected pool satisfy the exact
+   component-wide base-margin separator and direct-safety hypotheses of the
+   full-owner theorem at the same fixed record.
 
-Graph connectivity, owner coverage, core safety, and the four-edge budget no
-longer contribute uncertainty.  The unresolved issue is solely this signed
-cross-state admission implication, plus elimination of (3) and the
-double-margin overlap branch.
+Current-support connectivity, core safety, and the four-edge budget no longer
+contribute uncertainty.  Net base-signed connectivity is still load-bearing,
+along with terminal admission, elimination of (3), and the double-margin
+overlap branch.
 
 ## Claim boundary
 
-Proved: all six graphs are four-edge spanning trees; global minimum response
-extraction is common-safe at the probe utilities; every paid non-EFX branch
-therefore has a full-owner decorated component; and the exact three-outcome
-reduction above is cap-free.
+Proved: all six `Y`-relative graphs are four-edge spanning trees; global
+minimum response extraction is common-safe at the probe utilities; and the
+exact three-outcome reduction above is cap-free at the current-support level.
 
-Not proved: the signed base-margin admission implication, contradiction of
+Not proved: preservation of connectivity after composition/cancellation
+against `X`, the signed base-margin admission implication, contradiction of
 the supplier-capture system (3), closure of double-margin overlap, the full
 fixed-`U` theorem, or general EFX.

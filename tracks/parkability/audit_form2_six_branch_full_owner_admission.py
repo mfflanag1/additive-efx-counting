@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Independent graph audit of form-2 six-branch full-owner admission."""
+"""Independent current-support graph audit of the form-2 six branches."""
 
 from __future__ import annotations
 
@@ -100,8 +100,9 @@ def run(root: Path):
             "theorem_sha256": hashlib.sha256(theorem.read_bytes()).hexdigest(),
         },
         "claim_boundary": (
-            "cap-free graph and minimum-response safety audit; signed "
-            "base-margin admission and saturation composition are not proved"
+            "cap-free Y-relative graph and minimum-response safety audit; "
+            "connectivity after cancellation against the GG base X, signed "
+            "base-margin admission, and saturation composition are not proved"
         ),
     }
 
