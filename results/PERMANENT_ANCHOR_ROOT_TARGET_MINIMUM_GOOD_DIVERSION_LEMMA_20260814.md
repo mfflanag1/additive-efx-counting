@@ -5,6 +5,13 @@
 **Status:** cap-free reduction of aggregate root-target capture to a
 single-good critical envelope or an explicit three-edge probe
 
+**Strengthened later on 2026-08-14:**
+`PERMANENT_ANCHOR_ROOT_TARGET_BILATERAL_COMPENSATOR_FRONTIER_LEMMA_20260814.md`
+pays the singleton to the root, allows arbitrary bilateral packets, gives an
+if-and-only-if four-edge criterion, and reduces universal failure to a
+two-row/direct-safety separator.  The lemma below remains correct but is no
+longer the sharp frontier.
+
 ## Root-target response
 
 Use the permanent-anchor partial allocation
