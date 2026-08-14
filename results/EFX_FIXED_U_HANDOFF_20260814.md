@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `6c5bf00`
-(`research: refute repeat-to-rank-four shortcut`)
+**Latest pushed research checkpoint before this note update:** `d0ca08d`
+(`research: liquidate root-star different-source leaf`)
 
 ## Frozen objective
 
@@ -227,6 +227,32 @@ Files:
 - `results/form2_all_target_change_exact_repeat_rank_no_go_audit.json`
 - `tracks/parkability/audit_form2_all_target_change_exact_repeat_rank_no_go.py`
 
+### 9. Root-star different-source leaf liquidation
+
+The first different represented source after root-source double absorption
+now has a direct four-edge continuation.  If `y` responds into the other
+nonempty residual target `R_z`, positivity permits moving the whole `R_z` to
+`y` and parking the singleton at `z`.  Relative to the saturated support,
+the only supplier pairs are
+
+```text
+y -> root, z -> root, z -> y, charity -> z.
+```
+
+The root retains its permanent strict anchor and `y` strictly improves.  If
+the allocation is not EFX, the singleton target cannot be responsible for a
+failure.  A response involving `d` recruits all four owners; every other
+survivor is confined to just two represented targets.  Thus the former
+arbitrary different-source continuation has been reduced to a two-target
+represented residual.  The lemma explicitly assumes both depleted residuals
+are nonempty; exhaustion is the separate strict support-consumption exit.
+
+Files:
+
+- `results/R3_ROOT_STAR_DIFFERENT_SOURCE_LEAF_LIQUIDATION_LEMMA_20260814.md`
+- `results/r3_root_star_different_source_leaf_liquidation_audit.json`
+- `tracks/parkability/audit_r3_root_star_different_source_leaf_liquidation.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -282,6 +308,13 @@ The immediate theorem target is therefore:
 Do not attempt to discharge this statement by deriving rank four from exact
 repetition alone; the witness in section 8 rules out that shortcut in the
 applicable owner-only response geometry.
+
+For the root-source represented-star branch, apply section 9 before returning
+to generic repeat analysis.  Its remaining local target is the signed
+two-target residual: either return the singleton holder's existing supplier
+cell without adding an edge, or prove that every indispensable foreign-support
+import activates PI, support refinement, or full-owner admission.  The two
+later-source stars still terminate at the anchor critical-packet separator.
 
 This should be attacked using the complete signed support-drainage and
 response-saturation record.  Scalar inequalities alone cannot close it: the
@@ -341,10 +374,11 @@ explicitly open in `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 
 Focused verification across the three- and nine-topology menus, independent
 menu audit/core extraction, payment identities, spanning frontier,
-cancellation theorem, all-target-change frontier, and repeat-rank no-go:
+cancellation theorem, all-target-change frontier, repeat-rank no-go, and
+root-star leaf liquidation:
 
 ```text
-11 passed in 26.94s
+12 passed in 25.35s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
