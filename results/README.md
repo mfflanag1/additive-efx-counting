@@ -2079,3 +2079,11 @@ both encodings.
   response or a strict merger in the represented-response quotient.  At
   saturation, maximal quotient components are therefore mutually safe.
   Internal response rank and the signed base-margin/release interface remain.
+- [`FORM2_LINEAR_ALLOCATION_CEGAR_CHECKPOINT_20260814.md`](FORM2_LINEAR_ALLOCATION_CEGAR_CHECKPOINT_20260814.md)
+  ([33-model census](exact_response_form2_linear_cegar_checkpoint_analysis.json))
+  replaces nested-minimum complete-EFX cuts by equivalent direct deletion
+  inequalities and freezes a reproducible two-stage form-2 run.  All 33
+  adversarial models had a complete EFX allocation within four support edges;
+  141 selected topologies show that this is evidence, not a universal menu.
+  The recurring signal is the already known shortest charity path and its
+  root endpoint/shared-target capture gate.

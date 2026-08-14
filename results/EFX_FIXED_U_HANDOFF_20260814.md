@@ -1133,6 +1133,35 @@ Authoritative files:
 - `tracks/parkability/audit_closed_base_block_cross_response_merger.py`
 - `tracks/parkability/test_closed_base_block_cross_response_merger.py`
 
+## 37. Form-2 ITE-free decision checkpoint
+
+A new exact driver replaces every nested least-good EFX expression by the
+equivalent direct family `v_i(Z_i) >= v_i(Z_j-g)` for every target good.
+The equivalence is independently replayed for bundle sizes one through
+twelve.
+
+The reproducible form-2 run stopped at declared iteration limits after 33
+exact rational adversarial models and 264 topology-diverse cuts. Every model
+had a complete EFX allocation using at most four frozen-support edges. The
+minimum edge histogram is `7/19/7` for two/three/four edges. The selected
+witnesses span 141 topologies, so no small fixed-topology selector is
+supported.
+
+Across all models, three response cores are invariant whole targets:
+`r->q=Q`, `d->q=Q`, and `q->s=E`. The most frequent witness is the already
+known path `charity->r->s->q->d`. This points back to the cap-free endpoint
+capture/shared-target packet gate; another bounded iteration extension is
+not the next step.
+
+Authoritative files:
+
+- `results/FORM2_LINEAR_ALLOCATION_CEGAR_CHECKPOINT_20260814.md`
+- `results/exact_response_form2_linear_allocation_cegar_fresh_v2_20260814.json`
+- `results/exact_response_form2_linear_allocation_cegar_stage2_v2_20260814.json`
+- `results/exact_response_form2_linear_cegar_checkpoint_analysis.json`
+- `tracks/parkability/run_exact_response_linear_allocation_cegar.py`
+- `tracks/parkability/analyze_exact_response_linear_cegar_checkpoint.py`
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1296,7 +1325,7 @@ replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-16 passed in 0.88s
+18 passed in 1.08s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization
