@@ -1,5 +1,25 @@
 # Fixed-U rank-three four-edge premise ledger
 
+## External-Hall decision nonvacuity correction (2026-08-14)
+
+The exact `2x1`/`3x2` signed menus have been composed into 53 form-R2 and 60
+form-R3 at-most-four-edge topology families.  They cannot be decided on the
+legacy twelve-atom master under full PI-freeness: in both forms the premise
+cell is already UNSAT before any EFX endpoint is negated, due to the forced
+generalized self-edge `s -- {l}|{p} --> s`.  The repaired allocated-`E` cells
+also leave no live full-PI profile (form R3 at the master layer and form R2
+after the independently replayed 14,249-family exclusion).  See
+`EXTERNAL_HALL_FINITE_DECISION_NONVACUITY_GATE_20260814.md`.
+
+Accordingly, another patched twelve-atom selector decision cannot discharge
+the live universal gate.  The active cap-free obligation is the alternating
+external-Hall closure-or-cancellation lemma: follow the base suppliers of
+every overflowing mixed core until the walk produces a new signed label,
+closes generalized PI, or exhausts/returns enough old matching support to
+enter one of the exact edge-cancelling star/fork signatures.  Observer safety
+and preservation of the first-priority root margin are the load-bearing
+inequalities.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

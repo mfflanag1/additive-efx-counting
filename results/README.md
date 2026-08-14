@@ -57,6 +57,17 @@ as an internally verified hybrid theorem rather than a peer-reviewed theorem.
 The general problem remains open. Current exact status and proof gates are
 in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 
+The August 14 external-Hall nonvacuity audit
+[`EXTERNAL_HALL_FINITE_DECISION_NONVACUITY_GATE_20260814.md`](EXTERNAL_HALL_FINITE_DECISION_NONVACUITY_GATE_20260814.md)
+composes the surviving `2x1` star and `3x2` fork into exact at-most-four-edge
+menus (53 form-R2 and 60 form-R3 topologies), but proves that the legacy
+full-PI twelve-atom master is already inconsistent before those endpoints
+are tested.  The driver now fails closed rather than reporting a vacuous
+selector theorem.  Since the allocated-support repair is likewise excluded
+before the Hall menu becomes decisive, the live target is cap-free
+alternating supplier-walk closure or edge cancellation, not another patched
+finite selector run.
+
 The August 14 endpoint-6 release checkpoint
 [`ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md`](ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md)
 is the current sharp fixed-`U` frontier.  In the exact twelve-atom form-2
