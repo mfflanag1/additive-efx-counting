@@ -869,7 +869,7 @@ in the all-unsafe reservoir fan is generalized PI.  Section 26 gives an exact
 counterexample.  The correct continuation must handle the missing-source
 capture, not declare the repeated-source fan closed.
 
-After sections 27--28 the corrected reservoir-fan target is:
+After sections 27--29 the corrected reservoir-fan target is:
 
 > In the 24 foreign-duplicate-supplier maps, reverse the common-overlap or
 > two-packet residual capture while cancelling enough original supplier
@@ -877,6 +877,32 @@ After sections 27--28 the corrected reservoir-fan target is:
 > selected fan cores satisfy the original-supplier support condition or use
 > a supplier completion/cancellation before invoking the all-owner-paid
 > observer continuation.
+
+## 29. Exact liquidated-root whole-cell physical frontier
+
+The final bounded topology census is recorded in
+`LIQUIDATED_ROOT_THREE_SOURCE_PHYSICAL_COMPRESSION_FRONTIER_LEMMA_20260814.md`
+and its byte-replayed JSON audit.  For each fixed anchor supplier, all 48
+nonself image-three source maps were minimized over the allowed duplicate
+omission and all four destinations of the complete root residual `Y_r`.
+
+Exactly 42 maps use at most four original supplier-to-destination pairs.  The
+minimum distribution is 14 maps at three edges, 28 at four, and six at five.
+The six survivors are precisely the root-missing, missing-supplies-duplicate
+maps.  Their whole-cell construction has three nonroot source moves, the
+anchor-supplier return to the root, and charity to the root.  Rerouting `Y_r`
+cannot cancel one of those five pairs.
+
+This strengthens section 28 in the liquidated-root cell basis: the 18
+nonroot-missing duplicate-omission maps are now unconditionally all-owner
+paid within four original pairs.  All 24 foreign-duplicate maps also fit the
+four-pair topology, but still need the paid-hole trimming/double-capture
+continuation.  The six root-missing maps are paid but need a packet split,
+cycle, PI argument, or another cancellation to fall from five pairs to four.
+
+This is not a proof over arbitrary packet graphs and it does not establish
+observer EFX.  It is the sharp endpoint of the whole-cell route and the best
+place to resume.
 
 The shortest live continuation on the permanent-anchor route is now:
 
@@ -1029,6 +1055,13 @@ duplicate-omission payment/support frontier, the combined chain reports:
 
 ```text
 11 passed in 0.55s
+```
+
+The final exact physical-compression census was replayed together with its
+six immediate liquidation/fan dependencies.  The focused chain reports:
+
+```text
+7 passed in 0.35s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization

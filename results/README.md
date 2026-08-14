@@ -2009,3 +2009,10 @@ both encodings.
   core supplied by the missing owner.  The construction uses three current-
   holder moves plus charity; it satisfies the objective's four-edge metric
   only when those cores induce at most three original-supplier/source pairs.
+- [`LIQUIDATED_ROOT_THREE_SOURCE_PHYSICAL_COMPRESSION_FRONTIER_LEMMA_20260814.md`](LIQUIDATED_ROOT_THREE_SOURCE_PHYSICAL_COMPRESSION_FRONTIER_LEMMA_20260814.md)
+  ([exact census](liquidated_root_three_source_physical_compression_audit.json))
+  resolves that original-supplier condition in the liquidated-root whole-cell
+  basis for 42 of 48 image-three source maps.  The only five-edge survivors
+  are six root-missing maps where the missing target supplies the duplicated
+  source.  This is minimal only inside the declared whole-cell normal form;
+  arbitrary packet splitting, observer safety, and fixed-`U` termination remain.
