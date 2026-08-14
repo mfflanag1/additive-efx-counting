@@ -1,0 +1,58 @@
+{
+  "census": {
+    "assignment_count": 625,
+    "base_final_pair_count": 390625,
+    "disconnected_pair_count": 342625,
+    "proper_cut_checks": 11718750
+  },
+  "checks": [
+    "no net edge crosses K iff base/final membership agrees goodwise",
+    "goodwise membership agreement iff aggregate physical unions agree",
+    "every net connected component preserves its exact base-good union",
+    "connected Y-tree can have disconnected X-net graph with no whole return"
+  ],
+  "claim_boundary": "finite exhaustive audit of the cap-free set identity and exact counterexample; response rank, outsider safety, PI, and EFX are not inferred",
+  "good_count": 4,
+  "owner_plus_charity_count": 5,
+  "provenance": {
+    "script": "tracks/parkability/audit_branch_tree_base_cancellation_closed_union.py",
+    "script_sha256": "18f75b93d85366ef8bd4ccadf394e071930d3a10e974a331a47e486980b97fbb",
+    "theorem": "results/BRANCH_TREE_BASE_CANCELLATION_OR_CLOSED_UNION_LEMMA_20260814.md",
+    "theorem_sha256": "f8f3bba8bdcf1d165794fb2b0ab40c6917ca59fe14fe63cf441d325f735568fa"
+  },
+  "schema": "branch-tree-base-cancellation-closed-union-v1",
+  "status": "CLOSED_UNION_EQUIVALENCE_EXHAUSTED",
+  "whole_return_shortcut_counterexample": {
+    "base": [
+      "s",
+      "q",
+      "r",
+      "charity"
+    ],
+    "current": [
+      "charity",
+      "r",
+      "s",
+      "q"
+    ],
+    "current_component_count": 1,
+    "final": [
+      "r",
+      "s",
+      "q",
+      "d"
+    ],
+    "net_base_components": [
+      [
+        "charity",
+        "d"
+      ],
+      [
+        "q",
+        "r",
+        "s"
+      ]
+    ],
+    "whole_return_packet_count": 0
+  }
+}
