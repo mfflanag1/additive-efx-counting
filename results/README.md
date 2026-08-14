@@ -1904,3 +1904,11 @@ both encodings.
   completes the signed-support census for the `3x2` fork.  Exactly 156
   patterns—78 in each exact response form—meet the four-edge cancellation
   inequality; 564 overflow before valuation constraints are considered.
+- [`R3_LATER_SOURCE_ROOT_PRESERVING_STAR_FRONTIER_LEMMA_20260814.md`](R3_LATER_SOURCE_ROOT_PRESERVING_STAR_FRONTIER_LEMMA_20260814.md)
+  ([20-case signed audit](r3_later_source_root_preserving_star_audit.json))
+  completes only the nonroot incoming packet in each later-source residual
+  R3 star.  This keeps the physical operation within three owner pairs plus
+  charity and proves an exact dichotomy: either the protected root remains
+  strict, or the moved response intersects the permanent anchor in enough
+  root value to capture its entire strict base margin.  Conversion of that
+  captured anchor packet remains the live universal gate.

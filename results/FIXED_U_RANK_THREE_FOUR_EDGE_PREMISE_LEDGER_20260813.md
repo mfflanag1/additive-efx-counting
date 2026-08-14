@@ -33,6 +33,21 @@ their residual union without adding an edge; see
 gate is conversion of the first different old represented response source
 into physical PI or the exact full-owner base-margin terminal.
 
+For the two later-source stars, retaining the unused part of the root's
+incoming matching packet improves this boundary.  Completing only the
+nonroot incoming packet leaves at most three owner pairs plus charity.  The
+root stays strict unless the moved root response captures its entire
+permanent-anchor margin:
+
+\[
+ v_r(E_r\cap A)\ge v_r(A)-v_r(X_r)>0.
+\]
+
+This is the exact cap-free terminal in
+`R3_LATER_SOURCE_ROOT_PRESERVING_STAR_FRONTIER_LEMMA_20260814.md`.  The live
+obligation is now conversion of that captured physical anchor packet; it is
+not another generic Hall or packet-size case.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

@@ -254,3 +254,34 @@ progress; a response involving `d` is full-owner recruitment.  What remains
 to prove is that an already recorded response wholly inside the represented
 component closes physical generalized PI or carries the exact signed
 base-margin data needed by the full-owner theorem.
+
+## Root-preserving represented-star update
+
+The two represented stars whose common source is later than the protected
+root admit a sharper physical operation.  Complete the incoming packet at
+the nonroot star target, but move only the chosen response core at the root.
+The unused part of the root's incoming packet remains at the root.  One old
+cycle edge is therefore preserved and the other is cancelled; exact signed
+enumeration leaves at most three owner-transfer pairs, so charity is the
+fourth edge.
+
+Let `A` be the permanent root anchor and `E_r` the chosen response core in
+the root target.  The operation is priority-valid whenever
+
+\[
+                  v_r(A\setminus E_r)>v_r(X_r).
+\]
+
+If this inequality fails, additivity forces the exact alternative
+
+\[
+ v_r(E_r\cap A)\ge v_r(A)-v_r(X_r)>0.
+\]
+
+See `R3_LATER_SOURCE_ROOT_PRESERVING_STAR_FRONTIER_LEMMA_20260814.md`.
+Consequently the different-source represented branch is no longer an
+untyped PI/base-margin alternative.  Its sole scalar terminal is a
+current-safe later-source response into the root whose physical anchor
+intersection covers the root's entire strict permanent-anchor margin.
+Converting that captured packet into a release-compatible PI/full-owner
+exchange or a strict replacement anchor remains unproved.
