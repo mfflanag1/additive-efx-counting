@@ -2,9 +2,9 @@
   "claim_boundary": "cap-free frontier; current-only d payment, observer safety, and double-capture reversal remain open",
   "provenance": {
     "script": "tracks/parkability/audit_form2_root_star_disjoint_or_double_capture.py",
-    "script_sha256": "39c3b8e04da68b50137552921721c9d97ae02259df6910a9831455ef7d945669",
+    "script_sha256": "c066f4c81bc2efd2891ab98556408cb6564547c21ecf61b39402c367a269cd43",
     "theorem": "results/FORM2_ROOT_STAR_DISJOINT_OR_DOUBLE_CAPTURE_FRONTIER_20260814.md",
-    "theorem_sha256": "a4ac6e365960685314fb806c0009bad60b1d6c71cbcf6ff7d7bfa1ee34fe972f"
+    "theorem_sha256": "2faee48b06e3324daaafeaadb40edff53104432421696e8e7ae995ff6a27a449"
   },
   "scalar_checks": {
     "d_payment_identity": "unsat",
@@ -13,18 +13,30 @@
   },
   "schema": "form2-root-star-disjoint-double-capture-v1",
   "status": "DISJOINT_ROOT_STAR_OR_DOUBLE_MARGIN_CAPTURE",
-  "support_edges": [
-    [
-      "charity",
-      "r"
+  "support_edges": {
+    "disjoint_star": [
+      [
+        "charity",
+        "r"
+      ],
+      [
+        "r",
+        "d"
+      ],
+      [
+        "r",
+        "s"
+      ]
     ],
-    [
-      "r",
-      "d"
-    ],
-    [
-      "r",
-      "s"
+    "priority_assignment": [
+      [
+        "charity",
+        "r"
+      ],
+      [
+        "r",
+        "d"
+      ]
     ]
-  ]
+  }
 }

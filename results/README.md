@@ -1941,4 +1941,7 @@ both encodings.
   proves the cap-free first topology of the form-2 menu: disjoint root
   responses reverse on three edges, with only `r,d` payment holes; failure of
   both uncrossings forces one physical overlap packet to capture both strict
-  response margins.  Reversal of that double capture remains open.
+  response margins.  A stronger payment-first assignment sends only the
+  current-only `d` core and charity, using two edges and leaving the same
+  `r,d` holes.  Reversal of the double capture/observer continuation remains
+  open.

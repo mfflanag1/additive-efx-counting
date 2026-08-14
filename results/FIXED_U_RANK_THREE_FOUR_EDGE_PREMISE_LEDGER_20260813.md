@@ -109,6 +109,13 @@ form-2 obligation is therefore simultaneous reversal of that double-margin
 packet or repair of the exact `{r,d}` payment pair through the other menu
 topologies.
 
+For payment alone, overlap is not an obstruction at all: because `q,s` are
+already represented and base-paid, send the entire `d->r` core to `d`, leave
+the `s` core at the root, and give `p` to the root.  This uses only two edges
+and has exactly the same `{r,d}` payment pair.  The double-capture statement
+is needed only for the response/observer continuation, not for physical
+conservation.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

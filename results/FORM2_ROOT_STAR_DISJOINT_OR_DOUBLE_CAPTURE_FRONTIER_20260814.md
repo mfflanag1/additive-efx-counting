@@ -54,6 +54,38 @@ assumption.
 
 ## Root-star allocation and exact holes
 
+There is a stronger payment-first construction that does not require
+disjointness.  Since represented owners `q,s` are already base-paid, send the
+entire current-only `d` response to `d`, leave `q,s` unchanged, and give the
+singleton to the root:
+
+\[
+ \widehat Z_r=(B_r\setminus D)+p,
+ \qquad \widehat Z_d=B_d+D,
+ \qquad \widehat Z_q=B_q,
+ \qquad \widehat Z_s=B_s.                         \tag{4}
+\]
+
+This uses only `r->d` and `charity->r`.  The overlap with `S` stays assigned
+to `d`; source `s` does not need that second response core to remain above
+base.  Hence shared-target overlap is not a conservation or owner-payment
+obstruction.
+
+Put `Delta_i=v_i(B_i)-v_i(X_i)` (written `\Delta_i` below).  The only payment
+conditions for (4) are
+
+\[
+ \Delta_d+v_d(D)\ge0,
+ \qquad
+ \Delta_r+v_r(p)-v_r(D)\ge0.                     \tag{5}
+\]
+
+The current desire of `D` cannot silently be promoted to the first
+inequality: the signed `d` residual must actually pay the difference.
+
+The disjoint star remains useful as a second candidate and as an exact
+response-structure classifier.
+
 Let `D'` and `S'` be either disjoint original cores or one of the uncrossed
 pairs above.  Form
 
@@ -62,14 +94,14 @@ pairs above.  Form
  Z_r&=B_r\setminus(D'\mathbin{\dot\cup}S')+p,\\
  Z_d&=B_d+D',\\
  Z_s&=B_s+S',\\
- Z_q&=B_q.                                         \tag{4}
+ Z_q&=B_q.                                         \tag{6}
 \end{aligned}
 
 The operation uses only
 
 \[
-             \mathrm{charity}\to r,qquad
-             r\to d,qquad r\to s,                \tag{5}
+             \mathrm{charity}\to r,\qquad
+             r\to d,\qquad r\to s,               \tag{7}
 
 \]
 
@@ -84,14 +116,14 @@ sizes.  Owners `q` and `s` remain strictly base-paid.  Put
 The two exact remaining payment conditions are
 
 \[
- \Delta_d+v_d(D')\ge0,                            \tag{6}
+ \Delta_d+v_d(D')\ge0,                            \tag{8}
 
 \]
 
 and
 
 \[
- \Delta_r+v_r(p)-v_r(D'\cup S')\ge0.              \tag{7}
+ \Delta_r+v_r(p)-v_r(D'\cup S')\ge0.              \tag{9}
 
 \]
 
@@ -104,11 +136,14 @@ pay the difference.
 The first topology in the exact form-2 three-topology menu has one exhaustive
 frontier:
 
-1. a disjoint at-most-three-edge root star with only the explicit `r,d`
-   payment inequalities (6)--(7); or
-2. a shared packet `K` satisfying the two-margin capture (3).
+1. the unconditional two-edge priority assignment (4), with only the
+   explicit `r,d` payment inequalities (5);
+2. a disjoint at-most-three-edge root star with the same two payment rows in
+   (8)--(9); or
+3. a shared packet `K` satisfying the two-margin capture (3).
 
-If (6)--(7) hold, any observer failure is a paid-splice decorated response.
+If (5) or (8)--(9) hold for the corresponding candidate, any observer failure
+is a paid-splice decorated response.
 If either fails, its exact donor/root capture inequality must be combined
 with the other two menu topologies.  If (3) holds, the next cap-free lemma
 must return or split the common packet without losing both source margins or
@@ -116,8 +151,9 @@ the permanent root anchor.
 
 ## Claim boundary
 
-Proved: the uncrossing dichotomy, double-margin capture, conservation, edge
-bound, and exact payment identities.
+Proved: the unconditional two-edge priority assignment, uncrossing
+dichotomy, double-margin capture, conservation, edge bounds, and exact
+payment identities.
 
 Not proved: base payment of the current-only `d` response, simultaneous
 reversal of (3), observer safety of the enlarged final bundles, exhaustion

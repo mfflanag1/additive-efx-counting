@@ -70,7 +70,24 @@ def support_checks():
     }
     expected = {("charity", "r"), ("r", "d"), ("r", "s")}
     assert edges == expected
-    return sorted(map(list, edges))
+    priority_final = {
+        "r": {"R", "S", "p"},
+        "d": {"Bd", "D"},
+        "s": {"Bs"},
+        "q": {"Bq"},
+        "charity": set(),
+    }
+    assert set().union(*initial.values()) == set().union(*priority_final.values())
+    priority_edges = {
+        (supplier[packet], owner)
+        for owner, packets in priority_final.items()
+        for packet in packets if supplier[packet] != owner
+    }
+    assert priority_edges == {("charity", "r"), ("r", "d")}
+    return {
+        "disjoint_star": sorted(map(list, edges)),
+        "priority_assignment": sorted(map(list, priority_edges)),
+    }
 
 
 def run(root: Path):
