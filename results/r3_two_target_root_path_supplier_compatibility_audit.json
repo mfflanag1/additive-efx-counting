@@ -1,0 +1,120 @@
+{
+  "checks": {
+    "conservation": true,
+    "exact_three_matching_shapes": true,
+    "final_edges_at_most_four": true,
+    "root_and_singleton_source_strict": true
+  },
+  "claim_boundary": "cap-free favorable-path candidate; observer/repeat, backward path, singleton star, and foreign-support import remain open",
+  "matching_count": 3,
+  "matching_shapes": [
+    [
+      [
+        "x",
+        "y"
+      ],
+      [
+        "y",
+        "x"
+      ]
+    ],
+    [
+      [
+        "x",
+        "y"
+      ],
+      [
+        "z",
+        "x"
+      ]
+    ],
+    [
+      [
+        "y",
+        "x"
+      ],
+      [
+        "z",
+        "y"
+      ]
+    ]
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_r3_two_target_root_path_supplier_compatibility.py",
+    "script_sha256": "2041d047636749aa4014fc82b1a6e02bd5bf9c8efc40cb7ad21eea40cbdcc635",
+    "theorem": "results/R3_TWO_TARGET_ROOT_PATH_SUPPLIER_COMPATIBILITY_LEMMA_20260814.md",
+    "theorem_sha256": "c6f11021bc0188831138e1bfe9ee43de67b412b576640d35445a8b2990d0ca52",
+    "z3": "5.0.0"
+  },
+  "schema": "r3-two-target-root-path-supplier-compatibility-v1",
+  "status": "FAVORABLE_ROOT_PATH_HAS_FOUR_EDGE_CANDIDATE",
+  "supplier_cases": [
+    {
+      "final_edges": [
+        [
+          "charity",
+          "y"
+        ],
+        [
+          "y",
+          "x"
+        ],
+        [
+          "z",
+          "y"
+        ]
+      ],
+      "root_core": [
+        "y0"
+      ],
+      "singleton_source_core": [
+        "zx"
+      ]
+    },
+    {
+      "final_edges": [
+        [
+          "charity",
+          "y"
+        ],
+        [
+          "y",
+          "x"
+        ],
+        [
+          "z",
+          "x"
+        ]
+      ],
+      "root_core": [
+        "zy"
+      ],
+      "singleton_source_core": [
+        "zx"
+      ]
+    },
+    {
+      "final_edges": [
+        [
+          "charity",
+          "y"
+        ],
+        [
+          "y",
+          "x"
+        ],
+        [
+          "z",
+          "x"
+        ]
+      ],
+      "root_core": [
+        "y0",
+        "zy"
+      ],
+      "singleton_source_core": [
+        "zx"
+      ]
+    }
+  ]
+}
