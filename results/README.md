@@ -2072,3 +2072,10 @@ both encodings.
   in the missing-owner row and too costly in the predecessor row.  Elimination
   of that packet from the signed fixed-`U` ledger, physical frozen-supplier
   compression, and observer EFX safety remain open.
+- [`CLOSED_BASE_BLOCK_CROSS_RESPONSE_MERGER_LEMMA_20260814.md`](CLOSED_BASE_BLOCK_CROSS_RESPONSE_MERGER_LEMMA_20260814.md)
+  ([52-partition quotient audit](closed_base_block_cross_response_merger_audit.json))
+  closes outsider safety as an independent net-cancellation gate.  An EFX
+  failure across two closed base-support blocks is either a new decorated
+  response or a strict merger in the represented-response quotient.  At
+  saturation, maximal quotient components are therefore mutually safe.
+  Internal response rank and the signed base-margin/release interface remain.

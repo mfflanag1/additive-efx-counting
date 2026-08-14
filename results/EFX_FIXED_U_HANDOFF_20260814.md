@@ -1061,8 +1061,8 @@ Frozen-supplier compression and observer safety remain open in both classes.
 The overlap branch in the two predecessor-duplicate terminal maps is no
 longer an unnamed capture inequality.  If the missing-owner core `C` and
 predecessor core `E` overlap in `O`, split `O` into a packet `H` sent with
-`C minus E` to the missing owner and its complement sent with `E minus C` to the
-predecessor.
+`C minus E` to the missing owner and its complement sent with `E minus C`
+to the predecessor.
 
 The two payment conditions have opposite thresholds:
 
@@ -1101,6 +1101,37 @@ generalized-PI family or a saturated represented-component terminal, or
 freeze an exact positive-rational full-premise countermodel.  Scalar payment
 inequalities alone are not enough; the signed `X -> Y -> Z` provenance ledger
 must be used.
+
+## 36. Closed cancellation blocks are outsider-safe at saturation
+
+The net `X -> Z` graph of a paid four-edge branch may disconnect even when
+its current `Y -> Z` graph is a spanning tree. Each net component is an
+exact closed base-support block `K` with `X(K)=Z(K)`.
+
+A failed EFX comparison whose observer and target lie in different blocks
+produces a globally minimal current-safe decorated response across that
+block cut. Its exact record is either new, giving permanent response
+augmentation, or already present, in which case the two blocks already lie
+in one represented-response component. Adding a genuinely cross-component
+response strictly reduces the quotient component count.
+
+The exhaustive audit enumerates all 52 partitions of the four owners plus
+charity and every quotient graph, checking 1,769 cross-component response
+additions. Every addition merges exactly two components, so at most four
+strict mergers are possible. At saturation, maximal response-closed unions
+of cancellation blocks are therefore mutually outsider-safe.
+
+This closes one of the two explicit cancellation-admission gates from
+section 6. The remaining gate is internal response rank, together with the
+signed component-margin and release hypotheses. Exact repetition alone
+cannot supply that rank, as the section-8 rational no-go witness shows.
+
+Authoritative files:
+
+- `results/CLOSED_BASE_BLOCK_CROSS_RESPONSE_MERGER_LEMMA_20260814.md`
+- `results/closed_base_block_cross_response_merger_audit.json`
+- `tracks/parkability/audit_closed_base_block_cross_response_merger.py`
+- `tracks/parkability/test_closed_base_block_cross_response_merger.py`
 
 The shortest live continuation on the permanent-anchor route is now:
 
@@ -1265,7 +1296,7 @@ replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-15 passed in 0.82s
+16 passed in 0.88s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization
