@@ -337,3 +337,10 @@ margins.  See
 R3 terminal is no longer a generic shared-target overlap: it is a
 double-margin physical packet coupled to the root/current-only-`d` two-hole
 separator.
+
+The second menu topology reduces to a single path packet as well.  Returning
+the ordinary `d->q` core and compensating `q` from the root gives the
+three-edge path `charity->r->q->d`; only a lower bound in the `q` row and an
+upper bound in the root row constrain the compensation packet.  See
+`FORM2_Q_COMPENSATION_PATH_PACKET_FRONTIER_20260814.md`.  Its failure packet
+is exactly the bicriteria anchor-capture object already isolated above.

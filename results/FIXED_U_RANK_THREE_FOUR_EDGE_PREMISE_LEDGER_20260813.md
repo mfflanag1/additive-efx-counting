@@ -116,6 +116,24 @@ and has exactly the same `{r,d}` payment pair.  The double-capture statement
 is needed only for the response/observer continuation, not for physical
 conservation.
 
+The second form-2 topology also has a cap-free payment core.  Return the
+ordinary base-desired `d->q` core to `d`, compensate `q` with one packet `P`
+from the root, and send charity to the root.  This uses only
+`charity->r->q->d`; `d,s` are paid automatically.  The exact remaining
+thresholds are
+
+\[
+ v_q(P)\ge v_q(C_d)-\Delta_q,
+ \qquad
+ v_r(P)\le\Delta_r+v_r(p).
+\]
+
+See `FORM2_Q_COMPENSATION_PATH_PACKET_FRONTIER_20260814.md`.  Failure is one
+inclusion-minimal packet that is indispensable for compensating `q` but too
+expensive for the root—the same bicriteria object isolated by anchor
+uncrossing.  The remaining theorem must force that packet into the third
+menu topology or a signed PI/full-owner exit.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

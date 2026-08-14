@@ -1945,3 +1945,10 @@ both encodings.
   current-only `d` core and charity, using two edges and leaving the same
   `r,d` holes.  Reversal of the double capture/observer continuation remains
   open.
+- [`FORM2_Q_COMPENSATION_PATH_PACKET_FRONTIER_20260814.md`](FORM2_Q_COMPENSATION_PATH_PACKET_FRONTIER_20260814.md)
+  ([exact audit](form2_q_compensation_path_packet_audit.json))
+  gives the cap-free payment core of the second form-2 menu topology.  The
+  ordinary `d` core returns along `q->d`, one root packet compensates `q`, and
+  charity compensates the root.  Failure is one inclusion-minimal packet
+  whose `q` value crosses the compensation threshold while its root value
+  exceeds all available root margin.
