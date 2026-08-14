@@ -1162,6 +1162,58 @@ Authoritative files:
 - `tracks/parkability/run_exact_response_linear_allocation_cegar.py`
 - `tracks/parkability/analyze_exact_response_linear_cegar_checkpoint.py`
 
+## 38. Charity should not be sent to an already-paid missing owner
+
+The previous terminal construction assigned `p` to missing owner `m`, even
+though its ordinary core `C` alone is strictly base-paying. Assigning
+charity instead to terminal owner `q` lowers the compensation threshold;
+assigning it to predecessor `x` raises the permitted donor cost. Each
+placement uses at most three current-holder edges.
+
+Joint failure produces nested packets crossing both charity-subsidy corners.
+This strictly weakens the terminal obstruction in section 33; the old
+construction remains correct but is payment-wise dominated.
+
+## 39. Every terminal map has a two-level four-edge selector
+
+Push the terminal compensation backward through the path
+`m->y->x->q`. Choose `P_2` from the `x` target to compensate `q`, then
+choose `P_1` from the `y` target to compensate `x`. Place charity at `q`,
+`x`, or `y`.
+
+For each placement, minimize the y-value of `P_1` subject to the q and x
+payment thresholds. The feasible family is always nonempty because the
+full path cores are desired above the relevant complete current bundles.
+The placement succeeds exactly when this minimum is within y’s surplus
+budget. Success uses only
+
+```text
+q->m, x->q, y->x, charity->{q,x,y}.
+```
+
+Thus all four terminal maps are paid within four current-holder edges unless
+all three exact dynamic cost tests fail.
+
+## 40. The predecessor maps reduce to one joint three-corner separator
+
+In the two predecessor-duplicate maps, split the shared `q`-target overlap
+between `m` and `x` while independently choosing the terminal packet sent
+from `x` to `q`. Minimize both packets in the x row. Charity can lower the
+m threshold, lower the q threshold, or raise the x budget.
+
+A paid four-edge allocation exists unless all three subsidy corners lie
+strictly below the two-packet predecessor-cost frontier. This jointly
+subsumes the earlier overlap and terminal packet tests. The surviving
+physical problem is now to realize these optimized packets within the
+frozen-supplier edge budget and close any failed observer response.
+
+Authoritative files:
+
+- `results/TERMINAL_PATH_CHARITY_PLACEMENT_BICRITERIA_LEMMA_20260814.md`
+- `results/TERMINAL_PATH_TWO_LEVEL_CHARITY_SELECTOR_LEMMA_20260814.md`
+- `results/PREDECESSOR_TERMINAL_TWO_PACKET_CHARITY_SELECTOR_LEMMA_20260814.md`
+- their three JSON audits and replay tests
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1325,7 +1377,7 @@ replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-18 passed in 1.08s
+21 passed in 1.20s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization

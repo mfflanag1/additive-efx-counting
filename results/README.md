@@ -2087,3 +2087,20 @@ both encodings.
   141 selected topologies show that this is evidence, not a universal menu.
   The recurring signal is the already known shortest charity path and its
   root endpoint/shared-target capture gate.
+- [`TERMINAL_PATH_CHARITY_PLACEMENT_BICRITERIA_LEMMA_20260814.md`](TERMINAL_PATH_CHARITY_PLACEMENT_BICRITERIA_LEMMA_20260814.md)
+  ([exact algebra audit](terminal_path_charity_placement_bicriteria_audit.json))
+  strengthens the terminal compensator by assigning charity to `q` or its
+  predecessor `x`, since the missing owner is already paid by its base core.
+  Either placement gives a paid at-most-three-current-holder-edge endpoint
+  or two nested packets cross both corners of the charity-width rectangle.
+- [`TERMINAL_PATH_TWO_LEVEL_CHARITY_SELECTOR_LEMMA_20260814.md`](TERMINAL_PATH_TWO_LEVEL_CHARITY_SELECTOR_LEMMA_20260814.md)
+  ([exact algebra audit](terminal_path_two_level_charity_selector_audit.json))
+  pushes compensation one step farther backward.  All four terminal maps
+  have a paid four-current-holder-edge allocation unless a two-level packet
+  cost exceeds the release budget for all three useful charity placements.
+- [`PREDECESSOR_TERMINAL_TWO_PACKET_CHARITY_SELECTOR_LEMMA_20260814.md`](PREDECESSOR_TERMINAL_TWO_PACKET_CHARITY_SELECTOR_LEMMA_20260814.md)
+  ([exact algebra audit](predecessor_terminal_two_packet_charity_selector_audit.json))
+  jointly optimizes the overlap split and terminal compensator in the two
+  predecessor-duplicate maps.  The exact survivor is a three-corner
+  predecessor-cost separator.  Frozen-supplier compression and observer
+  EFX remain open.
