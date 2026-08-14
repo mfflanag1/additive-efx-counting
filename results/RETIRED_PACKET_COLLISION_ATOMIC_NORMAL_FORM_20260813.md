@@ -2,8 +2,8 @@
 
 **Date:** 2026-08-13
 
-**Status:** cap-free reduction of `T_{L,times}^*` to two packet geometries
-and one safe-payment normalization wall; all remain open
+**Status:** cap-free reduction of `T_{L,times}^*` to one holder-price family
+and one safe-center three-offer star; both remain open
 
 ## Input and branch order
 
@@ -169,14 +169,31 @@ adds the fourth physical edge supplying `E` and obtains a supplier-closed PI
 cycle in every source pattern.  Consequently the exact C survivor is
 narrower than an arbitrary reset: at least one reservoir supplies a safe
 packet `Q` with `v_h(Q)>=tau_h(E)`, while the same deficient response relation
-persists.  This is the **safe-payment normalization wall**.
+persists.
 
-The smallest missing operation is therefore an **adaptive selector
-commitment with a source/rank potential**: process one of these ledger-free
-safe pairs to completion before the old colliding selector may be
-reconsidered, and prove that the same deficient source relation cannot reset.
-Without that operation, normalization-bypass is not eliminated by packet
-charging.
+The protected target-envelope refinement sends every all-unsafe pattern to
+PI.  A safe envelope packet owned by someone other than the response source,
+or an unsafe reversal with a different source, enters the existing two-core /
+two-hole machinery.  The sole new local survivor is the **safe-center three-
+offer star**: the center's whole bundle is common-safe, while three disjoint
+safe offers from the other owner bundles are all desired by that center.  An
+unsafe center would itself create a supplier-closed PI 2-cycle.
+
+The canonical center-return test then swaps a leaf's own offer to the center
+and the common-safe center bundle to that leaf.  A successful protected row
+enters two-hole machinery.  Hence the exact star survivor additionally obeys
+
+\[
+v_h(U_s)<\max\{F_h,\tau_h(O_h)\}
+\qquad\text{for all three leaves }h.              \tag{4}
+\]
+
+It is a three-row center-return rejection separator.
+
+The smallest missing operation is now a star allocation or three-way holder-
+price argument: assign one offer to the center while protecting its supplier
+and the two remaining leaves, or show that all three failed arm transfers
+enter the already isolated holder-price family.
 
 ## Typed branches
 
@@ -220,9 +237,9 @@ by A--C:
    compensated transfer; and
 2. pay or contradict the bounded root-holder price (3), or construct a
    controlled release valid at its equality boundary; and
-3. eliminate the safe-payment normalization wall by a nonresetting adaptive
-   selector commitment, a source/rank improvement, or a projection that
-   itself closes rather than merely renames the parked terminal.
+3. allocate or holder-pay one arm of the safe-center three-offer star, or
+   prove that its three simultaneous holder-price failures contradict the
+   exact GG maximality/provenance premises.
 
 If one is false, the missing operation is respectively controlled
 unretirement/packet splitting, controlled anchor release with explicit
@@ -249,6 +266,11 @@ The normalization-bypass survivor is further reduced by
 `NORMALIZATION_BYPASS_RESERVOIR_REVERSAL_LEMMA_20260813.md`.
 Its all-unsafe branch is sharpened by
 `NORMALIZATION_BYPASS_THREE_RESERVOIR_FAN_DICHOTOMY_20260813.md`.
+The complete-target envelope and protected pair/star reduction are in
+`TARGET_ENVELOPE_UNIVERSAL_PAYMENT_OR_PI_LEMMA_20260813.md` and
+`TARGET_ENVELOPE_PROTECTED_PAIR_OR_SAME_SOURCE_STAR_LEMMA_20260813.md`.
+The star's direct return is resolved by
+`SAFE_CENTER_THREE_OFFER_RETURN_OR_REJECTION_LEMMA_20260813.md`.
 
 The reduction is cap-free and performs no valuation-cell or residual-only
 search. It does not eliminate A--C, refute them under complete GG

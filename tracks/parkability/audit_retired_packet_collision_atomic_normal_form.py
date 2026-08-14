@@ -83,6 +83,12 @@ def run(repo: Path) -> dict:
         "normalization_bypass_reservoir_reversal_audit.json",
         "NORMALIZATION_BYPASS_THREE_RESERVOIR_FAN_DICHOTOMY_20260813.md",
         "normalization_bypass_three_reservoir_fan_audit.json",
+        "TARGET_ENVELOPE_UNIVERSAL_PAYMENT_OR_PI_LEMMA_20260813.md",
+        "target_envelope_universal_payment_or_pi_audit.json",
+        "TARGET_ENVELOPE_PROTECTED_PAIR_OR_SAME_SOURCE_STAR_LEMMA_20260813.md",
+        "target_envelope_protected_pair_or_star_audit.json",
+        "SAFE_CENTER_THREE_OFFER_RETURN_OR_REJECTION_LEMMA_20260813.md",
+        "safe_center_three_offer_return_or_rejection_audit.json",
         "retired_packet_charge_anchor_gate_audit.json",
     ]
     script = Path(__file__).resolve()
@@ -96,13 +102,13 @@ def run(repo: Path) -> dict:
         "atomic_survivors": [
             "atomwise_critical_whole_packet_bilateral_deadlock",
             "root_facing_anchor_critical_packet",
-            "safe_payment_normalization_wall",
+            "safe_center_three_offer_same_source_star",
         ],
         "full_T_L_times_theorem_closed": False,
         "smallest_missing_operations": [
             "controlled unretirement or proper packet split",
             "reverse root-surplus band or release anchor within it",
-            "nonresetting adaptive selector commitment with source/rank potential",
+            "safe-center star allocation or three-way holder payment",
         ],
         "dependencies": [
             {"path": f"results/{name}", "sha256": sha256(results / name)}

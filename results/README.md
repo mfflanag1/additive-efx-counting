@@ -96,8 +96,12 @@ headlines:
   proper retired subpacket or satisfies the atomwise charge
   `(|K|-1)mu<=d`; the root-facing loss band is exactly the bounded holder
   price `0<=pi_r(D)<=x-delta`; and the entire all-unsafe normalization fan
-  closes by a supplier-compatible PI cycle. The remaining safe-payment wall
-  still needs a simultaneous observer-debt augmenting argument. This does
+  closes by a supplier-compatible PI cycle. A complete-target envelope then
+  sends every nondegenerate payment pattern to PI or two-hole response
+  machinery; the sole new survivor is a safe center with three disjoint
+  same-source offers whose three leaves all reject the canonical safe-center
+  return. This star still needs an allocation-or-holder-price
+  argument. The checkpoint does
   not close `T_{L,times}^*`, GG, or general EFX.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)

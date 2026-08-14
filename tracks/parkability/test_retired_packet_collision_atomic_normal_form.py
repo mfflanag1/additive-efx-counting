@@ -16,6 +16,6 @@ def test_retired_packet_collision_atomic_normal_form_replays() -> None:
     assert result["atomic_survivors"] == [
         "atomwise_critical_whole_packet_bilateral_deadlock",
         "root_facing_anchor_critical_packet",
-        "safe_payment_normalization_wall",
+        "safe_center_three_offer_same_source_star",
     ]
     assert not result["full_T_L_times_theorem_closed"]

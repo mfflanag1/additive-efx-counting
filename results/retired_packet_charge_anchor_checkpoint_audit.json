@@ -1,6 +1,6 @@
 {
   "all_unsafe_normalization_fan_closed": true,
-  "claim_boundary": "verified cap-free reduction checkpoint; coupled-payment augmentation and complete GG closure remain open",
+  "claim_boundary": "verified cap-free reduction checkpoint; safe-center star allocation and complete GG closure remain open",
   "dependencies": [
     {
       "path": "results/retired_packet_charge_anchor_gate_audit.json",
@@ -14,7 +14,7 @@
     },
     {
       "path": "results/root_facing_anchor_surplus_band_audit.json",
-      "sha256": "0fa85819d0134a3c55b2ee4e4099855953299587a59614e65e87d228676d64d9",
+      "sha256": "be90587c0ec7fb61a7f47dc2158d54a61134dabeb5dbc5e88404131dff91523f",
       "status": "ROOT_FACING_SURVIVOR_REDUCED_TO_CLOSED_SURPLUS_BAND"
     },
     {
@@ -24,34 +24,49 @@
     },
     {
       "path": "results/normalization_bypass_reservoir_reversal_audit.json",
-      "sha256": "6189f31c231fc21eaf6cda02c236979be9ef70603a486cd8dfef475306f7f6f5",
+      "sha256": "cb33cf24fb789bb1e6015fc85f076113f1b94ca4c84d4d721b61734d03179ca4",
       "status": "BYPASS_REDUCED_TO_COLLISION_OR_SAFE_PAYMENT_WALL"
     },
     {
       "path": "results/normalization_bypass_three_reservoir_fan_audit.json",
-      "sha256": "95790be5179b272bbb8e68895aedf6badde6448f1c3b1f2a19b92cb4e49cbc3c",
+      "sha256": "20684818f172a93e23abeb588b0c980d6fd0f543397b36be4f67e3bf3683ed29",
       "status": "ALL_UNSAFE_FAN_ALWAYS_HAS_SUPPLIER_CLOSED_PI_CYCLE"
     },
     {
       "path": "results/retired_packet_collision_atomic_normal_form_audit.json",
-      "sha256": "fc241370eadb8b10f064dec4d8d50241479b4bf78b1070e52bf0fe17eb162bb6",
+      "sha256": "0520980380218ee35b3efe32011ecaba689477d169e82e0ade04ce9fa59e5f66",
       "status": "T_L_TIMES_REDUCED_TO_THREE_ATOMIC_SURVIVORS"
+    },
+    {
+      "path": "results/target_envelope_universal_payment_or_pi_audit.json",
+      "sha256": "0a1a0c121d4c0bd140b66a60b0cadec9038b3c5843cb58383ffad017cea97d63",
+      "status": "ONE_TARGET_HAS_UNIVERSAL_EXTERNAL_PAYER_OR_SUPPLIED_PI"
+    },
+    {
+      "path": "results/target_envelope_protected_pair_or_star_audit.json",
+      "sha256": "9e3107eee539b38ad3cf1b0a68ea0bde5b573c245c03b0559f1ca08d93653a61",
+      "status": "SAFE_PAYMENT_WALL_REDUCED_TO_TWO_HOLE_OR_THREE_OFFER_STAR"
+    },
+    {
+      "path": "results/safe_center_three_offer_return_or_rejection_audit.json",
+      "sha256": "aa7a8bb0e5e922b0283a0a92c7b4641fb62adf12f6be4eba587c9837c03a1833",
+      "status": "SAFE_CENTER_STAR_ENTERS_TWO_HOLE_OR_THREE_ROW_REJECTION"
     }
   ],
   "full_T_L_times_theorem_closed": false,
   "full_T_L_times_theorem_refuted": false,
   "provenance": {
     "checkpoint": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md",
-    "checkpoint_sha256": "744d31158a7a5065c88feb5397dea2a7617ce6d821879d4cb26affa9c8224c03",
+    "checkpoint_sha256": "6965b1f9a31b45bead1ae7ce06dedd2d1690f0ea9800e6b1ec63d9ec49482697",
     "script": "tracks/parkability/audit_retired_packet_charge_anchor_checkpoint.py",
-    "script_sha256": "9eeb42256e83d52a8aaf90c0b7287883c1794206bd57eeb18361ebcb57473ae7"
+    "script_sha256": "d8bc61c4cbf1d657fe144c7e0205476085961023135037de4ae75829fc4514fd"
   },
   "remaining_separator_families": [
     "holder_price_separator",
-    "safe_payment_normalization_wall"
+    "safe_center_three_offer_star"
   ],
   "root_holder_price": "0 <= pi_r(D) <= x-delta",
   "schema": "retired-packet-charge-anchor-checkpoint-audit-v1",
-  "status": "T_L_TIMES_NARROWED_TO_HOLDER_PRICE_OR_SAFE_PAYMENT_SEPARATOR",
+  "status": "T_L_TIMES_NARROWED_TO_HOLDER_PRICE_OR_SAFE_CENTER_STAR",
   "strict_whole_packet_charge": "(|K|-1)*mu <= d"
 }

@@ -14,10 +14,9 @@ proper-packet reduction, and normalization reversal now reduce the goal to:
 
 1. a **holder-price separator**, appearing either as an atomwise-critical
    whole retired packet or as its bounded root-facing specialization; or
-2. a **safe-payment normalization wall**, where a ledger-free desired
-   response has at least one disjoint common-safe observer-payment packet,
-   but that local payment has not yet been composed with every other
-   current-safe target.
+2. a **safe-center three-offer star**, after protected target-envelope
+   payment sends every other normalization pattern to PI or the existing
+   two-core/two-hole machinery.
 
 This is not a proof of `T_{L,times}^*`, GG, four-agent EFX, or general EFX,
 and it is not a complete-contract counterexample.
@@ -90,8 +89,24 @@ the target owner supplies `E` to its source.  Every owner then supplies one
 desired packet along a nonself edge.  The four-edge functional graph contains
 a directed cycle, and pairwise disjointness makes it supplier-closed PI.
 Therefore an exact normalization survivor must contain at least one safe
-threshold-payment packet.  The all-unsafe and alleged source-inactive-leaf
+threshold-payment packet.  Raising the threshold to the complete active-
+target envelope makes that packet universal for its observer row. Including
+the protected floor gives a two-core/two-hole reduction except in one label
+pattern: the payment owner is the response source, both other reversals have
+that same source, and the source's whole current bundle is common-safe.  The
+survivor is exactly a safe center plus three disjoint safe offers, all desired
+by the center. The all-unsafe, source-inactive-leaf, and unsafe-center
 recurrences are eliminated.
+
+A final canonical test swaps one leaf's offer to the center and the safe
+center bundle back to that leaf.  Success gives two protected cores and
+enters two-hole machinery.  Therefore the exact star survivor has the
+three-row rejection certificate
+
+\[
+v_h(U_s)<\max\{F_h,\tau_h(O_h)\}
+\quad\text{for every leaf }h.
+\]
 
 ## Typed branch status
 
@@ -104,21 +119,21 @@ recurrences are eliminated.
 
 ## Smallest remaining theorem
 
-The next load-bearing statement is a **coupled-payment augmenting-path
-lemma**.  Starting with the ledger-free desired response `E` and every safe
-threshold-payment packet exposed by the three reservoirs, it must prove one
-of:
+The next load-bearing statement is a **safe-center star allocation-or-price
+lemma**.  Starting with the three offers and their exact physical holders,
+it must prove one of:
 
-1. a rank-four all-current response allocation and hence EFX;
+1. an EFX allocation of one offer to the center and protected bundles to the
+   three leaves;
 2. a supplier-closed desired cycle and hence PI;
 3. a strict source/target-rank or proper-retired-packet reduction;
 4. a root/anchor operation; or
-5. an exact return to the already isolated holder-price separator.
+5. an exact three-way holder-price separator for the offer suppliers.
 
-The essential difficulty is simultaneous observer debt: a packet that pays
-owner `h` against `E` need not pay `h` against every other current-safe
-target.  A one-pair threshold cannot be promoted to a global matching
-without an augmenting or fixed-point argument.
+The target envelope resolves same-target observer debt.  The remaining
+difficulty is leaf allocation: all three safe offers have the same desired
+source, so response rank is one, while transferring any arm may require a
+different holder compensation.
 
 ## Reproduction
 
@@ -132,6 +147,9 @@ pytest -q \
   tracks/parkability/test_root_facing_holder_price_duality.py \
   tracks/parkability/test_normalization_bypass_reservoir_reversal.py \
   tracks/parkability/test_normalization_bypass_three_reservoir_fan.py \
+  tracks/parkability/test_target_envelope_universal_payment_or_pi.py \
+  tracks/parkability/test_target_envelope_protected_pair_or_star.py \
+  tracks/parkability/test_safe_center_three_offer_return_or_rejection.py \
   tracks/parkability/test_retired_packet_collision_atomic_normal_form.py \
   tracks/parkability/test_retired_packet_charge_anchor_checkpoint.py
 ```
@@ -139,4 +157,3 @@ pytest -q \
 The arithmetic audits use exact QF_LRA/QF_LIA.  The 324 fan assignments are
 an exhaustive finite audit of source labels only, not a valuation-cell
 search and not a premise of the analytic functional-graph proof.
-
