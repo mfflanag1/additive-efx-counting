@@ -5,6 +5,12 @@
 **Status:** cap-free elimination of 21 of 26 direct-return topology signatures
 up to one exact root-margin packet; five uncompensated signatures remain
 
+**Superseded frontier:** the five topology signatures are eliminated by
+`R3_SINGLETON_RETAINED_INCOMING_CELL_RETURN_LEMMA_20260814.md`.  The returned
+packet need not lie inside the response core because `z` keeps `p`; any
+positive incoming packet strictly improves it.  The root-margin capture and
+observer/repeat boundary remain live.
+
 ## Keep the singleton and trim the response
 
 Use the two-target state
