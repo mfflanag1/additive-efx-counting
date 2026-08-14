@@ -150,6 +150,15 @@ bounded-menu topologies now have cap-free payment formulas.  The exact live
 menu gate is simultaneous failure of the two-edge `{r,d}` star, the
 bicriteria root-to-`q` packet, and these root/q aggregate inequalities.
 
+That simultaneous scalar failure is feasible.  An exact positive-rational
+four-row witness uses three safe singleton responses inside an
+inclusion-minimal strict root anchor; it makes both root-star holes fail, the
+q-compensation packet root-expensive, and both q-d swap inequalities fail.
+See `FORM2_THREE_MENU_SCALAR_FEASIBILITY_GAP_20260814.md`.  This is not a
+fixed-U countermodel: it omits base EFX, PI-freeness, and the signed saturated
+record.  It proves that the next implication must use one of those genuinely
+non-scalar premises rather than only combine the menu payment inequalities.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

@@ -1,0 +1,55 @@
+{
+  "checks": {
+    "d_current_response": true,
+    "d_ordinary_base_response": true,
+    "q_current_response": true,
+    "q_path_q_paid": true,
+    "q_path_root_fails": true,
+    "root_anchor_delete_any_not_strict": true,
+    "root_anchor_strict": true,
+    "root_star_d_fails": true,
+    "root_star_root_fails": true,
+    "s_current_response": true,
+    "singleton_cores_safe": true,
+    "swap_q_fails": true,
+    "swap_root_fails": true
+  },
+  "claim_boundary": "local scalar/common-safe-singleton witness only; not a full fixed-U, PI-free, base-EFX, or globally maximal countermodel",
+  "provenance": {
+    "script": "tracks/parkability/audit_form2_three_menu_scalar_feasibility_gap.py",
+    "script_sha256": "7aefc00e7ef9e27824e6487f3e379c6251c65c2c7b641f9f434bbd35534c9c77",
+    "theorem": "results/FORM2_THREE_MENU_SCALAR_FEASIBILITY_GAP_20260814.md",
+    "theorem_sha256": "4cfb7ee8589a87ed4c372fa25fca9df86389904d9054a5a2b4c8c2411b10677c"
+  },
+  "schema": "form2-three-menu-scalar-feasibility-gap-v1",
+  "status": "EXACT_LOCAL_SCALAR_WITNESS",
+  "values": {
+    "d": {
+      "Cd": "11/10",
+      "D": "3/10",
+      "base": "1",
+      "current": "1/5"
+    },
+    "q": {
+      "Bd": "1/10",
+      "Cd": "3",
+      "P": "16/5",
+      "base": "3",
+      "current": "31/10",
+      "p": "1/10"
+    },
+    "r": {
+      "Cs": "2",
+      "D": "2",
+      "P": "2",
+      "base": "5",
+      "current": "6",
+      "p": "1/10"
+    },
+    "s": {
+      "Cs": "6/5",
+      "base": "1",
+      "current": "11/10"
+    }
+  }
+}

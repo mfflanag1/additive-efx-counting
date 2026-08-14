@@ -352,3 +352,11 @@ aggregate `q`-compensation inequality.  Consequently every candidate
 topology now has a cap-free payment boundary.  Proving that their simultaneous
 failure activates PI/full-owner/signed progress is the remaining analytic
 menu theorem.
+
+The payment inequalities alone cannot establish that implication.  The
+exact local witness in `FORM2_THREE_MENU_SCALAR_FEASIBILITY_GAP_20260814.md`
+satisfies safe singleton response cores, correct current/base response
+status, represented-owner payment, and a minimal strict root anchor while
+defeating all three payment candidates.  Hence the remaining proof must use
+closed-core PI, complete signed support drainage, or saturated response
+continuation; another scalar averaging argument cannot suffice.

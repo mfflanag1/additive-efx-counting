@@ -1958,3 +1958,10 @@ both encodings.
   moving the root response to `s`, and transferring the whole old `d` bundle
   plus charity to `q` automatically pays `d,s`; only one root-retention and
   one aggregate `q`-compensation inequality remain.
+- [`FORM2_THREE_MENU_SCALAR_FEASIBILITY_GAP_20260814.md`](FORM2_THREE_MENU_SCALAR_FEASIBILITY_GAP_20260814.md)
+  ([exact rational audit](form2_three_menu_scalar_feasibility_gap_audit.json))
+  gives a local positive-rational configuration with safe singleton cores
+  and a minimal strict root anchor in which all three menu payment frontiers
+  fail simultaneously.  It is not a saturated fixed-U countermodel; it
+  proves the remaining contradiction must use signed saturation or PI rather
+  than scalar payment inequalities alone.
