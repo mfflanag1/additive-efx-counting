@@ -1,5 +1,18 @@
 # Global retired-root-support ledger composition theorem
 
+**Collision-resolution update (2026-08-14).** The collision subtype
+`T_{L,times}^*` is now closed by the strict first-priority floor-reset and
+singleton supplier-star theorem. The surviving typed terminal is therefore
+
+\[
+ T_0^*\mathbin{\dot\cup}T_{L,\perp}^*.
+\]
+
+The historical decomposition `T^dagger=T_0^* dot-union T_L^*` below remains
+the correct entry classification; its collision component is no longer an
+open endpoint. This does not close the empty-ledger or parked-support
+components.
+
 **Date:** 2026-08-13
 
 **Status:** cap-free composition of the retired-support ledger through the

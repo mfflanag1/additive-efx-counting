@@ -1,5 +1,13 @@
 # Aug-14 collision-candidate transition-admissibility audit
 
+**Resolution update (2026-08-14).** The root-side floor-admission gate is
+closed by `STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md`.
+The reset explicitly replaces later auxiliary floors at a strict-root
+allocation, retains every physical label, and is not itself counted as
+progress. Its singleton-star specialization supplies proper packet response
+support and closes `T_{L,times}^*`. The older unreset candidates catalogued
+below remain conditional; their stronger global cuts are not needed.
+
 **Date:** 2026-08-14
 
 **Correction (2026-08-14):** the claimed admission of the complete-current-

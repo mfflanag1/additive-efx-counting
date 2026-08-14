@@ -1,5 +1,12 @@
 # GG cycle-class referee composition
 
+**Collision-resolution update (2026-08-14).** The previously open
+`T_{L,times}^*` collision component is closed by the strict first-priority
+floor-reset and singleton supplier-star theorem. The remaining global typed
+terminal is `T_0^* dot-union T_{L,perp}^*`. The historical collision audit
+and correction below are retained as provenance; they are no longer the live
+GG endpoint. Full `GG` and four-agent/general EFX remain open.
+
 **Date:** 2026-08-12
 
 **Status:** **mixed interface and signed-surplus recruitment reconstructed

@@ -9,6 +9,9 @@ def test_root_retired_packet_old_anchor_critical_localization_independent() -> N
     assert result["critical_cases"] > 0
     assert result["equality_cases_excluded_by_nondegeneracy"] > 0
     assert result["failures"] == 0
+    assert result["current_target_cases"] > 0
+    assert result["current_target_critical_cases"] > 0
+    assert result["current_target_implication_failures"] == 0
     assert not result["imports_primary_audit"]
     assert not result["imports_z3"]
     assert not result["full_T_L_times_theorem_closed"]

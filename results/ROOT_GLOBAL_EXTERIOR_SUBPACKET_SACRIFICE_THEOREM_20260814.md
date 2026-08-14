@@ -10,6 +10,12 @@ or floor-paying supplier star, but this document does not currently close
 the root-held branch.  See
 `ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
 
+**Resolution update (2026-08-14).** The new strict first-priority
+floor-reset theorem explicitly releases the old later floors and recomputes
+the actual state. Its singleton specialization closes the root-holder branch
+directly. The unreset all-subpacket formulation below remains conditional;
+its full strength is no longer needed for `T_{L,times}^*`.
+
 **Composition closure (2026-08-14):** the strict global underpayment face is
 empty under the frozen anchored `GG` interface. The retained old desired root
 core `T_q+f` lies in the base exterior and is worth more than `X_r`, whereas

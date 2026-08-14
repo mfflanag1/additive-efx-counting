@@ -23,6 +23,9 @@ def run() -> dict[str, object]:
     critical_cases = 0
     removable_cases = 0
     equality_cases_excluded_by_nondegeneracy = 0
+    current_target_cases = 0
+    current_target_critical_cases = 0
+    current_target_implication_failures = []
     for base in range(1, bound + 1):
         for anchor in range(base + 1, bound + 1):
             for atom in range(1, anchor + 1):
@@ -35,10 +38,21 @@ def run() -> dict[str, object]:
                     critical_cases += 1
                     if not atom > anchor - base:
                         failures.append((base, anchor, atom))
+                for extra in range(0, bound - anchor + 1):
+                    root_target = anchor + extra
+                    current_target_cases += 1
+                    if root_target - atom < base:
+                        current_target_critical_cases += 1
+                        if atom <= root_target - base or anchor - atom >= base:
+                            current_target_implication_failures.append(
+                                (base, anchor, extra, atom)
+                            )
     assert cases > 0
     assert removable_cases > 0
     assert critical_cases > 0
     assert failures == []
+    assert current_target_critical_cases > 0
+    assert current_target_implication_failures == []
 
     theorem = ROOT / "results/ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md"
     script = Path(__file__).resolve()
@@ -53,6 +67,11 @@ def run() -> dict[str, object]:
             equality_cases_excluded_by_nondegeneracy
         ),
         "failures": len(failures),
+        "current_target_cases": current_target_cases,
+        "current_target_critical_cases": current_target_critical_cases,
+        "current_target_implication_failures": len(
+            current_target_implication_failures
+        ),
         "imports_primary_audit": False,
         "imports_z3": False,
         "full_T_L_times_theorem_closed": False,

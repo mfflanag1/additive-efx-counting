@@ -5,11 +5,13 @@
 **Status:** cap-free reduction of every root-held retired packet to a
 base-contained packet or an exact blocker of the signed missing-base return
 
-**Supersession update (2026-08-14).** The global-exterior dominance identity
-now forces `K subseteq X_r` directly, without executing the signed return.
-Therefore the blocker/multi-label-charge alternative below is no longer a
-live branch of the root-held recurrence. The signed-support argument remains
-a valid conditional theorem and provenance audit of the earlier route.
+**Supersession correction (2026-08-14).** The earlier global-exterior
+dominance route was conditional on a floor-invalid supplier star, so it did
+not by itself remove the blocker/multi-label branch. The later explicit
+strict first-priority floor reset repairs that admission gap and the
+singleton-star closure eliminates the entire root-holder branch directly.
+The signed-support argument below remains a valid conditional theorem and
+provenance audit of the intermediate route.
 
 **Composition update.**  The base-contained branch is further reduced by
 `BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md` to

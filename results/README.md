@@ -152,29 +152,45 @@ headlines:
   [independent integer replay](gg_old_root_core_exterior_dominance_independent_audit.json),
   [composition audit](retired_packet_charge_anchor_resolution_20260814_audit.json),
   [floor-admission correction](ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md))
-  closes the nonroot collision branch and gives a conditional root scalar
-  contradiction. The desire-free envelope descent
-  closes every nonroot holder. For a root holder, a floor-admissible global
-  supplier star would force every retired atom above the value of the entire
-  base exterior, while the retained old `GG` edge `r -> q` gives the same
-  root a desired core `T_q+f` inside that exterior and above `X_r`. The
-  resulting strict cycle
-  `v_r(k)>v_r(O)>=v_r(T_q+f)>v_r(X_r)>=v_r(k)` is impossible. However, the
-  supplier star empties later owners and has not been shown to preserve their
-  declared floors or execute a controlled reset. Thus `T_{L,times}^*`
-  remains open at that exact operation; this also does not close parked
-  support, the empty-ledger terminal, full `GG`, or general EFX.
+  now closes the complete collision subtype `T_{L,times}^*`. The desire-free
+  envelope descent closes every nonroot holder. For a root holder, the new
+  strict first-priority floor-reset theorem explicitly replaces—rather than
+  silently preserves—the later auxiliary floors at the complete singleton
+  supplier-star allocation. The retained old core makes `G-k` strictly
+  better than `X_r` for every selected retired atom `k`; every non-EFX
+  response then meets the packet only in `K-k`. Primary and independent
+  replays cover the root margin and support geometry. This does not close
+  parked support, the empty-ledger terminal, full `GG`, or general EFX, and
+  the new reset step still requires external expert review.
 
 - [`ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md`](ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md)
   ([primary audit](root_retired_packet_old_anchor_critical_localization_audit.json),
   [independent replay](root_retired_packet_old_anchor_critical_localization_independent_audit.json))
   bypasses the invalid all-donor supplier star for every removable root-held
-  atom. Returning one atom to its recorded retirement source preserves every
-  nonroot floor. The root either retains the permanent old anchor or replaces
-  it by a still-desired deletion. Exact recurrence therefore forces the
-  retired packet to consist entirely of critical atoms `g` satisfying
-  `v_r(D_r-g)<v_r(X_r)`. The live collision gate is payment or anchor exchange
-  for that critical-anchor packet, not generic exterior pooling.
+  atom. The admitted clean controlled release gives the atom alone to one
+  named later sacrifice row, moves that row's displaced target to charity,
+  and waives only its auxiliary floor; no historical return is inferred. The
+  root either retains the permanent old anchor or replaces it by a
+  still-desired deletion. The strengthened version forces every survivor to
+  be critical for the full current root target and hence for the old anchor.
+  This was the last intermediate gate before the controlled floor reset
+  closed the root-holder branch.
+
+- [`STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md`](STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md)
+  ([exact audit](strict_first_priority_floor_reset_admission_audit.json))
+  supplies the missing controlled reset. At an explicitly tested allocation
+  with the first-priority root strictly above the globally maximal base, it
+  replaces every auxiliary current floor by the owner's actual assigned
+  utility, retains all physical labels, and recomputes every EFX comparison.
+  The reset is not itself counted as progress.
+
+- [`ROOT_SINGLETON_SUPPLIER_STAR_FLOOR_RESET_CLOSURE_THEOREM_20260814.md`](ROOT_SINGLETON_SUPPLIER_STAR_FLOOR_RESET_CLOSURE_THEOREM_20260814.md)
+  ([primary audit](root_singleton_supplier_star_floor_reset_closure_audit.json),
+  [independent replay](root_singleton_supplier_star_floor_reset_closure_independent_audit.json))
+  uses that reset at `(G-k,{k},empty,empty)`. The old desired root core in
+  the base exterior makes the root strict for every `k`; singleton and empty
+  targets cannot be strongly envied, so every failed test has proper
+  `K`-intersection. This closes the root-holder half of `T_{L,times}^*`.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))

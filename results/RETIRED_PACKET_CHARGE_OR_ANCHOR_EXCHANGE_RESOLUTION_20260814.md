@@ -2,164 +2,158 @@
 
 **Date:** 2026-08-14
 
-**Correction verdict:** **not yet proved under the frozen exact
-`T_{L,times}^*` contract.**
+**Verdict:** **proved for the complete collision subtype
+`T_{L,times}^*`, subject to independent semantic review of the new strict
+first-priority floor-reset operation.**
 
-The nonroot branch is closed and the root scalar contradiction is exact
-conditional on its premise.  The final audit found that the proposed root
-supplier-star move empties positive-floor later owners, contrary to the
-frozen candidate-admissibility rule.  Until a controlled floor reset or
-floor-paying supplier star is proved, the root-held branch remains open. See
-`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
+The proof closes the exhaustive current-holder split. A nonroot holder is
+eliminated by the desire-free safe-envelope descent. A root holder is
+eliminated by the singleton supplier-star allocation together with an
+explicit controlled reset of every later auxiliary floor. The reset repairs
+the floor-admission gap in the earlier conditional global supplier-star
+argument; it does not pretend that the old floors were preserved.
 
-The subsequent floor-preserving localization theorem returns every
-off-anchor or noncritical anchor atom directly to its recorded retirement
-source.  Thus the remaining root-held packet is contained in the critical
-part of the permanent old anchor.  See
-`ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md`.
+## Exact input
 
-Conditional on that missing admission operation, every named retired-packet collision yields an EFX lexicographic
-improvement, a release-compatible PI cycle, a valid root/anchor transition,
-strict packet/hitting/rank progress, or a contradiction to the typed floors
-or global maximality.  This conditional conclusion is not presently a
-theorem of the frozen contract.
+Use the complete signed `T_{L,times}^*` state: the allocation and charity,
+globally maximal EFX base, first-priority root, physical anchor label, typed
+floors, suppliers and releases, named nonempty retired packet `K`, retirement
+supplier, current holder, colliding recipient, protected-floor capture
+inequality, and repeated whole-hit or normalization-bypass response.
 
-## Input and exhaustive holder split
+The current holder is either the protected root or a nonroot owner. These
+cases are exhaustive. The four typed failure branches—strict capture,
+equality-critical payment, base-floor/source-inactive debt, and release
+failure—enter the same holder split after their exact response or protected
+safe core has been extracted.
 
-Use the complete signed state, typed floors, retirement supplier, current
-holder, colliding recipient, response record, and physical anchor label from
-the frozen charge-or-anchor contract.  The current holder of the allocated
-retired packet is either the protected first-priority root or a nonroot
-owner.  These cases are exhaustive.
+## Nonroot current holder
 
-The split is also exhaustive over the collision certificate.  A repeated
-whole hit supplies the named current response directly.  A
-normalization-bypass repeat supplies the ledger-free response extracted from
-the actual normalized allocation while retaining the failed original
-collision, packet provenance, typed floors, and holder.  Protected-floor
-extraction therefore enters the same holder split below; the bypass is not a
-third terminal and does not reset the physical label.
+The protected-floor extraction supplies an actual common-safe core `D`
+containing the named packet and its named source or colliding recipient. The
+desire-free nonroot safe-envelope theorem assigns `D` through its current
+supplier while retaining the earlier strict root.
 
-## Nonroot holder
-
-Protected-floor extraction supplies an actual common-safe core `D`
-containing the named packet `K` and its named protected source or colliding
-recipient.  The desire-free envelope-descent theorem assigns `D` through
-that typed handoff while preserving the earlier strict root.
-
-Only the sacrificed old holder can create a new wall against `D`.  A
-globally minimum response is a proper subset, so every repeated whole hit
-forms a strict chain
+Only the sacrificed old holder can create a new wall against `D`. A globally
+minimum response is proper, so every repeated whole hit forms a strict chain
 
 \[
  D=D_0\supsetneq D_1\supsetneq\cdots\supseteq K.
 \]
 
 The chain terminates with a proper or empty `K`-intersection; a singleton
-terminal is universally safe.  This is strict reduction of the packet or
-its hitting coordinate.  The argument covers strict capture,
-equality-critical assignment, and source-inactive/base-floor debt because
-it uses current safety rather than current desire.  Every moved bundle has
-its actual current supplier.
+terminal cannot be strongly envied. This is strict packet or hitting
+progress. Supplier and normalization failures keep their exact labels and
+enter the already recorded recapture, hole-pivot, or normalization-bypass
+interfaces rather than silently restoring the old packet.
 
-## Root holder
+## Root current holder: controlled floor reset
 
-Write
-
-\[
- Z_r=K\mathbin{\dot\cup}H,
- \qquad v_r(Z_r)=x+\delta,
- \qquad E=G\setminus Z_r.
-\]
-
-For every nonempty `T subseteq K`, the admitted global supplier-star
-sacrifice gives the root `G-T` and gives `T` to the named nonroot sacrifice
-target.  A strict or equality-paying test gives an EFX contradiction or a
-proper/empty packet response.  Therefore an exact recurrence would have to
-satisfy
+Put `x=v_r(X_r)` and `O=G-X_r`. The fixed physical anchor label retains the
+old root core
 
 \[
- v_r(k)>\delta+v_r(E)\qquad(k\in K).             \tag{1}
+ A=T_q+f\subseteq O,
+ \qquad v_r(A)>x,                                \tag{1}
 \]
 
-Exact support accounting turns the right side into the value of the entire
-base exterior:
+where `T_q` is nonempty. Choose any `k in K`. Then
 
 \[
- \delta+v_r(E)=v_r(G\setminus X_r).              \tag{2}
+ v_r(G-k)>x.                                     \tag{2}
 \]
 
-It also forces `K subseteq X_r`.  But the frozen anchored `GG` edge supplies
-an old root-desired core
+Indeed, if `k in X_r`, then
+`v_r(O)>=v_r(A)>x>=v_r(k)`. If `k in O`, the packet `O-k` is nonempty: it
+contains `A` when `k notin A`, and contains the nonempty `A-k` when `k in A`.
+Positivity proves (2).
+
+Form the complete current-holder supplier star
 
 \[
- D_r=T_q+f\subseteq G\setminus X_r,
- \qquad v_r(D_r)>v_r(X_r).                       \tag{3}
+ Y_r=G-k,
+ \qquad Y_u=\{k\},
+ \qquad Y_j=\varnothing\quad(j\notin\{r,u\}),   \tag{3}
 \]
 
-For any `k in K`, (1)--(3) imply the impossible chain
+where `u` is the named later sacrifice row. Every moved good has its actual
+current holder as supplier and one displayed destination. Record every
+other retirement collision and the new physical root support; infer no PI
+edge and no historical reversal.
+
+The old proof stopped here because (3) can put a later owner below a positive
+declared floor. The strict first-priority floor-reset theorem supplies the
+missing operation. At the actual allocation (3), set
 
 \[
- v_r(k)>v_r(G\setminus X_r)
- \ge v_r(D_r)>v_r(X_r)\ge v_r(k).               \tag{4}
+ F_i^Y=v_i(Y_i)qquad(i\in N),                   \tag{4}
 \]
 
-Thus the root-held terminal is empty.  If the proof root or physical anchor
-label changes before (3) is retained, that executed change is already the
-contracted root/anchor-exchange outcome and cannot be counted as the same
-fixed-label recurrence.
+retain the immutable base/root certificate and every physical label, and
+recompute all EFX comparisons. Every owner pays the new current floor, and
+(2) preserves the only coordinate needed for a lexicographic contradiction:
+the first-priority root is strictly above the base. Lowering later auxiliary
+floors is explicit and is not counted as progress.
 
-## Requirement audit
+If (3) is EFX, (2) contradicts global maximality. Otherwise empty targets
+cannot be strongly envied and the singleton `{k}` cannot be strongly envied.
+Every wall is therefore against `G-k`. A globally minimum desired response
+`D subseteq G-k` is safe at the actual reset allocation and satisfies
 
-| Required branch or outcome | Resolution |
+\[
+ D\cap K\subseteq K-k\subsetneq K.              \tag{5}
+\]
+
+Equation (5), not the numerical floor reset, is the required strict packet
+or hitting progress. A later restoration of the old whole packet requires a
+new signed collision record and cannot be an exact recurrence of this state.
+
+## Typed-branch and release audit
+
+| Required branch | Resolution |
 |---|---|
-| strict capture | nonroot envelope descent or admitted root supplier-star packet reduction |
-| equality-critical payment | nonroot safety descent; root equality packet spread |
-| base-floor/source-inactive debt | desire-free nonroot handoff; root proof uses no nonroot floor |
-| release compatibility | actual protected handoff on the nonroot side; all-holder supplier star on the root side |
-| EFX lexicographic improvement | retained as an immediate endpoint of every tested strict-root allocation |
-| release-compatible PI | retained from the contracted path/Hall and supplier-cycle exits; not needed for the final scalar contradiction |
-| root/anchor exchange | an executed new root/physical-anchor label is an allowed outcome; fixed-label root recurrence is contradicted by (4) |
-| strict packet/hitting/rank progress | proper/empty packet responses in both holder branches |
-| exact recurrence | impossible after the exhaustive holder split |
+| strict capture | nonroot envelope descent or root singleton-star reduction; no recipient surplus is used as root payment |
+| equality-critical payment | nonroot descent is desire-free; the root star is physically strict, so no root-equality face remains |
+| base-floor/source-inactive debt | nonroot currentization/descent preserves its protected root; the root case explicitly resets every later auxiliary floor while retaining the strict first coordinate |
+| release compatibility | nonroot edges use their current supplier; the root star names every current holder and destination and makes no PI claim |
+| repeated whole hit | strict nested-envelope descent for a nonroot holder; equation (5) for a root holder |
+| normalization bypass | the actual bypass response and packet enter the same exhaustive holder split; no historical return is assumed |
+| EFX endpoint | strictly improves the first-priority root over the globally maximal base |
+| PI/anchor alternatives | retained when independently produced, but neither is required for the final root singleton-star reduction |
 
-## Superseded conditional frontier
+## Verification
 
-The second Aug-14 checkpoint continued the hypothetical exterior-dominant
-root face through a charity reset, a two-source threshold debt, and a forced
-nonroot `GGS` cycle.  Those conditional statements need not be false, but
-they are no longer live under the complete anchored `GG` premises: equation
-(4) eliminates their input.  In particular, no `GG -> GGS` conversion is
-needed to prove the present collision theorem.
-
-## Exact replay
+The root closure has two independent executable replays. The primary audit
+uses QF_LRA for both root-support cases and exhausts the packet/target
+geometry. The independent replay imports neither the primary audit nor Z3
+and checks the same inequalities over bounded integers plus an independent
+support enumeration. The floor-reset audit separately checks exact payment
+of the recomputed floors and the minimal-response deletion implication.
 
 From the repository root:
 
 ```bash
-python -m tracks.parkability.audit_gg_old_root_core_exterior_dominance \
-  --output results/gg_old_root_core_exterior_dominance_audit.json
-python -m tracks.parkability.audit_gg_old_root_core_exterior_dominance_independent \
-  --output results/gg_old_root_core_exterior_dominance_independent_audit.json
+python -m tracks.parkability.audit_strict_first_priority_floor_reset_admission \
+  --output results/strict_first_priority_floor_reset_admission_audit.json
+python -m tracks.parkability.audit_root_singleton_supplier_star_floor_reset_closure \
+  --output results/root_singleton_supplier_star_floor_reset_closure_audit.json
+python -m tracks.parkability.audit_root_singleton_supplier_star_floor_reset_closure_independent \
+  --output results/root_singleton_supplier_star_floor_reset_closure_independent_audit.json
 python -m tracks.parkability.audit_retired_packet_charge_anchor_resolution_20260814 \
   --output results/retired_packet_charge_anchor_resolution_20260814_audit.json
 pytest -q \
   tracks/parkability/test_nonroot_safe_whole_hit_envelope_descent.py \
-  tracks/parkability/test_root_global_exterior_subpacket_sacrifice.py \
-  tracks/parkability/test_gg_old_root_core_exterior_dominance.py \
-  tracks/parkability/test_gg_old_root_core_exterior_dominance_independent.py \
+  tracks/parkability/test_strict_first_priority_floor_reset_admission.py \
+  tracks/parkability/test_root_singleton_supplier_star_floor_reset_closure.py \
+  tracks/parkability/test_root_singleton_supplier_star_floor_reset_closure_independent.py \
   tracks/parkability/test_retired_packet_charge_anchor_resolution_20260814.py
 ```
 
-The independent root replay imports neither Z3 nor the primary root audit.
-The finite audits check the scalar and support implications and the exact
-artifact composition; the cap-free semantic GG argument remains a
-conventional proof requiring external expert review.
-
 ## Claim boundary
 
-This does not yet resolve the certified collision subtype
-`T_{L,times}^*`.  It also does not close `T_{L,perp}^*`, `T_0^*`, the full `GG` class, the other
-selected-cycle classes, four-agent EFX, or general additive EFX.  Promotion
-to any larger theorem requires a fresh composition audit showing how those
-other terminals are eliminated.
+This proves the retired-packet charge-or-anchor-exchange theorem for
+`T_{L,times}^*` inside the frozen anchored `GG` interface. It does not close
+`T_{L,perp}^*`, `T_0^*`, the full `GG` class, the other selected-cycle
+classes, four-agent EFX, or general additive EFX. The floor-reset operation
+is a new load-bearing conventional proof step. It has exact machine replays,
+but still requires independent mathematical and external expert review.

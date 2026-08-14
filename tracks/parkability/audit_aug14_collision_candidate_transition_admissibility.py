@@ -27,6 +27,8 @@ def run() -> dict[str, object]:
     root_contradiction = ROOT / "results/GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md"
     resolution = ROOT / "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md"
     floor_gap = ROOT / "results/ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md"
+    floor_reset = ROOT / "results/STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md"
+    reset_closure = ROOT / "results/ROOT_SINGLETON_SUPPLIER_STAR_FLOOR_RESET_CLOSURE_THEOREM_20260814.md"
     candidates = {
         "base_donation": ROOT / "results/SUPPLIER_ALIGNED_BASE_DONATION_PACKET_SPREAD_THEOREM_20260814.md",
         "exterior_pooling": ROOT / "results/BASE_CONTAINED_RETIRED_PACKET_EXTERIOR_DONATION_SPLIT_THEOREM_20260814.md",
@@ -68,7 +70,7 @@ def run() -> dict[str, object]:
     audit_text = audit.read_text()
     assert "root-side floor-admission gate" in audit_text
     assert "floor-compatible supplier-star or controlled" in audit_text
-    assert "open; nothing here" in audit_text
+    assert "closes `T_{L,times}^*`" in audit_text
 
     paths = [
         contract,
@@ -81,24 +83,27 @@ def run() -> dict[str, object]:
         root_contradiction,
         resolution,
         floor_gap,
+        floor_reset,
+        reset_closure,
         *candidates.values(),
         script,
     ]
     return {
         "schema": "aug14-collision-candidate-transition-admissibility-audit-v1",
-        "status": "ROOT_GLOBAL_CUT_CONDITIONAL_FLOOR_ADMISSION_OPEN",
+        "status": "ROOT_FLOOR_GATE_REPAIRED_T_L_TIMES_CLOSED",
         "governing_rules_present": governing_rules_present,
         "conditional_boundaries_present": conditional_boundaries_present,
-        "admission_theorem_proved": False,
+        "admission_theorem_proved": True,
         "equality_face_admission_theorem_proved": True,
         "base_contained_exterior_pooling_admitted": True,
         "root_global_exterior_subpacket_sacrifice_admitted": False,
+        "root_singleton_reset_supplier_star_admitted": True,
         "root_global_exterior_subpacket_sacrifice_scalar_cut_conditional": True,
-        "declared_floor_gate_open": True,
-        "base_containment_unconditional": True,
+        "declared_floor_gate_open": False,
+        "base_containment_unconditional_from_old_global_cut": False,
         "charity_one_good_reset_admitted": True,
-        "full_T_L_times_theorem_closed": False,
-        "next_gate": "controlled_floor_reset_or_floor_paying_supplier_star",
+        "full_T_L_times_theorem_closed": True,
+        "next_gate": "T_0^* or T_{L,perp}^* outside this collision theorem",
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path) for path in paths
         },

@@ -23,6 +23,13 @@ from .audit_root_retired_packet_old_anchor_critical_localization import (
 from .audit_root_retired_packet_old_anchor_critical_localization_independent import (
     run as run_critical_localization_independent,
 )
+from .audit_strict_first_priority_floor_reset_admission import run as run_floor_reset
+from .audit_root_singleton_supplier_star_floor_reset_closure import (
+    run as run_root_reset_closure,
+)
+from .audit_root_singleton_supplier_star_floor_reset_closure_independent import (
+    run as run_root_reset_closure_independent,
+)
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -40,6 +47,9 @@ def run() -> dict[str, object]:
     floor_gap = run_floor_gap()
     critical_localization = run_critical_localization()
     critical_localization_independent = run_critical_localization_independent()
+    floor_reset = run_floor_reset()
+    root_reset_closure = run_root_reset_closure()
+    root_reset_closure_independent = run_root_reset_closure_independent()
 
     assert nonroot["status"] == "ALL_COMMON_SAFE_NONROOT_WHOLE_HITS_TERMINATE"
     assert global_cut["status"] == (
@@ -48,12 +58,22 @@ def run() -> dict[str, object]:
     assert root["conditional_root_scalar_survivor_contradicted"]
     assert not root["root_held_collision_closed"]
     assert root_independent["feasible_chains"] == 0
-    assert floor_gap["status"] == "ROOT_SUPPLIER_STAR_FLOOR_ADMISSION_NOT_PROVED"
-    assert not floor_gap["supplier_star_transition_admitted"]
+    assert floor_gap["status"] == (
+        "HISTORICAL_UNRESET_STAR_INVALID_FLOOR_RESET_REPAIR_PROVED"
+    )
+    assert not floor_gap["unreset_supplier_star_transition_admitted"]
+    assert floor_gap["reset_supplier_star_transition_admitted"]
     assert critical_localization["status"] == (
         "ROOT_PACKET_LOCALIZED_TO_OLD_ANCHOR_CRITICAL_ATOMS"
     )
     assert critical_localization_independent["failures"] == 0
+    assert floor_reset["status"] == "STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMITTED"
+    assert not floor_reset["old_later_floors_preserved"]
+    assert not floor_reset["floor_reset_counts_as_progress"]
+    assert root_reset_closure["root_holder_branch_closed"]
+    assert root_reset_closure["full_T_L_times_theorem_closed"]
+    assert root_reset_closure_independent["arithmetic_failures"] == 0
+    assert root_reset_closure_independent["support_failures"] == 0
     assert global_cut["strict_atomwise_cut_exact"]
     assert global_cut["equality_face_closed"]
     assert nonroot["protected_floor_source_inactive_branch_covered"]
@@ -67,6 +87,8 @@ def run() -> dict[str, object]:
     global_theorem = ROOT / "results/ROOT_GLOBAL_EXTERIOR_SUBPACKET_SACRIFICE_THEOREM_20260814.md"
     floor_gap_theorem = ROOT / "results/ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md"
     localization_theorem = ROOT / "results/ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md"
+    floor_reset_theorem = ROOT / "results/STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md"
+    root_reset_theorem = ROOT / "results/ROOT_SINGLETON_SUPPLIER_STAR_FLOOR_RESET_CLOSURE_THEOREM_20260814.md"
     script = Path(__file__).resolve()
     text = resolution.read_text()
     for phrase in (
@@ -75,8 +97,8 @@ def run() -> dict[str, object]:
         "base-floor/source-inactive",
         "release compatibility",
         "exhaustive holder split",
-        "not yet proved",
-        "retirement supplier",
+        "proved for the complete collision subtype",
+        "retirement",
         "current holder",
         "repeated whole hit",
         "normalization-bypass",
@@ -85,17 +107,20 @@ def run() -> dict[str, object]:
 
     return {
         "schema": "retired-packet-charge-anchor-resolution-audit-v1",
-        "status": "ROOT_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN",
+        "status": "T_L_TIMES_COLLISION_CLOSED_BY_CONTROLLED_FLOOR_RESET",
         "holder_partition": ["protected_root", "nonroot_owner"],
         "holder_partition_exhaustive": True,
         "nonroot_whole_hit_closed": True,
-        "root_whole_hit_closed": False,
+        "root_whole_hit_closed": True,
         "root_scalar_contradiction_conditional": True,
-        "root_supplier_star_floor_admission_proved": False,
+        "root_supplier_star_floor_admission_proved": True,
+        "strict_first_priority_floor_reset_admitted": True,
+        "old_later_floors_preserved": False,
+        "floor_reset_counts_as_progress": False,
         "root_packet_localized_to_old_anchor_critical_atoms": True,
         "root_off_anchor_atom_returns_closed": True,
         "root_noncritical_anchor_atom_returns_closed": True,
-        "root_critical_anchor_packet_closed": False,
+        "root_critical_anchor_packet_closed": True,
         "strict_capture_covered": True,
         "equality_critical_covered": True,
         "base_floor_source_inactive_covered": True,
@@ -119,12 +144,12 @@ def run() -> dict[str, object]:
             "old_root_core_inside_base_exterior": True,
             "label_change_is_allowed_progress": True,
             "fixed_label_scalar_chain_unsat": root["scalar_chain_qf_lra_unsat"],
-            "supplier_star_floor_admission_proved": False,
+            "supplier_star_floor_admission_proved": True,
+            "controlled_floor_reset_recorded": True,
         },
-        "full_T_L_times_theorem_closed": False,
-        "smallest_missing_operation": critical_localization[
-            "smallest_remaining_operation"
-        ],
+        "full_T_L_times_theorem_closed": True,
+        "smallest_missing_operation": None,
+        "next_global_terminal": "T_0^* or T_{L,perp}^*",
         "parked_T_L_perp_closed": False,
         "empty_ledger_T0_closed": False,
         "GG_closed": False,
@@ -139,6 +164,8 @@ def run() -> dict[str, object]:
                 global_theorem,
                 floor_gap_theorem,
                 localization_theorem,
+                floor_reset_theorem,
+                root_reset_theorem,
                 script,
             )
         },

@@ -207,22 +207,22 @@ def run(root: Path) -> dict:
         (result_dir / "global_retired_root_support_ledger_composition_audit.json").read_text()
     )
     assert ledger_resolution["status"] == (
-        "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN"
+        "T_L_TIMES_CLOSED_T0_AND_T_L_PERP_OPEN"
     )
-    assert not ledger_resolution["collision_T_L_times_closed"]
+    assert ledger_resolution["collision_T_L_times_closed"]
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN",
+        "status": "T_L_TIMES_CLOSED_T0_AND_T_L_PERP_OPEN",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
         "smallest_named_terminal": "generic rank-completing paid-response splice outside the enlarged-root contract",
         "historical_global_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
-        "global_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
+        "global_typed_terminal": "T_0^* dot-union T_{L,perp}^*",
         "pre_ledger_terminal": "T_0^*",
         "post_ledger_terminal": "T_L^*",
         "post_ledger_terminal_subtypes": ledger_resolution[
@@ -234,7 +234,8 @@ def run(root: Path) -> dict:
         "closed_post_ledger_subtypes": ledger_resolution[
             "closed_post_ledger_subtypes"
         ],
-        "collision_T_L_times_closed": False,
+        "collision_T_L_times_closed": True,
+        "collision_T_L_times_controlled_floor_reset_admitted": True,
         "collision_T_L_times_conditional_scalar_contradiction": True,
         "collision_T_L_times_root_packet_localized_to_critical_old_anchor": True,
         "stated_four_old_core_normal_form_vacuous": True,
@@ -250,12 +251,11 @@ def run(root: Path) -> dict:
         "open_obligations": [
             "close the generic empty-ledger T_0^* recurrence",
             "project, activate, or otherwise close collision-free parked support T_{L,perp}^*",
-            "pay or anchor-exchange a critical old-anchor atom in root-held T_{L,times}^*",
         ],
         "dependencies": records,
         "claim_boundary": (
-            "critical-old-anchor collision localization inside the branch-complete "
-            "GG reduction, not a GG closure theorem, collision theorem, or "
+            "controlled-floor-reset closure of the collision subtype inside the "
+            "branch-complete GG reduction, not a GG closure theorem or "
             "four-agent/general EFX proof"
         ),
         "provenance": {

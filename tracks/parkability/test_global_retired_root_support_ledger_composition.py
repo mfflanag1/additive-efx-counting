@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 def test_global_retired_root_support_ledger_composition_replays() -> None:
     result = run(ROOT)
     assert result["status"] == (
-        "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN"
+        "T_L_TIMES_CLOSED_T0_AND_T_L_PERP_OPEN"
     )
     assert result["g_states_covered"] == [f"G{i}" for i in range(11)]
     assert len(result["cross_cutting_operations_covered"]) == 8
@@ -21,14 +21,15 @@ def test_global_retired_root_support_ledger_composition_replays() -> None:
     assert result["historical_typed_terminal"] == (
         "T^dagger = T_0^* dot-union T_L^*"
     )
-    assert result["surviving_terminal"] == "T^dagger = T_0^* dot-union T_L^*"
+    assert result["surviving_terminal"] == "T_0^* dot-union T_{L,perp}^*"
     assert result["pre_ledger_terminal"] == "T_0^*"
     assert result["post_ledger_terminal"] == "T_L^*"
     assert result["post_ledger_terminal_subtypes"] == [
         "T_{L,perp}^*", "T_{L,times}^*"
     ]
-    assert result["closed_post_ledger_subtypes"] == []
-    assert not result["collision_T_L_times_closed"]
+    assert result["closed_post_ledger_subtypes"] == ["T_{L,times}^*"]
+    assert result["collision_T_L_times_closed"]
+    assert result["collision_T_L_times_controlled_floor_reset_admitted"]
     assert result["collision_T_L_times_conditional_scalar_contradiction"]
     assert result["collision_T_L_times_root_packet_localized_to_critical_old_anchor"]
     assert not result["parked_T_L_perp_closed"]

@@ -2,10 +2,20 @@
 
 **Date:** 2026-08-14
 
-**Verdict:** the proposed complete-current-exterior supplier-star is not yet
-an admissible transition under the frozen `T_{L,times}^*` contract.  Its
-scalar and support consequences are correct conditionally, but they do not
-currently close the root-held collision branch.
+**Historical verdict:** the proposed complete-current-exterior supplier-star
+was not admissible while it silently retained the old positive nonroot
+floors.
+
+**Resolution update (2026-08-14).** The gap is now repaired by
+`STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md`. It
+explicitly resets every later auxiliary floor at the tested allocation,
+retains the strict first-priority root certificate, recomputes every EFX
+comparison, and does not count the reset itself as progress. The singleton
+specialization in
+`ROOT_SINGLETON_SUPPLIER_STAR_FLOOR_RESET_CLOSURE_THEOREM_20260814.md`
+then gives strict packet progress and closes the root-holder branch. The old
+unreset argument below remains invalid and is retained as correction
+provenance.
 
 ## Exact mismatch
 
@@ -51,7 +61,7 @@ The nonroot desire-free envelope descent is unaffected.  The defect is only
 the admission of the root-side operation that derives the first strict
 inequality.
 
-## Smallest missing operation
+## Smallest missing operation, now supplied
 
 Prove one of the following, without changing the frozen theorem:
 
@@ -64,22 +74,20 @@ Prove one of the following, without changing the frozen theorem:
 3. a different root/anchor exchange deriving the needed packet reduction or
    contradiction without emptying a positive-floor owner.
 
-Absent one of these, `T_{L,times}^*` remains open.  This is a proof-gap
-diagnosis, not a counterexample to the theorem itself and not evidence
-against four-agent EFX.
+The new controlled floor-reset theorem supplies alternative 1. The reset is
+recorded explicitly, and the singleton-star response geometry supplies the
+separate strict progress required by that theorem.
 
 ## Subsequent localization
 
 `ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md`
-removes every off-anchor or noncritical anchor atom without using the global
-supplier star.  It returns one atom to its recorded retirement source,
-preserves every declared floor, and retains or validly shrinks the old root
-anchor.  Hence the live root obstruction is now the narrower cell
+first narrowed the gap without using the global supplier star. Its corrected
+version uses a clean controlled release rather than a historical-source
+return. The later floor-reset theorem closes even the residual cell
 
 \[
  \varnothing\ne K\subseteq
  \{g\in D_r:v_r(D_r-g)<v_r(X_r)\}.
 \]
 
-The missing operation must pay or exchange one of these critical old-anchor
-atoms; it need not solve the unrestricted all-donor problem.
+so critical old-anchor payment is no longer a live `T_{L,times}^*` gate.

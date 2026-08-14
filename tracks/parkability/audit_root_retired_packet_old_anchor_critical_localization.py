@@ -20,15 +20,28 @@ def sha256(path: Path) -> str:
 
 
 def run() -> dict[str, object]:
-    anchor, base, atom, source_before, source_after = z3.Reals(
-        "anchor base atom source_before source_after"
+    anchor, base, atom, root_target = z3.Reals(
+        "anchor base atom root_target"
     )
-    source = z3.SolverFor("QF_LRA")
-    source.add(atom > 0, source_after == source_before + atom)
-    source_floor_strict = source.check() == z3.sat
-    source.push()
-    source.add(source_after <= source_before)
-    source_floor_strict = source_floor_strict and source.check() == z3.unsat
+
+    strict_release = z3.SolverFor("QF_LRA")
+    strict_release.add(
+        anchor > base,
+        atom > 0,
+        root_target >= anchor,
+        anchor - atom > base,
+        root_target - atom <= base,
+    )
+    noncritical_anchor_release_is_root_strict = strict_release.check() == z3.unsat
+
+    off_anchor_release = z3.SolverFor("QF_LRA")
+    off_anchor_release.add(
+        anchor > base,
+        atom > 0,
+        root_target >= anchor + atom,
+        root_target - atom <= base,
+    )
+    off_anchor_release_is_root_strict = off_anchor_release.check() == z3.unsat
 
     critical = z3.SolverFor("QF_LRA")
     critical.add(
@@ -40,6 +53,23 @@ def run() -> dict[str, object]:
     critical.push()
     critical.add(atom < anchor - base)
     critical_atom_exceeds_surplus = critical.check() == z3.unsat
+
+    current_critical = z3.SolverFor("QF_LRA")
+    current_critical.add(
+        anchor > base,
+        root_target >= anchor,
+        atom > 0,
+        root_target - atom <= base,
+        root_target - atom != base,
+    )
+    current_critical.push()
+    current_critical.add(atom <= root_target - base)
+    critical_atom_exceeds_current_surplus = current_critical.check() == z3.unsat
+    current_critical.pop()
+    current_critical.add(anchor - atom > base)
+    current_critical_implies_old_anchor_critical = (
+        current_critical.check() == z3.unsat
+    )
 
     goods = tuple(range(8))
     off_anchor_cases = 0
@@ -75,39 +105,68 @@ def run() -> dict[str, object]:
     anchor_source = ROOT / "results/PERMANENT_ANCHOR_HITTING_RECURRENCE_CONTRACT_20260813.md"
     old_core = ROOT / "results/CHARITY_COMPLETED_PATH_ROOT_RESPONSE_ANCHOR_LEMMA_20260811.md"
     correction = ROOT / "results/ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md"
+    clean_release = ROOT / "results/ROOT_STRICT_CLEAN_SUBPACKET_RELEASE_ADMISSION_THEOREM_20260814.md"
     script = Path(__file__).resolve()
 
     text = theorem.read_text()
     anchor_source_text = anchor_source.read_text()
     old_core_text = old_core.read_text()
-    assert "Return `g` to its recorded retirement source" in text
-    assert "preserves all declared" in text
-    assert "K\\subseteq C_r(A)" in text
+    clean_release_text = clean_release.read_text()
+    assert "One-atom clean controlled release" in text
+    assert "waives exactly the named sacrifice row's auxiliary floor" in text
+    assert "reversibility inference" in text
+    assert "K\\subseteq C_r(Z_r)" in text
+    assert "C_r(Z_r) subseteq C_r(A)" in text
+    assert "chosen atom is given alone to the named sacrificed nonroot owner" in text
+    assert "Z'_u=T" in clean_release_text
+    assert "sacrificed later" in clean_release_text
     assert "currently assigned to `r`" in anchor_source_text
     assert "common-safe and strictly desired by" in old_core_text
 
     return {
         "schema": "root-retired-packet-old-anchor-critical-localization-v1",
         "status": "ROOT_PACKET_LOCALIZED_TO_OLD_ANCHOR_CRITICAL_ATOMS",
-        "recorded_source_floor_strictly_improves": source_floor_strict,
+        "off_anchor_atom_clean_release_is_root_strict": (
+            off_anchor_release_is_root_strict
+        ),
+        "noncritical_anchor_atom_clean_release_is_root_strict": (
+            noncritical_anchor_release_is_root_strict
+        ),
         "critical_atom_exceeds_anchor_surplus": critical_atom_exceeds_surplus,
+        "critical_atom_exceeds_current_surplus": (
+            critical_atom_exceeds_current_surplus
+        ),
+        "current_target_critical_implies_old_anchor_critical": (
+            current_critical_implies_old_anchor_critical
+        ),
         "off_anchor_support_cases_checked": off_anchor_cases,
         "anchor_atom_support_cases_checked": noncritical_anchor_cases,
         "packet_inside_anchor_terminal_cases": terminal_cases,
-        "off_anchor_atom_return_admitted": True,
+        "off_anchor_atom_clean_release_admitted": True,
         "noncritical_anchor_atom_release_admitted": True,
-        "all_other_owner_floors_unchanged": True,
-        "retirement_source_floor_preserved": True,
+        "all_nonsacrificed_owner_floors_unchanged": True,
+        "designated_later_owner_auxiliary_floor_waived": True,
+        "historical_residual_preserving_return_used": False,
         "root_floor_preserved_by_old_or_reduced_anchor": True,
         "release_supplier_is_current_root": True,
-        "exact_recurrent_survivor": "nonempty K subseteq C_r(A) subseteq A",
+        "exact_recurrent_survivor": (
+            "nonempty K subseteq C_r(Z_r) subseteq C_r(A) subseteq A"
+        ),
         "full_T_L_times_theorem_closed": False,
         "smallest_remaining_operation": (
             "pay or anchor-exchange a critical retired atom of the old root core"
         ),
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path)
-            for path in (theorem, contract, anchor_source, old_core, correction, script)
+            for path in (
+                theorem,
+                contract,
+                anchor_source,
+                old_core,
+                correction,
+                clean_release,
+                script,
+            )
         },
     }
 

@@ -1,11 +1,14 @@
 {
   "augmented_generic_T_star_strictly_narrowed": true,
-  "claim_boundary": "global ledger composition through the current G0-G10 architecture; the collision root branch is localized to critical atoms of the old anchor; typed T-dagger, GG, and general EFX remain open",
-  "closed_post_ledger_subtypes": [],
-  "collision_T_L_times_closed": false,
+  "claim_boundary": "global ledger composition through the current G0-G10 architecture; the collision subtype is closed by a controlled strict-root floor reset; T_0, parked support, GG, and general EFX remain open",
+  "closed_post_ledger_subtypes": [
+    "T_{L,times}^*"
+  ],
+  "collision_T_L_times_closed": true,
   "collision_T_L_times_conditional_scalar_contradiction": true,
+  "collision_T_L_times_controlled_floor_reset_admitted": true,
   "collision_T_L_times_root_packet_localized_to_critical_old_anchor": true,
-  "collision_T_L_times_smallest_missing_operation": "pay or anchor-exchange a critical retired atom of the old root core",
+  "collision_T_L_times_smallest_missing_operation": null,
   "collision_normalization_checks": {
     "capture": true,
     "equality_without_typed_handoff_to_TL_star": true,
@@ -43,7 +46,7 @@
     },
     {
       "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
-      "sha256": "c8635102017bc041034fd5a68ca1244e618904fae5cfcb23cc68e7991f1702c6"
+      "sha256": "ba2fdb9911bb874c1edc1e5eda18035ecdb835b2c2332dab8a245ba06d419090"
     },
     {
       "path": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPLETION_AUDIT_20260813.md",
@@ -79,7 +82,7 @@
     },
     {
       "path": "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md",
-      "sha256": "4c82eda6d06ca7b6903479eb8d6c169681352ce0eeeea6c6378c21cf3f5a35f9"
+      "sha256": "b0c3abde51f9eea8e6db256c845a513febf8c8d97684703af133bd1d61f4d30c"
     },
     {
       "path": "results/GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md",
@@ -87,7 +90,7 @@
     },
     {
       "path": "results/retired_packet_charge_anchor_resolution_20260814_audit.json",
-      "sha256": "f8ecfd398023031f90c4c14e2b97a8315a3807c9df2142b339e38cd8b740fb35"
+      "sha256": "6e7eabd2a44adfaa64702d720d151e55fdf9acddf86d18cb7620174f2f84b184"
     },
     {
       "path": "results/gg_old_root_core_exterior_dominance_audit.json",
@@ -99,23 +102,43 @@
     },
     {
       "path": "results/ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md",
-      "sha256": "4b77fb0c5b5e1f9597ac2a7576d9e135a7d81e7c3eae4f3e315f974cd92069df"
+      "sha256": "4e950f4eb8be6435812ab583fcf4a0d9f9b9dceb8b0fdde1c0bfdbf57420d0e2"
     },
     {
       "path": "results/root_global_supplier_star_floor_admissibility_gap_audit.json",
-      "sha256": "1e6f50933746dcecf7c4296152e5911809a62929509b2d8e8c6480a5ba111a1f"
+      "sha256": "f09bf2b70b8239dec86df81e09eced998f75848e6d82f8e9d5ed8610796bf8c6"
     },
     {
       "path": "results/ROOT_RETIRED_PACKET_OLD_ANCHOR_CRITICAL_LOCALIZATION_THEOREM_20260814.md",
-      "sha256": "266e857fdd945b4d473c27967a726105814e28679aca461c0d2e7d92a10461fb"
+      "sha256": "a55dd380a3b355d62725426b390998f02b92851fe49b5f86e92ceed36a604974"
     },
     {
       "path": "results/root_retired_packet_old_anchor_critical_localization_audit.json",
-      "sha256": "4d17e7e5ee7cc35b602f3c97ad7e648584ec20f4d122e0d2cd40833a5dbe0c3f"
+      "sha256": "2b15df5c0e586634e3066312160dba278f552a892bf2fb95e8957dde7dbd58d5"
     },
     {
       "path": "results/root_retired_packet_old_anchor_critical_localization_independent_audit.json",
-      "sha256": "787dcdeeda985209e7c45d1d7198c159fd410e9e150d3f687400223369213357"
+      "sha256": "22929384e1daa269d30d041db498ae8a763032cea3b55e684cc028de22fc1825"
+    },
+    {
+      "path": "results/STRICT_FIRST_PRIORITY_FLOOR_RESET_ADMISSION_THEOREM_20260814.md",
+      "sha256": "9956c5398e2d9d0192b9f46cf556142ea8d9780d6d557d43f1d08308a206ffab"
+    },
+    {
+      "path": "results/strict_first_priority_floor_reset_admission_audit.json",
+      "sha256": "b483cb46f07a20ff15314e937c546376a3c0513718d843200382051b1da5788e"
+    },
+    {
+      "path": "results/ROOT_SINGLETON_SUPPLIER_STAR_FLOOR_RESET_CLOSURE_THEOREM_20260814.md",
+      "sha256": "d4f029daf291afe32556920c6eb70babe9e87742baa4bf0d36e9331455a73eba"
+    },
+    {
+      "path": "results/root_singleton_supplier_star_floor_reset_closure_audit.json",
+      "sha256": "98dbe08a22f72357ef20ae90e45ab42f47214f2b0e8f39aef8501890cdec272b"
+    },
+    {
+      "path": "results/root_singleton_supplier_star_floor_reset_closure_independent_audit.json",
+      "sha256": "9c35fa7b6bd125eedff365056e570f355cf9f8f98f8023532f25efb32fdd306b"
     }
   ],
   "finite_component_argument": {
@@ -156,9 +179,9 @@
   "pre_ledger_terminal": "T_0^*",
   "provenance": {
     "script": "tracks/parkability/audit_global_retired_root_support_ledger_composition.py",
-    "script_sha256": "deaab340d5dbf2af18029549e459405db41d59abe077ec05dac214137a549678",
+    "script_sha256": "38bc82b9738609ce983fbc17df138f17e1d0f598d5faab0f51cb97d98518dbad",
     "theorem": "results/GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md",
-    "theorem_sha256": "c8635102017bc041034fd5a68ca1244e618904fae5cfcb23cc68e7991f1702c6"
+    "theorem_sha256": "ba2fdb9911bb874c1edc1e5eda18035ecdb835b2c2332dab8a245ba06d419090"
   },
   "scalar_collision_checks": {
     "deletion_or_capture_exhaustive": true,
@@ -166,14 +189,13 @@
     "failed_deletion_uses_nonempty_packet": true
   },
   "schema": "global-retired-root-support-ledger-composition-audit-v4",
-  "status": "T_L_TIMES_CRITICAL_OLD_ANCHOR_PACKET_GATE_OPEN",
-  "surviving_terminal": "T^dagger = T_0^* dot-union T_L^*",
+  "status": "T_L_TIMES_CLOSED_T0_AND_T_L_PERP_OPEN",
+  "surviving_terminal": "T_0^* dot-union T_{L,perp}^*",
   "surviving_terminal_requirements": [
     "nonempty retired support",
     "retirement provenance and current holders",
     "fixed typed protected floors",
-    "complete-pool parked-support certificate or collision certificate",
-    "collision subtype has repeated hitting/bypass response or typed separator",
+    "complete-pool parked-support certificate",
     "typed rank deficiency or observer-payment/release separator"
   ],
   "transition_routes": {
