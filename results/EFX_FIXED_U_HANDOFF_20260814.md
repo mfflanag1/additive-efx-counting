@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `a56ce46`
-(`research: eliminate incoming-root cell topology`)
+**Latest research checkpoint before this note update:** `9c3b1d5`
+(`research: close same-source root-response replacement`)
 
 ## Frozen objective
 
@@ -525,6 +525,35 @@ Files:
 - `results/strict_root_incoming_cell_diversion_or_capture_audit.json`
 - `tracks/parkability/audit_strict_root_incoming_cell_diversion_or_capture.py`
 
+### 19. Same-source root-response recurrence reduced to capture
+
+At a bilateral probe `(H,D)`, suppose the next root-target response `F` lies
+in untouched original-root support and has the same source as `H`.  Return
+`H` and replace it by `F`, retaining `D` and charity.  Because `F` is desired
+above the source's entire probe bundle, the replacement is admissible and
+strictly increases that identical source's utility.
+
+The replacement exceeds four edges only in one exact signature: the source
+is not `q`, `D` is nonempty, and `F` meets both original root supplier cells
+while leaving a proper anchor residual.  Completing the anchor deletes the
+extra `q -> root` edge.  Thus every case gives a four-edge strict-progress
+probe unless
+
+```text
+v_r(F)-v_r(D) >= delta_r+v_r(p),
+```
+
+or the same inequality holds after anchor completion.  Exact same-source
+residual recurrence is therefore no longer an untyped survivor.  The live
+response cases are a different source, typed simultaneous root capture, or
+the singleton-hit changed-state continuation.
+
+Files:
+
+- `results/PERMANENT_ANCHOR_SAME_SOURCE_ROOT_RESPONSE_REPLACEMENT_LEMMA_20260814.md`
+- `results/permanent_anchor_same_source_root_response_replacement_audit.json`
+- `tracks/parkability/audit_permanent_anchor_same_source_root_response_replacement.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -668,10 +697,11 @@ root-star leaf liquidation, two-target root-path repair, and foreign-import
 cancellation, root-compensated direct return, and singleton-retained partial
 return, universal incoming-cell return, and permanent-anchor nonroot response
 transfer, root-target minimum-good diversion, and the exact bilateral
-compensator frontier and incoming-root cell diversion:
+compensator frontier, incoming-root cell diversion, and same-source
+root-response replacement:
 
 ```text
-21 passed in 22.39s
+22 passed in 22.84s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
