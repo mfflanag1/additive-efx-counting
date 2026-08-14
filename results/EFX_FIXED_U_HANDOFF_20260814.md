@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `65eb355`
-(`research: trim singleton-source return within four edges`)
+**Latest pushed research checkpoint before this note update:** `79f7126`
+(`research: eliminate residual two-target topology obstruction`)
 
 ## Frozen objective
 
@@ -353,6 +353,29 @@ Files:
 - `results/r3_singleton_retained_partial_return_audit.json`
 - `tracks/parkability/audit_r3_singleton_retained_partial_return.py`
 
+### 14. Every two-target support signature is now covered
+
+The five residual topology signatures were artifacts of requiring the
+returned packet to lie inside the response core.  Because `z` keeps the
+positive singleton, any positive incoming packet improves it.  The universal
+menu is therefore: return one good from the `z -> root` cell, return the whole
+`y -> root` cell, or—when neither exists—move one root-supplied good.  Each
+choice reuses, replaces, or adds at most one pair, so every presence pattern
+stays within four edges.
+
+The two-target topology obstruction is eliminated completely.  Either a
+minimum menu packet costs less than the root's strict margin and gives a
+priority-valid four-edge probe, or every displaced-`z` singleton and the
+whole displaced-`y` cell individually capture that entire margin.  The live
+branch is root-critical incoming support plus observer/repeat closure, not
+packet topology.
+
+Files:
+
+- `results/R3_SINGLETON_RETAINED_INCOMING_CELL_RETURN_LEMMA_20260814.md`
+- `results/r3_singleton_retained_incoming_cell_return_audit.json`
+- `tracks/parkability/audit_r3_singleton_retained_incoming_cell_return.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -477,10 +500,10 @@ menu audit/core extraction, payment identities, spanning frontier,
 cancellation theorem, all-target-change frontier, repeat-rank no-go, and
 root-star leaf liquidation, two-target root-path repair, and foreign-import
 cancellation, root-compensated direct return, and singleton-retained partial
-return:
+return and universal incoming-cell return:
 
 ```text
-16 passed in 25.56s
+17 passed in 22.33s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
