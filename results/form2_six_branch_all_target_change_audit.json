@@ -1,0 +1,165 @@
+{
+  "branch_count": 6,
+  "branches": [
+    {
+      "all_targets_changed": true,
+      "d_core": "Dr",
+      "omitted_source": "r",
+      "symmetric_differences": {
+        "charity": [
+          "p"
+        ],
+        "d": [
+          "Dr"
+        ],
+        "q": [
+          "Q"
+        ],
+        "r": [
+          "Dr",
+          "S",
+          "p"
+        ],
+        "s": [
+          "Q",
+          "S"
+        ]
+      }
+    },
+    {
+      "all_targets_changed": true,
+      "d_core": "Dr",
+      "omitted_source": "q",
+      "symmetric_differences": {
+        "charity": [
+          "p"
+        ],
+        "d": [
+          "Dr"
+        ],
+        "q": [
+          "R",
+          "p"
+        ],
+        "r": [
+          "Dr",
+          "R",
+          "S"
+        ],
+        "s": [
+          "S"
+        ]
+      }
+    },
+    {
+      "all_targets_changed": true,
+      "d_core": "Dr",
+      "omitted_source": "s",
+      "symmetric_differences": {
+        "charity": [
+          "p"
+        ],
+        "d": [
+          "Dr"
+        ],
+        "q": [
+          "Q",
+          "R"
+        ],
+        "r": [
+          "Dr",
+          "R"
+        ],
+        "s": [
+          "Q",
+          "p"
+        ]
+      }
+    },
+    {
+      "all_targets_changed": true,
+      "d_core": "Dq",
+      "omitted_source": "r",
+      "symmetric_differences": {
+        "charity": [
+          "p"
+        ],
+        "d": [
+          "Dq"
+        ],
+        "q": [
+          "Dq",
+          "Q"
+        ],
+        "r": [
+          "S",
+          "p"
+        ],
+        "s": [
+          "Q",
+          "S"
+        ]
+      }
+    },
+    {
+      "all_targets_changed": true,
+      "d_core": "Dq",
+      "omitted_source": "q",
+      "symmetric_differences": {
+        "charity": [
+          "p"
+        ],
+        "d": [
+          "Dq"
+        ],
+        "q": [
+          "Dq",
+          "R",
+          "p"
+        ],
+        "r": [
+          "R",
+          "S"
+        ],
+        "s": [
+          "S"
+        ]
+      }
+    },
+    {
+      "all_targets_changed": true,
+      "d_core": "Dq",
+      "omitted_source": "s",
+      "symmetric_differences": {
+        "charity": [
+          "p"
+        ],
+        "d": [
+          "Dq"
+        ],
+        "q": [
+          "Dq",
+          "Q",
+          "R"
+        ],
+        "r": [
+          "R"
+        ],
+        "s": [
+          "Q",
+          "p"
+        ]
+      }
+    }
+  ],
+  "claim_boundary": "cap-free physical target-change audit; whether an old cross-state record satisfies the extraction terminal is not proved",
+  "provenance": {
+    "script": "tracks/parkability/audit_form2_six_branch_all_target_change.py",
+    "script_sha256": "5f4854fde7e3a14e8c07f89ad3aa7be16ba6ac30488c19cfb90fa87d34e97c24",
+    "theorem": "results/FORM2_SIX_BRANCH_ALL_TARGET_CHANGE_REPEAT_FRONTIER_20260814.md",
+    "theorem_sha256": "00b382b2e3824949b89635598ef099c6c877f302b0009f6330d0cdb2bfa114de"
+  },
+  "record_consequence": "a response at a branch target cannot be an unchanged-Y-target record; a non-new complete decorated record is cross-state",
+  "schema": "form2-six-branch-all-target-change-v1",
+  "status": "ALL_SIX_BRANCHES_CHANGE_ALL_FIVE_TARGETS"
+}
