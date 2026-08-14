@@ -452,12 +452,50 @@ def complete_efx_formula(value, present, allocation):
     ))
 
 
+def add_anchor_charity_bypass_constraints(solver, value, present):
+    """Restrict the master to the permanent-anchor parked-bypass branch.
+
+    Move the fixed r->q anchor core to r, retain every other current good,
+    and require every placement of the singleton charity packet to fail EFX.
+    Requiring p to be worth at most each owner's pre-donation bundle excludes
+    a singleton p response for every choice of nonroot holder.
+    """
+    anchor = set(RESPONSE_CORE["r"])
+    rotated = {owner: set(SUPPORT[owner]) for owner in OWNERS}
+    rotated["q"] -= anchor
+    rotated["r"] |= anchor
+
+    # The permanent anchor is ordinary/base-desired, not merely current.
+    solver.add(base_response(value, "r", RESPONSE_CORE["r"], present))
+
+    for observer in OWNERS:
+        solver.add(
+            total(value, observer, PACKET["P"])
+            <= total(value, observer, rotated[observer])
+        )
+
+    allocations = []
+    for holder in OWNERS:
+        allocation = {owner: tuple(rotated[owner]) for owner in OWNERS}
+        allocation[holder] = (*allocation[holder], *PACKET["P"])
+        solver.add(z3.Not(complete_efx_formula(value, present, allocation)))
+        allocations.append(allocation)
+    return rotated, allocations
+
+
 def run(output: Path, timeout_seconds: int, maximum_iterations: int,
         random_seed: int, resume: Path | None = None,
         maximum_families_per_round: int = 250,
         separate_complete_efx: bool = False,
-        maximum_efx_per_round: int = 250):
+        maximum_efx_per_round: int = 250,
+        require_anchor_charity_bypass: bool = False):
     solver, value, present = build_master()
+    bypass_rotated = None
+    bypass_allocations = None
+    if require_anchor_charity_bypass:
+        bypass_rotated, bypass_allocations = add_anchor_charity_bypass_constraints(
+            solver, value, present
+        )
     solver.set(timeout=timeout_seconds * 1000, random_seed=random_seed)
     signatures = set()
     allocation_signatures = set()
@@ -541,6 +579,19 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
         "maximum_families_per_round": maximum_families_per_round,
         "separate_complete_efx": separate_complete_efx,
         "maximum_efx_per_round": maximum_efx_per_round,
+        "require_anchor_charity_bypass": require_anchor_charity_bypass,
+        "anchor_charity_bypass": (
+            {
+                "anchor_core": list(RESPONSE_CORE["r"]),
+                "rotated_partial": {
+                    owner: sorted(goods)
+                    for owner, goods in bypass_rotated.items()
+                },
+                "failed_charity_holders": list(OWNERS),
+                "singleton_charity_response_excluded_for_all_sources": True,
+            }
+            if require_anchor_charity_bypass else None
+        ),
         "random_seed": random_seed,
         "resume": resume_record,
         "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
@@ -555,7 +606,14 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
                 "The separator excludes closed generalized-PI families. "
             )
             + "UNSAT is a bounded split-cell theorem, not a cap-free lift. "
-            "A SAT terminal is an exact countermodel only to the declared "
+            + (
+                "The optional anchor-charity restriction additionally "
+                "requires every permanent-anchor plus singleton-charity "
+                "placement to fail EFX while the singleton is not desired "
+                "from any pre-donation owner bundle. "
+                if require_anchor_charity_bypass else ""
+            )
+            + "A SAT terminal is an exact countermodel only to the declared "
             "finite necessary-premise menu, not to general additive EFX."
         ),
     }
@@ -664,6 +722,7 @@ def main():
     parser.add_argument("--maximum-families-per-round", type=int, default=250)
     parser.add_argument("--separate-complete-efx", action="store_true")
     parser.add_argument("--maximum-efx-per-round", type=int, default=250)
+    parser.add_argument("--require-anchor-charity-bypass", action="store_true")
     args = parser.parse_args()
     result = run(
         args.output, args.timeout_seconds, args.maximum_iterations,
@@ -671,6 +730,7 @@ def main():
         maximum_families_per_round=args.maximum_families_per_round,
         separate_complete_efx=args.separate_complete_efx,
         maximum_efx_per_round=args.maximum_efx_per_round,
+        require_anchor_charity_bypass=args.require_anchor_charity_bypass,
     )
     print(json.dumps({
         "status": result["status"],

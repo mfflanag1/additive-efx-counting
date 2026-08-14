@@ -51,6 +51,15 @@ now the shortest reduction of the frozen target: exactly two
 support-provenance edges, followed by the precise unproved nonroot
 normalization-bypass gate.  It is not yet a proof of the frozen target.
 
+The parked inequality is impossible whenever the entire anchor target is
+common-safe at the anchor source's floor: a proper residual good could be
+deleted while retaining the strictly desired anchor core.  Hence the core
+must exhaust the target, leaving its donor to desire the positive charity
+singleton.  See
+`NESTED_DESIRED_CORE_EXHAUSTS_SAFE_TARGET_LEMMA_20260814.md`.  This closes
+the 21-role form-0 parked branch cap-free; the universal predicate currently
+guarantees only core safety, not whole-target safety.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

@@ -1827,3 +1827,8 @@ both encodings.
   singleton normalization-bypass branch.  Earlier R2 and endpoint-6
   two-probe conclusions are reductions, not completed EFX theorems, until
   the same gap is repaired.
+- [`NESTED_DESIRED_CORE_EXHAUSTS_SAFE_TARGET_LEMMA_20260814.md`](NESTED_DESIRED_CORE_EXHAUSTS_SAFE_TARGET_LEMMA_20260814.md)
+  proves cap-free that a desired core nested in a whole target common-safe at
+  the same floor must equal that target.  This explains the immediate UNSAT
+  of the 21-role form-0 parked-bypass master: after the anchor transfer the
+  donor is empty and necessarily desires the positive charity singleton.

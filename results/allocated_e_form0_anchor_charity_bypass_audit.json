@@ -1,0 +1,120 @@
+{
+  "charity_holders_tested": [
+    "r",
+    "q",
+    "d",
+    "s"
+  ],
+  "claim_boundary": "Exact UNSAT only in the optional 21-role allocated-E form0 necessary-premise cell. It is not a cap-free normalization-bypass theorem and does not prove fixed-U or general EFX.",
+  "deletion_minimal_core_size": 1,
+  "deletion_minimal_unsat_core": [
+    "p_parked_for_q"
+  ],
+  "formula_level_deletion_minimal_core": [
+    {
+      "formula": "If(rs_present_q0_out, rs_v_q0_out_q > 0, rs_v_q0_out_q == 0)",
+      "label": "master_assertion_45"
+    },
+    {
+      "formula": "If(rs_present_h_in, rs_v_h_in_r > 0, rs_v_h_in_r == 0)",
+      "label": "master_assertion_16"
+    },
+    {
+      "formula": "If(rs_present_k_out, rs_v_k_out_r > 0, rs_v_k_out_r == 0)",
+      "label": "master_assertion_36"
+    },
+    {
+      "formula": "rs_v_p_q <= rs_v_j_out_q + rs_v_k_out_q + rs_v_q0_out_q",
+      "label": "p_parked_for_q"
+    },
+    {
+      "formula": "If(rs_present_j_out, rs_v_j_out_q > 0, rs_v_j_out_q == 0)",
+      "label": "master_assertion_29"
+    },
+    {
+      "formula": "rs_present_p",
+      "label": "master_assertion_95"
+    },
+    {
+      "formula": "If(rs_present_p, rs_v_p_q > 0, rs_v_p_q == 0)",
+      "label": "master_assertion_81"
+    },
+    {
+      "formula": "Or(And(rs_v_j_in_r + rs_v_k_in_r + rs_v_q0_in_r > 1,\n       Implies(rs_present_j_in,\n               rs_v_k_in_r + rs_v_q0_in_r <= 1),\n       Implies(rs_present_k_in,\n               rs_v_j_in_r + rs_v_q0_in_r <= 1),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_r + rs_v_k_in_r <= 1),\n       Implies(rs_present_j_in,\n               rs_v_k_in_q + rs_v_q0_in_q <= 1),\n       Implies(rs_present_k_in,\n               rs_v_j_in_q + rs_v_q0_in_q <= 1),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_q + rs_v_k_in_q <= 1),\n       Implies(rs_present_j_in,\n               rs_v_k_in_d + rs_v_q0_in_d <= 1),\n       Implies(rs_present_k_in,\n               rs_v_j_in_d + rs_v_q0_in_d <= 1),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_d + rs_v_k_in_d <= 1),\n       Implies(rs_present_j_in,\n               rs_v_k_in_s + rs_v_q0_in_s <= 1),\n       Implies(rs_present_k_in,\n               rs_v_j_in_s + rs_v_q0_in_s <= 1),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_s + rs_v_k_in_s <= 1)),\n   And(rs_v_j_in_r + rs_v_k_in_r + rs_v_q0_in_r >\n       rs_v_a0_in_r +\n       rs_v_a0_out_r +\n       rs_v_a1_in_r +\n       rs_v_a1_out_r +\n       rs_v_h_in_r +\n       rs_v_h_out_r,\n       Implies(rs_present_j_in,\n               rs_v_k_in_r + rs_v_q0_in_r <=\n               rs_v_a0_in_r +\n               rs_v_a0_out_r +\n               rs_v_a1_in_r +\n               rs_v_a1_out_r +\n               rs_v_h_in_r +\n               rs_v_h_out_r),\n       Implies(rs_present_k_in,\n               rs_v_j_in_r + rs_v_q0_in_r <=\n               rs_v_a0_in_r +\n               rs_v_a0_out_r +\n               rs_v_a1_in_r +\n               rs_v_a1_out_r +\n               rs_v_h_in_r +\n               rs_v_h_out_r),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_r + rs_v_k_in_r <=\n               rs_v_a0_in_r +\n               rs_v_a0_out_r +\n               rs_v_a1_in_r +\n               rs_v_a1_out_r +\n               rs_v_h_in_r +\n               rs_v_h_out_r),\n       Implies(rs_present_j_in,\n               rs_v_k_in_q + rs_v_q0_in_q <=\n               rs_v_j_in_q +\n               rs_v_j_out_q +\n               rs_v_k_in_q +\n               rs_v_k_out_q +\n               rs_v_q0_in_q +\n               rs_v_q0_out_q),\n       Implies(rs_present_k_in,\n               rs_v_j_in_q + rs_v_q0_in_q <=\n               rs_v_j_in_q +\n               rs_v_j_out_q +\n               rs_v_k_in_q +\n               rs_v_k_out_q +\n               rs_v_q0_in_q +\n               rs_v_q0_out_q),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_q + rs_v_k_in_q <=\n               rs_v_j_in_q +\n               rs_v_j_out_q +\n               rs_v_k_in_q +\n               rs_v_k_out_q +\n               rs_v_q0_in_q +\n               rs_v_q0_out_q),\n       Implies(rs_present_j_in,\n               rs_v_k_in_d + rs_v_q0_in_d <=\n               rs_v_m_in_d +\n               rs_v_m_out_d +\n               rs_v_gq_in_d +\n               rs_v_gq_out_d +\n               rs_v_gr_in_d +\n               rs_v_gr_out_d),\n       Implies(rs_present_k_in,\n               rs_v_j_in_d + rs_v_q0_in_d <=\n               rs_v_m_in_d +\n               rs_v_m_out_d +\n               rs_v_gq_in_d +\n               rs_v_gq_out_d +\n               rs_v_gr_in_d +\n               rs_v_gr_out_d),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_d + rs_v_k_in_d <=\n               rs_v_m_in_d +\n               rs_v_m_out_d +\n               rs_v_gq_in_d +\n               rs_v_gq_out_d +\n               rs_v_gr_in_d +\n               rs_v_gr_out_d),\n       Implies(rs_present_j_in,\n               rs_v_k_in_s + rs_v_q0_in_s <=\n               rs_v_l_s + rs_v_e_s),\n       Implies(rs_present_k_in,\n               rs_v_j_in_s + rs_v_q0_in_s <=\n               rs_v_l_s + rs_v_e_s),\n       Implies(rs_present_q0_in,\n               rs_v_j_in_s + rs_v_k_in_s <=\n               rs_v_l_s + rs_v_e_s)))",
+      "label": "master_assertion_165"
+    },
+    {
+      "formula": "If(rs_present_k_out, rs_v_k_out_q > 0, rs_v_k_out_q == 0)",
+      "label": "master_assertion_37"
+    },
+    {
+      "formula": "And(rs_v_j_in_q +\n    rs_v_j_out_q +\n    rs_v_k_in_q +\n    rs_v_k_out_q +\n    rs_v_q0_in_q +\n    rs_v_q0_out_q >\n    1,\n    Implies(rs_present_j_in,\n            rs_v_j_out_r +\n            rs_v_k_in_r +\n            rs_v_k_out_r +\n            rs_v_q0_in_r +\n            rs_v_q0_out_r <=\n            1),\n    Implies(rs_present_j_out,\n            rs_v_j_in_r +\n            rs_v_k_in_r +\n            rs_v_k_out_r +\n            rs_v_q0_in_r +\n            rs_v_q0_out_r <=\n            1),\n    Implies(rs_present_k_in,\n            rs_v_j_in_r +\n            rs_v_j_out_r +\n            rs_v_k_out_r +\n            rs_v_q0_in_r +\n            rs_v_q0_out_r <=\n            1),\n    Implies(rs_present_k_out,\n            rs_v_j_in_r +\n            rs_v_j_out_r +\n            rs_v_k_in_r +\n            rs_v_q0_in_r +\n            rs_v_q0_out_r <=\n            1),\n    Implies(rs_present_q0_in,\n            rs_v_j_in_r +\n            rs_v_j_out_r +\n            rs_v_k_in_r +\n            rs_v_k_out_r +\n            rs_v_q0_out_r <=\n            1),\n    Implies(rs_present_q0_out,\n            rs_v_j_in_r +\n            rs_v_j_out_r +\n            rs_v_k_in_r +\n            rs_v_k_out_r +\n            rs_v_q0_in_r <=\n            1),\n    Implies(rs_present_j_in,\n            rs_v_j_out_q +\n            rs_v_k_in_q +\n            rs_v_k_out_q +\n            rs_v_q0_in_q +\n            rs_v_q0_out_q <=\n            1),\n    Implies(rs_present_j_out,\n            rs_v_j_in_q +\n            rs_v_k_in_q +\n            rs_v_k_out_q +\n            rs_v_q0_in_q +\n            rs_v_q0_out_q <=\n            1),\n    Implies(rs_present_k_in,\n            rs_v_j_in_q +\n            rs_v_j_out_q +\n            rs_v_k_out_q +\n            rs_v_q0_in_q +\n            rs_v_q0_out_q <=\n            1),\n    Implies(rs_present_k_out,\n            rs_v_j_in_q +\n            rs_v_j_out_q +\n            rs_v_k_in_q +\n            rs_v_q0_in_q +\n            rs_v_q0_out_q <=\n            1),\n    Implies(rs_present_q0_in,\n            rs_v_j_in_q +\n            rs_v_j_out_q +\n            rs_v_k_in_q +\n            rs_v_k_out_q +\n            rs_v_q0_out_q <=\n            1),\n    Implies(rs_present_q0_out,\n            rs_v_j_in_q +\n            rs_v_j_out_q +\n            rs_v_k_in_q +\n            rs_v_k_out_q +\n            rs_v_q0_in_q <=\n            1),\n    Implies(rs_present_j_in,\n            rs_v_j_out_d +\n            rs_v_k_in_d +\n            rs_v_k_out_d +\n            rs_v_q0_in_d +\n            rs_v_q0_out_d <=\n            1),\n    Implies(rs_present_j_out,\n            rs_v_j_in_d +\n            rs_v_k_in_d +\n            rs_v_k_out_d +\n            rs_v_q0_in_d +\n            rs_v_q0_out_d <=\n            1),\n    Implies(rs_present_k_in,\n            rs_v_j_in_d +\n            rs_v_j_out_d +\n            rs_v_k_out_d +\n            rs_v_q0_in_d +\n            rs_v_q0_out_d <=\n            1),\n    Implies(rs_present_k_out,\n            rs_v_j_in_d +\n            rs_v_j_out_d +\n            rs_v_k_in_d +\n            rs_v_q0_in_d +\n            rs_v_q0_out_d <=\n            1),\n    Implies(rs_present_q0_in,\n            rs_v_j_in_d +\n            rs_v_j_out_d +\n            rs_v_k_in_d +\n            rs_v_k_out_d +\n            rs_v_q0_out_d <=\n            1),\n    Implies(rs_present_q0_out,\n            rs_v_j_in_d +\n            rs_v_j_out_d +\n            rs_v_k_in_d +\n            rs_v_k_out_d +\n            rs_v_q0_in_d <=\n            1),\n    Implies(rs_present_j_in,\n            rs_v_j_out_s +\n            rs_v_k_in_s +\n            rs_v_k_out_s +\n            rs_v_q0_in_s +\n            rs_v_q0_out_s <=\n            1),\n    Implies(rs_present_j_out,\n            rs_v_j_in_s +\n            rs_v_k_in_s +\n            rs_v_k_out_s +\n            rs_v_q0_in_s +\n            rs_v_q0_out_s <=\n            1),\n    Implies(rs_present_k_in,\n            rs_v_j_in_s +\n            rs_v_j_out_s +\n            rs_v_k_out_s +\n            rs_v_q0_in_s +\n            rs_v_q0_out_s <=\n            1),\n    Implies(rs_present_k_out,\n            rs_v_j_in_s +\n            rs_v_j_out_s +\n            rs_v_k_in_s +\n            rs_v_q0_in_s +\n            rs_v_q0_out_s <=\n            1),\n    Implies(rs_present_q0_in,\n            rs_v_j_in_s +\n            rs_v_j_out_s +\n            rs_v_k_in_s +\n            rs_v_k_out_s +\n            rs_v_q0_out_s <=\n            1),\n    Implies(rs_present_q0_out,\n            rs_v_j_in_s +\n            rs_v_j_out_s +\n            rs_v_k_in_s +\n            rs_v_k_out_s +\n            rs_v_q0_in_s <=\n            1))",
+      "label": "master_assertion_162"
+    },
+    {
+      "formula": "If(rs_present_j_out, rs_v_j_out_r > 0, rs_v_j_out_r == 0)",
+      "label": "master_assertion_28"
+    },
+    {
+      "formula": "And(rs_v_a0_in_r +\n    rs_v_a0_out_r +\n    rs_v_a1_in_r +\n    rs_v_a1_out_r >\n    1,\n    Implies(rs_present_a0_in,\n            rs_v_a0_out_r + rs_v_a1_in_r + rs_v_a1_out_r <=\n            1),\n    Implies(rs_present_a0_out,\n            rs_v_a0_in_r + rs_v_a1_in_r + rs_v_a1_out_r <= 1),\n    Implies(rs_present_a1_in,\n            rs_v_a0_in_r + rs_v_a0_out_r + rs_v_a1_out_r <=\n            1),\n    Implies(rs_present_a1_out,\n            rs_v_a0_in_r + rs_v_a0_out_r + rs_v_a1_in_r <= 1),\n    Implies(rs_present_a0_in,\n            rs_v_a0_out_q + rs_v_a1_in_q + rs_v_a1_out_q <=\n            1),\n    Implies(rs_present_a0_out,\n            rs_v_a0_in_q + rs_v_a1_in_q + rs_v_a1_out_q <= 1),\n    Implies(rs_present_a1_in,\n            rs_v_a0_in_q + rs_v_a0_out_q + rs_v_a1_out_q <=\n            1),\n    Implies(rs_present_a1_out,\n            rs_v_a0_in_q + rs_v_a0_out_q + rs_v_a1_in_q <= 1),\n    Implies(rs_present_a0_in,\n            rs_v_a0_out_d + rs_v_a1_in_d + rs_v_a1_out_d <=\n            1),\n    Implies(rs_present_a0_out,\n            rs_v_a0_in_d + rs_v_a1_in_d + rs_v_a1_out_d <= 1),\n    Implies(rs_present_a1_in,\n            rs_v_a0_in_d + rs_v_a0_out_d + rs_v_a1_out_d <=\n            1),\n    Implies(rs_present_a1_out,\n            rs_v_a0_in_d + rs_v_a0_out_d + rs_v_a1_in_d <= 1),\n    Implies(rs_present_a0_in,\n            rs_v_a0_out_s + rs_v_a1_in_s + rs_v_a1_out_s <=\n            1),\n    Implies(rs_present_a0_out,\n            rs_v_a0_in_s + rs_v_a1_in_s + rs_v_a1_out_s <= 1),\n    Implies(rs_present_a1_in,\n            rs_v_a0_in_s + rs_v_a0_out_s + rs_v_a1_out_s <=\n            1),\n    Implies(rs_present_a1_out,\n            rs_v_a0_in_s + rs_v_a0_out_s + rs_v_a1_in_s <= 1))",
+      "label": "master_assertion_161"
+    },
+    {
+      "formula": "If(rs_present_h_out, rs_v_h_out_r > 0, rs_v_h_out_r == 0)",
+      "label": "master_assertion_20"
+    },
+    {
+      "formula": "If(rs_present_q0_out, rs_v_q0_out_r > 0, rs_v_q0_out_r == 0)",
+      "label": "master_assertion_44"
+    }
+  ],
+  "formula_level_deletion_minimal_core_size": 14,
+  "formula_level_raw_core_size": 15,
+  "formula_level_status": "unsat",
+  "full_status": "unsat",
+  "group_statuses": {
+    "base_anchor_and_endpoint_failures": "sat",
+    "base_anchor_and_parked": "unsat",
+    "base_anchor_only": "sat",
+    "endpoint_failures_only": "sat",
+    "parked_and_endpoint_failures": "unsat",
+    "parked_only": "unsat"
+  },
+  "raw_unsat_core": [
+    "anchor_is_base_response",
+    "p_parked_for_q"
+  ],
+  "rotated_partial": {
+    "d": [
+      "gq_in",
+      "gq_out",
+      "gr_in",
+      "gr_out",
+      "m_in",
+      "m_out"
+    ],
+    "q": [
+      "j_out",
+      "k_out",
+      "q0_out"
+    ],
+    "r": [
+      "a0_in",
+      "a0_out",
+      "a1_in",
+      "a1_out",
+      "h_in",
+      "h_out",
+      "j_in",
+      "k_in",
+      "q0_in"
+    ],
+    "s": [
+      "e",
+      "l"
+    ]
+  },
+  "schema": "allocated-e-form0-anchor-charity-bypass-audit-v1",
+  "source_sha256": "0df8a05a86ab8dd23d87cc6b8d5f7c9ca3938c2594b83eee5a56807898957c90",
+  "status": "UNSAT_ANCHOR_CHARITY_PARKED_BYPASS"
+}
