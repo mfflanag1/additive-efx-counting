@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed research checkpoint before this note update:** `56c2b2a`
-(`research: prepare form2 widened-menu core replay`)
+**Latest pushed research checkpoint before this note update:** `245bc5b`
+(`research: isolate exact form2 record-repeat frontier`)
 
 ## Frozen objective
 
@@ -152,6 +152,55 @@ Files:
 - `results/FORM2_SIX_BRANCH_FULL_OWNER_ADMISSION_REDUCTION_20260814.md`
 - `results/form2_six_branch_full_owner_admission_audit.json`
 
+### 6. Exact base-cancellation characterization
+
+For a packet on a current-support edge `u -> v`, its intersection with the
+old base bundle `X_v` cancels when the `X -> Y` and `Y -> Z` signed transfers
+are composed; its intersections with every other base bundle become net
+base-relative edges into `v`.  More globally, a vertex set `K` has no net
+`X -> Z` edge across its cut exactly when its physical union is unchanged:
+
+```text
+X(K) = Z(K).
+```
+
+Thus net base-relative disconnection is equivalent to a nontrivial closed
+aggregate base-support block.  It is not equivalent to return of an entire
+branch packet.  An exact five-vertex counterexample shows a current spanning
+path can split into two net base components even though no whole moved packet
+returns to its recipient's base owner.
+
+Files:
+
+- `results/BRANCH_TREE_BASE_CANCELLATION_OR_CLOSED_UNION_LEMMA_20260814.md`
+- `results/branch_tree_base_cancellation_closed_union_audit.json`
+- `tracks/parkability/audit_branch_tree_base_cancellation_closed_union.py`
+
+The exhaustive finite audit checked `390,625` base/final assignment pairs and
+`11,718,750` proper cuts.  This theorem corrects the packetwise provenance
+shortcut; it does not itself supply the response-rank or base-margin terminal.
+
+### 7. All-target-change and exact-repeat frontier
+
+Every one of the six canonical four-edge branches changes all four owner
+bundles and charity.  Therefore a globally minimum failed response at a paid
+non-EFX branch cannot be a response on an unchanged target support from the
+current state `Y`.  Saturation leaves only:
+
+1. a new fully decorated response/support record; or
+2. an old cross-state record.
+
+If the complete decoration is old, full signed-state reconstruction fixes the
+entire allocation, charity bundle, graph, target support, and labels.  The
+survivor is consequently an **exact paid four-edge decorated-record repeat**,
+not a generic old response.  Closing that exact repeat remains the live gate.
+
+Files:
+
+- `results/FORM2_SIX_BRANCH_ALL_TARGET_CHANGE_REPEAT_FRONTIER_20260814.md`
+- `results/form2_six_branch_all_target_change_audit.json`
+- `tracks/parkability/audit_form2_six_branch_all_target_change.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -191,12 +240,18 @@ The highest-leverage cap-free statement is now:
 > inequalities force a release-compatible generalized-PI family or the exact
 > full-owner decorated-response/base-margin terminal.
 
-For a paid non-EFX branch, this now factors through an explicit
-**cancellation dichotomy**: compose the `X->Y` signed record with the
-four-edge `Y->Z` spanning tree.  Either the net decorated component satisfies
-the full-owner theorem's exact interface, or every disappearing tree edge is
-a return of old base support and must force retirement, record progress, or
-release-compatible PI.
+For a paid non-EFX branch, this now factors through two exact alternatives.
+If a net base-relative cut appears, it is a closed aggregate base-support
+block `X(K)=Z(K)`, not necessarily an edgewise base return.  Independently,
+all five current targets change, so saturation reduces any non-new response
+to an exact paid four-edge cross-state decorated-record repeat.
+
+The immediate theorem target is therefore:
+
+> Prove that an exact paid four-edge decorated-record repeat satisfies the
+> represented-component base-margin/direct-safety terminal, or forces
+> release-compatible generalized PI/progress; otherwise construct an exact
+> positive rational saturated countermodel to that implication.
 
 This should be attacked using the complete signed support-drainage and
 response-saturation record.  Scalar inequalities alone cannot close it: the
@@ -254,11 +309,12 @@ explicitly open in `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 
 ## Verification and process state
 
-Focused verification across the widened-menu, payment-compression,
-spanning-frontier, and certificate-extractor tests:
+Focused verification across the three- and nine-topology menus, independent
+menu audit/core extraction, payment identities, spanning frontier,
+cancellation theorem, and all-target-change frontier:
 
 ```text
-8 passed in 0.44s
+10 passed in 27.84s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
