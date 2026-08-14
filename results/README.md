@@ -68,6 +68,17 @@ before the Hall menu becomes decisive, the live target is cap-free
 alternating supplier-walk closure or edge cancellation, not another patched
 finite selector run.
 
+The subsequent cap-free component reduction
+[`EXTERNAL_HALL_FULL_OWNER_RECRUITMENT_LEMMA_20260814.md`](EXTERNAL_HALL_FULL_OWNER_RECRUITMENT_LEMMA_20260814.md)
+checks 2,112 defect/form occurrences and shows that only three form-R3
+represented-cycle `2x1` stars avoid immediate all-owner recruitment.  The
+[`R3 represented-star double-absorption lemma`](R3_REPRESENTED_STAR_DOUBLE_ABSORPTION_LEMMA_20260814.md)
+then eliminates persistent sole-source recurrence: completing both incoming
+cycle packets leaves exactly two owner-transfer pairs, charity is the third,
+and every later same-source absorption reuses those pairs while strictly
+shrinking the residual target union.  The first different old represented
+response source remains the live PI/full-owner conversion gate.
+
 The August 14 endpoint-6 release checkpoint
 [`ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md`](ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md)
 is the current sharp fixed-`U` frontier.  In the exact twelve-atom form-2

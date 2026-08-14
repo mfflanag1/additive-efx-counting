@@ -1,0 +1,82 @@
+{
+  "claim_boundary": "exact owner-component and Hall-incidence classification only; application of the full-owner separator still requires the frozen decorated-response, payment, and saturation premises",
+  "defect_form_occurrences_checked": 2112,
+  "distinct_residual_decorations": 3,
+  "occurrence_counts": {
+    "R2_2x1_full": 768,
+    "R2_3x2_full": 288,
+    "R3_2x1_full": 576,
+    "R3_2x1_residual": 192,
+    "R3_3x2_full": 288
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_external_hall_full_owner_recruitment.py",
+    "script_sha256": "d66edbd11910a62fe26ce0548bc3b96b38df1882d7a223bb8732d7951f1b740e",
+    "theorem": "results/EXTERNAL_HALL_FULL_OWNER_RECRUITMENT_LEMMA_20260814.md",
+    "theorem_sha256": "663ff46bda042ef1834f917c9b189aacd720c0e870cb84bad28bbff98c8f066f"
+  },
+  "residual_decorations": [
+    {
+      "defect_edges": [
+        [
+          "s",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "form": "R3",
+      "sources": [
+        "s"
+      ],
+      "targets": [
+        "q",
+        "r"
+      ]
+    },
+    {
+      "defect_edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "sources": [
+        "r"
+      ],
+      "targets": [
+        "q",
+        "s"
+      ]
+    },
+    {
+      "defect_edges": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "form": "R3",
+      "sources": [
+        "q"
+      ],
+      "targets": [
+        "r",
+        "s"
+      ]
+    }
+  ],
+  "schema": "external-hall-full-owner-recruitment-audit-v1",
+  "status": "ONLY_R3_REPRESENTED_2X1_STARS_AVOID_FULL_OWNER_RECRUITMENT"
+}

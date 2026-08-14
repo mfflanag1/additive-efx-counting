@@ -228,3 +228,29 @@ offset by exhaustion/return of an old matching pair.  The remaining theorem
 is consequently a valuation/saturation decision on a finite 2x1-plus-156
 signed support menu, followed by a cap-free argument that overflowing mixed
 cores activate support refinement rather than recurrence.
+
+## Full-owner recruitment and represented-star absorption update
+
+The external Hall menu does not remain a generic finite valuation problem.
+At the owner-component level, every `R2` star/fork and every `R3` fork or
+star involving `d` recruits all four owners.  Under the frozen saturation
+contract those responses enter the component-wide selector and, after its
+nonterminal outcomes are excluded, the exact full-owner charity-exchange
+separator.  Only three `R3` stars wholly inside `{r,q,s}` avoid that immediate
+recruitment; this classification is exact and cap-free.
+
+For each residual star, complete both incoming cycle packets and move both
+star targets to their common source.  The two corresponding old cycle edges
+cancel, leaving exactly the other two represented suppliers pointing to the
+common source; charity adds the third edge.  Any repeated response by that
+same source into either depleted target uses an existing pair and strictly
+shrinks a finite residual union.  Hence a sole-source represented star cannot
+recur.  See `EXTERNAL_HALL_FULL_OWNER_RECRUITMENT_LEMMA_20260814.md` and
+`R3_REPRESENTED_STAR_DOUBLE_ABSORPTION_LEMMA_20260814.md`.
+
+The live branch is now the first *different* old represented response source
+after double absorption.  A new source/core/release coordinate is saturation
+progress; a response involving `d` is full-owner recruitment.  What remains
+to prove is that an already recorded response wholly inside the represented
+component closes physical generalized PI or carries the exact signed
+base-margin data needed by the full-owner theorem.

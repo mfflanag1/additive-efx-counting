@@ -20,6 +20,19 @@ enter one of the exact edge-cancelling star/fork signatures.  Observer safety
 and preservation of the first-priority root margin are the load-bearing
 inequalities.
 
+The owner-component part of that walk is now exact.  Every external Hall
+defect recruits all four owners except a form-R3 `2x1` star wholly inside the
+represented cycle; see
+`EXTERNAL_HALL_FULL_OWNER_RECRUITMENT_LEMMA_20260814.md`.  Those three
+owner-label stars are no longer edge-overflow terminals either.  Completing
+both incoming cycle packets and absorbing both star targets into their common
+source deletes two old cycle edges and leaves exactly two owner pairs plus
+charity.  Repeated same-source responses into those targets strictly shrink
+their residual union without adding an edge; see
+`R3_REPRESENTED_STAR_DOUBLE_ABSORPTION_LEMMA_20260814.md`.  The remaining
+gate is conversion of the first different old represented response source
+into physical PI or the exact full-owner base-margin terminal.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new
