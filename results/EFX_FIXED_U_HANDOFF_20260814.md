@@ -6,8 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest research checkpoint before this note update:** `7a6f112`
-(`research: reduce root capture to itemwise criticality`)
+**Latest research checkpoint before this note update:** `79839bf`
+(`research: exhaust root-source bilateral compensation`)
 
 ## Frozen objective
 
@@ -441,6 +441,50 @@ Files:
 - `results/permanent_anchor_root_target_minimum_good_diversion_audit.json`
 - `tracks/parkability/audit_permanent_anchor_root_target_minimum_good_diversion.py`
 
+### 17. Exact bilateral frontier and direct-safety wall
+
+The minimum-good probe was not sharp: its source already improves from any
+positive root packet, so charity should compensate the root.  The strengthened
+selector exchanges arbitrary packets `H subseteq B_r` and `D subseteq B_i`,
+and gives the singleton to the root.  The source and root conditions are
+
+```text
+v_i(H) > v_i(D),
+v_r(H)-v_r(D) < delta_r+v_r(p).
+```
+
+There is an exact support criterion.  The exchange exceeds four edges only
+when the non-`q` source returns a nonempty compensator, `H` hits both root
+supplier cells, and `H` leaves a proper anchor residual.  Every other packet
+pair fits within four edges.
+
+If no admissible pair works, every source-affordable compensator satisfies
+
+```text
+v_r(D) <= v_r(H)-delta_r-v_r(p).
+```
+
+In particular, every nonempty root packet costs at least
+`delta_r+v_r(p)`.  More importantly, the desired response makes the complete
+bundle swap `H=B_r,D=B_i` source-improving and edge-feasible.  Failure of that
+probe is exactly
+
+```text
+v_r(B_i)+v_r(p) <= v_r(X_r),
+```
+
+a direct-safety wall rather than an untyped root-capture inequality.  An exact
+positive-additive local witness satisfies every bilateral failure inequality,
+so positivity and the two payment rows alone cannot finish the branch.  The
+next proof must connect this wall to the full signed base-margin/direct-safety
+terminal or use another observer/PI premise.
+
+Files:
+
+- `results/PERMANENT_ANCHOR_ROOT_TARGET_BILATERAL_COMPENSATOR_FRONTIER_LEMMA_20260814.md`
+- `results/permanent_anchor_root_target_bilateral_compensator_frontier_audit.json`
+- `tracks/parkability/audit_permanent_anchor_root_target_bilateral_compensator_frontier.py`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -474,12 +518,12 @@ displayed raw filenames first.
 
 The shortest live continuation on the permanent-anchor route is now:
 
-> In the root-target item-critical envelope, where every good in the exact
-> disjoint response has root value at least `delta_r`, either a single-good
-> diversion probe produces a new saturated record, its exact decorated
-> response repeat forces the represented-component base-margin/direct-safety
-> terminal or generalized PI/progress, or the complete GG premises admit an
-> exact positive-rational countermodel.
+> Starting from the exact direct-safety wall
+> `v_r(B_i)+v_r(p)<=v_r(X_r)` and the universal bilateral separator, prove
+> that a non-EFX full-bundle-swap probe enters the represented-component
+> base-margin/direct-safety terminal or generalized PI/progress; otherwise
+> produce a complete positive-rational fixed-`U` countermodel satisfying the
+> full signed saturation ledger.
 
 The hitting branch must be handled separately through the nonroot
 singleton-hit envelope descent.  Do not identify the changed descent endpoint
@@ -583,10 +627,11 @@ cancellation theorem, all-target-change frontier, repeat-rank no-go, and
 root-star leaf liquidation, two-target root-path repair, and foreign-import
 cancellation, root-compensated direct return, and singleton-retained partial
 return, universal incoming-cell return, and permanent-anchor nonroot response
-transfer and root-target minimum-good diversion:
+transfer, root-target minimum-good diversion, and the exact bilateral
+compensator frontier:
 
 ```text
-19 passed in 22.37s
+20 passed in 22.69s
 ```
 
 All solver processes launched after the checkpoint have exited.  Nothing
