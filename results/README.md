@@ -2030,3 +2030,10 @@ both encodings.
   pure-cell survivors and an exact critical split in the supplier-aligned
   third.  It is conditional on the refuted-as-a-local-implication pure-cell
   lift and is not presently applicable to the accumulated mixed-support fan.
+- [`THREE_COLOR_MIXED_SUPPORT_HALL_COMPRESSION_REFUTATION_20260814.md`](THREE_COLOR_MIXED_SUPPORT_HALL_COMPRESSION_REFUTATION_20260814.md)
+  ([exact six-good audit](three_color_mixed_support_hall_compression_refutation_audit.json))
+  separates base owner, frozen-`Y` supplier, and later response target.  Three
+  pairwise-disjoint minimal common-safe desired cores can have no closed
+  represented-source PI subfamily yet require six frozen-supplier pairs to
+  reverse.  Thus PI-free base-support Hall geometry alone cannot prove the
+  physical four-edge theorem; the signed `X -> Y -> Z` ledger is essential.

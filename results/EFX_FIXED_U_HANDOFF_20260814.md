@@ -924,6 +924,32 @@ the anchor supplier, a partial-anchor split gives a precise bicriteria
 critical packet.  This remains conditional and is not part of the universal
 fixed-`U` closure.
 
+## 30. Three-color mixed-support compression no-go
+
+`THREE_COLOR_MIXED_SUPPORT_HALL_COMPRESSION_REFUTATION_20260814.md`
+isolates the exact reason the actual support set `Pi` cannot be controlled by
+PI-freeness alone.  Base owner, frozen-`Y` supplier, and later target holder
+are three different labels.
+
+The exact six-good family has three disjoint two-good cores for sources
+`1,2,3`.  Every good is base-owned by missing source `0`, so no nonempty
+represented-source subfamily is base-closed and the displayed cores produce
+no generalized PI.  Each core has source values `6+5>10`, while neither
+singleton is desired, so both supplier components are indispensable.  The
+three reversals use exactly
+
+```text
+0->1, 3->1, 0->2, 1->2, 0->3, 2->3,
+```
+
+six frozen-supplier pairs before charity.
+
+This is not a full fixed-`U` countermodel.  It is an exact refutation of the
+reduced implication “PI-free response Hall geometry implies three physical
+owner pairs.”  Any universal proof must now use the signed relation between
+`X`, `Y`, and the later probe—support return/cancellation, ledger growth, or
+decorated recurrence—not another owner-label Hall argument.
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1079,11 +1105,12 @@ duplicate-omission payment/support frontier, the combined chain reports:
 
 After correcting the physical-compression scope, the conditional census,
 independent edge-mask encoding, mixed-core counterexample, and conditional
-anchor-substitution frontier were replayed together with their six immediate
+anchor-substitution frontier, and three-color support obstruction were
+replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-9 passed in 0.46s
+10 passed in 0.51s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization
