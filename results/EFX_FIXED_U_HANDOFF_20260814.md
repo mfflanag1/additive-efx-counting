@@ -910,6 +910,14 @@ cross-state normalization were rerun:
 5 passed in 0.27s
 ```
 
+After adding the universal liquidation, three-placement response frontier,
+and strengthened full-source/anchor-residual swap, the combined eight-test
+focused chain was replayed:
+
+```text
+8 passed in 0.41s
+```
+
 The full-residual liquidation corollary is a direct algebraic specialization
 of the already tested bilateral and strict-root-surplus constructions; it
 adds no solver-generated certificate.
