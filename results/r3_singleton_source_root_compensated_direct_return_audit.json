@@ -1,0 +1,417 @@
+{
+  "claim_boundary": "cap-free direct selector and exact root capture; edge-overflow, observer/repeat, backward path, and star remain open",
+  "direct_four_edge_feasible": 10,
+  "edge_distribution": {
+    "3": 2,
+    "4": 8,
+    "5": 12,
+    "6": 4
+  },
+  "five_cell_direct_path_feasible": 80,
+  "five_cell_full_path_feasible": 69,
+  "five_cell_rescued_by_direct": 33,
+  "five_cell_union_feasible": 102,
+  "provenance": {
+    "script": "tracks/parkability/audit_r3_singleton_source_root_compensated_direct_return.py",
+    "script_sha256": "bc48dc017275807354557397b6237c8fb2133911040cc6178590257d4ac0f042",
+    "theorem": "results/R3_SINGLETON_SOURCE_ROOT_COMPENSATED_DIRECT_RETURN_LEMMA_20260814.md",
+    "theorem_sha256": "6c34e0942d255e0bf76640869884e23319741179f2a0ad64c79984f52d4e7398",
+    "z3": "5.0.0"
+  },
+  "root_payment_equivalence": true,
+  "schema": "r3-singleton-source-root-compensated-direct-return-v1",
+  "signature_count": 26,
+  "signatures": [
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true
+      },
+      "signature": [
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false
+      },
+      "signature": [
+        0,
+        0,
+        2
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false
+      },
+      "signature": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "edge_count": 3,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": false,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": false
+      },
+      "signature": [
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true
+      },
+      "signature": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true
+      },
+      "signature": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false
+      },
+      "signature": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false
+      },
+      "signature": [
+        1,
+        1,
+        2
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": false
+      },
+      "signature": [
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true
+      },
+      "signature": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": true
+      },
+      "signature": [
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": false,
+        "z_to_x": false
+      },
+      "signature": [
+        2,
+        0,
+        2
+      ]
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "edge_count": 6,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": true,
+        "y_to_z": true,
+        "z_to_x": false
+      },
+      "signature": [
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        2,
+        2,
+        0
+      ]
+    },
+    {
+      "edge_count": 5,
+      "four_edge_feasible": false,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": true
+      },
+      "signature": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "edge_count": 4,
+      "four_edge_feasible": true,
+      "indicators": {
+        "x_to_z": true,
+        "y_to_x": false,
+        "y_to_z": true,
+        "z_to_x": false
+      },
+      "signature": [
+        2,
+        2,
+        2
+      ]
+    }
+  ],
+  "status": "DIRECT_RETURN_OR_ROOT_MARGIN_CHARITY_CAPTURE"
+}
