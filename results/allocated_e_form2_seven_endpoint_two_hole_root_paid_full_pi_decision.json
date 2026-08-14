@@ -1,0 +1,175 @@
+{
+  "allow_d_payment_hole": false,
+  "claim_boundary": "Exact twelve-atom allocated-E form-2 decision for the recorded required-paid owner set. UNSAT strengthens the bounded dichotomy to such an EFX endpoint; SAT refutes only that strengthening, not complete EFX.",
+  "core_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "elapsed_seconds": 41.64375629200367,
+  "endpoint_count": 7,
+  "endpoint_diagnostics": [
+    {
+      "endpoint": 1,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "9907/10800",
+        "q": "181/180",
+        "r": "226/225",
+        "s": "1163/1080"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 2,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "901/900",
+        "q": "181/180",
+        "r": "226/225",
+        "s": "1"
+      },
+      "underpaid_owners": []
+    },
+    {
+      "endpoint": 3,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "6307/7200",
+        "q": "181/180",
+        "r": "226/225",
+        "s": "1571/1350"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 4,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "20683/21600",
+        "q": "181/180",
+        "r": "893/900",
+        "s": "1163/1080"
+      },
+      "underpaid_owners": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 5,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "899/900",
+        "q": "299/300",
+        "r": "899/900",
+        "s": "1163/1080"
+      },
+      "underpaid_owners": [
+        "r",
+        "q",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 6,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1",
+        "q": "887/900",
+        "r": "1",
+        "s": "1163/1080"
+      },
+      "underpaid_owners": [
+        "q"
+      ]
+    },
+    {
+      "endpoint": 7,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "20683/21600",
+        "q": "449/450",
+        "r": "76/75",
+        "s": "1163/1080"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    }
+  ],
+  "full_pi_source": "results/allocated_e_form2_all_allocation_atom_cegar.json",
+  "maximum_payment_holes": 2,
+  "pi_clause_count": 46683,
+  "pi_source_sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+  "random_seed": 32452843,
+  "required_paid_owners": [
+    "r"
+  ],
+  "schema": "allocated-e-seven-endpoint-paid-strengthening-v1",
+  "solver": "Z3 5.0.0",
+  "solver_status": "sat",
+  "source_sha256": "22302f7cf306ad351d050ae1771430742cacaad870e25c4f6f16be451c8ea613",
+  "status": "SAT_NO_PI_OR_REQUIRED_PAID_SEVEN_ENDPOINT_EFX",
+  "timeout_seconds": 900,
+  "values": {
+    "d": {
+      "a0": "20707/21600",
+      "a1": "869/21600",
+      "e": "9871/21600",
+      "gq": "448/675",
+      "gr": "193/4320",
+      "h": "901/7200",
+      "j": "6299/21600",
+      "k": "2687/7200",
+      "l": "917/7200",
+      "m": "869/21600",
+      "p": "941/21600",
+      "q0": "539/1440"
+    },
+    "q": {
+      "a0": "1/180",
+      "a1": "1/150",
+      "e": "74/75",
+      "gq": "2/3",
+      "gr": "1/300",
+      "h": "43/150",
+      "j": "49/150",
+      "k": "17/50",
+      "l": "8/225",
+      "m": "1/225",
+      "p": "1/75",
+      "q0": "61/180"
+    },
+    "r": {
+      "a0": "893/900",
+      "a1": "11/900",
+      "e": "49/50",
+      "gq": "14/15",
+      "gr": "1/150",
+      "h": "1/90",
+      "j": "7/150",
+      "k": "11/180",
+      "l": "1/60",
+      "m": "7/900",
+      "p": "19/900",
+      "q0": "67/75"
+    },
+    "s": {
+      "a0": "4961/5400",
+      "a1": "1/450",
+      "e": "4937/5400",
+      "gq": "899/1350",
+      "gr": "439/5400",
+      "h": "221/1350",
+      "j": "881/2700",
+      "k": "227/675",
+      "l": "439/2700",
+      "m": "1/300",
+      "p": "463/5400",
+      "q0": "181/540"
+    }
+  }
+}

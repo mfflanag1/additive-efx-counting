@@ -1,0 +1,118 @@
+{
+  "audit_source_sha256": "0a4e28055953d5568917c532e406cfc86bedfd896b2eb0729e466fea8cac0d33",
+  "claim_boundary": "Exact positive-rational countermodel to only the declared bounded payment strengthening. Complete EFX itself is not refuted.",
+  "endpoint_diagnostics": [
+    {
+      "endpoint": 1,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "417/440",
+        "q": "3323/2904",
+        "r": "969/968",
+        "s": "973/968"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 2,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "2539/2420",
+        "q": "3323/2904",
+        "r": "969/968",
+        "s": "1"
+      },
+      "underpaid_owners": []
+    },
+    {
+      "endpoint": 3,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "4359/4840",
+        "q": "3323/2904",
+        "r": "969/968",
+        "s": "3821/2904"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 4,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "241/242",
+        "q": "3323/2904",
+        "r": "963/968",
+        "s": "973/968"
+      },
+      "underpaid_owners": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 5,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "967/968",
+        "q": "483/484",
+        "r": "37/242",
+        "s": "973/968"
+      },
+      "underpaid_owners": [
+        "r",
+        "q",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 6,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1",
+        "q": "477/484",
+        "r": "1",
+        "s": "973/968"
+      },
+      "underpaid_owners": [
+        "q"
+      ]
+    },
+    {
+      "endpoint": 7,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "1153/1210",
+        "q": "967/968",
+        "r": "977/968",
+        "s": "973/968"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    }
+  ],
+  "endpoint_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "full_generalized_pi_found": false,
+  "full_minimal_core_counts": {
+    "d": 18,
+    "q": 19,
+    "r": 19,
+    "s": 21
+  },
+  "master_fixed_profile_status": "sat",
+  "maximum_payment_holes": 1,
+  "qualifying_endpoint_count": 0,
+  "required_paid_owners": [
+    "q",
+    "s"
+  ],
+  "schema": "allocated-e-seven-endpoint-payment-cegar-countermodel-audit-v1",
+  "source": "results/allocated_e_form2_seven_endpoint_one_hole_qs_paid_pi_cegar.json",
+  "source_sha256": "1d0e9cc89b79c63e02eff0b7324d0506eeae039b87ccfd8f09ada6169e4ed43c",
+  "status": "AUDIT_PASSED"
+}

@@ -1,0 +1,1234 @@
+{
+  "claim_boundary": "Exact twelve-atom form-2 CEGAR. UNSAT proves the declared payment strengthening under full generalized-PI exclusion. A terminal SAT profile is a bounded countermodel to that strengthening only.",
+  "distinct_core_atom_count": 1849,
+  "elapsed_seconds": 91.09948487501242,
+  "endpoint_count": 7,
+  "endpoint_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "endpoint_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "generalized_pi_cut_count": 46699,
+  "initial_pi_cut_count": 46683,
+  "iterations": [
+    {
+      "fresh_cut_count": 3,
+      "iteration": 0,
+      "minimal_common_safe_desired_counts": {
+        "d": 22,
+        "q": 15,
+        "r": 25,
+        "s": 21
+      },
+      "pi_cycle_count": 3,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "gq"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "e",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "e",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "gq"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "e",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "e",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "l"
+              ],
+              "incoming": [
+                "a0",
+                "l"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "gq"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "fresh_cut_count": 4,
+      "iteration": 1,
+      "minimal_common_safe_desired_counts": {
+        "d": 20,
+        "q": 18,
+        "r": 19,
+        "s": 22
+      },
+      "pi_cycle_count": 4,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "l"
+              ],
+              "incoming": [
+                "l"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "l"
+              ],
+              "incoming": [
+                "a0",
+                "l"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "e",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "e",
+                "gr"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "fresh_cut_count": 9,
+      "iteration": 2,
+      "minimal_common_safe_desired_counts": {
+        "d": 18,
+        "q": 19,
+        "r": 22,
+        "s": 22
+      },
+      "pi_cycle_count": 9,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "l"
+              ],
+              "incoming": [
+                "l"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "l"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "l"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "m"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "l"
+              ],
+              "incoming": [
+                "l"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "m"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "p"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "l"
+              ],
+              "incoming": [
+                "a0",
+                "l"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "e",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "e",
+                "gr"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "h",
+                "k"
+              ],
+              "released": [
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "m"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "p"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 3,
+      "minimal_common_safe_desired_counts": {
+        "d": 18,
+        "q": 19,
+        "r": 19,
+        "s": 21
+      },
+      "solver_status": "sat"
+    }
+  ],
+  "maximum_families_per_round": 1000,
+  "maximum_iterations": 100,
+  "maximum_payment_holes": 1,
+  "pi_source": "results/allocated_e_form2_all_allocation_atom_cegar.json",
+  "pi_source_sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+  "random_seed": 179424673,
+  "required_paid_owners": [
+    "q",
+    "s"
+  ],
+  "schema": "allocated-e-seven-endpoint-payment-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "23de2e7cb16c5dfd5adcee177d93e49f44b90e859ae9576a762b3616fa90aa8d",
+  "status": "SAT_PI_FREE_NO_REQUIRED_ENDPOINT",
+  "timeout_seconds_per_check": 900,
+  "values": {
+    "d": {
+      "a0": "574/605",
+      "a1": "233/4840",
+      "e": "2921/4840",
+      "gq": "3139/4840",
+      "gr": "129/2420",
+      "h": "719/4840",
+      "j": "1443/4840",
+      "k": "1701/4840",
+      "l": "719/4840",
+      "m": "243/4840",
+      "p": "57/1210",
+      "q0": "1701/4840"
+    },
+    "q": {
+      "a0": "1/242",
+      "a1": "3/484",
+      "e": "955/968",
+      "gq": "961/1452",
+      "gr": "1/242",
+      "h": "119/726",
+      "j": "241/726",
+      "k": "229/484",
+      "l": "43/264",
+      "m": "5/968",
+      "p": "3/968",
+      "q0": "985/2904"
+    },
+    "r": {
+      "a0": "963/968",
+      "a1": "3/484",
+      "e": "955/968",
+      "gq": "1/242",
+      "gr": "3/968",
+      "h": "15/968",
+      "j": "871/968",
+      "k": "57/968",
+      "l": "13/968",
+      "m": "5/968",
+      "p": "7/484",
+      "q0": "7/121"
+    },
+    "s": {
+      "a0": "119/121",
+      "a1": "1/484",
+      "e": "479/484",
+      "gq": "1927/2904",
+      "gr": "7/968",
+      "h": "917/2904",
+      "j": "481/1452",
+      "k": "959/2904",
+      "l": "15/968",
+      "m": "3/968",
+      "p": "5/484",
+      "q0": "959/2904"
+    }
+  }
+}

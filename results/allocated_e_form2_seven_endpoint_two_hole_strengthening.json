@@ -1,0 +1,177 @@
+{
+  "allow_d_payment_hole": false,
+  "claim_boundary": "Exact twelve-atom allocated-E form-2 decision for the recorded required-paid owner set. UNSAT strengthens the bounded dichotomy to such an EFX endpoint; SAT refutes only that strengthening, not complete EFX.",
+  "core_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "elapsed_seconds": 32.572116708004614,
+  "endpoint_count": 7,
+  "endpoint_diagnostics": [
+    {
+      "endpoint": 1,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "377/384",
+        "q": "19901/18432",
+        "r": "513/512",
+        "s": "12275/10752"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 2,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1537/1536",
+        "q": "19901/18432",
+        "r": "513/512",
+        "s": "1"
+      },
+      "underpaid_owners": []
+    },
+    {
+      "endpoint": 3,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1067/1536",
+        "q": "19901/18432",
+        "r": "513/512",
+        "s": "6913/5376"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 4,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1517/1536",
+        "q": "19901/18432",
+        "r": "643/768",
+        "s": "12275/10752"
+      },
+      "underpaid_owners": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 5,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "767/768",
+        "q": "1535/1536",
+        "r": "511/512",
+        "s": "12275/10752"
+      },
+      "underpaid_owners": [
+        "r",
+        "q",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 6,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1535/1536",
+        "q": "1553/2304",
+        "r": "1",
+        "s": "12275/10752"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 7,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "127/128",
+        "q": "767/768",
+        "r": "385/384",
+        "s": "12275/10752"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    }
+  ],
+  "maximum_payment_holes": 2,
+  "pi_clause_count": 425,
+  "random_seed": 393241,
+  "required_paid_owners": [
+    "r",
+    "q",
+    "d",
+    "s"
+  ],
+  "schema": "allocated-e-seven-endpoint-paid-strengthening-v1",
+  "solver": "Z3 5.0.0",
+  "solver_status": "sat",
+  "source_sha256": "2cbd455fa8cd07e61d8423d81ac2d06ae016e7b8e1f88116874de80ce4c417bc",
+  "status": "SAT_NO_PI_OR_REQUIRED_PAID_SEVEN_ENDPOINT_EFX",
+  "timeout_seconds": 900,
+  "values": {
+    "d": {
+      "a0": "509/512",
+      "a1": "3/512",
+      "e": "491/768",
+      "gq": "1019/1536",
+      "gr": "5/768",
+      "h": "235/768",
+      "j": "253/768",
+      "k": "131/384",
+      "l": "31/1536",
+      "m": "7/1536",
+      "p": "1/768",
+      "q0": "511/1536"
+    },
+    "q": {
+      "a0": "1/512",
+      "a1": "1553/18432",
+      "e": "3055/4608",
+      "gq": "1541/4608",
+      "gr": "1541/18432",
+      "h": "1637/18432",
+      "j": "10715/18432",
+      "k": "511/2048",
+      "l": "7693/18432",
+      "m": "1529/18432",
+      "p": "1/384",
+      "q0": "1529/6144"
+    },
+    "r": {
+      "a0": "643/768",
+      "a1": "253/1536",
+      "e": "1283/1536",
+      "gq": "1/256",
+      "gr": "83/512",
+      "h": "171/512",
+      "j": "2/3",
+      "k": "43/256",
+      "l": "251/1536",
+      "m": "125/768",
+      "p": "127/768",
+      "q0": "85/512"
+    },
+    "s": {
+      "a0": "7699/10752",
+      "a1": "503/3584",
+      "e": "3853/5376",
+      "gq": "193/1344",
+      "gr": "131/896",
+      "h": "1537/5376",
+      "j": "3839/5376",
+      "k": "1537/10752",
+      "l": "1523/3584",
+      "m": "737/5376",
+      "p": "1523/5376",
+      "q0": "1523/10752"
+    }
+  }
+}

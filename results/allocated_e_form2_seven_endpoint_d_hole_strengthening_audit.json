@@ -1,0 +1,182 @@
+{
+  "all_pi_clauses_excluded_exactly": true,
+  "audit_source_sha256": "671561c0fe946ab22c4d6b70a3578a58200192cbc306bd304ac8ccdbdca1f453",
+  "claim_boundary": "Exact Fraction audit of one minimized-core paid-endpoint shortcut counterprofile, including a full generalized-PI search. A profile with another PI does not refute a payment strengthening on the fully generalized-PI-free domain.",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "endpoint_diagnostics": [
+    {
+      "endpoint": 1,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "13159/13860",
+        "q": "133/132",
+        "r": "661/660",
+        "s": "19/10"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 2,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "661/660",
+        "q": "133/132",
+        "r": "661/660",
+        "s": "1"
+      },
+      "underpaid_owners": []
+    },
+    {
+      "endpoint": 3,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "992/1155",
+        "q": "133/132",
+        "r": "661/660",
+        "s": "169/165"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 4,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "131/132",
+        "q": "133/132",
+        "r": "131/132",
+        "s": "19/10"
+      },
+      "underpaid_owners": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 5,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "1",
+        "q": "65/66",
+        "r": "111/110",
+        "s": "19/10"
+      },
+      "underpaid_owners": [
+        "q"
+      ]
+    },
+    {
+      "endpoint": 6,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "6653/6930",
+        "q": "659/660",
+        "r": "1",
+        "s": "19/10"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 7,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "601/630",
+        "q": "103/120",
+        "r": "667/660",
+        "s": "19/10"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    }
+  ],
+  "full_generalized_pi_found": true,
+  "full_generalized_pi_witness": {
+    "cycle": [
+      "r",
+      "q",
+      "d"
+    ],
+    "edges": [
+      {
+        "desired_core": [
+          "a0",
+          "a1"
+        ],
+        "incoming": [
+          "a0"
+        ],
+        "released": [
+          "j",
+          "gq"
+        ],
+        "source": "r",
+        "target": "q"
+      },
+      {
+        "desired_core": [
+          "j",
+          "k",
+          "m",
+          "gr"
+        ],
+        "incoming": [
+          "j",
+          "m",
+          "gr"
+        ],
+        "released": [
+          "h",
+          "q0",
+          "l"
+        ],
+        "source": "q",
+        "target": "d"
+      },
+      {
+        "desired_core": [
+          "h",
+          "q0",
+          "gq"
+        ],
+        "incoming": [
+          "h",
+          "q0",
+          "gq"
+        ],
+        "released": [
+          "a0",
+          "m"
+        ],
+        "source": "d",
+        "target": "r"
+      }
+    ]
+  },
+  "full_minimal_core_counts": {
+    "d": 17,
+    "q": 16,
+    "r": 27,
+    "s": 44
+  },
+  "master_fixed_profile_status": "sat",
+  "maximum_payment_holes": null,
+  "pi_clause_count": 425,
+  "qualifying_endpoint_count": 0,
+  "required_paid_owners": [
+    "r",
+    "q",
+    "s"
+  ],
+  "schema": "allocated-e-paid-strengthening-counterprofile-audit-v1",
+  "source": "results/allocated_e_form2_seven_endpoint_d_hole_strengthening.json",
+  "source_sha256": "d45d560c7cea43558c1c0875c020fe67e57566c7c1027cff4d438aa3c57568dd",
+  "status": "COUNTERPROFILE_AUDIT_PASSED"
+}

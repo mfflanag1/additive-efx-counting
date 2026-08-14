@@ -1,0 +1,58 @@
+{
+  "audit_source_sha256": "24564551fe68483f7c8ddcf7038ecf52172159cae889c74da30be100847936a8",
+  "claim_boundary": "Independent exact UNSAT replay of the complete declared 93,480-allocation, four-support-edge decision in the twelve-atom allocated-E R3 cell. This proves the bounded-cell disjunction only. Lifting from the declared atoms and necessary premises to every saturated cap-free fixed-U state remains open.",
+  "independent_replay": {
+    "allocation_encoding": "direct complete_efx formula without atoms",
+    "direct_allocation_clause_count": 143,
+    "independent_core_atom_count": 1849,
+    "pi_clause_count": 46683,
+    "pi_predicate_encoding": "literal tail-minimum base_response",
+    "random_seed": 104729,
+    "reason_unknown": null,
+    "solver": "Z3 5.0.0",
+    "status": "unsat",
+    "timeout_seconds": 1800
+  },
+  "schema": "allocated-e-all-allocation-unsat-independent-audit-v1",
+  "source": "results/allocated_e_form2_all_allocation_atom_cegar.json",
+  "source_chain": [
+    {
+      "sha256": "1955076b297172693c99439d524c9ae39e2dd2b687eb033afe77a107cfca1eff",
+      "source": "results/allocated_e_form2_pi_payment_cegar_round15_checkpoint.json"
+    },
+    {
+      "sha256": "080b9a1badc6426db3f9e42eacee045d573cafcfd33b028d75585291801d0d2b",
+      "source": "results/allocated_e_form2_pi_payment_atom_cegar.json"
+    },
+    {
+      "sha256": "ff681bc887fb1aa5d940a9c710eed8028f918e742a7e9a2fa9452ce560998bff",
+      "source": "results/allocated_e_form2_pi_payment_atom_cegar_continuation.json"
+    },
+    {
+      "sha256": "e8c318b9bfc17cf493d90a6573a5ef86e9ad14dcfffaf3d9c0ffea00b47db9e5",
+      "source": "results/allocated_e_form2_root_charity_exchange_cegar.json"
+    },
+    {
+      "sha256": "2edb10d7ceac1052a89849e5dbdf92b1f75a573d16b16a3ce819bb1c11f05b8c",
+      "source": "results/allocated_e_form2_root_hole_bilateral_cegar.json"
+    },
+    {
+      "sha256": "fc280e043ae8b69f3b16ec1d4f52963f9c60edabcee13bfceb0fcc1ea0882262",
+      "source": "results/allocated_e_form2_root_s_fork_cegar.json"
+    },
+    {
+      "sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+      "source": "results/allocated_e_form2_all_allocation_atom_cegar.json"
+    }
+  ],
+  "source_sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+  "status": "AUDIT_PASSED",
+  "structural_checks": {
+    "allocation_count_matches_manifest": true,
+    "complete_menu_has_93480_allocations": true,
+    "every_allocation_cut_is_in_complete_four_edge_menu": true,
+    "every_pi_signature_is_closed_disjoint_family": true,
+    "pi_count_matches_manifest": true,
+    "terminal_source_status_unsat": true
+  }
+}

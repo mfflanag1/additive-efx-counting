@@ -1,0 +1,1012 @@
+{
+  "batch_all_model_self_pi": true,
+  "claim_boundary": "Exact CEGAR over physically realizable one/two-good refinements of the twelve named pieces. It separates every generalized PI over physical subgoods. Terminal SAT without PI refutes the seven-endpoint selector only; a full theorem countermodel would additionally require no unrestricted four-edge EFX allocation and every saturation premise.",
+  "core_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "dynamic_physical_subpacket_pi_cut_count": 68,
+  "elapsed_seconds": 654.734935000015,
+  "endpoint_count": 7,
+  "iterations": [
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "gr.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "gr.0",
+              "m.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "gr.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 4,
+      "fresh_batch_self_pi_cut_count": 4,
+      "iteration": 0,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "singleton",
+        "gr": "singleton",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 18,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "gr.1",
+              "m.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "gr.1",
+              "m.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "k.0",
+              "k.1",
+              "l.0",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "s",
+            [
+              "e.1",
+              "gr.0",
+              "p.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "s",
+            [
+              "e.1",
+              "gr.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 6,
+      "fresh_batch_self_pi_cut_count": 6,
+      "iteration": 1,
+      "packet_cardinality_class": {
+        "a0": "singleton",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "singleton",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gq.0",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gq.1",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gr.1",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gr.1",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gr.0",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "k.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "k.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "k.0",
+              "l.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "k.0",
+              "l.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "l.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "l.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "l.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "gr.1",
+              "k.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 15,
+      "fresh_batch_self_pi_cut_count": 15,
+      "iteration": 2,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "singleton",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.1",
+              "m.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "gr.1",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "k.1",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "k.1",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.1",
+              "l.0",
+              "l.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.1",
+              "k.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.1",
+              "k.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.1",
+              "k.0",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.1",
+              "k.0",
+              "l.0",
+              "l.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.1",
+              "l.0",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "gr.1",
+              "k.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "gr.1",
+              "l.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "gr.1",
+              "l.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "s",
+            [
+              "e.0",
+              "gr.0",
+              "gr.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 14,
+      "fresh_batch_self_pi_cut_count": 14,
+      "iteration": 3,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 21,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "gq.1",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "h.1",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.1",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "l.0",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "l.0",
+              "l.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.1",
+              "l.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "gr.1",
+              "h.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "gr.1",
+              "h.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 9,
+      "fresh_batch_self_pi_cut_count": 9,
+      "iteration": 4,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 21,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "a0.1",
+              "gr.0",
+              "m.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.1",
+              "m.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.0",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "gq.0",
+              "gq.1",
+              "gr.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "gr.1",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "s",
+            [
+              "e.0",
+              "e.1",
+              "gr.0",
+              "p.0"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 6,
+      "fresh_batch_self_pi_cut_count": 6,
+      "iteration": 5,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "singleton",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "h.1",
+              "k.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "k.0",
+              "l.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "k.0",
+              "l.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "l.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 9,
+      "fresh_batch_self_pi_cut_count": 9,
+      "iteration": 6,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "singleton",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "singleton",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 19,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "s",
+            [
+              "e.1",
+              "gr.0"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 1,
+      "fresh_batch_self_pi_cut_count": 1,
+      "iteration": 7,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "singleton",
+        "m": "singleton",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 19,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gq.1",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "l.0",
+              "q0.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 2,
+      "fresh_batch_self_pi_cut_count": 2,
+      "iteration": 8,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 19,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 1,
+      "fresh_batch_self_pi_cut_count": 1,
+      "iteration": 9,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 19,
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 10,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 149,
+        "q": 152,
+        "r": 184,
+        "s": 33
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 19,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "m.1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "m.1"
+        ],
+        "r": [
+          "a0.0",
+          "j.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 11,
+      "reason_unknown": "canceled",
+      "solver_status": "unknown"
+    }
+  ],
+  "maximum_iterations": 500,
+  "physical_subpacket_pi_cut_count": 68,
+  "preseed_all_self_pi": false,
+  "preseeded_self_pi_cut_count": 0,
+  "random_seed": 99991,
+  "schema": "allocated-e-seven-endpoint-physical-subpacket-pi-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "1ad9a8bef5189340f1ffbe2561c827d36f270bbc26b4dfe2130ac707038de777",
+  "status": "UNKNOWN",
+  "timeout_seconds_per_check": 900,
+  "whole_packet_pi_clause_count": 425
+}
