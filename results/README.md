@@ -1952,3 +1952,9 @@ both encodings.
   charity compensates the root.  Failure is one inclusion-minimal packet
   whose `q` value crosses the compensation threshold while its root value
   exceeds all available root margin.
+- [`FORM2_QD_SWAP_ROOT_RESPONSE_PAYMENT_FRONTIER_20260814.md`](FORM2_QD_SWAP_ROOT_RESPONSE_PAYMENT_FRONTIER_20260814.md)
+  ([exact audit](form2_qd_swap_root_response_payment_audit.json))
+  gives the cap-free third menu topology.  Returning the ordinary `d` core,
+  moving the root response to `s`, and transferring the whole old `d` bundle
+  plus charity to `q` automatically pays `d,s`; only one root-retention and
+  one aggregate `q`-compensation inequality remain.

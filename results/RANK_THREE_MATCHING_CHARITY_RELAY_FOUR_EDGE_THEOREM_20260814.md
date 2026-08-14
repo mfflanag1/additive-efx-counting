@@ -344,3 +344,11 @@ three-edge path `charity->r->q->d`; only a lower bound in the `q` row and an
 upper bound in the root row constrain the compensation packet.  See
 `FORM2_Q_COMPENSATION_PATH_PACKET_FRONTIER_20260814.md`.  Its failure packet
 is exactly the bicriteria anchor-capture object already isolated above.
+
+The third menu topology is a deterministic `q-d` swap plus the root response
+to `s`; see `FORM2_QD_SWAP_ROOT_RESPONSE_PAYMENT_FRONTIER_20260814.md`.
+It automatically pays `d,s` and leaves only one root-retention and one
+aggregate `q`-compensation inequality.  Consequently every candidate
+topology now has a cap-free payment boundary.  Proving that their simultaneous
+failure activates PI/full-owner/signed progress is the remaining analytic
+menu theorem.

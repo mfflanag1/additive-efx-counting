@@ -134,6 +134,22 @@ expensive for the root—the same bicriteria object isolated by anchor
 uncrossing.  The remaining theorem must force that packet into the third
 menu topology or a signed PI/full-owner exit.
 
+The third form-2 topology has no subset-selection gate.  Move the whole
+ordinary `d` core from `q` to `d`, the whole root response to `s`, and all of
+`B_d` plus charity to `q`.  Owners `d,s` are paid automatically.  The only
+tests are
+
+\[
+ v_r(C_s)\le\Delta_r,
+ \qquad
+ v_q(B_d)+v_q(p)\ge v_q(C_d)-\Delta_q.
+\]
+
+See `FORM2_QD_SWAP_ROOT_RESPONSE_PAYMENT_FRONTIER_20260814.md`.  All three
+bounded-menu topologies now have cap-free payment formulas.  The exact live
+menu gate is simultaneous failure of the two-edge `{r,d}` star, the
+bicriteria root-to-`q` packet, and these root/q aggregate inequalities.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new
