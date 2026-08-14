@@ -66,6 +66,22 @@ jointly feasible.  The active proof obligation is therefore signed routing
 of this critical packet through the represented support/drainage component,
 not another scalar partition claim.
 
+The first exact routing census now selects a unique useful topology in the
+allocated-E form-0 twelve-atom cell.  After complete generalized-PI
+exclusion, every profile has an EFX allocation on
+
+\[
+             \mathrm{charity}\to r\to q\to d\to s.
+\]
+
+The decision covers all 343 stay-or-forward packet cuts, ended UNSAT after
+21,934 PI cuts, and replays from a 70-cut core whose PI witnesses were audited
+independently.  See
+`ALLOCATED_E_FORM0_HAMILTONIAN_PATH_BOUNDED_THEOREM_20260814.md`.  This is a
+bounded-atom theorem, not the cap-free lift.  It identifies the analytic
+target: prove that failure of every three-packet cut on this path forces a
+closed PI family or the full-owner separator.
+
 ## Strict-root proper-surplus closure (2026-08-14)
 
 The controlled floor-reset and retired-packet collision theorem yield a new

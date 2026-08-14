@@ -1920,3 +1920,12 @@ both encodings.
   crosses the root deficit and covers the source response margin plus
   charity.  A rational witness proves the separator is not contradictory
   without the remaining signed saturation premises.
+- [`ALLOCATED_E_FORM0_HAMILTONIAN_PATH_BOUNDED_THEOREM_20260814.md`](ALLOCATED_E_FORM0_HAMILTONIAN_PATH_BOUNDED_THEOREM_20260814.md)
+  ([70-cut replay](allocated_e_form0_hamiltonian_path_unsat_core.json),
+  [independent PI-witness audit](allocated_e_form0_hamiltonian_path_core_audit.json))
+  proves in the exact twelve-atom form-0 cell that generalized-PI-freeness
+  forces a complete EFX allocation on the single four-edge path
+  `charity -> r -> q -> d -> s`.  The primary 21,934-cut trace is compressed
+  as `allocated_e_form0_hamiltonian_path_cegar.json.gz`.  This is a bounded
+  theorem and a candidate cap-free path-partition selector, not the universal
+  fixed-U result.

@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "distinct cycle owners and canonical cyclic targets",
+    "nonempty pairwise-disjoint desired cores",
+    "base-owner closure inside cycle owners plus charity",
+    "exact incoming/released packet identities",
+    "release coverage of every allocated incoming good"
+  ],
+  "claim_boundary": "Solver-independent combinatorial audit of the 70 PI witnesses; the UNSAT master replay still uses the primary algebraic encoding.",
+  "core_witness_count": 70,
+  "cycle_length_counts": {
+    "3": 17,
+    "4": 53
+  },
+  "schema": "allocated-e-form0-hamiltonian-path-core-audit-v1",
+  "script_sha256": "59c1056da58f9964bb0314ca3dd94ad1641ffb265b024fd3747ebc128295121e",
+  "source": "results/allocated_e_form0_hamiltonian_path_unsat_core.json",
+  "source_sha256": "804418f62a1e0d4d19709b70a7109295b979286251793f081c4ab1f4ce5dd446",
+  "status": "CORE_SEMANTICS_VALID"
+}

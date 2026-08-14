@@ -305,3 +305,19 @@ the singleton.  See
 separator is scalar-feasible, so its elimination must use complete signed
 supplier/saturation data; the two valuation rows alone cannot finish the
 theorem.
+
+An exact bounded decision now supplies a concrete routing target.  In the
+allocated-E form-0 twelve-atom cell, complete generalized-PI exclusion forces
+an EFX allocation on the single Hamiltonian path
+
+\[
+             \mathrm{charity}\to r\to q\to d\to s.
+\]
+
+All 343 stay-or-forward packet choices were negated; the master became UNSAT
+after 21,934 PI cuts and replays from a 70-cut core.  See
+`ALLOCATED_E_FORM0_HAMILTONIAN_PATH_BOUNDED_THEOREM_20260814.md`.  The
+remaining cap-free theorem is therefore not arbitrary graph search: it is a
+three-cut path-partition lemma whose failure must activate closed PI or the
+full-owner base-margin separator.  The bounded result does not itself prove
+that lift or cover form 2.
