@@ -2049,3 +2049,11 @@ both encodings.
   spanning oriented path from the missing source to the omitted target.
   Reversing it pays all three represented sources; the sole possible hole is
   the missing owner.  Frozen-supplier mixing and repair of that hole remain.
+- [`CANONICAL_PATH_BASE_RESPONSE_PREFIX_OR_TERMINAL_SPLIT_LEMMA_20260814.md`](CANONICAL_PATH_BASE_RESPONSE_PREFIX_OR_TERMINAL_SPLIT_LEMMA_20260814.md)
+  ([exact role/algebra audit](canonical_path_base_response_prefix_or_terminal_split_audit.json))
+  repairs the missing-owner hole with its ordinary base-desired response in
+  eight of the twelve fixed-role maps: reverse the path prefix ending at that
+  response target.  The four terminal-target maps reduce to one inclusion-
+  minimal compensator packet that is indispensable to the terminal owner but
+  too expensive for its predecessor.  Mixed frozen provenance and observer
+  safety remain.

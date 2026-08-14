@@ -998,6 +998,39 @@ local theorem is not path existence: it is repair of the sacrificed missing-
 owner hole using its captured mandatory response, while keeping the exact
 frozen-supplier pair count and observer budgets.
 
+## 33. Eight maps close payment; four reduce to one terminal split
+
+Fix the actual roles `m=d` and ordinary base-response target `b=q`.
+`CANONICAL_PATH_BASE_RESPONSE_PREFIX_OR_TERMINAL_SPLIT_LEMMA_20260814.md`
+classifies the position of `q` on the canonical path.  Among the twelve role
+maps, `q` occurs in positions one, two, and three exactly four times each.
+
+If `q` is internal—position one or two—send its base-desired `d->q` core to
+`d`, reverse only the path prefix ending at `q`, and give charity to `d`.
+The core alone base-pays `d`; every owner on the prefix receives a bundle it
+desires above its entire current bundle; later owners are unchanged.  These
+eight maps use respectively three or four current-holder edges.
+
+If `q` is terminal, the problem collapses to one packet `P` inside the
+incoming terminal core.  Writing `Delta_i` for current base surplus and `C`
+for the removed `d->q` core, choose an inclusion-minimal packet satisfying
+
+```text
+v_q(P) >= v_q(C) - Delta_q.
+```
+
+It yields a three-edge paid allocation exactly when
+
+```text
+v_predecessor(P) <= Delta_predecessor.
+```
+
+Failure leaves the exact bicriteria critical packet: every item is necessary
+for compensating `q`, while the whole packet is too expensive for its
+predecessor to release.  This is now the only current-holder payment gate in
+the four terminal maps.  Frozen-supplier expansion and observer continuation
+are separate and remain open.
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1154,12 +1187,13 @@ duplicate-omission payment/support frontier, the combined chain reports:
 After correcting the physical-compression scope, the conditional census,
 independent edge-mask encoding, mixed-core counterexample, and conditional
 anchor-substitution frontier, three-color support obstruction, full-owner
-connected-rank-defect census, and unique Hamiltonian-omission census were
+connected-rank-defect census, unique Hamiltonian-omission census, and
+canonical path-prefix/terminal-split reduction were
 replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-12 passed in 0.59s
+13 passed in 0.65s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization
