@@ -1,0 +1,169 @@
+{
+  "branches": [
+    {
+      "d_core": "Dr",
+      "lost_packets": [
+        "Dr",
+        "S"
+      ],
+      "omitted_source": "r",
+      "support_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "d_core": "Dr",
+      "lost_packets": [
+        "R"
+      ],
+      "omitted_source": "q",
+      "support_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "d_core": "Dr",
+      "lost_packets": [
+        "Q"
+      ],
+      "omitted_source": "s",
+      "support_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "d_core": "Dq",
+      "lost_packets": [
+        "S"
+      ],
+      "omitted_source": "r",
+      "support_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "d_core": "Dq",
+      "lost_packets": [
+        "Dq",
+        "R"
+      ],
+      "omitted_source": "q",
+      "support_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "d_core": "Dq",
+      "lost_packets": [
+        "Q"
+      ],
+      "omitted_source": "s",
+      "support_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "claim_boundary": "cap-free owner-payment compression on the disjoint branch; observer and saturation closure remain open",
+  "provenance": {
+    "script": "tracks/parkability/audit_form2_six_branch_payment_compression.py",
+    "script_sha256": "fc9dfaa41c180d1e8a7fabd465fff829d78cb41fb7a57b6ed567593c2737235e",
+    "theorem": "results/FORM2_SIX_BRANCH_PAYMENT_COMPRESSION_LEMMA_20260814.md",
+    "theorem_sha256": "96e3589d0da1c76ce765684af2a2ce96bd6c3ea458d5e68893cfd11d4c30f939"
+  },
+  "scalar_checks": {
+    "six_failures_imply_three_captures": "unsat",
+    "three_captures_imply_six_failures": "unsat"
+  },
+  "schema": "form2-six-branch-payment-compression-v1",
+  "status": "SIX_FAILURES_IFF_THREE_SUPPLIER_CAPTURES"
+}

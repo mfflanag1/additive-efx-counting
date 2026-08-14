@@ -1,0 +1,43 @@
+{
+  "allocation_count": 439,
+  "checks": [
+    "independent enumeration of every stay/send allocation",
+    "exact three-topology menu and union cardinality",
+    "resume source hash and cumulative-cut continuity",
+    "global uniqueness of every generalized-PI cut signature",
+    "nonempty pairwise-disjoint desired cores",
+    "exact base incoming/released identities and release coverage"
+  ],
+  "claim_boundary": "Solver-independent structural audit of the allocation menu and PI witnesses. It does not replay the QF_LRA master and cannot promote a bounded verdict to a cap-free theorem.",
+  "cycle_length_counts": {
+    "3": 2125,
+    "4": 23288
+  },
+  "schema": "allocated-e-form2-three-topology-menu-structural-audit-v1",
+  "script_sha256": "8f0474ca187117cdc693886a8a36c4e6214e140f94c29d774beaafb406a97044",
+  "status": "STRUCTURE_VALID",
+  "topology_allocation_counts": [
+    12,
+    84,
+    343
+  ],
+  "trace_rows": [
+    {
+      "cumulative_cut_count": 19747,
+      "fresh_cut_count": 19747,
+      "iteration_count": 15,
+      "path": "results/allocated_e_form2_three_topology_menu_cegar.json",
+      "sha256": "8cf4b172f247a88c1576ca63f1e0400c0179d0c68332f72dc73e2885cfda7956",
+      "status": "UNKNOWN"
+    },
+    {
+      "cumulative_cut_count": 25413,
+      "fresh_cut_count": 5666,
+      "iteration_count": 10,
+      "path": "results/allocated_e_form2_three_topology_menu_cegar_resume19747.json",
+      "sha256": "814a92cbe5c8c2154b03d8f9fd317c61069c12c466ea2c1f8be3496c15591a82",
+      "status": "ITERATION_LIMIT"
+    }
+  ],
+  "unique_pi_witness_count": 25413
+}
