@@ -57,6 +57,21 @@ as an internally verified hybrid theorem rather than a peer-reviewed theorem.
 The general problem remains open. Current exact status and proof gates are
 in [`GENERAL_EFX_GOAL_20260730.md`](GENERAL_EFX_GOAL_20260730.md).
 
+The August 14 endpoint-6 release checkpoint
+[`ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md`](ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md)
+is the current sharp fixed-`U` frontier.  In the exact twelve-atom form-2
+cell, a complete producer over 10,428 one-root-atom releases reduces to a
+dual-verified core containing only 289 generalized-PI clauses and three EFX
+allocations.  All three preserve `A`, release the entire root packet `H`, and
+use at most four supplier edges.  Its cap-free lift reduces physical failure
+to generalized PI, an external response, a minimal one-hole Hall deficiency,
+or a strict hidden-minimum packet split.  This is a bounded theorem plus a
+cap-free reduction, not the universal fixed-`U` theorem or general EFX.  The
+direct physically realizable total/least-good selector is SAT, but its exact
+22-good expansion contains a generalized PI.  Subsequent CEGAR reached 1,135
+physical subpacket-PI cuts before an UNKNOWN check; no countermodel or
+physical UNSAT theorem is claimed.
+
 The August 12 cap-free composition
 [`UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md`](UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md)
 excludes the exact saturated four-owner decorated-response/base-margin

@@ -110,6 +110,35 @@ coordinated nonroot redistribution can close the theorem while the current
 root bundle is fixed. See
 `ENDPOINT6_ROOT_FIXED_FOUR_EDGE_COMPLETION_NO_GO_20260814.md`.
 
+The complementary root-changing cell is now sharply positive in the exact
+twelve-atom model.  Under endpoint-6 EFX, `q,s` endpoint payment, the genuine
+root-retained `q` debt, and full generalized-PI exclusion, one of exactly
+three allocations is EFX:
+
+\[
+(A,Q,H+L+W,(E-L)+P),
+\quad (A,Q,L+W,H+(E-L)+P),
+\quad (A,H+(Q-J)+M+P,J+(W-M),E).
+\]
+
+All three preserve `A`, release the whole root packet `H`, and use at most
+four support edges.  The complete 10,428-allocation CEGAR reduces to an
+independently replayed core of 289 PI clauses and only these three endpoints.
+The cap-free expansion therefore has a precise five-way frontier: physical
+EFX through one of the three releases, physical PI, an external response, a
+minimal one-hole Hall deficiency, or a strict hidden-minimum physical packet
+split.  See
+`ENDPOINT6_THREE_WAY_H_RELEASE_BOUNDED_AND_CAPFREE_REDUCTION_20260814.md`.
+
+The direct total/least-good lift is SAT even after enforcing exact
+singleton/two-good realizability, but its 22-good expansion contains a
+one-owner physical generalized PI.  Lazy separation learned 135 self-core
+cuts; the first self-PI-free model then contained 1,000 multi-owner PI
+families (918 on `{d,q,r}`), while a sparse independent continuation found
+proper-`J`-split `{q,r}` cycles.  A 1,135-cut continuation is currently
+UNKNOWN, so this is structural evidence and a compressed target—not a
+physical UNSAT theorem.
+
 The companion EFX-2 track has reduced the canonical whole-retired-packet
 current-response branch to five exact compensation paths and their path-Hall
 cut, with strict root overpayment closed and equality collapsed to a unique
@@ -137,15 +166,20 @@ is exactly refuted.
   audited over all seven endpoints.
 - Endpoint-6 root-fixed exhaustion: exact PI-free rational countermodel with
   zero EFX allocations in the independently regenerated 6,411-member menu.
+- Endpoint-6 whole-`H` release: complete producer UNSAT over 10,428 candidate
+  allocations; minimized to 289 PI clauses and three release allocations;
+  independent nested-minimum/direct-EFX replay UNSAT.
 
 ## Claim boundary
 
 Proved: the exact twelve-atom sharp `q,s`-paid/two-debt endpoint theorem;
 cap-free hidden-minimum, physical Hall-lift, minimal-deficiency one-hole,
 root/sacrifice observer localization, and root-retention compensation
-identities.
+identities; and the exact three-way whole-`H` release theorem with its
+cap-free physical reduction.
 
-Not proved: elimination of the remaining supplier-compatible two-creditor
-Hall cut,
+Not proved: conversion of the remaining external-response, supplier-compatible
+one-hole Hall, or hidden-minimum split exits into an admitted physical
+whole-`H` release with fixed-`U` progress;
 the universal saturated fixed-`U` four-edge theorem, four-agent additive EFX,
 or general additive EFX.

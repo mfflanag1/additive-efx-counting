@@ -1,0 +1,74 @@
+{
+  "allocation_count": 3,
+  "claim_boundary": "Audits only the exact packet identities and support-edge counts of the dual-verified bounded core. The physical lift additionally uses the separately proved hidden-minimum and Hall-lift lemmas.",
+  "core_source": "results/allocated_e_form2_endpoint6_single_root_release_unsat_core.json",
+  "core_source_sha256": "6acebc240a48f3b76b6d883b2a01495999a5bc2e87b4de97b0f69f861856e465",
+  "independent_source": "results/allocated_e_form2_endpoint6_single_root_release_compact_core_audit.json",
+  "independent_source_sha256": "11eb9a52b9cf6d590a25751230ee5b2df1d929239dad9926bfb2b33e3af46d72",
+  "pi_clause_count": 289,
+  "root_packet_preserved": "A",
+  "root_packet_released": "H",
+  "rows": [
+    {
+      "packet_form": "(A,Q,H+L+W,(E-L)+P)",
+      "support_edge_count": 3,
+      "support_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    {
+      "packet_form": "(A,Q,L+W,H+(E-L)+P)",
+      "support_edge_count": 3,
+      "support_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    {
+      "packet_form": "(A,H+(Q-J)+M+P,J+(W-M),E)",
+      "support_edge_count": 4,
+      "support_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "endpoint6-three-way-h-release-lift-audit-v1",
+  "source_sha256": "dc7703825efe302237652d0007acdddd5498a8d157a098f17bedbaa625968129",
+  "status": "AUDIT_PASSED"
+}
