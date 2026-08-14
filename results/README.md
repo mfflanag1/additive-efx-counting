@@ -1809,3 +1809,21 @@ both encodings.
   Hamiltonian owner-to-charity paths. Any edge into a surviving owner hole
   closes a directed owner cycle in one pivot; decorated payment is the
   remaining interface.
+## 2026-08-14 fixed-U normalization-bypass correction
+
+- [`PERMANENT_ANCHOR_CHARITY_RELAY_TWO_EDGE_THEOREM_20260814.md`](PERMANENT_ANCHOR_CHARITY_RELAY_TWO_EDGE_THEOREM_20260814.md)
+  gives the shortest current reduction of the saturated rank-three target:
+  move the permanent anchor to the strict root and place the singleton
+  charity alternately at the root and unmatched owner.  Both complete
+  candidates use exactly two support-provenance edges.
+- [`NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`](NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md)
+  corrects the imported claim that all `T_{L,times}^*` collisions are
+  closed.  The cited dependencies cover root holders and common-safe
+  nonroot whole hits, but not a nonroot-held normalization bypass whose
+  repeated ledger-free response avoids the retired packet.  An exact local
+  positive-additive witness and independent audit confirm the dependency
+  mismatch; this is not a full GG or fixed-`U` countermodel.
+- The active theorem is therefore reduced to closing or refuting that exact
+  singleton normalization-bypass branch.  Earlier R2 and endpoint-6
+  two-probe conclusions are reductions, not completed EFX theorems, until
+  the same gap is repaired.

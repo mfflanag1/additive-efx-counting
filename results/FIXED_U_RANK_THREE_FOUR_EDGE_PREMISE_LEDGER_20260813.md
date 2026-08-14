@@ -1,5 +1,56 @@
 # Fixed-U rank-three four-edge premise ledger
 
+## Strict-root proper-surplus closure (2026-08-14)
+
+The controlled floor-reset and retired-packet collision theorem yield a new
+cap-free reduction that bypasses the R2/R3 provenance and donor-margin
+separators.  Whenever the physical root bundle decomposes as `A+H`, with
+nonempty detachable `H` and the permanent anchor `A` still strictly above
+the first-priority base coordinate, the two probes
+
+`(A,Q,W+H+P,E)` and `(A+H,Q,W+P,E)`
+
+force a complete EFX endpoint through at most two support edges, conditional
+on semantic acceptance of the imported controlled-reset/collision
+composition.  See
+`STRICT_ROOT_SURPLUS_RESET_RETIRE_RETURN_CLOSURE_THEOREM_20260814.md`.
+
+Thus the live universal coverage question has sharpened: prove that every
+target state exposes such proper strict-root surplus or exits through an
+already closed EFX/PI/progress/rank-growth branch.  The no-surplus face—where
+the current root support is exactly the anchor, or every nonempty deletion
+destroys root strictness—is not closed by this argument.
+
+### Rank-three charity-relay upgrade
+
+The selected rank-three matching itself removes the no-surplus restriction.
+Reverse its three disjoint physical desired cores while retaining all target
+residuals and the singleton charity.  The represented first-priority root
+then contains its base-desired core and is strict.  Stage the charity at the
+root, move it to the unmatched owner, and return it.  The two complete
+endpoints use the three matching pairs plus one charity pair, while the
+return creates the exact reset-floor collision certificate.
+
+`RANK_THREE_MATCHING_CHARITY_RELAY_FOUR_EDGE_THEOREM_20260814.md` reduces the
+full frozen target predicate to a nonroot-held singleton normalization
+bypass.  The imported `T_{L,times}^*` resolution does not currently close
+that case when its repeated ledger-free response avoids the retired packet;
+see `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
+
+### Permanent-anchor simplification
+
+The other two matching edges are unnecessary.  Move only the permanent
+ordinary anchor core `A` from its current target `q` to the first-priority
+root, then place the singleton charity alternately at the root and at the
+unmatched owner.  Both complete allocations have a strict root and use only
+the anchor pair plus one charity pair.  Returning the staged charity
+singleton supplies the same exact reset-floor collision.
+
+See `PERMANENT_ANCHOR_CHARITY_RELAY_TWO_EDGE_THEOREM_20260814.md`.  This is
+now the shortest reduction of the frozen target: exactly two
+support-provenance edges, followed by the precise unproved nonroot
+normalization-bypass gate.  It is not yet a proof of the frozen target.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

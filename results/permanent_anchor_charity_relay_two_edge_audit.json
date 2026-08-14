@@ -1,0 +1,68 @@
+{
+  "canonical_cancellation_restores_sacrifice_endpoint": true,
+  "cases": [
+    {
+      "anchor_holder_equals_sacrifice": false,
+      "root_endpoint_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "sacrifice_endpoint_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ]
+    },
+    {
+      "anchor_holder_equals_sacrifice": true,
+      "root_endpoint_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "sacrifice_endpoint_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ]
+    }
+  ],
+  "claim_boundary": "Checks both anchor-holder/sacrifice incidences, conservation, two-edge provenance, strict root, reset deficit, and exact cancellation. It does not independently certify that the floor reset and staged relay are admitted G0--G10 operations or reprove the imported collision theorem.",
+  "imported_collision_theorem_commit": "34709c9ce22dbde23a5fa381a2ccea7898dfe1ca",
+  "maximum_support_provenance_edges": 2,
+  "physical_conservation": true,
+  "relay_edge_from_sacrifice_to_root": [
+    "d",
+    "r"
+  ],
+  "reset_floor_capture_negation_status": "unsat",
+  "retired_packet": [
+    "p"
+  ],
+  "schema": "permanent-anchor-charity-relay-two-edge-audit-v1",
+  "source_sha256": "1a0110d45efe2bafeeb3922178d5e7e01dd998f94ef156266643179889668f1e",
+  "status": "CONDITIONAL_COMPOSITION_AUDIT_PASSED",
+  "strict_root_negation_status": "unsat",
+  "theorem_sha256": "7a3ead21d2a18947ea8b557d30fe5427794be4da217bfb0f3ce350ed17c141c8"
+}

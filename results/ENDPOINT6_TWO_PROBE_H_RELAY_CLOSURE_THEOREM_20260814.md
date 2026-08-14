@@ -1,10 +1,18 @@
 # Endpoint-6 two-probe `H`-relay closure theorem
 
+**Dependency correction (2026-08-14):** the imported claim that all
+`T_{L,times}^*` states are closed has an uncovered nonroot-holder
+normalization-bypass case when the repeated ledger-free response avoids
+`H`; see `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.  This
+document proves the two-probe reduction and exact collision premise map, but
+does not currently prove that one probe is EFX unless that missing branch is
+closed or a local argument forces the normalized response to hit `H`.
+
 **Date:** 2026-08-14
 
-**Status:** cap-free closure of the endpoint-6 recurrent branch, conditional
-on semantic acceptance of the imported `T_{L,times}^*` collision theorem;
-the paid/sacrificed relay admission is separately proved
+**Status:** cap-free reduction of the endpoint-6 recurrent branch to the
+unproved nonroot normalization-bypass subtype; the paid/sacrificed relay
+admission is separately proved
 
 ## Two explicit probes
 

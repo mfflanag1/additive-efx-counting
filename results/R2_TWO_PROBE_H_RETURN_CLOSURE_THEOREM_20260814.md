@@ -1,10 +1,17 @@
 # R2 two-probe `H`-return closure theorem
 
+**Dependency correction (2026-08-14):** the imported complete
+`T_{L,times}^*` closure has an uncovered nonroot-holder
+normalization-bypass case when the repeated ledger-free response avoids
+`H`; see `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.  The
+two-probe identities below remain valid, but the claimed EFX conclusion is
+not established without closing that branch.
+
 **Date:** 2026-08-14
 
-**Status:** cap-free closure of the named-provenance proper-residual R2
-branch, conditional on semantic acceptance of `T_{L,times}^*`; arbitrary
-captured-support provenance remains open
+**Status:** cap-free reduction of the named-provenance proper-residual R2
+branch to the unproved nonroot normalization bypass; arbitrary
+captured-support provenance also remains open
 
 ## Input branch
 

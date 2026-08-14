@@ -1,5 +1,11 @@
 # Whole-`H` release collision-or-parked-support reduction
 
+**Dependency correction (2026-08-14):** the imported complete collision
+closure does not currently cover a nonroot-held normalization bypass whose
+repeated ledger-free response avoids `H`; see
+`NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.  Accordingly the
+collision alternative below cannot yet be deleted in full.
+
 **Date:** 2026-08-14
 
 **Status:** cap-free composition reduction; the parked-support terminal
