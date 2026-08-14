@@ -1,0 +1,5801 @@
+{
+  "claim_boundary": "Exact twelve-atom decision for only the named root-retention creditor debt. It does not decide physical EFX or the cap-free theorem.",
+  "creditor": "q",
+  "distinct_core_atom_count": 1850,
+  "elapsed_seconds": 40.57385204199818,
+  "endpoint_index": 6,
+  "endpoint_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "endpoint_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "generalized_pi_cut_count": 46761,
+  "initial_pi_cut_count": 46683,
+  "iterations": [
+    {
+      "fresh_cut_count": 35,
+      "iteration": 0,
+      "minimal_common_safe_desired_counts": {
+        "d": 14,
+        "q": 28,
+        "r": 32,
+        "s": 31
+      },
+      "pi_cycle_count": 35,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "k",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "a1",
+                "m"
+              ],
+              "released": [
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "k",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "gr"
+              ],
+              "released": [
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "l",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "l",
+                "m",
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "l",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "a1",
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "q0"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "q0",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "k",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "gr"
+              ],
+              "released": [
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l",
+                "gq"
+              ],
+              "incoming": [
+                "j",
+                "l",
+                "gq"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "h",
+                "j",
+                "gq"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "q0",
+                "gr"
+              ],
+              "incoming": [
+                "h",
+                "q0",
+                "gr"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "l",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "a1",
+                "l",
+                "gq"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "e",
+                "m"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "e",
+                "m"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "gr"
+              ],
+              "incoming": [
+                "e",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "k",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "a1",
+                "h",
+                "k",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "gr"
+              ],
+              "incoming": [
+                "e",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "l",
+                "m",
+                "p"
+              ],
+              "incoming": [
+                "a1",
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "k",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "gr"
+              ],
+              "released": [
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "e",
+                "m"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "l",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "a1",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "a1",
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0",
+                "k"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "j",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "m"
+              ],
+              "incoming": [
+                "e",
+                "m"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0",
+                "k"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "j",
+                "l"
+              ],
+              "incoming": [
+                "a1",
+                "h",
+                "j",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "m"
+              ],
+              "incoming": [
+                "e",
+                "m"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0",
+                "k"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "l",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "a1",
+                "j",
+                "l",
+                "gr",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "gr"
+              ],
+              "incoming": [
+                "e",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0",
+                "k"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "j",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "gr"
+              ],
+              "incoming": [
+                "e",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0",
+                "k"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "h",
+                "j",
+                "l"
+              ],
+              "incoming": [
+                "a1",
+                "h",
+                "j",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "j",
+                "gq",
+                "gr",
+                "p"
+              ],
+              "released": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0",
+                "k"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "q0"
+              ],
+              "incoming": [
+                "a0",
+                "q0"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "j",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "l",
+                "m",
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "l",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k",
+                "p"
+              ],
+              "incoming": [
+                "a1",
+                "j",
+                "p"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "q0"
+              ],
+              "incoming": [
+                "a0",
+                "q0"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "j",
+                "gr",
+                "p"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gq"
+              ],
+              "incoming": [
+                "a0",
+                "gq"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "h",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "a0",
+                "h",
+                "gr",
+                "p"
+              ],
+              "released": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "m",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "m",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l",
+                "gq"
+              ],
+              "incoming": [
+                "j",
+                "l",
+                "gq"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "q0",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "gr",
+                "p"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "l",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "a1",
+                "l",
+                "m",
+                "gq"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq",
+                "p"
+              ],
+              "incoming": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "released": [
+                "e"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "k"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "j",
+                "gq",
+                "gr"
+              ],
+              "released": [
+                "e"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "a1"
+              ],
+              "incoming": [
+                "a0"
+              ],
+              "released": [
+                "j",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "j",
+                "gq",
+                "gr"
+              ],
+              "released": [
+                "e"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "fresh_cut_count": 4,
+      "iteration": 1,
+      "minimal_common_safe_desired_counts": {
+        "d": 12,
+        "q": 20,
+        "r": 12,
+        "s": 46
+      },
+      "pi_cycle_count": 4,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "e",
+                "gq"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0"
+              ],
+              "incoming": [
+                "a1"
+              ],
+              "released": [
+                "h",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "h",
+                "j",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "e",
+                "gq"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0"
+              ],
+              "incoming": [
+                "a1"
+              ],
+              "released": [
+                "h",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "j",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "gr"
+              ],
+              "incoming": [
+                "e",
+                "gr"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "q0"
+              ],
+              "incoming": [
+                "a0",
+                "q0"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "k",
+                "l",
+                "m",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "k",
+                "l",
+                "m",
+                "p"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "fresh_cut_count": 28,
+      "iteration": 2,
+      "minimal_common_safe_desired_counts": {
+        "d": 17,
+        "q": 24,
+        "r": 26,
+        "s": 30
+      },
+      "pi_cycle_count": 28,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k",
+                "l"
+              ],
+              "incoming": [
+                "k",
+                "l"
+              ],
+              "released": [
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k",
+                "l"
+              ],
+              "incoming": [
+                "k",
+                "l"
+              ],
+              "released": [
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "l",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "k",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "incoming": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "k",
+                "q0",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "incoming": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0",
+                "gr",
+                "p"
+              ],
+              "incoming": [
+                "a1",
+                "gr",
+                "p"
+              ],
+              "released": [
+                "h",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "a0",
+                "h"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "k",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "q0",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "p"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "incoming": [],
+              "released": [],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "incoming": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "gq"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "k",
+                "q0",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "incoming": [
+                "a1",
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "j",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "e",
+                "p"
+              ],
+              "released": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "incoming": [
+                "h",
+                "k",
+                "q0",
+                "l"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "fresh_cut_count": 11,
+      "iteration": 3,
+      "minimal_common_safe_desired_counts": {
+        "d": 15,
+        "q": 23,
+        "r": 19,
+        "s": 26
+      },
+      "pi_cycle_count": 11,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "j",
+                "k",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "j",
+                "m"
+              ],
+              "released": [
+                "h",
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "a1",
+                "j"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "e",
+                "m"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "a0"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "j",
+                "k",
+                "l",
+                "m"
+              ],
+              "incoming": [
+                "j",
+                "m"
+              ],
+              "released": [
+                "h",
+                "q0"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "a1",
+                "j"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "a1",
+                "j"
+              ],
+              "released": [
+                "h",
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "e"
+              ],
+              "incoming": [
+                "a1",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "r",
+            "q",
+            "d",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "q0",
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "q0",
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "h",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "j"
+              ],
+              "released": [
+                "q0",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "gr"
+              ],
+              "incoming": [
+                "a0",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "d",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "l",
+                "e"
+              ],
+              "incoming": [
+                "l",
+                "e"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "s",
+              "target": "r"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 4,
+      "minimal_common_safe_desired_counts": {
+        "d": 12,
+        "q": 23,
+        "r": 15,
+        "s": 23
+      },
+      "solver_status": "sat"
+    }
+  ],
+  "maximum_families_per_round": 1000,
+  "maximum_iterations": 100,
+  "pi_source": "results/allocated_e_form2_all_allocation_atom_cegar.json",
+  "pi_source_sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+  "random_seed": 533000401,
+  "retained_allocation": {
+    "charity": [],
+    "d": [
+      "j",
+      "gq",
+      "gr"
+    ],
+    "q": [
+      "k",
+      "q0",
+      "p",
+      "m"
+    ],
+    "r": [
+      "a0",
+      "a1",
+      "h"
+    ],
+    "s": [
+      "l",
+      "e"
+    ]
+  },
+  "schema": "allocated-e-root-retention-new-debt-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "06492bfa30141a0ba2e16bf3c9a8205456a46fece8dcc5995a38cf0b944e6f06",
+  "status": "SAT_PI_FREE_NEW_CREDITOR_DEBT",
+  "timeout_seconds_per_check": 900,
+  "values": {
+    "d": {
+      "a0": "267/278",
+      "a1": "7/556",
+      "e": "3/139",
+      "gq": "489/556",
+      "gr": "7/139",
+      "h": "15/556",
+      "j": "8/139",
+      "k": "243/278",
+      "l": "15/556",
+      "m": "9/556",
+      "p": "3/556",
+      "q0": "10/139"
+    },
+    "q": {
+      "a0": "535/556",
+      "a1": "9/278",
+      "e": "138/139",
+      "gq": "125/139",
+      "gr": "7/278",
+      "h": "2/139",
+      "j": "19/278",
+      "k": "511/556",
+      "l": "5/556",
+      "m": "3/556",
+      "p": "1/278",
+      "q0": "8/139"
+    },
+    "r": {
+      "a0": "547/556",
+      "a1": "13/556",
+      "e": "543/556",
+      "gq": "521/556",
+      "gr": "9/556",
+      "h": "1/278",
+      "j": "23/556",
+      "k": "509/556",
+      "l": "1/278",
+      "m": "9/556",
+      "p": "1/278",
+      "q0": "15/278"
+    },
+    "s": {
+      "a0": "553/556",
+      "a1": "1/139",
+      "e": "555/556",
+      "gq": "533/556",
+      "gr": "1/556",
+      "h": "2/139",
+      "j": "4/139",
+      "k": "135/278",
+      "l": "9/556",
+      "m": "1/278",
+      "p": "1/556",
+      "q0": "135/278"
+    }
+  }
+}

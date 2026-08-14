@@ -98,6 +98,13 @@ physical-tail obstruction is therefore a two-row root/sacrifice problem.  It
 is the same typed pair appearing in the companion root-retention and
 two-creditor Hall analysis.
 
+The compact proof core contains only `Z1,Z2,Z3,Z4,Z6`. Retaining the actual
+current root bundle makes `Z1`--`Z4` single-`d`-debt rows; the `Z3` owner `s`
+returns exactly to her base bundle. Only `Z6` leaves a genuine second
+creditor, `q`, with packet `M` as its explicit compensation. This refinement
+is proved and audited in
+`FIVE_CORE_ENDPOINT_ROOT_RETENTION_LEDGER_LEMMA_20260814.md`.
+
 ## Claim boundary
 
 Proved: the exact bounded `q,s`-paid theorem, its sharp two-debt boundary, and

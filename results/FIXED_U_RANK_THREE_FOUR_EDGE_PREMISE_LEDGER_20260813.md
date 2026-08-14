@@ -26,6 +26,22 @@ endpoint failure has only those two observer rows. Root retention converts
 their repair to exact `q,s` compensation prices and a supplier-compatible
 two-creditor Hall cut; elimination of that cut remains open.
 
+The five endpoints in the sharp compact core admit a stronger typed ledger.
+After exact current-root retention, `Z1`--`Z4` have only the pre-existing `d`
+debt (`Z3` returns `s` exactly to `X_s`). `Z6` is the sole genuine
+two-creditor row, `{d,q}`, with explicit compensation packet `M` and three
+used supplier edges. Exact PI-free search refutes automatic `q` payment in
+that row. The cap-free live branch is therefore the old current-only `d`
+wall plus the single `Z6` `M`-compensation/two-cycle cut.
+
+That `Z6` root-fixed face is exhaustively refuted in the bounded cell: an
+independently audited exact PI-free profile has zero EFX allocations among
+all 6,411 complete allocations retaining `A+H` with at most four support
+edges. The next cap-free lemma must therefore change/release the root anchor
+or move to a different well-founded GG record. Root-fixed donor menus,
+including arbitrary coordinated nonroot redistribution, are closed as a
+route.
+
 ## Decisive bounded interface
 
 The complete allocated-`E` twelve-atom R3 proxy is now solved: every

@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "Exact twelve-atom decision for only the named root-retention creditor debt. It does not decide physical EFX or the cap-free theorem.",
+  "creditor": "s",
+  "distinct_core_atom_count": 1849,
+  "elapsed_seconds": 0.031215166993206367,
+  "endpoint_index": 3,
+  "endpoint_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "endpoint_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "generalized_pi_cut_count": 46683,
+  "initial_pi_cut_count": 46683,
+  "iterations": [
+    {
+      "iteration": 0,
+      "solver_status": "unsat"
+    }
+  ],
+  "maximum_families_per_round": 1000,
+  "maximum_iterations": 100,
+  "pi_source": "results/allocated_e_form2_all_allocation_atom_cegar.json",
+  "pi_source_sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+  "random_seed": 472882027,
+  "retained_allocation": {
+    "charity": [],
+    "d": [
+      "l",
+      "m",
+      "gq",
+      "gr"
+    ],
+    "q": [
+      "j",
+      "k",
+      "q0"
+    ],
+    "r": [
+      "a0",
+      "a1",
+      "h"
+    ],
+    "s": [
+      "e",
+      "p"
+    ]
+  },
+  "schema": "allocated-e-root-retention-new-debt-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "06492bfa30141a0ba2e16bf3c9a8205456a46fece8dcc5995a38cf0b944e6f06",
+  "status": "UNSAT_PI_OR_NEW_CREDITOR_DEBT",
+  "timeout_seconds_per_check": 900
+}

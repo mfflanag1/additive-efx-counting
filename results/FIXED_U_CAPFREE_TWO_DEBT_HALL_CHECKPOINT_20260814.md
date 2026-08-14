@@ -86,12 +86,29 @@ continuation:
 
 1. a minimal one-hole Hall-deficient physical response family; or
 2. a non-EFX seven-endpoint expansion whose failed comparisons are confined
-   to the exact root/sacrifice pair `{r,d}`.
+   to the exact root/sacrifice pair `{r,d}`, followed after root retention by
+   either the existing sole `d` wall or the unique `Z6` `{d,q}`/`M` branch.
 
 Retaining the current strict root converts such an endpoint into exact
 compensation prices for the paid pair `{q,s}`.  A disjoint compatible packet
 pair closes the reassembly; failure is an explicit two-creditor Hall cut.
 See `ROOT_RETENTION_QS_COMPENSATION_HALL_REDUCTION_LEMMA_20260814.md`.
+
+The 394-clause proof core uses only endpoints `Z1,Z2,Z3,Z4,Z6`. Exact
+root-retention accounting collapses `Z1`--`Z4` to the already named single
+`d`-wall branch: in `Z3` the apparently affected `s` bundle becomes exactly
+`X_s`, so it remains paid. Only `Z6` has a genuine second creditor, namely
+`q`, and it carries the explicit compensation packet `M`. An exact PI-free
+rational countermodel shows that `M` need not pay `q`. See
+`FIVE_CORE_ENDPOINT_ROOT_RETENTION_LEDGER_LEMMA_20260814.md`.
+
+The remaining `Z6` root-fixed face has now been exhausted, not merely
+sampled. An independently audited exact PI-free profile has no EFX allocation
+among all 6,411 complete allocations retaining `A+H` and using at most four
+support edges. Hence neither a larger one-target donation nor arbitrary
+coordinated nonroot redistribution can close the theorem while the current
+root bundle is fixed. See
+`ENDPOINT6_ROOT_FIXED_FOUR_EDGE_COMPLETION_NO_GO_20260814.md`.
 
 The companion EFX-2 track has reduced the canonical whole-retired-packet
 current-response branch to five exact compensation paths and their path-Hall
@@ -101,9 +118,15 @@ two-debt objects above into that exact physical supplier-path contract—or
 produce a full-premise countermodel. Generic payment bounds, packet-size caps,
 and fixed endpoint topologies are no longer the right targets.
 
+The smallest remaining bridge is now root-changing: in the sole genuine
+second-creditor `Z6` row, derive a root/anchor-changing operation, a
+well-founded change of saturated record, or response-mediated progress whose
+final root support differs from `A+H`. A proof confined to the root-fixed face
+is exactly refuted.
+
 ## Verification
 
-- 21 focused tests pass in 3.66 seconds.
+- 27 focused tests pass in 2.87 seconds in the current verifier environment.
 - Hidden-minimum audit: all negated implications UNSAT for arities 1--12.
 - Hall audit: all 3x3 and 4x4 nonempty incidence graphs classified; 14,218
   inclusion-minimal deficiencies verified in one-hole normal form.
@@ -112,6 +135,8 @@ and fixed endpoint topologies are no longer the right targets.
   endpoint/payment formulas.
 - One-hole sharpness: exact PI-free rational countermodel, independently
   audited over all seven endpoints.
+- Endpoint-6 root-fixed exhaustion: exact PI-free rational countermodel with
+  zero EFX allocations in the independently regenerated 6,411-member menu.
 
 ## Claim boundary
 

@@ -5,6 +5,12 @@
 **Status:** cap-free exact accounting and exhaustive two-creditor reduction;
 the final supplier-compatible Hall cut remains open
 
+**Endpoint-6 no-go update.** The compensation identities remain valid, but
+they cannot close the sole genuine `Z6` second-creditor row while retaining
+the root. `ENDPOINT6_ROOT_FIXED_FOUR_EDGE_COMPLETION_NO_GO_20260814.md`
+gives an exact PI-free profile with no EFX allocation in the full 6,411-member
+root-fixed four-edge menu. A root/anchor-changing transition is necessary.
+
 ## Input
 
 Let `Y` be the current physical support allocation and suppose the protected
