@@ -15,12 +15,11 @@ general additive EFX. The cap-free manuscript proof has exact symbolic and
 independent finite mechanics audits, but has not received external expert
 review or proof-assistant formalization.
 
-**Subsequent closure update (2026-08-14):** the collision component
-`T_{L,times}^*` of this historical output union is now closed by
-`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`.  The
-current unresolved union is `T_0^* dot-union T_{L,perp}^*`.  This does not
-change the ledger-composition theorem proved here; it updates the downstream
-frontier.
+**Subsequent audit correction (2026-08-14):** the attempted collision closure
+has an unresolved declared-floor admission gate in its root supplier-star
+operation.  The historical output union therefore remains current:
+`T^dagger=T_0^* dot-union T_L^*`.  See
+`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
 
 ## Requirement audit
 

@@ -26,6 +26,7 @@ def run() -> dict[str, object]:
     charity_reset = ROOT / "results/GLOBAL_EXTERIOR_DOMINANCE_BASE_CONTAINMENT_AND_CHARITY_RESET_THEOREM_20260814.md"
     root_contradiction = ROOT / "results/GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md"
     resolution = ROOT / "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md"
+    floor_gap = ROOT / "results/ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md"
     candidates = {
         "base_donation": ROOT / "results/SUPPLIER_ALIGNED_BASE_DONATION_PACKET_SPREAD_THEOREM_20260814.md",
         "exterior_pooling": ROOT / "results/BASE_CONTAINED_RETIRED_PACKET_EXTERIOR_DONATION_SPLIT_THEOREM_20260814.md",
@@ -65,9 +66,9 @@ def run() -> dict[str, object]:
 
     script = Path(__file__).resolve()
     audit_text = audit.read_text()
-    assert "root-side admission gate is crossed" in audit_text
-    assert "immediately contradictory" in audit_text
-    assert "response-source/debt-to-anchor conversion is not needed" in audit_text
+    assert "root-side floor-admission gate" in audit_text
+    assert "floor-compatible supplier-star or controlled" in audit_text
+    assert "open; nothing here" in audit_text
 
     paths = [
         contract,
@@ -79,22 +80,25 @@ def run() -> dict[str, object]:
         charity_reset,
         root_contradiction,
         resolution,
+        floor_gap,
         *candidates.values(),
         script,
     ]
     return {
         "schema": "aug14-collision-candidate-transition-admissibility-audit-v1",
-        "status": "ROOT_GLOBAL_CUT_ADMITTED_AND_OLD_ROOT_CORE_CLOSES_COLLISION",
+        "status": "ROOT_GLOBAL_CUT_CONDITIONAL_FLOOR_ADMISSION_OPEN",
         "governing_rules_present": governing_rules_present,
         "conditional_boundaries_present": conditional_boundaries_present,
         "admission_theorem_proved": False,
         "equality_face_admission_theorem_proved": True,
         "base_contained_exterior_pooling_admitted": True,
-        "root_global_exterior_subpacket_sacrifice_admitted": True,
+        "root_global_exterior_subpacket_sacrifice_admitted": False,
+        "root_global_exterior_subpacket_sacrifice_scalar_cut_conditional": True,
+        "declared_floor_gate_open": True,
         "base_containment_unconditional": True,
         "charity_one_good_reset_admitted": True,
-        "full_T_L_times_theorem_closed": True,
-        "next_gate": "parked_support_or_empty_ledger_terminal_not_charity_response_debt",
+        "full_T_L_times_theorem_closed": False,
+        "next_gate": "controlled_floor_reset_or_floor_paying_supplier_star",
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path) for path in paths
         },

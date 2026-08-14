@@ -2,6 +2,14 @@
 
 **Date:** 2026-08-14
 
+**Correction (2026-08-14):** the supplier-star allocation below empties
+later owners and therefore is not yet admitted under the frozen requirement
+that every candidate preserve its declared floors.  The scalar cut and old-
+root-core contradiction remain valid conditional on a controlled floor reset
+or floor-paying supplier star, but this document does not currently close
+the root-held branch.  See
+`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
+
 **Composition closure (2026-08-14):** the strict global underpayment face is
 empty under the frozen anchored `GG` interface. The retained old desired root
 core `T_q+f` lies in the base exterior and is worth more than `X_r`, whereas
@@ -9,9 +17,8 @@ the cut below would put each base-contained retired atom above that entire
 exterior. See
 `GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md`.
 
-**Status:** cap-free admission of every strictly root-paying global exterior
-mode and elimination of its equality face; its apparent strict-underpayment
-terminal is contradicted after composition with the permanent old root edge
+**Status:** conditional scalar/support reduction; transition admission is
+open at the frozen positive-floor sacrifice gate
 
 ## Exact root state
 

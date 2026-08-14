@@ -73,13 +73,15 @@ def run() -> dict[str, object]:
 
     return {
         "schema": "base-contained-global-exterior-sacrifice-admission-audit-v1",
-        "status": "STRICT_GLOBAL_EXTERIOR_SACRIFICE_ADMITTED_DOMINANCE_REMAINS",
+        "status": "STRICT_GLOBAL_EXTERIOR_SACRIFICE_FLOOR_ADMISSION_OPEN",
         "strict_margin_exact": strict_margin_exact,
         "singleton_target_never_strongly_envied": singleton_target_never_strongly_envied,
         "support_cases_checked": support_cases,
         "root_target_whole_packet_hits": whole_hits,
         "singleton_packet_zero_hit_cases": singleton_packet_zero_hits,
         "other_retired_labels_recorded": True,
+        "declared_floor_preservation_proved": False,
+        "supplier_star_transition_admitted": False,
         "exterior_dominance_closed": False,
         "global_multilabel_well_foundedness_proved": False,
         "full_T_L_times_theorem_closed": False,

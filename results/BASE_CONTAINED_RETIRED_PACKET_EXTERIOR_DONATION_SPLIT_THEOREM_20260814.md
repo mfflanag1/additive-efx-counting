@@ -2,13 +2,17 @@
 
 **Date:** 2026-08-14
 
+**Correction (2026-08-14):** the supplier-star implementation cited below
+does not yet preserve declared floors of emptied later owners.  The
+arithmetic remains conditional; see
+`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
+
 **Composition closure (2026-08-14):** the exterior-dominance cut is
 inconsistent with the permanent old desired root core `T_q+f` in the frozen
 anchored `GG` state. See the old-root-core contradiction theorem.
 
-**Status:** strict exterior donation is admitted by the global-exterior
-sacrifice theorem; the exterior-dominance cut is unconditional locally and
-empty after full anchored composition
+**Status:** conditional exterior-donation arithmetic; transition admission
+is open at the declared-floor gate
 
 **Admission update (2026-08-14).**  The separate
 `BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md`

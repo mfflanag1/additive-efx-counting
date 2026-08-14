@@ -6,12 +6,11 @@
 `G0--G10` architecture; the exact surviving class is typed `T_L^*`, not GG
 closure
 
-**Subsequent closure update (2026-08-14):** this theorem records the
-historical output of the ledger composition.  The collision component
-`T_{L,times}^*` is now eliminated by
-`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`.  The
-current surviving union is therefore
-`T_0^* dot-union T_{L,perp}^*`; neither of those two components is closed.
+**Subsequent audit correction (2026-08-14):** an attempted elimination of
+`T_{L,times}^*` remains conditional because its root supplier-star operation
+does not yet preserve declared nonroot floors.  Thus this theorem's full
+typed output `T^dagger=T_0^* dot-union T_L^*` remains the current frontier.
+See `ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
 
 ## Theorem
 

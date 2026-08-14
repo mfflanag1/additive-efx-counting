@@ -2,14 +2,12 @@
 
 **Date:** 2026-08-14
 
-**Supersession (2026-08-14):** the full frozen collision theorem is now
-proved in
-`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`. The
-exterior-dominant root face developed below is empty once the retained old
-root core `T_q+f` is composed: it lies in the base exterior and is worth
-strictly more than `X_r`, contradicting the claim that every retired root
-atom is worth more than that entire exterior. The charity-reset and forced-
-`GGS` sections remain conditional diagnostics, not the live frontier.
+**Audit correction (2026-08-14):** the proposed final scalar contradiction
+is exact only after admitting a supplier-star allocation that empties later
+owners.  The frozen contract requires their declared floors to be preserved,
+and no controlled reset has yet been proved.  Thus the exterior-dominant
+root face below remains conditional and the full collision theorem is open
+at `ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
 
 **Historical checkpoint status:** at this checkpoint the theorem not yet proved or refuted. All common-safe nonroot
 whole-hit recurrences and every root packet-price equality mode are

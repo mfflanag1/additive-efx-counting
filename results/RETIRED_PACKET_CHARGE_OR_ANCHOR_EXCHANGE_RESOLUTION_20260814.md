@@ -2,12 +2,21 @@
 
 **Date:** 2026-08-14
 
-**Verdict:** **proved under the frozen exact `T_{L,times}^*` contract.**
+**Correction verdict:** **not yet proved under the frozen exact
+`T_{L,times}^*` contract.**
 
-Every named retired-packet collision yields an EFX lexicographic
+The nonroot branch is closed and the root scalar contradiction is exact
+conditional on its premise.  The final audit found that the proposed root
+supplier-star move empties positive-floor later owners, contrary to the
+frozen candidate-admissibility rule.  Until a controlled floor reset or
+floor-paying supplier star is proved, the root-held branch remains open. See
+`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
+
+Conditional on that missing admission operation, every named retired-packet collision yields an EFX lexicographic
 improvement, a release-compatible PI cycle, a valid root/anchor transition,
 strict packet/hitting/rank progress, or a contradiction to the typed floors
-or global maximality.  There is no exact recurrent collision terminal.
+or global maximality.  This conditional conclusion is not presently a
+theorem of the frozen contract.
 
 ## Input and exhaustive holder split
 
@@ -143,8 +152,8 @@ conventional proof requiring external expert review.
 
 ## Claim boundary
 
-This resolves only the certified collision subtype `T_{L,times}^*`.  It
-does not close `T_{L,perp}^*`, `T_0^*`, the full `GG` class, the other
+This does not yet resolve the certified collision subtype
+`T_{L,times}^*`.  It also does not close `T_{L,perp}^*`, `T_0^*`, the full `GG` class, the other
 selected-cycle classes, four-agent EFX, or general additive EFX.  Promotion
 to any larger theorem requires a fresh composition audit showing how those
 other terminals are eliminated.

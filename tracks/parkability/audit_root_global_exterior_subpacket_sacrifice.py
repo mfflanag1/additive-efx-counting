@@ -119,10 +119,11 @@ def run() -> dict[str, object]:
 
     return {
         "schema": "root-global-exterior-subpacket-sacrifice-audit-v1",
-        "status": "ROOT_REDUCED_TO_STRICT_COMPLETE_CURRENT_EXTERIOR_DOMINANCE",
+        "status": "CONDITIONAL_ROOT_EXTERIOR_DOMINANCE_FLOOR_ADMISSION_OPEN",
         "margin_identity_exact": margin_identity_exact,
         "strict_test_exact": strict_test_exact,
         "strict_atomwise_cut_exact": strict_atomwise_cut_exact,
+        "supplier_star_floor_admission_proved": False,
         "summed_cut_exact": summed_cut_exact,
         "support_cases_checked": support_cases,
         "proper_transfer_whole_packet_hits": proper_transfer_whole_hits,

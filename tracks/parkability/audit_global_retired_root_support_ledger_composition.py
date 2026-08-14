@@ -31,8 +31,8 @@ def run(repo: Path) -> dict:
     assert contract["g_states_covered"] == [f"G{i}" for i in range(11)]
     assert all(contract["scalar_checks"].values())
     assert collision["no_silent_reuse"]
-    assert collision_resolution["status"] == "T_L_TIMES_COLLISION_THEOREM_PROVED"
-    assert collision_resolution["full_T_L_times_theorem_closed"]
+    assert collision_resolution["status"] == "ROOT_FLOOR_ADMISSIBILITY_GATE_OPEN"
+    assert not collision_resolution["full_T_L_times_theorem_closed"]
     assert not collision_resolution["parked_T_L_perp_closed"]
     assert not collision_resolution["empty_ledger_T0_closed"]
 
@@ -81,12 +81,14 @@ def run(repo: Path) -> dict:
         "retired_packet_charge_anchor_resolution_20260814_audit.json",
         "gg_old_root_core_exterior_dominance_audit.json",
         "gg_old_root_core_exterior_dominance_independent_audit.json",
+        "ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md",
+        "root_global_supplier_star_floor_admissibility_gap_audit.json",
     ]
     script = Path(__file__).resolve()
     theorem = results / "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md"
     return {
-        "schema": "global-retired-root-support-ledger-composition-audit-v3",
-        "status": "COLLISION_SUBTYPE_CLOSED_T0_AND_PARKED_SUPPORT_REMAIN",
+        "schema": "global-retired-root-support-ledger-composition-audit-v4",
+        "status": "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN",
         "g_states_covered": list(transition_routes),
         "transition_routes": transition_routes,
         "cross_cutting_operations_covered": contract["cross_cutting_operations"],
@@ -130,19 +132,24 @@ def run(repo: Path) -> dict:
         },
         "finite_component_argument": finite_component_argument,
         "historical_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
-        "surviving_terminal": "T_0^* dot-union T_{L,perp}^*",
+        "surviving_terminal": "T^dagger = T_0^* dot-union T_L^*",
         "pre_ledger_terminal": "T_0^*",
-        "post_ledger_terminal": "T_{L,perp}^*",
-        "post_ledger_terminal_subtypes": ["T_{L,perp}^*"],
-        "closed_post_ledger_subtypes": ["T_{L,times}^*"],
+        "post_ledger_terminal": "T_L^*",
+        "post_ledger_terminal_subtypes": ["T_{L,perp}^*", "T_{L,times}^*"],
+        "closed_post_ledger_subtypes": [],
         "surviving_terminal_requirements": [
             "nonempty retired support",
             "retirement provenance and current holders",
             "fixed typed protected floors",
-            "complete active selector and release pool avoids retired support",
-            "exact generic T-star recurrence under the fixed physical label",
+            "complete-pool parked-support certificate or collision certificate",
+            "collision subtype has repeated hitting/bypass response or typed separator",
+            "typed rank deficiency or observer-payment/release separator",
         ],
-        "collision_T_L_times_closed": True,
+        "collision_T_L_times_closed": False,
+        "collision_T_L_times_conditional_scalar_contradiction": True,
+        "collision_T_L_times_smallest_missing_operation": collision_resolution[
+            "smallest_missing_operation"
+        ],
         "parked_T_L_perp_closed": False,
         "generic_empty_ledger_T_star_closed": False,
         "augmented_generic_T_star_strictly_narrowed": True,
@@ -153,8 +160,8 @@ def run(repo: Path) -> dict:
         ],
         "claim_boundary": (
             "global ledger composition through the current G0-G10 architecture; "
-            "the collision subtype is closed; T_0, parked support, GG, and "
-            "general EFX remain open"
+            "the collision root branch remains open at the declared-floor "
+            "admission gate; typed T-dagger, GG, and general EFX remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(repo)),

@@ -118,6 +118,8 @@ def run(root: Path) -> dict:
         "retired_packet_charge_anchor_resolution_20260814_audit.json",
         "gg_old_root_core_exterior_dominance_audit.json",
         "gg_old_root_core_exterior_dominance_independent_audit.json",
+        "ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md",
+        "root_global_supplier_star_floor_admissibility_gap_audit.json",
     )
     records = [
         {"path": f"results/{name}", "sha256": sha256(result_dir / name)}
@@ -201,25 +203,23 @@ def run(root: Path) -> dict:
     ledger_resolution = json.loads(
         (result_dir / "global_retired_root_support_ledger_composition_audit.json").read_text()
     )
-    assert ledger_resolution["status"] == (
-        "COLLISION_SUBTYPE_CLOSED_T0_AND_PARKED_SUPPORT_REMAIN"
-    )
-    assert ledger_resolution["collision_T_L_times_closed"]
+    assert ledger_resolution["status"] == "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN"
+    assert not ledger_resolution["collision_T_L_times_closed"]
 
     script = Path(__file__).resolve()
     theorem = result_dir / "GG_CYCLE_CLASS_REFEREE_COMPOSITION_20260812.md"
     return {
         "schema": "gg-cycle-class-referee-composition-audit-v1",
-        "status": "COLLISION_SUBTYPE_CLOSED_T0_AND_PARKED_SUPPORT_REMAIN",
+        "status": "T_L_TIMES_ROOT_FLOOR_ADMISSION_GATE_OPEN",
         "node_count": len(NODES),
         "edge_count": len(EDGES),
         "reachable_nodes": sorted(reached),
         "terminal_nodes": terminal_nodes,
         "smallest_named_terminal": "generic rank-completing paid-response splice outside the enlarged-root contract",
         "historical_global_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
-        "global_typed_terminal": "T_0^* dot-union T_{L,perp}^*",
+        "global_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
         "pre_ledger_terminal": "T_0^*",
-        "post_ledger_terminal": "T_{L,perp}^*",
+        "post_ledger_terminal": "T_L^*",
         "post_ledger_terminal_subtypes": ledger_resolution[
             "post_ledger_terminal_subtypes"
         ],
@@ -229,7 +229,8 @@ def run(root: Path) -> dict:
         "closed_post_ledger_subtypes": ledger_resolution[
             "closed_post_ledger_subtypes"
         ],
-        "collision_T_L_times_closed": True,
+        "collision_T_L_times_closed": False,
+        "collision_T_L_times_conditional_scalar_contradiction": True,
         "stated_four_old_core_normal_form_vacuous": True,
         "core_rotation_outcome_counts": rotation["outcome_counts"],
         "frozen_witnesses_escape_by_efx_rotation": True,
@@ -239,15 +240,17 @@ def run(root: Path) -> dict:
         "local_recurrence_response_rank": 1,
         "residual_partition_family_size": 4096,
         "efx_floor_feasible_residual_partitions": 0,
-        "uncovered_premise_count": 2,
+        "uncovered_premise_count": 3,
         "open_obligations": [
             "close the generic empty-ledger T_0^* recurrence",
             "project, activate, or otherwise close collision-free parked support T_{L,perp}^*",
+            "admit a controlled floor reset or floor-paying supplier star in root-held T_{L,times}^*",
         ],
         "dependencies": records,
         "claim_boundary": (
-            "collision-subtype closure inside the branch-complete GG reduction, "
-            "not a GG closure theorem or four-agent/general EFX proof"
+            "conditional collision scalar reduction inside the branch-complete "
+            "GG reduction, not a GG closure theorem, collision theorem, or "
+            "four-agent/general EFX proof"
         ),
         "provenance": {
             "script": str(script.relative_to(root)),

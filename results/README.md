@@ -86,10 +86,10 @@ headlines:
   The independent implementation checks 15,625
   signed reconstruction pairs and 125,000 physical normalization cases.
   The exact global terminal is the typed union
-  `T^dagger=T_0^* dot-union T_L^*`; its empty-ledger component, typed
-  `T_L^*` parked component, GG closure, and general EFX remain open. The
-  collision component `T_{L,times}^*` is now closed by the Aug-14 resolution
-  below.
+  `T^dagger=T_0^* dot-union T_L^*`; its empty-ledger, parked-support, and
+  collision components, GG closure, and general EFX remain open. The Aug-14
+  attempted collision closure isolates a declared-floor admission gate in
+  the root supplier-star operation.
 
 - [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md)
   ([exact checkpoint audit](retired_packet_charge_anchor_checkpoint_audit.json),
@@ -150,16 +150,20 @@ headlines:
   ([root contradiction](GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md),
   [primary root audit](gg_old_root_core_exterior_dominance_audit.json),
   [independent integer replay](gg_old_root_core_exterior_dominance_independent_audit.json),
-  [composition audit](retired_packet_charge_anchor_resolution_20260814_audit.json))
-  proves the frozen collision theorem. The desire-free envelope descent
-  closes every nonroot holder. For a root holder, the admitted global
+  [composition audit](retired_packet_charge_anchor_resolution_20260814_audit.json),
+  [floor-admission correction](ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md))
+  closes the nonroot collision branch and gives a conditional root scalar
+  contradiction. The desire-free envelope descent
+  closes every nonroot holder. For a root holder, a floor-admissible global
   supplier star would force every retired atom above the value of the entire
   base exterior, while the retained old `GG` edge `r -> q` gives the same
   root a desired core `T_q+f` inside that exterior and above `X_r`. The
   resulting strict cycle
-  `v_r(k)>v_r(O)>=v_r(T_q+f)>v_r(X_r)>=v_r(k)` is impossible. Thus
-  `T_{L,times}^*` is closed cap-free. This does not close the parked-support
-  subtype, the empty-ledger terminal, full `GG`, or general EFX.
+  `v_r(k)>v_r(O)>=v_r(T_q+f)>v_r(X_r)>=v_r(k)` is impossible. However, the
+  supplier star empties later owners and has not been shown to preserve their
+  declared floors or execute a controlled reset. Thus `T_{L,times}^*`
+  remains open at that exact operation; this also does not close parked
+  support, the empty-ledger terminal, full `GG`, or general EFX.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))

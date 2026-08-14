@@ -59,7 +59,7 @@ def run() -> dict[str, object]:
     ]
     checkpoint = files[0].read_text()
     for phrase in (
-        "Supersession",
+        "Audit correction",
         "theorem not yet proved or refuted",
         "Nonroot branch: closed",
         "strict clean subpacket release",
@@ -89,13 +89,13 @@ def run() -> dict[str, object]:
         "signed_missing_base_packet_charge_or_base_containment_audit.json":
             "ROOT_PACKET_BASE_CONTAINED_OR_SIGNED_RETURN_HAS_NAMED_BLOCKER",
         "base_contained_global_exterior_sacrifice_admission_audit.json":
-            "STRICT_GLOBAL_EXTERIOR_SACRIFICE_ADMITTED_DOMINANCE_REMAINS",
+            "STRICT_GLOBAL_EXTERIOR_SACRIFICE_FLOOR_ADMISSION_OPEN",
         "exterior_dominance_three_agent_source_reduction_audit.json":
             "EXTERIOR_DOMINANCE_REDUCED_TO_TWO_SOURCE_ROOT_THRESHOLD_DEBT",
         "base_contained_signed_reset_one_good_root_normal_form_audit.json":
             "BASE_CONTAINED_PACKET_NORMALIZED_TO_ONE_GOOD_ON_OFF_RESPONSE",
         "root_global_exterior_subpacket_sacrifice_audit.json":
-            "ROOT_REDUCED_TO_STRICT_COMPLETE_CURRENT_EXTERIOR_DOMINANCE",
+            "CONDITIONAL_ROOT_EXTERIOR_DOMINANCE_FLOOR_ADMISSION_OPEN",
         "root_global_exterior_subpacket_sacrifice_independent_audit.json":
             "INDEPENDENT_INTEGER_REPLAY_CONFIRMS_GLOBAL_ROOT_CUT_AND_BASE_CONTAINMENT",
         "global_exterior_dominance_base_containment_charity_reset_audit.json":
@@ -116,7 +116,7 @@ def run() -> dict[str, object]:
 
     return {
         "schema": "retired-packet-charge-anchor-second-checkpoint-20260814-audit-v1",
-        "status": "SUPERSEDED_CONDITIONAL_GGS_FRONTIER_COLLISION_NOW_CLOSED",
+        "status": "CONDITIONAL_GGS_FRONTIER_ROOT_FLOOR_ADMISSION_OPEN",
         "dependency_statuses": statuses,
         "nonroot_safe_whole_hit_closed": True,
         "proper_donor_free_equality_closed": False,
@@ -125,10 +125,12 @@ def run() -> dict[str, object]:
         "strict_clean_subpacket_release_admitted": True,
         "strict_atomwise_pool_dominance_unconditional": True,
         "signed_missing_base_support_fork_proved": True,
-        "base_contained_exterior_sacrifice_admitted": True,
+        "base_contained_exterior_sacrifice_admitted": False,
+        "base_contained_exterior_sacrifice_scalar_cut_conditional": True,
         "exterior_dominance_source_topology_reduced": True,
         "one_good_root_normal_form_proved": True,
-        "global_exterior_supplier_star_admitted": True,
+        "global_exterior_supplier_star_admitted": False,
+        "global_exterior_supplier_star_scalar_cut_conditional": True,
         "global_exterior_independent_integer_replay_passed": True,
         "base_containment_unconditional": True,
         "signed_missing_base_return_required": False,
@@ -141,9 +143,9 @@ def run() -> dict[str, object]:
         "forced_nonroot_GGS_cycle_proved": True,
         "off_good_profiles_remaining": 3,
         "on_good_profiles_closed": False,
-        "remaining_separator": "none_in_full_anchored_GG_contract_conditional_GGS_profiles_vacuous",
-        "old_root_core_exterior_contradiction_proved": True,
-        "full_T_L_times_theorem_closed": True,
+        "remaining_separator": "controlled_floor_reset_or_floor_paying_supplier_star",
+        "old_root_core_exterior_contradiction_conditional": True,
+        "full_T_L_times_theorem_closed": False,
         "full_T_L_times_theorem_refuted": False,
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path) for path in files

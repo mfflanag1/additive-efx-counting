@@ -2,8 +2,13 @@
 
 **Date:** 2026-08-14
 
-**Status:** cap-free admission of the strict complete-exterior donation for a
-base-contained root packet; exterior dominance remains
+**Correction (2026-08-14):** the candidate empties later owners and has not
+been shown to preserve their declared floors.  Its scalar/support reduction
+is conditional on the same controlled-reset gate documented in
+`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
+
+**Status:** conditional strict complete-exterior reduction; floor admission
+remains open
 
 **Supersession update (2026-08-14).** The global-exterior subpacket theorem
 proves the same cut before base containment is known, and the exact exterior

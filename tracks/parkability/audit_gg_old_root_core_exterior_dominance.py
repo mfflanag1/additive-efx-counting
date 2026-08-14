@@ -81,7 +81,7 @@ def run() -> dict[str, object]:
 
     return {
         "schema": "gg-old-root-core-exterior-dominance-audit-v1",
-        "status": "ROOT_HELD_T_L_TIMES_SURVIVOR_CONTRADICTED",
+        "status": "CONDITIONAL_ROOT_EXTERIOR_DOMINANCE_CONTRADICTED",
         "scalar_chain_qf_lra_unsat": scalar_chain_unsat,
         "support_cases_checked": support_cases,
         "packet_is_base_contained": True,
@@ -89,7 +89,9 @@ def run() -> dict[str, object]:
         "old_root_core_is_base_desired": True,
         "permanent_old_edge_retained_at_fixed_label": True,
         "new_root_or_anchor_label_is_contracted_progress": True,
-        "root_held_collision_closed": True,
+        "supplier_star_floor_admission_proved": False,
+        "conditional_root_scalar_survivor_contradicted": True,
+        "root_held_collision_closed": False,
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path)
             for path in (

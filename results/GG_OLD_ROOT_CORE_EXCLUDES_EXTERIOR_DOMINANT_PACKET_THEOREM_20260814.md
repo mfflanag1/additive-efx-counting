@@ -2,8 +2,15 @@
 
 **Date:** 2026-08-14
 
-**Status:** cap-free contradiction eliminating the root-held survivor of the
-retired-packet collision theorem
+**Correction (2026-08-14):** the contradiction in this document is exact,
+but its exterior-dominance premise was derived using a supplier-star move
+that has not been shown to preserve the frozen nonroot floors.  It is
+therefore a conditional contradiction, not yet an elimination of every
+root-held collision.  See
+`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`.
+
+**Status:** cap-free scalar contradiction conditional on admission of the
+root supplier-star premise
 
 ## Frozen interface
 

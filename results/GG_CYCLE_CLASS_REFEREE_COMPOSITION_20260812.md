@@ -372,12 +372,16 @@ are now exactly refuted. The surviving stronger GG task is to derive a
 decorated-head exchange or contradiction from global recurrence, together
 with the root-sourced complete-residual-pool capture.
 
-## Aug-14 retired-collision closure update
+## Aug-14 retired-collision audit correction
 
-The collision component of the post-ledger terminal is now closed by
-[`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md).
+The attempted collision closure in
+[`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md)
+is conditional. The root supplier-star allocation empties later owners and
+has not yet been shown to preserve their declared floors or execute a valid
+controlled reset. See
+[`ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md`](ROOT_GLOBAL_SUPPLIER_STAR_FLOOR_ADMISSIBILITY_GAP_20260814.md).
 For a nonroot holder, a desire-free safe-envelope descent strictly shrinks
-the named packet or its hitting coordinate. For a root holder, the admitted
+the named packet or its hitting coordinate. Conditional on a valid root
 complete-exterior supplier star would force
 
 \[
@@ -386,10 +390,10 @@ complete-exterior supplier star would force
 
 But the permanent old edge retained throughout the anchored branch has
 `D_r=T_q+f subseteq G-X_r` and
-`v_r(D_r)>v_r(X_r)>=v_r(k)`, an immediate contradiction. Thus
-`T_{L,times}^*` is no longer a terminal.
+`v_r(D_r)>v_r(X_r)>=v_r(k)`, an immediate contradiction. The scalar
+contradiction is exact, but the missing floor admission means
+`T_{L,times}^*` remains a terminal.
 
-This does not close the full composition. The typed union now retains the
-empty-ledger `T_0^*` branch and the collision-free parked-support
-`T_{L,perp}^*` branch. Those, plus any pre-ledger GG terminal not routed into
-the retired collision interface, remain the honest next proof targets.
+The full typed union `T^dagger=T_0^* dot-union T_L^*` therefore remains open.
+The immediate collision target is a controlled floor reset or floor-paying
+supplier star; `T_0^*` and `T_{L,perp}^*` remain the other terminals.
