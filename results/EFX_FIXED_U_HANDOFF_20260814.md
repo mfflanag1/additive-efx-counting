@@ -1024,6 +1024,13 @@ focused chain was replayed:
 8 passed in 0.41s
 ```
 
+After the reservoir-fan correction, missing-source double-capture split, and
+duplicate-omission payment/support frontier, the combined chain reports:
+
+```text
+11 passed in 0.55s
+```
+
 The full-residual liquidation corollary is a direct algebraic specialization
 of the already tested bilateral and strict-root-surplus constructions; it
 adds no solver-generated certificate.
