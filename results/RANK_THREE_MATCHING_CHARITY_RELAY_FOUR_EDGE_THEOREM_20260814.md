@@ -150,3 +150,25 @@ Closure of the missing normalization-bypass branch would prove the complete
 active saturated rank-three fixed-`U` four-edge objective with unrestricted
 packet sizes.  This document does not yet prove that branch, the global
 BCFF-to-GG import, four-agent additive EFX, or general additive EFX.
+
+## Cross-state localization update (2026-08-14)
+
+The disjoint bypass is no longer an arbitrary repeated response.  Applying
+`SINGLETON_RELAY_CROSS_STATE_RESPONSE_LOCALIZATION_LEMMA_20260814.md` to the
+two rows in (4) gives an exhaustive cap-free split.  Every response avoiding
+`p` is either a safe desired response at both probes, or its failure to cross
+from one probe to the other is confined to a singleton-width interval in
+one of exactly two rows:
+
+\[
+ v_r(B_r)<z\le v_r(B_r+p),
+ \qquad\text{or}\qquad
+ v_d(B_d)<z\le v_d(B_d+p).
+\]
+
+The same localization holds for observer safety thresholds.  Thus the live
+composition problem is now: route a shared safe response through the exact
+rank-three relation, or eliminate the simultaneous `r/d` singleton-critical
+separator using the saturated response/support record.  No response sourced
+by `q` or `s`, and no unbounded residual packet, creates another scalar
+branch.  This sharpens but does not close the theorem.

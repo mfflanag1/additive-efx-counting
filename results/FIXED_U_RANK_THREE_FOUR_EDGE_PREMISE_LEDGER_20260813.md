@@ -60,6 +60,22 @@ singleton.  See
 the 21-role form-0 parked branch cap-free; the universal predicate currently
 guarantees only core safety, not whole-target safety.
 
+The converse observation rules out whole-target safety as the universal
+repair: whenever the anchor has a proper residual, deleting any residual
+good leaves the root's strictly desired anchor and explicitly witnesses
+unsafe whole-target support.  The four-edge matching relay is therefore the
+correct live construction, not the two-edge anchor-only shortcut.
+
+For that relay, the cap-free cross-state localization lemma now proves that
+every response avoiding the charity singleton is either valid at both relay
+probes or lies in an exact singleton-width critical interval in the root or
+unmatched-source row.  See
+`SINGLETON_RELAY_CROSS_STATE_RESPONSE_LOCALIZATION_LEMMA_20260814.md`.
+The remaining universal gate is correspondingly finite in roles but not yet
+closed: compose a shared safe response with one of the two exact five-edge
+rank-three relations, or eliminate the simultaneous `r/d` critical bands
+from the full saturation premises.
+
 **Date:** 2026-08-13
 
 **Purpose:** freeze the noncircular theorem domain and distinguish exact GG

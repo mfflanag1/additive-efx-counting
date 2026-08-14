@@ -1832,3 +1832,15 @@ both encodings.
   the same floor must equal that target.  This explains the immediate UNSAT
   of the 21-role form-0 parked-bypass master: after the anchor transfer the
   donor is empty and necessarily desires the positive charity singleton.
+- Proper residuals also show why whole-target safety cannot repair the
+  universal branch: deleting a residual good leaves the root's strictly
+  desired anchor and witnesses failure of whole-target safety.  The live
+  construction is therefore the full rank-three four-edge relay, not the
+  anchor-only two-edge shortcut.
+- [`SINGLETON_RELAY_CROSS_STATE_RESPONSE_LOCALIZATION_LEMMA_20260814.md`](SINGLETON_RELAY_CROSS_STATE_RESPONSE_LOCALIZATION_LEMMA_20260814.md)
+  ([exact audit](singleton_relay_cross_state_response_localization_audit.json))
+  localizes every response avoiding the relayed singleton.  It is either a
+  safe desired response at both probes, or its source/safety failure lies in
+  an exact singleton-width interval in the root or unmatched-source row.
+  The isolated interval separator is rationally feasible, so the remaining
+  closure must use the saturated rank-three response/support premises.

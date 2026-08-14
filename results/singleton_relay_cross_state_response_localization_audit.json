@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "d_desire_persists_unless_root_source": true,
+    "d_only_root_desire_forces_p_band": true,
+    "d_safe_response_can_lose_safety_only_in_d_row": true,
+    "ordinary_d_state_desire_persists_to_r_state": true,
+    "r_only_d_desire_forces_p_band": true,
+    "r_safe_response_can_lose_safety_only_in_root_row": true
+  },
+  "claim_boundary": "response-source and cross-state safety localization only; collision closure, fixed-U, GG, and EFX remain open",
+  "critical_rows": [
+    "r",
+    "d"
+  ],
+  "isolated_singleton_critical_separator_feasible": true,
+  "provenance": {
+    "script": "tracks/parkability/audit_singleton_relay_cross_state_response_localization.py",
+    "script_sha256": "770a9fa4bd3e610176d0e33339aca82573cc480a715ae7851a91818036e2a70b",
+    "theorem": "results/SINGLETON_RELAY_CROSS_STATE_RESPONSE_LOCALIZATION_LEMMA_20260814.md",
+    "theorem_sha256": "28fcda07e906b9eb579945432ec4ddce9af3ab5c41df1446b85926bdb0449a87",
+    "z3_version": "5.0.0"
+  },
+  "remaining_gate": "use the saturated rank-three response/support premises to eliminate a shared safe response or the exact r/d singleton-critical intervals",
+  "schema": "singleton-relay-cross-state-response-localization-audit-v1",
+  "status": "CAP_FREE_LOCALIZATION_PROVED"
+}
