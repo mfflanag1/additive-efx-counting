@@ -21,6 +21,9 @@ def run(repo: Path) -> dict:
     collision = json.loads(
         (results / "retired_packet_selector_collision_normalization_audit.json").read_text()
     )
+    collision_resolution = json.loads(
+        (results / "retired_packet_charge_anchor_resolution_20260814_audit.json").read_text()
+    )
     assert contract["status"] == "CONTRACT_AND_G0_G10_COVERAGE_VERIFIED"
     assert collision["status"] == (
         "COLLISION_NORMALIZED_TO_LEDGER_FREE_PROGRESS_ROOT_OR_TL_STAR"
@@ -28,6 +31,10 @@ def run(repo: Path) -> dict:
     assert contract["g_states_covered"] == [f"G{i}" for i in range(11)]
     assert all(contract["scalar_checks"].values())
     assert collision["no_silent_reuse"]
+    assert collision_resolution["status"] == "T_L_TIMES_COLLISION_THEOREM_PROVED"
+    assert collision_resolution["full_T_L_times_theorem_closed"]
+    assert not collision_resolution["parked_T_L_perp_closed"]
+    assert not collision_resolution["empty_ledger_T0_closed"]
 
     transition_routes = {
         "G0": ["original"],
@@ -69,12 +76,17 @@ def run(repo: Path) -> dict:
         "CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
         "UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md",
         "PERMANENT_ANCHOR_MINIMAL_RESPONSE_PEEL_OR_RESELECT_THEOREM_20260813.md",
+        "RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md",
+        "GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md",
+        "retired_packet_charge_anchor_resolution_20260814_audit.json",
+        "gg_old_root_core_exterior_dominance_audit.json",
+        "gg_old_root_core_exterior_dominance_independent_audit.json",
     ]
     script = Path(__file__).resolve()
     theorem = results / "GLOBAL_RETIRED_ROOT_SUPPORT_LEDGER_COMPOSITION_THEOREM_20260813.md"
     return {
-        "schema": "global-retired-root-support-ledger-composition-audit-v2",
-        "status": "GLOBAL_LEDGER_COMPOSED_EXACT_T_DAGGER_SURVIVES",
+        "schema": "global-retired-root-support-ledger-composition-audit-v3",
+        "status": "COLLISION_SUBTYPE_CLOSED_T0_AND_PARKED_SUPPORT_REMAIN",
         "g_states_covered": list(transition_routes),
         "transition_routes": transition_routes,
         "cross_cutting_operations_covered": contract["cross_cutting_operations"],
@@ -117,18 +129,21 @@ def run(repo: Path) -> dict:
             "no_silent_reuse": collision["no_silent_reuse"],
         },
         "finite_component_argument": finite_component_argument,
-        "surviving_terminal": "T^dagger = T_0^* dot-union T_L^*",
+        "historical_typed_terminal": "T^dagger = T_0^* dot-union T_L^*",
+        "surviving_terminal": "T_0^* dot-union T_{L,perp}^*",
         "pre_ledger_terminal": "T_0^*",
-        "post_ledger_terminal": "T_L^*",
-        "post_ledger_terminal_subtypes": ["T_{L,perp}^*", "T_{L,times}^*"],
+        "post_ledger_terminal": "T_{L,perp}^*",
+        "post_ledger_terminal_subtypes": ["T_{L,perp}^*"],
+        "closed_post_ledger_subtypes": ["T_{L,times}^*"],
         "surviving_terminal_requirements": [
-            "nonempty retired packet",
-            "retirement supplier and current holder",
+            "nonempty retired support",
+            "retirement provenance and current holders",
             "fixed typed protected floors",
-            "complete-pool parked-support certificate or collision certificate",
-            "collision subtype has repeated hitting/bypass response or typed separator",
-            "typed rank deficiency or observer-payment/release separator",
+            "complete active selector and release pool avoids retired support",
+            "exact generic T-star recurrence under the fixed physical label",
         ],
+        "collision_T_L_times_closed": True,
+        "parked_T_L_perp_closed": False,
         "generic_empty_ledger_T_star_closed": False,
         "augmented_generic_T_star_strictly_narrowed": True,
         "gg_closed": False,
@@ -138,7 +153,8 @@ def run(repo: Path) -> dict:
         ],
         "claim_boundary": (
             "global ledger composition through the current G0-G10 architecture; "
-            "typed T-dagger, GG, and general EFX remain open"
+            "the collision subtype is closed; T_0, parked support, GG, and "
+            "general EFX remain open"
         ),
         "provenance": {
             "script": str(script.relative_to(repo)),

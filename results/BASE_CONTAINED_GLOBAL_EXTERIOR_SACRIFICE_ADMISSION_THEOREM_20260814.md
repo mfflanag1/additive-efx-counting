@@ -5,6 +5,11 @@
 **Status:** cap-free admission of the strict complete-exterior donation for a
 base-contained root packet; exterior dominance remains
 
+**Supersession update (2026-08-14).** The global-exterior subpacket theorem
+proves the same cut before base containment is known, and the exact exterior
+identity then forces base containment. The present singleton operation is a
+valid special case.
+
 ## Input and operation
 
 Let `X` be the globally maximal EFX-with-charity base with first-priority

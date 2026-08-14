@@ -15,6 +15,13 @@ general additive EFX. The cap-free manuscript proof has exact symbolic and
 independent finite mechanics audits, but has not received external expert
 review or proof-assistant formalization.
 
+**Subsequent closure update (2026-08-14):** the collision component
+`T_{L,times}^*` of this historical output union is now closed by
+`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`.  The
+current unresolved union is `T_0^* dot-union T_{L,perp}^*`.  This does not
+change the ledger-composition theorem proved here; it updates the downstream
+frontier.
+
 ## Requirement audit
 
 | Objective requirement | Authoritative evidence | Verdict |

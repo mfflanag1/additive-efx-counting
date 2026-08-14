@@ -6,6 +6,13 @@
 `G0--G10` architecture; the exact surviving class is typed `T_L^*`, not GG
 closure
 
+**Subsequent closure update (2026-08-14):** this theorem records the
+historical output of the ledger composition.  The collision component
+`T_{L,times}^*` is now eliminated by
+`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`.  The
+current surviving union is therefore
+`T_0^* dot-union T_{L,perp}^*`; neither of those two components is closed.
+
 ## Theorem
 
 Use the frozen augmented-state contract and the existing `G0--G10` proof

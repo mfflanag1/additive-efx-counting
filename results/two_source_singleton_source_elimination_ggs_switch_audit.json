@@ -1,0 +1,74 @@
+{
+  "forced_cycle_is_release_compatible_pi": false,
+  "forced_cycle_word": "GGS",
+  "forced_ggs_orientations": 2,
+  "full_T_L_times_theorem_closed": false,
+  "ledger_preserving_cycle_switch_proved": false,
+  "profiles": [
+    {
+      "cycle": [
+        "q-G->c",
+        "c-S->s",
+        "s-G->q"
+      ],
+      "ordinary_source": "c",
+      "sources": [
+        "c",
+        "q"
+      ],
+      "verdict": "FORCED_GGS"
+    },
+    {
+      "cycle": [
+        "c-G->q",
+        "q-S->s",
+        "s-G->c"
+      ],
+      "ordinary_source": "q",
+      "sources": [
+        "c",
+        "q"
+      ],
+      "verdict": "FORCED_GGS"
+    },
+    {
+      "incoming_singleton_champion": [
+        "q",
+        "s"
+      ],
+      "ordinary_source": "c",
+      "sources": [
+        "c",
+        "s"
+      ],
+      "verdict": "SINGLETON_SOURCE_CONTRADICTION"
+    },
+    {
+      "incoming_singleton_champion": [
+        "c",
+        "s"
+      ],
+      "ordinary_source": "s",
+      "sources": [
+        "c",
+        "s"
+      ],
+      "verdict": "SINGLETON_SOURCE_CONTRADICTION"
+    }
+  ],
+  "provenance": {
+    "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CONTRACT_20260813.md": "5fabff7a899999cd2b9cb3a01e5bc0f6d200fc095190be1bf0014e9d0dc438db",
+    "results/THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809.md": "b03efe7cba2a3a2be9c9efe38c5b926014b01cc01bc36205b2b3ab59466d05ed",
+    "results/TWO_SOURCE_ROOT_THRESHOLD_DEBT_DERANGEMENT_THEOREM_20260814.md": "960f9796e21d5635ddd822bb9b34689148ff672bcc342b5166a8e18253e57ba6",
+    "results/TWO_SOURCE_SINGLETON_SOURCE_ELIMINATION_AND_GGS_SWITCH_THEOREM_20260814.md": "f1c7bc69667b741bdcd94d0fb97215e38cc4ae8bae8f394194ef58543bcecf4e",
+    "tracks/parkability/audit_two_source_singleton_source_elimination_ggs_switch.py": "038dd8448daffd32c6a0acdd7e223b30cf1aa92e82474e413440913ee76cc096"
+  },
+  "schema": "two-source-singleton-source-elimination-ggs-switch-audit-v1",
+  "singleton_source_contradictions": 2,
+  "source_pair_orientations_checked": 4,
+  "status": "SINGLETON_SOURCE_PAIR_CLOSED_SOLE_SURVIVOR_FORCES_NONROOT_GGS",
+  "surviving_source_pair": [
+    "c",
+    "q"
+  ]
+}

@@ -2,8 +2,13 @@
 
 **Date:** 2026-08-14
 
+**Composition closure (2026-08-14):** the exterior-dominance cut is
+inconsistent with the permanent old desired root core `T_q+f` in the frozen
+anchored `GG` state. See the old-root-core contradiction theorem.
+
 **Status:** strict exterior donation is admitted by the global-exterior
-sacrifice theorem; the exterior-dominance cut is unconditional
+sacrifice theorem; the exterior-dominance cut is unconditional locally and
+empty after full anchored composition
 
 **Admission update (2026-08-14).**  The separate
 `BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md`

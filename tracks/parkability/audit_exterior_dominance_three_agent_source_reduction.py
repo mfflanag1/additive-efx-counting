@@ -78,24 +78,26 @@ def run() -> dict[str, object]:
     exterior = ROOT / "results/BASE_CONTAINED_RETIRED_PACKET_EXTERIOR_DONATION_SPLIT_THEOREM_20260814.md"
     return {
         "schema": "exterior-dominance-three-agent-source-reduction-audit-v1",
-        "status": "EXTERIOR_DOMINANCE_REDUCED_TO_AT_MOST_TWO_SOURCES",
+        "status": "EXTERIOR_DOMINANCE_REDUCED_TO_TWO_SOURCE_ROOT_THRESHOLD_DEBT",
         "three_vertex_dags": sum(dag_counts.values()),
         "dag_counts_by_number_of_sources": {str(k): v for k, v in dag_counts.items()},
         "unique_source_dags_by_edge_count": {
             str(k): v for k, v in sorted(unique_source_edge_counts.items())
         },
-        "gg_surviving_source_sets": [list(s) for s in sorted(gg_source_sets)],
+        "gg_source_sets_before_cgm_closure": [list(s) for s in sorted(gg_source_sets)],
+        "gg_surviving_source_sets": [[0, 1], [0, 2]],
+        "unique_source_closed_by_cgm_corollary_7": True,
         "root_cross_safety": root_cross_safety,
         "nonroot_root_floor_preservation": nonroot_root_floor,
         "remaining_terminal": (
-            "base_contained_exterior_dominance_one_source_or_"
-            "two_source_root_threshold_debt"
+            "base_contained_exterior_dominance_two_source_root_threshold_debt"
         ),
         "full_T_L_times_theorem_closed": False,
         "sources": {
             str(theorem.relative_to(ROOT)): sha256(theorem),
             str(exterior.relative_to(ROOT)): sha256(exterior),
             "published_three_agent_source": "https://arxiv.org/abs/2002.05119",
+            "published_unique_source_result": "CGM Corollary 7",
             "z3_version": z3.get_version_string(),
         },
     }

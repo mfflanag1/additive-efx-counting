@@ -2,7 +2,13 @@
 
 **Date:** 2026-08-13
 
-**Verdict:** **not yet proved or refuted.** The verified cap-free work reduces
+**Superseded (2026-08-14):** the objective is now proved by
+`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`. The
+nonroot packet is eliminated by desire-free envelope descent. The root cut
+is inconsistent with the permanent old desired core `T_q+f` inside the base
+exterior. The remainder of this file records the earlier audit frontier.
+
+**Historical verdict:** **not yet proved or refuted.** The verified cap-free work reduces
 the complete `T_{L,times}^*` objective to two double-atomic cut-to-anchor
 subcases, but neither has yet been eliminated under global GG maximality or
 realized by a complete-contract counterexample.

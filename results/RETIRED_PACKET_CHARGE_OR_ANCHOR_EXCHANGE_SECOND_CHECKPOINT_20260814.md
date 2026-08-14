@@ -2,12 +2,25 @@
 
 **Date:** 2026-08-14
 
-**Status:** theorem not yet proved or refuted. All common-safe nonroot
+**Supersession (2026-08-14):** the full frozen collision theorem is now
+proved in
+`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`. The
+exterior-dominant root face developed below is empty once the retained old
+root core `T_q+f` is composed: it lies in the base exterior and is worth
+strictly more than `X_r`, contradicting the claim that every retired root
+atom is worth more than that entire exterior. The charity-reset and forced-
+`GGS` sections remain conditional diagnostics, not the live frontier.
+
+**Historical checkpoint status:** at this checkpoint the theorem not yet proved or refuted. All common-safe nonroot
 whole-hit recurrences and every root packet-price equality mode are
-eliminated; the direct root-held terminal is strict atomwise aggregate
-underpayment, further reduced to a base-contained retired packet or a named
-blocker of the signed missing-base return. The base-contained branch in turn
-obeys complete exterior dominance.
+eliminated. The direct root-held terminal obeys complete-current-exterior
+dominance, which forces the packet to be base-contained. A supplier-free
+charity reset then reduces it unconditionally to the one-good on/off response
+normal form. CGM's unique-source and double-edge two-source cases close; the
+remaining obstruction is a single-edge two-source hard champion pattern with
+a cyclic threshold-debt map. Singleton structure eliminates source pair
+`{c,s}` and forces a nonroot `GGS` cycle in the sole `{c,q}` survivor. It is
+not compatibility or multi-label charging.
 
 **Correction and repair (2026-08-14).**  Historical provenance alone does
 not admit reversal. The strict branch is independently repaired by a clean
@@ -21,15 +34,16 @@ the new packet-spread operation.
 
 The earlier five-path Hall cut was not the final obstruction. Fixed-priority
 sacrifice permits later owners to lose whenever the root remains strict.
-Using that fact and the named retirement supplier yields two stronger
+Using that fact and an explicit global supplier star yields three stronger
 reductions:
 
 1. a safe whole-packet response held by a nonroot enters a strictly nested
    response-envelope descent and cannot recur; and
-2. a root-held packet can be cleanly released one subpacket at a time whenever
-   the root remains strict, without assuming historical reversibility.
-3. the signed missing-base packet eliminates every root packet crossing the
-   base boundary; failure names a different retired/anchor/release blocker.
+2. a root-held packet can be released against the complete current exterior
+   one subpacket at a time whenever the root remains strict, without assuming
+   historical reversibility or supplier compatibility; and
+3. the resulting exterior inequality itself forces base containment, while
+   the base charity singleton gives an unconditional one-good reset.
 
 These operations use the actual protected source/colliding recipient and
 signed supplier record. They do not assign cores to arbitrary owners.
@@ -53,7 +67,7 @@ universally safe. This needs safety and the actual typed handoff, but not
 current desire. Strict, equality-critical, and source-inactive/base-floor
 nonroot whole hits are therefore covered.
 
-## Root branch: complete-pool price
+## Root branch: complete current-exterior price
 
 Write
 
@@ -62,56 +76,44 @@ Write
  \qquad v_r(Z_r)=x+\delta.
 \]
 
-Returning a nonempty `T subseteq K` to the named retirement supplier while
-giving compatible `K`-free exterior packet `R` to the root leaves exact
-margin
+For a nonempty `T subseteq K`, give `T` to a named nonroot sacrifice target
+and give the root every other good. Every current holder explicitly supplies
+her target. The exact root margin is
 
 \[
- \delta-v_r(T)+v_r(R).                           \tag{1}
+ \delta+v_r(E)-v_r(T),
+ \qquad E=G\setminus Z_r.                        \tag{1}
 \]
 
 Every strict instance of (1) gives controlled release, an EFX contradiction,
-or proper/zero packet hitting by the clean-release theorem. At equality,
-nondegeneracy forces `T=Y_r-X_r` and `R=X_r-Y_r`. Leaving one incoming good
-at the root, or donating one off-packet good in the singleton case, makes the
-root strict while spreading `K`. Thus equality also gives proper/zero packet
-hitting.
+or proper/zero packet hitting. At equality, nondegeneracy forces
+`G-T=X_r`; leaving one good of `T` at the root makes it strict while spreading
+`K`. Thus equality also gives proper/zero packet hitting.
 
-## Exact strict packet-price cut
+## Exact strict global-exterior cut
 
-Let `mathfrak R_T` be the complete family of supplier-compatible `K`-free
-exterior modes for returning `T`. A recurrent root packet must satisfy
+A recurrent root packet must satisfy
 
 \[
- \max_{R\in\mathfrak R_T}v_r(R)
- < v_r(T)-\delta
+ v_r(E)<v_r(T)-\delta
  \qquad(\varnothing\ne T\subseteq K),            \tag{2}
-\]
-
-because every equality instance is eliminated by packet spread.
-
-For any exterior family common to all singleton returns, put
-
-\[
- M_r=\max_R v_r(R).
 \]
 
 Then every retired atom obeys
 
 \[
- v_r(g)>\delta+M_r.                              \tag{3}
+ v_r(g)>\delta+v_r(E).                           \tag{3}
 \]
 
 Summation gives
 
 \[
- (|K|-1)\delta+|K|M_r<x.                        \tag{4}
+ (|K|-1)\delta+|K|v_r(E)<x.                     \tag{4}
 \]
 
-This is the **strict atomwise exterior-pool dominance terminal**. It is stronger
-than the earlier whole-response price, five-path Hall cut, and generic
-double-atomic bi-row cut because it tests every subpacket against return to
-the historical supplier.
+This is the **strict complete-current-exterior dominance terminal**. It is
+stronger than every compatible-pool price because it uses all current goods
+outside the root target and names all of their suppliers.
 
 The common-safe-core cut remains independently available:
 
@@ -121,58 +123,73 @@ The common-safe-core cut remains independently available:
 
 from `ROOT_SAFE_WHOLE_HIT_COMPLETE_POOL_REDUCTION_THEOREM_20260814.md`,
 where the actual protected core `D` is assigned through its named current
-recipient. The clean-release and equality-spread theorems now supply packet
-splitting independently of recipient feasibility throughout the root branch.
+recipient. The global supplier-star theorem supplies packet splitting
+independently of recipient feasibility throughout the root branch.
 
-## Signed base-support fork
+## Base containment and supplier-free one-good reset
 
-Put `S^+=Y_r-X_r` and `S^-=X_r-Y_r`. If `S^-` is an admitted return, release
-`K cap S^+`. A nonempty proper intersection is strictly root-paying; a
-complete intersection is the eliminated equality face. Hence the only
-survivor satisfies
+Put `S^+=Z_r-X_r`, `S^-=X_r-Z_r`, and `O=G-X_r`. Exact set accounting gives
 
 \[
- K\subseteq X_r.
+ \delta+v_r(E)=v_r(O).                           \tag{5}
 \]
 
-If `S^-` is not admitted, its exact failure names another retired packet,
-protected anchor/core, or release/floor premise. Thus every remaining root
-state is either a **base-contained retired-anchor face** or a directed charge
-to a different physical ledger/anchor coordinate. The latter is not progress
-by itself; global well-foundedness or a PI conversion is still required.
-
-For the base-contained branch, the admitted global-exterior sacrifice gives
+Thus (3) becomes
 
 \[
  v_r(G-X_r)<v_r(g)\qquad(g\in K).
 \]
 
-Otherwise pooling the complete base exterior into the root while releasing
-`g` as a singleton makes the root strict and forces a proper/zero packet
-response. Thus the remaining base-contained packet is atomwise more valuable
-to the root than her entire base exterior.
+Any packet atom outside `X_r` would itself lie in `O`, contradicting this
+inequality. Hence `K subseteq X_r` unconditionally; no signed-return blocker
+survives.
 
 The existing three-agent source reduction then makes the exterior-dominant
 face acyclic and eliminates its three-source topology. In the frozen `GG`
-identity, the only surviving nonroot source sets are
+identity, the one-source face closes by CGM Corollary 7 and the only surviving
+nonroot source sets are
 
 \[
- \{c\},\qquad\{c,q\},\qquad\{c,s\}.
+ \{c,q\}\qquad\text{or}\qquad\{c,s\}.
 \]
 
-The two-source cases carry an exact owner `i` whose three-agent completion
-falls below `tau_i(X_r)`; the one-source case has unique source `c`. Thus the
-base-contained side is now a named source/debt interface, not an anonymous
-valuation cut.
+Both cases carry an exact owner `i` whose three-agent completion falls below
+`tau_i(X_r)`. Thus the base-contained side is now a named two-source/debt
+interface, not an anonymous valuation cut.
 
-If the signed missing-base packet is admitted, a root-preserving reset puts
-this side in the exact one-good form `Y_r=X_r+g`. A whole-`K` response then
-has one of two supports:
+The double-edge two-source DAG also closes: CGM's first Section 4 case gives a
+Pareto-dominating completion when both sources reach the unique non-source.
+Thus the surviving nonroot envy graph has exactly one edge from one source to
+the non-source. Its hard CGM champion pattern is forced. Running Lemma 19 with
+each nonroot owner designated first yields three complete EFX candidates; each
+must underpay a different owner at the root threshold. The resulting no-self
+debt map on three owners contains a directed 2- or 3-cycle. This is not yet PI,
+because its edges come from different complete allocations.
+
+The base singleton now resolves one of the two source pairs. In source pair
+`{c,s}`, CGM's forced hard champion pattern places an incoming champion edge
+into singleton owner `s`; every such edge is nongenuine and therefore an
+ordinary incoming envy edge, contradicting that `s` is a source. Hence the
+only source pair is `{c,q}`. With `s` the non-source, the same hard pattern
+forces the nonroot cycle
 
 \[
- D=(X_r-L)+g,
+ b\xrightarrow{G}a\longrightarrow s\xrightarrow{G}b,
+ \qquad\{a,b\}=\{c,q\},                         \tag{6}
+\]
+
+whose word is `GGS`. This is a distinct unresolved cycle class, not PI: its
+two genuine edges both consume `f`.
+
+Move the base charity singleton `f` to the root while leaving all owner
+bundles at their base targets. This supplier-free candidate has root target
+`X_r+f` and is strictly above base. A failed EFX test either reduces `K` or
+has a whole-`K` response of one of two supports:
+
+\[
+ D=(X_r-L)+f,
  \quad\varnothing\ne L\subseteq X_r-K,
- \quad v_r(L)>v_r(g),
+ \quad v_r(L)>v_r(f),
 \]
 
 unless it is a safe root reselection; or
@@ -183,8 +200,22 @@ unless it is a safe root reselection; or
 \]
 
 The second includes the exact source-inactive base-root response `D=X_r`
-when `L` is empty. If the signed reset is blocked, the state is already on
-the multi-label charge side.
+when `L` is empty. These forms now hold without a signed reset. An EFX wall
+only guarantees a profitable deletion of some target good, so it does not in
+general force the off-good response `X_r`.
+
+For an off-good response, its source ordinarily envies `X_r`. Combining that
+ordinary edge with the original genuine `r -> q` edge closes every response
+sourced by `q`. In the orientation `q -> s` of (6), a response sourced by `s`
+also closes via the one-genuine cycle `r -> q -> s -> r`. The exact off-good
+survivors are therefore
+
+\[
+ (a,i)\in\{(c,c),(c,s),(q,c)\},                 \tag{7}
+\]
+
+where `a` is the ordinary source into singleton `s` and `i` is the response
+source. All on-good profiles remain.
 
 ## Typed branch audit
 
@@ -193,29 +224,27 @@ the multi-label charge side.
 | strict capture | nonroot envelope closes; every strictly root-paying clean subpacket release is admitted |
 | equality critical | nonroot envelope closes; root equality collapses to base restoration and packet spread |
 | base-floor/source inactive | no independent nonroot terminal; root safe core enters the same subpacket price test |
-| release compatibility | every move uses the named current holder and retirement return owner; other retired support is normalized before execution |
+| release compatibility | the complete exterior supplier star names every current holder; the charity reset moves only `f`; no historical reversal is used |
 
 ## Smallest remaining theorem
 
-Starting from the exterior-dominant/charged fork, use the retirement-time floor
+Starting from the exterior-dominant charity-reset normal form, use the retirement-time floor
 snapshot and exact originating `G0--G10` transition to prove one of:
 
-1. eliminate the on-good loss band `v_r(L)>v_r(g)` or use `D` as an anchor;
+1. eliminate the on-good loss band `v_r(L)>v_r(f)` or use `D` as an anchor;
 2. eliminate the off-good base-root/source-inactive response;
-3. in source set `{c}`, the retirement supplier/current response source
-   forces a root/anchor exchange or PI;
-4. in source set `{c,q}` or `{c,s}`, route the exact root-threshold debt owner
-   through the retirement supplier or contradict its retirement-time floor;
-5. a signed-return charge cycle is release-compatible PI or has a strict
-   finite label descent;
-6. some admitted compatible exterior packet violates the strict packet-price
-   cut;
-7. a root/anchor exchange leaves `K` at the root while strictly changing the
+3. realize one edge of the exact 2- or 3-cycle of root-threshold debts as a
+   common physical supplier-compatible core exchange;
+4. route the response source, retirement supplier, and debt-cycle owner into
+   a release-compatible PI component or contradict the retirement-time floor;
+5. execute a ledger-preserving `GG -> GGS` switch or use their combined
+   edges without treating the two overlapping `f`-edges as PI;
+6. a root/anchor exchange leaves `K` at the root while strictly changing the
    physical anchor label; or
-8. the complete signed recurrence is impossible.
+7. the complete signed recurrence is impossible.
 
-If none holds, a refutation must realize the strict cuts (2)--(4), global GG
-maximality, multi-label recurrence, and every signed transition/release premise in
+If none holds, a refutation must realize the strict cuts (2)--(5), global GG
+maximality, the charity-reset recurrence, and every signed transition/release premise in
 one exact positive-additive state. Local scalar realizations remain
 insufficient.
 
@@ -224,8 +253,10 @@ insufficient.
 This checkpoint does not prove or refute `T_{L,times}^*`, GG, four-agent EFX,
 or general additive EFX. Its unconditional result is the nonroot closure,
 strict clean subpacket release, equality packet spread, and the strict
-atomwise cut. The live root face is now base-contained or charged to another
-exact label, with the base-contained side satisfying complete exterior
-dominance and one of three named source topologies. Source/debt-to-anchor
-conversion, the one-good on/off response split, and global multi-label
-well-foundedness remain, so this is not yet a mathematical breakthrough.
+atomwise cut. The live root face is unconditionally base-contained, satisfies
+complete exterior dominance, and has the charity one-good response in the
+sole `{c,q}` source topology, with a forced nonroot `GGS` cycle and cyclic
+cross-completion threshold debt. Three external-source off-good profiles and
+all on-good profiles remain. Debt-cycle-to-physical-exchange or
+ledger-preserving `GG -> GGS` conversion is still missing, so this is not yet
+a mathematical breakthrough.

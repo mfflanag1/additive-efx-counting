@@ -6,6 +6,11 @@
 one-good enlarged base root and an on-good loss band or off-good base-root
 response
 
+**Supersession update (2026-08-14).** The same on/off support normal form is
+now obtained unconditionally by moving the base charity singleton into the
+root. No signed missing-base return is required. This theorem remains a valid
+optional transition but is not a premise of the live reduction.
+
 ## Input
 
 Let the first-priority root be strict at current bundle `Y_r`, and write
@@ -117,9 +122,9 @@ the base-contained recurrent face has all of the following:
  \qquad v_r(G-X_r)<v_r(k)\ (k\in K),            \tag{7}
 \]
 
-an exact safe whole-packet response in the on/off-good forms (5)--(7), and nonroot
-source set `{c}`, `{c,q}`, or `{c,s}`, with root-threshold debt in the
-two-source cases.
+an exact safe whole-packet response in the on/off-good forms (5)--(7), and
+nonroot source set `{c,q}` or `{c,s}`, with root-threshold debt. The former
+one-source set `{c}` closes by CGM Corollary 7.
 
 ## Claim boundary
 

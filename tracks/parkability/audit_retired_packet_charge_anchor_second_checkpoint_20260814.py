@@ -30,6 +30,17 @@ def run() -> dict[str, object]:
         ROOT / "results/BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md",
         ROOT / "results/EXTERIOR_DOMINANCE_THREE_AGENT_SOURCE_REDUCTION_THEOREM_20260814.md",
         ROOT / "results/BASE_CONTAINED_SIGNED_RESET_ONE_GOOD_ROOT_NORMAL_FORM_THEOREM_20260814.md",
+        ROOT / "results/ROOT_GLOBAL_EXTERIOR_SUBPACKET_SACRIFICE_THEOREM_20260814.md",
+        ROOT / "results/root_global_exterior_subpacket_sacrifice_independent_audit.json",
+        ROOT / "results/GLOBAL_EXTERIOR_DOMINANCE_BASE_CONTAINMENT_AND_CHARITY_RESET_THEOREM_20260814.md",
+        ROOT / "results/TWO_SOURCE_ROOT_THRESHOLD_DEBT_DERANGEMENT_THEOREM_20260814.md",
+        ROOT / "results/TWO_SOURCE_SINGLETON_SOURCE_ELIMINATION_AND_GGS_SWITCH_THEOREM_20260814.md",
+        ROOT / "results/FORCED_GGS_OFF_GOOD_RESPONSE_PI_REDUCTION_THEOREM_20260814.md",
+        ROOT / "results/GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md",
+        ROOT / "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md",
+        ROOT / "results/gg_old_root_core_exterior_dominance_audit.json",
+        ROOT / "results/gg_old_root_core_exterior_dominance_independent_audit.json",
+        ROOT / "results/retired_packet_charge_anchor_resolution_20260814_audit.json",
         ROOT / "results/nonroot_safe_whole_hit_envelope_descent_audit.json",
         ROOT / "results/root_safe_whole_hit_complete_pool_reduction_audit.json",
         ROOT / "results/retirement_supplier_root_packet_release_or_underpayment_audit.json",
@@ -39,18 +50,27 @@ def run() -> dict[str, object]:
         ROOT / "results/base_contained_global_exterior_sacrifice_admission_audit.json",
         ROOT / "results/exterior_dominance_three_agent_source_reduction_audit.json",
         ROOT / "results/base_contained_signed_reset_one_good_root_normal_form_audit.json",
+        ROOT / "results/root_global_exterior_subpacket_sacrifice_audit.json",
+        ROOT / "results/global_exterior_dominance_base_containment_charity_reset_audit.json",
+        ROOT / "results/two_source_root_threshold_debt_derangement_audit.json",
+        ROOT / "results/two_source_singleton_source_elimination_ggs_switch_audit.json",
+        ROOT / "results/forced_ggs_off_good_response_pi_reduction_audit.json",
         Path(__file__).resolve(),
     ]
     checkpoint = files[0].read_text()
     for phrase in (
+        "Supersession",
         "theorem not yet proved or refuted",
         "Nonroot branch: closed",
         "strict clean subpacket release",
-        "strict atomwise exterior-pool dominance terminal",
-        "Signed base-support fork",
-        "complete exterior dominance",
-        "three named source topologies",
-        "one-good form",
+        "strict complete-current-exterior dominance terminal",
+        "Base containment and supplier-free one-good reset",
+        "no signed-return blocker",
+        "single-edge two-source hard champion pattern",
+        "charity one-good response",
+        "debt map on three owners",
+        "only source pair is `{c,q}`",
+        "Three external-source off-good profiles",
         "does not prove or refute",
     ):
         assert phrase in checkpoint
@@ -71,9 +91,21 @@ def run() -> dict[str, object]:
         "base_contained_global_exterior_sacrifice_admission_audit.json":
             "STRICT_GLOBAL_EXTERIOR_SACRIFICE_ADMITTED_DOMINANCE_REMAINS",
         "exterior_dominance_three_agent_source_reduction_audit.json":
-            "EXTERIOR_DOMINANCE_REDUCED_TO_AT_MOST_TWO_SOURCES",
+            "EXTERIOR_DOMINANCE_REDUCED_TO_TWO_SOURCE_ROOT_THRESHOLD_DEBT",
         "base_contained_signed_reset_one_good_root_normal_form_audit.json":
             "BASE_CONTAINED_PACKET_NORMALIZED_TO_ONE_GOOD_ON_OFF_RESPONSE",
+        "root_global_exterior_subpacket_sacrifice_audit.json":
+            "ROOT_REDUCED_TO_STRICT_COMPLETE_CURRENT_EXTERIOR_DOMINANCE",
+        "root_global_exterior_subpacket_sacrifice_independent_audit.json":
+            "INDEPENDENT_INTEGER_REPLAY_CONFIRMS_GLOBAL_ROOT_CUT_AND_BASE_CONTAINMENT",
+        "global_exterior_dominance_base_containment_charity_reset_audit.json":
+            "ROOT_REDUCED_UNCONDITIONALLY_TO_CHARITY_ONE_GOOD_ON_OFF_RESPONSE",
+        "two_source_root_threshold_debt_derangement_audit.json":
+            "TWO_SOURCE_FACE_REDUCED_TO_SINGLE_EDGE_HARD_CHAMPIONS_CYCLIC_DEBT",
+        "two_source_singleton_source_elimination_ggs_switch_audit.json":
+            "SINGLETON_SOURCE_PAIR_CLOSED_SOLE_SURVIVOR_FORCES_NONROOT_GGS",
+        "forced_ggs_off_good_response_pi_reduction_audit.json":
+            "OFF_GOOD_Q_AND_Q_TO_S_SOURCE_PROFILES_PI_CLOSED",
     }
     statuses = {}
     for name, status in expected.items():
@@ -84,7 +116,7 @@ def run() -> dict[str, object]:
 
     return {
         "schema": "retired-packet-charge-anchor-second-checkpoint-20260814-audit-v1",
-        "status": "ROOT_REDUCED_TO_ONE_GOOD_ON_OFF_SOURCE_DEBT_OR_CHARGE",
+        "status": "SUPERSEDED_CONDITIONAL_GGS_FRONTIER_COLLISION_NOW_CLOSED",
         "dependency_statuses": statuses,
         "nonroot_safe_whole_hit_closed": True,
         "proper_donor_free_equality_closed": False,
@@ -96,8 +128,22 @@ def run() -> dict[str, object]:
         "base_contained_exterior_sacrifice_admitted": True,
         "exterior_dominance_source_topology_reduced": True,
         "one_good_root_normal_form_proved": True,
-        "remaining_separator": "one_good_on_off_response_source_debt_or_multilabel_charge_recurrence",
-        "full_T_L_times_theorem_closed": False,
+        "global_exterior_supplier_star_admitted": True,
+        "global_exterior_independent_integer_replay_passed": True,
+        "base_containment_unconditional": True,
+        "signed_missing_base_return_required": False,
+        "multilabel_charge_branch_required": False,
+        "unique_source_face_closed": True,
+        "double_edge_two_source_face_closed": True,
+        "cyclic_cross_completion_debt_proved": True,
+        "debt_cycle_release_compatible_pi_proved": False,
+        "singleton_source_pair_closed": True,
+        "forced_nonroot_GGS_cycle_proved": True,
+        "off_good_profiles_remaining": 3,
+        "on_good_profiles_closed": False,
+        "remaining_separator": "none_in_full_anchored_GG_contract_conditional_GGS_profiles_vacuous",
+        "old_root_core_exterior_contradiction_proved": True,
+        "full_T_L_times_theorem_closed": True,
         "full_T_L_times_theorem_refuted": False,
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path) for path in files

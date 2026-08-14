@@ -9,19 +9,25 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_global_retired_root_support_ledger_composition_replays() -> None:
     result = run(ROOT)
-    assert result["status"] == "GLOBAL_LEDGER_COMPOSED_EXACT_T_DAGGER_SURVIVES"
+    assert result["status"] == (
+        "COLLISION_SUBTYPE_CLOSED_T0_AND_PARKED_SUPPORT_REMAIN"
+    )
     assert result["g_states_covered"] == [f"G{i}" for i in range(11)]
     assert len(result["cross_cutting_operations_covered"]) == 8
     assert all(result["physical_label_floor_separation"].values())
     assert len(result["finite_component_argument"]) == 6
     assert all(result["scalar_collision_checks"].values())
     assert all(result["collision_normalization_checks"].values())
-    assert result["surviving_terminal"] == "T^dagger = T_0^* dot-union T_L^*"
+    assert result["historical_typed_terminal"] == (
+        "T^dagger = T_0^* dot-union T_L^*"
+    )
+    assert result["surviving_terminal"] == "T_0^* dot-union T_{L,perp}^*"
     assert result["pre_ledger_terminal"] == "T_0^*"
-    assert result["post_ledger_terminal"] == "T_L^*"
-    assert result["post_ledger_terminal_subtypes"] == [
-        "T_{L,perp}^*", "T_{L,times}^*"
-    ]
+    assert result["post_ledger_terminal"] == "T_{L,perp}^*"
+    assert result["post_ledger_terminal_subtypes"] == ["T_{L,perp}^*"]
+    assert result["closed_post_ledger_subtypes"] == ["T_{L,times}^*"]
+    assert result["collision_T_L_times_closed"]
+    assert not result["parked_T_L_perp_closed"]
     assert result["no_collision_terminal_guard"]
     assert result["augmented_generic_T_star_strictly_narrowed"]
     assert not result["generic_empty_ledger_T_star_closed"]

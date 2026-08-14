@@ -22,6 +22,10 @@ def run() -> dict[str, object]:
     audit = ROOT / "results/AUG14_COLLISION_CANDIDATE_TRANSITION_ADMISSIBILITY_AUDIT_20260814.md"
     equality_admission = ROOT / "results/ROOT_EQUALITY_BASE_RESTORATION_PACKET_SPREAD_ADMISSION_THEOREM_20260814.md"
     exterior_admission = ROOT / "results/BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md"
+    global_admission = ROOT / "results/ROOT_GLOBAL_EXTERIOR_SUBPACKET_SACRIFICE_THEOREM_20260814.md"
+    charity_reset = ROOT / "results/GLOBAL_EXTERIOR_DOMINANCE_BASE_CONTAINMENT_AND_CHARITY_RESET_THEOREM_20260814.md"
+    root_contradiction = ROOT / "results/GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md"
+    resolution = ROOT / "results/RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md"
     candidates = {
         "base_donation": ROOT / "results/SUPPLIER_ALIGNED_BASE_DONATION_PACKET_SPREAD_THEOREM_20260814.md",
         "exterior_pooling": ROOT / "results/BASE_CONTAINED_RETIRED_PACKET_EXTERIOR_DONATION_SPLIT_THEOREM_20260814.md",
@@ -60,17 +64,37 @@ def run() -> dict[str, object]:
     assert all(conditional_boundaries_present.values())
 
     script = Path(__file__).resolve()
-    paths = [contract, charge, audit, equality_admission, exterior_admission, *candidates.values(), script]
+    audit_text = audit.read_text()
+    assert "root-side admission gate is crossed" in audit_text
+    assert "immediately contradictory" in audit_text
+    assert "response-source/debt-to-anchor conversion is not needed" in audit_text
+
+    paths = [
+        contract,
+        charge,
+        audit,
+        equality_admission,
+        exterior_admission,
+        global_admission,
+        charity_reset,
+        root_contradiction,
+        resolution,
+        *candidates.values(),
+        script,
+    ]
     return {
         "schema": "aug14-collision-candidate-transition-admissibility-audit-v1",
-        "status": "BASE_EQUALITY_AND_EXTERIOR_POOLING_ADMITTED_OTHER_GLOBAL_REWRITES_OPEN",
+        "status": "ROOT_GLOBAL_CUT_ADMITTED_AND_OLD_ROOT_CORE_CLOSES_COLLISION",
         "governing_rules_present": governing_rules_present,
         "conditional_boundaries_present": conditional_boundaries_present,
         "admission_theorem_proved": False,
         "equality_face_admission_theorem_proved": True,
         "base_contained_exterior_pooling_admitted": True,
-        "full_T_L_times_theorem_closed": False,
-        "next_gate": "generic_candidate_admission_or_base_contained_multilabel_charge",
+        "root_global_exterior_subpacket_sacrifice_admitted": True,
+        "base_containment_unconditional": True,
+        "charity_one_good_reset_admitted": True,
+        "full_T_L_times_theorem_closed": True,
+        "next_gate": "parked_support_or_empty_ledger_terminal_not_charity_response_debt",
         "provenance": {
             str(path.relative_to(ROOT)): sha256(path) for path in paths
         },

@@ -2,6 +2,13 @@
 
 **Date:** 2026-08-13
 
+**Update (2026-08-14):** the certified collision subtype
+`T_{L,times}^*` is now closed by
+`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`. The
+empty-ledger `T_0^*` and collision-free parked-support `T_{L,perp}^*`
+components remain open; this ledger theorem's historical terminal statement
+should be read with that refinement.
+
 **Verdict:** **proved as a no-silent-reuse composition theorem.** The ledger
 is not enforced by banning retired goods. Every original `G0--G10`
 transition remains available for audit; retired transfers are cancelled in a
@@ -58,11 +65,10 @@ carry either a complete-pool avoidance certificate or the exact
 collision/provenance certificate.
 
 Thus the named global ledger gate is closed, but GG and four-agent EFX are
-not. The next analytic target is payment or anchor conversion inside the
-collision subtype `T_{L,times}^*`, preferably using the exact capture packet
-and known holder. The parked subtype `T_{L,perp}^*` instead needs a projection
-or induction that removes inert retired support. The separate pre-ledger
-target is closure of `T_0^*`.
+not.  The collision subtype `T_{L,times}^*` has since been closed by the
+Aug-14 charge-or-anchor resolution.  The live post-ledger target is now a
+projection, activation, or induction theorem for inert parked support
+`T_{L,perp}^*`; the separate pre-ledger target is closure of `T_0^*`.
 
 ## Artifacts and replay
 

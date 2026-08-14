@@ -87,7 +87,9 @@ headlines:
   signed reconstruction pairs and 125,000 physical normalization cases.
   The exact global terminal is the typed union
   `T^dagger=T_0^* dot-union T_L^*`; its empty-ledger component, typed
-  `T_L^*` parked/collision components, GG closure, and general EFX remain open.
+  `T_L^*` parked component, GG closure, and general EFX remain open. The
+  collision component `T_{L,times}^*` is now closed by the Aug-14 resolution
+  below.
 
 - [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CHECKPOINT_20260813.md)
   ([exact checkpoint audit](retired_packet_charge_anchor_checkpoint_audit.json),
@@ -124,6 +126,40 @@ headlines:
   worth at least the root surplus. Global anchor structure is therefore
   essential. The checkpoint does not eliminate these
   two subcases, close `T_{L,times}^*`, GG, or general EFX.
+
+- [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_SECOND_CHECKPOINT_20260814.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_SECOND_CHECKPOINT_20260814.md)
+  ([checkpoint audit](retired_packet_charge_anchor_second_checkpoint_20260814_audit.json))
+  supersedes the root-side compatibility/charge fork. The complete-current-
+  exterior supplier star tests every nonempty retired subpacket, eliminates
+  equality by leave-one packet spread, and forces every recurrent root-held
+  atom above the root's entire base exterior. The exact exterior identity
+  then forces `K subseteq X_r` without a signed historical return. A charity-
+  singleton reset gives the one-good on/off response normal form. CGM
+  Corollary 7 closes the unique-source face; the hard two-source analysis
+  closes the double-edge graph and source pair `{c,s}`, forcing a nonroot
+  `GGS` cycle in the sole `{c,q}` survivor. Three of six off-good role
+  profiles close by one-genuine-edge PI cycles. The remaining gate in that
+  conditional continuation is a ledger-preserving `GG -> GGS` or debt-cycle-
+  to-physical-exchange operation; all on-good profiles and three external-
+  source off-good profiles remain there.
+  The global root cut has a symbolic/support audit and a separate exhaustive
+  injective-integer replay. This checkpoint is superseded as the live
+  frontier by the old-root-core contradiction below.
+
+- [`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md)
+  ([root contradiction](GG_OLD_ROOT_CORE_EXCLUDES_EXTERIOR_DOMINANT_PACKET_THEOREM_20260814.md),
+  [primary root audit](gg_old_root_core_exterior_dominance_audit.json),
+  [independent integer replay](gg_old_root_core_exterior_dominance_independent_audit.json),
+  [composition audit](retired_packet_charge_anchor_resolution_20260814_audit.json))
+  proves the frozen collision theorem. The desire-free envelope descent
+  closes every nonroot holder. For a root holder, the admitted global
+  supplier star would force every retired atom above the value of the entire
+  base exterior, while the retained old `GG` edge `r -> q` gives the same
+  root a desired core `T_q+f` inside that exterior and above `X_r`. The
+  resulting strict cycle
+  `v_r(k)>v_r(O)>=v_r(T_q+f)>v_r(X_r)>=v_r(k)` is impossible. Thus
+  `T_{L,times}^*` is closed cap-free. This does not close the parked-support
+  subtype, the empty-ledger terminal, full `GG`, or general EFX.
 
 - [`POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md`](POST_RECRUITMENT_OBSERVER_PAYMENT_OBJECTIVE_RESOLUTION_20260813.md)
   ([independent completion audit](post_recruitment_observer_payment_resolution_independent_audit.json))

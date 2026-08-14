@@ -11,6 +11,12 @@ base-restoration packet-spread theorem
 uses nondegeneracy and the GG base support to turn every admitted equality
 mode into a strict packet-spread move.
 
+**Supersession update (2026-08-14).**
+`ROOT_GLOBAL_EXTERIOR_SUBPACKET_SACRIFICE_THEOREM_20260814.md` supplies the
+complete current exterior by an explicit supplier star, removes the
+compatibility premise, and eliminates equality. The present theorem remains
+a valid smaller operation but is no longer the strongest root-side cut.
+
 ## Exact input
 
 Let an exact `T_{L,times}^*` state have first-priority root `r` with

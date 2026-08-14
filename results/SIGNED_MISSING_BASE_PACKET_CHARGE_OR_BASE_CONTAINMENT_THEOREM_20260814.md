@@ -5,6 +5,12 @@
 **Status:** cap-free reduction of every root-held retired packet to a
 base-contained packet or an exact blocker of the signed missing-base return
 
+**Supersession update (2026-08-14).** The global-exterior dominance identity
+now forces `K subseteq X_r` directly, without executing the signed return.
+Therefore the blocker/multi-label-charge alternative below is no longer a
+live branch of the root-held recurrence. The signed-support argument remains
+a valid conditional theorem and provenance audit of the earlier route.
+
 **Composition update.**  The base-contained branch is further reduced by
 `BASE_CONTAINED_GLOBAL_EXTERIOR_SACRIFICE_ADMISSION_THEOREM_20260814.md` to
 the exterior-dominance inequalities `v_r(G-X_r)<v_r(g)` for every `g in K`.

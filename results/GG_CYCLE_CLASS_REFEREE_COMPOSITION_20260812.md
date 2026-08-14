@@ -371,3 +371,25 @@ post-recruitment payment implication and the alleged `R_q`-only anchor gate
 are now exactly refuted. The surviving stronger GG task is to derive a
 decorated-head exchange or contradiction from global recurrence, together
 with the root-sourced complete-residual-pool capture.
+
+## Aug-14 retired-collision closure update
+
+The collision component of the post-ledger terminal is now closed by
+[`RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md`](RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_RESOLUTION_20260814.md).
+For a nonroot holder, a desire-free safe-envelope descent strictly shrinks
+the named packet or its hitting coordinate. For a root holder, the admitted
+complete-exterior supplier star would force
+
+\[
+ v_r(k)>v_r(G-X_r)\qquad(k\in K\subseteq X_r).
+\]
+
+But the permanent old edge retained throughout the anchored branch has
+`D_r=T_q+f subseteq G-X_r` and
+`v_r(D_r)>v_r(X_r)>=v_r(k)`, an immediate contradiction. Thus
+`T_{L,times}^*` is no longer a terminal.
+
+This does not close the full composition. The typed union now retains the
+empty-ledger `T_0^*` branch and the collision-free parked-support
+`T_{L,perp}^*` branch. Those, plus any pre-ledger GG terminal not routed into
+the retired collision interface, remain the honest next proof targets.
