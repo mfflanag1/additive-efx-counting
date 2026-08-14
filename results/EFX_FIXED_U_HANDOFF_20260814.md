@@ -6,7 +6,8 @@
 
 **Branch:** `codex/efx-fixed-u-termination-20260813`
 
-**Latest pushed checkpoint:** `b2f6fe8` (`research: widen form2 four-edge menu`)
+**Latest pushed research checkpoint before this note update:** `56c2b2a`
+(`research: prepare form2 widened-menu core replay`)
 
 ## Frozen objective
 
@@ -66,11 +67,17 @@ and tests are committed:
 - `tracks/parkability/run_allocated_e_form2_response_branch_menu_cegar.py`
 - `tracks/parkability/test_allocated_e_form2_response_branch_menu_cegar.py`
 
-The widened solver was intentionally interrupted for this handoff before its
-first check completed.  Its untracked output
-`results/allocated_e_form2_response_branch_menu_cegar.json` has status
-`UNKNOWN`, reason `interrupted from keyboard`, with zero new iterations and
-the correct `25,413` loaded cuts.  It is not evidence and should not be cited.
+Three widened checks have now ended without a mathematical verdict.  The
+first and the 925-second continuation were intentionally interrupted; an
+independent seed-991 check reached its declared 300-second timeout.  All
+three record the correct `25,413` loaded cuts, zero fresh cuts, and status
+`UNKNOWN`.  They are timing diagnostics, not evidence for SAT or UNSAT, and
+should not be cited as a theorem or counterexample.
+
+The committed certificate extractor
+`extract_allocated_e_form2_response_branch_menu_unsat_core.py` independently
+regenerates all `973` allocations and is ready to track, reduce, and replay
+the PI cuts if a future run proves UNSAT.
 
 ### 3. Cap-free response-path payment identity
 
@@ -125,6 +132,26 @@ Files:
 - `results/FORM2_SIX_BRANCH_PAYMENT_COMPRESSION_LEMMA_20260814.md`
 - `results/form2_six_branch_payment_compression_audit.json`
 
+### 5. Current-support spanning frontier and correction
+
+Every one of the six canonical branch graphs is exactly a four-edge spanning
+tree on charity plus all four owners.  Moreover, if such a branch is
+owner-paid but not EFX, a globally minimum failed response is common-safe at
+the actual probe utilities.  This is a cap-free reduction of observer
+failure to one precisely decorated current response.
+
+The provenance boundary is essential: the spanning tree is measured from
+the current support state `Y`, which is the edge metric in the frozen goal.
+It does **not** automatically imply that the net signed graph relative to
+the older GG base `X` remains connected after packet cancellation.  An
+earlier draft incorrectly called this immediate full-owner admission; commit
+`d73267c` corrected the claim before using it downstream.
+
+Files:
+
+- `results/FORM2_SIX_BRANCH_FULL_OWNER_ADMISSION_REDUCTION_20260814.md`
+- `results/form2_six_branch_full_owner_admission_audit.json`
+
 ## Critical resume correction
 
 Do **not** resume the old three-menu driver by supplying only
@@ -163,6 +190,13 @@ The highest-leverage cap-free statement is now:
 > certified double-margin packet, or the three simultaneous supplier-capture
 > inequalities force a release-compatible generalized-PI family or the exact
 > full-owner decorated-response/base-margin terminal.
+
+For a paid non-EFX branch, this now factors through an explicit
+**cancellation dichotomy**: compose the `X->Y` signed record with the
+four-edge `Y->Z` spanning tree.  Either the net decorated component satisfies
+the full-owner theorem's exact interface, or every disappearing tree edge is
+a return of old base support and must force retirement, record progress, or
+release-compatible PI.
 
 This should be attacked using the complete signed support-drainage and
 response-saturation record.  Scalar inequalities alone cannot close it: the
@@ -220,14 +254,15 @@ explicitly open in `NONROOT_NORMALIZATION_BYPASS_COLLISION_GAP_20260814.md`.
 
 ## Verification and process state
 
-Focused verification at checkpoint `b2f6fe8`:
+Focused verification across the widened-menu, payment-compression,
+spanning-frontier, and certificate-extractor tests:
 
 ```text
-6 passed in 0.33s
+8 passed in 0.44s
 ```
 
-The two solver processes launched after that checkpoint were interrupted and
-exited.  Nothing campaign-critical is running.  The worktree contains many
+All solver processes launched after the checkpoint have exited.  Nothing
+campaign-critical is running.  The worktree contains many
 older unrelated untracked research traces and two pre-existing modified
 files; they were deliberately neither staged nor reverted.
 
