@@ -1,0 +1,40 @@
+{
+  "c_d_edges": [
+    [
+      "charity",
+      "s"
+    ],
+    [
+      "r",
+      "d"
+    ]
+  ],
+  "c_r_edges": [
+    [
+      "charity",
+      "s"
+    ]
+  ],
+  "canonical_cancellation_of_relay_equals": "C_d",
+  "checks": {
+    "both_probes_complete_partitions": true,
+    "c_d_uses_two_edges": true,
+    "c_r_uses_one_edge": true,
+    "only_incremental_change_is_whole_H_return": true,
+    "root_strictly_improves_on_H_return": true,
+    "unpaid_d_forces_strict_H_deficit_capture": true
+  },
+  "claim_boundary": "Checks exact allocations, edges, cancellation, and payment-capture algebra. It imports the proper-residual payment theorem and does not independently validate T_Ltimes or universal provenance.",
+  "dependencies": {
+    "results/R2_TWO_PROBE_H_RETURN_CLOSURE_THEOREM_20260814.md": "21dcb9634b1042d9318dbb804dfb47855fb8bea76c3f3d583945f13d45e4305b",
+    "results/ROOT_FACING_TWO_EDGE_STRICT_PAYMENT_COMPLETION_LEMMA_20260813.md": "5404acdf1ed340bdda2569986480a7ffe13ebdd77e83982c22159191a1f11217"
+  },
+  "imported_collision_theorem_commit": "34709c9ce22dbde23a5fa381a2ccea7898dfe1ca",
+  "relay_from_c_d_to_c_r": {
+    "edge": "d->r",
+    "packet": "H"
+  },
+  "schema": "r2-two-probe-h-return-closure-audit-v1",
+  "source_sha256": "96a969a855d068b5fcaf554814a7392e64685a4f86a103faa5ff09f432db2f26",
+  "status": "CONDITIONAL_R2_H_RETURN_COMPOSITION_AUDIT_PASSED"
+}

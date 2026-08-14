@@ -81,6 +81,10 @@ SUPPORT = {
     "charity": PACKET["P"],
 }
 
+CURRENT_HOLDER = {
+    good: holder for holder, goods in SUPPORT.items() for good in goods
+}
+
 RESPONSE_CORE = {
     source: tuple(
         split_name(name, True)
@@ -314,12 +318,149 @@ def serialize_values(values):
     }
 
 
+def find_complete_efx_four_edge_endpoints(values, active_goods, maximum=250):
+    """Find exact complete EFX allocations using at most four move edges."""
+    active = tuple(active_goods)
+    owner_index = {owner: index for index, owner in enumerate(OWNERS)}
+    destination = {good: z3.Int(f"efx_destination_{good}") for good in active}
+    solver = z3.Solver()
+    for good in active:
+        solver.add(destination[good] >= 0, destination[good] < len(OWNERS))
+
+    possible_edges = tuple(
+        (supplier, target)
+        for supplier in (*OWNERS, "charity") for target in OWNERS
+        if supplier != target
+    )
+    edge = {
+        pair: z3.Bool(f"efx_edge_{pair[0]}_{pair[1]}")
+        for pair in possible_edges
+    }
+    for good in active:
+        supplier = CURRENT_HOLDER[good]
+        for target in OWNERS:
+            if target == supplier:
+                continue
+            solver.add(z3.Implies(
+                destination[good] == owner_index[target],
+                edge[supplier, target],
+            ))
+    solver.add(z3.PbLe([(variable, 1) for variable in edge.values()], 4))
+
+    utility = {}
+    for observer in OWNERS:
+        for recipient in OWNERS:
+            utility[observer, recipient] = z3.Sum(*(
+                z3.If(
+                    destination[good] == owner_index[recipient],
+                    z3.RealVal(str(values[observer][good])), 0,
+                )
+                for good in active
+            ))
+    for observer in OWNERS:
+        for target in OWNERS:
+            if observer == target:
+                continue
+            for removed in active:
+                solver.add(z3.Implies(
+                    destination[removed] == owner_index[target],
+                    utility[observer, observer]
+                    >= utility[observer, target]
+                    - z3.RealVal(str(values[observer][removed])),
+                ))
+    results = []
+    while len(results) < maximum and solver.check() == z3.sat:
+        model = solver.model()
+        allocation = {owner: [] for owner in OWNERS}
+        for good in GOODS:
+            if good in destination:
+                target = OWNERS[model.eval(destination[good]).as_long()]
+            else:
+                supplier = CURRENT_HOLDER[good]
+                target = supplier if supplier in OWNERS else "r"
+            allocation[target].append(good)
+        actual_edges = sorted({
+            (CURRENT_HOLDER[good], owner)
+            for owner, goods in allocation.items() for good in goods
+            if good in active and CURRENT_HOLDER[good] != owner
+        })
+        assert len(actual_edges) <= 4
+        result = {
+            "allocation": {
+                owner: tuple(goods) for owner, goods in allocation.items()
+            },
+            "transfer_edges": tuple(actual_edges),
+        }
+        assert verify_complete_efx_endpoint(values, active, result)
+        results.append(result)
+        solver.add(z3.Or(*(
+            destination[good] != model.eval(destination[good]) for good in active
+        )))
+    return tuple(results)
+
+
+def find_complete_efx_four_edge(values, active_goods):
+    endpoints = find_complete_efx_four_edge_endpoints(
+        values, active_goods, maximum=1
+    )
+    return endpoints[0] if endpoints else None
+
+
+def verify_complete_efx_endpoint(values, active_goods, endpoint):
+    """Independent exact-arithmetic verifier for a four-edge endpoint."""
+    active = set(active_goods)
+    allocation = endpoint["allocation"]
+    assigned = [good for owner in OWNERS for good in allocation[owner] if good in active]
+    if len(assigned) != len(set(assigned)) or set(assigned) != active:
+        return False
+    edges = {
+        (CURRENT_HOLDER[good], owner)
+        for owner in OWNERS for good in allocation[owner]
+        if good in active and CURRENT_HOLDER[good] != owner
+    }
+    if len(edges) > 4 or edges != set(endpoint["transfer_edges"]):
+        return False
+    utility = {
+        (observer, recipient): sum(
+            (values[observer][good] for good in allocation[recipient]
+             if good in active),
+            Fraction(),
+        )
+        for observer in OWNERS for recipient in OWNERS
+    }
+    return all(
+        utility[observer, observer]
+        >= utility[observer, target] - values[observer][removed]
+        for observer in OWNERS for target in OWNERS if observer != target
+        for removed in allocation[target] if removed in active
+    )
+
+
+def complete_efx_formula(value, present, allocation):
+    utility = {
+        (observer, recipient): total(value, observer, allocation[recipient])
+        for observer in OWNERS for recipient in OWNERS
+    }
+    return z3.And(*(
+        z3.Implies(
+            present[removed],
+            utility[observer, observer]
+            >= utility[observer, target] - value[removed, observer],
+        )
+        for observer in OWNERS for target in OWNERS if observer != target
+        for removed in allocation[target]
+    ))
+
+
 def run(output: Path, timeout_seconds: int, maximum_iterations: int,
         random_seed: int, resume: Path | None = None,
-        maximum_families_per_round: int = 250):
+        maximum_families_per_round: int = 250,
+        separate_complete_efx: bool = False,
+        maximum_efx_per_round: int = 250):
     solver, value, present = build_master()
     solver.set(timeout=timeout_seconds * 1000, random_seed=random_seed)
     signatures = set()
+    allocation_signatures = set()
     resume_record = None
     if resume is not None:
         root = Path(__file__).resolve().parents[2]
@@ -342,6 +483,27 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
             if payload.get("goods") != list(GOODS):
                 raise ValueError("resume goods do not match role-split cell")
             for record in payload.get("iterations", ()):
+                endpoint_rows = record.get("complete_efx_allocations")
+                if endpoint_rows is None:
+                    allocation = record.get("complete_efx_allocation")
+                    endpoint_rows = () if allocation is None else (
+                        {"allocation": allocation},
+                    )
+                for endpoint_row in endpoint_rows:
+                    allocation = endpoint_row["allocation"]
+                    normalized_allocation = {
+                        owner: tuple(goods)
+                        for owner, goods in allocation.items()
+                    }
+                    allocation_signature = tuple(
+                        (owner, tuple(normalized_allocation[owner]))
+                        for owner in OWNERS
+                    )
+                    if allocation_signature not in allocation_signatures:
+                        allocation_signatures.add(allocation_signature)
+                        solver.add(z3.Not(complete_efx_formula(
+                            value, present, normalized_allocation
+                        )))
                 families = record.get("closed_families")
                 if families is None:
                     family = record.get("closed_family")
@@ -363,6 +525,7 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
             "source_sha256": hashlib.sha256(resume.read_bytes()).hexdigest(),
             "chain_length": len(chain),
             "loaded_cut_count": len(signatures),
+            "loaded_complete_efx_cut_count": len(allocation_signatures),
         }
     result = {
         "schema": "allocated-e-form0-role-split-pi-cegar-v1",
@@ -376,15 +539,24 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
         "timeout_seconds_per_check": timeout_seconds,
         "maximum_iterations": maximum_iterations,
         "maximum_families_per_round": maximum_families_per_round,
+        "separate_complete_efx": separate_complete_efx,
+        "maximum_efx_per_round": maximum_efx_per_round,
         "random_seed": random_seed,
         "resume": resume_record,
         "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "iterations": [],
         "claim_boundary": (
             "Exact 21-good maximally role-split R2 necessary-premise cell. "
-            "UNSAT is a bounded split-cell theorem, not a cap-free lift. SAT "
-            "without a closed family is an exact countermodel to this finite "
-            "premise strengthening, not to complete EFX."
+            + (
+                "The separator excludes both complete EFX allocations using "
+                "at most four current-supplier transfer edges and closed "
+                "generalized-PI families. "
+                if separate_complete_efx else
+                "The separator excludes closed generalized-PI families. "
+            )
+            + "UNSAT is a bounded split-cell theorem, not a cap-free lift. "
+            "A SAT terminal is an exact countermodel only to the declared "
+            "finite necessary-premise menu, not to general additive EFX."
         ),
     }
     started = time.monotonic()
@@ -410,11 +582,48 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
         values, active = values_from_model(solver.model(), value, present)
         result["last_values"] = serialize_values(values)
         result["last_active_goods"] = list(active)
+        if separate_complete_efx:
+            endpoints = find_complete_efx_four_edge_endpoints(
+                values, active, maximum=maximum_efx_per_round
+            )
+            if endpoints:
+                fresh_endpoints = []
+                for endpoint in endpoints:
+                    allocation = endpoint["allocation"]
+                    allocation_signature = tuple(
+                        (owner, tuple(allocation[owner])) for owner in OWNERS
+                    )
+                    if allocation_signature in allocation_signatures:
+                        continue
+                    allocation_signatures.add(allocation_signature)
+                    solver.add(z3.Not(complete_efx_formula(
+                        value, present, allocation
+                    )))
+                    fresh_endpoints.append({
+                        "allocation": {
+                            owner: list(goods)
+                            for owner, goods in allocation.items()
+                        },
+                        "transfer_edges": [
+                            list(edge) for edge in endpoint["transfer_edges"]
+                        ],
+                    })
+                if not fresh_endpoints:
+                    raise AssertionError(
+                        "oracle repeated only installed EFX allocations"
+                    )
+                record["complete_efx_allocations"] = fresh_endpoints
+                result["iterations"].append(record)
+                checkpoint()
+                continue
         families = find_closed_families(
             values, active, maximum=maximum_families_per_round
         )
         if not families:
-            result["status"] = "SAT_NO_GENERALIZED_PI"
+            result["status"] = (
+                "SAT_NO_COMPLETE_EFX_OR_GENERALIZED_PI"
+                if separate_complete_efx else "SAT_NO_GENERALIZED_PI"
+            )
             result["values"] = serialize_values(values)
             result["active_goods"] = list(active)
             result["iterations"].append(record)
@@ -440,6 +649,7 @@ def run(output: Path, timeout_seconds: int, maximum_iterations: int,
         result["status"] = "ITERATION_LIMIT"
         checkpoint()
     result["generalized_pi_cut_count"] = len(signatures)
+    result["complete_efx_cut_count"] = len(allocation_signatures)
     checkpoint()
     return result
 
@@ -452,11 +662,15 @@ def main():
     parser.add_argument("--random-seed", type=int, default=0)
     parser.add_argument("--resume", type=Path)
     parser.add_argument("--maximum-families-per-round", type=int, default=250)
+    parser.add_argument("--separate-complete-efx", action="store_true")
+    parser.add_argument("--maximum-efx-per-round", type=int, default=250)
     args = parser.parse_args()
     result = run(
         args.output, args.timeout_seconds, args.maximum_iterations,
         args.random_seed, resume=args.resume,
         maximum_families_per_round=args.maximum_families_per_round,
+        separate_complete_efx=args.separate_complete_efx,
+        maximum_efx_per_round=args.maximum_efx_per_round,
     )
     print(json.dumps({
         "status": result["status"],
