@@ -55,8 +55,8 @@ both `E` and **all** of `Y_r`, counting their union once.  The only possible
 pairs are
 
 \[
- q\to r:A,qquad r\to i:Y_r,qquad
- k\to i:E\cap(Y_k\setminus A),qquad charity\to h:p.           \tag{3}
+ q\to r:A,\qquad r\to i:Y_r,\qquad
+ k\to i:E\cap(Y_k\setminus A),\qquad charity\to h:p.          \tag{3}
 \]
 
 The third pair is absent if that intersection is empty, and self-pairs are
@@ -78,7 +78,7 @@ root, and give `p` to the root.  The final root bundle is
 The only possible nonself pairs are
 
 \[
- q\to r:A\setminus E,qquad q\to i:E,qquad charity\to r:p,    \tag{5}
+ q\to r:A\setminus E,\qquad q\to i:E,\qquad charity\to r:p.  \tag{5}
 \]
 
 so the allocation uses at most three edges.  If `i=k`, inequality (2) says

@@ -32,7 +32,7 @@ Let `q` be the target of the permanent anchor response and let
 For any nonroot owner `i`, form the complete allocation
 
 \[
- Z_r=A,qquad
+ Z_r=A,\qquad
  Z_i=(Y_i\setminus A)\mathbin{\dot\cup}Y_r\mathbin{\dot\cup}\{p\},
 \]
 

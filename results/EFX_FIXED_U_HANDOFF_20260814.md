@@ -695,28 +695,31 @@ Files:
 
 For a captured root response `E subseteq A` with source cell `S_i`, transfer
 all of `S_i` to the root, return `Y_r`, give the charity singleton to the
-root, and give `E` to its source.  Desire above the source's complete probe
-bundle pays the source even when it was holding `Y_r`.  The allocation uses
-at most four edges.
+root, and give `E` to its source.  If the anchor supplier is distinct from
+the response source, its whole residual cell `Q_i=Y_q-A` also goes to the
+root on the already active `q -> r` edge.  Desire above the source's complete
+probe bundle pays the source even when it was holding `Y_r`.  The allocation
+uses at most four edges.
 
 It preserves the strict root exactly when
 
 ```text
-v_r(E)-v_r(S_i) < delta_r+v_r(p).
+v_r(E)-v_r(S_i)-v_r(Q_i) < delta_r+v_r(p).
 ```
 
 Failure strengthens to
 
 ```text
-v_r(S_i)+v_r(p) <= v_r(E)-delta_r
-                 <= v_r(X_r)-v_r(Y_r)
-                 <  v_r(X_r).
+v_r(S_i)+v_r(Q_i)+v_r(p) <= v_r(E)-delta_r
+                          <= v_r(X_r)-v_r(Y_r)
+                          <  v_r(X_r).
 ```
 
 Raw aggregate capture is therefore no longer the terminal.  The live scalar
-branch is strict direct safety of the response source's entire ordinary cell
-together with charity; the other live branch is the exact decorated response
-after a priority-valid full-source swap.
+branch is strict direct safety of the response source's entire ordinary cell,
+the distinct anchor supplier's residual cell, and charity; the other live
+branch is the exact decorated response after a priority-valid full-source
+swap.
 
 Files:
 
@@ -763,7 +766,8 @@ as the first attack.  Its shortest live implication is:
 > forces either the nonroot singleton-hit terminal, a new decorated record,
 > release-compatible generalized PI/progress, or the represented-component
 > terminal.  In the root-response branch, combine the strict direct-safety
-> wall `v_r(S_i)+v_r(p)<v_r(X_r)` with the other signed observer/source rows;
+> wall `v_r(S_i)+v_r(Q_i)+v_r(p)<v_r(X_r)` with the other signed
+> observer/source rows;
 > otherwise construct a full-premise positive-rational countermodel.
 
 Do not treat the two-edge charity relay as unconditional.  Its reset-

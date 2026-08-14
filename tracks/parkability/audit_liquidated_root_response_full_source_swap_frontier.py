@@ -47,8 +47,8 @@ def run(root: Path = ROOT) -> dict[str, object]:
             }
         )
 
-    x, anchor, residual, charity, response, source_cell = z3.Reals(
-        "x anchor residual charity response source_cell"
+    x, anchor, residual, charity, response, source_cell, q_cell = z3.Reals(
+        "x anchor residual charity response source_cell q_cell"
     )
     delta = residual + anchor - x
     assumptions = [
@@ -58,20 +58,24 @@ def run(root: Path = ROOT) -> dict[str, object]:
         charity > 0,
         response > 0,
         source_cell >= 0,
+        q_cell >= 0,
         response <= anchor,
     ]
 
     equivalence = z3.SolverFor("QF_LRA")
     equivalence.add(*assumptions)
-    final_root = anchor - response + residual + source_cell + charity
+    final_root = anchor - response + residual + source_cell + q_cell + charity
     equivalence.add(
-        z3.Xor(final_root > x, response - source_cell < delta + charity)
+        z3.Xor(
+            final_root > x,
+            response - source_cell - q_cell < delta + charity,
+        )
     )
 
     separator = z3.SolverFor("QF_LRA")
     separator.add(*assumptions)
-    separator.add(response - source_cell >= delta + charity)
-    separator.add(z3.Not(source_cell + charity < x))
+    separator.add(response - source_cell - q_cell >= delta + charity)
+    separator.add(z3.Not(source_cell + q_cell + charity < x))
 
     theorem = root / "results/LIQUIDATED_ROOT_RESPONSE_FULL_SOURCE_SWAP_FRONTIER_LEMMA_20260814.md"
     parent = root / "results/FIXED_U_LIQUIDATED_ROOT_THREE_PLACEMENT_RESPONSE_FRONTIER_LEMMA_20260814.md"
@@ -101,8 +105,9 @@ def run(root: Path = ROOT) -> dict[str, object]:
             for path in (theorem, parent, script)
         },
         "claim_boundary": (
-            "root capture repairs by a four-edge full-source swap or implies "
-            "v_r(S_i)+v_r(p)<v_r(X_r); neither final branch is closed"
+            "root capture repairs by a four-edge full-source/anchor-residual "
+            "swap or implies v_r(S_i)+v_r(Q_i)+v_r(p)<v_r(X_r); "
+            "neither final branch is closed"
         ),
     }
 

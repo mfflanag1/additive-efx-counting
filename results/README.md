@@ -1984,5 +1984,7 @@ both encodings.
   repairs that root-capture branch by swapping the response source's entire
   ordinary cell into the root.  Either the resulting complete allocation is
   a strict-root at-most-four-edge probe, or failure forces the stronger
-  direct-safety wall `v_r(S_i)+v_r(p)<v_r(X_r)`.  Decorated recurrence and
-  the other signed rows remain open.
+  direct-safety wall
+  `v_r(S_i)+v_r(Q_i)+v_r(p)<v_r(X_r)`, where `Q_i` is the distinct anchor
+  supplier's residual cell.  Decorated recurrence and the other signed rows
+  remain open.
