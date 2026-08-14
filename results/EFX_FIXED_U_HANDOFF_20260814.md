@@ -1031,6 +1031,31 @@ predecessor to release.  This is now the only current-holder payment gate in
 the four terminal maps.  Frozen-supplier expansion and observer continuation
 are separate and remain open.
 
+## 34. The four terminal maps split into two cross exchanges and two splits
+
+The omitted response core in terminal target `q` is desired either by the
+path predecessor or by the first represented path source.  The four maps
+split exactly `2+2`.
+
+`TERMINAL_PATH_OMITTED_CORE_CROSS_EXCHANGE_FRONTIER_20260814.md` handles the
+predecessor case.  If the omitted core has a desired subcore disjoint from
+the missing owner's base-paying `d->q` core, exchange the predecessor and
+`q` cores, send `d->q` to `d`, and give charity to `d`.  The only current-
+holder pairs are
+
+```text
+predecessor->q, q->predecessor, q->d, charity->d.
+```
+
+All owners are paid.  If the two `q`-target cores cannot be uncrossed, their
+overlap captures the predecessor's complete response margin.  Thus these two
+maps are reduced to one shared-target capture packet.
+
+In the other two terminal maps the omitted core pays the first represented
+source, not the predecessor.  They retain the terminal bicriteria packet
+from section 33, plus the same disjoint-or-capture alternative at `q`.
+Frozen-supplier compression and observer safety remain open in both classes.
+
 The shortest live continuation on the permanent-anchor route is now:
 
 > Combine the exact p-augmented root-complement wall, incoming-cell capture,
@@ -1188,12 +1213,13 @@ After correcting the physical-compression scope, the conditional census,
 independent edge-mask encoding, mixed-core counterexample, and conditional
 anchor-substitution frontier, three-color support obstruction, full-owner
 connected-rank-defect census, unique Hamiltonian-omission census, and
-canonical path-prefix/terminal-split reduction were
+canonical path-prefix/terminal-split reduction, and terminal omitted-core
+cross-exchange frontier were
 replayed together with their six immediate
 liquidation/fan dependencies.  The focused chain reports:
 
 ```text
-13 passed in 0.65s
+14 passed in 0.70s
 ```
 
 The full-residual liquidation corollary is a direct algebraic specialization

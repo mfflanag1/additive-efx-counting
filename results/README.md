@@ -2057,3 +2057,10 @@ both encodings.
   minimal compensator packet that is indispensable to the terminal owner but
   too expensive for its predecessor.  Mixed frozen provenance and observer
   safety remain.
+- [`TERMINAL_PATH_OMITTED_CORE_CROSS_EXCHANGE_FRONTIER_20260814.md`](TERMINAL_PATH_OMITTED_CORE_CROSS_EXCHANGE_FRONTIER_20260814.md)
+  ([2+2 role/algebra audit](terminal_path_omitted_core_cross_exchange_frontier_audit.json))
+  splits the four terminal maps.  In two, the omitted `q`-target core is
+  desired by `q`'s predecessor; if it uncrosses from the missing owner's
+  base core, a four-edge `q`/predecessor exchange pays everyone.  Failure is
+  exact full-margin overlap capture.  The other two retain the terminal
+  bicriteria split together with the same uncrossing gate.
