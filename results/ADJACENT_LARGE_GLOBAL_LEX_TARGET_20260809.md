@@ -58,8 +58,10 @@ the reservoir-extraction premise "the pool contains a desired set", which
 fails outright for an empty bottom packet.
 
 In the two-nonsingleton composition neither hypothesis is assumed: positivity
-comes from the BCFF Lemma A.1 perturbation (see "Nonnegative values and
-ties" below), and the nonempty packets are discharged once for all four cycle
+comes from the nondegeneracy of the BCFF Lemma A.1 respecting witness
+together with the paper's standing monotonicity — *not* from A.1 alone, see
+"Nonnegative values and ties" below — and the nonempty packets are discharged
+once for all four cycle
 classes by the "Packet nondegeneracy" section of
 [`TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md`](TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md)
 — an empty bottom makes the owner a self-`f`-champion whose `f`-absorption is
@@ -417,19 +419,40 @@ not a restriction placed on possible rival allocations.
 
 ## Nonnegative values and ties
 
-The structural proof is run after the standard BCFF nondegenerate positive
-perturbation.  BCFF Lemma A.1 supplies an additive perturbation respecting
+The structural proof is run in a nondegenerate positive profile respecting
 every strict comparison of the original instance.  Positivity is used only
 for `v_r(U)>b_r` and for the strict total-versus-deletion inequalities in
 (19); nondegeneracy makes the selected envy/champion relations strict.
 
+*BCFF-audit repair 2026-08-16* (the single drift found by
+[`BCFF_IMPORT_AUDIT_20260816.md`](BCFF_IMPORT_AUDIT_20260816.md); provenance,
+not mathematics).  This paragraph previously read "BCFF Lemma A.1 supplies an
+additive perturbation".  It does not.  What A.1 supplies is a **nondegenerate
+cancelable** respecting witness `v'` together with the one-directional
+transfer `EFX(v') => EFX(v)`.  Three corrections follow.
+
+1. The *additive* respecting nondegenerate perturbation this proof is run in
+   does exist and is standard, but it is folklore (Chaudhury et al.), **not**
+   BCFF Lemma A.1.
+2. A.1 says nothing about **positivity**.  The positivity used above is A.1's
+   nondegeneracy together with the paper's standing monotonicity assumption,
+   and should be cited that way.
+3. The transfer is one-directional and carries back **only the final EFX
+   allocation** — not global lexicographic maximality, not the one-charity
+   normal form, not the selected champion graph.  Those are defined inside
+   the perturbed profile, which is exactly what makes the argument sound; the
+   correct in-corpus statement is `ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`,
+   lines 276--281 (that file is on `codex/efx-breakthrough-next-20260802`).
+   Extending this normal form verbatim to tied nonnegative profiles would
+   need an explicit state-preserving tie wrapper, which is not claimed here.
+
 If the surrounding composition produces a complete EFX allocation in the
 perturbed instance, it is EFX for the original valuations: an original
 strict EFX violation would remain strict under a respecting perturbation.
-Thus zero item values and ties do not create an additional adjacent-large
-packet case.  This wrapper does not upgrade the present cycle-class theorem
-to complete four-agent EFX; that still requires the composition described
-below.
+That one-directional transfer is exactly what A.1 licenses.  Thus zero item
+values and ties do not create an additional adjacent-large packet case.  This
+wrapper does not upgrade the present cycle-class theorem to complete
+four-agent EFX; that still requires the composition described below.
 
 ## Corrected exact diagnostics
 

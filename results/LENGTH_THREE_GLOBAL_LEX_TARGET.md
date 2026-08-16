@@ -19,7 +19,7 @@ v_i(f)\le v_i(X_i)\qquad(i\in N).
 \tag{1}
 \]
 
-BCFF Definition 2.6 supplies an incoming `f`-champion for every allocated
+BCFF Observation 2.8 supplies an incoming `f`-champion for every allocated
 bundle; Definitions 3.1--3.4 and Lemma 3.5 convert every PI cycle into a
 Pareto-improving EFX allocation.  Such a cycle is impossible at a globally
 lexicographically maximal state.
