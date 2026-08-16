@@ -1,0 +1,269 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 256,
+  "break_good_symmetry": true,
+  "candidate_partition_count": 91,
+  "elapsed_seconds": 722.480237,
+  "floater": 8,
+  "iterations_completed": 5,
+  "learned_rival_count": 1024,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "A SAT counterexample refutes normalized-utilitarian-maximal radius-one Hall completion, not complete additive EFX; UNSAT proves this fixed base cell.",
+  "n": 4,
+  "schema": "partial-hall-utilitarian-cegar-v1",
+  "smt2_output": "game-theory/additive-efx-counting/results/partial_hall_utilitarian_cegar_session5_quotient.smt2",
+  "solver_reason_unknown": "canceled",
+  "solver_statistics": "(:added-eqs                   18\n :arith-eq-adapter            4\n :arith-bound-propagations-lp 3555117\n :arith-conflicts             7969\n :arith-fixed-eqs             9\n :arith-lower                 294277\n :arith-make-feasible         195811\n :arith-max-columns           6036\n :arith-max-rows              5996\n :arith-offset-eqs            8\n :arith-upper                 292172\n :binary-propagations         203390\n :conflicts                   8306\n :decisions                   1216862\n :del-clause                  2655\n :final-checks                3\n :max-memory                  205.06\n :memory                      205.06\n :minimized-lits              4593\n :mk-bool-var                 7291\n :mk-clause                   11480\n :mk-clause-binary            1205\n :num-allocs                  1402855671\n :num-checks                  4\n :propagations                676672\n :restarts                    66\n :rlimit-count                204192276\n :time                        300.01)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": false,
+  "timeout_seconds_per_master": 300,
+  "trace": [
+    {
+      "base_score": {
+        "denominator": 14335230,
+        "numerator": 13732483
+      },
+      "elapsed_seconds": 66.517718,
+      "improving_rival_count": 1282,
+      "iteration": 1,
+      "learned_rival_count_before": 0,
+      "new_improving_rival_count": 1282,
+      "values": [
+        [
+          9994,
+          2516,
+          2516,
+          14886,
+          9994,
+          20058,
+          3739,
+          13663,
+          9854
+        ],
+        [
+          8825,
+          3849,
+          1244,
+          4859,
+          1049,
+          5054,
+          6298,
+          9952,
+          7464
+        ],
+        [
+          20,
+          48,
+          26,
+          1,
+          370,
+          392,
+          10,
+          376,
+          3
+        ],
+        [
+          918,
+          4911,
+          5088,
+          12543,
+          7750,
+          17690,
+          14851,
+          3639,
+          6124
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 119520,
+        "numerator": 111857
+      },
+      "elapsed_seconds": 73.49158,
+      "improving_rival_count": 1338,
+      "iteration": 2,
+      "learned_rival_count_before": 256,
+      "new_improving_rival_count": 1338,
+      "values": [
+        [
+          90,
+          40,
+          667,
+          667,
+          1194,
+          1384,
+          60,
+          1304,
+          1234
+        ],
+        [
+          63,
+          782,
+          9,
+          566,
+          1186,
+          1366,
+          1312,
+          90,
+          602
+        ],
+        [
+          647,
+          623,
+          8,
+          16,
+          28,
+          4,
+          655,
+          4,
+          671
+        ],
+        [
+          2,
+          210,
+          12,
+          107,
+          117,
+          331,
+          2,
+          216,
+          331
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 41008,
+        "numerator": 43207
+      },
+      "elapsed_seconds": 367.206142,
+      "improving_rival_count": 912,
+      "iteration": 3,
+      "learned_rival_count_before": 512,
+      "new_improving_rival_count": 912,
+      "values": [
+        [
+          66,
+          22,
+          4618,
+          4662,
+          11589,
+          16229,
+          4750,
+          6883,
+          2441
+        ],
+        [
+          34503,
+          34943,
+          31842,
+          176,
+          440,
+          35471,
+          34415,
+          616,
+          32634
+        ],
+        [
+          2247,
+          8,
+          2271,
+          44,
+          72,
+          2347,
+          2307,
+          4,
+          20
+        ],
+        [
+          1169,
+          24,
+          24,
+          1101,
+          4,
+          1171,
+          4,
+          1151,
+          12
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 77448,
+        "numerator": 93985
+      },
+      "elapsed_seconds": 421.89198,
+      "improving_rival_count": 549,
+      "iteration": 4,
+      "learned_rival_count_before": 768,
+      "new_improving_rival_count": 549,
+      "values": [
+        [
+          2338,
+          56,
+          56,
+          59577,
+          63894,
+          132800,
+          66344,
+          66344,
+          73279
+        ],
+        [
+          66519,
+          84,
+          32787,
+          66379,
+          28,
+          28,
+          33732,
+          28,
+          32759
+        ],
+        [
+          8311,
+          16,
+          8327,
+          8223,
+          8247,
+          16630,
+          8263,
+          8359,
+          8
+        ],
+        [
+          29,
+          3,
+          2058,
+          1,
+          2031,
+          2086,
+          11,
+          2073,
+          6
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

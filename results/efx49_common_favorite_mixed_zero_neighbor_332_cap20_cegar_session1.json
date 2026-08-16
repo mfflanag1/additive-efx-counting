@@ -1,0 +1,97 @@
+{
+  "candidate_audit": null,
+  "claim_boundary": "A SAT candidate refutes only the selection claim that every mixed profile has a threshold-passing residual partition with resident rank two and a zero-neighbor bundle. It is not an EFX counterexample. UNSAT requires independent replay.",
+  "elapsed_seconds": 107.96769690513611,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "iterations": 1,
+  "learned_motif_count": 49,
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_mixed_zero_neighbor_332_cap20_cegar_session1.pb",
+  "proto_bytes": 4477297,
+  "proto_sha256": "174263f404e16bd9c9fd8c360f3e30da6a562c58fa574976d971e6661270d279",
+  "schema": "common-favorite-mixed-zero-neighbor-cegar-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "selected_residual_shape": "332",
+  "solver_status": "UNKNOWN",
+  "solver_wall_seconds": 60.066416000000004,
+  "status": "MASTER_UNKNOWN",
+  "strict_common_favorite": 0,
+  "trace": [
+    {
+      "iteration": 1,
+      "learned_motif_count_before": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 47.828427000000005,
+      "unlearned_zero_neighbor_rank_two_motif_count": 49,
+      "values": [
+        [
+          20,
+          1,
+          12,
+          7,
+          16,
+          4,
+          1,
+          18,
+          3
+        ],
+        [
+          20,
+          1,
+          19,
+          4,
+          1,
+          19,
+          19,
+          1,
+          19
+        ],
+        [
+          20,
+          19,
+          19,
+          18,
+          19,
+          19,
+          1,
+          1,
+          1
+        ],
+        [
+          20,
+          1,
+          19,
+          19,
+          1,
+          19,
+          1,
+          18,
+          19
+        ]
+      ]
+    }
+  ],
+  "upper": 20,
+  "values": null
+}

@@ -16,6 +16,13 @@ paper/*.log
 paper/*.out
 paper/*.toc
 paper/*.synctex.gz
+paper/**/*.aux
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.log
+paper/**/*.out
+paper/**/*.toc
+paper/**/*.synctex.gz
 
 *.swp
 *.tmp
@@ -23,3 +30,31 @@ paper/*.synctex.gz
 
 /efx-paper-supplement*.tar.xz
 /efx-paper-supplement*.manifest.json
+
+# Live solver workspaces and regenerable proof transcripts.  Durable theorem
+# notes, generators, compact JSON summaries, formal sources, and verification
+# code stay versioned; these multi-gigabyte files remain local.
+/output/
+/tmp/
+/results/*.drat
+/results/*.cnf
+/results/*.cpc
+/results/*.smt2
+!/results/partial_hall_owner_minimum_ties_extraction_aggregate.smt2
+!/results/partial_hall_owner_minimum_ties_singletons_*.smt2
+!/results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.smt2
+!/results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.smt2
+/results/*.pb
+/results/*.pbtxt
+/results/*.raw.*
+/results/*.stderr.*
+formal/**/.lake/
+
+# Same policy as above, extended to results subdirectories (2026-08-16):
+# regenerable solver transcripts stay local at any depth.
+/results/**/*.drat
+/results/**/*.cnf
+/results/**/*.cpc
+/results/**/*.smt2
+/results/**/*.pb
+/results/**/*.pbtxt

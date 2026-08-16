@@ -1,0 +1,368 @@
+{
+  "agent_order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "agent_order_names": [
+    "p",
+    "s",
+    "r",
+    "q"
+  ],
+  "candidate_count": 65536,
+  "claim_boundary": {
+    "sat": "refutes the rooted external-observer lemma in this exact variable-packet cell only",
+    "unsat": "proves the rooted lemma only in this exact variable-packet cell until a cap-free proof is supplied"
+  },
+  "elapsed_seconds": 6.609837770462036,
+  "goods": [
+    "tr",
+    "br0",
+    "br1",
+    "tq",
+    "bq0",
+    "bq1",
+    "x",
+    "y",
+    "f"
+  ],
+  "iterations": 6,
+  "packet_sizes": [
+    1,
+    2,
+    1,
+    2
+  ],
+  "pool_size": 545,
+  "reason_unknown": null,
+  "schema": "alternating-variable-packet-rooted-cegar-v1",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "UNSAT_ROOTED_VARIABLE_PACKET_CELL",
+  "trace": [
+    {
+      "dominating_count": 568,
+      "efx_count": 2037,
+      "iteration": 1,
+      "new_count": 568,
+      "pool_size_before": 0,
+      "values": [
+        [
+          165,
+          16,
+          20,
+          32,
+          28,
+          32,
+          205,
+          201,
+          173
+        ],
+        [
+          9,
+          1,
+          2,
+          1,
+          4,
+          5,
+          11,
+          182,
+          3
+        ],
+        [
+          6,
+          2,
+          4,
+          87,
+          8,
+          10,
+          107,
+          109,
+          103
+        ],
+        [
+          12,
+          3,
+          4,
+          7,
+          6,
+          7,
+          170,
+          1,
+          8
+        ]
+      ]
+    },
+    {
+      "dominating_count": 164,
+      "efx_count": 1946,
+      "iteration": 2,
+      "new_count": 164,
+      "pool_size_before": 128,
+      "values": [
+        [
+          275,
+          8,
+          10,
+          6,
+          2,
+          4,
+          297,
+          295,
+          291
+        ],
+        [
+          6,
+          6,
+          7,
+          9,
+          2,
+          3,
+          18,
+          533,
+          10
+        ],
+        [
+          24,
+          20,
+          24,
+          547,
+          12,
+          16,
+          583,
+          587,
+          563
+        ],
+        [
+          1,
+          20,
+          26,
+          65,
+          4,
+          14,
+          381,
+          65,
+          18
+        ]
+      ]
+    },
+    {
+      "dominating_count": 17,
+      "efx_count": 1417,
+      "iteration": 3,
+      "new_count": 17,
+      "pool_size_before": 256,
+      "values": [
+        [
+          119,
+          4,
+          5,
+          3,
+          1,
+          2,
+          130,
+          129,
+          127
+        ],
+        [
+          503,
+          352,
+          362,
+          845,
+          161,
+          171,
+          1207,
+          1227,
+          372
+        ],
+        [
+          107,
+          125,
+          128,
+          253,
+          9,
+          12,
+          390,
+          393,
+          143
+        ],
+        [
+          5,
+          13,
+          21,
+          47,
+          3,
+          4,
+          417,
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "dominating_count": 258,
+      "efx_count": 1837,
+      "iteration": 4,
+      "new_count": 258,
+      "pool_size_before": 273,
+      "values": [
+        [
+          567,
+          8,
+          12,
+          28,
+          20,
+          24,
+          591,
+          587,
+          547
+        ],
+        [
+          2685,
+          341,
+          514,
+          1220,
+          903,
+          927,
+          3516,
+          3564,
+          634
+        ],
+        [
+          136,
+          142,
+          151,
+          299,
+          3,
+          6,
+          447,
+          450,
+          154
+        ],
+        [
+          4,
+          13,
+          23,
+          53,
+          7,
+          9,
+          437,
+          35,
+          15
+        ]
+      ]
+    },
+    {
+      "dominating_count": 92,
+      "efx_count": 1634,
+      "iteration": 5,
+      "new_count": 92,
+      "pool_size_before": 401,
+      "values": [
+        [
+          955,
+          8,
+          12,
+          28,
+          20,
+          24,
+          979,
+          975,
+          935
+        ],
+        [
+          1894,
+          27,
+          36,
+          938,
+          72,
+          920,
+          1948,
+          2958,
+          63
+        ],
+        [
+          147,
+          155,
+          165,
+          332,
+          2,
+          4,
+          495,
+          497,
+          171
+        ],
+        [
+          1,
+          10,
+          21,
+          52,
+          4,
+          6,
+          852,
+          30,
+          8
+        ]
+      ]
+    },
+    {
+      "dominating_count": 52,
+      "efx_count": 1569,
+      "iteration": 6,
+      "new_count": 52,
+      "pool_size_before": 493,
+      "values": [
+        [
+          841,
+          24,
+          28,
+          20,
+          8,
+          12,
+          897,
+          893,
+          877
+        ],
+        [
+          837,
+          91,
+          816,
+          98,
+          14,
+          21,
+          1737,
+          1786,
+          900
+        ],
+        [
+          6374,
+          381,
+          4001,
+          7240,
+          918,
+          970,
+          11189,
+          11241,
+          4486
+        ],
+        [
+          5,
+          13,
+          29,
+          71,
+          6,
+          9,
+          711,
+          41,
+          15
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

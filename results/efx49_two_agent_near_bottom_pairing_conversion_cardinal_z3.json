@@ -1,0 +1,213 @@
+{
+  "bottom_order_agents": [
+    0,
+    1
+  ],
+  "bottom_order_constraint_count": 24,
+  "common_bottom_pair": [
+    7,
+    8
+  ],
+  "conversion_partition_count": 6,
+  "conversion_partitions": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ]
+    ]
+  ],
+  "conversion_scope": "all",
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 17.346746921539307,
+  "favorite": 0,
+  "fixed_residual_matching": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "hall_failure_template_count": 21,
+  "hall_witness_type": "all",
+  "interpretation": "UNSAT proves the fixed-pairing lemma in this exact encoding; independent replay is required before theorem status.",
+  "m": 9,
+  "n": 4,
+  "near_bottom_exception_good": 6,
+  "near_bottom_order_agents": [
+    2,
+    3
+  ],
+  "near_bottom_order_constraint_count": 20,
+  "reason_unknown": null,
+  "residual_matching_wlog": "Every perfect matching of the six non-low residual goods is equivalent by a goods relabeling.",
+  "schema": "common-bottom-pairing-conversion-lra-v1",
+  "smt2_path": "results/efx49_two_agent_near_bottom_pairing_conversion_cardinal_z3.smt2",
+  "smt2_sha256": "e16a04a1b5d5d8b0412fa1407964377b1018523b3d0a1a0b112c8407f9b324d8",
+  "solver_status": "sat",
+  "status": "CONVERSION_COUNTEREXAMPLE",
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds": 300.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      1545,
+      557,
+      1058,
+      1030,
+      1030,
+      522,
+      522,
+      494,
+      522
+    ],
+    [
+      8327,
+      8282,
+      7303,
+      5210,
+      7258,
+      3117,
+      3117,
+      1069,
+      3117
+    ],
+    [
+      210,
+      155,
+      106,
+      105,
+      152,
+      158,
+      2,
+      48,
+      104
+    ],
+    [
+      1581,
+      1038,
+      1038,
+      1030,
+      1030,
+      1062,
+      8,
+      503,
+      1030
+    ]
+  ]
+}

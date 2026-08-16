@@ -1,0 +1,91 @@
+{
+  "add_per_iteration": 64,
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "claim_boundary": "UNSAT for all 20 patterns, followed by independent proof checking, would force a full Hall cell among the four selected bottom pairs whenever no pair is bottom-two for three agents. A SAT endpoint refutes only this selected-cell strengthening if another Hall cell or another EFX shape survives.",
+  "distinct_selected_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "elapsed_seconds": 300.8982238769531,
+  "favorite_pair_partition_count": 840,
+  "full_hall_cells": null,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "max_iterations": 8,
+  "multiplicity_signature": [
+    2,
+    2
+  ],
+  "pattern_count": 20,
+  "pattern_index": 6,
+  "pool_size": 768,
+  "reason_unknown": "timeout",
+  "schema": "bottom-pair-pattern-selector-cegar-v1",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_six_orbit_refutation_profile.json",
+      "sha256": "761fe6d4eeb8e14bf5b2abe8075a5626a3b1bf48cdf7e72392c143cb68a24756"
+    },
+    {
+      "path": "results/efx49_distinct_half_terminal_radius2_R_m0_cpsat_cap20_forbid_cell12_optimize_session1.json",
+      "sha256": "fb3c3e91a0fb7ccc1c4da2f19413f3133624896c433104be4e0d032cfe999e45"
+    },
+    {
+      "path": "results/efx49_distinct_half_eight_orbit_cegar_session3.json",
+      "sha256": "4af11b06945283811d7611912b7157efdf7fc479f578d8cc364e15f318505722"
+    },
+    {
+      "path": "results/efx49_distinct_half_terminal_exchange_R_session1.json",
+      "sha256": "03882aa18925b7f02fb0d6d673bfcba4d0dfa6bee1ad7a6d4965318fcbe51cce"
+    },
+    {
+      "path": "results/efx49_distinct_half_terminal_exchange_U_session1.json",
+      "sha256": "0f87d429d8960fc0009f311b120c8b8d49354a0e7f0086500b2dce9b1fefeba2"
+    },
+    {
+      "path": "results/efx49_distinct_half_eight_minus_six_anneal_seed27_session1.json",
+      "sha256": "c34e7b0147da5823859dd20aa58c565d1fde41093311d2978d2c79535aa79a5b"
+    },
+    {
+      "path": "results/efx49_distinct_half_eight_orbit_anneal_seed30_session1.json",
+      "sha256": "81ebe58e9233aaea8f3a85731055a97c664e19fd7035ab33180230aba941b6b3"
+    }
+  ],
+  "seeded_pool_size": 768,
+  "selected_cell_encoding": {
+    "accept_literals": 120,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 2,
+    "pairing_failure_terms": 30
+  },
+  "smt2_path": "results/efx49_bottom_pair_pattern6_selector_cegar_session1.smt2",
+  "smt2_sha256": "619a281b506d736b138057e8aeb0acc13b2f60daadaef676713664b02b51e6a8",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "time_limit_seconds_per_solve": 300.0,
+  "trace": [],
+  "values": null
+}

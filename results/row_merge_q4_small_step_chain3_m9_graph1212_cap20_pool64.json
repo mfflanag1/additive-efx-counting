@@ -1,0 +1,841 @@
+{
+  "add_per_round": 4,
+  "base_initial_cut_count": 16,
+  "bundle_sizes_excluding_critical_good": [
+    2,
+    1,
+    2,
+    3
+  ],
+  "chain_partition_count": 515,
+  "claim_boundary": "A bounded-integer verdict applies only to the stated wall cap. This decides only the displayed small-step Hall-size-four cell; it is not general row-merge continuation or complete EFX.",
+  "domain": "positive additive integer wall valuations with each wall item in 1..20; the perturbed post-wall entry may exceed the wall cap",
+  "elapsed_seconds": 417.32734513282776,
+  "extra_warm_partition_count": 32,
+  "extra_warm_sources": [
+    {
+      "added": 28,
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+      "sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+    },
+    {
+      "added": 4,
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool60.json",
+      "sha256": "bfbea59a2555a886889f86f85766ce1d7cf2e023887d5ea2f3c6c034bb1ef71c"
+    }
+  ],
+  "final_cut_count": 80,
+  "fixed_graph_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "fixed_graph_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "formula": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.smt2",
+  "formula_sha256": "f126a852e633f51d032061463af88813e4b8869ae9bd0f654f69d9b06516f9f5",
+  "initial_cut_count": 64,
+  "integer_upper": 20,
+  "interpretation": "The bounded exact-integer master reached its resource limit.",
+  "m": 9,
+  "max_rounds": 6,
+  "maximum_chain_length": 3,
+  "minimal_hall_witness_size": 4,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "per_check_time_limit_seconds": 180.0,
+  "round_count": 5,
+  "rounds": [
+    {
+      "chain_support_count": 7,
+      "cuts_after_learning": 68,
+      "cuts_before_solve": 64,
+      "learned_partition_count": 4,
+      "learned_partitions": [
+        [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            7,
+            8
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            7,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      ],
+      "new_chain_support_count": 7,
+      "new_chain_supporting_allocation_count": 23,
+      "post_wall_values": [
+        [
+          11,
+          9,
+          22,
+          1,
+          10,
+          12,
+          3,
+          3,
+          15
+        ],
+        [
+          5,
+          5,
+          20,
+          1,
+          14,
+          4,
+          4,
+          1,
+          17
+        ],
+        [
+          17,
+          1,
+          20,
+          1,
+          8,
+          13,
+          1,
+          5,
+          6
+        ],
+        [
+          17,
+          1,
+          20,
+          1,
+          12,
+          5,
+          5,
+          9,
+          12
+        ]
+      ],
+      "round": 0,
+      "solver_status": "sat",
+      "solver_wall_seconds": 175.8739311695099,
+      "wall_values": [
+        [
+          11,
+          9,
+          20,
+          1,
+          10,
+          12,
+          3,
+          3,
+          15
+        ],
+        [
+          5,
+          5,
+          20,
+          1,
+          14,
+          4,
+          4,
+          1,
+          17
+        ],
+        [
+          17,
+          1,
+          20,
+          1,
+          8,
+          13,
+          1,
+          5,
+          6
+        ],
+        [
+          17,
+          1,
+          20,
+          1,
+          12,
+          5,
+          5,
+          9,
+          12
+        ]
+      ]
+    },
+    {
+      "chain_support_count": 9,
+      "cuts_after_learning": 72,
+      "cuts_before_solve": 68,
+      "learned_partition_count": 4,
+      "learned_partitions": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      ],
+      "new_chain_support_count": 9,
+      "new_chain_supporting_allocation_count": 46,
+      "post_wall_values": [
+        [
+          13,
+          7,
+          21,
+          13,
+          4,
+          17,
+          2,
+          2,
+          15
+        ],
+        [
+          17,
+          1,
+          19,
+          3,
+          1,
+          1,
+          7,
+          6,
+          14
+        ],
+        [
+          11,
+          6,
+          20,
+          13,
+          3,
+          18,
+          1,
+          1,
+          17
+        ],
+        [
+          17,
+          1,
+          20,
+          3,
+          1,
+          1,
+          6,
+          7,
+          15
+        ]
+      ],
+      "round": 1,
+      "solver_status": "sat",
+      "solver_wall_seconds": 78.24536800384521,
+      "wall_values": [
+        [
+          13,
+          7,
+          20,
+          13,
+          4,
+          17,
+          2,
+          2,
+          15
+        ],
+        [
+          17,
+          1,
+          19,
+          3,
+          1,
+          1,
+          7,
+          6,
+          14
+        ],
+        [
+          11,
+          6,
+          20,
+          13,
+          3,
+          18,
+          1,
+          1,
+          17
+        ],
+        [
+          17,
+          1,
+          20,
+          3,
+          1,
+          1,
+          6,
+          7,
+          15
+        ]
+      ]
+    },
+    {
+      "chain_support_count": 14,
+      "cuts_after_learning": 76,
+      "cuts_before_solve": 72,
+      "learned_partition_count": 4,
+      "learned_partitions": [
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      ],
+      "new_chain_support_count": 14,
+      "new_chain_supporting_allocation_count": 28,
+      "post_wall_values": [
+        [
+          18,
+          1,
+          20,
+          10,
+          6,
+          14,
+          3,
+          5,
+          11
+        ],
+        [
+          6,
+          2,
+          9,
+          12,
+          1,
+          16,
+          1,
+          20,
+          1
+        ],
+        [
+          16,
+          1,
+          20,
+          20,
+          18,
+          3,
+          6,
+          1,
+          8
+        ],
+        [
+          5,
+          10,
+          12,
+          12,
+          1,
+          8,
+          1,
+          20,
+          3
+        ]
+      ],
+      "round": 2,
+      "solver_status": "sat",
+      "solver_wall_seconds": 35.61773610115051,
+      "wall_values": [
+        [
+          18,
+          1,
+          19,
+          10,
+          6,
+          14,
+          3,
+          5,
+          11
+        ],
+        [
+          6,
+          2,
+          9,
+          12,
+          1,
+          16,
+          1,
+          20,
+          1
+        ],
+        [
+          16,
+          1,
+          20,
+          20,
+          18,
+          3,
+          6,
+          1,
+          8
+        ],
+        [
+          5,
+          10,
+          12,
+          12,
+          1,
+          8,
+          1,
+          20,
+          3
+        ]
+      ]
+    },
+    {
+      "chain_support_count": 12,
+      "cuts_after_learning": 80,
+      "cuts_before_solve": 76,
+      "learned_partition_count": 4,
+      "learned_partitions": [
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            7,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      ],
+      "new_chain_support_count": 12,
+      "new_chain_supporting_allocation_count": 24,
+      "post_wall_values": [
+        [
+          19,
+          1,
+          21,
+          11,
+          7,
+          14,
+          3,
+          3,
+          11
+        ],
+        [
+          9,
+          3,
+          16,
+          5,
+          1,
+          13,
+          2,
+          19,
+          1
+        ],
+        [
+          15,
+          1,
+          20,
+          18,
+          18,
+          3,
+          7,
+          1,
+          9
+        ],
+        [
+          3,
+          6,
+          8,
+          15,
+          1,
+          1,
+          3,
+          19,
+          1
+        ]
+      ],
+      "round": 3,
+      "solver_status": "sat",
+      "solver_wall_seconds": 89.11963081359863,
+      "wall_values": [
+        [
+          19,
+          1,
+          20,
+          11,
+          7,
+          14,
+          3,
+          3,
+          11
+        ],
+        [
+          9,
+          3,
+          16,
+          5,
+          1,
+          13,
+          2,
+          19,
+          1
+        ],
+        [
+          15,
+          1,
+          20,
+          18,
+          18,
+          3,
+          7,
+          1,
+          9
+        ],
+        [
+          3,
+          6,
+          8,
+          15,
+          1,
+          1,
+          3,
+          19,
+          1
+        ]
+      ]
+    },
+    {
+      "cuts_before_solve": 80,
+      "reason_unknown": "canceled",
+      "round": 4,
+      "solver_status": "unknown",
+      "solver_wall_seconds": 37.71839904785156
+    }
+  ],
+  "schema": "row-merge-q4-exchange-chain-cegar-v1",
+  "seed_analysis": "results/row_merge_q4_distance3_exchange_m9_analysis.json",
+  "seed_analysis_sha256": "8edeea0b07fca9b2deb1ff97c59e7912ea689ab3c7c3bbe2d65093c005852a82",
+  "seed_partition_count": 8,
+  "small_step_goods": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "solver_status": "unknown",
+  "status": "CEGAR_INCOMPLETE",
+  "terminal_complete_efx_audit": null,
+  "terminal_post_wall_values": null,
+  "terminal_wall_values": null,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "warm_cut_limit": 8,
+  "warm_partition_count": 8,
+  "warm_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "warm_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9"
+}

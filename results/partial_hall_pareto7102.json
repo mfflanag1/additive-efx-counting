@@ -1,0 +1,116 @@
+{
+  "accepted_moves": 5257,
+  "audit": {
+    "candidate_utilities": [
+      1262,
+      992,
+      15583,
+      10886
+    ],
+    "dominator_count": 4,
+    "eligible_state_count": 654,
+    "radius_one": {
+      "best_normalized_slack": -0.0002632964718272775,
+      "best_witness": {
+        "floater_host": 2,
+        "masks": [
+          192,
+          14,
+          272,
+          33
+        ],
+        "matching": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "move_destination": 3,
+        "move_source": 2,
+        "moved_good": 0,
+        "normalized_minimum_slack": -0.0002632964718272775
+      },
+      "candidate_partition_count": 91,
+      "completable_partition_count": 0,
+      "completion_witnesses": []
+    },
+    "strongest_dominator": {
+      "base_index": 17334,
+      "floater": 3,
+      "total_normalized_surplus": 0.044967276009930036,
+      "utilities": [
+        1262,
+        1148,
+        15583,
+        11024
+      ]
+    },
+    "strongest_dominator_normalized_surplus": 0.044967276009930036
+  },
+  "elapsed_seconds": 338.851563,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "improvements": 1,
+  "iterations_completed": 10000,
+  "iterations_requested": 10000,
+  "max_delta": 500,
+  "meaning": "A counterexample refutes Pareto-maximal radius-one Hall completion, not complete additive EFX.",
+  "random_seed": 7102,
+  "schema": "partial-hall-pareto-anneal-v1",
+  "seed_path": "results/partial_hall_pareto71.json",
+  "seed_sha256": "e5f9002a3e510835cee564da674b7860937beeec627e6c1e7333b7bca8d10e16",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      618,
+      312,
+      383,
+      1,
+      1220,
+      1,
+      625,
+      637,
+      1
+    ],
+    [
+      119,
+      734,
+      125,
+      133,
+      669,
+      993,
+      174,
+      437,
+      414
+    ],
+    [
+      6005,
+      2754,
+      3820,
+      1881,
+      9578,
+      223,
+      2650,
+      299,
+      1908
+    ],
+    [
+      352,
+      4165,
+      138,
+      43,
+      1250,
+      10886,
+      8864,
+      2785,
+      6965
+    ]
+  ]
+}

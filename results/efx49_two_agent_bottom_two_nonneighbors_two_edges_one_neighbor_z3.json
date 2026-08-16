@@ -1,0 +1,207 @@
+{
+  "bottom_order_agents": [
+    1,
+    2
+  ],
+  "bottom_order_constraint_count": 24,
+  "common_bottom_pair": [
+    7,
+    8
+  ],
+  "conversion_partition_count": 6,
+  "conversion_partitions": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7
+      ]
+    ]
+  ],
+  "conversion_scope": "all",
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 154.51899075508118,
+  "favorite": 0,
+  "fixed_residual_matching": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "hall_failure_template_count": 1,
+  "hall_witness_type": "two_edges_one_neighbor",
+  "interpretation": "UNSAT proves the fixed-pairing lemma in this exact encoding; independent replay is required before theorem status.",
+  "m": 9,
+  "n": 4,
+  "reason_unknown": null,
+  "residual_matching_wlog": "Every perfect matching of the six non-low residual goods is equivalent by a goods relabeling.",
+  "schema": "common-bottom-pairing-conversion-lra-v1",
+  "smt2_path": "results/efx49_two_agent_bottom_two_nonneighbors_two_edges_one_neighbor_z3.smt2",
+  "smt2_sha256": "0c50f949fcb877f4af346e4d8b59d018cc3cba49ce73cff886d4af2820c10cdf",
+  "solver_status": "sat",
+  "status": "CONVERSION_COUNTEREXAMPLE",
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds": 240.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      325,
+      6,
+      164,
+      168,
+      312,
+      166,
+      8,
+      154,
+      317
+    ],
+    [
+      327,
+      109,
+      118,
+      215,
+      215,
+      219,
+      210,
+      99,
+      108
+    ],
+    [
+      6512,
+      1649,
+      3256,
+      3361,
+      4674,
+      4884,
+      6491,
+      1565,
+      1628
+    ],
+    [
+      4806,
+      3184,
+      1517,
+      3364,
+      3319,
+      1652,
+      1652,
+      45,
+      4761
+    ]
+  ]
+}

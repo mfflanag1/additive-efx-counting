@@ -1,0 +1,86 @@
+{
+  "add_per_iteration": 64,
+  "claim_boundary": "UNSAT in every relative matching orbit would establish the conditional two-cell selector only after independent replay. A terminal SAT model would refute that selector, not complete EFX.",
+  "elapsed_seconds": 300.43235301971436,
+  "favorite_pair_partition_count": 840,
+  "first_cell": {
+    "bottom_agents": [
+      0,
+      1
+    ],
+    "bottom_pair": [
+      7,
+      8
+    ],
+    "matching": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        5
+      ],
+      [
+        4,
+        6
+      ]
+    ]
+  },
+  "initial_local_conversion_count": 12,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "matching_orbit_count": 9,
+  "matching_orbit_index": 7,
+  "max_iterations": 8,
+  "pattern": "disjoint",
+  "pool_size": 445,
+  "reason_unknown": "timeout",
+  "schema": "two-pair-bottom-cross-cegar-v1",
+  "second_cell": {
+    "bottom_agents": [
+      2,
+      3
+    ],
+    "bottom_pair": [
+      5,
+      6
+    ],
+    "matching": [
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        7
+      ],
+      [
+        4,
+        8
+      ]
+    ]
+  },
+  "seed_sources": [
+    {
+      "path": "results/efx49_two_pair_bottom_cross_conversion_disjoint_orbit5_session1.json",
+      "sha256": "0c10ae64623fe8c4a57870433e04af7187117c2ff00719ca8a4a705c8225465c"
+    },
+    {
+      "path": "results/efx49_two_pair_bottom_cross_conversion_disjoint_orbit7_session1.json",
+      "sha256": "9cc5e6017cab069da2e3ba8927a4cca8236019b96cef90cc2765c282587f679f"
+    },
+    {
+      "path": "results/efx49_two_pair_bottom_cross_conversion_disjoint_orbit8_session1.json",
+      "sha256": "71c0498dbb45c005753846ee2a790d5db3007e0fe9bf92be3db1ae7a130bd36a"
+    }
+  ],
+  "seeded_pool_size": 445,
+  "smt2_path": "results/efx49_two_pair_bottom_cross_disjoint_orbit7_cegar_session1.smt2",
+  "smt2_sha256": "152dc6ff3fb0544d3b00d29a5fb9d3de5952567b3258347d90d53bec793fe9a6",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "time_limit_seconds_per_solve": 300.0,
+  "trace": [],
+  "values": null
+}

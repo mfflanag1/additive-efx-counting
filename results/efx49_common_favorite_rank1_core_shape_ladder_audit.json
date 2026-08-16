@@ -1,0 +1,335 @@
+{
+  "analytic_consequences": [
+    "The 29-partition cap-4 menu is not cap-free: the first cap-5 model has 52 unpooled singleton repairs.",
+    "A shape-only extension is false: later cap-6 models escape through new origin placements in shapes already present in the cap-5 core.",
+    "The cap-5 core adds only the 4+2+2+1 and 4+3+1+1 layers to the exact cap-4 balanced core.",
+    "Every audited cap-6 adversary has three identical resident rows, isolating origin-sensitive bundle comparisons inside the repeated-row subcell."
+  ],
+  "cap4": {
+    "claim_boundary": "This is a sufficient singleton-obstruction core for one bounded repeated-resident cell. It need not be deletion-minimal and does not extend the theorem above the recorded cap.",
+    "core_shape_counts": {
+      "3+3+2+1": 29
+    },
+    "core_size": 29,
+    "source": {
+      "core_size": 29,
+      "encoding": "duplicate_hall_selectors",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_hall_core6.pbtxt",
+      "proto_sha256": "fa092a0a1d92a21d2ddc68b964ab438e4028947e72a15b36628f38d573518c30",
+      "replay_solver_wall_seconds": 7.450735000000001,
+      "solver_wall_seconds": 8.64581,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_hall_core6.json",
+      "source_sha256": "298bc596aa2ee5092ed02b1138903ce2d1d8ddfb8978f9d30f2db18141da4426"
+    }
+  },
+  "cap5": {
+    "balanced_layer_equals_cap4_core": true,
+    "claim": "At cap 5, these same 112 singleton obstructions plus the 45 extended-bridge obstructions are infeasible in both the duplicate-matching and duplicate-Hall encodings.",
+    "claim_boundary": "This is a sufficient singleton-obstruction core for one bounded repeated-resident cell. It need not be deletion-minimal and does not extend the theorem above the recorded cap.",
+    "core_shape_counts": {
+      "3+3+2+1": 29,
+      "4+2+2+1": 35,
+      "4+3+1+1": 48
+    },
+    "hall_replay_source": {
+      "core_size": 112,
+      "encoding": "duplicate_hall_selectors",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_matching_core112_hall_replay.pbtxt",
+      "proto_sha256": "a9d59ff78bc217fd50b8f3313578b4c0cb3f3601b03b26edab946057f8841843",
+      "solver_wall_seconds": 80.741482,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_matching_core112_hall_replay.json",
+      "source_sha256": "951057670c18b91ccc48c48761e9c0008c39fef7f9520574154b231625c4c40a"
+    },
+    "matching_source": {
+      "core_size": 112,
+      "encoding": "duplicate_matching_clauses",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_shapeaware_matching_core1.pbtxt",
+      "proto_sha256": "00bded8332183f231b833d6ba1ae68e4e6c1e5a35add26548b2a5883d0806312",
+      "replay_solver_wall_seconds": 74.097711,
+      "solver_wall_seconds": 67.65952300000001,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_shapeaware_matching_core1.json",
+      "source_sha256": "7212654b2a0b4247a8a99fb572ef222afab076dc19eb3590bc0f50bc41310248"
+    },
+    "shared_core_size": 112
+  },
+  "cap6": {
+    "all_trace_models_have_identical_residents": true,
+    "current_unsolved_pool_size": 211,
+    "last_new_singleton_support_count": 15,
+    "last_solved_cut_count": 196,
+    "status": "SAT_THROUGH_196_CUTS_211_CUT_MASTER_NOT_RUN",
+    "trace": [
+      {
+        "cuts_after_learning": 113,
+        "cuts_before_solve": 112,
+        "identical_residents": true,
+        "new_singleton_support_by_shape": {
+          "5+2+1+1": 6
+        },
+        "new_singleton_support_count": 6,
+        "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_core112_probe.pbtxt",
+        "proto_sha256": "8892234b120c44892ceefbf01817949c658bb82319287ac25c76055186fb35d2",
+        "solver_wall_seconds": 71.908175,
+        "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_core112_probe.json",
+        "source_sha256": "1b128033e25b08ee5858b65eb78d1038032b231fa8f391d1eca73c66b0b983c7",
+        "values": [
+          [
+            6,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1
+          ],
+          [
+            6,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1
+          ],
+          [
+            6,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1
+          ],
+          [
+            6,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1
+          ]
+        ]
+      },
+      {
+        "cuts_after_learning": 145,
+        "cuts_before_solve": 118,
+        "identical_residents": true,
+        "new_singleton_support_by_shape": {
+          "3+3+2+1": 12,
+          "4+2+2+1": 15
+        },
+        "new_singleton_support_count": 27,
+        "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_shape_ladder_cegar2.pbtxt",
+        "proto_sha256": "601d05238b550a3d41240c92cadabb8ea2d8ef43be0dbde5886b9f675b3d92aa",
+        "solver_wall_seconds": 77.183778,
+        "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_shape_ladder_cegar2.json",
+        "source_sha256": "60088ae1ec83a13367519ea7a18df44f8aff1236393de7f0d549ddf9e8db447a",
+        "values": [
+          [
+            6,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            1
+          ],
+          [
+            6,
+            5,
+            5,
+            1,
+            4,
+            4,
+            1,
+            1,
+            3
+          ],
+          [
+            6,
+            5,
+            5,
+            1,
+            4,
+            4,
+            1,
+            1,
+            3
+          ],
+          [
+            6,
+            5,
+            5,
+            1,
+            4,
+            4,
+            1,
+            1,
+            3
+          ]
+        ]
+      },
+      {
+        "cuts_after_learning": 196,
+        "cuts_before_solve": 145,
+        "identical_residents": true,
+        "new_singleton_support_by_shape": {
+          "3+3+2+1": 30,
+          "4+3+1+1": 20,
+          "5+2+1+1": 1
+        },
+        "new_singleton_support_count": 51,
+        "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_shape_ladder_cegar3.pbtxt",
+        "proto_sha256": "9af95dcbc2f5b59ee175d3a0c3314a038f85733efe43dabf8f7b1382adb58624",
+        "solver_wall_seconds": 87.104617,
+        "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_shape_ladder_cegar3.json",
+        "source_sha256": "e21afcd62b7f1ba2c6048a0d51a604e1360a3b85041d589312600e107a7bdfaa",
+        "values": [
+          [
+            6,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            5,
+            1
+          ],
+          [
+            6,
+            4,
+            4,
+            1,
+            1,
+            1,
+            1,
+            5,
+            1
+          ],
+          [
+            6,
+            4,
+            4,
+            1,
+            1,
+            1,
+            1,
+            5,
+            1
+          ],
+          [
+            6,
+            4,
+            4,
+            1,
+            1,
+            1,
+            1,
+            5,
+            1
+          ]
+        ]
+      },
+      {
+        "cuts_after_learning": 211,
+        "cuts_before_solve": 196,
+        "identical_residents": true,
+        "new_singleton_support_by_shape": {
+          "4+2+2+1": 15
+        },
+        "new_singleton_support_count": 15,
+        "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_shape_ladder_cegar4.pbtxt",
+        "proto_sha256": "97a1b86036b62c4e862609e4a8ac243a9ef293d33cfda4b4920719f6c8f9c584",
+        "solver_wall_seconds": 222.656661,
+        "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap6_shape_ladder_cegar4.json",
+        "source_sha256": "6b5e3112a443614b7bf10f506fbbbce22c3e109fd193aa5062f87e24bbd711ba",
+        "values": [
+          [
+            6,
+            1,
+            1,
+            1,
+            2,
+            2,
+            1,
+            4,
+            1
+          ],
+          [
+            6,
+            4,
+            4,
+            4,
+            1,
+            1,
+            3,
+            1,
+            4
+          ],
+          [
+            6,
+            4,
+            4,
+            4,
+            1,
+            1,
+            3,
+            1,
+            4
+          ],
+          [
+            6,
+            4,
+            4,
+            4,
+            1,
+            1,
+            3,
+            1,
+            4
+          ]
+        ]
+      }
+    ]
+  },
+  "claim_boundary": "This audit sharpens a bounded repeated-resident local theorem and records a SAT cap-6 CEGAR frontier. It does not prove the 211-cut cap-6 master infeasible, does not cover pairwise-distinct residents or values above 6, and does not resolve complete additive EFX.",
+  "m": 9,
+  "n": 4,
+  "schema": "common-favorite-rank1-core-shape-ladder-audit-v1",
+  "selected_cell": {
+    "favorite": 0,
+    "owner": 0,
+    "repair_family": "radius2_extended_bridge",
+    "repair_partition_count": 45,
+    "resident_equality_pair": "12",
+    "residual_partition": [
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ]
+    ]
+  },
+  "status": "DUAL_ENCODED_CAP5_CORE_AND_CAP6_SAT_LADDER_AUDITED"
+}

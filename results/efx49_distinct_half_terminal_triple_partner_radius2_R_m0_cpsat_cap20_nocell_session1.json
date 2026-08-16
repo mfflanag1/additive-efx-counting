@@ -1,0 +1,125 @@
+{
+  "branches": 588848,
+  "cap": 20,
+  "case": "R",
+  "conflicts": 11491,
+  "elapsed_seconds": 7.0673768520355225,
+  "favorite_pair_efx_orbit_histogram": {
+    "('R', 0, ('RR', 'RU'))": 48,
+    "('R', 1, ('RR', 'UU'))": 44,
+    "('R', 1, ('RU', 'RU'))": 108,
+    "('R', 2, ('RU', 'UU'))": 30,
+    "('R', 3, ('UU', 'UU'))": 5,
+    "('U', 0, ('RR', 'RR'))": 12,
+    "('U', 1, ('RR', 'RU'))": 123,
+    "('U', 2, ('RR', 'UU'))": 42,
+    "('U', 2, ('RU', 'RU'))": 46,
+    "('U', 3, ('RU', 'UU'))": 13
+  },
+  "favorite_pair_efx_partition_count": 471,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": null,
+  "full_hall_cell_forbidden": false,
+  "literal_complete_efx_count": 2113,
+  "m": 9,
+  "n": 4,
+  "proto_path": "results/efx49_distinct_half_terminal_triple_partner_radius2_R_m0_cpsat_cap20_nocell_session1.pb",
+  "proto_sha256": "10debde41260f748b72d450f2cab45690cfb0bee0848b3f6a3e8bcccace2fc78",
+  "random_seed": 20260767,
+  "schema": "distinct-half-terminal-exchange-cpsat-v1",
+  "solver_status": "OPTIMAL",
+  "status": "TERMINAL_SELECTOR_COUNTEREXAMPLE",
+  "symmetry_breaking": [],
+  "target": "radius2_triple_partner",
+  "target_partition_count": 36,
+  "target_partitions_sha256": "340014860a76b9dcb3f75c2ae590df1e4681414905780fe0b7a217995e14d19a",
+  "terminal_matching_orbit": 0,
+  "terminal_matching_orbit_count": 3,
+  "terminal_matching_representative": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "terminal_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "terminal_signature": [
+    "R",
+    3,
+    [
+      "UU",
+      "UU"
+    ]
+  ],
+  "time_limit_seconds": 300.0,
+  "values": [
+    [
+      5,
+      4,
+      4,
+      4,
+      4,
+      3,
+      1,
+      1,
+      3
+    ],
+    [
+      5,
+      4,
+      4,
+      3,
+      3,
+      3,
+      1,
+      1,
+      2
+    ],
+    [
+      7,
+      5,
+      2,
+      4,
+      4,
+      5,
+      3,
+      5,
+      1
+    ],
+    [
+      5,
+      4,
+      1,
+      3,
+      3,
+      1,
+      4,
+      2,
+      4
+    ]
+  ],
+  "warning": "SAT refutes only the selected terminal-to-target implication. INFEASIBLE is finite-cap only and requires independent replay.",
+  "workers": 4
+}

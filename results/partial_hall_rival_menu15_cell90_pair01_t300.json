@@ -1,0 +1,89 @@
+{
+  "cell_count": 1,
+  "elapsed_seconds": 109.443948,
+  "meaning": "UNSAT cells are exact exclusions under the supplied strengthened master. SAT cells are candidates requiring new radius-five blockers; UNKNOWN cells are inconclusive.",
+  "only_pair": [
+    0,
+    1
+  ],
+  "only_partition_index": 90,
+  "records": [
+    {
+      "best_improving_rival": {
+        "floater": 2,
+        "masks": [
+          146,
+          72,
+          257,
+          32
+        ]
+      },
+      "deficient_agents": [
+        0,
+        1
+      ],
+      "designated_bundle": 2,
+      "floater_host": 3,
+      "improving_radius_five_rival_count": 127,
+      "move_destination": 2,
+      "move_source": 3,
+      "moved_good": 5,
+      "partition_index": 90,
+      "solver_verdict": "sat",
+      "values": [
+        [
+          1060,
+          1677,
+          12,
+          24,
+          665,
+          1809,
+          485,
+          1222,
+          78
+        ],
+        [
+          1185,
+          7,
+          783,
+          1524,
+          28,
+          2328,
+          1933,
+          28,
+          388
+        ],
+        [
+          2248,
+          6,
+          6,
+          42,
+          78,
+          6,
+          1127,
+          1211,
+          2308
+        ],
+        [
+          2354,
+          987,
+          160,
+          1107,
+          30,
+          2364,
+          2344,
+          70,
+          2304
+        ]
+      ]
+    }
+  ],
+  "schema": "partial-hall-designated-trap-screen-v1",
+  "source": "results/partial_hall_rival_menu15_factored_gate.smt2",
+  "source_sha256": "0ed384759a712be94ba061d3fc4c930b33fc1fe8db551239d8099233212aa193",
+  "status": "SCREENED",
+  "timeout_seconds_per_cell": 300,
+  "verdict_counts": {
+    "sat": 1
+  }
+}

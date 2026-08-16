@@ -1,0 +1,89 @@
+{
+  "branch_axis": "host",
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "floater_host": 0,
+      "partition_indices": [
+        13,
+        16,
+        19
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_designated_trap_host_branches/host_0.smt2",
+      "prior_branch_exclusions": 0,
+      "sha256": "22c712c6f67ffb09ffd19a0cafc57bcad810c33db9faa2e135e6620772672a53"
+    },
+    {
+      "branch": 1,
+      "floater_host": 1,
+      "partition_indices": [
+        23,
+        26,
+        39,
+        42
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_designated_trap_host_branches/host_1.smt2",
+      "prior_branch_exclusions": 1,
+      "sha256": "c6d10088f35c58c4a0214fdfe0c1c9312a9b8f551401ed27581f0b2a07228d2c"
+    },
+    {
+      "branch": 2,
+      "floater_host": 2,
+      "partition_indices": [
+        46,
+        49,
+        52,
+        55,
+        58
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_designated_trap_host_branches/host_2.smt2",
+      "prior_branch_exclusions": 2,
+      "sha256": "5613610c8a09c1bf6856ef39b7c1a3fdc741293c58a2b56d200d1e34852fda2c"
+    },
+    {
+      "branch": 3,
+      "floater_host": 3,
+      "partition_indices": [
+        69,
+        72,
+        88,
+        89,
+        90
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_designated_trap_host_branches/host_3.smt2",
+      "prior_branch_exclusions": 3,
+      "sha256": "24e6ea62ff2fcecbed57eb08af87cf252299413e745dbbe818601592f3caf38e"
+    }
+  ],
+  "designated_bundle_only": true,
+  "meaning": "The injected pair-deficiency disjunction is implied by the fixed-cell obstruction constraints, as independently proved by the dual-verified pair-deficiency theorem. The disjoint branches select the first pair or floater-host class on the requested axis.",
+  "output": "results/partial_hall_utilitarian_local_r5_designated_trap_strengthened_master.smt2",
+  "output_sha256": "1859523b0301efc8f06dda3506e7f9c47a3872ea6b55a005b924fdfd9b6999f6",
+  "pair_deficiency_core": "results/partial_hall_pair_deficiency_core.json",
+  "pair_deficiency_proof": "results/partial_hall_pair_deficiency_compact_core.json",
+  "schema": "partial-hall-pair-deficiency-strengthening-v1",
+  "selected_partition_count": 17,
+  "selected_partition_indices": [
+    13,
+    16,
+    19,
+    23,
+    26,
+    39,
+    42,
+    46,
+    49,
+    52,
+    55,
+    58,
+    69,
+    72,
+    88,
+    89,
+    90
+  ],
+  "source": "results/partial_hall_utilitarian_local_r5_nonempty_hall_core_orbit_strengthened_master.smt2",
+  "source_sha256": "31b1225eef89aad0fc685ead6971ebfadbd70a86644db57170eb44ffb30e0439",
+  "status": "EXACT_STRENGTHENING_AND_COVER"
+}

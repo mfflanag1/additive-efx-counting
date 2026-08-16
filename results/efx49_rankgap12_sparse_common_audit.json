@@ -1,0 +1,88 @@
+{
+  "balanced_partition_count": 424,
+  "cells": [
+    {
+      "comparison_variables": 5268,
+      "encoding": "matching_clauses",
+      "hall_edge_clauses": 0,
+      "hall_selectors": 0,
+      "matching_clauses": 10224,
+      "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap12_favorites4_balanced_or_singleton_sparse_session1.pb",
+      "proto_sha256": "2f3f77e6c742eab1419a45422488cce82be6c42e38b5ed472badedf73ac28c14",
+      "result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap12_favorites4_balanced_or_singleton_sparse_session1.json",
+      "result_sha256": "6c97e488205fa0e3fd376c9545475b5a9c4cd1e38c7e211beb81213b60708e4b",
+      "solver_status": "INFEASIBLE",
+      "wall_time_seconds": 106.812222
+    },
+    {
+      "comparison_variables": 5268,
+      "encoding": "hall_selectors",
+      "hall_edge_clauses": 286272,
+      "hall_selectors": 39618,
+      "matching_clauses": 0,
+      "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap12_favorites4_balanced_or_singleton_sparse_hall.pb",
+      "proto_sha256": "e3e8501bd9270e512c793315808dfebe8cc966f6a22f0b52f5b8705977168f1d",
+      "result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap12_favorites4_balanced_or_singleton_sparse_hall.json",
+      "result_sha256": "4a152c574a14a5c322bca4db3a115e3cb2b303306e4610a0a18879b1c432d14a",
+      "solver_status": "INFEASIBLE",
+      "wall_time_seconds": 420.968974
+    }
+  ],
+  "claim": "In the rank-distinct cap-12 common-favorite cell, either a shape-(3,2,2,2) EFX allocation exists or one of two canonical partitions isolating the common favorite supports EFX.",
+  "claim_level": "computer-assisted theorem candidate: exact matching-clause and Hall-selector CP-SAT infeasibility verdicts",
+  "encodings": [
+    "matching_clauses",
+    "hall_selectors"
+  ],
+  "limitations": [
+    "This is a finite rank-cap-12 statement, not arbitrary additivity.",
+    "Both encodings were solved by OR-Tools CP-SAT.",
+    "The sparse cells do not yet have external proof logs."
+  ],
+  "pool_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap12_favorites4_balanced_or_singleton_sparse_pool.json",
+  "pool_sha256": "316b53b820c7be2d56e9b0db2c2f2c7c33266a472371f3b228b7dc397d0e2685",
+  "pool_size": 426,
+  "schema": "rank-gap12-common-favorite-sparse-dual-audit-v1",
+  "singleton_partition_count": 2,
+  "singleton_partitions": [
+    [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        6
+      ],
+      [
+        5,
+        7,
+        8
+      ]
+    ]
+  ],
+  "status": "SPARSE_DUAL_ENCODING_AUDIT_PASSED"
+}

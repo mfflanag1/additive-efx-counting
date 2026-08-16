@@ -1,0 +1,50 @@
+{
+  "add_per_iteration": 128,
+  "branches": 3898077,
+  "cap": 20,
+  "cell_obstruction": "singleton",
+  "conflicts": 305875,
+  "elapsed_seconds": 600.1493828296661,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "candidate_singleton_witness_edges": 420,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 780,
+  "pool_source": {
+    "partition_count": 780,
+    "path": "results/efx49_distinct_half_full_cell_eight_orbit_pool.json",
+    "sha256": "d3ac9ea85da07072fb8ce5f970d823fbafbc5e37083849ceddc9252477533437"
+  },
+  "proto_path": "results/efx49_distinct_half_full_cell_eight_orbit_singleton_cpsat_cap20_session1.pb",
+  "proto_sha256": "ec636b88a313dc56367b9efbe514cd6bf7756bc7ddf6433e337bf76601c675cf",
+  "random_seed": 20260742,
+  "resume_source": null,
+  "resume_source_sha256": null,
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "union",
+  "seed_sources": [],
+  "seed_supported_union_size": 0,
+  "solver_status": "UNKNOWN",
+  "status": "CP_SAT_UNKNOWN",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 600.0,
+  "trace": [],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

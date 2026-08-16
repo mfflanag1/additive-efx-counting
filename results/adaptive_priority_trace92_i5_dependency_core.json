@@ -1,0 +1,88 @@
+{
+  "candidate_count": 4,
+  "cell_count": 24,
+  "core": [
+    {
+      "candidate": {
+        "base_owner": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          0,
+          null
+        ],
+        "floater": 8
+      },
+      "candidate_index": 0,
+      "kind": "candidate",
+      "pool_index": 0
+    },
+    {
+      "agent_order": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "candidate_index": 1,
+      "cell_index": 6,
+      "kind": "rival",
+      "pool_index": 196,
+      "rival": {
+        "base_owner": [
+          1,
+          1,
+          1,
+          null,
+          3,
+          1,
+          0,
+          2,
+          3
+        ],
+        "floater": 3
+      }
+    }
+  ],
+  "deletion_minimal_assumption_count": 2,
+  "deletion_minimal_candidate_count": 1,
+  "deletion_minimal_rival_count": 1,
+  "dependency_candidate_indices": [
+    1
+  ],
+  "dependency_closed_candidate_count": 2,
+  "discarded_assumption_count": 422,
+  "elapsed_seconds": 0.6954748630523682,
+  "initial_assumption_count": 424,
+  "initial_rival_count": 420,
+  "m": 9,
+  "meaning": "the fixed candidate identities cannot all be strict blocked lexicographic maxima for their 24 seed-derived orders; this does not prove the adaptive-priority conjecture",
+  "n": 4,
+  "necessity_replay": [
+    {
+      "pool_index": 0,
+      "status_without": "sat"
+    },
+    {
+      "pool_index": 196,
+      "status_without": "sat"
+    }
+  ],
+  "pool_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace92_i5_pool.json",
+  "pool_sha256": "292c8c262f567a0602f74a7bc199095cd721c213cc0c34dffb5ff8bd6b6138cc",
+  "preserve_rival_dependencies": true,
+  "require_distinct_item_values": false,
+  "schema": "adaptive-priority-rival-core-v1",
+  "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_seed_trace92_i5.json",
+  "seed_sha256": "bd6eedd3b88255226b367628117270e089c73abdcc9aa66584e970566a226f72",
+  "shrink_candidates": true,
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace92_i5_dependency_core.smt2",
+  "smt2_sha256": "f82a44f59113b4aab9c04f67c729478e31cf6e84e7af5a6db74dc085111b569a",
+  "solver_checks": 8,
+  "solver_unsat_core_count": 5,
+  "status": "UNSAT_DELETION_MINIMAL_RIVAL_CORE"
+}

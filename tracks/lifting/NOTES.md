@@ -92,7 +92,7 @@ argument then forces some agent to strong-envy after removing one chore **from i
 Write the additive closure of a valuation as `v'(S) = Σ_{g∈S} v({g})`.
 Goods-EFX defect for the pair (i envies j):
 ```
-def(i,j) = min_{g∈X_j} v_i(X_j \ {g}) − v_i(X_i)          # >0  ⇔  strong envy
+def(i,j) = max_{g∈X_j} v_i(X_j \ {g}) − v_i(X_i)          # >0  ⇔  EFX violation
 ```
 
 **(a) Coverage / subadditive witnesses (1A) — the "redundant good" collapses.**
@@ -101,12 +101,12 @@ or support-only valuation a bundle can contain a good with **zero marginal value
 is already present), so `v_i(X_j\{g}) = v_i(X_j)` and deletion buys the envied agent nothing.
 The exact inequality that fails under additive closure: for additive v',
 ```
-min_{g∈X_j} v'_i(X_j\{g}) = v'_i(X_j) − max_{g∈X_j} v_i({g})
+max_{g∈X_j} v'_i(X_j\{g}) = v'_i(X_j) − min_{g∈X_j} v_i({g})
 ```
-so the deletion **always** removes the single largest good, i.e. there is a *strictly positive cushion
-equal to the top good in the envied bundle*. Coverage can drive that cushion to 0 (redundant good);
-additive cannot. Concretely, `def(i,j)_additive = v'_i(X_j) − v'_i(X_i) − max_{g∈X_j} v_i({g})`, and
-EFX exploits exactly the `max` term the witness erased.
+so the hardest EFX comparison removes the single least-valued good. With strictly positive additive
+values there is a positive cushion equal to the bottom good in the envied bundle, but it can be
+arbitrarily small. Coverage can drive that cushion exactly to 0 through a redundant good. Concretely,
+`def(i,j)_additive = v'_i(X_j) − v'_i(X_i) − min_{g∈X_j} v_i({g})`.
 
 **Empirically fatal:** the additive shadow of Instance 2 (singletons of u_0, computed) is
 ```
@@ -115,7 +115,7 @@ agent0 = agent1 = agent2 = [23,23,23,23,23,23, 21, 28]   (goods A,B,C=23, x=21, 
 σ only permutes the *equal-valued* A/B/C goods and fixes x,y, so **all three shadows are identical → a
 single type → provably EFX-safe.** The coverage weights that made bundles differ (8·χ_{A∪B}, 9·χ_{B∪xy},…)
 are cross-type synergies that vanish under Σ-of-singletons: every good ends up in ~the same number of
-weighted sets, giving a near-uniform singleton vector (top 28 ≈ average 23.4), i.e. a large cushion and
+weighted sets, giving a near-uniform singleton vector (bottom 21 ≈ average 23.4), i.e. a large cushion and
 trivially curable envy. **Naive shadowing destroys the witness twice over: it flattens values AND
 collapses the type count.**
 
@@ -163,13 +163,13 @@ None is claimed to be a counterexample — the campaign's exact verifier decides
 
 **Claim (additive EFX-defect cushion).** For additive v and any pair (i,j),
 ```
-def(i,j) = v_i(X_j) − v_i(X_i) − max_{g∈X_j} v_i({g}).
+def(i,j) = v_i(X_j) − v_i(X_i) − min_{g∈X_j} v_i({g}).
 ```
 Strong envy therefore requires an agent i to value some bundle X_j MORE than its own by *strictly more
-than the single most valuable good in X_j*. Two consequences that doom naive lifts:
+than the least valuable good in X_j*. Two consequences that doom naive lifts:
 
-1. **Support-only / coverage witnesses shadow to near-uniform singletons** (top good ≈ average), so
-   `max_{g∈X_j} v_i({g})` is a large fraction of `v_i(X_j)` and the cushion swallows any envy — and the
+1. **Support-only / coverage witnesses shadow to near-uniform singletons** (bottom good ≈ average), so
+   `min_{g∈X_j} v_i({g})` is a substantial fraction of `v_i(X_j)` and the cushion swallows modest envy — and the
    relabeling symmetry additionally collapses the shadow to one type. (Verified: coverage witness →
    `[23,23,23,23,23,23,21,28]`, identical across agents.)
 2. **Chores witnesses cannot be complemented for n≥4** because complementation is a partition-bijection
@@ -180,5 +180,5 @@ than the single most valuable good in X_j*. Two consequences that doom naive lif
 support-only valuation, or as the negation-complement of an additive chores instance with n≥4, has
 ≤3 distinct rows and admits an EFX allocation.* If true, it formally closes the naive-lift avenue and
 forces the search onto instances (like C9) whose value multisets are engineered to be distinct AND to
-keep `max_{g∈X_j} v_i({g})` small relative to the envy gap — i.e. bundles of many near-equal middling
-goods with no single dominant good, the additive regime where the cushion is thinnest.
+keep `min_{g∈X_j} v_i({g})` small relative to the envy gap — i.e. bundles containing a tiny
+observer-specific good, the additive regime where the EFX cushion is thinnest.

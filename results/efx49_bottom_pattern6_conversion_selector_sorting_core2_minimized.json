@@ -1,0 +1,237 @@
+{
+  "agent_bottom_pairs": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "assumption_solve_seconds": 325.43912410736084,
+  "claim_boundary": "A proof-checked UNSAT replay establishes only the conditional bottom-pattern conversion lemma represented by this formula.",
+  "core_minimization": true,
+  "core_partitions": [
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        6,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        5,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        4,
+        5
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3,
+        4
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        6,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        5,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        4,
+        5
+      ],
+      [
+        3,
+        7
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        7
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        8
+      ]
+    ]
+  ],
+  "core_size": 10,
+  "formula": "results/efx49_bottom_pattern6_conversion_selector_sorting_core2_minimized.smt2",
+  "formula_sha256": "7344703414ebe1bd2a29ec42fa10c60cc4a6f3af7a06d5d587f5ea595b3e295b",
+  "pattern_index": 6,
+  "pool_size": 72,
+  "reason_unknown": null,
+  "replay_reason_unknown": null,
+  "replay_solve_seconds": 175.20114302635193,
+  "replay_solver_status": "unsat",
+  "schema": "bottom-pattern-conversion-core-lra-v1",
+  "selected_cell_encoding": {
+    "accept_literals": 120,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 2,
+    "pairing_failure_terms": 30
+  },
+  "solver_status": "unsat",
+  "source": "results/efx49_bottom_pattern6_conversion_selector_cegar_session1.json",
+  "source_sha256": "a1d34dd94278d64dada57f0f918ad4dd9c5fad3b278d5f307f2457213c9008bf",
+  "status": "CORE_UNSAT_CANDIDATE",
+  "time_limit_seconds_per_solve": 1200.0,
+  "universal_threshold_encoding": "sorting"
+}

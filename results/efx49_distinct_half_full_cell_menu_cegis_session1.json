@@ -1,0 +1,995 @@
+{
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 117.60482287406921,
+  "favorite_pair_partition_count": 840,
+  "final_profile_count": 34,
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "initial_profile_count": 24,
+  "interpretation": "An UNSAT menu would be a cap-free finite-menu strengthening of the full-cell dichotomy, subject to independent replay. SAT iterations are exact menu counterexamples but retain other favorite-pair EFX repairs.",
+  "m": 9,
+  "max_iterations": 10,
+  "n": 4,
+  "schema": "distinct-half-full-cell-menu-cegis-v1",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap5_session1.json",
+      "sha256": "905ad5c7bf1dbcfaec41b9dc6b43a9b9a150243bd106607ed7d6d7786f003b83"
+    },
+    {
+      "path": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap6_session1.json",
+      "sha256": "7fa3c4adbe6f266cb1bc46fb0cd9824c56b173cecccc141f6d04de4d1fab8c2d"
+    },
+    {
+      "path": "results/efx49_distinct_half_full_cell_complement_cegar_session1.json",
+      "sha256": "20e3098d5b2821d5c983b82b086c54d15e84eb4acadea4e8ca96777f12d2093a"
+    },
+    {
+      "path": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap20_session3.json",
+      "sha256": "0dce1aac4894c1a54da47c702b48bc4ab288c4fcb090ea56b460ef322e6d0c8e"
+    },
+    {
+      "path": "results/efx49_distinct_half_full_cell_cap5_minimal_core.json",
+      "sha256": "57a557c1c7c04deec3063cecbea3cba0d84bc67ff8ead05c5258db85f4949ddd"
+    },
+    {
+      "path": "results/efx49_distinct_half_full_cell_integer_core17_cap6.json",
+      "sha256": "5517059c69075d13d6206ddd408914fe6f87ae399757b9f6f88b44e353d48af8"
+    },
+    {
+      "path": "results/efx49_distinct_half_full_cell_real_two_partition_menu_session1.json",
+      "sha256": "13f282744774f471fddb62542cbcedb5ff1f13d4716c791414d91d842d40f30e"
+    }
+  ],
+  "smt2_path": "results/efx49_distinct_half_full_cell_menu_cegis_session1.smt2",
+  "smt2_sha256": "e6b281424de6e7c7c52b403c62823eec840dc8e27da4ed58b7e86146a4315e41",
+  "status": "ITERATION_LIMIT",
+  "time_limit_seconds_per_iteration": 60.0,
+  "trace": [
+    {
+      "favorite_pair_repair_count": 410,
+      "iteration": 1,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            5,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 24,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          9809,
+          4907,
+          4857,
+          45,
+          4922,
+          9734,
+          4992,
+          4987,
+          4927
+        ],
+        [
+          98297,
+          9896,
+          78607,
+          29535,
+          78709,
+          39329,
+          78760,
+          29484,
+          59019
+        ],
+        [
+          147930,
+          59108,
+          118456,
+          74005,
+          14817,
+          82763,
+          112237,
+          88902,
+          88662
+        ],
+        [
+          14793,
+          9758,
+          32,
+          9766,
+          9870,
+          4947,
+          9862,
+          9854,
+          9806
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 309,
+      "iteration": 2,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 25,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          22729,
+          11370,
+          11425,
+          11436,
+          11458,
+          22652,
+          11491,
+          11480,
+          11469
+        ],
+        [
+          545496,
+          229468,
+          307683,
+          229732,
+          71982,
+          386954,
+          387218,
+          387482,
+          466225
+        ],
+        [
+          68187,
+          17913,
+          22795,
+          40576,
+          45326,
+          45425,
+          45458,
+          45491,
+          45359
+        ],
+        [
+          113645,
+          56685,
+          56630,
+          56740,
+          56850,
+          68693,
+          68748,
+          68803,
+          80756
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 297,
+      "iteration": 3,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 26,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          71463,
+          41915,
+          49155,
+          49302,
+          49449,
+          63635,
+          56836,
+          56689,
+          49596
+        ],
+        [
+          23821,
+          12667,
+          12765,
+          16630,
+          16483,
+          20054,
+          20152,
+          20103,
+          20005
+        ],
+        [
+          23821,
+          16490,
+          16196,
+          16147,
+          16539,
+          16588,
+          16686,
+          16637,
+          23576
+        ],
+        [
+          3403,
+          7,
+          14,
+          3263,
+          3284,
+          3291,
+          3326,
+          3333,
+          3319
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 436,
+      "iteration": 4,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 27,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          8793,
+          4400,
+          14,
+          6607,
+          14,
+          6614,
+          6600,
+          6600,
+          6600
+        ],
+        [
+          35172,
+          17628,
+          17600,
+          17544,
+          17656,
+          19891,
+          19723,
+          19891,
+          19863
+        ],
+        [
+          96723,
+          30891,
+          63576,
+          63499,
+          31199,
+          63884,
+          63807,
+          63961,
+          31122
+        ],
+        [
+          6637,
+          6619,
+          6610,
+          6583,
+          6610,
+          6610,
+          6583,
+          6583,
+          6619
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 499,
+      "iteration": 5,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            3,
+            8
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            5,
+            6
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 28,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          1718,
+          865,
+          868,
+          871,
+          874,
+          1287,
+          446,
+          410,
+          407
+        ],
+        [
+          46854,
+          23667,
+          23475,
+          23571,
+          23763,
+          25678,
+          25582,
+          27497,
+          27785
+        ],
+        [
+          15618,
+          7633,
+          7857,
+          7825,
+          2331,
+          10252,
+          10284,
+          7889,
+          12935
+        ],
+        [
+          7809,
+          2955,
+          5334,
+          2971,
+          5366,
+          5350,
+          5382,
+          4278,
+          1867
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 347,
+      "iteration": 6,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 29,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          3008,
+          1509,
+          1539,
+          1549,
+          1569,
+          1559,
+          1529,
+          1519,
+          1459
+        ],
+        [
+          2950,
+          1606,
+          2248,
+          2278,
+          2890,
+          2293,
+          2905,
+          2860,
+          2830
+        ],
+        [
+          2360,
+          1967,
+          1943,
+          1694,
+          2015,
+          2324,
+          2027,
+          1955,
+          2003
+        ],
+        [
+          590,
+          395,
+          470,
+          479,
+          509,
+          512,
+          536,
+          533,
+          548
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 437,
+      "iteration": 7,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 30,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          4625,
+          2317,
+          2326,
+          27,
+          2362,
+          2380,
+          2371,
+          2245,
+          2209
+        ],
+        [
+          4830,
+          4414,
+          2423,
+          4430,
+          4630,
+          2855,
+          4598,
+          4446,
+          4462
+        ],
+        [
+          26565,
+          20199,
+          20551,
+          20639,
+          22766,
+          23382,
+          23470,
+          23558,
+          22854
+        ],
+        [
+          2415,
+          2287,
+          8,
+          2295,
+          2183,
+          2383,
+          2335,
+          2327,
+          2311
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 333,
+      "iteration": 8,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            7,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 31,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          11820,
+          5945,
+          1633,
+          7438,
+          7718,
+          11540,
+          7648,
+          7578,
+          70
+        ],
+        [
+          1182,
+          299,
+          848,
+          306,
+          313,
+          570,
+          862,
+          855,
+          904
+        ],
+        [
+          10638,
+          1570,
+          5726,
+          5789,
+          5852,
+          6545,
+          6608,
+          6230,
+          6293
+        ],
+        [
+          116,
+          92,
+          93,
+          94,
+          87,
+          95,
+          103,
+          98,
+          99
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 454,
+      "iteration": 9,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            8
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 32,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          27450,
+          17359,
+          7388,
+          17419,
+          17539,
+          27030,
+          17599,
+          7988,
+          7748
+        ],
+        [
+          43920,
+          14175,
+          22008,
+          22104,
+          26669,
+          31234,
+          26957,
+          22200,
+          26765
+        ],
+        [
+          5490,
+          1898,
+          2763,
+          2751,
+          2775,
+          2787,
+          3664,
+          2799,
+          4577
+        ],
+        [
+          5490,
+          1528,
+          3449,
+          3461,
+          3509,
+          3497,
+          1564,
+          3533,
+          3473
+        ]
+      ]
+    },
+    {
+      "favorite_pair_repair_count": 558,
+      "iteration": 10,
+      "menu": [
+        [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            7,
+            8
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      ],
+      "menu_size": 2,
+      "profile_count": 33,
+      "reason_unknown": null,
+      "solver_status": "sat",
+      "values": [
+        [
+          4500,
+          2648,
+          3561,
+          2661,
+          2648,
+          3574,
+          1748,
+          874,
+          861
+        ],
+        [
+          64656,
+          40342,
+          39721,
+          39928,
+          40963,
+          17477,
+          41170,
+          41584,
+          41584
+        ],
+        [
+          43104,
+          19294,
+          23810,
+          21621,
+          23948,
+          24086,
+          26275,
+          38450,
+          24362
+        ],
+        [
+          7184,
+          3454,
+          3477,
+          3546,
+          5434,
+          5250,
+          3615,
+          3592,
+          5273
+        ]
+      ]
+    }
+  ]
+}

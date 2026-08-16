@@ -1,0 +1,119 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "base_efx": true,
+  "base_utilities": [
+    8707,
+    1700,
+    8941,
+    1758
+  ],
+  "candidate_partition_count": 91,
+  "checked_partition_matching_pairs": 2184,
+  "distinct_feasibility_graph_count": 60,
+  "floater": 8,
+  "floater_nonenvy": true,
+  "hall_completable_partition_count": 0,
+  "inclusion_minimal_hall_type_histogram": {
+    "2->1": 141,
+    "3->2": 65,
+    "4->3": 8
+  },
+  "m": 9,
+  "matching_count_per_partition": 24,
+  "meaning": "The displayed eligible partial EFX state has no Hall-completable partition after assigning the floater and moving at most one old good.",
+  "move_family_primary_hall_type_histogram": {
+    "0->1:2->1": 6,
+    "0->1:3->2": 1,
+    "0->1:4->3": 1,
+    "0->2:2->1": 6,
+    "0->2:3->2": 2,
+    "0->3:2->1": 3,
+    "0->3:3->2": 3,
+    "0->3:4->3": 2,
+    "1->0:2->1": 9,
+    "1->0:3->2": 2,
+    "1->0:4->3": 1,
+    "1->2:2->1": 9,
+    "1->2:3->2": 3,
+    "1->3:2->1": 7,
+    "1->3:3->2": 1,
+    "1->3:4->3": 4,
+    "2->0:2->1": 6,
+    "2->0:3->2": 2,
+    "2->1:2->1": 5,
+    "2->1:3->2": 3,
+    "2->3:2->1": 6,
+    "2->3:3->2": 2,
+    "3->0:2->1": 1,
+    "3->1:2->1": 1,
+    "3->2:2->1": 1,
+    "radius0:2->1": 4
+  },
+  "n": 4,
+  "nearest_normalized_utilitarian_improver": {
+    "base_index": 50742,
+    "floater": 8,
+    "masks": [
+      72,
+      34,
+      17,
+      132
+    ],
+    "normalized_utilitarian_gain": {
+      "denominator": 2616,
+      "numerator": 847
+    },
+    "owner_distance": 4,
+    "utilities": [
+      8743,
+      3346,
+      8941,
+      1828
+    ]
+  },
+  "nearest_pareto_dominator": {
+    "base_index": 29574,
+    "floater": 2,
+    "masks": [
+      72,
+      258,
+      17,
+      160
+    ],
+    "owner_distance": 4,
+    "utilities": [
+      8743,
+      1709,
+      8941,
+      3506
+    ]
+  },
+  "normalized_utilitarian_improver_count": 811,
+  "pareto_dominator_count": 124,
+  "primary_hall_type_histogram": {
+    "2->1": 64,
+    "3->2": 19,
+    "4->3": 8
+  },
+  "schema": "partial-hall-radius-one-model-audit-v1",
+  "source": "results/partial_hall_utilitarian_local_r3_cegar_session1.json",
+  "source_sha256": "2f1b49bb9faadb1e156e17e4ac564c2f52421dd8b0b9026157b81b7e58957fe0",
+  "status": "VERIFIED_RADIUS_ONE_HALL_OBSTRUCTION"
+}

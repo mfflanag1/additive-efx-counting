@@ -1,0 +1,74 @@
+{
+  "branches": 225856,
+  "cap": 5,
+  "case": "U",
+  "conflicts": 4928,
+  "elapsed_seconds": 22.896209955215454,
+  "favorite_pair_efx_orbit_histogram": null,
+  "favorite_pair_efx_partition_count": null,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "proto_path": "results/efx49_distinct_half_terminal_radius2_U_m0_cpsat_cap5_replay.pb",
+  "proto_sha256": "85b6821432a3cabdf7e4d4c526cf3b7141dea8342d5766eb55cc1804fadde51c",
+  "random_seed": 99210,
+  "schema": "distinct-half-terminal-exchange-cpsat-v1",
+  "solver_status": "INFEASIBLE",
+  "status": "FINITE_CAP_UNSAT_CANDIDATE",
+  "symmetry_breaking": [],
+  "target": "radius2",
+  "target_partition_count": 138,
+  "target_partitions_sha256": "52cdf9be0d72b56b0fe6a31d35d338c8c7fb0e5d7c79e86b08ac002d8117d108",
+  "terminal_matching_orbit": 0,
+  "terminal_matching_orbit_count": 4,
+  "terminal_matching_representative": [
+    1,
+    2,
+    3,
+    0
+  ],
+  "terminal_partition": [
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "terminal_signature": [
+    "U",
+    3,
+    [
+      "RU",
+      "UU"
+    ]
+  ],
+  "time_limit_seconds": 300.0,
+  "values": null,
+  "warning": "SAT refutes only the selected terminal-to-target implication. INFEASIBLE is finite-cap only and requires independent replay.",
+  "workers": 1
+}

@@ -1,0 +1,189 @@
+{
+  "cases": [
+    {
+      "all_supporting_partitions_isolate_common_favorite": true,
+      "balanced_partition_count": 0,
+      "labeled_complete_efx_count": 18,
+      "labeled_shape_counts": {
+        "5+2+1+1": 6,
+        "6+1+1+1": 12
+      },
+      "name": "tight18",
+      "residual_6111_partition_count": 1,
+      "residual_threshold_matching_sets": [
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_family_anneal_seed132.json",
+      "source_sha256": "daaff29c17939a3119d89a4a92b5559e379a989895dbc6f96c4e128fca2beb70",
+      "strict_common_favorite_good": 0,
+      "unlabeled_shape_counts": {
+        "5+2+1+1": 1,
+        "6+1+1+1": 1
+      },
+      "unlabeled_supported_partition_count": 2,
+      "values": [
+        [
+          15,
+          11,
+          12,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2
+        ],
+        [
+          16,
+          15,
+          2,
+          3,
+          1,
+          4,
+          3,
+          3,
+          3
+        ],
+        [
+          24,
+          8,
+          10,
+          1,
+          1,
+          1,
+          1,
+          3,
+          1
+        ],
+        [
+          19,
+          10,
+          11,
+          1,
+          1,
+          1,
+          2,
+          3,
+          2
+        ]
+      ]
+    },
+    {
+      "all_supporting_partitions_isolate_common_favorite": true,
+      "balanced_partition_count": 0,
+      "labeled_complete_efx_count": 480,
+      "labeled_shape_counts": {
+        "3+3+2+1": 288,
+        "4+2+2+1": 120,
+        "4+3+1+1": 72
+      },
+      "name": "balanced_or_residual_falsification",
+      "residual_6111_partition_count": 0,
+      "residual_threshold_matching_sets": [],
+      "source_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_common_balanced_or_residual6111_matching_session1.json",
+      "source_sha256": "80c1f98b75787aaedf7aed8dbdf7c516c2128e4a996348788199fede9450dc01",
+      "strict_common_favorite_good": 0,
+      "unlabeled_shape_counts": {
+        "3+3+2+1": 12,
+        "4+2+2+1": 5,
+        "4+3+1+1": 3
+      },
+      "unlabeled_supported_partition_count": 20,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "claim": "The tight profile has exactly 18 complete EFX allocations, all favorite-singleton; the cap-13 identical-row profile refutes balanced-or-(6,1,1,1) while preserving favorite-singleton EFX.",
+  "limitations": [
+    "Neither profile is an additive-EFX counterexample.",
+    "The 18-allocation endpoint is heuristic search output.",
+    "The residual-family falsification rules out only the two-shape cover."
+  ],
+  "schema": "common-favorite-efx-4x9-boundary-audit-v1",
+  "status": "COMMON_FAVORITE_BOUNDARY_AUDIT_PASSED",
+  "tight18_independent_continuations": [
+    {
+      "accepted_moves": 24697,
+      "best_family_count": 18,
+      "improvements": 0,
+      "iterations": 60000,
+      "random_seed": 135,
+      "result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_family_anneal_seed135.json",
+      "result_sha256": "5cf32ebff5efe746980f6dc76c925f06999a9692b96c05a53750098e912d004e"
+    },
+    {
+      "accepted_moves": 25363,
+      "best_family_count": 18,
+      "improvements": 0,
+      "iterations": 60000,
+      "random_seed": 136,
+      "result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_family_anneal_seed136.json",
+      "result_sha256": "9a336290d250facb55bf7b8979391067b1a571e417020c5c8696072b2e834a48"
+    },
+    {
+      "accepted_moves": 25509,
+      "best_family_count": 18,
+      "improvements": 0,
+      "iterations": 60000,
+      "random_seed": 137,
+      "result_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_family_anneal_seed137.json",
+      "result_sha256": "80ca9890e34e048ba3b90cf864129421afc4bc95dc8a6fa358319f20076d44e2"
+    }
+  ],
+  "tight18_local_transfer_audit": {
+    "meaning": "heuristic local-minimum evidence only; not a proof of global minimality or existence",
+    "minimum_target_family_count": 18,
+    "positive_one_row_transfers_preserving_common_favorite": 841
+  }
+}

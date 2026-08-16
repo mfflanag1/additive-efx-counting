@@ -1,0 +1,64 @@
+{
+  "add_per_iteration": 512,
+  "branches": 4259124,
+  "cap": 20,
+  "cell_obstruction": "full_hall",
+  "conflicts": 1689,
+  "elapsed_seconds": 600.242350101471,
+  "favorite_pair_partition_count": 780,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "iterations": 1,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "partition_family": "eight_orbit",
+  "pool_size": 483,
+  "pool_source": null,
+  "proto_path": "results/efx49_distinct_half_eight_orbit_cpsat_cegar_cap20_session1.pb",
+  "proto_sha256": "49f2cce1a6c64e386cadffeceeeca9b19643f9406909f5ca7d240b84dd2af1c6",
+  "random_seed": 20260731,
+  "required_terminal_case": null,
+  "required_terminal_encoding": null,
+  "resume_source": null,
+  "resume_source_sha256": null,
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "union",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_six_orbit_refutation_profile.json",
+      "sha256": "761fe6d4eeb8e14bf5b2abe8075a5626a3b1bf48cdf7e72392c143cb68a24756"
+    },
+    {
+      "path": "results/efx49_distinct_half_terminal_radius2_R_m0_cpsat_cap20_forbid_cell12_optimize_session1.json",
+      "sha256": "fb3c3e91a0fb7ccc1c4da2f19413f3133624896c433104be4e0d032cfe999e45"
+    },
+    {
+      "path": "results/efx49_distinct_half_eight_orbit_cegar_session3.json",
+      "sha256": "4af11b06945283811d7611912b7157efdf7fc479f578d8cc364e15f318505722"
+    }
+  ],
+  "seed_supported_union_size": 483,
+  "solver_status": "UNKNOWN",
+  "status": "CP_SAT_UNKNOWN",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 600.0,
+  "trace": [],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

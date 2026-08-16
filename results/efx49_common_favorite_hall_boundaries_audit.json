@@ -1,0 +1,78 @@
+{
+  "analytic_interpretation": "The cleanest common-favorite target is now: if every owner fails the scalar threshold on every residual partition, force a balanced four-agent Hall matching. Universal threshold failure implies the canonical per-row rank-sum disjunction x3+x7>f or x4+x5>f.",
+  "cases": {
+    "balanced_only": {
+      "both_gates_pass_count": 0,
+      "owners": {
+        "0": {
+          "canonical_x3_plus_x7_slack": 752,
+          "canonical_x4_plus_x5_slack": 491,
+          "hall_fail_threshold_fail": 795,
+          "hall_pass_threshold_fail": 171
+        },
+        "1": {
+          "canonical_x3_plus_x7_slack": 572,
+          "canonical_x4_plus_x5_slack": 581,
+          "hall_fail_threshold_fail": 815,
+          "hall_pass_threshold_fail": 151
+        },
+        "2": {
+          "canonical_x3_plus_x7_slack": 824,
+          "canonical_x4_plus_x5_slack": 1031,
+          "hall_fail_threshold_fail": 805,
+          "hall_pass_threshold_fail": 161
+        },
+        "3": {
+          "canonical_x3_plus_x7_slack": 2129,
+          "canonical_x4_plus_x5_slack": 2399,
+          "hall_fail_threshold_fail": 829,
+          "hall_pass_threshold_fail": 137
+        }
+      },
+      "source": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_real_shape6111_session1.json",
+      "threshold_pass_count": 0
+    },
+    "singleton_only": {
+      "both_gates_pass_count": 80,
+      "owners": {
+        "0": {
+          "canonical_x3_plus_x7_slack": -6262,
+          "canonical_x4_plus_x5_slack": -6255,
+          "hall_fail_threshold_fail": 423,
+          "hall_fail_threshold_pass": 527,
+          "hall_pass_threshold_pass": 16
+        },
+        "1": {
+          "canonical_x3_plus_x7_slack": -76082,
+          "canonical_x4_plus_x5_slack": -63823,
+          "hall_fail_threshold_fail": 52,
+          "hall_fail_threshold_pass": 897,
+          "hall_pass_threshold_pass": 17
+        },
+        "2": {
+          "canonical_x3_plus_x7_slack": -13136,
+          "canonical_x4_plus_x5_slack": -12461,
+          "hall_fail_threshold_fail": 632,
+          "hall_fail_threshold_pass": 295,
+          "hall_pass_threshold_fail": 28,
+          "hall_pass_threshold_pass": 11
+        },
+        "3": {
+          "canonical_x3_plus_x7_slack": -3841,
+          "canonical_x4_plus_x5_slack": -3881,
+          "hall_fail_threshold_fail": 567,
+          "hall_fail_threshold_pass": 359,
+          "hall_pass_threshold_fail": 4,
+          "hall_pass_threshold_pass": 36
+        }
+      },
+      "source": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_favorite_real_sparse_session1.json",
+      "threshold_pass_count": 2158
+    }
+  },
+  "claim": "The balanced-only profile fails the owner threshold on every residual partition, whereas the singleton-only profile has 80 owner/partition pairs passing both the threshold and resident Hall gates.",
+  "owner_partition_checks_per_case": 3864,
+  "residual_partition_count_per_owner": 966,
+  "schema": "favorite-singleton-hall-boundaries-audit-v1",
+  "status": "HALL_BOUNDARY_AUDIT_PASSED"
+}

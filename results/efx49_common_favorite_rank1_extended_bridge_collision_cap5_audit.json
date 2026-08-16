@@ -1,0 +1,118 @@
+{
+  "case_split_reason": "The cell symmetry orders the three resident rows lexicographically, so any repeated pair is adjacent and lies in case 12 or case 23.",
+  "claim": "Within the positive cap-5 rank-one selected cell, if at least two resident valuation rows coincide, then either one of the 45 extended-bridge repairs or a favorite-singleton partition supports EFX.",
+  "claim_boundary": "This is a dual-encoded CP-SAT theorem candidate without external proof logs. It does not cover pairwise-distinct residents, values above 5, the other Hall ranks, or general additive EFX.",
+  "domain": "positive integer additive valuations in [1,5]",
+  "duplicate_hall_case_count": 7,
+  "duplicate_hall_graphs_exhaustively_checked": 4096,
+  "duplicate_hall_selector_count_per_partition": 49,
+  "encodings": [
+    "duplicate_matching_clauses",
+    "duplicate_hall_selectors"
+  ],
+  "favorite_singleton_partition_count": 966,
+  "m": 9,
+  "n": 4,
+  "nonvacuity_singleton_support_count": 225,
+  "nonvacuity_values": [
+    [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "quotient_matching_count_per_partition": 12,
+  "repair_partition_count": 45,
+  "resident_case_split": [
+    "12",
+    "23"
+  ],
+  "schema": "common-favorite-rank1-extended-bridge-collision-cap5-audit-v1",
+  "singleton_obstruction_pool_size": 392,
+  "sources": [
+    {
+      "branches": 119742,
+      "conflicts": 9500,
+      "encoding": "duplicate_matching_clauses",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_duplicate_matching_session1.pbtxt",
+      "proto_sha256": "b4b691413e0b971d99ccacae0aede89ee3e74a5e47bc678d689c2400771dd08a",
+      "resident_equality_pair": "12",
+      "solver_wall_seconds": 123.784839,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_duplicate_matching_session1.json",
+      "source_sha256": "c460501d74443e3d999bd28b63f4ea58f4a1083c1ffa6afb7be4f4a00b2e4569"
+    },
+    {
+      "branches": 127489,
+      "conflicts": 11839,
+      "encoding": "duplicate_matching_clauses",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap5_duplicate_matching_session1.pbtxt",
+      "proto_sha256": "0f679f547824b6fb6c2554bd08f39cd6d4de47a1c9131e895268b28acc26e556",
+      "resident_equality_pair": "23",
+      "solver_wall_seconds": 131.888651,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap5_duplicate_matching_session1.json",
+      "source_sha256": "c727fa07f1d36dc0995965119408d0185dbc0b2ffd23b449f86cf0777c9403e9"
+    },
+    {
+      "branches": 44212,
+      "conflicts": 9334,
+      "encoding": "duplicate_hall_selectors",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_duplicate_hall_session1.pbtxt",
+      "proto_sha256": "58f227802419a9ec1d9cf663b60d5151dadbe60825d41f6e7b9b6f235b6d2fea",
+      "resident_equality_pair": "12",
+      "solver_wall_seconds": 137.813603,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap5_duplicate_hall_session1.json",
+      "source_sha256": "050988e517bc8e13ee574f8f7e6b5fa4331f1a42bee2ec613709be1b44b5e5cc"
+    },
+    {
+      "branches": 59299,
+      "conflicts": 14382,
+      "encoding": "duplicate_hall_selectors",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap5_duplicate_hall_session1.pbtxt",
+      "proto_sha256": "f9e7a16fee5acd324ff2b7d39714880e24bcd1b339dec0786bd207d06a9ebf76",
+      "resident_equality_pair": "23",
+      "solver_wall_seconds": 160.762775,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap5_duplicate_hall_session1.json",
+      "source_sha256": "a8302273ef74a344c4316932c64d6ea62b6eb71fe84878754fc92273bc62f1b3"
+    }
+  ],
+  "status": "DUAL_ENCODED_REPEATED_RESIDENT_CAP5_THEOREM_CANDIDATE"
+}

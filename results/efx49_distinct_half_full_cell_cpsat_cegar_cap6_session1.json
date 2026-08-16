@@ -1,0 +1,119 @@
+{
+  "add_per_iteration": 512,
+  "branches": 623068,
+  "cap": 6,
+  "conflicts": 94362,
+  "elapsed_seconds": 74.95459294319153,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 401,
+  "proto_path": "results/efx49_distinct_half_full_cell_cpsat_cegar_cap6_session1.pb",
+  "proto_sha256": "759a48ec41979b44b809ec9a01a80d1e1646198906287b6387a444c314ad493c",
+  "random_seed": 20260731,
+  "resume_source": null,
+  "resume_source_sha256": null,
+  "schema": "distinct-half-full-cell-cpsat-cegar-v1",
+  "seed_mode": "complement",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_favorite_triple_boundary_audit.json",
+      "sha256": "05534e7b1d06ea4ccb57af293b33582af6811c55f76d3c22c7ca051429d6c20c"
+    },
+    {
+      "path": "results/efx49_distinct_half_structured_floor_boundary_audit.json",
+      "sha256": "79d93b5bf09d9d656ec7e52b93f78ad63578bc9edbbcd02b8aab84d34698fec0"
+    },
+    {
+      "path": "results/efx49_distinct_half_fixed_host_lex_boundary_audit.json",
+      "sha256": "00e68567a2bc286d0359b8b08a148b3a7694b9995ba7f3dacc07292747b01081"
+    },
+    {
+      "path": "results/efx49_distinct_half_rank_radius_boundary_audit.json",
+      "sha256": "47736cdfc9e2c70a13a1393904967298f27d8255f115ba99e2771753a78d66a1"
+    },
+    {
+      "path": "results/efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "sha256": "0a69e1249a57ecec7d8cd45763ff54afb8258e1eace54205a70a591767b2c693"
+    }
+  ],
+  "seed_supported_union_size": 785,
+  "solver_status": "INFEASIBLE",
+  "status": "FINITE_CAP_UNSAT_CANDIDATE",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "time_limit_seconds": 120.0,
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 346,
+      "iteration": 1,
+      "pool_size_before": 55,
+      "values": [
+        [
+          6,
+          4,
+          3,
+          1,
+          2,
+          4,
+          4,
+          4,
+          2
+        ],
+        [
+          6,
+          1,
+          4,
+          4,
+          5,
+          5,
+          2,
+          1,
+          4
+        ],
+        [
+          6,
+          1,
+          4,
+          5,
+          5,
+          5,
+          3,
+          1,
+          3
+        ],
+        [
+          6,
+          2,
+          3,
+          5,
+          5,
+          4,
+          2,
+          1,
+          5
+        ]
+      ]
+    }
+  ],
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A terminal SAT model refutes only the conditional full-cell target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

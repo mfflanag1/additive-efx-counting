@@ -1,0 +1,24 @@
+{
+  "claim": "Matching-clause and Hall-selector QF_LRA encodings both reject a common-three profile with no anchor-separated balanced EFX partition.",
+  "domain": "strictly positive reals normalized per row",
+  "encodings": [
+    {
+      "encoding": "matching_clauses",
+      "result": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_three_anchored_matching_session1.json",
+      "result_sha256": "9c80e84ca58d2c730e50f2404d9b830171f9b8b3a94f3be1b0facc94349016ce",
+      "smt2": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_three_anchored_matching_session1.smt2",
+      "smt2_sha256": "720371ab3e8f0031808651a0a570d633b2d732403998fc7b489f850786de4253"
+    },
+    {
+      "encoding": "hall_selectors",
+      "result": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_three_anchored_hall_session1.json",
+      "result_sha256": "0d75211c3a266ed988a52d7290f02f1cbd44eafa0ee652feb286a7723e378469",
+      "smt2": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_three_anchored_hall_session1.smt2",
+      "smt2_sha256": "eb9398853a6ecc571f850b78e74f56675e21f6744d392848a87f533938e5df39"
+    }
+  ],
+  "schema": "common-three-dual-encoding-audit-v1",
+  "status": "COMMON_THREE_DUAL_ENCODING_AUDIT_PASSED",
+  "target_partition_count": 240,
+  "trust_boundary": "These Z3 UNSAT results corroborate the cap-free analytic exchange proof but are not independently proof-checked certificates."
+}

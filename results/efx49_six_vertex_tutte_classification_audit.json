@@ -1,0 +1,19 @@
+{
+  "claim": "A graph on six vertices has no perfect matching iff it has at least two odd components, or deleting one vertex leaves at least three odd components, or two vertices cover every edge.",
+  "graphs_with_perfect_matching": 24823,
+  "graphs_without_perfect_matching": 7945,
+  "labeled_graph_count": 32768,
+  "obstruction_signature_counts": {
+    "one_vertex_three_odd_components": 420,
+    "one_vertex_three_odd_components + two_vertex_cover": 1416,
+    "two_odd_components": 1408,
+    "two_odd_components + one_vertex_three_odd_components": 975,
+    "two_odd_components + one_vertex_three_odd_components + two_vertex_cover": 2976,
+    "two_odd_components + two_vertex_cover": 120,
+    "two_vertex_cover": 630
+  },
+  "perfect_pairing_count": 15,
+  "schema": "six-vertex-tutte-classification-audit-v1",
+  "scope": "Exhaustive semantic audit over all 2^15 labeled simple graphs; the cap-free proof is the six-vertex specialization of Tutte's theorem.",
+  "status": "SIX_VERTEX_TUTTE_CLASSIFICATION_AUDIT_PASSED"
+}

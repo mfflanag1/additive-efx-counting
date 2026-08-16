@@ -1,0 +1,179 @@
+{
+  "agent_order": [
+    1,
+    0,
+    2,
+    3
+  ],
+  "blocked_hosts": {
+    "state_a": [
+      3
+    ],
+    "state_b": [
+      0,
+      2
+    ]
+  },
+  "checks": {
+    "frozen_formula_status": "unsat",
+    "negated_v0_g6_gt_g7_status": "unsat",
+    "negated_v2_g7_gt_g6_status": "unsat",
+    "premise_model": [
+      [
+        3,
+        3,
+        3,
+        19,
+        19,
+        13,
+        22,
+        19,
+        19
+      ],
+      [
+        3,
+        3,
+        3,
+        13,
+        19,
+        22,
+        19,
+        19,
+        19
+      ],
+      [
+        3,
+        3,
+        3,
+        19,
+        19,
+        13,
+        19,
+        22,
+        19
+      ],
+      [
+        5,
+        5,
+        5,
+        31,
+        36,
+        36,
+        36,
+        36,
+        10
+      ]
+    ],
+    "premise_status": "sat",
+    "swap_ineligible_or_lex_lower_status": "unsat"
+  },
+  "m": 9,
+  "meaning": "under weak EFX and weak floater-nonenvy, the three stated blocked hosts force the swap state to be eligible and strictly larger in order (1,0,2,3); item and agent relabeling gives the abstract forced-singleton-swap lemma",
+  "n": 4,
+  "schema": "forced-singleton-swap-certificate-v1",
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/forced_singleton_swap_lemma.smt2",
+  "smt2_sha256": "8d59723872ddffdd8e01b14287272fca6741506448ed094006b2da8984bdc478",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "state_a": {
+    "base_owner": [
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      0,
+      0,
+      null
+    ],
+    "bundles": [
+      [
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "floater": 8
+  },
+  "state_b": {
+    "base_owner": [
+      1,
+      1,
+      1,
+      null,
+      3,
+      1,
+      2,
+      0,
+      3
+    ],
+    "bundles": [
+      [
+        7
+      ],
+      [
+        0,
+        1,
+        2,
+        5
+      ],
+      [
+        6
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    "floater": 3
+  },
+  "status": "PROVED_CANONICAL_SYMBOLIC_LEMMA",
+  "strictly_positive_additive_values": true,
+  "swap_state": {
+    "base_owner": [
+      1,
+      1,
+      1,
+      null,
+      3,
+      1,
+      0,
+      2,
+      3
+    ],
+    "bundles": [
+      [
+        6
+      ],
+      [
+        0,
+        1,
+        2,
+        5
+      ],
+      [
+        7
+      ],
+      [
+        4,
+        8
+      ]
+    ],
+    "floater": 3
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "best": {
+    "record": {
+      "candidate_score": {
+        "denominator": 4519620,
+        "numerator": 8924893
+      },
+      "candidate_to_maximum_ratio": 0.9985823876150579,
+      "candidate_utilities": [
+        421882,
+        2216,
+        18235,
+        38975
+      ],
+      "eligible_state_count": 407,
+      "global_maximizer_count": 2,
+      "global_maximizers": [
+        {
+          "floater": 2,
+          "masks": [
+            192,
+            258,
+            25,
+            32
+          ]
+        },
+        {
+          "floater": 3,
+          "masks": [
+            192,
+            258,
+            21,
+            32
+          ]
+        }
+      ],
+      "is_global_maximizer": false,
+      "maximum_score": {
+        "denominator": 265860,
+        "numerator": 525739
+      },
+      "radius_one": {
+        "best_normalized_slack": -1.5488027754545737e-05,
+        "best_witness": {
+          "floater_host": 1,
+          "masks": [
+            192,
+            266,
+            21,
+            32
+          ],
+          "matching": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "move_destination": 2,
+          "move_source": 1,
+          "moved_good": 2,
+          "normalized_minimum_slack": -1.5488027754545737e-05
+        },
+        "candidate_partition_count": 91,
+        "completable_partition_count": 0,
+        "completion_witnesses": []
+      }
+    },
+    "second_move": [
+      1,
+      3,
+      8,
+      1
+    ],
+    "values": [
+      [
+        42732,
+        1131,
+        24,
+        605,
+        217,
+        35316,
+        215484,
+        206398,
+        273
+      ],
+      [
+        1392,
+        2180,
+        18,
+        18,
+        825,
+        2306,
+        86,
+        293,
+        56
+      ],
+      [
+        7902,
+        14825,
+        1,
+        1,
+        10333,
+        3441,
+        11787,
+        12864,
+        3412
+      ],
+      [
+        237,
+        8843,
+        437,
+        995,
+        1401,
+        38975,
+        919,
+        11763,
+        8170
+      ]
+    ]
+  },
+  "first_move": [
+    1,
+    8,
+    3,
+    1
+  ],
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "max_second_delta": 32,
+  "meaning": "A counterexample refutes the normalized-utilitarian radius-one Hall selector, not complete additive EFX.",
+  "schema": "partial-hall-cell-crossing-search-v1",
+  "seed_path": "results/partial_hall_utilitarian_maximality_anneal_seed17_cont117.json",
+  "seed_sha256": "df0bf1ae3d8496d87cbb991ac574684514c12f2c25a02d5f53665457df3ea78d",
+  "status": "NO_COUNTEREXAMPLE",
+  "tested_candidate_count": 8400,
+  "valid_obstruction_count": 34
+}

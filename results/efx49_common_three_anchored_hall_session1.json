@@ -1,0 +1,37 @@
+{
+  "branch": "Each agent has at least four low goods that pair above its favorite with every shared high good.",
+  "cegar_add": 0,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 156.9476568698883,
+  "favorite": 0,
+  "interpretation": "UNSAT proves the target anchored family contains an EFX allocation throughout this common-three subbranch. SAT is only a counterexample to that target family, not to EFX existence.",
+  "low_goods": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "m": 9,
+  "max_iterations": 50,
+  "n": 4,
+  "obstruction_encoding": "hall_selectors",
+  "pool_size": 240,
+  "reason_unknown": null,
+  "schema": "common-three-anchored-lra-result-v1",
+  "semantic_audit": null,
+  "shared_half_favorite_set": [
+    1,
+    2,
+    3
+  ],
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_common_three_anchored_hall_session1.smt2",
+  "smt2_sha256": "eb9398853a6ecc571f850b78e74f56675e21f6744d392848a87f533938e5df39",
+  "solver_status": "unsat",
+  "status": "UNSAT",
+  "symmetry": "common-favorite row lex and unused-good column lex",
+  "target_family": "All anchor-separated partitions of shape 3+2+2+2 with one anchor from {0,1,2,3} in each bundle.",
+  "target_partition_count": 240,
+  "trace": [],
+  "values": null
+}

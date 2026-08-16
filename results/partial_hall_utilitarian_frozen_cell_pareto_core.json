@@ -1,0 +1,394 @@
+{
+  "candidate_partition_count": 91,
+  "deletion_irreducible_unsat_core": [
+    {
+      "agent": 0,
+      "kind": "row_normalization",
+      "label": "track_0"
+    },
+    {
+      "agent": 2,
+      "kind": "row_normalization",
+      "label": "track_20"
+    },
+    {
+      "agent": 2,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_22"
+    },
+    {
+      "agent": 3,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_33"
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_72",
+      "left_mask": 22,
+      "right_mask": 64
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_696",
+      "left_mask": 66,
+      "right_mask": 24
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_713",
+      "left_mask": 68,
+      "right_mask": 24
+    },
+    {
+      "agent": 2,
+      "kind": "eligible_comparison",
+      "label": "track_1228",
+      "left_mask": 68,
+      "right_mask": 17
+    },
+    {
+      "agent": 2,
+      "kind": "eligible_comparison",
+      "label": "track_1376",
+      "left_mask": 257,
+      "right_mask": 24
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2840",
+      "left_mask": 10,
+      "right_mask": 20
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2975",
+      "left_mask": 17,
+      "right_mask": 268
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3549",
+      "left_mask": 64,
+      "right_mask": 52
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3670",
+      "left_mask": 68,
+      "right_mask": 272
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4306",
+      "left_mask": 273,
+      "right_mask": 132
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4542",
+      "left_mask": 320,
+      "right_mask": 17
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5624",
+      "left_mask": 14,
+      "right_mask": 32
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6088",
+      "left_mask": 32,
+      "right_mask": 24
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6339",
+      "left_mask": 64,
+      "right_mask": 14
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8636",
+      "left_mask": 14,
+      "right_mask": 32
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8766",
+      "left_mask": 17,
+      "right_mask": 266
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_9036",
+      "left_mask": 34,
+      "right_mask": 64
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_9547",
+      "left_mask": 136,
+      "right_mask": 66
+    },
+    {
+      "floater": 0,
+      "kind": "maximality",
+      "label": "track_11154",
+      "masks": [
+        144,
+        14,
+        320,
+        32
+      ]
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11212",
+      "masks": [
+        384,
+        80,
+        9,
+        36
+      ]
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11222",
+      "masks": [
+        384,
+        24,
+        65,
+        36
+      ]
+    }
+  ],
+  "deletion_irreducible_unsat_core_size": 25,
+  "elapsed_seconds": 2.8936471939086914,
+  "eligible_comparison_count": 2024,
+  "eligible_state_count": 992,
+  "false_edge_witness_count": 565,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "ineligible_witness_count": 9046,
+  "meaning": "SAT would refute the normalized-utilitarian radius-one Hall selector; UNSAT eliminates only this frozen combinatorial cell. Neither outcome by itself refutes complete additive EFX.",
+  "schema": "partial-hall-utilitarian-frozen-cell-v1",
+  "seed_path": "results/partial_hall_pareto_cegar_session1.json",
+  "seed_sha256": "8196ea6ea2c5d4357b754f4c4bf824e5f6a2cb2b3088f4a0c49412bf44ae049b",
+  "smt2_path": "results/partial_hall_utilitarian_frozen_cell_pareto_core.smt2",
+  "smt2_sha256": "c947f990fa784e33ba46ad1b23ab05c3d89a7476161a51f965c297e9b84e8300",
+  "status": "UNSAT",
+  "timeout_seconds": 600.0,
+  "true_edge_comparison_count": 1799,
+  "unsat_core": [
+    {
+      "agent": 0,
+      "kind": "row_normalization",
+      "label": "track_0"
+    },
+    {
+      "agent": 2,
+      "kind": "row_normalization",
+      "label": "track_20"
+    },
+    {
+      "agent": 2,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_22"
+    },
+    {
+      "agent": 3,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_33"
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_72",
+      "left_mask": 22,
+      "right_mask": 64
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_696",
+      "left_mask": 66,
+      "right_mask": 24
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_713",
+      "left_mask": 68,
+      "right_mask": 24
+    },
+    {
+      "agent": 2,
+      "kind": "eligible_comparison",
+      "label": "track_1228",
+      "left_mask": 68,
+      "right_mask": 17
+    },
+    {
+      "agent": 2,
+      "kind": "eligible_comparison",
+      "label": "track_1376",
+      "left_mask": 257,
+      "right_mask": 24
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2840",
+      "left_mask": 10,
+      "right_mask": 20
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2975",
+      "left_mask": 17,
+      "right_mask": 268
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3549",
+      "left_mask": 64,
+      "right_mask": 52
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3670",
+      "left_mask": 68,
+      "right_mask": 272
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4306",
+      "left_mask": 273,
+      "right_mask": 132
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4542",
+      "left_mask": 320,
+      "right_mask": 17
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5624",
+      "left_mask": 14,
+      "right_mask": 32
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6088",
+      "left_mask": 32,
+      "right_mask": 24
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6339",
+      "left_mask": 64,
+      "right_mask": 14
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8636",
+      "left_mask": 14,
+      "right_mask": 32
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8766",
+      "left_mask": 17,
+      "right_mask": 266
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_9036",
+      "left_mask": 34,
+      "right_mask": 64
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_9547",
+      "left_mask": 136,
+      "right_mask": 66
+    },
+    {
+      "floater": 0,
+      "kind": "maximality",
+      "label": "track_11154",
+      "masks": [
+        144,
+        14,
+        320,
+        32
+      ]
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11212",
+      "masks": [
+        384,
+        80,
+        9,
+        36
+      ]
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11222",
+      "masks": [
+        384,
+        24,
+        65,
+        36
+      ]
+    }
+  ],
+  "unsat_core_size": 25
+}

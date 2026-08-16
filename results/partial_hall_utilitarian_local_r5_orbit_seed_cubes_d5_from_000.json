@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_6_2_2",
+        "v_0_4 +\n-1*v_0_6 +\n-1*v_1_3 +\n-1*v_2_4 +\nv_2_5 +\n-1*v_3_5 +\nv_3_6 +\nv_3_8 <=\n0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_000.smt2",
+      "sha256": "14570a3fdf3d665d2c8001616311f0f5e9fed0d49ec279cc278da32f8b877cef"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_6_2_2",
+        "Not(v_0_4 +\n    -1*v_0_6 +\n    -1*v_1_3 +\n    -1*v_2_4 +\n    v_2_5 +\n    -1*v_3_5 +\n    v_3_6 +\n    v_3_8 <=\n    0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_001.smt2",
+      "sha256": "8e7b1f12e1694ed7a27754b7e85bd4e7f1f824dfbe0c1d8d7aeca9f133ae47c9"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(edge_6_2_2)",
+        "v_0_1 + -1*v_0_3 + v_0_4 + v_0_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_002.smt2",
+      "sha256": "d464aa9a146f8f5ad3f4d23642213e748b37c252ccc7698ccffb589547092168"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(edge_6_2_2)",
+        "Not(v_0_1 + -1*v_0_3 + v_0_4 + v_0_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_003.smt2",
+      "sha256": "1d8d42b3f88359217f526e3fcd24ef474a5f0b934a1cecca3e85fde4e5ebc50c"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d3/branch_000.smt2",
+  "source_sha256": "9d2475646d0ca32b75cf0d200bca76e6879a9db4bcbde6b89f3e4caee2d1c203",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

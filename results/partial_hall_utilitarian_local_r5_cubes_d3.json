@@ -1,0 +1,92 @@
+{
+  "branch_count": 8,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_65_1_1",
+        "v_0_0 + v_0_1 + v_0_2 + v_0_3 + -1*v_0_7 + v_0_8 >= 0",
+        "v_0_0 + v_0_1 + v_0_2 + v_0_3 + -1*v_0_6 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_000.smt2",
+      "sha256": "71dda0f09bb6f73ad26a5d2736cf794402ed46bd076ef6264e344c4755227013"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_65_1_1",
+        "v_0_0 + v_0_1 + v_0_2 + v_0_3 + -1*v_0_7 + v_0_8 >= 0",
+        "Not(v_0_0 + v_0_1 + v_0_2 + v_0_3 + -1*v_0_6 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_001.smt2",
+      "sha256": "9d38bf028f44afab204d69f194e88c01f07d78ca739323896c7a0bc7fd734d05"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "edge_65_1_1",
+        "Not(v_0_0 + v_0_1 + v_0_2 + v_0_3 + -1*v_0_7 + v_0_8 >= 0)",
+        "edge_28_0_0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_002.smt2",
+      "sha256": "3ac5e62ed5c7eb6e6597e809a8dc6ecb70b04a1bda917b8b5cdfe88f8961740b"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "edge_65_1_1",
+        "Not(v_0_0 + v_0_1 + v_0_2 + v_0_3 + -1*v_0_7 + v_0_8 >= 0)",
+        "Not(edge_28_0_0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_003.smt2",
+      "sha256": "d056c10a6df9ba1df20003294421dc16a52a2ecc1ecc152039965d7aa4587818"
+    },
+    {
+      "branch": 4,
+      "cube": [
+        "Not(edge_65_1_1)",
+        "edge_90_1_0",
+        "v_1_2 + -1*v_1_4 + v_1_6 + -1*v_1_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_004.smt2",
+      "sha256": "d464190582abc2694fb6e979172803e7afb1b08751839b5f708161529abf1175"
+    },
+    {
+      "branch": 5,
+      "cube": [
+        "Not(edge_65_1_1)",
+        "edge_90_1_0",
+        "Not(v_1_2 + -1*v_1_4 + v_1_6 + -1*v_1_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_005.smt2",
+      "sha256": "6787f18fedefaec22e42a7b4f81f5c44152c87c3f446fd8019b6d79e8a66b91d"
+    },
+    {
+      "branch": 6,
+      "cube": [
+        "Not(edge_65_1_1)",
+        "Not(edge_90_1_0)",
+        "v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_006.smt2",
+      "sha256": "b188152d5442bbcdbc7ca8b6efa42f4e1959cd69a828c9d4360eb64c4b564018"
+    },
+    {
+      "branch": 7,
+      "cube": [
+        "Not(edge_65_1_1)",
+        "Not(edge_90_1_0)",
+        "Not(v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_cubes_d3/branch_007.smt2",
+      "sha256": "e7b8454ab25f58253103315301561f3775dedd20713aad56d9380d948abe4d1e"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 3,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_factored_session1.smt2",
+  "source_sha256": "d692c217f71d7f846498bc8dcdba37f5639728814917164df5b27b1ae7d60e49",
+  "status": "EXACT_CUBE_COVER"
+}

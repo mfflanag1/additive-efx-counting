@@ -1,0 +1,66 @@
+{
+  "candidate_partition_count": 91,
+  "elapsed_seconds": 0.3887450695037842,
+  "eligible_comparison_count": 1750,
+  "eligible_state_count": 407,
+  "false_edge_witness_count": 563,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "ineligible_witness_count": 9407,
+  "meaning": "SAT would refute the normalized-utilitarian radius-one Hall selector; UNSAT eliminates only this frozen combinatorial cell. Neither outcome by itself refutes complete additive EFX.",
+  "schema": "partial-hall-utilitarian-frozen-cell-v1",
+  "seed_path": "results/partial_hall_utilitarian_maximality_anneal_seed17_cont117.json",
+  "seed_sha256": "df0bf1ae3d8496d87cbb991ac574684514c12f2c25a02d5f53665457df3ea78d",
+  "smt2_path": "results/partial_hall_utilitarian_frozen_cell_seed17_cont117_core.smt2",
+  "smt2_sha256": "f3a949008774ca2040fd0271d376eb53f4f240645a8d635ad6361af366d69cce",
+  "status": "UNSAT",
+  "timeout_seconds": 600.0,
+  "true_edge_comparison_count": 1740,
+  "unsat_core": [
+    {
+      "agent": 1,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_13"
+    },
+    {
+      "agent": 2,
+      "good": 3,
+      "kind": "strict_positivity",
+      "label": "track_24"
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5937",
+      "left_mask": 14,
+      "right_mask": 17
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5991",
+      "left_mask": 21,
+      "right_mask": 258
+    },
+    {
+      "floater": 2,
+      "kind": "maximality",
+      "label": "track_11313",
+      "masks": [
+        192,
+        258,
+        25,
+        32
+      ]
+    }
+  ],
+  "unsat_core_size": 5
+}

@@ -1,0 +1,138 @@
+{
+  "all_maximality_constraints_satisfied": true,
+  "cegar_batch": 8,
+  "cegar_iterations": 2,
+  "complete_candidate_count": 52,
+  "learned_maximality_blocker_count": 13,
+  "learned_maximality_blockers": [
+    "maximality_0_0_0123",
+    "maximality_0_0_0132",
+    "maximality_0_0_3120",
+    "maximality_1_1_0123",
+    "maximality_1_1_0132",
+    "maximality_1_1_3102",
+    "maximality_2_2_0123",
+    "maximality_1_1_0312",
+    "maximality_1_1_0321",
+    "maximality_2_2_2130",
+    "maximality_2_2_2310",
+    "maximality_2_2_0132",
+    "maximality_3_3_0123"
+  ],
+  "meaning": "UNSAT proves that normalized-utilitarian maximality against all owner-minimum substitutions forces an owner-minimum Hall completion. SAT must be checked for item-level realizability.",
+  "model": {
+    "floaters": [
+      "(/ 1.0 1072.0)",
+      "(/ 1.0 67.0)",
+      "(/ 9.0 536.0)",
+      "(/ 1.0 134.0)"
+    ],
+    "remainder_minima": [
+      [
+        "(/ 1073.0 4288.0)",
+        "(/ 5.0 1072.0)",
+        "(/ 1041.0 4288.0)",
+        "(/ 1045.0 4288.0)"
+      ],
+      [
+        "(/ 1.0 536.0)",
+        "(/ 237.0 1072.0)",
+        "(/ 129.0 536.0)",
+        "(/ 33.0 134.0)"
+      ],
+      [
+        "(/ 1.0 1072.0)",
+        "(/ 1.0 1072.0)",
+        "(/ 985.0 4288.0)",
+        "(/ 1001.0 4288.0)"
+      ],
+      [
+        "(/ 257.0 804.0)",
+        "(/ 511.0 1608.0)",
+        "(/ 9.0 1072.0)",
+        "(/ 487.0 1608.0)"
+      ]
+    ],
+    "remainder_totals": [
+      [
+        "(/ 1073.0 4288.0)",
+        "(/ 5.0 1072.0)",
+        "(/ 1041.0 4288.0)",
+        "(/ 1045.0 4288.0)"
+      ],
+      [
+        "(/ 1.0 536.0)",
+        "(/ 237.0 1072.0)",
+        "(/ 129.0 536.0)",
+        "(/ 33.0 134.0)"
+      ],
+      [
+        "(/ 1.0 1072.0)",
+        "(/ 1.0 1072.0)",
+        "(/ 985.0 4288.0)",
+        "(/ 1001.0 4288.0)"
+      ],
+      [
+        "(/ 257.0 804.0)",
+        "(/ 511.0 1608.0)",
+        "(/ 9.0 1072.0)",
+        "(/ 487.0 1608.0)"
+      ]
+    ],
+    "selected_goods": [
+      [
+        "(/ 1045.0 8576.0)",
+        "(/ 1117.0 8576.0)",
+        "(/ 1.0 268.0)",
+        "(/ 1.0 536.0)"
+      ],
+      [
+        "(/ 127.0 536.0)",
+        "(/ 9.0 268.0)",
+        "(/ 1.0 1072.0)",
+        "(/ 1.0 268.0)"
+      ],
+      [
+        "(/ 1061.0 4288.0)",
+        "(/ 1041.0 4288.0)",
+        "(/ 21.0 1072.0)",
+        "(/ 9.0 1072.0)"
+      ],
+      [
+        "(/ 5.0 536.0)",
+        "(/ 1.0 1072.0)",
+        "(/ 13.0 1072.0)",
+        "(/ 23.0 1072.0)"
+      ]
+    ]
+  },
+  "multi_good_remainder_bundle_labels": [],
+  "pair_extraction_lemma_asserted": true,
+  "pair_orbit_count": 58,
+  "pair_orbit_index": 1,
+  "schema": "partial-hall-owner-minimum-substitution-conversion-v1",
+  "selected_pair_role": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    1
+  ],
+  "singleton_bundle_labels": [],
+  "smt2": "results/partial_hall_owner_minimum_substitution_conversion_r00_o01_cegar_resume.smt2",
+  "smt2_sha256": "5405e9e1d1dbfec473e17787cdbd25c7de0d701d10d0023c3cf0e3044013db20",
+  "solver_reason_unknown": null,
+  "solver_verdict": "sat",
+  "status": "AGGREGATE_COUNTEREXAMPLE",
+  "substitution_allocation_count": 384,
+  "substitution_eligibility_factored": true,
+  "substitution_partition_count": 16,
+  "timeout_seconds": 120,
+  "trap_witness_prefix": null,
+  "unsat_core": null
+}

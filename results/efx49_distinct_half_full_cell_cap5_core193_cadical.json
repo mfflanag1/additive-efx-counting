@@ -1,0 +1,51 @@
+{
+  "cap": 5,
+  "clauses": 2112228,
+  "dimacs_bytes": 53048113,
+  "dimacs_path": "results/efx49_distinct_half_full_cell_cap5_core193.cnf",
+  "dimacs_sha256": "b0d8ed17b78bb8e92247c66e810a713ef0cf77eb995271fa3b43109711a55640",
+  "encoder_source_sha256": "adf33f40d7311fcea1172c32f4651289288f6fbcf56c4c51fe74300c1b92e2b8",
+  "encoding": {
+    "hall_witnesses": 8820,
+    "implementation": "independent monotone-threshold CNF",
+    "linear_witnesses": 25436,
+    "no_full_cell": {
+      "hall_failure_templates_per_pairing": 21,
+      "hall_witnesses": 8820,
+      "low_pair_cells": 28,
+      "rejection_inequality_witnesses": 672
+    },
+    "partition_violation_selectors": 3088,
+    "universal_threshold": "four-set and pair-degree witnesses",
+    "value_bits_per_entry": 4
+  },
+  "environment": {
+    "platform": "macOS-26.3.1-arm64-arm-64bit",
+    "python_sat": "1.9.dev7"
+  },
+  "fixed_values": null,
+  "partition_pool_size": 193,
+  "schema": "distinct-half-full-cell-threshold-cnf-result-v1",
+  "seconds": {
+    "build": 6.523983,
+    "solve_wall": 39.759251,
+    "total": 51.102883
+  },
+  "solver": {
+    "backend": "Cadical195",
+    "cpu_seconds": 28.537923000000003,
+    "requested": "cadical195",
+    "statistics": {
+      "conflicts": 28142,
+      "decisions": 1820853,
+      "propagations": 36417745,
+      "restarts": 2652
+    },
+    "status": "UNSAT",
+    "timeout_seconds": 600.0
+  },
+  "source": "results/efx49_distinct_half_full_cell_lia_cap5_core3.json",
+  "source_sha256": "601ba8a6b5d54f9d3a19e34d309157896fa27179947fed22c8f3cd5d90583110",
+  "status": "UNSAT",
+  "variables": 990312
+}

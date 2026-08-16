@@ -1,0 +1,73 @@
+{
+  "branch_count": 6,
+  "branches": [
+    {
+      "branch": 0,
+      "deficient_agents": [
+        0,
+        1
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_pair_strengthened_branches/pair_0_1.smt2",
+      "prior_pair_exclusions": 0,
+      "sha256": "84eb2bd063f06ae0c6ae0410d050796736548b82beb6a992d4a970dd3fa5e7b2"
+    },
+    {
+      "branch": 1,
+      "deficient_agents": [
+        0,
+        2
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_pair_strengthened_branches/pair_0_2.smt2",
+      "prior_pair_exclusions": 1,
+      "sha256": "c09cc4b312c64085655559b0bfe0b7eaa545e7e7f25c0c1cef55cfbe73b4deb9"
+    },
+    {
+      "branch": 2,
+      "deficient_agents": [
+        0,
+        3
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_pair_strengthened_branches/pair_0_3.smt2",
+      "prior_pair_exclusions": 2,
+      "sha256": "f71bbce0456afd39ae851846dbafdd97e426b108a3969f48faf2b4feb600b404"
+    },
+    {
+      "branch": 3,
+      "deficient_agents": [
+        1,
+        2
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_pair_strengthened_branches/pair_1_2.smt2",
+      "prior_pair_exclusions": 3,
+      "sha256": "e89149ab49d2f043e2d7c77e1fa7e19b4440771959f30d1c3629f5169d1ee89b"
+    },
+    {
+      "branch": 4,
+      "deficient_agents": [
+        1,
+        3
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_pair_strengthened_branches/pair_1_3.smt2",
+      "prior_pair_exclusions": 4,
+      "sha256": "87108617dd588c431a474327021a1f88bbef780aab06244d76bc41d678edf03a"
+    },
+    {
+      "branch": 5,
+      "deficient_agents": [
+        2,
+        3
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_pair_strengthened_branches/pair_2_3.smt2",
+      "prior_pair_exclusions": 5,
+      "sha256": "d035a2031f43ffb47a18defdde89b33106e79fb40ce9905a0e33ce94bd8efe15"
+    }
+  ],
+  "meaning": "The injected pair-deficiency disjunction is implied by the fixed-cell obstruction constraints, as independently proved by the dual-verified pair-deficiency theorem. The six disjoint branches select the lexicographically first deficient agent pair.",
+  "output": "results/partial_hall_utilitarian_local_r5_pair_strengthened_master.smt2",
+  "output_sha256": "8f29a9a0b72babeb3312fb6f67771c52fdd64bca30db5ecb697bf260886b2d63",
+  "pair_deficiency_proof": "results/partial_hall_pair_deficiency_compact_core.json",
+  "schema": "partial-hall-pair-deficiency-strengthening-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_nonempty_hall_core_orbit_strengthened_master.smt2",
+  "source_sha256": "31b1225eef89aad0fc685ead6971ebfadbd70a86644db57170eb44ffb30e0439",
+  "status": "EXACT_STRENGTHENING_AND_COVER"
+}

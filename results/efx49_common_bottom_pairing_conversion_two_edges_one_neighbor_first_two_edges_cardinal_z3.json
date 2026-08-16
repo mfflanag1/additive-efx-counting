@@ -1,0 +1,165 @@
+{
+  "bottom_order_constraint_count": 48,
+  "common_bottom_pair": [
+    7,
+    8
+  ],
+  "conversion_partition_count": 4,
+  "conversion_partitions": [
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2,
+        8
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        8
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2,
+        7
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        7
+      ],
+      [
+        5,
+        6
+      ]
+    ]
+  ],
+  "conversion_scope": "first_two_edges",
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 12.936445236206055,
+  "favorite": 0,
+  "fixed_residual_matching": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "hall_failure_template_count": 1,
+  "hall_witness_type": "two_edges_one_neighbor",
+  "interpretation": "UNSAT proves the fixed-pairing lemma in this exact encoding; independent replay is required before theorem status.",
+  "m": 9,
+  "n": 4,
+  "reason_unknown": null,
+  "residual_matching_wlog": "Every perfect matching of the six non-low residual goods is equivalent by a goods relabeling.",
+  "schema": "common-bottom-pairing-conversion-lra-v1",
+  "smt2_path": "results/efx49_common_bottom_pairing_conversion_two_edges_one_neighbor_first_two_edges_cardinal_z3.smt2",
+  "smt2_sha256": "c301e884021844302463c93e3147d2fc4059124eb24dc5d449dedf263e53a122",
+  "solver_status": "sat",
+  "status": "CONVERSION_COUNTEREXAMPLE",
+  "threshold_encoding": "cardinal",
+  "time_limit_seconds": 300.0,
+  "universal_owner_threshold_failure": true,
+  "values": [
+    [
+      4538,
+      4430,
+      3652,
+      2712,
+      2323,
+      2269,
+      1880,
+      1826,
+      886
+    ],
+    [
+      2314,
+      931,
+      1808,
+      1356,
+      1356,
+      1437,
+      1248,
+      877,
+      931
+    ],
+    [
+      91,
+      47,
+      68,
+      45,
+      65,
+      46,
+      46,
+      43,
+      3
+    ],
+    [
+      904,
+      447,
+      447,
+      447,
+      874,
+      467,
+      467,
+      447,
+      40
+    ]
+  ]
+}

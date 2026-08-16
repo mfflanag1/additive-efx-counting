@@ -1,0 +1,54 @@
+{
+  "schema": "row-merge-global-partial-radius1-refutation-v1",
+  "status": "EXACT_REFUTATION_WITNESS",
+  "domain": "strictly positive additive integer valuations",
+  "n": 4,
+  "m": 8,
+  "scope": "generic isolated single-wall crossing; Hall witness size 3; wall shape 3+2+2+1; one good may be deleted and at most one remaining good moved globally; bundle ownership may change",
+  "wall_partition": [[0, 1, 2], [3, 4], [5, 6], [7]],
+  "critical_wall": {
+    "moving_agent": 0,
+    "moving_bundle": [0, 1, 2],
+    "envied_remainder": [3],
+    "critical_good": 4,
+    "perturbed_good": 3
+  },
+  "wall_values": [
+    [5750, 8378, 1409, 15537, 9844, 3456, 3608, 5674],
+    [1116, 4, 8, 1130, 561, 561, 1136, 1132],
+    [690, 3, 4, 698, 19, 11, 700, 699],
+    [57, 39, 15, 2759, 21, 45, 2768, 2768]
+  ],
+  "post_wall_values": [
+    [5750, 8378, 1409, 15556, 9844, 3456, 3608, 5674],
+    [1116, 4, 8, 1130, 561, 561, 1136, 1132],
+    [690, 3, 4, 698, 19, 11, 700, 699],
+    [57, 39, 15, 2759, 21, 45, 2768, 2768]
+  ],
+  "scaled_wall_epsilon": 19,
+  "wall_feasibility_graph": [
+    [true, true, false, false],
+    [false, true, true, false],
+    [false, true, true, false],
+    [false, true, true, true]
+  ],
+  "post_feasibility_graph": [
+    [false, true, false, false],
+    [false, true, true, false],
+    [false, true, true, false],
+    [false, true, true, true]
+  ],
+  "changed_original_partition_edges": [[0, 0, true, false]],
+  "global_wall_isolation_verified": true,
+  "candidate_partition_count": 126,
+  "candidate_supporting_partition_count": 0,
+  "global_partial_efx_supporting_partition_count": 92,
+  "global_partial_efx_allocation_count": 390,
+  "minimum_global_partial_efx_transfer_distance": 2,
+  "nearest_global_partial_efx_deleted_good": 0,
+  "nearest_global_partial_efx_partition": [[1, 2, 4], [3, 5], [6], [7]],
+  "complete_efx_supporting_partition_count": 52,
+  "complete_efx_allocation_count": 218,
+  "claim": "The m=7 global radius-one partial-restart lemma does not extend to this m=8 padding shape: all 126 encoded radius-one restart partitions fail after the isolated wall.",
+  "claim_boundary": "This is not an EFX counterexample: the post-wall instance has 218 complete EFX allocations. It refutes only the stated radius-one partial-restart construction in one Hall-size-three m=8 shape. The three other m=8 padding runs timed out and establish nothing."
+}

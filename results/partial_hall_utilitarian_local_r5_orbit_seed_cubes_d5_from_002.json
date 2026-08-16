@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_74_0_0",
+        "v_0_2 + -1*v_0_4 + v_0_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_000.smt2",
+      "sha256": "06a6911d10fda3b158b30ee7eaba402a7a22ceb301de219076f471dee517e1e9"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_74_0_0",
+        "Not(v_0_2 + -1*v_0_4 + v_0_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_001.smt2",
+      "sha256": "d0e38e52ac9bca889283cb04475cd68b5f239b5f9ecca6ac9ce545609c61e0d6"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(edge_74_0_0)",
+        "v_0_0 + -1*v_0_4 + v_0_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_002.smt2",
+      "sha256": "ca9f098b39f5d8e320487839c0dce8732751131fae79d87b2cf5d6fcc7b82b4f"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(edge_74_0_0)",
+        "Not(v_0_0 + -1*v_0_4 + v_0_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_003.smt2",
+      "sha256": "c62e40014e202ac97474797beea5796427cd434e003f75ef0e81b45f1d00e5ad"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d3/branch_002.smt2",
+  "source_sha256": "e1ce63d1fb4e8e7b61dd8a254bbea8ab44ea90a436373348c1e7e4943e76f355",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

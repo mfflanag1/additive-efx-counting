@@ -1,0 +1,113 @@
+{
+  "accepted_moves": 925,
+  "elapsed_seconds": 151.278098,
+  "final_temperature": 1e-07,
+  "improvements": 17,
+  "initial_temperature": 0.003,
+  "iterations_completed": 2000,
+  "iterations_requested": 2000,
+  "landscape": {
+    "best_winner_normalized_slack": 0.0027642883825177438,
+    "eligible_state_count": 277,
+    "has_direct_insertion": false,
+    "has_radius_one_completion": true,
+    "maximum_product": 0.018704014419857154,
+    "winner_count": 1,
+    "winners": [
+      {
+        "base_index": 19990,
+        "best_host_normalized_margin": -0.0027536154543999145,
+        "floater": 8,
+        "insertable": false,
+        "masks": [
+          72,
+          134,
+          17,
+          32
+        ],
+        "radius_one": {
+          "best_normalized_slack": 0.0027642883825177438,
+          "best_witness": {
+            "floater_host": 1,
+            "masks": [
+              64,
+              390,
+              25,
+              32
+            ],
+            "matching": [
+              2,
+              3,
+              1,
+              0
+            ],
+            "move_destination": 2,
+            "move_source": 0,
+            "moved_good": 3,
+            "normalized_minimum_slack": 0.0027642883825177438
+          },
+          "candidate_partition_count": 91,
+          "completable_partition_count": 3
+        },
+        "utilities": [
+          7566,
+          30801,
+          30885,
+          19497
+        ]
+      }
+    ]
+  },
+  "meaning": "A counterexample refutes maximum-Nash radius-one Hall completion, not complete additive EFX.",
+  "random_seed": 619,
+  "schema": "partial-hall-completion-anneal-v1",
+  "seed_path": "results/partial_nash_completion_refutation_profile.json",
+  "seed_sha256": "928029ffcd6d4171e1733999fe6f6f0abf0d0d5ab6ffe1c7c0a3702215155981",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      639,
+      187,
+      387,
+      2658,
+      1001,
+      353,
+      4908,
+      387,
+      231
+    ],
+    [
+      12180,
+      7883,
+      21806,
+      156,
+      12795,
+      31277,
+      30694,
+      1112,
+      368
+    ],
+    [
+      10731,
+      2914,
+      19010,
+      127,
+      20154,
+      937,
+      30602,
+      1,
+      9219
+    ],
+    [
+      1139,
+      6,
+      4730,
+      38,
+      10138,
+      19497,
+      17603,
+      185,
+      9639
+    ]
+  ]
+}

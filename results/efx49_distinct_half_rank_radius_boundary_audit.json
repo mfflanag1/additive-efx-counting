@@ -1,0 +1,219 @@
+{
+  "destination_perfect_matching_agent_to_bundle": [
+    2,
+    3,
+    0,
+    1
+  ],
+  "distinct_item_values_per_row": true,
+  "distinct_perfect_exit_partitions": 312,
+  "favorite_pair_balanced_efx_partition_count": 312,
+  "favorite_pair_state_graph": {
+    "degree": 21,
+    "partitions": 840,
+    "undirected_edges": 8820
+  },
+  "half_favorite_representatives": [
+    2,
+    1,
+    4,
+    5
+  ],
+  "interpretation": "The branch-specific plateau conjecture survives, but its former empirical radius-two strengthening is false. This strict profile requires two rank-preserving swaps before an augmenting swap.",
+  "limitation": "The rank-three plateau has many exits and the profile has complete EFX allocations; this is not a counterexample to EFX existence.",
+  "literal_complete_efx_allocation_count": 1052,
+  "matching_rank_histogram": {
+    "1": 3,
+    "2": 130,
+    "3": 395,
+    "4": 312
+  },
+  "minimum_rank_preserving_walk_then_augmentation_length": 3,
+  "perfect_partitions_within_radius_two_via_rank_three": 0,
+  "rank_three_plateau_component_size": 395,
+  "schema": "distinct-half-rank-radius-boundary-audit-v1",
+  "shortest_augmenting_path": [
+    {
+      "matching_rank": 3,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "matching_rank": 3,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "matching_rank": 3,
+      "partition": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "matching_rank": 4,
+      "partition": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    }
+  ],
+  "start_feasibility_graph": [
+    [
+      1,
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0
+    ]
+  ],
+  "start_matching_rank": 3,
+  "start_partition": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      8
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "status": "DISTINCT_HALF_RANK_RADIUS_BOUNDARY_AUDIT_PASSED",
+  "strict_common_favorite": true,
+  "values": [
+    [
+      100,
+      35,
+      55,
+      37,
+      4,
+      99,
+      51,
+      83,
+      56
+    ],
+    [
+      100,
+      93,
+      41,
+      77,
+      80,
+      1,
+      57,
+      86,
+      99
+    ],
+    [
+      100,
+      92,
+      86,
+      27,
+      99,
+      72,
+      77,
+      14,
+      53
+    ],
+    [
+      100,
+      99,
+      84,
+      1,
+      93,
+      83,
+      75,
+      61,
+      36
+    ]
+  ]
+}

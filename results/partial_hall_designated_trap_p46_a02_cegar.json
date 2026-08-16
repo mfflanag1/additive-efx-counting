@@ -1,0 +1,54 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 32,
+  "break_good_symmetry": false,
+  "candidate_partition_count": 91,
+  "factor_rival_eligibility": true,
+  "factored_hall": true,
+  "factored_rival_comparison_count": 4065,
+  "floater": 8,
+  "hall_witness": true,
+  "iterations_completed": 1,
+  "learned_rival_count": 3187,
+  "local_rival_template_count": 37501,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "SAT refutes the stated bounded-owner-distance normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 5,
+  "random_seed": 211,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "seed_from": "results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.json",
+  "seed_learned_rival_count": 416,
+  "smt2_output": "results/partial_hall_designated_trap_p46_a02_cegar_master.smt2",
+  "solver_reason_unknown": "timeout",
+  "solver_statistics": "(:added-eqs                   2\n :arith-bound-propagations-lp 187847\n :arith-conflicts             295\n :arith-lower                 70541\n :arith-make-feasible         17098\n :arith-max-columns           8958\n :arith-max-rows              8918\n :arith-offset-eqs            2\n :arith-upper                 131451\n :binary-propagations         208461\n :conflicts                   315\n :decisions                   16563\n :del-clause                  2916\n :max-memory                  210.05\n :memory                      36.74\n :minimized-lits              386\n :mk-bool-var                 23754\n :mk-clause                   15357\n :mk-clause-binary            46138\n :num-allocs                  59872899780.00\n :num-checks                  1\n :propagations                258715\n :random-seed                 422\n :restarts                    2\n :rlimit-count                13839239\n :time                        300.55)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": true,
+  "timeout_seconds_per_master": 300,
+  "trace": [],
+  "trap_agents": [
+    0,
+    2
+  ],
+  "trap_bundle": 2,
+  "trap_partition": 46,
+  "values": null
+}

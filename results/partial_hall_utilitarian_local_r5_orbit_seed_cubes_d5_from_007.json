@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0",
+        "v_0_1 + v_0_2 + v_0_3 + -1*v_0_4 + v_0_7 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_000.smt2",
+      "sha256": "b4af526d7a1168a87d04f0474658edc815644ae7e3d15c47ca37aa96792b0aba"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0",
+        "Not(v_0_1 + v_0_2 + v_0_3 + -1*v_0_4 + v_0_7 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_001.smt2",
+      "sha256": "52e4fca8994e0b8f8f3baebdebd708cf040f06043425d83b94773d8838b34857"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0)",
+        "edge_64_2_1"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_002.smt2",
+      "sha256": "f9636d8642d71ec2a296f34cffc96b0a98a922d05936955ffcd0deb88847eaaf"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0)",
+        "Not(edge_64_2_1)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_003.smt2",
+      "sha256": "bfc963491155dbc75024ac5ffe56b72a1cfcbd6f04bdd65bdc4a79a88cd8ad67"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d3/branch_007.smt2",
+  "source_sha256": "95a25434575cc856d4d56b7be5c69a80f70b699164b820b60f3f06fa9e2c41e4",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

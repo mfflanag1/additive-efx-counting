@@ -1,0 +1,54 @@
+{
+  "analysis": "results/row_merge_q4_distance3_exchange_m9_analysis.json",
+  "analysis_sha256": "8edeea0b07fca9b2deb1ff97c59e7912ea689ab3c7c3bbe2d65093c005852a82",
+  "chain_partition_count": 515,
+  "claim_boundary": "This neither proves nor refutes the exchange-chain candidate, row-merge continuation, or general complete additive EFX.",
+  "fixed_graph_32_cut_status": "sat",
+  "fixed_graph_32_cut_support_count": 9,
+  "fixed_graph_36_cut_status": "unknown",
+  "fixed_graph_40_cut_status": "unknown",
+  "fixed_graph_56_cut_hall_status": "unknown",
+  "fixed_graph_56_cut_matching_status": "unknown",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "global_24_cut_status": "sat",
+  "global_24_cut_support_count": 48,
+  "global_24_cut_trace": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "global_24_cut_trace_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+  "global_56_cut_cvc5_status": "timeout_without_verdict",
+  "global_56_cut_formula_sha256": "d64f73d9116cd91a6e7bd25a78dbcaf2e41abb0be603da74dcc8bec89cf63ef8",
+  "global_56_cut_normalized_formula_sha256": "21d31e6bc2c3cd9d4f5145c3ee60ffacac1df82e73b27e5b8b3f15c0a4edca00",
+  "global_56_cut_z3_status": "unknown",
+  "interpretation": "Simple paths and cycles of at most three one-good transfers form a compact 515-partition successor menu. The first two exact models retain respectively 48 and 9 repairs, but the strengthened 56-cut cell remains undecided under two obstruction encodings and two exact solvers.",
+  "matching_vs_hall_obstruction_encoding": "PASS",
+  "nonempty_row_graph_encoding_differential_count": 50625,
+  "schema": "row-merge-q4-exchange-chain-gate-audit-v1",
+  "status": "EXCHANGE_CHAIN_CANDIDATE_OPEN_AT_56_CUT_GATE",
+  "terminal_nearest_supporting_partition_count": 20,
+  "terminal_source_sha256": "78fbccb806d175df811bd4157dfd1f8920842d013d16250caa49391ea3e6e939",
+  "terminal_supporting_chain_partition_count": 8
+}

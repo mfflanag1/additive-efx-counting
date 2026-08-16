@@ -1,0 +1,190 @@
+{
+  "combined_constant": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "combined_vector_is_zero": true,
+  "core_constraint_count": 12,
+  "meaning": "The weighted sum of the listed weak/strict inequalities and equalities is identically zero, while the total multiplier on strict inequalities is positive. Hence the frozen core is infeasible.",
+  "nonzero_multiplier_count": 12,
+  "schema": "partial-hall-farkas-certificate-v1",
+  "source": "results/partial_hall_utilitarian_frozen_cell_local_r2_core.json",
+  "source_sha256": "a60b7bec071fa7f52dffeb08b1b1b274147663f7412b823359959fad67ff477e",
+  "status": "EXACT_FARKAS_CONTRADICTION",
+  "strict_multiplier_sum": {
+    "denominator": 1,
+    "numerator": 1
+  },
+  "terms": [
+    {
+      "constraint": {
+        "agent": 0,
+        "good": 2,
+        "kind": "strict_positivity",
+        "label": "track_3"
+      },
+      "multiplier": {
+        "denominator": 5,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "good": 6,
+        "kind": "strict_positivity",
+        "label": "track_27"
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "eligible_comparison",
+        "label": "track_132",
+        "left_mask": 24,
+        "right_mask": 32
+      },
+      "multiplier": {
+        "denominator": 5,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_2174",
+        "left_mask": 1,
+        "right_mask": 16
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_2949",
+        "left_mask": 20,
+        "right_mask": 32
+      },
+      "multiplier": {
+        "denominator": 5,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_3012",
+        "left_mask": 24,
+        "right_mask": 258
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 2
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_4669",
+        "left_mask": 322,
+        "right_mask": 129
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_4851",
+        "left_mask": 392,
+        "right_mask": 16
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "kind": "ineligible_witness",
+        "label": "track_5453",
+        "left_mask": 10,
+        "right_mask": 64
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_7238",
+        "left_mask": 80,
+        "right_mask": 392
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_7307",
+        "left_mask": 129,
+        "right_mask": 16
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "floater": 0,
+        "kind": "maximality",
+        "label": "track_10424",
+        "masks": [
+          130,
+          68,
+          280,
+          32
+        ]
+      },
+      "multiplier": {
+        "denominator": 15,
+        "numerator": 1
+      },
+      "relation": "weak"
+    }
+  ]
+}

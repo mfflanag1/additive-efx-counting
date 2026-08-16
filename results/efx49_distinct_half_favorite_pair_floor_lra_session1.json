@@ -1,0 +1,182 @@
+{
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 4.749247789382935,
+  "favorite": 0,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "interpretation": "UNSAT_CANDIDATE would prove, subject to independent replay, the selected sufficient cover in the four-distinct-representatives branch. ZERO_TARGET_STATE would refute only that proposed normal form, not EFX existence.",
+  "iterations": 4,
+  "m": 9,
+  "n": 4,
+  "pool_size": 384,
+  "reason_unknown": null,
+  "schema": "distinct-half-pair-cover-lra-result-v1",
+  "smt2_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_distinct_half_favorite_pair_floor_lra_session1.smt2",
+  "smt2_sha256": "58b7a10e1d301430f719e74b460d166201f51eb5317dbe71ff8603e6320b2092",
+  "solver_status": "unsat",
+  "status": "UNSAT_CANDIDATE",
+  "target": "A balanced partition with the common favorite in a pair, assignable so every owner receives at least favorite value.",
+  "target_kind": "favorite-pair-balanced-floor",
+  "target_state_count": 840,
+  "trace": [
+    {
+      "iteration": 1,
+      "pool_size_before": 0,
+      "supported_state_count": 840,
+      "values": [
+        [
+          89,
+          53,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72,
+          72
+        ],
+        [
+          43,
+          16,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35
+        ],
+        [
+          43,
+          16,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35
+        ],
+        [
+          43,
+          16,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35,
+          35
+        ]
+      ]
+    },
+    {
+      "iteration": 2,
+      "pool_size_before": 128,
+      "supported_state_count": 185,
+      "values": [
+        [
+          175,
+          153,
+          153,
+          16,
+          157,
+          161,
+          157,
+          8,
+          4
+        ],
+        [
+          109,
+          59,
+          57,
+          49,
+          55,
+          57,
+          55,
+          4,
+          47
+        ],
+        [
+          976,
+          966,
+          453,
+          493,
+          533,
+          533,
+          533,
+          413,
+          20
+        ],
+        [
+          482,
+          237,
+          249,
+          237,
+          249,
+          249,
+          249,
+          12,
+          4
+        ]
+      ]
+    },
+    {
+      "iteration": 3,
+      "pool_size_before": 256,
+      "supported_state_count": 162,
+      "values": [
+        [
+          143,
+          140,
+          61,
+          73,
+          73,
+          12,
+          6,
+          85,
+          73
+        ],
+        [
+          245,
+          239,
+          191,
+          48,
+          203,
+          12,
+          24,
+          191,
+          179
+        ],
+        [
+          427,
+          418,
+          191,
+          227,
+          209,
+          36,
+          18,
+          227,
+          245
+        ],
+        [
+          83,
+          67,
+          67,
+          12,
+          67,
+          6,
+          2,
+          73,
+          67
+        ]
+      ]
+    }
+  ],
+  "universal_owner_threshold_failure": true,
+  "values": null
+}

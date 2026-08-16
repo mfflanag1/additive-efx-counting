@@ -1,0 +1,96 @@
+{
+  "cell_count": 6,
+  "hall_edge_literal_cell_count": 1,
+  "maximum_core_size": 25,
+  "maximum_maximality_rival_count": 3,
+  "meaning": "This is a census of exact UNSAT comparison cells, not a cover of all Hall obstructions. maximality_rival_count measures the number of explicit eligible rivals needed in each core.",
+  "records": [
+    {
+      "constraint_kind_counts": {
+        "ineligible_witness": 2,
+        "maximality": 1,
+        "strict_positivity": 2
+      },
+      "core_size": 5,
+      "maximality_rival_count": 1,
+      "seed_path": "results/partial_hall_utilitarian_maximality_anneal_seed17_cont117.json",
+      "source": "results/partial_hall_utilitarian_frozen_cell_seed17_cont117_core.json",
+      "source_sha256": "c4d606ee83c1a19a37bf1e74d694c57b2022fba5109421c7d7c27793d52489da",
+      "uses_hall_edge_literal": false
+    },
+    {
+      "constraint_kind_counts": {
+        "eligible_comparison": 2,
+        "ineligible_witness": 4,
+        "maximality": 1,
+        "strict_positivity": 1
+      },
+      "core_size": 8,
+      "maximality_rival_count": 1,
+      "seed_path": "results/partial_hall_utilitarian_maximality_anneal_seed23.json",
+      "source": "results/partial_hall_utilitarian_frozen_cell_seed23_core.json",
+      "source_sha256": "d00e415903346bdf577a56a76471ea1734fed1ee62f6e6fdf2c97806d83efc15",
+      "uses_hall_edge_literal": false
+    },
+    {
+      "constraint_kind_counts": {
+        "eligible_comparison": 5,
+        "ineligible_witness": 13,
+        "maximality": 3,
+        "row_normalization": 2,
+        "strict_positivity": 2
+      },
+      "core_size": 25,
+      "maximality_rival_count": 3,
+      "seed_path": "results/partial_hall_pareto_cegar_session1.json",
+      "source": "results/partial_hall_utilitarian_frozen_cell_pareto_core.json",
+      "source_sha256": "c34a544b250af64049aed8311ad35af0c33d21c72ba1da77e85757155afd52f6",
+      "uses_hall_edge_literal": false
+    },
+    {
+      "constraint_kind_counts": {
+        "eligible_comparison": 1,
+        "ineligible_witness": 8,
+        "maximality": 1,
+        "strict_positivity": 2
+      },
+      "core_size": 12,
+      "maximality_rival_count": 1,
+      "seed_path": "results/partial_hall_utilitarian_local_cegar_session1.json",
+      "source": "results/partial_hall_utilitarian_frozen_cell_local_r2_core.json",
+      "source_sha256": "a60b7bec071fa7f52dffeb08b1b1b274147663f7412b823359959fad67ff477e",
+      "uses_hall_edge_literal": false
+    },
+    {
+      "constraint_kind_counts": {
+        "eligible_comparison": 1,
+        "ineligible_witness": 9,
+        "maximality": 1,
+        "strict_positivity": 2
+      },
+      "core_size": 13,
+      "maximality_rival_count": 1,
+      "seed_path": "results/partial_hall_utilitarian_local_r3_cegar_session1.json",
+      "source": "results/partial_hall_utilitarian_frozen_cell_local_r3_core.json",
+      "source_sha256": "ef10be2c7c4c1951e65d0a45ec2de09c297b254d0fa152607c0e81f42592aa77",
+      "uses_hall_edge_literal": false
+    },
+    {
+      "constraint_kind_counts": {
+        "eligible_comparison": 6,
+        "false_edge_witness": 1,
+        "ineligible_witness": 9,
+        "maximality": 2,
+        "strict_positivity": 4
+      },
+      "core_size": 22,
+      "maximality_rival_count": 2,
+      "seed_path": "results/partial_hall_utilitarian_local_r4_cegar_session1.json",
+      "source": "results/partial_hall_utilitarian_frozen_cell_local_r4_core.json",
+      "source_sha256": "5708a12bb55a3dcf62bcafcfcc6548ee2b79b1f1bd1fd56fbca0762690aaf68a",
+      "uses_hall_edge_literal": true
+    }
+  ],
+  "schema": "partial-hall-frozen-core-census-v1",
+  "status": "AUDITED"
+}

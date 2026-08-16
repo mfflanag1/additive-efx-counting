@@ -1,0 +1,31 @@
+{
+  "claim_survives_tested_profiles": true,
+  "claim_tested": "Every eligible four-agent one-floater EFX state is radius-one Hall-completable, or some radius-one candidate partition has a two-agent Hall witness with exactly one neighbor.",
+  "profiles": [
+    {
+      "candidate_partitions_tested_or_generated": 2412,
+      "eligible_bundle_shape_histogram": {
+        "1,1,1,4": 12,
+        "1,1,2,3": 24
+      },
+      "first_counterexample": null,
+      "hall_blocked_with_pair_extraction_states": 12,
+      "hall_witness_type_histogram": {
+        "2:1": 1809,
+        "3:1": 491,
+        "3:2": 1902,
+        "4:1": 15,
+        "4:2": 360,
+        "4:3": 811
+      },
+      "m": 8,
+      "pair_extraction_counterexample_found": false,
+      "radius_one_hall_completable_states": 24,
+      "source": "results/tb4.json",
+      "source_sha256": "cfbce533012e41bf30bfc716ff12092ed4933e612f00093dc3984e4aaef780f5",
+      "states_available": 36,
+      "states_tested": 36
+    }
+  ],
+  "schema": "partial-hall-pair-extraction-search-v1"
+}

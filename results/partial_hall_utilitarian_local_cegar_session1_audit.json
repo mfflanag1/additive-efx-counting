@@ -1,0 +1,115 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "base_efx": true,
+  "base_utilities": [
+    387,
+    293,
+    383,
+    406
+  ],
+  "candidate_partition_count": 91,
+  "checked_partition_matching_pairs": 2184,
+  "distinct_feasibility_graph_count": 58,
+  "floater": 8,
+  "floater_nonenvy": true,
+  "hall_completable_partition_count": 0,
+  "inclusion_minimal_hall_type_histogram": {
+    "2->1": 170,
+    "3->2": 69,
+    "4->3": 12
+  },
+  "m": 9,
+  "matching_count_per_partition": 24,
+  "meaning": "The displayed eligible partial EFX state has no Hall-completable partition after assigning the floater and moving at most one old good.",
+  "move_family_primary_hall_type_histogram": {
+    "0->1:2->1": 7,
+    "0->1:4->3": 1,
+    "0->2:2->1": 8,
+    "0->3:2->1": 4,
+    "0->3:3->2": 1,
+    "0->3:4->3": 3,
+    "1->0:2->1": 5,
+    "1->0:3->2": 3,
+    "1->0:4->3": 4,
+    "1->2:2->1": 12,
+    "1->3:2->1": 4,
+    "1->3:3->2": 4,
+    "1->3:4->3": 4,
+    "2->0:2->1": 8,
+    "2->1:2->1": 8,
+    "2->3:2->1": 4,
+    "2->3:3->2": 4,
+    "3->0:2->1": 1,
+    "3->1:2->1": 1,
+    "3->2:2->1": 1,
+    "radius0:2->1": 1,
+    "radius0:3->2": 3
+  },
+  "n": 4,
+  "nearest_normalized_utilitarian_improver": {
+    "base_index": 7796,
+    "floater": 8,
+    "masks": [
+      129,
+      74,
+      16,
+      36
+    ],
+    "normalized_utilitarian_gain": {
+      "denominator": 11460,
+      "numerator": 3193
+    },
+    "owner_distance": 3,
+    "utilities": [
+      659,
+      447,
+      258,
+      722
+    ]
+  },
+  "nearest_pareto_dominator": {
+    "base_index": 36436,
+    "floater": 6,
+    "masks": [
+      129,
+      14,
+      272,
+      32
+    ],
+    "owner_distance": 3,
+    "utilities": [
+      659,
+      293,
+      383,
+      406
+    ]
+  },
+  "normalized_utilitarian_improver_count": 737,
+  "pareto_dominator_count": 186,
+  "primary_hall_type_histogram": {
+    "2->1": 64,
+    "3->2": 15,
+    "4->3": 12
+  },
+  "schema": "partial-hall-radius-one-model-audit-v1",
+  "source": "results/partial_hall_utilitarian_local_cegar_session1.json",
+  "source_sha256": "7f8c20582633abac9b18ae706bc413fef3f204e9e8e3c4a516ca26ddc6ccd358",
+  "status": "VERIFIED_RADIUS_ONE_HALL_OBSTRUCTION"
+}

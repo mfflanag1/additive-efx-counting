@@ -1,0 +1,949 @@
+{
+  "core_count": 5,
+  "cores": [
+    {
+      "candidate_count": 4,
+      "core_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace92_i5_dependency_core.json",
+      "core_sha256": "1488b3ca3962ebeba3f283d0e9adbd49cc48009e69cf37d47748a6aaf90533b8",
+      "dependency_closed_candidate_count": 2,
+      "motifs": [
+        {
+          "agent_order": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            4,
+            1,
+            2
+          ],
+          "candidate_floater": 3,
+          "candidate_index": 1,
+          "changed_agents": [
+            0,
+            2
+          ],
+          "changed_good_count": 2,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": 2,
+              "good": 6,
+              "to": 0
+            },
+            {
+              "from": 0,
+              "good": 7,
+              "to": 2
+            }
+          ],
+          "own_utility_deltas": [
+            1984,
+            0,
+            -29632,
+            0
+          ],
+          "rival_bundle_sizes": [
+            1,
+            4,
+            1,
+            2
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 3,
+          "rival_lexicographically_nonlower_in_seed": true,
+          "transition_type": "two_agent_good_swap",
+          "unchanged_priority_prefix": [
+            1
+          ]
+        }
+      ],
+      "rival_count": 1,
+      "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_seed_trace92_i5.json",
+      "transition_type_counts": {
+        "two_agent_good_swap": 1
+      }
+    },
+    {
+      "candidate_count": 6,
+      "core_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace93_i7117_dependency_core.json",
+      "core_sha256": "7af57b91dc71c93e5bfa1c34d2afc3a0ebf7b12f43acd3321cbf4bd9992b27dd",
+      "dependency_closed_candidate_count": 5,
+      "motifs": [
+        {
+          "agent_order": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 1,
+          "changed_agents": [
+            3
+          ],
+          "changed_good_count": 2,
+          "first_bundle_changed_in_order": 3,
+          "moves": [
+            {
+              "from": null,
+              "good": 1,
+              "to": 3
+            },
+            {
+              "from": 3,
+              "good": 3,
+              "to": null
+            }
+          ],
+          "one_host_exchange": {
+            "ejected_good": 3,
+            "host": 3,
+            "host_weakly_improves": false,
+            "inserted_floater": 1,
+            "observer_checks": [
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 202,
+                "observer": 0,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 63515,
+                "observer": 1,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 25618,
+                "observer": 2,
+                "own_covers_removed": true
+              }
+            ],
+            "simple_safe_exchange_conditions_hold": false
+          },
+          "own_utility_deltas": [
+            0,
+            0,
+            0,
+            -6402
+          ],
+          "rival_bundle_sizes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 3,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "one_host_floater_exchange",
+          "unchanged_priority_prefix": [
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "agent_order": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "candidate_bundle_sizes": [
+            2,
+            3,
+            1,
+            2
+          ],
+          "candidate_floater": 8,
+          "candidate_index": 2,
+          "changed_agents": [
+            0
+          ],
+          "changed_good_count": 2,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": 0,
+              "good": 4,
+              "to": null
+            },
+            {
+              "from": null,
+              "good": 8,
+              "to": 0
+            }
+          ],
+          "one_host_exchange": {
+            "ejected_good": 4,
+            "host": 0,
+            "host_weakly_improves": false,
+            "inserted_floater": 8,
+            "observer_checks": [
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 76168,
+                "observer": 1,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 15128,
+                "observer": 2,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 20014,
+                "observer": 3,
+                "own_covers_removed": true
+              }
+            ],
+            "simple_safe_exchange_conditions_hold": false
+          },
+          "own_utility_deltas": [
+            -1025,
+            0,
+            0,
+            0
+          ],
+          "rival_bundle_sizes": [
+            2,
+            3,
+            1,
+            2
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 4,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "one_host_floater_exchange",
+          "unchanged_priority_prefix": [
+            1,
+            2
+          ]
+        }
+      ],
+      "rival_count": 2,
+      "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_seed_trace93_i7117.json",
+      "transition_type_counts": {
+        "one_host_floater_exchange": 2
+      }
+    },
+    {
+      "candidate_count": 6,
+      "core_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace93_i7244_dependency_core.json",
+      "core_sha256": "8570d66a2693d45833fed9de470dd069bcdf14b06fe0acd0516aec9b6d79e8e3",
+      "dependency_closed_candidate_count": 5,
+      "motifs": [
+        {
+          "agent_order": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 4,
+          "changed_agents": [
+            1,
+            2
+          ],
+          "changed_good_count": 4,
+          "first_bundle_changed_in_order": 2,
+          "moves": [
+            {
+              "from": 1,
+              "good": 0,
+              "to": 2
+            },
+            {
+              "from": null,
+              "good": 1,
+              "to": 1
+            },
+            {
+              "from": 1,
+              "good": 2,
+              "to": null
+            },
+            {
+              "from": 2,
+              "good": 4,
+              "to": 1
+            }
+          ],
+          "own_utility_deltas": [
+            0,
+            -47825,
+            194,
+            0
+          ],
+          "rival_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 2,
+          "rival_lexicographically_nonlower_in_seed": true,
+          "transition_type": "floater_exchange_plus_reallocation",
+          "unchanged_priority_prefix": [
+            3,
+            0
+          ]
+        },
+        {
+          "agent_order": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 4,
+          "changed_agents": [
+            0,
+            1,
+            2
+          ],
+          "changed_good_count": 6,
+          "first_bundle_changed_in_order": 1,
+          "moves": [
+            {
+              "from": 1,
+              "good": 0,
+              "to": null
+            },
+            {
+              "from": null,
+              "good": 1,
+              "to": 1
+            },
+            {
+              "from": 1,
+              "good": 2,
+              "to": 0
+            },
+            {
+              "from": 2,
+              "good": 3,
+              "to": 0
+            },
+            {
+              "from": 2,
+              "good": 4,
+              "to": 1
+            },
+            {
+              "from": 0,
+              "good": 7,
+              "to": 2
+            }
+          ],
+          "own_utility_deltas": [
+            -181,
+            -47825,
+            145,
+            0
+          ],
+          "rival_bundle_sizes": [
+            2,
+            2,
+            1,
+            3
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 0,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "floater_exchange_plus_reallocation",
+          "unchanged_priority_prefix": [
+            3
+          ]
+        },
+        {
+          "agent_order": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "candidate_bundle_sizes": [
+            2,
+            2,
+            1,
+            3
+          ],
+          "candidate_floater": 3,
+          "candidate_index": 5,
+          "changed_agents": [
+            0
+          ],
+          "changed_good_count": 2,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": null,
+              "good": 3,
+              "to": 0
+            },
+            {
+              "from": 0,
+              "good": 4,
+              "to": null
+            }
+          ],
+          "one_host_exchange": {
+            "ejected_good": 4,
+            "host": 0,
+            "host_weakly_improves": false,
+            "inserted_floater": 3,
+            "observer_checks": [
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 49290,
+                "observer": 1,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 14831,
+                "observer": 2,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 23889,
+                "observer": 3,
+                "own_covers_removed": true
+              }
+            ],
+            "simple_safe_exchange_conditions_hold": false
+          },
+          "own_utility_deltas": [
+            -474,
+            0,
+            0,
+            0
+          ],
+          "rival_bundle_sizes": [
+            2,
+            2,
+            1,
+            3
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 4,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "one_host_floater_exchange",
+          "unchanged_priority_prefix": [
+            3,
+            1,
+            2
+          ]
+        }
+      ],
+      "rival_count": 3,
+      "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_seed_trace93_i7244.json",
+      "transition_type_counts": {
+        "floater_exchange_plus_reallocation": 2,
+        "one_host_floater_exchange": 1
+      }
+    },
+    {
+      "candidate_count": 5,
+      "core_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_trace93_i9744_dependency_core.json",
+      "core_sha256": "2d6041555a434088aa9dc6872df96e82340c1f166f07aee85ece8bf3ad20ba8e",
+      "dependency_closed_candidate_count": 5,
+      "motifs": [
+        {
+          "agent_order": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "candidate_bundle_sizes": [
+            2,
+            3,
+            2,
+            1
+          ],
+          "candidate_floater": 3,
+          "candidate_index": 0,
+          "changed_agents": [
+            0,
+            1,
+            3
+          ],
+          "changed_good_count": 5,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": 1,
+              "good": 0,
+              "to": null
+            },
+            {
+              "from": 1,
+              "good": 1,
+              "to": 0
+            },
+            {
+              "from": null,
+              "good": 3,
+              "to": 3
+            },
+            {
+              "from": 3,
+              "good": 5,
+              "to": 1
+            },
+            {
+              "from": 0,
+              "good": 6,
+              "to": 3
+            }
+          ],
+          "own_utility_deltas": [
+            -725,
+            3072,
+            0,
+            8270
+          ],
+          "rival_bundle_sizes": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "rival_eligible_in_seed": true,
+          "rival_floater": 0,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "floater_exchange_plus_reallocation",
+          "unchanged_priority_prefix": []
+        },
+        {
+          "agent_order": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 1,
+          "changed_agents": [
+            3
+          ],
+          "changed_good_count": 2,
+          "first_bundle_changed_in_order": 3,
+          "moves": [
+            {
+              "from": null,
+              "good": 1,
+              "to": 3
+            },
+            {
+              "from": 3,
+              "good": 3,
+              "to": null
+            }
+          ],
+          "one_host_exchange": {
+            "ejected_good": 3,
+            "host": 3,
+            "host_weakly_improves": false,
+            "inserted_floater": 1,
+            "observer_checks": [
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 173,
+                "observer": 0,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 59240,
+                "observer": 1,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 25599,
+                "observer": 2,
+                "own_covers_removed": true
+              }
+            ],
+            "simple_safe_exchange_conditions_hold": false
+          },
+          "own_utility_deltas": [
+            0,
+            0,
+            0,
+            -8052
+          ],
+          "rival_bundle_sizes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 3,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "one_host_floater_exchange",
+          "unchanged_priority_prefix": [
+            1,
+            0,
+            2
+          ]
+        }
+      ],
+      "rival_count": 2,
+      "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_seed_trace93_i9744.json",
+      "transition_type_counts": {
+        "floater_exchange_plus_reallocation": 1,
+        "one_host_floater_exchange": 1
+      }
+    },
+    {
+      "candidate_count": 5,
+      "core_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/adaptive_priority_seed93_dependency_core.json",
+      "core_sha256": "6d350fd9d8c0bc145dc9c21bf8d9edd9f908374053315654feb415a464844592",
+      "dependency_closed_candidate_count": 5,
+      "motifs": [
+        {
+          "agent_order": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 1,
+          "changed_agents": [
+            0,
+            2
+          ],
+          "changed_good_count": 4,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": null,
+              "good": 1,
+              "to": 0
+            },
+            {
+              "from": 2,
+              "good": 4,
+              "to": null
+            },
+            {
+              "from": 0,
+              "good": 7,
+              "to": 2
+            },
+            {
+              "from": 2,
+              "good": 8,
+              "to": 0
+            }
+          ],
+          "own_utility_deltas": [
+            -715,
+            0,
+            212,
+            0
+          ],
+          "rival_bundle_sizes": [
+            2,
+            3,
+            1,
+            2
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 4,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "floater_exchange_plus_reallocation",
+          "unchanged_priority_prefix": [
+            1
+          ]
+        },
+        {
+          "agent_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 4,
+          "changed_agents": [
+            0,
+            1,
+            2
+          ],
+          "changed_good_count": 6,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": 1,
+              "good": 0,
+              "to": null
+            },
+            {
+              "from": null,
+              "good": 1,
+              "to": 0
+            },
+            {
+              "from": 1,
+              "good": 2,
+              "to": 0
+            },
+            {
+              "from": 2,
+              "good": 4,
+              "to": 1
+            },
+            {
+              "from": 0,
+              "good": 7,
+              "to": 2
+            },
+            {
+              "from": 2,
+              "good": 8,
+              "to": 1
+            }
+          ],
+          "own_utility_deltas": [
+            1005,
+            -44643,
+            212,
+            0
+          ],
+          "rival_bundle_sizes": [
+            2,
+            2,
+            1,
+            3
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 0,
+          "rival_lexicographically_nonlower_in_seed": true,
+          "transition_type": "floater_exchange_plus_reallocation",
+          "unchanged_priority_prefix": [
+            3
+          ]
+        },
+        {
+          "agent_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 4,
+          "changed_agents": [
+            0,
+            1,
+            2
+          ],
+          "changed_good_count": 5,
+          "first_bundle_changed_in_order": 0,
+          "moves": [
+            {
+              "from": null,
+              "good": 1,
+              "to": 0
+            },
+            {
+              "from": 1,
+              "good": 2,
+              "to": 0
+            },
+            {
+              "from": 2,
+              "good": 4,
+              "to": 1
+            },
+            {
+              "from": 0,
+              "good": 7,
+              "to": 2
+            },
+            {
+              "from": 2,
+              "good": 8,
+              "to": null
+            }
+          ],
+          "own_utility_deltas": [
+            1005,
+            -21393,
+            212,
+            0
+          ],
+          "rival_bundle_sizes": [
+            2,
+            2,
+            1,
+            3
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 8,
+          "rival_lexicographically_nonlower_in_seed": true,
+          "transition_type": "floater_exchange_plus_reallocation",
+          "unchanged_priority_prefix": [
+            3
+          ]
+        },
+        {
+          "agent_order": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "candidate_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "candidate_floater": 1,
+          "candidate_index": 4,
+          "changed_agents": [
+            1
+          ],
+          "changed_good_count": 2,
+          "first_bundle_changed_in_order": 1,
+          "moves": [
+            {
+              "from": 1,
+              "good": 0,
+              "to": null
+            },
+            {
+              "from": null,
+              "good": 1,
+              "to": 1
+            }
+          ],
+          "one_host_exchange": {
+            "ejected_good": 0,
+            "host": 1,
+            "host_weakly_improves": false,
+            "inserted_floater": 1,
+            "observer_checks": [
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 898,
+                "observer": 0,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": true,
+                "modified_host_efx_slack": 13680,
+                "observer": 2,
+                "own_covers_removed": true
+              },
+              {
+                "floater_at_most_removed": false,
+                "modified_host_efx_slack": 37775,
+                "observer": 3,
+                "own_covers_removed": true
+              }
+            ],
+            "simple_safe_exchange_conditions_hold": false
+          },
+          "own_utility_deltas": [
+            0,
+            -22589,
+            0,
+            0
+          ],
+          "rival_bundle_sizes": [
+            1,
+            2,
+            2,
+            3
+          ],
+          "rival_eligible_in_seed": false,
+          "rival_floater": 0,
+          "rival_lexicographically_nonlower_in_seed": false,
+          "transition_type": "one_host_floater_exchange",
+          "unchanged_priority_prefix": [
+            3,
+            0
+          ]
+        }
+      ],
+      "rival_count": 4,
+      "seed_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/lexmax_all_orders_seed93_exact_replay.json",
+      "transition_type_counts": {
+        "floater_exchange_plus_reallocation": 3,
+        "one_host_floater_exchange": 1
+      }
+    }
+  ],
+  "meaning": "combinatorial descriptions of takeover moves in fixed 4x9 dependency-closed cores; this is not a covering theorem",
+  "rival_count": 12,
+  "schema": "adaptive-priority-exchange-motif-audit-v1",
+  "status": "AUDITED",
+  "transition_type_counts": {
+    "floater_exchange_plus_reallocation": 6,
+    "one_host_floater_exchange": 5,
+    "two_agent_good_swap": 1
+  }
+}

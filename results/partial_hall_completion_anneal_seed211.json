@@ -1,0 +1,112 @@
+{
+  "accepted_moves": 641,
+  "elapsed_seconds": 76.887635,
+  "final_temperature": 1e-06,
+  "improvements": 16,
+  "initial_temperature": 0.003,
+  "iterations_completed": 1000,
+  "iterations_requested": 1000,
+  "landscape": {
+    "best_winner_normalized_slack": 0.0005398967844382691,
+    "eligible_state_count": 632,
+    "has_radius_one_completion": true,
+    "maximum_product": 0.02984368546347655,
+    "winner_count": 1,
+    "winners": [
+      {
+        "base_index": 49638,
+        "best_host_normalized_margin": 0.3244497805886481,
+        "floater": 4,
+        "insertable": true,
+        "masks": [
+          192,
+          34,
+          5,
+          264
+        ],
+        "radius_one": {
+          "best_normalized_slack": 0.0005398967844382691,
+          "best_witness": {
+            "floater_host": 3,
+            "masks": [
+              192,
+              32,
+              7,
+              280
+            ],
+            "matching": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "move_destination": 2,
+            "move_source": 1,
+            "moved_good": 1,
+            "normalized_minimum_slack": 0.0005398967844382691
+          },
+          "candidate_partition_count": 100,
+          "completable_partition_count": 9
+        },
+        "utilities": [
+          6329,
+          54462,
+          31091,
+          20893
+        ]
+      }
+    ]
+  },
+  "meaning": "A counterexample refutes maximum-Nash radius-one Hall completion, not complete additive EFX.",
+  "random_seed": 211,
+  "schema": "partial-hall-completion-anneal-v1",
+  "seed_path": "results/partial_nash_completion_refutation_profile.json",
+  "seed_sha256": "928029ffcd6d4171e1733999fe6f6f0abf0d0d5ab6ffe1c7c0a3702215155981",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      323,
+      2016,
+      95,
+      644,
+      372,
+      661,
+      4167,
+      2162,
+      311
+    ],
+    [
+      5948,
+      19298,
+      3755,
+      18967,
+      10141,
+      35164,
+      5034,
+      10734,
+      9230
+    ],
+    [
+      11787,
+      15139,
+      19304,
+      21565,
+      1219,
+      1665,
+      11577,
+      11275,
+      164
+    ],
+    [
+      1,
+      268,
+      47,
+      16768,
+      1,
+      20893,
+      20860,
+      12,
+      4125
+    ]
+  ]
+}

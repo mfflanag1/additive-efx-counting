@@ -1,0 +1,77 @@
+{
+  "schema": "efx48-relocatable-cpc-replay-summary-v1",
+  "status": "PASS",
+  "date": "2026-08-01",
+  "all_eight_cells_checked": true,
+  "all_ethos_correct": true,
+  "cell_count": 8,
+  "elapsed_seconds": 8333.439925,
+  "full_transcript_sha256": "db6c765cd9cb101f2e401c4547e96dc812f40b5f1749c4b8ece51f8f324a0f31",
+  "semantic_summary_sha256": "9e5b4398943599966b535a32e32747c06298d9cd917b7bfd368e7d9fb4a69373",
+  "transformation": "Only the two leading CPC signature include lines were rewritten to the moved certification root; every remaining proof-body byte was preserved.",
+  "signature_tree": {
+    "all_files_match_official_archive": true,
+    "signature_file_count": 51,
+    "signature_tree_sha256": "d782730973035ced5410a0b7160a2b7f29a28978a915aa318aeccb615bbc1fd2",
+    "source_archive_sha256": "7eeeb65a6c5bfe985a6b3fc7938b87709bbc0e3f72d661b1d0587d4173ad9b33"
+  },
+  "records": [
+    {
+      "cell": "favorite-211",
+      "ethos_seconds": 1003.52388,
+      "preserved_body_bytes": 187294669,
+      "preserved_body_sha256": "5c16ac19736bdf1971852aaa78f6d274a3942ee6fe3c29c10a37c76df3a76891",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "favorite-31",
+      "ethos_seconds": 2950.441966,
+      "preserved_body_bytes": 459895668,
+      "preserved_body_sha256": "14200bda152b2452ff894428ccae3d11810b5cfbd9226cb1b53556950cb4bbec",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "favorite-22",
+      "ethos_seconds": 1544.222332,
+      "preserved_body_bytes": 338399497,
+      "preserved_body_sha256": "0ebc4eb3023b2300890bda24442aebe4701613849843a290aed6779cdc520f91",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "top4-second1111",
+      "ethos_seconds": 28.258095,
+      "preserved_body_bytes": 21219676,
+      "preserved_body_sha256": "1879489f4894de0e9776ebc8ae7b5a9ecbac25b68d771d8c8d3c37d9cdf8f0cd",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "top4-second4",
+      "ethos_seconds": 1709.993941,
+      "preserved_body_bytes": 449335122,
+      "preserved_body_sha256": "579920571f9dc74f5ae72167afbd6ac557786938e42e854ad1418dec3b7b4e23",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "top4-second31",
+      "ethos_seconds": 521.898495,
+      "preserved_body_bytes": 115319380,
+      "preserved_body_sha256": "0e61a56382b9520fc41a406dfe856b0a67fdb0e34e00cd87e4e468d4d421933f",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "top4-second22",
+      "ethos_seconds": 507.700805,
+      "preserved_body_bytes": 78871377,
+      "preserved_body_sha256": "d3a0eed63aeaf59916ff9b443dca4ffb67f3439d7bade8971b1bd69ec9cf5c5f",
+      "ethos_verdict": "correct"
+    },
+    {
+      "cell": "top4-second211",
+      "ethos_seconds": 59.007745,
+      "preserved_body_bytes": 18119382,
+      "preserved_body_sha256": "4a5999214bb07067aa3062e8ff6c9a8a750c997e6e01feb36b05d491f7dc1a5c",
+      "ethos_verdict": "correct"
+    }
+  ],
+  "claim_boundary": "This verifies temporary-root relocatability of all eight CPC proofs on the same physical host. It is not independent-host or independent-person replication."
+}

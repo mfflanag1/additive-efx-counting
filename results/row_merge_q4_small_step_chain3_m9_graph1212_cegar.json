@@ -1,0 +1,101 @@
+{
+  "add_per_round": 32,
+  "base_initial_cut_count": 16,
+  "bundle_sizes_excluding_critical_good": [
+    2,
+    1,
+    2,
+    3
+  ],
+  "chain_partition_count": 515,
+  "claim_boundary": "This decides only the displayed small-step Hall-size-four cell; it is not general row-merge continuation or complete EFX.",
+  "domain": "strictly positive additive real valuations",
+  "elapsed_seconds": 180.22410225868225,
+  "final_cut_count": 56,
+  "fixed_graph_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "fixed_graph_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "formula": "results/row_merge_q4_small_step_chain3_m9_graph1212_cegar.smt2",
+  "formula_sha256": "b25ab864b87be9a556f18504001505cae37ff96a093b79493d7babc6f0d0bb94",
+  "initial_cut_count": 56,
+  "interpretation": "The exact-real master reached its bounded resource limit.",
+  "m": 9,
+  "max_rounds": 4,
+  "maximum_chain_length": 3,
+  "minimal_hall_witness_size": 4,
+  "n": 4,
+  "per_check_time_limit_seconds": 180.0,
+  "round_count": 1,
+  "rounds": [
+    {
+      "cuts_before_solve": 56,
+      "reason_unknown": "timeout",
+      "round": 0,
+      "solver_status": "unknown",
+      "solver_wall_seconds": 180.08003401756287
+    }
+  ],
+  "schema": "row-merge-q4-exchange-chain-cegar-v1",
+  "seed_analysis": "results/row_merge_q4_distance3_exchange_m9_analysis.json",
+  "seed_analysis_sha256": "8edeea0b07fca9b2deb1ff97c59e7912ea689ab3c7c3bbe2d65093c005852a82",
+  "seed_partition_count": 8,
+  "small_step_goods": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "solver_status": "unknown",
+  "status": "CEGAR_INCOMPLETE",
+  "terminal_complete_efx_audit": null,
+  "terminal_post_wall_values": null,
+  "terminal_wall_values": null,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "warm_partition_count": 32,
+  "warm_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "warm_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9"
+}

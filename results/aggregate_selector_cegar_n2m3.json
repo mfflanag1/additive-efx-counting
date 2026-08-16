@@ -1,0 +1,14 @@
+{
+  "elapsed_seconds": 0.013055086135864258,
+  "iterations": 3,
+  "m": 3,
+  "mode": "exact_lra_cegar",
+  "n": 2,
+  "pool_size": 4,
+  "reason_unknown": null,
+  "selected_floater": 0,
+  "selector": "strict_normalized_aggregate_minimum",
+  "smt2": "; benchmark generated from python API\n(set-info :status unknown)\n(declare-fun value_0_0 () Real)\n(declare-fun value_0_1 () Real)\n(declare-fun value_0_2 () Real)\n(declare-fun value_1_0 () Real)\n(declare-fun value_1_1 () Real)\n(declare-fun value_1_2 () Real)\n(assert\n (> value_0_0 0.0))\n(assert\n (> value_0_1 0.0))\n(assert\n (> value_0_2 0.0))\n(assert\n (let ((?x38 (+ value_0_0 value_0_1 value_0_2)))\n (= ?x38 1.0)))\n(assert\n (> value_1_0 0.0))\n(assert\n (> value_1_1 0.0))\n(assert\n (> value_1_2 0.0))\n(assert\n (let ((?x50 (+ value_1_0 value_1_1 value_1_2)))\n (= ?x50 1.0)))\n(assert\n (let ((?x52 (+ value_0_0 value_1_0)))\n (< ?x52 (+ value_0_1 value_1_1))))\n(assert\n (let ((?x52 (+ value_0_0 value_1_0)))\n (< ?x52 (+ value_0_2 value_1_2))))\n(assert\n (let ((?x79 (+ value_1_1)))\n (let (($x87 (< ?x79 0.0)))\n (let ((?x75 (+ value_0_2)))\n (let (($x74 (< ?x75 0.0)))\n (or $x74 $x87 (< ?x79 (+ value_1_0)) (< ?x79 (+ value_1_2))))))))\n(assert\n (let ((?x79 (+ value_1_1)))\n (let (($x87 (< ?x79 0.0)))\n (let ((?x75 (+ value_0_2)))\n (let (($x74 (< ?x75 0.0)))\n (or $x74 $x87 (< ?x75 (+ value_0_0)) (< ?x75 (+ value_0_1))))))))\n(assert\n (let ((?x89 (+ value_1_2)))\n (let (($x122 (< ?x89 0.0)))\n (let ((?x113 (+ value_0_1)))\n (let (($x121 (< ?x113 0.0)))\n (or $x121 $x122 (< ?x89 (+ value_1_0)) (< ?x89 (+ value_1_1))))))))\n(assert\n (let ((?x89 (+ value_1_2)))\n(let (($x122 (< ?x89 0.0)))\n(let ((?x113 (+ value_0_1)))\n(let (($x121 (< ?x113 0.0)))\n(or $x121 $x122 (< ?x113 (+ value_0_0)) (< ?x113 (+ value_0_2))))))))\n(check-sat)\n",
+  "solver_status": "unsat",
+  "status": "UNSAT_CANDIDATE"
+}

@@ -1,0 +1,534 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 32,
+  "break_good_symmetry": false,
+  "candidate_partition_count": 91,
+  "floater": 8,
+  "iterations_completed": 8,
+  "learned_rival_count": 60,
+  "local_rival_template_count": 1806,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "SAT refutes the owner-distance-two normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 3,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "smt2_output": "game-theory/additive-efx-counting/results/partial_hall_utilitarian_local_r3_cegar_session1.smt2",
+  "solver_reason_unknown": null,
+  "solver_statistics": "(:added-eqs                   10\n :arith-eq-adapter            4\n :arith-bound-propagations-lp 519975\n :arith-conflicts             1316\n :arith-lower                 45298\n :arith-make-feasible         38740\n :arith-max-columns           3810\n :arith-max-rows              3770\n :arith-upper                 54952\n :binary-propagations         56748\n :conflicts                   1363\n :decisions                   380763\n :del-clause                  560\n :final-checks                7\n :max-memory                  60.64\n :memory                      60.54\n :minimized-lits              185\n :mk-bool-var                 4761\n :mk-clause                   3600\n :mk-clause-binary            906\n :num-allocs                  332457287\n :num-checks                  7\n :propagations                101496\n :restarts                    10\n :rlimit-count                32995941\n :time                        6.72)",
+  "status": "SAT_LOCAL_MAXIMAL_OBSTRUCTION",
+  "timeout_seconds_per_master": 300,
+  "trace": [
+    {
+      "base_score": {
+        "denominator": 2445912,
+        "numerator": 2119457
+      },
+      "improving_local_rival_count": 5,
+      "iteration": 1,
+      "learned_rival_count_before": 0,
+      "new_improving_local_rival_count": 5,
+      "values": [
+        [
+          3,
+          15,
+          24,
+          1223,
+          1196,
+          12,
+          45,
+          1265,
+          15
+        ],
+        [
+          605,
+          614,
+          6,
+          18,
+          54,
+          1252,
+          3,
+          614,
+          632
+        ],
+        [
+          4667,
+          3739,
+          813,
+          1346,
+          418,
+          9219,
+          1254,
+          3390,
+          4272
+        ],
+        [
+          5076,
+          5020,
+          1129,
+          1297,
+          3863,
+          6345,
+          6345,
+          1297,
+          5076
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 8080,
+        "numerator": 7783
+      },
+      "improving_local_rival_count": 13,
+      "iteration": 2,
+      "learned_rival_count_before": 5,
+      "new_improving_local_rival_count": 13,
+      "values": [
+        [
+          737,
+          4,
+          769,
+          16,
+          28,
+          793,
+          821,
+          4,
+          60
+        ],
+        [
+          60,
+          794,
+          105,
+          1558,
+          824,
+          2472,
+          1985,
+          1940,
+          2382
+        ],
+        [
+          16,
+          20,
+          4,
+          773,
+          817,
+          837,
+          4,
+          4,
+          757
+        ],
+        [
+          1197,
+          407,
+          407,
+          24,
+          20,
+          1600,
+          8,
+          1201,
+          1600
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 19560,
+        "numerator": 23747
+      },
+      "improving_local_rival_count": 10,
+      "iteration": 3,
+      "learned_rival_count_before": 18,
+      "new_improving_local_rival_count": 10,
+      "values": [
+        [
+          1307,
+          60,
+          2584,
+          15,
+          1217,
+          3786,
+          3981,
+          5303,
+          1307
+        ],
+        [
+          1288,
+          2586,
+          70,
+          10,
+          1258,
+          2676,
+          1907,
+          629,
+          2616
+        ],
+        [
+          4,
+          420,
+          1,
+          8,
+          431,
+          436,
+          1,
+          1,
+          2
+        ],
+        [
+          1303,
+          1253,
+          30,
+          15,
+          5,
+          1313,
+          5,
+          1298,
+          1298
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 191520,
+        "numerator": 179503
+      },
+      "improving_local_rival_count": 10,
+      "iteration": 4,
+      "learned_rival_count_before": 28,
+      "new_improving_local_rival_count": 10,
+      "values": [
+        [
+          1030,
+          72,
+          2078,
+          9,
+          976,
+          2168,
+          551,
+          1626,
+          1066
+        ],
+        [
+          1048,
+          2106,
+          70,
+          10,
+          1018,
+          2196,
+          1577,
+          479,
+          2136
+        ],
+        [
+          24,
+          991,
+          28,
+          24,
+          1051,
+          1079,
+          4,
+          1031,
+          24
+        ],
+        [
+          263,
+          4,
+          252,
+          6,
+          4,
+          268,
+          265,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 15792,
+        "numerator": 17665
+      },
+      "improving_local_rival_count": 6,
+      "iteration": 5,
+      "learned_rival_count_before": 38,
+      "new_improving_local_rival_count": 6,
+      "values": [
+        [
+          3,
+          3,
+          15,
+          619,
+          12,
+          640,
+          51,
+          592,
+          39
+        ],
+        [
+          4703,
+          48,
+          4463,
+          1947,
+          2612,
+          6506,
+          3942,
+          3325,
+          4038
+        ],
+        [
+          662,
+          9,
+          680,
+          617,
+          1333,
+          9,
+          18,
+          1968,
+          626
+        ],
+        [
+          319,
+          309,
+          2,
+          14,
+          10,
+          331,
+          24,
+          4,
+          303
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 3384,
+        "numerator": 3935
+      },
+      "improving_local_rival_count": 11,
+      "iteration": 6,
+      "learned_rival_count_before": 44,
+      "new_improving_local_rival_count": 11,
+      "values": [
+        [
+          1,
+          1,
+          5,
+          175,
+          4,
+          182,
+          17,
+          166,
+          13
+        ],
+        [
+          165,
+          181,
+          4,
+          382,
+          209,
+          571,
+          366,
+          4,
+          374
+        ],
+        [
+          24,
+          3,
+          42,
+          493,
+          547,
+          3,
+          6,
+          562,
+          12
+        ],
+        [
+          539,
+          491,
+          4,
+          56,
+          20,
+          563,
+          527,
+          28,
+          28
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 4140,
+        "numerator": 7301
+      },
+      "improving_local_rival_count": 5,
+      "iteration": 7,
+      "learned_rival_count_before": 55,
+      "new_improving_local_rival_count": 5,
+      "values": [
+        [
+          3,
+          14,
+          671,
+          3,
+          681,
+          694,
+          692,
+          1,
+          1
+        ],
+        [
+          42,
+          2656,
+          3,
+          57,
+          12,
+          2722,
+          2680,
+          39,
+          69
+        ],
+        [
+          2693,
+          1,
+          7,
+          11,
+          22,
+          1,
+          2,
+          8,
+          15
+        ],
+        [
+          6,
+          532,
+          9,
+          9,
+          546,
+          554,
+          23,
+          553,
+          528
+        ]
+      ]
+    },
+    {
+      "base_score": {
+        "denominator": 52320,
+        "numerator": 71863
+      },
+      "improving_local_rival_count": 0,
+      "iteration": 8,
+      "learned_rival_count_before": 60,
+      "new_improving_local_rival_count": 0,
+      "values": [
+        [
+          3454,
+          1763,
+          18,
+          1745,
+          5271,
+          8725,
+          6998,
+          1709,
+          1709
+        ],
+        [
+          42,
+          1640,
+          3,
+          57,
+          12,
+          1706,
+          1664,
+          39,
+          69
+        ],
+        [
+          5370,
+          1322,
+          9,
+          1817,
+          3571,
+          9,
+          18,
+          1790,
+          1790
+        ],
+        [
+          60,
+          1548,
+          80,
+          105,
+          1683,
+          1758,
+          5,
+          1748,
+          1733
+        ]
+      ]
+    }
+  ],
+  "values": [
+    [
+      3454,
+      1763,
+      18,
+      1745,
+      5271,
+      8725,
+      6998,
+      1709,
+      1709
+    ],
+    [
+      42,
+      1640,
+      3,
+      57,
+      12,
+      1706,
+      1664,
+      39,
+      69
+    ],
+    [
+      5370,
+      1322,
+      9,
+      1817,
+      3571,
+      9,
+      18,
+      1790,
+      1790
+    ],
+    [
+      60,
+      1548,
+      80,
+      105,
+      1683,
+      1758,
+      5,
+      1748,
+      1733
+    ]
+  ]
+}

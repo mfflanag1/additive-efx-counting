@@ -1,0 +1,122 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 7276,
+  "elapsed_seconds": 284.88129,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": false,
+  "exclude_universal_min": false,
+  "favorite_pattern": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 13440,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "partition_singleton_good": null,
+  "partition_singleton_goods": [
+    0,
+    1
+  ],
+  "partition_universe_size": 3129,
+  "pool_sha256": "d6e9ffd3ac1906c3cba46763da9ba2183ccc61e966173708fe43990163664d5b",
+  "pool_size": 560,
+  "proto_bytes": 1804928,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_favorites31_balanced_or_favorite_singleton_matching_session1.pb",
+  "proto_sha256": "1e62f3da558ea684230f201f0560996dc18a16f36ef2917942b4d14fa16e8ddd",
+  "require_distinct_item_values": true,
+  "require_pairwise_distinct_rows": false,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [
+    {
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_shape3222_favorites31_matching_stabilized_pool.json",
+      "sha256": "79500912c6f71977a3d04d1b2709e001c7663e04144e131200138f84ba95213a"
+    }
+  ],
+  "solver_status": "INFEASIBLE",
+  "status": "UNSAT_BOUNDED_CELL_CANDIDATE",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 609951,
+      "conflicts": 31769,
+      "deterministic_time": 5.110134556172734,
+      "iteration": 1,
+      "pool_size_before": 454,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 106,
+      "values": [
+        [
+          13,
+          9,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          8,
+          7,
+          6,
+          4,
+          3,
+          1,
+          2,
+          5
+        ],
+        [
+          13,
+          8,
+          7,
+          6,
+          2,
+          4,
+          1,
+          3,
+          5
+        ],
+        [
+          8,
+          13,
+          7,
+          6,
+          5,
+          1,
+          2,
+          4,
+          3
+        ]
+      ],
+      "wall_time_seconds": 17.056389
+    },
+    {
+      "branches": 1214752,
+      "conflicts": 271091,
+      "deterministic_time": 74.72283481823096,
+      "iteration": 2,
+      "pool_size": 560,
+      "solver_status": "INFEASIBLE",
+      "wall_time_seconds": 267.339355
+    }
+  ],
+  "upper": 13,
+  "values": null
+}

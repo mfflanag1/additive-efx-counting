@@ -1,0 +1,253 @@
+{
+  "candidate_trichotomy": "Every eligible all-host-blocked state has either a strict bundle preference cycle or a source-good substitution followed by an eligible bundle rematching with larger Nash welfare.",
+  "claim_boundary": "The census covers six exact four-agent, nine-good profiles. It does not establish the candidate trichotomy for arbitrary values, bundle shapes, or numbers of goods.",
+  "inputs": [
+    {
+      "path": "results/partial_linear_potential_refutation.json",
+      "sha256": "727c5af4bd7fb9395dc2c543329df067184d727685eaf563261d23adc7564bd9"
+    },
+    {
+      "path": "results/partial_nash_initial_cegar_models.json",
+      "sha256": "b85e7ca452137ef093942e24133a89d12d7ce7263bee360228bd3066597af223"
+    }
+  ],
+  "meaning": "Every audited all-host-blocked eligible state either had a strict bundle cycle or an eligible source substitution/rematching with strictly larger Nash welfare. This finite census is not a proof of the general trichotomy.",
+  "profiles": [
+    {
+      "all_host_blocked_state_count": 40,
+      "eligible_state_count": 98,
+      "label": "linear_refutation",
+      "rescues_with_owner_loss_count": 0,
+      "source_substitution_rescue_state_count": 14,
+      "strict_bundle_cycle_state_count": 26
+    },
+    {
+      "all_host_blocked_state_count": 104,
+      "eligible_state_count": 1647,
+      "label": "initial_cegar_iteration_1",
+      "rescues_with_owner_loss_count": 0,
+      "source_substitution_rescue_state_count": 70,
+      "strict_bundle_cycle_state_count": 34
+    },
+    {
+      "all_host_blocked_state_count": 230,
+      "eligible_state_count": 1534,
+      "label": "initial_cegar_iteration_2",
+      "rescues_with_owner_loss_count": 0,
+      "source_substitution_rescue_state_count": 192,
+      "strict_bundle_cycle_state_count": 38
+    },
+    {
+      "all_host_blocked_state_count": 2768,
+      "eligible_state_count": 4230,
+      "label": "initial_cegar_iteration_3",
+      "rescues_with_owner_loss_count": 3,
+      "source_substitution_rescue_state_count": 1099,
+      "strict_bundle_cycle_state_count": 1669
+    },
+    {
+      "all_host_blocked_state_count": 209,
+      "eligible_state_count": 1364,
+      "label": "initial_cegar_iteration_4",
+      "rescues_with_owner_loss_count": 0,
+      "source_substitution_rescue_state_count": 180,
+      "strict_bundle_cycle_state_count": 29
+    },
+    {
+      "all_host_blocked_state_count": 363,
+      "eligible_state_count": 1904,
+      "label": "initial_cegar_iteration_5",
+      "rescues_with_owner_loss_count": 0,
+      "source_substitution_rescue_state_count": 269,
+      "strict_bundle_cycle_state_count": 94
+    }
+  ],
+  "rescue_templates": [
+    {
+      "count": 413,
+      "owner_gain_count": 2,
+      "owner_loss_count": 0,
+      "permutation_shape": "211",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    },
+    {
+      "count": 367,
+      "owner_gain_count": 2,
+      "owner_loss_count": 0,
+      "permutation_shape": "211",
+      "receiver_is_supporter": true,
+      "supporter_count": 3
+    },
+    {
+      "count": 184,
+      "owner_gain_count": 3,
+      "owner_loss_count": 0,
+      "permutation_shape": "31",
+      "receiver_is_supporter": true,
+      "supporter_count": 3
+    },
+    {
+      "count": 175,
+      "owner_gain_count": 3,
+      "owner_loss_count": 0,
+      "permutation_shape": "31",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    },
+    {
+      "count": 170,
+      "owner_gain_count": 1,
+      "owner_loss_count": 0,
+      "permutation_shape": "1111",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    },
+    {
+      "count": 105,
+      "owner_gain_count": 2,
+      "owner_loss_count": 0,
+      "permutation_shape": "211",
+      "receiver_is_supporter": true,
+      "supporter_count": 4
+    },
+    {
+      "count": 91,
+      "owner_gain_count": 2,
+      "owner_loss_count": 0,
+      "permutation_shape": "211",
+      "receiver_is_supporter": true,
+      "supporter_count": 1
+    },
+    {
+      "count": 71,
+      "owner_gain_count": 1,
+      "owner_loss_count": 0,
+      "permutation_shape": "1111",
+      "receiver_is_supporter": true,
+      "supporter_count": 3
+    },
+    {
+      "count": 52,
+      "owner_gain_count": 3,
+      "owner_loss_count": 0,
+      "permutation_shape": "31",
+      "receiver_is_supporter": true,
+      "supporter_count": 1
+    },
+    {
+      "count": 51,
+      "owner_gain_count": 1,
+      "owner_loss_count": 0,
+      "permutation_shape": "1111",
+      "receiver_is_supporter": true,
+      "supporter_count": 1
+    },
+    {
+      "count": 46,
+      "owner_gain_count": 3,
+      "owner_loss_count": 0,
+      "permutation_shape": "31",
+      "receiver_is_supporter": true,
+      "supporter_count": 4
+    },
+    {
+      "count": 37,
+      "owner_gain_count": 4,
+      "owner_loss_count": 0,
+      "permutation_shape": "4",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    },
+    {
+      "count": 28,
+      "owner_gain_count": 4,
+      "owner_loss_count": 0,
+      "permutation_shape": "4",
+      "receiver_is_supporter": true,
+      "supporter_count": 3
+    },
+    {
+      "count": 15,
+      "owner_gain_count": 1,
+      "owner_loss_count": 0,
+      "permutation_shape": "1111",
+      "receiver_is_supporter": true,
+      "supporter_count": 4
+    },
+    {
+      "count": 11,
+      "owner_gain_count": 4,
+      "owner_loss_count": 0,
+      "permutation_shape": "4",
+      "receiver_is_supporter": true,
+      "supporter_count": 1
+    },
+    {
+      "count": 2,
+      "owner_gain_count": 2,
+      "owner_loss_count": 1,
+      "permutation_shape": "31",
+      "receiver_is_supporter": true,
+      "supporter_count": 1
+    },
+    {
+      "count": 1,
+      "owner_gain_count": 1,
+      "owner_loss_count": 0,
+      "permutation_shape": "211",
+      "receiver_is_supporter": true,
+      "supporter_count": 3
+    },
+    {
+      "count": 1,
+      "owner_gain_count": 2,
+      "owner_loss_count": 0,
+      "permutation_shape": "31",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    },
+    {
+      "count": 1,
+      "owner_gain_count": 3,
+      "owner_loss_count": 0,
+      "permutation_shape": "22",
+      "receiver_is_supporter": true,
+      "supporter_count": 1
+    },
+    {
+      "count": 1,
+      "owner_gain_count": 3,
+      "owner_loss_count": 0,
+      "permutation_shape": "22",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    },
+    {
+      "count": 1,
+      "owner_gain_count": 4,
+      "owner_loss_count": 0,
+      "permutation_shape": "4",
+      "receiver_is_supporter": true,
+      "supporter_count": 4
+    },
+    {
+      "count": 1,
+      "owner_gain_count": 3,
+      "owner_loss_count": 1,
+      "permutation_shape": "4",
+      "receiver_is_supporter": true,
+      "supporter_count": 2
+    }
+  ],
+  "schema": "partial-nash-substitution-census-v1",
+  "status": "NO_RESIDUAL_IN_AUDITED_PROFILES",
+  "totals": {
+    "all_host_blocked_state_count": 3714,
+    "eligible_state_count": 10777,
+    "rescues_with_owner_loss_count": 3,
+    "residual_state_count": 0,
+    "source_substitution_rescue_state_count": 1824,
+    "strict_bundle_cycle_state_count": 1890
+  }
+}

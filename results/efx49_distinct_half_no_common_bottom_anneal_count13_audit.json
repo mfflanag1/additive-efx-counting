@@ -1,0 +1,73 @@
+{
+  "accepted_moves": 1,
+  "audit": {
+    "counting_score": 27,
+    "favorite_pair_efx_partition_count": 12,
+    "maximizing_low_pairs": [
+      [
+        7,
+        8
+      ]
+    ],
+    "maximum_favorite_triple_cell_count": 15
+  },
+  "candidate_lower_bound": 15,
+  "common_bottom_pair_forbidden": true,
+  "elapsed_seconds": 0.053215980529785156,
+  "final_temperature": 0.02,
+  "initial_temperature": 8.0,
+  "iterations_completed": 1,
+  "literal_complete_efx_count": 274,
+  "random_seed": 20260829,
+  "schema": "distinct-half-counting-invariant-anneal-v1",
+  "scope": "integer profiles normalized to favorite 100 in the exact universal-threshold distinct-representative branch",
+  "selection_counterexample_requires_favorite_pair_count": 0,
+  "status": "NO_COMMON_BOTTOM_QUANTITATIVE_COUNTEREXAMPLE",
+  "values": [
+    [
+      100,
+      68,
+      76,
+      71,
+      71,
+      55,
+      67,
+      19,
+      1
+    ],
+    [
+      100,
+      81,
+      91,
+      92,
+      92,
+      68,
+      88,
+      1,
+      1
+    ],
+    [
+      100,
+      62,
+      63,
+      70,
+      58,
+      70,
+      19,
+      24,
+      1
+    ],
+    [
+      100,
+      69,
+      66,
+      71,
+      59,
+      41,
+      85,
+      4,
+      1
+    ]
+  ],
+  "warning": "A positive favorite-pair count does not refute the qualitative common-bottom selection lemma. Any unrefuted lower bound is falsification evidence only, not a proof."
+}

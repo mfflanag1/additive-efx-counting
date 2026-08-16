@@ -1,0 +1,150 @@
+{
+  "combined_constant": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "combined_vector_is_zero": true,
+  "core_constraint_count": 9,
+  "meaning": "The weighted sum of the listed weak/strict inequalities and equalities is identically zero, while the total multiplier on strict inequalities is positive. Hence the frozen core is infeasible.",
+  "nonzero_multiplier_count": 9,
+  "schema": "partial-hall-farkas-certificate-v1",
+  "source": "results/partial_hall_complementary_swap_gate8_frozen_cell.json",
+  "source_sha256": "3121604f1c1cffb3d68f1986bb801b51de207833cd893c3df4c86bec95de0140",
+  "status": "EXACT_FARKAS_CONTRADICTION",
+  "strict_multiplier_sum": {
+    "denominator": 1,
+    "numerator": 1
+  },
+  "terms": [
+    {
+      "constraint": {
+        "agent": 2,
+        "good": 1,
+        "kind": "strict_positivity",
+        "label": "track_22"
+      },
+      "multiplier": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_2789",
+        "left_mask": 66,
+        "right_mask": 129
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_2986",
+        "left_mask": 129,
+        "right_mask": 18
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_6004",
+        "left_mask": 9,
+        "right_mask": 256
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_6180",
+        "left_mask": 17,
+        "right_mask": 192
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 3
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_7264",
+        "left_mask": 154,
+        "right_mask": 1
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_7334",
+        "left_mask": 192,
+        "right_mask": 264
+      },
+      "multiplier": {
+        "denominator": 8,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_7360",
+        "left_mask": 258,
+        "right_mask": 17
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 3
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "floater": 8,
+        "kind": "maximality",
+        "label": "track_10341",
+        "masks": [
+          144,
+          14,
+          65,
+          32
+        ],
+        "owner_distance": 2
+      },
+      "multiplier": {
+        "denominator": 16,
+        "numerator": 1
+      },
+      "relation": "weak"
+    }
+  ]
+}

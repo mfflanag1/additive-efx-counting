@@ -1,0 +1,216 @@
+{
+  "add_per_iteration": 128,
+  "branches": 3385500,
+  "cap": 20,
+  "conflicts": 258789,
+  "elapsed_seconds": 900.313285112381,
+  "time_limit_seconds": 900.0,
+  "favorite_pair_partition_count": 840,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "iterations": 4,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "n": 4,
+  "pool_size": 331,
+  "proto_path": "results/efx49_distinct_half_two_core_cpsat_cegar_cap20_session2.pbtxt",
+  "proto_sha256": "f5c41cc06575cfc0b34ce44fba6731a09b81701309b38e47d4cd63943f53113b",
+  "random_seed": 20260731,
+  "resume_source": "results/efx49_distinct_half_two_core_cpsat_cegar_cap20_session2.json",
+  "resume_source_sha256": "2aba714260d4fa493a505bdb7927f324731f9de6dbbbc7f354ce9f31c2771d03",
+  "schema": "distinct-half-two-core-cpsat-cegar-v1",
+  "seed_mode": "complement",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_favorite_triple_boundary_audit.json",
+      "sha256": "05534e7b1d06ea4ccb57af293b33582af6811c55f76d3c22c7ca051429d6c20c"
+    },
+    {
+      "path": "results/efx49_distinct_half_structured_floor_boundary_audit.json",
+      "sha256": "79d93b5bf09d9d656ec7e52b93f78ad63578bc9edbbcd02b8aab84d34698fec0"
+    },
+    {
+      "path": "results/efx49_distinct_half_fixed_host_lex_boundary_audit.json",
+      "sha256": "00e68567a2bc286d0359b8b08a148b3a7694b9995ba7f3dacc07292747b01081"
+    },
+    {
+      "path": "results/efx49_distinct_half_rank_radius_boundary_audit.json",
+      "sha256": "47736cdfc9e2c70a13a1393904967298f27d8255f115ba99e2771753a78d66a1"
+    },
+    {
+      "path": "results/efx49_universal_threshold_distinct_reps_cegar_session1.json",
+      "sha256": "0a69e1249a57ecec7d8cd45763ff54afb8258e1eace54205a70a591767b2c693"
+    }
+  ],
+  "seed_supported_union_size": 785,
+  "solver_status": "UNKNOWN",
+  "status": "CP_SAT_UNKNOWN",
+  "symmetry_breaking": [
+    "nonincreasing favorite values by agent",
+    "nonincreasing agent-0 values on goods 5..8"
+  ],
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 398,
+      "iteration": 1,
+      "pool_size_before": 55,
+      "values": [
+        [
+          19,
+          12,
+          7,
+          18,
+          7,
+          14,
+          10,
+          10,
+          9
+        ],
+        [
+          19,
+          15,
+          15,
+          4,
+          16,
+          16,
+          17,
+          3,
+          4
+        ],
+        [
+          19,
+          4,
+          18,
+          13,
+          13,
+          9,
+          7,
+          6,
+          17
+        ],
+        [
+          19,
+          11,
+          17,
+          3,
+          16,
+          11,
+          6,
+          1,
+          15
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 143,
+      "iteration": 2,
+      "pool_size_before": 183,
+      "values": [
+        [
+          20,
+          11,
+          1,
+          10,
+          15,
+          12,
+          12,
+          12,
+          2
+        ],
+        [
+          20,
+          19,
+          11,
+          19,
+          1,
+          19,
+          19,
+          13,
+          1
+        ],
+        [
+          20,
+          11,
+          1,
+          19,
+          17,
+          9,
+          16,
+          19,
+          1
+        ],
+        [
+          20,
+          19,
+          1,
+          19,
+          16,
+          15,
+          11,
+          11,
+          2
+        ]
+      ]
+    },
+    {
+      "favorite_pair_efx_survivors": 20,
+      "iteration": 3,
+      "pool_size_before": 311,
+      "values": [
+        [
+          15,
+          8,
+          11,
+          9,
+          10,
+          11,
+          11,
+          1,
+          1
+        ],
+        [
+          15,
+          8,
+          12,
+          9,
+          11,
+          7,
+          12,
+          1,
+          1
+        ],
+        [
+          14,
+          10,
+          6,
+          8,
+          11,
+          10,
+          8,
+          1,
+          1
+        ],
+        [
+          14,
+          8,
+          8,
+          10,
+          8,
+          9,
+          6,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "two_core_candidate_count": 168,
+  "two_core_scope": "all",
+  "values": null,
+  "warning": "UNSAT is finite-cap only and needs independent replay. A SAT terminal model refutes only the conditional two-core target unless literal complete-EFX enumeration is also zero.",
+  "workers": 8
+}

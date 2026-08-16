@@ -1,0 +1,27 @@
+{
+  "schema": "row-merge-deficient-block-restart-refutation-witness-v1",
+  "status": "DEFICIENT_BLOCK_RESTART_REFUTATION_WITNESS",
+  "n": 4,
+  "m": 7,
+  "minimal_hall_witness_agents": [0, 1, 2],
+  "deficient_block_bundle_indices": [0, 1, 2],
+  "wall_partition": [[0, 1], [2, 3], [4, 5], [6]],
+  "moving_agent": 0,
+  "moving_bundle_index": 0,
+  "perturbed_good": 2,
+  "critical_good": 3,
+  "wall_values": [
+    [976, 502, 1478, 49, 77, 404, 14],
+    [159, 2, 164, 4, 167, 1, 3],
+    [10, 3, 237, 6, 241, 2, 1],
+    [160, 3, 5, 7, 1, 162, 162]
+  ],
+  "post_wall_values": [
+    [976, 502, 1485, 49, 77, 404, 14],
+    [159, 2, 164, 4, 167, 1, 3],
+    [10, 3, 237, 6, 241, 2, 1],
+    [160, 3, 5, 7, 1, 162, 162]
+  ],
+  "claim": "No deletion and repartition confined to the deficient three-bundle block yields a partial EFX allocation post-wall.",
+  "claim_boundary": "The post-wall profile has complete EFX allocations elsewhere. This refutes Hall-local partial restart, not complete EFX continuation."
+}

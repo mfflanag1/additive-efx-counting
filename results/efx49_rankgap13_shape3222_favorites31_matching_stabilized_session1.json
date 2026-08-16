@@ -1,0 +1,109 @@
+{
+  "claim_scope": "bounded integer favorite-pattern cell; an UNSAT result requires independent solver replay before theorem status",
+  "comparison_variables": 5160,
+  "elapsed_seconds": 5.212346,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "exclude_peelable": false,
+  "exclude_universal_min": false,
+  "favorite_pattern": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "favorite_pattern_stabilizer": true,
+  "hall_edge_clauses": 0,
+  "hall_selectors": 0,
+  "m": 9,
+  "matching_clauses": 10680,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "partition_shape": [
+    3,
+    2,
+    2,
+    2
+  ],
+  "partition_singleton_good": null,
+  "partition_universe_size": 1260,
+  "pool_sha256": "10cf946b1260c95d637f829c000c49d6feca26593003a8de021f1d29e52ec9b6",
+  "pool_size": 445,
+  "proto_bytes": 1335968,
+  "proto_path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_rankgap13_shape3222_favorites31_matching_stabilized_session1.pb",
+  "proto_sha256": "aedb8d068709fe7432526836a076443b50861c717bc4c1bc68501b1bc3b7c61d",
+  "require_distinct_item_values": true,
+  "require_pairwise_distinct_rows": false,
+  "schema": "integer-partition-cp-sat-result-v1",
+  "seed_pools": [
+    {
+      "path": "/Users/maxf/projects/economics-research/game-theory/additive-efx-counting/results/efx49_borda_shape3222_favorites31_pool.json",
+      "sha256": "42ce0f931b6c9d7b6708dafa247d88eae3b8aee64dc567b33ab5e0b0850bc1d3"
+    }
+  ],
+  "solver_status": "OPTIMAL",
+  "status": "ITERATION_LIMIT",
+  "symmetry": "none",
+  "trace": [
+    {
+      "branches": 329020,
+      "conflicts": 5216,
+      "deterministic_time": 1.4307213592376244,
+      "iteration": 1,
+      "pool_size_before": 417,
+      "solver_status": "OPTIMAL",
+      "supported_partition_count": 28,
+      "values": [
+        [
+          13,
+          12,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1
+        ],
+        [
+          13,
+          12,
+          4,
+          6,
+          3,
+          2,
+          1,
+          5,
+          7
+        ],
+        [
+          13,
+          8,
+          7,
+          6,
+          5,
+          2,
+          4,
+          3,
+          1
+        ],
+        [
+          12,
+          13,
+          5,
+          8,
+          1,
+          2,
+          4,
+          6,
+          3
+        ]
+      ],
+      "wall_time_seconds": 5.078844
+    }
+  ],
+  "upper": 13,
+  "values": null
+}

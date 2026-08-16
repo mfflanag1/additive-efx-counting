@@ -1,0 +1,550 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.92in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!55!black,
+  citecolor=blue!55!black,
+  urlcolor=blue!55!black,
+  pdftitle={Complete EFX for Four Additive Agents and Eight Goods},
+  pdfsubject={A formally audited computer-assisted proof}
+}
+\setlength{\emergencystretch}{3em}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\EFX}{\mathrm{EFX}}
+\newcommand{\N}{\mathcal{N}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\vsum}[2]{v_{#1}(#2)}
+
+\title{\textbf{Complete EFX for Four Additive Agents and Eight Goods}\\
+\large A formally audited computer-assisted proof}
+\author{Draft for adversarial review}
+\date{July 30, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We prove that every instance of four agents and eight indivisible goods with
+nonnegative additive valuations admits a complete allocation that is
+envy-free up to any good (EFX). This is the first additive parameter cell
+immediately beyond the general $m\le n+3$ existence frontier. The proof is
+hybrid. Lean verifies the mathematical reduction from a hypothetical
+counterexample to eight exact rational linear-arithmetic systems. A
+generator-independent parser audit binds every assertion in those systems to
+the Lean terminal-cell specifications. For each system, cvc5 emits a CPC proof
+of unsatisfiability and the separate Ethos checker accepts the proof as
+\texttt{correct}. The eight proofs contain 13,812,082 proof-step lines and
+occupy 1.668 GB. An alternative encoding over all 40,824 labeled onto
+allocations independently closes all eight cells. A 124-entry SHA-256 manifest
+binds the complete proof package, exact published inputs, tools, audits,
+formulas, proofs, Lean build, and source archive. We explain the structural
+reduction, the formal-to-computational boundary, and the remaining trust
+assumptions. We also report a 130-partition deletion-minimal explanatory core
+with its own independently checked CPC proof. This manuscript is a technical
+review draft, not a claim of peer review or independently confirmed novelty.
+\end{abstract}
+
+\section{Introduction}
+
+Let $\N$ be a finite set of agents and $\M$ a finite set of indivisible
+goods. Agent $i$ has an additive valuation
+\[
+  v_i(S)=\sum_{g\in S} w_{ig},\qquad w_{ig}\ge0.
+\]
+A complete allocation $X=(X_i)_{i\in\N}$ partitions all goods. It is EFX if
+for every pair of agents $i\ne j$ and every good $g\in X_j$,
+\[
+  v_i(X_i)\ge v_i(X_j\setminus\{g\}).
+\]
+The central existence question asks whether a complete EFX allocation always
+exists for additive valuations.
+
+Complete EFX is known for three additive agents
+\cite{CGM2024}. Mahara proved complete EFX for general monotone valuations
+when $m\le n+3$ \cite{Mahara2021}. Thus four agents and seven goods are
+covered, while the case of four agents and eight goods is the first
+near-diagonal additive cell outside both standard boundaries. Four-agent
+partial EFX leaving at most one good unallocated is known
+\cite{Berger2022}, but does not settle completeness.
+
+Our main result is the following.
+
+\begin{theorem}[Main theorem]\label{thm:main}
+Every nonnegative additive valuation instance with four agents and
+eight goods admits a complete EFX allocation.
+\end{theorem}
+
+The terminal reduction is carried out for strictly positive weights. To pass
+from nonnegative weights, observe that each fixed allocation's EFX region is
+closed and there are finitely many allocations. Hence the set of instances
+with no EFX allocation is open. Any nonnegative counterexample would therefore
+have a sufficiently small strictly positive perturbation that remains a
+counterexample. This perturbation reduction and the final nonnegative wrapper
+are checked in Lean.
+
+The proof combines four layers:
+\begin{enumerate}[leftmargin=2.1em]
+  \item published complete-EFX inputs for four agents and seven goods and for
+  three additive agents;
+  \item a Lean-checked structural reduction to eight terminal ranking cells;
+  \item an independently generated and parser-audited exact linear-arithmetic
+  formula for each cell; and
+  \item eight cvc5 CPC proofs accepted by the separate Ethos checker.
+\end{enumerate}
+
+This organization follows an explicit trust boundary. The mathematical
+reduction is not inferred from solver output. Conversely, Lean does not prove
+billions of arithmetic proof steps internally. It proves the finite
+reduction; exact formula audits connect that reduction to independently
+checked arithmetic certificates.
+
+\paragraph{Contributions.}
+Besides Theorem~\ref{thm:main}, the development provides:
+\begin{itemize}[leftmargin=1.8em]
+  \item a reverse-parking criterion and a terminating threshold-cycle normal
+  form for EFX allocations;
+  \item a generic favorite-small-bundle theorem: if every agent receives a
+  favorite good and every bundle has size at most two, the allocation is EFX;
+  \item a formal construction closing the injective-favorite case whenever
+  $n\le m\le2n$;
+  \item exact canonical coverage, stabilizer, partition-enumeration, and
+  perfect-matching equivalence theorems in Lean;
+  \item an independent direct-allocation encoding for all eight cells; and
+  \item a deletion-minimal 130-partition core that exposes the geometry of
+  one terminal contradiction.
+\end{itemize}
+
+\section{Definitions and basic reductions}
+
+\begin{definition}
+For an agent $i$ and bundle $S$, define the one-good-removal threshold
+\[
+  \tau_i(S)=\max_{g\in S} v_i(S\setminus\{g\}),\qquad
+  \tau_i(\varnothing)=0.
+\]
+\end{definition}
+
+An allocation is EFX exactly when
+\[
+  v_i(X_i)\ge \tau_i(X_j)
+  \quad\text{for all }i,j.
+\]
+For additive valuations,
+\[
+  \tau_i(S)=v_i(S)-\min_{g\in S}v_i(g).
+\]
+
+\subsection{Reverse parking and threshold cycles}
+
+Suppose $X$ is EFX and $f\in X_h$. Removing $f$ can only make the observer
+inequalities of $h$ harder; all other agents see a target bundle shrink.
+Consequently $f$ is removable from $h$ precisely when
+\[
+  v_h(X_h)-v_h(f)\ge \max_{j\ne h}\tau_h(X_j).
+\]
+Choosing a least-valued good in $X_h$ yields the following criterion.
+
+\begin{lemma}[Reverse parking]\label{lem:parking}
+An owner $h$ has a removable good if and only if
+\[
+  \tau_h(X_h)\ge\max_{j\ne h}\tau_h(X_j).
+\]
+\end{lemma}
+
+If no owner satisfies this inequality, choose for every owner $h$ a strict
+threshold-maximizing target $c(h)$. The resulting functional graph contains a
+directed cycle. Rotate bundles along that cycle. EFX is preserved, and the
+finite potential
+\[
+  \Phi(X)=\sum_h\tau_h(X_h)
+\]
+strictly increases. Repeating must terminate.
+
+\begin{theorem}[Threshold-cycle normal form]\label{thm:cycle}
+Every complete EFX allocation with nonempty bundles can be transformed by
+EFX-preserving bundle rotations into one having an owner-removable good.
+\end{theorem}
+
+The theorem is generic over finite agents and goods and nonnegative additive
+valuations in the Lean development. Strict positivity forces all four bundles
+to be nonempty in the $4\times8$ setting.
+
+\subsection{Normalization and strict rankings}
+
+Multiplying one agent's valuation row by a positive scalar preserves every
+EFX comparison. We normalize each row so that
+\[
+  \sum_{g\in\M}w_{ig}=1.
+\]
+There are only finitely many complete allocations. If a normalized instance
+has no EFX allocation, choose one strict failed inequality for each
+allocation. These failures persist in an open neighborhood. A sufficiently
+small sum-preserving perturbation therefore makes every row ranking strict
+while preserving positivity and nonexistence.
+
+Lean proves this simultaneous perturbation rather than treating genericity as
+an informal ``without loss of generality'' step.
+
+\subsection{Favorite small bundles}
+
+\begin{lemma}[Favorite-small-bundle lemma]\label{lem:favorites}
+Let $X$ be a complete allocation in a positive additive instance. If every
+agent owns one of its favorite goods and every bundle has size at most two,
+then $X$ is EFX.
+\end{lemma}
+
+\begin{proof}
+After removing any good from a target bundle, at most one good remains. The
+observer values that good no more than its own favorite, which is contained
+in its own bundle.
+\end{proof}
+
+The Lean theorem is more general: given an injective favorite map and
+$|\M|\le2|\N|$, it constructs the allocation and proves EFX. In particular,
+if four agents have four distinct favorite goods among eight goods, give each
+agent its favorite and one remaining good.
+
+\section{Reduction to eight terminal cells}
+
+Assume for contradiction that a positive additive $4\times8$ instance has no
+complete EFX allocation. Normalize and perturb it as above.
+
+\subsection{Residual cuts from published theorems}
+
+Two structurally easy regions are removed.
+
+\paragraph{Universal minimum.}
+If a good is minimum for every agent, delete it, apply Mahara's complete
+$4\times7$ theorem, rotate to an unenvied source, and insert the good there.
+
+\paragraph{Peelable agent-good pair.}
+If an agent-good pair satisfies the formal peelability inequalities, delete
+that agent and good, apply the complete three-agent additive theorem to the
+remaining seven goods, and reinsert the pair.
+
+The latter reduction initially exposed a genuine specification error during
+audit: the deleted agent had incorrectly been retained as an observer with an
+empty bundle. The corrected predicate excludes that observer while retaining
+all comparisons needed for reinsertion. The correction and all downstream
+theorems are machine-checked.
+
+\subsection{Favorite multiplicities}
+
+By Lemma~\ref{lem:favorites}, favorites cannot be distinct. With strict
+rankings, the noninjective favorite multiplicities are, up to relabeling,
+\[
+  2+1+1,\qquad3+1,\qquad2+2,\qquad4.
+\]
+Canonical favorite vectors for the first three are
+\[
+  (0,0,1,2),\qquad(0,0,0,1),\qquad(0,0,1,1).
+\]
+If all four agents favor good $0$, refine by the multiplicities of their
+second favorites:
+\[
+  1+1+1+1,\qquad4,\qquad3+1,\qquad2+2,\qquad2+1+1.
+\]
+This gives exactly eight terminal cells.
+
+Only symmetries preserving a fixed ranking prefix are used. Agents with the
+same prefix and goods absent from every prescribed prefix may be sorted
+lexicographically. Lean proves that every relevant orbit has a representative
+satisfying these stabilizer inequalities.
+
+\section{Partitions and perfect matchings}
+
+There are exactly
+\[
+  S(8,4)=1,701
+\]
+unlabeled partitions of eight goods into four nonempty bundles. The Lean
+development verifies the restricted-growth enumeration and proves that every
+onto labeled allocation is obtained from one enumerated partition by a
+permutation of the four bundles.
+
+Fix a partition $\mathcal B=(B_0,B_1,B_2,B_3)$. Construct a bipartite graph
+between agents and bundles. Put edge $iB_b$ when
+\[
+  v_i(B_b)\ge \max_{c\ne b}\tau_i(B_c).
+\]
+
+\begin{proposition}[Matching equivalence]\label{prop:matching}
+The partition $\mathcal B$ supports a complete EFX allocation if and only if
+its agent-bundle feasibility graph has a perfect matching.
+\end{proposition}
+
+Thus a counterexample must obstruct all $4!=24$ matchings for every one of
+the 1,701 partitions.
+
+\section{Exact terminal formulas}
+
+Each terminal formula is quantifier-free rational linear arithmetic. It
+contains:
+\begin{itemize}[leftmargin=1.8em]
+  \item 32 strictly positive valuation variables and four row-normalization
+  equations;
+  \item exact favorite or second-favorite constraints;
+  \item the valid cell stabilizers;
+  \item exclusions of the universal-minimum and peelable regions;
+  \item 27,216 agent-bundle feasibility-edge definitions; and
+  \item 40,824 perfect-matching obstruction assertions.
+\end{itemize}
+
+The final formulas are generated by a program that does not import the
+original encoder, the original partition implementation, or Z3. A separate
+parser audit reconstructs the exact assertion semantics, independently
+enumerates the 1,701 partitions, checks every edge definition and all 24
+matching obstructions per partition, and binds the cell constants to their
+Lean definitions.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+Cell & Ranking data & Stabilizer\\
+\midrule
+favorite-$211$ & $(0,0,1,2)$ & none\\
+favorite-$31$ & $(0,0,0,1)$ & favorite preserving\\
+favorite-$22$ & $(0,0,1,1)$ & favorite preserving\\
+second-$1111$ & $(1,2,3,4)$ & prefix preserving\\
+second-$4$ & $(1,1,1,1)$ & prefix preserving\\
+second-$31$ & $(1,1,1,2)$ & prefix preserving\\
+second-$22$ & $(1,1,2,2)$ & prefix preserving\\
+second-$211$ & $(1,1,2,3)$ & prefix preserving\\
+\bottomrule
+\end{tabular}
+\caption{The eight terminal ranking cells. The last five share favorite
+vector $(0,0,0,0)$.}
+\label{tab:cells}
+\end{table}
+
+\section{Certificate closure}
+
+For every terminal formula:
+\begin{enumerate}[leftmargin=2.1em]
+  \item the original exact Z3 computation returns \texttt{unsat};
+  \item the archived formula replays in a fresh process;
+  \item an isolated rebuild matches the archived formula byte for byte;
+  \item the independent generator emits a semantically audited formula;
+  \item cvc5 emits a CPC proof; and
+  \item Ethos accepts that proof as \texttt{correct}.
+\end{enumerate}
+
+The eight CPC proofs total 1,668,457,899 bytes and 13,812,082 proof-step
+lines. Formula, proof, tool, all 51 transitive CPC-signature files, paper, and
+audit hashes are bound by a 96-entry certificate manifest. An additional
+audit matches all 545,360 formula assertions to all 545,360 permanent CPC
+assumptions in order, with zero mismatches.
+
+\subsection{Alternative direct encoding}
+
+As a non-load-bearing cross-check, a second formulation directly negates
+every labeled onto allocation. There are
+\[
+  4!\,S(8,4)=40,824
+\]
+such allocations. This encoding does not use the 1,701-partition
+feasibility-graph representation. All eight direct formulas are UNSAT: six
+close in Z3, and the two hardest close in cvc5 after an audited identity-only
+SMT-LIB syntax normalization.
+
+\subsection{Lean composition and axiom audit}
+
+Lean proves the theorem
+\[
+\texttt{admitsEFX\_4x8\_of\_standard\_published\_inputs}.
+\]
+Its permanent axiom audit reports exactly
+\[
+  [\texttt{propext},\ \texttt{Classical.choice},\ \texttt{Quot.sound}],
+\]
+with no \texttt{sorryAx} dependency and no native-computation axiom. The exact
+Mahara and Chaudhury--Garg--Mehlhorn paper versions and theorem fragments are
+hash-pinned; their proofs remain external trusted mathematics rather than
+re-formalized Lean proofs.
+
+\subsection{End-to-end package}
+
+The frozen finalizer:
+\begin{itemize}[leftmargin=1.8em]
+  \item verifies every CPC and direct-encoding artifact hash;
+  \item reruns the semantic and published-input audits;
+  \item checks the Lean source inventory and root imports;
+  \item performs a full pinned Lean build and axiom audit; and
+  \item creates a deterministic archive containing the transitive proof
+  sources.
+\end{itemize}
+All 124 entries in the final SHA-256 manifest verify. The deterministic
+source archive contains 72 files. A clean-source replay script extracts it
+into a new temporary project with no prior project build directory and repeats
+both audits, the Lean build, and the axiom check; independent-host replay
+remains part of the external release gate.
+
+\section{The 130-partition explanatory core}
+
+The favorite-$211$ cell has favorite vector $(0,0,1,2)$. Starting from all
+1,701 partition obstructions, assumption-core extraction produced 200
+partitions. Deletion shrinking then obtained a 130-partition core.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Bundle-size shape & Initial core & Final core\\
+\midrule
+$3+2+2+1$ & 98 & 59\\
+$2+2+2+2$ & 51 & 20\\
+$4+2+1+1$ & 30 & 30\\
+$3+3+1+1$ & 20 & 20\\
+$5+1+1+1$ & 1 & 1\\
+\midrule
+Total & 200 & 130\\
+\bottomrule
+\end{tabular}
+\caption{Shape counts in the explanatory core.}
+\end{table}
+
+Every single-partition deletion from the final core is satisfiable, so every
+survivor is individually indispensable relative to this core. This is
+deletion minimality, not a minimum-cardinality theorem.
+
+The final core has an exact two-piece description:
+\begin{enumerate}[leftmargin=2.1em]
+  \item 110 partitions in which shared favorite good $0$ is a singleton,
+  favorite goods $0,1,2$ are separated, and no nonfavorite good is a
+  singleton; and
+  \item 20 pair partitions of shape $2+2+2+2$ in which good $0$ is paired
+  with one nonfavorite good.
+\end{enumerate}
+The reduced formula has a 220,777,714-byte CPC proof containing 2,032,963
+proof-step lines; Ethos accepts it as \texttt{correct}.
+
+This geometry suggests an analytic target: prove that either one of the
+anchored singleton partitions or one of a small boundary family of anchored
+pair partitions has a perfect EFX matching. Ongoing deletion-witness analysis
+extracts exact valuations for which each indispensable partition is the sole
+EFX-supporting partition within the 130-partition core, counts all support in
+the full 1,701-partition universe, and exposes the Hall-deficient agent subsets
+in the other 129 core partitions.
+
+\section{Trust boundary and review status}
+
+The internally verified deduction has the form
+\[
+\begin{aligned}
+&\text{two pinned published EFX theorems}\\
+&+\ \text{Lean-checked structural reduction}\\
+&+\ \text{independently audited Lean-to-SMT binding}\\
+&+\ \text{eight CPC/Ethos UNSAT certificates}\\
+&\Longrightarrow\ \text{complete positive additive EFX at }(4,8).
+\end{aligned}
+\]
+
+The remaining trusted components are:
+\begin{itemize}[leftmargin=1.8em]
+  \item the mathematical proofs in the two published input papers;
+  \item the Lean kernel, pinned toolchain, and mathlib;
+  \item the Ethos checker implementation; and
+  \item the parser-based semantic bridge, which is audited software rather
+  than a single reflected theorem in Lean's kernel.
+\end{itemize}
+
+No independent fair-division or formal-certification expert has yet signed
+off. The package has a fresh-source replay on the original host, but not a
+second-machine or cross-operating-system replay. Accordingly, the warranted
+status is:
+\begin{quote}
+\textbf{Internally verified hybrid computer-assisted theorem; external
+review and novelty confirmation pending.}
+\end{quote}
+
+\section{Research directions}
+
+Three directions are immediate.
+
+\paragraph{Short analytic contradiction.}
+Use the deletion witnesses to identify repeated Hall-deficient agent sets and
+translate their missing edges into threshold inequalities. Search for small
+Farkas combinations that explain the 130-way disjunction.
+
+\paragraph{Next parameter cells.}
+The universal-minimum and peelable reductions make $(4,9)$ and $(5,9)$ the
+natural successors. At $(5,9)$, the generic injective-favorite theorem still
+closes the distinct-favorite region because $9\le2\cdot5$. Hall-selector
+encodings may avoid enumerating all $5!=120$ matchings per partition.
+
+\paragraph{Counting.}
+Theorem~\ref{thm:main} proves at least one EFX allocation at $(4,8)$. The
+additive counting conjecture asks for at least four. Threshold-cycle
+rotations and multiplicities of perfect matchings may help strengthen
+existence into a counting statement.
+
+\section*{Artifact availability}
+
+The source repository contains the Lean development, generators, audit
+programs, proof guide, expert-review checklist, and this manuscript. The
+large frozen formulas and proof objects are stored in the certification
+bundle identified by
+\texttt{EFX48\_END\_TO\_END\_CERTIFICATE.json} and
+\texttt{EFX48\_END\_TO\_END\_MANIFEST.sha256}.
+
+\begin{thebibliography}{9}
+
+\bibitem{CGM2024}
+B. R. Chaudhury, J. Garg, and K. Mehlhorn.
+\newblock EFX exists for three agents.
+\newblock \emph{Journal of the ACM}, 71(1), 2024.
+\newblock \url{https://arxiv.org/abs/2002.05119}.
+
+\bibitem{Mahara2021}
+R. Mahara.
+\newblock Extension of additive valuations to general valuations on the
+existence of EFX.
+\newblock In \emph{ESA 2021}, LIPIcs 204, Article 66, 2021.
+\newblock \url{https://doi.org/10.4230/LIPIcs.ESA.2021.66}.
+
+\bibitem{Berger2022}
+B. Berger, A. Cohen, M. Feldman, and A. Fiat.
+\newblock Almost full EFX exists for four agents.
+\newblock In \emph{AAAI 2022}, pages 4826--4833.
+\newblock \url{https://doi.org/10.1609/aaai.v36i5.20410}.
+
+\bibitem{Ashuri2025}
+A. Ashuri, V. Gkatzelis, and A. Sgouritsa.
+\newblock EF2X exists for four agents.
+\newblock In \emph{AAAI 2025}, pages 13555--13563.
+\newblock \url{https://doi.org/10.1609/aaai.v39i13.33480}.
+
+\bibitem{Akrami2026}
+H. Akrami, A. Mayorov, K. Mehlhorn, S. Srinivas, and C. Weidenbach.
+\newblock A counterexample to EFX: $n\ge3$ agents, $m\ge n+5$ items,
+submodular valuations via SAT-solving.
+\newblock arXiv:2604.18216, 2026.
+\newblock \url{https://arxiv.org/abs/2604.18216}.
+
+\bibitem{Branzei2025}
+S. Br\^anzei.
+\newblock Computing envy-free up to any good (EFX) allocations via local
+search.
+\newblock arXiv:2510.05429, 2025.
+\newblock \url{https://arxiv.org/abs/2510.05429}.
+
+\end{thebibliography}
+
+\end{document}

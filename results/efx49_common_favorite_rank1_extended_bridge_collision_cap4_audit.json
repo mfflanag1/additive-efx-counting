@@ -1,0 +1,118 @@
+{
+  "case_split_reason": "The cell symmetry orders the three resident rows lexicographically, so any repeated pair is adjacent and lies in case 12 or case 23.",
+  "claim": "Within the positive cap-4 rank-one selected cell, if at least two resident valuation rows coincide, then either one of the 45 extended-bridge repairs or a favorite-singleton partition supports EFX.",
+  "claim_boundary": "This is a dual-encoded CP-SAT theorem candidate without external proof logs. It does not cover pairwise-distinct residents, values above 4, the other Hall ranks, or general additive EFX.",
+  "domain": "positive integer additive valuations in [1,4]",
+  "duplicate_hall_case_count": 7,
+  "duplicate_hall_graphs_exhaustively_checked": 4096,
+  "duplicate_hall_selector_count_per_partition": 49,
+  "encodings": [
+    "duplicate_matching_clauses",
+    "duplicate_hall_selectors"
+  ],
+  "favorite_singleton_partition_count": 966,
+  "m": 9,
+  "n": 4,
+  "nonvacuity_singleton_support_count": 225,
+  "nonvacuity_values": [
+    [
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  ],
+  "quotient_matching_count_per_partition": 12,
+  "repair_partition_count": 45,
+  "resident_case_split": [
+    "12",
+    "23"
+  ],
+  "schema": "common-favorite-rank1-extended-bridge-collision-cap4-audit-v1",
+  "singleton_obstruction_pool_size": 392,
+  "sources": [
+    {
+      "branches": 49403,
+      "conflicts": 1322,
+      "encoding": "duplicate_matching_clauses",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_duplicate_matching_session1.pbtxt",
+      "proto_sha256": "728327d341d5fe8bcd3a79238ee8eb78495d6a18730d62d36f1a8d207b0645d5",
+      "resident_equality_pair": "12",
+      "solver_wall_seconds": 27.444089,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_duplicate_matching_session1.json",
+      "source_sha256": "ce3d50ae01a0e0e274a3d555cd2f1c004322a1f000e041db7f1c3220f14ae8c5"
+    },
+    {
+      "branches": 67688,
+      "conflicts": 1744,
+      "encoding": "duplicate_matching_clauses",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap4_duplicate_matching_session1.pbtxt",
+      "proto_sha256": "2b732dc6e08c91593d705c20e0c46e30b0b65e3a790146d1aae8d5c87d83bc3e",
+      "resident_equality_pair": "23",
+      "solver_wall_seconds": 31.249205000000003,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap4_duplicate_matching_session1.json",
+      "source_sha256": "9f79b3562479b1d20a9e8a85f0afe4a4b07f3ab77ba0513c8111f1c33189acc8"
+    },
+    {
+      "branches": 16540,
+      "conflicts": 1144,
+      "encoding": "duplicate_hall_selectors",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_duplicate_hall_session1.pbtxt",
+      "proto_sha256": "76805ded0d44dc01b3b53fcf4698558a3d917f2909a20d27a8a120f339861140",
+      "resident_equality_pair": "12",
+      "solver_wall_seconds": 36.005543,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision12_cap4_duplicate_hall_session1.json",
+      "source_sha256": "1942ecec96c231ecd8f68ea3b0c4222e270616c3824e9fc2358358a54c24cd35"
+    },
+    {
+      "branches": 13670,
+      "conflicts": 929,
+      "encoding": "duplicate_hall_selectors",
+      "proto": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap4_duplicate_hall_session1.pbtxt",
+      "proto_sha256": "e303db07ac8cd0c194f690ab0312b855dce3681e800b2fda26c0e8d7ace42fc7",
+      "resident_equality_pair": "23",
+      "solver_wall_seconds": 36.670455000000004,
+      "source": "results/efx49_common_favorite_rank1_extended_bridge_collision23_cap4_duplicate_hall_session1.json",
+      "source_sha256": "6c3cf3f731b454765c7249608b0552575f7ca892c3538a4b05108249a1e470aa"
+    }
+  ],
+  "status": "DUAL_ENCODED_REPEATED_RESIDENT_CAP4_THEOREM_CANDIDATE"
+}

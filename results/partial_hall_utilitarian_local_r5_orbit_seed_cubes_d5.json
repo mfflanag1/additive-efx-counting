@@ -1,0 +1,510 @@
+{
+  "children": [
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000.json",
+      "manifest_sha256": "eca2b3b5bd3011b37301733ab3e9649bce87f2958d08eb55597b55b91734c934",
+      "parent_branch": 0
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_001.json",
+      "manifest_sha256": "a49650b84d5b9850ee7fcf7e2e857d87c878188a2637afb40df6ece2dc2fdf87",
+      "parent_branch": 1
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002.json",
+      "manifest_sha256": "1ed9f088300b980cd79bf39412bf9a070804fe9c3773322ae92bbccd89dd0833",
+      "parent_branch": 2
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003.json",
+      "manifest_sha256": "ff40b44f8d7881a7a9817e4dd3095724798fd3bee6565761a0444b50699bba22",
+      "parent_branch": 3
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_004.json",
+      "manifest_sha256": "27efdbc43de552ec4e8c69a9e34c19303fd4ef4f8c33914eadea587ab3044af9",
+      "parent_branch": 4
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005.json",
+      "manifest_sha256": "c3263acffbaa43bd9dc9f2e384d857f76a3fa01494f3bab4386aa0dcd8560794",
+      "parent_branch": 5
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_006.json",
+      "manifest_sha256": "9494ea43a5aabdc476a8c9ab98d28de73b3f4ac647a876d3c66249c4b37aa121",
+      "parent_branch": 6
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007.json",
+      "manifest_sha256": "ea1976781be6e9ebf2fb287a4f3c9aa7d92703c8e097b8b6ed5012006908a1b5",
+      "parent_branch": 7
+    }
+  ],
+  "leaf_count": 32,
+  "leaves": [
+    {
+      "child_branch": 0,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "edge_87_1_1",
+        "edge_6_2_2",
+        "v_0_4 +\n-1*v_0_6 +\n-1*v_1_3 +\n-1*v_2_4 +\nv_2_5 +\n-1*v_3_5 +\nv_3_6 +\nv_3_8 <=\n0"
+      ],
+      "leaf": 0,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_000.smt2",
+      "sha256": "14570a3fdf3d665d2c8001616311f0f5e9fed0d49ec279cc278da32f8b877cef"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "edge_87_1_1",
+        "edge_6_2_2",
+        "Not(v_0_4 +\n    -1*v_0_6 +\n    -1*v_1_3 +\n    -1*v_2_4 +\n    v_2_5 +\n    -1*v_3_5 +\n    v_3_6 +\n    v_3_8 <=\n    0)"
+      ],
+      "leaf": 1,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_001.smt2",
+      "sha256": "8e7b1f12e1694ed7a27754b7e85bd4e7f1f824dfbe0c1d8d7aeca9f133ae47c9"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "edge_87_1_1",
+        "Not(edge_6_2_2)",
+        "v_0_1 + -1*v_0_3 + v_0_4 + v_0_7 >= 0"
+      ],
+      "leaf": 2,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_002.smt2",
+      "sha256": "d464aa9a146f8f5ad3f4d23642213e748b37c252ccc7698ccffb589547092168"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "edge_87_1_1",
+        "Not(edge_6_2_2)",
+        "Not(v_0_1 + -1*v_0_3 + v_0_4 + v_0_7 >= 0)"
+      ],
+      "leaf": 3,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_000/branch_003.smt2",
+      "sha256": "1d8d42b3f88359217f526e3fcd24ef474a5f0b934a1cecca3e85fde4e5ebc50c"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "Not(edge_87_1_1)",
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_6 + -1*v_1_8 >= 0",
+        "v_0_2 + v_0_4 + v_0_7 + -1*v_0_8 >= 0"
+      ],
+      "leaf": 4,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_001/branch_000.smt2",
+      "sha256": "9c3dc3db73fd8e65ff44cb4dbc5fa2e4ce280e427747cdacb71842c815cd5ddc"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "Not(edge_87_1_1)",
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_6 + -1*v_1_8 >= 0",
+        "Not(v_0_2 + v_0_4 + v_0_7 + -1*v_0_8 >= 0)"
+      ],
+      "leaf": 5,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_001/branch_001.smt2",
+      "sha256": "d0c3a76897e587bf6c39c1d2b7e02196a3613bfc353b7b065fcdfb47d5f65a11"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "Not(edge_87_1_1)",
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_6 + -1*v_1_8 >= 0)",
+        "v_0_1 + -1*v_0_4 + -1*v_0_6 + -1*v_0_8 <= 0"
+      ],
+      "leaf": 6,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_001/branch_002.smt2",
+      "sha256": "c93e55cc8c6f4f0fdcf683aa0484e95a1a0d9d35a1cdb57d06f03fbfaa962dd2"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "edge_53_2_2",
+        "v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0",
+        "Not(edge_87_1_1)",
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_6 + -1*v_1_8 >= 0)",
+        "Not(v_0_1 + -1*v_0_4 + -1*v_0_6 + -1*v_0_8 <= 0)"
+      ],
+      "leaf": 7,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_001/branch_003.smt2",
+      "sha256": "89053e9c5a15165a9f3e021e35b1954f3638b8949b23898efddc165f0792e8ac"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0",
+        "edge_74_0_0",
+        "v_0_2 + -1*v_0_4 + v_0_7 >= 0"
+      ],
+      "leaf": 8,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_000.smt2",
+      "sha256": "06a6911d10fda3b158b30ee7eaba402a7a22ceb301de219076f471dee517e1e9"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0",
+        "edge_74_0_0",
+        "Not(v_0_2 + -1*v_0_4 + v_0_7 >= 0)"
+      ],
+      "leaf": 9,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_001.smt2",
+      "sha256": "d0e38e52ac9bca889283cb04475cd68b5f239b5f9ecca6ac9ce545609c61e0d6"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0",
+        "Not(edge_74_0_0)",
+        "v_0_0 + -1*v_0_4 + v_0_7 >= 0"
+      ],
+      "leaf": 10,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_002.smt2",
+      "sha256": "ca9f098b39f5d8e320487839c0dce8732751131fae79d87b2cf5d6fcc7b82b4f"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0",
+        "Not(edge_74_0_0)",
+        "Not(v_0_0 + -1*v_0_4 + v_0_7 >= 0)"
+      ],
+      "leaf": 11,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_002/branch_003.smt2",
+      "sha256": "c62e40014e202ac97474797beea5796427cd434e003f75ef0e81b45f1d00e5ad"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "Not(v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0)",
+        "edge_77_0_3",
+        "edge_53_0_0"
+      ],
+      "leaf": 12,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_000.smt2",
+      "sha256": "cffef03cc35968365f0b1c12fa09ba1ad2ac64a9af166889d0022ae75a033e3a"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "Not(v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0)",
+        "edge_77_0_3",
+        "Not(edge_53_0_0)"
+      ],
+      "leaf": 13,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_001.smt2",
+      "sha256": "2e235b5573cad13a6a9422030bc31b56fa178c6ba3d409a38a08299e8f54ac9f"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "Not(v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0)",
+        "Not(edge_77_0_3)",
+        "v_0_3 +\n-1*v_0_6 +\nv_1_0 +\n-1*v_1_2 +\n-1*v_1_3 +\n-1*v_2_0 +\nv_2_8 +\nv_3_2 <=\n0"
+      ],
+      "leaf": 14,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_002.smt2",
+      "sha256": "a068032b6337af97213cb58eb4f32650274794440ca532aacf300490ec8e7a68"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "edge_53_2_2",
+        "Not(v_0_0 + -1*v_0_3 + v_0_4 + v_0_8 >= 0)",
+        "Not(v_0_1 + v_0_2 + v_0_7 + -1*v_0_8 >= 0)",
+        "Not(edge_77_0_3)",
+        "Not(v_0_3 +\n    -1*v_0_6 +\n    v_1_0 +\n    -1*v_1_2 +\n    -1*v_1_3 +\n    -1*v_2_0 +\n    v_2_8 +\n    v_3_2 <=\n    0)"
+      ],
+      "leaf": 15,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_003.smt2",
+      "sha256": "88e1d4cf412ede8b58ee67c6cc725e4a86876a26de7e2daf94043f13db888304"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0",
+        "edge_22_2_3",
+        "v_0_1 + -1*v_0_3 + v_0_4 + v_0_7 >= 0"
+      ],
+      "leaf": 16,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_004/branch_000.smt2",
+      "sha256": "cec59c913442efe211ed4425a586bf0ef3e53eafef49b5f96425388117ac15d2"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0",
+        "edge_22_2_3",
+        "Not(v_0_1 + -1*v_0_3 + v_0_4 + v_0_7 >= 0)"
+      ],
+      "leaf": 17,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_004/branch_001.smt2",
+      "sha256": "87d0b9a8368cedef8a586af91ffeccde84d46b87a8eb6a9e3d03b1f2e17f6fd3"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0",
+        "Not(edge_22_2_3)",
+        "v_2_0 + v_2_7 + -1*v_2_8 >= 0"
+      ],
+      "leaf": 18,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_004/branch_002.smt2",
+      "sha256": "a0d82e155f41615c394bdd9101dd7dee5bc8de86bb729f08a1581066e6ffc993"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0",
+        "Not(edge_22_2_3)",
+        "Not(v_2_0 + v_2_7 + -1*v_2_8 >= 0)"
+      ],
+      "leaf": 19,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_004/branch_003.smt2",
+      "sha256": "06603c7f3fe7259f95687b4b4752fa8fb2452ddbca41d4b24b220bcf77b6c6e9"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "Not(v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0)",
+        "v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0",
+        "v_2_3 + v_2_4 + -1*v_2_5 + v_2_6 <= 0"
+      ],
+      "leaf": 20,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_000.smt2",
+      "sha256": "eb2e86450bba1060698a0c9fa1cbccf0be27bd596fc9b29df502687c6337fffa"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "Not(v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0)",
+        "v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0",
+        "Not(v_2_3 + v_2_4 + -1*v_2_5 + v_2_6 <= 0)"
+      ],
+      "leaf": 21,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_001.smt2",
+      "sha256": "93a6d25ee11aa3bfa4615e522a4f4bd604e15b0a322939fc55b98b7183ca24d9"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "Not(v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0)",
+        "Not(v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0)",
+        "v_2_0 + v_2_1 + v_2_2 + v_2_3 + -1*v_2_7 >= 0"
+      ],
+      "leaf": 22,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_002.smt2",
+      "sha256": "9e6ea94b780a576f589ba3d634e3b61853d06239042ad06e236e7415bd2314bd"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0",
+        "Not(v_2_1 + v_2_2 + v_2_3 + v_2_4 + -1*v_2_7 + v_2_8 >= 0)",
+        "Not(v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0)",
+        "Not(v_2_0 + v_2_1 + v_2_2 + v_2_3 + -1*v_2_7 >= 0)"
+      ],
+      "leaf": 23,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_003.smt2",
+      "sha256": "1b55f4c435ae3326f01f704afa9e90aa5ab62c11c15a5ba534424ec2da20663c"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "v_0_2 +\nv_0_4 +\n-1*v_0_7 +\n-1*v_1_1 +\n-1*v_1_2 +\nv_1_8 +\n-1*v_2_4 +\nv_3_7 <=\n0",
+        "edge_6_1_1",
+        "v_2_0 + v_2_1 + v_2_3 + -1*v_2_7 >= 0"
+      ],
+      "leaf": 24,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_006/branch_000.smt2",
+      "sha256": "5454d90a2516c0d0b63127b177296c91e451e470373334a41711f929c8ee4e73"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "v_0_2 +\nv_0_4 +\n-1*v_0_7 +\n-1*v_1_1 +\n-1*v_1_2 +\nv_1_8 +\n-1*v_2_4 +\nv_3_7 <=\n0",
+        "edge_6_1_1",
+        "Not(v_2_0 + v_2_1 + v_2_3 + -1*v_2_7 >= 0)"
+      ],
+      "leaf": 25,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_006/branch_001.smt2",
+      "sha256": "aff698cec765838617a6c061f39e96529c60d944f2f25ec3cc29667f557c9168"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "v_0_2 +\nv_0_4 +\n-1*v_0_7 +\n-1*v_1_1 +\n-1*v_1_2 +\nv_1_8 +\n-1*v_2_4 +\nv_3_7 <=\n0",
+        "Not(edge_6_1_1)",
+        "v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 >= 0"
+      ],
+      "leaf": 26,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_006/branch_002.smt2",
+      "sha256": "a2e824eb1ed025e8e8500f9356ceab2bb3497aa3ab833aba5eec7398e526f66a"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "v_0_2 +\nv_0_4 +\n-1*v_0_7 +\n-1*v_1_1 +\n-1*v_1_2 +\nv_1_8 +\n-1*v_2_4 +\nv_3_7 <=\n0",
+        "Not(edge_6_1_1)",
+        "Not(v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 >= 0)"
+      ],
+      "leaf": 27,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_006/branch_003.smt2",
+      "sha256": "8da70e459b7a8d405e06eaf2c95fc28148cb26c88779d8d32d859641db7db37d"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "Not(v_0_2 +\n    v_0_4 +\n    -1*v_0_7 +\n    -1*v_1_1 +\n    -1*v_1_2 +\n    v_1_8 +\n    -1*v_2_4 +\n    v_3_7 <=\n    0)",
+        "v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0",
+        "v_0_1 + v_0_2 + v_0_3 + -1*v_0_4 + v_0_7 + v_0_8 >= 0"
+      ],
+      "leaf": 28,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_000.smt2",
+      "sha256": "b4af526d7a1168a87d04f0474658edc815644ae7e3d15c47ca37aa96792b0aba"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "Not(v_0_2 +\n    v_0_4 +\n    -1*v_0_7 +\n    -1*v_1_1 +\n    -1*v_1_2 +\n    v_1_8 +\n    -1*v_2_4 +\n    v_3_7 <=\n    0)",
+        "v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0",
+        "Not(v_0_1 + v_0_2 + v_0_3 + -1*v_0_4 + v_0_7 + v_0_8 >= 0)"
+      ],
+      "leaf": 29,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_001.smt2",
+      "sha256": "52e4fca8994e0b8f8f3baebdebd708cf040f06043425d83b94773d8838b34857"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "Not(v_0_2 +\n    v_0_4 +\n    -1*v_0_7 +\n    -1*v_1_1 +\n    -1*v_1_2 +\n    v_1_8 +\n    -1*v_2_4 +\n    v_3_7 <=\n    0)",
+        "Not(v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0)",
+        "edge_64_2_1"
+      ],
+      "leaf": 30,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_002.smt2",
+      "sha256": "f9636d8642d71ec2a296f34cffc96b0a98a922d05936955ffcd0deb88847eaaf"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(edge_53_2_2)",
+        "Not(v_2_2 + v_2_6 + v_2_7 + -1*v_2_8 >= 0)",
+        "Not(v_0_2 +\n    v_0_4 +\n    -1*v_0_7 +\n    -1*v_1_1 +\n    -1*v_1_2 +\n    v_1_8 +\n    -1*v_2_4 +\n    v_3_7 <=\n    0)",
+        "Not(v_2_1 + v_2_2 + v_2_3 + -1*v_2_4 + v_2_8 >= 0)",
+        "Not(edge_64_2_1)"
+      ],
+      "leaf": 31,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_007/branch_003.smt2",
+      "sha256": "bfc963491155dbc75024ac5ffe56b72a1cfcbd6f04bdd65bdc4a79a88cd8ad67"
+    }
+  ],
+  "meaning": "Every child exactly covers its parent branch and the parent exactly covers the source. Therefore the listed leaves exactly cover the source: SAT of one leaf is SAT of the source, while UNSAT of every leaf is UNSAT of the source.",
+  "parent_manifest": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d3.json",
+  "parent_manifest_sha256": "40d2f4a79cb4eccc31108443066ba13da93012a6cf0866e581bba5f1defdbf13",
+  "schema": "smt2-composed-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_orbit_seed_master.smt2",
+  "source_sha256": "2605cc33df9eb1205433d03fdd3c590f0f69c38f95419570fa19349259301c9d",
+  "status": "EXACT_COMPOSED_CUBE_COVER"
+}

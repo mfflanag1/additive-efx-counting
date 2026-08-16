@@ -1,0 +1,109 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 128,
+  "break_good_symmetry": true,
+  "candidate_partition_count": 91,
+  "connected_rivals": true,
+  "factor_rival_eligibility": false,
+  "factored_hall": false,
+  "factored_rival_comparison_count": null,
+  "floater": 8,
+  "hall_witness": false,
+  "iterations_completed": 2,
+  "learned_rival_count": 1128,
+  "local_rival_template_count": 34370,
+  "m": 9,
+  "max_iterations": 200,
+  "meaning": "SAT refutes the stated bounded-owner-distance normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 5,
+  "random_seed": 211,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "seed_from": null,
+  "seed_learned_rival_count": 0,
+  "smt2_output": "results/partial_hall_connected_exchange_r5_unfactored_cegar.smt2",
+  "solver_reason_unknown": "canceled",
+  "solver_statistics": "(:added-eqs                   10\n :arith-eq-adapter            4\n :arith-bound-propagations-lp 201153\n :arith-conflicts             411\n :arith-lower                 19084\n :arith-make-feasible         11293\n :arith-max-columns           6255\n :arith-max-rows              6215\n :arith-upper                 16613\n :binary-propagations         14633\n :conflicts                   421\n :decisions                   116510\n :del-clause                  115\n :max-memory                  107.62\n :memory                      107.46\n :minimized-lits              211\n :mk-bool-var                 7582\n :mk-clause                   3734\n :mk-clause-binary            1285\n :num-allocs                  566911982\n :num-checks                  1\n :propagations                20853\n :random-seed                 211\n :restarts                    4\n :rlimit-count                18917953\n :time                        60.01)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": true,
+  "timeout_seconds_per_master": 60,
+  "trace": [
+    {
+      "base_score": {
+        "denominator": 256200,
+        "numerator": 253489
+      },
+      "improving_local_rival_count": 158,
+      "iteration": 1,
+      "learned_rival_count_before": 0,
+      "new_improving_local_rival_count": 158,
+      "values": [
+        [
+          123,
+          7,
+          453,
+          453,
+          934,
+          1064,
+          316,
+          618,
+          302
+        ],
+        [
+          611,
+          1182,
+          30,
+          10,
+          10,
+          1803,
+          621,
+          631,
+          1202
+        ],
+        [
+          6,
+          527,
+          60,
+          545,
+          1162,
+          12,
+          671,
+          30,
+          647
+        ],
+        [
+          16,
+          20,
+          8,
+          549,
+          581,
+          613,
+          44,
+          44,
+          565
+        ]
+      ]
+    }
+  ],
+  "trap_agents": [],
+  "trap_bundle": null,
+  "trap_partition": null,
+  "values": null
+}

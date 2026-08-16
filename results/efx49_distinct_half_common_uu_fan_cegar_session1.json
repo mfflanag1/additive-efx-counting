@@ -1,0 +1,116 @@
+{
+  "add_per_iteration": 54,
+  "common_rr_uu_singleton_witness": [
+    5,
+    6
+  ],
+  "common_rr_uu_singleton_witness_encoding": {
+    "edge": [
+      5,
+      6
+    ],
+    "rejection_constraints": 24,
+    "rr_low_pair_cells": 6
+  },
+  "common_rr_uu_singleton_witness_forbidden": false,
+  "domain": "strictly positive reals normalized per row",
+  "elapsed_seconds": 335.7708158493042,
+  "favorite_pair_partition_count": 54,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "low_pair_cells": 28,
+    "pairing_failure_terms": 420
+  },
+  "full_hall_cell_forbidden": true,
+  "interpretation": "A terminal model refutes only the conditional full-cell selection target. UNSAT_CANDIDATE requires an independent encoding before theorem status.",
+  "iterations": 2,
+  "literal_complete_efx_count": null,
+  "m": 9,
+  "max_iterations": 3,
+  "n": 4,
+  "no_common_rr_uu_singleton_witness_encoding": null,
+  "partition_family": "common_uu_fan",
+  "pool_size": 49,
+  "rank_disjunct_branch": null,
+  "reason_unknown": "canceled",
+  "resume_source": null,
+  "resume_source_sha256": null,
+  "schema": "distinct-half-full-cell-cegar-v1",
+  "second_smallest_representative_map": null,
+  "seed_mode": "union",
+  "seed_sources": [
+    {
+      "path": "results/efx49_distinct_half_eight_orbit_cpsat_cap20_optimize_session1.json",
+      "sha256": "8c3900be3262a66aff8f9a3f924c6be7ef5737c143bdfa87018e7891b5e7c7ba"
+    }
+  ],
+  "seed_supported_union_size": 30,
+  "smt2_path": "results/efx49_distinct_half_common_uu_fan_cegar_session1.smt2",
+  "smt2_sha256": "b93860f28d107e1e72ec67594745f7b68664ddd4c0b2a7efaf13fd33d453520b",
+  "solver_status": "unknown",
+  "status": "MASTER_UNKNOWN",
+  "time_limit_seconds": 300.0,
+  "trace": [
+    {
+      "favorite_pair_efx_survivors": 19,
+      "iteration": 1,
+      "pool_size_before": 30,
+      "values": [
+        [
+          1977,
+          1222,
+          1382,
+          64,
+          1270,
+          643,
+          1969,
+          603,
+          1366
+        ],
+        [
+          22387,
+          19500,
+          11574,
+          9317,
+          19710,
+          1496,
+          17243,
+          22072,
+          14461
+        ],
+        [
+          1995,
+          649,
+          641,
+          1963,
+          1306,
+          1298,
+          1266,
+          1322,
+          56
+        ],
+        [
+          1349,
+          36,
+          138,
+          1283,
+          1187,
+          30,
+          1319,
+          1229,
+          1301
+        ]
+      ]
+    }
+  ],
+  "universal_owner_threshold_failure": true,
+  "universal_threshold_encoding": "cardinal",
+  "values": null
+}

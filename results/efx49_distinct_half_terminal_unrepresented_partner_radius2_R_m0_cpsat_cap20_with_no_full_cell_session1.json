@@ -1,0 +1,135 @@
+{
+  "branches": 1307828,
+  "cap": 20,
+  "case": "R",
+  "conflicts": 6506,
+  "elapsed_seconds": 14.933655023574829,
+  "favorite_pair_efx_orbit_histogram": {
+    "('R', 0, ('RR', 'RU'))": 19,
+    "('R', 1, ('RR', 'UU'))": 26,
+    "('R', 1, ('RU', 'RU'))": 53,
+    "('R', 2, ('RU', 'UU'))": 82,
+    "('R', 3, ('UU', 'UU'))": 12,
+    "('U', 0, ('RR', 'RR'))": 4,
+    "('U', 1, ('RR', 'RU'))": 42,
+    "('U', 2, ('RR', 'UU'))": 34,
+    "('U', 2, ('RU', 'RU'))": 60,
+    "('U', 3, ('RU', 'UU'))": 36
+  },
+  "favorite_pair_efx_partition_count": 368,
+  "fixed_half_favorite_representatives": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "full_cell_encoding": {
+    "accept_literals": 1680,
+    "hall_failure_templates_per_pairing": 21,
+    "hall_witness_literals": 8820,
+    "low_pair_cells": 28
+  },
+  "full_hall_cell_forbidden": true,
+  "full_hall_cell_forbidden_pairs": null,
+  "full_hall_cells": [],
+  "literal_complete_efx_count": 2431,
+  "m": 9,
+  "n": 4,
+  "proto_path": "results/efx49_distinct_half_terminal_unrepresented_partner_radius2_R_m0_cpsat_cap20_with_no_full_cell_session1.pb",
+  "proto_sha256": "485bd341d8e66438d30cd03710e04225e476fdb0968b4ceaa86625228cc679c3",
+  "random_seed": 99505,
+  "schema": "distinct-half-terminal-exchange-cpsat-v1",
+  "solver_status": "OPTIMAL",
+  "status": "TERMINAL_SELECTOR_COUNTEREXAMPLE",
+  "symmetry_breaking": [],
+  "target": "radius2_new_favorite_partner",
+  "target_partition_count": 36,
+  "target_partitions_sha256": "d54d0b05b5717d4b6c7e2b3c342f3df37627ca3bb6c20d88a733fbdc6ea63591",
+  "target_pool_source": "results/efx49_distinct_half_terminal_unrepresented_partner_radius2_R_pool.json",
+  "target_pool_source_sha256": "b479afc11af85618d7719421b51d75c5373d0ebe83b42c2e65a18c287412bdc2",
+  "terminal_matching_orbit": 0,
+  "terminal_matching_orbit_count": 3,
+  "terminal_matching_representative": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "terminal_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "terminal_signature": [
+    "R",
+    3,
+    [
+      "UU",
+      "UU"
+    ]
+  ],
+  "terminal_slack_branch": "any",
+  "time_limit_seconds": 120.0,
+  "values": [
+    [
+      19,
+      11,
+      16,
+      12,
+      14,
+      16,
+      15,
+      15,
+      15
+    ],
+    [
+      7,
+      2,
+      4,
+      4,
+      5,
+      4,
+      4,
+      2,
+      1
+    ],
+    [
+      19,
+      12,
+      15,
+      15,
+      16,
+      17,
+      14,
+      7,
+      13
+    ],
+    [
+      7,
+      3,
+      5,
+      5,
+      4,
+      5,
+      6,
+      5,
+      5
+    ]
+  ],
+  "warning": "SAT refutes only the selected terminal-to-target implication. INFEASIBLE is finite-cap only and requires independent replay.",
+  "workers": 4
+}

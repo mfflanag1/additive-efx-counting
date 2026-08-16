@@ -1,0 +1,16 @@
+{
+  "schema": "row-merge-no-stable-partition-witness-v1",
+  "status": "NO_STABLE_PARTITION_WITNESS",
+  "n": 4,
+  "m": 7,
+  "moving_agent": 3,
+  "base_agent": 2,
+  "values": [
+    [1338, 49, 28, 2676, 7, 4070, 1352],
+    [1293, 56, 8, 2674, 1365, 4087, 1397],
+    [2, 8, 12, 30, 652, 9, 647],
+    [23, 6, 1, 1265, 19, 31, 15]
+  ],
+  "claim": "The merged and target endpoints have disjoint sets of EFX-supporting unlabeled partitions, so no fixed partition supports the full row merge.",
+  "claim_boundary": "The row path remains completely EFX-covered by changing partitions. This refutes fixed-partition coverage, not row-merge continuation or additive EFX existence."
+}

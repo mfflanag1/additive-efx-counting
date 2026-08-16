@@ -1,0 +1,33 @@
+{
+  "certificate_root": "game-theory/experimental-runs/additive-efx-counting-runs/parkability/certification-20260801-v2",
+  "container_boundary": "same physical Mac host; clean Linux/ARM Docker container; not an independent-host replication",
+  "container_image_id": "sha256:ea17ec341c4211d1dd7f184a0dedf7dcb7945e92db20a5dde20544262214b84f",
+  "container_image_repo_digest": "ubuntu@sha256:4fbb8e6a8395de5a7550b33509421a2bafbc0aab6c06ba2cef9ebffbc7092d90",
+  "container_platform": "linux/arm64",
+  "date": "2026-08-01",
+  "lean_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "lean_build_jobs": 1574,
+  "lean_build_status": "PASS",
+  "lean_theorem": "EFX48.admitsEFX_4x8_of_standard_published_inputs_nonnegative",
+  "lean_version": "4.32.1",
+  "published_input_audit": {
+    "all_passed": true,
+    "checker_sha256": "fec17a3c531ae1b3594fbd8653b79c7320e6d9dbd279e6beca629df3a34360b1",
+    "output_sha256": "5bf022e2e937b3e9b8b5fa1c5e34e9ebf6676de1e6566381cc7aa0dbb19c11b0",
+    "schema": "efx48-published-input-audit-v1"
+  },
+  "schema": "efx48-linux-replay-v1",
+  "semantic_audit": {
+    "all_passed": true,
+    "cell_count": 8,
+    "checker_sha256": "2f9c19b2a14744320f70a65952d0864dee6540fd43adb73af54e3e029df1514d",
+    "output_sha256": "283dced3f0e00beb8cf22aada9644222bf0a70db9605ea6d7275e07a622d8e04",
+    "partition_universe_count": 1701,
+    "schema": "independent-formula-semantic-binding-v1"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,7163 @@
+{
+  "candidate": {
+    "base_owner": [
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      0,
+      0,
+      null
+    ],
+    "floater": 8,
+    "insertable_hosts": [],
+    "utilities": [
+      9787,
+      34360,
+      30805,
+      20512
+    ],
+    "utility_product": 212486804036051200
+  },
+  "candidate_diagnostics": {
+    "bundles": [
+      [
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "efx_min_slack": 1045,
+    "floater_nonenvy_slacks": [
+      9526,
+      32173,
+      24931,
+      17543
+    ],
+    "insertion_witnesses_by_host": {
+      "0": [
+        {
+          "observer": 2,
+          "removed_good": 7,
+          "slack": -4829
+        },
+        {
+          "observer": 3,
+          "removed_good": 7,
+          "slack": -1609
+        }
+      ],
+      "1": [
+        {
+          "observer": 2,
+          "removed_good": 1,
+          "slack": -570
+        }
+      ],
+      "2": [
+        {
+          "observer": 3,
+          "removed_good": 0,
+          "slack": -344
+        }
+      ],
+      "3": [
+        {
+          "observer": 1,
+          "removed_good": 8,
+          "slack": -488
+        }
+      ]
+    }
+  },
+  "candidate_normalized_nash": {
+    "denominator": 2971326251698805,
+    "numerator": 84153189717248
+  },
+  "claim_boundary": "This refutes the partial-EFX maximum-Nash direct-completion conjecture. It does not refute complete additive EFX: the profile has complete EFX allocations.",
+  "complete_efx": {
+    "assignment_count": 262144,
+    "efx_allocation_count": 83,
+    "efx_allocations_sha256": "763cdc3b10f19f8de13cb3adf735c179171ce67eafa9219e332ad0bfc9f3dff0",
+    "first_efx_allocations": [
+      [
+        0,
+        0,
+        1,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        1,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ]
+    ]
+  },
+  "discovery_provenance": {
+    "discovery_iteration": 45,
+    "path": "results/partial_nash_gap_anneal_seed211.json",
+    "random_seed": 211,
+    "sha256": "c70870d3965621d5b60044ebd3adf7a2058af9a6c2446b414ef5790c6a867211"
+  },
+  "distinct_eligible_utility_vector_count": 285,
+  "eligible_partial_state_count": 290,
+  "eligible_states": [
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        9787,
+        34360,
+        30805,
+        20512
+      ],
+      "utility_product": 212486804036051200
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        1,
+        3,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3578,
+        46647,
+        29760,
+        41368
+      ],
+      "utility_product": 205476190869242880
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        1,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3839,
+        46647,
+        29760,
+        38399
+      ],
+      "utility_product": 204641952950761920
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3946,
+        45063,
+        29760,
+        38399
+      ],
+      "utility_product": 203202956815355520
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        1,
+        2,
+        3,
+        0,
+        0,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        9787,
+        32449,
+        30805,
+        20512
+      ],
+      "utility_product": 200668926198074080
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3946,
+        40965,
+        29760,
+        41368
+      ],
+      "utility_product": 199006605426355200
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        45063,
+        29760,
+        41368
+      ],
+      "utility_product": 198498801405035520
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3839,
+        45063,
+        29760,
+        38399
+      ],
+      "utility_product": 197692891843423680
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        1,
+        3
+      ],
+      "utilities": [
+        4207,
+        40965,
+        29760,
+        38399
+      ],
+      "utility_product": 196941985746811200
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3946,
+        43152,
+        29760,
+        38399
+      ],
+      "utility_product": 194585668785838080
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        1,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3578,
+        46647,
+        29760,
+        38940
+      ],
+      "utility_product": 193416236522150400
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        null,
+        2,
+        3,
+        0,
+        0,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        9787,
+        30865,
+        30805,
+        20512
+      ],
+      "utility_product": 190873259795480800
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3580,
+        46647,
+        29760,
+        38399
+      ],
+      "utility_product": 190835684179142400
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        9787,
+        30262,
+        30858,
+        20512
+      ],
+      "utility_product": 187466209327607424
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3946,
+        40965,
+        29760,
+        38940
+      ],
+      "utility_product": 187326368577216000
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        45063,
+        29760,
+        38543
+      ],
+      "utility_product": 184943417679227520
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        1,
+        3
+      ],
+      "utilities": [
+        3948,
+        40965,
+        29760,
+        38399
+      ],
+      "utility_product": 184817437539436800
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3839,
+        40965,
+        29760,
+        38940
+      ],
+      "utility_product": 182246814234144000
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3580,
+        40965,
+        29760,
+        41368
+      ],
+      "utility_product": 180548314096896000
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3839,
+        40965,
+        29760,
+        38543
+      ],
+      "utility_product": 180388776605716800
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1,
+        3
+      ],
+      "utilities": [
+        3841,
+        40965,
+        29760,
+        38399
+      ],
+      "utility_product": 179808454303185600
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        2,
+        2,
+        3,
+        0,
+        null,
+        2
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        33503,
+        21053
+      ],
+      "utility_product": 179404076412290415
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        43152,
+        29760,
+        38940
+      ],
+      "utility_product": 178924634776166400
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        3,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        43152,
+        29760,
+        38543
+      ],
+      "utility_product": 177100467338926080
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        null,
+        3,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3580,
+        43152,
+        29760,
+        38399
+      ],
+      "utility_product": 176537428852838400
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        51233,
+        25578,
+        20856
+      ],
+      "utility_product": 169695000792613296
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        null,
+        3
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        51233,
+        25554,
+        20856
+      ],
+      "utility_product": 169535774894614128
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        2,
+        2,
+        3,
+        0,
+        null,
+        3
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27629,
+        24022
+      ],
+      "utility_product": 168814189536267030
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        3,
+        3,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3580,
+        40965,
+        29760,
+        38543
+      ],
+      "utility_product": 168218760158496000
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        3,
+        0,
+        3,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27629,
+        23631
+      ],
+      "utility_product": 166066443798664815
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27706,
+        23481
+      ],
+      "utility_product": 165472198650427410
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        null,
+        3
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27682,
+        23481
+      ],
+      "utility_product": 165328860284455770
+    },
+    {
+      "base_owner": [
+        2,
+        3,
+        2,
+        1,
+        3,
+        1,
+        0,
+        null,
+        3
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        1,
+        3
+      ],
+      "utilities": [
+        6209,
+        40530,
+        28677,
+        21397
+      ],
+      "utility_product": 154413357642212130
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        2,
+        1,
+        3,
+        1,
+        0,
+        1,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        41302,
+        28677,
+        20856
+      ],
+      "utility_product": 153376024501654416
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        2,
+        1,
+        3,
+        1,
+        0,
+        3,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        40530,
+        28677,
+        21006
+      ],
+      "utility_product": 151591671291877740
+    },
+    {
+      "base_owner": [
+        null,
+        3,
+        1,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3946,
+        59428,
+        29760,
+        21397
+      ],
+      "utility_product": 149325510845391360
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        2,
+        2,
+        3,
+        0,
+        3,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27629,
+        21203
+      ],
+      "utility_product": 149003715791252595
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        null,
+        1
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        0,
+        1,
+        2
+      ],
+      "utilities": [
+        6209,
+        30865,
+        37870,
+        20512
+      ],
+      "utility_product": 148864538061310400
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27706,
+        21053
+      ],
+      "utility_product": 148361918069394330
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        2,
+        null,
+        3,
+        1,
+        0,
+        3,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        38946,
+        28677,
+        21006
+      ],
+      "utility_product": 145667141133320268
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        2,
+        3,
+        3,
+        1,
+        0,
+        null,
+        3
+      ],
+      "floater": 7,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        38946,
+        28677,
+        21000
+      ],
+      "utility_product": 145625533837938000
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        1,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3948,
+        59428,
+        29760,
+        20856
+      ],
+      "utility_product": 145623747723632640
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        1,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3947,
+        59428,
+        29760,
+        20856
+      ],
+      "utility_product": 145586862275880960
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        3,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27682,
+        20662
+      ],
+      "utility_product": 145480384617240540
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        27759,
+        20512
+      ],
+      "utility_product": 144825969271344480
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        2,
+        3,
+        0,
+        3,
+        2
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        26438,
+        21203
+      ],
+      "utility_product": 142580630427780090
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        3,
+        2,
+        3,
+        0,
+        null,
+        2
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        26438,
+        21197
+      ],
+      "utility_product": 142540283128691910
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        1,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        29450,
+        37870,
+        20512
+      ],
+      "utility_product": 142039871890672000
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        2,
+        3,
+        0,
+        2,
+        2
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        26515,
+        21053
+      ],
+      "utility_product": 141984272634447075
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        0,
+        null,
+        1
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6209,
+        28352,
+        39000,
+        20512
+      ],
+      "utility_product": 140824421197824000
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        null,
+        0
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6470,
+        34360,
+        30805,
+        20512
+      ],
+      "utility_product": 140470994391872000
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        2,
+        3,
+        0,
+        3,
+        2
+      ],
+      "floater": 1,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        40965,
+        26438,
+        20806
+      ],
+      "utility_product": 139910984138112180
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        28678,
+        37947,
+        20512
+      ],
+      "utility_product": 138597684707646528
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        1,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        6209,
+        35132,
+        30805,
+        20512
+      ],
+      "utility_product": 137833173290270080
+    },
+    {
+      "base_owner": [
+        2,
+        3,
+        2,
+        null,
+        3,
+        1,
+        0,
+        1,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        35620,
+        28677,
+        21397
+      ],
+      "utility_product": 135706977528142020
+    },
+    {
+      "base_owner": [
+        0,
+        3,
+        1,
+        null,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3579,
+        59428,
+        29760,
+        21397
+      ],
+      "utility_product": 135437405807312640
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        6209,
+        34360,
+        30882,
+        20512
+      ],
+      "utility_product": 135141346410524160
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        0,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        4245,
+        51233,
+        29760,
+        20856
+      ],
+      "utility_product": 134986838764377600
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        0,
+        1,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        26937,
+        39000,
+        20512
+      ],
+      "utility_product": 133796114341344000
+    },
+    {
+      "base_owner": [
+        2,
+        3,
+        2,
+        null,
+        3,
+        1,
+        0,
+        3,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        34848,
+        28677,
+        21547
+      ],
+      "utility_product": 133696502388919008
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        2,
+        3,
+        3,
+        1,
+        0,
+        1,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        35620,
+        28677,
+        21000
+      ],
+      "utility_product": 133189069873860000
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        1,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3580,
+        59428,
+        29760,
+        21000
+      ],
+      "utility_product": 132961639910400000
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        1,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3579,
+        59428,
+        29760,
+        21000
+      ],
+      "utility_product": 132924499787520000
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        2,
+        2,
+        3,
+        0,
+        1,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6209,
+        27539,
+        37870,
+        20512
+      ],
+      "utility_product": 132822955246085440
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        1,
+        null,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3581,
+        59428,
+        29760,
+        20856
+      ],
+      "utility_product": 132086788398766080
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        26165,
+        39077,
+        20512
+      ],
+      "utility_product": 130218180158692640
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        null,
+        1,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        56915,
+        29760,
+        21397
+      ],
+      "utility_product": 129673994749526400
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        26767,
+        37947,
+        20512
+      ],
+      "utility_product": 129362027567109792
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        null,
+        1
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        26767,
+        37923,
+        20512
+      ],
+      "utility_product": 129280211121498528
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        2,
+        2,
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        38946,
+        25578,
+        20856
+      ],
+      "utility_product": 128997745610624352
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3946,
+        51233,
+        29760,
+        21397
+      ],
+      "utility_product": 128733827440632960
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        0,
+        2,
+        3,
+        0,
+        null,
+        1
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6577,
+        30865,
+        30805,
+        20512
+      ],
+      "utility_product": 128269482954416800
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        1,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        6209,
+        32449,
+        30882,
+        20512
+      ],
+      "utility_product": 127625190619182144
+    },
+    {
+      "base_owner": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        1,
+        0,
+        null,
+        2
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31375,
+        18799
+      ],
+      "utility_product": 127619782547796000
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        null,
+        1
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        6209,
+        32449,
+        30858,
+        20512
+      ],
+      "utility_product": 127526006480367936
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        3,
+        0,
+        null,
+        1
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6211,
+        32449,
+        30805,
+        20512
+      ],
+      "utility_product": 127347982079926240
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        1,
+        2,
+        3,
+        0,
+        1,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6470,
+        31034,
+        30805,
+        20512
+      ],
+      "utility_product": 126873598368956800
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        0,
+        null,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3877,
+        51233,
+        29760,
+        21397
+      ],
+      "utility_product": 126482779773779520
+    },
+    {
+      "base_owner": [
+        null,
+        3,
+        2,
+        2,
+        3,
+        1,
+        0,
+        3,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31375,
+        18578
+      ],
+      "utility_product": 126119491471512000
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20641,
+        24022
+      ],
+      "utility_product": 126117256730901870
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3948,
+        51233,
+        29760,
+        20856
+      ],
+      "utility_product": 125542529903831040
+    },
+    {
+      "base_owner": [
+        null,
+        3,
+        2,
+        2,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31452,
+        18428
+      ],
+      "utility_product": 125408215618785792
+    },
+    {
+      "base_owner": [
+        3,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        3,
+        2
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31375,
+        18408
+      ],
+      "utility_product": 124965421412832000
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        2,
+        1,
+        2,
+        3,
+        0,
+        1,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        25026,
+        39000,
+        20512
+      ],
+      "utility_product": 124304174834112000
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3946,
+        45063,
+        29760,
+        23481
+      ],
+      "utility_product": 124258668949226880
+    },
+    {
+      "base_owner": [
+        3,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31452,
+        18258
+      ],
+      "utility_product": 124251313260678912
+    },
+    {
+      "base_owner": [
+        3,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        null,
+        2
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31428,
+        18258
+      ],
+      "utility_product": 124156501117786368
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        0,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3877,
+        51233,
+        29760,
+        21000
+      ],
+      "utility_product": 124136017911360000
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        null,
+        2,
+        3,
+        0,
+        1,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        6209,
+        31637,
+        30805,
+        20512
+      ],
+      "utility_product": 124121259916437280
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20641,
+        23625
+      ],
+      "utility_product": 124032977698258125
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        1,
+        2,
+        3,
+        0,
+        2,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6470,
+        30262,
+        30882,
+        20512
+      ],
+      "utility_product": 124026741572501760
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        null,
+        0
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        1,
+        2
+      ],
+      "utilities": [
+        6470,
+        30262,
+        30858,
+        20512
+      ],
+      "utility_product": 123930353974621440
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        null,
+        2,
+        3,
+        0,
+        3,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20617,
+        23631
+      ],
+      "utility_product": 123920224105000995
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        3,
+        2,
+        3,
+        0,
+        null,
+        3
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20617,
+        23625
+      ],
+      "utility_product": 123888760292863125
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        null,
+        2,
+        3,
+        0,
+        2,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2,
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20694,
+        23481
+      ],
+      "utility_product": 123593506059046590
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        0,
+        null,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3879,
+        51233,
+        29760,
+        20856
+      ],
+      "utility_product": 123348397542289920
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        3,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        31428,
+        18037
+      ],
+      "utility_product": 122653675685261952
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        1,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        6209,
+        31034,
+        30858,
+        20512
+      ],
+      "utility_product": 121964993839925376
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        3,
+        0,
+        1,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        6211,
+        31034,
+        30805,
+        20512
+      ],
+      "utility_product": 121794732530075840
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        null,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        6209,
+        30865,
+        30882,
+        20512
+      ],
+      "utility_product": 121395158817253440
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3578,
+        46647,
+        29760,
+        24022
+      ],
+      "utility_product": 119318049145739520
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        6209,
+        30262,
+        30935,
+        20512
+      ],
+      "utility_product": 119227768313469760
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        1,
+        1,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6211,
+        30262,
+        30882,
+        20512
+      ],
+      "utility_product": 119061838007234688
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        1,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        35132,
+        26438,
+        20512
+      ],
+      "utility_product": 118293570376502528
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        2,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3841,
+        34848,
+        46065,
+        19152
+      ],
+      "utility_product": 118088436840675840
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        2,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3840,
+        34848,
+        46065,
+        19152
+      ],
+      "utility_product": 118057692649881600
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        1,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        35620,
+        25554,
+        20856
+      ],
+      "utility_product": 117870597110185920
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3580,
+        46647,
+        29760,
+        23481
+      ],
+      "utility_product": 116696078028345600
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        1,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3579,
+        46647,
+        29760,
+        23481
+      ],
+      "utility_product": 116663481358505280
+    },
+    {
+      "base_owner": [
+        2,
+        3,
+        2,
+        3,
+        3,
+        1,
+        0,
+        3,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        28677,
+        18722
+      ],
+      "utility_product": 116167722547238208
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        4207,
+        45063,
+        29760,
+        20512
+      ],
+      "utility_product": 115726694237521920
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        2,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        34848,
+        25631,
+        20856
+      ],
+      "utility_product": 115663435204407552
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3946,
+        40965,
+        29760,
+        24022
+      ],
+      "utility_product": 115561223060140800
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        null,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3580,
+        51233,
+        29760,
+        21000
+      ],
+      "utility_product": 114626500934400000
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        45063,
+        29760,
+        23625
+      ],
+      "utility_product": 113361394875120000
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3948,
+        40965,
+        29760,
+        23481
+      ],
+      "utility_product": 113015918405779200
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        1,
+        3
+      ],
+      "utilities": [
+        3947,
+        40965,
+        29760,
+        23481
+      ],
+      "utility_product": 112987292286628800
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        null,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3579,
+        45063,
+        29760,
+        23481
+      ],
+      "utility_product": 112701919961805120
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3839,
+        46647,
+        29760,
+        21053
+      ],
+      "utility_product": 112198938396114240
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        1,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        31637,
+        27629,
+        20512
+      ],
+      "utility_product": 111324339887396384
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        3,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20641,
+        21197
+      ],
+      "utility_product": 111285800138411745
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        0,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3946,
+        45063,
+        29760,
+        20856
+      ],
+      "utility_product": 110367480073466880
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3581,
+        34848,
+        46065,
+        19152
+      ],
+      "utility_product": 110094947234173440
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        4207,
+        34848,
+        39053,
+        19152
+      ],
+      "utility_product": 109652592622358016
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        4209,
+        34848,
+        39000,
+        19152
+      ],
+      "utility_product": 109555837687296000
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        4208,
+        34848,
+        39000,
+        19152
+      ],
+      "utility_product": 109529808740352000
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3841,
+        46647,
+        29760,
+        20512
+      ],
+      "utility_product": 109372706753034240
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        3,
+        2,
+        3,
+        0,
+        3,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        40965,
+        20617,
+        20806
+      ],
+      "utility_product": 109106012556753870
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        30865,
+        27706,
+        20512
+      ],
+      "utility_product": 108910506773875520
+    },
+    {
+      "base_owner": [
+        1,
+        2,
+        1,
+        3,
+        2,
+        3,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        40965,
+        20694,
+        20656
+      ],
+      "utility_product": 108723966660519840
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3947,
+        45063,
+        29760,
+        20512
+      ],
+      "utility_product": 108574580973496320
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        null,
+        2,
+        3,
+        0,
+        1,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        27539,
+        30858,
+        20512
+      ],
+      "utility_product": 108229489120245696
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        4207,
+        40965,
+        29760,
+        21053
+      ],
+      "utility_product": 107977281333566400
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3946,
+        43152,
+        29760,
+        21053
+      ],
+      "utility_product": 106685384644085760
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3839,
+        45063,
+        29760,
+        20656
+      ],
+      "utility_product": 106345070806993920
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        1,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3578,
+        46647,
+        29760,
+        21397
+      ],
+      "utility_product": 106279589441819520
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        1,
+        null,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        6209,
+        26767,
+        30935,
+        20512
+      ],
+      "utility_product": 105457989374352160
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        4209,
+        40965,
+        29760,
+        20512
+      ],
+      "utility_product": 105252596816947200
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3579,
+        40965,
+        29760,
+        24022
+      ],
+      "utility_product": 104813385030979200
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        1,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3579,
+        46647,
+        29760,
+        21053
+      ],
+      "utility_product": 104600156426072640
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        0,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        4138,
+        34848,
+        37870,
+        19152
+      ],
+      "utility_product": 104587018501109760
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        1,
+        3,
+        0,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3610,
+        46647,
+        29760,
+        20856
+      ],
+      "utility_product": 104518908383155200
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3948,
+        43152,
+        29760,
+        20512
+      ],
+      "utility_product": 103996568113643520
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3947,
+        43152,
+        29760,
+        20512
+      ],
+      "utility_product": 103970226531041280
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        1,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3580,
+        46647,
+        29760,
+        20856
+      ],
+      "utility_product": 103650330197145600
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3580,
+        40965,
+        29760,
+        23625
+      ],
+      "utility_product": 103109986476000000
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3579,
+        40965,
+        29760,
+        23625
+      ],
+      "utility_product": 103081184803800000
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        0,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3946,
+        40965,
+        29760,
+        21397
+      ],
+      "utility_product": 102933289893340800
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3947,
+        34848,
+        39053,
+        19152
+      ],
+      "utility_product": 102875869522331136
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        0,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3949,
+        34848,
+        39000,
+        19152
+      ],
+      "utility_product": 102788311481856000
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        0,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        4245,
+        38946,
+        29760,
+        20856
+      ],
+      "utility_product": 102613499551411200
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        null,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1,
+        3
+      ],
+      "utilities": [
+        3581,
+        40965,
+        29760,
+        23481
+      ],
+      "utility_product": 102510132677582400
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3581,
+        46647,
+        29760,
+        20512
+      ],
+      "utility_product": 101969191065507840
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1,
+        3
+      ],
+      "utilities": [
+        3947,
+        40965,
+        29760,
+        21053
+      ],
+      "utility_product": 101304095418014400
+    },
+    {
+      "base_owner": [
+        3,
+        2,
+        2,
+        2,
+        3,
+        1,
+        0,
+        2,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        25631,
+        18258
+      ],
+      "utility_product": 101255418103283136
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        0,
+        3,
+        0,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1,
+        3
+      ],
+      "utilities": [
+        3978,
+        40965,
+        29760,
+        20856
+      ],
+      "utility_product": 101144362867891200
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        null,
+        3,
+        0,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3610,
+        45063,
+        29760,
+        20856
+      ],
+      "utility_product": 100969742287180800
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        3,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        45063,
+        29760,
+        21000
+      ],
+      "utility_product": 100765684333440000
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        0,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3948,
+        40965,
+        29760,
+        20856
+      ],
+      "utility_product": 100381584867379200
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        4207,
+        29710,
+        39053,
+        20512
+      ],
+      "utility_product": 100123857416985920
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        null,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3840,
+        34848,
+        39053,
+        19152
+      ],
+      "utility_product": 100086987323473920
+    },
+    {
+      "base_owner": [
+        null,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3877,
+        40530,
+        29760,
+        21397
+      ],
+      "utility_product": 100059474640003200
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        4209,
+        29710,
+        39000,
+        20512
+      ],
+      "utility_product": 100035510419520000
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        4208,
+        29710,
+        39000,
+        20512
+      ],
+      "utility_product": 100011743370240000
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        null,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        3842,
+        34848,
+        39000,
+        19152
+      ],
+      "utility_product": 100003214158848000
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3839,
+        40965,
+        29760,
+        21197
+      ],
+      "utility_product": 99206104810507200
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3579,
+        45063,
+        29760,
+        20656
+      ],
+      "utility_product": 99142747699461120
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1,
+        3
+      ],
+      "utilities": [
+        3949,
+        40965,
+        29760,
+        20512
+      ],
+      "utility_product": 98750892095539200
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        0,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        1,
+        3
+      ],
+      "utilities": [
+        3840,
+        40965,
+        29760,
+        21053
+      ],
+      "utility_product": 98557822752768000
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3877,
+        34848,
+        37923,
+        19152
+      ],
+      "utility_product": 98127442101782016
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        0,
+        2,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3879,
+        34848,
+        37870,
+        19152
+      ],
+      "utility_product": 98040851804206080
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        0,
+        1,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        3879,
+        40530,
+        29760,
+        20856
+      ],
+      "utility_product": 97579890937267200
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3578,
+        43152,
+        29760,
+        21197
+      ],
+      "utility_product": 97397675484088320
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3839,
+        34848,
+        37923,
+        19152
+      ],
+      "utility_product": 97165656494387712
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        1,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        27539,
+        27682,
+        20512
+      ],
+      "utility_product": 97090178165358784
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        null,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3841,
+        34848,
+        37870,
+        19152
+      ],
+      "utility_product": 97080410358328320
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3579,
+        43152,
+        29760,
+        21053
+      ],
+      "utility_product": 96763049072778240
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        3841,
+        40965,
+        29760,
+        20656
+      ],
+      "utility_product": 96724483244006400
+    },
+    {
+      "base_owner": [
+        3,
+        2,
+        2,
+        null,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 3,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        24440,
+        18258
+      ],
+      "utility_product": 96550365512240640
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        3,
+        2,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        34848,
+        23257,
+        19136
+      ],
+      "utility_product": 96295140930852864
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        3,
+        2,
+        3,
+        1,
+        0,
+        null,
+        2
+      ],
+      "floater": 7,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        6209,
+        34848,
+        23233,
+        19136
+      ],
+      "utility_product": 96195769413359616
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        0,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4138,
+        29710,
+        37870,
+        20512
+      ],
+      "utility_product": 95498478217811200
+    },
+    {
+      "base_owner": [
+        0,
+        1,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3947,
+        38946,
+        29760,
+        20856
+      ],
+      "utility_product": 95410007710110720
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        3,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        24440,
+        18031
+      ],
+      "utility_product": 95349963881652480
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        3,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3580,
+        43152,
+        29760,
+        20656
+      ],
+      "utility_product": 94964898314649600
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3579,
+        43152,
+        29760,
+        20656
+      ],
+      "utility_product": 94938371806740480
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        1,
+        2,
+        2,
+        3,
+        0,
+        2,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        26767,
+        27759,
+        20512
+      ],
+      "utility_product": 94630946405128224
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        0,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        3877,
+        38946,
+        29760,
+        21000
+      ],
+      "utility_product": 94364986504320000
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        null,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        3
+      ],
+      "utilities": [
+        3581,
+        43152,
+        29760,
+        20512
+      ],
+      "utility_product": 94329207298621440
+    },
+    {
+      "base_owner": [
+        null,
+        3,
+        0,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        4245,
+        34848,
+        29760,
+        21397
+      ],
+      "utility_product": 94197931503667200
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        null,
+        3,
+        0,
+        2,
+        0,
+        3
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3610,
+        40965,
+        29760,
+        21397
+      ],
+      "utility_product": 94168569821328000
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3947,
+        29710,
+        39053,
+        20512
+      ],
+      "utility_product": 93936026913440320
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        0,
+        2,
+        3,
+        1,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3949,
+        29710,
+        39000,
+        20512
+      ],
+      "utility_product": 93856077606720000
+    },
+    {
+      "base_owner": [
+        2,
+        3,
+        null,
+        2,
+        3,
+        1,
+        0,
+        3,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        23180,
+        18578
+      ],
+      "utility_product": 93177683260865280
+    },
+    {
+      "base_owner": [
+        2,
+        3,
+        null,
+        2,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        23257,
+        18428
+      ],
+      "utility_product": 92732381745075072
+    },
+    {
+      "base_owner": [
+        1,
+        3,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0,
+        1
+      ],
+      "utilities": [
+        3579,
+        40965,
+        29760,
+        21197
+      ],
+      "utility_product": 92487275102059200
+    },
+    {
+      "base_owner": [
+        1,
+        null,
+        1,
+        3,
+        3,
+        0,
+        2,
+        0,
+        3
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3610,
+        40965,
+        29760,
+        21000
+      ],
+      "utility_product": 92421365904000000
+    },
+    {
+      "base_owner": [
+        0,
+        3,
+        null,
+        1,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3579,
+        40530,
+        29760,
+        21397
+      ],
+      "utility_product": 92368547778326400
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        0,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        4247,
+        34848,
+        29760,
+        20856
+      ],
+      "utility_product": 91859497233039360
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        3,
+        3,
+        null,
+        2,
+        0,
+        3
+      ],
+      "floater": 5,
+      "insertable_hosts": [],
+      "utilities": [
+        3580,
+        40965,
+        29760,
+        21000
+      ],
+      "utility_product": 91653321312000000
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        null,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3840,
+        29710,
+        39053,
+        20512
+      ],
+      "utility_product": 91389496667750400
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        null,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3842,
+        29710,
+        39000,
+        20512
+      ],
+      "utility_product": 91313003333760000
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        3,
+        0,
+        1,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        26937,
+        26438,
+        20512
+      ],
+      "utility_product": 90700042845037248
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        2,
+        3,
+        1,
+        0,
+        3,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        34848,
+        23233,
+        18037
+      ],
+      "utility_product": 90671148249831072
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        2,
+        3,
+        1,
+        0,
+        2,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        6209,
+        34848,
+        23310,
+        17887
+      ],
+      "utility_product": 90215113206335040
+    },
+    {
+      "base_owner": [
+        1,
+        0,
+        1,
+        3,
+        0,
+        3,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        1,
+        3
+      ],
+      "utilities": [
+        3581,
+        40965,
+        29760,
+        20656
+      ],
+      "utility_product": 90177134729702400
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        1,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3581,
+        40530,
+        29760,
+        20856
+      ],
+      "utility_product": 90083420842060800
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        2,
+        2,
+        3,
+        1,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3877,
+        29710,
+        37923,
+        20512
+      ],
+      "utility_product": 89600234583865920
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        0,
+        2,
+        2,
+        3,
+        1,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        3879,
+        29710,
+        37870,
+        20512
+      ],
+      "utility_product": 89521168923849600
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3839,
+        29710,
+        37923,
+        20512
+      ],
+      "utility_product": 88722027487093440
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3841,
+        29710,
+        37870,
+        20512
+      ],
+      "utility_product": 88644189181878400
+    },
+    {
+      "base_owner": [
+        0,
+        3,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3947,
+        34848,
+        29760,
+        21397
+      ],
+      "utility_product": 87585214521784320
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        0,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        4245,
+        34848,
+        30858,
+        19152
+      ],
+      "utility_product": 87425366260700160
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        4247,
+        34848,
+        30805,
+        19152
+      ],
+      "utility_product": 87316328332316160
+    },
+    {
+      "base_owner": [
+        0,
+        1,
+        null,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3579,
+        38946,
+        29760,
+        21000
+      ],
+      "utility_product": 87111758240640000
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        2,
+        null,
+        3,
+        0,
+        1,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        29450,
+        23180,
+        20512
+      ],
+      "utility_product": 86941754170208000
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        4207,
+        34848,
+        30858,
+        19152
+      ],
+      "utility_product": 86642759919614976
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        null,
+        0,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        4209,
+        34848,
+        30805,
+        19152
+      ],
+      "utility_product": 86535066152747520
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3949,
+        34848,
+        29760,
+        20856
+      ],
+      "utility_product": 85413975647109120
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        null,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4138,
+        34848,
+        30858,
+        19152
+      ],
+      "utility_product": 85221711563433984
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        0,
+        null,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4140,
+        34848,
+        30805,
+        19152
+      ],
+      "utility_product": 85116458510899200
+    },
+    {
+      "base_owner": [
+        2,
+        1,
+        1,
+        2,
+        null,
+        3,
+        0,
+        2,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        28678,
+        23257,
+        20512
+      ],
+      "utility_product": 84943904742027968
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        0,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3879,
+        34848,
+        29760,
+        21000
+      ],
+      "utility_product": 84479212984320000
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        3,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        4209,
+        34848,
+        29760,
+        19136
+      ],
+      "utility_product": 83529690649067520
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        3,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        4208,
+        34848,
+        29760,
+        19136
+      ],
+      "utility_product": 83509845153546240
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        2,
+        1,
+        null,
+        3,
+        0,
+        1,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        26937,
+        24310,
+        20512
+      ],
+      "utility_product": 83399577939437760
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        2,
+        0,
+        null,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        4209,
+        34848,
+        28677,
+        19152
+      ],
+      "utility_product": 80557250188681728
+    },
+    {
+      "base_owner": [
+        0,
+        1,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3840,
+        34360,
+        29760,
+        20512
+      ],
+      "utility_product": 80542538661888000
+    },
+    {
+      "base_owner": [
+        0,
+        3,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        4208,
+        34848,
+        29760,
+        18428
+      ],
+      "utility_product": 80420120531435520
+    },
+    {
+      "base_owner": [
+        3,
+        0,
+        0,
+        0,
+        3,
+        1,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        4247,
+        34848,
+        29760,
+        18258
+      ],
+      "utility_product": 80416700253204480
+    },
+    {
+      "base_owner": [
+        null,
+        3,
+        0,
+        3,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        4138,
+        34848,
+        29760,
+        18572
+      ],
+      "utility_product": 79700298191585280
+    },
+    {
+      "base_owner": [
+        3,
+        0,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        4209,
+        34848,
+        29760,
+        18258
+      ],
+      "utility_product": 79697172443074560
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        4207,
+        29710,
+        30858,
+        20512
+      ],
+      "utility_product": 79113563418261120
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        null,
+        0,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        4209,
+        29710,
+        30805,
+        20512
+      ],
+      "utility_product": 79015228165982400
+    },
+    {
+      "base_owner": [
+        3,
+        0,
+        0,
+        null,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [],
+      "utilities": [
+        4140,
+        34848,
+        29760,
+        18258
+      ],
+      "utility_product": 78390661419417600
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        3,
+        0,
+        3,
+        1,
+        2,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3949,
+        34848,
+        29760,
+        19136
+      ],
+      "utility_product": 78369861813534720
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        0,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        3
+      ],
+      "utilities": [
+        4210,
+        34848,
+        29760,
+        17887
+      ],
+      "utility_product": 78096287260569600
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        3,
+        3,
+        1,
+        2,
+        0,
+        3
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3581,
+        34848,
+        29760,
+        21000
+      ],
+      "utility_product": 77989188372480000
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        null,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4138,
+        29710,
+        30858,
+        20512
+      ],
+      "utility_product": 77816003191054080
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        0,
+        3,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        4140,
+        34848,
+        29760,
+        18031
+      ],
+      "utility_product": 77416037685043200
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        0,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4138,
+        34848,
+        27682,
+        19152
+      ],
+      "utility_product": 76450431638439936
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        0,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4140,
+        34848,
+        27629,
+        19152
+      ],
+      "utility_product": 76340939204597760
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        3,
+        null,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3842,
+        34848,
+        29760,
+        19136
+      ],
+      "utility_product": 76246393792757760
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        1,
+        3,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        34848,
+        28677,
+        19152
+      ],
+      "utility_product": 75581036111927808
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3579,
+        34848,
+        31428,
+        19152
+      ],
+      "utility_product": 75070694558103552
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        2,
+        null,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3579,
+        34848,
+        31428,
+        19152
+      ],
+      "utility_product": 75070694558103552
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3581,
+        34848,
+        31375,
+        19152
+      ],
+      "utility_product": 74985975675072000
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        2,
+        null,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        0
+      ],
+      "utilities": [
+        3581,
+        34848,
+        31375,
+        19152
+      ],
+      "utility_product": 74985975675072000
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        2,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 1,
+      "insertable_hosts": [
+        0,
+        2
+      ],
+      "utilities": [
+        3580,
+        34848,
+        31375,
+        19152
+      ],
+      "utility_product": 74965035720960000
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        0,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        4247,
+        34848,
+        26438,
+        19152
+      ],
+      "utility_product": 74938129798726656
+    },
+    {
+      "base_owner": [
+        null,
+        1,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        3947,
+        30865,
+        29760,
+        20512
+      ],
+      "utility_product": 74365986324633600
+    },
+    {
+      "base_owner": [
+        0,
+        1,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3947,
+        30865,
+        29760,
+        20512
+      ],
+      "utility_product": 74365986324633600
+    },
+    {
+      "base_owner": [
+        0,
+        3,
+        null,
+        3,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3840,
+        34848,
+        29760,
+        18572
+      ],
+      "utility_product": 73960644044390400
+    },
+    {
+      "base_owner": [
+        0,
+        1,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        4208,
+        28678,
+        29760,
+        20512
+      ],
+      "utility_product": 73665734980730880
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        2,
+        0,
+        null,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        4209,
+        29710,
+        28677,
+        20512
+      ],
+      "utility_product": 73556880315399360
+    },
+    {
+      "base_owner": [
+        2,
+        null,
+        1,
+        2,
+        1,
+        3,
+        0,
+        2,
+        2
+      ],
+      "floater": 1,
+      "insertable_hosts": [],
+      "utilities": [
+        6209,
+        24589,
+        23257,
+        20512
+      ],
+      "utility_product": 72832333973837984
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        3,
+        3,
+        1,
+        2,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3842,
+        34848,
+        29760,
+        18031
+      ],
+      "utility_product": 71843578933800960
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3842,
+        30262,
+        29760,
+        20512
+      ],
+      "utility_product": 70973450897940480
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        null,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3840,
+        34848,
+        27682,
+        19152
+      ],
+      "utility_product": 70944818146836480
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        1,
+        1,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        3581,
+        32449,
+        29760,
+        20512
+      ],
+      "utility_product": 70932713376737280
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        1,
+        1,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3581,
+        32449,
+        29760,
+        20512
+      ],
+      "utility_product": 70932713376737280
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        2,
+        2,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        3842,
+        34848,
+        27629,
+        19152
+      ],
+      "utility_product": 70845866769097728
+    },
+    {
+      "base_owner": [
+        null,
+        2,
+        0,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        4138,
+        29710,
+        27682,
+        20512
+      ],
+      "utility_product": 69806941484696320
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        0,
+        2,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        34848,
+        26438,
+        19152
+      ],
+      "utility_product": 69679932793777152
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        2,
+        0,
+        0,
+        3,
+        1,
+        0,
+        null
+      ],
+      "floater": 8,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        29710,
+        28677,
+        20512
+      ],
+      "utility_product": 69013095834048960
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        0,
+        1,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3877,
+        28352,
+        29760,
+        20512
+      ],
+      "utility_product": 67099677978132480
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        2,
+        null,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3840,
+        34848,
+        25554,
+        19152
+      ],
+      "utility_product": 65491073004994560
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        2,
+        null,
+        1,
+        3,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [
+        2
+      ],
+      "utilities": [
+        3842,
+        34848,
+        25501,
+        19152
+      ],
+      "utility_product": 65389281134994432
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3840,
+        29710,
+        27682,
+        20512
+      ],
+      "utility_product": 64779762035097600
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3842,
+        29710,
+        27629,
+        20512
+      ],
+      "utility_product": 64689409464319360
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        1,
+        0,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 0,
+      "insertable_hosts": [
+        1
+      ],
+      "utilities": [
+        3949,
+        26767,
+        29760,
+        20512
+      ],
+      "utility_product": 64524963474216960
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        1,
+        0,
+        null,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        26767,
+        29760,
+        20512
+      ],
+      "utility_product": 64524963474216960
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        0,
+        null,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3947,
+        34848,
+        24363,
+        19152
+      ],
+      "utility_product": 64178547337529856
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        0,
+        null,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        34848,
+        24310,
+        19152
+      ],
+      "utility_product": 64071380823690240
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        null,
+        0,
+        2,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        29710,
+        26438,
+        20512
+      ],
+      "utility_product": 63624794352986240
+    },
+    {
+      "base_owner": [
+        null,
+        0,
+        1,
+        0,
+        1,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 0,
+      "insertable_hosts": [],
+      "utilities": [
+        4209,
+        24589,
+        29760,
+        20512
+      ],
+      "utility_product": 63177251388549120
+    },
+    {
+      "base_owner": [
+        0,
+        null,
+        1,
+        0,
+        1,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 1,
+      "insertable_hosts": [],
+      "utilities": [
+        4208,
+        24589,
+        29760,
+        20512
+      ],
+      "utility_product": 63162241350205440
+    },
+    {
+      "base_owner": [
+        1,
+        1,
+        null,
+        1,
+        0,
+        3,
+        2,
+        0,
+        1
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3579,
+        28352,
+        29760,
+        20512
+      ],
+      "utility_product": 61942158236712960
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        2,
+        null,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3877,
+        34848,
+        23233,
+        19152
+      ],
+      "utility_product": 60116416484737536
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        0,
+        2,
+        null,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3879,
+        34848,
+        23180,
+        19152
+      ],
+      "utility_product": 60010217713797120
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        2,
+        null,
+        3,
+        1,
+        0,
+        0
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3842,
+        29710,
+        25501,
+        20512
+      ],
+      "utility_product": 59706997384979840
+    },
+    {
+      "base_owner": [
+        0,
+        2,
+        2,
+        0,
+        null,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3947,
+        29710,
+        24363,
+        20512
+      ],
+      "utility_product": 58601475525366720
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        2,
+        0,
+        null,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3949,
+        29710,
+        24310,
+        20512
+      ],
+      "utility_product": 58503621708188800
+    },
+    {
+      "base_owner": [
+        0,
+        0,
+        1,
+        null,
+        1,
+        3,
+        2,
+        0,
+        0
+      ],
+      "floater": 3,
+      "insertable_hosts": [],
+      "utilities": [
+        3842,
+        24589,
+        29760,
+        20512
+      ],
+      "utility_product": 57668567316418560
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3579,
+        34848,
+        23233,
+        19152
+      ],
+      "utility_product": 55495655042268672
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        null,
+        2,
+        0,
+        1,
+        3,
+        0,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3581,
+        34848,
+        23180,
+        19152
+      ],
+      "utility_product": 55399997327431680
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        0,
+        2,
+        null,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3877,
+        29710,
+        23233,
+        20512
+      ],
+      "utility_product": 54892341061808320
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        0,
+        2,
+        null,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 4,
+      "insertable_hosts": [],
+      "utilities": [
+        3879,
+        29710,
+        23180,
+        20512
+      ],
+      "utility_product": 54795370891334400
+    },
+    {
+      "base_owner": [
+        2,
+        2,
+        null,
+        2,
+        0,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3579,
+        29710,
+        23233,
+        20512
+      ],
+      "utility_product": 50673120624248640
+    },
+    {
+      "base_owner": [
+        2,
+        0,
+        null,
+        2,
+        0,
+        3,
+        1,
+        0,
+        2
+      ],
+      "floater": 2,
+      "insertable_hosts": [],
+      "utilities": [
+        3581,
+        29710,
+        23180,
+        20512
+      ],
+      "utility_product": 50585775499321600
+    }
+  ],
+  "independent_enumerators": {
+    "core_complete": "PASS",
+    "core_partial": "PASS",
+    "literal_complete": "PASS",
+    "literal_partial": "PASS",
+    "vectorized_partial": "PASS"
+  },
+  "maximum_product": 212486804036051200,
+  "maximum_product_gap": 7010613166808320,
+  "maximum_product_state_count": 1,
+  "meaning": "The fixed candidate is the unique maximum-product state among every eligible one-floater EFX allocation and no host accepts its floater. The same profile has complete EFX allocations.",
+  "partial_assignment_universe_count": 589824,
+  "schema": "partial-nash-completion-refutation-audit-v1",
+  "second_largest_product": 205476190869242880,
+  "source": "results/partial_nash_completion_refutation_profile.json",
+  "source_sha256": "928029ffcd6d4171e1733999fe6f6f0abf0d0d5ab6ffe1c7c0a3702215155981",
+  "status": "EXACT_BLOCKED_UNIQUE_MAXIMUM_NASH_STATE",
+  "values": [
+    [
+      1,
+      2,
+      299,
+      368,
+      1,
+      32,
+      6209,
+      3578,
+      261
+    ],
+    [
+      16385,
+      4098,
+      24580,
+      5682,
+      9,
+      34848,
+      29710,
+      772,
+      2187
+    ],
+    [
+      10241,
+      53,
+      18436,
+      7065,
+      20564,
+      1625,
+      29760,
+      77,
+      5874
+    ],
+    [
+      371,
+      541,
+      1249,
+      144,
+      17887,
+      20512,
+      19152,
+      150,
+      2969
+    ]
+  ]
+}

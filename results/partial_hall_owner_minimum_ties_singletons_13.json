@@ -1,0 +1,20 @@
+{
+  "abstraction": "Each nonsingleton bundle is its owner's selected minimum good plus a nonempty remainder; singleton bundles contain only the selected good. Per-observer values, remainder totals, and remainder minima determine all encoded EFX edges. Remainder realizability is relaxed, so UNSAT is sound.",
+  "candidate_count": 25,
+  "candidate_family": "four direct insertions plus every transfer of a source owner's selected minimum good, with host and source independent",
+  "meaning": "UNSAT proves the selected owner-minimum pair-extraction disjunction for four-agent one-floater EFX states with the stated singleton bundle labels. SAT must be checked for item-level realizability.",
+  "model": null,
+  "owner_minimum_ties_allowed": true,
+  "schema": "partial-hall-owner-minimum-extraction-aggregate-v1",
+  "singleton_bundle_labels": [
+    0,
+    2,
+    3
+  ],
+  "smt2": "results/partial_hall_owner_minimum_ties_singletons_13.smt2",
+  "smt2_sha256": "3468712ac728b839f16cbe9d09c07eb8abafc4972a6c294ada5af89d95acee2d",
+  "solver_reason_unknown": null,
+  "solver_verdict": "unsat",
+  "status": "OWNER_MINIMUM_PAIR_EXTRACTION_FORCED",
+  "timeout_seconds": 300
+}

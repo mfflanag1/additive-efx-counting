@@ -1,0 +1,7936 @@
+{
+  "analysis": "results/row_merge_q4_chain_topology_mining_final_analysis.json",
+  "analysis_sha256": "a8ca08b2715b2fced4a58cc51522f140cb17c9bbf95b9551e7440dd44b4e8d87",
+  "claim_boundary": "This is exact finite-trace proof mining. A surviving selector is not a wall-pivot theorem; it must be encoded against fresh adversarial models or proved analytically.",
+  "criterion_families": {
+    "row_and_sum_extrema": [
+      "row0_min",
+      "row0_max",
+      "row1_min",
+      "row1_max",
+      "row2_min",
+      "row2_max",
+      "row3_min",
+      "row3_max",
+      "rowsum_min",
+      "rowsum_max"
+    ],
+    "row_extrema": [
+      "row0_min",
+      "row0_max",
+      "row1_min",
+      "row1_max",
+      "row2_min",
+      "row2_max",
+      "row3_min",
+      "row3_max"
+    ],
+    "row_min": [
+      "row0_min",
+      "row1_min",
+      "row2_min",
+      "row3_min"
+    ]
+  },
+  "decisions": {
+    "row_and_sum_extrema": {
+      "edge": {
+        "minimum_distinct_criterion_count": 2,
+        "policy": {
+          "edge:0>1": "rowsum_min",
+          "edge:0>2": "row1_min",
+          "edge:0>3": "rowsum_min",
+          "edge:1>0": "row1_min",
+          "edge:1>2": "row1_min",
+          "edge:1>3": "rowsum_min",
+          "edge:2>0": "rowsum_min",
+          "edge:2>1": "rowsum_min",
+          "edge:2>3": "rowsum_min",
+          "edge:3>0": "row1_min",
+          "edge:3>1": "row1_min",
+          "edge:3>2": "row1_min"
+        },
+        "status": "sat",
+        "witnesses": [
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 0,
+            "partition": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 2,
+            "model_index": 1,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "rowsum_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 2,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 2,
+            "model_index": 3,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "rowsum_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 4,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 5,
+            "partition": [
+              [
+                0,
+                1,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>1"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              0
+            ],
+            "matching_count": 3,
+            "model_index": 6,
+            "partition": [
+              [
+                0,
+                2,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>3"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 7,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 3,
+            "model_index": 8,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 5,
+            "model_index": 9,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 6,
+            "model_index": 10,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "rowsum_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 11,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              7,
+              3,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 12,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              2,
+              4,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 13,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              8,
+              1,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 14,
+            "partition": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 15,
+            "partition": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 16,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>3"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 17,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 18,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>1"
+              }
+            ],
+            "goods": [
+              6,
+              0,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 19,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                6
+              ],
+              [
+                2,
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "rowsum_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 20,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 21,
+            "partition": [
+              [
+                0,
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 1,
+            "model_index": 22,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "global": {
+        "status": "unsat"
+      },
+      "source": {
+        "minimum_distinct_criterion_count": 2,
+        "policy": {
+          "source:0": "rowsum_min",
+          "source:1": "row1_min",
+          "source:2": "rowsum_min",
+          "source:3": "row1_min"
+        },
+        "status": "sat",
+        "witnesses": [
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 0,
+            "partition": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              1,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 2,
+            "model_index": 1,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 2,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 2,
+            "model_index": 3,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              4,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 4,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 5,
+            "partition": [
+              [
+                0,
+                1,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              0
+            ],
+            "matching_count": 3,
+            "model_index": 6,
+            "partition": [
+              [
+                0,
+                2,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              1,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 7,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 8,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 5,
+            "model_index": 9,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 10,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 11,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              7,
+              3,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 12,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              2,
+              4,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 13,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              8,
+              1,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 14,
+            "partition": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 15,
+            "partition": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 16,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 17,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 18,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 19,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 20,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 21,
+            "partition": [
+              [
+                0,
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "rowsum_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 1,
+            "model_index": 22,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "target": {
+        "status": "unsat"
+      }
+    },
+    "row_extrema": {
+      "edge": {
+        "minimum_distinct_criterion_count": 2,
+        "policy": {
+          "edge:0>1": "row0_min",
+          "edge:0>2": "row0_min",
+          "edge:0>3": "row1_min",
+          "edge:1>0": "row1_min",
+          "edge:1>2": "row1_min",
+          "edge:1>3": "row0_min",
+          "edge:2>0": "row0_min",
+          "edge:2>1": "row0_min",
+          "edge:2>3": "row0_min",
+          "edge:3>0": "row1_min",
+          "edge:3>1": "row1_min",
+          "edge:3>2": "row1_min"
+        },
+        "status": "sat",
+        "witnesses": [
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 0,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>1"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 1,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 2,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>1"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 3,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 4,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 5,
+            "partition": [
+              [
+                0,
+                1,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              0
+            ],
+            "matching_count": 3,
+            "model_index": 6,
+            "partition": [
+              [
+                0,
+                2,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>3"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 7,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 8,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 5,
+            "model_index": 9,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 10,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 11,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              7,
+              3,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 12,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              2,
+              4,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 13,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              8,
+              1,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 14,
+            "partition": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              3,
+              5,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 15,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 16,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>3"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 17,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 18,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 19,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 20,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3>0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 21,
+            "partition": [
+              [
+                0,
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 1,
+            "model_index": 22,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "global": {
+        "status": "unsat"
+      },
+      "source": {
+        "minimum_distinct_criterion_count": 2,
+        "policy": {
+          "source:0": "row0_min",
+          "source:1": "row1_min",
+          "source:2": "row0_min",
+          "source:3": "row1_min"
+        },
+        "status": "sat",
+        "witnesses": [
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 0,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 1,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 2,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 3,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              4,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 4,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                2,
+                3
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 5,
+            "partition": [
+              [
+                0,
+                1,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              0
+            ],
+            "matching_count": 3,
+            "model_index": 6,
+            "partition": [
+              [
+                0,
+                2,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 7,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 8,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 5,
+            "model_index": 9,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 10,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 11,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              7,
+              3,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 12,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              2,
+              4,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 13,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2,
+                5
+              ],
+              [
+                3
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              8,
+              1,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 14,
+            "partition": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              5,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 15,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 16,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 17,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 18,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 19,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 20,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 21,
+            "partition": [
+              [
+                0,
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 1,
+            "model_index": 22,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "target": {
+        "status": "unsat"
+      }
+    },
+    "row_min": {
+      "edge": {
+        "minimum_distinct_criterion_count": 2,
+        "policy": {
+          "edge:0>1": "row0_min",
+          "edge:0>2": "row0_min",
+          "edge:0>3": "row0_min",
+          "edge:1>0": "row3_min",
+          "edge:1>2": "row0_min",
+          "edge:1>3": "row0_min",
+          "edge:2>0": "row0_min",
+          "edge:2>1": "row3_min",
+          "edge:2>3": "row3_min",
+          "edge:3>0": "row3_min",
+          "edge:3>1": "row3_min",
+          "edge:3>2": "row0_min"
+        },
+        "status": "sat",
+        "witnesses": [
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              8,
+              0,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 0,
+            "partition": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                8
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "3>2"
+              }
+            ],
+            "goods": [
+              2,
+              1,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 1,
+            "partition": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                6,
+                8
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              3,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "2>3"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              6
+            ],
+            "matching_count": 1,
+            "model_index": 2,
+            "partition": [
+              [
+                0,
+                1,
+                6
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "3>2"
+              }
+            ],
+            "goods": [
+              2,
+              1,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 3,
+            "partition": [
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                6,
+                8
+              ],
+              [
+                3
+              ],
+              [
+                4,
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              3,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              3
+            ],
+            "matching_count": 4,
+            "model_index": 4,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 5,
+            "partition": [
+              [
+                0,
+                1,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              0
+            ],
+            "matching_count": 3,
+            "model_index": 6,
+            "partition": [
+              [
+                0,
+                2,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "2>3"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 7,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              6,
+              1
+            ],
+            "matching_count": 3,
+            "model_index": 8,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 5,
+            "model_index": 9,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 10,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              3,
+              6,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 11,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "2>3"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              6
+            ],
+            "matching_count": 2,
+            "model_index": 12,
+            "partition": [
+              [
+                0,
+                1,
+                6
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 13,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              }
+            ],
+            "goods": [
+              8,
+              1,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 14,
+            "partition": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              3,
+              5,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 15,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 16,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "2>3"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 17,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 18,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              7,
+              3,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 19,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "3>2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2>0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 20,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1>2"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "2>3"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "3>0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              8
+            ],
+            "matching_count": 1,
+            "model_index": 21,
+            "partition": [
+              [
+                0,
+                1,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row3_min",
+                "edge": "3>1"
+              },
+              {
+                "criterion": "row3_min",
+                "edge": "1>0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0>2"
+              }
+            ],
+            "goods": [
+              6,
+              2,
+              0
+            ],
+            "matching_count": 1,
+            "model_index": 22,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "global": {
+        "status": "unsat"
+      },
+      "source": {
+        "minimum_distinct_criterion_count": 2,
+        "policy": {
+          "source:0": "row0_min",
+          "source:1": "row0_min",
+          "source:2": "row0_min",
+          "source:3": "row1_min"
+        },
+        "status": "sat",
+        "witnesses": [
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 0,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 1,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 2,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              1,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 3,
+            "partition": [
+              [
+                0,
+                6
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              2,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 4,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              5
+            ],
+            "matching_count": 1,
+            "model_index": 5,
+            "partition": [
+              [
+                0,
+                1,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              5,
+              0
+            ],
+            "matching_count": 3,
+            "model_index": 6,
+            "partition": [
+              [
+                0,
+                2,
+                3
+              ],
+              [
+                1,
+                5
+              ],
+              [
+                4,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              2,
+              0,
+              1
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 7,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 8,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              7,
+              1,
+              3
+            ],
+            "matching_count": 5,
+            "model_index": 9,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 10,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 11,
+            "partition": [
+              [
+                0,
+                7
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              7,
+              3,
+              1
+            ],
+            "matching_count": 4,
+            "model_index": 12,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                7
+              ],
+              [
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 13,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              }
+            ],
+            "goods": [
+              8,
+              1,
+              3
+            ],
+            "matching_count": 1,
+            "model_index": 14,
+            "partition": [
+              [
+                0,
+                8
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                4,
+                5
+              ],
+              [
+                6,
+                7
+              ]
+            ],
+            "vertices": [
+              3,
+              0,
+              1,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              5,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 15,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              1
+            ],
+            "matching_count": 2,
+            "model_index": 16,
+            "partition": [
+              [
+                0,
+                4
+              ],
+              [
+                1,
+                6,
+                7,
+                8
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              0,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              0,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 17,
+            "partition": [
+              [
+                0,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4,
+                6,
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              0,
+              2,
+              3
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              4
+            ],
+            "matching_count": 2,
+            "model_index": 18,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              1
+            ],
+            "matching_count": 1,
+            "model_index": 19,
+            "partition": [
+              [
+                0,
+                3
+              ],
+              [
+                1,
+                4,
+                5
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              }
+            ],
+            "goods": [
+              3,
+              7,
+              4
+            ],
+            "matching_count": 1,
+            "model_index": 20,
+            "partition": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                6,
+                8
+              ],
+              [
+                5,
+                7
+              ]
+            ],
+            "vertices": [
+              1,
+              3,
+              2,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "2"
+              },
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              }
+            ],
+            "goods": [
+              3,
+              4,
+              7
+            ],
+            "matching_count": 1,
+            "model_index": 21,
+            "partition": [
+              [
+                0,
+                1,
+                7
+              ],
+              [
+                2
+              ],
+              [
+                3,
+                5
+              ],
+              [
+                4,
+                6,
+                8
+              ]
+            ],
+            "vertices": [
+              1,
+              2,
+              3,
+              0
+            ]
+          },
+          {
+            "edge_rules": [
+              {
+                "criterion": "row1_min",
+                "edge": "3"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "1"
+              },
+              {
+                "criterion": "row0_min",
+                "edge": "0"
+              }
+            ],
+            "goods": [
+              6,
+              3,
+              0
+            ],
+            "matching_count": 1,
+            "model_index": 22,
+            "partition": [
+              [
+                0,
+                4,
+                5
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                2,
+                6
+              ],
+              [
+                7,
+                8
+              ]
+            ],
+            "vertices": [
+              3,
+              1,
+              0,
+              2
+            ]
+          }
+        ]
+      },
+      "target": {
+        "status": "unsat"
+      }
+    }
+  },
+  "exact_model_count": 23,
+  "schema": "row-merge-q4-valuation-selector-mining-v1",
+  "simplest_surviving_selector": {
+    "criterion_family": "row_min",
+    "minimum_distinct_criterion_count": 2,
+    "policy": {
+      "source:0": "row0_min",
+      "source:1": "row0_min",
+      "source:2": "row0_min",
+      "source:3": "row1_min"
+    },
+    "policy_class": "source",
+    "status": "sat",
+    "witnesses": [
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          6,
+          3,
+          4
+        ],
+        "matching_count": 2,
+        "model_index": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          6,
+          1,
+          5
+        ],
+        "matching_count": 1,
+        "model_index": 1,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          7,
+          1
+        ],
+        "matching_count": 1,
+        "model_index": 2,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          6,
+          1,
+          5
+        ],
+        "matching_count": 1,
+        "model_index": 3,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          7,
+          1
+        ],
+        "matching_count": 4,
+        "model_index": 4,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          6,
+          3,
+          5
+        ],
+        "matching_count": 1,
+        "model_index": 5,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          6,
+          5,
+          0
+        ],
+        "matching_count": 3,
+        "model_index": 6,
+        "partition": [
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          3,
+          0,
+          4
+        ],
+        "matching_count": 1,
+        "model_index": 7,
+        "partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ],
+          [
+            4,
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          7,
+          1
+        ],
+        "matching_count": 4,
+        "model_index": 8,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          }
+        ],
+        "goods": [
+          7,
+          1,
+          3
+        ],
+        "matching_count": 5,
+        "model_index": 9,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          7,
+          1
+        ],
+        "matching_count": 2,
+        "model_index": 10,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          7,
+          1
+        ],
+        "matching_count": 4,
+        "model_index": 11,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          7,
+          3,
+          1
+        ],
+        "matching_count": 4,
+        "model_index": 12,
+        "partition": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          4,
+          1
+        ],
+        "matching_count": 2,
+        "model_index": 13,
+        "partition": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            6,
+            7,
+            8
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          }
+        ],
+        "goods": [
+          8,
+          1,
+          3
+        ],
+        "matching_count": 1,
+        "model_index": 14,
+        "partition": [
+          [
+            0,
+            8
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          5,
+          1
+        ],
+        "matching_count": 1,
+        "model_index": 15,
+        "partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6,
+            7,
+            8
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          3,
+          4,
+          1
+        ],
+        "matching_count": 2,
+        "model_index": 16,
+        "partition": [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            6,
+            7,
+            8
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0,
+          3
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          3,
+          0,
+          4
+        ],
+        "matching_count": 2,
+        "model_index": 17,
+        "partition": [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2
+          ],
+          [
+            4,
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          6,
+          3,
+          4
+        ],
+        "matching_count": 2,
+        "model_index": 18,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          6,
+          3,
+          1
+        ],
+        "matching_count": 1,
+        "model_index": 19,
+        "partition": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          0,
+          2
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          }
+        ],
+        "goods": [
+          3,
+          7,
+          4
+        ],
+        "matching_count": 1,
+        "model_index": 20,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            8
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          2,
+          0
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "2"
+          },
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          }
+        ],
+        "goods": [
+          3,
+          4,
+          7
+        ],
+        "matching_count": 1,
+        "model_index": 21,
+        "partition": [
+          [
+            0,
+            1,
+            7
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      {
+        "edge_rules": [
+          {
+            "criterion": "row1_min",
+            "edge": "3"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "1"
+          },
+          {
+            "criterion": "row0_min",
+            "edge": "0"
+          }
+        ],
+        "goods": [
+          6,
+          3,
+          0
+        ],
+        "matching_count": 1,
+        "model_index": 22,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          0,
+          2
+        ]
+      }
+    ]
+  },
+  "status": "FINITE_TRACE_SELECTOR_FOUND",
+  "trace_hashes": {
+    "results/row_merge_q4_all_paths_start3_plus_base_cap20_gate.json": "ec86e5b71b2c74ad4d70854846726e9ab4fb31b303dd76c512ef36e4f6987f3e",
+    "results/row_merge_q4_all_three_cycles_plus_base_cap20_gate.json": "8f6fd94b0befeb9cd859e5908f4732e92a8a65be800564d1fc8a479b3bc3f81e",
+    "results/row_merge_q4_cycle023_both_plus_base_cap20_gate.json": "b07f8ef8897c91487d4becf9d14cb24cc1ab365b8104935432ae91ece217d5c3",
+    "results/row_merge_q4_cycle023_plus_base_cap20_gate.json": "d01e016ff7da5d52f1e99ac0c8fecbad240577d4b348c209581eb2e990ebf9e7",
+    "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json": "3dc7486e735e538c9b6721e997403e1b0c7d975dff4ea892a8cb65493f658a48",
+    "results/row_merge_q4_min_topology_cover_round2_plus_base_cap20_gate.json": "1ecba9677d6f47b6657018650a30367d71f22a0e83e14b84ceeffdfb063a3dcc",
+    "results/row_merge_q4_path32_all_lengths_plus_base_cap20_gate.json": "3937657361a086d76c012d4c9e07b2814b5afef2f9974169fcc421c00a303587",
+    "results/row_merge_q4_path32_plus_base_cap20_gate.json": "59914b83dbb992808bfdfb1e87644600be9c1d5d745eb358139b0a0b6f99baae",
+    "results/row_merge_q4_small_step_chain3_m9_cegar.json": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+    "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_cegar.json": "02015e0ed81c43d3d85900b3e462cf8c280cafb7f27e83ed60e7e2ef99ae473e",
+    "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721",
+    "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool60.json": "bfbea59a2555a886889f86f85766ce1d7cf2e023887d5ea2f3c6c034bb1ef71c",
+    "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+  },
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "branch_count": 4,
+  "branches": [
+    {
+      "deficient_agent_count": 1,
+      "hall_witness_count": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_hall_witness_deficiency_p66/deficiency_1.smt2",
+      "prior_type_exclusions": 0,
+      "sha256": "c2f30d0040db020866f9fc9313a9230e0d271e3c3400fe065816d476e1ace9c6"
+    },
+    {
+      "deficient_agent_count": 2,
+      "hall_witness_count": 24,
+      "path": "results/partial_hall_utilitarian_local_r5_hall_witness_deficiency_p66/deficiency_2.smt2",
+      "prior_type_exclusions": 1,
+      "sha256": "37f5ec70da5524365efd7bfb90cf3b93760570ebe03d77a79cb9a815ef8e8bf9"
+    },
+    {
+      "deficient_agent_count": 3,
+      "hall_witness_count": 24,
+      "path": "results/partial_hall_utilitarian_local_r5_hall_witness_deficiency_p66/deficiency_3.smt2",
+      "prior_type_exclusions": 2,
+      "sha256": "7c1fa197aa09335809e7567404ba5e75747dfbaacab0b08c16a28116aa8c2303"
+    },
+    {
+      "deficient_agent_count": 4,
+      "hall_witness_count": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_hall_witness_deficiency_p66/deficiency_4.smt2",
+      "prior_type_exclusions": 3,
+      "sha256": "fd84abc11e451c08d56ea76ea493efc42b70499fac9d842366024d234fc9e270"
+    }
+  ],
+  "meaning": "The source asserts Hall failure for the selected partition. The four disjoint branches select the least deficient-agent-set size having a minimal Hall witness, so their disjunction is equivalent to the source.",
+  "partition": 66,
+  "schema": "partial-hall-deficiency-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_hall_witness_core_orbit_strengthened_master.smt2",
+  "source_sha256": "c6d3b56c6752c24976f11455f9e5df801fa7c63994bdb620eea1deb3045958a6",
+  "status": "EXACT_DISJOINT_COVER"
+}

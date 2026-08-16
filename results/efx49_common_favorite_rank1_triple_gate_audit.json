@@ -1,0 +1,109 @@
+{
+  "claim_boundary": "These early dense and sparse exact-real formulas ended UNKNOWN. A later exact cap-20 profile refutes the candidate lemma even with every favorite-singleton partition excluded.",
+  "dense_exact_real_boundary": {
+    "formula_bytes": 17272560,
+    "formula_sha256": "1a6507dc5eb17bb50133cc9fb642993457df57d7c240cd030174492fac8dc17a",
+    "reason_unknown": "timeout",
+    "solver_status": "unknown",
+    "source": "results/efx49_common_favorite_rank1_triple_conversion_lra_session1.json",
+    "source_sha256": "37f93f480b24cb3e49e371eaec4a68a2a4df8f29ca3abf6271c22aa78dc4935c",
+    "time_limit_seconds": 5.0
+  },
+  "domain": "positive additive valuations",
+  "m": 9,
+  "n": 4,
+  "proved_normal_form": "Every row of a resident feasibility graph is nonempty. Hence rank one forces all three residents to accept only one common bundle A. For each resident i, threshold_i(A) is then strictly larger than the total value of either side bundle.",
+  "schema": "common-favorite-rank1-triple-gate-audit-v1",
+  "sparse_exact_real_boundary": {
+    "formula_bytes": 3156817,
+    "formula_sha256": "ca6f2a8f62fff1f6e39649b6badfac10e1c78257bd168f35a833b400e4ee4c55",
+    "normalization_source": "results/efx49_common_favorite_rank1_triple_conversion_cegar_session1.cvc5.normalization.json",
+    "normalization_source_sha256": "9504fa0e540029793bf04b95ee3bf8af286ebc0763b277059bf1744c70d98367",
+    "normalized_formula_sha256": "b13b73da18f5226db437c32b7feb0d35aa3ef92ee716e752411926e912487b61",
+    "reason_unknown": "canceled",
+    "reconstructed_singleton_pool_size": 185,
+    "solver_status": "unknown",
+    "source": "results/efx49_common_favorite_rank1_triple_conversion_cegar_session1.json",
+    "source_sha256": "519131920e8b32ad22a95cef6862dc59792e8a6faa3b78ead33dea721bbf0500"
+  },
+  "status": "RANK1_TRIPLE_EARLY_GATE_SUPERSEDED",
+  "strict_common_favorite": 0,
+  "superseded_by": "results/efx49_common_favorite_rank1_local6_boundary_audit.json",
+  "then_candidate_lemma": "If the common bundle A is a triple and the selected 3+3+2 partition passes its owner's threshold, then either a favorite-singleton EFX partition exists or moving one good of A next to the favorite produces a balanced EFX partition.",
+  "unconditional_three_conversion_boundary": {
+    "all_supporting_partition_count": 116,
+    "complete_efx_allocation_count": 301,
+    "favorite_singleton_supporting_partition_count": 116,
+    "local_conversion_supporting_partition_count": 0,
+    "resident_graph": [
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        false,
+        false
+      ]
+    ],
+    "selected_owner_threshold_pass": true,
+    "supporting_partition_count_by_shape": {
+      "3321": 77,
+      "4221": 31,
+      "4311": 7,
+      "5211": 1
+    },
+    "values": [
+      [
+        514,
+        10,
+        247,
+        267,
+        207,
+        207,
+        80,
+        504,
+        504
+      ],
+      [
+        183,
+        12,
+        1,
+        16,
+        9,
+        9,
+        9,
+        14,
+        1
+      ],
+      [
+        198,
+        15,
+        4,
+        10,
+        1,
+        1,
+        1,
+        4,
+        20
+      ],
+      [
+        250,
+        12,
+        116,
+        131,
+        3,
+        3,
+        3,
+        146,
+        98
+      ]
+    ]
+  }
+}

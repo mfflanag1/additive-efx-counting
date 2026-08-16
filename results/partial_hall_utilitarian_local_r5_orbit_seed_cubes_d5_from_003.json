@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_77_0_3",
+        "edge_53_0_0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_000.smt2",
+      "sha256": "cffef03cc35968365f0b1c12fa09ba1ad2ac64a9af166889d0022ae75a033e3a"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_77_0_3",
+        "Not(edge_53_0_0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_001.smt2",
+      "sha256": "2e235b5573cad13a6a9422030bc31b56fa178c6ba3d409a38a08299e8f54ac9f"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(edge_77_0_3)",
+        "v_0_3 +\n-1*v_0_6 +\nv_1_0 +\n-1*v_1_2 +\n-1*v_1_3 +\n-1*v_2_0 +\nv_2_8 +\nv_3_2 <=\n0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_002.smt2",
+      "sha256": "a068032b6337af97213cb58eb4f32650274794440ca532aacf300490ec8e7a68"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(edge_77_0_3)",
+        "Not(v_0_3 +\n    -1*v_0_6 +\n    v_1_0 +\n    -1*v_1_2 +\n    -1*v_1_3 +\n    -1*v_2_0 +\n    v_2_8 +\n    v_3_2 <=\n    0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_003/branch_003.smt2",
+      "sha256": "88e1d4cf412ede8b58ee67c6cc725e4a86876a26de7e2daf94043f13db888304"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d3/branch_003.smt2",
+  "source_sha256": "af9723b875adaa5f3dfe3d256ccbb06d190231a536554b469eaf0db521ffbd87",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

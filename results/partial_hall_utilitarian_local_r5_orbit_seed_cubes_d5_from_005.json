@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0",
+        "v_2_3 + v_2_4 + -1*v_2_5 + v_2_6 <= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_000.smt2",
+      "sha256": "eb2e86450bba1060698a0c9fa1cbccf0be27bd596fc9b29df502687c6337fffa"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0",
+        "Not(v_2_3 + v_2_4 + -1*v_2_5 + v_2_6 <= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_001.smt2",
+      "sha256": "93a6d25ee11aa3bfa4615e522a4f4bd604e15b0a322939fc55b98b7183ca24d9"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0)",
+        "v_2_0 + v_2_1 + v_2_2 + v_2_3 + -1*v_2_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_002.smt2",
+      "sha256": "9e6ea94b780a576f589ba3d634e3b61853d06239042ad06e236e7415bd2314bd"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(v_2_5 + -1*v_2_6 + -1*v_2_7 <= 0)",
+        "Not(v_2_0 + v_2_1 + v_2_2 + v_2_3 + -1*v_2_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d5_from_005/branch_003.smt2",
+      "sha256": "1b55f4c435ae3326f01f704afa9e90aa5ab62c11c15a5ba534424ec2da20663c"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_orbit_seed_cubes_d3/branch_005.smt2",
+  "source_sha256": "1b0636587701ea1d59b0a2e84e6a738de2b74270c576d229c2dac512621ecfab",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}
