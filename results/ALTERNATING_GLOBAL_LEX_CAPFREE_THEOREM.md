@@ -21,7 +21,12 @@ decomposed by the two genuine edges as
 `p` and `T_q+f` for `s`.  Assume further that
 
 - valuations are strictly positive, and
-- the bottom packets `B_r` and `B_q` are nonempty.
+- the packets `T_r`, `B_r`, `T_q`, `B_q` are all nonempty.
+
+(*Referee repair 2026-08-16, second pass:* top-packet nonemptiness added to
+the hypothesis block — it is load-bearing (with `T_q=∅` the desired set is
+`{f}`, `tau_q=0`, and the extraction threshold degenerates) and is discharged
+by part (b) of the composition's Packet nondegeneracy section.)
 
 For a fixed lexicographic priority order, suppose either a compatible
 **generalized** champion family is present or all four compatible

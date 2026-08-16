@@ -125,9 +125,14 @@ is unenvied — the same fact used above to exclude genuine edges into
 singleton bundles.  So `T` empty is impossible.
 
 Consequently `T_r,B_r,T_q,B_q` are all nonempty at any state surviving the
-classification.  The nonempty-packet hypotheses of items 1, 3 and 4, and the
-strict positivity they are stated with, are discharged here rather than
-assumed; the per-lemma bookkeeping is in
+classification.  The nonempty-packet hypotheses of items 1, 3 and 4 are
+discharged here rather than assumed.  (Strict positivity itself is an input
+to this argument, not a conclusion of it; it is discharged by BCFF Lemma A.1,
+as the audit tables record.  Charity dominance, the other framework input
+used above, is derivable in one line at a lex-maximal state: if
+`v_i({f})>b_i`, replacing `X_i` by `{f}` is EFX — deleting the lone good
+leaves the empty set — improves `i`, and fixes everyone else, contradicting
+maximality.)  The per-lemma bookkeeping is in
 [`LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md`](LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md),
 [`ALTERNATING_BCFF_COMPOSITION_AUDIT.md`](ALTERNATING_BCFF_COMPOSITION_AUDIT.md),
 and

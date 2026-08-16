@@ -74,7 +74,7 @@ to close any order.
 | `U=X_r+B_q` contains a desired set (both branches) | Reservoir extraction premise; needs `B_q` nonempty and positivity | **Load-bearing** |
 | In branch 2, `A` is sourced by `r` | The three compatible cycles (5) exclude `p`, `q`, `s` | No |
 | Strict inequality chain (19) `v_q(D_r)>tau_q(D_r)>v_q(A)>tau_q(A)` | Positivity plus branch inequality (18) | **EXTERNAL-TRUSTED** only through BCFF Lemma A.1 for positivity |
-| `p,s` fixed at base and `r` strictly improved | The constructed allocation (16) keeps `Y_p={x}`, `Y_s={y}` | Closes every remaining `p`-first order regardless of `r`'s position |
+| `p,s` fixed at base and `r` strictly improved | The constructed allocation (16) keeps `Y_p={x}`, `Y_s={y}` | Lex improvement only when `r` precedes `q` ((16) may leave `q` below base); this suffices because all five remaining `p`-first types — `(p,r,s,q)`, `(p,r,q,s)`, `(p,s,r,q)` — have `r` before `q`; the three `p`-first orders with `q` before `r` are closed by escapes (11)/(12) instead |
 
 ## Order coverage
 

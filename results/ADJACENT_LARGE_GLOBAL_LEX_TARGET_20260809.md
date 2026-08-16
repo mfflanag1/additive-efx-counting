@@ -45,8 +45,10 @@ a PI-free adjacent-large state satisfying, in addition to the normal form
 above:
 
 - **strictly positive valuations**, and
-- **nonempty bottom packets `B_r` and `B_q`** (hence nonempty `T_r,T_q`,
-  since the selected desired sets are `T_r+f` and `T_q+f`).
+- **nonempty packets `T_r`, `B_r`, `T_q`, `B_q`** (top-packet nonemptiness
+  is discharged by part (b) of the composition's Packet nondegeneracy
+  section, via charity dominance; it does not follow from `B_r,B_q` being
+  nonempty).
 
 These were used silently and are load-bearing: `v_r(U)=b_r+v_r(B_q)>b_r` in
 Theorem 1 and in the second extraction branch of Theorem 3 needs `B_q`
