@@ -1,0 +1,6366 @@
+{
+  "aggregate_counts": {
+    "bases_anchor_absent": 240685,
+    "bases_examined": 493333,
+    "bases_with_anchor": 252648,
+    "cancellation_B_failures": 1992396,
+    "cancellation_B_failures_at_equality": 1992396,
+    "cancellation_B_failures_below_x": 0,
+    "cancellation_C_failures": 6544116,
+    "cancellation_configs_checked": 11958736,
+    "cancellation_configs_rejected_no_root_protected_prestate": 1987376,
+    "configs_with_L_alpha_equal_K": 1803708,
+    "configs_with_L_alpha_strictly_over_K": 34072500,
+    "matrices_scanned": 233030,
+    "matrices_with_efx_base": 233030,
+    "root_strictness_eq3_checks": 601236,
+    "root_strictness_eq3_failures": 0,
+    "star_min_card_1": 3673242,
+    "star_min_card_gt_1": 0,
+    "star_min_response_can_contain_k": 3673242,
+    "star_root_is_a_source": 735,
+    "star_states_checked": 3673242,
+    "star_states_efx": 0,
+    "star_walls_not_all_against_root": 0,
+    "successor_can_sustain_another_round": 34031181,
+    "successor_claim5_violations": 35876208,
+    "successor_collision_multiplicity_increases": 34072500,
+    "successor_configs_checked": 35876208,
+    "successor_packet_can_stall": 35876208,
+    "successor_packet_decrease_always": 0,
+    "successor_packet_ever_root_held": 0,
+    "wall_decrease_on_L_equal_K_slice": 1803708,
+    "wall_decrease_on_L_over_K_slice": 0,
+    "wall_no_choice_decreases_on_L_over_K_slice": 21294,
+    "wall_successor_claim5_violations": 0,
+    "wall_successor_decreases_for_some_choice": 35854914,
+    "wall_successor_no_choice_decreases": 21294,
+    "wall_successor_no_response_available": 0,
+    "wall_successor_packet_can_stall": 34072500,
+    "wall_successor_packet_decrease_always": 1803708
+  },
+  "first_witnesses": {
+    "cancellation_B_failure": {
+      "K": [
+        0
+      ],
+      "L_alpha": [
+        0,
+        3,
+        4
+      ],
+      "O_eq_G_minus_X_r": [
+        1,
+        2,
+        4
+      ],
+      "anchor_core_A": [
+        1,
+        2,
+        4
+      ],
+      "base_X": [
+        [
+          0,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          4
+        ]
+      ],
+      "base_charity": [],
+      "cancellation": {
+        "Z_minus_root_bundle_contract_reading": [
+          0,
+          1,
+          2
+        ],
+        "Z_minus_root_bundle_referee_reading": [
+          1,
+          2
+        ],
+        "root_strict_survives_contract_reading": false,
+        "root_strict_survives_referee_reading": false,
+        "v_r_of_it": 3,
+        "v_r_of_it_referee": 2
+      },
+      "certified_pre_state": {
+        "Y": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ],
+          []
+        ],
+        "charity": [],
+        "collision_certificate": {
+          "B": [
+            1
+          ],
+          "candidate_cell_A": [
+            0,
+            1
+          ],
+          "d_s": 0,
+          "mu_s": 1,
+          "recipient": 1
+        },
+        "floors": [
+          3,
+          1,
+          1,
+          0
+        ]
+      },
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 0,
+      "label": "cancellation_B_failure",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "v_r_O": 4,
+      "v_r_anchor": 4,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 2,
+          "g4": 2
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 2
+        }
+      },
+      "withheld_off_root_retired": [
+        3,
+        4
+      ],
+      "x": 3,
+      "x_eq_v_r_X_r": 3
+    },
+    "cancellation_C_failure": {
+      "K": [
+        3
+      ],
+      "L_alpha": [
+        3,
+        4
+      ],
+      "O_eq_G_minus_X_r": [
+        1,
+        2,
+        4
+      ],
+      "anchor_core_A": [
+        1,
+        2,
+        4
+      ],
+      "base_X": [
+        [
+          0,
+          3
+        ],
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          4
+        ]
+      ],
+      "base_charity": [],
+      "cancellation": {
+        "Z_minus_root_bundle_contract_reading": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "Z_minus_root_bundle_referee_reading": [
+          0,
+          1,
+          2
+        ],
+        "root_strict_survives_contract_reading": true,
+        "root_strict_survives_referee_reading": false,
+        "v_r_of_it": 5,
+        "v_r_of_it_referee": 3
+      },
+      "certified_pre_state": {
+        "Y": [
+          [
+            0,
+            3
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            4
+          ]
+        ],
+        "charity": [],
+        "collision_certificate": {
+          "B": [
+            0
+          ],
+          "candidate_cell_A": [
+            0,
+            3
+          ],
+          "d_s": 0,
+          "mu_s": 1,
+          "recipient": 1
+        },
+        "floors": [
+          3,
+          1,
+          1,
+          2
+        ]
+      },
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 3,
+      "label": "cancellation_C_failure",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "v_r_O": 4,
+      "v_r_anchor": 4,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 2,
+          "g4": 2
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 2
+        }
+      },
+      "withheld_off_root_retired": [
+        4
+      ],
+      "x": 3,
+      "x_eq_v_r_X_r": 3
+    },
+    "claim5_violation": {
+      "K": [
+        0
+      ],
+      "L_alpha": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "O_eq_G_minus_X_r": [
+        2,
+        3,
+        4
+      ],
+      "anchor_core_A": [
+        2,
+        3,
+        4
+      ],
+      "base_X": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "base_charity": [],
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 0,
+      "label": "claim5_violation",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "u": 1,
+      "v_r_O": 3,
+      "v_r_anchor": 3,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        }
+      },
+      "x_eq_v_r_X_r": 2
+    },
+    "collision_multiplicity_increase": {
+      "K": [
+        0
+      ],
+      "L_alpha": [
+        0,
+        4
+      ],
+      "O_eq_G_minus_X_r": [
+        2,
+        3,
+        4
+      ],
+      "anchor_core_A": [
+        2,
+        3,
+        4
+      ],
+      "base_X": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "base_charity": [],
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 0,
+      "label": "collision_multiplicity_increase",
+      "pre_multiplicity": 1,
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "star_multiplicity": 2,
+      "v_r_O": 3,
+      "v_r_anchor": 3,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        }
+      },
+      "x_eq_v_r_X_r": 2
+    },
+    "min_response_contains_k": {
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 0,
+      "label": "min_response_contains_k",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "u": 1,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        }
+      }
+    },
+    "packet_stall": {
+      "K": [
+        0
+      ],
+      "L_alpha": [
+        0
+      ],
+      "O_eq_G_minus_X_r": [
+        2,
+        3,
+        4
+      ],
+      "anchor_core_A": [
+        2,
+        3,
+        4
+      ],
+      "base_X": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "base_charity": [],
+      "certified_pre_state": {
+        "Y": [
+          [
+            0,
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            4
+          ]
+        ],
+        "charity": [],
+        "collision_certificate": {
+          "B": [
+            1
+          ],
+          "candidate_cell_A": [
+            0,
+            1
+          ],
+          "d_s": 0,
+          "mu_s": 1,
+          "recipient": 1
+        },
+        "floors": [
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      "demonic_kprime": 1,
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 0,
+      "k_size": 1,
+      "label": "packet_stall",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "u": 1,
+      "v_r_O": 3,
+      "v_r_anchor": 3,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        }
+      },
+      "withheld_off_root_retired": [],
+      "x": 2,
+      "x_eq_v_r_X_r": 2
+    },
+    "wall_no_choice_decreases": {
+      "K": [
+        4
+      ],
+      "L_alpha": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "O_eq_G_minus_X_r": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "anchor_core_A": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "base_X": [
+        [
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ],
+      "base_charity": [],
+      "demonic_kprime": 1,
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 4,
+      "k_size": 1,
+      "label": "wall_no_choice_decreases",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "u": 1,
+      "v_r_O": 4,
+      "v_r_anchor": 4,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 2
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 2
+        }
+      },
+      "withheld_off_root_retired": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "x": 2,
+      "x_eq_v_r_X_r": 2
+    },
+    "wall_packet_stall": {
+      "K": [
+        0
+      ],
+      "L_alpha": [
+        0,
+        4
+      ],
+      "O_eq_G_minus_X_r": [
+        2,
+        3,
+        4
+      ],
+      "anchor_core_A": [
+        2,
+        3,
+        4
+      ],
+      "base_X": [
+        [
+          0,
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ],
+      "base_charity": [],
+      "demonic_kprime": 1,
+      "goods": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "k": 0,
+      "k_size": 1,
+      "label": "wall_packet_stall",
+      "priority_order": [
+        "agent0(root r)",
+        "agent1",
+        "agent2",
+        "agent3"
+      ],
+      "space": "A_m5_w12_exhaustive",
+      "u": 1,
+      "v_r_O": 3,
+      "v_r_anchor": 3,
+      "valuations": {
+        "agent0": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent1": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent2": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        },
+        "agent3": {
+          "g0": 1,
+          "g1": 1,
+          "g2": 1,
+          "g3": 1,
+          "g4": 1
+        }
+      },
+      "withheld_off_root_retired": [
+        4
+      ],
+      "x": 2,
+      "x_eq_v_r_X_r": 2
+    }
+  },
+  "generated": "2026-08-16",
+  "provenance": {
+    "tracks/parkability/model_check_tlx_successor_20260816.py": "8f8555f26fd9f92bc59c8fda5c068ecfcebb5bba932bc3fbfbe1c64a71b98883"
+  },
+  "schema": "tlx-successor-model-check-v1",
+  "self_test": {
+    "all_passed": true,
+    "checks": {
+      "a_strictly_worse_efx_allocation_exists": true,
+      "cancellation_fails_at_the_boundary": true,
+      "cancellation_passes_after_one_weight_flip": true,
+      "efx_detector_false_after_flip": true,
+      "efx_detector_true_before_flip": true,
+      "lexmax_bases_are_efx": true,
+      "lexmax_vector_is_undominated": true,
+      "min_card_at_star_is_1": true,
+      "min_card_returns_to_1_when_an_owner_is_emptied": true,
+      "min_card_without_empty_owner_exceeds_1": true,
+      "packet_decreases_when_ledger_equals_packet": true,
+      "packet_stalls_when_ledger_strictly_contains_packet": true,
+      "strict_and_wall_readings_differ": true,
+      "worse_allocation_not_reported_as_base": true
+    },
+    "info": {
+      "cancellation_boundary_values": [
+        6,
+        6,
+        7
+      ],
+      "lexmax_vector": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "loose_demonic_kprime_wall_reading": 1,
+      "min_card_without_empty_owner_value": 2,
+      "tight_claim5_strict_reading": false,
+      "tight_claim5_wall_reading": true,
+      "tight_demonic_kprime_wall_reading": 0
+    }
+  },
+  "spaces": {
+    "A_m5_w12_exhaustive": {
+      "counts": {
+        "bases_anchor_absent": 22093,
+        "bases_examined": 45032,
+        "bases_with_anchor": 22939,
+        "cancellation_B_failures": 99852,
+        "cancellation_B_failures_at_equality": 99852,
+        "cancellation_B_failures_below_x": 0,
+        "cancellation_C_failures": 298502,
+        "cancellation_configs_checked": 484337,
+        "cancellation_configs_rejected_no_root_protected_prestate": 65183,
+        "configs_with_L_alpha_equal_K": 103035,
+        "configs_with_L_alpha_strictly_over_K": 1349976,
+        "matrices_scanned": 15504,
+        "matrices_with_efx_base": 15504,
+        "root_strictness_eq3_checks": 34345,
+        "root_strictness_eq3_failures": 0,
+        "star_min_card_1": 232560,
+        "star_min_card_gt_1": 0,
+        "star_min_response_can_contain_k": 232560,
+        "star_root_is_a_source": 0,
+        "star_states_checked": 232560,
+        "star_states_efx": 0,
+        "star_walls_not_all_against_root": 0,
+        "successor_can_sustain_another_round": 1349976,
+        "successor_claim5_violations": 1453011,
+        "successor_collision_multiplicity_increases": 1349976,
+        "successor_configs_checked": 1453011,
+        "successor_packet_can_stall": 1453011,
+        "successor_packet_decrease_always": 0,
+        "successor_packet_ever_root_held": 0,
+        "wall_decrease_on_L_equal_K_slice": 103035,
+        "wall_decrease_on_L_over_K_slice": 0,
+        "wall_no_choice_decreases_on_L_over_K_slice": 1884,
+        "wall_successor_claim5_violations": 0,
+        "wall_successor_decreases_for_some_choice": 1451127,
+        "wall_successor_no_choice_decreases": 1884,
+        "wall_successor_no_response_available": 0,
+        "wall_successor_packet_can_stall": 1349976,
+        "wall_successor_packet_decrease_always": 103035
+      },
+      "declared_space_size": 15504,
+      "seconds": 28.82,
+      "space": {
+        "base_cap": 4,
+        "goods": 5,
+        "mode": "exhaustive",
+        "name": "A_m5_w12_exhaustive",
+        "other_weights": [
+          1,
+          2
+        ],
+        "root_weights": [
+          1,
+          2
+        ]
+      },
+      "witnesses": {
+        "cancellation_B_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2
+            ],
+            "root_strict_survives_contract_reading": false,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 3,
+            "v_r_of_it_referee": 2
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "cancellation_B_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            3,
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "cancellation_C_failure": {
+          "K": [
+            3
+          ],
+          "L_alpha": [
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              0,
+              1,
+              2
+            ],
+            "root_strict_survives_contract_reading": true,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 5,
+            "v_r_of_it_referee": 3
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                0
+              ],
+              "candidate_cell_A": [
+                0,
+                3
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              2
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 3,
+          "label": "cancellation_C_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "claim5_violation": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "claim5_violation",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "collision_multiplicity_increase": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "collision_multiplicity_increase",
+          "pre_multiplicity": 1,
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "star_multiplicity": 2,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "eq3_failure": null,
+        "min_response_contains_k": {
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "min_response_contains_k",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          }
+        },
+        "packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "withheld_off_root_retired": [],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "star_min_card_gt_1": null,
+        "wall_no_choice_decreases": {
+          "K": [
+            4
+          ],
+          "L_alpha": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 4,
+          "k_size": 1,
+          "label": "wall_no_choice_decreases",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "wall_packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "wall_packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        }
+      }
+    },
+    "B_m5_root123_others12_exhaustive": {
+      "counts": {
+        "bases_anchor_absent": 144340,
+        "bases_examined": 246351,
+        "bases_with_anchor": 102011,
+        "cancellation_B_failures": 384282,
+        "cancellation_B_failures_at_equality": 384282,
+        "cancellation_B_failures_below_x": 0,
+        "cancellation_C_failures": 1360192,
+        "cancellation_configs_checked": 2320562,
+        "cancellation_configs_rejected_no_root_protected_prestate": 434318,
+        "configs_with_L_alpha_equal_K": 516540,
+        "configs_with_L_alpha_strictly_over_K": 6445146,
+        "matrices_scanned": 98280,
+        "matrices_with_efx_base": 98280,
+        "root_strictness_eq3_checks": 172180,
+        "root_strictness_eq3_failures": 0,
+        "star_min_card_1": 1474200,
+        "star_min_card_gt_1": 0,
+        "star_min_response_can_contain_k": 1474200,
+        "star_root_is_a_source": 0,
+        "star_states_checked": 1474200,
+        "star_states_efx": 0,
+        "star_walls_not_all_against_root": 0,
+        "successor_can_sustain_another_round": 6435366,
+        "successor_claim5_violations": 6961686,
+        "successor_collision_multiplicity_increases": 6445146,
+        "successor_configs_checked": 6961686,
+        "successor_packet_can_stall": 6961686,
+        "successor_packet_decrease_always": 0,
+        "successor_packet_ever_root_held": 0,
+        "wall_decrease_on_L_equal_K_slice": 516540,
+        "wall_decrease_on_L_over_K_slice": 0,
+        "wall_no_choice_decreases_on_L_over_K_slice": 8976,
+        "wall_successor_claim5_violations": 0,
+        "wall_successor_decreases_for_some_choice": 6952710,
+        "wall_successor_no_choice_decreases": 8976,
+        "wall_successor_no_response_available": 0,
+        "wall_successor_packet_can_stall": 6445146,
+        "wall_successor_packet_decrease_always": 516540
+      },
+      "declared_space_size": 98280,
+      "seconds": 168.38,
+      "space": {
+        "base_cap": 4,
+        "goods": 5,
+        "mode": "exhaustive",
+        "name": "B_m5_root123_others12_exhaustive",
+        "other_weights": [
+          1,
+          2
+        ],
+        "root_weights": [
+          1,
+          2,
+          3
+        ]
+      },
+      "witnesses": {
+        "cancellation_B_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2
+            ],
+            "root_strict_survives_contract_reading": false,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 3,
+            "v_r_of_it_referee": 2
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "cancellation_B_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 3
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            3,
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "cancellation_C_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2,
+              3
+            ],
+            "root_strict_survives_contract_reading": true,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 4,
+            "v_r_of_it_referee": 3
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "cancellation_C_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 3
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "claim5_violation": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "claim5_violation",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "collision_multiplicity_increase": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "collision_multiplicity_increase",
+          "pre_multiplicity": 1,
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "star_multiplicity": 2,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "eq3_failure": null,
+        "min_response_contains_k": {
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "min_response_contains_k",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          }
+        },
+        "packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              2,
+              1,
+              1,
+              1
+            ]
+          },
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "withheld_off_root_retired": [],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "star_min_card_gt_1": null,
+        "wall_no_choice_decreases": {
+          "K": [
+            4
+          ],
+          "L_alpha": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 4,
+          "k_size": 1,
+          "label": "wall_no_choice_decreases",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "wall_packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "wall_packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        }
+      }
+    },
+    "C_m6_w12_exhaustive": {
+      "counts": {
+        "bases_anchor_absent": 21216,
+        "bases_examined": 101952,
+        "bases_with_anchor": 80736,
+        "cancellation_B_failures": 1231534,
+        "cancellation_B_failures_at_equality": 1231534,
+        "cancellation_B_failures_below_x": 0,
+        "cancellation_C_failures": 3748058,
+        "cancellation_configs_checked": 7020567,
+        "cancellation_configs_rejected_no_root_protected_prestate": 1035945,
+        "configs_with_L_alpha_equal_K": 755298,
+        "configs_with_L_alpha_strictly_over_K": 20306403,
+        "matrices_scanned": 54264,
+        "matrices_with_efx_base": 54264,
+        "root_strictness_eq3_checks": 251766,
+        "root_strictness_eq3_failures": 0,
+        "star_min_card_1": 976752,
+        "star_min_card_gt_1": 0,
+        "star_min_response_can_contain_k": 976752,
+        "star_root_is_a_source": 0,
+        "star_states_checked": 976752,
+        "star_states_efx": 0,
+        "star_walls_not_all_against_root": 0,
+        "successor_can_sustain_another_round": 20306403,
+        "successor_claim5_violations": 21061701,
+        "successor_collision_multiplicity_increases": 20306403,
+        "successor_configs_checked": 21061701,
+        "successor_packet_can_stall": 21061701,
+        "successor_packet_decrease_always": 0,
+        "successor_packet_ever_root_held": 0,
+        "wall_decrease_on_L_equal_K_slice": 755298,
+        "wall_decrease_on_L_over_K_slice": 0,
+        "wall_no_choice_decreases_on_L_over_K_slice": 120,
+        "wall_successor_claim5_violations": 0,
+        "wall_successor_decreases_for_some_choice": 21061581,
+        "wall_successor_no_choice_decreases": 120,
+        "wall_successor_no_response_available": 0,
+        "wall_successor_packet_can_stall": 20306403,
+        "wall_successor_packet_decrease_always": 755298
+      },
+      "declared_space_size": 54264,
+      "seconds": 233.96,
+      "space": {
+        "base_cap": 2,
+        "goods": 6,
+        "mode": "exhaustive",
+        "name": "C_m6_w12_exhaustive",
+        "other_weights": [
+          1,
+          2
+        ],
+        "root_weights": [
+          1,
+          2
+        ]
+      },
+      "witnesses": {
+        "cancellation_B_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2
+            ],
+            "root_strict_survives_contract_reading": false,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 3,
+            "v_r_of_it_referee": 2
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              1
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "cancellation_B_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            3,
+            4,
+            5
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "cancellation_C_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2,
+              3
+            ],
+            "root_strict_survives_contract_reading": true,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 4,
+            "v_r_of_it_referee": 3
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              1
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "cancellation_C_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            4,
+            5
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "claim5_violation": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "claim5_violation",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "collision_multiplicity_increase": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "collision_multiplicity_increase",
+          "pre_multiplicity": 1,
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "star_multiplicity": 2,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "eq3_failure": null,
+        "min_response_contains_k": {
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "min_response_contains_k",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          }
+        },
+        "packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "base_charity": [],
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              1,
+              1
+            ]
+          },
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "star_min_card_gt_1": null,
+        "wall_no_choice_decreases": {
+          "K": [
+            5
+          ],
+          "L_alpha": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              5
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 5,
+          "k_size": 1,
+          "label": "wall_no_choice_decreases",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "wall_packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4
+            ],
+            [
+              5
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "wall_packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            5
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        }
+      }
+    },
+    "D_m5_w123_sampled": {
+      "counts": {
+        "bases_anchor_absent": 26226,
+        "bases_examined": 50960,
+        "bases_with_anchor": 24734,
+        "cancellation_B_failures": 139771,
+        "cancellation_B_failures_at_equality": 139771,
+        "cancellation_B_failures_below_x": 0,
+        "cancellation_C_failures": 499498,
+        "cancellation_configs_checked": 886917,
+        "cancellation_configs_rejected_no_root_protected_prestate": 157323,
+        "configs_with_L_alpha_equal_K": 195795,
+        "configs_with_L_alpha_strictly_over_K": 2464956,
+        "matrices_scanned": 29982,
+        "matrices_with_efx_base": 29982,
+        "root_strictness_eq3_checks": 65265,
+        "root_strictness_eq3_failures": 0,
+        "star_min_card_1": 449730,
+        "star_min_card_gt_1": 0,
+        "star_min_response_can_contain_k": 449730,
+        "star_root_is_a_source": 0,
+        "star_states_checked": 449730,
+        "star_states_efx": 0,
+        "star_walls_not_all_against_root": 0,
+        "successor_can_sustain_another_round": 2460906,
+        "successor_claim5_violations": 2660751,
+        "successor_collision_multiplicity_increases": 2464956,
+        "successor_configs_checked": 2660751,
+        "successor_packet_can_stall": 2660751,
+        "successor_packet_decrease_always": 0,
+        "successor_packet_ever_root_held": 0,
+        "wall_decrease_on_L_equal_K_slice": 195795,
+        "wall_decrease_on_L_over_K_slice": 0,
+        "wall_no_choice_decreases_on_L_over_K_slice": 5541,
+        "wall_successor_claim5_violations": 0,
+        "wall_successor_decreases_for_some_choice": 2655210,
+        "wall_successor_no_choice_decreases": 5541,
+        "wall_successor_no_response_available": 0,
+        "wall_successor_packet_can_stall": 2464956,
+        "wall_successor_packet_decrease_always": 195795
+      },
+      "declared_space_size": 30000,
+      "seconds": 40.73,
+      "space": {
+        "base_cap": 4,
+        "goods": 5,
+        "mode": "sampled",
+        "name": "D_m5_w123_sampled",
+        "other_weights": [
+          1,
+          2,
+          3
+        ],
+        "root_weights": [
+          1,
+          2,
+          3
+        ],
+        "samples": 30000,
+        "seed": 20260816
+      },
+      "witnesses": {
+        "cancellation_B_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              2
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2
+            ],
+            "root_strict_survives_contract_reading": false,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 3,
+            "v_r_of_it_referee": 2
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              2,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "cancellation_B_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            3,
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "cancellation_C_failure": {
+          "K": [
+            3
+          ],
+          "L_alpha": [
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              2
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              0,
+              1,
+              2
+            ],
+            "root_strict_survives_contract_reading": true,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 5,
+            "v_r_of_it_referee": 3
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                3
+              ],
+              [
+                1
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                0
+              ],
+              "candidate_cell_A": [
+                0,
+                3
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              2,
+              2
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 3,
+          "label": "cancellation_C_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "claim5_violation": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "claim5_violation",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "collision_multiplicity_increase": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "collision_multiplicity_increase",
+          "pre_multiplicity": 1,
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "star_multiplicity": 2,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "eq3_failure": null,
+        "min_response_contains_k": {
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "min_response_contains_k",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            }
+          }
+        },
+        "packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              2,
+              1,
+              2,
+              2
+            ]
+          },
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "star_min_card_gt_1": null,
+        "wall_no_choice_decreases": {
+          "K": [
+            4
+          ],
+          "L_alpha": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 4,
+          "k_size": 1,
+          "label": "wall_no_choice_decreases",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 2,
+              "g1": 2,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "wall_packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              2
+            ],
+            [
+              4
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "wall_packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 3,
+          "v_r_anchor": 3,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        }
+      }
+    },
+    "E_m6_w123_sampled": {
+      "counts": {
+        "bases_anchor_absent": 2629,
+        "bases_examined": 7617,
+        "bases_with_anchor": 4988,
+        "cancellation_B_failures": 70623,
+        "cancellation_B_failures_at_equality": 70623,
+        "cancellation_B_failures_below_x": 0,
+        "cancellation_C_failures": 256389,
+        "cancellation_configs_checked": 492975,
+        "cancellation_configs_rejected_no_root_protected_prestate": 103185,
+        "configs_with_L_alpha_equal_K": 55890,
+        "configs_with_L_alpha_strictly_over_K": 1423035,
+        "matrices_scanned": 5000,
+        "matrices_with_efx_base": 5000,
+        "root_strictness_eq3_checks": 18630,
+        "root_strictness_eq3_failures": 0,
+        "star_min_card_1": 90000,
+        "star_min_card_gt_1": 0,
+        "star_min_response_can_contain_k": 90000,
+        "star_root_is_a_source": 0,
+        "star_states_checked": 90000,
+        "star_states_efx": 0,
+        "star_walls_not_all_against_root": 0,
+        "successor_can_sustain_another_round": 1423035,
+        "successor_claim5_violations": 1478925,
+        "successor_collision_multiplicity_increases": 1423035,
+        "successor_configs_checked": 1478925,
+        "successor_packet_can_stall": 1478925,
+        "successor_packet_decrease_always": 0,
+        "successor_packet_ever_root_held": 0,
+        "wall_decrease_on_L_equal_K_slice": 55890,
+        "wall_decrease_on_L_over_K_slice": 0,
+        "wall_no_choice_decreases_on_L_over_K_slice": 9,
+        "wall_successor_claim5_violations": 0,
+        "wall_successor_decreases_for_some_choice": 1478916,
+        "wall_successor_no_choice_decreases": 9,
+        "wall_successor_no_response_available": 0,
+        "wall_successor_packet_can_stall": 1423035,
+        "wall_successor_packet_decrease_always": 55890
+      },
+      "declared_space_size": 5000,
+      "seconds": 19.89,
+      "space": {
+        "base_cap": 2,
+        "goods": 6,
+        "mode": "sampled",
+        "name": "E_m6_w123_sampled",
+        "other_weights": [
+          1,
+          2,
+          3
+        ],
+        "root_weights": [
+          1,
+          2,
+          3
+        ],
+        "samples": 5000,
+        "seed": 816
+      },
+      "witnesses": {
+        "cancellation_B_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2,
+              3
+            ],
+            "root_strict_survives_contract_reading": false,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 4,
+            "v_r_of_it_referee": 3
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                2,
+                3
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1,
+                2
+              ],
+              "candidate_cell_A": [
+                0,
+                1,
+                2
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              4,
+              2,
+              1,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "cancellation_B_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2,
+              "g5": 3
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2,
+              "g5": 3
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 3,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 3,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            4,
+            5
+          ],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        },
+        "cancellation_C_failure": {
+          "K": [
+            4
+          ],
+          "L_alpha": [
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "root_strict_survives_contract_reading": true,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 6,
+            "v_r_of_it_referee": 4
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                4
+              ],
+              [
+                2
+              ],
+              [
+                3
+              ],
+              [
+                5
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [],
+              "candidate_cell_A": [
+                4
+              ],
+              "d_s": 1,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              4,
+              1,
+              3,
+              1
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 4,
+          "label": "cancellation_C_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2,
+              "g5": 3
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2,
+              "g5": 3
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 3,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 3,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            5
+          ],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        },
+        "claim5_violation": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            2,
+            3,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "anchor_core_A": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "base_X": [
+            [
+              0,
+              1
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "claim5_violation",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2,
+              "g5": 3
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 3,
+              "g5": 3
+            },
+            "agent3": {
+              "g0": 3,
+              "g1": 3,
+              "g2": 3,
+              "g3": 3,
+              "g4": 2,
+              "g5": 1
+            }
+          },
+          "x_eq_v_r_X_r": 2
+        },
+        "collision_multiplicity_increase": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "collision_multiplicity_increase",
+          "pre_multiplicity": 1,
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "star_multiplicity": 2,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent2": {
+              "g0": 2,
+              "g1": 3,
+              "g2": 1,
+              "g3": 1,
+              "g4": 3,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "x_eq_v_r_X_r": 4
+        },
+        "eq3_failure": null,
+        "min_response_contains_k": {
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "label": "min_response_contains_k",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 3,
+              "g5": 3
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 1
+            }
+          }
+        },
+        "packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              [
+                5
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                2
+              ],
+              "candidate_cell_A": [
+                0,
+                2
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              4,
+              2,
+              3,
+              1
+            ]
+          },
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent2": {
+              "g0": 2,
+              "g1": 3,
+              "g2": 1,
+              "g3": 1,
+              "g4": 3,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        },
+        "star_min_card_gt_1": null,
+        "wall_no_choice_decreases": {
+          "K": [
+            5
+          ],
+          "L_alpha": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "base_X": [
+            [
+              5
+            ],
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              4
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 5,
+          "k_size": 1,
+          "label": "wall_no_choice_decreases",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2,
+              "g5": 3
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 1,
+              "g3": 1,
+              "g4": 2,
+              "g5": 3
+            }
+          },
+          "withheld_off_root_retired": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "x": 2,
+          "x_eq_v_r_X_r": 2
+        },
+        "wall_packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            5
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4,
+              5
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1
+            ],
+            [
+              3
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "wall_packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2,
+              "g5": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 1,
+              "g4": 1,
+              "g5": 2
+            },
+            "agent2": {
+              "g0": 2,
+              "g1": 3,
+              "g2": 1,
+              "g3": 1,
+              "g4": 3,
+              "g5": 1
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 1,
+              "g5": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            5
+          ],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        }
+      }
+    },
+    "F_m5_wideroot_probe": {
+      "counts": {
+        "bases_anchor_absent": 24181,
+        "bases_examined": 41421,
+        "bases_with_anchor": 17240,
+        "cancellation_B_failures": 66334,
+        "cancellation_B_failures_at_equality": 66334,
+        "cancellation_B_failures_below_x": 0,
+        "cancellation_C_failures": 381477,
+        "cancellation_configs_checked": 753378,
+        "cancellation_configs_rejected_no_root_protected_prestate": 191422,
+        "configs_with_L_alpha_equal_K": 177150,
+        "configs_with_L_alpha_strictly_over_K": 2082984,
+        "matrices_scanned": 30000,
+        "matrices_with_efx_base": 30000,
+        "root_strictness_eq3_checks": 59050,
+        "root_strictness_eq3_failures": 0,
+        "star_min_card_1": 450000,
+        "star_min_card_gt_1": 0,
+        "star_min_response_can_contain_k": 450000,
+        "star_root_is_a_source": 735,
+        "star_states_checked": 450000,
+        "star_states_efx": 0,
+        "star_walls_not_all_against_root": 0,
+        "successor_can_sustain_another_round": 2055495,
+        "successor_claim5_violations": 2260134,
+        "successor_collision_multiplicity_increases": 2082984,
+        "successor_configs_checked": 2260134,
+        "successor_packet_can_stall": 2260134,
+        "successor_packet_decrease_always": 0,
+        "successor_packet_ever_root_held": 0,
+        "wall_decrease_on_L_equal_K_slice": 177150,
+        "wall_decrease_on_L_over_K_slice": 0,
+        "wall_no_choice_decreases_on_L_over_K_slice": 4764,
+        "wall_successor_claim5_violations": 0,
+        "wall_successor_decreases_for_some_choice": 2255370,
+        "wall_successor_no_choice_decreases": 4764,
+        "wall_successor_no_response_available": 0,
+        "wall_successor_packet_can_stall": 2082984,
+        "wall_successor_packet_decrease_always": 177150
+      },
+      "declared_space_size": 30000,
+      "seconds": 38.89,
+      "space": {
+        "base_cap": 4,
+        "goods": 5,
+        "mode": "sampled",
+        "name": "F_m5_wideroot_probe",
+        "other_weights": [
+          1,
+          2,
+          3
+        ],
+        "root_weights": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "samples": 30000,
+        "seed": 5
+      },
+      "witnesses": {
+        "cancellation_B_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            2,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              3
+            ],
+            "root_strict_survives_contract_reading": false,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 4,
+            "v_r_of_it_referee": 3
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [],
+              "candidate_cell_A": [
+                0
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 3
+            },
+            "floors": [
+              4,
+              3,
+              3,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "cancellation_B_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 4
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 1,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            2,
+            4
+          ],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        },
+        "cancellation_C_failure": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "cancellation": {
+            "Z_minus_root_bundle_contract_reading": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "Z_minus_root_bundle_referee_reading": [
+              1,
+              2,
+              3
+            ],
+            "root_strict_survives_contract_reading": true,
+            "root_strict_survives_referee_reading": false,
+            "v_r_of_it": 5,
+            "v_r_of_it_referee": 4
+          },
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                1,
+                3
+              ],
+              [
+                2
+              ],
+              [
+                4
+              ],
+              []
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                2
+              ],
+              "candidate_cell_A": [
+                0,
+                2
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              4,
+              3,
+              3,
+              0
+            ]
+          },
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "cancellation_C_failure",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 4
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 1,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        },
+        "claim5_violation": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "claim5_violation",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 4,
+          "v_r_anchor": 4,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 2,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 3,
+              "g3": 3,
+              "g4": 2
+            }
+          },
+          "x_eq_v_r_X_r": 3
+        },
+        "collision_multiplicity_increase": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "base_charity": [],
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "collision_multiplicity_increase",
+          "pre_multiplicity": 1,
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "star_multiplicity": 2,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 3,
+              "g3": 2,
+              "g4": 1
+            }
+          },
+          "x_eq_v_r_X_r": 3
+        },
+        "eq3_failure": null,
+        "min_response_contains_k": {
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "label": "min_response_contains_k",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 3,
+              "g3": 2,
+              "g4": 1
+            }
+          }
+        },
+        "packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "base_charity": [],
+          "certified_pre_state": {
+            "Y": [
+              [
+                0,
+                2
+              ],
+              [
+                1
+              ],
+              [
+                3
+              ],
+              [
+                4
+              ]
+            ],
+            "charity": [],
+            "collision_certificate": {
+              "B": [
+                1
+              ],
+              "candidate_cell_A": [
+                0,
+                1
+              ],
+              "d_s": 0,
+              "mu_s": 1,
+              "recipient": 1
+            },
+            "floors": [
+              3,
+              1,
+              2,
+              1
+            ]
+          },
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 3,
+              "g3": 2,
+              "g4": 1
+            }
+          },
+          "withheld_off_root_retired": [],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        },
+        "star_min_card_gt_1": null,
+        "wall_no_choice_decreases": {
+          "K": [
+            4
+          ],
+          "L_alpha": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "anchor_core_A": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "base_X": [
+            [
+              4
+            ],
+            [
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 4,
+          "k_size": 1,
+          "label": "wall_no_choice_decreases",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 2,
+              "g4": 4
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 1,
+              "g4": 2
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 3,
+              "g3": 1,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 2,
+              "g3": 1,
+              "g4": 2
+            }
+          },
+          "withheld_off_root_retired": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "x": 4,
+          "x_eq_v_r_X_r": 4
+        },
+        "wall_packet_stall": {
+          "K": [
+            0
+          ],
+          "L_alpha": [
+            0,
+            4
+          ],
+          "O_eq_G_minus_X_r": [
+            1,
+            2,
+            4
+          ],
+          "anchor_core_A": [
+            1,
+            2,
+            4
+          ],
+          "base_X": [
+            [
+              0,
+              3
+            ],
+            [
+              1
+            ],
+            [
+              4
+            ],
+            [
+              2
+            ]
+          ],
+          "base_charity": [],
+          "demonic_kprime": 1,
+          "goods": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "k": 0,
+          "k_size": 1,
+          "label": "wall_packet_stall",
+          "priority_order": [
+            "agent0(root r)",
+            "agent1",
+            "agent2",
+            "agent3"
+          ],
+          "u": 1,
+          "v_r_O": 5,
+          "v_r_anchor": 5,
+          "valuations": {
+            "agent0": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 2,
+              "g3": 2,
+              "g4": 2
+            },
+            "agent1": {
+              "g0": 1,
+              "g1": 1,
+              "g2": 1,
+              "g3": 1,
+              "g4": 1
+            },
+            "agent2": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 1,
+              "g3": 2,
+              "g4": 3
+            },
+            "agent3": {
+              "g0": 1,
+              "g1": 2,
+              "g2": 3,
+              "g3": 2,
+              "g4": 1
+            }
+          },
+          "withheld_off_root_retired": [
+            4
+          ],
+          "x": 3,
+          "x_eq_v_r_X_r": 3
+        }
+      }
+    }
+  },
+  "total_seconds": 530.67,
+  "verdicts": {
+    "G2_minimum_response_may_contain_k": {
+      "cases": 3673242,
+      "root_is_a_source_cases": 735,
+      "verdict": "CONFIRMED"
+    },
+    "G2_response_is_always_a_singleton": {
+      "min_card_1_cases": 3673242,
+      "min_card_gt_1_cases": 0,
+      "verdict": "CONFIRMED"
+    },
+    "G2_star_allocation_is_never_EFX": {
+      "efx_star_states": 0,
+      "star_states_checked": 3673242,
+      "verdict": "CONFIRMED"
+    },
+    "G3_no_legal_response_at_all_decreases_the_packet_MAXIMAL_STEELMAN": {
+      "no_choice_decreases_configs": 21294,
+      "of_which_on_L_strictly_over_K": 21294,
+      "reading": "response restricted to strongly-envied targets AND chosen favourably among equally minimal responses",
+      "some_choice_decreases_configs": 35854914,
+      "verdict": "CONFIRMED"
+    },
+    "G3_packet_coordinate_can_fail_to_decrease": {
+      "configs_checked": 35876208,
+      "reading": "strict (the reset theorem's own minimisation quantifier)",
+      "stalling_configs": 35876208,
+      "verdict": "CONFIRMED"
+    },
+    "G3_packet_coordinate_can_fail_to_decrease_STEELMAN": {
+      "always_decreasing_configs": 1803708,
+      "configs_with_no_wall_response": 0,
+      "reading": "response restricted to strongly-envied targets (D <= G-k), adversarial choice among equally minimal responses",
+      "stalling_configs": 34072500,
+      "verdict": "CONFIRMED"
+    },
+    "G3_star_increases_collision_hitting_multiplicity": {
+      "increasing_configs": 34072500,
+      "verdict": "CONFIRMED"
+    },
+    "G7_canonical_cancellation_breaks_root_strictness": {
+      "configs_checked": 11958736,
+      "contract_reading_failures": 1992396,
+      "contract_reading_failures_are_exactly_at_equality": true,
+      "referee_reading_failures": 6544116,
+      "verdict": "CONFIRMED"
+    },
+    "SOUND_eq3_root_strictness_of_the_bare_star": {
+      "checks": 601236,
+      "failures": 0,
+      "verdict": "CONFIRMED"
+    },
+    "closure_equation_5_holds_under_the_reset_theorems_own_quantifier": {
+      "verdict": "REFUTED",
+      "violations_strict_reading": 35876208,
+      "violations_wall_reading": 0
+    },
+    "progress_holds_exactly_on_the_L_alpha_equals_K_slice": {
+      "L_equals_K_configs": 1803708,
+      "L_strictly_over_K_configs": 34072500,
+      "decreasing_on_L_equals_K": 1803708,
+      "decreasing_on_L_strictly_over_K": 0,
+      "verdict": "CONFIRMED"
+    },
+    "stalling_successor_can_host_another_round": {
+      "cases": 34031181,
+      "of_stalling_configs": 34072500,
+      "verdict": "CONFIRMED"
+    },
+    "successor_packet_can_be_root_held_again": {
+      "cases": 0,
+      "verdict": "NOT_OBSERVED"
+    }
+  }
+}
