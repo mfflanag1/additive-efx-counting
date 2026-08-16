@@ -17,7 +17,7 @@ nonsingleton reduction
 | Nonempty `T_r,B_r,T_q,B_q` | Empty top contradicts charity dominance; empty bottom forces a self-`f`-champion via BCFF Observation 2.10 | No genericity assumption |
 | Common safety of `D_p,D_r` | They are the desired sets of the two selected champions | By definition |
 | `p,q` do not envy `X_r` | Either envy edge closes a basic PI cycle through `r -f-> q` and `q -> p` | No exclusion of unrelated edges |
-| Positive/nondegenerate values | Nondegeneracy from the BCFF Lemma A.1 respecting witness; positivity from A.1's nondegeneracy **plus the paper's standing monotonicity**. The witness A.1 guarantees is *cancelable*, not necessarily additive; the additive respecting nondegenerate perturbation actually run here is folklore (Chaudhury et al.), not A.1 | Only the final EFX allocation is carried back to the original profile — see the A.1 note in the inventory below |
+| Positive/nondegenerate values | Nondegeneracy from the BCFF Lemma A.1 respecting witness; positivity from A.1's nondegeneracy **plus the paper's standing monotonicity**. The witness A.1 guarantees is *cancelable*, not necessarily additive — which costs nothing, because no step of this chain needs an additive perturbation at all (*cancelable-class repair 2026-08-16*, R8) | Only the final EFX allocation is carried back to the original profile — see the A.1 note in the inventory below |
 
 *BCFF-audit repair 2026-08-16.*  The BCFF-sourced rows above are marked
 "No" in the sense that they introduce no *hidden* assumption; they are
@@ -77,10 +77,18 @@ Section-2 citation below is coherent only under the full arXiv build.
 
 **What Lemma A.1 does and does not supply.**
 
-1. **Not additivity.**  A.1 produces a *cancelable* respecting witness, not
-   necessarily an additive one.  Additive respecting nondegenerate
-   perturbations exist, but that is folklore (Chaudhury et al.), **not** BCFF
-   Lemma A.1.
+1. **Not additivity — and this point is now moot.**  A.1 produces a
+   *cancelable* respecting witness, not necessarily an additive one.
+   Additive respecting nondegenerate perturbations do exist, but that is
+   folklore (Chaudhury et al.), **not** BCFF Lemma A.1.  *Cancelable-class
+   repair 2026-08-16* (R8 of
+   [`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)):
+   the correction is kept here for the audit trail, but nothing downstream
+   turns on it — **no additive perturbation is needed at any point in this
+   chain**, so A.1's cancelable witness is not a shortfall but exactly what
+   the argument consumes.  The sweep found no order-closing step in the
+   length-three chain that uses additivity, which is why the composition
+   theorem now states its hypothesis at the nice-cancelable level.
 2. **Not positivity.**  A.1 says nothing about positivity.  The strict
    positivity used here is A.1's nondegeneracy together with the paper's
    standing monotonicity assumption; cite it as "A.1 + standing

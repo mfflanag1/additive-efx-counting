@@ -7,10 +7,11 @@ branch; independent referee audit remains required
 
 ## Theorem
 
-Consider four positive, nondegenerate additive agents.  Let `X` be a
-globally lexicographically maximal noncomplete partial EFX allocation in the
-BCFF one-charity normal form, and suppose exactly two allocated bundles are
-nonsingletons.
+Consider four agents with **nice cancelable** valuations, in BCFF's sense:
+normalized and monotone, cancelable, and admitting a non-degenerate
+cancelable respecting witness.  Let `X` be a globally lexicographically
+maximal noncomplete partial EFX allocation in the BCFF one-charity normal
+form, and suppose exactly two allocated bundles are nonsingletons.
 
 The following four proved cycle-class statements apply:
 
@@ -22,6 +23,48 @@ The following four proved cycle-class statements apply:
 
 Then `X` cannot exist.  Equivalently, a globally maximal noncomplete
 four-agent EFX state cannot have exactly two nonsingleton bundles.
+
+> **Corollary (the original additive statement, quotable verbatim).**
+> Consider four positive, nondegenerate additive agents.  Let `X` be a
+> globally lexicographically maximal noncomplete partial EFX allocation in
+> the BCFF one-charity normal form, and suppose exactly two allocated bundles
+> are nonsingletons.  Then `X` cannot exist.
+
+The corollary is immediate: positive nondegenerate additive valuations are
+normalized, monotone, cancelable and non-degenerate, hence nice cancelable.
+
+*Cancelable-class repair 2026-08-16* (R7 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+The hypothesis above previously read "four positive, nondegenerate additive
+agents".  Two sweeps found no order-closing step in any of the four cycle
+classes that consumes additivity: the alternating and adjacent chains in the
+"Additivity-dependence sweep" of
+[`BCFF_IMPORT_AUDIT_20260816.md`](BCFF_IMPORT_AUDIT_20260816.md), and the
+length-two, length-three and packet-nondegeneracy material in the sweep
+above.  Three points make the widening exact.
+
+- Every appeal to "positivity" in the corpus is monotonicity upgraded to
+  strictness by non-degeneracy (distinct bundles get distinct values), which
+  is how BCFF themselves derive it in the proof of Observation 2.8.
+- The one direction cancelability does not give on its own,
+  `v(S)>v(T) => v(S∪R)>v(T∪R)`, *is* available here: cancelable plus
+  non-degenerate make set-cancelation a biconditional, which BCFF state and
+  use in Section 3.  The corpus consumes it at exactly one site
+  (`LENGTH_THREE_GLOBAL_LEX_TARGET.md`, equation (13)), now restated
+  accordingly by repair R4.
+- "Nice" is consumed only at the BCFF Lemma A.1 step, which is where the
+  corpus already invokes it, and A.1's non-degenerate cancelable witness is
+  precisely what the argument needs — so the A.1 provenance drift recorded
+  in the import audit costs nothing.
+
+Every BCFF import used here (Lemma 2.4, Observations 2.8--2.11, Definitions
+2.6--2.7, Definitions 3.1, 3.2 and 3.4, Lemma 3.5, Definition 3.9, Theorem
+3.16, Lemma A.1) is proved by BCFF for nice cancelable valuations, so nothing
+external narrows the class either.  The genuinely additive material that the
+sweeps did find sits in intermediate contractions that close no priority
+order and are superseded by additivity-free theorems — adjacent Theorem 2's
+equations (14)--(15), and the proof-mining history below line 500 of
+`LENGTH_THREE_GLOBAL_LEX_TARGET.md`, both now labelled as such.
 
 ## Selected-cycle classification
 
@@ -93,8 +136,12 @@ Being a selected desired set, `D` is common-safe: `v_i(D-g)<=b_i` for every
 agent `i` and every `g in D`, where `b_i=v_i(X_i)`.  Strict positivity gives
 
 \[
-v_w(D)=b_w+v_w(f)>b_w,
+v_w(D)=v_w(X_w\cup\{f\})>v_w(X_w)=b_w,
 \]
+
+(*cancelable-class repair 2026-08-16*, R3: `f` is unallocated, so `X_w+f` and
+`X_w` are different bundles; monotonicity gives `>=` and non-degeneracy
+upgrades it to `>`.  The former additive form `b_w+v_w(f)` was decorative,)
 
 so the owner `w` strictly prefers `D` to her own bundle and is a
 self-`f`-champion.  This is exactly the configuration excluded by BCFF
@@ -172,9 +219,11 @@ is the most important external interface to audit independently.
 
 ## Current consequence and boundary
 
-This establishes the exactly-two-nonsingleton theorem within the positive,
-nondegenerate BCFF one-charity normal form.  It is not a proof of complete
-four-agent additive EFX.  That result still requires
+This establishes the exactly-two-nonsingleton theorem within the BCFF
+one-charity normal form, for nice cancelable valuations and hence a fortiori
+for positive nondegenerate additive ones (*cancelable-class repair
+2026-08-16*, R7).  It is not a proof of complete four-agent EFX in either
+class.  That result still requires
 contraction/augmentation theorems for states with three and four
 nonsingleton bundles, followed by the nonnegative/tie wrapper.  The
 length-two BCFF interface and the new length-three composition should be

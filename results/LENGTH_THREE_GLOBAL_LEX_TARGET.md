@@ -6,6 +6,20 @@
 residual; the earlier wall reductions below are retained as proof-mining
 history and are superseded by the two reservoir-order orientations
 
+*Cancelable-class repair 2026-08-16* (R6 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+**These superseded sections are additive-only.**  Lines 1--500 — the
+load-bearing normal form and the reservoir lemmas — were swept and hold for
+BCFF's nice-cancelable class.  The proof-mining history below (roughly lines
+500--2800: the adaptive-singleton, parallel-root, augmented-root,
+hybrid-pair, quota-transversal, dual-mode-potential and fractional-pivot
+material) is pervasively additive — it computes on differences of set values
+and on quota deficits `delta = b - v(D \ H)`, neither of which cancelability
+supports — and it is *not* reachable from the reservoir-order theorem, which
+uses only `W=X_q+B_r`, `U=X_r+B_q` and the thresholds `tau_r(D_p)`,
+`tau_q(D_r)`.  If any of that material is ever revived as load-bearing it
+must be re-swept and will carry an additivity hypothesis.
+
 ## Source-valid starting point
 
 Fix a lexicographic priority order and choose a globally maximal partial EFX
@@ -279,7 +293,10 @@ U=X_r+B_q,\qquad t'=\tau_p(D_r).
 \]
 
 The sets `U` and `D_r` are disjoint, and
-`v_r(U)=b_r+v_r(B_q)>b_r`, so `U` contains a desired set.  Repeat the
+`v_r(U)>v_r(X_r)=b_r` (*cancelable-class repair 2026-08-16*, R2: `B_q` is
+nonempty and disjoint from `X_r`, so monotonicity plus non-degeneracy give
+the strict inequality; the former additive form `b_r+v_r(B_q)` was
+decorative), so `U` contains a desired set.  Repeat the
 threshold extraction, now at the `p` threshold.
 
 If `v_p(U)>=t'`, choose an inclusion-minimal `Q subseteq U` at that
@@ -405,9 +422,29 @@ v_p(R)<v_p(D_p).
 \]
 
 For the first inequality, `v_r(T_q)>v_r(T_r)`.  For the second, the selected
-`p` edge and absence of `p -> q` give `v_p(T_r)>v_p(T_q)`, while
-`p` not envying `X_r` together with `p(D_p)>b_p` gives
-`v_p(f)>v_p(B_r)`.
+`p` edge and absence of `p -> q` give `v_p(T_q)<v_p(T_r)`; adjoining the
+disjoint packet `B_r` to both sides gives
+
+\[
+v_p(R)=v_p(T_q\cup B_r)<v_p(T_r\cup B_r)=v_p(X_r),
+\]
+
+and the large-bundle no-envy row (4a) together with `D_p` being desired by
+`p` gives `v_p(X_r)<=b_p<v_p(D_p)`.  Chaining the two yields
+`v_p(R)<v_p(D_p)`.
+
+*Cancelable-class repair 2026-08-16* (R4 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+The second justification previously read: "`p` not envying `X_r` together
+with `p(D_p)>b_p` gives `v_p(f)>v_p(B_r)`".  That summed two strict
+inequalities across disjoint parts, which cancelability does not license, and
+the sub-inequality `v_p(f)>v_p(B_r)` is not needed at all.  The replacement
+above uses only the set-cancelation biconditional
+`v(S∪R)>v(T∪R) <=> v(S)>v(T)` for `R` disjoint from `S∪T`, which cancelable
+plus non-degenerate valuations do supply (BCFF `2.Preliminaries.tex:101`, and
+the identical move in BCFF's proof of Lemma 3.13).  The first inequality's
+step `v_r(T_q)>v_r(T_r)` is adjoined to `B_r` by that same biconditional.
+No additivity is used in either direction.
 
 Choose an inclusion-minimal `C subseteq R` with `v_r(C)>b_r`.  Then every
 deletion of `C` is below `b_r`, and (13) gives
@@ -485,6 +522,13 @@ sizes. Consequently the adaptive-singleton, parallel-root, augmented-root,
 hybrid-pair, and fractional-pivot sections below are no longer completion
 gates. They remain useful falsification history for narrower candidate
 families.
+
+*Cancelable-class repair 2026-08-16* (R6): those same sections are also
+**additive-only**, unlike everything above line 500. They compute on
+differences of set values and on quota deficits, which cancelable valuations
+do not support, so they do not participate in the strengthening of the
+composition to BCFF's nice-cancelable class. Being falsification history
+rather than completion gates, they need no repair — only this label.
 
 For `a=p` or `a=q`, the rotated theorem closes every order beginning with
 `r` and every `(s,r,...)` order.  The `W` theorem closes every order in

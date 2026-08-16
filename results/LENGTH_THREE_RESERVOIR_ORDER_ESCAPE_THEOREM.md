@@ -50,7 +50,11 @@ W=X_q+B_r,\qquad t_r=\tau_r(D_p).
 \]
 
 The pool contains a desired set because
-`v_q(W)=b_q+v_q(B_r)>b_q`. Apply extraction to `(D_p,W,r)`.
+`v_q(W)>v_q(X_q)=b_q` (*cancelable-class repair 2026-08-16*, R2: `B_r` is
+nonempty and disjoint from `X_q`, so `W` and `X_q` are different bundles;
+monotonicity gives `>=` and non-degeneracy upgrades it to `>`. The former
+additive form `b_q+v_q(B_r)` was decorative). Apply extraction to
+`(D_p,W,r)`.
 
 If it returns a common-safe `Q` with `v_r(Q)>=t_r`, then
 
@@ -96,8 +100,9 @@ U=X_r+B_q,\qquad t_q=\tau_q(D_r).
 \tag{5}
 \]
 
-Here `v_r(U)=b_r+v_r(B_q)>b_r`, so `U` contains a desired set. Apply
-extraction to `(D_r,U,q)`.
+Here `v_r(U)>v_r(X_r)=b_r` (*cancelable-class repair 2026-08-16*, R2; `B_q`
+nonempty, same monotone-plus-non-degenerate argument as for `W`), so `U`
+contains a desired set. Apply extraction to `(D_r,U,q)`.
 
 If it returns a common-safe `Q` with `v_q(Q)>=t_q`, then
 
@@ -240,6 +245,19 @@ with more than two nonsingleton bundles.
 The twenty-four aggregate allocation implications replay as exact
 QF_LRA-UNSAT in
 [`length_three_reservoir_order_packet_audit.json`](length_three_reservoir_order_packet_audit.json).
-That audit checks the additive inequalities. The source exclusion in the
-`r`-before-`q` low branch and the derivation of the normal form from BCFF
-remain analytic parts of the theorem.
+That audit checks the aggregate threshold inequalities; its encoding uses
+only bundle totals and deletion maxima, so it is valid for cancelable
+valuations. The source exclusion in the `r`-before-`q` low branch and the
+derivation of the normal form from BCFF remain analytic parts of the theorem.
+
+*Cancelable-class repair 2026-08-16* (R5 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+This sentence previously read "That audit checks the additive inequalities",
+which understated it.  `decide_length_three_reservoir_order.py` represents
+each bundle by two scalars — a total and a tail (`= tau`) — constrained only
+by `total > 0`, `0 <= tail < total`, `tail <= base`, plus the base
+envy/desire signs.  There is no per-good decomposition and no sum anywhere in
+the encoding, so those constraints are exactly the monotone, non-degenerate
+and common-safety facts and the replay certifies the aggregate argument at
+the cancelable level.  Re-replayed on this branch: `status: ALL_FORCED,
+cases: 24` (z3 5.0.0).

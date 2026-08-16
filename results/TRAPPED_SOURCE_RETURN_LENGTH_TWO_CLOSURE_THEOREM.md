@@ -44,10 +44,20 @@ discard part of an incoming packet; this does not affect PI feasibility.
 
 **Proof.** If no agent envies singleton \(X_a\), then no agent strongly envies
 \(X_a\cup\{f\}\): deleting \(f\) leaves the unenvied singleton, while deleting
-its singleton good leaves the unenvied charity. Positive additivity makes
-owner \(a\) strictly prefer the pair. Hence \(a\) is a clean self-\(f\)
+its singleton good leaves the unenvied charity. Monotonicity and
+non-degeneracy make owner \(a\) strictly prefer the pair. Hence \(a\) is a
+clean self-\(f\)
 champion and absorption is complete EFX, contradicting maximality.
 \(\square\)
+
+*Cancelable-class repair 2026-08-16* (R1 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+The phrase "positive additivity" above was decorative.  The only fact
+consumed is \(v_a(X_a\cup\{f\})>v_a(X_a)\); since \(f\notin X_a\) the two
+bundles differ, so monotonicity gives \(\ge\) and non-degeneracy upgrades it
+to \(>\).  This is verbatim the step in BCFF's own proof of Observation 2.8,
+and it is the entire valuation content of this chain — the closure theorem
+below is pure directed-graph combinatorics.
 
 The ordinary envy graph is acyclic, since an envy cycle is already a basic
 PI cycle.
