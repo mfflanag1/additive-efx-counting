@@ -1,0 +1,309 @@
+{
+  "claim_boundary": "Closed-form exact arithmetic over the banked profiles and the banked whole-role menu.  The wall premise and Lemma D are verified, not assumed.  The two refutations are statements about these two specific constructions on this population; they do not show that no constructive rule exists, only that the two natural ones fail.",
+  "distinct_edge_sets_in_menu": 47,
+  "lemma_d_breakdown": {
+    "gives_d_a_role_outside_W": 83,
+    "of_which_gives_d_a_role_of_A": 59,
+    "separates_a0_from_a1": 55
+  },
+  "lemma_d_satisfied_by": 83,
+  "lemma_d_violated_by": 0,
+  "menu_edge_count_distribution": {
+    "3": 3,
+    "4": 80
+  },
+  "menu_size": 83,
+  "menu_source": "/private/tmp/claude-501/-Users-maxf/6175bcb0-28cd-4372-acaf-8320948e73b9/scratchpad/idwitness2/seed_whole_role_menu.json",
+  "menu_source_sha256": "d33c33c2146c2d335539055284439fd01c193b73a353a014297e78e58d654259",
+  "profiles_examined": 113,
+  "refutation_base_blocks": [
+    {
+      "charity_host": "r",
+      "edge_count": 7,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->r": 113,
+        "q->r": 82,
+        "s->r": 106
+      },
+      "profiles": 113,
+      "within_edge_cap": false
+    },
+    {
+      "charity_host": "q",
+      "edge_count": 7,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->q": 113,
+        "r->q": 112,
+        "s->q": 108
+      },
+      "profiles": 113,
+      "within_edge_cap": false
+    },
+    {
+      "charity_host": "d",
+      "edge_count": 6,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "q->d": 113,
+        "r->d": 101,
+        "s->d": 105
+      },
+      "profiles": 113,
+      "within_edge_cap": false
+    },
+    {
+      "charity_host": "s",
+      "edge_count": 7,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->s": 109,
+        "q->s": 113,
+        "r->s": 112
+      },
+      "profiles": 113,
+      "within_edge_cap": false
+    }
+  ],
+  "refutation_supplier_homes": [
+    {
+      "charity_host": "r",
+      "edge_count": 1,
+      "edges": [
+        [
+          "charity",
+          "r"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->r": 113,
+        "q->r": 100,
+        "r->d": 16,
+        "s->d": 35,
+        "s->r": 113
+      },
+      "profiles": 113,
+      "within_edge_cap": true
+    },
+    {
+      "charity_host": "q",
+      "edge_count": 1,
+      "edges": [
+        [
+          "charity",
+          "q"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->q": 113,
+        "d->r": 113,
+        "q->r": 15,
+        "r->d": 55,
+        "r->q": 88,
+        "s->d": 35,
+        "s->q": 72,
+        "s->r": 107
+      },
+      "profiles": 113,
+      "within_edge_cap": true
+    },
+    {
+      "charity_host": "d",
+      "edge_count": 1,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->r": 42,
+        "q->d": 33,
+        "q->r": 22,
+        "r->d": 92,
+        "s->d": 94,
+        "s->r": 107
+      },
+      "profiles": 113,
+      "within_edge_cap": true
+    },
+    {
+      "charity_host": "s",
+      "edge_count": 1,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ]
+      ],
+      "efx_profile_count": 0,
+      "failing_pairs": {
+        "d->r": 113,
+        "d->s": 73,
+        "q->r": 22,
+        "q->s": 93,
+        "r->d": 55,
+        "r->s": 71,
+        "s->r": 24
+      },
+      "profiles": 113,
+      "within_edge_cap": true
+    }
+  ],
+  "role_wildness_counts": {
+    "a0": 4,
+    "a1": 6,
+    "e": 2,
+    "gq": 13,
+    "gr": 1,
+    "h": 1,
+    "j": 2,
+    "k": 1,
+    "l": 13,
+    "m": 15,
+    "p": 8,
+    "q0": 1
+  },
+  "schema": "fixed-u-chart-structure-audit-v1",
+  "script_sha256": "a2b24ff0a7e3cb7bea0087f5bbc83fb89f6ff515819ce9c24699505229bf8064",
+  "traces": [
+    {
+      "path": "/private/tmp/claude-501/-Users-maxf/6175bcb0-28cd-4372-acaf-8320948e73b9/scratchpad/idwitness2/inputs/exact_response_form2_one_minimum_split_cegar_20260814.json",
+      "sha256": "24872d6bf5e5b75ae2dc0de8faa453346806c2bc97f2cd38d975e935d130896b"
+    },
+    {
+      "path": "/private/tmp/claude-501/-Users-maxf/6175bcb0-28cd-4372-acaf-8320948e73b9/scratchpad/idwitness2/inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json",
+      "sha256": "e396f24dfb60f0ea796e6dea46962a3ac4eb3794ee6e6e87932f9fa94eff6963"
+    },
+    {
+      "path": "/private/tmp/claude-501/-Users-maxf/6175bcb0-28cd-4372-acaf-8320948e73b9/scratchpad/idwitness2/inputs/exact_response_form2_canonical_physical_cegar_20260814.json",
+      "sha256": "4e4e1919680fdf480b5257bfe8111cf6b794838a7728c52a58bb93db0a0f0c17"
+    },
+    {
+      "path": "/private/tmp/claude-501/-Users-maxf/6175bcb0-28cd-4372-acaf-8320948e73b9/scratchpad/idwitness2/inputs/exact_response_form2_canonical_physical_cegar_stage2_20260814.json",
+      "sha256": "201149865ee0e39b6e0635bd66c9ae50522e7ddca0cb7793d04e9df20df0653e"
+    }
+  ],
+  "wall_premise_holds_on": 113,
+  "wall_premise_violated_on": 0
+}
