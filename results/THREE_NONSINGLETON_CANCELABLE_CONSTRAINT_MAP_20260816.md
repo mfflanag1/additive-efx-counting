@@ -324,9 +324,14 @@ handle.**
 
 ## 8. Convention and bookkeeping defects found
 
-1. **`tau` is undefined almost everywhere.** Of 40 files, 4 state a `tau` convention
-   (3 additive-form, 1 opaque), 1 uses max-deletion implicitly and correctly
-   (`CROSS_STAR_HOLE_PIVOT`), 4 use `tau` inherited-undefined, and the rest never mention it. The
+1. **`tau` is undefined almost everywhere.** (*Tally corrected 2026-08-16, second pass:
+   the per-file inventory in section 5 is authoritative.*) Of 40 files, 11 use `tau`:
+   5 additive-form (whether by displayed definition or committed idiom), 1 max-deletion
+   implicitly and correctly (`CROSS_STAR_HOLE_PIVOT`), 4 inherited/convention-agnostic in
+   use, and 1 boundary-convention-only (`GENERAL_TRANSFER_COMPONENT_HYBRID_WALL`); the
+   rest never mention it. The original tally here ("4 state a convention, 3 additive-form")
+   counted only literal displayed definition lines and disagreed with the inventory; all
+   11 now carry explicit convention banners (commit b03e583). The
    "unstated convention" defect flagged for `ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY` in the
    two-nonsingleton second pass is **near-universal here**.
 2. **A live convention conflict inside the rung.** `FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION` and
