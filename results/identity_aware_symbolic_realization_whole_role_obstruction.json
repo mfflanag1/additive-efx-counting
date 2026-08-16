@@ -1,0 +1,185 @@
+{
+  "cap_covers_every_role": false,
+  "cardinality_cap": 3,
+  "cardinality_vectors_available": 8,
+  "cardinality_vectors_examined": 8,
+  "claim_boundary": "When cap_covers_every_role is true the sweep is every physical realization of the profile and the verdict is exact for it.  Otherwise it covers only realizations with at most `cap` goods per role.  Nothing here establishes chart coverage or the universal fixed-U theorem.",
+  "configurations": [
+    {
+      "physical_good_count": 22,
+      "role_cardinalities": {
+        "a0": 2,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 2,
+        "p": 2,
+        "q0": 1
+      },
+      "rounds": 99,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 23,
+      "role_cardinalities": {
+        "a0": 2,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 2,
+        "p": 3,
+        "q0": 1
+      },
+      "rounds": 104,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 23,
+      "role_cardinalities": {
+        "a0": 2,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 3,
+        "p": 2,
+        "q0": 1
+      },
+      "rounds": 141,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 24,
+      "role_cardinalities": {
+        "a0": 2,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 3,
+        "p": 3,
+        "q0": 1
+      },
+      "rounds": 122,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 23,
+      "role_cardinalities": {
+        "a0": 3,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 2,
+        "p": 2,
+        "q0": 1
+      },
+      "rounds": 34,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 24,
+      "role_cardinalities": {
+        "a0": 3,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 2,
+        "p": 3,
+        "q0": 1
+      },
+      "rounds": 127,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 24,
+      "role_cardinalities": {
+        "a0": 3,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 3,
+        "p": 2,
+        "q0": 1
+      },
+      "rounds": 98,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    },
+    {
+      "physical_good_count": 25,
+      "role_cardinalities": {
+        "a0": 3,
+        "a1": 2,
+        "e": 2,
+        "gq": 2,
+        "gr": 2,
+        "h": 2,
+        "j": 2,
+        "k": 1,
+        "l": 2,
+        "m": 3,
+        "p": 3,
+        "q0": 1
+      },
+      "rounds": 185,
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION"
+    }
+  ],
+  "edge_cap": 4,
+  "edge_origin": "support",
+  "realization_family": "every positive-rational realization of the profile at the stated role cardinalities; values are solver unknowns, not a fixed two-good template",
+  "role_slacks": {
+    "a0": 3,
+    "a1": 2,
+    "e": 2,
+    "gq": 2,
+    "gr": 2,
+    "h": 2,
+    "j": 2,
+    "k": 1,
+    "l": 2,
+    "m": 99,
+    "p": 236,
+    "q0": 1
+  },
+  "schema": "identity-aware-symbolic-realization-cegar-v1",
+  "script_sha256": "d8cf21e6606b26854930bb366e5a0871e7a1c318ae2b9d8e47c06e9414f44419",
+  "source_profile": "/private/tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json",
+  "source_profile_sha256": "e396f24dfb60f0ea796e6dea46962a3ac4eb3794ee6e6e87932f9fa94eff6963",
+  "source_profile_status": "SAT_RELAXED_PHYSICAL_FOUR_EDGE_OBSTRUCTION",
+  "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION",
+  "terminal": null
+}

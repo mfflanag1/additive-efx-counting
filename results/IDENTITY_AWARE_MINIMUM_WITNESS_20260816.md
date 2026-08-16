@@ -342,18 +342,51 @@ more goods per role remain unexamined.
 every distinct totals/minima profile appearing in the four banked form-2
 physical CEGAR traces.
 
-**Population correction.** The task brief cites `173` exact adversarial
-profiles.  That figure is not reproducible from the banked artifacts.  The
-traces contain `100 + 101 + 7 + 3 = 211` rounds, which reduce to **`111`
-distinct `(totals, minima)` profiles** — the stage-2 canonical run resumed
-from stage 1 and replayed its cuts, so the two overlap almost completely.
-Adding the traces' terminal countermodel profiles gives **`113` distinct
-profiles** in total, which is the population the batch examines.  The
-qualitative claim attached to the figure is correct: every round does carry a
-four-edge EFX allocation.  The count should be corrected wherever `173` is
-cited.
+### 7.1 Data-integrity correction: the adversarial-profile count is 111, not 173
 
-**Batch verdict.**
+The `173` exact adversarial profiles cited in the task brief and in the
+program's running notes is **not reproducible from any banked artifact**.
+
+The four form-2 physical CEGAR traces on `cc/efx-fixed-u-salvage-20260814`
+contain, by direct count:
+
+| trace | rounds | distinct profiles in that trace |
+|---|---|---|
+| `exact_response_form2_canonical_physical_cegar_20260814.json` | 100 | 100 |
+| `exact_response_form2_canonical_physical_cegar_stage2_20260814.json` | 101 | 101 |
+| `exact_response_form2_one_minimum_split_cegar_20260814.json` | 7 | 7 |
+| `exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json` | 3 | 3 |
+| **total rounds** | **211** | — |
+| **distinct across all four** | — | **111** |
+
+**Mechanism of the discrepancy.** The stage-2 canonical run is a *resume*: its
+own `resumed_from` field names
+`exact_response_form2_canonical_physical_cegar_20260814.json`, and on restart
+it reloads and replays that run's accumulated cuts.  Its `101` rounds are
+therefore the earlier `100` profiles plus one genuinely new one.  Summing
+round counts across the two stages double-counts almost the entire
+population.  `211` rounds collapse to `111` distinct `(totals, minima)`
+profiles; adding the traces' terminal countermodel profiles, which are not
+themselves rounds, gives the `113` the batch examines.
+
+Neither `211`, `111`, nor `113` is `173`, and no subset or union of these
+traces yields `173`.  The figure appears to be an independent error rather
+than a different slicing of the same data.
+
+**What survives.** The qualitative claim attached to the figure is correct and
+is reconfirmed here: every round does carry a complete four-support-edge EFX
+allocation, and §7.2 re-derives that independently for all `113` profiles.
+
+**Recommended propagation.** Replace `173` with `111 distinct profiles over
+211 rounds (113 including terminal countermodels)` wherever it is cited, and
+record the resume-double-count as the cause so the same arithmetic is not
+repeated on the next resumed trace.
+
+Reproduce with `distinct_profiles()` in
+`tracks/parkability/run_identity_aware_witness_side_batch.py`, whose output
+JSON records `distinct_profiles_available` directly.
+
+### 7.2 Batch verdict
 
 | quantity | value |
 |---|---|
@@ -376,6 +409,50 @@ arithmetic — completeness of the allocation, the four-edge support budget, and
 each observer's EFX comparison against every other bundle — so a `sat` round is
 never taken on the solver's word.  Per-profile detail is in
 `results/identity_aware_witness_side_batch_form2.json`.
+
+## 7.3 Symbolic realizations: dropping the two-good template
+
+The witness-side driver of §6 fixes two goods per role, which is every
+realization only at slack two (Corollary B1).  Proposition 4 says that above
+slack two the value column itself is free, so a genuinely stronger search is
+needed there.
+
+`run_identity_aware_symbolic_realization_cegar.py` supplies it.  For a fixed
+vector of role cardinalities it makes every physical good value a real unknown
+subject to
+
+```text
+u[g,x,i] >= M[i,g],   sum_x u[g,x,i] = T[i,g],   some x attains M[i,g],
+```
+
+so the master ranges over **all** positive realizations at those
+cardinalities, with the coincidence partitions whatever the attaining indices
+induce, rather than over a template.  Cardinality vectors with
+`2 <= k_g <= min(rho(g), cap)` are swept.  Termination is by the same argument
+as before: every round contributes an allocation none of the earlier
+realizations admitted, and the allocation space is finite.
+
+| profile | cardinality vectors | goods | CEGAR rounds | verdict |
+|---|---|---|---|---|
+| one-minimum-split obstruction | 1 | 19 | 32 | every realization admits a four-edge EFX allocation |
+| whole-role obstruction | 8 | 22–25 | 34–185, total 910 | every realization admits a four-edge EFX allocation |
+
+Two things follow.
+
+First, a **validation**: on the slack-two profile the symbolic family is
+exactly the two-good family, and the symbolic driver independently reproduces
+§6's verdict from a real-valued master rather than a Boolean one (32 rounds
+instead of 11, as the weaker per-round master needs more allocations).
+
+Second, a **strict extension**: on the whole-role obstruction profile the
+verdict now covers every realization with at most three goods per role, across
+all eight admissible cardinality vectors, not merely the two-good ones.  Every
+accepted allocation is re-audited outside z3 in exact rational arithmetic.
+
+The cap still binds there.  That profile has `rho(m) = 99` and
+`rho(p) = 236`, so realizations with four or more goods in those roles remain
+outside the sweep, and `cap_covers_every_role` is recorded as `false` in the
+output.  This narrows open item 1 rather than closing it.
 
 ## 8. Verification
 
@@ -419,6 +496,16 @@ python -m tracks.parkability.run_identity_aware_witness_side_cegar \
   --profile /tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json \
   --output results/identity_aware_witness_side_cegar_whole_role_obstruction.json \
   --maximum-rounds 80 --timeout-seconds 90
+
+python -m tracks.parkability.run_identity_aware_symbolic_realization_cegar \
+  --profile /tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json \
+  --output results/identity_aware_symbolic_realization_one_minimum_split.json \
+  --cap 3 --maximum-rounds 120 --timeout-seconds 90
+
+python -m tracks.parkability.run_identity_aware_symbolic_realization_cegar \
+  --profile /tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json \
+  --output results/identity_aware_symbolic_realization_whole_role_obstruction.json \
+  --cap 3 --maximum-rounds 200 --timeout-seconds 120
 
 python -m tracks.parkability.run_identity_aware_witness_side_batch \
   --trace /tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json \
@@ -465,6 +552,8 @@ New script and output sha256 values are recorded in §10.
 - Both banked form-2 adversarial profiles: every two-good realization admits a
   complete EFX allocation within four support edges (`2^21` and `2^30`
   realizations, covered by `11` and `19` allocations).
+- The same for every realization with at most three goods per role, from a
+  real-valued master over all `8` admissible cardinality vectors (§7.3).
 - The one-minimum-split obstruction profile is exhaustively resolved: its
   selector obstruction is not a four-edge obstruction.
 
@@ -477,9 +566,10 @@ New script and output sha256 values are recorded in §10.
 
 **Open.**
 
-- Realizations with three or more goods per role, for profiles whose slack
-  exceeds two. The whole-role obstruction profile has roles at slack `3`,
-  `99`, `236`; the present search does not touch them.
+- Realizations with **four or more** goods in a role, for profiles whose slack
+  exceeds three.  §7.3 settles both banked profiles up to three goods per
+  role; the whole-role obstruction profile still has `rho(m) = 99` and
+  `rho(p) = 236` beyond that.
 - Whether the fixed-`U` premises force some role to slack two — §5.1 says they
   do not force it globally, but a *joint* condition over roles is untested.
 - A general theorem behind the batch evidence: does every fixed-`U`-admissible
@@ -491,10 +581,14 @@ Nothing here resolves four-agent or general additive EFX.
 
 ## 10. Next steps, in priority order
 
-1. **Symbolic-value identity CEGAR.** Replace the two-good side pattern by a
-   z3-symbolic role realization with up to `min(rho(g), c)` goods, values
-   constrained to sum to `T` with minimum `M`. This makes the `unsat` verdicts
-   exhaustive above slack two and is the direct continuation of §6.
+1. **Raise the cardinality cap.** §7.3 built the symbolic-value driver and ran
+   it to `cap = 3`, so both banked profiles are now settled for every
+   realization with at most three goods per role.  What remains is the tail:
+   the whole-role obstruction profile has `rho(m) = 99` and `rho(p) = 236`.
+   Two routes are worth trying before brute cap-raising — a monotonicity
+   argument showing that splitting a good further never destroys a four-edge
+   repair, which would collapse the tail to a bounded check, or a direct
+   argument that a role whose slack is large is never the binding one.
 2. **Prove the slack-two theorem.** The verdict is uniform over all `113`
    profiles and exact on the `68` slack-two ones.  Lemma C says only split
    roles matter and the canonical baselines split at most three roles, so the
@@ -523,10 +617,13 @@ Recorded at freeze.  Each output JSON also carries its driver's
 1b33ee9f54eccfc4f862da73f148cdb3e73e2b19c47c2c41be40891d9e8dfd2c  tracks/parkability/run_identity_aware_partition_admission_sweep.py
 4f584558d4c638b371062298445270b8ec959073f9250fc38991478099b6ffee  tracks/parkability/run_identity_aware_witness_side_cegar.py
 e13343c88b3543d59958e5e101e4c581f85e2794c83893674ca46bbc7e212de0  tracks/parkability/run_identity_aware_witness_side_batch.py
+d8cf21e6606b26854930bb366e5a0871e7a1c318ae2b9d8e47c06e9414f44419  tracks/parkability/run_identity_aware_symbolic_realization_cegar.py
 2bc0e51a5c9eb444814669db872ff8bbed7eb371a3a5e454140cf953ec126ebb  tracks/parkability/test_identity_aware_witness.py
 2e5c9d13b7167e790619333d58427b21fce76a2d00d1b56b562afa26841b8314  results/identity_aware_witness_realizability_audit.json
 e7ce8125dc70e62d4c2d77129c5002fc6e5490e00adef9fb95d94ffaf2d19dc4  results/identity_aware_partition_admission_sweep_form2.json
 e67935f76c0fe35fbf722d4741c05aaf1732c8e62a67ddbeb73a59d5b20fb159  results/identity_aware_witness_side_cegar_one_minimum_split.json
 22dc50c17982b4fa46859c92a17aa39bbe84e9ca0dc21ca62e64ab7f372255fb  results/identity_aware_witness_side_cegar_whole_role_obstruction.json
 792400756569a8dc4c8f71a54216c74bd5c057d7b11fc1114bd62d8415c2dbd5  results/identity_aware_witness_side_batch_form2.json
+2b210cf3c3116662f179bba6df72a3aaf2448d2f6b8442c40240d90d9115e2e9  results/identity_aware_symbolic_realization_one_minimum_split.json
+157e2e60aeb31dfce1cbaaa8598aa13f036f02e8c5ea516fae30a3f993cc05f0  results/identity_aware_symbolic_realization_whole_role_obstruction.json
 ```
