@@ -11,6 +11,23 @@ not content. The nonroot-holder branch is unaffected. Status is downgraded to
 **conditionally closed on admissibility of the controlled floor reset**. Do
 not quote externally. Full report: `TLX_CLOSURE_REFEREE_REPORT_20260816.md`.
 
+**Model-check update (2026-08-16, later same day).** The successor-state model
+checker (`TLX_SUCCESSOR_MODEL_CHECK_20260816.md`, 233,030 instances / 35.9M
+successor configurations) CONFIRMS referee findings G2, G3 and G7 with
+concrete witnesses, and additionally REFUTES closure equation (5) outright
+under its own minimisation quantifier (the singleton target `{k}` is desired
+by any emptied owner, so `D={k}` is a legal globally minimum response with
+`D∩K ⊄ K−k`; the closure needs `D ⊆ G−k` as an explicit hypothesis).
+Sharpest finding: the packet coordinate descends on EXACTLY the `L_α = K`
+slice (1,803,708/1,803,708) and NEVER off it (0/34,072,500), where the
+contract's other declared coordinate (hitting multiplicity) strictly
+INCREASES. Honest status: **closed on the `L_α = K` slice, open otherwise;
+route recommended for retirement** — the sole repair would be proving
+`L_α = K` in the root-holder branch, and the nonroot branch's own claim
+boundary disclaims the same slice from the opposite side. Verdicts are
+conditional on witness reachability (the checker searches a superset of
+genuine `T_{L,×}^*` states; see simplification S1 in the model-check report).
+
 **Date:** 2026-08-14
 
 **Status (superseded 2026-08-16, see referee downgrade above):** cap-free
