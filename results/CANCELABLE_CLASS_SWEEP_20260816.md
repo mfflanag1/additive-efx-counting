@@ -347,3 +347,267 @@ and A.1's cancelable witness is exactly what the argument needs. The corpus's he
 6. **Nondegeneracy convention.** As in the first sweep, and now confirmed verbatim against
    BCFF `2.Preliminaries.tex:76`: distinct bundles receive distinct values. Every "positivity"
    appeal in the corpus is monotonicity upgraded to strictness by this.
+
+---
+
+# Complete-closure sweep (second pass) — 2026-08-16
+
+The first pass swept 7 files and its verdict was blocked at the final gate. The gate was
+right, and the miss was mine in a specific and instructive way: my §2 preamble opened
+"Throughout, `tau_j(S) = max_{g in S} v_j(S \ {g})`", which **normalized a symbol the corpus
+does not define uniformly**. `ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md` — order-closing for
+`(p,s,r,q)` and `(s,p,q,r)`, and inspected by neither sweep — defined `tau` by the *additive*
+formula `v_i(Z) - min_{g in Z} v_i(g)`. Declaring a convention is not the same as checking one,
+and a global preamble is exactly the instrument that hides a local conflict. This pass therefore
+records the `tau` convention **per file**, as found, with no normalization.
+
+The `tau` line was repaired at commit `418f324` before this pass began; the sweep below
+confirms the repair's premise (the proof body already used the max-deletion reading throughout)
+and re-derives the downward-closure claim that the additive form would have left unsupported.
+
+**SECOND-PASS VERDICT: the widening STANDS.** Zero new genuinely-additive load-bearing sites.
+Every order-closing step in all four case theorems resolves to monotone + cancelable +
+non-degenerate. Eleven repairs are recommended (S1-S11); all are wording, convention-statement,
+or bookkeeping, and none blocks the widening.
+
+## A. How the closure was computed
+
+Transitive citation closure from eight seeds (the four case theorems, the three BCFF composition
+audits, and the composition theorem), chasing every `*.md` reference in every reached file.
+Raw closure: 30 nodes, 27 present in this worktree (3 dangling — `ONE_LARGE_CHAMPION_CLOSURE_
+REDUCTION.md` and `TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md` live on
+`codex/efx-breakthrough-next-20260802`, gap G5; `REDUCTION.md` is a line-wrap artifact of the
+first, not a real file).
+
+Citation closure is not dependency closure: a file may be cited as superseded history,
+corroboration, or a counterexample witness. Each reached file is therefore classified as
+**load-bearing** (an order-closing argument depends on its mathematical content),
+**cited-not-load-bearing**, or **out-of-closure**.
+
+## B. File inventory
+
+### B.1 Load-bearing, alternating branch (9 files)
+
+| File | Role | Orders closed | `tau` convention | Verdict |
+|---|---|---|---|---|
+| `ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md` | top theorem, order cover 16+2+2+4 | all 24 | uses `tau` ×2, **no definition** (S3) | **inequality suffices** |
+| `ALTERNATING_EASY_PRIORITY_ESCAPE_LEMMA.md` | singleton-collapse escapes | 16 | not used | **inequality suffices** |
+| `ALTERNATING_ROOT_FLIP_LEMMA.md` | root flip | `(p,q,r,s)`, `(s,r,q,p)` | **no `tau` symbol**; writes deletions explicitly | **inequality suffices** |
+| `ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md` | safe-pair existence | `(p,s,r,q)`, `(s,p,q,r)` | **`max_{g in Z} v_i(Z\{g})`** at :22 | **inequality suffices** |
+| `ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md` | pair → EFX allocation | same 2 | **`max_{g in Z} v_i(Z\{g})`** at :13 (repaired `418f324`) | **inequality suffices** |
+| `ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md` | trichotomy | `(p,s,q,r)`,`(p,q,s,r)`,`(s,p,r,q)`,`(s,r,p,q)` | uses `tau` ×5, **no definition** (S1) | **inequality suffices** |
+| `ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md` | four-family enumeration + narrow/broad witness | dichotomy input | not used | **inequality suffices** (enumeration); witness is additive *by design* |
+| `ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md` | routes reservoir lemma → reduction | classification | uses `tau` ×1, inherited | **inequality suffices** |
+| `ALTERNATING_BCFF_COMPOSITION_AUDIT.md` | premise bookkeeping | — | not used | **inequality suffices** |
+
+### B.2 Load-bearing, adjacent branch (2 files)
+
+| File | Role | Orders closed | `tau` convention | Verdict |
+|---|---|---|---|---|
+| `ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md` | Theorems 1-3 | all 24 | **`max_{g in Z} v_i(Z-g)`** at :32 | **inequality suffices**, except Theorem 2 (superseded, see D) |
+| `ADJACENT_BCFF_COMPOSITION_AUDIT.md` | premise bookkeeping | — | uses `tau` ×3, inherited | **inequality suffices**, except row :67 (S6) |
+
+### B.3 Cited but not load-bearing (3 files)
+
+| File | Why cited | Why not load-bearing |
+|---|---|---|
+| `ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md` | exact `(2,2,2,2)` UNSAT for the safe-pair gate | Self-declared: ":4 superseded by a cap-free analytic proof", ":76-77 no longer the basis for the arbitrary-packet claim". Additive by construction (per-good Z3 encoding) |
+| `ALTERNATING_GLOBAL_LEX_ATOMIC_THEOREM.md` | `ALTERNATING_BCFF_COMPOSITION_AUDIT.md:25` cites lines 46-51 to fix **the rival quantifier** | The cited lines are a definition ("all `5^7` assignments … rivals may leave any number of goods unallocated"), not a mathematical step. Its own theorem is a bounded `2+2+1+1` atom with "analytic packet lift open" |
+| `ADAPTIVE_ROOT_ORDER_BRIDGE_REFUTATION_20260809.md` | `ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md:167-172` cites it as motivation | It is a *refutation* witness (root change alone does not close the two surviving orders). Additive scope makes the refutation stronger, not the theorem weaker — same logic as the cross-bottom witness |
+
+### B.4 Out-of-closure (11 files, verified not assumed)
+
+`ALTERNATING_ANCHORED_OR_PROMOTED_TARGET.md`, `ALTERNATING_EXTENSION_OR_HANDOFF_REDUCTION.md`,
+`ALTERNATING_EXTERNAL_OBSERVER_ATOMIC_WALL_LEMMA.md`, `ALTERNATING_PACKET_LIFT_CHECKPOINT_20260809.md`,
+`ALTERNATING_Q_FACE_PACKING_CHECKPOINT_20260809.md`, `ALTERNATING_ROOT_FLIP_CHECKPOINT_20260809.md`,
+`ALTERNATING_SINGLETON_RETURN_TARGET.md`, `ALTERNATING_TWO_HEAD_ROOT_COVERED_COMPRESSION_LEMMA_20260813.md`,
+`DECORATED_HEAD_ALTERNATING_MINIMAL_RESPONSE_LEMMA_20260813.md`,
+`ROOT_CRITICAL_ALTERNATING_FRONTIER_LEMMA_20260811.md`,
+`ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md`.
+
+None is reached by the transitive closure from the eight seeds.
+
+**The two files the task named were verified, not assumed.** A repository-wide grep shows
+`ROOT_CRITICAL_ALTERNATING_FRONTIER_LEMMA_20260811.md` and
+`ALTERNATING_PAYMENT_COMPENSATION_CHAIN_LEMMA_20260810.md` are cited by exactly three files:
+`README.md` (index), `GENERAL_EFX_GOAL_20260730.md` (program roadmap), and
+`THREE_NONSINGLETON_CONTRACTION_TARGET_20260809.md`. The third places them: both belong to the
+**three-nonsingleton "GG flower" rung**, a later and separate part of the program. Their own
+closing sentences confirm it — ":155 … close `GG`, or prove four-agent/general additive EFX"
+and ":141 … close the `GG` flower". No case theorem, composition audit, or the composition
+theorem cites either. **OUT-OF-COVER CONFIRMED.**
+
+Both are, however, *genuinely additive* internally (`ROOT_CRITICAL:(1)` defines
+`delta = v_r(H)-v_r(A) = v_r(W)-v_r(L)`; `PAYMENT_COMPENSATION` defines
+`Delta_a = v_q(K)-v_q(X_a)`). That is a note for whoever composes the three-nonsingleton rung:
+**those files would need their own sweep before any widening claim extends to it.** It does not
+touch the two-nonsingleton composition.
+
+## C. Site-by-site verdicts, alternating branch
+
+Sites already covered by the first sweep's table are marked *(pass 1)* and not re-argued.
+
+| Site | Displayed step | Verdict |
+|---|---|---|
+| `EASY_PRIORITY:37-40` | "Every allocation in the proof gives each agent at most one good. Such an allocation is automatically EFX: deleting the only good … leaves the empty set" | **inequality suffices** — normalization `v(∅)=0` plus nonnegativity *(pass 1)* |
+| `EASY_PRIORITY:20-22`, (1) | `v_r(y)>v_r(X_r)`, `v_q(x)>v_q(X_q)` | **inequality suffices** — the two ordinary envy edges of the selected cycle, hypotheses not computations |
+| `ROOT_FLIP:42-46`, (4) | `v_i(D\{g}) <= v_i(X_i)` for all `i,g` | **inequality suffices** — common safety written out; note this file uses **no `tau` symbol at all**, which is why it was never exposed to the convention conflict |
+| `ROOT_FLIP:79-83`, (7) | `v_i(X_q\{h\}) <= u_i` | **inequality suffices** — base EFX |
+| `ROOT_FLIP:87-97`, (8) | `A` fails EFX only if `v_s(X_q\{h}) > v_s(D)` | **inequality suffices** — (4)+(7) discharge every other comparison |
+| `ROOT_FLIP:99-108`, (9) | `B` fails EFX only if `v_s(D\{g}) > v_s(X_q)` | **inequality suffices** — (2),(3) give the three strict improvements |
+| `ROOT_FLIP:110-121` | "If both allocations failed, **nonnegativity** and (8) would give `v_s(X_q)>v_s(D)`; **nonnegativity** and (9) would give `v_s(D)>v_s(X_q)`" | **inequality suffices — but the cited axiom is the wrong one (S5).** The step is `v_s(X_q) >= v_s(X_q\{h})` and `v_s(D) >= v_s(D\{g})`, i.e. **monotonicity**. Under additivity nonnegativity of a single good implies it, which is why the loose word survived; under a monotone non-additive valuation "nonnegativity" does not give it. The lemma's own summary at :147 already says "uses only monotonicity" — so the file is self-consistent and only these two words are off |
+| `ROOT_FLIP:147-149` | "uses only monotonicity, base EFX, desired-set safety, and the two strict envy relations; **additivity … not needed**" | **inequality suffices** — the corpus's only explicit additivity-free self-certification; independently confirmed *(pass 1)* |
+| `RESERVOIR_EXCHANGE:22` | `tau_i(Z)=max_{g in Z} v_i(Z\{g})` | max-deletion, **stated** — the reference convention |
+| `RESERVOIR_EXCHANGE:35-41` | Minimal-crossing fact: minimal `E` on which some agent crosses base; "every one-good deletion of `E` is below every observer's base"; hence `E` common-safe and desired | **inequality suffices** — pure inclusion-minimality and finiteness; not even monotonicity is consumed (a proper subset of a minimal crossing set is by definition non-crossing for *every* agent) |
+| `RESERVOIR_EXCHANGE:80-83`, (1) | `v_r(U)=b_r+v_r(B_q)>b_r` | **inequality suffices** — decorative equality; consumes `v_r(X_r ∪ B_q) > v_r(X_r)`, `B_q≠∅` *(pass 1)* |
+| `RESERVOIR_EXCHANGE:92-94` | `tau_q(A) <= v_q(A) <= v_q(U) < t <= v_q(D)` | **inequality suffices** — max-deletion + monotone; `A ⊆ U`; branch hypothesis; `tau_q(D) <= v_q(D)` |
+| `RESERVOIR_EXCHANGE:105-108`, (2) | `v_i(Q-h) > b_i` | **inequality suffices** — definition of unsafe |
+| `RESERVOIR_EXCHANGE:113-115` | `v_q(A) <= v_q(Q-h) < t <= v_q(D)` | **inequality suffices** — `A ⊆ Q-h` monotone; inclusion-minimality of `Q` at the `q` threshold |
+| `TWO_SAFE_BUNDLE:11-16` | `tau_i(Z)=max_{g in Z} v_i(Z\{g})` (repaired) | max-deletion, **stated**; **the repair is correct and necessary** — see the check on the next row |
+| `TWO_SAFE_BUNDLE:30-34`, (1) | `C = {Z : tau_i(Z) <= b_i ∀i}`; "**This family is downward closed**" | **inequality suffices under max-deletion, by monotonicity** — for `Z' ⊆ Z` and `g ∈ Z'`: `Z'\{g} ⊆ Z\{g}`, so `v_i(Z'\{g}) <= v_i(Z\{g}) <= tau_i(Z) <= b_i`. **This is the load-bearing consequence of the `418f324` repair:** under the old additive form `tau_i(Z)=v_i(Z)-min_{g∈Z}v_i(g)`, downward closure is *not* a monotonicity consequence, and the claim at :35 would have been unsupported outside the additive class. The repair does not merely restore consistency of notation; it restores the proof of (1) |
+| `TWO_SAFE_BUNDLE:47-54`, (3) | `D,Q ∈ C`, `v_q(Q) >= tau_q(D)` | **inequality suffices** — hypothesis |
+| `TWO_SAFE_BUNDLE:74-83` | allocation (4): `p` keeps base by (1); `r` gets `{y}` with `v_r(y)>b_r`; `s` gets desired `D` with `v_s(D)>b_s=v_s(y)`; self-comparisons by nonnegativity | **inequality suffices** — `b_s = v_s(y)` is the identity `X_s={y}`, not an additive claim |
+| `TWO_SAFE_BUNDLE:85-96` | "`q`'s only nontrivial comparison is to `D` … Inequality (3) is precisely `v_q(Y_q) >= max_{g in D} v_q(D\{g})`" | **inequality suffices** — and this line is the internal proof that the file's `tau` was always max-deletion in use |
+| `TWO_SAFE_BUNDLE:98-103` | allocation (5): `p,s` retain base singletons; `r` gets desired `D`; (3) handles `q` | **inequality suffices** |
+| `TWO_SAFE_BUNDLE:110-113` | safe-pair packing lemma statement | **inequality suffices** — restatement of the reservoir theorem's conclusion |
+| `DUAL_TRICHOTOMY:76-79`, (1) | `v_q(W)=b_q+v_q(B_r)>b_q` | **inequality suffices** — decorative equality; `B_r≠∅` *(pass 1)* |
+| `DUAL_TRICHOTOMY:81-84` | minimal-crossing; compatible-family absence rules out `r`,`s` | **inequality suffices** — as `RESERVOIR_EXCHANGE:35-41` |
+| `DUAL_TRICHOTOMY:88-90` | `tau_r(A) <= v_r(A) <= v_r(W) < t <= v_r(D_p)` | **inequality suffices** — monotone + branch hypothesis |
+| `DUAL_TRICHOTOMY:100-102` | `v_r(A) <= v_r(R-h) < t <= v_r(D_p)` | **inequality suffices** — minimality of `R` |
+| `DUAL_TRICHOTOMY:106-112` | EFX check of all three alternatives; "the displayed `r` inequality is exactly her sole nontrivial external EFX comparison" | **inequality suffices** *(pass 1)*. The quoted sentence is only true under the **max-deletion** reading — further evidence the file's undefined `tau` is max-deletion (S1) |
+| `CROSS_BOTTOM:26-63`, (3)-(5) | the four compatible generalized families; narrow seeds `B_r\|B_q` vs broad `H\|S` with empty release | **inequality suffices** — pure PI-cycle structure (BCFF Def 3.4); no valuation arithmetic |
+| `CROSS_BOTTOM:80-159` | the `V*` profile, the four-family margin table, and the `1000a_g+2^{e_g}` nondegeneracy argument | **genuinely additive — and correctly so.** This is a *counterexample witness*; living in the additive subclass makes the refutation stronger, not the theorem weaker *(pass 1)* |
+| `CROSS_BOTTOM:149-152` | "**Positive additivity** makes every offer obtained by shrinking the incoming packet or enlarging the prescribed release still less valuable" | **inequality suffices — monotonicity** (both operations shrink the offer set) *(pass 1)*. Wording only (S7) |
+| `EXTERNAL_OBSERVER_RESOLUTION:30-37` | routes: reservoir lemma constructs `A,Q` with `v_q(Q)>=tau_q(A)`; the two-safe-bundle reduction turns them into the improvement | **inequality suffices** — this is the citation that makes `TWO_SAFE_BUNDLE_REDUCTION` load-bearing for `(p,s,r,q)`/`(s,p,q,r)` |
+
+## D. Site-by-site verdicts, adjacent branch
+
+| Site | Displayed step | Verdict |
+|---|---|---|
+| `ADJACENT:32` | `tau_i(Z)=max_{g in Z} v_i(Z-g)` | max-deletion, **stated** |
+| `ADJACENT:79-83` | easy first priorities: singleton-only allocations are EFX | **inequality suffices** |
+| `ADJACENT:95-104` | reservoir extraction lemma | **inequality suffices** — identical in form to the length-three extraction swept in pass 1: `A ⊆ P` monotone in branch 1; inclusion-minimality of `R` in branch 2 |
+| `ADJACENT:106-110` | `v_q(W)>b_q`, `v_r(U)>b_r` | **inequality suffices** — already written as inequalities *(pass 1)* |
+| `ADJACENT:118-133`, (2)-(3) | `v_p(P) >= tau_p(D_r)` ⟹ (3) is EFX, `r` improves | **inequality suffices** — common safety + the threshold |
+| `ADJACENT:135-157`, (4)-(5) | `v_p(B) < tau_p(D_r)`; the three PI-compatible cycles exclude `p,q,s` as sources | **inequality suffices** — structural (BCFF Def 3.4) |
+| `ADJACENT:166-175` | `v_p(D_r)>tau_p(D_r)>v_p(B)>=tau_p(B)` | **inequality suffices** — monotone + non-degenerate *(pass 1)* |
+| `ADJACENT:190-212`, (7)-(9) | `v_r(R)>=tau_r(D_p)`; else `v_r(A)<tau_r(D_p)<=b_r`, so `A` is not `r`-sourced | **inequality suffices** — `tau_r(D_p) <= b_r` is common safety of `D_p` |
+| `ADJACENT:214-224`, (10) | `v_r(D_p)>tau_r(D_p)>v_r(A)>=tau_r(A)` | **inequality suffices** *(pass 1)* |
+| `ADJACENT:226-243`, (11)-(12) | `q`- and `s`-sourced `A` give EFX escapes; "the same inequality (9) checks `r` against `A`" | **inequality suffices** |
+| **`ADJACENT:270-303`, Theorem 2, (14)-(15)** | `delta_p=b_p-v_p(D_p\H)`, `delta_r=b_r-v_r(B\H)`; "if `v_p(H_p)>delta_p` … then `D'_p=(D_p\H)+H_p` … would be desired by `p`" | **GENUINELY ADDITIVE** — confirmed, unchanged from pass 1. The step is the additive identity `v_p((D_p\H) ∪ H_p) = v_p(D_p\H) + v_p(H_p)`; the two sides share no common part, so neither C1 nor C2 applies. **Not load-bearing:** ":317-319 Theorem 2 was the intermediate contraction that isolated the five hard types. The next theorem closes them without having to solve the quota wall directly." It closes no priority order |
+| `ADJACENT:291` | "would remain common-safe by **downward closure**" (the other half of the same step) | **inequality suffices — monotonicity alone**, by the same argument as `TWO_SAFE_BUNDLE:(1)` *(pass 1)* |
+| `ADJACENT:331-352`, (16) | safe-repartition lemma: `R` desired by `r`, `Q` common-safe, `v_q(Q)>=tau_q(R)` ⟹ (16) EFX, `p,s` fixed, `r` improves | **inequality suffices** — common safety covers every observer but `q`; `q`'s comparison *is* condition 3; `Y_p=X_p`, `Y_s=X_s` |
+| `ADJACENT:369-371` | "positivity gives `v_r(U)>b_r`, so an inclusion-minimal subset of `U` that crosses some agent's base is desired" | **inequality suffices** — `B_q≠∅`, monotone + non-degenerate |
+| `ADJACENT:373-388`, (17)-(18) | the two extraction branches | **inequality suffices** |
+| `ADJACENT:390-401`, (19) | `v_q(D_r)>tau_q(D_r)>v_q(A)>tau_q(A)` | **inequality suffices** — monotone + non-degenerate (the final `>` needs `A≠∅`) |
+| `ADJACENT:420-425` | "Positivity is used **only** for `v_r(U)>b_r` and for the strict total-versus-deletion inequalities in (19); nondegeneracy makes the selected envy/champion relations strict" | **inequality suffices** — an accurate, already-additivity-free self-audit of Theorem 3 |
+| `ADJACENT:427-455` | the A.1 provenance repair | correct as written; one-directional transfer, cancelable witness |
+| `ADJACENT_AUDIT:38`, `:54`, `:74` | reservoir-extraction premise rows quoting `v_q(W)=b_q+v_q(B_r)>b_q` and `v_r(U)=b_r+v_r(B_q)>b_r` | **inequality suffices** — decorative equalities carried into the audit table (S4) |
+| **`ADJACENT_AUDIT:67`** | "\| Downward closure of common safety under the quota split (14) \| **Additivity** and base EFX \| No \|" | **misattributed (S6).** Downward closure needs **monotonicity only**; what genuinely needs additivity in (14) is the quota arithmetic, not the closure. As written this is the only row in any of the three composition audits that names additivity as a derivation while answering "Hidden assumption? No" |
+
+## E. Cancelability-direction audit, second pass
+
+Systematic scan of all 14 in-closure files for `v(S)>v(T) => v(S∪R)>v(T∪R)` and for sums or
+differences of set values.
+
+Only three additivity-shaped displays exist in the entire alternating/adjacent closure:
+`RESERVOIR_EXCHANGE:81`, `DUAL_TRICHOTOMY:77` (both decorative, both swept in pass 1), and
+`ADJACENT:273-300` (Theorem 2, genuinely additive, superseded). **Zero reverse-cancelation
+uses.** The reason is structural: unlike the length-three normal form, the alternating and
+adjacent files take the champion decompositions as given hypotheses and never derive
+inequalities between `T_r` and `T_q`, so the C2 move never arises.
+
+## F. Two bookkeeping defects in the first pass's own repairs
+
+**F.1 — R6's range left `:2800-2911` unclassified, including a live additive-A.1 line.**
+`LENGTH_THREE_GLOBAL_LEX_TARGET.md` is now **2911 lines** (it was 2867 when pass 1 swept it;
+the R1-R8 repairs at `0325e01` added 44). My §4 heading and my §8 scope item 2 both say
+"lines 500-2800". That range statement is wrong at both ends of the problem: it excluded
+`:2800-2911` from the stated classification, and that tail contains the "Nonnegative and tie
+wrapper" at `:2890-2906`, whose lines `:2894-2895` still read
+
+> "Apply BCFF Lemma A.1 to replace the original **nice additive** profile by a nondegenerate
+> **additive** profile that respects every strict comparison of the original."
+
+That is precisely finding 7(a) of `BCFF_IMPORT_AUDIT_20260816.md` — A.1 supplies a *cancelable*
+witness, not an additive one — still live in the document, in a section that is **not**
+superseded proof-mining. Pass 1 read those lines and quoted the wrapper in its §4, but never
+gave it a verdict row and never put it on the repair list. Correct disposition: the wrapper is
+**"inequality suffices"** as mathematics (the argument only needs a respecting nondegenerate
+witness, which is exactly what A.1 gives), and the words "nice additive"/"additive profile"
+should read "nice cancelable"/"nondegenerate cancelable profile" (S8).
+
+**F.2 — R8's pin `2848-2850` is stale.** The corrected pin is `:2894-2895`. Two files carry the
+stale pin: `BCFF_IMPORT_AUDIT_20260816.md:53` and `LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md:108`
+(S9). Both are pointing at real text; only the line numbers drifted, by the 44+2 lines the
+R1-R8 commit inserted above them.
+
+## G. Recommended repairs (second pass; reported, not applied)
+
+| | File:line | Fix |
+|---|---|---|
+| S1 | `ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md:31-35` | **Highest priority.** Add the `tau` definition. The file uses `tau` five times, closes 4 of the 24 orders, and defines it nowhere — the same defect class the gate caught, in its "unstated" rather than "misstated" form. Its uses are all consistent with max-deletion (verified above at `:88-90`, `:100-102`, `:106-112`), so the fix is additive-free |
+| S2 | `ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md:34`, `ADJACENT_LARGE:147,148,287` | LaTeX: `qquad` → `\qquad` (missing backslash, renders as literal text); `ADJACENT_LARGE:277` `dotcup` → `\dotcup`; `ALTERNATING_ROOT_FLIP_LEMMA.md:106-108` display (9) is missing its closing `\]` |
+| S3 | `ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md`, `ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md`, `ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md`, `ADJACENT_BCFF_COMPOSITION_AUDIT.md` | Add a one-line "conventions" pointer naming the max-deletion `tau`, so no file uses the symbol without a resolvable definition |
+| S4 | `RESERVOIR_EXCHANGE:81`, `DUAL_TRICHOTOMY:77`, `ADJACENT_LARGE:53-55`, `ADJACENT_AUDIT:38,54` | Same as R2, extended to the alternating/adjacent branch: `v_r(U)=b_r+v_r(B_q)>b_r` → `v_r(U)>v_r(X_r)=b_r` (and the `W` mirror) |
+| S5 | `ALTERNATING_ROOT_FLIP_LEMMA.md:110,116` | "nonnegativity and (8)" → "monotonicity and (8)"; likewise for (9). The lemma's own summary at :147 already says monotonicity |
+| S6 | `ADJACENT_BCFF_COMPOSITION_AUDIT.md:67` | Split the row: downward closure of common safety ← **monotonicity**; the quota arithmetic of (14) ← **additivity**, and mark that half superseded by Theorem 3 |
+| S7 | `ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md:149` | "Positive additivity makes every offer … still less valuable" → "Monotonicity makes …". The profile itself stays additive; it is a witness |
+| S8 | `LENGTH_THREE_GLOBAL_LEX_TARGET.md:2894-2895` | "the original nice additive profile … a nondegenerate additive profile" → "the original nice cancelable profile … a nondegenerate cancelable profile". **This is the last live instance of the A.1 additivity drift in the load-bearing corpus** |
+| S9 | `BCFF_IMPORT_AUDIT_20260816.md:53`, `LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md:108` | Re-pin `2848-2850` → `2894-2895` |
+| S10 | this file, §4 heading and §8 item 2 | "lines 500-2800" → "lines 500-2889 (proof-mining history) and 2890-2906 (the tie wrapper, classified separately at F.1)" |
+| S11 | `ALTERNATING_EASY_PRIORITY_ESCAPE_LEMMA.md:4` | **The one remaining "additive" scope line in the load-bearing cover.** "four additive agents" → "four normalized monotone agents" (nice cancelable after A.1). Its proof uses only `v(∅)=0` and nonnegativity |
+
+## H. Scope-line disposition, every in-closure file
+
+| File | Current scope/status line | Disposition under the widening |
+|---|---|---|
+| `ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md:5` | "cap-free analytic theorem under the normalized positive alternating premises" | **OK as written** — "normalized positive" is monotone + non-degenerate |
+| `ALTERNATING_EASY_PRIORITY_ESCAPE_LEMMA.md:4` | "**four additive agents**, arbitrary top/bottom bundle sizes …" | **NEEDS FIX (S11)** — inherited framing, not a consumed hypothesis |
+| `ALTERNATING_ROOT_FLIP_LEMMA.md:5` | "**normalized monotone valuations**; arbitrary packet sizes" | **Already correct** — the model for the others |
+| `ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md:5` | "cap-free analytic theorem" (hypothesis 3 at :30: "values are positive") | **OK as written** |
+| `ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md:4` | "cap-free analytic reduction and cap-free safe-pair existence theorem" | **OK as written** (post-`418f324`) |
+| `ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md:5` | "cap-free analytic escape theorem; strict same-offer refinement open" | **OK as written**; add the `tau` definition (S1) |
+| `ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md:4` | "**positive additive** valuations, four agents, two two-good large bundles …" | **Keep additive** — this is a counterexample witness; narrowing the class strengthens it. Add one clause noting the enumeration (3)-(4) is class-independent |
+| `ALTERNATING_EXTERNAL_OBSERVER_RESOLUTION_20260809.md:5` | "all eight hard orders classified; surviving pair proved cap-free" | **OK as written** |
+| `ALTERNATING_BCFF_COMPOSITION_AUDIT.md` | no class scope line; premise rows cite "A.1 + standing monotonicity" | **OK as written** |
+| `ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md:4` | "all 24 priority orders closed analytically for arbitrary packet sizes" (:47 "strictly positive valuations") | **OK as written**; Theorem 2 should carry an explicit additivity hypothesis |
+| `ADJACENT_BCFF_COMPOSITION_AUDIT.md` | no class scope line | **OK**, except row :67 (S6) |
+| `ALTERNATING_TWO_SAFE_BUNDLE_BINARY_THEOREM.md:4-5` | "exact bounded theorem, superseded …; Cell `(2,2,2,2)`" | **Keep additive** — bounded solver result, self-declared superseded |
+| `ALTERNATING_GLOBAL_LEX_ATOMIC_THEOREM.md:5` | "**positive additive** valuations, bundle shape `2+2+1+1`" | **Keep additive** — bounded atom; only its rival-quantifier definition is cited |
+| `ADAPTIVE_ROOT_ORDER_BRIDGE_REFUTATION_20260809.md:8` | "**four positive additive** agents … strict alternating seven-good atom" | **Keep additive** — refutation witness |
+
+## I. Second-pass verdict
+
+> **The nice-cancelable widening STANDS.** No blocking sites in the complete 24-order
+> dependency closure of all four case theorems.
+
+- **New genuinely-additive load-bearing sites: none.**
+- Genuinely additive material in the closure remains exactly where pass 1 put it: adjacent
+  Theorem 2 (intermediate, closes no order, superseded by the additivity-free Theorem 3), the
+  superseded region of `LENGTH_THREE_GLOBAL_LEX_TARGET.md`, and three bounded/witness artifacts
+  whose additive scope is correct for what they are.
+- The `418f324` `tau` repair is confirmed **necessary, not cosmetic**: it is what makes the
+  downward-closure claim at `TWO_SAFE_BUNDLE_REDUCTION:35` provable outside the additive class.
+- One defect of the same class remains open: `ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md` uses
+  `tau` five times, closes four orders, and never defines it (S1). Its uses are verified
+  consistent with max-deletion, so this is a statement gap, not a proof gap.
+- S1-S11 should land before the Theorem heading is quoted at nice-cancelable generality. S8 is
+  the substantive one — the last live A.1 additivity drift in the load-bearing corpus.
+
+## J. Second-pass scope statement
+
+1. **Swept line-by-line:** the 11 load-bearing files of §B.1-B.2 in full, plus the 3
+   cited-not-load-bearing files of §B.3 for classification. 14 files, ~2,700 lines.
+2. **Verified out-of-closure by citation search, not assumed:** the 11 files of §B.4, including
+   the two the task named; the evidence for those two is given in §B.4 (cited only by the index,
+   the roadmap, and the three-nonsingleton target, and both self-identify as GG-flower work).
+3. **Convention checking is now per-file and as-found.** No symbol was normalized across files.
+   Where a file uses `tau` without defining it, that is recorded as a defect rather than
+   silently resolved against a sibling.
+4. **Not re-derived:** BCFF's own lemmas (unchanged from pass 1); the frozen JSON audits and
+   solver cores, which are corroboration and are additive by construction in every case.
+5. **What this still does not establish:** the correctness of the four case theorems. Both
+   passes determine which valuation hypotheses their proofs consume, not whether the proofs are
+   right. The outstanding independent referee check on the length-two BCFF Theorem 3.16
+   interface is untouched.
