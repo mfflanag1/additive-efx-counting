@@ -5,6 +5,26 @@
 **Status:** cap-free analytic selector across every hard flower cell;
 dependency closure remains open
 
+
+*Convention note 2026-08-16 (`tau`).* This file uses `tau` **without defining it** (inherited). Its displayed use,
+`tau_q(D_r) = v_q(T_q)` at (2), is phrased in the additive "minimum good" idiom;
+the constraint map records that this identity also holds under the max-deletion
+reading, via the cancelable biconditional C2.
+
+The two forms coincide **only under additivity**: for additive `v`,
+`max_{g in Z} v(Z\{g}) = v(Z) - min_{g in Z} v(g)`, but for a merely monotone
+cancelable `v` they are different functionals. Composing this file with one that
+uses the other form is therefore sound only inside the additive class, where this
+rung currently sits. The rung's live conflict —
+`FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810` and
+`FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810` (additive form) against
+`CROSS_STAR_HOLE_PIVOT_LEMMA_20260811` (max-deletion) — is recorded at section 8,
+item 2 of
+[`THREE_NONSINGLETON_CANCELABLE_CONSTRAINT_MAP_20260816.md`](THREE_NONSINGLETON_CANCELABLE_CONSTRAINT_MAP_20260816.md).
+Nothing is broken today; the banner exists so the conflict cannot hide when the
+rung's proofs are composed. **Labeling only**: no definition and no step in this
+file is changed.
+
 ## Statement
 
 Work in the representative full-`X_q` flower cell with priority

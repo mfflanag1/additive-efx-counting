@@ -153,6 +153,23 @@ but not consumed by the file's own conclusion.
 `tau` column records the convention **as found**. "unused" = the symbol never appears;
 "inherited" = used without definition.
 
+*Convention note 2026-08-16.* The eleven files that use `tau` now each carry a dated
+convention banner declaring which form they use (defect 8.1/8.2 below, made visible rather
+than repaired). The banners are inserted after each file's header block, so **line pins in
+this inventory for those eleven files predate them and are low by the banner length (18-21
+lines, per file)**. Equation tags, section names and the verdicts are unaffected. The eleven:
+`THREE_NONSINGLETON_CYCLE_CENSUS_AND_FLOWER_REDUCTION_20260809`,
+`FLOWER_LATER_OWNER_SINGLE_REPLACEMENT_SELECTOR_LEMMA_20260810`,
+`FLOWER_MINIMAL_PAYMENT_RESIDUAL_ROTATION_LEMMA_20260810`,
+`FLOWER_RESIDUAL_WALL_PAYMENT_POLARITY_LEMMA_20260810`,
+`CROSS_STAR_HOLE_PIVOT_LEMMA_20260811`,
+`PACKET_REPLACEMENT_COMPLEMENT_RETURN_LEMMA_20260810`,
+`LEX_SACRIFICED_RESPONSE_COMPRESSION_LEMMA_20260811`,
+`ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811`,
+`LEX_ROOTED_OWNER_CHARITY_DONATION_OBSTRUCTION_LEMMA_20260810`,
+`CHARITY_ROOTED_HUB_SPLIT_OBSTRUCTION_LEMMA_20260810`,
+`GENERAL_TRANSFER_COMPONENT_HYBRID_WALL_LEMMA`.
+
 ### 5.1 Seeds and architecture
 
 | File | `tau` | Scope line (verbatim) | Verdict |
