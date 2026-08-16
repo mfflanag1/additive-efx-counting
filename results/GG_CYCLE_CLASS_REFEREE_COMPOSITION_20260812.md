@@ -7,7 +7,7 @@ referee round returned GAP FOUND on the floor-reset/supplier-star closure
 acceptable-leaf list at lines 76-78). `T_{L,times}^*` is NOT closed; the live
 GG terminals are `T_0^* dot-union T_{L,perp}^* dot-union T_{L,times}^*`
 (the last conditional on repairing the floor-reset admissibility). See
-`TLX_CLOSURE_REFEREE_REPORT_20260816.md`.
+[`TLX_CLOSURE_REFEREE_REPORT_20260816.md`](TLX_CLOSURE_REFEREE_REPORT_20260816.md).
 
 **Collision-resolution update (2026-08-14, superseded above).** The previously open
 `T_{L,times}^*` collision component is closed by the strict first-priority

@@ -3,8 +3,8 @@
 **Date:** 2026-08-16
 
 **Status:** *Referee repair 2026-08-16* — written to close gap G4 of the
-referee report `TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`
-(currently on `codex/efx-breakthrough-next-20260802`), which identified the
+referee report
+[`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md), which identified the
 absence of an alternating premise table as the reason the packet
 nondegeneracy gap G1 went unnoticed.  Format mirrors
 [`LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md`](LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md).
@@ -164,11 +164,12 @@ records this as its single real drift).
    carry lexicographic maximality, the one-charity normal form, or the
    champion graph — all of which are defined *inside* the perturbed profile,
    which is exactly why the argument is legitimate.  The correct in-corpus
-   statement of this is `ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`, lines
-   276--281 ("Their Appendix A perturbation is sufficient for existence
+   statement of this is
+   [`ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`](ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md),
+   lines 276--281 ("Their Appendix A perturbation is sufficient for existence
    theorems but does not automatically preserve a designated tied maximal
-   state or its selected champion graph"); that file is on
-   `codex/efx-breakthrough-next-20260802`, see gap G5.
+   state or its selected champion graph").  *G5 consolidation 2026-08-16*: that file is
+   now co-resident on this branch and the citation is a live link.
 
 None of this reopens the conditional status of the composition: everything is
 defined inside the perturbed profile and only the final EFX allocation

@@ -2,7 +2,7 @@
 
 Internal adversarial referee round, independent session, no shared context with the proving
 sessions. Companion to the same-day T_{L,×} report
-(`TLX_CLOSURE_REFEREE_REPORT_20260816.md` on `codex/efx-gg-cycle-referee-20260812`).
+[`TLX_CLOSURE_REFEREE_REPORT_20260816.md`](TLX_CLOSURE_REFEREE_REPORT_20260816.md).
 
 **VERDICT: GAP FOUND — repairable; no counterexample; not yet externally quotable.**
 Architecture sound. Case exhaustiveness survived brute force; the generalized-PI interface
@@ -72,10 +72,16 @@ length-two closes the internal-edge alternative and Def 3.9 is clause-checked in
 ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md:245-256. Needs one human check against
 arXiv:2102.10654. Length-two cites zero computational evidence.
 
-**G5 (LOW-MEDIUM): version fragmentation.** Main checkout carries the OLDER 149-line
-length-two theorem (asserts external edges outright, lacks internal-edge exclusion); the
-repaired 159-line version exists only on the three later branches. Composition branch has
-only 2 of 13 adjacent_large_*.json artifacts + one dangling audit link.
+**G5 (LOW-MEDIUM): version fragmentation. — CLOSED, *G5 consolidation 2026-08-16*.**
+As found: main checkout carried the OLDER 149-line length-two theorem (asserts external
+edges outright, lacks internal-edge exclusion), the repaired 159-line version existed only
+on the three later branches, and the composition branch had only 2 of 13
+adjacent_large_*.json artifacts plus one dangling audit link. Closed by branch
+`cc/consolidation-20260816`, which merges `codex/efx-breakthrough-next-20260802` into the
+repaired referee corpus. `ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`, this report, the
+companion T_{L,×} report and `PRIORITY_SWEEP_20260816.md` are now co-resident with the
+repaired documents, and every cross-branch citation that had been rendered as inline code
+with a branch caveat is now a live relative link.
 
 **G6 (LOW): ledger overclaims.** "exact packet audit replays all 24 indexed cases" —
 the packet audit models bundles as two reals (no set membership/disjointness); the

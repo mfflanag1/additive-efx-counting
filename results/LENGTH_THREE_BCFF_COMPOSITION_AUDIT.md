@@ -98,9 +98,9 @@ Section-2 citation below is coherent only under the full arXiv build.
    carry lexicographic maximality, the one-charity normal form, or the
    champion graph — all of which are defined *inside* the perturbed profile,
    which is exactly why the argument is legitimate.  The correct in-corpus
-   statement of this is `ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`, lines
-   276--281; that file is on `codex/efx-breakthrough-next-20260802`, see gap
-   G5.
+   statement of this is
+   [`ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`](ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md),
+   lines 276--281.
 
 Related wording to fix outside this audit: the "Nonnegative and tie wrapper"
 of

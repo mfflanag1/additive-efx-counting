@@ -138,8 +138,8 @@ present theorem does not revive the refuted candidate in any of those orders
 and does not by itself prove complete additive EFX.
 
 > *Correction, referee repair 2026-08-16* (gap G3 of the referee report
-> `TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
-> `codex/efx-breakthrough-next-20260802`).  The paragraph above previously
+> [`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md)).
+> The paragraph above previously
 > read that the trichotomy covers only `(p,s,q,r)` and `(s,p,r,q)`, "leaving
 > `(p,q,s,r)` and `(s,r,p,q)`".  That sentence was stale and contradicted
 > both

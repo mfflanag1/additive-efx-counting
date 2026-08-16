@@ -34,8 +34,8 @@ generalized champion families are absent. Then `X` is not globally
 lexicographically maximal among partial EFX allocations.
 
 *Referee repair 2026-08-16* (gaps G1 and G2 of
-`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
-`codex/efx-breakthrough-next-20260802`).  Three changes were made to this
+[`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md)).
+Three changes were made to this
 statement.
 
 1. **Positivity and nonempty bottoms are now explicit.** They were used

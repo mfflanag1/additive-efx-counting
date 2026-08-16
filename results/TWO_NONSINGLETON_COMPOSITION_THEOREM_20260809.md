@@ -50,11 +50,19 @@ therefore no longer conjectural at nice-cancelable generality.
 What remains are the standing external gates, unchanged by any of this work
 and none of them specific to the widening: the human check of the BCFF
 Theorem 3.16 / Definition 3.9 interface against
-[arXiv:2102.10654](https://arxiv.org/abs/2102.10654), the G5 branch
-consolidation, and genuine external review. Correctness of the four case
-theorems themselves is likewise untouched — both sweeps determine which
-valuation hypotheses their proofs consume, not whether those proofs are
-right.
+[arXiv:2102.10654](https://arxiv.org/abs/2102.10654), and genuine external
+review. Correctness of the four case theorems themselves is likewise
+untouched — both sweeps determine which valuation hypotheses their proofs
+consume, not whether those proofs are right.
+
+*G5 consolidation 2026-08-16.* The third gate listed here until now, the G5
+branch consolidation, is **closed** by branch `cc/consolidation-20260816`,
+which merges `codex/efx-breakthrough-next-20260802` into the repaired referee
+corpus. Every document this composition cites is now co-resident, so the
+cross-branch citations carried as inline code with a branch caveat have been
+converted to live relative links; see the G5 item of
+[`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md).
+No mathematical content changed.
 
 *Provenance.* This paragraph supersedes the interim downgrade added at
 `418f324`, which read "the nice-cancelable Theorem is NOT yet quotable; the
@@ -143,8 +151,8 @@ the theorem.
 ## Packet nondegeneracy
 
 *Referee repair 2026-08-16* (closes gap G1 of the referee report
-`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
-`codex/efx-breakthrough-next-20260802`).  Items 1, 3 and 4 require the top
+[`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md)).
+Items 1, 3 and 4 require the top
 and bottom packets of the two nonsingleton bundles to be nonempty; only the
 length-three branch discharged this, in
 [`LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md`](LENGTH_THREE_BCFF_COMPOSITION_AUDIT.md)
@@ -188,11 +196,10 @@ order, contradicting the global lexicographic maximality of `X`.  (In the
 one-charity normal form `Y` is in fact complete; that is not needed here,
 since maximality is taken over all partial EFX allocations, of which the
 complete ones are a special case.)  This is the "clean direct
-absorption" of `ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`, line 239, and the
-same self-`f`-champion route the length-three audit takes through BCFF
-Observation 2.10.  (That file is not yet on this branch; it currently lives
-on `codex/efx-breakthrough-next-20260802`, one instance of the version
-fragmentation recorded as gap G5.)
+absorption" of
+[`ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`](ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md),
+line 239, and the same self-`f`-champion route the length-three audit takes
+through BCFF Observation 2.10.
 
 **(b) The top packet is nonempty.**  Suppose `T` is empty.  Then the selected
 desired set is `D={f}`, so its source strictly prefers the lone charity good

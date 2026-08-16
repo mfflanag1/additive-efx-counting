@@ -9,7 +9,8 @@ _20260814.md:44-49` and `RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CONTRACT
 _20260813.md:102-103`; and the supporting audit scripts verify provenance,
 not content. The nonroot-holder branch is unaffected. Status is downgraded to
 **conditionally closed on admissibility of the controlled floor reset**. Do
-not quote externally. Full report: `TLX_CLOSURE_REFEREE_REPORT_20260816.md`.
+not quote externally. Full report:
+[`TLX_CLOSURE_REFEREE_REPORT_20260816.md`](TLX_CLOSURE_REFEREE_REPORT_20260816.md).
 
 **Model-check update (2026-08-16, later same day).** The successor-state model
 checker (`TLX_SUCCESSOR_MODEL_CHECK_20260816.md`, 233,030 instances / 35.9M

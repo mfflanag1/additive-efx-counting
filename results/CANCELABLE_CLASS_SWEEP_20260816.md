@@ -378,10 +378,15 @@ or bookkeeping, and none blocks the widening.
 
 Transitive citation closure from eight seeds (the four case theorems, the three BCFF composition
 audits, and the composition theorem), chasing every `*.md` reference in every reached file.
-Raw closure: 30 nodes, 27 present in this worktree (3 dangling — `ONE_LARGE_CHAMPION_CLOSURE_
-REDUCTION.md` and `TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md` live on
-`codex/efx-breakthrough-next-20260802`, gap G5; `REDUCTION.md` is a line-wrap artifact of the
+Raw closure: 30 nodes, 27 present in the worktree at sweep time (3 dangling —
+[`ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`](ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md) and
+[`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md) lived on
+`codex/efx-breakthrough-next-20260802`, gap G5; `REDUCTION.md` was a line-wrap artifact of the
 first, not a real file).
+
+*G5 consolidation 2026-08-16*: both files are now co-resident on `cc/consolidation-20260816`, so the
+closure has no dangling nodes and the two citations above are live links. The counts are left
+as the sweep found them.
 
 Citation closure is not dependency closure: a file may be cited as superseded history,
 corroboration, or a counterexample witness. Each reached file is therefore classified as

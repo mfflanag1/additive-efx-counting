@@ -39,8 +39,8 @@ and their respective sources strictly prefer them to their base bundles.
 ## Standing hypotheses
 
 *Referee repair 2026-08-16* (gap G1 of the referee report
-`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
-`codex/efx-breakthrough-next-20260802`).  Theorems 1--3 below are stated for
+[`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`](TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md)).
+Theorems 1--3 below are stated for
 a PI-free adjacent-large state satisfying, in addition to the normal form
 above:
 
@@ -444,8 +444,9 @@ transfer `EFX(v') => EFX(v)`.  Three corrections follow.
    allocation** — not global lexicographic maximality, not the one-charity
    normal form, not the selected champion graph.  Those are defined inside
    the perturbed profile, which is exactly what makes the argument sound; the
-   correct in-corpus statement is `ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`,
-   lines 276--281 (that file is on `codex/efx-breakthrough-next-20260802`).
+   correct in-corpus statement is
+   [`ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md`](ONE_LARGE_CHAMPION_CLOSURE_REDUCTION.md),
+   lines 276--281.
    Extending this normal form verbatim to tied nonnegative profiles would
    need an explicit state-preserving tie wrapper, which is not claimed here.
 
