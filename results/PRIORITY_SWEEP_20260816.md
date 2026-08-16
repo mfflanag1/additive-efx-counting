@@ -35,8 +35,12 @@ still v1. Cite 2607.27455 (R(d) < ed) for the rainbow-cycle closure.
 ## Chores: tri-valued m <= 11 theorem STILL NOVEL — GO
 
 No collision found. He-Tao 2606.08872 still v2 (two citations, both 2026-08-11, both
-non-colliding). Independent attestation the 3-agent cell is open: Hosseini-Khurana-Pathak-
-Vaish 2608.10397 (2026-08-11). Nearest-sounding rival Lin-Wu-Zhou "restricted additive"
+non-colliding). CORRECTION (2026-08-16, caught during paper drafting): Hosseini-Khurana-
+Pathak-Vaish 2608.10397 does NOT state the 3-agent cell is open — its abstract gives
+approximation schemes (goods; 3-agent chores) and submodular impossibilities, plus
+EFX∨MMS for two-type additive chores. Cite it as concurrent Aug-2026 activity on the cell;
+the explicit openness statement is He-Tao §6, verified verbatim: "It is open whether an
+EFX allocation always exists for three agents." Nearest-sounding rival Lin-Wu-Zhou "restricted additive"
 (2603.17270) is a different model (c_i(e) in {0, c(e)}), no overlap.
 
 FRAMING LAW for the writeup: KMS m <= 2n already covers m <= 6 at n=3, and n=3
