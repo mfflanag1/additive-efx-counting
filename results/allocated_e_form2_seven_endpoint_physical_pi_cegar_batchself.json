@@ -1,0 +1,178 @@
+{
+  "batch_all_model_self_pi": true,
+  "claim_boundary": "Exact CEGAR over physically realizable one/two-good refinements of the twelve named pieces. It separates every generalized PI over physical subgoods. Terminal SAT without PI refutes the seven-endpoint selector only; a full theorem countermodel would additionally require no unrestricted four-edge EFX allocation and every saturation premise.",
+  "core_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "dynamic_physical_subpacket_pi_cut_count": 48,
+  "elapsed_seconds": 270.2845497080125,
+  "endpoint_count": 7,
+  "iterations": [
+    {
+      "batch_self_pi_count": 4,
+      "first_physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.0"
+          ]
+        ]
+      ],
+      "fresh_batch_self_pi_cut_count": 4,
+      "iteration": 0,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "singleton",
+        "gr": "singleton",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 18,
+      "solver_status": "sat"
+    },
+    {
+      "batch_self_pi_count": 6,
+      "first_physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.1"
+          ]
+        ]
+      ],
+      "fresh_batch_self_pi_cut_count": 6,
+      "iteration": 1,
+      "packet_cardinality_class": {
+        "a0": "singleton",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "singleton",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_self_pi_count": 15,
+      "first_physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.1",
+            "gr.1"
+          ]
+        ]
+      ],
+      "fresh_batch_self_pi_cut_count": 15,
+      "iteration": 2,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "singleton",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_self_pi_count": 14,
+      "first_physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.1",
+            "m.1"
+          ]
+        ]
+      ],
+      "fresh_batch_self_pi_cut_count": 14,
+      "iteration": 3,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 21,
+      "solver_status": "sat"
+    },
+    {
+      "batch_self_pi_count": 9,
+      "first_physical_pi_signature": [
+        [
+          "q",
+          [
+            "gq.1",
+            "gr.1"
+          ]
+        ]
+      ],
+      "fresh_batch_self_pi_cut_count": 9,
+      "iteration": 4,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 21,
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 5,
+      "reason_unknown": "canceled",
+      "solver_status": "unknown"
+    }
+  ],
+  "maximum_iterations": 500,
+  "physical_subpacket_pi_cut_count": 48,
+  "preseed_all_self_pi": false,
+  "preseeded_self_pi_cut_count": 0,
+  "random_seed": 99991,
+  "schema": "allocated-e-seven-endpoint-physical-subpacket-pi-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "edb826b75211019d1acc777fe0ae6af263eba13f8ef9ceda890bac0608c8c392",
+  "status": "UNKNOWN",
+  "timeout_seconds_per_check": 900,
+  "whole_packet_pi_clause_count": 425
+}

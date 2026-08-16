@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "capture_strictly_exceeds_positive_half_floor_slack": "unsat",
+    "failed_complement_payment_forces_exact_capture": "unsat",
+    "proper_root_complement_is_full_value_base_safe": "unsat"
+  },
+  "claim_boundary": "Cap-free exact split/capture fork. It does not compress two root recipient edges into the four-edge endpoint, prove safety of the enlarged W+R target, or finish complete EFX.",
+  "schema": "half-floor-root-complement-or-capture-audit-v1",
+  "solver": "Z3 5.0.0",
+  "source": "tracks/parkability/audit_half_floor_root_complement_or_capture.py",
+  "source_sha256": "cc5fa620e0797346c383a494631a47790aba2aad6d8b433f65d2464faced2f2d",
+  "theorem": "results/HALF_FLOOR_ROOT_COMPLEMENT_OR_CAPTURE_LEMMA_20260813.md",
+  "theorem_sha256": "03e123cc51accf0b568aa7dc60187e21c2d5e02c9485086d641f73139dddeb7b"
+}

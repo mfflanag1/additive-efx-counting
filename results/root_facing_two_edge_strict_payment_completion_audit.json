@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "W_plus_H_strictly_pays_d": true,
+    "atom_conservation": true,
+    "charity_empty": true,
+    "every_owner_nonempty": true,
+    "exactly_two_edges": true,
+    "functional_on_suppliers": true,
+    "represented_owners_strictly_paid": true,
+    "restoration_cancellation_gives_J_above_Gq": true,
+    "safe_Q_tail_dominates_J_plus_KminusJ": true
+  },
+  "claim_boundary": "exact conditional strict-payment/conservation lemma assuming both the named X_d=H+(K-J)+Gq provenance identity and a nonempty Q\\K residual; these hold in the twelve-atom cell but are not universal GG premises",
+  "final": {
+    "charity": [],
+    "d": [
+      "H",
+      "W"
+    ],
+    "q": [
+      "Q"
+    ],
+    "r": [
+      "A"
+    ],
+    "s": [
+      "E",
+      "p"
+    ]
+  },
+  "initial": {
+    "charity": [
+      "p"
+    ],
+    "d": [
+      "W"
+    ],
+    "q": [
+      "Q"
+    ],
+    "r": [
+      "A",
+      "H"
+    ],
+    "s": [
+      "E"
+    ]
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_root_facing_two_edge_strict_payment_completion.py",
+    "script_sha256": "1ca91ac94f68fbab00010e1b7613feceee2d54520376d2e2f2593c76cbeed9ef",
+    "theorem": "results/ROOT_FACING_TWO_EDGE_STRICT_PAYMENT_COMPLETION_LEMMA_20260813.md",
+    "theorem_sha256": "5404acdf1ed340bdda2569986480a7ffe13ebdd77e83982c22159191a1f11217",
+    "z3_version": "5.0.0"
+  },
+  "schema": "root-facing-two-edge-strict-payment-completion-v1",
+  "status": "NAMED_PROVENANCE_PROPER_RESIDUAL_TWO_EDGE_PAYMENT_VERIFIED",
+  "transfer_edges": [
+    [
+      "charity",
+      "s"
+    ],
+    [
+      "r",
+      "d"
+    ]
+  ]
+}

@@ -1,0 +1,277 @@
+{
+  "cap_free_reason": "each D and R atom represents an arbitrary finite physical packet; the proof uses only disjointness, nonemptiness, and conservation",
+  "claim_boundary": "cap-free conservation and graph lemma conditional on disjoint shared-target cores and the endpoint payment/safety inequalities; it does not derive those conditions from saturation and is not the universal four-edge extraction theorem",
+  "exact_remaining_gate": "derive two disjoint response/payment cores inside the shared q target, or repair their overlap while preserving the four support-edge budget; then establish the owner-payment and observer-safety inequalities",
+  "normal_form_count": 3,
+  "provenance": {
+    "script": "tracks/parkability/audit_rank_three_disjoint_double_core_four_edge.py",
+    "script_sha256": "ec778513da7039fab4d643430c01f00d6b1f08da0f81b60767d62773c2956bbc",
+    "theorem": "results/RANK_THREE_DISJOINT_DOUBLE_CORE_COMPLETE_FOUR_EDGE_LEMMA_20260813.md",
+    "theorem_sha256": "299dfe2a2528e8cf8798e934d615350881fffc6e61a60490a3d8e30068d44002"
+  },
+  "records": [
+    {
+      "checks": {
+        "all_four_sources_receive_one_desired_core": true,
+        "atom_conservation": true,
+        "charity_is_empty": true,
+        "construction_is_not_functional": true,
+        "exactly_four_support_edges": true,
+        "q_must_supply_two_recipients": true,
+        "shared_q_cores_are_distinct_atoms": true,
+        "transfer_graph_connected": true
+      },
+      "final_atoms": {
+        "c": [
+          "D[c->q]",
+          "R[c]"
+        ],
+        "charity": [],
+        "q": [
+          "D[q->charity]",
+          "R[q]"
+        ],
+        "r": [
+          "D[r->q]",
+          "R[r]"
+        ],
+        "s": [
+          "D[s->r]",
+          "R[s]"
+        ]
+      },
+      "initial_atoms": {
+        "c": [
+          "R[c]"
+        ],
+        "charity": [
+          "D[q->charity]"
+        ],
+        "q": [
+          "D[c->q]",
+          "D[r->q]",
+          "R[q]"
+        ],
+        "r": [
+          "D[s->r]",
+          "R[r]"
+        ],
+        "s": [
+          "R[s]"
+        ]
+      },
+      "response_edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "c"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "all_four_sources_receive_one_desired_core": true,
+        "atom_conservation": true,
+        "charity_is_empty": true,
+        "construction_is_not_functional": true,
+        "exactly_four_support_edges": true,
+        "q_must_supply_two_recipients": true,
+        "shared_q_cores_are_distinct_atoms": true,
+        "transfer_graph_connected": true
+      },
+      "final_atoms": {
+        "c": [
+          "D[c->q]",
+          "R[c]"
+        ],
+        "charity": [],
+        "q": [
+          "D[q->charity]",
+          "R[q]"
+        ],
+        "r": [
+          "D[r->q]",
+          "R[r]"
+        ],
+        "s": [
+          "D[s->c]",
+          "R[s]"
+        ]
+      },
+      "initial_atoms": {
+        "c": [
+          "D[s->c]",
+          "R[c]"
+        ],
+        "charity": [
+          "D[q->charity]"
+        ],
+        "q": [
+          "D[c->q]",
+          "D[r->q]",
+          "R[q]"
+        ],
+        "r": [
+          "R[r]"
+        ],
+        "s": [
+          "R[s]"
+        ]
+      },
+      "response_edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "c"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "c",
+          "s"
+        ],
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "c"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "all_four_sources_receive_one_desired_core": true,
+        "atom_conservation": true,
+        "charity_is_empty": true,
+        "construction_is_not_functional": true,
+        "exactly_four_support_edges": true,
+        "q_must_supply_two_recipients": true,
+        "shared_q_cores_are_distinct_atoms": true,
+        "transfer_graph_connected": true
+      },
+      "final_atoms": {
+        "c": [
+          "D[c->q]",
+          "R[c]"
+        ],
+        "charity": [],
+        "q": [
+          "D[q->s]",
+          "R[q]"
+        ],
+        "r": [
+          "D[r->q]",
+          "R[r]"
+        ],
+        "s": [
+          "D[s->charity]",
+          "R[s]"
+        ]
+      },
+      "initial_atoms": {
+        "c": [
+          "R[c]"
+        ],
+        "charity": [
+          "D[s->charity]"
+        ],
+        "q": [
+          "D[c->q]",
+          "D[r->q]",
+          "R[q]"
+        ],
+        "r": [
+          "R[r]"
+        ],
+        "s": [
+          "D[q->s]",
+          "R[s]"
+        ]
+      },
+      "response_edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "charity"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "c"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "rank-three-disjoint-double-core-four-edge-v1",
+  "status": "ALL_THREE_NORMAL_FORMS_CLOSE_CONDITIONALLY"
+}

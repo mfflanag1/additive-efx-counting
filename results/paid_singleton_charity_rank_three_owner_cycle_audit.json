@@ -1,0 +1,249 @@
+{
+  "checks": {
+    "base_safe_singleton_not_base_or_current_desired_by_paid_source": true,
+    "cycle_length_histogram": {
+      "2": 2,
+      "3": 2
+    },
+    "every_form_contains_owner_cycle": true,
+    "rank_three_matching_forms_checked": 4
+  },
+  "claim_boundary": "cap-free scalar and graph lemma conditional on a base-safe singleton charity token and paid represented sources; it does not constrain a sacrificed source below base and does not prove disjoint release packets or finish the four-edge complete-EFX theorem",
+  "exact_remaining_gate": "make one forced two- or three-owner cycle release-compatible; the only cap-free obstruction is physical core overlap/full-margin capture or an outside supplier label",
+  "provenance": {
+    "script": "tracks/parkability/audit_paid_singleton_charity_rank_three_owner_cycle.py",
+    "script_sha256": "94bd869c1aef8b92f3bdd58c774a23536def60fe1ff88c6cc7e0b9b5d22fa007",
+    "theorem": "results/PAID_SINGLETON_CHARITY_RANK_THREE_OWNER_CYCLE_LEMMA_20260813.md",
+    "theorem_sha256": "db021e9396bb376da60b92f704c65e7b9afa8fdaf9dc8e5adcdfd5433466316c",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "all_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "owner_cycles": [
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "root_facing_edge": [
+        "d",
+        "q"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "shortest_cycle_length": 2,
+      "strong_wall_response_edge": [
+        "d",
+        "r"
+      ]
+    },
+    {
+      "all_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "owner_cycles": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "q",
+          "r"
+        ]
+      ],
+      "root_facing_edge": [
+        "d",
+        "q"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "shortest_cycle_length": 2,
+      "strong_wall_response_edge": [
+        "d",
+        "r"
+      ]
+    },
+    {
+      "all_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "owner_cycles": [
+        [
+          "q",
+          "r",
+          "s"
+        ]
+      ],
+      "root_facing_edge": [
+        "d",
+        "q"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "shortest_cycle_length": 3,
+      "strong_wall_response_edge": [
+        "d",
+        "r"
+      ]
+    },
+    {
+      "all_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "owner_cycles": [
+        [
+          "d",
+          "q",
+          "r",
+          "s"
+        ],
+        [
+          "d",
+          "q",
+          "s"
+        ]
+      ],
+      "root_facing_edge": [
+        "d",
+        "q"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "shortest_cycle_length": 3,
+      "strong_wall_response_edge": [
+        "d",
+        "r"
+      ]
+    }
+  ],
+  "schema": "paid-singleton-charity-rank-three-owner-cycle-v1",
+  "status": "PAID_SOURCE_CHARITY_RESPONSE_EXCLUDED_AND_FIVE_EDGE_CYCLE_FORCED"
+}

@@ -1,0 +1,4930 @@
+{
+  "claim_boundary": "Assumption-level core for the bounded allocated-E R2 exclusion. A raw/minimized SMT core is an analytic candidate, not by itself a cap-free proof.",
+  "core": [
+    {
+      "index": 11,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "k",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "h",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "h"
+            ],
+            "incoming": [
+              "h"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 18,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "l"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "l"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 97,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "j"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "e"
+            ],
+            "incoming": [
+              "e"
+            ],
+            "released": [
+              "a1",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 143,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "r",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "k"
+            ],
+            "incoming": [
+              "a0",
+              "k"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "m"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 984,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "m"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 986,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 989,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "p"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "p"
+            ],
+            "incoming": [
+              "p"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1117,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j"
+            ],
+            "source": "s",
+            "target": "q"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1439,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "m"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1824,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "a1",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "l"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "s",
+            "target": "q"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1828,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "a1",
+            "gr"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "s",
+            "target": "q"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1931,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "l",
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 1997,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2053,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2054,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "j",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "j",
+              "m"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2055,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2056,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "p"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "p"
+            ],
+            "incoming": [
+              "p"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2058,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2059,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2064,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ],
+        [
+          "s",
+          [
+            "a0",
+            "gq"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2276,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ],
+        [
+          "s",
+          [
+            "h",
+            "k",
+            "l",
+            "q0"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "a0",
+              "j"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "incoming": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2283,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "k",
+              "q0",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "a0",
+              "j"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2312,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "e",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "q0"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "k",
+              "e"
+            ],
+            "incoming": [
+              "e"
+            ],
+            "released": [
+              "h",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "a0",
+              "j"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "q0",
+              "m"
+            ],
+            "incoming": [
+              "q0"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2544,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "k"
+            ],
+            "incoming": [
+              "a0",
+              "k"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "m"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2629,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "e"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2633,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 2985,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a1",
+            "e"
+          ]
+        ],
+        [
+          "r",
+          [
+            "h",
+            "k",
+            "l",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "incoming": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "e"
+            ],
+            "incoming": [
+              "a1",
+              "e"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "a0",
+              "j"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3107,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "a0",
+              "j"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 3777,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "gq"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "a1",
+              "j"
+            ],
+            "source": "s",
+            "target": "q"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4100,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "e"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "e"
+            ],
+            "incoming": [
+              "e"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "a0",
+              "j"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4228,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "h"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4631,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "q0",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "h",
+              "k",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "k"
+            ],
+            "incoming": [
+              "k"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4657,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "m"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "gr"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "m"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4672,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "h",
+            "k",
+            "l",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "gr"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "j"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4717,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "gr",
+              "p"
+            ],
+            "incoming": [
+              "gr",
+              "p"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "r",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "k"
+            ],
+            "incoming": [
+              "a0",
+              "k"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4821,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "m",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "m",
+              "p"
+            ],
+            "incoming": [
+              "m",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 4824,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "gr",
+              "p"
+            ],
+            "incoming": [
+              "gr",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 5566,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "e"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "p"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "e"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "p"
+            ],
+            "incoming": [
+              "p"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 5617,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "gq",
+            "h"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "h",
+              "gq"
+            ],
+            "incoming": [
+              "a0",
+              "h",
+              "gq"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 6513,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "gr",
+              "p"
+            ],
+            "incoming": [
+              "gr",
+              "p"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 8158,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "h"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "gq"
+            ],
+            "incoming": [
+              "l",
+              "gq"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 8698,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 8701,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 10446,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 11158,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "gq"
+            ],
+            "incoming": [
+              "l",
+              "gq"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 11364,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "gq",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 12112,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "m",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "m",
+              "p"
+            ],
+            "incoming": [
+              "m",
+              "p"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "e"
+            ],
+            "incoming": [
+              "l",
+              "e"
+            ],
+            "released": [
+              "a0",
+              "m"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 12568,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [],
+            "released": [],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 13098,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "h"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 13496,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "p"
+            ],
+            "incoming": [
+              "e",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "h"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 13994,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "gq"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          }
+        ]
+      }
+    },
+    {
+      "index": 14198,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "witness": {
+        "cycle": [
+          "r",
+          "q",
+          "d",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "e",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a0",
+              "a1"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          },
+          {
+            "desired_core": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "incoming": [
+              "j",
+              "k",
+              "q0"
+            ],
+            "released": [
+              "e",
+              "p"
+            ],
+            "source": "d",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "l",
+              "m",
+              "gq"
+            ],
+            "incoming": [
+              "l",
+              "gq"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "s",
+            "target": "r"
+          }
+        ]
+      }
+    }
+  ],
+  "core_count": 53,
+  "full_cut_count": 14249,
+  "random_seed": 6211,
+  "schema": "allocated-e-form0-pi-unsat-core-v1",
+  "solver": "Z3 5.0.0",
+  "source_code_sha256": "87ba18c836f7c8b965e80da2d26ec55b56268db282d8ef7bb285ec9595fe185b",
+  "source_sha256": "3d61cba5e1df9a49731bcc6f17c52057e65d25a5b52ec7f6d4cb5b2d0d3e2b13",
+  "status": "unsat",
+  "timeout_seconds": 1800
+}

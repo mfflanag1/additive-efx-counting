@@ -1,0 +1,8187 @@
+{
+  "base": {
+    "c": [
+      "c0",
+      "c1",
+      "c2",
+      "c3"
+    ],
+    "charity": [
+      "f"
+    ],
+    "q": [
+      "q0",
+      "q1",
+      "q2"
+    ],
+    "r": [
+      "r0",
+      "r1"
+    ],
+    "s": [
+      "s0"
+    ]
+  },
+  "claim_boundary": "exact eleven-good global root-coordinate decision for one minimal rank-three two-hole response normal form; SAT would establish a root-maximal positive-additive local obstruction, not the complete fixed-U packet premises or an EFX counterexample",
+  "current": {
+    "c": [
+      "q1"
+    ],
+    "charity": [
+      "r1",
+      "c3"
+    ],
+    "q": [
+      "q0",
+      "r0",
+      "c0"
+    ],
+    "r": [
+      "c1",
+      "c2",
+      "f"
+    ],
+    "s": [
+      "s0",
+      "q2"
+    ]
+  },
+  "expected_current_walls": [
+    [
+      "c",
+      "q"
+    ],
+    [
+      "q",
+      "charity"
+    ],
+    [
+      "r",
+      "q"
+    ],
+    [
+      "s",
+      "r"
+    ]
+  ],
+  "goods": [
+    "r0",
+    "r1",
+    "q0",
+    "q1",
+    "q2",
+    "c0",
+    "c1",
+    "c2",
+    "c3",
+    "s0",
+    "f"
+  ],
+  "improvement_objective": "root-strict",
+  "iterations": [
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 0,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 1,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 2,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 3,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "f",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 4,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 5,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c3",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 6,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 7,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 8,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 9,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q2"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 10,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 11,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 12,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 13,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 14,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 15,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c3",
+          "s0"
+        ]
+      },
+      "iteration": 16,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 17,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "c2",
+          "c3"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 18,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "c3",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 19,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q2",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 20,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 21,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 22,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 23,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 24,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 25,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 26,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 27,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 28,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 29,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 30,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "c3",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 31,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "f"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 32,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 33,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "f"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 34,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 35,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 36,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 37,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 38,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "c2",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 39,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 40,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 41,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "f"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q1",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 42,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 43,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 44,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 45,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 46,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 47,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 48,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 49,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c3",
+          "s0"
+        ]
+      },
+      "iteration": 50,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q1"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 51,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q1",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 52,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 53,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 54,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 55,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 56,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q2"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 57,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 58,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c2",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 59,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 60,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 61,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c1",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 62,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 63,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 64,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 65,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "q2"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 66,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 67,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 68,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q2",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "s0"
+        ]
+      },
+      "iteration": 69,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 70,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "c3",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 71,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 72,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 73,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 74,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 75,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q1",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 76,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 77,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 78,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 79,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 80,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2",
+          "r1"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 81,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 82,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 83,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 84,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 85,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 86,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 87,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 88,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c3",
+          "q1",
+          "s0"
+        ]
+      },
+      "iteration": 89,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 90,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 91,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 92,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "s0"
+        ]
+      },
+      "iteration": 93,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 94,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 95,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 96,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 97,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 98,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "f"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 99,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r1"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 100,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 101,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c3",
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 102,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 103,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 104,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 105,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 106,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 107,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c3",
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 108,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 109,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "c3",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 110,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 111,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1",
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 112,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "c3",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 113,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 114,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 115,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "q2",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 116,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 117,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 118,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "s0"
+        ],
+        "s": [
+          "f",
+          "q2"
+        ]
+      },
+      "iteration": 119,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "q1",
+          "s0"
+        ]
+      },
+      "iteration": 120,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "s0"
+        ],
+        "s": [
+          "c1",
+          "q2"
+        ]
+      },
+      "iteration": 121,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "s0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "r0"
+        ]
+      },
+      "iteration": 122,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 123,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3",
+          "q0"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 124,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 125,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 126,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "q2"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 127,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 128,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 129,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "f"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 130,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 131,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "q2",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 132,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 133,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c2"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 134,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 135,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 136,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 137,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 138,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 139,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 140,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 141,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 142,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "r": [
+          "c1",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 143,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 144,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "s0"
+        ]
+      },
+      "iteration": 145,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "s0"
+        ]
+      },
+      "iteration": 146,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 147,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "f",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 148,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 149,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 150,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 151,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 152,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 153,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 154,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 155,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 156,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 157,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 158,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 159,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c0",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 160,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 161,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 162,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 163,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 164,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 165,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "c3",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 166,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "c3",
+          "f"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "q1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 167,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "f"
+        ],
+        "charity": [
+          "c2",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "q1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 168,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 169,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 170,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 171,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q1",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 172,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 173,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 174,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 175,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c2",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 176,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r0",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 177,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 178,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 179,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "q2",
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c3",
+          "s0"
+        ]
+      },
+      "iteration": 180,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r1"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 181,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 182,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 183,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c0",
+          "c3"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 184,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 185,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 186,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "f"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 187,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 188,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 189,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 190,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r1"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 191,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 192,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 193,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 194,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 195,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 196,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 197,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 198,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 199,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 200,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 201,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "q0"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 202,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "s0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "f",
+          "q2"
+        ]
+      },
+      "iteration": 203,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "q0"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 204,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "q1",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 205,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 206,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 207,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "r1"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 208,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "q2",
+          "r1"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 209,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 210,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 211,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q1"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 212,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 213,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c2"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 214,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 215,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 216,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "f"
+        ],
+        "r": [
+          "c1",
+          "q0",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 217,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "q1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 218,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 219,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 220,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "s0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "r1"
+        ],
+        "s": [
+          "c1",
+          "c2",
+          "q2"
+        ]
+      },
+      "iteration": 221,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 222,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 223,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 224,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r0"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 225,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "r0"
+        ],
+        "s": [
+          "f",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 226,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 227,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r0"
+        ],
+        "q": [
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 228,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "f",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 229,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 230,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3",
+          "q0"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 231,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "c3",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 232,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r0"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 233,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c1",
+          "s0"
+        ]
+      },
+      "iteration": 234,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c0",
+          "c3"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 235,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1"
+        ],
+        "charity": [
+          "r0"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 236,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 237,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "r0",
+          "s0"
+        ]
+      },
+      "iteration": 238,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "f"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 239,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 240,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c0",
+          "c3"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 241,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 242,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 243,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 244,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c1",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r1"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 245,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 246,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c2",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 247,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c0",
+          "c3"
+        ],
+        "q": [
+          "c2",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 248,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "s0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "r1"
+        ],
+        "s": [
+          "c1",
+          "q2"
+        ]
+      },
+      "iteration": 249,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 250,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "c3",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 251,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 252,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "q0",
+          "r1"
+        ],
+        "q": [
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 253,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 254,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c0",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 255,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 256,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 257,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 258,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "c1",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 259,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 260,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "q2"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 261,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 262,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3",
+          "r0"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 263,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 264,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r0"
+        ],
+        "q": [
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 265,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "r0"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c3",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 266,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2",
+          "r0"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 267,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 268,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "c2",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 269,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "r0"
+        ],
+        "s": [
+          "c2",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 270,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2",
+          "r1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "s0"
+        ]
+      },
+      "iteration": 271,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "c0",
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 272,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "q0",
+          "s0"
+        ]
+      },
+      "iteration": 273,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "f",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 274,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 275,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q2",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 276,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q0"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 277,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "f",
+          "r0"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 278,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 279,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 280,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c0",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 281,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 282,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "f"
+        ],
+        "q": [
+          "c0",
+          "r1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 283,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c3",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 284,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c0",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 285,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c1",
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q2"
+        ],
+        "s": [
+          "c3",
+          "s0"
+        ]
+      },
+      "iteration": 286,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q2"
+        ],
+        "s": [
+          "c3",
+          "f",
+          "s0"
+        ]
+      },
+      "iteration": 287,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q1",
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 288,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "c2",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "f",
+          "q2"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 289,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 290,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "r0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "f",
+          "q0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 291,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c1",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c0",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 292,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "c0",
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 293,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "c1",
+          "q0",
+          "q2"
+        ],
+        "r": [
+          "c2",
+          "f"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 294,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "q1",
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "f",
+          "q2"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "q0"
+        ],
+        "s": [
+          "s0"
+        ]
+      },
+      "iteration": 295,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c0",
+          "c1",
+          "q1"
+        ],
+        "charity": [
+          "c2",
+          "r1"
+        ],
+        "q": [
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 296,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "r0"
+        ],
+        "charity": [
+          "c3",
+          "q2"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "q1"
+        ],
+        "r": [
+          "c1",
+          "c2",
+          "f"
+        ],
+        "s": [
+          "r1",
+          "s0"
+        ]
+      },
+      "iteration": 297,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "f",
+          "q1"
+        ],
+        "charity": [
+          "c3"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r1"
+        ],
+        "r": [
+          "c2",
+          "r0"
+        ],
+        "s": [
+          "c1",
+          "q2",
+          "s0"
+        ]
+      },
+      "iteration": 298,
+      "master_status": "sat"
+    },
+    {
+      "blocking_efx_lex_allocation": {
+        "c": [
+          "c1",
+          "q1",
+          "q2"
+        ],
+        "charity": [
+          "r1"
+        ],
+        "q": [
+          "c0",
+          "q0",
+          "r0"
+        ],
+        "r": [
+          "c3",
+          "f"
+        ],
+        "s": [
+          "c2",
+          "s0"
+        ]
+      },
+      "iteration": 299,
+      "master_status": "sat"
+    }
+  ],
+  "oracle_policy": "minimum-moved-goods-from-current",
+  "schema": "rank-three-global-root-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "status": "iteration_limit"
+}

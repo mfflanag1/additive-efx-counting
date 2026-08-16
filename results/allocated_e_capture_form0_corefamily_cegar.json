@@ -1,0 +1,572 @@
+{
+  "allocation_count": 0,
+  "base": {
+    "charity": [
+      "gr"
+    ],
+    "d": [
+      "h",
+      "k",
+      "q0",
+      "l"
+    ],
+    "q": [
+      "gq",
+      "a1",
+      "j"
+    ],
+    "r": [
+      "a0",
+      "m"
+    ],
+    "s": [
+      "e",
+      "p"
+    ]
+  },
+  "claim_boundary": "Exact twelve-good allocated-E captured-support cell with complete ordinary and generalized self-PI exclusions plus iterative cuts for every canonical generalized PI cycle found. Any result is a bounded-atom theorem or counterprofile, not the cap-free theorem.",
+  "e_external_supplier": "d",
+  "elapsed_seconds": 47.38562854198972,
+  "form_index": 0,
+  "generalized_pi_cut_count": 508,
+  "iterations": [
+    {
+      "fresh_cut_count": 9,
+      "iteration": 0,
+      "minimal_common_safe_desired_counts": {
+        "d": 22,
+        "q": 19,
+        "r": 10,
+        "s": 26
+      },
+      "pi_cycle_count": 17,
+      "pi_witnesses": [
+        {
+          "cycle": [
+            "d",
+            "r"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "h",
+                "q0"
+              ],
+              "source": "r",
+              "target": "d"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "d",
+            "q"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "j",
+                "k"
+              ],
+              "incoming": [
+                "k"
+              ],
+              "released": [
+                "gq"
+              ],
+              "source": "d",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "q",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "a1"
+              ],
+              "released": [],
+              "source": "q",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "gq",
+                "gr"
+              ],
+              "incoming": [
+                "gr"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "s",
+              "target": "q"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "d",
+            "r",
+            "q"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "a1"
+              ],
+              "incoming": [
+                "a1"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l"
+              ],
+              "incoming": [
+                "l"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "m"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "q",
+            "r",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a1",
+                "e",
+                "p"
+              ],
+              "incoming": [
+                "a1",
+                "e",
+                "p"
+              ],
+              "released": [
+                "a0",
+                "m"
+              ],
+              "source": "q",
+              "target": "r"
+            },
+            {
+              "desired_core": [
+                "a0",
+                "j"
+              ],
+              "incoming": [
+                "a0",
+                "j"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "r",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "m",
+                "gq"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "a1",
+                "j"
+              ],
+              "source": "s",
+              "target": "q"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "d",
+            "r",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "h"
+              ],
+              "incoming": [
+                "h"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            },
+            {
+              "desired_core": [
+                "k",
+                "l",
+                "gr"
+              ],
+              "incoming": [
+                "k",
+                "l",
+                "gr"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "r",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "e"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "s",
+              "target": "d"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "d",
+            "q",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "e",
+                "gr"
+              ],
+              "incoming": [
+                "e",
+                "gr"
+              ],
+              "released": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "source": "d",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "a1",
+                "q0"
+              ],
+              "incoming": [
+                "a1",
+                "q0"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "q",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "gq"
+              ],
+              "incoming": [
+                "gq"
+              ],
+              "released": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "s",
+              "target": "d"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "d",
+            "r",
+            "q",
+            "s"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "a1"
+              ],
+              "incoming": [
+                "a1"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l"
+              ],
+              "incoming": [
+                "l"
+              ],
+              "released": [
+                "a1",
+                "gq"
+              ],
+              "source": "r",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "e"
+              ],
+              "incoming": [
+                "q0"
+              ],
+              "released": [
+                "p"
+              ],
+              "source": "q",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "m"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "k",
+                "q0",
+                "l"
+              ],
+              "source": "s",
+              "target": "d"
+            }
+          ]
+        },
+        {
+          "cycle": [
+            "d",
+            "r",
+            "s",
+            "q"
+          ],
+          "edges": [
+            {
+              "desired_core": [
+                "a0",
+                "a1"
+              ],
+              "incoming": [
+                "a1"
+              ],
+              "released": [
+                "m"
+              ],
+              "source": "d",
+              "target": "r"
+            },
+            {
+              "desired_core": [
+                "j",
+                "l"
+              ],
+              "incoming": [
+                "j",
+                "l"
+              ],
+              "released": [
+                "e",
+                "p"
+              ],
+              "source": "r",
+              "target": "s"
+            },
+            {
+              "desired_core": [
+                "h",
+                "e"
+              ],
+              "incoming": [
+                "h",
+                "e"
+              ],
+              "released": [
+                "a1",
+                "j",
+                "gq"
+              ],
+              "source": "s",
+              "target": "q"
+            },
+            {
+              "desired_core": [
+                "q0",
+                "m"
+              ],
+              "incoming": [
+                "m"
+              ],
+              "released": [
+                "h",
+                "k",
+                "l"
+              ],
+              "source": "q",
+              "target": "d"
+            }
+          ]
+        }
+      ],
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 1,
+      "reason_unknown": "canceled",
+      "solver_status": "unknown"
+    }
+  ],
+  "maximum_iterations": 300,
+  "negate_named_selector": false,
+  "random_seed": 3109,
+  "resume": {
+    "loaded_cut_count": 499,
+    "source": "results/allocated_e_capture_form0_capture_master_cegar.json",
+    "source_sha256": "0bbb3f6af158589088fad5434278e9442e9c41248529fb632bee8b76a44767aa"
+  },
+  "schema": "allocated-e-capture-rank-three-generalized-pi-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "c4e8c25c5c6ad25defb9b06957139e0e3fcea41a73cbc44fa5f4f6c4d69ced35",
+  "status": "UNKNOWN",
+  "support": {
+    "charity": [
+      "p"
+    ],
+    "d": [
+      "m",
+      "gq",
+      "gr"
+    ],
+    "q": [
+      "j",
+      "k",
+      "q0"
+    ],
+    "r": [
+      "a0",
+      "a1",
+      "h"
+    ],
+    "s": [
+      "l",
+      "e"
+    ]
+  },
+  "timeout_seconds_per_check": 300
+}

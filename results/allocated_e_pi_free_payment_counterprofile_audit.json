@@ -1,0 +1,563 @@
+{
+  "audit_source": "tracks/parkability/audit_allocated_e_pi_free_payment_counterprofile.py",
+  "audit_source_sha256": "0b75a07ae324067e4384020dd583d2c05c5adeca005696391738929cfcaae8d4",
+  "claim_boundary": "Exact twelve-good R3 profile satisfying the declared allocated-E master and full generalized-PI-freeness. It refutes only the three canonical all-owner-base-payment topologies. It has 78 complete EFX allocations through at most four support edges, including two-edge witnesses, and is not a four-edge theorem countermodel.",
+  "distinct_efx_topology_count": 54,
+  "efx_count_by_edge_count": {
+    "2": 2,
+    "3": 12,
+    "4": 64
+  },
+  "fixed_master_replay": "sat",
+  "generalized_pi_family_count": 0,
+  "minimal_core_counts": {
+    "d": 15,
+    "q": 25,
+    "r": 14,
+    "s": 27
+  },
+  "minimum_efx_edge_count": 2,
+  "paid_matching_allocation_count_checked": 720,
+  "paid_matching_witness_count": 0,
+  "sample_efx_witnesses": [
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "h",
+          "p"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 2,
+      "edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "283/284",
+        "q": "143/142",
+        "r": "273/284",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "h",
+          "m",
+          "gq",
+          "gr",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "a1"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 2,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "70/71",
+        "q": "143/142",
+        "r": "287/284",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "h",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j",
+          "k",
+          "p"
+        ],
+        "r": [
+          "a0",
+          "q0"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "285/284",
+        "q": "285/284",
+        "r": "281/284",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "h",
+          "m",
+          "gq"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "gr",
+          "p"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "283/284",
+        "q": "143/142",
+        "r": "1",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "m",
+          "gq",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "h",
+          "gr"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "141/142",
+        "q": "143/142",
+        "r": "69/71",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "h",
+          "m",
+          "gq",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "gr"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "1",
+        "q": "143/142",
+        "r": "137/142",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "h",
+          "gq",
+          "gr",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "m"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "70/71",
+        "q": "143/142",
+        "r": "1",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0",
+          "h",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a1",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "281/284",
+        "q": "143/142",
+        "r": "137/142",
+        "s": "143/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "a1",
+          "h",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "l"
+        ],
+        "s": [
+          "e",
+          "p"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "utilities": {
+        "d": "285/284",
+        "q": "143/142",
+        "r": "1",
+        "s": "1"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "h",
+          "l",
+          "m",
+          "gq",
+          "gr",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "a1"
+        ],
+        "s": [
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "285/284",
+        "q": "143/142",
+        "r": "287/284",
+        "s": "141/142"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "h",
+          "l",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "a1"
+        ],
+        "s": [
+          "e",
+          "p"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "1",
+        "q": "143/142",
+        "r": "287/284",
+        "s": "1"
+      }
+    },
+    {
+      "allocation": {
+        "d": [
+          "l",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0"
+        ],
+        "r": [
+          "a0",
+          "h",
+          "p"
+        ],
+        "s": [
+          "a1",
+          "e"
+        ]
+      },
+      "edge_count": 3,
+      "edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "utilities": {
+        "d": "141/142",
+        "q": "143/142",
+        "r": "273/284",
+        "s": "145/142"
+      }
+    }
+  ],
+  "schema": "allocated-e-pi-free-payment-counterprofile-audit-v1",
+  "solver": "Z3 5.0.0",
+  "source": "results/allocated_e_form2_pi_payment_atom_cegar_continuation.json",
+  "source_sha256": "ff681bc887fb1aa5d940a9c710eed8028f918e742a7e9a2fa9452ce560998bff",
+  "status": "PAYMENT_MENU_REFUTED_FOUR_EDGE_EFX_SURVIVES",
+  "unrestricted_allocation_count_checked": 93480,
+  "unrestricted_efx_witness_count": 78
+}

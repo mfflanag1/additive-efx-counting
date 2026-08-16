@@ -1,0 +1,109 @@
+{
+  "base": {
+    "charity": [
+      "gr"
+    ],
+    "d": [
+      "h",
+      "k",
+      "q0",
+      "l"
+    ],
+    "q": [
+      "gq",
+      "a1",
+      "j"
+    ],
+    "r": [
+      "a0",
+      "m"
+    ],
+    "s": [
+      "e",
+      "p"
+    ]
+  },
+  "claim_boundary": "Exact twelve-good decision for full generalized-PI-freeness together with failure of every allocation in the three canonical paid near-perfect matching topologies. UNSAT is a bounded payment/PI dichotomy, not a cap-free theorem or EFX result.",
+  "elapsed_seconds": 900.0423809579806,
+  "form_index": 2,
+  "form_name": "R3_THREE_CYCLE",
+  "generalized_pi_cut_count": 28820,
+  "iterations": [
+    {
+      "iteration": 0,
+      "reason_unknown": "timeout",
+      "solver_status": "unknown"
+    }
+  ],
+  "maximum_families_per_round": 10000,
+  "maximum_iterations": 15,
+  "paid_matching_allocation_count": 720,
+  "paid_matching_topologies": [
+    [
+      [
+        "charity",
+        "s"
+      ],
+      [
+        "s",
+        "q"
+      ],
+      [
+        "q",
+        "r"
+      ],
+      [
+        "r",
+        "d"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "r"
+      ],
+      [
+        "r",
+        "s"
+      ],
+      [
+        "s",
+        "q"
+      ],
+      [
+        "q",
+        "d"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "d"
+      ],
+      [
+        "q",
+        "r"
+      ],
+      [
+        "s",
+        "q"
+      ],
+      [
+        "r",
+        "s"
+      ]
+    ]
+  ],
+  "random_seed": 9563,
+  "resume": {
+    "loaded_distinct_cut_count": 28820,
+    "recursive_chain_length": 1,
+    "source": "results/allocated_e_capture_form2_pairlinear_flattened_resume_v2.json",
+    "source_sha256": "d4d10f2dc7052c66c5e9f20b89e2781af51dbed1aab52dbbbc497bb56b5d79a6"
+  },
+  "schema": "allocated-e-pi-payment-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "3256da7ca5311bffea4c9f56f194f38cc626882ff7346c8a0dd874e7f0f98f88",
+  "status": "UNKNOWN",
+  "timeout_seconds_per_check": 900
+}

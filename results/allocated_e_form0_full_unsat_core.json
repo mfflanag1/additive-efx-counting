@@ -1,0 +1,1426 @@
+{
+  "base_assertion_count": 11635,
+  "claim_boundary": "Categorized SMT core for one bounded allocated-E R2 master. It is a proof-discovery artifact, not a cap-free theorem.",
+  "core": [
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (ite (<= (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r)\n                     aec_v_gq_r)\n                 (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r)\n                 aec_v_gq_r))\n      (a!14 (ite (<= (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q)\n                     aec_v_gq_q)\n                 (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q)\n                 aec_v_gq_q))\n      (a!15 (ite (<= (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d)\n                     aec_v_gq_d)\n                 (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d)\n                 aec_v_gq_d))\n      (a!16 (ite (<= (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s)\n                     aec_v_gq_s)\n                 (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s)\n                 aec_v_gq_s)))\n(let ((a!17 (and (> (+ aec_v_e_r aec_v_gr_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_l_s aec_v_m_s aec_v_gq_s) 1.0)\n                 (<= (- (+ aec_v_l_r aec_v_m_r aec_v_gq_r) a!13) 1.0)\n                 (<= (- (+ aec_v_l_q aec_v_m_q aec_v_gq_q) a!14) 1.0)\n                 (<= (- (+ aec_v_l_d aec_v_m_d aec_v_gq_d) a!15) 1.0)\n                 (<= (- (+ aec_v_l_s aec_v_m_s aec_v_gq_s) a!16) 1.0))))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 14198,
+      "position": 31,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_h_r)\n                  (ite (<= aec_v_a0_r aec_v_h_r) aec_v_a0_r aec_v_h_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_h_q)\n                  (ite (<= aec_v_a0_q aec_v_h_q) aec_v_a0_q aec_v_h_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_h_d)\n                  (ite (<= aec_v_a0_d aec_v_h_d) aec_v_a0_d aec_v_h_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_h_s)\n                  (ite (<= aec_v_a0_s aec_v_h_s) aec_v_a0_s aec_v_h_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                   (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_h_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 13496,
+      "position": 30,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_h_r)\n                  (ite (<= aec_v_a0_r aec_v_h_r) aec_v_a0_r aec_v_h_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_h_q)\n                  (ite (<= aec_v_a0_q aec_v_h_q) aec_v_a0_q aec_v_h_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_h_d)\n                  (ite (<= aec_v_a0_d aec_v_h_d) aec_v_a0_d aec_v_h_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_h_s)\n                  (ite (<= aec_v_a0_s aec_v_h_s) aec_v_a0_s aec_v_h_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                   (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_e_r aec_v_gr_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_h_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 13098,
+      "position": 29,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!6 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!7 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!8 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!9 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_e_q aec_v_p_q)\n                   (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_e_d aec_v_p_d)\n                   (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_e_s aec_v_p_s)\n                   (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n                1.0))\n      (a!13 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                   (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!5) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!6) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!7) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!8) 1.0)\n                 (> (+ aec_v_e_d aec_v_p_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 12568,
+      "position": 28,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                    aec_v_gr_r)\n                (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                aec_v_gr_r))\n      (a!10 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!11 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!12 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!13 (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!9) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!10) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!11) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!12) 1.0))))\n  (not a!13)))",
+      "kind": "higher_family",
+      "original_index": 11364,
+      "position": 27,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (<= (- (+ aec_v_l_r aec_v_gq_r)\n                   (ite (<= aec_v_l_r aec_v_gq_r) aec_v_l_r aec_v_gq_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_l_q aec_v_gq_q)\n                   (ite (<= aec_v_l_q aec_v_gq_q) aec_v_l_q aec_v_gq_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_l_d aec_v_gq_d)\n                   (ite (<= aec_v_l_d aec_v_gq_d) aec_v_l_d aec_v_gq_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_l_s aec_v_gq_s)\n                   (ite (<= aec_v_l_s aec_v_gq_s) aec_v_l_s aec_v_gq_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_e_r aec_v_gr_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_l_s aec_v_gq_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 11158,
+      "position": 26,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                  (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n  (not (and (> (+ aec_v_e_r aec_v_gr_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 10446,
+      "position": 25,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_gq_r aec_v_gr_r)\n                  (ite (<= aec_v_gq_r aec_v_gr_r) aec_v_gq_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_gq_q aec_v_gr_q)\n                   (ite (<= aec_v_gq_q aec_v_gr_q) aec_v_gq_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_gq_d aec_v_gr_d)\n                   (ite (<= aec_v_gq_d aec_v_gr_d) aec_v_gq_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_gq_s aec_v_gr_s)\n                   (ite (<= aec_v_gq_s aec_v_gr_s) aec_v_gq_s aec_v_gr_s))\n                1.0)))\n  (not (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_gq_s aec_v_gr_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 8701,
+      "position": 24,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                  (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n  (not (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 8698,
+      "position": 23,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_h_r)\n                  (ite (<= aec_v_a0_r aec_v_h_r) aec_v_a0_r aec_v_h_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_h_q)\n                  (ite (<= aec_v_a0_q aec_v_h_q) aec_v_a0_q aec_v_h_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_h_d)\n                  (ite (<= aec_v_a0_d aec_v_h_d) aec_v_a0_d aec_v_h_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_h_s)\n                  (ite (<= aec_v_a0_s aec_v_h_s) aec_v_a0_s aec_v_h_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (<= (- (+ aec_v_l_r aec_v_gq_r)\n                   (ite (<= aec_v_l_r aec_v_gq_r) aec_v_l_r aec_v_gq_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_l_q aec_v_gq_q)\n                   (ite (<= aec_v_l_q aec_v_gq_q) aec_v_l_q aec_v_gq_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_l_d aec_v_gq_d)\n                   (ite (<= aec_v_l_d aec_v_gq_d) aec_v_l_d aec_v_gq_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_l_s aec_v_gq_s)\n                   (ite (<= aec_v_l_s aec_v_gq_s) aec_v_l_s aec_v_gq_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_e_r aec_v_gr_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_h_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_l_s aec_v_gq_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 8158,
+      "position": 22,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_gr_r aec_v_p_r)\n                  (ite (<= aec_v_gr_r aec_v_p_r) aec_v_gr_r aec_v_p_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_gr_q aec_v_p_q)\n                  (ite (<= aec_v_gr_q aec_v_p_q) aec_v_gr_q aec_v_p_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_gr_d aec_v_p_d)\n                  (ite (<= aec_v_gr_d aec_v_p_d) aec_v_gr_d aec_v_p_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_gr_s aec_v_p_s)\n                  (ite (<= aec_v_gr_s aec_v_p_s) aec_v_gr_s aec_v_p_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (<= (- (+ aec_v_l_r aec_v_e_r)\n                   (ite (<= aec_v_l_r aec_v_e_r) aec_v_l_r aec_v_e_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_l_q aec_v_e_q)\n                   (ite (<= aec_v_l_q aec_v_e_q) aec_v_l_q aec_v_e_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_l_d aec_v_e_d)\n                   (ite (<= aec_v_l_d aec_v_e_d) aec_v_l_d aec_v_e_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_l_s aec_v_e_s)\n                   (ite (<= aec_v_l_s aec_v_e_s) aec_v_l_s aec_v_e_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_gr_q aec_v_p_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_l_s aec_v_e_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 6513,
+      "position": 21,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_gr_r aec_v_p_r)\n                  (ite (<= aec_v_gr_r aec_v_p_r) aec_v_gr_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_gr_q aec_v_p_q)\n                  (ite (<= aec_v_gr_q aec_v_p_q) aec_v_gr_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_gr_d aec_v_p_d)\n                  (ite (<= aec_v_gr_d aec_v_p_d) aec_v_gr_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_gr_s aec_v_p_s)\n                  (ite (<= aec_v_gr_s aec_v_p_s) aec_v_gr_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_k_r)\n                  (ite (<= aec_v_a0_r aec_v_k_r) aec_v_a0_r aec_v_k_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_k_q)\n                  (ite (<= aec_v_a0_q aec_v_k_q) aec_v_a0_q aec_v_k_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_k_d)\n                  (ite (<= aec_v_a0_d aec_v_k_d) aec_v_a0_d aec_v_k_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_k_s)\n                  (ite (<= aec_v_a0_s aec_v_k_s) aec_v_a0_s aec_v_k_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_l_r aec_v_e_r)\n                  (ite (<= aec_v_l_r aec_v_e_r) aec_v_l_r aec_v_e_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_l_q aec_v_e_q)\n                   (ite (<= aec_v_l_q aec_v_e_q) aec_v_l_q aec_v_e_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_l_d aec_v_e_d)\n                   (ite (<= aec_v_l_d aec_v_e_d) aec_v_l_d aec_v_e_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_l_s aec_v_e_s)\n                   (ite (<= aec_v_l_s aec_v_e_s) aec_v_l_s aec_v_e_s))\n                1.0)))\n  (not (and (> (+ aec_v_gr_r aec_v_p_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_a0_d aec_v_k_d) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_l_s aec_v_e_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 4717,
+      "position": 20,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a1_r aec_v_m_r)\n                  (ite (<= aec_v_a1_r aec_v_m_r) aec_v_a1_r aec_v_m_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a1_q aec_v_m_q)\n                  (ite (<= aec_v_a1_q aec_v_m_q) aec_v_a1_q aec_v_m_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a1_d aec_v_m_d)\n                  (ite (<= aec_v_a1_d aec_v_m_d) aec_v_a1_d aec_v_m_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a1_s aec_v_m_s)\n                  (ite (<= aec_v_a1_s aec_v_m_s) aec_v_a1_s aec_v_m_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_q0_r aec_v_gr_r)\n                  (ite (<= aec_v_q0_r aec_v_gr_r) aec_v_q0_r aec_v_gr_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_q0_q aec_v_gr_q)\n                  (ite (<= aec_v_q0_q aec_v_gr_q) aec_v_q0_q aec_v_gr_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_q0_d aec_v_gr_d)\n                  (ite (<= aec_v_q0_d aec_v_gr_d) aec_v_q0_d aec_v_gr_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_q0_s aec_v_gr_s)\n                  (ite (<= aec_v_q0_s aec_v_gr_s) aec_v_q0_s aec_v_gr_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_a0_r aec_v_k_r)\n                  (ite (<= aec_v_a0_r aec_v_k_r) aec_v_a0_r aec_v_k_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_a0_q aec_v_k_q)\n                   (ite (<= aec_v_a0_q aec_v_k_q) aec_v_a0_q aec_v_k_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_a0_d aec_v_k_d)\n                   (ite (<= aec_v_a0_d aec_v_k_d) aec_v_a0_d aec_v_k_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_a0_s aec_v_k_s)\n                   (ite (<= aec_v_a0_s aec_v_k_s) aec_v_a0_s aec_v_k_s))\n                1.0)))\n  (not (and (> (+ aec_v_a1_r aec_v_m_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_q0_q aec_v_gr_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_a0_d aec_v_k_d) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 4631,
+      "position": 19,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_h_r)\n                  (ite (<= aec_v_a0_r aec_v_h_r) aec_v_a0_r aec_v_h_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_h_q)\n                  (ite (<= aec_v_a0_q aec_v_h_q) aec_v_a0_q aec_v_h_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_h_d)\n                  (ite (<= aec_v_a0_d aec_v_h_d) aec_v_a0_d aec_v_h_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_h_s)\n                  (ite (<= aec_v_a0_s aec_v_h_s) aec_v_a0_s aec_v_h_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!10 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!11 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!12 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s))\n      (a!13 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                     aec_v_gr_r)\n                 (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                 aec_v_gr_r))\n      (a!14 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!15 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!16 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!17 (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_h_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!9) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!10) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!11) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!12) 1.0)\n                 (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!13) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!14) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!15) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!16) 1.0))))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 4228,
+      "position": 18,
+      "signature": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a1_r aec_v_e_r)\n                  (ite (<= aec_v_a1_r aec_v_e_r) aec_v_a1_r aec_v_e_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a1_q aec_v_e_q)\n                  (ite (<= aec_v_a1_q aec_v_e_q) aec_v_a1_q aec_v_e_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a1_d aec_v_e_d)\n                  (ite (<= aec_v_a1_d aec_v_e_d) aec_v_a1_d aec_v_e_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a1_s aec_v_e_s)\n                  (ite (<= aec_v_a1_s aec_v_e_s) aec_v_a1_s aec_v_e_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_j_r)\n                  (ite (<= aec_v_a0_r aec_v_j_r) aec_v_a0_r aec_v_j_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_j_q)\n                  (ite (<= aec_v_a0_q aec_v_j_q) aec_v_a0_q aec_v_j_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_j_d)\n                  (ite (<= aec_v_a0_d aec_v_j_d) aec_v_a0_d aec_v_j_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_j_s)\n                  (ite (<= aec_v_a0_s aec_v_j_s) aec_v_a0_s aec_v_j_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                    aec_v_gr_r)\n                (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                aec_v_gr_r))\n      (a!10 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!11 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!12 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!13 (and (> (+ aec_v_a1_r aec_v_e_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_a0_q aec_v_j_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!9) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!10) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!11) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!12) 1.0))))\n  (not a!13)))",
+      "kind": "higher_family",
+      "original_index": 4100,
+      "position": 17,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "e"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!2 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!3 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!4 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_l_r aec_v_gq_r)\n                  (ite (<= aec_v_l_r aec_v_gq_r) aec_v_l_r aec_v_gq_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_l_q aec_v_gq_q)\n                   (ite (<= aec_v_l_q aec_v_gq_q) aec_v_l_q aec_v_gq_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_l_d aec_v_gq_d)\n                   (ite (<= aec_v_l_d aec_v_gq_d) aec_v_l_d aec_v_gq_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_l_s aec_v_gq_s)\n                   (ite (<= aec_v_l_s aec_v_gq_s) aec_v_l_s aec_v_gq_s))\n                1.0)))\n(let ((a!13 (and (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!1) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!2) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!3) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!4) 1.0)\n                 (> (+ aec_v_e_d aec_v_gr_d) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_l_s aec_v_gq_s) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12)))\n  (not a!13)))",
+      "kind": "higher_family",
+      "original_index": 3777,
+      "position": 16,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_j_r)\n                  (ite (<= aec_v_a0_r aec_v_j_r) aec_v_a0_r aec_v_j_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_j_q)\n                  (ite (<= aec_v_a0_q aec_v_j_q) aec_v_a0_q aec_v_j_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_j_d)\n                  (ite (<= aec_v_a0_d aec_v_j_d) aec_v_a0_d aec_v_j_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_j_s)\n                  (ite (<= aec_v_a0_s aec_v_j_s) aec_v_a0_s aec_v_j_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_gq_r aec_v_gr_r)\n                  (ite (<= aec_v_gq_r aec_v_gr_r) aec_v_gq_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_gq_q aec_v_gr_q)\n                   (ite (<= aec_v_gq_q aec_v_gr_q) aec_v_gq_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_gq_d aec_v_gr_d)\n                   (ite (<= aec_v_gq_d aec_v_gr_d) aec_v_gq_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_gq_s aec_v_gr_s)\n                   (ite (<= aec_v_gq_s aec_v_gr_s) aec_v_gq_s aec_v_gr_s))\n                1.0)))\n  (not (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_a0_q aec_v_j_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_gq_s aec_v_gr_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 3107,
+      "position": 15,
+      "signature": [
+        [
+          "q",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                    aec_v_gr_r)\n                (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                aec_v_gr_r))\n      (a!10 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!11 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!12 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!13 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_e_q aec_v_p_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!9) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!10) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!11) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!12) 1.0))))\n  (not a!13)))",
+      "kind": "higher_family",
+      "original_index": 2633,
+      "position": 14,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_j_r aec_v_e_r)\n                  (ite (<= aec_v_j_r aec_v_e_r) aec_v_j_r aec_v_e_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_j_q aec_v_e_q)\n                  (ite (<= aec_v_j_q aec_v_e_q) aec_v_j_q aec_v_e_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_j_d aec_v_e_d)\n                  (ite (<= aec_v_j_d aec_v_e_d) aec_v_j_d aec_v_e_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_j_s aec_v_e_s)\n                  (ite (<= aec_v_j_s aec_v_e_s) aec_v_j_s aec_v_e_s))\n               1.0))\n      (a!9 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                    aec_v_gr_r)\n                (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                aec_v_gr_r))\n      (a!10 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!11 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!12 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!13 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_e_q) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!9) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!10) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!11) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!12) 1.0))))\n  (not a!13)))",
+      "kind": "higher_family",
+      "original_index": 2629,
+      "position": 13,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a1_r aec_v_m_r)\n                  (ite (<= aec_v_a1_r aec_v_m_r) aec_v_a1_r aec_v_m_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a1_q aec_v_m_q)\n                  (ite (<= aec_v_a1_q aec_v_m_q) aec_v_a1_q aec_v_m_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a1_d aec_v_m_d)\n                  (ite (<= aec_v_a1_d aec_v_m_d) aec_v_a1_d aec_v_m_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a1_s aec_v_m_s)\n                  (ite (<= aec_v_a1_s aec_v_m_s) aec_v_a1_s aec_v_m_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_k_r aec_v_q0_r) aec_v_k_r aec_v_q0_r)\n                    aec_v_gr_r)\n                (ite (<= aec_v_k_r aec_v_q0_r) aec_v_k_r aec_v_q0_r)\n                aec_v_gr_r))\n      (a!6 (ite (<= (ite (<= aec_v_k_q aec_v_q0_q) aec_v_k_q aec_v_q0_q)\n                    aec_v_gr_q)\n                (ite (<= aec_v_k_q aec_v_q0_q) aec_v_k_q aec_v_q0_q)\n                aec_v_gr_q))\n      (a!7 (ite (<= (ite (<= aec_v_k_d aec_v_q0_d) aec_v_k_d aec_v_q0_d)\n                    aec_v_gr_d)\n                (ite (<= aec_v_k_d aec_v_q0_d) aec_v_k_d aec_v_q0_d)\n                aec_v_gr_d))\n      (a!8 (ite (<= (ite (<= aec_v_k_s aec_v_q0_s) aec_v_k_s aec_v_q0_s)\n                    aec_v_gr_s)\n                (ite (<= aec_v_k_s aec_v_q0_s) aec_v_k_s aec_v_q0_s)\n                aec_v_gr_s))\n      (a!9 (<= (- (+ aec_v_a0_r aec_v_j_r)\n                  (ite (<= aec_v_a0_r aec_v_j_r) aec_v_a0_r aec_v_j_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_a0_q aec_v_j_q)\n                   (ite (<= aec_v_a0_q aec_v_j_q) aec_v_a0_q aec_v_j_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_a0_d aec_v_j_d)\n                   (ite (<= aec_v_a0_d aec_v_j_d) aec_v_a0_d aec_v_j_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_a0_s aec_v_j_s)\n                   (ite (<= aec_v_a0_s aec_v_j_s) aec_v_a0_s aec_v_j_s))\n                1.0))\n      (a!13 (<= (- (+ aec_v_l_r aec_v_e_r)\n                   (ite (<= aec_v_l_r aec_v_e_r) aec_v_l_r aec_v_e_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_l_q aec_v_e_q)\n                   (ite (<= aec_v_l_q aec_v_e_q) aec_v_l_q aec_v_e_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_l_d aec_v_e_d)\n                   (ite (<= aec_v_l_d aec_v_e_d) aec_v_l_d aec_v_e_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_l_s aec_v_e_s)\n                   (ite (<= aec_v_l_s aec_v_e_s) aec_v_l_s aec_v_e_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_a1_r aec_v_m_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_k_q aec_v_q0_q aec_v_gr_q) 1.0)\n                 (<= (- (+ aec_v_k_r aec_v_q0_r aec_v_gr_r) a!5) 1.0)\n                 (<= (- (+ aec_v_k_q aec_v_q0_q aec_v_gr_q) a!6) 1.0)\n                 (<= (- (+ aec_v_k_d aec_v_q0_d aec_v_gr_d) a!7) 1.0)\n                 (<= (- (+ aec_v_k_s aec_v_q0_s aec_v_gr_s) a!8) 1.0)\n                 (> (+ aec_v_a0_d aec_v_j_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_l_s aec_v_e_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 2283,
+      "position": 12,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_m_r aec_v_gr_r)\n                  (ite (<= aec_v_m_r aec_v_gr_r) aec_v_m_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_m_q aec_v_gr_q)\n                   (ite (<= aec_v_m_q aec_v_gr_q) aec_v_m_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_m_d aec_v_gr_d)\n                   (ite (<= aec_v_m_d aec_v_gr_d) aec_v_m_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_m_s aec_v_gr_s)\n                   (ite (<= aec_v_m_s aec_v_gr_s) aec_v_m_s aec_v_gr_s))\n                1.0)))\n  (not (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_e_q aec_v_p_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_m_s aec_v_gr_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 2059,
+      "position": 11,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                  (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n  (not (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_e_q aec_v_p_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 2058,
+      "position": 10,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_m_r aec_v_p_r)\n                  (ite (<= aec_v_m_r aec_v_p_r) aec_v_m_r aec_v_p_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_m_q aec_v_p_q)\n                   (ite (<= aec_v_m_q aec_v_p_q) aec_v_m_q aec_v_p_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_m_d aec_v_p_d)\n                   (ite (<= aec_v_m_d aec_v_p_d) aec_v_m_d aec_v_p_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_m_s aec_v_p_s)\n                   (ite (<= aec_v_m_s aec_v_p_s) aec_v_m_s aec_v_p_s))\n                1.0)))\n  (not (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_e_q aec_v_gr_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_m_s aec_v_p_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 2056,
+      "position": 9,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "p"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                  (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n  (not (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_e_q aec_v_gr_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 2055,
+      "position": 8,
+      "signature": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!6 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!7 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!8 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!9 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_e_q aec_v_p_q)\n                   (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_e_d aec_v_p_d)\n                   (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_e_s aec_v_p_s)\n                   (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n                1.0))\n      (a!13 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                     aec_v_gr_r)\n                 (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                 aec_v_gr_r))\n      (a!14 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!15 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!16 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!5) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!6) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!7) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!8) 1.0)\n                 (> (+ aec_v_e_d aec_v_p_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!13) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!14) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!15) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!16) 1.0))))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 1997,
+      "position": 7,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!6 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!7 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!8 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!9 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                   (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                   (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                   (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n                1.0))\n      (a!13 (ite (<= (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r)\n                     aec_v_gq_r)\n                 (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r)\n                 aec_v_gq_r))\n      (a!14 (ite (<= (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q)\n                     aec_v_gq_q)\n                 (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q)\n                 aec_v_gq_q))\n      (a!15 (ite (<= (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d)\n                     aec_v_gq_d)\n                 (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d)\n                 aec_v_gq_d))\n      (a!16 (ite (<= (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s)\n                     aec_v_gq_s)\n                 (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s)\n                 aec_v_gq_s)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!5) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!6) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!7) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!8) 1.0)\n                 (> (+ aec_v_e_d aec_v_gr_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_l_s aec_v_m_s aec_v_gq_s) 1.0)\n                 (<= (- (+ aec_v_l_r aec_v_m_r aec_v_gq_r) a!13) 1.0)\n                 (<= (- (+ aec_v_l_q aec_v_m_q aec_v_gq_q) a!14) 1.0)\n                 (<= (- (+ aec_v_l_d aec_v_m_d aec_v_gq_d) a!15) 1.0)\n                 (<= (- (+ aec_v_l_s aec_v_m_s aec_v_gq_s) a!16) 1.0))))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 1931,
+      "position": 6,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!6 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!7 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!8 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!9 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_e_q aec_v_p_q)\n                   (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_e_d aec_v_p_d)\n                   (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_e_s aec_v_p_s)\n                   (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n                1.0))\n      (a!13 (<= (- (+ aec_v_l_r aec_v_m_r)\n                   (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_l_q aec_v_m_q)\n                   (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_l_d aec_v_m_d)\n                   (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_l_s aec_v_m_s)\n                   (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!5) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!6) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!7) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!8) 1.0)\n                 (> (+ aec_v_e_d aec_v_p_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_l_s aec_v_m_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 1439,
+      "position": 5,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!2 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!3 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!4 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!5 (<= (- (+ aec_v_e_r aec_v_p_r)\n                  (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_e_q aec_v_p_q)\n                  (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_e_d aec_v_p_d)\n                  (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_e_s aec_v_p_s)\n                  (ite (<= aec_v_e_s aec_v_p_s) aec_v_e_s aec_v_p_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_gq_r aec_v_gr_r)\n                  (ite (<= aec_v_gq_r aec_v_gr_r) aec_v_gq_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_gq_q aec_v_gr_q)\n                   (ite (<= aec_v_gq_q aec_v_gr_q) aec_v_gq_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_gq_d aec_v_gr_d)\n                   (ite (<= aec_v_gq_d aec_v_gr_d) aec_v_gq_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_gq_s aec_v_gr_s)\n                   (ite (<= aec_v_gq_s aec_v_gr_s) aec_v_gq_s aec_v_gr_s))\n                1.0)))\n(let ((a!13 (and (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!1) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!2) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!3) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!4) 1.0)\n                 (> (+ aec_v_e_d aec_v_p_d) 1.0)\n                 a!5\n                 a!6\n                 a!7\n                 a!8\n                 (> (+ aec_v_gq_s aec_v_gr_s) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12)))\n  (not a!13)))",
+      "kind": "higher_family",
+      "original_index": 1117,
+      "position": 4,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!6 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!7 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!8 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!9 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                   (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                   (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                   (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n                1.0))\n      (a!13 (<= (- (+ aec_v_m_r aec_v_gq_r)\n                   (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_m_q aec_v_gq_q)\n                   (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_m_d aec_v_gq_d)\n                   (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_m_s aec_v_gq_s)\n                   (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!5) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!6) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!7) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!8) 1.0)\n                 (> (+ aec_v_e_d aec_v_gr_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 986,
+      "position": 3,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a0_r aec_v_a1_r)\n                  (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a0_q aec_v_a1_q)\n                  (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a0_d aec_v_a1_d)\n                  (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a0_s aec_v_a1_s)\n                  (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s))\n               1.0))\n      (a!5 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!6 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!7 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!8 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s))\n      (a!9 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                   (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                   (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                   (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n                1.0))\n      (a!13 (<= (- (+ aec_v_l_r aec_v_m_r)\n                   (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r))\n                1.0))\n      (a!14 (<= (- (+ aec_v_l_q aec_v_m_q)\n                   (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q))\n                1.0))\n      (a!15 (<= (- (+ aec_v_l_d aec_v_m_d)\n                   (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d))\n                1.0))\n      (a!16 (<= (- (+ aec_v_l_s aec_v_m_s)\n                   (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s))\n                1.0)))\n(let ((a!17 (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n                 a!1\n                 a!2\n                 a!3\n                 a!4\n                 (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!5) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!6) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!7) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!8) 1.0)\n                 (> (+ aec_v_e_d aec_v_gr_d) 1.0)\n                 a!9\n                 a!10\n                 a!11\n                 a!12\n                 (> (+ aec_v_l_s aec_v_m_s) 1.0)\n                 a!13\n                 a!14\n                 a!15\n                 a!16)))\n  (not a!17)))",
+      "kind": "higher_family",
+      "original_index": 984,
+      "position": 2,
+      "signature": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_e_r aec_v_gr_r)\n                  (ite (<= aec_v_e_r aec_v_gr_r) aec_v_e_r aec_v_gr_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_e_q aec_v_gr_q)\n                  (ite (<= aec_v_e_q aec_v_gr_q) aec_v_e_q aec_v_gr_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_e_d aec_v_gr_d)\n                  (ite (<= aec_v_e_d aec_v_gr_d) aec_v_e_d aec_v_gr_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_e_s aec_v_gr_s)\n                  (ite (<= aec_v_e_s aec_v_gr_s) aec_v_e_s aec_v_gr_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_a0_r aec_v_k_r)\n                  (ite (<= aec_v_a0_r aec_v_k_r) aec_v_a0_r aec_v_k_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_a0_q aec_v_k_q)\n                  (ite (<= aec_v_a0_q aec_v_k_q) aec_v_a0_q aec_v_k_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_a0_d aec_v_k_d)\n                  (ite (<= aec_v_a0_d aec_v_k_d) aec_v_a0_d aec_v_k_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_a0_s aec_v_k_s)\n                  (ite (<= aec_v_a0_s aec_v_k_s) aec_v_a0_s aec_v_k_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_l_r aec_v_m_r)\n                  (ite (<= aec_v_l_r aec_v_m_r) aec_v_l_r aec_v_m_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_l_q aec_v_m_q)\n                   (ite (<= aec_v_l_q aec_v_m_q) aec_v_l_q aec_v_m_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_l_d aec_v_m_d)\n                   (ite (<= aec_v_l_d aec_v_m_d) aec_v_l_d aec_v_m_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_l_s aec_v_m_s)\n                   (ite (<= aec_v_l_s aec_v_m_s) aec_v_l_s aec_v_m_s))\n                1.0)))\n  (not (and (> (+ aec_v_e_r aec_v_gr_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_a0_d aec_v_k_d) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_l_s aec_v_m_s) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 143,
+      "position": 1,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "formula": "(let ((a!1 (<= (- (+ aec_v_a1_r aec_v_m_r)\n                  (ite (<= aec_v_a1_r aec_v_m_r) aec_v_a1_r aec_v_m_r))\n               1.0))\n      (a!2 (<= (- (+ aec_v_a1_q aec_v_m_q)\n                  (ite (<= aec_v_a1_q aec_v_m_q) aec_v_a1_q aec_v_m_q))\n               1.0))\n      (a!3 (<= (- (+ aec_v_a1_d aec_v_m_d)\n                  (ite (<= aec_v_a1_d aec_v_m_d) aec_v_a1_d aec_v_m_d))\n               1.0))\n      (a!4 (<= (- (+ aec_v_a1_s aec_v_m_s)\n                  (ite (<= aec_v_a1_s aec_v_m_s) aec_v_a1_s aec_v_m_s))\n               1.0))\n      (a!5 (<= (- (+ aec_v_k_r aec_v_gr_r)\n                  (ite (<= aec_v_k_r aec_v_gr_r) aec_v_k_r aec_v_gr_r))\n               1.0))\n      (a!6 (<= (- (+ aec_v_k_q aec_v_gr_q)\n                  (ite (<= aec_v_k_q aec_v_gr_q) aec_v_k_q aec_v_gr_q))\n               1.0))\n      (a!7 (<= (- (+ aec_v_k_d aec_v_gr_d)\n                  (ite (<= aec_v_k_d aec_v_gr_d) aec_v_k_d aec_v_gr_d))\n               1.0))\n      (a!8 (<= (- (+ aec_v_k_s aec_v_gr_s)\n                  (ite (<= aec_v_k_s aec_v_gr_s) aec_v_k_s aec_v_gr_s))\n               1.0))\n      (a!9 (<= (- (+ aec_v_a0_r aec_v_j_r)\n                  (ite (<= aec_v_a0_r aec_v_j_r) aec_v_a0_r aec_v_j_r))\n               1.0))\n      (a!10 (<= (- (+ aec_v_a0_q aec_v_j_q)\n                   (ite (<= aec_v_a0_q aec_v_j_q) aec_v_a0_q aec_v_j_q))\n                1.0))\n      (a!11 (<= (- (+ aec_v_a0_d aec_v_j_d)\n                   (ite (<= aec_v_a0_d aec_v_j_d) aec_v_a0_d aec_v_j_d))\n                1.0))\n      (a!12 (<= (- (+ aec_v_a0_s aec_v_j_s)\n                   (ite (<= aec_v_a0_s aec_v_j_s) aec_v_a0_s aec_v_j_s))\n                1.0)))\n  (not (and (> (+ aec_v_a1_r aec_v_m_r) 1.0)\n            a!1\n            a!2\n            a!3\n            a!4\n            (> (+ aec_v_k_q aec_v_gr_q) 1.0)\n            a!5\n            a!6\n            a!7\n            a!8\n            (> (+ aec_v_a0_d aec_v_j_d) 1.0)\n            a!9\n            a!10\n            a!11\n            a!12)))",
+      "kind": "higher_family",
+      "original_index": 11,
+      "position": 0,
+      "signature": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ]
+    },
+    {
+      "category": "exact_response_relation:s:d",
+      "formula": "(let ((a!1 (- (+ aec_v_m_r aec_v_gq_r)\n              (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)))\n      (a!2 (- (+ aec_v_m_q aec_v_gq_q)\n              (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)))\n      (a!3 (- (+ aec_v_m_d aec_v_gq_d)\n              (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)))\n      (a!4 (- (+ aec_v_m_s aec_v_gq_s)\n              (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)))\n      (a!5 (- (+ aec_v_m_r aec_v_gr_r)\n              (ite (<= aec_v_m_r aec_v_gr_r) aec_v_m_r aec_v_gr_r)))\n      (a!6 (- (+ aec_v_m_q aec_v_gr_q)\n              (ite (<= aec_v_m_q aec_v_gr_q) aec_v_m_q aec_v_gr_q)))\n      (a!7 (- (+ aec_v_m_d aec_v_gr_d)\n              (ite (<= aec_v_m_d aec_v_gr_d) aec_v_m_d aec_v_gr_d)))\n      (a!8 (- (+ aec_v_m_s aec_v_gr_s)\n              (ite (<= aec_v_m_s aec_v_gr_s) aec_v_m_s aec_v_gr_s)))\n      (a!9 (- (+ aec_v_gq_r aec_v_gr_r)\n              (ite (<= aec_v_gq_r aec_v_gr_r) aec_v_gq_r aec_v_gr_r)))\n      (a!10 (- (+ aec_v_gq_q aec_v_gr_q)\n               (ite (<= aec_v_gq_q aec_v_gr_q) aec_v_gq_q aec_v_gr_q)))\n      (a!11 (- (+ aec_v_gq_d aec_v_gr_d)\n               (ite (<= aec_v_gq_d aec_v_gr_d) aec_v_gq_d aec_v_gr_d)))\n      (a!12 (- (+ aec_v_gq_s aec_v_gr_s)\n               (ite (<= aec_v_gq_s aec_v_gr_s) aec_v_gq_s aec_v_gr_s)))\n      (a!13 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                     aec_v_gr_r)\n                 (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                 aec_v_gr_r))\n      (a!14 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!15 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!16 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!17 (and (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!13) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!14) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!15) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!16) 1.0)))\n      (a!18 (and (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!13)\n                     (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!14)\n                     (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!15)\n                     (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!16)\n                     (+ aec_v_l_s aec_v_e_s)))))\n  (or (and (> (+ aec_v_m_s) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_m_s) (+ aec_v_l_s aec_v_e_s))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_gq_s) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_gq_s) (+ aec_v_l_s aec_v_e_s))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_gr_s) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n           (<= a!1 1.0)\n           (<= a!2 1.0)\n           (<= a!3 1.0)\n           (<= a!4 1.0))\n      (and (> (+ aec_v_m_s aec_v_gq_s) (+ aec_v_l_s aec_v_e_s))\n           (<= a!1 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!2 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!3 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!4 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_m_s aec_v_gr_s) 1.0)\n           (<= a!5 1.0)\n           (<= a!6 1.0)\n           (<= a!7 1.0)\n           (<= a!8 1.0))\n      (and (> (+ aec_v_m_s aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n           (<= a!5 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!6 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!7 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!8 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_gq_s aec_v_gr_s) 1.0)\n           (<= a!9 1.0)\n           (<= a!10 1.0)\n           (<= a!11 1.0)\n           (<= a!12 1.0))\n      (and (> (+ aec_v_gq_s aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n           (<= a!9 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!10 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!11 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!12 (+ aec_v_l_s aec_v_e_s)))\n      a!17\n      a!18)))",
+      "kind": "base",
+      "position": 11633
+    },
+    {
+      "category": "exact_response_relation:q:r",
+      "formula": "(let ((a!1 (- (+ aec_v_a0_r aec_v_a1_r)\n              (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r)))\n      (a!2 (- (+ aec_v_a0_q aec_v_a1_q)\n              (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q)))\n      (a!3 (- (+ aec_v_a0_d aec_v_a1_d)\n              (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)))\n      (a!4 (- (+ aec_v_a0_s aec_v_a1_s)\n              (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s)))\n      (a!5 (- (+ aec_v_a0_r aec_v_h_r)\n              (ite (<= aec_v_a0_r aec_v_h_r) aec_v_a0_r aec_v_h_r)))\n      (a!6 (- (+ aec_v_a0_q aec_v_h_q)\n              (ite (<= aec_v_a0_q aec_v_h_q) aec_v_a0_q aec_v_h_q)))\n      (a!7 (- (+ aec_v_a0_d aec_v_h_d)\n              (ite (<= aec_v_a0_d aec_v_h_d) aec_v_a0_d aec_v_h_d)))\n      (a!8 (- (+ aec_v_a0_s aec_v_h_s)\n              (ite (<= aec_v_a0_s aec_v_h_s) aec_v_a0_s aec_v_h_s)))\n      (a!9 (- (+ aec_v_a1_r aec_v_h_r)\n              (ite (<= aec_v_a1_r aec_v_h_r) aec_v_a1_r aec_v_h_r)))\n      (a!10 (- (+ aec_v_a1_q aec_v_h_q)\n               (ite (<= aec_v_a1_q aec_v_h_q) aec_v_a1_q aec_v_h_q)))\n      (a!11 (- (+ aec_v_a1_d aec_v_h_d)\n               (ite (<= aec_v_a1_d aec_v_h_d) aec_v_a1_d aec_v_h_d)))\n      (a!12 (- (+ aec_v_a1_s aec_v_h_s)\n               (ite (<= aec_v_a1_s aec_v_h_s) aec_v_a1_s aec_v_h_s)))\n      (a!13 (ite (<= (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r)\n                     aec_v_h_r)\n                 (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r)\n                 aec_v_h_r))\n      (a!14 (ite (<= (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q)\n                     aec_v_h_q)\n                 (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q)\n                 aec_v_h_q))\n      (a!15 (ite (<= (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)\n                     aec_v_h_d)\n                 (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)\n                 aec_v_h_d))\n      (a!16 (ite (<= (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s)\n                     aec_v_h_s)\n                 (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s)\n                 aec_v_h_s)))\n(let ((a!17 (and (> (+ aec_v_a0_q aec_v_a1_q aec_v_h_q) 1.0)\n                 (<= (- (+ aec_v_a0_r aec_v_a1_r aec_v_h_r) a!13) 1.0)\n                 (<= (- (+ aec_v_a0_q aec_v_a1_q aec_v_h_q) a!14) 1.0)\n                 (<= (- (+ aec_v_a0_d aec_v_a1_d aec_v_h_d) a!15) 1.0)\n                 (<= (- (+ aec_v_a0_s aec_v_a1_s aec_v_h_s) a!16) 1.0)))\n      (a!18 (and (> (+ aec_v_a0_q aec_v_a1_q aec_v_h_q)\n                    (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_a0_r aec_v_a1_r aec_v_h_r) a!13)\n                     (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_a0_q aec_v_a1_q aec_v_h_q) a!14)\n                     (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_a0_d aec_v_a1_d aec_v_h_d) a!15)\n                     (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n                 (<= (- (+ aec_v_a0_s aec_v_a1_s aec_v_h_s) a!16)\n                     (+ aec_v_l_s aec_v_e_s)))))\n  (or (and (> (+ aec_v_a0_q) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_a0_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a1_q) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_a1_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_h_q) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_h_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n           (<= a!1 1.0)\n           (<= a!2 1.0)\n           (<= a!3 1.0)\n           (<= a!4 1.0))\n      (and (> (+ aec_v_a0_q aec_v_a1_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!1 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!2 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!3 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!4 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a0_q aec_v_h_q) 1.0)\n           (<= a!5 1.0)\n           (<= a!6 1.0)\n           (<= a!7 1.0)\n           (<= a!8 1.0))\n      (and (> (+ aec_v_a0_q aec_v_h_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!5 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!6 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!7 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!8 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a1_q aec_v_h_q) 1.0)\n           (<= a!9 1.0)\n           (<= a!10 1.0)\n           (<= a!11 1.0)\n           (<= a!12 1.0))\n      (and (> (+ aec_v_a1_q aec_v_h_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!9 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!10 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!11 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!12 (+ aec_v_l_s aec_v_e_s)))\n      a!17\n      a!18)))",
+      "kind": "base",
+      "position": 11623
+    },
+    {
+      "category": "exact_response_relation:r:q",
+      "formula": "(let ((a!1 (- (+ aec_v_j_r aec_v_k_r)\n              (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)))\n      (a!2 (- (+ aec_v_j_q aec_v_k_q)\n              (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)))\n      (a!3 (- (+ aec_v_j_d aec_v_k_d)\n              (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)))\n      (a!4 (- (+ aec_v_j_s aec_v_k_s)\n              (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)))\n      (a!5 (- (+ aec_v_j_r aec_v_q0_r)\n              (ite (<= aec_v_j_r aec_v_q0_r) aec_v_j_r aec_v_q0_r)))\n      (a!6 (- (+ aec_v_j_q aec_v_q0_q)\n              (ite (<= aec_v_j_q aec_v_q0_q) aec_v_j_q aec_v_q0_q)))\n      (a!7 (- (+ aec_v_j_d aec_v_q0_d)\n              (ite (<= aec_v_j_d aec_v_q0_d) aec_v_j_d aec_v_q0_d)))\n      (a!8 (- (+ aec_v_j_s aec_v_q0_s)\n              (ite (<= aec_v_j_s aec_v_q0_s) aec_v_j_s aec_v_q0_s)))\n      (a!9 (- (+ aec_v_k_r aec_v_q0_r)\n              (ite (<= aec_v_k_r aec_v_q0_r) aec_v_k_r aec_v_q0_r)))\n      (a!10 (- (+ aec_v_k_q aec_v_q0_q)\n               (ite (<= aec_v_k_q aec_v_q0_q) aec_v_k_q aec_v_q0_q)))\n      (a!11 (- (+ aec_v_k_d aec_v_q0_d)\n               (ite (<= aec_v_k_d aec_v_q0_d) aec_v_k_d aec_v_q0_d)))\n      (a!12 (- (+ aec_v_k_s aec_v_q0_s)\n               (ite (<= aec_v_k_s aec_v_q0_s) aec_v_k_s aec_v_q0_s)))\n      (a!13 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                     aec_v_q0_r)\n                 (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                 aec_v_q0_r))\n      (a!14 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!15 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!16 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s)))\n(let ((a!17 (and (> (+ aec_v_j_r aec_v_k_r aec_v_q0_r) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!13) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!14) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!15) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!16) 1.0)))\n      (a!18 (and (> (+ aec_v_j_r aec_v_k_r aec_v_q0_r)\n                    (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!13)\n                     (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!14)\n                     (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!15)\n                     (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!16)\n                     (+ aec_v_l_s aec_v_e_s)))))\n  (or (and (> (+ aec_v_j_r) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_j_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_k_r) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_k_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_q0_r) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_q0_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_j_r aec_v_k_r) 1.0)\n           (<= a!1 1.0)\n           (<= a!2 1.0)\n           (<= a!3 1.0)\n           (<= a!4 1.0))\n      (and (> (+ aec_v_j_r aec_v_k_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!1 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!2 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!3 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!4 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_j_r aec_v_q0_r) 1.0)\n           (<= a!5 1.0)\n           (<= a!6 1.0)\n           (<= a!7 1.0)\n           (<= a!8 1.0))\n      (and (> (+ aec_v_j_r aec_v_q0_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!5 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!6 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!7 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!8 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_k_r aec_v_q0_r) 1.0)\n           (<= a!9 1.0)\n           (<= a!10 1.0)\n           (<= a!11 1.0)\n           (<= a!12 1.0))\n      (and (> (+ aec_v_k_r aec_v_q0_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!9 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!10 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!11 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!12 (+ aec_v_l_s aec_v_e_s)))\n      a!17\n      a!18)))",
+      "kind": "base",
+      "position": 11619
+    },
+    {
+      "category": "d_wall_Q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d)))\n  (>= (+ aec_v_m_d aec_v_gq_d aec_v_gr_d)\n      (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!1)))",
+      "kind": "base",
+      "position": 11615
+    },
+    {
+      "category": "d_wall_A",
+      "formula": "(< (+ aec_v_m_d aec_v_gq_d aec_v_gr_d)\n   (- (+ aec_v_a0_d aec_v_a1_d)\n      (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)))",
+      "kind": "base",
+      "position": 11614
+    },
+    {
+      "category": "d_Q_response",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!2 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!3 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!4 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s)))\n  (and (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n       (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!1) 1.0)\n       (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!2) 1.0)\n       (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!3) 1.0)\n       (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!4) 1.0)))",
+      "kind": "base",
+      "position": 11610
+    },
+    {
+      "category": "pairwise_closed_pi:9167",
+      "formula": "(not (and (> (+ aec_v_e_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_e_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_e_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_e_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_e_s) 1.0)\n          (> (+ aec_v_gq_s aec_v_p_s) 1.0)\n          (<= (+ aec_v_p_r) 1.0)\n          (<= (+ aec_v_gq_r) 1.0)\n          (<= (+ aec_v_p_q) 1.0)\n          (<= (+ aec_v_gq_q) 1.0)\n          (<= (+ aec_v_p_d) 1.0)\n          (<= (+ aec_v_gq_d) 1.0)\n          (<= (+ aec_v_p_s) 1.0)\n          (<= (+ aec_v_gq_s) 1.0)))",
+      "kind": "base",
+      "position": 9448
+    },
+    {
+      "category": "pairwise_closed_pi:9165",
+      "formula": "(not (and (> (+ aec_v_e_q aec_v_p_q) 1.0)\n          (<= (+ aec_v_p_r) 1.0)\n          (<= (+ aec_v_e_r) 1.0)\n          (<= (+ aec_v_p_q) 1.0)\n          (<= (+ aec_v_e_q) 1.0)\n          (<= (+ aec_v_p_d) 1.0)\n          (<= (+ aec_v_e_d) 1.0)\n          (<= (+ aec_v_p_s) 1.0)\n          (<= (+ aec_v_e_s) 1.0)\n          (> (+ aec_v_gq_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gq_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gq_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gq_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gq_s) 1.0)))",
+      "kind": "base",
+      "position": 9446
+    },
+    {
+      "category": "pairwise_closed_pi:8891",
+      "formula": "(not (and (> (+ aec_v_e_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_e_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_e_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_e_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_e_s) 1.0)\n          (> (+ aec_v_a1_s aec_v_p_s) 1.0)\n          (<= (+ aec_v_p_r) 1.0)\n          (<= (+ aec_v_a1_r) 1.0)\n          (<= (+ aec_v_p_q) 1.0)\n          (<= (+ aec_v_a1_q) 1.0)\n          (<= (+ aec_v_p_d) 1.0)\n          (<= (+ aec_v_a1_d) 1.0)\n          (<= (+ aec_v_p_s) 1.0)\n          (<= (+ aec_v_a1_s) 1.0)))",
+      "kind": "base",
+      "position": 9172
+    },
+    {
+      "category": "pairwise_closed_pi:2575",
+      "formula": "(not (and (> (+ aec_v_e_r aec_v_p_r) 1.0)\n          (<= (+ aec_v_p_r) 1.0)\n          (<= (+ aec_v_e_r) 1.0)\n          (<= (+ aec_v_p_q) 1.0)\n          (<= (+ aec_v_e_q) 1.0)\n          (<= (+ aec_v_p_d) 1.0)\n          (<= (+ aec_v_e_d) 1.0)\n          (<= (+ aec_v_p_s) 1.0)\n          (<= (+ aec_v_e_s) 1.0)\n          (> (+ aec_v_m_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_m_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_m_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_m_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_m_s) 1.0)))",
+      "kind": "base",
+      "position": 2856
+    },
+    {
+      "category": "pairwise_closed_pi:1921",
+      "formula": "(not (and (> (+ aec_v_q0_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_q0_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_q0_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_q0_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_q0_s) 1.0)\n          (> (+ aec_v_a0_d aec_v_k_d) 1.0)\n          (<= (+ aec_v_k_r) 1.0)\n          (<= (+ aec_v_a0_r) 1.0)\n          (<= (+ aec_v_k_q) 1.0)\n          (<= (+ aec_v_a0_q) 1.0)\n          (<= (+ aec_v_k_d) 1.0)\n          (<= (+ aec_v_a0_d) 1.0)\n          (<= (+ aec_v_k_s) 1.0)\n          (<= (+ aec_v_a0_s) 1.0)))",
+      "kind": "base",
+      "position": 2202
+    },
+    {
+      "category": "pairwise_closed_pi:1907",
+      "formula": "(not (and (> (+ aec_v_k_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_k_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_k_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_k_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_k_s) 1.0)\n          (> (+ aec_v_a0_d aec_v_q0_d) 1.0)\n          (<= (+ aec_v_q0_r) 1.0)\n          (<= (+ aec_v_a0_r) 1.0)\n          (<= (+ aec_v_q0_q) 1.0)\n          (<= (+ aec_v_a0_q) 1.0)\n          (<= (+ aec_v_q0_d) 1.0)\n          (<= (+ aec_v_a0_d) 1.0)\n          (<= (+ aec_v_q0_s) 1.0)\n          (<= (+ aec_v_a0_s) 1.0)))",
+      "kind": "base",
+      "position": 2188
+    },
+    {
+      "category": "pairwise_closed_pi:373",
+      "formula": "(not (and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n          (<= (+ aec_v_a1_r) 1.0)\n          (<= (+ aec_v_a0_r) 1.0)\n          (<= (+ aec_v_a1_q) 1.0)\n          (<= (+ aec_v_a0_q) 1.0)\n          (<= (+ aec_v_a1_d) 1.0)\n          (<= (+ aec_v_a0_d) 1.0)\n          (<= (+ aec_v_a1_s) 1.0)\n          (<= (+ aec_v_a0_s) 1.0)\n          (> (+ aec_v_m_q aec_v_gq_q) 1.0)\n          (<= (+ aec_v_gq_r) 1.0)\n          (<= (+ aec_v_m_r) 1.0)\n          (<= (+ aec_v_gq_q) 1.0)\n          (<= (+ aec_v_m_q) 1.0)\n          (<= (+ aec_v_gq_d) 1.0)\n          (<= (+ aec_v_m_d) 1.0)\n          (<= (+ aec_v_gq_s) 1.0)\n          (<= (+ aec_v_m_s) 1.0)))",
+      "kind": "base",
+      "position": 654
+    },
+    {
+      "category": "fixed_anchored_pi:109",
+      "formula": "(not (and (> (+ aec_v_m_q) 1.0)\n          (<= 0.0 1.0)\n          (<= 0.0 1.0)\n          (<= 0.0 1.0)\n          (<= 0.0 1.0)))",
+      "kind": "base",
+      "position": 280
+    },
+    {
+      "category": "fixed_anchored_pi:108",
+      "formula": "(not (and (> (+ aec_v_j_q aec_v_m_q) 1.0)\n          (<= (+ aec_v_m_r) 1.0)\n          (<= (+ aec_v_j_r) 1.0)\n          (<= (+ aec_v_m_q) 1.0)\n          (<= (+ aec_v_j_q) 1.0)\n          (<= (+ aec_v_m_d) 1.0)\n          (<= (+ aec_v_j_d) 1.0)\n          (<= (+ aec_v_m_s) 1.0)\n          (<= (+ aec_v_j_s) 1.0)))",
+      "kind": "base",
+      "position": 279
+    },
+    {
+      "category": "fixed_anchored_pi:106",
+      "formula": "(not (and (> (+ aec_v_gr_q aec_v_m_q) 1.0)\n          (<= (+ aec_v_m_r) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_m_q) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_m_d) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_m_s) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)))",
+      "kind": "base",
+      "position": 277
+    },
+    {
+      "category": "fixed_anchored_pi:89",
+      "formula": "(not (and (> (+ aec_v_l_d aec_v_m_d) 1.0)\n          (<= (+ aec_v_m_r) 1.0)\n          (<= (+ aec_v_l_r) 1.0)\n          (<= (+ aec_v_m_q) 1.0)\n          (<= (+ aec_v_l_q) 1.0)\n          (<= (+ aec_v_m_d) 1.0)\n          (<= (+ aec_v_l_d) 1.0)\n          (<= (+ aec_v_m_s) 1.0)\n          (<= (+ aec_v_l_s) 1.0)))",
+      "kind": "base",
+      "position": 260
+    },
+    {
+      "category": "fixed_anchored_pi:69",
+      "formula": "(not (and (> (+ aec_v_gr_d aec_v_p_d) 1.0)\n          (<= (+ aec_v_p_r) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_p_q) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_p_d) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_p_s) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)))",
+      "kind": "base",
+      "position": 240
+    },
+    {
+      "category": "fixed_anchored_pi:13",
+      "formula": "(not (and (> (+ aec_v_a1_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_a1_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_a1_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_a1_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_a1_s) 1.0)))",
+      "kind": "base",
+      "position": 184
+    },
+    {
+      "category": "fixed_response:s",
+      "formula": "(and (> (+ aec_v_l_s aec_v_e_s) 1.0)\n     (<= (+ aec_v_e_r) 1.0)\n     (<= (+ aec_v_l_r) 1.0)\n     (<= (+ aec_v_e_q) 1.0)\n     (<= (+ aec_v_l_q) 1.0)\n     (<= (+ aec_v_e_d) 1.0)\n     (<= (+ aec_v_l_d) 1.0)\n     (<= (+ aec_v_e_s) 1.0)\n     (<= (+ aec_v_l_s) 1.0))",
+      "kind": "base",
+      "position": 170
+    },
+    {
+      "category": "fixed_response:q",
+      "formula": "(and (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n     (<= (+ aec_v_k_r aec_v_q0_r) 1.0)\n     (<= (+ aec_v_j_r aec_v_q0_r) 1.0)\n     (<= (+ aec_v_j_r aec_v_k_r) 1.0)\n     (<= (+ aec_v_k_q aec_v_q0_q) 1.0)\n     (<= (+ aec_v_j_q aec_v_q0_q) 1.0)\n     (<= (+ aec_v_j_q aec_v_k_q) 1.0)\n     (<= (+ aec_v_k_d aec_v_q0_d) 1.0)\n     (<= (+ aec_v_j_d aec_v_q0_d) 1.0)\n     (<= (+ aec_v_j_d aec_v_k_d) 1.0)\n     (<= (+ aec_v_k_s aec_v_q0_s) 1.0)\n     (<= (+ aec_v_j_s aec_v_q0_s) 1.0)\n     (<= (+ aec_v_j_s aec_v_k_s) 1.0))",
+      "kind": "base",
+      "position": 169
+    },
+    {
+      "category": "fixed_response:r",
+      "formula": "(and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n     (<= (+ aec_v_a1_r) 1.0)\n     (<= (+ aec_v_a0_r) 1.0)\n     (<= (+ aec_v_a1_q) 1.0)\n     (<= (+ aec_v_a0_q) 1.0)\n     (<= (+ aec_v_a1_d) 1.0)\n     (<= (+ aec_v_a0_d) 1.0)\n     (<= (+ aec_v_a1_s) 1.0)\n     (<= (+ aec_v_a0_s) 1.0))",
+      "kind": "base",
+      "position": 168
+    },
+    {
+      "category": "generalized_self_pi:31",
+      "formula": "(not (and (> (+ aec_v_e_s aec_v_p_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_p_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_e_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_e_r aec_v_p_r) 1.0)\n          (<= (+ aec_v_p_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_e_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_e_q aec_v_p_q) 1.0)\n          (<= (+ aec_v_p_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_e_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_e_d aec_v_p_d) 1.0)\n          (<= (+ aec_v_p_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_e_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_e_s aec_v_p_s) 1.0)))",
+      "kind": "base",
+      "position": 167
+    },
+    {
+      "category": "generalized_self_pi:30",
+      "formula": "(not (and (> (+ aec_v_p_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_p_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_p_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_p_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_p_s) 1.0)))",
+      "kind": "base",
+      "position": 166
+    },
+    {
+      "category": "generalized_self_pi:29",
+      "formula": "(not (and (> (+ aec_v_e_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_e_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_e_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_e_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_e_s) 1.0)))",
+      "kind": "base",
+      "position": 165
+    },
+    {
+      "category": "generalized_self_pi:16",
+      "formula": "(not (and (> (+ aec_v_q0_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_q0_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_q0_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_q0_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_q0_s) 1.0)))",
+      "kind": "base",
+      "position": 152
+    },
+    {
+      "category": "generalized_self_pi:14",
+      "formula": "(not (and (> (+ aec_v_k_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_k_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_k_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_k_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_k_s) 1.0)))",
+      "kind": "base",
+      "position": 150
+    },
+    {
+      "category": "generalized_self_pi:7",
+      "formula": "(not (and (> (+ aec_v_gq_q aec_v_a1_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_a1_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gq_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gq_r aec_v_a1_r) 1.0)\n          (<= (+ aec_v_a1_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gq_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gq_q aec_v_a1_q) 1.0)\n          (<= (+ aec_v_a1_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gq_d aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gq_d aec_v_a1_d) 1.0)\n          (<= (+ aec_v_a1_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gq_s aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gq_s aec_v_a1_s) 1.0)))",
+      "kind": "base",
+      "position": 143
+    },
+    {
+      "category": "generalized_self_pi:6",
+      "formula": "(not (and (> (+ aec_v_a1_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_a1_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_a1_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_a1_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_a1_s) 1.0)))",
+      "kind": "base",
+      "position": 142
+    },
+    {
+      "category": "generalized_self_pi:5",
+      "formula": "(not (and (> (+ aec_v_gq_q aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gq_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_gq_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_gq_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_gq_s) 1.0)))",
+      "kind": "base",
+      "position": 141
+    },
+    {
+      "category": "generalized_self_pi:2",
+      "formula": "(not (and (> (+ aec_v_m_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_m_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_m_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_m_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_m_s) 1.0)))",
+      "kind": "base",
+      "position": 138
+    },
+    {
+      "category": "generalized_self_pi:1",
+      "formula": "(not (and (> (+ aec_v_a0_r aec_v_gr_r) 1.0)\n          (<= (+ aec_v_gr_r) 1.0)\n          (<= (+ aec_v_a0_r) 1.0)\n          (<= (+ aec_v_gr_q) 1.0)\n          (<= (+ aec_v_a0_q) 1.0)\n          (<= (+ aec_v_gr_d) 1.0)\n          (<= (+ aec_v_a0_d) 1.0)\n          (<= (+ aec_v_gr_s) 1.0)\n          (<= (+ aec_v_a0_s) 1.0)))",
+      "kind": "base",
+      "position": 137
+    },
+    {
+      "category": "base_owner_efx:s:d",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_h_s aec_v_k_s) aec_v_h_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_h_s aec_v_k_s) aec_v_h_s aec_v_k_s)\n                aec_v_q0_s)))\n  (<= (- (+ aec_v_h_s aec_v_k_s aec_v_q0_s aec_v_l_s)\n         (ite (<= a!1 aec_v_l_s) a!1 aec_v_l_s))\n      1.0))",
+      "kind": "base",
+      "position": 115
+    },
+    {
+      "category": "base_owner_efx:s:q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_gq_s aec_v_a1_s) aec_v_gq_s aec_v_a1_s)\n                    aec_v_j_s)\n                (ite (<= aec_v_gq_s aec_v_a1_s) aec_v_gq_s aec_v_a1_s)\n                aec_v_j_s)))\n  (<= (- (+ aec_v_gq_s aec_v_a1_s aec_v_j_s) a!1) 1.0))",
+      "kind": "base",
+      "position": 114
+    },
+    {
+      "category": "base_owner_efx:s:r",
+      "formula": "(<= (- (+ aec_v_a0_s aec_v_m_s)\n       (ite (<= aec_v_a0_s aec_v_m_s) aec_v_a0_s aec_v_m_s))\n    1.0)",
+      "kind": "base",
+      "position": 113
+    },
+    {
+      "category": "base_charity_efx:s",
+      "formula": "(<= (+ aec_v_gr_s) 1.0)",
+      "kind": "base",
+      "position": 112
+    },
+    {
+      "category": "base_normalization:s",
+      "formula": "(= (+ aec_v_e_s aec_v_p_s) 1.0)",
+      "kind": "base",
+      "position": 111
+    },
+    {
+      "category": "base_owner_efx:d:s",
+      "formula": "(<= (- (+ aec_v_e_d aec_v_p_d)\n       (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n    1.0)",
+      "kind": "base",
+      "position": 110
+    },
+    {
+      "category": "base_owner_efx:d:q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_gq_d aec_v_a1_d) aec_v_gq_d aec_v_a1_d)\n                    aec_v_j_d)\n                (ite (<= aec_v_gq_d aec_v_a1_d) aec_v_gq_d aec_v_a1_d)\n                aec_v_j_d)))\n  (<= (- (+ aec_v_gq_d aec_v_a1_d aec_v_j_d) a!1) 1.0))",
+      "kind": "base",
+      "position": 109
+    },
+    {
+      "category": "base_normalization:d",
+      "formula": "(= (+ aec_v_h_d aec_v_k_d aec_v_q0_d aec_v_l_d) 1.0)",
+      "kind": "base",
+      "position": 106
+    },
+    {
+      "category": "base_owner_efx:q:s",
+      "formula": "(<= (- (+ aec_v_e_q aec_v_p_q)\n       (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n    1.0)",
+      "kind": "base",
+      "position": 105
+    },
+    {
+      "category": "base_owner_efx:q:d",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_h_q aec_v_k_q) aec_v_h_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_h_q aec_v_k_q) aec_v_h_q aec_v_k_q)\n                aec_v_q0_q)))\n  (<= (- (+ aec_v_h_q aec_v_k_q aec_v_q0_q aec_v_l_q)\n         (ite (<= a!1 aec_v_l_q) a!1 aec_v_l_q))\n      1.0))",
+      "kind": "base",
+      "position": 104
+    },
+    {
+      "category": "base_charity_efx:q",
+      "formula": "(<= (+ aec_v_gr_q) 1.0)",
+      "kind": "base",
+      "position": 102
+    },
+    {
+      "category": "base_normalization:q",
+      "formula": "(= (+ aec_v_gq_q aec_v_a1_q aec_v_j_q) 1.0)",
+      "kind": "base",
+      "position": 101
+    },
+    {
+      "category": "base_owner_efx:r:s",
+      "formula": "(<= (- (+ aec_v_e_r aec_v_p_r)\n       (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n    1.0)",
+      "kind": "base",
+      "position": 100
+    },
+    {
+      "category": "base_owner_efx:r:d",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_h_r aec_v_k_r) aec_v_h_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_h_r aec_v_k_r) aec_v_h_r aec_v_k_r)\n                aec_v_q0_r)))\n  (<= (- (+ aec_v_h_r aec_v_k_r aec_v_q0_r aec_v_l_r)\n         (ite (<= a!1 aec_v_l_r) a!1 aec_v_l_r))\n      1.0))",
+      "kind": "base",
+      "position": 99
+    },
+    {
+      "category": "base_owner_efx:r:q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_gq_r aec_v_a1_r) aec_v_gq_r aec_v_a1_r)\n                    aec_v_j_r)\n                (ite (<= aec_v_gq_r aec_v_a1_r) aec_v_gq_r aec_v_a1_r)\n                aec_v_j_r)))\n  (<= (- (+ aec_v_gq_r aec_v_a1_r aec_v_j_r) a!1) 1.0))",
+      "kind": "base",
+      "position": 98
+    },
+    {
+      "category": "base_charity_efx:r",
+      "formula": "(<= (+ aec_v_gr_r) 1.0)",
+      "kind": "base",
+      "position": 97
+    },
+    {
+      "category": "base_normalization:r",
+      "formula": "(= (+ aec_v_a0_r aec_v_m_r) 1.0)",
+      "kind": "base",
+      "position": 96
+    },
+    {
+      "category": "positive_lower:gr:s",
+      "formula": "(> aec_v_gr_s 0.0)",
+      "kind": "base",
+      "position": 86
+    },
+    {
+      "category": "positive_lower:gq:d",
+      "formula": "(> aec_v_gq_d 0.0)",
+      "kind": "base",
+      "position": 76
+    },
+    {
+      "category": "positive_lower:gq:q",
+      "formula": "(> aec_v_gq_q 0.0)",
+      "kind": "base",
+      "position": 74
+    },
+    {
+      "category": "positive_lower:m:d",
+      "formula": "(> aec_v_m_d 0.0)",
+      "kind": "base",
+      "position": 68
+    },
+    {
+      "category": "positive_lower:q0:r",
+      "formula": "(> aec_v_q0_r 0.0)",
+      "kind": "base",
+      "position": 40
+    },
+    {
+      "category": "positive_lower:k:r",
+      "formula": "(> aec_v_k_r 0.0)",
+      "kind": "base",
+      "position": 32
+    },
+    {
+      "category": "positive_lower:h:s",
+      "formula": "(> aec_v_h_s 0.0)",
+      "kind": "base",
+      "position": 22
+    },
+    {
+      "category": "positive_lower:h:d",
+      "formula": "(> aec_v_h_d 0.0)",
+      "kind": "base",
+      "position": 20
+    },
+    {
+      "category": "positive_lower:h:r",
+      "formula": "(> aec_v_h_r 0.0)",
+      "kind": "base",
+      "position": 16
+    },
+    {
+      "category": "positive_lower:a1:s",
+      "formula": "(> aec_v_a1_s 0.0)",
+      "kind": "base",
+      "position": 14
+    },
+    {
+      "category": "positive_lower:a1:q",
+      "formula": "(> aec_v_a1_q 0.0)",
+      "kind": "base",
+      "position": 10
+    }
+  ],
+  "core_count": 92,
+  "higher_family_count": 32,
+  "random_seed": 8663,
+  "schema": "allocated-e-form0-full-unsat-core-v1",
+  "solver": "Z3 5.0.0",
+  "source": "results/allocated_e_form0_pi_greedy_minimal_core.json",
+  "source_code_sha256": "c1e02f848d60a95ae1740f49df7c93d7d36a20c826b587b0889f3ed3643e6357",
+  "source_sha256": "78161815595debaff4c08ac6b3f1456910f88ebe63db16d9ddd27c3e8a202839",
+  "status": "unsat",
+  "timeout_seconds": 900
+}

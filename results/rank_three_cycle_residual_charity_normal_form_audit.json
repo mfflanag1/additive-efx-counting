@@ -1,0 +1,2270 @@
+{
+  "checks": {
+    "all_charities_empty": true,
+    "all_edge_counts_at_most_four": true,
+    "all_support_partitions_conserved": true,
+    "base_desired_incoming_core_pays_owner": true
+  },
+  "claim_boundary": "cap-free support/payment normal form conditional on pairwise-disjoint base-desired cycle cores; it does not prove existence of an observer-safe residual/charity selection or eliminate overlap capture",
+  "exact_remaining_gate": "select one cycle owner b and one arbitrary residual subpacket S_j per cycle supplier so every final observer-target EFX inequality holds",
+  "provenance": {
+    "script": "tracks/parkability/audit_rank_three_cycle_residual_charity_normal_form.py",
+    "script_sha256": "1e0e911d41ff0d805f1261d2f80f3457b4447c74e332594851072730e08adf26",
+    "theorem": "results/RANK_THREE_CYCLE_RESIDUAL_CHARITY_NORMAL_FORM_LEMMA_20260813.md",
+    "theorem_sha256": "2a079a9741e4b1a30a73a11a22af387f739351f957b0218d978ea44cb1eb8435",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i0]",
+          "R1[i1]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i0]",
+          "R1[i1]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i0]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 2,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i0]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i1]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i1"
+        ],
+        [
+          "i1",
+          "i0"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i2]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "R1[i2]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i2]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i2]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        false,
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "R1[i2]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "R1[i2]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        false,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "R1[i2]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "R1[i2]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true,
+        false
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i0",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]",
+          "p"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i0"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i1",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i2]",
+          "p"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i1"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    },
+    {
+      "charity_recipient": "i2",
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "cycle_edges_preserved": true,
+        "edge_count_at_most_four": true,
+        "edge_count_is_cycle_plus_one": true,
+        "every_owner_receives_own_desired_core": true
+      },
+      "cycle_size": 3,
+      "final_atoms": {
+        "charity": [],
+        "i0": [
+          "D[i0]",
+          "R0[i0]",
+          "R1[i1]"
+        ],
+        "i1": [
+          "D[i1]",
+          "R0[i1]",
+          "R1[i2]"
+        ],
+        "i2": [
+          "D[i2]",
+          "R0[i2]",
+          "R1[i0]",
+          "p"
+        ]
+      },
+      "initial_atoms": {
+        "charity": [
+          "p"
+        ],
+        "i0": [
+          "D[i2]",
+          "R0[i0]",
+          "R1[i0]"
+        ],
+        "i1": [
+          "D[i0]",
+          "R0[i1]",
+          "R1[i1]"
+        ],
+        "i2": [
+          "D[i1]",
+          "R0[i2]",
+          "R1[i2]"
+        ]
+      },
+      "moved_residual_bits": [
+        true,
+        true,
+        true
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "i2"
+        ],
+        [
+          "i0",
+          "i2"
+        ],
+        [
+          "i1",
+          "i0"
+        ],
+        [
+          "i2",
+          "i1"
+        ]
+      ]
+    }
+  ],
+  "schema": "rank-three-cycle-residual-charity-normal-form-v1",
+  "selector_count": 32,
+  "status": "ALL_TWO_AND_THREE_CYCLE_RESIDUAL_SELECTORS_VALID"
+}

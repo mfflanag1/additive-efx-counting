@@ -1,0 +1,102 @@
+{
+  "checks": {
+    "d_failure_is_bare_residual_deficit": true,
+    "d_margin_identity": true,
+    "desired_core_strictly_pays_cycle_source": true,
+    "retained_owner_stays_paid": true
+  },
+  "claim_boundary": "cap-free graph/conservation/payment reduction; it does not exclude the sacrificed-owner deficit or establish observer EFX",
+  "provenance": {
+    "script": "tracks/parkability/audit_paid_cycle_charity_to_sacrificed.py",
+    "script_sha256": "001b021b6215fc98ffdde0ebe68d8a28abcb4da1d28c2f36ee750b359959f3a4",
+    "theorem": "results/PAID_CYCLE_CHARITY_TO_SACRIFICED_LEMMA_20260813.md",
+    "theorem_sha256": "9a4fec801792dd293c9bef464940f1c72667e1c8b1e3dfd602ab603e52f3d421",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_keeps_old_bundle_and_receives_charity": true,
+        "edge_count": true,
+        "every_cycle_source_receives_desired_core": true,
+        "functional_on_suppliers": true,
+        "off_cycle_s_preserved_in_r2": true,
+        "represented_sources_are_cycle_sources": true
+      },
+      "form": "R2",
+      "responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_keeps_old_bundle_and_receives_charity": true,
+        "edge_count": true,
+        "every_cycle_source_receives_desired_core": true,
+        "functional_on_suppliers": true,
+        "off_cycle_s_preserved_in_r2": true,
+        "represented_sources_are_cycle_sources": true
+      },
+      "form": "R3",
+      "responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "paid-cycle-charity-to-sacrificed-v1",
+  "status": "R2_THREE_EDGE_AND_R3_FOUR_EDGE_PAYMENT_SKELETONS_VERIFIED"
+}

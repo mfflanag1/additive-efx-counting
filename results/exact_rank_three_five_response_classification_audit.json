@@ -1,0 +1,177 @@
+{
+  "checks": {
+    "fourth_form_has_rank_four_matching": true,
+    "q_budget_forces_q_to_r_from_q_to_d": true,
+    "surviving_form_indices": [
+      0,
+      2
+    ]
+  },
+  "claim_boundary": "cap-free graph and q-budget classification inside the named fixed-U packet interface; it does not prove full signed reachability, cycle release compatibility, or the complete four-edge EFX conclusion",
+  "exact_remaining_gate": "complete the sacrificed d owner from its two responses into r/q while retaining or rerouting the paid r-q or r-q-s cycle and absorbing singleton charity through at most four support edges",
+  "forms": [
+    {
+      "classification": "survives_graph_and_q_budget",
+      "edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "index": 0,
+      "rank_four_matching_exists": false
+    },
+    {
+      "classification": "excluded_by_q_to_d_implies_q_to_r",
+      "edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "r"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "index": 1,
+      "rank_four_matching_exists": false
+    },
+    {
+      "classification": "survives_graph_and_q_budget",
+      "edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "index": 2,
+      "rank_four_matching_exists": false
+    },
+    {
+      "classification": "excluded_by_rank_four_matching",
+      "edges": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ],
+      "index": 3,
+      "rank_four_matching_exists": true
+    }
+  ],
+  "provenance": {
+    "script": "tracks/parkability/audit_exact_rank_three_five_response_classification.py",
+    "script_sha256": "6215c29aaa6630b0c1663d6c5bae3160f3066990c8d476595c19a0a83be678c6",
+    "theorem": "results/EXACT_RANK_THREE_FIVE_RESPONSE_CLASSIFICATION_LEMMA_20260813.md",
+    "theorem_sha256": "8a826054502badb087731efb4c0ab06e629e1bf90f4406f69da72c69c2ff9989",
+    "z3_version": "5.0.0"
+  },
+  "schema": "exact-rank-three-five-response-classification-v1",
+  "status": "EXACTLY_TWO_RESPONSE_FORMS_SURVIVE",
+  "surviving_forms": {
+    "three_cycle": [
+      [
+        "r",
+        "q"
+      ],
+      [
+        "q",
+        "s"
+      ],
+      [
+        "s",
+        "r"
+      ],
+      [
+        "d",
+        "q"
+      ],
+      [
+        "d",
+        "r"
+      ]
+    ],
+    "two_cycle": [
+      [
+        "r",
+        "q"
+      ],
+      [
+        "q",
+        "r"
+      ],
+      [
+        "s",
+        "d"
+      ],
+      [
+        "d",
+        "q"
+      ],
+      [
+        "d",
+        "r"
+      ]
+    ]
+  }
+}

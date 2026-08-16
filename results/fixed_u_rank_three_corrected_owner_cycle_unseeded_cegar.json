@@ -1,0 +1,570 @@
+{
+  "claim_boundary": "exact twelve-atom CEGAR with necessary support-rank-three and mixed-reassembly-rank-three response gates; full signed-record reachability, deterministic priority selection, all Hall resets, and a genuine repeat remain unencoded, so SAT is not a recurrence countermodel and UNSAT is only a bounded-atom theorem",
+  "edge_origin": "support",
+  "exclude_self_responses": true,
+  "extra_seed_cut_count": 0,
+  "extra_seeds": [],
+  "maximum_escapes_per_round": 256,
+  "oracle_metric": "edges",
+  "radius_slack": 0,
+  "random_seed": 97,
+  "reason_unknown": "canceled",
+  "required_minimal_normal_form": false,
+  "required_owner_cycle_form": true,
+  "response_gate": {
+    "corrected_owner_cycle_form_required": true,
+    "minimal_root_facing_normal_form_required": false,
+    "reassembly_mixed_rank_four_forbidden": true,
+    "reassembly_relation": "union of all base-common-safe and same-state current-safe desired subsets",
+    "retained_named_cores": [
+      "r:A",
+      "q:Q",
+      "s:E"
+    ],
+    "self_responses_excluded_from_matching": true,
+    "split_ordinary_rank_four_forbidden": true,
+    "support_rank_four_forbidden": true,
+    "support_relation": "union of all base-common-safe and same-state current-safe desired subsets",
+    "unique_support_wall": "d strongly envies A; Q, E, and P are d-safe"
+  },
+  "rounds": [
+    {
+      "blocking_allocations": [
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "gr",
+            "h",
+            "m"
+          ],
+          "q": [
+            "a1",
+            "j"
+          ],
+          "r": [
+            "a0",
+            "k",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h"
+          ],
+          "q": [
+            "gq",
+            "gr",
+            "j",
+            "m"
+          ],
+          "r": [
+            "a0",
+            "k",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "gr",
+            "h",
+            "m"
+          ],
+          "q": [
+            "a1",
+            "k"
+          ],
+          "r": [
+            "a0",
+            "j",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "m",
+            "p"
+          ],
+          "q": [
+            "gr",
+            "j",
+            "k"
+          ],
+          "r": [
+            "a0",
+            "a1"
+          ],
+          "s": [
+            "e",
+            "h",
+            "l",
+            "q0"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "gr",
+            "m"
+          ],
+          "q": [
+            "gq",
+            "j",
+            "k",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "p"
+          ],
+          "s": [
+            "e",
+            "h",
+            "l"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h"
+          ],
+          "q": [
+            "gq",
+            "gr",
+            "k",
+            "m"
+          ],
+          "r": [
+            "a0",
+            "j",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h",
+            "m"
+          ],
+          "q": [
+            "gq",
+            "gr",
+            "k"
+          ],
+          "r": [
+            "a0",
+            "j",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "gr",
+            "h"
+          ],
+          "q": [
+            "gq",
+            "j",
+            "k",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "p"
+          ],
+          "s": [
+            "e",
+            "l",
+            "m"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "gr",
+            "m",
+            "p"
+          ],
+          "q": [
+            "e",
+            "j"
+          ],
+          "r": [
+            "a0",
+            "k",
+            "q0"
+          ],
+          "s": [
+            "a1",
+            "h",
+            "l"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "gr",
+            "m",
+            "p"
+          ],
+          "q": [
+            "e",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "j",
+            "k"
+          ],
+          "s": [
+            "a1",
+            "h",
+            "l"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h",
+            "m"
+          ],
+          "q": [
+            "gq",
+            "gr",
+            "j"
+          ],
+          "r": [
+            "a0",
+            "k",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "m",
+            "p"
+          ],
+          "q": [
+            "gr",
+            "j",
+            "k"
+          ],
+          "r": [
+            "a0",
+            "a1",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "h",
+            "l"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h"
+          ],
+          "q": [
+            "gq",
+            "j",
+            "k",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "gr",
+            "m"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "gq",
+            "gr",
+            "m",
+            "p"
+          ],
+          "q": [
+            "a1",
+            "j"
+          ],
+          "r": [
+            "a0",
+            "k",
+            "q0"
+          ],
+          "s": [
+            "e",
+            "h",
+            "l"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "gq"
+          ],
+          "q": [
+            "h",
+            "j",
+            "k",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "gr",
+            "m"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "m"
+          ],
+          "q": [
+            "h",
+            "j",
+            "k",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "gq",
+            "gr"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h"
+          ],
+          "q": [
+            "j",
+            "k",
+            "m",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "gq",
+            "gr"
+          ],
+          "s": [
+            "e",
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "gq",
+            "h"
+          ],
+          "q": [
+            "gr",
+            "j",
+            "k",
+            "m"
+          ],
+          "r": [
+            "a0",
+            "p"
+          ],
+          "s": [
+            "e",
+            "l",
+            "q0"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "h",
+            "m"
+          ],
+          "q": [
+            "gq",
+            "gr",
+            "j",
+            "k"
+          ],
+          "r": [
+            "a0",
+            "p"
+          ],
+          "s": [
+            "e",
+            "l",
+            "q0"
+          ]
+        },
+        {
+          "charity": [],
+          "d": [
+            "a1",
+            "gr",
+            "h"
+          ],
+          "q": [
+            "gq",
+            "j",
+            "k",
+            "m"
+          ],
+          "r": [
+            "a0",
+            "p"
+          ],
+          "s": [
+            "e",
+            "l",
+            "q0"
+          ]
+        }
+      ],
+      "iteration": 0,
+      "master_status": "sat",
+      "minimum_radius": 4,
+      "mode": "complete_efx",
+      "values": {
+        "d": {
+          "a0": "379/1281",
+          "a1": "1",
+          "e": "55/427",
+          "gq": "179/427",
+          "gr": "337/2562",
+          "h": "1039/2562",
+          "j": "365/854",
+          "k": "449/2562",
+          "l": "544/1281",
+          "m": "751/2562",
+          "p": "303/427",
+          "q0": "172/427"
+        },
+        "q": {
+          "a0": "163/1281",
+          "a1": "1111/1281",
+          "e": "1",
+          "gq": "184/427",
+          "gr": "347/854",
+          "h": "5/366",
+          "j": "1465/2562",
+          "k": "257/854",
+          "l": "7/366",
+          "m": "3/122",
+          "p": "1/61",
+          "q0": "170/1281"
+        },
+        "r": {
+          "a0": "619/854",
+          "a1": "562/1281",
+          "e": "1801/2562",
+          "gq": "185/1281",
+          "gr": "1487/2562",
+          "h": "7/366",
+          "j": "691/2562",
+          "k": "242/427",
+          "l": "4/183",
+          "m": "235/854",
+          "p": "299/427",
+          "q0": "185/427"
+        },
+        "s": {
+          "a0": "182/183",
+          "a1": "296/549",
+          "e": "601/1098",
+          "gq": "64/549",
+          "gr": "119/1098",
+          "h": "424/549",
+          "j": "20/61",
+          "k": "125/1098",
+          "l": "308/549",
+          "m": "1/3",
+          "p": "497/1098",
+          "q0": "121/366"
+        }
+      }
+    },
+    {
+      "iteration": 1,
+      "master_status": "unknown"
+    }
+  ],
+  "schema": "fixed-u-rank-three-full-relation-cegar-v1",
+  "seed": "results/fixed_u_full_packet_terminal_cegar.json",
+  "seed_cut_count": 300,
+  "seed_filter": "complete-EFX seeds retained only when their selected provenance-edge count is within target_edge_bound; noncomplete global-maximality cuts are retained without this filter",
+  "seed_sha256": "19422e48c65317ac2b5ea3e4a934c39b0f47dd2c9235d16cda459538ab1a07a3",
+  "solver": "Z3 5.0.0",
+  "status": "unknown",
+  "target_edge_bound": 4
+}

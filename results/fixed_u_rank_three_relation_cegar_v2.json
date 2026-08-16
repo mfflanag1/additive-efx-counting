@@ -1,0 +1,216 @@
+{
+  "claim_boundary": "exact twelve-atom CEGAR with necessary support-rank-three and mixed-reassembly-rank-three response gates; full signed-record reachability, deterministic priority selection, all Hall resets, and a genuine repeat remain unencoded, so SAT is not a recurrence countermodel and UNSAT is only a bounded-atom theorem",
+  "maximum_escapes_per_round": 64,
+  "radius_slack": 0,
+  "reason_unknown": "canceled",
+  "response_gate": {
+    "reassembly_mixed_rank_four_forbidden": true,
+    "reassembly_relation": "union of all base-common-safe and same-state current-safe desired subsets",
+    "retained_named_cores": [
+      "r:A",
+      "q:Q",
+      "s:E"
+    ],
+    "split_ordinary_rank_four_forbidden": true,
+    "support_rank_four_forbidden": true,
+    "support_relation": "all base-common-safe desired subsets"
+  },
+  "rounds": [
+    {
+      "blocking_allocations": [
+        {
+          "charity": [
+            "j",
+            "l"
+          ],
+          "d": [
+            "gq",
+            "h",
+            "k"
+          ],
+          "q": [
+            "a1",
+            "p"
+          ],
+          "r": [
+            "a0",
+            "gr",
+            "m"
+          ],
+          "s": [
+            "e",
+            "q0"
+          ]
+        },
+        {
+          "charity": [
+            "gr",
+            "j",
+            "l"
+          ],
+          "d": [
+            "e",
+            "gq",
+            "k"
+          ],
+          "q": [
+            "a1",
+            "q0"
+          ],
+          "r": [
+            "h",
+            "m"
+          ],
+          "s": [
+            "a0",
+            "p"
+          ]
+        },
+        {
+          "charity": [
+            "gr",
+            "j",
+            "l"
+          ],
+          "d": [
+            "gq",
+            "k",
+            "p"
+          ],
+          "q": [
+            "a1",
+            "q0"
+          ],
+          "r": [
+            "h",
+            "m"
+          ],
+          "s": [
+            "a0",
+            "e"
+          ]
+        },
+        {
+          "charity": [
+            "gr",
+            "j"
+          ],
+          "d": [
+            "e",
+            "gq",
+            "k"
+          ],
+          "q": [
+            "a1",
+            "q0"
+          ],
+          "r": [
+            "a0",
+            "h",
+            "m"
+          ],
+          "s": [
+            "l",
+            "p"
+          ]
+        },
+        {
+          "charity": [
+            "gr",
+            "l"
+          ],
+          "d": [
+            "gq",
+            "h",
+            "k"
+          ],
+          "q": [
+            "a1",
+            "p"
+          ],
+          "r": [
+            "a0",
+            "j",
+            "m"
+          ],
+          "s": [
+            "e",
+            "q0"
+          ]
+        }
+      ],
+      "iteration": 0,
+      "master_status": "sat",
+      "minimum_radius": 3,
+      "mode": "efx_lex",
+      "values": {
+        "d": {
+          "a0": "181/364",
+          "a1": "181/546",
+          "e": "131/156",
+          "gq": "181/1092",
+          "gr": "181/1092",
+          "h": "183/364",
+          "j": "181/364",
+          "k": "181/546",
+          "l": "181/546",
+          "m": "25/156",
+          "p": "181/182",
+          "q0": "181/546"
+        },
+        "q": {
+          "a0": "3/182",
+          "a1": "179/182",
+          "e": "1/182",
+          "gq": "1/2",
+          "gr": "3/182",
+          "h": "1/91",
+          "j": "46/91",
+          "k": "45/91",
+          "l": "87/182",
+          "m": "1/91",
+          "p": "1/91",
+          "q0": "3/182"
+        },
+        "r": {
+          "a0": "185/364",
+          "a1": "191/364",
+          "e": "183/364",
+          "gq": "1/182",
+          "gr": "183/364",
+          "h": "181/182",
+          "j": "2/91",
+          "k": "1/182",
+          "l": "1/182",
+          "m": "179/364",
+          "p": "183/364",
+          "q0": "25/52"
+        },
+        "s": {
+          "a0": "905/1092",
+          "a1": "181/1092",
+          "e": "173/364",
+          "gq": "193/1092",
+          "gr": "187/1092",
+          "h": "13/84",
+          "j": "151/1092",
+          "k": "25/156",
+          "l": "29/42",
+          "m": "187/546",
+          "p": "191/364",
+          "q0": "131/156"
+        }
+      }
+    },
+    {
+      "iteration": 1,
+      "master_status": "unknown"
+    }
+  ],
+  "schema": "fixed-u-rank-three-full-relation-cegar-v1",
+  "seed": "results/fixed_u_full_packet_terminal_cegar.json",
+  "seed_cut_count": 300,
+  "seed_sha256": "19422e48c65317ac2b5ea3e4a934c39b0f47dd2c9235d16cda459538ab1a07a3",
+  "solver": "Z3 5.0.0",
+  "status": "unknown"
+}

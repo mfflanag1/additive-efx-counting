@@ -1,0 +1,107 @@
+{
+  "checks": {
+    "all_support_checks": true,
+    "d_failure_is_strict_deficit_or_capture": true,
+    "d_margin_identity": true,
+    "selected_sources_strictly_paid": true
+  },
+  "claim_boundary": "cap-free four-edge support and all-non-d payment lemma; it does not prove d is paid or final targets are observer-safe",
+  "exact_remaining_gate": "two-cycle: eliminate d's lost-W-core capture; three-cycle: eliminate the bare residual deficit v_d(W)+v_d(p)<v_d(X_d), jointly with the represented-owner endpoint failures",
+  "provenance": {
+    "script": "tracks/parkability/audit_full_cycle_charity_to_sacrificed_completion.py",
+    "script_sha256": "29a430da2651dba62a089ee03c1e3052bf849565c590556360248d60dcad80c9",
+    "theorem": "results/FULL_CYCLE_CHARITY_TO_SACRIFICED_COMPLETION_LEMMA_20260813.md",
+    "theorem_sha256": "17e2bf95062a77685f022f159487f244ce5defed681aeb87c2688e77308b067c",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_charity": true,
+        "every_selected_source_receives_desired_core": true,
+        "exactly_four_support_edges": true
+      },
+      "d_loses_response_core": true,
+      "kind": "two_cycle",
+      "selected_responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_charity": true,
+        "every_selected_source_receives_desired_core": true,
+        "exactly_four_support_edges": true
+      },
+      "d_loses_response_core": false,
+      "kind": "three_cycle",
+      "selected_responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "full-cycle-charity-to-sacrificed-completion-v1",
+  "status": "BOTH_FULL_CYCLE_D_ENDPOINTS_CONSTRUCTED"
+}

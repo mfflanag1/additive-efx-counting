@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "exact twelve-atom CEGAR with necessary support-rank-three and mixed-reassembly-rank-three response gates; full signed-record reachability, deterministic priority selection, all Hall resets, and a genuine repeat remain unencoded, so SAT is not a recurrence countermodel and UNSAT is only a bounded-atom theorem",
+  "edge_origin": "support",
+  "exclude_self_responses": true,
+  "extra_seed_cut_count": 459,
+  "extra_seeds": [
+    "results/fixed_u_rank_three_root_facing_complete_cegar.json",
+    "results/fixed_u_rank_three_root_facing_support_edge_cegar.json"
+  ],
+  "maximum_escapes_per_round": 256,
+  "oracle_metric": "edges",
+  "radius_slack": 0,
+  "random_seed": 613,
+  "reason_unknown": "interrupted from keyboard",
+  "required_minimal_normal_form": false,
+  "required_owner_cycle_form": true,
+  "response_gate": {
+    "corrected_owner_cycle_form_required": true,
+    "minimal_root_facing_normal_form_required": false,
+    "reassembly_mixed_rank_four_forbidden": true,
+    "reassembly_relation": "union of all base-common-safe and same-state current-safe desired subsets",
+    "retained_named_cores": [
+      "r:A",
+      "q:Q",
+      "s:E"
+    ],
+    "self_responses_excluded_from_matching": true,
+    "split_ordinary_rank_four_forbidden": true,
+    "support_rank_four_forbidden": true,
+    "support_relation": "union of all base-common-safe and same-state current-safe desired subsets",
+    "unique_support_wall": "d strongly envies A; Q, E, and P are d-safe"
+  },
+  "rounds": [
+    {
+      "iteration": 0,
+      "master_status": "unknown"
+    }
+  ],
+  "schema": "fixed-u-rank-three-full-relation-cegar-v1",
+  "seed": "results/fixed_u_full_packet_terminal_cegar.json",
+  "seed_cut_count": 300,
+  "seed_filter": "complete-EFX seeds retained only when their selected provenance-edge count is within target_edge_bound; noncomplete global-maximality cuts are retained without this filter",
+  "seed_sha256": "19422e48c65317ac2b5ea3e4a934c39b0f47dd2c9235d16cda459538ab1a07a3",
+  "solver": "Z3 5.0.0",
+  "status": "unknown",
+  "target_edge_bound": 4
+}

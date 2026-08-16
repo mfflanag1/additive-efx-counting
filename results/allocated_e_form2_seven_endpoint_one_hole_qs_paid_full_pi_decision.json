@@ -1,0 +1,174 @@
+{
+  "allow_d_payment_hole": false,
+  "claim_boundary": "Exact twelve-atom allocated-E form-2 decision for the recorded required-paid owner set. UNSAT strengthens the bounded dichotomy to such an EFX endpoint; SAT refutes only that strengthening, not complete EFX.",
+  "core_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "elapsed_seconds": 32.1858114170027,
+  "endpoint_count": 7,
+  "endpoint_diagnostics": [
+    {
+      "endpoint": 1,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "4965/5236",
+        "q": "1043/748",
+        "r": "749/748",
+        "s": "69/68"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 2,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "5479/5236",
+        "q": "1043/748",
+        "r": "749/748",
+        "s": "1"
+      },
+      "underpaid_owners": []
+    },
+    {
+      "endpoint": 3,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1184/1309",
+        "q": "1043/748",
+        "r": "749/748",
+        "s": "1685/1496"
+      },
+      "underpaid_owners": [
+        "d"
+      ]
+    },
+    {
+      "endpoint": 4,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "743/748",
+        "q": "1043/748",
+        "r": "186/187",
+        "s": "69/68"
+      },
+      "underpaid_owners": [
+        "r",
+        "d"
+      ]
+    },
+    {
+      "endpoint": 5,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "1",
+        "q": "743/748",
+        "r": "1",
+        "s": "69/68"
+      },
+      "underpaid_owners": [
+        "q"
+      ]
+    },
+    {
+      "endpoint": 6,
+      "is_efx": false,
+      "owner_utilities": {
+        "d": "1",
+        "q": "729/748",
+        "r": "1",
+        "s": "69/68"
+      },
+      "underpaid_owners": [
+        "q"
+      ]
+    },
+    {
+      "endpoint": 7,
+      "is_efx": true,
+      "owner_utilities": {
+        "d": "371/374",
+        "q": "186/187",
+        "r": "755/748",
+        "s": "69/68"
+      },
+      "underpaid_owners": [
+        "q",
+        "d"
+      ]
+    }
+  ],
+  "full_pi_source": "results/allocated_e_form2_all_allocation_atom_cegar.json",
+  "maximum_payment_holes": 1,
+  "pi_clause_count": 46683,
+  "pi_source_sha256": "a15f0d3b159f2390736b4f32dbc76f592fb01a0db72c2032c90215d867bc8496",
+  "random_seed": 141650963,
+  "required_paid_owners": [
+    "q",
+    "s"
+  ],
+  "schema": "allocated-e-seven-endpoint-paid-strengthening-v1",
+  "solver": "Z3 5.0.0",
+  "solver_status": "sat",
+  "source_sha256": "22302f7cf306ad351d050ae1771430742cacaad870e25c4f6f16be451c8ea613",
+  "status": "SAT_NO_PI_OR_REQUIRED_PAID_SEVEN_ENDPOINT_EFX",
+  "timeout_seconds": 900,
+  "values": {
+    "d": {
+      "a0": "113/119",
+      "a1": "59/1309",
+      "e": "59/1309",
+      "gq": "1625/2618",
+      "gr": "118/1309",
+      "h": "743/5236",
+      "j": "757/2618",
+      "k": "1125/2618",
+      "l": "375/2618",
+      "m": "6/119",
+      "p": "59/1309",
+      "q0": "1493/5236"
+    },
+    "q": {
+      "a0": "365/374",
+      "a1": "9/748",
+      "e": "181/187",
+      "gq": "397/748",
+      "gr": "1/187",
+      "h": "15/748",
+      "j": "171/374",
+      "k": "21/44",
+      "l": "3/68",
+      "m": "5/748",
+      "p": "1/187",
+      "q0": "86/187"
+    },
+    "r": {
+      "a0": "186/187",
+      "a1": "5/748",
+      "e": "739/748",
+      "gq": "179/187",
+      "gr": "1/187",
+      "h": "1/187",
+      "j": "21/748",
+      "k": "729/1496",
+      "l": "1/187",
+      "m": "1/187",
+      "p": "1/68",
+      "q0": "727/1496"
+    },
+    "s": {
+      "a0": "1323/1496",
+      "a1": "1/187",
+      "e": "7/8",
+      "gq": "937/1496",
+      "gr": "173/1496",
+      "h": "189/1496",
+      "j": "541/1496",
+      "k": "3/8",
+      "l": "19/136",
+      "m": "5/748",
+      "p": "1/8",
+      "q0": "3/748"
+    }
+  }
+}

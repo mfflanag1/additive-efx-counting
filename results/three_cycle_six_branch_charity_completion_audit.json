@@ -1,0 +1,268 @@
+{
+  "checks": {
+    "all_support_checks": true,
+    "branches_without_shared_target_overlap": 2,
+    "failed_omitted_source_is_strict_capture": true,
+    "omitted_source_margin_identity": true,
+    "selected_sources_strictly_paid": true
+  },
+  "claim_boundary": "cap-free support and three-owner payment normal form; it does not prove one of six endpoint margins and observer budgets succeeds",
+  "exact_remaining_gate": "among six branches, select one whose omitted paid-cycle source has nonnegative signed margin and whose changed targets are observer-safe; or convert all six capture/overlap failures into a saturated exit",
+  "provenance": {
+    "script": "tracks/parkability/audit_three_cycle_six_branch_charity_completion.py",
+    "script_sha256": "75fc97b931b9945ee7018074a038845907fbe95b3fa2740c110126a166100349",
+    "theorem": "results/THREE_CYCLE_SIX_BRANCH_CHARITY_COMPLETION_LEMMA_20260813.md",
+    "theorem_sha256": "8e27d80dde9c39fa863ef8f2c354ec8ea298794d27be17414a9857bc43886c21",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "active_cycle_responses": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "omitted_source_receives_charity": true,
+        "two_cycle_sources_receive_desired_cores": true
+      },
+      "d_core_cycle_disjointness_required": true,
+      "d_core_target": "r",
+      "omitted_cycle_source": "r",
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_cycle_responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "omitted_source_receives_charity": true,
+        "two_cycle_sources_receive_desired_cores": true
+      },
+      "d_core_cycle_disjointness_required": true,
+      "d_core_target": "r",
+      "omitted_cycle_source": "q",
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "active_cycle_responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "omitted_source_receives_charity": true,
+        "two_cycle_sources_receive_desired_cores": true
+      },
+      "d_core_cycle_disjointness_required": false,
+      "d_core_target": "r",
+      "omitted_cycle_source": "s",
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_cycle_responses": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "omitted_source_receives_charity": true,
+        "two_cycle_sources_receive_desired_cores": true
+      },
+      "d_core_cycle_disjointness_required": false,
+      "d_core_target": "q",
+      "omitted_cycle_source": "r",
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_cycle_responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "omitted_source_receives_charity": true,
+        "two_cycle_sources_receive_desired_cores": true
+      },
+      "d_core_cycle_disjointness_required": true,
+      "d_core_target": "q",
+      "omitted_cycle_source": "q",
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "active_cycle_responses": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "omitted_source_receives_charity": true,
+        "two_cycle_sources_receive_desired_cores": true
+      },
+      "d_core_cycle_disjointness_required": true,
+      "d_core_target": "q",
+      "omitted_cycle_source": "s",
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "three-cycle-six-branch-charity-completion-v1",
+  "status": "SIX_CAP_FREE_BRANCHING_COMPLETIONS_CONSTRUCTED"
+}

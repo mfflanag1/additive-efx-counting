@@ -1,0 +1,740 @@
+{
+  "claim_boundary": "Exact CEGAR over physically realizable one/two-good refinements of the twelve named pieces. It separates every generalized PI over physical subgoods. Terminal SAT without PI refutes the seven-endpoint selector only; a full theorem countermodel would additionally require no unrestricted four-edge EFX allocation and every saturation premise.",
+  "core_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "core_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "elapsed_seconds": 830.1424025830056,
+  "endpoint_count": 7,
+  "iterations": [
+    {
+      "iteration": 0,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 54,
+        "q": 211,
+        "r": 1313,
+        "s": 151
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "singleton",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "two",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 19,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.0",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 1,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 277,
+        "q": 1038,
+        "r": 909,
+        "s": 6530
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "singleton",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 21,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "a0.1",
+            "gr.0",
+            "m.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.0",
+          "a0.1",
+          "m.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 2,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 275,
+        "q": 1125,
+        "r": 869,
+        "s": 6423
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "singleton",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 21,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.1",
+            "gr.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.1",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 3,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 601,
+        "q": 215,
+        "r": 525,
+        "s": 143
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "two",
+        "l": "singleton",
+        "m": "singleton",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 19,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "a0.1",
+            "gr.0"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.0",
+          "a0.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 4,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 677,
+        "q": 245,
+        "r": 120,
+        "s": 460
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.1",
+            "m.0"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.0",
+          "m.0",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 5,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 674,
+        "q": 245,
+        "r": 155,
+        "s": 464
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "singleton",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "gr.1",
+            "m.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "m.1",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 6,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 289,
+        "q": 566,
+        "r": 271,
+        "s": 674
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 21,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.0",
+            "gr.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.0",
+          "gr.0",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 7,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 199,
+        "q": 280,
+        "r": 237,
+        "s": 261
+      },
+      "packet_cardinality_class": {
+        "a0": "singleton",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "physical_pi_signature": [
+        [
+          "r",
+          [
+            "a0.0",
+            "gr.0",
+            "m.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "r": [
+          "a0.0",
+          "m.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 8,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 217,
+        "q": 210,
+        "r": 98,
+        "s": 260
+      },
+      "packet_cardinality_class": {
+        "a0": "singleton",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "gr.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "j.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 9,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 221,
+        "q": 266,
+        "r": 97,
+        "s": 260
+      },
+      "packet_cardinality_class": {
+        "a0": "singleton",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "gr.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "j.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 10,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 230,
+        "q": 450,
+        "r": 119,
+        "s": 261
+      },
+      "packet_cardinality_class": {
+        "a0": "singleton",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "singleton",
+        "j": "two",
+        "k": "singleton",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "a1.1",
+            "gq.1",
+            "gr.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "a1.1",
+          "j.1",
+          "gq.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 11,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 298,
+        "q": 1211,
+        "r": 131,
+        "s": 379
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 22,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "a1.1",
+            "gr.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "a1.1",
+          "j.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 12,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 368,
+        "q": 845,
+        "r": 143,
+        "s": 384
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 22,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.1",
+            "gr.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.1",
+          "j.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 13,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 439,
+        "q": 1099,
+        "r": 222,
+        "s": 388
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 22,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "a1.1",
+            "gr.0",
+            "j.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "a1.1",
+          "j.0",
+          "j.1",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 14,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 309,
+        "q": 953,
+        "r": 271,
+        "s": 330
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 22,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "a1.1",
+            "gq.0",
+            "gr.0",
+            "j.0",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "a1.1",
+          "j.0",
+          "j.1",
+          "gq.0",
+          "gr.0"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 15,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 468,
+        "q": 942,
+        "r": 297,
+        "s": 391
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 22,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "gr.1",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "j.1",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 16,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 543,
+        "q": 1439,
+        "r": 347,
+        "s": 467
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "two",
+        "h": "two",
+        "j": "two",
+        "k": "two",
+        "l": "two",
+        "m": "two",
+        "p": "singleton",
+        "q0": "singleton"
+      },
+      "physical_good_count": 22,
+      "physical_pi_signature": [
+        [
+          "q",
+          [
+            "a1.0",
+            "gr.1",
+            "j.1"
+          ]
+        ]
+      ],
+      "physical_pi_witness": {
+        "q": [
+          "a1.0",
+          "j.1",
+          "gr.1"
+        ]
+      },
+      "solver_status": "sat"
+    }
+  ],
+  "maximum_iterations": 500,
+  "physical_subpacket_pi_cut_count": 17,
+  "random_seed": 524287,
+  "schema": "allocated-e-seven-endpoint-physical-subpacket-pi-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "2479e3fc1b0c2fc0e468aa59b60557bc2181a48640c249722cfe1e5cdbba90e9",
+  "status": "RUNNING",
+  "timeout_seconds_per_check": 900,
+  "whole_packet_pi_clause_count": 425
+}

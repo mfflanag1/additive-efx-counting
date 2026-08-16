@@ -1,0 +1,99 @@
+{
+  "claim_boundary": "Cap-free combinatorial closure consequence conditional on each displayed d core being base-common-safe desired. This is unconditional for d->q; the current-only d->r status, support-return edge compression, and final EFX remain open.",
+  "document_sha256": "43c4cfc1d2b40959bcfcf3a5b4fc9ce4032c7154bec89141cec04f1c375a34bd",
+  "record_count": 6,
+  "records": [
+    {
+      "closed_without_omitted_support_would_force_pi": true,
+      "family": "selected",
+      "form": "R2",
+      "omitted_owner": "d",
+      "sources": [
+        "q",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "closed_without_omitted_support_would_force_pi": true,
+      "family": "replace_r_at_q_by_d",
+      "form": "R2",
+      "omitted_owner": "r",
+      "pairwise_disjoint_by_distinct_targets": true,
+      "physical_targets": [
+        "q",
+        "r",
+        "d"
+      ],
+      "sources": [
+        "d",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "closed_without_omitted_support_would_force_pi": true,
+      "family": "replace_q_at_r_by_d",
+      "form": "R2",
+      "omitted_owner": "q",
+      "pairwise_disjoint_by_distinct_targets": true,
+      "physical_targets": [
+        "r",
+        "q",
+        "d"
+      ],
+      "sources": [
+        "d",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "closed_without_omitted_support_would_force_pi": true,
+      "family": "selected",
+      "form": "R3",
+      "omitted_owner": "d",
+      "sources": [
+        "q",
+        "r",
+        "s"
+      ]
+    },
+    {
+      "closed_without_omitted_support_would_force_pi": true,
+      "family": "replace_r_at_q_by_d",
+      "form": "R3",
+      "omitted_owner": "r",
+      "pairwise_disjoint_by_distinct_targets": true,
+      "physical_targets": [
+        "q",
+        "s",
+        "r"
+      ],
+      "sources": [
+        "d",
+        "q",
+        "s"
+      ]
+    },
+    {
+      "closed_without_omitted_support_would_force_pi": true,
+      "family": "replace_s_at_r_by_d",
+      "form": "R3",
+      "omitted_owner": "s",
+      "pairwise_disjoint_by_distinct_targets": true,
+      "physical_targets": [
+        "r",
+        "q",
+        "s"
+      ],
+      "sources": [
+        "d",
+        "q",
+        "r"
+      ]
+    }
+  ],
+  "schema": "rank-three-pi-free-crossed-provenance-import-audit-v1",
+  "status": "BOTH_FORMS_ALL_CROSSED_IMPORTS_VERIFIED"
+}

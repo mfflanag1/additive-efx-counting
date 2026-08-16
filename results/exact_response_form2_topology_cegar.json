@@ -1,0 +1,260 @@
+{
+  "claim_boundary": "topology-level CEGAR in one corrected exact-response twelve-atom necessary-premise cell. UNSAT proves only the bounded theorem; a profile with no <=4 witness is a bounded obstruction, not a full saturated-state countermodel. Iteration limit/UNKNOWN is evidence only.",
+  "distinct_blocked_allocation_count": 1554,
+  "form_index": 2,
+  "form_name": "R3_THREE_CYCLE",
+  "maximum_new_topologies_per_round": 4,
+  "provenance": {
+    "script_sha256": "257f0d6ae9a6b8dafa040d0c301c3575d51464d97a4f53a041ceecf24d9a493f"
+  },
+  "random_seed": 1801,
+  "reason_unknown": "canceled",
+  "rounds": [
+    {
+      "chosen_topologies": [
+        [
+          [
+            "charity",
+            "d"
+          ],
+          [
+            "r",
+            "d"
+          ]
+        ],
+        [
+          [
+            "charity",
+            "r"
+          ],
+          [
+            "r",
+            "d"
+          ]
+        ],
+        [
+          [
+            "charity",
+            "r"
+          ],
+          [
+            "d",
+            "q"
+          ],
+          [
+            "r",
+            "d"
+          ]
+        ],
+        [
+          [
+            "charity",
+            "q"
+          ],
+          [
+            "r",
+            "s"
+          ],
+          [
+            "s",
+            "d"
+          ]
+        ]
+      ],
+      "complete_efx_allocation_count": 242,
+      "feasible_topology_count": 70,
+      "iteration": 0,
+      "minimum_edge_count": 2,
+      "new_blocked_allocation_counts": [
+        6,
+        8,
+        55,
+        20
+      ],
+      "values": {
+        "d": {
+          "a0": "265/268",
+          "a1": "265/268",
+          "e": "179/536",
+          "gq": "177/536",
+          "gr": "177/536",
+          "h": "89/268",
+          "j": "181/536",
+          "k": "181/536",
+          "l": "89/268",
+          "m": "175/536",
+          "p": "3/536",
+          "q0": "181/536"
+        },
+        "q": {
+          "a0": "535/1072",
+          "a1": "533/1072",
+          "e": "1265/2144",
+          "gq": "515/1072",
+          "gr": "3/536",
+          "h": "525/2144",
+          "j": "529/2144",
+          "k": "887/2144",
+          "l": "1261/2144",
+          "m": "3/536",
+          "p": "3/536",
+          "q0": "539/1072"
+        },
+        "r": {
+          "a0": "6985/7504",
+          "a1": "7013/7504",
+          "e": "535/1072",
+          "gq": "2665/7504",
+          "gr": "519/7504",
+          "h": "2707/7504",
+          "j": "2707/7504",
+          "k": "2651/7504",
+          "l": "535/1072",
+          "m": "519/7504",
+          "p": "543/1072",
+          "q0": "2651/7504"
+        },
+        "s": {
+          "a0": "563/670",
+          "a1": "513/1340",
+          "e": "523/670",
+          "gq": "1/536",
+          "gr": "3/536",
+          "h": "563/2680",
+          "j": "473/2680",
+          "k": "473/2680",
+          "l": "593/2680",
+          "m": "1/268",
+          "p": "147/670",
+          "q0": "421/670"
+        }
+      }
+    }
+  ],
+  "schema": "exact-response-topology-cegar-v1",
+  "selected_topologies": [
+    [
+      [
+        "charity",
+        "d"
+      ],
+      [
+        "d",
+        "s"
+      ],
+      [
+        "q",
+        "r"
+      ],
+      [
+        "r",
+        "q"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "q"
+      ],
+      [
+        "q",
+        "d"
+      ],
+      [
+        "r",
+        "s"
+      ],
+      [
+        "s",
+        "r"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "s"
+      ],
+      [
+        "d",
+        "r"
+      ],
+      [
+        "q",
+        "d"
+      ],
+      [
+        "r",
+        "q"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "s"
+      ],
+      [
+        "d",
+        "r"
+      ],
+      [
+        "r",
+        "d"
+      ],
+      [
+        "s",
+        "q"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "d"
+      ],
+      [
+        "r",
+        "d"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "r"
+      ],
+      [
+        "r",
+        "d"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "r"
+      ],
+      [
+        "d",
+        "q"
+      ],
+      [
+        "r",
+        "d"
+      ]
+    ],
+    [
+      [
+        "charity",
+        "q"
+      ],
+      [
+        "r",
+        "s"
+      ],
+      [
+        "s",
+        "d"
+      ]
+    ]
+  ],
+  "solver": "Z3 5.0.0",
+  "status": "UNKNOWN",
+  "timeout_seconds_per_master": 300
+}

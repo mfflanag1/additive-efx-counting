@@ -1,0 +1,34 @@
+{
+  "checks": {
+    "base_q_capture": true,
+    "current_root_capture": true,
+    "current_root_core_above_w": true,
+    "current_root_terminal_underpaid": true,
+    "q_is_base_desired": true,
+    "q_tail_equals_w": true,
+    "w_above_half_floor": true
+  },
+  "claim_boundary": "Exact one-row scalar compatibility witness only. It is not a four-owner valuation profile, saturated state, or EFX countermodel.",
+  "derived": {
+    "current_branch_final_d_value": "9/10",
+    "q_margin": "1/5",
+    "q_tail": "3/5",
+    "q_total": "6/5"
+  },
+  "schema": "dual-d-capture-scalar-compatibility-audit-v1",
+  "solver": "Z3 5.0.0",
+  "source": "tracks/parkability/audit_dual_d_capture_scalar_compatibility.py",
+  "source_sha256": "5a21241083309dbea765b3a10b908abad3998ac9a65a54226ae639780cd1187a",
+  "status": "SAT_EXACT_SCALAR_MODEL",
+  "theorem": "results/DUAL_D_CAPTURE_SCALAR_COMPATIBILITY_NO_GO_20260813.md",
+  "theorem_sha256": "af6f280f85a81dde995679d07ad7739854148c9eb6bdeb22377cb7566a195650",
+  "values": {
+    "charity": "1/10",
+    "current_root_core": "7/10",
+    "floor": "1",
+    "q_good_1": "3/5",
+    "q_good_2": "3/5",
+    "retained_root": "1/2",
+    "w": "3/5"
+  }
+}

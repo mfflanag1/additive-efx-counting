@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "all_distributions_conserve": true,
+    "all_distributions_within_four_edges": true,
+    "d_strict_payment_from_base_plus_charity": true,
+    "donor_failure_implies_strict_capture": true,
+    "donor_margin_identity": true,
+    "donor_safe_iff_capture_within_margin_forward": true
+  },
+  "claim_boundary": "cap-free support geometry and exact payment identities; donor capture and observer safety remain unproved",
+  "distribution_count": 240,
+  "edge_histogram": {
+    "2": 36,
+    "3": 162,
+    "4": 42
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_captured_own_support_four_edge_star.py",
+    "script_sha256": "0d3b86d68f3291f8ce8be1d94c424fd8c54497b41b793abfe307b66e55e680c1",
+    "theorem": "results/CAPTURED_OWN_SUPPORT_FOUR_EDGE_STAR_LEMMA_20260813.md",
+    "theorem_sha256": "eeff10ae03b41576a80e36d14722aed87938567bf2377098c79621496de69676",
+    "z3_version": "5.0.0"
+  },
+  "schema": "captured-own-support-four-edge-star-v1",
+  "status": "CAPTURED_SUPPORT_RETURN_ALWAYS_WITHIN_FOUR_EDGES"
+}

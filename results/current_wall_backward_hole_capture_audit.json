@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "full_current_wall_packet_with_retained_w_base_pays": "unsat",
+    "terminal_capture_strictly_exceeds_charity_value": "unsat",
+    "terminal_failure_forces_exact_retained_packet_capture": "unsat"
+  },
+  "claim_boundary": "Cap-free payment-hole termination for the nonsingleton current wall. Observer safety, capture uncrossing, and complete EFX remain.",
+  "schema": "current-wall-backward-hole-capture-audit-v1",
+  "solver": "Z3 5.0.0",
+  "source": "tracks/parkability/audit_current_wall_backward_hole_capture.py",
+  "source_sha256": "ec268be894d70899a88c5dae0e8e35105a5cf930035a3610252efc9c93f6d7a6",
+  "theorem": "results/CURRENT_WALL_BACKWARD_HOLE_CAPTURE_LEMMA_20260813.md",
+  "theorem_sha256": "96e20936363403447a039c48e3af6490865fca34b80efb36c1770030c461c608"
+}

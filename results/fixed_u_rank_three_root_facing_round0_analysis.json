@@ -1,0 +1,587 @@
+{
+  "claim_boundary": "descriptive exact subset-response census under base and same-state floors; it does not assert which GG response records are reachable or selected",
+  "schema": "fixed-u-no-go-response-relation-analysis-v1",
+  "source": "results/fixed_u_rank_three_root_facing_cegar.json",
+  "source_iteration": 0,
+  "states": {
+    "reassembly": {
+      "current_floor": [
+        {
+          "source": "d",
+          "subset": [
+            "a0"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a1",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "k",
+            "h",
+            "m"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "l",
+            "e"
+          ],
+          "target": "s"
+        }
+      ],
+      "current_maximum_matching": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "mixed_maximum_matching": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ],
+      "ordinary_base_floor": [
+        {
+          "source": "r",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "a0",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a0",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a0",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "a1",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a1",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "h",
+            "m"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "h",
+            "m"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "l",
+            "e"
+          ],
+          "target": "s"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "l",
+            "e"
+          ],
+          "target": "s"
+        }
+      ],
+      "ordinary_maximum_matching": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ]
+    },
+    "split": {
+      "current_floor": [
+        {
+          "source": "s",
+          "subset": [
+            "a0"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a1",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "h"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "l"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "e",
+            "m"
+          ],
+          "target": "s"
+        }
+      ],
+      "current_maximum_matching": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "mixed_maximum_matching": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "ordinary_base_floor": [
+        {
+          "source": "r",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "a0",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a0",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a0",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "a1",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a1",
+            "gr"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "h",
+            "l"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "h",
+            "l"
+          ],
+          "target": "d"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "e",
+            "m"
+          ],
+          "target": "s"
+        }
+      ],
+      "ordinary_maximum_matching": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    "support": {
+      "current_floor": [
+        {
+          "source": "d",
+          "subset": [
+            "a0"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "j",
+            "k",
+            "q0"
+          ],
+          "target": "q"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "l",
+            "e"
+          ],
+          "target": "s"
+        }
+      ],
+      "current_maximum_matching": [
+        [
+          "d",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "mixed_maximum_matching": [
+        [
+          "q",
+          "q"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ],
+      "ordinary_base_floor": [
+        {
+          "source": "r",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "a0",
+            "a1"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "a0",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a0",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a0",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "a0",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "r",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "a1",
+            "h"
+          ],
+          "target": "r"
+        },
+        {
+          "source": "q",
+          "subset": [
+            "j",
+            "k",
+            "q0"
+          ],
+          "target": "q"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "j",
+            "k",
+            "q0"
+          ],
+          "target": "q"
+        },
+        {
+          "source": "d",
+          "subset": [
+            "l",
+            "e"
+          ],
+          "target": "s"
+        },
+        {
+          "source": "s",
+          "subset": [
+            "l",
+            "e"
+          ],
+          "target": "s"
+        }
+      ],
+      "ordinary_maximum_matching": [
+        [
+          "q",
+          "q"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ]
+    }
+  }
+}

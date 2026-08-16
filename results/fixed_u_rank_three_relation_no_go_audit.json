@@ -1,0 +1,184 @@
+{
+  "allocations_examined_by_exact_radius": {
+    "0": 1,
+    "1": 48,
+    "2": 1056,
+    "3": 14080,
+    "4": 126720
+  },
+  "checks": {
+    "exact_radius_three_no_go": true,
+    "packet_premises": true,
+    "q_Q_edge_present": true,
+    "q_Q_is_common_safe": true,
+    "reassembly_mixed_rank_three": true,
+    "root_A_edge_present": true,
+    "root_A_is_common_safe": true,
+    "s_E_edge_present": true,
+    "s_E_is_common_safe": true,
+    "split_ordinary_rank_at_most_three": true,
+    "support_mixed_rank_three": true
+  },
+  "claim_boundary": "exact positive-rational twelve-atom profile satisfying the declared packet premises and necessary support/split/reassembly rank-three response gates, with no EFX lex improvement moving at most three goods; full signed-repeat reachability, deterministic priority records, all Hall resets, and cap-free packet exchange remain unencoded",
+  "efx_lex_escapes_by_exact_radius": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 31
+  },
+  "recorded_menu_matches_exact_radius_four_set": true,
+  "recorded_radius_four_menu_size": 31,
+  "response_matchings": {
+    "reassembly": {
+      "current": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "mixed": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ],
+      "ordinary": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ]
+    },
+    "split": {
+      "current": [
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "mixed": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "ordinary": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    "support": {
+      "current": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "mixed": [
+        [
+          "q",
+          "q"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ],
+      "ordinary": [
+        [
+          "q",
+          "q"
+        ],
+        [
+          "r",
+          "r"
+        ],
+        [
+          "s",
+          "s"
+        ]
+      ]
+    }
+  },
+  "response_ranks": {
+    "reassembly": {
+      "current": 3,
+      "mixed": 3,
+      "ordinary": 3
+    },
+    "split": {
+      "current": 2,
+      "mixed": 3,
+      "ordinary": 3
+    },
+    "support": {
+      "current": 3,
+      "mixed": 3,
+      "ordinary": 3
+    }
+  },
+  "schema": "fixed-u-rank-three-relation-radius-three-no-go-audit-v1",
+  "source": "results/fixed_u_rank_three_relation_cegar_v3.json",
+  "source_iteration": 4,
+  "source_iteration_sha256": "e2d8e48678b44df1e7a907a16067b8ebaa597975bc775714d97ced2fa627a01d",
+  "status": "RANK_GATED_RADIUS_THREE_SELECTOR_REFUTED"
+}

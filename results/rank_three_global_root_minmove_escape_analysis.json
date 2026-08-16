@@ -1,0 +1,184 @@
+{
+  "distinct_transfer_signatures": 155,
+  "escape_count": 300,
+  "good_recipient_frequencies": {
+    "c0": {
+      "c": 84,
+      "charity": 7,
+      "q": 169,
+      "r": 25,
+      "s": 15
+    },
+    "c1": {
+      "c": 42,
+      "charity": 13,
+      "q": 35,
+      "r": 180,
+      "s": 30
+    },
+    "c2": {
+      "c": 34,
+      "charity": 14,
+      "q": 33,
+      "r": 203,
+      "s": 16
+    },
+    "c3": {
+      "c": 39,
+      "charity": 192,
+      "q": 40,
+      "r": 17,
+      "s": 12
+    },
+    "f": {
+      "c": 30,
+      "charity": 5,
+      "q": 34,
+      "r": 216,
+      "s": 15
+    },
+    "q0": {
+      "c": 53,
+      "charity": 5,
+      "q": 185,
+      "r": 40,
+      "s": 17
+    },
+    "q1": {
+      "c": 269,
+      "q": 9,
+      "r": 8,
+      "s": 14
+    },
+    "q2": {
+      "c": 23,
+      "charity": 5,
+      "q": 35,
+      "r": 37,
+      "s": 200
+    },
+    "r0": {
+      "c": 61,
+      "charity": 7,
+      "q": 167,
+      "r": 55,
+      "s": 10
+    },
+    "r1": {
+      "c": 13,
+      "charity": 165,
+      "q": 72,
+      "r": 30,
+      "s": 20
+    },
+    "s0": {
+      "c": 2,
+      "q": 2,
+      "r": 2,
+      "s": 294
+    }
+  },
+  "interpretation": "bounded adversarial motif mining only; repeated minimum-move escapes suggest candidate packet operations but do not prove a cap-free selector",
+  "move_radius_histogram": {
+    "2": 6,
+    "3": 130,
+    "4": 162,
+    "5": 2
+  },
+  "root_current_target_goods_retained_histogram": {
+    "1": 64,
+    "2": 173,
+    "3": 63
+  },
+  "schema": "rank-three-minmove-escape-analysis-v1",
+  "source": "results/rank_three_global_root_minmove_cegar.json",
+  "top_transfer_signatures": [
+    {
+      "count": 9,
+      "signature": "charity->q:1;q->c:1;q->r:1;r->s:1"
+    },
+    {
+      "count": 8,
+      "signature": "charity->q:1;q->c:1;q->r:1;r->charity:1"
+    },
+    {
+      "count": 7,
+      "signature": "charity->q:1;q->c:1;q->r:1;r->q:1"
+    },
+    {
+      "count": 7,
+      "signature": "q->r:1;r->c:1;r->q:1"
+    },
+    {
+      "count": 6,
+      "signature": "q->c:1;q->r:1;r->s:1;s->q:1"
+    },
+    {
+      "count": 6,
+      "signature": "q->c:1;q->r:1;r->q:1"
+    },
+    {
+      "count": 6,
+      "signature": "charity->q:1;q->c:1;r->s:1;s->r:1"
+    },
+    {
+      "count": 6,
+      "signature": "charity->q:1;q->c:1;q->s:1"
+    },
+    {
+      "count": 5,
+      "signature": "charity->c:1;q->r:1;r->c:1"
+    },
+    {
+      "count": 5,
+      "signature": "charity->q:1;q->c:1;r->q:1"
+    },
+    {
+      "count": 5,
+      "signature": "charity->q:1;q->r:1;r->c:1"
+    },
+    {
+      "count": 5,
+      "signature": "charity->c:1;r->s:1;s->r:1"
+    },
+    {
+      "count": 4,
+      "signature": "q->c:1;q->s:1;s->q:1"
+    },
+    {
+      "count": 4,
+      "signature": "charity->s:1;q->c:1;s->q:1"
+    },
+    {
+      "count": 4,
+      "signature": "charity->q:1;q->c:1;q->s:1;s->q:1"
+    },
+    {
+      "count": 4,
+      "signature": "c->r:1;charity->q:1;q->c:1;r->c:1"
+    },
+    {
+      "count": 4,
+      "signature": "charity->q:1;q->c:1;r->c:1"
+    },
+    {
+      "count": 4,
+      "signature": "charity->c:1;q->r:1;r->q:1"
+    },
+    {
+      "count": 4,
+      "signature": "charity->q:1;q->c:1;q->r:1;r->c:1"
+    },
+    {
+      "count": 3,
+      "signature": "q->c:1;r->q:1"
+    }
+  ],
+  "unchanged_current_bundle_counts": {
+    "c": 6,
+    "charity": 65,
+    "q": 27,
+    "r": 59,
+    "s": 140
+  }
+}

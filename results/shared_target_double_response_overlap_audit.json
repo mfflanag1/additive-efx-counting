@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "packet_partition": {
+      "captured_overlap": [
+        "overlap"
+      ],
+      "partition_exact": true,
+      "trimmed_response": [
+        "only_C"
+      ]
+    },
+    "strict_capture_when_outside_strictly_below_floor": "unsat",
+    "weak_capture_implication": "unsat"
+  },
+  "claim_boundary": "cap-free set/algebra lemma; it does not reverse the capture inequality or prove endpoint owner-payment and observer safety",
+  "exact_dichotomy": "if C\\A remains desired, an inclusion-minimal subcore there is disjoint and inherits common safety; otherwise A intersection C captures at least the entire C-source response margin",
+  "provenance": {
+    "script": "tracks/parkability/audit_shared_target_double_response_overlap.py",
+    "script_sha256": "d551d5397ff385dbbaa63cb76178516f2f9fa8760ae9c04f8e9ce4d300bab327",
+    "theorem": "results/SHARED_TARGET_DOUBLE_RESPONSE_DISJOINT_OR_CAPTURE_LEMMA_20260813.md",
+    "theorem_sha256": "0961f473cc2cd5614bc52b29f2e52f1095e3fe48c583a718c243a50da43416b3"
+  },
+  "schema": "shared-target-double-response-disjoint-or-capture-v1",
+  "status": "DISJOINT_OR_FULL_MARGIN_CAPTURE"
+}

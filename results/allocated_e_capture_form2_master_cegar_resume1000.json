@@ -1,0 +1,655 @@
+{
+  "allocation_count": 0,
+  "base": {
+    "charity": [
+      "gr"
+    ],
+    "d": [
+      "h",
+      "k",
+      "q0",
+      "l"
+    ],
+    "q": [
+      "gq",
+      "a1",
+      "j"
+    ],
+    "r": [
+      "a0",
+      "m"
+    ],
+    "s": [
+      "e",
+      "p"
+    ]
+  },
+  "claim_boundary": "Exact twelve-good allocated-E captured-support cell with complete ordinary and generalized self-PI exclusions plus iterative cuts for every canonical generalized PI cycle found. Any result is a bounded-atom theorem or counterprofile, not the cap-free theorem.",
+  "e_external_supplier": "d",
+  "elapsed_seconds": 48.97641974998987,
+  "form_index": 2,
+  "generalized_pi_cut_count": 311,
+  "iterations": [
+    {
+      "iteration": 0,
+      "minimal_common_safe_desired_counts": {
+        "d": 12,
+        "q": 21,
+        "r": 16,
+        "s": 26
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "l"
+            ],
+            "incoming": [
+              "l"
+            ],
+            "released": [
+              "a1",
+              "gq"
+            ],
+            "source": "d",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "q0"
+            ],
+            "incoming": [
+              "a1"
+            ],
+            "released": [
+              "h",
+              "k",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 1,
+      "minimal_common_safe_desired_counts": {
+        "d": 18,
+        "q": 31,
+        "r": 14,
+        "s": 21
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "gq"
+            ],
+            "source": "d",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "k",
+              "gq"
+            ],
+            "incoming": [
+              "a1",
+              "gq"
+            ],
+            "released": [
+              "h",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 2,
+      "minimal_common_safe_desired_counts": {
+        "d": 18,
+        "q": 28,
+        "r": 11,
+        "s": 28
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "gq"
+            ],
+            "source": "d",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "k",
+              "q0",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "h",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 3,
+      "minimal_common_safe_desired_counts": {
+        "d": 49,
+        "q": 13,
+        "r": 39,
+        "s": 27
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "k",
+              "q0",
+              "gr"
+            ],
+            "incoming": [
+              "k",
+              "q0",
+              "gr"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "d",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "l"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 4,
+      "minimal_common_safe_desired_counts": {
+        "d": 42,
+        "q": 13,
+        "r": 49,
+        "s": 29
+      },
+      "pi_witness": {
+        "cycle": [
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "j",
+              "e"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "gq",
+              "gr",
+              "p"
+            ],
+            "incoming": [
+              "gr",
+              "p"
+            ],
+            "released": [
+              "a1",
+              "j"
+            ],
+            "source": "s",
+            "target": "q"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 5,
+      "minimal_common_safe_desired_counts": {
+        "d": 27,
+        "q": 27,
+        "r": 24,
+        "s": 19
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "r"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "k",
+              "m",
+              "gr"
+            ],
+            "incoming": [
+              "k",
+              "gr"
+            ],
+            "released": [
+              "a0"
+            ],
+            "source": "d",
+            "target": "r"
+          },
+          {
+            "desired_core": [
+              "a0",
+              "l"
+            ],
+            "incoming": [
+              "a0"
+            ],
+            "released": [
+              "h",
+              "k",
+              "q0"
+            ],
+            "source": "r",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 6,
+      "minimal_common_safe_desired_counts": {
+        "d": 53,
+        "q": 12,
+        "r": 15,
+        "s": 14
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a1",
+              "j",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "gq"
+            ],
+            "source": "d",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "h",
+              "q0",
+              "l",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "k"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 7,
+      "minimal_common_safe_desired_counts": {
+        "d": 18,
+        "q": 22,
+        "r": 13,
+        "s": 25
+      },
+      "pi_witness": {
+        "cycle": [
+          "q",
+          "s"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "e",
+              "gr"
+            ],
+            "incoming": [
+              "gr"
+            ],
+            "released": [
+              "p"
+            ],
+            "source": "q",
+            "target": "s"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "j",
+              "gq",
+              "p"
+            ],
+            "incoming": [
+              "p"
+            ],
+            "released": [],
+            "source": "s",
+            "target": "q"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 8,
+      "minimal_common_safe_desired_counts": {
+        "d": 19,
+        "q": 23,
+        "r": 13,
+        "s": 17
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "r",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "a1"
+            ],
+            "incoming": [
+              "a1"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          },
+          {
+            "desired_core": [
+              "j",
+              "q0",
+              "gr"
+            ],
+            "incoming": [
+              "q0",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "k",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "h",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 9,
+      "minimal_common_safe_desired_counts": {
+        "d": 16,
+        "q": 22,
+        "r": 15,
+        "s": 14
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "r",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "a0",
+              "h"
+            ],
+            "incoming": [
+              "h"
+            ],
+            "released": [
+              "m"
+            ],
+            "source": "d",
+            "target": "r"
+          },
+          {
+            "desired_core": [
+              "a1",
+              "m"
+            ],
+            "incoming": [
+              "m"
+            ],
+            "released": [
+              "j",
+              "gq"
+            ],
+            "source": "r",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "k",
+              "gq"
+            ],
+            "incoming": [
+              "gq"
+            ],
+            "released": [
+              "h",
+              "q0",
+              "l"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 10,
+      "minimal_common_safe_desired_counts": {
+        "d": 35,
+        "q": 10,
+        "r": 34,
+        "s": 21
+      },
+      "pi_witness": {
+        "cycle": [
+          "d",
+          "q"
+        ],
+        "edges": [
+          {
+            "desired_core": [
+              "h",
+              "k",
+              "gq",
+              "gr"
+            ],
+            "incoming": [
+              "h",
+              "k",
+              "gr"
+            ],
+            "released": [
+              "a1",
+              "j"
+            ],
+            "source": "d",
+            "target": "q"
+          },
+          {
+            "desired_core": [
+              "j",
+              "q0",
+              "l"
+            ],
+            "incoming": [
+              "j"
+            ],
+            "released": [
+              "h",
+              "k"
+            ],
+            "source": "q",
+            "target": "d"
+          }
+        ]
+      },
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 11,
+      "reason_unknown": "canceled",
+      "solver_status": "unknown"
+    }
+  ],
+  "maximum_iterations": 1000,
+  "negate_named_selector": false,
+  "random_seed": 2609,
+  "resume": {
+    "loaded_cut_count": 300,
+    "source": "results/allocated_e_capture_form2_master_cegar_300.json",
+    "source_sha256": "d4d2cdb632795ae9d8c442e3ba686b2657d60ed99f51ba1facc15dd9063886e9"
+  },
+  "schema": "allocated-e-capture-rank-three-generalized-pi-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "74d13f8d82c96c1afdebe52e7286b9cdbd7152be678984c721e50436f2e4e69f",
+  "status": "UNKNOWN",
+  "support": {
+    "charity": [
+      "p"
+    ],
+    "d": [
+      "m",
+      "gq",
+      "gr"
+    ],
+    "q": [
+      "j",
+      "k",
+      "q0"
+    ],
+    "r": [
+      "a0",
+      "a1",
+      "h"
+    ],
+    "s": [
+      "l",
+      "e"
+    ]
+  },
+  "timeout_seconds_per_check": 300
+}

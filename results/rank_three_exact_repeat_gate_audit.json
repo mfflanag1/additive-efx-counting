@@ -1,0 +1,256 @@
+{
+  "checks": {
+    "all_owner_charity_graph_connected": true,
+    "anchor_forced": true,
+    "available_owner_response_graph_cycle_free": true,
+    "positive_rational_response_realization": true,
+    "sacrificed_owner_is_root_facing": true,
+    "sacrificed_owner_unrepresented": true,
+    "selected_rank_is_three": true,
+    "two_target_holes_remain": true
+  },
+  "claim_boundary": "exact exhaustive graph-level refutation of the implication from full physical owner coverage plus anchor-constrained priority to a rank-four Hamiltonian response state; not a full-premise GG or EFX countermodel",
+  "minimal_survivor_count": 3,
+  "minimal_survivors": [
+    {
+      "edge_count": 4,
+      "edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "holes": [
+        "c",
+        "s"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ]
+    },
+    {
+      "edge_count": 4,
+      "edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "c"
+        ]
+      ],
+      "holes": [
+        "r",
+        "s"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "c"
+        ]
+      ]
+    },
+    {
+      "edge_count": 4,
+      "edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "charity"
+        ]
+      ],
+      "holes": [
+        "c",
+        "r"
+      ],
+      "selected_matching": [
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "charity"
+        ]
+      ]
+    }
+  ],
+  "minimum_edge_count": 4,
+  "provenance": {
+    "script": "tracks/parkability/audit_rank_three_exact_repeat_gate.py",
+    "script_sha256": "bb7e4340b1c681b13d94f175c1e1575d0bcd3b1cbd099813bf767056ba72a853",
+    "theorem": "results/RANK_THREE_EXACT_REPEAT_CLOSURE_GATE_20260813.md",
+    "theorem_sha256": "b0a682a80ac34905864e18d91e9df202b3da45c350100c68b09f9395dd3fe12e"
+  },
+  "response_graphs_checked": 32768,
+  "schema": "rank-three-exact-repeat-gate-v1",
+  "status": "RANK_THREE_TWO_HOLE_OBSTRUCTION_EXISTS",
+  "survivor_count": 208,
+  "survivor_edge_count_histogram": {
+    "10": 3,
+    "4": 3,
+    "5": 19,
+    "6": 49,
+    "7": 66,
+    "8": 49,
+    "9": 19
+  },
+  "survivor_hole_pair_histogram": {
+    "c,r": 64,
+    "c,s": 80,
+    "r,s": 64
+  },
+  "survivor_selected_matching_histogram": {
+    "q->charity;r->q;s->c": 64,
+    "q->charity;r->q;s->r": 80,
+    "q->s;r->q;s->charity": 64
+  },
+  "witness": {
+    "edge_count": 4,
+    "edges": [
+      [
+        "c",
+        "q"
+      ],
+      [
+        "q",
+        "charity"
+      ],
+      [
+        "r",
+        "q"
+      ],
+      [
+        "s",
+        "r"
+      ]
+    ],
+    "holes": [
+      "c",
+      "s"
+    ],
+    "rational_response_realization": {
+      "base_floor_each_source": "1",
+      "exact_desired_response_edges": [
+        [
+          "c",
+          "q"
+        ],
+        [
+          "q",
+          "charity"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "full_GG_countermodel": false,
+      "positive_rational": true,
+      "singleton_target_threshold_each_observer": "0",
+      "valuations": {
+        "c": {
+          "atom:c": "1/2",
+          "atom:charity": "1/2",
+          "atom:q": "2",
+          "atom:r": "1/2",
+          "atom:s": "1/2"
+        },
+        "q": {
+          "atom:c": "1/2",
+          "atom:charity": "2",
+          "atom:q": "1/2",
+          "atom:r": "1/2",
+          "atom:s": "1/2"
+        },
+        "r": {
+          "atom:c": "1/2",
+          "atom:charity": "1/2",
+          "atom:q": "2",
+          "atom:r": "1/2",
+          "atom:s": "1/2"
+        },
+        "s": {
+          "atom:c": "1/2",
+          "atom:charity": "1/2",
+          "atom:q": "1/2",
+          "atom:r": "2",
+          "atom:s": "1/2"
+        }
+      }
+    },
+    "selected_matching": [
+      [
+        "q",
+        "charity"
+      ],
+      [
+        "r",
+        "q"
+      ],
+      [
+        "s",
+        "r"
+      ]
+    ]
+  }
+}

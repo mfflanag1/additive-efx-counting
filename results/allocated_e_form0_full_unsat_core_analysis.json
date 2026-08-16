@@ -1,0 +1,1511 @@
+{
+  "claim_boundary": "Human-readable decoding of one bounded SMT core. Anchored rows use a smallest fixed-core family witnessing the exclusion. This is a proof-discovery map, not a cap-free proof.",
+  "core_count": 92,
+  "numerical_category_counts": {
+    "base_charity_efx": 3,
+    "base_normalization": 4,
+    "base_owner_efx": 10,
+    "d_Q_response": 1,
+    "d_wall_A": 1,
+    "d_wall_Q": 1,
+    "exact_response_relation": 3,
+    "fixed_response": 3,
+    "positive_lower": 11
+  },
+  "numerical_premise_count": 37,
+  "numerical_premises": [
+    {
+      "category": "exact_response_relation:s:d",
+      "formula": "(let ((a!1 (- (+ aec_v_m_r aec_v_gq_r)\n              (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)))\n      (a!2 (- (+ aec_v_m_q aec_v_gq_q)\n              (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)))\n      (a!3 (- (+ aec_v_m_d aec_v_gq_d)\n              (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)))\n      (a!4 (- (+ aec_v_m_s aec_v_gq_s)\n              (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)))\n      (a!5 (- (+ aec_v_m_r aec_v_gr_r)\n              (ite (<= aec_v_m_r aec_v_gr_r) aec_v_m_r aec_v_gr_r)))\n      (a!6 (- (+ aec_v_m_q aec_v_gr_q)\n              (ite (<= aec_v_m_q aec_v_gr_q) aec_v_m_q aec_v_gr_q)))\n      (a!7 (- (+ aec_v_m_d aec_v_gr_d)\n              (ite (<= aec_v_m_d aec_v_gr_d) aec_v_m_d aec_v_gr_d)))\n      (a!8 (- (+ aec_v_m_s aec_v_gr_s)\n              (ite (<= aec_v_m_s aec_v_gr_s) aec_v_m_s aec_v_gr_s)))\n      (a!9 (- (+ aec_v_gq_r aec_v_gr_r)\n              (ite (<= aec_v_gq_r aec_v_gr_r) aec_v_gq_r aec_v_gr_r)))\n      (a!10 (- (+ aec_v_gq_q aec_v_gr_q)\n               (ite (<= aec_v_gq_q aec_v_gr_q) aec_v_gq_q aec_v_gr_q)))\n      (a!11 (- (+ aec_v_gq_d aec_v_gr_d)\n               (ite (<= aec_v_gq_d aec_v_gr_d) aec_v_gq_d aec_v_gr_d)))\n      (a!12 (- (+ aec_v_gq_s aec_v_gr_s)\n               (ite (<= aec_v_gq_s aec_v_gr_s) aec_v_gq_s aec_v_gr_s)))\n      (a!13 (ite (<= (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                     aec_v_gr_r)\n                 (ite (<= aec_v_m_r aec_v_gq_r) aec_v_m_r aec_v_gq_r)\n                 aec_v_gr_r))\n      (a!14 (ite (<= (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                     aec_v_gr_q)\n                 (ite (<= aec_v_m_q aec_v_gq_q) aec_v_m_q aec_v_gq_q)\n                 aec_v_gr_q))\n      (a!15 (ite (<= (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                     aec_v_gr_d)\n                 (ite (<= aec_v_m_d aec_v_gq_d) aec_v_m_d aec_v_gq_d)\n                 aec_v_gr_d))\n      (a!16 (ite (<= (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                     aec_v_gr_s)\n                 (ite (<= aec_v_m_s aec_v_gq_s) aec_v_m_s aec_v_gq_s)\n                 aec_v_gr_s)))\n(let ((a!17 (and (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) 1.0)\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!13) 1.0)\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!14) 1.0)\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!15) 1.0)\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!16) 1.0)))\n      (a!18 (and (> (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n                 (<= (- (+ aec_v_m_r aec_v_gq_r aec_v_gr_r) a!13)\n                     (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_m_q aec_v_gq_q aec_v_gr_q) a!14)\n                     (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_m_d aec_v_gq_d aec_v_gr_d) a!15)\n                     (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n                 (<= (- (+ aec_v_m_s aec_v_gq_s aec_v_gr_s) a!16)\n                     (+ aec_v_l_s aec_v_e_s)))))\n  (or (and (> (+ aec_v_m_s) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_m_s) (+ aec_v_l_s aec_v_e_s))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_gq_s) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_gq_s) (+ aec_v_l_s aec_v_e_s))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_gr_s) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_m_s aec_v_gq_s) 1.0)\n           (<= a!1 1.0)\n           (<= a!2 1.0)\n           (<= a!3 1.0)\n           (<= a!4 1.0))\n      (and (> (+ aec_v_m_s aec_v_gq_s) (+ aec_v_l_s aec_v_e_s))\n           (<= a!1 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!2 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!3 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!4 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_m_s aec_v_gr_s) 1.0)\n           (<= a!5 1.0)\n           (<= a!6 1.0)\n           (<= a!7 1.0)\n           (<= a!8 1.0))\n      (and (> (+ aec_v_m_s aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n           (<= a!5 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!6 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!7 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!8 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_gq_s aec_v_gr_s) 1.0)\n           (<= a!9 1.0)\n           (<= a!10 1.0)\n           (<= a!11 1.0)\n           (<= a!12 1.0))\n      (and (> (+ aec_v_gq_s aec_v_gr_s) (+ aec_v_l_s aec_v_e_s))\n           (<= a!9 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!10 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!11 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!12 (+ aec_v_l_s aec_v_e_s)))\n      a!17\n      a!18)))"
+    },
+    {
+      "category": "exact_response_relation:q:r",
+      "formula": "(let ((a!1 (- (+ aec_v_a0_r aec_v_a1_r)\n              (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r)))\n      (a!2 (- (+ aec_v_a0_q aec_v_a1_q)\n              (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q)))\n      (a!3 (- (+ aec_v_a0_d aec_v_a1_d)\n              (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)))\n      (a!4 (- (+ aec_v_a0_s aec_v_a1_s)\n              (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s)))\n      (a!5 (- (+ aec_v_a0_r aec_v_h_r)\n              (ite (<= aec_v_a0_r aec_v_h_r) aec_v_a0_r aec_v_h_r)))\n      (a!6 (- (+ aec_v_a0_q aec_v_h_q)\n              (ite (<= aec_v_a0_q aec_v_h_q) aec_v_a0_q aec_v_h_q)))\n      (a!7 (- (+ aec_v_a0_d aec_v_h_d)\n              (ite (<= aec_v_a0_d aec_v_h_d) aec_v_a0_d aec_v_h_d)))\n      (a!8 (- (+ aec_v_a0_s aec_v_h_s)\n              (ite (<= aec_v_a0_s aec_v_h_s) aec_v_a0_s aec_v_h_s)))\n      (a!9 (- (+ aec_v_a1_r aec_v_h_r)\n              (ite (<= aec_v_a1_r aec_v_h_r) aec_v_a1_r aec_v_h_r)))\n      (a!10 (- (+ aec_v_a1_q aec_v_h_q)\n               (ite (<= aec_v_a1_q aec_v_h_q) aec_v_a1_q aec_v_h_q)))\n      (a!11 (- (+ aec_v_a1_d aec_v_h_d)\n               (ite (<= aec_v_a1_d aec_v_h_d) aec_v_a1_d aec_v_h_d)))\n      (a!12 (- (+ aec_v_a1_s aec_v_h_s)\n               (ite (<= aec_v_a1_s aec_v_h_s) aec_v_a1_s aec_v_h_s)))\n      (a!13 (ite (<= (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r)\n                     aec_v_h_r)\n                 (ite (<= aec_v_a0_r aec_v_a1_r) aec_v_a0_r aec_v_a1_r)\n                 aec_v_h_r))\n      (a!14 (ite (<= (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q)\n                     aec_v_h_q)\n                 (ite (<= aec_v_a0_q aec_v_a1_q) aec_v_a0_q aec_v_a1_q)\n                 aec_v_h_q))\n      (a!15 (ite (<= (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)\n                     aec_v_h_d)\n                 (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)\n                 aec_v_h_d))\n      (a!16 (ite (<= (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s)\n                     aec_v_h_s)\n                 (ite (<= aec_v_a0_s aec_v_a1_s) aec_v_a0_s aec_v_a1_s)\n                 aec_v_h_s)))\n(let ((a!17 (and (> (+ aec_v_a0_q aec_v_a1_q aec_v_h_q) 1.0)\n                 (<= (- (+ aec_v_a0_r aec_v_a1_r aec_v_h_r) a!13) 1.0)\n                 (<= (- (+ aec_v_a0_q aec_v_a1_q aec_v_h_q) a!14) 1.0)\n                 (<= (- (+ aec_v_a0_d aec_v_a1_d aec_v_h_d) a!15) 1.0)\n                 (<= (- (+ aec_v_a0_s aec_v_a1_s aec_v_h_s) a!16) 1.0)))\n      (a!18 (and (> (+ aec_v_a0_q aec_v_a1_q aec_v_h_q)\n                    (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_a0_r aec_v_a1_r aec_v_h_r) a!13)\n                     (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_a0_q aec_v_a1_q aec_v_h_q) a!14)\n                     (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_a0_d aec_v_a1_d aec_v_h_d) a!15)\n                     (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n                 (<= (- (+ aec_v_a0_s aec_v_a1_s aec_v_h_s) a!16)\n                     (+ aec_v_l_s aec_v_e_s)))))\n  (or (and (> (+ aec_v_a0_q) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_a0_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a1_q) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_a1_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_h_q) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_h_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a0_q aec_v_a1_q) 1.0)\n           (<= a!1 1.0)\n           (<= a!2 1.0)\n           (<= a!3 1.0)\n           (<= a!4 1.0))\n      (and (> (+ aec_v_a0_q aec_v_a1_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!1 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!2 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!3 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!4 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a0_q aec_v_h_q) 1.0)\n           (<= a!5 1.0)\n           (<= a!6 1.0)\n           (<= a!7 1.0)\n           (<= a!8 1.0))\n      (and (> (+ aec_v_a0_q aec_v_h_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!5 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!6 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!7 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!8 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_a1_q aec_v_h_q) 1.0)\n           (<= a!9 1.0)\n           (<= a!10 1.0)\n           (<= a!11 1.0)\n           (<= a!12 1.0))\n      (and (> (+ aec_v_a1_q aec_v_h_q) (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!9 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!10 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!11 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!12 (+ aec_v_l_s aec_v_e_s)))\n      a!17\n      a!18)))"
+    },
+    {
+      "category": "exact_response_relation:r:q",
+      "formula": "(let ((a!1 (- (+ aec_v_j_r aec_v_k_r)\n              (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)))\n      (a!2 (- (+ aec_v_j_q aec_v_k_q)\n              (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)))\n      (a!3 (- (+ aec_v_j_d aec_v_k_d)\n              (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)))\n      (a!4 (- (+ aec_v_j_s aec_v_k_s)\n              (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)))\n      (a!5 (- (+ aec_v_j_r aec_v_q0_r)\n              (ite (<= aec_v_j_r aec_v_q0_r) aec_v_j_r aec_v_q0_r)))\n      (a!6 (- (+ aec_v_j_q aec_v_q0_q)\n              (ite (<= aec_v_j_q aec_v_q0_q) aec_v_j_q aec_v_q0_q)))\n      (a!7 (- (+ aec_v_j_d aec_v_q0_d)\n              (ite (<= aec_v_j_d aec_v_q0_d) aec_v_j_d aec_v_q0_d)))\n      (a!8 (- (+ aec_v_j_s aec_v_q0_s)\n              (ite (<= aec_v_j_s aec_v_q0_s) aec_v_j_s aec_v_q0_s)))\n      (a!9 (- (+ aec_v_k_r aec_v_q0_r)\n              (ite (<= aec_v_k_r aec_v_q0_r) aec_v_k_r aec_v_q0_r)))\n      (a!10 (- (+ aec_v_k_q aec_v_q0_q)\n               (ite (<= aec_v_k_q aec_v_q0_q) aec_v_k_q aec_v_q0_q)))\n      (a!11 (- (+ aec_v_k_d aec_v_q0_d)\n               (ite (<= aec_v_k_d aec_v_q0_d) aec_v_k_d aec_v_q0_d)))\n      (a!12 (- (+ aec_v_k_s aec_v_q0_s)\n               (ite (<= aec_v_k_s aec_v_q0_s) aec_v_k_s aec_v_q0_s)))\n      (a!13 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                     aec_v_q0_r)\n                 (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                 aec_v_q0_r))\n      (a!14 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                     aec_v_q0_q)\n                 (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                 aec_v_q0_q))\n      (a!15 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                     aec_v_q0_d)\n                 (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                 aec_v_q0_d))\n      (a!16 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                     aec_v_q0_s)\n                 (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                 aec_v_q0_s)))\n(let ((a!17 (and (> (+ aec_v_j_r aec_v_k_r aec_v_q0_r) 1.0)\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!13) 1.0)\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!14) 1.0)\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!15) 1.0)\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!16) 1.0)))\n      (a!18 (and (> (+ aec_v_j_r aec_v_k_r aec_v_q0_r)\n                    (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!13)\n                     (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n                 (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!14)\n                     (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n                 (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!15)\n                     (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n                 (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!16)\n                     (+ aec_v_l_s aec_v_e_s)))))\n  (or (and (> (+ aec_v_j_r) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_j_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_k_r) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_k_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_q0_r) 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0)\n           (<= 0.0 1.0))\n      (and (> (+ aec_v_q0_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= 0.0 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= 0.0 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= 0.0 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_j_r aec_v_k_r) 1.0)\n           (<= a!1 1.0)\n           (<= a!2 1.0)\n           (<= a!3 1.0)\n           (<= a!4 1.0))\n      (and (> (+ aec_v_j_r aec_v_k_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!1 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!2 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!3 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!4 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_j_r aec_v_q0_r) 1.0)\n           (<= a!5 1.0)\n           (<= a!6 1.0)\n           (<= a!7 1.0)\n           (<= a!8 1.0))\n      (and (> (+ aec_v_j_r aec_v_q0_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!5 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!6 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!7 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!8 (+ aec_v_l_s aec_v_e_s)))\n      (and (> (+ aec_v_k_r aec_v_q0_r) 1.0)\n           (<= a!9 1.0)\n           (<= a!10 1.0)\n           (<= a!11 1.0)\n           (<= a!12 1.0))\n      (and (> (+ aec_v_k_r aec_v_q0_r) (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!9 (+ aec_v_a0_r aec_v_a1_r aec_v_h_r))\n           (<= a!10 (+ aec_v_j_q aec_v_k_q aec_v_q0_q))\n           (<= a!11 (+ aec_v_m_d aec_v_gq_d aec_v_gr_d))\n           (<= a!12 (+ aec_v_l_s aec_v_e_s)))\n      a!17\n      a!18)))"
+    },
+    {
+      "category": "d_wall_Q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d)))\n  (>= (+ aec_v_m_d aec_v_gq_d aec_v_gr_d)\n      (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!1)))"
+    },
+    {
+      "category": "d_wall_A",
+      "formula": "(< (+ aec_v_m_d aec_v_gq_d aec_v_gr_d)\n   (- (+ aec_v_a0_d aec_v_a1_d)\n      (ite (<= aec_v_a0_d aec_v_a1_d) aec_v_a0_d aec_v_a1_d)))"
+    },
+    {
+      "category": "d_Q_response",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_j_r aec_v_k_r) aec_v_j_r aec_v_k_r)\n                aec_v_q0_r))\n      (a!2 (ite (<= (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_j_q aec_v_k_q) aec_v_j_q aec_v_k_q)\n                aec_v_q0_q))\n      (a!3 (ite (<= (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                    aec_v_q0_d)\n                (ite (<= aec_v_j_d aec_v_k_d) aec_v_j_d aec_v_k_d)\n                aec_v_q0_d))\n      (a!4 (ite (<= (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_j_s aec_v_k_s) aec_v_j_s aec_v_k_s)\n                aec_v_q0_s)))\n  (and (> (+ aec_v_j_d aec_v_k_d aec_v_q0_d) 1.0)\n       (<= (- (+ aec_v_j_r aec_v_k_r aec_v_q0_r) a!1) 1.0)\n       (<= (- (+ aec_v_j_q aec_v_k_q aec_v_q0_q) a!2) 1.0)\n       (<= (- (+ aec_v_j_d aec_v_k_d aec_v_q0_d) a!3) 1.0)\n       (<= (- (+ aec_v_j_s aec_v_k_s aec_v_q0_s) a!4) 1.0)))"
+    },
+    {
+      "category": "fixed_response:s",
+      "formula": "(and (> (+ aec_v_l_s aec_v_e_s) 1.0)\n     (<= (+ aec_v_e_r) 1.0)\n     (<= (+ aec_v_l_r) 1.0)\n     (<= (+ aec_v_e_q) 1.0)\n     (<= (+ aec_v_l_q) 1.0)\n     (<= (+ aec_v_e_d) 1.0)\n     (<= (+ aec_v_l_d) 1.0)\n     (<= (+ aec_v_e_s) 1.0)\n     (<= (+ aec_v_l_s) 1.0))"
+    },
+    {
+      "category": "fixed_response:q",
+      "formula": "(and (> (+ aec_v_j_q aec_v_k_q aec_v_q0_q) 1.0)\n     (<= (+ aec_v_k_r aec_v_q0_r) 1.0)\n     (<= (+ aec_v_j_r aec_v_q0_r) 1.0)\n     (<= (+ aec_v_j_r aec_v_k_r) 1.0)\n     (<= (+ aec_v_k_q aec_v_q0_q) 1.0)\n     (<= (+ aec_v_j_q aec_v_q0_q) 1.0)\n     (<= (+ aec_v_j_q aec_v_k_q) 1.0)\n     (<= (+ aec_v_k_d aec_v_q0_d) 1.0)\n     (<= (+ aec_v_j_d aec_v_q0_d) 1.0)\n     (<= (+ aec_v_j_d aec_v_k_d) 1.0)\n     (<= (+ aec_v_k_s aec_v_q0_s) 1.0)\n     (<= (+ aec_v_j_s aec_v_q0_s) 1.0)\n     (<= (+ aec_v_j_s aec_v_k_s) 1.0))"
+    },
+    {
+      "category": "fixed_response:r",
+      "formula": "(and (> (+ aec_v_a0_r aec_v_a1_r) 1.0)\n     (<= (+ aec_v_a1_r) 1.0)\n     (<= (+ aec_v_a0_r) 1.0)\n     (<= (+ aec_v_a1_q) 1.0)\n     (<= (+ aec_v_a0_q) 1.0)\n     (<= (+ aec_v_a1_d) 1.0)\n     (<= (+ aec_v_a0_d) 1.0)\n     (<= (+ aec_v_a1_s) 1.0)\n     (<= (+ aec_v_a0_s) 1.0))"
+    },
+    {
+      "category": "base_owner_efx:s:d",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_h_s aec_v_k_s) aec_v_h_s aec_v_k_s)\n                    aec_v_q0_s)\n                (ite (<= aec_v_h_s aec_v_k_s) aec_v_h_s aec_v_k_s)\n                aec_v_q0_s)))\n  (<= (- (+ aec_v_h_s aec_v_k_s aec_v_q0_s aec_v_l_s)\n         (ite (<= a!1 aec_v_l_s) a!1 aec_v_l_s))\n      1.0))"
+    },
+    {
+      "category": "base_owner_efx:s:q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_gq_s aec_v_a1_s) aec_v_gq_s aec_v_a1_s)\n                    aec_v_j_s)\n                (ite (<= aec_v_gq_s aec_v_a1_s) aec_v_gq_s aec_v_a1_s)\n                aec_v_j_s)))\n  (<= (- (+ aec_v_gq_s aec_v_a1_s aec_v_j_s) a!1) 1.0))"
+    },
+    {
+      "category": "base_owner_efx:s:r",
+      "formula": "(<= (- (+ aec_v_a0_s aec_v_m_s)\n       (ite (<= aec_v_a0_s aec_v_m_s) aec_v_a0_s aec_v_m_s))\n    1.0)"
+    },
+    {
+      "category": "base_charity_efx:s",
+      "formula": "(<= (+ aec_v_gr_s) 1.0)"
+    },
+    {
+      "category": "base_normalization:s",
+      "formula": "(= (+ aec_v_e_s aec_v_p_s) 1.0)"
+    },
+    {
+      "category": "base_owner_efx:d:s",
+      "formula": "(<= (- (+ aec_v_e_d aec_v_p_d)\n       (ite (<= aec_v_e_d aec_v_p_d) aec_v_e_d aec_v_p_d))\n    1.0)"
+    },
+    {
+      "category": "base_owner_efx:d:q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_gq_d aec_v_a1_d) aec_v_gq_d aec_v_a1_d)\n                    aec_v_j_d)\n                (ite (<= aec_v_gq_d aec_v_a1_d) aec_v_gq_d aec_v_a1_d)\n                aec_v_j_d)))\n  (<= (- (+ aec_v_gq_d aec_v_a1_d aec_v_j_d) a!1) 1.0))"
+    },
+    {
+      "category": "base_normalization:d",
+      "formula": "(= (+ aec_v_h_d aec_v_k_d aec_v_q0_d aec_v_l_d) 1.0)"
+    },
+    {
+      "category": "base_owner_efx:q:s",
+      "formula": "(<= (- (+ aec_v_e_q aec_v_p_q)\n       (ite (<= aec_v_e_q aec_v_p_q) aec_v_e_q aec_v_p_q))\n    1.0)"
+    },
+    {
+      "category": "base_owner_efx:q:d",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_h_q aec_v_k_q) aec_v_h_q aec_v_k_q)\n                    aec_v_q0_q)\n                (ite (<= aec_v_h_q aec_v_k_q) aec_v_h_q aec_v_k_q)\n                aec_v_q0_q)))\n  (<= (- (+ aec_v_h_q aec_v_k_q aec_v_q0_q aec_v_l_q)\n         (ite (<= a!1 aec_v_l_q) a!1 aec_v_l_q))\n      1.0))"
+    },
+    {
+      "category": "base_charity_efx:q",
+      "formula": "(<= (+ aec_v_gr_q) 1.0)"
+    },
+    {
+      "category": "base_normalization:q",
+      "formula": "(= (+ aec_v_gq_q aec_v_a1_q aec_v_j_q) 1.0)"
+    },
+    {
+      "category": "base_owner_efx:r:s",
+      "formula": "(<= (- (+ aec_v_e_r aec_v_p_r)\n       (ite (<= aec_v_e_r aec_v_p_r) aec_v_e_r aec_v_p_r))\n    1.0)"
+    },
+    {
+      "category": "base_owner_efx:r:d",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_h_r aec_v_k_r) aec_v_h_r aec_v_k_r)\n                    aec_v_q0_r)\n                (ite (<= aec_v_h_r aec_v_k_r) aec_v_h_r aec_v_k_r)\n                aec_v_q0_r)))\n  (<= (- (+ aec_v_h_r aec_v_k_r aec_v_q0_r aec_v_l_r)\n         (ite (<= a!1 aec_v_l_r) a!1 aec_v_l_r))\n      1.0))"
+    },
+    {
+      "category": "base_owner_efx:r:q",
+      "formula": "(let ((a!1 (ite (<= (ite (<= aec_v_gq_r aec_v_a1_r) aec_v_gq_r aec_v_a1_r)\n                    aec_v_j_r)\n                (ite (<= aec_v_gq_r aec_v_a1_r) aec_v_gq_r aec_v_a1_r)\n                aec_v_j_r)))\n  (<= (- (+ aec_v_gq_r aec_v_a1_r aec_v_j_r) a!1) 1.0))"
+    },
+    {
+      "category": "base_charity_efx:r",
+      "formula": "(<= (+ aec_v_gr_r) 1.0)"
+    },
+    {
+      "category": "base_normalization:r",
+      "formula": "(= (+ aec_v_a0_r aec_v_m_r) 1.0)"
+    },
+    {
+      "category": "positive_lower:gr:s",
+      "formula": "(> aec_v_gr_s 0.0)"
+    },
+    {
+      "category": "positive_lower:gq:d",
+      "formula": "(> aec_v_gq_d 0.0)"
+    },
+    {
+      "category": "positive_lower:gq:q",
+      "formula": "(> aec_v_gq_q 0.0)"
+    },
+    {
+      "category": "positive_lower:m:d",
+      "formula": "(> aec_v_m_d 0.0)"
+    },
+    {
+      "category": "positive_lower:q0:r",
+      "formula": "(> aec_v_q0_r 0.0)"
+    },
+    {
+      "category": "positive_lower:k:r",
+      "formula": "(> aec_v_k_r 0.0)"
+    },
+    {
+      "category": "positive_lower:h:s",
+      "formula": "(> aec_v_h_s 0.0)"
+    },
+    {
+      "category": "positive_lower:h:d",
+      "formula": "(> aec_v_h_d 0.0)"
+    },
+    {
+      "category": "positive_lower:h:r",
+      "formula": "(> aec_v_h_r 0.0)"
+    },
+    {
+      "category": "positive_lower:a1:s",
+      "formula": "(> aec_v_a1_s 0.0)"
+    },
+    {
+      "category": "positive_lower:a1:q",
+      "formula": "(> aec_v_a1_q 0.0)"
+    }
+  ],
+  "pi_families": [
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "q",
+          [
+            "a0",
+            "h"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "e"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "j"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ],
+        [
+          "s",
+          [
+            "e",
+            "l"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "p"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "a0",
+            "j"
+          ]
+        ],
+        [
+          "q",
+          [
+            "gr",
+            "k"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a1",
+            "m"
+          ]
+        ]
+      ],
+      "kind": "higher"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "p"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "e",
+            "gr"
+          ]
+        ],
+        [
+          "s",
+          [
+            "a1",
+            "p"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "r",
+          [
+            "e",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "m",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "r",
+          [
+            "q0",
+            "gr"
+          ]
+        ],
+        [
+          "d",
+          [
+            "a0",
+            "k"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "r",
+          [
+            "k",
+            "gr"
+          ]
+        ],
+        [
+          "d",
+          [
+            "a0",
+            "q0"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ],
+        [
+          "q",
+          [
+            "m",
+            "gq"
+          ]
+        ]
+      ],
+      "kind": "pair"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "m"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ]
+      ],
+      "kind": "anchored"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "j",
+            "m"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ]
+      ],
+      "kind": "anchored"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "gr",
+            "m"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ]
+      ],
+      "kind": "anchored"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "l",
+            "m"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ],
+        [
+          "r",
+          [
+            "a0",
+            "a1"
+          ]
+        ]
+      ],
+      "kind": "anchored"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "gr",
+            "p"
+          ]
+        ],
+        [
+          "s",
+          [
+            "l",
+            "e"
+          ]
+        ]
+      ],
+      "kind": "anchored"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "a1",
+            "gr"
+          ]
+        ],
+        [
+          "q",
+          [
+            "j",
+            "k",
+            "q0"
+          ]
+        ]
+      ],
+      "kind": "anchored"
+    },
+    {
+      "family": [
+        [
+          "s",
+          [
+            "e",
+            "p",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "s",
+          [
+            "p",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "s",
+          [
+            "e",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "q0",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "d",
+          [
+            "k",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "gq",
+            "a1",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "a1",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "q",
+          [
+            "gq",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "r",
+          [
+            "m",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    },
+    {
+      "family": [
+        [
+          "r",
+          [
+            "a0",
+            "gr"
+          ]
+        ]
+      ],
+      "kind": "self"
+    }
+  ],
+  "pi_family_count": 55,
+  "pi_family_kind_counts": {
+    "anchored": 6,
+    "higher": 32,
+    "pair": 7,
+    "self": 10
+  },
+  "schema": "allocated-e-form0-full-core-analysis-v1",
+  "source": "results/allocated_e_form0_full_unsat_core.json",
+  "source_code_sha256": "777861c2a3ee835f2c5bb3a733bbd54b24923760d9fb0db0c73179d0b927417d",
+  "source_sha256": "5d21968337487721b9e0c3c1a7ffb31fa8888eda757d1671ca1e1ed4db1bf362",
+  "status": "CORE_DECODED"
+}

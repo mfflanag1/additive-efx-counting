@@ -1,0 +1,3022 @@
+{
+  "claim_boundary": "Exact CEGAR over every physically realizable singleton/two-good refinement of the twelve pieces in the declared endpoint-6 debt chart. Terminal UNSAT proves this two-slot physical chart; terminal SAT without PI still requires unrestricted packet and premise audits.",
+  "core_source": "results/allocated_e_form2_endpoint6_single_root_release_unsat_core.json",
+  "core_source_sha256": "6acebc240a48f3b76b6d883b2a01495999a5bc2e87b4de97b0f69f861856e465",
+  "dynamic_physical_subpacket_pi_cut_count": 192,
+  "elapsed_seconds": 937.302092708007,
+  "endpoint_source": "results/allocated_e_form2_all_allocation_minimized_unsat_core.json",
+  "endpoint_source_sha256": "8c57f349175f4c9c9b68f4e1da8b39ac7b7a8e102f6cdc576382522259575314",
+  "fixed_cardinality_class": {
+    "a0": "two",
+    "a1": "two",
+    "e": "two",
+    "gq": "two",
+    "gr": "singleton",
+    "h": "two",
+    "j": "two",
+    "k": "singleton",
+    "l": "singleton",
+    "m": "two",
+    "p": "singleton",
+    "q0": "two"
+  },
+  "fixed_cardinality_iteration": 3,
+  "fixed_cardinality_source": "results/allocated_e_form2_endpoint6_three_way_h_release_physical_pi_cegar_sparse.json",
+  "fixed_cardinality_source_sha256": "919571a9ad641fd0e39755b5082a400244b50885ddb285e2751622c45de4252e",
+  "iterations": [
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "q0.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 1,
+      "fresh_batch_self_pi_cut_count": 1,
+      "iteration": 0,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "gr.0",
+              "m.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "gr.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 2,
+      "fresh_batch_self_pi_cut_count": 2,
+      "iteration": 1,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "h.1",
+              "k.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "k.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "k.0",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "l.0",
+              "q0.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 5,
+      "fresh_batch_self_pi_cut_count": 5,
+      "iteration": 2,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.0",
+              "gq.1",
+              "j.1",
+              "m.0"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a0.1",
+              "j.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 3,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 260,
+        "q": 63,
+        "r": 1316,
+        "s": 221
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.0",
+              "gq.1",
+              "j.1",
+              "m.0"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.1",
+              "j.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 4,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 254,
+        "q": 61,
+        "r": 766,
+        "s": 277
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "d",
+            [
+              "a0.1",
+              "k.0"
+            ]
+          ],
+          [
+            "r",
+            [
+              "h.0",
+              "h.1",
+              "l.0",
+              "m.0",
+              "m.1",
+              "q0.0",
+              "q0.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 5,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 195,
+        "q": 66,
+        "r": 913,
+        "s": 374
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "e.1"
+            ]
+          ],
+          [
+            "s",
+            [
+              "a0.0",
+              "e.0",
+              "m.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 6,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 223,
+        "q": 263,
+        "r": 739,
+        "s": 345
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "e.1"
+            ]
+          ],
+          [
+            "s",
+            [
+              "a0.0",
+              "e.0",
+              "m.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 7,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 123,
+        "q": 236,
+        "r": 649,
+        "s": 556
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.1",
+              "e.1"
+            ]
+          ],
+          [
+            "s",
+            [
+              "a0.0",
+              "e.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 8,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 128,
+        "q": 238,
+        "r": 649,
+        "s": 567
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.1",
+              "j.0",
+              "j.1",
+              "m.0"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a0.1",
+              "gq.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 9,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 194,
+        "q": 268,
+        "r": 506,
+        "s": 557
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gq.0",
+              "gr.0",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gr.0",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 3,
+      "fresh_batch_self_pi_cut_count": 3,
+      "iteration": 10,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "gq.0",
+              "gq.1",
+              "gr.0",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gq.1",
+              "gr.0",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.0",
+              "gr.0",
+              "j.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "gq.0",
+              "gq.1",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gq.1",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gq.0",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gq.1",
+              "gr.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "gq.0",
+              "gr.0",
+              "j.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "gq.1",
+              "gr.0",
+              "j.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "gr.0",
+              "j.0",
+              "j.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gr.0",
+              "j.0",
+              "j.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 11,
+      "fresh_batch_self_pi_cut_count": 11,
+      "iteration": 11,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "r",
+            [
+              "a0.0",
+              "gr.0",
+              "m.1"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "l.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 4,
+      "fresh_batch_self_pi_cut_count": 4,
+      "iteration": 12,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.1",
+              "gr.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.0",
+              "k.0",
+              "l.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "k.0",
+              "l.0",
+              "q0.0"
+            ]
+          ]
+        ],
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "l.0",
+              "q0.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 4,
+      "fresh_batch_self_pi_cut_count": 4,
+      "iteration": 13,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "d",
+            [
+              "gr.0",
+              "h.1",
+              "k.0",
+              "q0.1"
+            ]
+          ]
+        ]
+      ],
+      "batch_self_pi_count": 1,
+      "fresh_batch_self_pi_cut_count": 1,
+      "iteration": 14,
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "gq.0",
+              "j.1",
+              "m.0",
+              "m.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a0.1",
+              "a1.0",
+              "a1.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 15,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 167,
+        "q": 2794,
+        "r": 544,
+        "s": 397
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "d",
+            [
+              "k.0",
+              "l.0",
+              "m.1",
+              "q0.0",
+              "q0.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a0.1",
+              "h.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 16,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 425,
+        "q": 108,
+        "r": 563,
+        "s": 406
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "d",
+            [
+              "a0.0",
+              "a0.1",
+              "q0.0"
+            ]
+          ],
+          [
+            "r",
+            [
+              "gr.0",
+              "h.0",
+              "h.1",
+              "k.0",
+              "l.0",
+              "m.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 17,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 441,
+        "q": 119,
+        "r": 899,
+        "s": 452
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a0.1",
+              "gq.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a1.0",
+              "a1.1",
+              "gq.0",
+              "j.0",
+              "j.1",
+              "m.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 18,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 390,
+        "q": 147,
+        "r": 3945,
+        "s": 469
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a0.1",
+              "gq.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a1.0",
+              "a1.1",
+              "gr.0",
+              "j.0",
+              "j.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 19,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 383,
+        "q": 142,
+        "r": 3732,
+        "s": 467
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a0.1",
+              "gq.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a1.1",
+              "gq.0",
+              "j.0",
+              "j.1",
+              "m.0",
+              "m.1"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 20,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 372,
+        "q": 219,
+        "r": 1049,
+        "s": 393
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a0.0",
+              "a1.0",
+              "a1.1",
+              "gq.1",
+              "j.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.1",
+              "j.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 21,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 332,
+        "q": 183,
+        "r": 1053,
+        "s": 445
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.1",
+              "j.1",
+              "m.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.1",
+              "j.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 22,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 330,
+        "q": 173,
+        "r": 1037,
+        "s": 440
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.1",
+              "j.1",
+              "m.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.0",
+              "a0.1",
+              "j.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 23,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 384,
+        "q": 181,
+        "r": 928,
+        "s": 460
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.1",
+              "j.1",
+              "m.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.1",
+              "j.0",
+              "m.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 24,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 320,
+        "q": 165,
+        "r": 863,
+        "s": 455
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "batch_multiowner_pi_count": 1,
+      "batch_physical_pi_signatures": [
+        [
+          [
+            "q",
+            [
+              "a1.0",
+              "a1.1",
+              "gq.1",
+              "j.1",
+              "m.1"
+            ]
+          ],
+          [
+            "r",
+            [
+              "a0.1",
+              "gq.0",
+              "j.0",
+              "m.0"
+            ]
+          ]
+        ]
+      ],
+      "fresh_batch_multiowner_pi_cut_count": 1,
+      "iteration": 25,
+      "minimal_common_safe_desired_core_counts": {
+        "d": 326,
+        "q": 170,
+        "r": 851,
+        "s": 503
+      },
+      "packet_cardinality_class": {
+        "a0": "two",
+        "a1": "two",
+        "e": "two",
+        "gq": "two",
+        "gr": "singleton",
+        "h": "two",
+        "j": "two",
+        "k": "singleton",
+        "l": "singleton",
+        "m": "two",
+        "p": "singleton",
+        "q0": "two"
+      },
+      "physical_good_count": 20,
+      "solver_status": "sat"
+    },
+    {
+      "iteration": 26,
+      "reason_unknown": "canceled",
+      "solver_status": "unknown"
+    }
+  ],
+  "maximum_iterations": 50,
+  "maximum_pi_families_per_round": 1,
+  "new_physical_subpacket_pi_cut_count_this_run": 49,
+  "physical_subpacket_pi_cut_count": 192,
+  "preseed_all_self_pi": false,
+  "preseeded_self_pi_cut_count": 0,
+  "random_seed": 86028229,
+  "release_allocation_count": 3,
+  "restored_physical_pi_cut_count": 143,
+  "restored_physical_pi_signatures": [
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "h.1",
+          "k.0",
+          "l.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "k.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "k.0",
+          "l.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "k.0",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "k.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "l.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "l.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "l.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "l.1",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "h.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "k.0",
+          "l.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "k.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "k.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "l.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "l.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "gr.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "h.1",
+          "k.0",
+          "k.1",
+          "l.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "h.1",
+          "k.0",
+          "k.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "h.1",
+          "k.0",
+          "l.1",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "h.1",
+          "k.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "h.1",
+          "k.1",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "k.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "k.0",
+          "k.1",
+          "l.0",
+          "l.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "k.0",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "k.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "k.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.0",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.1",
+          "k.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.1",
+          "k.0",
+          "k.1",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.1",
+          "k.0",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "h.1",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "k.0",
+          "k.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "k.0",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "k.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "l.0",
+          "l.1",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "l.1",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "l.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "h.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "k.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "k.0",
+          "k.1",
+          "l.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "k.0",
+          "l.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "k.0",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "k.0",
+          "l.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "k.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "l.0",
+          "l.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "l.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "l.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.1",
+          "k.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.1",
+          "k.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.1",
+          "l.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.1",
+          "l.1",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "h.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0",
+          "l.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0",
+          "l.0",
+          "l.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0",
+          "l.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "k.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "l.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "l.0",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "l.0",
+          "l.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "l.0",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "l.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "q0.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "q0.0",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "d",
+        [
+          "gr.1",
+          "q0.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.0",
+          "gr.0",
+          "gr.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.0",
+          "gr.0",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.0",
+          "gr.0",
+          "j.0",
+          "m.0",
+          "m.1"
+        ]
+      ],
+      [
+        "r",
+        [
+          "a0.0",
+          "a0.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.0",
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.0",
+          "j.0",
+          "m.0",
+          "m.1"
+        ]
+      ],
+      [
+        "r",
+        [
+          "a0.0",
+          "a0.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.1",
+          "gr.0",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gq.1",
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gr.0",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "a1.1",
+          "gr.1",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gq.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gq.1",
+          "gr.0",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gq.1",
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gr.0",
+          "gr.1",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gr.0",
+          "gr.1",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.0",
+          "gr.0",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gq.1",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.0",
+          "gr.1",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.0",
+          "gq.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.0",
+          "gq.1",
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.0",
+          "gr.0",
+          "gr.1",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.0",
+          "gr.0",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.0",
+          "gr.1",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.1",
+          "gr.0",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gq.1",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "a1.1",
+          "gr.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.0",
+          "gq.1",
+          "gr.0",
+          "j.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.0",
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.0",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.1",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gq.1",
+          "gr.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gr.0",
+          "gr.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gr.0",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gr.1",
+          "j.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "q",
+        [
+          "gr.1",
+          "j.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "a0.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "a0.1",
+          "gr.0",
+          "m.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.0",
+          "gr.1",
+          "m.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.0",
+          "gr.1",
+          "m.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.1",
+          "m.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.0",
+          "gr.1",
+          "m.0",
+          "m.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "r",
+        [
+          "a0.1",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "e.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "e.1",
+          "gr.0",
+          "p.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "gr.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "gr.0",
+          "p.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.0",
+          "gr.1",
+          "p.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.1",
+          "gr.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.1",
+          "gr.0",
+          "p.0"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "e.1",
+          "gr.1"
+        ]
+      ]
+    ],
+    [
+      [
+        "s",
+        [
+          "gr.1",
+          "p.0"
+        ]
+      ]
+    ]
+  ],
+  "resume": "results/allocated_e_form2_endpoint6_three_way_h_release_physical_pi_cegar_sparse.json",
+  "resume_through_iteration": null,
+  "schema": "endpoint6-three-way-h-release-physical-pi-cegar-v1",
+  "solver": "Z3 5.0.0",
+  "source_sha256": "94ff8082d2364824a5130bf2cd5cdae435760b4e56aff569b303e03adcda0e95",
+  "status": "UNKNOWN",
+  "timeout_seconds_per_check": 300,
+  "whole_packet_pi_clause_count": 289
+}

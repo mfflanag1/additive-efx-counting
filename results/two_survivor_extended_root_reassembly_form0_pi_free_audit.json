@@ -1,0 +1,93 @@
+{
+  "all_exact_relation_replays_match": true,
+  "all_named_families_have_no_efx": true,
+  "all_profiles_have_unrestricted_four_edge_efx": true,
+  "claim_boundary": "exact replay of two twelve-atom necessary-premise profiles. The result refutes the union of response-derived named topologies, not the unrestricted four-edge theorem and not the saturated theorem.",
+  "provenance": {
+    "script": "tracks/parkability/audit_two_survivor_named_topology_refutation.py",
+    "script_sha256": "11d2f8ca0945d7e7481b6a172c1c66c7724f512070473e58fddd98f3fdd34d04"
+  },
+  "records": [
+    {
+      "decision_allocation_count": 2060,
+      "exact_nonself_response_relation": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "exact_relation_matches_form": true,
+      "first_unrestricted_witness": {
+        "charity": [],
+        "d": [
+          "h",
+          "m",
+          "gr",
+          "p"
+        ],
+        "q": [
+          "j",
+          "k",
+          "q0",
+          "gq"
+        ],
+        "r": [
+          "a0",
+          "a1"
+        ],
+        "s": [
+          "l",
+          "e"
+        ]
+      },
+      "form_index": 0,
+      "master_exact_value_replay": "sat",
+      "named_allocation_count": 2060,
+      "named_allocation_count_matches": true,
+      "named_complete_efx_count": 0,
+      "named_topology_count": 9,
+      "ordinary_pi_free_exact": true,
+      "ordinary_pi_free_required": true,
+      "ordinary_response_cycles": [],
+      "ordinary_response_relation": [
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ],
+      "source": "results/two_survivor_extended_root_reassembly_form0_pi_free_decision.json",
+      "source_sha256": "b379af11cb58041a0d04b2b68afd94dcde0bda4865de91c087f29b66487736d2",
+      "unrestricted_four_edge_complete_efx_count": 44
+    }
+  ],
+  "schema": "two-survivor-named-topology-refutation-audit-v1",
+  "verdict": "NAMED_RESPONSE_TOPOLOGY_SELECTOR_REFUTED_UNRESTRICTED_FOUR_EDGE_SURVIVES"
+}

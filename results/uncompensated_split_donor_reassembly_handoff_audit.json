@@ -1,0 +1,43 @@
+{
+  "checks": {
+    "bilateral_transfer_support_is_connected": true,
+    "only_external_hole_remains_after_q_handoff": true,
+    "packets_pairwise_disjoint_after": true,
+    "packets_pairwise_disjoint_before": true,
+    "physical_goods_conserved": true,
+    "q_has_named_split_support_handoff": true,
+    "root_and_donor_are_ordinary_represented": true,
+    "root_q_and_donor_payment_imply_priority_validity": true,
+    "strict_root_precedes_missing_external_owner": true
+  },
+  "claim_boundary": "cap-free elimination of fourth-donor payment as a distinct terminal; the reassembled candidate returns to the existing sacrificed-hole recurrence and is not by this audit alone proved EFX",
+  "dependencies": {
+    "results/DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md": "5fa9e32b0302dd05abc221ee58f17a37d4c7d838d72a2593119b6c3a511dfaf4",
+    "results/FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md": "00219d044b900b4fd3efe197300cf9b36c16dcfe801dc262340f67c9e95aab68",
+    "results/FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md": "23f970c4ac3be694a7d08e7d12a2ff5784b7733e3e7317f85ddaa72be4e93950",
+    "results/LEX_SACRIFICED_RESPONSE_COMPRESSION_LEMMA_20260811.md": "b50d8e2537db164a178753e556978b3d85051cfdf3dc6653627fac915b500aeb",
+    "results/ROOT_ANCHORED_COMPRESSION_STAR_LEMMA_20260811.md": "eab526d83a0b857acadcd630669dc293b7ffda9e6e8d564cd7110881c8370878"
+  },
+  "provenance": {
+    "python": "3.14.3",
+    "script": "tracks/parkability/audit_uncompensated_split_donor_reassembly_handoff.py",
+    "script_sha256": "782fbd0c0e97ce91a3795b95f38f06205cd8f2035586b6084633d91776b3a826",
+    "theorem": "results/UNCOMPENSATED_SPLIT_DONOR_REASSEMBLY_HANDOFF_LEMMA_20260813.md",
+    "theorem_sha256": "56eaa5d4f63b0d1294cf04aef0eeb87f39bc48ba31964a65a9a80a0cf068f6c9",
+    "z3": "5.0.0"
+  },
+  "schema": "uncompensated-split-donor-reassembly-handoff-audit-v1",
+  "status": "ALL_FORCED",
+  "transfer_edges": [
+    [
+      "d",
+      "s",
+      "L"
+    ],
+    [
+      "s",
+      "d",
+      "M"
+    ]
+  ]
+}

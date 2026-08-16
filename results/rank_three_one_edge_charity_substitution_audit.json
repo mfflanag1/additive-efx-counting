@@ -1,0 +1,837 @@
+{
+  "checks": {
+    "all_cases_conserve_and_use_four_edges": true,
+    "all_non_omitted_sources_strictly_paid_by_desired_core": true,
+    "omitted_source_margin_identity": true,
+    "r_or_d_omission_eliminates_shared_q_overlap": true
+  },
+  "claim_boundary": "cap-free conservation/payment reduction for the corrected four response forms; it does not prove an admissible omission exists or derive final observer safety from saturation",
+  "exact_remaining_gate": "choose an omitted source h so Delta_h-L_h+v_h(p) meets its payment and observer debts, and every final changed target is EFX-safe; r/d omission simultaneously eliminates shared-q core overlap",
+  "omission_case_count": 16,
+  "omission_source_counts": {
+    "d": 4,
+    "q": 4,
+    "r": 4,
+    "s": 4
+  },
+  "provenance": {
+    "script": "tracks/parkability/audit_rank_three_one_edge_charity_substitution.py",
+    "script_sha256": "9bf575fb0a7ec12f34f223bd6b5c45976dd0ad7cfad7a9a200866acca2373bbd",
+    "theorem": "results/RANK_THREE_ONE_EDGE_CHARITY_SUBSTITUTION_LEMMA_20260813.md",
+    "theorem_sha256": "0eba4be0fc23cffb368662a46ec561911ea55c5e27dfd4122f4a58f54d09e3c3",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "active_q_target_core_sources": [
+        "d"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "r",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "q",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "d",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "s",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "r",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "q",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "d",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "s",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "r",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "q",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "d",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "s",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "r",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "q",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "d",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "active_q_target_core_sources": [
+        "d",
+        "r"
+      ],
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "every_non_omitted_source_receives_desired_core": true,
+        "exactly_three_reversed_responses_plus_charity": true,
+        "omitted_core_stays_with_physical_target": true,
+        "omitting_r_or_d_removes_shared_q_double_core": true
+      },
+      "omitted_response_source": "s",
+      "response_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "response_form_count": 4,
+  "schema": "rank-three-one-edge-charity-substitution-v1",
+  "status": "ALL_FOUR_FORMS_AND_OMISSIONS_CONSERVED"
+}

@@ -1,0 +1,165 @@
+{
+  "checks": {
+    "endpoint_failure_is_capture": true,
+    "endpoint_margin_identity": true,
+    "nonendpoint_desired_core_strictly_pays": true
+  },
+  "claim_boundary": "cap-free graph/conservation/payment reduction; it does not prove an endpoint with nonnegative margin exists or establish observer EFX",
+  "provenance": {
+    "script": "tracks/parkability/audit_sacrificed_source_shortest_charity_path.py",
+    "script_sha256": "4a489e844bc93f2b27749936d939cf114da23230132110afef656b58c4b27a4b",
+    "theorem": "results/SACRIFICED_SOURCE_SHORTEST_CHARITY_PATH_LEMMA_20260813.md",
+    "theorem_sha256": "d7ebe91d5554524783147adcb018b4e4a42fde314e3c639df3a4c3b670e10e91",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "checks": {
+        "at_most_four_edges": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_keeps_complete_old_bundle": true,
+        "each_nonendpoint_path_source_receives_core": true,
+        "edge_count_is_path_length": true,
+        "endpoint_receives_charity": true,
+        "functional_on_suppliers": true,
+        "off_path_bundles_preserved": true
+      },
+      "endpoint": "q",
+      "form": "R2",
+      "response_path": [
+        "d",
+        "r",
+        "q"
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "at_most_four_edges": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_keeps_complete_old_bundle": true,
+        "each_nonendpoint_path_source_receives_core": true,
+        "edge_count_is_path_length": true,
+        "endpoint_receives_charity": true,
+        "functional_on_suppliers": true,
+        "off_path_bundles_preserved": true
+      },
+      "endpoint": "r",
+      "form": "R2",
+      "response_path": [
+        "d",
+        "q",
+        "r"
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "at_most_four_edges": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_keeps_complete_old_bundle": true,
+        "each_nonendpoint_path_source_receives_core": true,
+        "edge_count_is_path_length": true,
+        "endpoint_receives_charity": true,
+        "functional_on_suppliers": true,
+        "off_path_bundles_preserved": true
+      },
+      "endpoint": "s",
+      "form": "R3",
+      "response_path": [
+        "d",
+        "r",
+        "q",
+        "s"
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "at_most_four_edges": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_keeps_complete_old_bundle": true,
+        "each_nonendpoint_path_source_receives_core": true,
+        "edge_count_is_path_length": true,
+        "endpoint_receives_charity": true,
+        "functional_on_suppliers": true,
+        "off_path_bundles_preserved": true
+      },
+      "endpoint": "r",
+      "form": "R3",
+      "response_path": [
+        "d",
+        "q",
+        "s",
+        "r"
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "sacrificed-source-shortest-charity-path-v1",
+  "status": "FOUR_SHORTEST_PATH_PAYMENT_SKELETONS_VERIFIED"
+}

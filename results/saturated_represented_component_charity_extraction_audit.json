@@ -1,0 +1,2985 @@
+{
+  "case_count": 132,
+  "checks": {
+    "all_component_path_source_cases": true,
+    "all_goods_conserved": true,
+    "all_incremental_graphs_connected": true,
+    "saturation_and_outsider_safety_force_efx": true,
+    "source_failure_forces_self_response": true,
+    "target_deletion_payment": true
+  },
+  "claim_boundary": "cap-free exclusion of saturated represented components of size 2-4 with directly safe unchanged outsiders; reachability from every fixed-U state and other GG classes are not established by this audit",
+  "component_size_counts": {
+    "2": 12,
+    "3": 48,
+    "4": 72
+  },
+  "dependencies": {
+    "results/ARBITRARY_CHARITY_PACKET_BLOCKER_COLLAPSE_LEMMA_20260811.md": "542d4882d83e12b3e9ef619c27af192cf425d89002ef644ada769a2417fb6a70",
+    "results/UNIVERSAL_FULL_OWNER_CHARITY_EXCHANGE_EXTRACTION_THEOREM_20260812.md": "396dd9a4af63c279adfca0ececb03bd90997766c59b4ed566ea9485f2ab653c3"
+  },
+  "provenance": {
+    "python": "3.14.3",
+    "script": "tracks/parkability/audit_saturated_represented_component_charity_extraction.py",
+    "script_sha256": "79e8fb48f82363e7d17b6633aa30841476285ae111b2fddcd7809f451bd8355e",
+    "theorem": "results/SATURATED_REPRESENTED_COMPONENT_CHARITY_EXTRACTION_THEOREM_20260813.md",
+    "theorem_sha256": "9c0c5b56e536ca58e32342ec3077227d5656c70241be90db35a841eafb23a7f1",
+    "z3": "5.0.0"
+  },
+  "records": [
+    {
+      "component": [
+        "r",
+        "q"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "q",
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "c",
+        "s",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "r",
+        "s",
+        "c",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "c",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "r",
+        "s",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "r",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "c",
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "r",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "q",
+        "s",
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "q",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "s",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "r",
+        "s",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "s",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "r",
+        "s"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "s",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "q",
+        "s",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "source": "s"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "s",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "c",
+        "s",
+        "q",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "q",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "q",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "c",
+        "r",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "r",
+        "c",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "c",
+        "r",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "r",
+        "c"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "c",
+        "q",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "q",
+        "c",
+        "r"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "r"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "q",
+        "r",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "r",
+        "q"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "source": "c"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "source": "q"
+    },
+    {
+      "component": [
+        "r",
+        "q",
+        "c",
+        "s"
+      ],
+      "connected": true,
+      "cycle": [
+        "charity",
+        "r",
+        "q",
+        "c",
+        "charity"
+      ],
+      "goods_conserved": true,
+      "path": [
+        "s",
+        "c",
+        "q",
+        "r"
+      ],
+      "source": "r"
+    }
+  ],
+  "schema": "saturated-represented-component-charity-extraction-audit-v1",
+  "status": "ALL_SATURATED_COMPONENTS_EXCLUDED"
+}

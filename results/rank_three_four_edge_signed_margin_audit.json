@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "base_desired_core_automatically_pays_after_any_own_subpacket_release": true,
+    "current_desired_core_automatically_pays_after_any_own_subpacket_release": true,
+    "observer_surplus_budget_is_sufficient": true,
+    "signed_owner_margin_identity": true
+  },
+  "claim_boundary": "cap-free linear identity and payment for every owner receiving a base- or current-desired response core; response-free endpoints and final enlarged-target safety remain",
+  "efx_budget": "m_i >= max_{j != i}(tau_i(Z_j)-v_i(X_i))_+",
+  "identity": "m_i = Delta_i - L_i + I_i",
+  "provenance": {
+    "script": "tracks/parkability/audit_rank_three_four_edge_signed_margin.py",
+    "script_sha256": "fff4ad74f00281420b38f8645169147bfb8316da95953044e2f42a4bcb017e21",
+    "theorem": "results/RANK_THREE_FOUR_EDGE_SIGNED_MARGIN_IDENTITY_LEMMA_20260813.md",
+    "theorem_sha256": "be849f240997c2943dbc17a4c7ba0d852f220000206c0fe14bfd905172c41b22",
+    "z3_version": "5.0.0"
+  },
+  "schema": "rank-three-four-edge-signed-margin-v1",
+  "status": "EXACT_MARGIN_IDENTITY_AND_ALL_RESPONSE_PAYMENT"
+}

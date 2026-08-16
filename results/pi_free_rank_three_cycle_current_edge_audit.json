@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "R2_pi_free_forces_current_only_edge": true,
+    "R3_pi_free_forces_current_only_edge": true,
+    "current_edge_payment": true
+  },
+  "claim_boundary": "cap-free response-label and payment implication only. Mixed-edge payment, sacrificed-owner payment, observers, and EFX remain open.",
+  "document_sha256": "849b7f2adcafa2615ee967e38e15ce2384f0a9f78eae945844ece3e50fa368a0",
+  "forms": [
+    {
+      "cycle_length": 2,
+      "form": "R2",
+      "ordinary_labelings_checked": 4,
+      "pi_free_labelings": 3,
+      "violations": 0
+    },
+    {
+      "cycle_length": 3,
+      "form": "R3",
+      "ordinary_labelings_checked": 8,
+      "pi_free_labelings": 7,
+      "violations": 0
+    }
+  ],
+  "schema": "pi-free-rank-three-cycle-current-edge-audit-v1",
+  "status": "PI_FREE_CYCLE_CURRENT_EDGE_VERIFIED"
+}

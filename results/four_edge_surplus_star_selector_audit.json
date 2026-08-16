@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "d_threshold_implies_payment": true,
+    "donor_budget_implies_payment": true,
+    "every_failed_maximum_separates_all_joint_choices": true,
+    "failed_star_forces_some_captured_packet_unaffordable": true,
+    "four_edge_count": true,
+    "independent_maxima_equal_joint_maximum": true
+  },
+  "claim_boundary": "cap-free selector proof with exhaustive finite sanity audit; success is not forced and donor-capture reversal remains open",
+  "failure_records": 250047,
+  "finite_records_checked": 500094,
+  "provenance": {
+    "script": "tracks/parkability/audit_four_edge_surplus_star_selector.py",
+    "script_sha256": "eb18015ff2c2256a8fb87e5bed9c3486d74af547fda2b4043480bda008f7b296",
+    "theorem": "results/FOUR_EDGE_SURPLUS_STAR_SELECTOR_LEMMA_20260813.md",
+    "theorem_sha256": "ea478d86b15618310a380d355516bb3b3f82ab4707afafa05b10878f20218394",
+    "z3_version": "5.0.0"
+  },
+  "schema": "four-edge-surplus-star-selector-v1",
+  "status": "SEPARABLE_STAR_SELECTOR_EXHAUSTIVELY_VERIFIED",
+  "success_records": 250047
+}

@@ -1,0 +1,635 @@
+{
+  "charity_bundles": [
+    {
+      "count": 23,
+      "key": []
+    }
+  ],
+  "charity_source_multisets": [
+    {
+      "count": 23,
+      "key": []
+    }
+  ],
+  "claim_boundary": "descriptive census of exact CEGAR escape allocations; frequencies do not prove that any listed transfer template is universally feasible",
+  "escape_count": 23,
+  "graph_shape_counts": [
+    {
+      "count": 9,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": true,
+        "has_parallel_supplier_edges": false
+      }
+    },
+    {
+      "count": 6,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": false,
+        "has_parallel_supplier_edges": true
+      }
+    },
+    {
+      "count": 3,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": true,
+        "has_parallel_supplier_edges": true
+      }
+    },
+    {
+      "count": 2,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "r",
+            "s"
+          ],
+          [
+            "d",
+            "q"
+          ]
+        ],
+        "connected": false,
+        "has_directed_two_cycle": true,
+        "has_parallel_supplier_edges": true
+      }
+    },
+    {
+      "count": 1,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "q",
+            "r"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": false,
+        "has_parallel_supplier_edges": true
+      }
+    },
+    {
+      "count": 1,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "q",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": false,
+        "has_parallel_supplier_edges": false
+      }
+    },
+    {
+      "count": 1,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": true,
+        "has_parallel_supplier_edges": false
+      }
+    }
+  ],
+  "mode_counts": {
+    "complete_efx": 23
+  },
+  "move_radius_counts": {
+    "5": 23
+  },
+  "moved_good_counts": {
+    "a0": 2,
+    "a1": 4,
+    "e": 3,
+    "gq": 3,
+    "gr": 23,
+    "h": 6,
+    "j": 23,
+    "k": 11,
+    "l": 23,
+    "m": 1,
+    "p": 10,
+    "q0": 6
+  },
+  "retained_base_goods": [
+    {
+      "count": 20,
+      "goods": [
+        "a0",
+        "m"
+      ],
+      "owner": "r"
+    },
+    {
+      "count": 13,
+      "goods": [
+        "a1",
+        "q0"
+      ],
+      "owner": "q"
+    },
+    {
+      "count": 11,
+      "goods": [
+        "gq",
+        "h"
+      ],
+      "owner": "d"
+    },
+    {
+      "count": 10,
+      "goods": [
+        "e",
+        "p"
+      ],
+      "owner": "s"
+    },
+    {
+      "count": 10,
+      "goods": [
+        "e"
+      ],
+      "owner": "s"
+    },
+    {
+      "count": 6,
+      "goods": [
+        "gq",
+        "k"
+      ],
+      "owner": "d"
+    },
+    {
+      "count": 6,
+      "goods": [
+        "a1"
+      ],
+      "owner": "q"
+    },
+    {
+      "count": 4,
+      "goods": [
+        "q0"
+      ],
+      "owner": "q"
+    },
+    {
+      "count": 3,
+      "goods": [
+        "gq",
+        "h",
+        "k"
+      ],
+      "owner": "d"
+    },
+    {
+      "count": 3,
+      "goods": [
+        "p"
+      ],
+      "owner": "s"
+    },
+    {
+      "count": 3,
+      "goods": [
+        "h",
+        "k"
+      ],
+      "owner": "d"
+    },
+    {
+      "count": 2,
+      "goods": [
+        "m"
+      ],
+      "owner": "r"
+    },
+    {
+      "count": 1,
+      "goods": [
+        "a0"
+      ],
+      "owner": "r"
+    }
+  ],
+  "schema": "fixed-u-full-packet-escape-analysis-v1",
+  "source": "results/fixed_u_rank_three_root_facing_complete_cegar.json",
+  "source_iteration": null,
+  "source_status": "RUNNING",
+  "top_transfer_graphs": [
+    {
+      "count": 3,
+      "key": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 3,
+      "key": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 2,
+      "key": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    }
+  ],
+  "transfer_graph_count": 14
+}

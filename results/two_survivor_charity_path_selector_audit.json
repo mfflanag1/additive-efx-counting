@@ -1,0 +1,227 @@
+{
+  "checks": {
+    "all_support_checks": true,
+    "endpoint_failure_is_strict_incoming_core_capture": true,
+    "endpoint_margin_identity": true,
+    "nonendpoint_desired_core_payment": true
+  },
+  "claim_boundary": "cap-free four-edge support and payment reduction for the two exact response forms; endpoint payment and observer safety are not proved",
+  "endpoint_choices": {
+    "three_cycle": [
+      "s",
+      "r"
+    ],
+    "two_cycle": [
+      "q",
+      "r"
+    ]
+  },
+  "exact_remaining_gate": "prove at least one of the two endpoints has nonnegative signed margin and all enlarged targets are observer-safe, or convert both strict incoming-core capture inequalities into a saturated PI, support-growth, or response-augmentation exit",
+  "provenance": {
+    "script": "tracks/parkability/audit_two_survivor_charity_path_selector.py",
+    "script_sha256": "0f350b31917cac0a89c7bfdb8efa333b75fb758e061a2ce4977bec207277898c",
+    "theorem": "results/TWO_SURVIVOR_HAMILTONIAN_CHARITY_PATH_SELECTOR_LEMMA_20260813.md",
+    "theorem_sha256": "7ade53ab4407a0fcc453ce77dcf0315d251f0cacd5c312a5a8fac2f7862205fc",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "checks": {
+        "all_path_edges_are_live_responses": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "exactly_four_support_edges": true,
+        "three_nonendpoint_sources_receive_desired_cores": true
+      },
+      "kind": "two_cycle",
+      "omitted_cycle_source": "q",
+      "response_path": [
+        "s",
+        "d",
+        "r",
+        "q"
+      ],
+      "response_path_edges": [
+        [
+          "s",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "all_path_edges_are_live_responses": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "exactly_four_support_edges": true,
+        "three_nonendpoint_sources_receive_desired_cores": true
+      },
+      "kind": "two_cycle",
+      "omitted_cycle_source": "r",
+      "response_path": [
+        "s",
+        "d",
+        "q",
+        "r"
+      ],
+      "response_path_edges": [
+        [
+          "s",
+          "d"
+        ],
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "all_path_edges_are_live_responses": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "exactly_four_support_edges": true,
+        "three_nonendpoint_sources_receive_desired_cores": true
+      },
+      "kind": "three_cycle",
+      "omitted_cycle_source": "s",
+      "response_path": [
+        "d",
+        "r",
+        "q",
+        "s"
+      ],
+      "response_path_edges": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "all_path_edges_are_live_responses": true,
+        "atom_conservation": true,
+        "charity_empty": true,
+        "exactly_four_support_edges": true,
+        "three_nonendpoint_sources_receive_desired_cores": true
+      },
+      "kind": "three_cycle",
+      "omitted_cycle_source": "r",
+      "response_path": [
+        "d",
+        "q",
+        "s",
+        "r"
+      ],
+      "response_path_edges": [
+        [
+          "d",
+          "q"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "s",
+          "r"
+        ]
+      ],
+      "transfer_edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "two-survivor-hamiltonian-charity-path-selector-v1",
+  "status": "FOUR_CAP_FREE_PATH_SELECTORS_CONSTRUCTED"
+}

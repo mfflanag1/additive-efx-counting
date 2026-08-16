@@ -1,0 +1,243 @@
+{
+  "charity_bundles": [
+    {
+      "count": 1,
+      "key": [
+        "gr",
+        "j",
+        "l"
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        "j"
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        "j",
+        "l"
+      ]
+    }
+  ],
+  "charity_source_multisets": [
+    {
+      "count": 1,
+      "key": [
+        "charity",
+        "charity",
+        "charity"
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        "charity"
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        "charity",
+        "charity"
+      ]
+    }
+  ],
+  "claim_boundary": "descriptive census of exact CEGAR escape allocations; frequencies do not prove that any listed transfer template is universally feasible",
+  "escape_count": 3,
+  "graph_shape_counts": [
+    {
+      "count": 1,
+      "shape": {
+        "charity_donates": false,
+        "charity_participates": false,
+        "charity_receives": false,
+        "components": [
+          [
+            "d",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": false,
+        "has_parallel_supplier_edges": false
+      }
+    },
+    {
+      "count": 1,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "r",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": false,
+        "has_parallel_supplier_edges": false
+      }
+    },
+    {
+      "count": 1,
+      "shape": {
+        "charity_donates": true,
+        "charity_participates": true,
+        "charity_receives": false,
+        "components": [
+          [
+            "charity",
+            "d",
+            "s"
+          ]
+        ],
+        "connected": true,
+        "has_directed_two_cycle": true,
+        "has_parallel_supplier_edges": false
+      }
+    }
+  ],
+  "mode_counts": {
+    "efx_lex": 3
+  },
+  "move_radius_counts": {
+    "3": 3
+  },
+  "moved_good_counts": {
+    "a0": 1,
+    "e": 1,
+    "gr": 2,
+    "h": 2,
+    "k": 1,
+    "l": 1,
+    "p": 1
+  },
+  "retained_base_goods": [
+    {
+      "count": 3,
+      "goods": [
+        "a1",
+        "q0"
+      ],
+      "owner": "q"
+    },
+    {
+      "count": 2,
+      "goods": [
+        "gq",
+        "k"
+      ],
+      "owner": "d"
+    },
+    {
+      "count": 2,
+      "goods": [
+        "a0",
+        "m"
+      ],
+      "owner": "r"
+    },
+    {
+      "count": 1,
+      "goods": [
+        "m"
+      ],
+      "owner": "r"
+    },
+    {
+      "count": 1,
+      "goods": [
+        "e"
+      ],
+      "owner": "s"
+    },
+    {
+      "count": 1,
+      "goods": [
+        "gq",
+        "h"
+      ],
+      "owner": "d"
+    },
+    {
+      "count": 1,
+      "goods": [
+        "e",
+        "p"
+      ],
+      "owner": "s"
+    },
+    {
+      "count": 1,
+      "goods": [
+        "p"
+      ],
+      "owner": "s"
+    }
+  ],
+  "schema": "fixed-u-full-packet-escape-analysis-v1",
+  "source": "results/fixed_u_rank_three_root_facing_cegar.json",
+  "source_iteration": 1,
+  "source_status": "RUNNING",
+  "top_transfer_graphs": [
+    {
+      "count": 1,
+      "key": [
+        [
+          "d",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "d",
+          "r"
+        ]
+      ]
+    },
+    {
+      "count": 1,
+      "key": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ]
+    }
+  ],
+  "transfer_graph_count": 3
+}

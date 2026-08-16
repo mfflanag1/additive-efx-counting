@@ -45,6 +45,8 @@ def run(
     preseed_all_self_pi: bool = False,
     resume: Path | None = None,
     resume_through_iteration: int | None = None,
+    fixed_cardinality_source: Path | None = None,
+    fixed_cardinality_iteration: int | None = None,
 ):
     core_source = core_source.resolve()
     endpoint_source = endpoint_source.resolve()
@@ -67,6 +69,19 @@ def run(
                 value[piece, observer] >= 2 * least[piece, observer],
             ))
     solver.add(singleton["p"])
+    fixed_cardinality_class = None
+    if fixed_cardinality_source is not None:
+        if fixed_cardinality_iteration is None:
+            raise ValueError("fixed cardinality iteration is required")
+        fixed_cardinality_source = fixed_cardinality_source.resolve()
+        cardinality_payload = json.loads(fixed_cardinality_source.read_text())
+        fixed_cardinality_class = cardinality_payload["iterations"][
+            fixed_cardinality_iteration
+        ]["packet_cardinality_class"]
+        if set(fixed_cardinality_class) != set(GOODS):
+            raise ValueError("fixed cardinality class does not cover all pieces")
+        for piece, kind in fixed_cardinality_class.items():
+            solver.add(singleton[piece] if kind == "singleton" else z3.Not(singleton[piece]))
     solver.add(
         endpoint_efx(value, least, endpoint6),
         total(value, "q", endpoint6["q"]) >= 1,
@@ -131,6 +146,16 @@ def run(
         "maximum_pi_families_per_round": maximum_pi_families_per_round,
         "resume": None if resume is None else str(resume.relative_to(ROOT)),
         "resume_through_iteration": resume_through_iteration,
+        "fixed_cardinality_source": (
+            None if fixed_cardinality_source is None
+            else str(fixed_cardinality_source.relative_to(ROOT))
+        ),
+        "fixed_cardinality_source_sha256": (
+            None if fixed_cardinality_source is None
+            else hashlib.sha256(fixed_cardinality_source.read_bytes()).hexdigest()
+        ),
+        "fixed_cardinality_iteration": fixed_cardinality_iteration,
+        "fixed_cardinality_class": fixed_cardinality_class,
         "iterations": [],
         "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         "claim_boundary": (
@@ -258,6 +283,8 @@ def main():
     parser.add_argument("--preseed-all-self-pi", action="store_true")
     parser.add_argument("--resume", type=Path)
     parser.add_argument("--resume-through-iteration", type=int)
+    parser.add_argument("--fixed-cardinality-source", type=Path)
+    parser.add_argument("--fixed-cardinality-iteration", type=int)
     args = parser.parse_args()
     result = run(
         args.core_source,
@@ -270,6 +297,8 @@ def main():
         args.preseed_all_self_pi,
         args.resume,
         args.resume_through_iteration,
+        args.fixed_cardinality_source,
+        args.fixed_cardinality_iteration,
     )
     print(json.dumps({
         "status": result["status"],

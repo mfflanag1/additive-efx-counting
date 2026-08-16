@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "all_support_checks": true,
+    "desired_core_recipients_strictly_paid": true,
+    "retained_s_plus_positive_charity_strictly_paid": true
+  },
+  "claim_boundary": "cap-free support and payment lemma conditional on disjoint selected cores and final observer safety; it does not reverse simultaneous overlap capture or prove EFX safety",
+  "exact_remaining_gate": "either find a d-response core disjoint from the corresponding r/q cycle core, or prove that simultaneous full-margin overlap capture at both r and q activates a saturated exit",
+  "provenance": {
+    "script": "tracks/parkability/audit_two_cycle_branching_charity_completion.py",
+    "script_sha256": "75b5468666cc59d588b2fa4ca8efe42d44baa47b8581b82d37ce4af135e24398",
+    "theorem": "results/TWO_CYCLE_BRANCHING_CHARITY_COMPLETION_LEMMA_20260813.md",
+    "theorem_sha256": "ee222af9f8fb95d0a44ebb31ec2762419c03bda343d4dff6454d041bb1c2e0ed",
+    "z3_version": "5.0.0"
+  },
+  "records": [
+    {
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "q_receives_desired_cycle_core": true,
+        "r_receives_desired_cycle_core": true,
+        "s_keeps_paid_bundle_and_receives_charity": true
+      },
+      "d_core_target": "r",
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    },
+    {
+      "checks": {
+        "atom_conservation": true,
+        "charity_empty": true,
+        "d_receives_desired_core": true,
+        "exactly_four_support_edges": true,
+        "q_receives_desired_cycle_core": true,
+        "r_receives_desired_cycle_core": true,
+        "s_keeps_paid_bundle_and_receives_charity": true
+      },
+      "d_core_target": "q",
+      "transfer_edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "d"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ]
+    }
+  ],
+  "schema": "two-cycle-branching-charity-completion-v1",
+  "status": "TWO_DISJOINT_BRANCHING_COMPLETIONS_CONSTRUCTED"
+}

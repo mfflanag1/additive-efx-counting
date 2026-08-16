@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "direct_floor_failure_excludes_every_residual_charity_partition": true,
+    "direct_floor_success_is_sufficient": true,
+    "failure_forces_strict_capture_or_parked_own_support_polarity": true,
+    "least_good_split_is_charity_safe_for_pool_size_at_least_two": true,
+    "least_good_split_maximizes_owner_value_over_all_nonempty_charity_subsets": true
+  },
+  "claim_boundary": "cap-free global residual-pool split for the sacrificed owner and nonempty charity; selected-core capture return and full fixed-U termination remain open",
+  "nonempty_charity_subsets_checked": 2374896,
+  "positive_value_instances": 21840,
+  "provenance": {
+    "python": "3.14.3",
+    "script": "tracks/parkability/audit_rank_three_two_hole_global_residual_split.py",
+    "script_sha256": "df0951a6eb9720113397099d2b1f9e228d93fe91c3ec274c25de6128bea8888c",
+    "theorem": "results/RANK_THREE_TWO_HOLE_GLOBAL_RESIDUAL_SPLIT_LEMMA_20260813.md",
+    "theorem_sha256": "a3bbdb3ce2f966ec2b53f11826cd06fff63e030063cc0aade443782e73edf2a6",
+    "z3": "5.0.0"
+  },
+  "schema": "rank-three-two-hole-global-residual-split-audit-v1",
+  "status": "ALL_RESIDUAL_CHARITY_SPLITS_CLASSIFIED"
+}

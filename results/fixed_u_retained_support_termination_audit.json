@@ -1,0 +1,293 @@
+{
+  "checks": {
+    "abstract_exact_repeat_node_reaches_saturated_extraction": true,
+    "all_dependency_statuses_accepted": true,
+    "finite_history_is_bounded": true,
+    "fixed_u_reaches_endpoint_or_progress_or_saturation": true,
+    "new_exact_event_strictly_increases_history": true,
+    "no_moved_good_radius_in_transition_graph": true,
+    "sole_nonterminal_coarse_scc_identified": true
+  },
+  "claim_boundary": "coarse composition and dependency audit only; a sacrificed-hole rank-three repeat with two target holes is not covered by the rank-four Hamiltonian extraction theorem",
+  "dependencies": [
+    {
+      "audit": "results/universal_retained_support_reset_audit.json",
+      "audit_sha256": "8978e0dd0c216bd56b0bfd5da21bd1f790c2263b0732423df1f47ff02f5747b3",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/UNIVERSAL_RETAINED_SUPPORT_RESET_LEMMA_20260811.md",
+      "theorem_sha256": "3be873eccb058c2633a660d70e4f697a44740110c0140f3c57c35777b8ee2df2"
+    },
+    {
+      "audit": "results/anchor_constrained_full_priority_matching_audit.json",
+      "audit_sha256": "e0c8e6577261dcebc9c3b3ce6a1d3d67633e675c9fa5f906e501f2b63852085a",
+      "audit_status": "ALL_CLASSIFIED",
+      "theorem": "results/ANCHOR_CONSTRAINED_FULL_PRIORITY_MATCHING_LEMMA_20260811.md",
+      "theorem_sha256": "4a6478b0f8f18459ba75c5aee3f4c238d9e572216b928c0d5060e45c6c91d909"
+    },
+    {
+      "audit": "results/degree_zero_q_split_core_root_flip_audit.json",
+      "audit_sha256": "48886692b1b9f40e8d78bb471446aa79ae56359fbee55222dd16037d46424f43",
+      "audit_status": "DEPENDENCIES_REPLAYABLE",
+      "theorem": "results/DEGREE_ZERO_Q_SPLIT_CORE_ROOT_FLIP_LEMMA_20260811.md",
+      "theorem_sha256": "5fa9e32b0302dd05abc221ee58f17a37d4c7d838d72a2593119b6c3a511dfaf4"
+    },
+    {
+      "audit": "results/fixed_u_arbitrary_hole_residual_selector_audit.json",
+      "audit_sha256": "e939f67ef3d0c6682e7a75e57124651029e941a980d1f2dd0af691c340a21bc1",
+      "audit_status": "DEPENDENCIES_REPLAYABLE",
+      "theorem": "results/FIXED_U_ARBITRARY_HOLE_RESIDUAL_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "00219d044b900b4fd3efe197300cf9b36c16dcfe801dc262340f67c9e95aab68"
+    },
+    {
+      "audit": "results/root_facing_exhaustion_handoff_audit.json",
+      "audit_sha256": "3d8384b8b258fa9a91f9aa181cd09eca8359ac006a3b51c8db14c26d1f35d361",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/ROOT_FACING_EXHAUSTION_HANDOFF_LEMMA_20260811.md",
+      "theorem_sha256": "53f9751526c962d114c10bc6a9e5cf42162ab520a874f5ad8bc66a995cb1afe3"
+    },
+    {
+      "audit": "results/source_margin_root_budget_frontier_audit.json",
+      "audit_sha256": "8a4c8217e87551d64f5e2a96f556d9f07f004f5759cbcfd09eca90c403861870",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/SOURCE_MARGIN_ROOT_BUDGET_FRONTIER_LEMMA_20260811.md",
+      "theorem_sha256": "b29a2742f6a762b60ffac5faf1172e4b74039cf7c3e382320551d23d41794e60"
+    },
+    {
+      "audit": "results/third_owner_root_replacement_fork_audit.json",
+      "audit_sha256": "caec824bb26925734d474c2b16fa3317ec278378bc456cde187f4ba0196ad3ca",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/THIRD_OWNER_ROOT_REPLACEMENT_FORK_LEMMA_20260811.md",
+      "theorem_sha256": "cade828fc7d684a9950c8cdbdbadb1c020286d74368e2492725e3a52a34176f9"
+    },
+    {
+      "audit": "results/root_concentration_bottom_absorption_rotation_audit.json",
+      "audit_sha256": "7c4d8f995eb14f557a52bdf71a8e4cdd1c11cc5376a3c0a692f82a5765d1db73",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/ROOT_CONCENTRATION_BOTTOM_ABSORPTION_ROTATION_LEMMA_20260811.md",
+      "theorem_sha256": "8a13665978eaaa954e945b675312a19477530793d7d6b7574604aa21d2fd18e2"
+    },
+    {
+      "audit": "results/universal_retained_bottom_support_reset_audit.json",
+      "audit_sha256": "60d795cfb7753e57730041b8c1a7859a661ac1a66c471c4d82cb36dce0d72ee4",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/UNIVERSAL_RETAINED_BOTTOM_SUPPORT_RESET_LEMMA_20260811.md",
+      "theorem_sha256": "923fa5bcfe832fc841db0dcb4d02ace3d169eac27596f3e027220b7145ed3937"
+    },
+    {
+      "audit": "results/bottom_tail_three_owner_cycle_splice_audit.json",
+      "audit_sha256": "af884c6712a8375691edab4fa7fccd9b855c70100e2197841c947c3594b02c2c",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/BOTTOM_TAIL_THREE_OWNER_CYCLE_SPLICE_LEMMA_20260811.md",
+      "theorem_sha256": "409a8ac81c628329eff81470c4ba3281f6a8969b6ac56c769c78af6d8d64f733"
+    },
+    {
+      "audit": "results/bottom_tail_q_budget_canonical_split_audit.json",
+      "audit_sha256": "1f40e0cb7221336217ffd781f85a84f9fc683d637abf3536201b2c817e501bc4",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/BOTTOM_TAIL_Q_BUDGET_CANONICAL_SPLIT_LEMMA_20260811.md",
+      "theorem_sha256": "e7dc7831c0e2c1133b8b21dfdb7f6ae85fa5319d552381dc1ae54739458d739b"
+    },
+    {
+      "audit": "results/blocked_hole_minimal_k_q_budget_dichotomy_audit.json",
+      "audit_sha256": "422bda7aae5916e770d26695d2e76490444c6d960d1c6f2708216400bd678ec8",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/BLOCKED_HOLE_MINIMAL_K_Q_BUDGET_DICHOTOMY_20260811.md",
+      "theorem_sha256": "40e349cafe4ccab517b01ab57a6db4f028dbaf8270687a88ab9019da98dcecb0"
+    },
+    {
+      "audit": "results/fourth_owner_margin_substitution_selector_audit.json",
+      "audit_sha256": "8e5128cd4a32830d45ab94227a20d6d3b93fcd0b0a107c4da95bb04a29c0c555",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/FOURTH_OWNER_MARGIN_SUBSTITUTION_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "6b0e43eaa3515016fc7a54aa3b822fe8d4b22fc0a57f89213260722c6cca66dd"
+    },
+    {
+      "audit": "results/compensated_fourth_owner_residual_selector_audit.json",
+      "audit_sha256": "b4caceff42216fc825a0043e72c345c8567eade283cf61cce710e08ecc541629",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMPENSATED_FOURTH_OWNER_RESIDUAL_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "23242568f7bc2d28c0ec984941b234885088a2be297486c51d86aa28788cd503"
+    },
+    {
+      "audit": "results/uncompensated_split_donor_reassembly_handoff_audit.json",
+      "audit_sha256": "a1977194221cd6e6ce91c2f60cc6c8ce676974018e393d968a9d4bafc28710f0",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/UNCOMPENSATED_SPLIT_DONOR_REASSEMBLY_HANDOFF_LEMMA_20260813.md",
+      "theorem_sha256": "56eaa5d4f63b0d1294cf04aef0eeb87f39bc48ba31964a65a9a80a0cf068f6c9"
+    },
+    {
+      "audit": "results/paid_input_omitted_hole_compression_audit.json",
+      "audit_sha256": "6469d4c9c5b70e373c41aeb6d3aa5928e35264236c3ca77da40e355312a9c657",
+      "audit_status": "ALL_EXHAUSTED",
+      "theorem": "results/PAID_INPUT_OMITTED_HOLE_COMPRESSION_LEMMA_20260811.md",
+      "theorem_sha256": "97caec1caf145a0df92005b273da17398d240f56f06ff23b88693030419fefd5"
+    },
+    {
+      "audit": "results/paid_anchor_current_wall_recurrence_audit.json",
+      "audit_sha256": "5bf06c4ba4419926db1e2b7f6c96983bfd494f6b3fa6449940354bc415c6027b",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/PAID_ANCHOR_CURRENT_WALL_RECURRENCE_LEMMA_20260811.md",
+      "theorem_sha256": "c9bd2518bea64ac95398b5190c22eb8efea9680bb693483b68ef3ba926e18ba7"
+    },
+    {
+      "audit": "results/paid_anchor_least_good_consumption_audit.json",
+      "audit_sha256": "cb425fa933ff319ebe81d5c4b973ba5e191411e521fcabd38c80688ea201989f",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/PAID_ANCHOR_LEAST_GOOD_CONSUMPTION_LEMMA_20260811.md",
+      "theorem_sha256": "b4bacb6dacbfee414778e3ac60400dcca62f5c106bc5cfd73f65e7eef3eefe89"
+    },
+    {
+      "audit": "results/universal_paid_anchor_support_reset_audit.json",
+      "audit_sha256": "ad5f34fb41c780ecc418fb85bd8e37c6e43f4b975ae626c68e8cd06a49faeae7",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/UNIVERSAL_PAID_ANCHOR_SUPPORT_RESET_LEMMA_20260811.md",
+      "theorem_sha256": "a95aeae307be112d14e23fa52ecfd44c9811eaa7b73cdbcc8196c74fa4ad4c54"
+    },
+    {
+      "audit": "results/paid_splice_observer_failure_current_response_audit.json",
+      "audit_sha256": "bb0da52814f0ca784d0862ff2bd7bf1b85112856f4c77191441ad694c13028d1",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/PAID_SPLICE_OBSERVER_FAILURE_CURRENT_RESPONSE_LEMMA_20260811.md",
+      "theorem_sha256": "38ca85d68239966e4f76dbed0e07549882540b8394a67ecd745781aee6ce3726"
+    },
+    {
+      "audit": "results/cross_component_safety_debt_bridge_audit.json",
+      "audit_sha256": "0d014b34e317c73eb16e9406e6b13dd9a498f5668134bcf862fe859aa5a0b4df",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/CROSS_COMPONENT_SAFETY_DEBT_BRIDGE_LEMMA_20260811.md",
+      "theorem_sha256": "3a6011e83f98bd7ccbf5f263fa5c06e625a7442539c549077f3678c2bb59847d"
+    },
+    {
+      "audit": "results/cross_component_return_compensation_selector_audit.json",
+      "audit_sha256": "ed4f402e4d52ea9b9bcd0c3498950e4e57e00b22c28154c79c6bb4bf6e6e217e",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/CROSS_COMPONENT_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "bb01d3c03e6903becc3591b1428ecf36ef3165b337d4d3c7c63f3f0628ce786d"
+    },
+    {
+      "audit": "results/component_wide_return_compensation_selector_audit.json",
+      "audit_sha256": "35e0ed310d0c66a02062dbbdbf383619b09293fe83e9e8f3fc2b067d3a0a6806",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMPONENT_WIDE_RETURN_COMPENSATION_SELECTOR_LEMMA_20260811.md",
+      "theorem_sha256": "cd1e9c8458bbaf8f6d762f6bfd62c2d5d881173ce772c2061f2614b64bc4d5f0"
+    },
+    {
+      "audit": "results/component_wide_current_or_base_floor_handoff_audit.json",
+      "audit_sha256": "38a017225f27c280f6d1234f12058314493299135e742b2c668a863eda15a782",
+      "audit_status": "ALL_FORCED",
+      "theorem": "results/COMPONENT_WIDE_CURRENT_OR_BASE_FLOOR_HANDOFF_LEMMA_20260811.md",
+      "theorem_sha256": "dc88619282c7e694b15f2c12f5ac83b6a9dcea0361610d23d9fdccff37c9f822"
+    },
+    {
+      "audit": "results/full_signed_transfer_state_reconstruction_audit.json",
+      "audit_sha256": "722256c747fc55b26ee104dd23a9f05a564f01b70cd0a3b7903c863b9ae34f2b",
+      "audit_status": "ALL_EXHAUSTED",
+      "theorem": "results/FULL_SIGNED_TRANSFER_STATE_RECONSTRUCTION_LEMMA_20260811.md",
+      "theorem_sha256": "23f970c4ac3be694a7d08e7d12a2ff5784b7733e3e7317f85ddaa72be4e93950"
+    },
+    {
+      "audit": "results/saturated_represented_component_charity_extraction_audit.json",
+      "audit_sha256": "588b1af056a98358177afc7b76f0c141738dcefb9e3f75e8652f23e645a0ee18",
+      "audit_status": "ALL_SATURATED_COMPONENTS_EXCLUDED",
+      "theorem": "results/SATURATED_REPRESENTED_COMPONENT_CHARITY_EXTRACTION_THEOREM_20260813.md",
+      "theorem_sha256": "9c0c5b56e536ca58e32342ec3077227d5656c70241be90db35a841eafb23a7f1"
+    }
+  ],
+  "dependency_count": 26,
+  "nontrivial_coarse_sccs": [
+    [
+      "bottom_tail",
+      "donor_reassembly",
+      "fourth_compensation",
+      "fourth_substitution",
+      "q_budget",
+      "q_split_handoff",
+      "root_facing",
+      "sacrificed_hole",
+      "source_frontier",
+      "third_fork"
+    ]
+  ],
+  "provenance": {
+    "python": "3.14.3",
+    "script": "tracks/parkability/audit_fixed_u_retained_support_termination.py",
+    "script_sha256": "3bb02213fd6fe3c5f764a3c9e95b435feb024a04768fb01e4ee41a927f5ea56d",
+    "theorem": "results/FIXED_U_RETAINED_SUPPORT_TERMINATION_THEOREM_20260813.md",
+    "theorem_sha256": "ae6418f1ae651a0725267560257f36d18b4ef8a813674aa00ff45fc165bd1082",
+    "z3": "5.0.0"
+  },
+  "schema": "fixed-u-retained-support-termination-audit-v1",
+  "status": "RANK_THREE_REPEAT_GATE_OPEN",
+  "transition_graph": {
+    "bottom_tail": [
+      "progress",
+      "q_budget"
+    ],
+    "component_bridge": [
+      "endpoint",
+      "progress",
+      "saturated_component"
+    ],
+    "decorated": [
+      "progress",
+      "component_bridge"
+    ],
+    "donor_reassembly": [
+      "q_split_handoff"
+    ],
+    "endpoint": [],
+    "exact_repeat": [
+      "saturated_component"
+    ],
+    "fixed_u": [
+      "top_reset"
+    ],
+    "fourth_compensation": [
+      "paid_candidate",
+      "donor_reassembly"
+    ],
+    "fourth_substitution": [
+      "paid_candidate",
+      "fourth_compensation"
+    ],
+    "paid_candidate": [
+      "endpoint",
+      "decorated"
+    ],
+    "progress": [],
+    "q_budget": [
+      "paid_candidate",
+      "fourth_substitution"
+    ],
+    "q_split_handoff": [
+      "progress",
+      "sacrificed_hole"
+    ],
+    "root_facing": [
+      "source_frontier"
+    ],
+    "sacrificed_hole": [
+      "endpoint",
+      "progress",
+      "decorated",
+      "root_facing"
+    ],
+    "saturated_component": [
+      "endpoint"
+    ],
+    "source_frontier": [
+      "progress",
+      "third_fork"
+    ],
+    "third_fork": [
+      "progress",
+      "paid_candidate",
+      "bottom_tail"
+    ],
+    "top_reset": [
+      "progress",
+      "root_facing"
+    ]
+  },
+  "well_founded_variant": "cardinality of the monotone set of exact state, transition, support, and decorated-response signatures; first occurrences grow it, but rank-three exact-repeat closure is not encoded"
+}
