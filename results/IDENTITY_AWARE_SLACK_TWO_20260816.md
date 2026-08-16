@@ -224,6 +224,13 @@ outside z3 in exact rational arithmetic.
 one added constraint: **no wild role may be split**.  By Theorem 1 a master
 `unsat` is then exhaustive over all realizations.
 
+It reuses the banked `build_decision` unmodified.  That is safe here precisely
+because the reduction never constructs a role with more than two goods — the
+banked encoding unpacks a role's goods as a pair and would raise on a wider
+one, a landmine for any driver that enumerates realizations, but unreachable
+for one that instead keeps wide roles whole.  The session-1 artifact whose
+sha256 is cited downstream stays untouched.
+
 | quantity | value |
 |---|---|
 | distinct profiles examined | `113` |
@@ -241,15 +248,43 @@ separate audit confirms directly that no accepted allocation splits a wild
 role — the hypothesis Theorem 1 rests on is checked, not assumed.
 
 **This is the answer to open item 1, by a stronger route than the item
-proposed.**  The item asked for symbolic values at up to `min(rho(g), 3)` goods
-per role, which would have been exhaustive only for roles of slack exactly
-three — `11` of the `45`, since by Lemma B a role of slack `>= 4` can carry
-four or more goods.  Restricting the *allocation* instead of enumerating the
-*realization* removes the cap entirely: the verdict below holds at every
-cardinality, including the roles at slack `99`, `133` and `236`.
+proposed.**  Per-profile verdicts are in
+`results/realization_free_universality_form2.json`; every one of the `45`
+slack-`> 2` profiles reads EXHAUSTIVE-UNSAT, at every cardinality.
 
-Per-profile verdicts are in `results/realization_free_universality_form2.json`.
-Every one of the `45` slack-`> 2` profiles reads EXHAUSTIVE-UNSAT.
+#### 2.2.1 Why the cardinality cap the item proposed could not have sufficed
+
+Open item 1 asked for symbolic values at up to `min(rho(g), 3)` goods per role.
+That route cannot be exhaustive across the `45`, and the boundary should be
+stated exactly, because it is the difference between a theorem and a
+conditional verdict.
+
+By Lemma B a role carries at most `rho(g)` goods.  A cap of three is therefore
+complete for a role of slack exactly three, and incomplete for a role of slack
+four or more, which may carry four or more goods that the cap never
+constructs.  The banked population splits accordingly:
+
+| max role slack | profiles | status under a cardinality-`<= 3` sweep |
+|---|---|---|
+| `2` | `68` | already exhaustive from the two-good family |
+| `3` | `11` | **converted to exhaustive** by the cap |
+| `>= 4` | `34` | exhaustive **only at cardinality `<= 3`** — still conditional |
+
+(Distribution of the `34`: slack `4` on `12` profiles, `5` on `3`, `6` on `2`,
+`7` on `2`, `8` on `1`, `10` on `2`, and one profile each at `11`, `12`, `14`,
+`23`, `30`, `37`, `48`, `53`, `54`, `89`, `133`, `236`.  Computed from the
+census records and cross-checked independently against the count reported by
+the symbolic-realization track.)
+
+So a cardinality-`<= 3` sweep raises the exhaustive count from `68` to `79` of
+`113`.  The remaining `34` keep a verdict strictly stronger than the two-good
+family's but weaker than exhaustive, and must be labelled that way per profile.
+
+Restricting the *allocation* instead of enumerating the *realization* removes
+the cap entirely, which is why the reduction reaches all `113`: it never has to
+construct a wide role's value column, only to keep that role inside one bundle.
+The roles at slack `99`, `133` and `236` are covered by the same argument as
+the roles at slack `3`.
 
 ### 2.3 Why no countermodel is available above slack two
 
@@ -374,16 +409,20 @@ Banked in `results/identity_aware_one_minimum_split_chart.json`.
   with `0` obstructions, `111` closed by branch W and `9` by branch S.  It
   ended at the iteration limit, not at `unsat`, so it is evidence for the
   identity-aware selector on the form-2 chart, not a theorem.
-- Independent corroboration from a different method: the symbolic-realization
-  CEGAR banked in commit `62c40e8`
+- Independent corroboration from a different method, **on two profiles only**:
+  the symbolic-realization CEGAR banked in commit `62c40e8`
   (`results/identity_aware_symbolic_realization_*.json`) enumerates
-  realizations symbolically up to three goods per role and also reports
-  `UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION` on both flagship
-  profiles, with no countermodel.  Its verdict is exhaustive on the
-  one-minimum-split profile (`cap_covers_every_role` true) and *not* exhaustive
-  on the whole-role obstruction profile (roles `m` and `p` at slack `99` and
-  `236`), which the reduction above closes exhaustively.  Two independent
-  routes, same verdict.
+  realizations symbolically up to three goods per role.  It is a single-profile
+  driver and has been run on exactly two profiles — the one-minimum-split
+  obstruction and the whole-role obstruction — reporting
+  `UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION` on both, with no
+  countermodel.  It is **not** a batch over the `45`, and must not be cited as
+  covering them.  Its verdict is exhaustive on the one-minimum-split profile
+  (`cap_covers_every_role` true) and *not* exhaustive on the whole-role
+  obstruction profile (roles `m` and `p` at slack `99` and `236`), which the
+  reduction above closes exhaustively.  On the two profiles where both apply,
+  two independent routes give the same verdict; the high-slack batch of that
+  method is owned by the symbolic-realization track and is still to come.
 
 **Open.**
 
