@@ -144,73 +144,6 @@ This is a genuine new \((4,9)\) subclass theorem, not the full \((4,9)\)
 cell and not a resolution of general additive EFX. The next common-favorite
 gate is threshold-passing but resident-Hall-deficient.
 
-## 8. Cap-free BCFF length-three residual theorem
-
-The project now proves an analytic arbitrary-packet escape theorem for the
-length-three basic-cycle topology in the BCFF exactly-two-nonsingleton
-reduction. The proof uses two minimal-threshold reservoir extractions. If
-`q` precedes `r`, only `r` can lose and `q` strictly improves; if `r`
-precedes `q`, only `q` can lose and `r` strictly improves. These orientations
-partition all 24 priority orders and work for all three possible sources of
-the external singleton envy edge.
-
-The low branch of the second extraction has an exact PI source wall: a
-`p`- or `q`-desired subset of `X_r+B_q` induces a generalized edge whose
-incoming `B_q` part is released by the selected `r -f-> q` edge. Hence only
-`r` and `s` can source the reversal, and both have explicit EFX allocations.
-
-The theorem is analytic and cap-free. A 24-case QF_LRA audit verifies the
-aggregate allocation inequalities under Z3 5.0.0 and 4.15.3, and a separate
-composition audit derives the normal form, nonempty packets, external edge,
-and source exclusions from BCFF. It closes the length-three residual only;
-it is not a proof of complete four-agent additive EFX and has not yet been
-externally refereed.
-
-## 9. Exactly-two composition and three-nonsingleton flower frontier
-
-Combining the length-three theorem with the length-two, adjacent, and
-alternating cycle theorems now eliminates every globally lex-maximal
-noncomplete BCFF state with exactly two nonsingleton bundles. The selected
-cycle classification allows extra graph edges and is cap-free, but its BCFF
-interfaces still require independent expert review.
-
-For exactly three nonsingletons, an exact directed census leaves eight cycle
-classes. The first, a mutual two-edge genuine cycle, reduces analytically to
-a three-packet flower with a third genuine arm. Across its 36 source cells
-and 24 priority orders, a common-safe cover theorem closes 432 cases
-directly; minimal four-cover strict-order menus close another 148. The
-remaining 284 cap-free low-wall cells survive a sound additive relaxation.
-
-In a true-tail atomic proof-mining cell, 316 of the 432 initial low-cover
-cases are impossible and 116 survive. Those models remain after blocking all
-one-floater swaps and priority-directed one-good transfers. A representative
-model's nearest improvement is a two-good connected generalized exchange,
-confirming that the next invariant must be an exchange component rather than
-item radius. This is a sharp frontier reduction, not closure of the flower
-and not general EFX.
-
-A cap-free packet-total/minimum audit now sharpens the largest surviving
-source family further. For all eight patterns in which the external large
-owner envies the singleton, every surviving desired-set configuration must
-cross both source packets. With common bottom sources, survival additionally
-requires full capture of one mutual-cycle bundle, with an exact priority
-condition for the dual capture. The arm-source-`r` audit classifies all 6,144
-support/order cells (5,124 UNSAT); arm-source `q` follows by relabeling. This
-is a new computer-assisted normal-form theorem, not closure of the capture
-cases.
-
-The first exact full-`X_q` capture witness has a distance-two EFX escape: a
-good in the captured `B_r` part swaps with a `B_q` good. This converts the
-next proof obligation into a precise bottom-crossing swap-blocker-to-PI
-lemma rather than a generic component search.
-
-The local half of that obligation is now proved cap-free: in a
-priority-directed bilateral swap, the earlier improving owner cannot fail;
-external target walls force exactly one of two opposite item comparisons and
-produce the matching generalized exchange edge, while a losing later owner
-is the only source-wall case. The remaining step is global pair selection and
-PI routing inside the capture normal form.
-
 ## Bottom-line assessment
 
 The existing counting paper remains a focused package of six exact witnesses,
@@ -238,18 +171,75 @@ one-transfer repairs. These are rigorous no-go results that focus the next
 lemma on a rank-maximal, owner-changing alternating exchange; they are not
 additional existence theorems.
 
-The rank-selection precursor is now independently frozen as an open gate.
-All three exact mixed profiles have a rank-two threshold pass with a
-zero-neighbor bundle. Two bounded cap-20 CEGAR searches produced neither a
-counterexample nor a certificate, sharply separating this plausible lemma
-from the already proved results.
+The rank-selection precursor is now exactly refuted. After symmetry-reduced
+cap-20 CEGAR grew the rank-two and zero-neighbor motif pools to 119 and 69, a
+smaller cap-4 search found a two-type profile with exactly three threshold
+passes, all of rank one, and no favorite-singleton EFX partition. Independent
+enumeration finds 195 balanced supporting partitions and 3,690 complete
+allocations. This retires both unconditional selectors without threatening
+EFX existence; the exact repair restricts to four pairwise nonproportional
+valuation rows, since all smaller type counts are already known safe.
+The first two repaired cap-4 sessions find 12 exact four-type trace profiles
+and grow the cumulative rank-two obstruction pool from 29 to 77 motifs.
+Independent replay checks every row-type condition, seed and proto hash,
+motif census, and learned-count transition. A third session then exactly
+refutes the repaired selector: four pairwise bundle-order-inequivalent rows,
+exactly three threshold passes all of rank one, no favorite-singleton EFX
+partition, 599 balanced supporting partitions, and 3,878 complete
+allocations. Thus rank maximization cannot remove the rank-one branch even
+in the genuinely open four-preference-type stratum.
+
+A separate cap-free formulation now interpolates one valuation row away from
+a safe three-type boundary. Each fixed allocation is feasible on an exact
+rational interval, so a first failure has a tight-breakpoint certificate. A
+proved resident-extension lemma sharpens this to a fixed bundle partition:
+only the moving agent's at most four extendable-bundle intervals matter, and
+the merged endpoint supplies at least two of them. An ordinal-chamber
+corollary closes every instance with at most three bundle-order types, a
+strictly larger safe class than identical cardinal rows. Across four tight
+count-four witnesses and the two mixed-Hall boundaries, all 72 ordered row
+paths have a stable partition; 63 need one assignment and nine need two
+assignments of the same bundles. This is a new proof target with exact finite
+evidence, not yet a theorem.
+The remaining chamber crossing has a proved essential-edge reduction: if the
+single changing feasibility edge is avoidable by a perfect matching, no
+bundle pivot is needed. Otherwise a minimal Hall witness has size 1, 2, 3,
+or 4 and is deficient by exactly one. An exhaustive audit checks all 4,929
+labeled essential-edge graphs and 213 symmetry orbits. Additive
+maximum-bundle feasibility rules out witness size 1 at a genuine single-wall
+crossing, leaving only sizes 2, 3, and 4.
+Exact generic-wall constructions now settle the first proposed pivot menu.
+All three Hall sizes can defeat every one-good transfer. Sizes 2 and 3 can
+defeat all 127 partitions within transfer radius two, with their nearest EFX
+support at distance three; the post-wall profiles still have 16 and 40
+complete allocations. The size-4 profile has 57 allocations at minimum
+distance two. Conversely, the size-4 radius-two obstruction is dual-solver
+UNSAT in the fixed seven-good (2+2+2+1) shape. This gives a verified local
+no-go and one bounded positive boundary, redirecting the cap-free proof
+toward longer Hall exchange chains or a global potential.
 
 Inside the previously opaque rank-one Hall case, a new analytic normal form
 shows that all residents must accept only one common bundle and satisfy one
 strict density inequality. This yields an exact owner-switch reduction.
-The associated audit also prevents overclaiming: a natural three-conversion
-rule is false even with the global no-singleton hypothesis. The exact
-boundary blocks all six one-good transfers, retains 366 balanced repairs and
-1,259 allocations, and raises the smallest surviving exchange radius to two.
-The 63 radius-two states are now reduced to nine origin signatures and a
-21-state contested-partner proof target, frozen at a 302-cut open boundary.
+The associated audits also prevent overclaiming: all six one-good transfers,
+the 21-state contested-partner family, and the 30-state bridge successor are
+false even with the global no-singleton hypothesis. The final cap-6
+refutation has three identical resident rows, blocks all 966 singleton
+partitions and all 30 proposed repairs, yet retains 264 supporting partitions
+and 2,790 complete EFX allocations. Every failed singleton is explained by
+one of two elementary Hall obstructions. Its 15 nearest repairs identify two
+more origin orbits, producing a 45-state successor. The first exact campaign
+blocks all 45 states and reaches a six-singleton Hamming-two local minimum;
+the global floor remains open. The identical-resident cap-6 subcell containing
+all current extremal profiles now closes under both matching-clause and
+Hall-selector encodings with a shared 392-partition pool. This is a bounded
+theorem candidate, not the unequal-resident rank-one theorem. A second
+dual-encoded result weakens full identity to any repeated resident row
+through cap 5: the two symmetry-reduced equality cases close independently under
+12-matching and seven-case Hall quotient encodings. The Hall reduction was
+also exhaustively checked on all 4,096 possible neighborhood graphs. Cap 6
+remains the first unresolved rung for this wider repeated-row stratum.
+This is a bounded statement about the particular local repair family, not a
+new EFX-existence class: four agents with any repeated valuation row have at
+most three valuation types and are already covered by the known three-types
+existence theorem (Ghosal et al., EC 2025).

@@ -765,8 +765,14 @@ The final content-addressed package contains:
 
 Every load-bearing entry is hash-bound by the end-to-end manifest. The source
 archive and manifest are identified by SHA-256 digests in the release notes.
-The CPC proofs use relocatable signature references in the public package;
-relocation is audited against the original proof bodies before release.
+The archived CPC proofs retain their original two absolute signature include
+lines. The release verifier creates a temporary relocated copy by rewriting
+only those two lines, verifies that every remaining proof-body byte is
+unchanged, checks all 51 signature files against the official cvc5 1.3.3
+source archive, and runs Ethos on the relocated copy. The full eight-cell
+relocation replay passed on the release host, preserving every proof-body byte;
+this is verifier-level relocatability, not an assumption about the archived
+paths or an independent-host replication.
 
 \paragraph{Minimal verification.}
 From the certification root:

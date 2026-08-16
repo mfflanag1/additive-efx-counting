@@ -1,0 +1,5186 @@
+{
+  "adaptive_hall_gate": "results/row_merge_q4_adaptive_hall_path_analysis.json",
+  "adaptive_hall_gate_sha256": "0130156d18c3678a8adac9cf601745990c4144616347c0cf53558eb668e01e77",
+  "category_model_coverage": {
+    "all_chain": 27,
+    "all_cycles": 26,
+    "all_paths": 27,
+    "cycles_length_2": 3,
+    "cycles_length_2_touching_0": 0,
+    "cycles_length_3": 26,
+    "cycles_length_3_touching_0": 26,
+    "cycles_touching_0": 26,
+    "endpoint_0_paths_or_cycles_touching_0": 27,
+    "hamiltonian_paths": 27,
+    "hamiltonian_paths_ending_0": 23,
+    "paths_ending_0": 23,
+    "paths_ending_0_or_cycles_touching_0": 27,
+    "paths_endpoint_0": 23,
+    "paths_length_2_with_0_internal": 21,
+    "paths_length_3_with_0_internal": 25,
+    "paths_starting_0": 0,
+    "paths_touching_0": 27,
+    "paths_with_0_internal": 27
+  },
+  "claim_boundary": "No universal category is a theorem. This analysis neither decides the full exchange-chain candidate nor proves complete additive EFX.",
+  "distinct_generic_model_count": 27,
+  "domain": "frozen exact integer models in one generic q=4 row-merge cell",
+  "hall_relaxation_model_coverage": {
+    "one_outside_neighborhood_step": 23,
+    "strict_current_neighborhood": 22,
+    "unrestricted_ending_zero_path": 23,
+    "unrestricted_source_with_omitting_witness": 23
+  },
+  "interpretation": "Coverage is exact only for the hash-bound finite corpus. The table locates which topology or Hall-source relaxation supplies at least one EFX-supporting chain action in each stored model.",
+  "minimum_topology_cover": [
+    {
+      "covered_model_count": 21,
+      "kind": "path",
+      "vertices": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 22,
+      "kind": "path",
+      "vertices": [
+        3,
+        2,
+        0
+      ]
+    }
+  ],
+  "minimum_topology_cover_size": 2,
+  "models": [
+    {
+      "category_support_action_counts": {
+        "all_chain": 34,
+        "all_cycles": 16,
+        "all_paths": 18,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 16,
+        "cycles_length_3_touching_0": 16,
+        "cycles_touching_0": 16,
+        "endpoint_0_paths_or_cycles_touching_0": 29,
+        "hamiltonian_paths": 12,
+        "hamiltonian_paths_ending_0": 7,
+        "paths_ending_0": 13,
+        "paths_ending_0_or_cycles_touching_0": 29,
+        "paths_endpoint_0": 13,
+        "paths_length_2_with_0_internal": 0,
+        "paths_length_3_with_0_internal": 5,
+        "paths_starting_0": 0,
+        "paths_touching_0": 18,
+        "paths_with_0_internal": 5
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 13,
+        "strict_current_neighborhood": 11,
+        "unrestricted_ending_zero_path": 13,
+        "unrestricted_source_with_omitting_witness": 13
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "0754a2a3aa3b5c7d564798d28acf244673c769b7961d811dba6b6c557806ec58",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 3,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 34,
+      "supporting_chain_partition_count": 34,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 21,
+        "all_cycles": 7,
+        "all_paths": 14,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 7,
+        "cycles_length_3_touching_0": 7,
+        "cycles_touching_0": 7,
+        "endpoint_0_paths_or_cycles_touching_0": 17,
+        "hamiltonian_paths": 10,
+        "hamiltonian_paths_ending_0": 6,
+        "paths_ending_0": 10,
+        "paths_ending_0_or_cycles_touching_0": 17,
+        "paths_endpoint_0": 10,
+        "paths_length_2_with_0_internal": 0,
+        "paths_length_3_with_0_internal": 4,
+        "paths_starting_0": 0,
+        "paths_touching_0": 14,
+        "paths_with_0_internal": 4
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 10,
+        "strict_current_neighborhood": 7,
+        "unrestricted_ending_zero_path": 10,
+        "unrestricted_source_with_omitting_witness": 10
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "091d181bfc4b20f6ecb5f187d43f5ee4059f9a69946aa4f1811655088060bd21",
+      "provenance": [
+        {
+          "corpus": "extra_generic_gate",
+          "round": 0,
+          "source": "results/row_merge_q4_relaxation_cover2_plus_base_generic_cap20_gate.json",
+          "source_sha256": "741790b7703a4528b4ca82299c726e59671b94d092578d6bf4a4285b340e243c"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 21,
+      "supporting_chain_partition_count": 21,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 28,
+        "all_cycles": 10,
+        "all_paths": 18,
+        "cycles_length_2": 2,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 8,
+        "cycles_length_3_touching_0": 6,
+        "cycles_touching_0": 6,
+        "endpoint_0_paths_or_cycles_touching_0": 14,
+        "hamiltonian_paths": 10,
+        "hamiltonian_paths_ending_0": 5,
+        "paths_ending_0": 8,
+        "paths_ending_0_or_cycles_touching_0": 14,
+        "paths_endpoint_0": 8,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 5,
+        "paths_starting_0": 0,
+        "paths_touching_0": 15,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 8,
+        "strict_current_neighborhood": 8,
+        "unrestricted_ending_zero_path": 8,
+        "unrestricted_source_with_omitting_witness": 8
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "0afe50e0b39e067ada54b3de181e5479a00b0a41e6a364691fd3f5c51338d051",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 6,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6
+        ],
+        "kind": "path",
+        "length": 1,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 28,
+      "supporting_chain_partition_count": 28,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 30,
+        "all_cycles": 11,
+        "all_paths": 19,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 11,
+        "cycles_length_3_touching_0": 11,
+        "cycles_touching_0": 11,
+        "endpoint_0_paths_or_cycles_touching_0": 21,
+        "hamiltonian_paths": 12,
+        "hamiltonian_paths_ending_0": 5,
+        "paths_ending_0": 10,
+        "paths_ending_0_or_cycles_touching_0": 21,
+        "paths_endpoint_0": 10,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 7,
+        "paths_starting_0": 0,
+        "paths_touching_0": 19,
+        "paths_with_0_internal": 9
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 10,
+        "strict_current_neighborhood": 3,
+        "unrestricted_ending_zero_path": 10,
+        "unrestricted_source_with_omitting_witness": 10
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "1cd690b14c27b94cd06ab3720b14fa1da54bde7320077426df7d82226ad9ba99",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 9,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 4,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 4,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 30,
+      "supporting_chain_partition_count": 30,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 27,
+        "all_cycles": 9,
+        "all_paths": 18,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 9,
+        "cycles_length_3_touching_0": 9,
+        "cycles_touching_0": 9,
+        "endpoint_0_paths_or_cycles_touching_0": 18,
+        "hamiltonian_paths": 12,
+        "hamiltonian_paths_ending_0": 5,
+        "paths_ending_0": 9,
+        "paths_ending_0_or_cycles_touching_0": 18,
+        "paths_endpoint_0": 9,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 7,
+        "paths_starting_0": 0,
+        "paths_touching_0": 18,
+        "paths_with_0_internal": 9
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 8,
+        "strict_current_neighborhood": 8,
+        "unrestricted_ending_zero_path": 9,
+        "unrestricted_source_with_omitting_witness": 9
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "30598bb24aeaa5aff2783b730ee13eb4e0210fb3a7edf95559a30acc0cfc82b6",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 1,
+          "source": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+          "source_sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          2,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          2,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          2,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 27,
+      "supporting_chain_partition_count": 23,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 20,
+        "all_cycles": 10,
+        "all_paths": 10,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 10,
+        "cycles_length_3_touching_0": 10,
+        "cycles_touching_0": 10,
+        "endpoint_0_paths_or_cycles_touching_0": 15,
+        "hamiltonian_paths": 5,
+        "hamiltonian_paths_ending_0": 2,
+        "paths_ending_0": 5,
+        "paths_ending_0_or_cycles_touching_0": 15,
+        "paths_endpoint_0": 5,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 3,
+        "paths_starting_0": 0,
+        "paths_touching_0": 10,
+        "paths_with_0_internal": 5
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 5,
+        "strict_current_neighborhood": 5,
+        "unrestricted_ending_zero_path": 5,
+        "unrestricted_source_with_omitting_witness": 5
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "308ba8aa9979e6eca84f00f09ca2d90bbb3f40628a8740fbba6d1ab67d7d6d37",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 2,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 20,
+      "supporting_chain_partition_count": 18,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 18,
+        "all_cycles": 8,
+        "all_paths": 10,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 8,
+        "cycles_length_3_touching_0": 8,
+        "cycles_touching_0": 8,
+        "endpoint_0_paths_or_cycles_touching_0": 12,
+        "hamiltonian_paths": 6,
+        "hamiltonian_paths_ending_0": 2,
+        "paths_ending_0": 4,
+        "paths_ending_0_or_cycles_touching_0": 12,
+        "paths_endpoint_0": 4,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 4,
+        "paths_starting_0": 0,
+        "paths_touching_0": 10,
+        "paths_with_0_internal": 6
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 4,
+        "strict_current_neighborhood": 2,
+        "unrestricted_ending_zero_path": 4,
+        "unrestricted_source_with_omitting_witness": 4
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "3a0eacb41b57d760b5e4b242d5c9b9b88ad33e6171075b564a0011396df9c4f2",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 1,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 18,
+      "supporting_chain_partition_count": 17,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 9,
+        "all_cycles": 2,
+        "all_paths": 7,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 2,
+        "cycles_length_3_touching_0": 2,
+        "cycles_touching_0": 2,
+        "endpoint_0_paths_or_cycles_touching_0": 5,
+        "hamiltonian_paths": 5,
+        "hamiltonian_paths_ending_0": 3,
+        "paths_ending_0": 3,
+        "paths_ending_0_or_cycles_touching_0": 5,
+        "paths_endpoint_0": 3,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 2,
+        "paths_starting_0": 0,
+        "paths_touching_0": 7,
+        "paths_with_0_internal": 4
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 3,
+        "strict_current_neighborhood": 3,
+        "unrestricted_ending_zero_path": 3,
+        "unrestricted_source_with_omitting_witness": 3
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "3ff35af68a4b497d5075657f09f0c36cc42b5585c47d8918f12193c51e67cb43",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 1,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+          "source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 3,
+        "goods": [
+          3,
+          4,
+          6
+        ],
+        "kind": "path",
+        "length": 3,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 6,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 3
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 3,
+        "goods": [
+          3,
+          4,
+          6
+        ],
+        "kind": "path",
+        "length": 3,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 6,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 3
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          3,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 9,
+      "supporting_chain_partition_count": 9,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 35,
+        "all_cycles": 18,
+        "all_paths": 17,
+        "cycles_length_2": 3,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 15,
+        "cycles_length_3_touching_0": 10,
+        "cycles_touching_0": 10,
+        "endpoint_0_paths_or_cycles_touching_0": 21,
+        "hamiltonian_paths": 10,
+        "hamiltonian_paths_ending_0": 6,
+        "paths_ending_0": 11,
+        "paths_ending_0_or_cycles_touching_0": 21,
+        "paths_endpoint_0": 11,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 4,
+        "paths_starting_0": 0,
+        "paths_touching_0": 17,
+        "paths_with_0_internal": 6
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 11,
+        "strict_current_neighborhood": 9,
+        "unrestricted_ending_zero_path": 11,
+        "unrestricted_source_with_omitting_witness": 11
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "4ba95e58c3168cb24617aab1ec91e3c8661d83d23d7a69966cd6f6a1fcceccd0",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 7,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 35,
+      "supporting_chain_partition_count": 34,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 16,
+        "all_cycles": 6,
+        "all_paths": 10,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 6,
+        "cycles_length_3_touching_0": 6,
+        "cycles_touching_0": 6,
+        "endpoint_0_paths_or_cycles_touching_0": 12,
+        "hamiltonian_paths": 7,
+        "hamiltonian_paths_ending_0": 3,
+        "paths_ending_0": 6,
+        "paths_ending_0_or_cycles_touching_0": 12,
+        "paths_endpoint_0": 6,
+        "paths_length_2_with_0_internal": 0,
+        "paths_length_3_with_0_internal": 4,
+        "paths_starting_0": 0,
+        "paths_touching_0": 10,
+        "paths_with_0_internal": 4
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 6,
+        "strict_current_neighborhood": 6,
+        "unrestricted_ending_zero_path": 6,
+        "unrestricted_source_with_omitting_witness": 6
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "4dec1aa480ecb029207f2c0f16e58a20f60bd191f8dcb286b93b65038a626dec",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 8,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 3,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 3,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 3,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 3,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 3,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 16,
+      "supporting_chain_partition_count": 16,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 13,
+        "all_cycles": 6,
+        "all_paths": 7,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 6,
+        "cycles_length_3_touching_0": 6,
+        "cycles_touching_0": 6,
+        "endpoint_0_paths_or_cycles_touching_0": 6,
+        "hamiltonian_paths": 5,
+        "hamiltonian_paths_ending_0": 0,
+        "paths_ending_0": 0,
+        "paths_ending_0_or_cycles_touching_0": 6,
+        "paths_endpoint_0": 0,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 5,
+        "paths_starting_0": 0,
+        "paths_touching_0": 7,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 0,
+        "strict_current_neighborhood": 0,
+        "unrestricted_ending_zero_path": 0,
+        "unrestricted_source_with_omitting_witness": 0
+      },
+      "minimum_outside_neighborhood_steps": null,
+      "post_values_sha256": "5006ac35055279712a482b348a5dae56119e94737cde5ffa3c2780dd2ea4d725",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 1,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+          "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": null,
+      "sample_strict_hall_repair": null,
+      "supporting_chain_action_count": 13,
+      "supporting_chain_partition_count": 13,
+      "was_strict_hall_failure": true
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 13,
+        "all_cycles": 7,
+        "all_paths": 6,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 7,
+        "cycles_length_3_touching_0": 7,
+        "cycles_touching_0": 7,
+        "endpoint_0_paths_or_cycles_touching_0": 12,
+        "hamiltonian_paths": 3,
+        "hamiltonian_paths_ending_0": 2,
+        "paths_ending_0": 5,
+        "paths_ending_0_or_cycles_touching_0": 12,
+        "paths_endpoint_0": 5,
+        "paths_length_2_with_0_internal": 0,
+        "paths_length_3_with_0_internal": 1,
+        "paths_starting_0": 0,
+        "paths_touching_0": 6,
+        "paths_with_0_internal": 1
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 5,
+        "strict_current_neighborhood": 5,
+        "unrestricted_ending_zero_path": 5,
+        "unrestricted_source_with_omitting_witness": 5
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "5da74e377ace63cd254a167b70e64112767df0d5d2bb298d182abfec5f32db75",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_path32_all_lengths_plus_base_cap20_gate.json",
+          "source_sha256": "3937657361a086d76c012d4c9e07b2814b5afef2f9974169fcc421c00a303587"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 13,
+      "supporting_chain_partition_count": 11,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 37,
+        "all_cycles": 14,
+        "all_paths": 23,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 14,
+        "cycles_length_3_touching_0": 14,
+        "cycles_touching_0": 14,
+        "endpoint_0_paths_or_cycles_touching_0": 30,
+        "hamiltonian_paths": 18,
+        "hamiltonian_paths_ending_0": 11,
+        "paths_ending_0": 16,
+        "paths_ending_0_or_cycles_touching_0": 30,
+        "paths_endpoint_0": 16,
+        "paths_length_2_with_0_internal": 0,
+        "paths_length_3_with_0_internal": 7,
+        "paths_starting_0": 0,
+        "paths_touching_0": 23,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 15,
+        "strict_current_neighborhood": 11,
+        "unrestricted_ending_zero_path": 16,
+        "unrestricted_source_with_omitting_witness": 16
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "5ea127bae0ca294087e426d354ecf9b4e7d9c8f9921a9f2d49af1d20daec8b8e",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json",
+          "source_sha256": "3dc7486e735e538c9b6721e997403e1b0c7d975dff4ea892a8cb65493f658a48"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 37,
+      "supporting_chain_partition_count": 37,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 27,
+        "all_cycles": 12,
+        "all_paths": 15,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 12,
+        "cycles_length_3_touching_0": 12,
+        "cycles_touching_0": 12,
+        "endpoint_0_paths_or_cycles_touching_0": 20,
+        "hamiltonian_paths": 7,
+        "hamiltonian_paths_ending_0": 4,
+        "paths_ending_0": 8,
+        "paths_ending_0_or_cycles_touching_0": 20,
+        "paths_endpoint_0": 8,
+        "paths_length_2_with_0_internal": 4,
+        "paths_length_3_with_0_internal": 3,
+        "paths_starting_0": 0,
+        "paths_touching_0": 15,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 7,
+        "strict_current_neighborhood": 5,
+        "unrestricted_ending_zero_path": 8,
+        "unrestricted_source_with_omitting_witness": 8
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "64773e758e8efb0677660fa96193cf5878cc7504e687fb628eaff26ad3b865aa",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 11,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          0
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 27,
+      "supporting_chain_partition_count": 26,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 67,
+        "all_cycles": 16,
+        "all_paths": 51,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 16,
+        "cycles_length_3_touching_0": 16,
+        "cycles_touching_0": 16,
+        "endpoint_0_paths_or_cycles_touching_0": 49,
+        "hamiltonian_paths": 34,
+        "hamiltonian_paths_ending_0": 21,
+        "paths_ending_0": 33,
+        "paths_ending_0_or_cycles_touching_0": 49,
+        "paths_endpoint_0": 33,
+        "paths_length_2_with_0_internal": 5,
+        "paths_length_3_with_0_internal": 13,
+        "paths_starting_0": 0,
+        "paths_touching_0": 51,
+        "paths_with_0_internal": 18
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 33,
+        "strict_current_neighborhood": 21,
+        "unrestricted_ending_zero_path": 33,
+        "unrestricted_source_with_omitting_witness": 33
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "692fbb24b61537d82e324ff3d555668767ded3979eb2a5ceefe654a8aa554ef1",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_cycle023_plus_base_cap20_gate.json",
+          "source_sha256": "d01e016ff7da5d52f1e99ac0c8fecbad240577d4b348c209581eb2e990ebf9e7"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          2,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "partition": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          2,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          2,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 67,
+      "supporting_chain_partition_count": 64,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 23,
+        "all_cycles": 8,
+        "all_paths": 15,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 8,
+        "cycles_length_3_touching_0": 8,
+        "cycles_touching_0": 8,
+        "endpoint_0_paths_or_cycles_touching_0": 14,
+        "hamiltonian_paths": 10,
+        "hamiltonian_paths_ending_0": 3,
+        "paths_ending_0": 6,
+        "paths_ending_0_or_cycles_touching_0": 14,
+        "paths_endpoint_0": 6,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 7,
+        "paths_starting_0": 0,
+        "paths_touching_0": 15,
+        "paths_with_0_internal": 9
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 6,
+        "strict_current_neighborhood": 5,
+        "unrestricted_ending_zero_path": 6,
+        "unrestricted_source_with_omitting_witness": 6
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "6bf999ad59b8f1bbbf8b1dd001e419cd8f7c028ae81acd29f4b210f9ccb4c587",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 4,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          7,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            7
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          8,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 8,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          8,
+          3
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "steps": [
+          {
+            "good": 3,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 8,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 23,
+      "supporting_chain_partition_count": 23,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 19,
+        "all_cycles": 5,
+        "all_paths": 14,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 5,
+        "cycles_length_3_touching_0": 5,
+        "cycles_touching_0": 5,
+        "endpoint_0_paths_or_cycles_touching_0": 13,
+        "hamiltonian_paths": 8,
+        "hamiltonian_paths_ending_0": 4,
+        "paths_ending_0": 8,
+        "paths_ending_0_or_cycles_touching_0": 13,
+        "paths_endpoint_0": 8,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 4,
+        "paths_starting_0": 0,
+        "paths_touching_0": 14,
+        "paths_with_0_internal": 6
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 8,
+        "strict_current_neighborhood": 6,
+        "unrestricted_ending_zero_path": 8,
+        "unrestricted_source_with_omitting_witness": 8
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "82d0ec232b99fd7be1b556507e93c5bd51f787195142dc4a4aee5ec179c37ddd",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 2,
+          "source": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+          "source_sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          0
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          2
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 2,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          2
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 2,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              2
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 1
+          }
+        ],
+        "vertices": [
+          3,
+          1,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 19,
+      "supporting_chain_partition_count": 17,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 7,
+        "all_cycles": 3,
+        "all_paths": 4,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 3,
+        "cycles_length_3_touching_0": 3,
+        "cycles_touching_0": 3,
+        "endpoint_0_paths_or_cycles_touching_0": 3,
+        "hamiltonian_paths": 2,
+        "hamiltonian_paths_ending_0": 0,
+        "paths_ending_0": 0,
+        "paths_ending_0_or_cycles_touching_0": 3,
+        "paths_endpoint_0": 0,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 2,
+        "paths_starting_0": 0,
+        "paths_touching_0": 4,
+        "paths_with_0_internal": 4
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 0,
+        "strict_current_neighborhood": 0,
+        "unrestricted_ending_zero_path": 0,
+        "unrestricted_source_with_omitting_witness": 0
+      },
+      "minimum_outside_neighborhood_steps": null,
+      "post_values_sha256": "85e469035f88a5f619904713b77c1645890597b866594ac0fa24216d1e742c8f",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 3,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+          "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          0
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": null,
+      "sample_strict_hall_repair": null,
+      "supporting_chain_action_count": 7,
+      "supporting_chain_partition_count": 7,
+      "was_strict_hall_failure": true
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 42,
+        "all_cycles": 21,
+        "all_paths": 21,
+        "cycles_length_2": 2,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 19,
+        "cycles_length_3_touching_0": 17,
+        "cycles_touching_0": 17,
+        "endpoint_0_paths_or_cycles_touching_0": 30,
+        "hamiltonian_paths": 14,
+        "hamiltonian_paths_ending_0": 8,
+        "paths_ending_0": 13,
+        "paths_ending_0_or_cycles_touching_0": 30,
+        "paths_endpoint_0": 13,
+        "paths_length_2_with_0_internal": 0,
+        "paths_length_3_with_0_internal": 6,
+        "paths_starting_0": 0,
+        "paths_touching_0": 19,
+        "paths_with_0_internal": 6
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 13,
+        "strict_current_neighborhood": 10,
+        "unrestricted_ending_zero_path": 13,
+        "unrestricted_source_with_omitting_witness": 13
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "90475ea31b918e939c11d7ef1a621d7bdb1c2c5af8568aa64b363a2ed66a008f",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_path32_plus_base_cap20_gate.json",
+          "source_sha256": "59914b83dbb992808bfdfb1e87644600be9c1d5d745eb358139b0a0b6f99baae"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          8
+        ],
+        "kind": "path",
+        "length": 1,
+        "matching_count": 1,
+        "partition": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5,
+            8
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "vertices": [
+          3,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 42,
+      "supporting_chain_partition_count": 41,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 8,
+        "all_cycles": 2,
+        "all_paths": 6,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 2,
+        "cycles_length_3_touching_0": 2,
+        "cycles_touching_0": 2,
+        "endpoint_0_paths_or_cycles_touching_0": 6,
+        "hamiltonian_paths": 2,
+        "hamiltonian_paths_ending_0": 2,
+        "paths_ending_0": 4,
+        "paths_ending_0_or_cycles_touching_0": 6,
+        "paths_endpoint_0": 4,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 0,
+        "paths_starting_0": 0,
+        "paths_touching_0": 6,
+        "paths_with_0_internal": 2
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 4,
+        "strict_current_neighborhood": 4,
+        "unrestricted_ending_zero_path": 4,
+        "unrestricted_source_with_omitting_witness": 4
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "91572b0f75a1e13ac046558dc5ffb943f01d91fb930f80cf4792d14e5c8b32f4",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 2,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+          "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          0
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 8,
+      "supporting_chain_partition_count": 8,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 9,
+        "all_cycles": 2,
+        "all_paths": 7,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 2,
+        "cycles_length_3_touching_0": 2,
+        "cycles_touching_0": 2,
+        "endpoint_0_paths_or_cycles_touching_0": 5,
+        "hamiltonian_paths": 3,
+        "hamiltonian_paths_ending_0": 1,
+        "paths_ending_0": 3,
+        "paths_ending_0_or_cycles_touching_0": 5,
+        "paths_endpoint_0": 3,
+        "paths_length_2_with_0_internal": 1,
+        "paths_length_3_with_0_internal": 2,
+        "paths_starting_0": 0,
+        "paths_touching_0": 6,
+        "paths_with_0_internal": 3
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 3,
+        "strict_current_neighborhood": 3,
+        "unrestricted_ending_zero_path": 3,
+        "unrestricted_source_with_omitting_witness": 3
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "9790b321a09aa2b9ca7d05b8876c4067a0bdc60470eeab479bba689908576607",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool60.json",
+          "source_sha256": "bfbea59a2555a886889f86f85766ce1d7cf2e023887d5ea2f3c6c034bb1ef71c"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          8
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 8,
+        "partition": [
+          [
+            0,
+            1,
+            8
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "vertices": [
+          1,
+          3,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          8
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 8,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            8
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "steps": [
+          {
+            "good": 8,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 8,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 3
+          }
+        ],
+        "vertices": [
+          1,
+          3,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          8
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 8,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            8
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            6,
+            7
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "steps": [
+          {
+            "good": 8,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 8,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 3
+          }
+        ],
+        "vertices": [
+          1,
+          3,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 9,
+      "supporting_chain_partition_count": 9,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 40,
+        "all_cycles": 18,
+        "all_paths": 22,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 18,
+        "cycles_length_3_touching_0": 18,
+        "cycles_touching_0": 18,
+        "endpoint_0_paths_or_cycles_touching_0": 32,
+        "hamiltonian_paths": 14,
+        "hamiltonian_paths_ending_0": 10,
+        "paths_ending_0": 14,
+        "paths_ending_0_or_cycles_touching_0": 32,
+        "paths_endpoint_0": 14,
+        "paths_length_2_with_0_internal": 3,
+        "paths_length_3_with_0_internal": 4,
+        "paths_starting_0": 0,
+        "paths_touching_0": 21,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 11,
+        "strict_current_neighborhood": 11,
+        "unrestricted_ending_zero_path": 14,
+        "unrestricted_source_with_omitting_witness": 14
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "acee3bd0242ac12492bf4041a837ef8df9f4af05b88d70bd53d7bf3eb87cd947",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 10,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          3,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 40,
+      "supporting_chain_partition_count": 38,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 13,
+        "all_cycles": 8,
+        "all_paths": 5,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 8,
+        "cycles_length_3_touching_0": 8,
+        "cycles_touching_0": 8,
+        "endpoint_0_paths_or_cycles_touching_0": 8,
+        "hamiltonian_paths": 3,
+        "hamiltonian_paths_ending_0": 0,
+        "paths_ending_0": 0,
+        "paths_ending_0_or_cycles_touching_0": 8,
+        "paths_endpoint_0": 0,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 3,
+        "paths_starting_0": 0,
+        "paths_touching_0": 5,
+        "paths_with_0_internal": 5
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 0,
+        "strict_current_neighborhood": 0,
+        "unrestricted_ending_zero_path": 0,
+        "unrestricted_source_with_omitting_witness": 0
+      },
+      "minimum_outside_neighborhood_steps": null,
+      "post_values_sha256": "c079b71445166075ecf11dd5ddb93f8fa20e89df29a3a0b0125b863ad2597338",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 3,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+          "source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": null,
+      "sample_strict_hall_repair": null,
+      "supporting_chain_action_count": 13,
+      "supporting_chain_partition_count": 12,
+      "was_strict_hall_failure": true
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 21,
+        "all_cycles": 7,
+        "all_paths": 14,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 7,
+        "cycles_length_3_touching_0": 7,
+        "cycles_touching_0": 7,
+        "endpoint_0_paths_or_cycles_touching_0": 14,
+        "hamiltonian_paths": 9,
+        "hamiltonian_paths_ending_0": 4,
+        "paths_ending_0": 7,
+        "paths_ending_0_or_cycles_touching_0": 14,
+        "paths_endpoint_0": 7,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 5,
+        "paths_starting_0": 0,
+        "paths_touching_0": 14,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 7,
+        "strict_current_neighborhood": 0,
+        "unrestricted_ending_zero_path": 7,
+        "unrestricted_source_with_omitting_witness": 7
+      },
+      "minimum_outside_neighborhood_steps": 1,
+      "post_values_sha256": "d0401326c46c8ca23cc1739a5f9b5db0c513c8c44c89cc19b00a6c81313944ee",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 5,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          0
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 3,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 1,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 1,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 1,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": false,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": null,
+      "supporting_chain_action_count": 21,
+      "supporting_chain_partition_count": 21,
+      "was_strict_hall_failure": true
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 13,
+        "all_cycles": 6,
+        "all_paths": 7,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 6,
+        "cycles_length_3_touching_0": 6,
+        "cycles_touching_0": 6,
+        "endpoint_0_paths_or_cycles_touching_0": 6,
+        "hamiltonian_paths": 5,
+        "hamiltonian_paths_ending_0": 0,
+        "paths_ending_0": 0,
+        "paths_ending_0_or_cycles_touching_0": 6,
+        "paths_endpoint_0": 0,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 5,
+        "paths_starting_0": 0,
+        "paths_touching_0": 7,
+        "paths_with_0_internal": 7
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 0,
+        "strict_current_neighborhood": 0,
+        "unrestricted_ending_zero_path": 0,
+        "unrestricted_source_with_omitting_witness": 0
+      },
+      "minimum_outside_neighborhood_steps": null,
+      "post_values_sha256": "d1d7ddb481fbc760c89c98f00746bab96d41e4dc427cb093c2b3f4b825e8ebbf",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_cycle023_both_plus_base_cap20_gate.json",
+          "source_sha256": "b07f8ef8897c91487d4becf9d14cb24cc1ab365b8104935432ae91ece217d5c3"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          1
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 6,
+        "partition": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": null,
+      "sample_strict_hall_repair": null,
+      "supporting_chain_action_count": 13,
+      "supporting_chain_partition_count": 11,
+      "was_strict_hall_failure": true
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 6,
+        "all_cycles": 0,
+        "all_paths": 6,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 0,
+        "cycles_length_3_touching_0": 0,
+        "cycles_touching_0": 0,
+        "endpoint_0_paths_or_cycles_touching_0": 4,
+        "hamiltonian_paths": 2,
+        "hamiltonian_paths_ending_0": 2,
+        "paths_ending_0": 4,
+        "paths_ending_0_or_cycles_touching_0": 4,
+        "paths_endpoint_0": 4,
+        "paths_length_2_with_0_internal": 2,
+        "paths_length_3_with_0_internal": 0,
+        "paths_starting_0": 0,
+        "paths_touching_0": 6,
+        "paths_with_0_internal": 2
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 4,
+        "strict_current_neighborhood": 4,
+        "unrestricted_ending_zero_path": 4,
+        "unrestricted_source_with_omitting_witness": 4
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "e59d2a4102663a424d978e0b2b4b2f0c9bedca6e4f5f88d45c8532dce38b8cd7",
+      "provenance": [
+        {
+          "corpus": "extra_generic_gate",
+          "round": 0,
+          "source": "results/row_merge_q4_cycles_touching0_plus_base_generic_cap20_gate.json",
+          "source_sha256": "e58d8f554f62eb1e553fd8c5567b75297d2cbb46a206f9dd63771a23b2ebb9ba"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          6,
+          0
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 4,
+        "partition": [
+          [
+            0,
+            4,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          3,
+          0,
+          2
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          6,
+          5
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 5,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              3
+            ],
+            "omitting_witness_count": 1,
+            "source": 3,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          3,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 6,
+      "supporting_chain_partition_count": 6,
+      "was_strict_hall_failure": false
+    },
+    {
+      "category_support_action_counts": {
+        "all_chain": 63,
+        "all_cycles": 15,
+        "all_paths": 48,
+        "cycles_length_2": 0,
+        "cycles_length_2_touching_0": 0,
+        "cycles_length_3": 15,
+        "cycles_length_3_touching_0": 15,
+        "cycles_touching_0": 15,
+        "endpoint_0_paths_or_cycles_touching_0": 39,
+        "hamiltonian_paths": 32,
+        "hamiltonian_paths_ending_0": 14,
+        "paths_ending_0": 24,
+        "paths_ending_0_or_cycles_touching_0": 39,
+        "paths_endpoint_0": 24,
+        "paths_length_2_with_0_internal": 6,
+        "paths_length_3_with_0_internal": 18,
+        "paths_starting_0": 0,
+        "paths_touching_0": 48,
+        "paths_with_0_internal": 24
+      },
+      "hall_relaxation_support_action_counts": {
+        "one_outside_neighborhood_step": 24,
+        "strict_current_neighborhood": 15,
+        "unrestricted_ending_zero_path": 24,
+        "unrestricted_source_with_omitting_witness": 24
+      },
+      "minimum_outside_neighborhood_steps": 0,
+      "post_values_sha256": "fb0462a959275409aaca1e2535b588ecc1d7d42c76121fb54aa3dc0bd10bc89e",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 0,
+          "source": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+          "source_sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+        },
+        {
+          "corpus": "ranked_path",
+          "round": 0,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_any_chain_repair": {
+        "goods": [
+          2,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_minimum_relaxed_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          2,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "sample_strict_hall_repair": {
+        "executed_step_count": 2,
+        "goods": [
+          2,
+          4
+        ],
+        "kind": "path",
+        "length": 2,
+        "matching_count": 2,
+        "no_omitting_witness_step_count": 0,
+        "outside_neighborhood_step_count": 0,
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ],
+        "steps": [
+          {
+            "good": 4,
+            "matching_count_after": 0,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 2,
+            "source_in_omitting_neighborhood": true,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "matching_count_after": 2,
+            "minimal_witness_sizes": [
+              4
+            ],
+            "omitting_witness_count": 1,
+            "source": 1,
+            "source_in_omitting_neighborhood": true,
+            "target": 2
+          }
+        ],
+        "vertices": [
+          1,
+          2,
+          0
+        ]
+      },
+      "supporting_chain_action_count": 63,
+      "supporting_chain_partition_count": 61,
+      "was_strict_hall_failure": false
+    }
+  ],
+  "schema": "row-merge-q4-hall-path-relaxation-analysis-v1",
+  "source_records": [
+    {
+      "path": "results/row_merge_q4_all_paths_start3_plus_base_cap20_gate.json",
+      "sha256": "ec86e5b71b2c74ad4d70854846726e9ab4fb31b303dd76c512ef36e4f6987f3e"
+    },
+    {
+      "path": "results/row_merge_q4_all_three_cycles_plus_base_cap20_gate.json",
+      "sha256": "8f6fd94b0befeb9cd859e5908f4732e92a8a65be800564d1fc8a479b3bc3f81e"
+    },
+    {
+      "path": "results/row_merge_q4_chain_topology_mining_final_analysis.json",
+      "sha256": "a8ca08b2715b2fced4a58cc51522f140cb17c9bbf95b9551e7440dd44b4e8d87"
+    },
+    {
+      "path": "results/row_merge_q4_cycle023_both_plus_base_cap20_gate.json",
+      "sha256": "b07f8ef8897c91487d4becf9d14cb24cc1ab365b8104935432ae91ece217d5c3"
+    },
+    {
+      "path": "results/row_merge_q4_cycle023_plus_base_cap20_gate.json",
+      "sha256": "d01e016ff7da5d52f1e99ac0c8fecbad240577d4b348c209581eb2e990ebf9e7"
+    },
+    {
+      "path": "results/row_merge_q4_cycles_touching0_plus_base_generic_cap20_gate.json",
+      "sha256": "e58d8f554f62eb1e553fd8c5567b75297d2cbb46a206f9dd63771a23b2ebb9ba"
+    },
+    {
+      "path": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json",
+      "sha256": "3dc7486e735e538c9b6721e997403e1b0c7d975dff4ea892a8cb65493f658a48"
+    },
+    {
+      "path": "results/row_merge_q4_min_topology_cover_round2_plus_base_cap20_gate.json",
+      "sha256": "1ecba9677d6f47b6657018650a30367d71f22a0e83e14b84ceeffdfb063a3dcc"
+    },
+    {
+      "path": "results/row_merge_q4_path32_all_lengths_plus_base_cap20_gate.json",
+      "sha256": "3937657361a086d76c012d4c9e07b2814b5afef2f9974169fcc421c00a303587"
+    },
+    {
+      "path": "results/row_merge_q4_path32_plus_base_cap20_gate.json",
+      "sha256": "59914b83dbb992808bfdfb1e87644600be9c1d5d745eb358139b0a0b6f99baae"
+    },
+    {
+      "path": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+      "sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+    },
+    {
+      "path": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+      "sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+    },
+    {
+      "path": "results/row_merge_q4_relaxation_cover2_plus_base_generic_cap20_gate.json",
+      "sha256": "741790b7703a4528b4ca82299c726e59671b94d092578d6bf4a4285b340e243c"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+      "sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_cegar.json",
+      "sha256": "02015e0ed81c43d3d85900b3e462cf8c280cafb7f27e83ed60e7e2ef99ae473e"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+      "sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool60.json",
+      "sha256": "bfbea59a2555a886889f86f85766ce1d7cf2e023887d5ea2f3c6c034bb1ef71c"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+      "sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+    }
+  ],
+  "status": "EXACT_HALL_PATH_RELAXATIONS_CLASSIFIED",
+  "topology_model_coverage": [
+    {
+      "covered_model_count": 22,
+      "kind": "path",
+      "vertices": [
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 21,
+      "kind": "cycle",
+      "vertices": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 21,
+      "kind": "path",
+      "vertices": [
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 19,
+      "kind": "cycle",
+      "vertices": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 16,
+      "kind": "path",
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 14,
+      "kind": "path",
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 14,
+      "kind": "path",
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 13,
+      "kind": "cycle",
+      "vertices": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 13,
+      "kind": "cycle",
+      "vertices": [
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "covered_model_count": 13,
+      "kind": "cycle",
+      "vertices": [
+        0,
+        3,
+        1
+      ]
+    },
+    {
+      "covered_model_count": 13,
+      "kind": "cycle",
+      "vertices": [
+        0,
+        3,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 13,
+      "kind": "path",
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 12,
+      "kind": "path",
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 11,
+      "kind": "path",
+      "vertices": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 11,
+      "kind": "path",
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 11,
+      "kind": "path",
+      "vertices": [
+        3,
+        1,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 7,
+      "kind": "path",
+      "vertices": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 6,
+      "kind": "path",
+      "vertices": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 5,
+      "kind": "path",
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "covered_model_count": 5,
+      "kind": "path",
+      "vertices": [
+        3,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "covered_model_count": 4,
+      "kind": "path",
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 3,
+      "kind": "cycle",
+      "vertices": [
+        1,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 3,
+      "kind": "cycle",
+      "vertices": [
+        1,
+        3,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 3,
+      "kind": "cycle",
+      "vertices": [
+        2,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 3,
+      "kind": "path",
+      "vertices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 2,
+      "kind": "cycle",
+      "vertices": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "covered_model_count": 2,
+      "kind": "path",
+      "vertices": [
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "covered_model_count": 2,
+      "kind": "path",
+      "vertices": [
+        3,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 1,
+      "kind": "path",
+      "vertices": [
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "covered_model_count": 1,
+      "kind": "path",
+      "vertices": [
+        1,
+        3,
+        2
+      ]
+    }
+  ],
+  "universal_categories": [
+    "all_chain",
+    "all_paths",
+    "paths_touching_0",
+    "paths_with_0_internal",
+    "hamiltonian_paths",
+    "paths_ending_0_or_cycles_touching_0",
+    "endpoint_0_paths_or_cycles_touching_0"
+  ],
+  "universal_hall_relaxations": []
+}

@@ -27,6 +27,20 @@ Structural filter from almost-full theorem: in any counterexample, for EVERY par
 allocation of m−1 goods, the leftover good is unplaceable. Strong — use as candidate filter
 and as no-go-lemma raw material (analogue of DGG "free entry").
 
+Parallel cap-free line: merge one valuation row into another, start from the
+published three-types theorem, and cross subset-sum order walls one at a
+time. The resident-extension and essential-edge lemmas reduce the first
+possible failure to minimal Hall witness sizes 2, 3, or 4. Exact generic-wall
+models now refute all one-good pivots; sizes 2 and 3 also refute every
+two-good complete pivot and require distance-three repairs. The stronger
+fixed-partition continuation is exactly false. A Hall-local partial restart
+is also false; a global radius-one partial restart closes the fixed
+seven-good shape in all three Hall sizes under Z3 and cvc5, but an isolated
+eight-good witness already requires radius two. The next target must combine
+an unbounded Hall exchange chain with a parking/reinsertion invariant, not a
+fixed local menu. See
+[ROW_MERGE_CONTINUATION_GATE.md](results/ROW_MERGE_CONTINUATION_GATE.md).
+
 New internal frontier:
 - additive \((4,8)\) is internally certified safe;
 - Borda-additive \((4,9)\) has a dual-encoded \(3+2+2+2\) theorem candidate;
@@ -273,22 +287,47 @@ The first radius-two decision gate blocks 63 balanced neighbors. Direct
 cap-6 and cap-20 masters remain `UNKNOWN`; a cap-6 CEGAR rebuild learned 488
 singleton obstructions across six models before another `UNKNOWN`. See
 [`results/efx49_common_favorite_mixed_hall_radius2_gate_audit.json`](results/efx49_common_favorite_mixed_hall_radius2_gate_audit.json).
-Before the exchange step, isolate the rank-selection lemma. All three exact
-mixed profiles attain resident rank two and admit a rank-two pass with a
-zero-neighbor bundle. Bounded cap-20 CEGAR learned 49 zero-neighbor motifs
-before timeout and 66 rank-two motifs across two iterations, without proof
-or counterexample. See
-[`results/efx49_common_favorite_mixed_selection_gate_audit.json`](results/efx49_common_favorite_mixed_selection_gate_audit.json).
+The attempted rank-selection precursor is now retired. Resumed cap-20 CEGAR
+first grew the rank-two and zero-neighbor pools to 119 and 69 motifs. A cap-4
+continuation then found an exact two-type profile with three threshold passes,
+all of rank one, no favorite-singleton EFX partition, and 3,690 balanced
+complete allocations. Restricting to four pairwise nonproportional rows does
+not rescue the idea: a second cap-4 profile has four pairwise bundle-order-
+inequivalent rows, again has only three rank-one passes and no singleton
+support, and retains 599 balanced supporting partitions and 3,878
+allocations. The exchange proof must handle rank-one and rank-two maxima
+separately inside the genuinely open four-preference-type stratum.
+See
+[`results/efx49_common_favorite_rank2_selection_refutation_audit.json`](results/efx49_common_favorite_rank2_selection_refutation_audit.json)
+and
+[`results/efx49_common_favorite_fourtype_rank2_refutation_audit.json`](results/efx49_common_favorite_fourtype_rank2_refutation_audit.json).
 The rank-one branch is reduced analytically to a common-column bundle and
 one strict density inequality per resident. Owner switching either reaches
 rank two or leaves a three-resident density wall/all-four-common-column
-case. The common-triple conversion-or-singleton dichotomy is now refuted
-even under the no-singleton hypothesis: all six one-good transfers can fail,
-while the nearest EFX repair is distance two. The exact next target is the
-radius-two implication, compressed from 63 states and nine origin signatures
-to the 21-state family where the favorite receives a contested-triple good.
-That family remains open after a 302-cut CEGAR boundary. See
-[`results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
+case. The common-triple conversion-or-singleton dichotomy is refuted even
+under the no-singleton hypothesis: all six one-good transfers can fail while
+the nearest EFX repair is distance two. The first 21-state radius-two
+compression and its 30-state bridge successor are now both exactly refuted.
+The latter cap-6 profile blocks all 966 favorite-singleton partitions and all
+30 repairs, while retaining 264 supporting partitions and 2,790 complete EFX
+allocations elsewhere. Its three identical resident rows reduce every local
+failure to one of two explicit Hall witnesses. The 15 nearest repairs occupy
+two additional origin orbits, giving a 45-state extended bridge target. See
+[`results/RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md`](results/RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md).
+A first exact cap-6 campaign blocks all 45 states and reduces the singleton
+alternative to six. That profile is an exact Hamming-two local minimum, but
+the global master still permits zero; the next bounded task is to settle this
+45-state singleton floor or produce its zero witness. The identical-resident
+subcell containing every current extremal profile is now closed at cap 6 by
+matching-clause and Hall-selector masters sharing one self-contained
+392-partition pool. The unequal-resident master remains `UNKNOWN` after 900
+seconds. A new quotient argument for repeated resident rows leaves only 12
+distinct matchings, or equivalently seven weighted Hall cases; its graph
+semantics have been exhaustively checked on all 4,096 neighborhood patterns.
+Both adjacent repeated-row cases are dual-encoded `UNSAT` through cap 5 with
+the same 392-partition pool, while both encodings remain `UNKNOWN` at cap 6.
+The next bounded gate is therefore cap 6; beyond it, isolate the first
+pairwise-distinct resident asymmetry needed to escape the repeated-row theorem.
 
 The two terminal partition orbits now have a sharper local proof-mining
 boundary. One-swap exchange is false, but every cap-5 terminal EFX state in

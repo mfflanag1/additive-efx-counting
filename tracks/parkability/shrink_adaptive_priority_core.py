@@ -100,6 +100,7 @@ def run(
     require_distinct_item_values: bool,
     shrink_candidates: bool,
     preserve_rival_dependencies: bool,
+    first_agents: tuple[int, ...],
 ) -> dict:
     if (
         output_path.exists()
@@ -119,6 +120,15 @@ def run(
     n = len(seed_values)
     m = len(seed_values[0])
     cells = derive_unique_seed_cells(seed_values)
+    if first_agents:
+        if len(first_agents) != len(set(first_agents)) or any(
+            not 0 <= agent < n for agent in first_agents
+        ):
+            raise ValueError("first-agent filter is invalid")
+        selected = set(first_agents)
+        cells = [cell for cell in cells if cell[0][0] in selected]
+    if not cells:
+        raise ValueError("first-agent filter selected no priority cells")
     rivals_by_order = load_pool(pool_path, n, m, cells)
 
     master, unique_candidates, utilities, candidate_selectors = build_master(
@@ -283,11 +293,13 @@ def run(
         "status": "UNSAT_DELETION_MINIMAL_RIVAL_CORE",
         "meaning": (
             "the fixed candidate identities cannot all be strict blocked "
-            "lexicographic maxima for their 24 seed-derived orders; this "
+            f"lexicographic maxima for their {len(cells)} selected "
+            "seed-derived orders; this "
             "does not prove the adaptive-priority conjecture"
         ),
         "n": n,
         "m": m,
+        "first_agent_filter": list(first_agents),
         "seed_path": str(seed_path.resolve()),
         "seed_sha256": sha256(seed_path),
         "pool_path": str(pool_path.resolve()),
@@ -342,6 +354,7 @@ def main() -> None:
     parser.add_argument("--require-distinct-item-values", action="store_true")
     parser.add_argument("--shrink-candidates", action="store_true")
     parser.add_argument("--preserve-rival-dependencies", action="store_true")
+    parser.add_argument("--first-agent", type=int, action="append", default=[])
     args = parser.parse_args()
     result = run(
         seed_path=args.seed,
@@ -352,6 +365,7 @@ def main() -> None:
         require_distinct_item_values=args.require_distinct_item_values,
         shrink_candidates=args.shrink_candidates,
         preserve_rival_dependencies=args.preserve_rival_dependencies,
+        first_agents=tuple(args.first_agent),
     )
     print(json.dumps(result, indent=2, sort_keys=True), flush=True)
 

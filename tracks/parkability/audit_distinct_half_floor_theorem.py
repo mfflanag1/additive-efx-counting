@@ -57,7 +57,7 @@ def audit(results_dir: Path) -> dict:
             or source.get("values") is not None
         ):
             raise AssertionError((encoding, "result scope changed"))
-        smt2_path = results_dir / Path(source["smt2_path"]).name
+        smt2_path = Path(source["smt2_path"])
         if sha256(smt2_path) != source["smt2_sha256"]:
             raise AssertionError((encoding, "SMT-LIB hash mismatch"))
         records.append({

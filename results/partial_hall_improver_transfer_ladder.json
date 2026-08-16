@@ -1,0 +1,141 @@
+{
+  "base_floater": 8,
+  "base_masks": [
+    192,
+    14,
+    17,
+    32
+  ],
+  "meaning": "Exact transfer graphs of the nearest normalized-utilitarian improvers in the certified radius-two-through-five obstruction ladder. These four profiles are structural evidence, not a cover.",
+  "record_count": 4,
+  "records": [
+    {
+      "new_floater": 8,
+      "owner_distance": 2,
+      "rival_masks": [
+        144,
+        14,
+        65,
+        32
+      ],
+      "source": "results/partial_hall_pareto_cegar_model_audit.json",
+      "source_sha256": "ff8d8db61eb1ea23fb0eb0a2901b270c63f9f737258857234a968b5411e0d1f1",
+      "transfers": [
+        {
+          "destination": 0,
+          "good": 4,
+          "source": 2
+        },
+        {
+          "destination": 2,
+          "good": 6,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "new_floater": 8,
+      "owner_distance": 3,
+      "rival_masks": [
+        129,
+        74,
+        16,
+        36
+      ],
+      "source": "results/partial_hall_utilitarian_local_cegar_session1_audit.json",
+      "source_sha256": "4970df99378433429cc515b0f26faa90c0ee3d13d78b1c33030b146dd30c43f8",
+      "transfers": [
+        {
+          "destination": 0,
+          "good": 0,
+          "source": 2
+        },
+        {
+          "destination": 3,
+          "good": 2,
+          "source": 1
+        },
+        {
+          "destination": 1,
+          "good": 6,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "new_floater": 8,
+      "owner_distance": 4,
+      "rival_masks": [
+        72,
+        34,
+        17,
+        132
+      ],
+      "source": "results/partial_hall_utilitarian_local_r3_cegar_session1_audit.json",
+      "source_sha256": "51343c0230b0d724690fb31996b0e2b40ad8471687c06354530a85ddcc0ca7ca",
+      "transfers": [
+        {
+          "destination": 3,
+          "good": 2,
+          "source": 1
+        },
+        {
+          "destination": 0,
+          "good": 3,
+          "source": 1
+        },
+        {
+          "destination": 1,
+          "good": 5,
+          "source": 3
+        },
+        {
+          "destination": 3,
+          "good": 7,
+          "source": 0
+        }
+      ]
+    },
+    {
+      "new_floater": 6,
+      "owner_distance": 5,
+      "rival_masks": [
+        32,
+        14,
+        144,
+        257
+      ],
+      "source": "results/partial_hall_utilitarian_local_r4_cegar_session1_audit.json",
+      "source_sha256": "8b8060eec4dc0e7aa839a87086876d499b44a6d114ee36b7dbfd69c701167412",
+      "transfers": [
+        {
+          "destination": 3,
+          "good": 0,
+          "source": 2
+        },
+        {
+          "destination": 0,
+          "good": 5,
+          "source": 3
+        },
+        {
+          "destination": null,
+          "good": 6,
+          "source": 0
+        },
+        {
+          "destination": 2,
+          "good": 7,
+          "source": 0
+        },
+        {
+          "destination": 3,
+          "good": 8,
+          "source": null
+        }
+      ]
+    }
+  ],
+  "schema": "partial-hall-improver-transfer-ladder-v1",
+  "status": "AUDITED"
+}

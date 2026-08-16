@@ -1,0 +1,65 @@
+{
+  "audited_refutations": [
+    {
+      "cegar_round_count": 3,
+      "complete_efx_allocation_count": 428,
+      "formula_sha256": "b4ca6041e3e46ce25cfcca955914c0e0210762bbd9aa8f1bb3a0863cf8b0b70e",
+      "learned_action_condition_count": 11,
+      "path": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+      "policies": [
+        [
+          0,
+          0,
+          0,
+          3
+        ]
+      ],
+      "post_values_sha256": "82d0ec232b99fd7be1b556507e93c5bd51f787195142dc4a4aee5ec179c37ddd",
+      "selected_action_count": 42,
+      "sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5",
+      "simple_chain_support_count": 17
+    }
+  ],
+  "audited_union_boundary": {
+    "formula_sha256": "001453631b3582e3c3f943138a418ca12922f3fbb132d3a7b02a6343d5090a27",
+    "last_sat_complete_efx_allocation_count": 417,
+    "last_sat_post_values_sha256": "64773e758e8efb0677660fa96193cf5878cc7504e687fb628eaff26ad3b865aa",
+    "last_sat_selected_support_action_count": 2,
+    "last_sat_simple_chain_support_count": 26,
+    "learned_action_condition_count": 100,
+    "path": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+    "policies": [
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        3
+      ]
+    ],
+    "sat_round_count": 12,
+    "sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5",
+    "terminal_status": "unknown_timeout_at_60_seconds"
+  },
+  "claim_boundary": "This refutes only the audited 0,0,0,3 source-wise minimum selector at integer cap 20. The union of all three trace-surviving policies is neither proved nor refuted. No result here refutes adaptive Hall-blocker paths, the full 515-partition chain candidate, row-merge continuation, or complete additive EFX.",
+  "domain": "positive additive integer wall valuations in 1..20 in the fixed four-agent, nine-good Hall-size-four graph cell",
+  "exact_trace_model_count": 23,
+  "interpretation": "Three source-wise minimum policies cover all 23 stored exact models. The natural 0,0,0,3 policy is exactly refuted in a fresh generic-wall cap-20 profile. Their three-policy union remains undecided after 12 SAT rounds, 100 conditional cuts, and a final 60-second timeout.",
+  "mining": "results/row_merge_q4_valuation_selector_mining_v2.json",
+  "mining_sha256": "7096ba38e79a5b2b4b9d8d9edd01651c60b19fcfbb72295a9c3fd97321c985bf",
+  "next_target": "Choose each transfer after recomputing a minimal Hall blocker; prove that the blocker size or a lexicographic slack potential decreases, or terminate in an EFX matching.",
+  "schema": "row-merge-q4-ranked-path-gate-audit-v1",
+  "status": "SINGLE_STATIC_SELECTOR_REFUTED_UNION_INCOMPLETE_AT_CAP20",
+  "trace_surviving_minimum_policy_count": 3
+}

@@ -205,14 +205,16 @@ All eight exact terminal formulas have:
 - an independently regenerated formula;
 - a cvc5-generated CPC proof;
 - an Ethos checker verdict of `correct`; and
-- formula, proof, tool, signature, semantic-audit, and literature-input
-  hashes in a 45-entry SHA-256 manifest.
+- formula, proof, tool, all 51 transitive signature, semantic-audit, and
+  literature-input hashes in a 96-entry SHA-256 manifest;
+- an ordered formula-to-proof audit matching 545,360 SMT assertions to
+  545,360 permanent CPC assumptions with zero mismatches.
 
 The CPC proofs total 1,668,457,899 bytes and 13,812,082 proof steps. The
 authoritative summary is
-[`EIGHT_CELL_CPC_CERTIFICATES.json`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260729/EIGHT_CELL_CPC_CERTIFICATES.json);
-the frozen manifest is
-[`EIGHT_CELL_CPC_MANIFEST.sha256`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260729/EIGHT_CELL_CPC_MANIFEST.sha256).
+[`EIGHT_CELL_CPC_CERTIFICATES.json`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260801-v2/EIGHT_CELL_CPC_CERTIFICATES.json);
+the release-candidate manifest is
+[`EIGHT_CELL_CPC_MANIFEST.sha256`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260801-v2/EIGHT_CELL_CPC_MANIFEST.sha256).
 
 The final Lean theorem is
 `admitsEFX_4x8_of_standard_published_inputs_nonnegative` in
@@ -230,14 +232,14 @@ allocations in each of the eight cells without using the
 partition/perfect-matching representation. All eight are UNSAT: six directly
 in Z3 and two in cvc5 after an audited identity-only syntax normalization.
 The frozen summary is
-[`DIRECT_ALLOCATION_CROSSCHECK.json`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260729/direct-allocation-crosscheck/DIRECT_ALLOCATION_CROSSCHECK.json).
+[`DIRECT_ALLOCATION_CROSSCHECK.json`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260801-v2/direct-allocation-crosscheck/DIRECT_ALLOCATION_CROSSCHECK.json).
 
 The final end-to-end audit reruns the semantic and literature checks, verifies
 the CPC and direct-allocation records, performs a full pinned Lean build and
-axiom audit, and packages 70 transitive proof-source files. Its
-[`EFX48_END_TO_END_CERTIFICATE.json`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260729/EFX48_END_TO_END_CERTIFICATE.json)
+axiom audit, and packages 72 transitive proof-source files. Its
+[`EFX48_END_TO_END_CERTIFICATE.json`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260801-v2/EFX48_END_TO_END_CERTIFICATE.json)
 has status `verified_hybrid_proof_package`, and its
-[`73-entry manifest`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260729/EFX48_END_TO_END_MANIFEST.sha256)
+[`124-entry manifest`](../../experimental-runs/additive-efx-counting-runs/parkability/certification-20260801-v2/EFX48_END_TO_END_MANIFEST.sha256)
 verifies locally.
 
 ## 6. What is and is not verified
@@ -252,7 +254,7 @@ verifies locally.
 - All eight terminal UNSAT claims have independently checked proof objects.
 - All eight alternative direct-allocation formulas are UNSAT.
 - The archived formulas and proofs match their frozen manifest.
-- The complete 73-entry end-to-end manifest verifies locally.
+- The complete 124-entry end-to-end manifest verifies locally.
 
 ### Remaining external trust
 

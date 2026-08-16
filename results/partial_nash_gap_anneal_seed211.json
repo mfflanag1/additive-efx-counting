@@ -1,0 +1,165 @@
+{
+  "accepted_moves": 20,
+  "elapsed_seconds": 7.870029,
+  "exact_audit": {
+    "blocked_pareto_frontier_utility_vector_count": 1,
+    "blocked_pareto_frontier_with_bounded_rescue_count": 0,
+    "blocked_pareto_frontier_without_bounded_rescue_count": 1,
+    "blocked_pareto_maximum_product": 212486804036051200,
+    "blocked_pareto_rescues": [
+      {
+        "bounded_rescue": null,
+        "realization_count": 1,
+        "representative": {
+          "base_owner": [
+            2,
+            1,
+            1,
+            1,
+            2,
+            3,
+            0,
+            0,
+            null
+          ],
+          "floater": 8,
+          "insertable_hosts": [],
+          "utilities": [
+            9787,
+            34360,
+            30805,
+            20512
+          ],
+          "utility_product": 212486804036051200
+        },
+        "strongest_bounded_product_surplus": 0,
+        "strongest_bounded_target": {
+          "base_owner": [
+            2,
+            1,
+            1,
+            1,
+            2,
+            3,
+            0,
+            0,
+            null
+          ],
+          "distance": 0,
+          "floater": 8,
+          "insertable_hosts": [],
+          "moves": [],
+          "utilities": [
+            9787,
+            34360,
+            30805,
+            20512
+          ],
+          "utility_product": 212486804036051200
+        },
+        "utilities": [
+          9787,
+          34360,
+          30805,
+          20512
+        ],
+        "utility_product": 212486804036051200
+      }
+    ],
+    "blocked_pareto_to_maximum_product_ratio": 1.0,
+    "distinct_utility_vector_count": 285,
+    "eligible_base_count": 290,
+    "maximum_product": 212486804036051200,
+    "maximum_product_has_insertable_realization": false,
+    "maximum_product_vector_count": 1,
+    "pareto_frontier_utility_vector_count": 28,
+    "rescue_radius": 9
+  },
+  "final_temperature": 1e-07,
+  "improvements": 4,
+  "initial_temperature": 0.005,
+  "iterations_completed": 45,
+  "iterations_requested": 1200,
+  "landscape": {
+    "blocked_pareto_frontier": [
+      {
+        "insertable_realization_count": 0,
+        "realization_count": 1,
+        "representative": {
+          "base_index": 3670,
+          "floater": 8
+        },
+        "utilities": [
+          9787,
+          34360,
+          30805,
+          20512
+        ]
+      }
+    ],
+    "blocked_pareto_frontier_utility_vector_count": 1,
+    "blocked_pareto_maximum_product": 212486804036051200,
+    "blocked_pareto_to_maximum_product_ratio": 1.0,
+    "distinct_utility_vector_count": 285,
+    "eligible_base_count": 290,
+    "insertable_pareto_frontier_utility_vector_count": 27,
+    "maximum_product": 212486804036051200,
+    "maximum_product_has_insertable_realization": false,
+    "maximum_product_vector_count": 1,
+    "pareto_frontier_utility_vector_count": 28
+  },
+  "m": 9,
+  "meaning": "A counterexample refutes maximum-Nash direct completion, not complete additive EFX; the endpoint is exactly enumerated.",
+  "n": 4,
+  "random_seed": 211,
+  "schema": "partial-nash-gap-anneal-v1",
+  "seed_path": "results/partial_nash_gap_search_seed.json",
+  "seed_sha256": "e4902f52776e32e7ad4b9f35b81a0a36219ba46db8704592b4a0ded3fe018911",
+  "status": "BLOCKED_NASH_MAXIMIZER_COUNTEREXAMPLE",
+  "values": [
+    [
+      1,
+      2,
+      299,
+      368,
+      1,
+      32,
+      6209,
+      3578,
+      261
+    ],
+    [
+      16385,
+      4098,
+      24580,
+      5682,
+      9,
+      34848,
+      29710,
+      772,
+      2187
+    ],
+    [
+      10241,
+      53,
+      18436,
+      7065,
+      20564,
+      1625,
+      29760,
+      77,
+      5874
+    ],
+    [
+      371,
+      541,
+      1249,
+      144,
+      17887,
+      20512,
+      19152,
+      150,
+      2969
+    ]
+  ]
+}

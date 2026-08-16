@@ -1,0 +1,699 @@
+{
+  "bounded_deletion_unsat_core": [
+    {
+      "agent": 0,
+      "kind": "row_nonnegativity"
+    },
+    {
+      "agent": 1,
+      "kind": "row_nonnegativity"
+    },
+    {
+      "agent": 2,
+      "kind": "row_nonnegativity"
+    },
+    {
+      "agent": 3,
+      "kind": "row_nonnegativity"
+    },
+    {
+      "constraint_index": 12,
+      "formula": "v_2_0 + v_2_4 >= v_2_6",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 15,
+      "formula": "v_2_0 + v_2_4 >= v_2_1 + v_2_2",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 17,
+      "formula": "v_3_5 >= v_3_7",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 18,
+      "formula": "v_3_5 >= v_3_6",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 19,
+      "formula": "v_3_5 >= v_3_2 + v_3_3",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 20,
+      "formula": "v_3_5 >= v_3_1 + v_3_3",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 21,
+      "formula": "v_3_5 >= v_3_1 + v_3_2",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 22,
+      "formula": "v_3_5 >= v_3_4",
+      "kind": "base_eligibility"
+    },
+    {
+      "constraint_index": 23,
+      "formula": "v_3_5 >= v_3_0",
+      "kind": "base_eligibility"
+    },
+    {
+      "floater_host": 0,
+      "kind": "hall_failure",
+      "move_destination": null,
+      "move_source": null,
+      "moved_good": null,
+      "partition": [
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 0
+    },
+    {
+      "floater_host": 0,
+      "kind": "no_pair_deficiency",
+      "move_destination": 0,
+      "move_source": 1,
+      "moved_good": 3,
+      "partition": [
+        [
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 13
+    },
+    {
+      "floater_host": 0,
+      "kind": "no_pair_deficiency",
+      "move_destination": 0,
+      "move_source": 2,
+      "moved_good": 0,
+      "partition": [
+        [
+          0,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 16
+    },
+    {
+      "floater_host": 0,
+      "kind": "hall_failure",
+      "move_destination": 0,
+      "move_source": 2,
+      "moved_good": 4,
+      "partition": [
+        [
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 19
+    },
+    {
+      "floater_host": 0,
+      "kind": "no_pair_deficiency",
+      "move_destination": 0,
+      "move_source": 2,
+      "moved_good": 4,
+      "partition": [
+        [
+          4,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 19
+    },
+    {
+      "floater_host": 1,
+      "kind": "hall_failure",
+      "move_destination": 1,
+      "move_source": 0,
+      "moved_good": 6,
+      "partition": [
+        [
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 23
+    },
+    {
+      "floater_host": 1,
+      "kind": "no_pair_deficiency",
+      "move_destination": 1,
+      "move_source": 0,
+      "moved_good": 6,
+      "partition": [
+        [
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          6,
+          8
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 23
+    },
+    {
+      "floater_host": 1,
+      "kind": "no_pair_deficiency",
+      "move_destination": 1,
+      "move_source": 0,
+      "moved_good": 7,
+      "partition": [
+        [
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          7,
+          8
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 26
+    },
+    {
+      "floater_host": 1,
+      "kind": "no_pair_deficiency",
+      "move_destination": 1,
+      "move_source": 2,
+      "moved_good": 0,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          0,
+          1,
+          2,
+          3,
+          8
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 39
+    },
+    {
+      "floater_host": 1,
+      "kind": "no_pair_deficiency",
+      "move_destination": 1,
+      "move_source": 2,
+      "moved_good": 4,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          8
+        ],
+        [
+          0
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 42
+    },
+    {
+      "floater_host": 2,
+      "kind": "hall_failure",
+      "move_destination": null,
+      "move_source": null,
+      "moved_good": null,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 44
+    },
+    {
+      "floater_host": 2,
+      "kind": "hall_failure",
+      "move_destination": 2,
+      "move_source": 0,
+      "moved_good": 6,
+      "partition": [
+        [
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          6,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 46
+    },
+    {
+      "floater_host": 2,
+      "kind": "no_pair_deficiency",
+      "move_destination": 2,
+      "move_source": 0,
+      "moved_good": 6,
+      "partition": [
+        [
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          6,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 46
+    },
+    {
+      "floater_host": 2,
+      "kind": "no_pair_deficiency",
+      "move_destination": 2,
+      "move_source": 0,
+      "moved_good": 7,
+      "partition": [
+        [
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          7,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 49
+    },
+    {
+      "floater_host": 2,
+      "kind": "no_pair_deficiency",
+      "move_destination": 2,
+      "move_source": 1,
+      "moved_good": 1,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          4,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 52
+    },
+    {
+      "floater_host": 2,
+      "kind": "no_pair_deficiency",
+      "move_destination": 2,
+      "move_source": 1,
+      "moved_good": 2,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          4,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 55
+    },
+    {
+      "floater_host": 2,
+      "kind": "no_pair_deficiency",
+      "move_destination": 2,
+      "move_source": 1,
+      "moved_good": 3,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          0,
+          3,
+          4,
+          8
+        ],
+        [
+          5
+        ]
+      ],
+      "partition_index": 58
+    },
+    {
+      "floater_host": 3,
+      "kind": "hall_failure",
+      "move_destination": null,
+      "move_source": null,
+      "moved_good": null,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "partition_index": 66
+    },
+    {
+      "floater_host": 3,
+      "kind": "no_pair_deficiency",
+      "move_destination": 3,
+      "move_source": 0,
+      "moved_good": 6,
+      "partition": [
+        [
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          6,
+          8
+        ]
+      ],
+      "partition_index": 69
+    },
+    {
+      "floater_host": 3,
+      "kind": "no_pair_deficiency",
+      "move_destination": 3,
+      "move_source": 0,
+      "moved_good": 7,
+      "partition": [
+        [
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          5,
+          7,
+          8
+        ]
+      ],
+      "partition_index": 72
+    },
+    {
+      "floater_host": 3,
+      "kind": "no_pair_deficiency",
+      "move_destination": 0,
+      "move_source": 3,
+      "moved_good": 5,
+      "partition": [
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          8
+        ]
+      ],
+      "partition_index": 88
+    },
+    {
+      "floater_host": 3,
+      "kind": "no_pair_deficiency",
+      "move_destination": 1,
+      "move_source": 3,
+      "moved_good": 5,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3,
+          5
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          8
+        ]
+      ],
+      "partition_index": 89
+    },
+    {
+      "floater_host": 3,
+      "kind": "no_pair_deficiency",
+      "move_destination": 2,
+      "move_source": 3,
+      "moved_good": 5,
+      "partition": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          8
+        ]
+      ],
+      "partition_index": 90
+    }
+  ],
+  "candidate_partition_count": 91,
+  "deletion_irreducible": false,
+  "initial_unsat_core_size": 74,
+  "meaning": "The deletion-irreducible tracked core proves that an eligible fixed-cell radius-one Hall obstruction cannot avoid a two-agent, one-neighbor deficient set in every candidate move.",
+  "minimization_timeout_seconds": 5,
+  "schema": "partial-hall-pair-deficiency-core-v1",
+  "smt2": "results/partial_hall_pair_deficiency_core.smt2",
+  "smt2_sha256": "4a40f031ea783e82b317c5a04abae825313074b977d5aa64482ed66d2b74f840",
+  "status": "UNSAT",
+  "timeout_seconds": 300,
+  "tracked_constraint_count": 218,
+  "unknown_deletion_checks": 34,
+  "unsat_core_size": 36
+}

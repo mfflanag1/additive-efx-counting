@@ -1,0 +1,96 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 128,
+  "candidate_partition_count": 91,
+  "elapsed_seconds": 328.46865,
+  "floater": 8,
+  "iterations_completed": 2,
+  "learned_rival_count": 1860,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "A SAT counterexample refutes normalized-utilitarian-maximal radius-one Hall completion, not complete additive EFX; UNSAT proves this fixed base cell.",
+  "n": 4,
+  "schema": "partial-hall-utilitarian-cegar-v1",
+  "solver_reason_unknown": "canceled",
+  "solver_statistics": "(:added-eqs                   12\n :arith-eq-adapter            4\n :arith-bound-propagations-lp 1281313\n :arith-conflicts             2219\n :arith-fixed-eqs             1\n :arith-lower                 117658\n :arith-make-feasible         75756\n :arith-max-columns           7099\n :arith-max-rows              7059\n :arith-offset-eqs            2\n :arith-upper                 111597\n :binary-propagations         99512\n :conflicts                   2303\n :decisions                   690382\n :del-clause                  113\n :max-memory                  205.67\n :memory                      205.67\n :minimized-lits              1402\n :mk-bool-var                 8548\n :mk-clause                   6339\n :mk-clause-binary            1409\n :num-allocs                  1301267835\n :num-checks                  1\n :propagations                181145\n :restarts                    19\n :rlimit-count                90818437\n :time                        300.01)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": true,
+  "timeout_seconds_per_master": 300,
+  "trace": [
+    {
+      "base_score": {
+        "denominator": 2445912,
+        "numerator": 2119457
+      },
+      "elapsed_seconds": 21.796464,
+      "improving_rival_count": 856,
+      "iteration": 1,
+      "learned_rival_count_before": 0,
+      "new_improving_rival_count": 856,
+      "values": [
+        [
+          3,
+          15,
+          24,
+          1223,
+          1196,
+          12,
+          45,
+          1265,
+          15
+        ],
+        [
+          605,
+          614,
+          6,
+          18,
+          54,
+          1252,
+          3,
+          614,
+          632
+        ],
+        [
+          4667,
+          3739,
+          813,
+          1346,
+          418,
+          9219,
+          1254,
+          3390,
+          4272
+        ],
+        [
+          5076,
+          5020,
+          1129,
+          1297,
+          3863,
+          6345,
+          6345,
+          1297,
+          5076
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

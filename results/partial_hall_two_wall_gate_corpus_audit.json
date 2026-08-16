@@ -1,0 +1,230 @@
+{
+  "covered_source_count": 1,
+  "meaning": "Each listed gate exactly satisfies the three support conditions of the cap-free two-wall Hall conversion lemma. Zero gates is a coverage boundary, not a counterexample to the lemma.",
+  "records": [
+    {
+      "base_eligible": true,
+      "fixed_state": {
+        "floater": 8,
+        "masks": [
+          192,
+          14,
+          17,
+          32
+        ]
+      },
+      "gate_count": 2,
+      "gates": [
+        {
+          "agent_a": 1,
+          "agent_c": 2,
+          "base_utilities": [
+            421882,
+            2216,
+            18235,
+            38975
+          ],
+          "conversion_floater": 2,
+          "conversion_masks": [
+            192,
+            258,
+            25,
+            32
+          ],
+          "conversion_pareto_dominates": true,
+          "conversion_utilities": [
+            421882,
+            2236,
+            18236,
+            38975
+          ],
+          "critical_direct": {
+            "agent": 1,
+            "left_mask": 14,
+            "right_mask": 17
+          },
+          "critical_direct_holds": false,
+          "critical_transfer": {
+            "agent": 1,
+            "left_mask": 21,
+            "right_mask": 258
+          },
+          "critical_transfer_holds": false,
+          "direct_masks": [
+            192,
+            14,
+            273,
+            32
+          ],
+          "transfer_masks": [
+            192,
+            266,
+            21,
+            32
+          ],
+          "transfer_matching": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "x": 2,
+          "y": 3
+        },
+        {
+          "agent_a": 1,
+          "agent_c": 2,
+          "base_utilities": [
+            421882,
+            2216,
+            18235,
+            38975
+          ],
+          "conversion_floater": 3,
+          "conversion_masks": [
+            192,
+            258,
+            21,
+            32
+          ],
+          "conversion_pareto_dominates": true,
+          "conversion_utilities": [
+            421882,
+            2236,
+            18236,
+            38975
+          ],
+          "critical_direct": {
+            "agent": 1,
+            "left_mask": 14,
+            "right_mask": 17
+          },
+          "critical_direct_holds": false,
+          "critical_transfer": {
+            "agent": 1,
+            "left_mask": 25,
+            "right_mask": 258
+          },
+          "critical_transfer_holds": false,
+          "direct_masks": [
+            192,
+            14,
+            273,
+            32
+          ],
+          "transfer_masks": [
+            192,
+            262,
+            25,
+            32
+          ],
+          "transfer_matching": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "x": 3,
+          "y": 2
+        }
+      ],
+      "m": 9,
+      "n": 4,
+      "source": "results/partial_hall_utilitarian_maximality_anneal_seed17_cont117.json",
+      "source_sha256": "df0bf1ae3d8496d87cbb991ac574684514c12f2c25a02d5f53665457df3ea78d"
+    },
+    {
+      "base_eligible": true,
+      "fixed_state": {
+        "floater": 8,
+        "masks": [
+          192,
+          14,
+          17,
+          32
+        ]
+      },
+      "gate_count": 0,
+      "gates": [],
+      "m": 9,
+      "n": 4,
+      "source": "results/partial_hall_utilitarian_maximality_anneal_seed23.json",
+      "source_sha256": "4afc849b0c65ee7e98568c3f4b88ea54b6747edcddbe8c9f8e83d285935b95a6"
+    },
+    {
+      "base_eligible": true,
+      "fixed_state": {
+        "floater": 8,
+        "masks": [
+          192,
+          14,
+          17,
+          32
+        ]
+      },
+      "gate_count": 0,
+      "gates": [],
+      "m": 9,
+      "n": 4,
+      "source": "results/partial_hall_pareto_cegar_session1.json",
+      "source_sha256": "8196ea6ea2c5d4357b754f4c4bf824e5f6a2cb2b3088f4a0c49412bf44ae049b"
+    },
+    {
+      "base_eligible": true,
+      "fixed_state": {
+        "floater": 8,
+        "masks": [
+          192,
+          14,
+          17,
+          32
+        ]
+      },
+      "gate_count": 0,
+      "gates": [],
+      "m": 9,
+      "n": 4,
+      "source": "results/partial_hall_utilitarian_local_cegar_session1.json",
+      "source_sha256": "7f8c20582633abac9b18ae706bc413fef3f204e9e8e3c4a516ca26ddc6ccd358"
+    },
+    {
+      "base_eligible": true,
+      "fixed_state": {
+        "floater": 8,
+        "masks": [
+          192,
+          14,
+          17,
+          32
+        ]
+      },
+      "gate_count": 0,
+      "gates": [],
+      "m": 9,
+      "n": 4,
+      "source": "results/partial_hall_utilitarian_local_r3_cegar_session1.json",
+      "source_sha256": "2f1b49bb9faadb1e156e17e4ac564c2f52421dd8b0b9026157b81b7e58957fe0"
+    },
+    {
+      "base_eligible": true,
+      "fixed_state": {
+        "floater": 8,
+        "masks": [
+          192,
+          14,
+          17,
+          32
+        ]
+      },
+      "gate_count": 0,
+      "gates": [],
+      "m": 9,
+      "n": 4,
+      "source": "results/partial_hall_utilitarian_local_r4_cegar_session1.json",
+      "source_sha256": "3b23bff29bc19bf94a5d222e8e4135f2e53878e0ab21941a3d91903f1d93602c"
+    }
+  ],
+  "schema": "partial-hall-two-wall-gate-audit-v1",
+  "source_count": 6,
+  "status": "AUDITED"
+}

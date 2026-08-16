@@ -40,33 +40,40 @@ integer profile and swap an outgoing top good for an equal-valued incoming
 top good; they are still ownerwise threshold-neutral.  Thus under generic
 item values the observed transition family is exactly minimum-slot cycles.
 
+The subsequent exact-rational audit strengthens this substantially.  Across
+the same 46 profiles there are 15,557 global threshold-maximal states, of
+which 7,655 have no direct Hall completion.  Every one of those 7,655 blocked
+maxima has a strictly direct-completion-margin-increasing path, through
+eligible owner-minimum floater swaps on the same plateau, to a completion;
+the maximum path length is two.  Thus the phenomenon is not an artifact of
+the minimum-utility tie-break or of floating-point comparisons.  See
+`PARTIAL_THRESHOLD_MAXIMUM_SWAP_REDUCTION_LEMMA.md` and
+`partial_hall_threshold_plateau_exact_path_audit.json`.
+
 ## Analytic lemma that would close four agents
 
-Select a global \(\Theta\)-maximizer and, within its plateau, maximize a finite
-Hall-defect order: first the largest matching cardinality over all four
-floater hosts, then the corresponding edge data under a fixed lexicographic
-order.
+Select a global \(\Theta\)-maximizer and, within its plateau, maximize the
+exact direct-completion margin \(H\) defined in
+`PARTIAL_THRESHOLD_MAXIMUM_SWAP_REDUCTION_LEMMA.md`.
 
 The required lemma is:
 
-> **Plateau-cycle conversion lemma.** If the selected state has no direct
-> Hall completion, the owner-minimum Hall-pair extraction theorem produces
-> either (i) an eligible state with strictly larger \(\Theta\), or (ii) an
-> eligible ownerwise-threshold-neutral slot cycle through at most two owners
-> and the floater position whose endpoint strictly improves the Hall-defect
-> order.
+> **Exact Hall-gradient lemma.** If the selected state has no direct Hall
+> completion, some eligible owner-minimum floater swap stays on the global
+> threshold plateau and strictly increases \(H\).
 
-Alternative (i) contradicts global threshold maximality.  Alternative (ii)
-contradicts the secondary finite maximum.  Therefore the selected plateau
-state must have a direct Hall completion.  Combining this with the known
-four-agent one-unallocated-good theorem proves complete additive EFX for four
-agents.
+The proved threshold-maximum swap lemma makes plateau preservation automatic;
+the strict increase contradicts secondary maximality.  Therefore the
+selected plateau state must have a direct Hall completion.  Combining this
+with the known four-agent one-unallocated-good theorem proves complete
+additive EFX for four agents.
 
-The key unresolved implication is local: turn the two-agent/one-neighbor Hall
-trap into the threshold-neutral cycle while preserving all cross-agent EFX
-and floater-nonenvy inequalities.  The exact distance-three example shows
-that a floater swap alone is insufficient; two owners plus the floater are
-the smallest plausible universal family.
+The key unresolved implication is local: prove the exact Hall-gradient lemma
+while preserving all cross-agent EFX and floater-nonenvy inequalities.  One
+of the 7,655 exact corpus paths needs two successive floater swaps, so a proof
+may need to show that every blocked state has an increasing first step rather
+than a one-step completion.  The swapped owner is not always in a designated
+minimum Hall-deficient set, ruling out that simplest role-fixed proof.
 
 ## General-EFX extension boundary
 
@@ -88,5 +95,6 @@ proved.
 
 Neither four-agent EFX nor general additive EFX is resolved.  The durable new
 content is the 237-profile existential plateau census, the exact refutation
-of the minimum-utility tie-break, the 4,847-transition ownerwise-neutral
-census, and the precise plateau-cycle lemma above.
+of the minimum-utility tie-break, the proved cap-free threshold-maximum swap
+lemma, and the exact-rational 15,557-state/7,655-blocked-state Hall-gradient
+census.

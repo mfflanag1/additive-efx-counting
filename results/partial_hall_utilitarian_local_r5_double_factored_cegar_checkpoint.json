@@ -1,0 +1,47 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 32,
+  "break_good_symmetry": true,
+  "candidate_partition_count": 91,
+  "factor_rival_eligibility": true,
+  "factored_hall": true,
+  "factored_rival_comparison_count": 2251,
+  "floater": 8,
+  "iterations_completed": 1,
+  "learned_rival_count": 416,
+  "local_rival_template_count": 37501,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "SAT refutes the stated bounded-owner-distance normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 5,
+  "random_seed": 211,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "seed_from": "results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.json",
+  "seed_learned_rival_count": 416,
+  "smt2_output": "results/partial_hall_utilitarian_local_r5_double_factored_cegar_session1.smt2",
+  "solver_reason_unknown": "timeout",
+  "solver_statistics": "(:arith-bound-propagations-lp 14457\n :arith-conflicts             82\n :arith-lower                 8912\n :arith-make-feasible         3632\n :arith-max-columns           5186\n :arith-max-rows              5146\n :arith-upper                 10607\n :binary-propagations         13446\n :conflicts                   84\n :decisions                   3487\n :del-clause                  2902\n :max-memory                  113.00\n :memory                      22.11\n :minimized-lits              13\n :mk-bool-var                 12929\n :mk-clause                   9827\n :mk-clause-binary            14598\n :num-allocs                  159264388462.00\n :num-checks                  1\n :propagations                19430\n :random-seed                 422\n :rlimit-count                2493176\n :time                        600.10)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": false,
+  "timeout_seconds_per_master": 600,
+  "trace": [],
+  "values": null
+}

@@ -87,7 +87,34 @@ Highest-value questions:
    unimported local module?
 4. Does Ethos interpret the CPC proof under the intended signatures?
 
-## Frozen package
+## Current hardened release candidate (2026-08-01)
+
+The coherent current snapshot is
+
+```text
+game-theory/experimental-runs/additive-efx-counting-runs/
+parkability/certification-20260801-v2
+```
+
+It contains a 124-entry end-to-end manifest, a 96-entry terminal-certificate
+manifest, and a 72-file deterministic source archive. The terminal manifest
+now binds the exact 545,360-assertion/545,360-assumption audit, the official
+cvc5 1.3.3 source archive, and all 51 transitive CPC signature files. The
+current Lean snapshot includes and builds the final nonnegative theorem.
+
+The full eight-cell moved-root Ethos replay has passed with every proof-body
+byte preserved; a clean Linux/ARM container replay has also passed on the same
+physical Mac.  Physically independent-host and independent-person replays
+remain release gates. See
+[`EFX48_RELEASE_HARDENING_20260801.md`](EFX48_RELEASE_HARDENING_20260801.md).
+
+Snapshot boundary: v2 remains internally coherent, but the working
+`paper/efx48/submission.tex` and generated PDF were updated after v2 to report
+the completed all-eight moved-root replay.  They are not manifest-bound v2
+artifacts.  Cut and verify a new coherent snapshot before distributing the
+updated manuscript as the certified release package.
+
+## Historical frozen package
 
 Certification root:
 
@@ -108,8 +135,8 @@ Primary files:
 - `EFX48_CLEAN_SOURCE_REPLAY.json`; and
 - `EFX48_CLEAN_SOURCE_FULL_ETHOS_REPLAY.json`.
 
-The corrected end-to-end manifest contains 73 entries and the source archive
-contains 70 files. The eight CPC proofs total 1,668,457,899 bytes and
+This historical end-to-end manifest contains 73 entries and the source archive
+contains 66 files. The eight CPC proofs total 1,668,457,899 bytes and
 13,812,082 proof-step lines.
 
 ## Reproduction commands

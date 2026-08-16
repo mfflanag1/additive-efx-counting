@@ -1,0 +1,53 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 128,
+  "break_good_symmetry": true,
+  "candidate_partition_count": 91,
+  "connected_rivals": true,
+  "factor_rival_eligibility": false,
+  "factored_hall": false,
+  "factored_rival_comparison_count": null,
+  "floater": 8,
+  "hall_witness": false,
+  "iterations_completed": 1,
+  "learned_rival_count": 3485,
+  "local_rival_template_count": 34370,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "SAT refutes the stated bounded-owner-distance normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 5,
+  "project_seed": true,
+  "random_seed": 211,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "seed_from": "results/partial_hall_utilitarian_local_r5_cegar_pool1.json",
+  "seed_learned_rival_count": 605,
+  "smt2_output": "results/partial_hall_connected_exchange_r5_seeded_cegar.smt2",
+  "solver_reason_unknown": "timeout",
+  "solver_statistics": "(:arith-bound-propagations-lp 1573\n :arith-conflicts             13\n :arith-lower                 494\n :arith-make-feasible         682\n :arith-max-columns           10580\n :arith-max-rows              10540\n :arith-upper                 1885\n :binary-propagations         64\n :conflicts                   13\n :decisions                   615\n :del-clause                  12\n :max-memory                  155.46\n :memory                      37.79\n :minimized-lits              2\n :mk-bool-var                 12918\n :mk-clause                   5679\n :mk-clause-binary            2289\n :num-allocs                  2903801334\n :num-checks                  1\n :propagations                78\n :random-seed                 422\n :rlimit-count                2128052\n :time                        300.19)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": true,
+  "timeout_seconds_per_master": 300,
+  "trace": [],
+  "trap_agents": [],
+  "trap_bundle": null,
+  "trap_partition": null,
+  "values": null
+}

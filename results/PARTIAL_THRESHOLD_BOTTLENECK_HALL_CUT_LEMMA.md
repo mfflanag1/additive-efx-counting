@@ -1,128 +1,187 @@
-# Bottleneck Hall-cut normal form
+# Bottleneck Hall-cut reduction for the threshold selector
 
-## Theorem
+## Proved cap-free lemma
 
-Let \(L\) and \(R\) be sets of \(n\) agents and bundles, and attach a real
-score \(s_{ij}\) to every pair \((i,j)\in L\times R\). Define
-
-\[
-\beta=\max_{\pi:L\to R\ {\rm bijective}}\ \min_{i\in L}s_{i,\pi(i)}.
-\]
-
-Let \(G_{\geq}\) contain the edges with \(s_{ij}\geq\beta\), and let
-\(G_{>}\) contain the edges with \(s_{ij}>\beta\). Then \(G_{\geq}\) has a
-perfect matching and \(G_{>}\) does not.
-
-If \(S\subseteq L\) is an inclusion-minimal Hall-deficient set in \(G_{>}\)
-and \(k=|S|\), then
+Fix a complete partition \(B=(B_0,\ldots,B_{n-1})\).  For every agent \(i\)
+and bundle label \(b\), define the normalized EFX edge slack
 
 \[
-|N_{G_{>}}(S)|=k-1. \tag{1}
+w_{ib}(B)=
+\frac{v_i(B_b)-\max_{j\ne b}\tau_i(B_j)}{v_i(M)}.
 \]
 
-Moreover:
+Let
 
-1. for every \(i\in S\), the other \(k-1\) agents \(S\setminus\{i\}\)
-   have a strict matching into \(N_{G_{>}}(S)\);
-2. every perfect matching of \(G_{\geq}\) uses at least one edge from \(S\)
-   to \(R\setminus N_{G_{>}}(S)\), and every such edge has score exactly
-   \(\beta\); and
-3. if \(S=L\), there is a perfect matching consisting of exactly one
-   score-\(\beta\) edge into the unique missing bundle and \(n-1\) strict
-   edges.
+\[
+\beta(B)=\max_{\pi}\min_i w_{i,\pi(i)}(B),
+\]
+
+where \(\pi\) ranges over perfect matchings from agents to bundle labels.
+At the bottleneck level \(\beta=\beta(B)\), form two bipartite graphs:
+
+\[
+G_{>\beta}=\{(i,b):w_{ib}(B)>\beta\},
+\qquad
+G_{\ge\beta}=\{(i,b):w_{ib}(B)\ge\beta\}.
+\]
+
+Then:
+
+1. \(G_{\ge\beta}\) has a perfect matching;
+2. \(G_{>\beta}\) has no perfect matching; and
+3. if \(S\) is any Hall-deficient agent set in \(G_{>\beta}\), with
+   deficiency
+   \[
+   d=|S|-|N_{>\beta}(S)|,
+   \]
+   then every perfect matching \(\pi\) in \(G_{\ge\beta}\) contains at
+   least \(d\) agents \(i\in S\) such that
+   \[
+   \pi(i)\notin N_{>\beta}(S)
+   \quad\text{and}\quad
+   w_{i,\pi(i)}(B)=\beta.
+   \tag{1}
+   \]
+
+Thus a strict critical Hall cut exposes not merely a zero-slack obstruction,
+but a specified supply of bottleneck-equality edges crossing the cut.
+
+### Full-cut one-bottleneck normal form
+
+Suppose the smallest Hall-deficient agent set in \(G_{>\beta}\) is the full
+set \(N\).  Then the strict graph uses exactly \(n-1\) bundle labels, say all
+labels except \(b\), and there is a perfect matching in \(G_{\ge\beta}\)
+with exactly one equality edge.  That equality edge enters \(b\); its other
+\(n-1\) edges are strict.
+
+To see this, every proper agent subset satisfies Hall in the strict graph.
+Hence deleting any one agent leaves \(n-1\) agents that can be matched
+strictly.  The strict graph itself has a matching of size \(n-1\), so its
+total neighborhood has size at least \(n-1\); full-set deficiency makes it
+at most \(n-1\).  Thus exactly one bundle label \(b\) is absent.  A weak
+perfect matching supplies some weak edge \((a,b)\).  Match the proper subset
+\(N-\{a\}\) strictly and add \((a,b)\).  Since no strict edge enters \(b\),
+that one edge has weight exactly \(\beta\).
+
+For four agents, this normal form turns the full-cut branch into a sharply
+localized task: improve the one equality edge entering the missing bundle
+while retaining a strict matching on the other three agents.
 
 ## Proof
 
-The definition of \(\beta\) and finiteness of the set of bijections give a
-perfect matching in \(G_{\geq}\). A perfect matching in \(G_{>}\) would have
-minimum score strictly greater than \(\beta\), a contradiction.
+An optimizer \(\pi\) in the finite definition of \(\beta(B)\) uses only
+edges of weight at least \(\beta\), proving 1.  A perfect matching using only
+edges of weight strictly greater than \(\beta\) would have bottleneck value
+strictly greater than \(\beta\), contradicting the definition, proving 2.
 
-Minimality of \(S\) says every proper subset \(A\subsetneq S\) satisfies
+For 3, at most \(|N_{>\beta}(S)|\) agents of \(S\) can be matched by \(\pi\)
+into that neighborhood.  Hence at least \(d\) are matched outside it.  Their
+matching edges are not in \(G_{>\beta}\), but they are in
+\(G_{\ge\beta}\), so their weights equal \(\beta\). \(\square\)
 
-\[
-|N_{G_{>}}(A)|\geq |A|. \tag{2}
-\]
+## Partial-allocation corollary
 
-For \(k>1\), apply (2) to \(S\setminus\{i\}\). Its neighborhood is contained
-in \(N_{G_{>}}(S)\), so the latter has size at least \(k-1\). Hall deficiency
-gives size at most \(k-1\), proving (1). For \(k=1\), deficiency directly
-gives an empty neighborhood. Hall's theorem applied to each
-\(S\setminus\{i\}\) proves assertion 1.
-
-A perfect matching of \(G_{\geq}\) assigns the \(k\) members of \(S\) to
-distinct bundles, while only \(k-1\) bundles lie in their strict
-neighborhood. At least one matched edge therefore leaves that neighborhood.
-It is weak but not strict, so its score is exactly \(\beta\). This proves
-assertion 2.
-
-Finally suppose \(S=L\). Equation (1) leaves a unique bundle
-\(r^*\in R\setminus N_{G_{>}}(L)\). Take any weak perfect matching and let
-\(i^*\) be the agent it matches to \(r^*\). Assertion 1 supplies a strict
-matching of \(L\setminus\{i^*\}\) onto the \(n-1\) strict-neighborhood
-bundles. Combine it with the weak edge \((i^*,r^*)\), whose score is exactly
-\(\beta\). This proves assertion 3. \(\square\)
-
-## EFX specialization
-
-For a complete bundle partition \(Y=(Y_1,\ldots,Y_n)\), use normalized EFX
-edge scores
+For a one-floater state \((X,f)\), write
 
 \[
-s_{ij}=\frac{v_i(Y_j)-\max_{\ell\ne j}
-\bigl(v_i(Y_\ell)-\min_{g\in Y_\ell}v_i(g)\bigr)}{v_i(M)}.
+H(X,f)=\max_h\beta(C_h(X,f)),
 \]
 
-Then \(\beta\geq0\) exactly when the partition supports an EFX assignment.
-When \(\beta<0\), the theorem gives an exact critical obstruction at the best
-possible assignment margin. For four agents, an inclusion-minimal critical
-set has size 1, 2, 3, or 4, with respectively 0, 1, 2, or 3 strict
-neighbors.
+where \(C_h(X,f)\) inserts \(f\) into host \(h\).  Put
+\(\beta=H(X,f)\).  Then:
 
-Thus the size-two and size-three branches are not separate graph-theoretic
-phenomena. In both, the missing analytic step is the same: modify the partial
-allocation so that a score-\(\beta\) edge crossing the critical cut becomes
-strict without destroying the matching on the other side. The full-cut
-branch additionally permits the exact one-equality-edge normal form.
+- for every host \(h\), the graph of edges in \(C_h(X,f)\) with slack
+  strictly greater than \(\beta\) has no perfect matching;
+- for every maximizing host, the graph of edges with slack at least
+  \(\beta\) has a perfect matching; and
+- for any successor one-floater state \((Y,g)\),
+  \[
+  H(Y,g)>\beta
+  \quad\Longleftrightarrow\quad
+  \text{some completion of }(Y,g)\text{ has a perfect matching using only
+  edges of slack }>\beta.
+  \tag{2}
+  \]
 
-## Proper-cut factorization or expansion
+Equation (2) is the exact Hall-gradient test.  It eliminates the nested
+maximum over successor matchings: the proof needs to augment one strict
+threshold graph across the old critical cut.
 
-Put \(T=N_{G_>}(S)\), \(U=L\setminus S\), and \(W=R\setminus T\). Take a
-weak perfect matching \(M\), and choose an agent \(a\in S\) that \(M\)
-matches into \(W\); at least one exists. There are two possibilities.
+## Cut-crossing edge lemma
 
-1. The weak graph induced between \(U\cup\{a\}\) and \(W\) has a perfect
-   matching. Combining it with the strict matching of
-   \(S\setminus\{a\}\) into \(T\) gives a full matching with exactly one
-   critical-cut crossing from \(S\) to \(W\).
-2. That residual graph is Hall-deficient. If \(Q\subseteq U\cup\{a\}\) is
-   a residual Hall witness, then \(Q\cap U\ne\varnothing\), and
-   \(S'=S\cup(Q\cap U)\) is a strictly larger Hall-deficient set in \(G_>\).
-
-For the second claim, \(a\) has a weak neighbor in \(W\), so a deficient
-\(Q\) cannot consist only of \(a\). Also
+Let \(S\) be Hall-deficient in the old strict graph of a complete partition
+\(P\) at level \(\beta\).  Suppose another complete partition \(Q\) has a
+perfect matching \(\rho\) using only edges of slack strictly greater than
+\(\beta\).  Then some \(i\in S\) is matched to a bundle
 
 \[
-N_{G_>}(S')\subseteq T\cup N_{G_{\geq}[U,W]}(Q).
+b=\rho(i)\notin N^P_{>\beta}(S),
 \]
 
-If \(a\in Q\), the right side has size at most
-\((|S|-1)+|Q\cap U|=|S'|-1\). If \(a\notin Q\), its size is at most
-\(|S'|-2\). Thus \(S'\) is Hall-deficient.
+and its individual edge slack crosses the cut:
 
-This dichotomy explains the extra equality crossings possible for proper
-cuts. Either the cut factors into a strict internal matching plus a smaller
-weak residual problem, or its obstruction necessarily expands to additional
-agents. For four agents, a size-three failure of factorization expands
-immediately to the full cut; a size-two failure expands to size three or
-four.
+\[
+w_{ib}(P)\le\beta<w_{ib}(Q).
+\tag{3}
+\]
 
-## Verification and boundary
+Indeed, injectivity permits at most \(|N^P_{>\beta}(S)|<|S|\) agents of
+\(S\) to be matched inside the old neighborhood.  Any agent matched outside
+it supplies (3).
 
-The script tracks/parkability/audit_bottleneck_hall_cut.py exhaustively checks
-all 27,713 nonmatchable strict bipartite graphs on \(4+4\) vertices, their
-31,556 inclusion-minimal deficient sets, and 757,344 weak matching
-extensions.
+Writing
 
-This cap-free graph lemma does not prove that the required
-valuation-dependent allocation modification exists. It therefore does not
-by itself prove four-agent or general additive EFX.
+\[
+R_i(B,b)=\max_{j\ne b}\tau_i(B_j),
+\]
+
+the strict increase in (3) is exactly
+
+\[
+v_i(Q_b)-v_i(P_b)
+>
+R_i(Q,b)-R_i(P,b).
+\tag{4}
+\]
+
+Thus every Hall-gradient step has a concrete local mechanism: it either
+raises the value of a bundle outside the old deficient neighborhood, lowers
+that observer's maximum competing threshold, or does both.  In particular,
+if \(Q_b=P_b\), (4) forces a strict decrease of the competing threshold; if
+all competing thresholds weakly increase, it forces a strict increase of the
+candidate bundle's value.
+
+Combined with
+`PARTIAL_THRESHOLD_HALL_COMPLETION_MOVE_REDUCTION_LEMMA.md`, a strict
+improvement need only be sought among three completed-partition operations:
+a one-good transfer, a two-bundle swap, or a three-bundle augmenting path.
+Reinsertion into the source is excluded identically.
+
+## Exact audit and remaining gate
+
+The exact-rational artifact
+`partial_hall_threshold_plateau_exact_path_audit.json` constructs both graphs
+at every one of its 4,848 selected strict-improvement steps.  In every case,
+the strict graph is Hall-deficient and the weak graph has a perfect matching.
+The minimum strict-cut witness sizes are 2 in 331 steps, 3 in 58 steps, and 4
+in 4,459 steps.
+
+For all 4,459 size-four witnesses, the strict graph has a three-bundle
+neighborhood and therefore one missing bundle.  In 4,457 steps, that missing
+bundle is the recipient selected by the completion-move trichotomy: the source
+receives the old floater in a two-bundle swap, or the new host receives the
+released good in a transfer or augmenting path.  The two remaining steps use
+the competing-threshold side of (4) together with a changed matching.  This
+near-degeneracy is evidence for the case split, not a universal theorem that
+the missing bundle must receive a good.
+
+Artifact SHA-256:
+`16d1d9041c32278cf243462d8bea679926cced30817c21b34b9f2f53448fcdb2`.
+
+The source owner is still not a universal member of a critical deficient set:
+it belongs to some critical deficient set in 4,695 of 4,848 steps.  Therefore
+the missing theorem is a cut-augmentation statement, not a fixed-role source
+selection rule.  One must use the equality edges in (1), the two exact EFX
+swap-wall types, and one of the three completed-partition moves to produce a
+strict perfect matching as in (2).  No such universal augmentation theorem is
+claimed here.

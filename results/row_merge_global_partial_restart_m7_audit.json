@@ -1,0 +1,53 @@
+{
+  "candidate_construction": "Choose one good to leave unallocated and move at most one of the six remaining goods between bundles; bundle ownership may change.",
+  "candidate_partition_count_per_hall_size": 81,
+  "claim": "For every encoded wall state, at least one of the 81 global one-good partial-restart partitions supports an EFX matching.",
+  "claim_boundary": "This is a fixed seven-good computer-assisted lemma. It does not complete the unallocated good, extend to larger bundle shapes, or prove row-merge continuation.",
+  "records": [
+    {
+      "candidate_partition_count": 81,
+      "cvc5_normalization": "results/row_merge_global_partial_q2_radius1_m7_unsat.cvc5.normalization.json",
+      "cvc5_normalized_formula_sha256": "910a372db3f04601d05f1b9e17baddd4121bd366b47040be965feb3fed1e5a7b",
+      "cvc5_result": "results/row_merge_global_partial_q2_radius1_m7_unsat.cvc5.json",
+      "cvc5_result_sha256": "03114caa30bdcb22ec9a0449e28538c224af926ad587ba6558f6338ef55fa43c",
+      "cvc5_status": "unsat",
+      "minimal_hall_witness_size": 2,
+      "z3_formula": "results/row_merge_global_partial_q2_radius1_m7_unsat.smt2",
+      "z3_formula_sha256": "7e0cf3915c41c7bbe94d5104df0bd0ffbfbf756a1ae0495ffae5b0a552890ad7",
+      "z3_source": "results/row_merge_global_partial_q2_radius1_m7_unsat.json",
+      "z3_source_sha256": "f323d029741b16d2b5ea60d2508636bc69de53613ad4d09c6bdf63b0ee304529",
+      "z3_status": "unsat"
+    },
+    {
+      "candidate_partition_count": 81,
+      "cvc5_normalization": "results/row_merge_global_partial_q3_radius1_m7_unsat.cvc5.normalization.json",
+      "cvc5_normalized_formula_sha256": "df05b28ca27d91cc772ad521994bf03d69eea1c349978ec1ffef1154dcf7abbe",
+      "cvc5_result": "results/row_merge_global_partial_q3_radius1_m7_unsat.cvc5.json",
+      "cvc5_result_sha256": "0b8d9100c472958f997102dc4834b98b505fa41112545d6a2b585a4edd1916f1",
+      "cvc5_status": "unsat",
+      "minimal_hall_witness_size": 3,
+      "z3_formula": "results/row_merge_global_partial_q3_radius1_m7_unsat.smt2",
+      "z3_formula_sha256": "b3ae1b9b1bb941f913cdb218a3dc73c1b1abd799b5cc2a43c5887aa17e43fe92",
+      "z3_source": "results/row_merge_global_partial_q3_radius1_m7_unsat.json",
+      "z3_source_sha256": "04ad5431d42071b372030ae617455187fff443375fc741d4f666767348fa30db",
+      "z3_status": "unsat"
+    },
+    {
+      "candidate_partition_count": 81,
+      "cvc5_normalization": "results/row_merge_global_partial_q4_radius1_m7_unsat.cvc5.normalization.json",
+      "cvc5_normalized_formula_sha256": "c585bea4d5275277c82f8008901ae0fbf62df57a822b125d33bc6a87e363e1ab",
+      "cvc5_result": "results/row_merge_global_partial_q4_radius1_m7_unsat.cvc5.json",
+      "cvc5_result_sha256": "a8065d6b730577c82aded19beb2642c697981309e5ccc0967a6168374c40c866",
+      "cvc5_status": "unsat",
+      "minimal_hall_witness_size": 4,
+      "z3_formula": "results/row_merge_global_partial_q4_radius1_m7_unsat.smt2",
+      "z3_formula_sha256": "0009957eae0fc88a8d1b7a6856f8fe54650caa9513e0be87a819a24402790b55",
+      "z3_source": "results/row_merge_global_partial_q4_radius1_m7_unsat.json",
+      "z3_source_sha256": "067592af964e7872caae754a0f4055fbf485410983572797dd163fc642d39d57",
+      "z3_status": "unsat"
+    }
+  ],
+  "schema": "row-merge-global-partial-restart-audit-v1",
+  "scope": "four agents, seven goods, wall shape 2+2+2+1, generic single-wall crossing, Hall sizes 2, 3, and 4",
+  "status": "GLOBAL_PARTIAL_RESTART_LEMMA_AUDITED"
+}

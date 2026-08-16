@@ -1,0 +1,315 @@
+{
+  "agent_order": [
+    0,
+    2,
+    1,
+    3
+  ],
+  "agent_order_names": [
+    "p",
+    "s",
+    "r",
+    "q"
+  ],
+  "candidate_count": 65536,
+  "claim_boundary": {
+    "sat": "refutes the rooted external-observer lemma in this exact variable-packet cell only",
+    "unsat": "proves the rooted lemma only in this exact variable-packet cell until a cap-free proof is supplied"
+  },
+  "elapsed_seconds": 6.4995880126953125,
+  "goods": [
+    "tr0",
+    "tr1",
+    "br",
+    "tq",
+    "bq0",
+    "bq1",
+    "x",
+    "y",
+    "f"
+  ],
+  "iterations": 5,
+  "packet_sizes": [
+    2,
+    1,
+    1,
+    2
+  ],
+  "pool_size": 535,
+  "reason_unknown": null,
+  "schema": "alternating-variable-packet-rooted-cegar-v1",
+  "solver": {
+    "logic": "QF_LRA",
+    "name": "z3",
+    "version": "5.0.0"
+  },
+  "status": "UNSAT_ROOTED_VARIABLE_PACKET_CELL",
+  "trace": [
+    {
+      "dominating_count": 365,
+      "efx_count": 1961,
+      "iteration": 1,
+      "new_count": 365,
+      "pool_size_before": 0,
+      "values": [
+        [
+          250,
+          259,
+          90,
+          232,
+          72,
+          295,
+          608,
+          599,
+          313
+        ],
+        [
+          6,
+          7,
+          2,
+          1,
+          3,
+          10,
+          1,
+          270,
+          2
+        ],
+        [
+          4,
+          6,
+          4,
+          123,
+          12,
+          14,
+          149,
+          151,
+          141
+        ],
+        [
+          4,
+          5,
+          3,
+          3,
+          7,
+          8,
+          262,
+          1,
+          9
+        ]
+      ]
+    },
+    {
+      "dominating_count": 260,
+      "efx_count": 2334,
+      "iteration": 2,
+      "new_count": 260,
+      "pool_size_before": 128,
+      "values": [
+        [
+          12,
+          24,
+          257,
+          32,
+          12,
+          16,
+          297,
+          293,
+          265
+        ],
+        [
+          3,
+          6,
+          9,
+          9,
+          1,
+          2,
+          17,
+          246,
+          9
+        ],
+        [
+          101,
+          191,
+          292,
+          301,
+          146,
+          155,
+          602,
+          611,
+          319
+        ],
+        [
+          3,
+          4,
+          17,
+          30,
+          5,
+          7,
+          194,
+          30,
+          12
+        ]
+      ]
+    },
+    {
+      "dominating_count": 219,
+      "efx_count": 1889,
+      "iteration": 3,
+      "new_count": 219,
+      "pool_size_before": 256,
+      "values": [
+        [
+          8,
+          24,
+          1095,
+          28,
+          12,
+          16,
+          1131,
+          1127,
+          1103
+        ],
+        [
+          275,
+          283,
+          10,
+          8,
+          16,
+          542,
+          566,
+          570,
+          2
+        ],
+        [
+          11,
+          1132,
+          1011,
+          1308,
+          33,
+          66,
+          3363,
+          3374,
+          2198
+        ],
+        [
+          4,
+          18,
+          17,
+          89,
+          24,
+          46,
+          728,
+          152,
+          58
+        ]
+      ]
+    },
+    {
+      "dominating_count": 197,
+      "efx_count": 1574,
+      "iteration": 4,
+      "new_count": 197,
+      "pool_size_before": 384,
+      "values": [
+        [
+          2161,
+          2169,
+          32,
+          2145,
+          16,
+          2201,
+          4370,
+          4362,
+          48
+        ],
+        [
+          14,
+          1073,
+          4,
+          2,
+          8,
+          1079,
+          1089,
+          1105,
+          2
+        ],
+        [
+          1,
+          269,
+          1,
+          538,
+          3,
+          6,
+          547,
+          548,
+          275
+        ],
+        [
+          9,
+          12,
+          16,
+          136,
+          23,
+          61,
+          1862,
+          2,
+          67
+        ]
+      ]
+    },
+    {
+      "dominating_count": 23,
+      "efx_count": 1612,
+      "iteration": 5,
+      "new_count": 23,
+      "pool_size_before": 512,
+      "values": [
+        [
+          1021,
+          1033,
+          1033,
+          1021,
+          12,
+          24,
+          3111,
+          3099,
+          2078
+        ],
+        [
+          36,
+          37,
+          43,
+          41,
+          13,
+          20,
+          115,
+          701,
+          30
+        ],
+        [
+          9,
+          541,
+          442,
+          2038,
+          27,
+          54,
+          2588,
+          2597,
+          1028
+        ],
+        [
+          6,
+          8,
+          39,
+          117,
+          17,
+          60,
+          713,
+          1,
+          75
+        ]
+      ]
+    }
+  ],
+  "values": null
+}

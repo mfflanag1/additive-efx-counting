@@ -1,0 +1,76 @@
+{
+  "analysis": "results/row_merge_q4_chain_topology_mining_final_analysis.json",
+  "analysis_sha256": "a8ca08b2715b2fced4a58cc51522f140cb17c9bbf95b9551e7440dd44b4e8d87",
+  "audited_refutations": [
+    {
+      "combined_partition_count": 96,
+      "complete_efx_allocation_count": 686,
+      "formula_sha256": "746c3b2faaeaade530c62dca17c6009216ff5e8d5599d64d809fa8de527fa115",
+      "menu_kind": "all_three_cycles",
+      "path": "results/row_merge_q4_all_three_cycles_plus_base_cap20_gate.json",
+      "post_values_sha256": "6b71be876eaebb69d8b3e751e591734757e43ce3853164aa624a1c7e8caba0f8",
+      "selected_partition_count": 80,
+      "sha256": "8f6fd94b0befeb9cd859e5908f4732e92a8a65be800564d1fc8a479b3bc3f81e",
+      "simple_chain_support_count": 44,
+      "status": "CYCLE023_PLUS_BASE_REFUTATION_FOUND"
+    },
+    {
+      "combined_partition_count": 130,
+      "complete_efx_allocation_count": 542,
+      "formula_sha256": "d1b35f6fca6c9a096d22c98d5c68de7f4f200b07b921e113ac2bcb2142fbfcdb",
+      "menu_kind": "all_paths_starting_at_3_of_length_1_to_3",
+      "path": "results/row_merge_q4_all_paths_start3_plus_base_cap20_gate.json",
+      "post_values_sha256": "52e386454d159dd510a67ebaa673ece64233d8c7f44b65bd60c92c1091147aa5",
+      "selected_partition_count": 117,
+      "sha256": "ec86e5b71b2c74ad4d70854846726e9ab4fb31b303dd76c512ef36e4f6987f3e",
+      "simple_chain_support_count": 19,
+      "status": "PATH_START3_PLUS_BASE_REFUTATION_FOUND"
+    },
+    {
+      "combined_partition_count": 30,
+      "complete_efx_allocation_count": 513,
+      "formula_sha256": "ea2631ff0ab839fe6f0e8342b5d5c1588a54a4f73a6193d2b207076245d80039",
+      "menu_kind": "minimum_trace_topology_cover",
+      "path": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json",
+      "post_values_sha256": "5ea127bae0ca294087e426d354ecf9b4e7d9c8f9921a9f2d49af1d20daec8b8e",
+      "selected_partition_count": 14,
+      "sha256": "3dc7486e735e538c9b6721e997403e1b0c7d975dff4ea892a8cb65493f658a48",
+      "simple_chain_support_count": 37,
+      "status": "TOPOLOGY_COVER_PLUS_BASE_REFUTATION_FOUND"
+    },
+    {
+      "combined_partition_count": 34,
+      "complete_efx_allocation_count": 381,
+      "formula_sha256": "4814171086015de130f552eccfee98609e3ac1cce8689181030f7d228120525b",
+      "menu_kind": "minimum_trace_topology_cover",
+      "path": "results/row_merge_q4_min_topology_cover_round2_plus_base_cap20_gate.json",
+      "post_values_sha256": "d53e74ba2cff444b7184b1aec71354636255132561df5255f373b424cc1d29b9",
+      "selected_partition_count": 18,
+      "sha256": "1ecba9677d6f47b6657018650a30367d71f22a0e83e14b84ceeffdfb063a3dcc",
+      "simple_chain_support_count": 15,
+      "status": "TOPOLOGY_COVER_PLUS_BASE_REFUTATION_FOUND"
+    }
+  ],
+  "claim_boundary": "This refutes only the listed topology-compressed repair menus at the stated integer cap. It does not refute the full 515-partition exchange-chain candidate, row-merge continuation, or complete EFX.",
+  "domain": "positive additive integer wall valuations in 1..20 in the fixed four-agent, nine-good Hall-size-four graph cell",
+  "interpretation": "All one-good three-cycle repairs, all simple paths starting at the three-good bundle, and two successive minimum two-topology covers are exactly refuted even when combined with the sixteen base pivots. Every refuting profile still has complete EFX allocations and other simple-chain repairs.",
+  "minimum_topology_cover_partition_count_after_two_refutations": 24,
+  "minimum_topology_cover_size_after_two_refutations": 2,
+  "sat_model_count": 23,
+  "schema": "row-merge-q4-topology-mining-gate-audit-v1",
+  "status": "SELECTED_TOPOLOGY_COMPRESSIONS_REFUTED_AT_CAP20",
+  "universal_existential_signatures": [
+    "kind=path",
+    "kind=path;length=2",
+    "kind=path;length=3",
+    "kind=path;touched=0,1,2,3",
+    "length=2",
+    "length=3",
+    "moves_critical=False",
+    "moves_from_failed_bundle=True",
+    "moves_into_failed_bundle=True",
+    "moves_perturbed=False",
+    "touched=0,1,2,3",
+    "touched=0,2,3"
+  ]
+}

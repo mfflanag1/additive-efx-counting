@@ -102,20 +102,30 @@ CEGAR master blocked all 63, learned 256 singleton obstructions from its
 first exact model, and returned `UNKNOWN` on the next 30-second solve. This endpoint
 neither proves nor refutes the radius-two implication.
 
-The 63 states have exactly nine bundle-origin signatures. The analytically
-natural subfamily has only 21 states: give the favorite a good from the
-contested triple, then either stop at one transfer or make one of eighteen
-second transfers. The boundary profile has eight repairs in this subfamily.
-A dedicated cap-20 CEGAR rebuild learned 302 singleton obstructions across
-two exact models before returning `UNKNOWN`. The complete orbit census and
-model replay are frozen in
-[efx49_common_favorite_rank1_radius2_orbits_audit.json](efx49_common_favorite_rank1_radius2_orbits_audit.json).
-This 21-state contested-partner implication is the smallest surviving
-rank-one exchange target.
+The 63 states have exactly nine bundle-origin signatures. The first natural
+subfamily had only 21 states: give the favorite a good from the contested
+triple, then either stop at one transfer or make one of eighteen second
+transfers. That implication is now exactly refuted. A positive cap-6 profile
+has no favorite-singleton EFX partition and blocks all 21 states, each with
+exactly one zero-neighbor bundle. It nevertheless has 285 balanced supporting
+partitions and 3,168 complete EFX allocations.
+
+All nine nearest repairs of the first refuting profile occupy one missing
+bridge orbit: pair the favorite with a good of the other triple, then move one
+contested good back into that depleted triple. The resulting 30-state family
+is now exactly refuted by a second cap-6 profile with zero singleton support.
+That profile has 15 nearest repairs in two further origin orbits, giving the
+surviving 45-state target. Its first bounded campaign reaches a
+six-singleton Hamming-two local minimum. The identical-resident cap-6 subcell
+closes under matching-clause and Hall-selector encodings, but the
+unequal-resident global floor remains open.
+The exact refutations, full censuses, and current boundary are frozen in
+[RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md](RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md) and
+[efx49_common_favorite_rank1_bridge_refutation_audit.json](efx49_common_favorite_rank1_bridge_refutation_audit.json).
 
 This normal form remains the first analytic reduction inside the mixed Hall
 branch: it replaces an arbitrary rank-one graph by one named bundle, one
 strict inequality per resident, and two owner-switch subcases. Any successful
-conversion proof must now use a genuinely two-step exchange or a larger
+conversion proof must now use the 45-state extended exchange or a larger
 adaptive family. Rank two and its zero-neighbor/two-bundle Hall forms remain
 separate successor gates.

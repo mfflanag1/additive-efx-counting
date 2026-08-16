@@ -1,0 +1,204 @@
+{
+  "candidate_partition_count": 91,
+  "deletion_irreducible_unsat_core": [
+    {
+      "agent": 0,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_3"
+    },
+    {
+      "agent": 2,
+      "good": 6,
+      "kind": "strict_positivity",
+      "label": "track_27"
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_132",
+      "left_mask": 24,
+      "right_mask": 32
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2174",
+      "left_mask": 1,
+      "right_mask": 16
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2949",
+      "left_mask": 20,
+      "right_mask": 32
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3012",
+      "left_mask": 24,
+      "right_mask": 258
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4669",
+      "left_mask": 322,
+      "right_mask": 129
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4851",
+      "left_mask": 392,
+      "right_mask": 16
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5453",
+      "left_mask": 10,
+      "right_mask": 64
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_7238",
+      "left_mask": 80,
+      "right_mask": 392
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_7307",
+      "left_mask": 129,
+      "right_mask": 16
+    },
+    {
+      "floater": 0,
+      "kind": "maximality",
+      "label": "track_10424",
+      "masks": [
+        130,
+        68,
+        280,
+        32
+      ]
+    }
+  ],
+  "deletion_irreducible_unsat_core_size": 12,
+  "elapsed_seconds": 0.726233720779419,
+  "eligible_comparison_count": 1902,
+  "eligible_state_count": 865,
+  "false_edge_witness_count": 553,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "ineligible_witness_count": 8443,
+  "meaning": "SAT would refute the normalized-utilitarian radius-one Hall selector; UNSAT eliminates only this frozen combinatorial cell. Neither outcome by itself refutes complete additive EFX.",
+  "schema": "partial-hall-utilitarian-frozen-cell-v1",
+  "seed_path": "results/partial_hall_utilitarian_local_cegar_session1.json",
+  "seed_sha256": "7f8c20582633abac9b18ae706bc413fef3f204e9e8e3c4a516ca26ddc6ccd358",
+  "smt2_path": "results/partial_hall_utilitarian_frozen_cell_local_r2_core.smt2",
+  "smt2_sha256": "14ae5a24c99fa1481223570650664b9eef5a8e4648ff51e78c513e74c2d30160",
+  "status": "UNSAT",
+  "timeout_seconds": 600.0,
+  "true_edge_comparison_count": 1806,
+  "unsat_core": [
+    {
+      "agent": 0,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_3"
+    },
+    {
+      "agent": 2,
+      "good": 6,
+      "kind": "strict_positivity",
+      "label": "track_27"
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_132",
+      "left_mask": 24,
+      "right_mask": 32
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2174",
+      "left_mask": 1,
+      "right_mask": 16
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2949",
+      "left_mask": 20,
+      "right_mask": 32
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3012",
+      "left_mask": 24,
+      "right_mask": 258
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4669",
+      "left_mask": 322,
+      "right_mask": 129
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4851",
+      "left_mask": 392,
+      "right_mask": 16
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5453",
+      "left_mask": 10,
+      "right_mask": 64
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_7238",
+      "left_mask": 80,
+      "right_mask": 392
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_7307",
+      "left_mask": 129,
+      "right_mask": 16
+    },
+    {
+      "floater": 0,
+      "kind": "maximality",
+      "label": "track_10424",
+      "masks": [
+        130,
+        68,
+        280,
+        32
+      ]
+    }
+  ],
+  "unsat_core_size": 12
+}

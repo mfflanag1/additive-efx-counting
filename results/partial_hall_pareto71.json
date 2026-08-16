@@ -1,0 +1,116 @@
+{
+  "accepted_moves": 2706,
+  "audit": {
+    "candidate_utilities": [
+      1262,
+      992,
+      16621,
+      10886
+    ],
+    "dominator_count": 4,
+    "eligible_state_count": 690,
+    "radius_one": {
+      "best_normalized_slack": -0.0002632964718272775,
+      "best_witness": {
+        "floater_host": 2,
+        "masks": [
+          192,
+          14,
+          272,
+          33
+        ],
+        "matching": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "move_destination": 3,
+        "move_source": 2,
+        "moved_good": 0,
+        "normalized_minimum_slack": -0.0002632964718272775
+      },
+      "candidate_partition_count": 91,
+      "completable_partition_count": 0,
+      "completion_witnesses": []
+    },
+    "strongest_dominator": {
+      "base_index": 17334,
+      "floater": 2,
+      "total_normalized_surplus": 0.045192958700067704,
+      "utilities": [
+        1262,
+        1148,
+        16621,
+        11032
+      ]
+    },
+    "strongest_dominator_normalized_surplus": 0.045192958700067704
+  },
+  "elapsed_seconds": 240.648374,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "improvements": 167,
+  "iterations_completed": 5000,
+  "iterations_requested": 5000,
+  "max_delta": 500,
+  "meaning": "A counterexample refutes Pareto-maximal radius-one Hall completion, not complete additive EFX.",
+  "random_seed": 71,
+  "schema": "partial-hall-pareto-anneal-v1",
+  "seed_path": "results/partial_hall_radius_one_2321_lra_compact.json",
+  "seed_sha256": "aab6cd0ba64549c22f223a2b5bd67926d6e9c11ae22b8f7bc3eb3872ad4de184",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      618,
+      312,
+      383,
+      1,
+      1220,
+      1,
+      625,
+      637,
+      1
+    ],
+    [
+      3,
+      734,
+      125,
+      133,
+      669,
+      993,
+      174,
+      553,
+      414
+    ],
+    [
+      6762,
+      2073,
+      3744,
+      1960,
+      9859,
+      223,
+      2369,
+      299,
+      1829
+    ],
+    [
+      352,
+      3875,
+      138,
+      146,
+      1073,
+      10886,
+      8864,
+      2785,
+      7329
+    ]
+  ]
+}

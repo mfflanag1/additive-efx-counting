@@ -1,0 +1,101 @@
+{
+  "base_good_stabilizer_order": 24,
+  "base_good_symmetry": true,
+  "base_good_symmetry_meaning": "Orders agent 0's values within base bundles {6,7}, {1,2,3}, and {0,4}. Their S2 x S3 x S2 relabeling action preserves the fixed base, radius-one Hall candidates, and owner-distance rival family, so this is satisfiability preserving.",
+  "branch_count": 8,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_66_1_1",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_000.smt2",
+      "sha256": "38a5bfc772ead9a97a6ff4e37ccb7d70e91c4d19e06cf710a538b8c93b34e344"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_66_1_1",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_001.smt2",
+      "sha256": "71c744671c6ad62c0ea9aabd15adf9487e9d4a7b1ae9a9511a642240df94c1c9"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "edge_66_1_1",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "v_0_2 + v_0_3 + -1*v_0_5 <= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_002.smt2",
+      "sha256": "cf81fd4e91ba5c7a75cd171babefc4433841407757fb614ac21bcf0d9c0e35e1"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "edge_66_1_1",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "Not(v_0_2 + v_0_3 + -1*v_0_5 <= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_003.smt2",
+      "sha256": "47f4949671ea3c9082cd57653b0f4fb50492c189a38f656cc7ba633787377630"
+    },
+    {
+      "branch": 4,
+      "cube": [
+        "Not(edge_66_1_1)",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "edge_43_0_0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_004.smt2",
+      "sha256": "bc965f32a78c27992d7ef25a568a337c87632cfdd5afc34c18cfa37e65066e13"
+    },
+    {
+      "branch": 5,
+      "cube": [
+        "Not(edge_66_1_1)",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "Not(edge_43_0_0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_005.smt2",
+      "sha256": "9a77dc159aa1d1ed9dfc9c050d6f4c295032d3af0e54b503971a7f64479a5b45"
+    },
+    {
+      "branch": 6,
+      "cube": [
+        "Not(edge_66_1_1)",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "edge_73_0_1"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_006.smt2",
+      "sha256": "8197cc100fb618e03248b253e80b3c196be45c5e9a3b2b310111ac982ccc722d"
+    },
+    {
+      "branch": 7,
+      "cube": [
+        "Not(edge_66_1_1)",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "Not(edge_73_0_1)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_cubes_d3/branch_007.smt2",
+      "sha256": "afe0b77e28aa2656163cdc00f103f8b29efabee6f9aea8eb6cfdd3fe9583c5dd"
+    }
+  ],
+  "cube_timeout_seconds": 60,
+  "depth": 3,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_core_orbit_strengthened_master.smt2",
+  "source_sha256": "a6425621e7d80a57539bafa9c689bf811d0f56267fa94e473c9be4406e28341a",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": [
+    "v_0_6 <= v_0_7",
+    "v_0_1 <= v_0_2",
+    "v_0_2 <= v_0_3",
+    "v_0_0 <= v_0_4"
+  ]
+}

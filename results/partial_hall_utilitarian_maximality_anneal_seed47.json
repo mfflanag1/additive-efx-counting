@@ -1,0 +1,114 @@
+{
+  "accepted_moves": 2352,
+  "elapsed_seconds": 254.826036,
+  "fixed_obstruction_record": {
+    "candidate_score": {
+      "denominator": 376635,
+      "numerator": 503714
+    },
+    "candidate_to_maximum_ratio": 0.9228115627621595,
+    "candidate_utilities": [
+      158969,
+      2388,
+      21444,
+      25529
+    ],
+    "eligible_state_count": 680,
+    "global_maximizer_count": 1,
+    "is_global_maximizer": false,
+    "maximum_score": {
+      "denominator": 903924,
+      "numerator": 1310033
+    },
+    "radius_one": {
+      "best_normalized_slack": -6.173085347883229e-05,
+      "best_witness": {
+        "floater_host": 2,
+        "masks": [
+          196,
+          10,
+          273,
+          32
+        ],
+        "matching": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "move_destination": 0,
+        "move_source": 1,
+        "moved_good": 2,
+        "normalized_minimum_slack": -6.173085347883229e-05
+      },
+      "candidate_partition_count": 91,
+      "completable_partition_count": 0,
+      "completion_witnesses": []
+    }
+  },
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "improvements": 176,
+  "iterations_completed": 10000,
+  "iterations_requested": 10000,
+  "max_delta": 4096,
+  "meaning": "A counterexample refutes the normalized-utilitarian radius-one Hall selector, not complete additive EFX.",
+  "random_seed": 47,
+  "schema": "partial-hall-utilitarian-maximality-anneal-v1",
+  "seed_path": "results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.json",
+  "seed_sha256": "c069335b22edbca3c2da3517451e14383893a7495827464f609ab800c2b5eaf8",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      109336,
+      3199,
+      1,
+      5631,
+      49665,
+      127240,
+      110897,
+      48072,
+      48139
+    ],
+    [
+      1548,
+      946,
+      667,
+      775,
+      1,
+      2391,
+      1,
+      844,
+      1
+    ],
+    [
+      11897,
+      11862,
+      237,
+      732,
+      9547,
+      4648,
+      12181,
+      3873,
+      9589
+    ],
+    [
+      61,
+      15484,
+      519,
+      2818,
+      895,
+      25529,
+      7598,
+      8742,
+      10094
+    ]
+  ]
+}

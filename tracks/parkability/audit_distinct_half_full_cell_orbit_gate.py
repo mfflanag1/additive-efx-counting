@@ -238,8 +238,6 @@ def audit_eight_orbit_boundary(
     )
     pool_source = result.get("pool_source", {})
     proto_path = Path(result.get("proto_path", ""))
-    if not proto_path.is_file():
-        proto_path = result_path.parent / proto_path.name
     if (
         pool.get("schema") != ORBIT_POOL_SCHEMA
         or pool.get("status") != "PROOF_MINING_POOL"

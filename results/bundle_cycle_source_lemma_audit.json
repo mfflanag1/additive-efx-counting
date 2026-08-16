@@ -1,0 +1,55 @@
+{
+  "bundle_cycle_lemma": "Rotating bundles around a cycle of agents that each weakly prefer the next bundle preserves EFX and floater nonenvy; if one preference is strict, Nash welfare strictly increases.",
+  "claim_boundary": "The reduction forces a floater-support edge but does not yet prove that repeated support edges close into an improving exchange.",
+  "formulas": [
+    {
+      "path": "bundle_cycle_weak.smt2",
+      "sha256": "009ca914121b4cc1b4f579e2e6094623701d9987c0a7114d6a97b642ea72ec81"
+    },
+    {
+      "path": "bundle_cycle_nash.smt2",
+      "sha256": "ad201824fc8aaf0a9e457a7a4ff82ec8f4137b026094cdde993c83d7576e646f"
+    },
+    {
+      "path": "bundle_cycle_source.smt2",
+      "sha256": "066fd6a263fde8ab239e6c2cd02561c292220e398b586bf31cfdcc9ff61b8e78"
+    }
+  ],
+  "graph": {
+    "acyclic_digraph_count": 543,
+    "irreflexive_digraph_count": 4096,
+    "property": "every acyclic strict-envy digraph has an unenvied bundle",
+    "status": "EXHAUSTIVE_FOUR_VERTEX_DIGRAPH_AUDIT_PASSED"
+  },
+  "literal": {
+    "cycle_premise_count": 79872,
+    "directed_cycle_count": 5,
+    "eligible_base_count": 41472,
+    "m": 4,
+    "n": 3,
+    "profile_count": 4096,
+    "status": "EXHAUSTIVE_LITERAL_AUDIT_PASSED",
+    "strict_cycle_count": 38400,
+    "value_domain": [
+      1,
+      2
+    ],
+    "verifier": "independent literal removed-good EFX expansion"
+  },
+  "schema": "bundle-cycle-source-lemma-audit-v1",
+  "source_host_corollary": "The strict-envy graph of a maximum-Nash eligible state is acyclic. It has an unenvied host bundle. If floater insertion at that host is blocked, every blocking removed-good witness uses an old host good that the observer values strictly below the floater.",
+  "status": "PROVED_BUNDLE_CYCLE_AND_SOURCE_HOST_REDUCTION",
+  "symbolic": {
+    "negated_bundle_cycle_efx_status": "unsat",
+    "negated_source_host_floater_ranking_status": "unsat",
+    "negated_strict_nash_increase_status": "unsat",
+    "solver": {
+      "logics": [
+        "QF_LRA",
+        "QF_NRA"
+      ],
+      "name": "z3",
+      "version": "5.0.0"
+    }
+  }
+}

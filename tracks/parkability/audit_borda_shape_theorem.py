@@ -30,17 +30,6 @@ def file_sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def resolve_committed_artifact(raw_path: str, results_dir: Path) -> Path:
-    """Resolve legacy absolute artifact paths inside a clean checkout."""
-    path = Path(raw_path)
-    if path.is_file():
-        return path
-    committed = results_dir / path.name
-    if committed.is_file():
-        return committed
-    return committed
-
-
 def audit(results_dir: Path) -> dict:
     cells = []
     pool_hashes = set()
@@ -84,20 +73,20 @@ def audit(results_dir: Path) -> dict:
                 "solver_status"
             ) != "INFEASIBLE":
                 raise AssertionError(f"{result_path} lacks an infeasible trace")
-            proto_path = resolve_committed_artifact(raw["proto_path"], results_dir)
+            proto_path = Path(raw["proto_path"])
             if (
                 not proto_path.is_file()
                 or file_sha256(proto_path) != raw["proto_sha256"]
                 or proto_path.stat().st_size != raw["proto_bytes"]
             ):
                 raise AssertionError(f"{result_path} has a broken proto reference")
-            raw_pool_path = raw.get("pool_path")
-            pool_path = (
-                resolve_committed_artifact(raw_pool_path, results_dir)
-                if raw_pool_path
-                else results_dir
-                / f"efx49_borda_shape3222_favorites{pattern_name}"
-                f"{suffix}_pool.json"
+            pool_path = Path(
+                raw.get("pool_path")
+                or str(
+                    results_dir
+                    / f"efx49_borda_shape3222_favorites{pattern_name}"
+                    f"{suffix}_pool.json"
+                )
             )
             if not pool_path.is_file():
                 raise AssertionError(f"{result_path} has no pool file")
@@ -181,7 +170,7 @@ def audit(results_dir: Path) -> dict:
         or core_cpc.get("check", {}).get("status") != "correct"
     ):
         raise AssertionError("the proof-checked 17-partition core is incomplete")
-    proof_path = resolve_committed_artifact(core_cpc["proof"], results_dir)
+    proof_path = Path(core_cpc["proof"])
     if (
         not proof_path.is_file()
         or file_sha256(proof_path) != core_cpc["proof_sha256"]

@@ -36,15 +36,6 @@ def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def repo_relative(path: Path) -> Path:
-    """Normalize recorded absolute paths without weakening file identity."""
-    path = Path(path)
-    for anchor in ("results", "output"):
-        if anchor in path.parts:
-            return Path(*path.parts[path.parts.index(anchor) :])
-    return path
-
-
 def decode_partitions(payload):
     return tuple(
         tuple(tuple(bundle) for bundle in partition)
@@ -179,11 +170,9 @@ def audit(
         or cnf_result.get("status") != "UNSAT"
         or cnf_result.get("cap") != 6
         or cnf_result.get("partition_pool_size") != 21
-        or repo_relative(cnf_result.get("source"))
-        != repo_relative(minimal_core_path)
+        or Path(cnf_result.get("source")).resolve() != minimal_core_path.resolve()
         or cnf_result.get("source_sha256") != minimal_hash
-        or repo_relative(cnf_result.get("dimacs_path"))
-        != repo_relative(cnf_path)
+        or Path(cnf_result.get("dimacs_path")).resolve() != cnf_path.resolve()
         or cnf_result.get("dimacs_sha256") != cnf_hash
         or cnf_result.get("variables") != 557152
         or cnf_result.get("clauses") != 1145090

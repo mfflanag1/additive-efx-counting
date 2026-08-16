@@ -1,0 +1,167 @@
+{
+  "changed_original_partition_edges": [
+    [
+      0,
+      0,
+      true,
+      false
+    ]
+  ],
+  "claim": "All 150 one-good deletions and arbitrary repartitions confined to the deficient block fail, while complete EFX allocations exist.",
+  "claim_boundary": "This refutes deficient-block partial restart in one generic seven-good Hall-size-three cell. It does not refute a global partial restart or complete EFX continuation.",
+  "complete_efx_allocation_count": 25,
+  "complete_efx_supporting_partition_count": 6,
+  "deficient_block_bundle_indices": [
+    0,
+    1,
+    2
+  ],
+  "deficient_block_candidate_partition_count": 150,
+  "deficient_block_census_by_deleted_good": {
+    "0": {
+      "candidate_partition_count": 25,
+      "supporting_allocation_count": 0,
+      "supporting_partition_count": 0
+    },
+    "1": {
+      "candidate_partition_count": 25,
+      "supporting_allocation_count": 0,
+      "supporting_partition_count": 0
+    },
+    "2": {
+      "candidate_partition_count": 25,
+      "supporting_allocation_count": 0,
+      "supporting_partition_count": 0
+    },
+    "3": {
+      "candidate_partition_count": 25,
+      "supporting_allocation_count": 0,
+      "supporting_partition_count": 0
+    },
+    "4": {
+      "candidate_partition_count": 25,
+      "supporting_allocation_count": 0,
+      "supporting_partition_count": 0
+    },
+    "5": {
+      "candidate_partition_count": 25,
+      "supporting_allocation_count": 0,
+      "supporting_partition_count": 0
+    }
+  },
+  "deficient_block_deleted_goods": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "deficient_block_supporting_allocation_count": 0,
+  "generic_single_wall_verified": true,
+  "global_partial_efx_allocation_count": 112,
+  "global_partial_efx_allocation_count_by_deleted_good": [
+    16,
+    16,
+    16,
+    16,
+    24,
+    12,
+    12
+  ],
+  "global_partial_efx_partition_count": 29,
+  "global_partial_efx_transfer_distance_histogram": {
+    "1": 2,
+    "2": 17,
+    "3": 10
+  },
+  "m": 7,
+  "minimal_hall_witnesses": [
+    {
+      "agents": [
+        0,
+        1,
+        2
+      ],
+      "neighbors": [
+        1,
+        2
+      ]
+    }
+  ],
+  "n": 4,
+  "nearest_global_partial_efx_deleted_good": 3,
+  "nearest_global_partial_efx_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2
+    ],
+    [
+      4
+    ],
+    [
+      5,
+      6
+    ]
+  ],
+  "nearest_global_partial_efx_transfer_distance": 1,
+  "post_feasibility_graph": [
+    [
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      false,
+      true,
+      true
+    ]
+  ],
+  "schema": "row-merge-deficient-block-restart-refutation-audit-v1",
+  "source": "results/row_merge_deficient_block_restart_refutation_m7_q3_witness.json",
+  "source_sha256": "4370d4f5b7957c440dbdc5fa3eb9821b93c52235b8d7511a71f323da24688865",
+  "status": "DEFICIENT_BLOCK_RESTART_REFUTATION_AUDITED",
+  "wall_feasibility_graph": [
+    [
+      true,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      false,
+      true,
+      true
+    ]
+  ]
+}

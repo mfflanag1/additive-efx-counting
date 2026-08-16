@@ -40,7 +40,7 @@
 
 \begin{abstract}
 We prove that every instance of four agents and eight indivisible goods with
-strictly positive additive valuations admits a complete allocation that is
+nonnegative additive valuations admits a complete allocation that is
 envy-free up to any good (EFX). This is the first additive parameter cell
 immediately beyond the general $m\le n+3$ existence frontier. The proof is
 hybrid. Lean verifies the mathematical reduction from a hypothetical
@@ -50,7 +50,7 @@ the Lean terminal-cell specifications. For each system, cvc5 emits a CPC proof
 of unsatisfiability and the separate Ethos checker accepts the proof as
 \texttt{correct}. The eight proofs contain 13,812,082 proof-step lines and
 occupy 1.668 GB. An alternative encoding over all 40,824 labeled onto
-allocations independently closes all eight cells. A 73-entry SHA-256 manifest
+allocations independently closes all eight cells. A 124-entry SHA-256 manifest
 binds the complete proof package, exact published inputs, tools, audits,
 formulas, proofs, Lean build, and source archive. We explain the structural
 reduction, the formal-to-computational boundary, and the remaining trust
@@ -64,7 +64,7 @@ review draft, not a claim of peer review or independently confirmed novelty.
 Let $\N$ be a finite set of agents and $\M$ a finite set of indivisible
 goods. Agent $i$ has an additive valuation
 \[
-  v_i(S)=\sum_{g\in S} w_{ig},\qquad w_{ig}>0.
+  v_i(S)=\sum_{g\in S} w_{ig},\qquad w_{ig}\ge0.
 \]
 A complete allocation $X=(X_i)_{i\in\N}$ partitions all goods. It is EFX if
 for every pair of agents $i\ne j$ and every good $g\in X_j$,
@@ -85,9 +85,17 @@ partial EFX leaving at most one good unallocated is known
 Our main result is the following.
 
 \begin{theorem}[Main theorem]\label{thm:main}
-Every strictly positive additive valuation instance with four agents and
+Every nonnegative additive valuation instance with four agents and
 eight goods admits a complete EFX allocation.
 \end{theorem}
+
+The terminal reduction is carried out for strictly positive weights. To pass
+from nonnegative weights, observe that each fixed allocation's EFX region is
+closed and there are finitely many allocations. Hence the set of instances
+with no EFX allocation is open. Any nonnegative counterexample would therefore
+have a sufficiently small strictly positive perturbation that remains a
+counterexample. This perturbation reduction and the final nonnegative wrapper
+are checked in Lean.
 
 The proof combines four layers:
 \begin{enumerate}[leftmargin=2.1em]
@@ -339,8 +347,10 @@ For every terminal formula:
 \end{enumerate}
 
 The eight CPC proofs total 1,668,457,899 bytes and 13,812,082 proof-step
-lines. Formula, proof, tool, signature, paper, and audit hashes are bound by a
-45-entry certificate manifest.
+lines. Formula, proof, tool, all 51 transitive CPC-signature files, paper, and
+audit hashes are bound by a 96-entry certificate manifest. An additional
+audit matches all 545,360 formula assertions to all 545,360 permanent CPC
+assumptions in order, with zero mismatches.
 
 \subsection{Alternative direct encoding}
 
@@ -380,10 +390,11 @@ The frozen finalizer:
   \item creates a deterministic archive containing the transitive proof
   sources.
 \end{itemize}
-All 73 entries in the final SHA-256 manifest verify. A separate clean-source
-test extracts the 60-file source archive into a new temporary project with no
-prior project build directory and repeats both audits, the Lean build, and
-the axiom check.
+All 124 entries in the final SHA-256 manifest verify. The deterministic
+source archive contains 72 files. A clean-source replay script extracts it
+into a new temporary project with no prior project build directory and repeats
+both audits, the Lean build, and the axiom check; independent-host replay
+remains part of the external release gate.
 
 \section{The 130-partition explanatory core}
 

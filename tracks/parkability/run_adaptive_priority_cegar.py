@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import itertools
 import json
+import math
 import time
 from pathlib import Path
 
@@ -181,6 +182,7 @@ def run(
     max_iterations: int,
     time_limit_s: float,
     require_distinct_item_values: bool,
+    first_agents: tuple[int, ...],
 ) -> dict:
     if (
         result_path.exists()
@@ -198,6 +200,15 @@ def run(
     n = len(seed_values)
     m = len(seed_values[0])
     cells = derive_unique_seed_cells(seed_values)
+    if first_agents:
+        if len(first_agents) != len(set(first_agents)) or any(
+            not 0 <= agent < n for agent in first_agents
+        ):
+            raise ValueError("first-agent filter is invalid")
+        selected = set(first_agents)
+        cells = [cell for cell in cells if cell[0][0] in selected]
+    if not cells:
+        raise ValueError("first-agent filter selected no priority cells")
     unique_candidates = list(dict.fromkeys(candidate for _, candidate in cells))
 
     rivals_by_order = load_pool(pool_path, n, m, cells)
@@ -318,11 +329,24 @@ def run(
         )
         if all_clear:
             exact_audit = exact_all_orders([list(row) for row in values])
-            if exact_audit["insertable_agent_order_count"] != 0:
+            selected_orders = {order for order, _candidate in cells}
+            selected_records = [
+                record
+                for record in exact_audit["records"]
+                if tuple(record["agent_order"]) in selected_orders
+            ]
+            if len(selected_records) != len(cells) or any(
+                record["lexmax_insertable_count"] != 0
+                for record in selected_records
+            ):
                 raise AssertionError(
-                    "terminal adaptive counterexample failed all-order replay"
+                    "terminal adaptive witness failed selected-order replay"
                 )
-            status = "ALL_ORDERS_BLOCKED_COUNTEREXAMPLE"
+            status = (
+                "ALL_ORDERS_BLOCKED_COUNTEREXAMPLE"
+                if len(cells) == math.factorial(n)
+                else "SELECTED_ORDERS_BLOCKED_WITNESS"
+            )
             result_values = values
             break
         atomic_json(
@@ -339,14 +363,16 @@ def run(
         "schema": SCHEMA,
         "status": status,
         "meaning": (
-            "a counterexample refutes only adaptive-priority lex-max direct "
-            "completion, not complete EFX existence; UNSAT closes only the "
-            "fixed candidate cell derived from the seed"
+            "an all-orders-blocked counterexample refutes only adaptive-priority "
+            "lex-max direct completion, not complete EFX existence; a selected-"
+            "orders witness blocks only the recorded priority orders; UNSAT "
+            "closes only the fixed candidate cell derived from the seed"
         ),
         "n": n,
         "m": m,
         "seed_path": str(seed_path.resolve()),
         "seed_sha256": sha256(seed_path),
+        "first_agent_filter": list(first_agents),
         "candidate_count": len(unique_candidates),
         "candidates": [
             {
@@ -397,6 +423,13 @@ def main() -> None:
     parser.add_argument("--max-iterations", type=int, default=20)
     parser.add_argument("--time-limit", type=float, default=300)
     parser.add_argument("--require-distinct-item-values", action="store_true")
+    parser.add_argument(
+        "--first-agent",
+        type=int,
+        action="append",
+        default=[],
+        help="retain only priority orders beginning with this agent",
+    )
     args = parser.parse_args()
     result = run(
         seed_path=args.seed,
@@ -407,6 +440,7 @@ def main() -> None:
         max_iterations=args.max_iterations,
         time_limit_s=args.time_limit,
         require_distinct_item_values=args.require_distinct_item_values,
+        first_agents=tuple(args.first_agent),
     )
     print(json.dumps(result, indent=2, sort_keys=True), flush=True)
 

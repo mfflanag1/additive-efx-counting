@@ -1,0 +1,8177 @@
+{
+  "base_pivot_partition_count": 16,
+  "claim_boundary": "This decides only the listed valuation-ranked selector in one four-agent nine-good fixed graph cell at the stated integer cap. It does not decide the full 515-partition chain candidate, row-merge continuation, or complete additive EFX.",
+  "complete_efx_audit": null,
+  "domain": "positive integer wall values at most 20",
+  "elapsed_seconds": 255.75522994995117,
+  "fixed_graph_source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+  "fixed_graph_source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "fixed_wall_graph": [
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "formula": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.smt2",
+  "formula_sha256": "001453631b3582e3c3f943138a418ca12922f3fbb132d3a7b02a6343d5090a27",
+  "hamiltonian_action_universe_count": 264,
+  "integer_upper": 20,
+  "interpretation": "The configured bounded decision ended without a theorem verdict.",
+  "learned_action_condition_count": 100,
+  "learned_action_conditions": [
+    {
+      "goods": [
+        3,
+        7,
+        1
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "goods": [
+        8,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        4,
+        3
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        4,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        1
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "goods": [
+        8,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        4,
+        3
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        4,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        1
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        8,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        4,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        4,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        2,
+        1
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        2,
+        1
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        1,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        8,
+        5
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        8,
+        3,
+        5
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        1,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        8,
+        5
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        8,
+        3,
+        5
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        5,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        1,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        5
+      ],
+      "matching_count": 6,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        1,
+        5
+      ],
+      "matching_count": 3,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        2,
+        1
+      ]
+    },
+    {
+      "goods": [
+        3,
+        0,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        5
+      ],
+      "matching_count": 6,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        0,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        5
+      ],
+      "matching_count": 6,
+      "partition": [
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        0,
+        5
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2
+        ],
+        [
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        8,
+        0,
+        3
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        8,
+        5,
+        3
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        8,
+        4
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        8,
+        4
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        0
+      ],
+      "matching_count": 5,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        6,
+        0,
+        3
+      ],
+      "matching_count": 3,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        0,
+        3
+      ],
+      "matching_count": 3,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        3,
+        4,
+        0
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        4
+      ],
+      "matching_count": 5,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        4,
+        0
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        3,
+        4
+      ],
+      "matching_count": 5,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        4,
+        0
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        4
+      ],
+      "matching_count": 5,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        7,
+        0,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        0,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        3,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        8,
+        3,
+        0
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        3,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        4
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        4
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        1,
+        4
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "goods": [
+        3,
+        8,
+        4
+      ],
+      "matching_count": 6,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        1,
+        3
+      ],
+      "matching_count": 4,
+      "partition": [
+        [
+          0,
+          8
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        4,
+        3
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        1,
+        3
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        6,
+        4,
+        3
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        7,
+        1
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          4,
+          5
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        1,
+        3
+      ],
+      "matching_count": 5,
+      "partition": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "goods": [
+        7,
+        4,
+        3
+      ],
+      "matching_count": 3,
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          8
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        3,
+        4
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        3,
+        4
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        8,
+        3,
+        4
+      ],
+      "matching_count": 2,
+      "partition": [
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "policy_index": 2,
+      "vertices": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        0
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 0,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    },
+    {
+      "goods": [
+        3,
+        6,
+        0
+      ],
+      "matching_count": 1,
+      "partition": [
+        [
+          0,
+          4,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2
+        ],
+        [
+          3,
+          7,
+          8
+        ]
+      ],
+      "policy_index": 1,
+      "vertices": [
+        1,
+        3,
+        0,
+        2
+      ]
+    }
+  ],
+  "m": 9,
+  "max_rounds": 20,
+  "n": 4,
+  "per_check_limit_seconds": 60.0,
+  "policies": [
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      3
+    ]
+  ],
+  "policy_meaning": "For each source bundle s, policy[s] names the agent whose minimum-valued good in s is moved. All 24 oriented Hamiltonian bundle paths and all tied minima are included.",
+  "post_wall_values": null,
+  "rounds": [
+    {
+      "learned_conditions_before_solve": 0,
+      "post_wall_values": [
+        [
+          18,
+          2,
+          21,
+          1,
+          2,
+          19,
+          5,
+          7,
+          5
+        ],
+        [
+          3,
+          2,
+          15,
+          6,
+          1,
+          13,
+          20,
+          1,
+          1
+        ],
+        [
+          2,
+          16,
+          1,
+          20,
+          2,
+          19,
+          6,
+          6,
+          6
+        ],
+        [
+          3,
+          2,
+          17,
+          4,
+          8,
+          12,
+          1,
+          20,
+          1
+        ]
+      ],
+      "round": 0,
+      "selected_action_count": 126,
+      "selected_partition_count": 60,
+      "selected_support_action_count": 20,
+      "selected_support_partition_count": 11,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            7,
+            1
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "goods": [
+            8,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            7,
+            4,
+            3
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            4,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            1
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "goods": [
+            8,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            7,
+            4,
+            3
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            4,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            6,
+            1
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            8,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            2,
+            1
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            6,
+            4,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            4,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 2.792711019515991,
+      "wall_values": [
+        [
+          18,
+          2,
+          20,
+          1,
+          2,
+          19,
+          5,
+          7,
+          5
+        ],
+        [
+          3,
+          2,
+          15,
+          6,
+          1,
+          13,
+          20,
+          1,
+          1
+        ],
+        [
+          2,
+          16,
+          1,
+          20,
+          2,
+          19,
+          6,
+          6,
+          6
+        ],
+        [
+          3,
+          2,
+          17,
+          4,
+          8,
+          12,
+          1,
+          20,
+          1
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 20,
+      "post_wall_values": [
+        [
+          17,
+          3,
+          21,
+          1,
+          19,
+          3,
+          6,
+          6,
+          2
+        ],
+        [
+          1,
+          4,
+          14,
+          9,
+          1,
+          7,
+          1,
+          1,
+          20
+        ],
+        [
+          15,
+          2,
+          20,
+          17,
+          19,
+          1,
+          6,
+          6,
+          1
+        ],
+        [
+          13,
+          4,
+          14,
+          8,
+          1,
+          1,
+          3,
+          3,
+          19
+        ]
+      ],
+      "round": 1,
+      "selected_action_count": 126,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 12,
+      "selected_support_partition_count": 4,
+      "selected_supports": [
+        {
+          "goods": [
+            6,
+            3,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            7,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            7,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            7,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 12.675302028656006,
+      "wall_values": [
+        [
+          17,
+          3,
+          20,
+          1,
+          19,
+          3,
+          6,
+          6,
+          2
+        ],
+        [
+          1,
+          4,
+          14,
+          9,
+          1,
+          7,
+          1,
+          1,
+          20
+        ],
+        [
+          15,
+          2,
+          20,
+          17,
+          19,
+          1,
+          6,
+          6,
+          1
+        ],
+        [
+          13,
+          4,
+          14,
+          8,
+          1,
+          1,
+          3,
+          3,
+          19
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 32,
+      "post_wall_values": [
+        [
+          16,
+          4,
+          21,
+          1,
+          19,
+          3,
+          7,
+          7,
+          2
+        ],
+        [
+          1,
+          4,
+          7,
+          16,
+          6,
+          9,
+          1,
+          1,
+          20
+        ],
+        [
+          15,
+          1,
+          20,
+          18,
+          18,
+          2,
+          6,
+          7,
+          1
+        ],
+        [
+          11,
+          3,
+          15,
+          7,
+          1,
+          1,
+          1,
+          2,
+          20
+        ]
+      ],
+      "round": 2,
+      "selected_action_count": 108,
+      "selected_partition_count": 72,
+      "selected_support_action_count": 5,
+      "selected_support_partition_count": 4,
+      "selected_supports": [
+        {
+          "goods": [
+            6,
+            3,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            6,
+            2,
+            1
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            2,
+            1
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 2.3646810054779053,
+      "wall_values": [
+        [
+          16,
+          4,
+          20,
+          1,
+          19,
+          3,
+          7,
+          7,
+          2
+        ],
+        [
+          1,
+          4,
+          7,
+          16,
+          6,
+          9,
+          1,
+          1,
+          20
+        ],
+        [
+          15,
+          1,
+          20,
+          18,
+          18,
+          2,
+          6,
+          7,
+          1
+        ],
+        [
+          11,
+          3,
+          15,
+          7,
+          1,
+          1,
+          1,
+          2,
+          20
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 37,
+      "post_wall_values": [
+        [
+          18,
+          2,
+          22,
+          1,
+          19,
+          3,
+          7,
+          3,
+          6
+        ],
+        [
+          8,
+          8,
+          20,
+          2,
+          17,
+          1,
+          15,
+          6,
+          4
+        ],
+        [
+          7,
+          10,
+          20,
+          1,
+          18,
+          3,
+          1,
+          15,
+          1
+        ],
+        [
+          1,
+          12,
+          14,
+          16,
+          15,
+          6,
+          1,
+          10,
+          20
+        ]
+      ],
+      "round": 3,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 13,
+      "selected_support_partition_count": 7,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            1,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            8,
+            5
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            8,
+            3,
+            5
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            1,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            8,
+            5
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            8,
+            3,
+            5
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            5,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            1,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            6,
+            5
+          ],
+          "matching_count": 6,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            6,
+            1,
+            5
+          ],
+          "matching_count": 3,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            2,
+            1
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 18.203756093978882,
+      "wall_values": [
+        [
+          18,
+          2,
+          20,
+          1,
+          19,
+          3,
+          7,
+          3,
+          6
+        ],
+        [
+          8,
+          8,
+          20,
+          2,
+          17,
+          1,
+          15,
+          6,
+          4
+        ],
+        [
+          7,
+          10,
+          20,
+          1,
+          18,
+          3,
+          1,
+          15,
+          1
+        ],
+        [
+          1,
+          12,
+          14,
+          16,
+          15,
+          6,
+          1,
+          10,
+          20
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 50,
+      "post_wall_values": [
+        [
+          2,
+          18,
+          23,
+          1,
+          19,
+          4,
+          7,
+          4,
+          7
+        ],
+        [
+          3,
+          15,
+          20,
+          4,
+          1,
+          1,
+          14,
+          8,
+          10
+        ],
+        [
+          15,
+          1,
+          18,
+          1,
+          16,
+          2,
+          5,
+          5,
+          5
+        ],
+        [
+          11,
+          2,
+          20,
+          1,
+          14,
+          4,
+          10,
+          11,
+          1
+        ]
+      ],
+      "round": 4,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 7,
+      "selected_support_partition_count": 4,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            0,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            5
+          ],
+          "matching_count": 6,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            0,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            5
+          ],
+          "matching_count": 6,
+          "partition": [
+            [
+              0,
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            0,
+            5
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            8,
+            0,
+            3
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            8,
+            5,
+            3
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 14.05339503288269,
+      "wall_values": [
+        [
+          2,
+          18,
+          20,
+          1,
+          19,
+          4,
+          7,
+          4,
+          7
+        ],
+        [
+          3,
+          15,
+          20,
+          4,
+          1,
+          1,
+          14,
+          8,
+          10
+        ],
+        [
+          15,
+          1,
+          18,
+          1,
+          16,
+          2,
+          5,
+          5,
+          5
+        ],
+        [
+          11,
+          2,
+          20,
+          1,
+          14,
+          4,
+          10,
+          11,
+          1
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 57,
+      "post_wall_values": [
+        [
+          2,
+          18,
+          22,
+          1,
+          3,
+          19,
+          7,
+          7,
+          3
+        ],
+        [
+          1,
+          17,
+          20,
+          1,
+          10,
+          8,
+          5,
+          16,
+          3
+        ],
+        [
+          9,
+          6,
+          20,
+          1,
+          10,
+          10,
+          1,
+          5,
+          13
+        ],
+        [
+          9,
+          1,
+          20,
+          1,
+          4,
+          11,
+          8,
+          8,
+          13
+        ]
+      ],
+      "round": 5,
+      "selected_action_count": 90,
+      "selected_partition_count": 60,
+      "selected_support_action_count": 8,
+      "selected_support_partition_count": 7,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            8,
+            4
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            8,
+            4
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            6,
+            0
+          ],
+          "matching_count": 5,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            3,
+            6,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            6,
+            0,
+            3
+          ],
+          "matching_count": 3,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            0,
+            3
+          ],
+          "matching_count": 3,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 19.771822690963745,
+      "wall_values": [
+        [
+          2,
+          18,
+          20,
+          1,
+          3,
+          19,
+          7,
+          7,
+          3
+        ],
+        [
+          1,
+          17,
+          20,
+          1,
+          10,
+          8,
+          5,
+          16,
+          3
+        ],
+        [
+          9,
+          6,
+          20,
+          1,
+          10,
+          10,
+          1,
+          5,
+          13
+        ],
+        [
+          9,
+          1,
+          20,
+          1,
+          4,
+          11,
+          8,
+          8,
+          13
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 65,
+      "post_wall_values": [
+        [
+          2,
+          18,
+          22,
+          14,
+          3,
+          19,
+          5,
+          7,
+          3
+        ],
+        [
+          5,
+          15,
+          17,
+          7,
+          1,
+          13,
+          3,
+          4,
+          20
+        ],
+        [
+          1,
+          15,
+          20,
+          17,
+          1,
+          19,
+          6,
+          7,
+          1
+        ],
+        [
+          4,
+          1,
+          8,
+          15,
+          1,
+          13,
+          2,
+          1,
+          20
+        ]
+      ],
+      "round": 6,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 9,
+      "selected_support_partition_count": 5,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            4,
+            0
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6,
+              7,
+              8
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            4
+          ],
+          "matching_count": 5,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            4,
+            0
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6,
+              7,
+              8
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            3,
+            4
+          ],
+          "matching_count": 5,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            4,
+            0
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6,
+              7,
+              8
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            2,
+            0,
+            3
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            4
+          ],
+          "matching_count": 5,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 14.365609884262085,
+      "wall_values": [
+        [
+          2,
+          18,
+          20,
+          14,
+          3,
+          19,
+          5,
+          7,
+          3
+        ],
+        [
+          5,
+          15,
+          17,
+          7,
+          1,
+          13,
+          3,
+          4,
+          20
+        ],
+        [
+          1,
+          15,
+          20,
+          17,
+          1,
+          19,
+          6,
+          7,
+          1
+        ],
+        [
+          4,
+          1,
+          8,
+          15,
+          1,
+          13,
+          2,
+          1,
+          20
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 74,
+      "post_wall_values": [
+        [
+          1,
+          19,
+          21,
+          5,
+          12,
+          11,
+          3,
+          8,
+          8
+        ],
+        [
+          1,
+          19,
+          20,
+          3,
+          2,
+          19,
+          13,
+          5,
+          10
+        ],
+        [
+          5,
+          1,
+          20,
+          1,
+          14,
+          7,
+          17,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          7,
+          15,
+          1,
+          13,
+          20,
+          2,
+          1
+        ]
+      ],
+      "round": 7,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 5,
+      "selected_support_partition_count": 3,
+      "selected_supports": [
+        {
+          "goods": [
+            7,
+            0,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            0,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            3,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            8,
+            3,
+            0
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            0,
+            2
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 39.003710985183716,
+      "wall_values": [
+        [
+          1,
+          19,
+          20,
+          5,
+          12,
+          11,
+          3,
+          8,
+          8
+        ],
+        [
+          1,
+          19,
+          20,
+          3,
+          2,
+          19,
+          13,
+          5,
+          10
+        ],
+        [
+          5,
+          1,
+          20,
+          1,
+          14,
+          7,
+          17,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          7,
+          15,
+          1,
+          13,
+          20,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 79,
+      "post_wall_values": [
+        [
+          18,
+          2,
+          23,
+          1,
+          4,
+          19,
+          8,
+          4,
+          7
+        ],
+        [
+          12,
+          1,
+          20,
+          1,
+          3,
+          16,
+          11,
+          3,
+          10
+        ],
+        [
+          4,
+          13,
+          20,
+          2,
+          4,
+          16,
+          1,
+          10,
+          1
+        ],
+        [
+          2,
+          13,
+          20,
+          1,
+          1,
+          17,
+          10,
+          11,
+          9
+        ]
+      ],
+      "round": 8,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 7,
+      "selected_support_partition_count": 4,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              4,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            4
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              4,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            4
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            1,
+            4
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              4,
+              6,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            0,
+            2,
+            3
+          ]
+        },
+        {
+          "goods": [
+            3,
+            8,
+            4
+          ],
+          "matching_count": 6,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              7
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            1,
+            3
+          ],
+          "matching_count": 4,
+          "partition": [
+            [
+              0,
+              8
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 8.270560026168823,
+      "wall_values": [
+        [
+          18,
+          2,
+          20,
+          1,
+          4,
+          19,
+          8,
+          4,
+          7
+        ],
+        [
+          12,
+          1,
+          20,
+          1,
+          3,
+          16,
+          11,
+          3,
+          10
+        ],
+        [
+          4,
+          13,
+          20,
+          2,
+          4,
+          16,
+          1,
+          10,
+          1
+        ],
+        [
+          2,
+          13,
+          20,
+          1,
+          1,
+          17,
+          10,
+          11,
+          9
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 86,
+      "post_wall_values": [
+        [
+          12,
+          8,
+          21,
+          1,
+          10,
+          12,
+          2,
+          15,
+          2
+        ],
+        [
+          13,
+          1,
+          20,
+          2,
+          15,
+          4,
+          10,
+          11,
+          11
+        ],
+        [
+          14,
+          5,
+          20,
+          1,
+          12,
+          8,
+          17,
+          1,
+          1
+        ],
+        [
+          2,
+          17,
+          20,
+          1,
+          2,
+          2,
+          8,
+          5,
+          13
+        ]
+      ],
+      "round": 9,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 9,
+      "selected_support_partition_count": 6,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            6,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            4,
+            3
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            6,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            1,
+            3
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            6,
+            4,
+            3
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "goods": [
+            3,
+            7,
+            1
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            1,
+            3
+          ],
+          "matching_count": 5,
+          "partition": [
+            [
+              0,
+              7
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "goods": [
+            7,
+            4,
+            3
+          ],
+          "matching_count": 3,
+          "partition": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ],
+            [
+              6,
+              8
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 17.629116773605347,
+      "wall_values": [
+        [
+          12,
+          8,
+          20,
+          1,
+          10,
+          12,
+          2,
+          15,
+          2
+        ],
+        [
+          13,
+          1,
+          20,
+          2,
+          15,
+          4,
+          10,
+          11,
+          11
+        ],
+        [
+          14,
+          5,
+          20,
+          1,
+          12,
+          8,
+          17,
+          1,
+          1
+        ],
+        [
+          2,
+          17,
+          20,
+          1,
+          2,
+          2,
+          8,
+          5,
+          13
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 95,
+      "post_wall_values": [
+        [
+          18,
+          2,
+          22,
+          1,
+          3,
+          19,
+          6,
+          6,
+          6
+        ],
+        [
+          3,
+          3,
+          14,
+          7,
+          16,
+          2,
+          19,
+          2,
+          1
+        ],
+        [
+          8,
+          6,
+          20,
+          1,
+          1,
+          19,
+          1,
+          1,
+          16
+        ],
+        [
+          4,
+          4,
+          15,
+          8,
+          1,
+          17,
+          2,
+          20,
+          1
+        ]
+      ],
+      "round": 10,
+      "selected_action_count": 72,
+      "selected_partition_count": 24,
+      "selected_support_action_count": 3,
+      "selected_support_partition_count": 1,
+      "selected_supports": [
+        {
+          "goods": [
+            8,
+            3,
+            4
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            3,
+            4
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        },
+        {
+          "goods": [
+            8,
+            3,
+            4
+          ],
+          "matching_count": 2,
+          "partition": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "policy_index": 2,
+          "vertices": [
+            3,
+            1,
+            2,
+            0
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 14.549573183059692,
+      "wall_values": [
+        [
+          18,
+          2,
+          20,
+          1,
+          3,
+          19,
+          6,
+          6,
+          6
+        ],
+        [
+          3,
+          3,
+          14,
+          7,
+          16,
+          2,
+          19,
+          2,
+          1
+        ],
+        [
+          8,
+          6,
+          20,
+          1,
+          1,
+          19,
+          1,
+          1,
+          16
+        ],
+        [
+          4,
+          4,
+          15,
+          8,
+          1,
+          17,
+          2,
+          20,
+          1
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 98,
+      "post_wall_values": [
+        [
+          9,
+          11,
+          21,
+          2,
+          11,
+          10,
+          2,
+          2,
+          15
+        ],
+        [
+          4,
+          4,
+          15,
+          8,
+          3,
+          17,
+          1,
+          20,
+          2
+        ],
+        [
+          1,
+          17,
+          20,
+          1,
+          12,
+          10,
+          6,
+          1,
+          1
+        ],
+        [
+          14,
+          3,
+          20,
+          1,
+          1,
+          1,
+          10,
+          11,
+          8
+        ]
+      ],
+      "round": 11,
+      "selected_action_count": 72,
+      "selected_partition_count": 42,
+      "selected_support_action_count": 2,
+      "selected_support_partition_count": 1,
+      "selected_supports": [
+        {
+          "goods": [
+            3,
+            6,
+            0
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 0,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "goods": [
+            3,
+            6,
+            0
+          ],
+          "matching_count": 1,
+          "partition": [
+            [
+              0,
+              4,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              3,
+              7,
+              8
+            ]
+          ],
+          "policy_index": 1,
+          "vertices": [
+            1,
+            3,
+            0,
+            2
+          ]
+        }
+      ],
+      "solver_status": "sat",
+      "solver_wall_seconds": 28.58334183692932,
+      "wall_values": [
+        [
+          9,
+          11,
+          20,
+          2,
+          11,
+          10,
+          2,
+          2,
+          15
+        ],
+        [
+          4,
+          4,
+          15,
+          8,
+          3,
+          17,
+          1,
+          20,
+          2
+        ],
+        [
+          1,
+          17,
+          20,
+          1,
+          12,
+          10,
+          6,
+          1,
+          1
+        ],
+        [
+          14,
+          3,
+          20,
+          1,
+          1,
+          1,
+          10,
+          11,
+          8
+        ]
+      ]
+    },
+    {
+      "learned_conditions_before_solve": 100,
+      "reason_unknown": "canceled",
+      "round": 12,
+      "solver_status": "unknown",
+      "solver_wall_seconds": 60.003814935684204
+    }
+  ],
+  "schema": "row-merge-q4-ranked-path-cegar-v1",
+  "selected_actions": null,
+  "simple_chain_support_count": null,
+  "solver_status": "unknown",
+  "status": "RANKED_PATH_SELECTOR_GATE_INCOMPLETE",
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "wall_values": null
+}

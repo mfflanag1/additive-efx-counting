@@ -1,0 +1,96 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 8,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0",
+        "edge_28_0_0",
+        "v_1_0 + v_1_1 + -1*v_1_3 + -1*v_1_4 <= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_000.smt2",
+      "sha256": "f35beebdc1c4b198f5bad6abe085e1ae4682464158b88e68261ac77eae8b1763"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0",
+        "edge_28_0_0",
+        "Not(v_1_0 + v_1_1 + -1*v_1_3 + -1*v_1_4 <= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_001.smt2",
+      "sha256": "8989bd052b3ff7f654776ff5adf3d71a94b8fcffcc71e9fdac155be1d1d635fc"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0",
+        "Not(edge_28_0_0)",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_002.smt2",
+      "sha256": "a7c3639a27b7aed68f09457108e687650fce095f5672b65b07e56140232b792a"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0",
+        "Not(edge_28_0_0)",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_003.smt2",
+      "sha256": "3eda91f34fb51fd7808f04d1ccec960315cd4ae5dbfce1ed54db05382c4c3491"
+    },
+    {
+      "branch": 4,
+      "cube": [
+        "Not(v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0)",
+        "rival_cmp_0_28_64",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_004.smt2",
+      "sha256": "65cfd8ded87d8d03e975cdfc24a0bd4802303bea78f7b63a0555cf6c5a62ed7b"
+    },
+    {
+      "branch": 5,
+      "cube": [
+        "Not(v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0)",
+        "rival_cmp_0_28_64",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_005.smt2",
+      "sha256": "f2c1f54925413504d386638d71e0c8802c05cdb4b965ca1f7df81438f03c967f"
+    },
+    {
+      "branch": 6,
+      "cube": [
+        "Not(v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0)",
+        "Not(rival_cmp_0_28_64)",
+        "v_0_1 + -1*v_0_2 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_006.smt2",
+      "sha256": "f005a1652c418926c55be6ccf8add59ad4f502eaabc73ab3552df25f17681fb3"
+    },
+    {
+      "branch": 7,
+      "cube": [
+        "Not(v_2_0 + v_2_4 + -1*v_2_5 + v_2_8 >= 0)",
+        "Not(rival_cmp_0_28_64)",
+        "Not(v_0_1 + -1*v_0_2 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_cubes_d3/branch_007.smt2",
+      "sha256": "64e2bf22c6e00861f12b233d5f93b81ebfaecd992cde1ac38c710214143cf71f"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 3,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_double_factored_seed416_master.smt2",
+  "source_sha256": "e5ff8777359f0763e6b43b8c5064f1381c3dbffcb4314377ec1d1a7cfadcc74e",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

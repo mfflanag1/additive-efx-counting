@@ -38,14 +38,24 @@ def load_values(path: Path) -> list[list[int]]:
     ]
 
 
-def score(landscape: dict) -> float:
+def score(landscape: dict, objective: str) -> float:
+    if objective == "first-agents":
+        return (
+            landscape["insertable_first_agent_count"]
+            + landscape["positive_first_agent_margin_sum"]
+        )
     return (
         landscape["insertable_agent_order_count"]
         + landscape["best_rescue_order_normalized_margin"]
     )
 
 
-def best_key(landscape: dict) -> tuple[int, float]:
+def best_key(landscape: dict, objective: str) -> tuple[int, float]:
+    if objective == "first-agents":
+        return (
+            landscape["insertable_first_agent_count"],
+            landscape["positive_first_agent_margin_sum"],
+        )
     return (
         landscape["insertable_agent_order_count"],
         landscape["best_rescue_order_normalized_margin"],
@@ -115,6 +125,7 @@ def run(
     random_seed: int,
     initial_temperature: float,
     final_temperature: float,
+    objective: str,
     output_path: Path,
     trace_path: Path | None,
 ) -> dict:
@@ -156,12 +167,16 @@ def run(
         temperature = initial_temperature * (
             final_temperature / initial_temperature
         ) ** progress
-        change = score(candidate_landscape) - score(current_landscape)
+        change = score(candidate_landscape, objective) - score(
+            current_landscape, objective
+        )
         if change <= 0 or rng.random() < math.exp(-change / temperature):
             current = candidate
             current_landscape = candidate_landscape
             accepted += 1
-        if best_key(candidate_landscape) < best_key(best_landscape):
+        if best_key(candidate_landscape, objective) < best_key(
+            best_landscape, objective
+        ):
             best = [row[:] for row in candidate]
             best_landscape = candidate_landscape
             improvements += 1
@@ -186,6 +201,8 @@ def run(
                 f"iteration={iteration} "
                 f"insertable_orders="
                 f"{best_landscape['insertable_agent_order_count']} "
+                f"insertable_first_agents="
+                f"{best_landscape['insertable_first_agent_count']} "
                 f"best_rescue_margin="
                 f"{best_landscape['best_rescue_order_normalized_margin']:.9f}",
                 flush=True,
@@ -221,6 +238,7 @@ def run(
         "random_seed": random_seed,
         "initial_temperature": initial_temperature,
         "final_temperature": final_temperature,
+        "objective": objective,
         "accepted_moves": accepted,
         "improvements": improvements,
         "elapsed_seconds": round(time.time() - started, 6),
@@ -239,6 +257,11 @@ def main() -> None:
     parser.add_argument("--random-seed", type=int, default=1)
     parser.add_argument("--initial-temperature", type=float, default=1.0)
     parser.add_argument("--final-temperature", type=float, default=0.001)
+    parser.add_argument(
+        "--objective",
+        choices=("orders", "first-agents"),
+        default="orders",
+    )
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--trace", type=Path)
     args = parser.parse_args()
@@ -248,6 +271,7 @@ def main() -> None:
         random_seed=args.random_seed,
         initial_temperature=args.initial_temperature,
         final_temperature=args.final_temperature,
+        objective=args.objective,
         output_path=args.output,
         trace_path=args.trace,
     )

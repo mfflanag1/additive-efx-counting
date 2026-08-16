@@ -1,0 +1,431 @@
+{
+  "accepted_moves": 706,
+  "elapsed_seconds": 106.626349,
+  "fixed_obstruction_record": {
+    "candidate_product": 126067414804716,
+    "candidate_to_maximum_ratio": 0.702263581028394,
+    "candidate_utilities": [
+      1821,
+      847,
+      8348,
+      9791
+    ],
+    "eligible_state_count": 830,
+    "maximum_nash_winner_count": 1,
+    "maximum_product": 179515808893440,
+    "radius_one": {
+      "best_normalized_slack": -0.0001717150903221375,
+      "best_witness": {
+        "floater_host": 1,
+        "masks": [
+          128,
+          270,
+          17,
+          96
+        ],
+        "matching": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "move_destination": 3,
+        "move_source": 0,
+        "moved_good": 6,
+        "normalized_minimum_slack": -0.0001717150903221375
+      },
+      "candidate_partition_count": 91,
+      "completable_partition_count": 0,
+      "completion_witnesses": []
+    }
+  },
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "improvements": 151,
+  "iterations_completed": 3000,
+  "iterations_requested": 3000,
+  "max_delta": 500,
+  "maximum_nash_audit": {
+    "best_winner_normalized_slack": 0.04976303317535545,
+    "eligible_state_count": 830,
+    "has_direct_insertion": true,
+    "has_radius_one_completion": true,
+    "maximum_product": 0.012057006660269825,
+    "winner_count": 1,
+    "winners": [
+      {
+        "base_index": 52869,
+        "best_host_normalized_margin": 0.08425487098472881,
+        "floater": 2,
+        "insertable": true,
+        "masks": [
+          136,
+          3,
+          48,
+          320
+        ],
+        "radius_one": {
+          "best_normalized_slack": 0.04976303317535545,
+          "best_witness": {
+            "floater_host": 0,
+            "masks": [
+              140,
+              3,
+              32,
+              336
+            ],
+            "matching": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "move_destination": 3,
+            "move_source": 2,
+            "moved_good": 4,
+            "normalized_minimum_slack": 0.04976303317535545
+          },
+          "candidate_partition_count": 100,
+          "completable_partition_count": 10,
+          "completion_witnesses": [
+            {
+              "floater_host": 0,
+              "masks": [
+                140,
+                3,
+                48,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 1,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": null,
+              "move_source": null,
+              "moved_good": null,
+              "normalized_minimum_slack": 2.8210336267208305e-05
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                132,
+                3,
+                48,
+                328
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 392,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 3,
+              "normalized_minimum_slack": 0.011058451816745656
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                140,
+                3,
+                32,
+                336
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 189,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 2,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.04976303317535545
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                128,
+                7,
+                48,
+                328
+              ],
+              "matching": [
+                0,
+                3,
+                1,
+                2
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 9,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 3,
+              "normalized_minimum_slack": 0.002369668246445498
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                136,
+                7,
+                32,
+                336
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 31,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 2,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.0010646335599972525
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                152,
+                3,
+                36,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 1,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 0,
+              "move_source": 2,
+              "moved_good": 4,
+              "normalized_minimum_slack": 2.8210336267208305e-05
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                136,
+                3,
+                36,
+                336
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 112,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 2,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.02948920484465508
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                136,
+                3,
+                48,
+                324
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 453,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": null,
+              "move_source": null,
+              "moved_good": null,
+              "normalized_minimum_slack": 0.012779282329045362
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                128,
+                3,
+                48,
+                332
+              ],
+              "matching": [
+                0,
+                3,
+                2,
+                1
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 550,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 3,
+              "normalized_minimum_slack": 0.015515684946964568
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                136,
+                3,
+                32,
+                340
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 18,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 2,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.004739336492890996
+            }
+          ]
+        },
+        "utilities": [
+          1493,
+          1035,
+          11864,
+          9792
+        ]
+      }
+    ]
+  },
+  "meaning": "A counterexample refutes the maximum-Nash radius-one Hall selector, not complete additive EFX.",
+  "random_seed": 43,
+  "schema": "partial-hall-maximality-anneal-v1",
+  "seed_path": "results/partial_hall_radius_one_2321_lra_compact.json",
+  "seed_sha256": "aab6cd0ba64549c22f223a2b5bd67926d6e9c11ae22b8f7bc3eb3872ad4de184",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      17,
+      1014,
+      1,
+      237,
+      591,
+      116,
+      565,
+      1256,
+      1
+    ],
+    [
+      557,
+      478,
+      171,
+      198,
+      108,
+      923,
+      293,
+      517,
+      553
+    ],
+    [
+      4837,
+      3485,
+      272,
+      1,
+      3511,
+      8353,
+      921,
+      4909,
+      2829
+    ],
+    [
+      5398,
+      5396,
+      452,
+      391,
+      1454,
+      9791,
+      4106,
+      2774,
+      5686
+    ]
+  ]
+}

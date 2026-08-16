@@ -260,6 +260,7 @@ def main() -> int:
     cells = [audit_cell(root, cell) for cell in CELLS]
     report = {
         "schema": "efx48-cpc-formula-assumption-audit-v1",
+        "checker_sha256": sha256(Path(__file__).resolve()),
         "method": (
             "Independent S-expression parsing and ordered structural hashing "
             "after expansion of the CPC @t term DAG"

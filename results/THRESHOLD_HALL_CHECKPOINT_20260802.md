@@ -50,10 +50,8 @@ inequalities.
    complete 4,847-state transition census.
 
 The two large JSON files are intentionally retained: they are exact audit
-records, not transient solver traces.  The 44 compact source JSON records
-referenced by the 46 failing profiles are also retained so the plateau replay
-is self-contained.  Annealing traces, temporary solver pools, interrupted
-scans, and unrelated EFX campaign artifacts are excluded.
+records, not transient solver traces.  Annealing traces, temporary solver
+pools, interrupted scans, and unrelated EFX campaign artifacts are excluded.
 
 ## Replays
 
@@ -70,18 +68,15 @@ cmp results/partial_hall_threshold_plateau_completion_analysis.json \
 The focused worktree regression gate used before publication is:
 
 ```bash
-pytest -q \
-  tracks/parkability/test_parkability.py \
-  tracks/parkability/test_threshold_hall_checkpoint.py
+pytest -q tracks/parkability/test_parkability.py
 ```
 
-At freeze time this reports 31 passing tests: the parent research snapshot's
-30-test suite plus one focused threshold--Hall checkpoint test.  The complete
-stored corpus that fed the 237-profile scan belongs to the broader research
-worktree; this focused branch freezes the scan output, the 46-profile
-counterexample payload used by the plateau replay, and all code needed for that
-replay.  It does not claim that the heterogeneous 1,948-file discovery corpus
-is independently frozen here.
+At freeze time this reports 31 passing tests.  The complete stored corpus that
+fed the 237-profile scan belongs to the broader research worktree; this focused
+branch freezes the scan output, the 46-profile counterexample payload used by
+the plateau replay, and all code needed for that replay.  It does not claim
+that the heterogeneous 1,948-file discovery corpus is independently frozen
+here.
 
 ## Frozen artifact hashes
 

@@ -2,7 +2,8 @@
 
 **Status:** the one-transfer pivot is refuted in all three realizable Hall
 sizes; the two-transfer pivot is refuted in Hall sizes two and three; one
-seven-good Hall-size-four cell is dual-solver UNSAT at radius two  
+seven-good Hall-size-four cell has a two-comparison seven-pivot core; the
+balanced eight-good Hall-size-four cell has a dual-solver 11-pivot theorem  
 **Scope:** four positive-additive agents at one generic subset-sum wall  
 **Not claimed:** an EFX counterexample, a proof of row-merge continuation, or
 a general radius bound
@@ -81,10 +82,9 @@ and [cvc5 replay](row_merge_single_wall_q4_radius2_m7_unsat.cvc5.json).
 
 This proves only the exact encoded cell: seven goods, bundle sizes
 \((2,2,2,1)\), a generic wall, and a minimal Hall witness of size four. It is
-not yet a human analytic lemma and does not cover other bundle shapes. At
-eight goods, 300-second exact-real attempts for shapes \((2,2,2,2)\) and
-\((2,2,3,1)\) returned UNKNOWN rather than a model or proof, so no extension
-is recorded.
+not yet a human analytic lemma. The core below sharpens the genericity
+hypotheses, and the following section extends the pair-complete construction
+to the balanced eight-good shape.
 
 ### Seven-partition core
 
@@ -116,6 +116,117 @@ and the [independent cvc5 replay](row_merge_single_wall_q4_radius2_m7_core.cvc5.
 This remains a fixed-shape computer-assisted lemma until its seven cases are
 converted into a human inequality argument.
 
+### Two-comparison genericity core
+
+The seven partitions do not follow from the post-wall Hall graph alone: if
+the perturbation is allowed to cross unrelated subset comparisons, an exact
+positive-additive model blocks all 127 radius-two partitions. Tracking all
+965 noncritical disjoint subset comparisons and shrinking the resulting
+assumption core leaves exactly two:
+
+\[
+v_0(014)>v_0(2)\quad\text{and}\quad v_0(015)>v_0(2)
+\]
+
+after the perturbation. Because the wall equality is \(v_0(01)=v_0(2)\),
+these are precisely
+
+\[
+0<\delta<v_0(4),\qquad 0<\delta<v_0(5).
+\]
+
+Both bounds together are sufficient and deletion-minimal; either bound alone
+admits a SAT model. Thus the full generic-wall machinery is unnecessary for
+this cell. Any sufficiently small positive continuation step satisfies the
+only two preserved comparisons used by the exact proof.
+
+The durable chain is the
+[genericity-core record](row_merge_single_wall_q4_radius2_m7_genericity_core.json),
+[raw formula](row_merge_single_wall_q4_radius2_m7_genericity_core.smt2),
+[normalization metadata](row_merge_single_wall_q4_radius2_m7_genericity_core.cvc5.normalization.json),
+and [cvc5 replay](row_merge_single_wall_q4_radius2_m7_genericity_core.cvc5.json).
+Z3 and cvc5 independently return UNSAT.
+
+## Balanced eight-good pair-pivot theorem
+
+Consider the balanced wall partition
+
+\[
+01\mid23\mid45\mid67,
+\]
+
+with critical equality \(v_0(01)=v_0(2)\), the edge from agent zero to
+\(01\) essential, and a minimal post-wall Hall witness containing all four
+agents. For
+
+\[
+0<\delta<\min\{v_0(4),v_0(5),v_0(6),v_0(7)\},
+\]
+
+at least one partition in an explicit 11-state menu supports complete EFX.
+The menu consists of:
+
+1. moving critical good 3 into \(01\);
+2. the two cross-pairings of \(01\) with \(23\); and
+3. for each of \(45\) and \(67\), two transfers into \(01\) and the two
+   cross-pairings with \(01\).
+
+The negation is exact QF_LRA UNSAT. Z3 proves the frozen formula in about 125
+seconds; pinned cvc5 1.3.3 independently proves its syntax-normalized image
+in about 234 seconds. See the
+[result](row_merge_q4_small_step_pair_m8.json),
+[raw formula](row_merge_q4_small_step_pair_m8.smt2),
+[normalization metadata](row_merge_q4_small_step_pair_m8.cvc5.normalization.json),
+and [cvc5 replay](row_merge_q4_small_step_pair_m8.cvc5.json).
+
+This is the first positive eight-good wall-pivot cell in the continuation
+program. It covers only shape \(2+2+2+2\) and Hall size four. It does not
+cover Hall sizes two or three, unbalanced wall shapes, or prove that a row
+path can always be continued.
+
+## First unbalanced failure at nine goods
+
+The balanced theorem does not extend to a cap-free radius-two statement.
+For wall shape
+
+\[
+01\mid23\mid45\mid678,
+\]
+
+the 16-state menu containing every transfer and every nontrivial split of
+the pair and triple is SAT. Radius-two CEGAR then learned all nearby repairs
+from successive models, growing the pool \(16\to27\to32\to37\). The terminal
+positive-additive model blocks all 319 partitions within transfer radius two.
+Its post-wall feasibility graph still changes only at edge \((0,01)\), and
+its unique minimal Hall witness is the full four-agent set with neighborhood
+the other three bundles.
+
+This is not an EFX counterexample. Exact enumeration finds 123 supporting
+partitions and 206 complete EFX allocations, beginning at distance three.
+The nearest supporting partition is
+
+\[
+0136\mid27\mid45\mid8.
+\]
+
+The durable chain is the
+[16-to-27 seed trace](row_merge_q4_small_step_radius2_m9_cegar_seed16.json),
+[cvc5 SAT replay of the 27-cut formula](row_merge_q4_small_step_radius2_m9_cegar_seed16.cvc5.json),
+[terminal 37-cut trace](row_merge_q4_small_step_radius2_m9_cegar_terminal37.json),
+and
+[solver-free complete audit](row_merge_q4_small_step_radius2_m9_boundary_audit.json).
+This establishes that even Hall size four needs a genuine three-transfer
+exchange once a resident bundle has three goods.
+
+Exact motif extraction reduces the full radius-three ball to 515 partitions
+formed by simple one-good transfer paths and cycles of length at most three.
+The terminal profile has eight EFX-supporting partitions in this menu. The
+resulting universal candidate remains open: a 24-cut exact master is SAT with
+48 repairs, a fixed-graph 32-cut master is SAT with nine repairs, and the
+strengthened 56-cut cell times out under matching-clause and Hall-selector
+encodings. See
+[ROW_MERGE_EXCHANGE_CHAIN_GATE.md](ROW_MERGE_EXCHANGE_CHAIN_GATE.md).
+
 ## Consequence for the proof program
 
 The Hall classification remains the right cap-free normal form, but a proof
@@ -125,6 +236,9 @@ Hall cases, the nearest valid state may require a three-bundle exchange cycle.
 
 The next analytic target is therefore a **global Hall exchange lemma**: use
 the deficient agent set and the tight comparison to construct an improving
-exchange chain, with no fixed bound of two moved goods. A second target is to
-prove the seven-state size-four core analytically, then determine which part
-of its exchange menu survives arbitrary bundle sizes.
+exchange chain whose length can grow with bundle size. The compact positive
+targets are the seven-state \(2+2+2+1\) lemma and the symmetric 11-state
+\(2+2+2+2\) lemma; the nine-repair fixed-graph boundary now isolates the first
+required three-transfer case split. A human proof should expose the
+resident-matching Hall witnesses shared by these positive cores and explain
+how that motif propagates.

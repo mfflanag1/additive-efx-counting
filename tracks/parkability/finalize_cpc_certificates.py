@@ -10,6 +10,8 @@ import os
 import tempfile
 from pathlib import Path
 
+from replay_efx48_relocatable_cpc import audit_signature_tree
+
 
 CELLS = (
     "favorite-211",
@@ -20,6 +22,9 @@ CELLS = (
     "top4-second31",
     "top4-second22",
     "top4-second211",
+)
+EXPECTED_CVC5_SOURCE_TAR_SHA256 = (
+    "7eeeb65a6c5bfe985a6b3fc7938b87709bbc0e3f72d661b1d0587d4173ad9b33"
 )
 
 
@@ -215,6 +220,62 @@ def finalize(root: Path) -> dict:
         ):
             raise ValueError(f"{cell}: semantic formula binding mismatch")
 
+    assumption_path = (
+        root
+        / "independent-generator-audit"
+        / "cpc-formula-assumptions.json"
+    )
+    if not assumption_path.is_file():
+        raise ValueError(f"missing CPC formula-assumption audit: {assumption_path}")
+    assumption = json.loads(assumption_path.read_text())
+    assumption_records = {
+        record["cell"]: record for record in assumption.get("cells", [])
+    }
+    if (
+        assumption.get("schema")
+        != "efx48-cpc-formula-assumption-audit-v1"
+        or assumption.get("all_passed") is not True
+        or assumption.get("formula_assertion_count") != 545_360
+        or assumption.get("permanent_cpc_assumption_count") != 545_360
+        or assumption.get("ordered_mismatch_count") != 0
+        or set(assumption_records) != set(CELLS)
+    ):
+        raise ValueError("CPC formula-assumption audit is incomplete")
+    for cell in CELLS:
+        record = assumption_records[cell]
+        if (
+            record.get("passed") is not True
+            or record.get("ordered_mismatch_count") != 0
+            or record.get("formula_sha256")
+            != summary_by_cell[cell]["formula_sha256"]
+            or record.get("proof_sha256")
+            != summary_by_cell[cell]["proof_sha256"]
+        ):
+            raise ValueError(f"{cell}: CPC formula-assumption binding mismatch")
+    assumption_checker = (
+        Path(__file__).with_name("audit_cpc_formula_assumptions.py").resolve()
+    )
+    require_hash(
+        assumption_checker,
+        assumption["checker_sha256"],
+        "CPC formula-assumption checker",
+    )
+    dependencies.add(assumption_path.resolve())
+
+    cvc5_source = root / "tools" / "cvc5-1.3.3-source.tar.gz"
+    require_hash(
+        cvc5_source,
+        EXPECTED_CVC5_SOURCE_TAR_SHA256,
+        "official cvc5 1.3.3 source archive",
+    )
+    dependencies.add(cvc5_source.resolve())
+    signature_tree = audit_signature_tree(root)
+    signature_root = root / "tools/cvc5-1.3.3-source/proofs/eo/cpc"
+    signature_files = sorted(signature_root.rglob("*.eo"))
+    if len(signature_files) != signature_tree["signature_file_count"]:
+        raise ValueError("CPC signature tree file count changed after audit")
+    dependencies.update(path.resolve() for path in signature_files)
+
     semantic_checker = (
         Path(__file__).with_name(
             "audit_independent_formula_semantics.py"
@@ -300,6 +361,12 @@ def finalize(root: Path) -> dict:
         "semantic_binding": relative_to_root(root, semantic_path),
         "semantic_binding_sha256": sha256(semantic_path),
         "semantic_binding_all_passed": True,
+        "formula_assumption_audit": relative_to_root(root, assumption_path),
+        "formula_assumption_audit_sha256": sha256(assumption_path),
+        "formula_assumption_audit_all_passed": True,
+        "cvc5_source_archive": relative_to_root(root, cvc5_source),
+        "cvc5_source_archive_sha256": EXPECTED_CVC5_SOURCE_TAR_SHA256,
+        "cpc_signature_tree": signature_tree,
         "published_input_audit": relative_to_root(
             root, published_path
         ),

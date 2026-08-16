@@ -1,0 +1,49 @@
+{
+  "schema": "partial-nash-cegar-source-split-gate-v1",
+  "status": "ALL_SOURCE_BRANCHES_UNKNOWN_TIMEOUT",
+  "meaning": "Fixing the unenvied source host did not make the 180-rival nonlinear Nash master decidable within 60 seconds per branch. This is neither SAT nor UNSAT evidence for any branch and is not a theorem about the maximum-Nash conjecture.",
+  "candidate": {
+    "floater": 6,
+    "base_owner": [0, 2, 3, 1, 1, 0, null, 2, 3]
+  },
+  "shared_pool": "results/partial_nash_cegar_structural_session2_pool.json",
+  "shared_pool_sha256": "d405368bef8bef65a01a66fcdb9f4ae880d80549379afaa7b0e83048b5a80258",
+  "rival_pool_size": 180,
+  "time_limit_seconds_per_branch": 60,
+  "branches": [
+    {
+      "source_host": 0,
+      "status": "MASTER_UNKNOWN",
+      "reason": "timeout",
+      "result": "results/partial_nash_cegar_source0_session3.json",
+      "result_sha256": "615a6172f4ee64e285755034220220d439e8b20196686dd4270ef198eade4245",
+      "smt2_sha256": "40d28df8236db093294886375b1ac743dd5a257d3cab4b1ab3ea0f5ef838185c"
+    },
+    {
+      "source_host": 1,
+      "status": "MASTER_UNKNOWN",
+      "reason": "timeout",
+      "result": "results/partial_nash_cegar_source1_session3.json",
+      "result_sha256": "d88e7a789a4b050c71920fe992af24e7515a686a0f0194edcaeccd6bfd4dd4e1",
+      "smt2_sha256": "ba5d206b0d0caf1f4512d0c28bfdc961112a4b0c74a364685d26d9c2e32f9599"
+    },
+    {
+      "source_host": 2,
+      "status": "MASTER_UNKNOWN",
+      "reason": "timeout",
+      "result": "results/partial_nash_cegar_source2_session3.json",
+      "result_sha256": "2cfec6841efcd5bd5156d846479271196579b28be32c7f63a85cfb4a70e9ff57",
+      "smt2_sha256": "58fb611ae7523543b824c86380c823e3d805b7ac2ee43c765bcf03acbe52b8d1"
+    },
+    {
+      "source_host": 3,
+      "status": "MASTER_UNKNOWN",
+      "reason": "timeout",
+      "result": "results/partial_nash_cegar_source3_session3.json",
+      "result_sha256": "659a70d4b94a035cbb3193b551f80afc191236c68099c0249dd345fa9a1d10d9",
+      "smt2_sha256": "11fe3914449de70e9d401d7cb140823788087b8439f78801cfb7e5c214813af0"
+    }
+  ],
+  "next_solver_step": "Do not extend the monolithic or source-only masters unchanged. Any further exact run should split or replace the nonlinear product comparisons.",
+  "claim_boundary": "The analytic bundle-cycle/source-host reduction is proved independently of these timeouts; the maximum-Nash completion conjecture remains open."
+}

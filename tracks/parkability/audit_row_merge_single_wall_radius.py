@@ -23,15 +23,6 @@ N = 4
 MATCHINGS = tuple(itertools.permutations(range(N)))
 
 
-def archived_path(recorded):
-    """Resolve a recorded artifact path in both its source and archived checkout."""
-    path = Path(recorded)
-    archived = Path("results") / path.name
-    if archived.is_file():
-        return archived
-    return path
-
-
 def canonical(partition):
     return tuple(sorted(tuple(sorted(bundle)) for bundle in partition))
 
@@ -129,7 +120,7 @@ def audit_source(path):
     source = json.loads(path.read_text())
     if source.get("status") != "RADIUS_PIVOT_REFUTATION_FOUND":
         raise ValueError("the audit requires a SAT radius-pivot refutation")
-    formula_path = archived_path(source["smt2_path"])
+    formula_path = Path(source["smt2_path"])
     if (
         not formula_path.is_file()
         or hashlib.sha256(formula_path.read_bytes()).hexdigest()
@@ -242,8 +233,8 @@ def audit_unsat_boundary(source_path, normalization_path, cvc5_path):
     source = json.loads(source_path.read_text())
     normalization = json.loads(normalization_path.read_text())
     cvc5 = json.loads(cvc5_path.read_text())
-    formula_path = archived_path(source["smt2_path"])
-    normalized_path = archived_path(normalization["output"])
+    formula_path = Path(source["smt2_path"])
+    normalized_path = Path(normalization["output"])
     if (
         source.get("status") != "UNSAT_CANDIDATE"
         or source.get("minimal_hall_witness_size") != 4
@@ -284,8 +275,8 @@ def audit_core(core_path, normalization_path, cvc5_path):
     core = json.loads(core_path.read_text())
     normalization = json.loads(normalization_path.read_text())
     cvc5 = json.loads(cvc5_path.read_text())
-    core_formula_path = archived_path(core["core_formula"])
-    normalized_path = archived_path(normalization["output"])
+    core_formula_path = Path(core["core_formula"])
+    normalized_path = Path(normalization["output"])
     expected_distances = [1, 1, 1, 2, 2, 2, 2]
     if (
         core.get("status") != "CANDIDATE_CORE_EXTRACTED"
@@ -323,9 +314,9 @@ def audit_genericity_core(core_path, normalization_path, cvc5_path):
     core = json.loads(core_path.read_text())
     normalization = json.loads(normalization_path.read_text())
     cvc5 = json.loads(cvc5_path.read_text())
-    source_path = archived_path(core["source"])
-    formula_path = archived_path(core["core_formula"])
-    normalized_path = archived_path(normalization["output"])
+    source_path = Path(core["source"])
+    formula_path = Path(core["core_formula"])
+    normalized_path = Path(normalization["output"])
     expected_bounds = {
         ((0, 1, 4), (2,), "wall_epsilon < value_0_4"),
         ((0, 1, 5), (2,), "wall_epsilon < value_0_5"),
@@ -385,8 +376,8 @@ def audit_pair_pivot(source_path, normalization_path, cvc5_path):
     source = json.loads(source_path.read_text())
     normalization = json.loads(normalization_path.read_text())
     cvc5 = json.loads(cvc5_path.read_text())
-    formula_path = archived_path(source["formula"])
-    normalized_path = archived_path(normalization["output"])
+    formula_path = Path(source["formula"])
+    normalized_path = Path(normalization["output"])
     pivots = {
         canonical(tuple(tuple(bundle) for bundle in partition))
         for partition in source.get("pivots", ())

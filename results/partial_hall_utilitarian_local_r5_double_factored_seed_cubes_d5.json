@@ -1,0 +1,510 @@
+{
+  "children": [
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000.json",
+      "manifest_sha256": "09a8dec85e698dbd5ae63a04279c73eadc67d2d718eae0f887c296554b773e3a",
+      "parent_branch": 0
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_001.json",
+      "manifest_sha256": "88e855791c3bb7bbd48f621bc276209e319ca21fe622f5f6c52f559a6501ecf9",
+      "parent_branch": 1
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_002.json",
+      "manifest_sha256": "01afe239078799a5821b4e63e785162b170b146cde445fac0a17ebfab3f3ca98",
+      "parent_branch": 2
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_003.json",
+      "manifest_sha256": "4969dd3cb5045bb2e144f99bd1f99bedcdbab2a05821a2e8092ecf1c3eac6f74",
+      "parent_branch": 3
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_004.json",
+      "manifest_sha256": "2397341012751154022299958f041d2cc87cd2557f02f341c06ab0ff2928d5a9",
+      "parent_branch": 4
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_005.json",
+      "manifest_sha256": "a8c43097a2d50da04a7bd1f4dd2912df7e8a015b32011878defddd51a680964a",
+      "parent_branch": 5
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_006.json",
+      "manifest_sha256": "a772e75005d13cf853979e26a77c3beafdd733aa0c7c02832457c089568968f9",
+      "parent_branch": 6
+    },
+    {
+      "branch_count": 4,
+      "manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007.json",
+      "manifest_sha256": "0ca961e72300cb35e1ed0e6ab718512f43a0cffadcae7ae9d2fcec8b257fb88a",
+      "parent_branch": 7
+    }
+  ],
+  "leaf_count": 32,
+  "leaves": [
+    {
+      "child_branch": 0,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "rival_cmp_2_192_1",
+        "v_0_1 + -1*v_0_4 + -1*v_0_8 <= 0"
+      ],
+      "leaf": 0,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_000.smt2",
+      "sha256": "d788a404850d1e6e95c83f3d21d333bc6a492decf6ba93ec8e1d7c142c763c63"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "rival_cmp_2_192_1",
+        "Not(v_0_1 + -1*v_0_4 + -1*v_0_8 <= 0)"
+      ],
+      "leaf": 1,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_001.smt2",
+      "sha256": "4ddbb2d82a1a9c4d9b748347b6e792e41d4a43c649f8d999f24ea61b63581e0b"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "Not(rival_cmp_2_192_1)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0"
+      ],
+      "leaf": 2,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_002.smt2",
+      "sha256": "7b145f22b3a038504ca7daef0f864b8761ccb275dade52b3dc137a02db8433c3"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "Not(rival_cmp_2_192_1)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)"
+      ],
+      "leaf": 3,
+      "parent_branch": 0,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_003.smt2",
+      "sha256": "b1707677ce95e03d63300537ec455f63dbfcb9b8b94d292900d82021b22fc5a3"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "edge_0_0_1",
+        "v_0_0 + v_0_4 + v_0_5 + -1*v_0_7 >= 0"
+      ],
+      "leaf": 4,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_001/branch_000.smt2",
+      "sha256": "d7f68579a00f9d02a68e14d10bfd4d74d34725efe2fe0a6ed71714e1b351b27d"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "edge_0_0_1",
+        "Not(v_0_0 + v_0_4 + v_0_5 + -1*v_0_7 >= 0)"
+      ],
+      "leaf": 5,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_001/branch_001.smt2",
+      "sha256": "b9d771d812b4c99f8e40a6a7d7e52a13b7d38a4e23f4cb7d6b98587ab811dcbc"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "Not(edge_0_0_1)",
+        "v_0_1 + -1*v_0_2 + -1*v_0_3 + v_0_6 >= 0"
+      ],
+      "leaf": 6,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_001/branch_002.smt2",
+      "sha256": "f83cab6c33565a3d747959327cbdb7227e5ef5a5274c989abc7c11e8f4d6dfae"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "Not(edge_0_0_1)",
+        "Not(v_0_1 + -1*v_0_2 + -1*v_0_3 + v_0_6 >= 0)"
+      ],
+      "leaf": 7,
+      "parent_branch": 1,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_001/branch_003.smt2",
+      "sha256": "bb6fd78474da1482ff49a369476ad8f54bdd17e1f9030ca550e8814c492d61bf"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "rival_cmp_0_64_257",
+        "v_0_1 + v_0_2 + v_0_3 + -1*v_0_6 + -1*v_0_7 + v_0_8 <= 0",
+        "edge_86_0_0"
+      ],
+      "leaf": 8,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_002/branch_000.smt2",
+      "sha256": "e823383f323863ba3249b75d00230a28ecfcd0ce3383fba13368ea594f0956fa"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "rival_cmp_0_64_257",
+        "v_0_1 + v_0_2 + v_0_3 + -1*v_0_6 + -1*v_0_7 + v_0_8 <= 0",
+        "Not(edge_86_0_0)"
+      ],
+      "leaf": 9,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_002/branch_001.smt2",
+      "sha256": "2a1e145dc4f8f4b0345a46138c81efe31865c8dac3d43cc8a228d1e1169cf0a7"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "rival_cmp_0_64_257",
+        "Not(v_0_1 + v_0_2 + v_0_3 + -1*v_0_6 + -1*v_0_7 + v_0_8 <= 0)",
+        "v_0_3 + -1*v_0_5 <= 0"
+      ],
+      "leaf": 10,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_002/branch_002.smt2",
+      "sha256": "876ff861528202ea7b5c951f591295b2e9dba9b5ac7039484c506f2a3b70bfbd"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "rival_cmp_0_64_257",
+        "Not(v_0_1 + v_0_2 + v_0_3 + -1*v_0_6 + -1*v_0_7 + v_0_8 <= 0)",
+        "Not(v_0_3 + -1*v_0_5 <= 0)"
+      ],
+      "leaf": 11,
+      "parent_branch": 2,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_002/branch_003.smt2",
+      "sha256": "b1f37425df5bb00b3e2a9b14dc06add3823f9cb655ff13a3728cdea7e525ea05"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "Not(rival_cmp_0_64_257)",
+        "v_0_1 + v_0_7 + -1*v_0_8 >= 0",
+        "edge_75_0_2"
+      ],
+      "leaf": 12,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_003/branch_000.smt2",
+      "sha256": "807f89f85602803ae4b44b878739fbec6db01d52cc9a237de8173c9875d5d6f6"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "Not(rival_cmp_0_64_257)",
+        "v_0_1 + v_0_7 + -1*v_0_8 >= 0",
+        "Not(edge_75_0_2)"
+      ],
+      "leaf": 13,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_003/branch_001.smt2",
+      "sha256": "2c131d2298e81be1554d320a7891be92b689eb89620148469cfae60d26d59488"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "Not(rival_cmp_0_64_257)",
+        "Not(v_0_1 + v_0_7 + -1*v_0_8 >= 0)",
+        "edge_25_0_1"
+      ],
+      "leaf": 14,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_003/branch_002.smt2",
+      "sha256": "d0381bff6a7f549fc03630260a80a2c54b229b94e87e25929e0f1f9d3bbebf34"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0",
+        "Not(v_0_2 + v_0_3 + v_0_4 + -1*v_0_6 >= 0)",
+        "Not(rival_cmp_0_64_257)",
+        "Not(v_0_1 + v_0_7 + -1*v_0_8 >= 0)",
+        "Not(edge_25_0_1)"
+      ],
+      "leaf": 15,
+      "parent_branch": 3,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_003/branch_003.smt2",
+      "sha256": "5fca28d850177d5b1ced17a36985e20e206f891941a3b7b53418a60e1a98a2d8"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "rival_cmp_0_192_272",
+        "v_0_1 + v_0_2 + v_0_3 + v_0_7 + -1*v_0_8 >= 0"
+      ],
+      "leaf": 16,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_004/branch_000.smt2",
+      "sha256": "e9367b103fb8f157b2dd5a9e0b733e28da1d5fef1066af4f088ee0c911effeb1"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "rival_cmp_0_192_272",
+        "Not(v_0_1 + v_0_2 + v_0_3 + v_0_7 + -1*v_0_8 >= 0)"
+      ],
+      "leaf": 17,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_004/branch_001.smt2",
+      "sha256": "5c54863ba02f404a3e83dbbb78170f208474f5de9f40ffa29cebcb3f5398df6f"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "Not(rival_cmp_0_192_272)",
+        "edge_86_0_0"
+      ],
+      "leaf": 18,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_004/branch_002.smt2",
+      "sha256": "12212fae4d493d66972a5f879ef12625653658d223466aeb568f87fe183553fd"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0",
+        "Not(rival_cmp_0_192_272)",
+        "Not(edge_86_0_0)"
+      ],
+      "leaf": 19,
+      "parent_branch": 4,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_004/branch_003.smt2",
+      "sha256": "09ac4aa1ab2e3d5c6fabb0b109e639ae91cc29dce9f5a2191dd025359a8205fe"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "edge_0_0_1",
+        "v_0_4 + v_0_5 + -1*v_0_7 + v_0_8 >= 0"
+      ],
+      "leaf": 20,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_005/branch_000.smt2",
+      "sha256": "50daf1194955d4906465ecb12dc9fe37dc52e60d216c1f72fbc43b2c9caaee93"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "edge_0_0_1",
+        "Not(v_0_4 + v_0_5 + -1*v_0_7 + v_0_8 >= 0)"
+      ],
+      "leaf": 21,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_005/branch_001.smt2",
+      "sha256": "a5153879ba7888667094df899248b5155b21aa42013c96c4c9067ae01f21e4ee"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "Not(edge_0_0_1)",
+        "v_0_0 + v_0_5 + -1*v_0_7 + v_0_8 >= 0"
+      ],
+      "leaf": 22,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_005/branch_002.smt2",
+      "sha256": "dd3a84704c537a9c3cad35e1a34cfe4a00a81c737bfa2840010283ba09742c20"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)",
+        "Not(edge_0_0_1)",
+        "Not(v_0_0 + v_0_5 + -1*v_0_7 + v_0_8 >= 0)"
+      ],
+      "leaf": 23,
+      "parent_branch": 5,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_005/branch_003.smt2",
+      "sha256": "ba4c8a3cd3caa546b998c1cb74ddcbae3a32d65d0a313a9520fa3054c34d3327"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0",
+        "rival_cmp_0_96_12",
+        "edge_80_0_1"
+      ],
+      "leaf": 24,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_006/branch_000.smt2",
+      "sha256": "3b8e2253481c58bf32bd4af4274f0563584dc02cc1f0dfae52c7c4b41d04cefc"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0",
+        "rival_cmp_0_96_12",
+        "Not(edge_80_0_1)"
+      ],
+      "leaf": 25,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_006/branch_001.smt2",
+      "sha256": "560b22b45e93c0925ba4bbceb23dbd493bbb824658af94e8661be04d41db3e06"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0",
+        "Not(rival_cmp_0_96_12)",
+        "v_0_1 +\nv_1_0 +\n-1*v_1_1 +\n-1*v_1_3 +\n-1*v_2_0 +\nv_2_3 +\n-1*v_2_4 +\nv_2_8 <=\n0"
+      ],
+      "leaf": 26,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_006/branch_002.smt2",
+      "sha256": "41553d75c37bb89fb67ed409fd66fc4992d25666884a0825f1f1cf78e698fd29"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0",
+        "Not(rival_cmp_0_96_12)",
+        "Not(v_0_1 +\n    v_1_0 +\n    -1*v_1_1 +\n    -1*v_1_3 +\n    -1*v_2_0 +\n    v_2_3 +\n    -1*v_2_4 +\n    v_2_8 <=\n    0)"
+      ],
+      "leaf": 27,
+      "parent_branch": 6,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_006/branch_003.smt2",
+      "sha256": "46bb6203bd78bb64a2ac799f86a4efdd01e6f500877ec07486236cd646fdf881"
+    },
+    {
+      "child_branch": 0,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "Not(v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0)",
+        "edge_21_0_1",
+        "v_0_0 + -1*v_0_1 + v_0_3 + -1*v_0_7 >= 0"
+      ],
+      "leaf": 28,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_000.smt2",
+      "sha256": "4c1c7b202708d72584680e5eda9d9420bc5faf4f3e6575825617841dc09cc1c5"
+    },
+    {
+      "child_branch": 1,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "Not(v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0)",
+        "edge_21_0_1",
+        "Not(v_0_0 + -1*v_0_1 + v_0_3 + -1*v_0_7 >= 0)"
+      ],
+      "leaf": 29,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_001.smt2",
+      "sha256": "2318742254a8c4a9b8547b1d6a1dfce1c131aca2f0a7e5ee89a4c98e87aeac76"
+    },
+    {
+      "child_branch": 2,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "Not(v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0)",
+        "Not(edge_21_0_1)",
+        "v_0_1 + -1*v_0_3 + -1*v_0_4 + v_0_7 >= 0"
+      ],
+      "leaf": 30,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_002.smt2",
+      "sha256": "157a4494e8297866a904576a47e525c71fdc8975742787ce1620f5525559783a"
+    },
+    {
+      "child_branch": 3,
+      "cube": [
+        "Not(v_1_1 + v_1_2 + v_1_3 + -1*v_1_5 >= 0)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "Not(v_0_2 + v_0_4 + -1*v_0_5 + -1*v_0_8 <= 0)",
+        "Not(edge_21_0_1)",
+        "Not(v_0_1 + -1*v_0_3 + -1*v_0_4 + v_0_7 >= 0)"
+      ],
+      "leaf": 31,
+      "parent_branch": 7,
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_003.smt2",
+      "sha256": "6de1419032cf887bef0910c991de5478448885e97d21a3419196fce0cd4b03cd"
+    }
+  ],
+  "meaning": "Every child exactly covers its parent branch and the parent exactly covers the source. Therefore the listed leaves exactly cover the source: SAT of one leaf is SAT of the source, while UNSAT of every leaf is UNSAT of the source.",
+  "parent_manifest": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d3.json",
+  "parent_manifest_sha256": "9c50b3453c29c290a4f97daf71bb38ba8e4efa84c69373af4c13c0fde634fc45",
+  "schema": "smt2-composed-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_double_factored_seed_master.smt2",
+  "source_sha256": "e80bfbfe1bd31c98c503d91d075cdab0fd1d652569ade66481ba4de5557f2ebe",
+  "status": "EXACT_COMPOSED_CUBE_COVER"
+}

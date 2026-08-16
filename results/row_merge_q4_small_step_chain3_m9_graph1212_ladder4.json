@@ -1,0 +1,283 @@
+{
+  "add_per_round": 4,
+  "base_initial_cut_count": 16,
+  "bundle_sizes_excluding_critical_good": [
+    2,
+    1,
+    2,
+    3
+  ],
+  "chain_partition_count": 515,
+  "claim_boundary": "This decides only the displayed small-step Hall-size-four cell; it is not general row-merge continuation or complete EFX.",
+  "domain": "strictly positive additive real valuations",
+  "elapsed_seconds": 215.1923577785492,
+  "final_cut_count": 36,
+  "fixed_graph_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "fixed_graph_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "formula": "results/row_merge_q4_small_step_chain3_m9_graph1212_ladder4.smt2",
+  "formula_sha256": "09b78b6b1a4d9f212df2acdc4b437d2544c0b065c6ae512416d629ada6f83f0e",
+  "initial_cut_count": 32,
+  "interpretation": "The exact-real master reached its bounded resource limit.",
+  "m": 9,
+  "max_rounds": 3,
+  "maximum_chain_length": 3,
+  "minimal_hall_witness_size": 4,
+  "n": 4,
+  "per_check_time_limit_seconds": 120.0,
+  "round_count": 2,
+  "rounds": [
+    {
+      "chain_support_count": 9,
+      "cuts_after_learning": 36,
+      "cuts_before_solve": 32,
+      "learned_partition_count": 4,
+      "learned_partitions": [
+        [
+          [
+            0,
+            1,
+            6
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            7,
+            8
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        [
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        [
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            7,
+            8
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ]
+        ]
+      ],
+      "new_chain_support_count": 9,
+      "new_chain_supporting_allocation_count": 26,
+      "post_wall_values": [
+        [
+          758,
+          349,
+          1125,
+          6,
+          403,
+          770,
+          24,
+          24,
+          1071
+        ],
+        [
+          1530,
+          11,
+          2152,
+          44,
+          1563,
+          66,
+          710,
+          732,
+          1464
+        ],
+        [
+          84,
+          622,
+          1489,
+          28,
+          755,
+          825,
+          7,
+          14,
+          1440
+        ],
+        [
+          392,
+          3,
+          558,
+          15,
+          24,
+          516,
+          184,
+          193,
+          371
+        ]
+      ],
+      "round": 0,
+      "solver_status": "sat",
+      "solver_wall_seconds": 94.69626903533936,
+      "wall_values": [
+        [
+          758,
+          349,
+          1107,
+          6,
+          403,
+          770,
+          24,
+          24,
+          1071
+        ],
+        [
+          1530,
+          11,
+          2152,
+          44,
+          1563,
+          66,
+          710,
+          732,
+          1464
+        ],
+        [
+          84,
+          622,
+          1489,
+          28,
+          755,
+          825,
+          7,
+          14,
+          1440
+        ],
+        [
+          392,
+          3,
+          558,
+          15,
+          24,
+          516,
+          184,
+          193,
+          371
+        ]
+      ]
+    },
+    {
+      "cuts_before_solve": 36,
+      "reason_unknown": "canceled",
+      "round": 1,
+      "solver_status": "unknown",
+      "solver_wall_seconds": 120.08913779258728
+    }
+  ],
+  "schema": "row-merge-q4-exchange-chain-cegar-v1",
+  "seed_analysis": "results/row_merge_q4_distance3_exchange_m9_analysis.json",
+  "seed_analysis_sha256": "8edeea0b07fca9b2deb1ff97c59e7912ea689ab3c7c3bbe2d65093c005852a82",
+  "seed_partition_count": 8,
+  "small_step_goods": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "solver_status": "unknown",
+  "status": "CEGAR_INCOMPLETE",
+  "terminal_complete_efx_audit": null,
+  "terminal_post_wall_values": null,
+  "terminal_wall_values": null,
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "warm_cut_limit": 8,
+  "warm_partition_count": 8,
+  "warm_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "warm_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9"
+}

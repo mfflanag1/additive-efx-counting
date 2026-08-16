@@ -243,7 +243,7 @@ def audit_negative_control(path: Path):
 def audit_conditional_optimizer(path: Path):
     payload = json.loads(path.read_text())
     values = tuple(tuple(row) for row in payload["values"])
-    hint_path = path.parent / Path(payload["hint_path"]).name
+    hint_path = Path(payload["hint_path"])
     hint = canonicalize_hint(load_values(hint_path))
     universe = favorite_pair_universe("eight_orbit")
     targets = tuple(supported_partitions(hint, list(universe)))
@@ -254,7 +254,7 @@ def audit_conditional_optimizer(path: Path):
     all_favorite_repairs = tuple(
         supported_partitions(values, list(favorite_pair_universe("all")))
     )
-    proto_path = path.parent / Path(payload["proto_path"]).name
+    proto_path = Path(payload["proto_path"])
     audit_branch(values)
     if (
         payload.get("schema") != "distinct-half-eight-orbit-cpsat-optimization-v1"

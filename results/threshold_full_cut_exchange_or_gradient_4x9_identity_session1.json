@@ -1,0 +1,49 @@
+{
+  "base_bundles": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "base_host": 0,
+  "base_permutation": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "candidate_sources": [
+    0,
+    1
+  ],
+  "cross_source_implication_count": 4,
+  "equality_agent": 1,
+  "exact_global_escape": null,
+  "exact_local_audit": null,
+  "floater": 8,
+  "forbid_cross_source_threshold_improvement": true,
+  "global_audit": null,
+  "local_implication_count": 4,
+  "meaning": "SAT refutes only the fixed full-cut two-source local statement; it refutes the global selector only if the exact audit also makes the fixed base globally threshold-maximal. UNSAT proves only this canonical four-pair critical-cut cell.",
+  "missing_bundle": 1,
+  "natural_matching_only": true,
+  "schema": "threshold-full-cut-two-source-4x9-v1",
+  "smt2": "results/threshold_full_cut_exchange_or_gradient_4x9_identity_session1.smt2",
+  "solver_reason_unknown": "timeout",
+  "solver_verdict": "unknown",
+  "status": "UNKNOWN",
+  "timeout_seconds": 60,
+  "values": null
+}

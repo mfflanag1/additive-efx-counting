@@ -1,0 +1,14 @@
+{
+  "schema": "partial-hall-utilitarian-local-r5-phase-gate-v1",
+  "status": "UNKNOWN",
+  "meaning": "The phase-selection replay produced neither SAT nor UNSAT. This is a solver boundary, not a theorem verdict.",
+  "owner_distance_radius": 5,
+  "learned_rival_count": 416,
+  "source_cegar": "results/partial_hall_utilitarian_local_r5_cegar_session2_b32.json",
+  "source_cegar_sha256": "6605bdd680afe8fbf20b01ef74b1081b9676d924225edf51c7e0e4a43f00cfb1",
+  "source_smt2": "results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.smt2",
+  "source_smt2_sha256": "f85a7b14c614635925f492353776a60d194c580248b54553bec1d0ee86c30ff4",
+  "replay_command": "z3 -T:600 smt.phase_selection=5 smt.random_seed=9302 results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.smt2",
+  "replay_output": "unknown",
+  "claim_boundary": "Owner-distance radii two through four are exactly refuted. Radius five and the global normalized-utilitarian selector remain open. Complete additive EFX is not refuted."
+}

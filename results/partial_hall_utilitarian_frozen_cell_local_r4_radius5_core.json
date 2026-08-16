@@ -1,0 +1,260 @@
+{
+  "candidate_partition_count": 91,
+  "deletion_irreducible_unsat_core": [
+    {
+      "agent": 0,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_2"
+    },
+    {
+      "agent": 0,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_3"
+    },
+    {
+      "agent": 1,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_12"
+    },
+    {
+      "agent": 3,
+      "good": 6,
+      "kind": "strict_positivity",
+      "label": "track_37"
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_831",
+      "left_mask": 32,
+      "right_mask": 194
+    },
+    {
+      "agent": 3,
+      "kind": "eligible_comparison",
+      "label": "track_1927",
+      "left_mask": 260,
+      "right_mask": 34
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2612",
+      "left_mask": 14,
+      "right_mask": 192
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3801",
+      "left_mask": 386,
+      "right_mask": 8
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_4765",
+      "left_mask": 14,
+      "right_mask": 192
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5267",
+      "left_mask": 32,
+      "right_mask": 384
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10818",
+      "left_mask": 17,
+      "right_mask": 32
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10932",
+      "left_mask": 32,
+      "right_mask": 258
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_11430",
+      "left_mask": 258,
+      "right_mask": 48
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_11453",
+      "left_mask": 336,
+      "right_mask": 1
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11476",
+      "masks": [
+        72,
+        384,
+        17,
+        36
+      ],
+      "owner_distance": 5
+    },
+    {
+      "agent": 0,
+      "kind": "false_edge_witness",
+      "label": "track_13396",
+      "left_mask": 192,
+      "right_mask": 264
+    }
+  ],
+  "deletion_irreducible_unsat_core_size": 16,
+  "elapsed_seconds": 0.36068296432495117,
+  "eligible_comparison_count": 2030,
+  "eligible_state_count": 808,
+  "false_edge_witness_count": 608,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "ineligible_witness_count": 9406,
+  "maximality_state_count": 27,
+  "maximum_owner_distance": 5,
+  "meaning": "SAT would refute the normalized-utilitarian radius-one Hall selector; UNSAT eliminates only this frozen combinatorial cell. Neither outcome by itself refutes complete additive EFX.",
+  "schema": "partial-hall-utilitarian-frozen-cell-v1",
+  "seed_path": "results/partial_hall_utilitarian_local_r4_cegar_session1.json",
+  "seed_sha256": "3b23bff29bc19bf94a5d222e8e4135f2e53878e0ab21941a3d91903f1d93602c",
+  "smt2_path": "results/partial_hall_utilitarian_frozen_cell_local_r4_radius5_core.smt2",
+  "smt2_sha256": "e15fccbc30d67e351b35cd884669fbb9f73889bb1df3873a9cc9c2ca63469073",
+  "status": "UNSAT",
+  "timeout_seconds": 600.0,
+  "true_edge_comparison_count": 1794,
+  "unsat_core": [
+    {
+      "agent": 0,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_2"
+    },
+    {
+      "agent": 0,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_3"
+    },
+    {
+      "agent": 1,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_12"
+    },
+    {
+      "agent": 3,
+      "good": 6,
+      "kind": "strict_positivity",
+      "label": "track_37"
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_831",
+      "left_mask": 32,
+      "right_mask": 194
+    },
+    {
+      "agent": 3,
+      "kind": "eligible_comparison",
+      "label": "track_1927",
+      "left_mask": 260,
+      "right_mask": 34
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_2612",
+      "left_mask": 14,
+      "right_mask": 192
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_3801",
+      "left_mask": 386,
+      "right_mask": 8
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_4765",
+      "left_mask": 14,
+      "right_mask": 192
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5267",
+      "left_mask": 32,
+      "right_mask": 384
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10818",
+      "left_mask": 17,
+      "right_mask": 32
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10932",
+      "left_mask": 32,
+      "right_mask": 258
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_11430",
+      "left_mask": 258,
+      "right_mask": 48
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_11453",
+      "left_mask": 336,
+      "right_mask": 1
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11476",
+      "masks": [
+        72,
+        384,
+        17,
+        36
+      ],
+      "owner_distance": 5
+    },
+    {
+      "agent": 0,
+      "kind": "false_edge_witness",
+      "label": "track_13396",
+      "left_mask": 192,
+      "right_mask": 264
+    }
+  ],
+  "unsat_core_size": 16
+}

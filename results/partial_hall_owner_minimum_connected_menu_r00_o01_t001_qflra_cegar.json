@@ -1,0 +1,219 @@
+{
+  "all_maximality_constraints_satisfied": null,
+  "cegar_batch": 16,
+  "cegar_iterations": 0,
+  "complete_candidate_blockers_asserted": true,
+  "complete_candidate_count": 52,
+  "cycle_allocation_count": 48,
+  "cycle_partition_count": 2,
+  "cycle_specs": [
+    [
+      0,
+      0,
+      2,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      0,
+      3,
+      0
+    ]
+  ],
+  "learned_maximality_blocker_count": 76,
+  "learned_maximality_blockers": [
+    "maximality_0_0_0123",
+    "maximality_0_0_0132",
+    "maximality_0_0_3120",
+    "maximality_1_1_0123",
+    "maximality_1_1_0132",
+    "maximality_1_1_3102",
+    "maximality_2_2_0123",
+    "maximality_1_1_0312",
+    "maximality_1_1_0321",
+    "maximality_2_2_2130",
+    "maximality_2_2_2310",
+    "maximality_2_2_0132",
+    "maximality_3_3_0123",
+    "maximality_1_1_1023",
+    "swap_0_1_3_1_1023",
+    "swap_1_0_3_1_1023",
+    "swap_1_0_3_1_1320",
+    "swap_0_1_3_1_1230",
+    "swap_0_1_3_1_3120",
+    "swap_0_1_3_1_3210",
+    "swap_0_1_3_1_1320",
+    "swap_1_0_3_1_0312",
+    "swap_1_0_3_1_0321",
+    "swap_1_0_3_1_1302",
+    "swap_0_1_3_1_0132",
+    "swap_2_0_3_1_0321",
+    "swap_2_0_3_1_0123",
+    "maximality_0_0_2103",
+    "maximality_3_0_2103",
+    "swap_0_0_3_0_2103",
+    "swap_0_0_3_1_2103",
+    "swap_0_1_3_0_2130",
+    "swap_0_1_3_1_2130",
+    "swap_1_0_3_0_0123",
+    "swap_1_0_3_0_2103",
+    "swap_1_0_3_1_2031",
+    "swap_1_0_3_1_2130",
+    "swap_1_1_3_0_2013",
+    "swap_1_1_3_0_2310",
+    "swap_1_1_3_1_0321",
+    "swap_1_1_3_1_2301",
+    "swap_2_0_3_0_3102",
+    "swap_2_0_3_0_3120",
+    "swap_0_0_3_1_3120",
+    "swap_0_1_3_0_0123",
+    "swap_2_0_3_0_0123",
+    "swap_2_0_3_1_0132",
+    "swap_2_1_3_0_0123",
+    "swap_2_1_3_1_0132",
+    "maximality_2_1_0123",
+    "maximality_3_1_0123",
+    "maximality_0_1_0123",
+    "swap_0_0_3_0_1230",
+    "swap_0_1_3_1_1203",
+    "maximality_0_0_1023",
+    "maximality_2_0_1023",
+    "maximality_2_0_1230",
+    "transfer_0_0_2_1023",
+    "transfer_0_0_2_1320",
+    "swap_2_0_3_0_0213",
+    "swap_2_0_3_0_1230",
+    "swap_2_0_3_0_3210",
+    "swap_2_0_3_1_3012",
+    "swap_2_0_3_1_3120",
+    "swap_2_0_3_1_3210",
+    "swap_2_1_3_0_2013",
+    "swap_2_1_3_0_2130",
+    "swap_2_1_3_0_2310",
+    "swap_2_1_3_1_0312",
+    "swap_2_1_3_1_1320",
+    "cycle_0_0_2_0_3_0_0123",
+    "cycle_0_1_2_0_3_0_0123",
+    "transfer_1_0_3_0123",
+    "swap_1_0_3_1_0123",
+    "swap_1_1_3_0_0321",
+    "cycle_0_0_2_0_3_0_2103"
+  ],
+  "meaning": "UNSAT proves that normalized-utilitarian maximality against all owner-minimum substitutions forces an owner-minimum Hall completion. SAT must be checked for item-level realizability.",
+  "model": null,
+  "multi_good_remainder_bundle_labels": [],
+  "one_good_transfers_included": true,
+  "pair_extraction_lemma_asserted": true,
+  "pair_orbit_count": 58,
+  "pair_orbit_index": 1,
+  "pairwise_swaps_included": true,
+  "schema": "partial-hall-owner-minimum-substitution-conversion-v1",
+  "selected_minimum_mask": 0,
+  "selected_pair_role": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    1
+  ],
+  "singleton_bundle_labels": [],
+  "smt2": "results/partial_hall_owner_minimum_connected_menu_r00_o01_t001_qflra_cegar.smt2",
+  "smt2_sha256": "f55351b9094ab3d16f1214fc382412311479a08ee60d6ad6c43ef219f5aa5279",
+  "solver_for_qf_lra": true,
+  "solver_reason_unknown": "timeout",
+  "solver_verdict": "unknown",
+  "status": "UNKNOWN",
+  "substitution_allocation_count": 384,
+  "substitution_eligibility_factored": true,
+  "substitution_partition_count": 16,
+  "swap_allocation_count": 288,
+  "swap_partition_count": 12,
+  "swap_specs": [
+    [
+      0,
+      0,
+      3,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      1
+    ],
+    [
+      0,
+      1,
+      3,
+      0
+    ],
+    [
+      0,
+      1,
+      3,
+      1
+    ],
+    [
+      1,
+      0,
+      3,
+      0
+    ],
+    [
+      1,
+      0,
+      3,
+      1
+    ],
+    [
+      1,
+      1,
+      3,
+      0
+    ],
+    [
+      1,
+      1,
+      3,
+      1
+    ],
+    [
+      2,
+      0,
+      3,
+      0
+    ],
+    [
+      2,
+      0,
+      3,
+      1
+    ],
+    [
+      2,
+      1,
+      3,
+      0
+    ],
+    [
+      2,
+      1,
+      3,
+      1
+    ]
+  ],
+  "timeout_seconds": 120,
+  "transfer_allocation_count": 576,
+  "transfer_partition_count": 24,
+  "trap_witness_prefix": "001",
+  "unsat_core": null
+}

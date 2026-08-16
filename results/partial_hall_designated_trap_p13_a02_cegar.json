@@ -1,0 +1,54 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 32,
+  "break_good_symmetry": false,
+  "candidate_partition_count": 91,
+  "factor_rival_eligibility": true,
+  "factored_hall": true,
+  "factored_rival_comparison_count": 4065,
+  "floater": 8,
+  "hall_witness": true,
+  "iterations_completed": 1,
+  "learned_rival_count": 3187,
+  "local_rival_template_count": 37501,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "SAT refutes the stated bounded-owner-distance normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 5,
+  "random_seed": 211,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "seed_from": "results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.json",
+  "seed_learned_rival_count": 416,
+  "smt2_output": "results/partial_hall_designated_trap_p13_a02_cegar_master.smt2",
+  "solver_reason_unknown": "timeout",
+  "solver_statistics": "(:arith-bound-propagations-lp 5406\n :arith-conflicts             24\n :arith-lower                 2195\n :arith-make-feasible         1466\n :arith-max-columns           8958\n :arith-max-rows              8918\n :arith-upper                 4692\n :binary-propagations         7149\n :conflicts                   25\n :decisions                   1394\n :del-clause                  2874\n :max-memory                  157.22\n :memory                      36.71\n :minimized-lits              10\n :mk-bool-var                 23754\n :mk-clause                   15095\n :mk-clause-binary            46112\n :num-allocs                  1084529070\n :num-checks                  1\n :propagations                8642\n :random-seed                 422\n :rlimit-count                2399621\n :time                        300.14)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": true,
+  "timeout_seconds_per_master": 300,
+  "trace": [],
+  "trap_agents": [
+    0,
+    2
+  ],
+  "trap_bundle": 0,
+  "trap_partition": 13,
+  "values": null
+}

@@ -1,0 +1,54 @@
+{
+  "claim_boundary": "The remaining case has either multiple floater supporters or a unique supporter separated from the source by weak-preference reachability; the lemma does not eliminate those cases.",
+  "corollary": "At a maximum-Nash eligible state, a source-host blocker with a unique floater supporter cannot be reachable from the source in the weak bundle-preference graph.",
+  "formulas": [
+    {
+      "path": "floater_substitution_cycle_weak.smt2",
+      "sha256": "76d40293e05d4726a3828f435e3cc55ed305a17957ec5761766502edacd1c2f1"
+    },
+    {
+      "path": "floater_substitution_cycle_nash.smt2",
+      "sha256": "e58bab38f9ad14c89199b0c3bcf1d010296e5bf207640c9d13dc9ef406babed7"
+    }
+  ],
+  "lemma": "Replace r in host bundle X_h by floater f. If exactly one agent i ranks f above r, i strictly prefers the modified host bundle, and the original weak bundle-preference graph has a simple path from h to i, rotate bundles along that path and give the modified bundle to i. The resulting one-floater state is EFX and eligible and has strictly larger Nash welfare.",
+  "literal_audits": [
+    {
+      "eligible_base_count": 3456,
+      "label": "exhaustive_binary_2x4",
+      "m": 4,
+      "n": 2,
+      "path_length_counts": {
+        "1": 96
+      },
+      "premise_path_count": 96,
+      "profile_count": 256
+    },
+    {
+      "eligible_base_count": 26104,
+      "label": "deterministic_sample_3x5",
+      "m": 5,
+      "n": 3,
+      "path_length_counts": {
+        "1": 1282,
+        "2": 485
+      },
+      "premise_path_count": 1767,
+      "profile_count": 1024
+    }
+  ],
+  "schema": "floater-substitution-cycle-lemma-audit-v1",
+  "status": "PROVED_FLOATER_SUBSTITUTION_PREFERENCE_PATH_LEMMA",
+  "symbolic": {
+    "negated_efx_and_floater_conclusion_status": "unsat",
+    "negated_strict_nash_conclusion_status": "unsat",
+    "solver": {
+      "logics": [
+        "QF_LRA",
+        "QF_NRA"
+      ],
+      "name": "z3",
+      "version": "5.0.0"
+    }
+  }
+}

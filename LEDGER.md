@@ -692,22 +692,60 @@ Consequences (both directions, size-preserving, same (n,m), additive-only):
   obstructions across six models before its next 60-second master returned
   `UNKNOWN`. See
   [`results/efx49_common_favorite_mixed_hall_radius2_gate_audit.json`](results/efx49_common_favorite_mixed_hall_radius2_gate_audit.json).
-- The rank-selection precursor remains open but has an exact census. All
-  three mixed profiles attain resident rank two and have a rank-two pass
-  with a zero-neighbor bundle. Cap-20 CEGAR searches learned 49 such stronger
-  motifs before timeout and 66 rank-two motifs across two iterations, with
-  no proof or counterexample. See
-  [`results/efx49_common_favorite_mixed_selection_gate_audit.json`](results/efx49_common_favorite_mixed_selection_gate_audit.json).
+- The rank-selection precursor is exactly false. Symmetry-reduced cap-20
+  continuations grew the rank-two and zero-neighbor pools to 119 and 69
+  motifs; a cap-4 continuation then found a two-type profile with exactly
+  three threshold passes, all of rank one, and no favorite-singleton EFX
+  partition. Independent replay finds 195 balanced supporting partitions
+  and 3,690 complete allocations. The repaired four-type selector is also
+  false: a cap-4 profile with four pairwise bundle-order-inequivalent rows
+  has three rank-one passes, no singleton support, 599 balanced supporting
+  partitions, and 3,878 complete allocations. See
+  [`results/efx49_common_favorite_rank2_selection_refutation_audit.json`](results/efx49_common_favorite_rank2_selection_refutation_audit.json)
+  and
+  [`results/efx49_common_favorite_fourtype_rank2_refutation_audit.json`](results/efx49_common_favorite_fourtype_rank2_refutation_audit.json).
 - The rank-one Hall branch has a proved common-column normal form: all three
   residents accept only one bundle, whose post-removal value strictly
   exceeds both side-bundle totals in every resident row. Owner switching
-  gives two exact successor cases. More decisively, a profile with no
-  favorite-singleton EFX partition blocks all six one-good transfers. It
-  has 366 balanced supporting partitions and 1,259 allocations; the nearest
-  15 repairs require two transfers. The radius-two neighborhood has nine
-  origin signatures; its natural 21-state contested-partner subfamily
-  remains open after 302 exact CEGAR cuts. See
-  [`results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md`](results/RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
+  gives two exact successor cases. More decisively, profiles with no
+  favorite-singleton EFX partition refute the six one-good transfers, the
+  21-state contested-partner family, and now the 30-state bridge union. The
+  final cap-6 witness has three identical residents, blocks all 966 singleton
+  partitions and all 30 target states, and still has 264 supporting
+  partitions and 2,790 complete allocations. Its singleton failures split
+  exactly into 927 three-resident/two-neighbor Hall witnesses and 39
+  all-agent/three-neighbor witnesses. Fifteen nearest repairs occupy two
+  further origin orbits, defining a 45-state successor. A first exact
+  campaign blocks all 45 and reaches a six-singleton Hamming-two local
+  minimum. The identical-resident cap-6 subcell is now dual-encoded `UNSAT`
+  with one shared 392-partition pool, while the unequal-resident decision
+  remains `UNKNOWN` after 900 seconds. Quotienting a duplicated resident row
+  gives 12 distinct matching clauses or seven exact weighted Hall cases; the
+  latter reduction agrees with literal matching on all 4,096 neighborhood
+  graphs. Both possible adjacent equality cases are dual-encoded `UNSAT`
+  through cap 5 with the same pool. The corresponding cap-6 masters remain
+  `UNKNOWN`, placing the next repeated-row frontier at cap 6. See
+  [`results/RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md`](results/RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md).
+
+## Single-wall continuation boundary (2026-08-01)
+
+- The row-merge continuation route reduces a first generic failure to one
+  deleted moving-agent edge and a minimal Hall witness of size 2, 3, or 4.
+- Exact positive-real models refute every one-good pivot for all three sizes.
+  Sizes 2 and 3 refute every partition within two good transfers; their
+  nearest EFX partitions are distance three. The post-wall profiles retain
+  16 and 40 complete EFX allocations.
+- The size-4 example blocks radius one and has 57 complete EFX allocations at
+  minimum distance two. For the same seven-good shape, a radius-two
+  obstruction is UNSAT in both Z3 and cvc5. This is a bounded solver theorem,
+  not a general exchange lemma.
+- Two eight-good radius-two masters returned `UNKNOWN` after 300 seconds.
+  The next cap-free target is a Hall-directed exchange chain or global
+  potential, not a universal one- or two-good transfer menu.
+- See
+  [`results/SINGLE_WALL_PIVOT_GATE.md`](results/SINGLE_WALL_PIVOT_GATE.md)
+  and
+  [`results/row_merge_single_wall_radius_refutation_audit.json`](results/row_merge_single_wall_radius_refutation_audit.json).
 
 ---
 

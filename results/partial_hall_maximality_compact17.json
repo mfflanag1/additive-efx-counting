@@ -1,0 +1,782 @@
+{
+  "accepted_moves": 1274,
+  "elapsed_seconds": 135.386518,
+  "fixed_obstruction_record": {
+    "candidate_product": 118602168224000,
+    "candidate_to_maximum_ratio": 0.6249402403394834,
+    "candidate_utilities": [
+      1735,
+      1055,
+      7264,
+      8920
+    ],
+    "eligible_state_count": 1008,
+    "maximum_nash_winner_count": 1,
+    "maximum_product": 189781615214236,
+    "radius_one": {
+      "best_normalized_slack": -0.00039494470774091627,
+      "best_witness": {
+        "floater_host": 2,
+        "masks": [
+          192,
+          14,
+          273,
+          32
+        ],
+        "matching": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "move_destination": null,
+        "move_source": null,
+        "moved_good": null,
+        "normalized_minimum_slack": -0.00039494470774091627
+      },
+      "candidate_partition_count": 91,
+      "completable_partition_count": 0,
+      "completion_witnesses": []
+    }
+  },
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "improvements": 288,
+  "iterations_completed": 3000,
+  "iterations_requested": 3000,
+  "max_delta": 100,
+  "maximum_nash_audit": {
+    "best_winner_normalized_slack": 0.04897314375987362,
+    "eligible_state_count": 1008,
+    "has_direct_insertion": true,
+    "has_radius_one_completion": true,
+    "maximum_product": 0.012746499668968294,
+    "winner_count": 1,
+    "winners": [
+      {
+        "base_index": 52490,
+        "best_host_normalized_margin": 0.09557661927330174,
+        "floater": 3,
+        "insertable": true,
+        "masks": [
+          148,
+          32,
+          3,
+          320
+        ],
+        "radius_one": {
+          "best_normalized_slack": 0.04897314375987362,
+          "best_witness": {
+            "floater_host": 0,
+            "masks": [
+              152,
+              32,
+              3,
+              324
+            ],
+            "matching": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "move_destination": 3,
+            "move_source": 0,
+            "moved_good": 2,
+            "normalized_minimum_slack": 0.04897314375987362
+          },
+          "candidate_partition_count": 91,
+          "completable_partition_count": 23,
+          "completion_witnesses": [
+            {
+              "floater_host": 0,
+              "masks": [
+                152,
+                36,
+                3,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                152,
+                32,
+                7,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 721,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.020339652448657188
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                152,
+                32,
+                3,
+                324
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 186,
+                  "target_bundle": 0
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.04897314375987362
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                140,
+                48,
+                3,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                140,
+                32,
+                19,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 721,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.020339652448657188
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                140,
+                32,
+                3,
+                336
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 105,
+                  "target_bundle": 0
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.02764612954186414
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                28,
+                160,
+                3,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 7,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 0,
+              "masks": [
+                28,
+                32,
+                3,
+                448
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 0,
+                  "row_total": 3798,
+                  "slack": 3,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 7,
+              "normalized_minimum_slack": 0.0007898894154818325
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                148,
+                40,
+                3,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": null,
+              "move_source": null,
+              "moved_good": null,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                144,
+                40,
+                7,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 721,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.020339652448657188
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                144,
+                40,
+                3,
+                324
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                132,
+                40,
+                19,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 721,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.020339652448657188
+            },
+            {
+              "floater_host": 1,
+              "masks": [
+                20,
+                40,
+                131,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 721,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 7,
+              "normalized_minimum_slack": 0.020339652448657188
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                148,
+                32,
+                11,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 3,
+                  "row_total": 35448,
+                  "slack": 721,
+                  "target_bundle": 2
+                }
+              ],
+              "move_destination": null,
+              "move_source": null,
+              "moved_good": null,
+              "normalized_minimum_slack": 0.020339652448657188
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                144,
+                36,
+                11,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 573,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.01967854935091696
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                144,
+                32,
+                11,
+                324
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 0,
+                  "row_total": 3798,
+                  "slack": 96,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 3,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.02527646129541864
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                132,
+                48,
+                11,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 573,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.01967854935091696
+            },
+            {
+              "floater_host": 2,
+              "masks": [
+                20,
+                160,
+                11,
+                320
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 573,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 7,
+              "normalized_minimum_slack": 0.01967854935091696
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                148,
+                32,
+                3,
+                328
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 1,
+                  "row_total": 3798,
+                  "slack": 105,
+                  "target_bundle": 0
+                }
+              ],
+              "move_destination": null,
+              "move_source": null,
+              "moved_good": null,
+              "normalized_minimum_slack": 0.02764612954186414
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                144,
+                36,
+                3,
+                328
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                144,
+                32,
+                7,
+                328
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 0,
+                  "row_total": 3798,
+                  "slack": 113,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 2,
+              "normalized_minimum_slack": 0.02975250131648236
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                132,
+                48,
+                3,
+                328
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 2,
+                  "row_total": 29118,
+                  "slack": 358,
+                  "target_bundle": 1
+                }
+              ],
+              "move_destination": 1,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.012294800467065046
+            },
+            {
+              "floater_host": 3,
+              "masks": [
+                132,
+                32,
+                19,
+                328
+              ],
+              "matching": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "minimum_constraints": [
+                {
+                  "agent": 0,
+                  "row_total": 3798,
+                  "slack": 62,
+                  "target_bundle": 3
+                }
+              ],
+              "move_destination": 2,
+              "move_source": 0,
+              "moved_good": 4,
+              "normalized_minimum_slack": 0.016324381253291206
+            }
+          ]
+        },
+        "utilities": [
+          2077,
+          1058,
+          8909,
+          9694
+        ]
+      }
+    ]
+  },
+  "meaning": "A counterexample refutes the maximum-Nash radius-one Hall selector, not complete additive EFX.",
+  "random_seed": 17,
+  "schema": "partial-hall-maximality-anneal-v1",
+  "seed_path": "results/partial_hall_radius_one_2321_lra_compact.json",
+  "seed_sha256": "aab6cd0ba64549c22f223a2b5bd67926d6e9c11ae22b8f7bc3eb3872ad4de184",
+  "status": "NO_COUNTEREXAMPLE",
+  "values": [
+    [
+      202,
+      87,
+      568,
+      551,
+      619,
+      28,
+      845,
+      890,
+      8
+    ],
+    [
+      448,
+      494,
+      321,
+      240,
+      76,
+      1058,
+      127,
+      632,
+      402
+    ],
+    [
+      5093,
+      3816,
+      244,
+      215,
+      2171,
+      8551,
+      2365,
+      2902,
+      3761
+    ],
+    [
+      4209,
+      4764,
+      788,
+      1250,
+      4009,
+      8920,
+      4969,
+      1814,
+      4725
+    ]
+  ]
+}

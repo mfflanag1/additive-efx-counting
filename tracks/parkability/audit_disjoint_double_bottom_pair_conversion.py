@@ -38,7 +38,7 @@ def load(path: Path):
 
 def audit_z3(path, encoding, source_hash=None):
     payload = load(path)
-    formula = path.parent / Path(payload["smt2_path"]).name
+    formula = Path(payload["smt2_path"])
     if (
         payload.get("schema") != "bottom-pattern-conversion-selector-lra-v1"
         or payload.get("status") != "UNSAT_CANDIDATE"
@@ -71,7 +71,7 @@ def audit_z3(path, encoding, source_hash=None):
 def audit_cvc5(path, normalization_path, sorting):
     payload = load(path)
     normalization = load(normalization_path)
-    formula = path.parent / Path(payload["formula"]).name
+    formula = Path(payload["formula"])
     if (
         payload.get("schema") != "external-smt-replay-v1"
         or payload.get("solver_interface") != "cvc5"
@@ -96,7 +96,7 @@ def audit_cvc5(path, normalization_path, sorting):
 
 def audit_cpc(path, cvc5):
     payload = load(path)
-    proof = path.parent / Path(payload["proof"]).name
+    proof = Path(payload["proof"])
     if (
         payload.get("schema") != "cvc5-cpc-ethos-certificate-v1"
         or payload.get("verified") is not True
@@ -125,7 +125,7 @@ def audit_cpc(path, cvc5):
 def audit_core(path, analysis_path):
     payload = load(path)
     analysis = load(analysis_path)
-    formula = path.parent / Path(payload["formula"]).name
+    formula = Path(payload["formula"])
     if (
         payload.get("schema") != "bottom-pattern-conversion-core-lra-v1"
         or payload.get("status") != "CORE_UNSAT_CANDIDATE"

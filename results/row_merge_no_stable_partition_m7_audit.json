@@ -1,0 +1,466 @@
+{
+  "base_agent": 2,
+  "claim": "No unlabeled partition supports EFX at both endpoints, while two exact allocation intervals cover the entire row merge.",
+  "claim_boundary": "This refutes the fixed-partition row-merge conjecture. It does not refute row-merge continuation with changing partitions or complete additive EFX existence.",
+  "full_path_partition_count": 0,
+  "m": 7,
+  "merged_endpoint_allocation_count": 32,
+  "merged_endpoint_partition_count": 8,
+  "merged_endpoint_partitions": [
+    {
+      "partition": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    }
+  ],
+  "merged_endpoint_values": [
+    [
+      1338,
+      49,
+      28,
+      2676,
+      7,
+      4070,
+      1352
+    ],
+    [
+      1293,
+      56,
+      8,
+      2674,
+      1365,
+      4087,
+      1397
+    ],
+    [
+      2,
+      8,
+      12,
+      30,
+      652,
+      9,
+      647
+    ],
+    [
+      2,
+      8,
+      12,
+      30,
+      652,
+      9,
+      647
+    ]
+  ],
+  "moving_agent": 3,
+  "n": 4,
+  "path_greedy_cover": [
+    {
+      "assignment": [
+        3,
+        2,
+        1,
+        1,
+        3,
+        0,
+        2
+      ],
+      "lower": {
+        "decimal": 0.0,
+        "denominator": 1,
+        "exact": "0",
+        "numerator": 0
+      },
+      "upper": {
+        "decimal": 0.3378451543042772,
+        "denominator": 1847,
+        "exact": "624/1847",
+        "numerator": 624
+      }
+    },
+    {
+      "assignment": [
+        3,
+        2,
+        2,
+        1,
+        3,
+        0,
+        2
+      ],
+      "lower": {
+        "decimal": 0.16129032258064516,
+        "denominator": 31,
+        "exact": "5/31",
+        "numerator": 5
+      },
+      "upper": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      }
+    }
+  ],
+  "path_greedy_cover_size": 2,
+  "path_supporting_interval_count": 60,
+  "path_union_components": [
+    {
+      "lower": {
+        "decimal": 0.0,
+        "denominator": 1,
+        "exact": "0",
+        "numerator": 0
+      },
+      "upper": {
+        "decimal": 1.0,
+        "denominator": 1,
+        "exact": "1",
+        "numerator": 1
+      }
+    }
+  ],
+  "schema": "row-merge-no-stable-partition-audit-v1",
+  "shared_endpoint_partition_count": 0,
+  "source": "results/row_merge_no_stable_partition_m7_witness.json",
+  "source_sha256": "01adc70772a566f98f5783ea6dcf453828680d711c5a3a398d2aee2ca46d428d",
+  "status": "NO_STABLE_PARTITION_AUDITED",
+  "target_endpoint_allocation_count": 24,
+  "target_endpoint_partition_count": 9,
+  "target_endpoint_partitions": [
+    {
+      "partition": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          4,
+          6
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 1
+    },
+    {
+      "partition": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 2
+    },
+    {
+      "partition": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 1
+    },
+    {
+      "partition": [
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 2
+    },
+    {
+      "partition": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2,
+          6
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 4
+    },
+    {
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 6
+    },
+    {
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 2
+    },
+    {
+      "partition": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "supporting_matching_count": 2
+    }
+  ]
+}

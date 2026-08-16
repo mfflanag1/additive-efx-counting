@@ -1,0 +1,247 @@
+{
+  "all_direct_insertions_avoid_host_pair": true,
+  "all_direct_insertions_blocked": true,
+  "base_is_eligible_one_floater_efx": true,
+  "claim_boundary": "This refutes direct-insertion pair extraction only. It does not refute pair extraction with one old-good transfer or complete EFX.",
+  "direct_insertion_graphs": [
+    {
+      "graph": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0
+        ]
+      ],
+      "hall_witnesses": [
+        {
+          "agents": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "neighbors": [
+            0,
+            1,
+            3
+          ]
+        }
+      ],
+      "host": 0,
+      "host_pair_witnesses": [],
+      "masks": [
+        259,
+        12,
+        48,
+        192
+      ],
+      "perfect_matching_count": 0
+    },
+    {
+      "graph": [
+        [
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "hall_witnesses": [
+        {
+          "agents": [
+            0,
+            1,
+            2
+          ],
+          "neighbors": [
+            1,
+            3
+          ]
+        },
+        {
+          "agents": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "neighbors": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "host": 1,
+      "host_pair_witnesses": [],
+      "masks": [
+        3,
+        268,
+        48,
+        192
+      ],
+      "perfect_matching_count": 0
+    },
+    {
+      "graph": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2
+        ]
+      ],
+      "hall_witnesses": [
+        {
+          "agents": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "neighbors": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "host": 2,
+      "host_pair_witnesses": [],
+      "masks": [
+        3,
+        12,
+        304,
+        192
+      ],
+      "perfect_matching_count": 0
+    },
+    {
+      "graph": [
+        [
+          1,
+          3
+        ],
+        [
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "hall_witnesses": [
+        {
+          "agents": [
+            0,
+            1,
+            2
+          ],
+          "neighbors": [
+            1,
+            3
+          ]
+        },
+        {
+          "agents": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "neighbors": [
+            1,
+            2,
+            3
+          ]
+        }
+      ],
+      "host": 3,
+      "host_pair_witnesses": [],
+      "masks": [
+        3,
+        12,
+        48,
+        448
+      ],
+      "perfect_matching_count": 0
+    }
+  ],
+  "direct_only_conjecture_refuted": true,
+  "one_old_good_move_completion": {
+    "floater_host": 0,
+    "graph": [
+      [
+        1
+      ],
+      [
+        0,
+        1,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "masks": [
+      258,
+      13,
+      48,
+      192
+    ],
+    "matching": [
+      1,
+      0,
+      3,
+      2
+    ],
+    "move_destination": 1,
+    "move_source": 0,
+    "moved_good": 0
+  },
+  "radius_one_completion_exists": true,
+  "schema": "partial-hall-direct-pair-counterexample-audit-v1",
+  "source": "results/partial_hall_direct_pair_extraction_counterexample.json",
+  "source_sha256": "0eb0653d15e7e88ef166664bf509ddb808911f7967bba92777e831a14b702cdd"
+}

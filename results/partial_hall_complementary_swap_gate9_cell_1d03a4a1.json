@@ -1,0 +1,424 @@
+{
+  "candidate_partition_count": 91,
+  "deletion_irreducible_unsat_core": [
+    {
+      "agent": 0,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_2"
+    },
+    {
+      "agent": 1,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_12"
+    },
+    {
+      "agent": 1,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_13"
+    },
+    {
+      "agent": 2,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_22"
+    },
+    {
+      "agent": 3,
+      "good": 6,
+      "kind": "strict_positivity",
+      "label": "track_37"
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_223",
+      "left_mask": 32,
+      "right_mask": 24
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_401",
+      "left_mask": 81,
+      "right_mask": 8
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_477",
+      "left_mask": 144,
+      "right_mask": 8
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_591",
+      "left_mask": 8,
+      "right_mask": 17
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_759",
+      "left_mask": 24,
+      "right_mask": 257
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_831",
+      "left_mask": 32,
+      "right_mask": 194
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4735",
+      "left_mask": 386,
+      "right_mask": 8
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5570",
+      "left_mask": 14,
+      "right_mask": 192
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5968",
+      "left_mask": 32,
+      "right_mask": 384
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_7465",
+      "left_mask": 344,
+      "right_mask": 129
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_7485",
+      "left_mask": 384,
+      "right_mask": 65
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8322",
+      "left_mask": 26,
+      "right_mask": 128
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8690",
+      "left_mask": 65,
+      "right_mask": 132
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8994",
+      "left_mask": 128,
+      "right_mask": 72
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_9995",
+      "left_mask": 17,
+      "right_mask": 32
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10109",
+      "left_mask": 32,
+      "right_mask": 258
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10155",
+      "left_mask": 50,
+      "right_mask": 260
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10667",
+      "left_mask": 258,
+      "right_mask": 48
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10689",
+      "left_mask": 336,
+      "right_mask": 1
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_10709",
+      "masks": [
+        81,
+        264,
+        132,
+        32
+      ],
+      "owner_distance": 6
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_10710",
+      "masks": [
+        96,
+        136,
+        17,
+        260
+      ],
+      "owner_distance": 5
+    },
+    {
+      "agent": 0,
+      "kind": "false_edge_witness",
+      "label": "track_12604",
+      "left_mask": 192,
+      "right_mask": 264
+    }
+  ],
+  "deletion_irreducible_unsat_core_size": 27,
+  "elapsed_seconds": 0.6035468578338623,
+  "eligible_comparison_count": 2030,
+  "eligible_state_count": 808,
+  "false_edge_witness_count": 608,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "ineligible_witness_count": 8638,
+  "maximality_menu": "results/partial_hall_complementary_swap_gate9.json",
+  "maximality_state_count": 2,
+  "maximum_owner_distance": null,
+  "meaning": "SAT would refute the normalized-utilitarian radius-one Hall selector; UNSAT eliminates only this frozen combinatorial cell. Neither outcome by itself refutes complete additive EFX.",
+  "menu_candidate_count": 9,
+  "menu_ineligible_count": 7,
+  "require_positive_complementary_sum": true,
+  "schema": "partial-hall-utilitarian-frozen-cell-v1",
+  "seed_path": "results/partial_hall_complementary_swap_gate8_counterexample.json",
+  "seed_sha256": "41451730f7fe7cb379c9c96b5fced5b61c97d8350eb9ae64e56f4b92a7ca677d",
+  "status": "UNSAT",
+  "timeout_seconds": 120.0,
+  "true_edge_comparison_count": 1794,
+  "unsat_core": [
+    {
+      "agent": 0,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_2"
+    },
+    {
+      "agent": 1,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_12"
+    },
+    {
+      "agent": 1,
+      "good": 2,
+      "kind": "strict_positivity",
+      "label": "track_13"
+    },
+    {
+      "agent": 2,
+      "good": 1,
+      "kind": "strict_positivity",
+      "label": "track_22"
+    },
+    {
+      "agent": 3,
+      "good": 6,
+      "kind": "strict_positivity",
+      "label": "track_37"
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_223",
+      "left_mask": 32,
+      "right_mask": 24
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_401",
+      "left_mask": 81,
+      "right_mask": 8
+    },
+    {
+      "agent": 0,
+      "kind": "eligible_comparison",
+      "label": "track_477",
+      "left_mask": 144,
+      "right_mask": 8
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_591",
+      "left_mask": 8,
+      "right_mask": 17
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_759",
+      "left_mask": 24,
+      "right_mask": 257
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_831",
+      "left_mask": 32,
+      "right_mask": 194
+    },
+    {
+      "agent": 0,
+      "kind": "ineligible_witness",
+      "label": "track_4735",
+      "left_mask": 386,
+      "right_mask": 8
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5570",
+      "left_mask": 14,
+      "right_mask": 192
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5968",
+      "left_mask": 32,
+      "right_mask": 384
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_7465",
+      "left_mask": 344,
+      "right_mask": 129
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_7485",
+      "left_mask": 384,
+      "right_mask": 65
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8322",
+      "left_mask": 26,
+      "right_mask": 128
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8690",
+      "left_mask": 65,
+      "right_mask": 132
+    },
+    {
+      "agent": 2,
+      "kind": "ineligible_witness",
+      "label": "track_8994",
+      "left_mask": 128,
+      "right_mask": 72
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_9995",
+      "left_mask": 17,
+      "right_mask": 32
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10109",
+      "left_mask": 32,
+      "right_mask": 258
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10155",
+      "left_mask": 50,
+      "right_mask": 260
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10667",
+      "left_mask": 258,
+      "right_mask": 48
+    },
+    {
+      "agent": 3,
+      "kind": "ineligible_witness",
+      "label": "track_10689",
+      "left_mask": 336,
+      "right_mask": 1
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_10709",
+      "masks": [
+        81,
+        264,
+        132,
+        32
+      ],
+      "owner_distance": 6
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_10710",
+      "masks": [
+        96,
+        136,
+        17,
+        260
+      ],
+      "owner_distance": 5
+    },
+    {
+      "agent": 0,
+      "kind": "false_edge_witness",
+      "label": "track_12604",
+      "left_mask": 192,
+      "right_mask": 264
+    }
+  ],
+  "unsat_core_size": 27
+}

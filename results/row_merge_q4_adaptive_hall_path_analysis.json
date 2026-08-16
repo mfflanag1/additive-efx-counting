@@ -1,0 +1,2847 @@
+{
+  "claim_boundary": "The selector is existential and recomputes a Hall blocker after each move. Finite-corpus coverage is not a universal lemma, does not prove the row-merge continuation claim, and does not prove complete additive EFX.",
+  "covered_distinct_generic_model_count": 20,
+  "distinct_generic_model_count": 25,
+  "domain": "frozen exact integer models in one generic q=4 row-merge cell",
+  "fixed_post_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "fixed_wall_graph": [
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "generic_model_occurrence_count": 26,
+  "initial_hole_bundle": 0,
+  "interpretation": "This is exact finite-trace evidence for an adaptive Hall-guided exchange mechanism. Coverage means every frozen generic adversarial valuation has at least one such path of at most three transfers.",
+  "maximum_transfer_depth": 3,
+  "models": [
+    {
+      "adaptive_path_count": 7,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "90475ea31b918e939c11d7ef1a621d7bdb1c2c5af8568aa64b363a2ed66a008f",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_path32_plus_base_cap20_gate.json",
+          "source_sha256": "59914b83dbb992808bfdfb1e87644600be9c1d5d745eb358139b0a0b6f99baae"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 7,
+            "hall_agents": [
+              0,
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 5,
+        "3": 2
+      },
+      "supporting_partition_count": 7,
+      "terminal_failure_histogram": {
+        "depth_limit": 3,
+        "no_hall_neighborhood_move": 7
+      },
+      "visited_state_count": 23,
+      "wall_values_sha256": "02ec9153794ae503259d79aa8cdd46a02c63d21344bb2671d6c79c3f57bda9eb"
+    },
+    {
+      "adaptive_path_count": 5,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "64773e758e8efb0677660fa96193cf5878cc7504e687fb628eaff26ad3b865aa",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 11,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          2
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 4,
+        "3": 1
+      },
+      "supporting_partition_count": 5,
+      "terminal_failure_histogram": {
+        "depth_limit": 18,
+        "no_hall_neighborhood_move": 5
+      },
+      "visited_state_count": 40,
+      "wall_values_sha256": "17380f7d32e9e261de56a3f308e30dc2a9ff497d5cdc605399d279a5b106790a"
+    },
+    {
+      "adaptive_path_count": 0,
+      "minimum_success_depth": null,
+      "post_values_sha256": "85e469035f88a5f619904713b77c1645890597b866594ac0fa24216d1e742c8f",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 3,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+          "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+        }
+      ],
+      "sample_success": null,
+      "success_depth_histogram": {},
+      "supporting_partition_count": 0,
+      "terminal_failure_histogram": {
+        "depth_limit": 10,
+        "no_hall_neighborhood_move": 9
+      },
+      "visited_state_count": 26,
+      "wall_values_sha256": "1992895408efe212e4e8bdf810457c51737e9127ce3ec223a1e45f3692c9911b"
+    },
+    {
+      "adaptive_path_count": 4,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "6bf999ad59b8f1bbbf8b1dd001e419cd8f7c028ae81acd29f4b210f9ccb4c587",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 4,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          2
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 8,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 3,
+        "3": 1
+      },
+      "supporting_partition_count": 4,
+      "terminal_failure_histogram": {
+        "depth_limit": 11,
+        "no_hall_neighborhood_move": 5
+      },
+      "visited_state_count": 28,
+      "wall_values_sha256": "1cb2b004d082a342b887163a340cfdecd86892cb61cd86a1f8bd5c17a0663b8a"
+    },
+    {
+      "adaptive_path_count": 5,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "4ba95e58c3168cb24617aab1ec91e3c8661d83d23d7a69966cd6f6a1fcceccd0",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 7,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 7,
+            "hall_agents": [
+              0,
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 5
+      },
+      "supporting_partition_count": 5,
+      "terminal_failure_histogram": {
+        "depth_limit": 5,
+        "no_hall_neighborhood_move": 6
+      },
+      "visited_state_count": 21,
+      "wall_values_sha256": "2557f8648b59b90991759c05dbe1816e5711f50ab35a71681d652d0b41e27ef7"
+    },
+    {
+      "adaptive_path_count": 3,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "4dec1aa480ecb029207f2c0f16e58a20f60bd191f8dcb286b93b65038a626dec",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 8,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          4
+        ],
+        "matching_count": 3,
+        "moves": [
+          {
+            "good": 4,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              1,
+              3
+            ],
+            "source": 3,
+            "target": 2
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 3
+      },
+      "supporting_partition_count": 3,
+      "terminal_failure_histogram": {
+        "depth_limit": 12,
+        "no_hall_neighborhood_move": 5
+      },
+      "visited_state_count": 28,
+      "wall_values_sha256": "321cc3e378d564d547a73feb66f97bcc756950771264079b8b1dbe1c8bae710d"
+    },
+    {
+      "adaptive_path_count": 3,
+      "minimum_success_depth": 3,
+      "post_values_sha256": "3ff35af68a4b497d5075657f09f0c36cc42b5585c47d8918f12193c51e67cb43",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 1,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+          "source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          4,
+          2
+        ],
+        "matching_count": 6,
+        "moves": [
+          {
+            "good": 4,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "3": 3
+      },
+      "supporting_partition_count": 3,
+      "terminal_failure_histogram": {
+        "depth_limit": 17,
+        "no_hall_neighborhood_move": 13
+      },
+      "visited_state_count": 47,
+      "wall_values_sha256": "59eec1821c75fa1ae96b91defc90e51fe2a66c434ae910e5b3e488a5f0a141f0"
+    },
+    {
+      "adaptive_path_count": 6,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "acee3bd0242ac12492bf4041a837ef8df9f4af05b88d70bd53d7bf3eb87cd947",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 10,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          4,
+          4
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 4,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              2,
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 4,
+        "3": 2
+      },
+      "supporting_partition_count": 6,
+      "terminal_failure_histogram": {
+        "depth_limit": 5,
+        "no_hall_neighborhood_move": 8
+      },
+      "visited_state_count": 26,
+      "wall_values_sha256": "5a6d71aa4dfdd1307112971ca70b519c68510f4b8bef5403a5d1828b1da38436"
+    },
+    {
+      "adaptive_path_count": 14,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "692fbb24b61537d82e324ff3d555668767ded3979eb2a5ceefe654a8aa554ef1",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_cycle023_plus_base_cap20_gate.json",
+          "source_sha256": "d01e016ff7da5d52f1e99ac0c8fecbad240577d4b348c209581eb2e990ebf9e7"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 2,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              0,
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 11,
+        "3": 3
+      },
+      "supporting_partition_count": 14,
+      "terminal_failure_histogram": {
+        "no_hall_neighborhood_move": 4
+      },
+      "visited_state_count": 24,
+      "wall_values_sha256": "6a3fa452aa194cd398205dc36e29190e89f23fa70a940d28b9aa7814bc0ea7c0"
+    },
+    {
+      "adaptive_path_count": 0,
+      "minimum_success_depth": null,
+      "post_values_sha256": "5006ac35055279712a482b348a5dae56119e94737cde5ffa3c2780dd2ea4d725",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 1,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+          "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+        }
+      ],
+      "sample_success": null,
+      "success_depth_histogram": {},
+      "supporting_partition_count": 0,
+      "terminal_failure_histogram": {
+        "depth_limit": 10,
+        "no_hall_neighborhood_move": 10
+      },
+      "visited_state_count": 28,
+      "wall_values_sha256": "709ad809cc855c2c2f2acbcb9625b96272040cc38a214b743bb9aae83d65e84b"
+    },
+    {
+      "adaptive_path_count": 0,
+      "minimum_success_depth": null,
+      "post_values_sha256": "d1d7ddb481fbc760c89c98f00746bab96d41e4dc427cb093c2b3f4b825e8ebbf",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_cycle023_both_plus_base_cap20_gate.json",
+          "source_sha256": "b07f8ef8897c91487d4becf9d14cb24cc1ab365b8104935432ae91ece217d5c3"
+        }
+      ],
+      "sample_success": null,
+      "success_depth_histogram": {},
+      "supporting_partition_count": 0,
+      "terminal_failure_histogram": {
+        "depth_limit": 13,
+        "no_hall_neighborhood_move": 12
+      },
+      "visited_state_count": 34,
+      "wall_values_sha256": "753595593fb8f94e214b96ea816a2818682a73fcb6d039dc5262e7cd862de9db"
+    },
+    {
+      "adaptive_path_count": 4,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "30598bb24aeaa5aff2783b730ee13eb4e0210fb3a7edf95559a30acc0cfc82b6",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 1,
+          "source": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+          "source_sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 5,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "hall_agents": [
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 4
+      },
+      "supporting_partition_count": 4,
+      "terminal_failure_histogram": {
+        "depth_limit": 4,
+        "no_hall_neighborhood_move": 13
+      },
+      "visited_state_count": 28,
+      "wall_values_sha256": "788a81f2353b14e7dc4ce16b8f94f1cedf0fb471ef79bf17d77a450e31a16a25"
+    },
+    {
+      "adaptive_path_count": 12,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "fb0462a959275409aaca1e2535b588ecc1d7d42c76121fb54aa3dc0bd10bc89e",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 0,
+          "source": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+          "source_sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+        },
+        {
+          "corpus": "ranked_path",
+          "round": 0,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 2,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              0,
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 10,
+        "3": 2
+      },
+      "supporting_partition_count": 12,
+      "terminal_failure_histogram": {
+        "depth_limit": 1,
+        "no_hall_neighborhood_move": 4
+      },
+      "visited_state_count": 22,
+      "wall_values_sha256": "9536b3471b3e01603971dbed757b0d1d3df8ec02b76e03dd8d148a054c625fda"
+    },
+    {
+      "adaptive_path_count": 6,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "0afe50e0b39e067ada54b3de181e5479a00b0a41e6a364691fd3f5c51338d051",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 6,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3,
+          3
+        ],
+        "matching_count": 3,
+        "moves": [
+          {
+            "good": 4,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 2,
+            "hall_agents": [
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              2,
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 3,
+        "3": 3
+      },
+      "supporting_partition_count": 6,
+      "terminal_failure_histogram": {
+        "depth_limit": 2,
+        "no_hall_neighborhood_move": 8
+      },
+      "visited_state_count": 21,
+      "wall_values_sha256": "9afd834e76939f4cbedbb79a0e456e829e1049691bdf9315eb28888b15cd6bec"
+    },
+    {
+      "adaptive_path_count": 3,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "9790b321a09aa2b9ca7d05b8876c4067a0bdc60470eeab479bba689908576607",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool60.json",
+          "source_sha256": "bfbea59a2555a886889f86f85766ce1d7cf2e023887d5ea2f3c6c034bb1ef71c"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          4
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 5,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 7,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              1,
+              3
+            ],
+            "source": 3,
+            "target": 2
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 2,
+        "3": 1
+      },
+      "supporting_partition_count": 3,
+      "terminal_failure_histogram": {
+        "depth_limit": 13,
+        "no_hall_neighborhood_move": 8
+      },
+      "visited_state_count": 34,
+      "wall_values_sha256": "a22f5432f7559ae8e800720816387ccc632aca36ce259d2caf22efef92a0f491"
+    },
+    {
+      "adaptive_path_count": 7,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "5ea127bae0ca294087e426d354ecf9b4e7d9c8f9921a9f2d49af1d20daec8b8e",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json",
+          "source_sha256": "3dc7486e735e538c9b6721e997403e1b0c7d975dff4ea892a8cb65493f658a48"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          2
+        ],
+        "matching_count": 4,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 7,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 5,
+        "3": 2
+      },
+      "supporting_partition_count": 7,
+      "terminal_failure_histogram": {
+        "depth_limit": 5,
+        "no_hall_neighborhood_move": 5
+      },
+      "visited_state_count": 23,
+      "wall_values_sha256": "a2e7ba6bb9dff89db7c1bb9bea037e73f1cd48da53aec9355069e537db94c340"
+    },
+    {
+      "adaptive_path_count": 3,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "308ba8aa9979e6eca84f00f09ca2d90bbb3f40628a8740fbba6d1ab67d7d6d37",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 2,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 5,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "hall_agents": [
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 3
+      },
+      "supporting_partition_count": 3,
+      "terminal_failure_histogram": {
+        "depth_limit": 10,
+        "no_hall_neighborhood_move": 10
+      },
+      "visited_state_count": 31,
+      "wall_values_sha256": "c08b3fd8536baf209b66229d16f9e038f2d65f45c97edc27a78317a2f52fe57c"
+    },
+    {
+      "adaptive_path_count": 3,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "1cd690b14c27b94cd06ab3720b14fa1da54bde7320077426df7d82226ad9ba99",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 9,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          2
+        ],
+        "matching_count": 4,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 3
+      },
+      "supporting_partition_count": 3,
+      "terminal_failure_histogram": {
+        "depth_limit": 10,
+        "no_hall_neighborhood_move": 6
+      },
+      "visited_state_count": 26,
+      "wall_values_sha256": "c8a89d54843913bf265cd3f3255849580d522a900d15d47c576f7881c7b4f410"
+    },
+    {
+      "adaptive_path_count": 4,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "91572b0f75a1e13ac046558dc5ffb943f01d91fb930f80cf4792d14e5c8b32f4",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 2,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+          "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3,
+          2
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 5,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "hall_agents": [
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 2,
+        "3": 2
+      },
+      "supporting_partition_count": 4,
+      "terminal_failure_histogram": {
+        "depth_limit": 14,
+        "no_hall_neighborhood_move": 11
+      },
+      "visited_state_count": 40,
+      "wall_values_sha256": "ca48a00a37a624c60da040755cf816a96be38108d43697511fdc2ad08a5a4046"
+    },
+    {
+      "adaptive_path_count": 3,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "5da74e377ace63cd254a167b70e64112767df0d5d2bb298d182abfec5f32db75",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 0,
+          "source": "results/row_merge_q4_path32_all_lengths_plus_base_cap20_gate.json",
+          "source_sha256": "3937657361a086d76c012d4c9e07b2814b5afef2f9974169fcc421c00a303587"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          4
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 4,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              0,
+              1,
+              3
+            ],
+            "source": 1,
+            "target": 2
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 3
+      },
+      "supporting_partition_count": 3,
+      "terminal_failure_histogram": {
+        "depth_limit": 10,
+        "no_hall_neighborhood_move": 12
+      },
+      "visited_state_count": 34,
+      "wall_values_sha256": "cd70b3515abdce18ceb734e7ab5c63687277c7d7b3cb2a0af682320dbf1ed560"
+    },
+    {
+      "adaptive_path_count": 6,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "82d0ec232b99fd7be1b556507e93c5bd51f787195142dc4a4aee5ec179c37ddd",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 2,
+          "source": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+          "source_sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          2
+        ],
+        "matching_count": 1,
+        "moves": [
+          {
+            "good": 2,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 4,
+        "3": 2
+      },
+      "supporting_partition_count": 6,
+      "terminal_failure_histogram": {
+        "depth_limit": 6,
+        "no_hall_neighborhood_move": 8
+      },
+      "visited_state_count": 27,
+      "wall_values_sha256": "df4f15eec21e741a518e5a5ee1e0b1fd2d70cfd9d28061487d8c1a748328a683"
+    },
+    {
+      "adaptive_path_count": 0,
+      "minimum_success_depth": null,
+      "post_values_sha256": "d0401326c46c8ca23cc1739a5f9b5db0c513c8c44c89cc19b00a6c81313944ee",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 5,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": null,
+      "success_depth_histogram": {},
+      "supporting_partition_count": 0,
+      "terminal_failure_histogram": {
+        "depth_limit": 6,
+        "no_hall_neighborhood_move": 7
+      },
+      "visited_state_count": 19,
+      "wall_values_sha256": "e6ebb1087b68a1095e3b3a196a766ddb0d4dd9a970a9c4c739456d8e03d65ef6"
+    },
+    {
+      "adaptive_path_count": 7,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "0754a2a3aa3b5c7d564798d28acf244673c769b7961d811dba6b6c557806ec58",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 3,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          2
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 3,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 1,
+            "target": 0
+          },
+          {
+            "good": 8,
+            "hall_agents": [
+              1,
+              3
+            ],
+            "hall_neighbors": [
+              3
+            ],
+            "source": 3,
+            "target": 1
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            6,
+            7
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 6,
+        "3": 1
+      },
+      "supporting_partition_count": 7,
+      "terminal_failure_histogram": {
+        "depth_limit": 6,
+        "no_hall_neighborhood_move": 5
+      },
+      "visited_state_count": 25,
+      "wall_values_sha256": "e9cafebfecb28f04b5b9bcd85477b93b5ba03b49909b76e710524c42d98dc561"
+    },
+    {
+      "adaptive_path_count": 2,
+      "minimum_success_depth": 2,
+      "post_values_sha256": "3a0eacb41b57d760b5e4b242d5c9b9b88ad33e6171075b564a0011396df9c4f2",
+      "provenance": [
+        {
+          "corpus": "ranked_path",
+          "round": 1,
+          "source": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+          "source_sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+        }
+      ],
+      "sample_success": {
+        "blocker_size_sequence": [
+          4,
+          3
+        ],
+        "matching_count": 2,
+        "moves": [
+          {
+            "good": 5,
+            "hall_agents": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              2,
+              3
+            ],
+            "source": 2,
+            "target": 0
+          },
+          {
+            "good": 6,
+            "hall_agents": [
+              1,
+              2,
+              3
+            ],
+            "hall_neighbors": [
+              1,
+              3
+            ],
+            "source": 3,
+            "target": 2
+          }
+        ],
+        "partition": [
+          [
+            0,
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ]
+      },
+      "success_depth_histogram": {
+        "2": 2
+      },
+      "supporting_partition_count": 2,
+      "terminal_failure_histogram": {
+        "depth_limit": 13,
+        "no_hall_neighborhood_move": 10
+      },
+      "visited_state_count": 34,
+      "wall_values_sha256": "e9f48c4612d16f03d38cb26840b47916e0c032a7ab4231cc8363685fd7831536"
+    },
+    {
+      "adaptive_path_count": 0,
+      "minimum_success_depth": null,
+      "post_values_sha256": "c079b71445166075ecf11dd5ddb93f8fa20e89df29a3a0b0125b863ad2597338",
+      "provenance": [
+        {
+          "corpus": "topology_mining",
+          "round": 3,
+          "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+          "source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+        }
+      ],
+      "sample_success": null,
+      "success_depth_histogram": {},
+      "supporting_partition_count": 0,
+      "terminal_failure_histogram": {
+        "depth_limit": 14,
+        "no_hall_neighborhood_move": 12
+      },
+      "visited_state_count": 35,
+      "wall_values_sha256": "f6695f3a381924a8cccd2162130670510fdb9f856897ea6505e81738f145634a"
+    }
+  ],
+  "move_rule": "At an unmatched labeled partition, choose an inclusion-minimal Hall-deficient agent set whose neighborhood omits the current hole; move one good from a non-singleton bundle in that neighborhood into the hole, then make the source the new hole. Sources are distinct, and the initial hole is never used as a source.",
+  "non_generic_model_occurrence_count": 12,
+  "non_generic_models": [
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+        "source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_cegar.json",
+        "source_sha256": "02015e0ed81c43d3d85900b3e462cf8c280cafb7f27e83ed60e7e2ef99ae473e"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 1,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_cegar.json",
+        "source_sha256": "02015e0ed81c43d3d85900b3e462cf8c280cafb7f27e83ed60e7e2ef99ae473e"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+        "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 4,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+        "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 5,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+        "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 6,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+        "source_sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+        "source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 2,
+        "source": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+        "source_sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_all_three_cycles_plus_base_cap20_gate.json",
+        "source_sha256": "8f6fd94b0befeb9cd859e5908f4732e92a8a65be800564d1fc8a479b3bc3f81e"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_all_paths_start3_plus_base_cap20_gate.json",
+        "source_sha256": "ec86e5b71b2c74ad4d70854846726e9ab4fb31b303dd76c512ef36e4f6987f3e"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    },
+    {
+      "changed_edges": [
+        [
+          0,
+          0,
+          true,
+          false
+        ],
+        [
+          0,
+          3,
+          true,
+          false
+        ]
+      ],
+      "post_graph": [
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ],
+      "provenance": {
+        "corpus": "topology_mining",
+        "round": 0,
+        "source": "results/row_merge_q4_min_topology_cover_round2_plus_base_cap20_gate.json",
+        "source_sha256": "1ecba9677d6f47b6657018650a30367d71f22a0e83e14b84ceeffdfb063a3dcc"
+      },
+      "wall_graph": [
+        [
+          true,
+          true,
+          true,
+          true
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ],
+        [
+          false,
+          true,
+          true,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          true
+        ]
+      ]
+    }
+  ],
+  "raw_model_count": 38,
+  "schema": "row-merge-q4-adaptive-hall-path-analysis-v1",
+  "sources": [
+    {
+      "path": "results/row_merge_q4_all_paths_start3_plus_base_cap20_gate.json",
+      "sha256": "ec86e5b71b2c74ad4d70854846726e9ab4fb31b303dd76c512ef36e4f6987f3e"
+    },
+    {
+      "path": "results/row_merge_q4_all_three_cycles_plus_base_cap20_gate.json",
+      "sha256": "8f6fd94b0befeb9cd859e5908f4732e92a8a65be800564d1fc8a479b3bc3f81e"
+    },
+    {
+      "path": "results/row_merge_q4_chain_topology_mining_final_analysis.json",
+      "sha256": "a8ca08b2715b2fced4a58cc51522f140cb17c9bbf95b9551e7440dd44b4e8d87"
+    },
+    {
+      "path": "results/row_merge_q4_cycle023_both_plus_base_cap20_gate.json",
+      "sha256": "b07f8ef8897c91487d4becf9d14cb24cc1ab365b8104935432ae91ece217d5c3"
+    },
+    {
+      "path": "results/row_merge_q4_cycle023_plus_base_cap20_gate.json",
+      "sha256": "d01e016ff7da5d52f1e99ac0c8fecbad240577d4b348c209581eb2e990ebf9e7"
+    },
+    {
+      "path": "results/row_merge_q4_min_topology_cover_plus_base_cap20_gate.json",
+      "sha256": "3dc7486e735e538c9b6721e997403e1b0c7d975dff4ea892a8cb65493f658a48"
+    },
+    {
+      "path": "results/row_merge_q4_min_topology_cover_round2_plus_base_cap20_gate.json",
+      "sha256": "1ecba9677d6f47b6657018650a30367d71f22a0e83e14b84ceeffdfb063a3dcc"
+    },
+    {
+      "path": "results/row_merge_q4_path32_all_lengths_plus_base_cap20_gate.json",
+      "sha256": "3937657361a086d76c012d4c9e07b2814b5afef2f9974169fcc421c00a303587"
+    },
+    {
+      "path": "results/row_merge_q4_path32_plus_base_cap20_gate.json",
+      "sha256": "59914b83dbb992808bfdfb1e87644600be9c1d5d745eb358139b0a0b6f99baae"
+    },
+    {
+      "path": "results/row_merge_q4_ranked_path_0003_generic_cap20_cegar.json",
+      "sha256": "7ac58cf062d9eea9144d9c48a14a3ccef3ebc9ce96bc8e22c29885e406ef14f5"
+    },
+    {
+      "path": "results/row_merge_q4_ranked_path_trace_union_generic_cap20_cegar.json",
+      "sha256": "cd764808262fbc487564dde1198ead201027339852a33f76256e7032c13990e5"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+      "sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_cegar.json",
+      "sha256": "02015e0ed81c43d3d85900b3e462cf8c280cafb7f27e83ed60e7e2ef99ae473e"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_ladder4.json",
+      "sha256": "54ad40d9e9c503224ac3655939d5b3956bcdedebcc12fba7f338cf2876cc0721"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool60.json",
+      "sha256": "bfbea59a2555a886889f86f85766ce1d7cf2e023887d5ea2f3c6c034bb1ef71c"
+    },
+    {
+      "path": "results/row_merge_q4_small_step_chain3_m9_graph1212_cap20_pool64.json",
+      "sha256": "29ec1cfab443eee6a177d04277b6f1ad8c5a8f756486c2e1bffc993389b2979d"
+    }
+  ],
+  "status": "ADAPTIVE_HALL_HOLE_PATH_HAS_FROZEN_COUNTERMODEL",
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "claim": "Replacing r in a nonsingleton host bundle by floater f preserves EFX and floater nonenvy when the host weakly prefers f to r and every other agent weakly prefers r to f; a strict host preference strictly increases Nash welfare.",
+  "claim_boundary": "This is one local exchange unit, not the covering argument needed to prove maximum-Nash completion or general complete EFX.",
+  "literal": {
+    "eligible_base_count": 3456,
+    "m": 4,
+    "n": 2,
+    "premise_exchange_count": 4032,
+    "profile_count": 256,
+    "status": "EXHAUSTIVE_LITERAL_AUDIT_PASSED",
+    "strict_exchange_count": 1344,
+    "value_domain": [
+      1,
+      2
+    ],
+    "verifier": "independent literal removed-good EFX expansion"
+  },
+  "schema": "safe-floater-exchange-lemma-audit-v1",
+  "scope": "The symbolic proof uses an aggregate for all untouched host goods, so it is independent of the number of goods and agents.",
+  "status": "PROVED_SYMBOLIC_SCALAR_SCHEMA_AND_EXHAUSTIVE_LITERAL_AUDIT",
+  "strict_smt2": "safe_floater_exchange_lemma_strict.smt2",
+  "strict_smt2_sha256": "900554cfe3d4682ac59bde562ef5f8c95e233c2d1f6100268884dfb9d6115714",
+  "symbolic": {
+    "negated_strict_nash_conclusion_status": "unsat",
+    "negated_weak_conclusion_status": "unsat",
+    "solver": {
+      "name": "z3",
+      "strict_logic": "QF_NRA",
+      "version": "5.0.0",
+      "weak_logic": "QF_LRA"
+    },
+    "weak_conclusions": [
+      "host_weakly_improves",
+      "host_does_not_envy_new_floater",
+      "other_observer_remove_new_floater",
+      "other_observer_remove_old_good",
+      "other_observer_does_not_envy_new_floater",
+      "host_retains_old_target_inequality"
+    ],
+    "weak_premise_status": "sat"
+  },
+  "weak_smt2": "safe_floater_exchange_lemma_weak.smt2",
+  "weak_smt2_sha256": "5b3085e4db3d8f9739f829602433e1779e5a697ce38076cc13c887f29440a092"
+}

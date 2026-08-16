@@ -1,0 +1,36 @@
+{
+  "schema": "partial-nash-local-trichotomy-gate-v1",
+  "status": "LOCAL_TRICHOTOMY_REFUTED",
+  "candidate_trichotomy": "Every eligible all-host-blocked state has either a strict bundle preference cycle or a source-good substitution followed by an eligible bundle rematching with larger Nash welfare.",
+  "finite_census": {
+    "artifact": "results/partial_nash_substitution_census.json",
+    "artifact_sha256": "e28e9f928e5b705faf9071363af96eafd320e917f20842143154d9cb35c782e9",
+    "eligible_state_count": 10777,
+    "all_host_blocked_state_count": 3714,
+    "strict_bundle_cycle_state_count": 1890,
+    "source_substitution_rescue_state_count": 1824,
+    "residual_state_count": 0
+  },
+  "exact_refutation": {
+    "source_model": "results/partial_nash_local_trichotomy_source0_session1.json",
+    "source_model_sha256": "f0c2759f52506de74721b3441f42efb68de3f90a8141222cd6465e2d5b3248e5",
+    "audit": "results/partial_nash_local_trichotomy_refutation_audit.json",
+    "audit_sha256": "a6af984d64450ae79a1777cecb189a1c1e72d65a8758ead3eab2add6c7dbd057",
+    "strict_bundle_cycle_count": 0,
+    "source_substitution_identity_count": 192,
+    "improving_source_substitution_count": 0,
+    "global_violating_rival_count": 1780,
+    "maximum_nash_counterexample": false
+  },
+  "solver_boundary": {
+    "source_0_first_status": "SAT_LOCAL_MODEL",
+    "source_0_continuation": "results/partial_nash_local_trichotomy_source0_session2.json",
+    "source_0_continuation_sha256": "033cd8145e91af86b5485d12d752dfcbede823a057f2931dc80b591d963fac3d",
+    "source_0_continuation_status": "unknown_timeout_at_244_rivals",
+    "source_1_status": "unknown_timeout_at_212_rivals",
+    "source_2_status": "unknown_timeout_at_212_rivals",
+    "source_3_status": "unknown_timeout_at_212_rivals"
+  },
+  "durable_conclusion": "The proved preference-path lemma remains valid, but no proof can close maximum-Nash completion using only strict bundle cycles and one source-good substitution/rematching. Global eligible rivals are essential.",
+  "claim_boundary": "The maximum-Nash completion conjecture and complete additive EFX remain open."
+}

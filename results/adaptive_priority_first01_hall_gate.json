@@ -1,0 +1,78 @@
+{
+  "schema": "adaptive-priority-first01-hall-gate-v1",
+  "status": "EXACT_FIXED_CELL_DIAGNOSTIC",
+  "n": 4,
+  "m": 9,
+  "seed_sha256": "f760920eca96d562864a00dadaa5af342a2aeed3f26369eacfdbd67a6382d44e",
+  "compact_core_sha256": "92240487e043ae981b4f1a640ff7208fe4400a234f664fcc8cce4a0550b1d717",
+  "inequality_core_sha256": "39b62e1749e0158a9cff0ce652ada95acb1c40b2fbb8deb6be10faa9fd315808",
+  "unit_propagation": {
+    "active_assumption_count": 53,
+    "simple_inequality_count": 30,
+    "disjunction_count": 23,
+    "solver_check_count": 1798,
+    "forced_disjunction_count": 2,
+    "round_count": 2,
+    "contradiction_found": false,
+    "forced": [
+      {
+        "assumption_index": 31,
+        "meaning": "the failed insertion of floater 3 into candidate-0 host bundle {5} is forced to be witnessed by agent 1 after removing floater 3",
+        "inequality": "v_1({0,1,8}) < v_1(5)"
+      },
+      {
+        "assumption_index": 104,
+        "meaning": "the first candidate-1 rival is forced to be eligible and lexicographically lower at first-priority agent 1",
+        "inequality": "v_1(1) < v_1(0) + v_1(2)"
+      }
+    ]
+  },
+  "hall_conflict_cover": {
+    "clause_count": 23,
+    "individually_feasible_alternative_count": 338,
+    "individual_witness_check_count": 612,
+    "theory_check_count": 5453,
+    "learned_conflict_count": 1268,
+    "deletion_minimal_conflict_count": 955,
+    "conflict_size_distribution": {
+      "2": 449,
+      "3": 313,
+      "4": 138,
+      "5": 55
+    },
+    "bounded_arity_cover_status": {
+      "at_most_2": "sat",
+      "at_most_3": "sat",
+      "at_most_4": "sat",
+      "at_most_5": "unsat"
+    },
+    "dominant_row_local_conflict_signatures": [
+      {
+        "row_supports": [[0], [0]],
+        "count": 167
+      },
+      {
+        "row_supports": [[0], [0], [0]],
+        "count": 128
+      },
+      {
+        "row_supports": [[3], [3]],
+        "count": 103
+      },
+      {
+        "row_supports": [[2], [2]],
+        "count": 77
+      },
+      {
+        "row_supports": [[1], [1]],
+        "count": 67
+      }
+    ]
+  },
+  "reproduction": {
+    "disjunct_analysis": "tracks/parkability/analyze_adaptive_priority_disjuncts.py",
+    "hall_extraction": "tracks/parkability/extract_adaptive_priority_hall_core.py"
+  },
+  "meaning": "The fixed two-first-agent cell has an exact finite Hall-style witness certificate, but local propagation does not close and the learned deletion-minimal conflict cover has 955 concrete conflicts, including indispensable five-way conflicts. A concise analytic lemma therefore requires symmetry or inequality-template compression rather than direct transcription.",
+  "claim_boundary": "This is an exact diagnostic for one seed-derived fixed candidate cell. It is not a theorem about arbitrary candidate identities, the adaptive-priority conjecture, or complete additive EFX."
+}

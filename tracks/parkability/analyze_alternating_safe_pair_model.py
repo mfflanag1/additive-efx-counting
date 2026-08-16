@@ -38,10 +38,7 @@ def analyze(path: Path):
     payload = json.loads(path.read_text())
     sizes = tuple(payload["packet_sizes"])
     cell = make_cell(sizes)
-    raw_values = payload.get("values", payload.get("model"))
-    if raw_values is None:
-        raise ValueError("input has neither values nor model")
-    values = tuple(tuple(Fraction(entry) for entry in row) for row in raw_values)
+    values = tuple(tuple(Fraction(entry) for entry in row) for row in payload["model"])
     own = numeric_utilities(values, cell["base_owner"])
     residual = tuple(
         good for good in range(cell["m"]) if good not in (cell["x"], cell["y"])

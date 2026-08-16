@@ -1,89 +1,129 @@
-# Exact obstruction to an owner-minimum floater swap
+# Owner-minimum floater-swap obstruction lemma
 
 ## Statement
 
-Let \((X,f)\) be an eligible one-floater partial EFX allocation for positive
-additive valuations. Choose an owner \(q\) and an owner-minimum good
-\(g\in X_q\), and let \((X',g)\) be obtained by replacing \(g\) with \(f\) in
-\(q\)'s bundle.
+Let \((X,f)\) be an eligible one-floater EFX allocation for positive-additive
+agents.  Fix an owner \(s\) whose bundle is nonsingleton, choose any
+owner-minimum good
 
-If \(X_q\) is nonsingleton, every agent weakly prefers her old bundle to the
-new floater \(g\). Consequently the new state can be ineligible only through:
+\[
+g\in\arg\min_{x\in X_s}v_s(x),
+\]
 
-1. an **incoming-target wall** for some external agent \(i\ne q\),
+and form \((Y,g)\) by setting
+
+\[
+Y_s=X_s-\{g\}+\{f\},
+\qquad Y_i=X_i\quad(i\ne s).
+\]
+
+Then every agent weakly prefers her bundle in \(Y\) to the new floater
+\(g\).  Moreover, \(Y\) is EFX unless at least one of the following two
+cross-wall certificates occurs:
+
+1. **incoming-target wall:** some observer \(i\ne s\) satisfies
    \[
-   v_i(X_i)<\tau_i(X_q-g+f);
+   v_i(X_i)<\tau_i(Y_s);
    \]
-2. a **source-owner shortfall** for \(q\) against some \(j\ne q\),
+2. **owner-shortfall wall:** owner \(s\) and some target \(j\ne s\) satisfy
    \[
-   v_q(X_q-g+f)<\tau_q(X_j).
+   v_s(Y_s)<\tau_s(X_j).
    \]
 
 Every incoming-target wall forces
 
 \[
-v_i(f)>v_i(g), \tag{1}
+v_i(f)>v_i(g)
+\quad\text{and}\quad
+v_i(f)>min_{x\in X_s\setminus\{g\}}v_i(x).
 \]
 
-whereas every source-owner shortfall forces
+Every owner-shortfall wall forces
 
 \[
-v_q(f)<v_q(g). \tag{2}
+v_s(f)<v_s(g).
 \]
 
-For a singleton source \(X_q=\{g\}\), add the possible floater wall
-\(v_q(f)<v_q(g)\), which has the same sign as (2).
+The statement is cap-free in agents, goods, and valuation magnitudes.
 
 ## Proof
 
-For any observer \(i\) and any good \(g\in X_q\), nonsingletonness gives
+Write \(R=X_s\setminus\{g\}\), which is nonempty.
+
+First check the new floater.  For an observer \(i\ne s\), base EFX gives
 
 \[
-\tau_i(X_q)=v_i(X_q)-\min_{x\in X_q}v_i(x)\geq v_i(g).
+v_i(X_i)\ge\tau_i(X_s).
 \]
 
-Old EFX therefore implies \(v_i(X_i)\geq v_i(g)\) for \(i\ne q\). For \(q\),
-the new bundle \(X'_q\) contains a remaining good worth at least \(v_q(g)\)
-and also the positive good \(f\), so \(v_q(X'_q)>v_q(g)\). Hence nobody
+For every good \(x\in X_s\), nonsingleton additivity gives
+\(\tau_i(X_s)\ge v_i(x)\): after removing an \(i\)-minimum good, the
+residual contains either \(x\) or another good worth at least \(x\).
+In particular, \(v_i(X_i)\ge v_i(g)\).  For owner \(s\), positivity and
+the owner-minimum property imply
+
+\[
+v_s(Y_s)=v_s(R)+v_s(f)>v_s(g),
+\]
+
+because \(R\) contains a good worth at least \(v_s(g)\).  Thus no agent
 envies the new floater.
 
-Only \(q\)'s bundle changes. For an external agent, all EFX comparisons
-except the one targeting \(q\)'s new bundle are unchanged. For \(q\), only
-the left side of her comparisons changes. This proves the exhaustive list.
+All EFX comparisons between two unchanged bundles are inherited from \(X\).
+The only remaining comparisons are from an unchanged observer \(i\ne s\)
+to changed target \(Y_s\), and from changed owner \(s\) to an unchanged
+target \(X_j\).  Their failures are exactly certificates 1 and 2.
 
-Write \(R=X_q-g\). An incoming-target wall and old EFX give
-
-\[
-\tau_i(R+f)>v_i(X_i)\geq\tau_i(R+g).
-\]
-
-For fixed \(R\), the map
+For the sign consequences, put
 
 \[
-x\longmapsto\tau_i(R+x)
-=v_i(R)+\max\{v_i(x)-\min_{r\in R}v_i(r),0\}
+r_i=\min_{x\in R}v_i(x).
 \]
 
-is nondecreasing in \(v_i(x)\). Its strict increase from \(g\) to \(f\)
-forces (1).
-
-For a source-owner shortfall, old EFX gives
+The replacement changes observer \(i\)'s target threshold by
 
 \[
-v_q(R)+v_q(f)<\tau_q(X_j)\leq v_q(R)+v_q(g),
+\tau_i(Y_s)-\tau_i(X_s)
+=\max\{v_i(f)-r_i,0\}-\max\{v_i(g)-r_i,0\}.
 \]
 
-which yields (2). The singleton floater wall is itself (2). \(\square\)
+An incoming-target wall, together with base EFX, says
 
-## Dependency-cycle consequence
+\[
+\tau_i(Y_s)>v_i(X_i)\ge\tau_i(X_s),
+\]
 
-The wall types demand opposite comparisons. A failed incoming move points to
-an observer who ranks the incoming floater above the released good; a failed
-source move says the source owner ranks them in the reverse order. A
-dependency-cycle proof must additionally show that the simultaneous union is
-EFX-feasible; the opposite signs alone do not provide that missing step.
+so the displayed difference is positive.  This is possible only when
+\(v_i(f)>r_i\) and \(v_i(f)>v_i(g)\).
 
-## Claim boundary
+Finally, an owner-shortfall wall and base EFX give
 
-This completely classifies local swap ineligibility. It does not prove that
-one swap or one dependency-cycle union is eligible.
+\[
+v_s(X_s)-v_s(g)+v_s(f)
+=v_s(Y_s)
+<\tau_s(X_j)
+\le v_s(X_s).
+\]
+
+Cancellation yields \(v_s(f)<v_s(g)\).
+
+## Interface with the breakthrough gate
+
+At a global threshold maximum, the
+`PARTIAL_THRESHOLD_MAXIMUM_SWAP_REDUCTION_LEMMA.md` shows that any swap not
+blocked by these walls stays on the same threshold plateau.  Therefore the
+exact Hall-gradient lemma has only one substantive task: use the direct Hall
+obstruction (or the owner-minimum pair trap) to select a source whose two
+wall families are absent and whose swap improves the exact completion margin.
+
+For four agents with all four bundles nonsingleton, universal failure of the
+four owner-minimum swaps yields a finite dependency digraph of incoming-target
+and owner-shortfall walls.  Turning a directed cycle in that graph into a
+strict Hall-margin improvement or an impossible weighted inequality is the
+remaining analytic conversion step.  No such cycle contradiction is claimed
+here.
+
+Singleton source bundles require a separate branch: swapping their only good
+reverses floater dominance unless owner and floater tie.  The cap-free
+owner-minimum pair-extraction theorem already isolates singleton patterns,
+so a complete proof must combine this lemma with that existing case split.

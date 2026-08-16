@@ -286,6 +286,12 @@ python3.10 tracks/parkability/run_adaptive_priority_cegar.py \
   --smt2 /tmp/adaptive.smt2
 ```
 
+Repeat the `--first-agent` option to test complete first-agent groups.
+Selecting agents 0 and 1 targets the 12 orders beginning with either agent.
+A `SELECTED_ORDERS_BLOCKED_WITNESS` blocks only those selected orders; it is
+a stronger falsification boundary, not a counterexample to adaptive priority
+unless all 24 orders were selected.
+
 `shrink_adaptive_priority_core.py` extracts a deletion-minimal joint core of
 candidate states and rival clauses. The first compact cell exposed the
 forced singleton-swap handoff. Its weak-EFX symbolic reconstruction is

@@ -1,0 +1,320 @@
+{
+  "base_pivot_partition_count": 16,
+  "base_pivots_blocked": true,
+  "claim_boundary": "This decides only the displayed fixed nine-good Hall-size-four cell. It is not general row-merge continuation or complete EFX.",
+  "combined_partition_count": 28,
+  "complete_efx_audit": null,
+  "cycle_edges": [
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "cycle_partition_count": 12,
+  "cycle_partitions": [
+    [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        7,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        7
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6,
+        8
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        6,
+        7
+      ]
+    ],
+    [
+      [
+        0,
+        8
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        4,
+        6,
+        7
+      ]
+    ]
+  ],
+  "cycle_vertices": [
+    0,
+    2,
+    3
+  ],
+  "domain": "strictly positive additive real valuations",
+  "fixed_graph_source": "results/row_merge_q4_small_step_chain3_m9_cegar.json",
+  "fixed_graph_source_sha256": "ae61c75a31bdab07e14a67807436796a74ddb130139626a9c4e87e68de58e4d9",
+  "fixed_post_wall_graph": [
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ]
+  ],
+  "formula": "results/row_merge_q4_cycle023_plus_base_gate.smt2",
+  "formula_sha256": "2b139a81d680564ada7b3b4b638d0a483f06fc551e1b90b37f2dec03bb1fa829",
+  "interpretation": "The exact-real cycle gate reached its solver limit.",
+  "m": 9,
+  "n": 4,
+  "obstruction_encoding": "matching_clauses",
+  "pair_pivot_support_count": null,
+  "post_wall_values": null,
+  "reason_unknown": "timeout",
+  "schema": "row-merge-q4-cycle023-gate-v1",
+  "simple_chain_support_count": null,
+  "solver_status": "unknown",
+  "solver_wall_seconds": 180.02977180480957,
+  "status": "CYCLE023_GATE_INCOMPLETE",
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ],
+  "wall_values": null
+}

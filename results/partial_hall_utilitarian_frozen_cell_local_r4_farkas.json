@@ -1,0 +1,332 @@
+{
+  "combined_constant": {
+    "denominator": 1,
+    "numerator": 0
+  },
+  "combined_vector_is_zero": true,
+  "core_constraint_count": 22,
+  "meaning": "The weighted sum of the listed weak/strict inequalities and equalities is identically zero, while the total multiplier on strict inequalities is positive. Hence the frozen core is infeasible.",
+  "nonzero_multiplier_count": 22,
+  "schema": "partial-hall-farkas-certificate-v1",
+  "source": "results/partial_hall_utilitarian_frozen_cell_local_r4_core.json",
+  "source_sha256": "5708a12bb55a3dcf62bcafcfcc6548ee2b79b1f1bd1fd56fbca0762690aaf68a",
+  "status": "EXACT_FARKAS_CONTRADICTION",
+  "strict_multiplier_sum": {
+    "denominator": 1,
+    "numerator": 1
+  },
+  "terms": [
+    {
+      "constraint": {
+        "agent": 0,
+        "good": 1,
+        "kind": "strict_positivity",
+        "label": "track_2"
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "good": 1,
+        "kind": "strict_positivity",
+        "label": "track_12"
+      },
+      "multiplier": {
+        "denominator": 13,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "good": 2,
+        "kind": "strict_positivity",
+        "label": "track_13"
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 3,
+        "good": 6,
+        "kind": "strict_positivity",
+        "label": "track_37"
+      },
+      "multiplier": {
+        "denominator": 13,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "eligible_comparison",
+        "label": "track_223",
+        "left_mask": 32,
+        "right_mask": 24
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "eligible_comparison",
+        "label": "track_477",
+        "left_mask": 144,
+        "right_mask": 8
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 3
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "kind": "eligible_comparison",
+        "label": "track_759",
+        "left_mask": 24,
+        "right_mask": 257
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "kind": "eligible_comparison",
+        "label": "track_831",
+        "left_mask": 32,
+        "right_mask": 194
+      },
+      "multiplier": {
+        "denominator": 13,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "eligible_comparison",
+        "label": "track_1346",
+        "left_mask": 128,
+        "right_mask": 17
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 3
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 3,
+        "kind": "eligible_comparison",
+        "label": "track_1927",
+        "left_mask": 260,
+        "right_mask": 34
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "ineligible_witness",
+        "label": "track_3801",
+        "left_mask": 386,
+        "right_mask": 8
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "kind": "ineligible_witness",
+        "label": "track_4765",
+        "left_mask": 14,
+        "right_mask": 192
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 3
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "kind": "ineligible_witness",
+        "label": "track_5267",
+        "left_mask": 32,
+        "right_mask": 384
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 1,
+        "kind": "ineligible_witness",
+        "label": "track_7410",
+        "left_mask": 384,
+        "right_mask": 65
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 2,
+        "kind": "ineligible_witness",
+        "label": "track_9470",
+        "left_mask": 128,
+        "right_mask": 72
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 3,
+        "kind": "ineligible_witness",
+        "label": "track_10818",
+        "left_mask": 17,
+        "right_mask": 32
+      },
+      "multiplier": {
+        "denominator": 13,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 3,
+        "kind": "ineligible_witness",
+        "label": "track_10932",
+        "left_mask": 32,
+        "right_mask": 258
+      },
+      "multiplier": {
+        "denominator": 4,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 3,
+        "kind": "ineligible_witness",
+        "label": "track_11430",
+        "left_mask": 258,
+        "right_mask": 48
+      },
+      "multiplier": {
+        "denominator": 13,
+        "numerator": 2
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "agent": 3,
+        "kind": "ineligible_witness",
+        "label": "track_11453",
+        "left_mask": 336,
+        "right_mask": 1
+      },
+      "multiplier": {
+        "denominator": 13,
+        "numerator": 1
+      },
+      "relation": "strict"
+    },
+    {
+      "constraint": {
+        "floater": 0,
+        "kind": "maximality",
+        "label": "track_11476",
+        "masks": [
+          144,
+          32,
+          72,
+          262
+        ]
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "floater": 0,
+        "kind": "maximality",
+        "label": "track_11477",
+        "masks": [
+          96,
+          28,
+          128,
+          258
+        ]
+      },
+      "multiplier": {
+        "denominator": 52,
+        "numerator": 1
+      },
+      "relation": "weak"
+    },
+    {
+      "constraint": {
+        "agent": 0,
+        "kind": "false_edge_witness",
+        "label": "track_14177",
+        "left_mask": 192,
+        "right_mask": 264
+      },
+      "multiplier": {
+        "denominator": 26,
+        "numerator": 1
+      },
+      "relation": "strict"
+    }
+  ]
+}

@@ -39,11 +39,6 @@ def sha256(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def artifact_path(owner_path, recorded):
-    archived = owner_path.parent / Path(recorded).name
-    return archived if archived.is_file() else Path(recorded)
-
-
 def audit_cegar(path, expected_status, expected_counts, expected_pool):
     payload = json.loads(path.read_text())
     universe = tuple(favorite_pair_balanced_universe())
@@ -70,7 +65,7 @@ def audit_cegar(path, expected_status, expected_counts, expected_pool):
         trace_summary.append(len(survivors))
         pool.update(survivors[: payload["add_per_iteration"]])
 
-    smt2_path = artifact_path(path, payload["smt2_path"])
+    smt2_path = Path(payload["smt2_path"])
     if (
         payload["status"] != expected_status
         or trace_summary != expected_counts
@@ -95,7 +90,7 @@ def audit_cegar(path, expected_status, expected_counts, expected_pool):
 
 def audit_cpsat(path):
     payload = json.loads(path.read_text())
-    proto_path = artifact_path(path, payload["proto_path"])
+    proto_path = Path(payload["proto_path"])
     if (
         payload["status"] != "CP_SAT_UNKNOWN"
         or payload["solver_status"] != "UNKNOWN"
@@ -121,18 +116,16 @@ def audit_cpsat(path):
 
 def audit_cpsat_cegar(path):
     payload = json.loads(path.read_text())
-    resume_path = artifact_path(path, payload["resume_source"])
+    resume_path = Path(payload["resume_source"])
     resume = json.loads(resume_path.read_text())
-    resume_proto = artifact_path(resume_path, resume["proto_path"])
+    resume_proto = Path(resume["proto_path"])
     if (
         sha256(resume_path) != payload["resume_source_sha256"]
         or resume.get("trace") != payload["trace"]
         or sha256(resume_proto) != resume["proto_sha256"]
     ):
         raise AssertionError("CP-SAT CEGAR resume provenance changed")
-    seed_paths = tuple(
-        artifact_path(path, source["path"]) for source in payload["seed_sources"]
-    )
+    seed_paths = tuple(Path(source["path"]) for source in payload["seed_sources"])
     for source, seed_path in zip(payload["seed_sources"], seed_paths):
         if sha256(seed_path) != source["sha256"]:
             raise AssertionError("CP-SAT CEGAR seed hash changed")
@@ -168,7 +161,7 @@ def audit_cpsat_cegar(path):
         trace_counts.append(len(survivors))
         pool.update(survivors[: payload["add_per_iteration"]])
         final_values = values
-    proto_path = artifact_path(path, payload["proto_path"])
+    proto_path = Path(payload["proto_path"])
     if (
         payload["status"] != "CP_SAT_UNKNOWN"
         or payload["solver_status"] != "UNKNOWN"
@@ -269,9 +262,7 @@ def audit_complement(
     expected_two_core_encoding,
 ):
     payload = json.loads(path.read_text())
-    seed_paths = tuple(
-        artifact_path(path, source["path"]) for source in payload["seed_sources"]
-    )
+    seed_paths = tuple(Path(source["path"]) for source in payload["seed_sources"])
     for source, seed_path in zip(payload["seed_sources"], seed_paths):
         if sha256(seed_path) != source["sha256"]:
             raise AssertionError("complement seed hash changed")
@@ -284,7 +275,7 @@ def audit_complement(
     ):
         raise AssertionError("complement seed frontier changed")
     if seed_analysis is not None:
-        analysis_path = artifact_path(path, seed_analysis["path"])
+        analysis_path = Path(seed_analysis["path"])
         if (
             sha256(analysis_path) != seed_analysis["sha256"]
             or recomputed["missing_partition_count"]
@@ -324,7 +315,7 @@ def audit_complement(
             raise AssertionError("seeded CEGAR trace replay changed")
         trace_counts.append(len(survivors))
         pool.update(survivors[: payload["add_per_iteration"]])
-    smt2_path = artifact_path(path, payload["smt2_path"])
+    smt2_path = Path(payload["smt2_path"])
     if (
         payload["status"] != "MASTER_UNKNOWN"
         or payload["solver_status"] != "unknown"

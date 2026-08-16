@@ -1,0 +1,110 @@
+{
+  "blocked_partition_count": 21,
+  "branches": 802243,
+  "candidate_audit": null,
+  "cegar_iterations": 1,
+  "cegar_singletons": true,
+  "cegar_trace": [
+    {
+      "iteration": 1,
+      "singleton_pool_size_before": 0,
+      "solver_status": "OPTIMAL",
+      "solver_wall_seconds": 0.108062,
+      "supported_unpooled_singleton_partition_count": 305,
+      "values": [
+        [
+          5,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          5,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          5,
+          1,
+          1,
+          3,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "cell_symmetry": true,
+  "claim_boundary": "SAT refutes only the selected local conversion-or-singleton implication under the recorded Hall-obstruction strength; it is not an EFX counterexample. UNSAT is bounded and requires independent replay.",
+  "conflicts": 42655,
+  "conversion_scope": "radius2_contested",
+  "domain": "positive integers in [1,20]",
+  "elapsed_seconds": 60.51909399032593,
+  "environment": {
+    "ortools": "9.15.6755",
+    "python": "3.10.14"
+  },
+  "favorite_singleton_partition_count": 966,
+  "hall_obstruction": "zero_neighbor",
+  "m": 9,
+  "n": 4,
+  "proto": "results/efx49_common_favorite_rank1_triple_zero_neighbor_contested_cap20_sym_cpsat_cegar_session1.pb",
+  "proto_bytes": 1680989,
+  "proto_sha256": "5f9a89f3e9f5ae38675dfb70c55d73348236e074d580f44c6e49f97901b7e27b",
+  "resident_rank_one_common_bundle": [
+    1,
+    2,
+    3
+  ],
+  "schema": "common-favorite-rank1-triple-conversion-cpsat-v1",
+  "selected_owner": 0,
+  "selected_residual_partition": [
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "singleton_obstruction_pool_size": 305,
+  "solver_status": "UNKNOWN",
+  "solver_wall_seconds": 60.041608000000004,
+  "status": "MASTER_UNKNOWN",
+  "strict_common_favorite": 0,
+  "time_limit_seconds": 60.0,
+  "upper": 20,
+  "values": null
+}

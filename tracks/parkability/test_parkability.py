@@ -44,6 +44,7 @@ try:
         run_generic_partition_cegar,
         run_integer_partition_cegar,
         run_lexmax_partial_cegar,
+        run_partial_nash_cegar,
         run_lra_cegar,
     )
 except ImportError:
@@ -73,6 +74,7 @@ except ImportError:
     import run_generic_partition_cegar
     import run_integer_partition_cegar
     import run_lexmax_partial_cegar
+    import run_partial_nash_cegar
     import run_lra_cegar
 
 
@@ -646,6 +648,75 @@ def test_integer_partition_master() -> int:
                     )
             checked += 1
 
+    four_agent_partitions = tuple(core.iter_unlabeled_nonempty_partitions(4, 5))
+    for owner_mask, duplicate_mask, distinct_mask in itertools.product(
+        range(1 << 4),
+        repeat=3,
+    ):
+        graph = tuple(
+            tuple(bool(mask & (1 << bundle)) for bundle in range(4))
+            for mask in (
+                owner_mask,
+                duplicate_mask,
+                duplicate_mask,
+                distinct_mask,
+            )
+        )
+        compressed_obstruction = (
+            duplicate_mask.bit_count() <= 1
+            or owner_mask == 0
+            or distinct_mask == 0
+            or (owner_mask | distinct_mask).bit_count() <= 1
+            or (duplicate_mask | owner_mask).bit_count() <= 2
+            or (duplicate_mask | distinct_mask).bit_count() <= 2
+            or (duplicate_mask | owner_mask | distinct_mask).bit_count() <= 3
+        )
+        if compressed_obstruction != (
+            audit_matching_augmentation.matching_rank(graph) < 4
+        ):
+            raise AssertionError("duplicate-row Hall reduction is not exact")
+
+    rng = random.Random(20260801)
+    for case_index in range(32):
+        duplicate_observers = (1, 2) if case_index % 2 == 0 else (2, 3)
+        rows = [tuple(rng.randrange(1, 4) for _ in range(5)) for _ in range(4)]
+        rows[duplicate_observers[1]] = rows[duplicate_observers[0]]
+        values = tuple(rows)
+        partition = rng.choice(four_agent_partitions)
+        expected = (
+            "SAT"
+            if audit_matching_augmentation.matching_rank(
+                audit_matching_augmentation.feasible_graph(values, partition)
+            )
+            < 4
+            else "UNSAT"
+        )
+        for encoding in (
+            "duplicate_matching_clauses",
+            "duplicate_hall_selectors",
+        ):
+            encoded = integer_partition_master.IntegerPartitionMaster(
+                4,
+                5,
+                3,
+                fixed_values=values,
+            )
+            encoded.add_duplicate_row_partition_obstruction(
+                partition,
+                duplicate_observers,
+                encoding=encoding,
+            )
+            if encoded.solve(time_limit_s=5).status != expected:
+                raise AssertionError(
+                    (
+                        "duplicate-row obstruction encoding mismatch",
+                        encoding,
+                        values,
+                        partition,
+                    )
+                )
+        checked += 1
+
     upper_missing = integer_partition_master.IntegerPartitionMaster(
         2,
         3,
@@ -665,6 +736,26 @@ def test_integer_partition_master() -> int:
         or upper_present.solve(time_limit_s=5).status != "SAT"
     ):
         raise AssertionError("upper-used cap-ladder cut is inconsistent")
+
+    proportional_rows = integer_partition_master.IntegerPartitionMaster(
+        2,
+        3,
+        6,
+        require_pairwise_nonproportional_rows=True,
+        fixed_values=((1, 2, 3), (2, 4, 6)),
+    )
+    nonproportional_rows = integer_partition_master.IntegerPartitionMaster(
+        2,
+        3,
+        6,
+        require_pairwise_nonproportional_rows=True,
+        fixed_values=((1, 2, 3), (2, 4, 5)),
+    )
+    if (
+        proportional_rows.solve(time_limit_s=5).status != "UNSAT"
+        or nonproportional_rows.solve(time_limit_s=5).status != "SAT"
+    ):
+        raise AssertionError("pairwise nonproportional-row cut is inconsistent")
 
     ranked = integer_partition_master.IntegerPartitionMaster(
         2,
@@ -929,6 +1020,153 @@ def test_fast_count() -> int:
         != sum(bool(base["parkable_hosts"]) for base in best)
     ):
         raise AssertionError("vectorized lex-max partial-EFX audit disagrees")
+    nash = small.partial_linear_potential_landscape(
+        small_values,
+        potential="normalized_nash",
+    )
+    best_nash_product = max(
+        base["own_values"][0] * base["own_values"][1]
+        for base in eligible
+    )
+    best_nash = [
+        base
+        for base in eligible
+        if base["own_values"][0] * base["own_values"][1]
+        == best_nash_product
+    ]
+    if (
+        nash["eligible_base_count"] != len(eligible)
+        or nash["maximizer_count"] != len(best_nash)
+        or nash["insertable_maximizer_count"]
+        != sum(bool(base["parkable_hosts"]) for base in best_nash)
+    ):
+        raise AssertionError("exact vectorized Nash selector disagrees")
+    utilitarian = small.partial_linear_potential_landscape(
+        small_values,
+        potential="normalized_utilitarian",
+    )
+    row_totals = tuple(map(sum, small_values))
+    best_utilitarian_score = max(
+        sum(
+            Fraction(base["own_values"][agent], row_totals[agent])
+            for agent in range(2)
+        )
+        for base in eligible
+    )
+    best_utilitarian = [
+        base
+        for base in eligible
+        if sum(
+            Fraction(base["own_values"][agent], row_totals[agent])
+            for agent in range(2)
+        )
+        == best_utilitarian_score
+    ]
+    if (
+        utilitarian["eligible_base_count"] != len(eligible)
+        or utilitarian["maximizer_count"] != len(best_utilitarian)
+        or utilitarian["insertable_maximizer_count"]
+        != sum(bool(base["parkable_hosts"]) for base in best_utilitarian)
+    ):
+        raise AssertionError("exact vectorized utilitarian selector disagrees")
+    pareto = small.partial_pareto_landscape(small_values)
+    by_utilities = {}
+    for base in eligible:
+        utilities = tuple(base["own_values"])
+        by_utilities[utilities] = (
+            by_utilities.get(utilities, False) or bool(base["parkable_hosts"])
+        )
+    frontier = [
+        utilities
+        for utilities in by_utilities
+        if not any(
+            all(other[agent] >= utilities[agent] for agent in range(2))
+            and other != utilities
+            for other in by_utilities
+        )
+    ]
+    if (
+        pareto["distinct_utility_vector_count"] != len(by_utilities)
+        or pareto["pareto_frontier_utility_vector_count"] != len(frontier)
+        or pareto["blocked_pareto_frontier_utility_vector_count"]
+        != sum(not by_utilities[utilities] for utilities in frontier)
+        or pareto["maximum_product"] != best_nash_product
+        or not pareto["maximum_product_has_insertable_realization"]
+    ):
+        raise AssertionError("vectorized partial-EFX Pareto frontier disagrees")
+    pareto_threshold = small.partial_pareto_threshold_landscape(small_values)
+    efficient_bases = [
+        base
+        for base in eligible
+        if tuple(base["own_values"]) in frontier
+    ]
+
+    def owner_threshold_score(base):
+        score = Fraction()
+        for agent in range(2):
+            bundle = tuple(
+                good
+                for good, owner in enumerate(base["base_owner"])
+                if owner == agent
+            )
+            threshold = (
+                sum(small_values[agent][good] for good in bundle)
+                - min(small_values[agent][good] for good in bundle)
+                if bundle
+                else 0
+            )
+            score += Fraction(threshold, row_totals[agent])
+        return score
+
+    best_pareto_threshold = max(map(owner_threshold_score, efficient_bases))
+    pareto_threshold_winners = [
+        base
+        for base in efficient_bases
+        if owner_threshold_score(base) == best_pareto_threshold
+    ]
+    if (
+        pareto_threshold["eligible_base_count"] != len(eligible)
+        or pareto_threshold["pareto_frontier_utility_vector_count"]
+        != len(frontier)
+        or pareto_threshold["maximizer_count"] != len(pareto_threshold_winners)
+        or pareto_threshold["insertable_maximizer_count"]
+        != sum(bool(base["parkable_hosts"]) for base in pareto_threshold_winners)
+    ):
+        raise AssertionError("Pareto-threshold selector disagrees")
+    pareto_rescue = small.partial_pareto_landscape(
+        small_values,
+        rescue_radius=2,
+    )
+    if (
+        pareto_rescue["rescue_radius"] != 2
+        or pareto_rescue[
+            "blocked_pareto_frontier_without_bounded_rescue_count"
+        ]
+        != 0
+    ):
+        raise AssertionError("partial-EFX Pareto rescue audit disagrees")
+    pareto_completion = small.partial_pareto_landscape(
+        small_values,
+        completion_radius=0,
+    )
+    if (
+        not pareto_completion["maximum_product_completion_within_radius"]
+        or pareto_completion["nearest_maximum_product_completion"]["distance"]
+        != 0
+    ):
+        raise AssertionError("partial-EFX Nash completion audit disagrees")
+    try:
+        small.partial_pareto_landscape(small_values, rescue_radius=-1)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("negative Pareto rescue radius was accepted")
+    try:
+        small.partial_pareto_landscape(small_values, completion_radius=-1)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("negative Nash completion radius was accepted")
     all_orders = small.lexmax_all_agent_orders_landscape(small_values)
     individual_orders = [
         small.lexmax_one_unallocated_landscape(
@@ -944,6 +1182,18 @@ def test_fast_count() -> int:
         != sum(
             result["lexmax_insertable_count"] > 0
             for result in individual_orders
+        )
+        or all_orders["insertable_first_agent_count"]
+        != sum(
+            any(
+                result["lexmax_insertable_count"] > 0
+                for order, result in zip(
+                    itertools.permutations(range(2)),
+                    individual_orders,
+                )
+                if order[0] == agent
+            )
+            for agent in range(2)
         )
         or [
             record["lexmax_utility_key"]
@@ -1040,6 +1290,47 @@ def test_lexmax_partial_encoding() -> int:
     if nondegenerate.solver.check() != lra_master.z3.unsat:
         raise AssertionError("nondegenerate lex rival was not blocked")
     return 3
+
+
+def test_partial_nash_helpers() -> int:
+    candidate = (4, (0, 1, 2, 3, None))
+    rivals = run_partial_nash_cegar.bundle_cycle_rivals(candidate, 4)
+    if len(rivals) != 20 or any(rival[0] != 4 for rival in rivals):
+        raise AssertionError("four-agent bundle-cycle rival census changed")
+    substitutions = run_partial_nash_cegar.source_substitution_rivals(
+        candidate,
+        4,
+        0,
+    )
+    if len(substitutions) != 24:
+        raise AssertionError("singleton-host substitution rival census changed")
+    for source_host in range(4):
+        master = run_partial_nash_cegar.NashMaster(
+            4,
+            5,
+            candidate,
+            source_host=source_host,
+        )
+        if master.bundle_cycle_cut_count != 20:
+            raise AssertionError("bundle-cycle cut census changed")
+    with tempfile.TemporaryDirectory() as raw_root:
+        path = Path(raw_root) / "pool.json"
+        run_partial_nash_cegar.write_pool(
+            path,
+            n=4,
+            m=5,
+            candidate=candidate,
+            rivals=rivals,
+        )
+        replay = run_partial_nash_cegar.load_pool(
+            path,
+            n=4,
+            m=5,
+            candidate=candidate,
+        )
+    if set(replay) != set(rivals):
+        raise AssertionError("partial-Nash rival pool replay changed")
+    return len(rivals) + 6
 
 
 def test_adaptive_priority_helpers() -> int:
@@ -1548,11 +1839,6 @@ def test_standard_hall_smt2() -> int:
     integer_normalized, _ = normalize_smt2_for_cvc5.normalize(integer_source)
     if "(set-logic QF_LIA)" not in integer_normalized:
         raise AssertionError("integer Hall formula received the wrong logic")
-    generic_normalized, replacements = normalize_smt2_for_cvc5.normalize(
-        "(declare-fun v_0_0 () Real)\n(assert (= (+ v_0_0) 1))\n(check-sat)\n"
-    )
-    if "(+ v_0_0)" in generic_normalized or replacements != 1:
-        raise AssertionError("generic unary atom sum was not normalized")
     return 3
 
 
@@ -2697,6 +2983,7 @@ def main() -> None:
     integer_partition_cases = test_integer_partition_master()
     fast_cases = test_fast_count()
     lexmax_partial_cases = test_lexmax_partial_encoding()
+    partial_nash_cases = test_partial_nash_helpers()
     adaptive_priority_cases = test_adaptive_priority_helpers()
     small_static, target_static = test_one_nonsingleton_certificates()
     source_census_cases = test_source_census()
@@ -2729,6 +3016,7 @@ def main() -> None:
         f"{integer_partition_cases} integer-partition cases, "
         f"{fast_cases} vectorized counts, "
         f"{lexmax_partial_cases} lex-max partial-EFX checks, "
+        f"{partial_nash_cases} partial-Nash helper checks, "
         f"{adaptive_priority_cases} adaptive-priority helper checks, "
         f"{small_static}+{target_static} static shape certificates, "
         f"{source_census_cases} source-census obstruction, "

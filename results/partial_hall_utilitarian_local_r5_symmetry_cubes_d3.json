@@ -1,0 +1,101 @@
+{
+  "base_good_stabilizer_order": 24,
+  "base_good_symmetry": true,
+  "base_good_symmetry_meaning": "Orders agent 0's values within base bundles {6,7}, {1,2,3}, and {0,4}. Their S2 x S3 x S2 relabeling action preserves the fixed base, radius-one Hall candidates, and owner-distance rival family, so this is satisfiability preserving.",
+  "branch_count": 8,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_6_2_2",
+        "v_0_0 + -1*v_0_3 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_000.smt2",
+      "sha256": "082373ebedf617e29d3b644193de0c8640a27ee930685c9fd5cca40e0568848d"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_6_2_2",
+        "v_0_0 + -1*v_0_3 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_001.smt2",
+      "sha256": "a5f1199918a1f7be13106e8d354303455060b67bf1918e9190fc81b4b43ebcd6"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "edge_6_2_2",
+        "Not(v_0_0 + -1*v_0_3 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "v_0_2 + v_0_3 + -1*v_0_5 + -1*v_0_6 + v_0_8 <= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_002.smt2",
+      "sha256": "08d7a403ce825ea23d21e652382cefcfec955d2766c863b18940021d4efa9103"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "edge_6_2_2",
+        "Not(v_0_0 + -1*v_0_3 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "Not(v_0_2 + v_0_3 + -1*v_0_5 + -1*v_0_6 + v_0_8 <= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_003.smt2",
+      "sha256": "1eb7e8b65c14546cc6c86ba5c19bf905aea03d8cecfee648c9e8bf0b5af91cc5"
+    },
+    {
+      "branch": 4,
+      "cube": [
+        "Not(edge_6_2_2)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_004.smt2",
+      "sha256": "05658db5bd482596345c350b347ee08faf059040079657224a58e1aab619d914"
+    },
+    {
+      "branch": 5,
+      "cube": [
+        "Not(edge_6_2_2)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0",
+        "Not(v_0_0 + -1*v_0_2 + -1*v_0_3 + v_0_4 + v_0_7 + v_0_8 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_005.smt2",
+      "sha256": "ecb2d8b5e66853d9062b4dbe9395ef5c61923baa21e10ec5386c7ab9da4b8799"
+    },
+    {
+      "branch": 6,
+      "cube": [
+        "Not(edge_6_2_2)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "v_3_0 + v_3_1 + -1*v_3_2 + -1*v_3_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_006.smt2",
+      "sha256": "86621e052af644827bedbe42c75de68a3a0e498eef655cf3c9e60e5d143e25b4"
+    },
+    {
+      "branch": 7,
+      "cube": [
+        "Not(edge_6_2_2)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)",
+        "Not(v_3_0 + v_3_1 + -1*v_3_2 + -1*v_3_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_symmetry_cubes_d3/branch_007.smt2",
+      "sha256": "99137288448881c6d9549cba520dbddf5f1f36e7711c789adf594088a5d42898"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 3,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_factored_session1.smt2",
+  "source_sha256": "d692c217f71d7f846498bc8dcdba37f5639728814917164df5b27b1ae7d60e49",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": [
+    "v_0_6 <= v_0_7",
+    "v_0_1 <= v_0_2",
+    "v_0_2 <= v_0_3",
+    "v_0_0 <= v_0_4"
+  ]
+}

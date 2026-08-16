@@ -1,6 +1,7 @@
 # Mixed Threshold/Hall Gate
 
-**Status:** open branch with two exact shortcut refutations  
+**Status:** open branch; rank-two selection and two earlier shortcuts exactly
+refuted  
 **Scope:** four agents, nine goods, positive additive valuations, and a
 strict common favorite  
 **Not claimed:** complete EFX for the full common-favorite cell, the full
@@ -99,7 +100,7 @@ frozen in
 Thus a successful proof cannot fix an arbitrary threshold-passing partition
 and perform only one transfer.
 
-## Rank-maximal selection boundary
+## Rank-maximal selection refuted
 
 Across the three exact profiles above, the maximum resident matching rank
 among threshold-passing pairs is two. The numbers of rank-two passes are 49,
@@ -116,6 +117,78 @@ reconstructed profile and search censuses are frozen in
 [efx49_common_favorite_mixed_selection_gate_audit.json](efx49_common_favorite_mixed_selection_gate_audit.json).
 These endpoints are neither proofs nor counterexamples.
 
+A symmetry-reduced continuation now extends those exact frontiers. Four new
+rank-two models add \(9,1,13,30\) motifs, taking the cumulative pool from 66
+to 119. Four new zero-neighbor models add \(11,3,3,3\), taking that pool from
+49 to 69. Every trace model, seed hash, motif census, and learned-count
+transition is independently reconstructed in
+[efx49_common_favorite_mixed_selection_gate_audit_v2.json](efx49_common_favorite_mixed_selection_gate_audit_v2.json).
+The endpoints remain iteration limits, not evidence that the claims are true
+or false.
+
+The candidate lemma is now exactly false, already at value cap 4. The profile
+
+\[
+\begin{pmatrix}
+4&3&1&1&2&2&2&3&3\\
+4&3&1&1&3&3&3&2&2\\
+4&3&1&1&3&3&3&2&2\\
+4&3&1&1&3&3&3&2&2
+\end{pmatrix}
+\]
+
+has a strict common favorite and exactly three threshold-passing
+owner--partition pairs, but every corresponding resident graph has matching
+rank one. None of the 966 favorite-singleton partitions supports EFX. Literal
+enumeration nevertheless finds 195 supporting partitions, all balanced, and
+3,690 labeled complete EFX allocations. The three nearest balanced repairs
+are one transfer away. The independent replay is
+[efx49_common_favorite_rank2_selection_refutation_audit.json](efx49_common_favorite_rank2_selection_refutation_audit.json).
+
+Thus both unconditional selectors are retired. The profile has only two
+valuation types, so it is deliberately not an EFX counterexample and lies
+inside a previously known existence class. The first computational repair
+required four pairwise nonproportional rows. The sharper mathematical
+boundary is ordinal: because EFX depends only on bundle comparisons, the
+three-types theorem immediately extends to at most three bundle-order types.
+A genuinely open four-agent profile may therefore be assumed to have four
+pairwise bundle-order-inequivalent rows.
+
+Two cumulative symmetry-reduced runs in that repaired stratum first started
+from 29 valid rank-two obstruction motifs, found 12 further exact four-type
+profiles, and enlarged the pool to 77 motifs. The new-motif sequence was
+\(6,3,3,3,3,3,3,3,6,3,6,6\). Every trace profile has four pairwise
+nonproportional rows, and every seed hash, proto hash, motif census, and
+learned-count transition is replayed in
+[efx49_common_favorite_fourtype_rank2_frontier_audit.json](efx49_common_favorite_fourtype_rank2_frontier_audit.json).
+Those two endpoints were iteration limits.
+
+The next cumulative session exactly refutes the repaired selector. Its
+profile is
+
+\[
+\begin{pmatrix}
+4&2&2&2&3&1&1&3&3\\
+4&3&1&1&2&3&3&3&2\\
+4&1&2&2&2&3&3&3&2\\
+4&1&2&2&2&3&3&2&3
+\end{pmatrix}.
+\]
+
+All four rows are pairwise nonproportional and, more strongly, pairwise
+bundle-order inequivalent across all \(2^9\) bundles. Exactly three
+owner--partition pairs pass the threshold, all for owner zero and all with
+resident matching rank one; none of the 966 favorite-singleton partitions
+supports EFX. Literal enumeration nevertheless finds 599 supporting
+partitions, all balanced, and two independent counters agree on 3,878
+complete EFX allocations. The three nearest balanced repairs are one
+transfer away. See
+[efx49_common_favorite_fourtype_rank2_refutation_audit.json](efx49_common_favorite_fourtype_rank2_refutation_audit.json).
+
+Thus even the relevant preference-type restriction does not rescue
+rank-maximal selection. A proof of the mixed branch must handle a rank-one
+maximum inside the genuinely open four-preference-type stratum.
+
 The rank-one side now has an analytic normal form. Because every feasibility
 row is nonempty, matching rank one forces all three residents to accept only
 one common bundle (A). Each resident then satisfies the strict inequality
@@ -129,11 +202,21 @@ and common-triple cases. The proof and exact boundaries are recorded in
 [RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md](RANK_ONE_COMMON_COLUMN_NORMAL_FORM.md).
 The strongest local result is negative: even with every favorite-singleton
 allocation excluded, one rank-one profile blocks all six one-good transfers.
-Its nearest EFX repairs require two transfers; the 63-partition radius-two
-successor remains open. Bundle-origin symmetry compresses the most natural
-successor further to 21 states in which the favorite receives a good from
-the contested triple; that implication also remains open after a 302-cut
-CEGAR boundary.
+Its nearest EFX repairs require two transfers. Bundle-origin symmetry first
+compressed the natural successor to 21 states in which the favorite receives
+a good from the contested triple; a second exact profile now refutes that
+implication too, while forcing all nine nearest repairs into one missing
+role-switching bridge orbit. The resulting 30-state union is also now
+exactly refuted by a zero-singleton cap-6 profile. Its 15 nearest repairs add
+two origin orbits, leaving a 45-state successor whose first bounded campaign
+reaches a six-singleton Hamming-two local minimum. Its identical-resident
+cap-6 subcell is dual-encoded `UNSAT`; unequal residents remain open. The current gate is
+recorded in
+[RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md](RANK_ONE_RADIUS_TWO_BRIDGE_GATE.md).
+The repeated-resident cap-5 certificate has since been compressed from 392
+singleton cuts to one shared 112-partition dual-encoded menu. A cap-6 ladder
+refutes the cap-free extension of that menu and remains SAT through 196 cuts;
+see [RANK_ONE_CORE_SHAPE_LADDER_GATE.md](RANK_ONE_CORE_SHAPE_LADDER_GATE.md).
 
 ## Precise next gate
 
@@ -146,13 +229,19 @@ allocation is EFX. Otherwise the Hall obstruction has one of three forms:
 3. the three residual bundles have at most two resident neighbors, with no
    smaller deficient subfamily.
 
-The next analytic target has two steps: first prove the **rank-two selection
-lemma** suggested by the exact census; then prove a **selected-pair
-alternating-exchange lemma** transforming such a pair, while allowing the
-owner and residual partition to change, into a balanced Hall-perfect
-partition. The boundaries show why both freedoms are necessary. The finite
-proof-mining target should begin with the rank-two/zero-neighbor case and a
-radius-two exchange family, then treat the two-bundle Hall witness.
+Rank maximization no longer removes the rank-one branch. The exact proof split
+must instead handle both possibilities:
+
+1. a rank-one maximum, using the common-column normal form and an adaptive
+   balanced conversion (the new cap-4 refutation itself has three successful
+   one-transfer repairs); and
+2. a rank-two maximum, using a selected-pair alternating exchange and then the
+   two-bundle Hall witness.
+
+Owner and residual-partition changes remain necessary. The finite proof-mining
+target should search for one conversion family that covers the new rank-one
+boundary together with the earlier 45-state bridge boundaries, rather than
+trying to force rank two first.
 
 The radius-two family has exactly 63 balanced partitions around the fixed
 canonical \(3+3+2\) state. Direct CP-SAT models remained `UNKNOWN` at caps 6

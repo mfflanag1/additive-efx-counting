@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "edge_21_0_1",
+        "v_0_0 + -1*v_0_1 + v_0_3 + -1*v_0_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_000.smt2",
+      "sha256": "4c1c7b202708d72584680e5eda9d9420bc5faf4f3e6575825617841dc09cc1c5"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "edge_21_0_1",
+        "Not(v_0_0 + -1*v_0_1 + v_0_3 + -1*v_0_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_001.smt2",
+      "sha256": "2318742254a8c4a9b8547b1d6a1dfce1c131aca2f0a7e5ee89a4c98e87aeac76"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(edge_21_0_1)",
+        "v_0_1 + -1*v_0_3 + -1*v_0_4 + v_0_7 >= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_002.smt2",
+      "sha256": "157a4494e8297866a904576a47e525c71fdc8975742787ce1620f5525559783a"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(edge_21_0_1)",
+        "Not(v_0_1 + -1*v_0_3 + -1*v_0_4 + v_0_7 >= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_007/branch_003.smt2",
+      "sha256": "6de1419032cf887bef0910c991de5478448885e97d21a3419196fce0cd4b03cd"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d3/branch_007.smt2",
+  "source_sha256": "c04b699113f0a486a4520fb773306a5ab4b29a3e46ae87e4a101161916921e17",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

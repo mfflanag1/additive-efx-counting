@@ -1,0 +1,86 @@
+{
+  "changed_edge": [
+    0,
+    0,
+    true,
+    false
+  ],
+  "claim": "A positive-additive four-agent nine-good q=4 small-step wall can have no complete EFX partition within transfer radius two.",
+  "claim_boundary": "The post-wall profile has 206 complete EFX allocations beginning at distance three. This refutes a local radius bound, not complete additive EFX existence.",
+  "complete_efx_allocation_count": 206,
+  "complete_efx_supporting_partition_count": 123,
+  "m": 9,
+  "minimal_hall_witness": {
+    "agents": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "neighbors": [
+      1,
+      2,
+      3
+    ]
+  },
+  "minimum_supporting_partition_transfer_distance": 3,
+  "n": 4,
+  "nearest_supporting_partition": [
+    [
+      0,
+      1,
+      3,
+      6
+    ],
+    [
+      2,
+      7
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      8
+    ]
+  ],
+  "radius": 2,
+  "radius_partition_count": 319,
+  "radius_support_count": 0,
+  "schema": "row-merge-q4-small-step-radius-boundary-audit-v1",
+  "seed_cvc5_solver_sha256": "fae4cef47a4e82e3b37f8928b5cb275c8a86d138a33e49d54a9933a157b57f74",
+  "seed_cvc5_status": "sat",
+  "seed_formula_sha256": "983fe702b96d429d70403ad74a0dc0da62feeaf45bf30a3738132b2e1c20208c",
+  "seed_normalized_formula_sha256": "e968bd0f334a5543abeacbed54313a2da13eababb7daad94ddf69b845b295d4f",
+  "seed_source": "results/row_merge_q4_small_step_radius2_m9_cegar_seed16.json",
+  "seed_source_sha256": "d96ee6908c151ac8902ac9f93e6859538619979a5c0fb3d79b8082265a094dcd",
+  "small_step_epsilon": 8,
+  "status": "Q4_SMALL_STEP_RADIUS_TWO_BOUNDARY_AUDITED",
+  "supporting_partition_transfer_distance_histogram": {
+    "3": 20,
+    "4": 62,
+    "5": 41
+  },
+  "terminal_formula_sha256": "4fc364a065226534e5fcac32782718c3f57e08762e4cfa4b6fa6491aee5844c7",
+  "terminal_source": "results/row_merge_q4_small_step_radius2_m9_cegar_terminal37.json",
+  "terminal_source_sha256": "78fbccb806d175df811bd4157dfd1f8920842d013d16250caa49391ea3e6e939",
+  "wall_partition": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7,
+      8
+    ]
+  ]
+}

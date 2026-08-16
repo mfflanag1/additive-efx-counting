@@ -1,0 +1,52 @@
+{
+  "base_good_stabilizer_order": null,
+  "base_good_symmetry": false,
+  "base_good_symmetry_meaning": null,
+  "branch_count": 4,
+  "branches": [
+    {
+      "branch": 0,
+      "cube": [
+        "rival_cmp_2_192_1",
+        "v_0_1 + -1*v_0_4 + -1*v_0_8 <= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_000.smt2",
+      "sha256": "d788a404850d1e6e95c83f3d21d333bc6a492decf6ba93ec8e1d7c142c763c63"
+    },
+    {
+      "branch": 1,
+      "cube": [
+        "rival_cmp_2_192_1",
+        "Not(v_0_1 + -1*v_0_4 + -1*v_0_8 <= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_001.smt2",
+      "sha256": "4ddbb2d82a1a9c4d9b748347b6e792e41d4a43c649f8d999f24ea61b63581e0b"
+    },
+    {
+      "branch": 2,
+      "cube": [
+        "Not(rival_cmp_2_192_1)",
+        "v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_002.smt2",
+      "sha256": "7b145f22b3a038504ca7daef0f864b8761ccb275dade52b3dc137a02db8433c3"
+    },
+    {
+      "branch": 3,
+      "cube": [
+        "Not(rival_cmp_2_192_1)",
+        "Not(v_0_3 + -1*v_0_4 + -1*v_0_7 + -1*v_0_8 <= 0)"
+      ],
+      "path": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d5_from_000/branch_003.smt2",
+      "sha256": "b1707677ce95e03d63300537ec455f63dbfcb9b8b94d292900d82021b22fc5a3"
+    }
+  ],
+  "cube_timeout_seconds": 120,
+  "depth": 2,
+  "meaning": "The disjunction of the listed branch cubes covers the source formula. SAT of any branch is SAT of the source; UNSAT of every branch is UNSAT of the source.",
+  "schema": "smt2-cube-cover-v1",
+  "source": "results/partial_hall_utilitarian_local_r5_double_factored_seed_cubes_d3/branch_000.smt2",
+  "source_sha256": "22acca3a1901dea86bff486667e6914c4107f9197c6594f603f5afab7c4ac40b",
+  "status": "EXACT_CUBE_COVER",
+  "symmetry_constraints": []
+}

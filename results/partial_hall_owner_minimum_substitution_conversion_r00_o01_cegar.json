@@ -1,0 +1,47 @@
+{
+  "all_maximality_constraints_satisfied": true,
+  "cegar_batch": 16,
+  "cegar_iterations": 1,
+  "complete_candidate_count": 52,
+  "learned_maximality_blocker_count": 7,
+  "learned_maximality_blockers": [
+    "maximality_0_0_0123",
+    "maximality_0_0_0132",
+    "maximality_0_0_3120",
+    "maximality_1_1_0123",
+    "maximality_1_1_0132",
+    "maximality_1_1_3102",
+    "maximality_2_2_0123"
+  ],
+  "meaning": "UNSAT proves that normalized-utilitarian maximality against all owner-minimum substitutions forces an owner-minimum Hall completion. SAT must be checked for item-level realizability.",
+  "model": null,
+  "multi_good_remainder_bundle_labels": [],
+  "pair_extraction_lemma_asserted": true,
+  "pair_orbit_count": 58,
+  "pair_orbit_index": 1,
+  "schema": "partial-hall-owner-minimum-substitution-conversion-v1",
+  "selected_pair_role": [
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      1
+    ],
+    1
+  ],
+  "singleton_bundle_labels": [],
+  "smt2": "results/partial_hall_owner_minimum_substitution_conversion_r00_o01_cegar.smt2",
+  "smt2_sha256": "404a534a406f8bb3b4bd7b9bb796ddbc7af5e0db3ae39d03d8b2e8e4c6e37ff3",
+  "solver_reason_unknown": "canceled",
+  "solver_verdict": "unknown",
+  "status": "UNKNOWN",
+  "substitution_allocation_count": 384,
+  "substitution_eligibility_factored": true,
+  "substitution_partition_count": 16,
+  "timeout_seconds": 10,
+  "trap_witness_prefix": null,
+  "unsat_core": null
+}

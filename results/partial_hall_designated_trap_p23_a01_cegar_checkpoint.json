@@ -1,0 +1,54 @@
+{
+  "base_bundles": [
+    [
+      6,
+      7
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      5
+    ]
+  ],
+  "batch_size": 32,
+  "break_good_symmetry": false,
+  "candidate_partition_count": 91,
+  "factor_rival_eligibility": true,
+  "factored_hall": true,
+  "factored_rival_comparison_count": 4065,
+  "floater": 8,
+  "hall_witness": true,
+  "iterations_completed": 1,
+  "learned_rival_count": 3187,
+  "local_rival_template_count": 37501,
+  "m": 9,
+  "max_iterations": 100,
+  "meaning": "SAT refutes the stated bounded-owner-distance normalized-utilitarian improvement lemma; UNSAT proves it for the fixed base cell.",
+  "n": 4,
+  "owner_distance_radius": 5,
+  "random_seed": 211,
+  "schema": "partial-hall-utilitarian-local-cegar-v1",
+  "seed_from": "results/partial_hall_utilitarian_local_r5_cegar_session4_seed211.json",
+  "seed_learned_rival_count": 416,
+  "smt2_output": "results/partial_hall_designated_trap_p23_a01_cegar_master.smt2",
+  "solver_reason_unknown": "timeout",
+  "solver_statistics": "(:arith-bound-propagations-lp 75023\n :arith-conflicts             139\n :arith-lower                 30228\n :arith-make-feasible         11071\n :arith-max-columns           8958\n :arith-max-rows              8918\n :arith-upper                 54174\n :binary-propagations         90628\n :conflicts                   151\n :decisions                   11082\n :del-clause                  2874\n :max-memory                  210.98\n :memory                      36.71\n :minimized-lits              129\n :mk-bool-var                 23754\n :mk-clause                   15210\n :mk-clause-binary            46124\n :num-allocs                  17072858821.00\n :num-checks                  1\n :propagations                110068\n :random-seed                 422\n :restarts                    1\n :rlimit-count                8892765\n :time                        300.46)",
+  "status": "MASTER_UNKNOWN",
+  "symmetry_close": true,
+  "timeout_seconds_per_master": 300,
+  "trace": [],
+  "trap_agents": [
+    0,
+    1
+  ],
+  "trap_bundle": 1,
+  "trap_partition": 23,
+  "values": null
+}

@@ -1,0 +1,86 @@
+{
+  "candidate_partition_count": 91,
+  "elapsed_seconds": 0.5465571880340576,
+  "eligible_comparison_count": 1550,
+  "eligible_state_count": 1301,
+  "false_edge_witness_count": 565,
+  "fixed_state": {
+    "floater": 8,
+    "masks": [
+      192,
+      14,
+      17,
+      32
+    ]
+  },
+  "ineligible_witness_count": 9510,
+  "meaning": "SAT would refute the normalized-utilitarian radius-one Hall selector; UNSAT eliminates only this frozen combinatorial cell. Neither outcome by itself refutes complete additive EFX.",
+  "schema": "partial-hall-utilitarian-frozen-cell-v1",
+  "seed_path": "results/partial_hall_utilitarian_maximality_anneal_seed23.json",
+  "seed_sha256": "4afc849b0c65ee7e98568c3f4b88ea54b6747edcddbe8c9f8e83d285935b95a6",
+  "status": "UNSAT",
+  "timeout_seconds": 600.0,
+  "true_edge_comparison_count": 2064,
+  "unsat_core": [
+    {
+      "agent": 1,
+      "good": 4,
+      "kind": "strict_positivity",
+      "label": "track_15"
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_488",
+      "left_mask": 12,
+      "right_mask": 1
+    },
+    {
+      "agent": 1,
+      "kind": "eligible_comparison",
+      "label": "track_560",
+      "left_mask": 32,
+      "right_mask": 388
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_5897",
+      "left_mask": 3,
+      "right_mask": 388
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6006",
+      "left_mask": 32,
+      "right_mask": 320
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6025",
+      "left_mask": 72,
+      "right_mask": 257
+    },
+    {
+      "agent": 1,
+      "kind": "ineligible_witness",
+      "label": "track_6139",
+      "left_mask": 276,
+      "right_mask": 1
+    },
+    {
+      "floater": 1,
+      "kind": "maximality",
+      "label": "track_11228",
+      "masks": [
+        192,
+        268,
+        17,
+        32
+      ]
+    }
+  ],
+  "unsat_core_size": 8
+}

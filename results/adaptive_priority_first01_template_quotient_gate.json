@@ -1,0 +1,41 @@
+{
+  "schema": "adaptive-priority-first01-template-quotient-gate-v1",
+  "status": "EXACT_FIXED_CELL_NEGATIVE_COMPRESSION_GATE",
+  "domain": "strictly positive additive valuations",
+  "n": 4,
+  "m": 9,
+  "seed_sha256": "f760920eca96d562864a00dadaa5af342a2aeed3f26369eacfdbd67a6382d44e",
+  "compact_core_sha256": "92240487e043ae981b4f1a640ff7208fe4400a234f664fcc8cce4a0550b1d717",
+  "inequality_core_sha256": "39b62e1749e0158a9cff0ce652ada95acb1c40b2fbb8deb6be10faa9fd315808",
+  "hall_core_sha256": "4e3b87b3ab8ad9b3b7f52c7dbece47ac77be58b895008b20ee31fb03fa202b65",
+  "quotient_output_sha256": "fff779e7914fceb879be2e1c5ecc9702172bf9b7cd8125f60caed354ca924143",
+  "hall_conflict_count": 955,
+  "row_local_conflict_count_after_premise_minimization": 926,
+  "mixed_row_conflict_count_after_premise_minimization": 29,
+  "exact_row_local_template_count": 397,
+  "row_local_minimal_premise_count_distribution": {
+    "2": 121,
+    "3": 280,
+    "4": 210,
+    "5": 150,
+    "6": 85,
+    "7": 56,
+    "8": 20,
+    "9": 4
+  },
+  "mixed_row_minimal_premise_count_distribution": {
+    "2": 8,
+    "3": 7,
+    "4": 11,
+    "5": 3
+  },
+  "solver_check_count": 4944,
+  "elapsed_seconds": 40.6987361907959,
+  "quotient_definition": "Each row-local conflict was reduced to a deletion-minimal arithmetic premise set and quotiented by exact colored-graph isomorphism under good relabeling and same-colored-premise relabeling.",
+  "meaning": "The 955-conflict Hall certificate does not collapse to a small family under the tested exact row-local symmetry: 926 row-local conflicts still occupy 397 templates. This is a calibrated negative proof-mining result, not an EFX theorem.",
+  "claim_boundary": "This is an exact diagnostic for one seed-derived fixed candidate cell. It neither proves the adaptive-priority completion conjecture nor proves complete additive EFX for four agents. It also does not rule out a stronger analytic quotient using structure absent from the tested colored-graph equivalence.",
+  "reproduction": {
+    "script": "tracks/parkability/quotient_adaptive_priority_hall_core.py",
+    "shortest_semantic_verification": "make verify-adaptive-first-agent-core"
+  }
+}

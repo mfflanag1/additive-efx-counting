@@ -1,0 +1,192 @@
+{
+  "base_bundles": [
+    [
+      0,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "base_host": 0,
+  "base_permutation": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "candidate_sources": [
+    0,
+    1
+  ],
+  "equality_agent": 1,
+  "exact_global_escape": {
+    "base_owners": [
+      0,
+      0,
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      -1
+    ],
+    "base_theta": "13205/13912",
+    "maximum_theta": "13585/13912",
+    "nearest_maximizer": {
+      "distance": 2,
+      "floater": 8,
+      "hall_insertable": true,
+      "owners": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        2,
+        3,
+        3,
+        -1
+      ],
+      "theta": "13585/13912"
+    },
+    "theta_gap": "95/3478"
+  },
+  "exact_local_audit": {
+    "base_best_host": 0,
+    "base_best_permutation": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "base_eligible": true,
+    "base_margin": "-5/3478",
+    "eligible_strict_improvement_exists": false,
+    "minimum_strict_hall_witness_size": 4,
+    "strict_graph": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        3
+      ],
+      [
+        0,
+        2,
+        3
+      ]
+    ],
+    "two_source_candidates": [
+      {
+        "best_host": 0,
+        "best_permutation": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "eligible": true,
+        "margin": "-5/3478",
+        "outgoing_good": 1,
+        "source": 0,
+        "strictly_improves": false
+      },
+      {
+        "best_host": 3,
+        "best_permutation": [
+          1,
+          0,
+          3,
+          2
+        ],
+        "eligible": false,
+        "margin": "-2/1739",
+        "outgoing_good": 3,
+        "source": 1,
+        "strictly_improves": true
+      }
+    ]
+  },
+  "floater": 8,
+  "global_audit": {
+    "eligible_state_count": 1675,
+    "fixed_base_global_record": null,
+    "fixed_base_is_global_threshold_maximum": false,
+    "hall_insertable_maximum_threshold_state_count": 80,
+    "maximum_threshold_state_count": 96
+  },
+  "local_implication_count": 4,
+  "meaning": "SAT refutes only the fixed full-cut two-source local statement; it refutes the global selector only if the exact audit also makes the fixed base globally threshold-maximal. UNSAT proves only this canonical four-pair critical-cut cell.",
+  "missing_bundle": 1,
+  "natural_matching_only": true,
+  "schema": "threshold-full-cut-two-source-4x9-v1",
+  "smt2": "results/threshold_full_cut_two_source_natural_4x9_identity_session1.smt2",
+  "solver_reason_unknown": null,
+  "solver_verdict": "sat",
+  "status": "FIXED_FULL_CUT_TWO_SOURCE_COUNTERMODEL",
+  "timeout_seconds": 60,
+  "values": [
+    [
+      2871,
+      476,
+      3187,
+      20,
+      504,
+      3191,
+      2699,
+      484,
+      480
+    ],
+    [
+      6,
+      865,
+      849,
+      18,
+      2,
+      866,
+      857,
+      8,
+      7
+    ],
+    [
+      1313,
+      332,
+      2,
+      1647,
+      102,
+      1723,
+      1735,
+      2,
+      100
+    ],
+    [
+      658,
+      120,
+      807,
+      1,
+      779,
+      120,
+      873,
+      1,
+      119
+    ]
+  ]
+}

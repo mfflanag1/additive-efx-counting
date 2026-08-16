@@ -12,7 +12,10 @@ import tempfile
 from pathlib import Path
 
 
-UNARY_ATOM_SUM = re.compile(r"\(\+\s+([^()\s]+)\s*\)")
+UNARY_VALUE_SUM = re.compile(
+    r"\(\+\s+((?:value|v|u|w|rho)_\d+_\d+)\s*\)"
+)
+ANY_UNARY_ATOM_SUM = re.compile(r"\(\+\s+[^()\s]+\s*\)")
 
 
 def sha256(data: bytes) -> str:
@@ -43,7 +46,10 @@ def normalize(source: str) -> tuple[str, int]:
         raise ValueError("source must contain exactly one check-sat command")
     if "(_ at-most" in source or "(_ at-least" in source:
         raise ValueError("source contains a nonstandard Z3 cardinality operator")
-    normalized, replacement_count = UNARY_ATOM_SUM.subn(r"\1", source)
+    normalized, replacement_count = UNARY_VALUE_SUM.subn(r"\1", source)
+    remaining = ANY_UNARY_ATOM_SUM.search(normalized)
+    if remaining is not None:
+        raise ValueError(f"unsupported unary sum remains: {remaining.group(0)}")
     lines = normalized.splitlines(keepends=True)
     insertion = 1 if lines and lines[0].startswith(";") else 0
     logic = (
@@ -82,12 +88,11 @@ def run(*, source_path: Path, output_path: Path, metadata_path: Path) -> dict:
                 )
                 else "QF_LRA"
             ),
-            "unary_atom_sum_identity_replacements": replacement_count,
             "unary_value_sum_identity_replacements": replacement_count,
         },
         "meaning": (
-            "syntax-only normalization: every unary (+ atom) is replaced by "
-            "the identical atom"
+            "syntax-only normalization: every unary valuation-variable sum "
+            "is replaced by its identical valuation-variable term"
         ),
     }
     atomic_write(output_path, normalized_bytes)
