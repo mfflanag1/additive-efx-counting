@@ -126,11 +126,30 @@ proves the symmetric order `(s,p,q,r)`.
 The external-observer candidate is exactly false in the other six hard
 orders.  The separate cap-free root-flip theorem nevertheless closes two of
 those orders, `(p,q,r,s)` and `(s,r,q,p)`, by a different rival form.  The
-other four hard orders require different constructions.  The later
-dual-reservoir trichotomy supplies those constructions for `(p,s,q,r)` and
-`(s,p,r,q)`, leaving `(p,q,s,r)` and `(s,r,p,q)`.  The present theorem does
-not revive the refuted candidate there and does not by itself prove complete
-additive EFX.
+other four hard orders require different constructions, and the later
+[`dual-reservoir trichotomy`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
+supplies constructions for **all four** of them: `(p,s,q,r)` and `(p,q,s,r)`
+directly, and `(s,p,r,q)` and `(s,r,p,q)` by half-turn relabeling.  The
+reason is that its alternative 2 (the anchored `q`-handoff) fixes both `p`
+and `s` at exactly their base utilities and strictly improves `q`, while `r`
+is last in both `p`-rooted orders, so `r`'s loss is never reached; its
+alternatives 1 and 3 improve the first-priority agent `p` outright.  The
+present theorem does not revive the refuted candidate in any of those orders
+and does not by itself prove complete additive EFX.
+
+> *Correction, referee repair 2026-08-16* (gap G3 of the referee report
+> `TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
+> `codex/efx-breakthrough-next-20260802`).  The paragraph above previously
+> read that the trichotomy covers only `(p,s,q,r)` and `(s,p,r,q)`, "leaving
+> `(p,q,s,r)` and `(s,r,p,q)`".  That sentence was stale and contradicted
+> both
+> [`ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md`](ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md)
+> (its "Cap-free priority-order consequence") and
+> [`ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md`](ALTERNATING_GLOBAL_LEX_CAPFREE_THEOREM.md)
+> (item 4 of its order cover), which credit the trichotomy with all four
+> orders.  The stale sentence was the error; the four-order claim is correct,
+> for the reason now given above.  Nothing in the present lemma's own proof
+> changes.
 
 The replay script checks the construction on the frozen exact profiles and
 on targeted countermodels to the false fixed-payment strengthenings.  That

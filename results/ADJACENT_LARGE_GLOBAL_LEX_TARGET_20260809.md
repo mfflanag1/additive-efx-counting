@@ -36,6 +36,36 @@ The selected desired sets are `D_p` for `p`, `D_r` for `r`, `{y}` for
 `q`, and `{x}` for `s`.  Thus all four sets are common-safe at the base,
 and their respective sources strictly prefer them to their base bundles.
 
+## Standing hypotheses
+
+*Referee repair 2026-08-16* (gap G1 of the referee report
+`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
+`codex/efx-breakthrough-next-20260802`).  Theorems 1--3 below are stated for
+a PI-free adjacent-large state satisfying, in addition to the normal form
+above:
+
+- **strictly positive valuations**, and
+- **nonempty bottom packets `B_r` and `B_q`** (hence nonempty `T_r,T_q`,
+  since the selected desired sets are `T_r+f` and `T_q+f`).
+
+These were used silently and are load-bearing: `v_r(U)=b_r+v_r(B_q)>b_r` in
+Theorem 1 and in the second extraction branch of Theorem 3 needs `B_q`
+nonempty and positive, and `v_q(W)=b_q+v_q(B_r)>b_q` behind the `p`-first
+escapes (11)--(12) needs `B_r` nonempty and positive.  Both are supplied by
+the reservoir-extraction premise "the pool contains a desired set", which
+fails outright for an empty bottom packet.
+
+In the two-nonsingleton composition neither hypothesis is assumed: positivity
+comes from the BCFF Lemma A.1 perturbation (see "Nonnegative values and
+ties" below), and the nonempty packets are discharged once for all four cycle
+classes by the "Packet nondegeneracy" section of
+[`TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md`](TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md)
+— an empty bottom makes the owner a self-`f`-champion whose `f`-absorption is
+an EFX lexicographic improvement in every order, and an empty top makes the
+selected desired set `{f}`, excluded by charity dominance.  The premise
+bookkeeping is tabulated in
+[`ADJACENT_BCFF_COMPOSITION_AUDIT.md`](ADJACENT_BCFF_COMPOSITION_AUDIT.md).
+
 The target is unrestricted.  A rival may cross either reservoir, change
 the root, repartition packets, or use a bundle whose safety is visible only
 at the new allocation.
@@ -141,8 +171,12 @@ which is its only comparison between nonsingleton new bundles.  Thus (6) is
 EFX and improves the first coordinate `r`.  This proves:
 
 > **Theorem 1 (adjacent `r`-first escape).** No PI-free adjacent-large state
-> is globally lexicographically maximal in an order beginning with `r`, for
-> arbitrary packet sizes.
+> satisfying the standing hypotheses (positive valuations, `B_r,B_q`
+> nonempty) is globally lexicographically maximal in an order beginning with
+> `r`, for arbitrary packet sizes.
+
+*Referee repair 2026-08-16:* the standing hypotheses are discharged by the
+composition, not assumed by it.
 
 Together with the easy singleton cases, eighteen of the twenty-four orders
 are closed analytically.
@@ -314,8 +348,12 @@ bundle must be an old offer or be safe only by reference to the old
 recipient.
 
 > **Theorem 3 (adjacent `p`-first escape).** No PI-free adjacent-large state
-> is globally lexicographically maximal in any of the five remaining
-> `p`-first priority/source types, for arbitrary packet sizes.
+> satisfying the standing hypotheses (positive valuations, `B_r,B_q`
+> nonempty) is globally lexicographically maximal in any of the five
+> remaining `p`-first priority/source types, for arbitrary packet sizes.
+
+*Referee repair 2026-08-16:* the standing hypotheses are discharged by the
+composition, not assumed by it.
 
 Apply the reservoir extraction lemma to the common-safe set `D_r`, recipient
 `q`, and pool

@@ -15,13 +15,62 @@ p\xrightarrow f r\longrightarrow s
 \xrightarrow f q\longrightarrow p,
 \]
 
-where `X_p={x}`, `X_s={y}`, and `X_r,X_q` are arbitrary nonempty bundles.
-For a fixed lexicographic priority order, suppose either a compatible
-generalized champion family is present or all four compatible cross-bottom
-families are absent. Then `X` is not globally lexicographically maximal
-among partial EFX allocations.
+where `X_p={x}`, `X_s={y}`, and `X_r,X_q` are arbitrary nonempty bundles,
+decomposed by the two genuine edges as
+`X_r=T_r + B_r` and `X_q=T_q + B_q` with selected desired sets `T_r+f` for
+`p` and `T_q+f` for `s`.  Assume further that
 
-No bound is imposed on the number of goods in any top or bottom packet.
+- valuations are strictly positive, and
+- the bottom packets `B_r` and `B_q` are nonempty.
+
+For a fixed lexicographic priority order, suppose either a compatible
+**generalized** champion family is present or all four compatible
+generalized champion families are absent. Then `X` is not globally
+lexicographically maximal among partial EFX allocations.
+
+*Referee repair 2026-08-16* (gaps G1 and G2 of
+`TWO_NONSINGLETON_COMPOSITION_REFEREE_REPORT_20260816.md`, currently on
+`codex/efx-breakthrough-next-20260802`).  Three changes were made to this
+statement.
+
+1. **Positivity and nonempty bottoms are now explicit.** They were used
+   silently by the reservoir-exchange lemma (which assumes `B_q` nonempty)
+   and by the dual-reservoir trichotomy (which assumes `B_r` nonempty);
+   without them six of the eight hard orders lose their proof. In the
+   two-nonsingleton composition both are discharged, not assumed: see the
+   "Packet nondegeneracy" section of
+   [`TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md`](TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md)
+   (empty bottom makes the owner a self-`f`-champion whose `f`-absorption is
+   an EFX lexicographic improvement in every order; empty top makes the
+   desired set `{f}`, excluded by charity dominance), together with BCFF
+   Lemma A.1 for the positive nondegenerate perturbation.
+2. **The disjunction is stated on the generalized (broad) notion**, matching
+   what the proof below actually uses. The previous mixed form paired a broad
+   first disjunct with a narrow second one. Narrow presence implies broad
+   presence in one line: a standard cross-bottom seed `B_r | B_q` into `q` is
+   the instance `H=B_r`, `S=B_q` of the generalized family
+   `r --H|S--> q`, `H subseteq B_r` of
+   [`ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md`](ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md)
+   (3)--(4), and its offered set `T_q+B_r` is contained in the generalized
+   offer `X_q+B_r`, so a source envying a subset of the narrow offer envies
+   that same subset of the broad one; the other three seeds are identical up
+   to relabeling. Hence broad absence implies narrow absence, which is why
+   the old mixed disjunction was a tautology and unsound to instantiate
+   literally.
+3. **Warning.** Because the implication runs narrow `=>` broad and not
+   conversely, verifying that the four *standard* cross-bottom seeds are
+   absent does **not** establish the second disjunct. The repo contains a
+   live profile where exactly that happens: in the repaired hand profile of
+   [`ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md`](ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md)
+   all four standard cross-bottom edges are absent while the generalized edge
+   `r --B_r|∅--> q` is present, and it supplies a Pareto-dominating EFX
+   allocation. Any reader instantiating this theorem must check the
+   generalized families, over every incoming subset and every prescribed
+   target release.
+
+No bound is imposed on the number of goods in any packet beyond the
+nonemptiness of `T_r,B_r,T_q,B_q`; in particular no cap and no fixed move
+menu is used.
 
 ## Adaptive-root/order formulation
 
@@ -65,10 +114,10 @@ There are 24 priority orders.
    half-turn either improves `s`, or fixes `s,p` and improves `r`, so it
    closes both `(s,p,r,q)` and `(s,r,p,q)`.
 
-These sets are disjoint and contain all 24 orders. If a compatible family is
-present, its standard PI cycle gives an EFX Pareto improvement and hence a
-lexicographic improvement in every order. If all compatible families are
-absent, items 1--4 apply. Thus no alternating state satisfying the stated
+These sets are disjoint and contain all 24 orders. If a compatible
+generalized family is present, its standard PI cycle gives an EFX Pareto
+improvement and hence a lexicographic improvement in every order. If all four
+compatible generalized families are absent, items 1--4 apply. Thus no alternating state satisfying the stated
 premises is globally lexicographically maximal. \(\square\)
 
 ## Consequence and boundary
