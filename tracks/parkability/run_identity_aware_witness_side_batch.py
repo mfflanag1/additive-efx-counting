@@ -18,6 +18,7 @@ from fractions import Fraction
 from pathlib import Path
 
 from .run_identity_aware_witness_side_cegar import (
+    audit_allocation,
     concrete_values,
     decide,
     failure_clause,
@@ -78,12 +79,13 @@ def solve_profile(totals, minima, edge_cap, maximum_rounds, timeout_seconds):
     symbolic = symbolic_values(totals, minima, role_goods, side)
 
     canonical = {(role, o): False for role in multi for o in OWNERS}
+    canonical_physical = concrete_values(totals, minima, role_goods, canonical)
     baseline_status, baseline_found, _ = decide(
-        concrete_values(totals, minima, role_goods, canonical),
-        role_goods, edge_cap, timeout_seconds,
+        canonical_physical, role_goods, edge_cap, timeout_seconds,
     )
     used_rounds = 0
     if baseline_found is not None:
+        audit_allocation(baseline_found[0], canonical_physical, edge_cap)
         master.add(failure_clause(baseline_found[0], symbolic))
         used_rounds = 1
 
@@ -113,6 +115,7 @@ def solve_profile(totals, minima, edge_cap, maximum_rounds, timeout_seconds):
         if concrete_status != "sat":
             status = "UNKNOWN"
             break
+        audit_allocation(found[0], physical, edge_cap)
         master.add(failure_clause(found[0], symbolic))
     return {
         "status": status,

@@ -197,10 +197,13 @@ contribution to the bundle minimum are determined by that multiset. ∎
 > §1.1 is genuinely free, and `(T, M, {pi_g})` has realizations with different
 > off-witness side minima.
 
-*Proof.* The first half is Corollary B1.  For the second, take `rho(g) = 3`
-and compare the three-good column `(M, M + t, T - 2M - t)` for different
-admissible `t > 0`: all share `T`, `M` and the same witness selection kernel,
-but the minimum of the two-good side `{x_2, x_3}` differs with `t`. ∎
+*Proof.* The first half is Corollary B1.  For the second, suppose
+`T[i,g] > 3 M[i,g]` for every observer and compare the three-good columns
+`(M, M + t, T - 2M - t)` for `0 < t < T - 3M`.  Each has total `T` and
+minimum `M` attained only at the first good, so all of them share `T`, `M`
+and the one-block coincidence partition; but the minimum of the two-good side
+`{x_2, x_3}`, which is what an EFX deletion against that side reads, equals
+`min(M + t, T - 2M - t)` and varies with `t`. ∎
 
 So the identity-aware abstraction is **exactly complete at slack two and
 strictly incomplete above it**.  That is the sharpest available statement of
@@ -227,8 +230,8 @@ witness recorded in the output.
 
 So all `15` coincidence partitions are realizable at every one of the twelve
 roles under the fixed-`U` premises: **15 proved realizable, 0 refuted, 0
-open**.  No partition can be discarded by a premise argument.  The
-`120` per-(role, partition) verdicts follow from the `36` block-count cells by
+open**.  No partition can be discarded by a premise argument.  All `180`
+per-(role, partition) verdicts follow from these `36` block-count cells by
 Lemma A's shape-independence.
 
 Claim tier: exact-computational (z3 `sat` with recorded rational witnesses,
@@ -368,7 +371,11 @@ state machine therefore decides all `113` banked profiles without a single
 unknown, and for the `68` exhaustive ones the decision is complete for every
 physical realization, not merely for the two-good family.
 
-Per-profile detail is in `results/identity_aware_witness_side_batch_form2.json`.
+Every allocation the batch accepts is re-audited outside z3 in exact rational
+arithmetic — completeness of the allocation, the four-edge support budget, and
+each observer's EFX comparison against every other bundle — so a `sat` round is
+never taken on the solver's word.  Per-profile detail is in
+`results/identity_aware_witness_side_batch_form2.json`.
 
 ## 8. Verification
 
@@ -515,11 +522,11 @@ Recorded at freeze.  Each output JSON also carries its driver's
 594a9e4890f46400fca6357a2ac9b1f517f42dfe01a36b318f3e0daa454aa06a  tracks/parkability/audit_identity_aware_witness_realizability.py
 1b33ee9f54eccfc4f862da73f148cdb3e73e2b19c47c2c41be40891d9e8dfd2c  tracks/parkability/run_identity_aware_partition_admission_sweep.py
 4f584558d4c638b371062298445270b8ec959073f9250fc38991478099b6ffee  tracks/parkability/run_identity_aware_witness_side_cegar.py
-cbf568189655a099db08d6519adbb9f8cddb4c706623e66712e5543aea2e7748  tracks/parkability/run_identity_aware_witness_side_batch.py
+e13343c88b3543d59958e5e101e4c581f85e2794c83893674ca46bbc7e212de0  tracks/parkability/run_identity_aware_witness_side_batch.py
 2bc0e51a5c9eb444814669db872ff8bbed7eb371a3a5e454140cf953ec126ebb  tracks/parkability/test_identity_aware_witness.py
 2e5c9d13b7167e790619333d58427b21fce76a2d00d1b56b562afa26841b8314  results/identity_aware_witness_realizability_audit.json
 e7ce8125dc70e62d4c2d77129c5002fc6e5490e00adef9fb95d94ffaf2d19dc4  results/identity_aware_partition_admission_sweep_form2.json
 e67935f76c0fe35fbf722d4741c05aaf1732c8e62a67ddbeb73a59d5b20fb159  results/identity_aware_witness_side_cegar_one_minimum_split.json
 22dc50c17982b4fa46859c92a17aa39bbe84e9ca0dc21ca62e64ab7f372255fb  results/identity_aware_witness_side_cegar_whole_role_obstruction.json
-a9819bd56688895cd8066bb715d1e55930cbff0e74e57be16c977e93db758947  results/identity_aware_witness_side_batch_form2.json
+792400756569a8dc4c8f71a54216c74bd5c057d7b11fc1114bd62d8415c2dbd5  results/identity_aware_witness_side_batch_form2.json
 ```
