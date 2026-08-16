@@ -10,10 +10,21 @@ Let `X` be the base EFX allocation and write
 
 \[
  b_i=v_i(X_i),\qquad
- \tau_i(Z)=v_i(Z)-\min_{g\in Z}v_i(g)
+ \tau_i(Z)=\max_{g\in Z}v_i(Z\setminus\{g\})
 \]
 
-for every nonempty bundle `Z`, with `tau_i(empty)=0`.  Define the common
+for every nonempty bundle `Z`, with `tau_i(empty)=0`.
+
+(*Cancelable-class repair 2026-08-16, second pass:* the definition previously
+read `tau_i(Z)=v_i(Z)-min_{g in Z}v_i(g)` — the additive form, which
+coincides with the max-deletion form above only under additivity and
+conflicts with the convention of `ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`,
+which hands off directly to this reduction.  The proof below already uses the
+max-deletion reading at every step — its key step states "Inequality (3) is
+precisely `v_q(Y_q) >= max_{g in D} v_q(D\{g})`", and the downward-closure
+and deletion-remainder uses follow from monotonicity alone — so line 12 was
+the only outlier.  Flagged as the blocking defect of the final-gate referee
+report; fix verified there before application.)  Define the common
 base-safe family
 
 \[

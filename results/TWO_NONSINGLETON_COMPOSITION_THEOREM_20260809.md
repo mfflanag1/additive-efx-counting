@@ -33,6 +33,18 @@ four-agent EFX state cannot have exactly two nonsingleton bundles.
 The corollary is immediate: positive nondegenerate additive valuations are
 normalized, monotone, cancelable and non-degenerate, hence nice cancelable.
 
+**Interim status (final-gate referee, 2026-08-16): the nice-cancelable
+Theorem is NOT yet quotable; the additive Corollary is the quotable
+statement.** The final gate found the two sweeps' coverage incomplete (7 of
+24 alternating/adjacent files inspected): `ALTERNATING_TWO_SAFE_BUNDLE_
+REDUCTION.md` — order-closing for `(p,s,r,q)` and `(s,p,q,r)` — defined
+`tau` by the additive formula (now fixed, fix referee-verified), and the
+case-theorem scope lines still read "additive". The widening is expected to
+stand once the complete alternating-chain sweep lands and the scope lines
+are reconciled; until then treat the Theorem heading as conjectural at
+nice-cancelable generality. Nothing in the gate reopens G1/G2/G3, and the
+additive result is unaffected.
+
 *Cancelable-class repair 2026-08-16* (R7 of
 [`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
 The hypothesis above previously read "four positive, nondegenerate additive
