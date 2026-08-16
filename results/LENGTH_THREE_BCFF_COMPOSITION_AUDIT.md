@@ -105,7 +105,8 @@ Section-2 citation below is coherent only under the full arXiv build.
 Related wording to fix outside this audit: the "Nonnegative and tie wrapper"
 of
 [`LENGTH_THREE_GLOBAL_LEX_TARGET.md`](LENGTH_THREE_GLOBAL_LEX_TARGET.md)
-(lines 2848--2850) still describes A.1 as supplying a *nondegenerate additive*
+(lines 2894--2895, re-pinned from 2848--2850 by *cancelable-class repair
+2026-08-16, third pass*, S9) described A.1 as supplying a *nondegenerate additive*
 profile.  That proof body was deliberately left untouched in this repair
 round; the flag is recorded here instead.
 

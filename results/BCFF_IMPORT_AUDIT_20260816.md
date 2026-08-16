@@ -50,7 +50,8 @@ this pin explicitly.
 7. **Lemma A.1 — DRIFT (the one real finding; most-cited import, 18 mentions).** A.1
    delivers exactly: non-degeneracy, a CANCELABLE (not necessarily additive) witness, and
    one-directional transfer EFX(v') ⟹ EFX(v). The corpus over-describes it three ways:
-   (a) ADDITIVITY — ADJACENT_LARGE:421 and LENGTH_THREE_GLOBAL_LEX_TARGET:2848-2850 claim
+   (a) ADDITIVITY — ADJACENT_LARGE:421 and LENGTH_THREE_GLOBAL_LEX_TARGET:2894-2895 claim
+   (re-pinned from :2848-2850, *cancelable-class repair 2026-08-16, third pass*, S9; both fixed)
    an "additive" perturbation; A.1 says cancelable. Additive-respecting-nondegenerate
    perturbations exist but that is folklore/Chaudhury et al., not A.1.
    (b) POSITIVITY — audit rows attribute positivity to A.1; it says nothing about it.

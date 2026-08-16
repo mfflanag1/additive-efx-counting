@@ -206,7 +206,9 @@ nonempty-packet hypotheses of items 1, 3 and 4 at the cancelable level.
 
 ---
 
-## 4. The superseded region of `LENGTH_THREE_GLOBAL_LEX_TARGET.md` (lines 500-2800)
+## 4. The superseded region of `LENGTH_THREE_GLOBAL_LEX_TARGET.md` — lines 500-2889, proof-mining history (the tie wrapper at 2890-2906 is classified separately at F.1)
+
+*Cancelable-class repair 2026-08-16, third pass* (S10): this heading previously read "lines 500-2800", which left `:2800-2911` unclassified — including the live additive-A.1 line at `:2894-2895` that F.1 caught and S8 repaired.
 
 **Genuinely additive, pervasively — and not load-bearing for any order closure.**
 
@@ -322,7 +324,9 @@ and A.1's cancelable witness is exactly what the argument needs. The corpus's he
    `TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md` (lines 70-139), on branch
    `codex/efx-gg-cycle-referee-20260812`.
 
-2. **What was sampled, not swept.** `LENGTH_THREE_GLOBAL_LEX_TARGET.md` lines 500-2800. These
+2. **What was sampled, not swept.** `LENGTH_THREE_GLOBAL_LEX_TARGET.md` lines 500-2889
+   (proof-mining history) and 2890-2906 (the tie wrapper, classified separately at F.1)
+   (*cancelable-class repair 2026-08-16, third pass*, S10; previously stated as "500-2800"). These
    are declared superseded by the document itself and are not reachable from the
    reservoir-order theorem. They were characterised by targeted inspection at five sites, not
    line-by-line. If any of that material is ever revived as load-bearing, it must be re-swept;

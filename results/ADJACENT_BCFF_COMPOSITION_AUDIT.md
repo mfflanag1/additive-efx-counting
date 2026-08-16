@@ -17,6 +17,16 @@ statements marked **EXTERNAL-TRUSTED**, which are not reproduced in this
 repository and need a human check against
 [arXiv:2102.10654](https://arxiv.org/abs/2102.10654).
 
+
+*Cancelable-class repair 2026-08-16, third pass* (S3 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+**Convention.** Throughout, `tau_i(Z)=max_{g in Z} v_i(Z\{g})` (max deletion),
+and a set `Z` is *common-safe* when `tau_i(Z)<=b_i` for every agent `i`, where
+`b_i=v_i(X_i)`. This is the definition stated in
+[`ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+and used uniformly across the in-closure files; it is recorded here so that no
+file uses the symbol without a resolvable definition.
+
 ## Structural premises shared by Theorems 1--3
 
 | Required premise | Derivation in the BCFF state | Hidden assumption? |
@@ -35,7 +45,7 @@ repository and need a human check against
 | Required premise | Derivation in the BCFF state | Hidden assumption? |
 |---|---|---|
 | `D` common-safe, `t=tau_j(D)` | `D` is one of the two selected desired sets | By definition |
-| A pool `P` disjoint from `D` that *contains a desired set* | For `P=W=B_r+X_q`: `v_q(W)=b_q+v_q(B_r)>b_q`. For `P=U=X_r+B_q`: `v_r(U)=b_r+v_r(B_q)>b_r`. Then an inclusion-minimal subset on which some agent crosses her base is desired and common-safe | **Load-bearing use of nonempty bottoms and positivity:** with `B_r=∅` the pool `W` collapses to `X_q` and with `B_q=∅` the pool `U` collapses to `X_r`, and in each case the displayed strict inequality — the sole reason `P` contains a desired set — fails |
+| A pool `P` disjoint from `D` that *contains a desired set* | For `P=W=B_r+X_q`: `v_q(W)>v_q(X_q)=b_q`. For `P=U=X_r+B_q`: `v_r(U)>v_r(X_r)=b_r` (*S4, third pass*: monotonicity plus non-degeneracy, the additive forms were decorative). Then an inclusion-minimal subset on which some agent crosses her base is desired and common-safe | **Load-bearing use of nonempty bottoms and positivity:** with `B_r=∅` the pool `W` collapses to `X_q` and with `B_q=∅` the pool `U` collapses to `X_r`, and in each case the displayed strict inequality — the sole reason `P` contains a desired set — fails |
 | No packet-size bound | The minimal-crossing argument is inclusion-based | No cap, no fixed move menu |
 
 ## Theorem 1 — every `r`-first order
@@ -64,7 +74,8 @@ to close any order.
 |---|---|---|
 | An inclusion-minimal desired `B subseteq U`, sourced by `r` | Reservoir extraction plus the source wall (5); needs `B_q` nonempty and positivity | See above |
 | `H=B∩D_p=B∩T_r` nonempty | Otherwise `(D_p,B,{x},{y})` is an EFX Pareto improvement | No |
-| Downward closure of common safety under the quota split (14) | Additivity and base EFX | No |
+| Downward closure of common safety under the quota split (14) | **Monotonicity** and base EFX: for `Z' subseteq Z` and `g in Z'`, `Z'-g subseteq Z-g`, so `v_i(Z'-g) <= v_i(Z-g) <= b_i` | No (*cancelable-class repair 2026-08-16, third pass*, S6: this row previously read "Additivity and base EFX", the only row in any of the three composition audits naming additivity as a derivation while answering "No") |
+| Quota arithmetic of (14): `v_p(H_p)>delta_p` makes `D'_p=(D_p\H)+H_p` desired | **Additivity** — the identity `v_p((D_p\H) u H_p) = v_p(D_p\H) + v_p(H_p)`, which neither monotonicity nor cancelability supplies | **Yes, genuinely additive** — but not load-bearing: Theorem 2 closes no priority order and is superseded by the additivity-free Theorem 3 (*added third pass*, S6) |
 
 ## Safe-repartition lemma and Theorem 3 — every remaining `p`-first type
 

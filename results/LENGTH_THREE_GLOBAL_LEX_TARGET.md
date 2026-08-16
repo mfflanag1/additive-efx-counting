@@ -10,15 +10,22 @@ history and are superseded by the two reservoir-order orientations
 [`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
 **These superseded sections are additive-only.**  Lines 1--500 — the
 load-bearing normal form and the reservoir lemmas — were swept and hold for
-BCFF's nice-cancelable class.  The proof-mining history below (roughly lines
-500--2800: the adaptive-singleton, parallel-root, augmented-root,
-hybrid-pair, quota-transversal, dual-mode-potential and fractional-pivot
-material) is pervasively additive — it computes on differences of set values
-and on quota deficits `delta = b - v(D \ H)`, neither of which cancelability
-supports — and it is *not* reachable from the reservoir-order theorem, which
-uses only `W=X_q+B_r`, `U=X_r+B_q` and the thresholds `tau_r(D_p)`,
-`tau_q(D_r)`.  If any of that material is ever revived as load-bearing it
-must be re-swept and will carry an additivity hypothesis.
+BCFF's nice-cancelable class.  The proof-mining history at lines 500--2889 —
+the adaptive-singleton, parallel-root, augmented-root, hybrid-pair,
+quota-transversal, dual-mode-potential and fractional-pivot material — is
+pervasively additive: it computes on differences of set values and on quota
+deficits `delta = b - v(D \ H)`, neither of which cancelability supports.  It
+is also *not* reachable from the reservoir-order theorem, which uses only
+`W=X_q+B_r`, `U=X_r+B_q` and the thresholds `tau_r(D_p)`, `tau_q(D_r)`.  If
+any of that material is ever revived as load-bearing it must be re-swept and
+will carry an additivity hypothesis.
+
+*Cancelable-class repair 2026-08-16, third pass* (S10).  The range above was
+re-pinned from "roughly 500--2800"; the old range left lines 2800--2911
+unclassified.  The tie wrapper at 2890--2906 is **not** superseded
+proof-mining and is classified separately: it is sound as mathematics — the
+argument needs only a respecting nondegenerate witness — and its two
+misdescribed A.1 lines were repaired by S8.
 
 ## Source-valid starting point
 
@@ -2891,8 +2898,13 @@ theorem.
 
 Empty packets are handled above.  Zero item values and valuation ties do not
 require a separate limiting argument inside the packet proof.  Apply BCFF
-Lemma A.1 to replace the original nice additive profile by a nondegenerate
-additive profile that respects every strict comparison of the original.
+Lemma A.1 to replace the original nice cancelable profile by a nondegenerate
+cancelable profile that respects every strict comparison of the original
+(*cancelable-class repair 2026-08-16, third pass*, S8: these two lines were
+the last live instance of the A.1 additivity drift in the load-bearing
+corpus. A.1 supplies a nondegenerate *cancelable* respecting witness, never
+an additive one; the argument here needs only a respecting nondegenerate
+witness, which is exactly what A.1 gives, so the mathematics is unchanged).
 Run the lexicographic-maximality argument entirely in the perturbed profile.
 If it yields a complete EFX allocation, that allocation is EFX for the
 original valuations: any original strict EFX violation would remain strict

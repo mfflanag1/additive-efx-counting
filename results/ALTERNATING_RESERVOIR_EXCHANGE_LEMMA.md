@@ -78,7 +78,7 @@ The sets `D` and `U` are disjoint.  Because `r` owns `X_r` and valuations
 are positive,
 
 \[
-v_r(U)=b_r+v_r(B_q)>b_r.
+v_r(U)>v_r(X_r)=b_r.
 \tag{1}
 \]
 

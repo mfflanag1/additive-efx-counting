@@ -104,16 +104,17 @@ their EFX comparisons.  Again the other visible bundles are singletons, so
 \[
 v_s(D\setminus\{g\})>v_s(X_q)
 \tag{9}
+\]
 
 for some \(g\in D\).
 
-If both allocations failed, nonnegativity and (8) would give
+If both allocations failed, monotonicity and (8) would give
 
 \[
 v_s(X_q)>v_s(D),
 \]
 
-while nonnegativity and (9) would give
+while monotonicity and (9) would give
 
 \[
 v_s(D)>v_s(X_q),
@@ -121,6 +122,16 @@ v_s(D)>v_s(X_q),
 
 a contradiction.  Thus at least one allocation is EFX.  Its stated
 lexicographic improvement follows from (2)--(3). \(\square\)
+
+*Cancelable-class repair 2026-08-16, third pass* (S5 and S2 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+The two steps closing the proof previously cited "nonnegativity"; the fact
+actually used is `v_s(X_q)>=v_s(X_q\{h})` and `v_s(D)>=v_s(D\{g})`, which is
+**monotonicity**.  Under additivity nonnegativity of a single good implies
+it, which is how the loose word survived; under a monotone non-additive
+valuation it does not.  This lemma's own summary below already says "uses
+only monotonicity", so the file was self-consistent and only these two words
+were off.  Display (9) was also missing its closing `\]`.
 
 ## Alternating-cycle consequence
 

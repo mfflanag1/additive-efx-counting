@@ -146,8 +146,13 @@ candidate source's own bundle:
 | `q` into `r` using \(K\subseteq B_q\) | \(X_r+B_q\) | 3076 | 10065 | 6989 |
 | `p` into `r` using \(K\subseteq B_q\) | \(X_r+B_q\) | 7026 | 10064 | 3038 |
 
-Positive additivity makes every offer obtained by shrinking the incoming
-packet or enlarging the prescribed release still less valuable.  No source
+Monotonicity makes every offer obtained by shrinking the incoming
+packet or enlarging the prescribed release still less valuable
+(*cancelable-class repair 2026-08-16, third pass*, S7: both operations shrink
+the offer set, so monotonicity alone suffices. The profile `V*` itself stays
+additive — it is a counterexample witness, and living in the additive
+subclass makes the refutation stronger, not weaker; the family enumeration
+(3)--(4) above is class-independent).  No source
 can envy any subset of such an offer.  Therefore **every edge in all four
 families (3)--(4) is absent**, for every prescribed target release.
 

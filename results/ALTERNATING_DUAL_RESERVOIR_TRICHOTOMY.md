@@ -28,11 +28,36 @@ X_r=T_r\mathbin{\dot\cup}B_r,\quad
 X_q=T_q\mathbin{\dot\cup}B_q,
 \]
 
-with charity good `f`, and put `b_i=v_i(X_i)`. Let
+with charity good `f`, and put `b_i=v_i(X_i)` and
 
 \[
-D_p=T_r+f,\qquad W=X_q+B_r,qquad t=\tau_r(D_p).
+\tau_i(Z)=\max_{g\in Z}v_i(Z\setminus\{g\}).
 \]
+
+A set is *common-safe* when `tau_i(Z)<=b_i` for every agent. Let
+
+\[
+D_p=T_r+f,\qquad W=X_q+B_r,\qquad t=\tau_r(D_p).
+\]
+
+*Cancelable-class repair 2026-08-16, third pass* (S1 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+This file used `tau` five times and defined it nowhere, while closing four of
+the twenty-four priority orders. The max-deletion definition above is now
+stated explicitly, matching
+[`ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+and
+[`ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md`](ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md).
+All five uses in this file were checked against it and are consistent — the
+chains `tau_r(A)<=v_r(A)<=v_r(W)<t<=v_r(D_p)` and
+`v_r(A)<=v_r(R-h)<t<=v_r(D_p)`, and the sentence in the EFX verification
+that "the displayed `r` inequality is exactly her sole nontrivial external
+EFX comparison", are true under max-deletion and only under it. So this was a
+statement gap, not a proof gap, and the fix introduces no additivity: under
+max-deletion, common safety is downward closed by monotonicity alone.
+*(Follows the `418f324` repair of the same defect class in its "misstated"
+form, where the additive reading `v_i(Z)-\min_{g\in Z}v_i(g)` would have left
+downward closure unsupported outside the additive class.)*
 
 The sets `D_p` and `W` are disjoint. Assume `D_p` is desired by `p`, `q`
 strictly envies `X_p={x}`, `B_r` is nonempty, and the two compatible families
@@ -74,7 +99,7 @@ At least one of the following holds:
 Because `q` owns `X_q` and values are positive,
 
 \[
-v_q(W)=b_q+v_q(B_r)>b_q.
+v_q(W)>v_q(X_q)=b_q.
 \tag{1}
 \]
 

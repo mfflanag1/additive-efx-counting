@@ -4,6 +4,16 @@
 **Status:** exact bounded theorem, superseded by a cap-free analytic proof
 **Cell:** `(2,2,2,2)` and priority order `(p,s,r,q)`
 
+
+*Cancelable-class repair 2026-08-16, third pass* (S3 of
+[`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).
+**Convention.** Throughout, `tau_i(Z)=max_{g in Z} v_i(Z\{g})` (max deletion),
+and a set `Z` is *common-safe* when `tau_i(Z)<=b_i` for every agent `i`, where
+`b_i=v_i(X_i)`. This is the definition stated in
+[`ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md`](ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md)
+and used uniformly across the in-closure files; it is recorded here so that no
+file uses the symbol without a resolvable definition.
+
 ## Theorem
 
 In every strict valuation profile satisfying the corrected alternating

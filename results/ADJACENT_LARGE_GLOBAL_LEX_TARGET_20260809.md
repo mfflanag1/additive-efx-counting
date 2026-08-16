@@ -50,10 +50,13 @@ above:
   section, via charity dominance; it does not follow from `B_r,B_q` being
   nonempty).
 
-These were used silently and are load-bearing: `v_r(U)=b_r+v_r(B_q)>b_r` in
+These were used silently and are load-bearing: `v_r(U)>v_r(X_r)=b_r` in
 Theorem 1 and in the second extraction branch of Theorem 3 needs `B_q`
-nonempty and positive, and `v_q(W)=b_q+v_q(B_r)>b_q` behind the `p`-first
-escapes (11)--(12) needs `B_r` nonempty and positive.  Both are supplied by
+nonempty, and `v_q(W)>v_q(X_q)=b_q` behind the `p`-first escapes (11)--(12)
+needs `B_r` nonempty (*cancelable-class repair 2026-08-16, third pass*, S4:
+the former additive forms `b_r+v_r(B_q)` and `b_q+v_q(B_r)` were decorative;
+monotonicity plus non-degeneracy give the strict inequalities once the bottom
+packet is nonempty).  Both are supplied by
 the reservoir-extraction premise "the pool contains a desired set", which
 fails outright for an empty bottom packet.
 
@@ -144,8 +147,8 @@ using any incoming subset of `B_q` is PI-compatible when its source is
 `q`, `s`, or `p`:
 
 \[
-r\xrightarrow f q\xrightarrow{B_q}r,qquad
-r\xrightarrow f q\longrightarrow s\xrightarrow{B_q}r,qquad
+r\xrightarrow f q\xrightarrow{B_q}r,\qquad
+r\xrightarrow f q\longrightarrow s\xrightarrow{B_q}r,\qquad
 r\xrightarrow f q\longrightarrow s\longrightarrow p
  \xrightarrow{B_q}r.
 \tag{5}
@@ -274,7 +277,7 @@ Put
 \delta_r=b_r-v_r(B\setminus H).
 \]
 
-If `H` had a partition `H=H_p dotcup H_r` with
+If `H` had a partition `H=H_p \dotcup H_r` with
 
 \[
 v_p(H_p)>\delta_p,\qquad v_r(H_r)>\delta_r,
@@ -284,7 +287,7 @@ v_p(H_p)>\delta_p,\qquad v_r(H_r)>\delta_r,
 then the disjoint sets
 
 \[
-D'_p=(D_p\setminus H)+H_p,qquad
+D'_p=(D_p\setminus H)+H_p,\qquad
 B'=(B\setminus H)+H_r
 \]
 

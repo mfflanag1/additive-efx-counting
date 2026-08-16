@@ -33,17 +33,35 @@ four-agent EFX state cannot have exactly two nonsingleton bundles.
 The corollary is immediate: positive nondegenerate additive valuations are
 normalized, monotone, cancelable and non-degenerate, hence nice cancelable.
 
-**Interim status (final-gate referee, 2026-08-16): the nice-cancelable
-Theorem is NOT yet quotable; the additive Corollary is the quotable
-statement.** The final gate found the two sweeps' coverage incomplete (7 of
-24 alternating/adjacent files inspected): `ALTERNATING_TWO_SAFE_BUNDLE_
-REDUCTION.md` — order-closing for `(p,s,r,q)` and `(s,p,q,r)` — defined
-`tau` by the additive formula (now fixed, fix referee-verified), and the
-case-theorem scope lines still read "additive". The widening is expected to
-stand once the complete alternating-chain sweep lands and the scope lines
-are reconciled; until then treat the Theorem heading as conjectural at
-nice-cancelable generality. Nothing in the gate reopens G1/G2/G3, and the
-additive result is unaffected.
+**Final status (2026-08-16): the nice-cancelable Theorem stands as stated.**
+The final gate's condition (i) is now satisfied on all three counts. The
+`tau` convention defect it caught is fixed and the fix is referee-verified
+(`418f324`): `ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md` — order-closing for
+`(p,s,r,q)` and `(s,p,q,r)` — had defined `tau` by the additive formula, and
+now states the max-deletion definition the proof body already used
+throughout. The complete-closure sweep has landed (`0c9658d`): 25 files
+classified by transitive citation closure from the eight seeds, the 11
+load-bearing ones swept line by line, **zero blocking sites and zero
+reverse-cancelation uses**, and no new genuinely-additive load-bearing site.
+The scope lines are reconciled (S11), the last remaining "additive" scope
+line in the load-bearing cover having been corrected. The Theorem heading is
+therefore no longer conjectural at nice-cancelable generality.
+
+What remains are the standing external gates, unchanged by any of this work
+and none of them specific to the widening: the human check of the BCFF
+Theorem 3.16 / Definition 3.9 interface against
+[arXiv:2102.10654](https://arxiv.org/abs/2102.10654), the G5 branch
+consolidation, and genuine external review. Correctness of the four case
+theorems themselves is likewise untouched — both sweeps determine which
+valuation hypotheses their proofs consume, not whether those proofs are
+right.
+
+*Provenance.* This paragraph supersedes the interim downgrade added at
+`418f324`, which read "the nice-cancelable Theorem is NOT yet quotable; the
+additive Corollary is the quotable statement" and predicted that the widening
+"is expected to stand once the complete alternating-chain sweep lands and the
+scope lines are reconciled". Both conditions are now met. Nothing in the gate
+ever reopened G1/G2/G3, and the additive Corollary was unaffected throughout.
 
 *Cancelable-class repair 2026-08-16* (R7 of
 [`CANCELABLE_CLASS_SWEEP_20260816.md`](CANCELABLE_CLASS_SWEEP_20260816.md)).

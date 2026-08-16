@@ -1,8 +1,9 @@
 # Alternating easy-priority escape lemma
 
 **Status:** cap-free analytic lemma
-**Scope:** four additive agents, arbitrary top/bottom bundle sizes, an
-alternating genuine champion cycle with two singleton owners
+**Scope:** four normalized monotone agents (nice cancelable after BCFF Lemma
+A.1), arbitrary top/bottom bundle sizes, an alternating genuine champion
+cycle with two singleton owners
 **Boundary:** closes 16 of 24 priority-role orders; eight singleton-first
 orders remain
 
