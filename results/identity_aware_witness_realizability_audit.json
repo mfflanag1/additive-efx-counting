@@ -1,0 +1,5447 @@
+{
+  "claim_boundary": "Exact and closed-form for the banked totals/minima profiles listed here.  It characterises which coincidence partitions a role can carry; it decides no EFX allocation and does not bear on the universal fixed-U theorem.",
+  "construction": "block j owns a distinct physical good; an observer in block j values it at M and spreads T-M evenly over the remaining b-1 goods, so every non-witness good is worth at least M exactly when T >= b*M",
+  "observers": [
+    "r",
+    "q",
+    "d",
+    "s"
+  ],
+  "partition_count": 15,
+  "partitions": [
+    "dqrs",
+    "d|qrs",
+    "dq|rs",
+    "dqr|s",
+    "dqs|r",
+    "dr|qs",
+    "drs|q",
+    "ds|qr",
+    "d|q|rs",
+    "d|qr|s",
+    "d|qs|r",
+    "dq|r|s",
+    "dr|q|s",
+    "ds|q|r",
+    "d|q|r|s"
+  ],
+  "profiles": [
+    {
+      "admission_depends_only_on_block_count": true,
+      "admission_threshold_equals_slack_ratio": true,
+      "every_admitted_realization_verified": true,
+      "roles": {
+        "a0": {
+          "block_counts_admitted": [
+            1,
+            2,
+            3
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/2088",
+                  "r": "1/522",
+                  "s": "1/1044"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/261",
+                  "r": "7/464",
+                  "s": "11/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/2088",
+                  "r": "1/522",
+                  "s": "11/4176"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/261",
+                  "r": "7/464",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/2088",
+                  "r": "7/464",
+                  "s": "1/1044"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/261",
+                  "r": "1/522",
+                  "s": "11/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/2088",
+                  "r": "7/464",
+                  "s": "11/4176"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/261",
+                  "r": "1/522",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/2088",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x1": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "1/522",
+                  "s": "11/8352"
+                },
+                "x2": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/261",
+                  "r": "1/522",
+                  "s": "1/1044"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/2088",
+                  "r": "7/464",
+                  "s": "11/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/261",
+                  "r": "1/522",
+                  "s": "11/4176"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/2088",
+                  "r": "7/464",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "1/522",
+                  "s": "11/8352"
+                },
+                "x1": {
+                  "d": "695/2784",
+                  "q": "1/2088",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x2": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/261",
+                  "r": "7/464",
+                  "s": "1/1044"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/2088",
+                  "r": "1/522",
+                  "s": "11/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "1/1044"
+                },
+                "x1": {
+                  "d": "695/2784",
+                  "q": "1/2088",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x2": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "1/522",
+                  "s": "11/8352"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/261",
+                  "r": "7/464",
+                  "s": "11/4176"
+                },
+                "x1": {
+                  "d": "695/1392",
+                  "q": "1/2088",
+                  "r": "1/522",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x1": {
+                  "d": "695/2784",
+                  "q": "1/2088",
+                  "r": "1/522",
+                  "s": "11/8352"
+                },
+                "x2": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qs|r": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x1": {
+                  "d": "695/2784",
+                  "q": "1/2088",
+                  "r": "7/928",
+                  "s": "1/1044"
+                },
+                "x2": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "1/522",
+                  "s": "11/8352"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|q|rs": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x1": {
+                  "d": "695/2784",
+                  "q": "1/2088",
+                  "r": "7/928",
+                  "s": "11/8352"
+                },
+                "x2": {
+                  "d": "695/2784",
+                  "q": "1/522",
+                  "r": "1/522",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1/1044",
+                "observer": "s",
+                "reason": "total below block count times minimum",
+                "total": "5/1392"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "3"
+        },
+        "a1": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1/1392",
+                  "r": "7/4176",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1385/1392",
+                  "r": "4099/4176",
+                  "s": "1387/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1/1392",
+                  "r": "7/4176",
+                  "s": "1387/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1385/1392",
+                  "r": "4099/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1/1392",
+                  "r": "4099/4176",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1385/1392",
+                  "r": "7/4176",
+                  "s": "1387/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1/1392",
+                  "r": "4099/4176",
+                  "s": "1387/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1385/1392",
+                  "r": "7/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1385/1392",
+                  "r": "7/4176",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1/1392",
+                  "r": "4099/4176",
+                  "s": "1387/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1385/1392",
+                  "r": "7/4176",
+                  "s": "1387/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1/1392",
+                  "r": "4099/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1385/1392",
+                  "r": "4099/4176",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1/1392",
+                  "r": "7/4176",
+                  "s": "1387/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "77/464",
+                  "q": "1385/1392",
+                  "r": "4099/4176",
+                  "s": "1387/1392"
+                },
+                "x1": {
+                  "d": "2095/8352",
+                  "q": "1/1392",
+                  "r": "7/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "77/464",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3481/8352"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "e": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "577/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "577/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "577/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "577/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "577/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "577/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "577/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/2088",
+                  "q": "175/348",
+                  "r": "17/4176",
+                  "s": "577/696"
+                },
+                "x1": {
+                  "d": "131/522",
+                  "q": "7/4176",
+                  "r": "17/4176",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "17/4176",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "17/2088"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "gq": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "5/4176"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "349/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "349/1044"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "5/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "5/4176"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "349/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "349/1044"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "5/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "5/4176"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "349/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "349/1044"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "5/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "5/4176"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "349/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1044",
+                  "q": "231/928",
+                  "r": "53/1392",
+                  "s": "349/1044"
+                },
+                "x1": {
+                  "d": "3467/8352",
+                  "q": "231/928",
+                  "r": "1/1392",
+                  "s": "5/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "231/928",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "gr": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "5/4176",
+                  "q": "1/1044",
+                  "r": "1/1044",
+                  "s": "1/696"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1/1044",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "1/522"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "h": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "347/2088",
+                  "q": "1/348",
+                  "r": "5/261",
+                  "s": "1/522"
+                },
+                "x1": {
+                  "d": "703/4176",
+                  "q": "1/348",
+                  "r": "1/696",
+                  "s": "1/522"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1/348",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/174"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "j": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2077/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2081/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2077/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2081/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2077/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2081/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2077/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2081/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2081/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2077/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2081/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2077/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2081/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2077/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/2784",
+                  "q": "2081/8352",
+                  "r": "47/48",
+                  "s": "1391/4176"
+                },
+                "x1": {
+                  "d": "2105/8352",
+                  "q": "2077/8352",
+                  "r": "1/2088",
+                  "s": "1391/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "2077/8352",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "231/464"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "k": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "2083/8352",
+                  "q": "695/1392",
+                  "r": "85/4176",
+                  "s": "695/2088"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "85/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "85/4176"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        },
+        "l": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "1/4176",
+                  "s": "1/4176"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "517/1044",
+                  "r": "19/1044",
+                  "s": "59/348"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "1/4176",
+                  "s": "59/348"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "517/1044",
+                  "r": "19/1044",
+                  "s": "1/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "19/1044",
+                  "s": "1/4176"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "517/1044",
+                  "r": "1/4176",
+                  "s": "59/348"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "1/522",
+                  "r": "19/1044",
+                  "s": "59/348"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "517/1044",
+                  "r": "1/4176",
+                  "s": "1/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "517/1044",
+                  "r": "1/4176",
+                  "s": "1/4176"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "1/522",
+                  "r": "19/1044",
+                  "s": "59/348"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "517/1044",
+                  "r": "1/4176",
+                  "s": "59/348"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "1/522",
+                  "r": "19/1044",
+                  "s": "1/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "517/1044",
+                  "r": "19/1044",
+                  "s": "1/4176"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "1/522",
+                  "r": "1/4176",
+                  "s": "59/348"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "695/4176",
+                  "q": "517/1044",
+                  "r": "19/1044",
+                  "s": "59/348"
+                },
+                "x1": {
+                  "d": "2143/8352",
+                  "q": "1/522",
+                  "r": "1/4176",
+                  "s": "1/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "695/4176",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "3533/8352"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "m": {
+          "block_counts_admitted": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "1/4176",
+                  "r": "5/4176",
+                  "s": "7/4176"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "2069/4176",
+                  "r": "1025/1044",
+                  "s": "343/2088"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "1/4176",
+                  "r": "5/4176",
+                  "s": "343/2088"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "2069/4176",
+                  "r": "1025/1044",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "1/4176",
+                  "r": "1025/1044",
+                  "s": "7/4176"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "2069/4176",
+                  "r": "5/4176",
+                  "s": "343/2088"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "1/4176",
+                  "r": "1025/1044",
+                  "s": "343/2088"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "2069/4176",
+                  "r": "5/4176",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "1/4176",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x1": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "5/4176",
+                  "s": "343/4176"
+                },
+                "x2": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/4176",
+                  "r": "5/4176",
+                  "s": "7/4176"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "1/4176",
+                  "r": "1025/1044",
+                  "s": "343/2088"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/4176",
+                  "r": "5/4176",
+                  "s": "343/2088"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "1/4176",
+                  "r": "1025/1044",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/8352",
+                  "r": "5/4176",
+                  "s": "343/4176"
+                },
+                "x1": {
+                  "d": "77/464",
+                  "q": "1/4176",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x2": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/4176",
+                  "r": "1025/1044",
+                  "s": "7/4176"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "1/4176",
+                  "r": "5/4176",
+                  "s": "343/2088"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "7/4176"
+                },
+                "x1": {
+                  "d": "77/464",
+                  "q": "1/4176",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x2": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "5/4176",
+                  "s": "343/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/4176",
+                  "r": "1025/1044",
+                  "s": "343/2088"
+                },
+                "x1": {
+                  "d": "77/232",
+                  "q": "1/4176",
+                  "r": "5/4176",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x1": {
+                  "d": "77/464",
+                  "q": "1/4176",
+                  "r": "5/4176",
+                  "s": "343/4176"
+                },
+                "x2": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qs|r": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x1": {
+                  "d": "77/464",
+                  "q": "1/4176",
+                  "r": "1025/2088",
+                  "s": "7/4176"
+                },
+                "x2": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "5/4176",
+                  "s": "343/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|q|rs": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/8352",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x1": {
+                  "d": "77/464",
+                  "q": "1/4176",
+                  "r": "1025/2088",
+                  "s": "343/4176"
+                },
+                "x2": {
+                  "d": "77/464",
+                  "q": "2069/8352",
+                  "r": "5/4176",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|q|r|s": {
+              "admitted": true,
+              "physical_good_count": 4,
+              "values": {
+                "x0": {
+                  "d": "1/1392",
+                  "q": "2069/12528",
+                  "r": "1025/3132",
+                  "s": "343/6264"
+                },
+                "x1": {
+                  "d": "77/696",
+                  "q": "1/4176",
+                  "r": "1025/3132",
+                  "s": "343/6264"
+                },
+                "x2": {
+                  "d": "77/696",
+                  "q": "2069/12528",
+                  "r": "5/4176",
+                  "s": "343/6264"
+                },
+                "x3": {
+                  "d": "77/696",
+                  "q": "2069/12528",
+                  "r": "1025/3132",
+                  "s": "7/4176"
+                }
+              },
+              "verified_by_recomputation": true
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "99"
+        },
+        "p": {
+          "block_counts_admitted": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "1/4176",
+                  "r": "1/261",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "2069/4176",
+                  "r": "2071/2088",
+                  "s": "235/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "1/4176",
+                  "r": "1/261",
+                  "s": "235/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "2069/4176",
+                  "r": "2071/2088",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "1/4176",
+                  "r": "2071/2088",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "2069/4176",
+                  "r": "1/261",
+                  "s": "235/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "1/4176",
+                  "r": "2071/2088",
+                  "s": "235/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "2069/4176",
+                  "r": "1/261",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "1/4176",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x1": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "1/261",
+                  "s": "235/2784"
+                },
+                "x2": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/4176",
+                  "r": "1/261",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "1/4176",
+                  "r": "2071/2088",
+                  "s": "235/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/4176",
+                  "r": "1/261",
+                  "s": "235/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "1/4176",
+                  "r": "2071/2088",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/8352",
+                  "r": "1/261",
+                  "s": "235/2784"
+                },
+                "x1": {
+                  "d": "521/1392",
+                  "q": "1/4176",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x2": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/4176",
+                  "r": "2071/2088",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "1/4176",
+                  "r": "1/261",
+                  "s": "235/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "1/1392"
+                },
+                "x1": {
+                  "d": "521/1392",
+                  "q": "1/4176",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x2": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "1/261",
+                  "s": "235/2784"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/4176",
+                  "r": "2071/2088",
+                  "s": "235/1392"
+                },
+                "x1": {
+                  "d": "521/696",
+                  "q": "1/4176",
+                  "r": "1/261",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x1": {
+                  "d": "521/1392",
+                  "q": "1/4176",
+                  "r": "1/261",
+                  "s": "235/2784"
+                },
+                "x2": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qs|r": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x1": {
+                  "d": "521/1392",
+                  "q": "1/4176",
+                  "r": "2071/4176",
+                  "s": "1/1392"
+                },
+                "x2": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "1/261",
+                  "s": "235/2784"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|q|rs": {
+              "admitted": true,
+              "physical_good_count": 3,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/8352",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x1": {
+                  "d": "521/1392",
+                  "q": "1/4176",
+                  "r": "2071/4176",
+                  "s": "235/2784"
+                },
+                "x2": {
+                  "d": "521/1392",
+                  "q": "2069/8352",
+                  "r": "1/261",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|q|r|s": {
+              "admitted": true,
+              "physical_good_count": 4,
+              "values": {
+                "x0": {
+                  "d": "1/4176",
+                  "q": "2069/12528",
+                  "r": "2071/6264",
+                  "s": "235/4176"
+                },
+                "x1": {
+                  "d": "521/2088",
+                  "q": "1/4176",
+                  "r": "2071/6264",
+                  "s": "235/4176"
+                },
+                "x2": {
+                  "d": "521/2088",
+                  "q": "2069/12528",
+                  "r": "1/261",
+                  "s": "235/4176"
+                },
+                "x3": {
+                  "d": "521/2088",
+                  "q": "2069/12528",
+                  "r": "2071/6264",
+                  "s": "1/1392"
+                }
+              },
+              "verified_by_recomputation": true
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "236"
+        },
+        "q0": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "2081/8352",
+                  "q": "1/232",
+                  "r": "1/4176",
+                  "s": "1/1044"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1/4176",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/4176"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        }
+      },
+      "source": "/private/tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json",
+      "source_sha256": "e396f24dfb60f0ea796e6dea46962a3ac4eb3794ee6e6e87932f9fa94eff6963",
+      "source_status": "SAT_RELAXED_PHYSICAL_FOUR_EDGE_OBSTRUCTION"
+    },
+    {
+      "admission_depends_only_on_block_count": true,
+      "admission_threshold_equals_slack_ratio": true,
+      "every_admitted_realization_verified": true,
+      "roles": {
+        "a0": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "1/2480",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "2479/4960",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "1/2480",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "2479/4960",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "1/2480",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "2479/4960",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "1/2480",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "2479/4960",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "2479/4960",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "1/2480",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "2479/4960",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "1/2480",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "2479/4960",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "1/2480",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2489/7440",
+                  "q": "2479/4960",
+                  "r": "4941/12400",
+                  "s": "97/496"
+                },
+                "x1": {
+                  "d": "9901/22320",
+                  "q": "1/2480",
+                  "r": "1239/6200",
+                  "s": "97/496"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1239/6200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "7419/12400"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "a1": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "1453/7440"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "4981/12400",
+                  "s": "2237/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "2237/3720"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "4981/12400",
+                  "s": "1453/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "4981/12400",
+                  "s": "1453/7440"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "1/7440",
+                  "s": "2237/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "4981/12400",
+                  "s": "2237/3720"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "1/7440",
+                  "s": "1453/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "1/7440",
+                  "s": "1453/7440"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "4981/12400",
+                  "s": "2237/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "1/7440",
+                  "s": "2237/3720"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "4981/12400",
+                  "s": "1453/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "4981/12400",
+                  "s": "1453/7440"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "2237/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "619/2790",
+                  "q": "7433/14880",
+                  "r": "4981/12400",
+                  "s": "2237/3720"
+                },
+                "x1": {
+                  "d": "619/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "1453/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "619/2790",
+                "observer": "d",
+                "reason": "total below block count times minimum",
+                "total": "619/1395"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "e": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7543/29760",
+                  "r": "1/3720",
+                  "s": "1/2480"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7333/14880",
+                  "r": "239/1200",
+                  "s": "2233/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7543/29760",
+                  "r": "1/3720",
+                  "s": "2233/3720"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7333/14880",
+                  "r": "239/1200",
+                  "s": "1/2480"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7543/29760",
+                  "r": "239/1200",
+                  "s": "1/2480"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7333/14880",
+                  "r": "1/3720",
+                  "s": "2233/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7543/29760",
+                  "r": "239/1200",
+                  "s": "2233/3720"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7333/14880",
+                  "r": "1/3720",
+                  "s": "1/2480"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7333/14880",
+                  "r": "1/3720",
+                  "s": "1/2480"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7543/29760",
+                  "r": "239/1200",
+                  "s": "2233/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7333/14880",
+                  "r": "1/3720",
+                  "s": "2233/3720"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7543/29760",
+                  "r": "239/1200",
+                  "s": "1/2480"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7333/14880",
+                  "r": "239/1200",
+                  "s": "1/2480"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7543/29760",
+                  "r": "1/3720",
+                  "s": "2233/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2473/22320",
+                  "q": "7333/14880",
+                  "r": "239/1200",
+                  "s": "2233/3720"
+                },
+                "x1": {
+                  "d": "1/6",
+                  "q": "7543/29760",
+                  "r": "1/3720",
+                  "s": "1/2480"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "7543/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7403/9920"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "gq": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "1/1860",
+                  "r": "617/3100",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "2469/9920",
+                  "r": "1249/6200",
+                  "s": "149/186"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "1/1860",
+                  "r": "617/3100",
+                  "s": "149/186"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "2469/9920",
+                  "r": "1249/6200",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "1/1860",
+                  "r": "1249/6200",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "2469/9920",
+                  "r": "617/3100",
+                  "s": "149/186"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "1/1860",
+                  "r": "1249/6200",
+                  "s": "149/186"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "2469/9920",
+                  "r": "617/3100",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "2469/9920",
+                  "r": "617/3100",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "1/1860",
+                  "r": "1249/6200",
+                  "s": "149/186"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "2469/9920",
+                  "r": "617/3100",
+                  "s": "149/186"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "1/1860",
+                  "r": "1249/6200",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "2469/9920",
+                  "r": "1249/6200",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "1/1860",
+                  "r": "617/3100",
+                  "s": "149/186"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "2461/22320",
+                  "q": "2469/9920",
+                  "r": "1249/6200",
+                  "s": "149/186"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "1/1860",
+                  "r": "617/3100",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "617/3100",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "2483/6200"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "gr": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "311/930",
+                  "q": "1/3720",
+                  "r": "1/3720",
+                  "s": "371/930"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1/3720",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "1/3720"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        },
+        "h": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "1241/2790",
+                  "q": "497/992",
+                  "r": "7429/37200",
+                  "s": "727/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "7429/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "7429/37200"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        },
+        "j": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "619/1860",
+                  "q": "7447/29760",
+                  "r": "239/1200",
+                  "s": "247/1240"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "239/1200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "239/1200"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        },
+        "k": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "4967/22320",
+                  "q": "2481/9920",
+                  "r": "22277/37200",
+                  "s": "13/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "22277/37200",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "22277/37200"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        },
+        "l": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "2971/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "2971/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "2971/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "2971/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "2971/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "2971/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "2971/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "7547/29760",
+                  "r": "4961/6200",
+                  "s": "2971/7440"
+                },
+                "x1": {
+                  "d": "311/1116",
+                  "q": "7547/29760",
+                  "r": "1/2480",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "7547/29760",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "7547/14880"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "m": {
+          "block_counts_admitted": [
+            1
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 1,
+              "values": {
+                "x0": {
+                  "d": "247/2232",
+                  "q": "7411/29760",
+                  "r": "4981/12400",
+                  "s": "1/3720"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "dqs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "dq|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "drs|q": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "dr|qs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "ds|qr": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "d|qrs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 2,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "4981/12400",
+                "observer": "r",
+                "reason": "singleton role carries one physical good",
+                "total": "4981/12400"
+              }
+            }
+          },
+          "singleton_role": true,
+          "slack_ratio": "1"
+        },
+        "p": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "99/248"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "99/248"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "99/248"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "99/248"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "99/248"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "99/248"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "1/7440"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "99/248"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "151/2790",
+                  "q": "1/7440",
+                  "r": "9927/12400",
+                  "s": "99/248"
+                },
+                "x1": {
+                  "d": "16127/22320",
+                  "q": "1/7440",
+                  "r": "1/7440",
+                  "s": "1/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "1/7440",
+                "observer": "q",
+                "reason": "total below block count times minimum",
+                "total": "1/3720"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        },
+        "q0": {
+          "block_counts_admitted": [
+            1,
+            2
+          ],
+          "partitions": {
+            "dqrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqr|s": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dqs|r": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|rs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dq|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            },
+            "drs|q": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|qs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "dr|q|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            },
+            "ds|qr": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "ds|q|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            },
+            "d|qrs": {
+              "admitted": true,
+              "physical_good_count": 2,
+              "values": {
+                "x0": {
+                  "d": "1241/5580",
+                  "q": "7451/29760",
+                  "r": "3757/18600",
+                  "s": "1483/7440"
+                },
+                "x1": {
+                  "d": "1241/5580",
+                  "q": "7439/29760",
+                  "r": "7399/37200",
+                  "s": "1483/7440"
+                }
+              },
+              "verified_by_recomputation": true
+            },
+            "d|qr|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            },
+            "d|qs|r": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            },
+            "d|q|rs": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 3,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            },
+            "d|q|r|s": {
+              "admitted": false,
+              "obstruction": {
+                "blocks": 4,
+                "minimum": "7399/37200",
+                "observer": "r",
+                "reason": "total below block count times minimum",
+                "total": "4971/12400"
+              }
+            }
+          },
+          "singleton_role": false,
+          "slack_ratio": "2"
+        }
+      },
+      "source": "/private/tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json",
+      "source_sha256": "24872d6bf5e5b75ae2dc0de8faa453346806c2bc97f2cd38d975e935d130896b",
+      "source_status": "SAT_ONE_MINIMUM_SPLIT_SELECTOR_OBSTRUCTION"
+    }
+  ],
+  "schema": "identity-aware-witness-realizability-audit-v1",
+  "script_sha256": "594a9e4890f46400fca6357a2ac9b1f517f42dfe01a36b318f3e0daa454aa06a"
+}

@@ -1,0 +1,589 @@
+{
+  "canonical_baseline": {
+    "allocation": {
+      "d": [
+        "m:0",
+        "gq:0",
+        "gr:0",
+        "p:0",
+        "p:1"
+      ],
+      "q": [
+        "h:0",
+        "j:0",
+        "k:0",
+        "q0:0",
+        "q0:1"
+      ],
+      "r": [
+        "a0:0",
+        "a0:1",
+        "a1:0",
+        "a1:1",
+        "l:1"
+      ],
+      "s": [
+        "l:0",
+        "e:0",
+        "e:1",
+        "gq:1"
+      ]
+    },
+    "coincidence_partition": "rqds",
+    "reason_unknown": null,
+    "split_roles": [
+      "gq",
+      "l"
+    ],
+    "status": "sat",
+    "used_edges": [
+      [
+        "charity",
+        "d"
+      ],
+      [
+        "d",
+        "s"
+      ],
+      [
+        "r",
+        "q"
+      ],
+      [
+        "s",
+        "r"
+      ]
+    ]
+  },
+  "claim_boundary": "Every side pattern realizes the same totals and minima.  A terminal concrete unsat together with a satisfiable canonical baseline proves that the totals/minima abstraction does not determine the four-support-edge EFX gate.  A master unsat proves only that no side pattern in this two-good family defeats the accumulated allocation menu.  Neither outcome resolves the universal fixed-U theorem.",
+  "edge_cap": 4,
+  "edge_origin": "support",
+  "multi_good_roles": [
+    "a0",
+    "a1",
+    "q0",
+    "l",
+    "e",
+    "gq",
+    "p"
+  ],
+  "rounds": [
+    {
+      "allocation": {
+        "d": [
+          "m:0",
+          "gq:0",
+          "gr:0",
+          "p:0",
+          "p:1"
+        ],
+        "q": [
+          "h:0",
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "a0:0",
+          "a0:1",
+          "a1:0",
+          "a1:1",
+          "l:1"
+        ],
+        "s": [
+          "l:0",
+          "e:0",
+          "e:1",
+          "gq:1"
+        ]
+      },
+      "iteration": 0,
+      "origin": "baseline",
+      "split_roles": [
+        "gq",
+        "l"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "a1:0",
+          "h:0",
+          "m:0",
+          "gq:0",
+          "gq:1"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1",
+          "l:0"
+        ],
+        "r": [
+          "a0:1",
+          "a1:1",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "l:1",
+          "e:0",
+          "e:1",
+          "gr:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "rqds",
+        "a1": "rqds",
+        "e": "rqds",
+        "gq": "rqd|s",
+        "l": "rqds",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 1,
+      "split_roles": [
+        "a0",
+        "a1",
+        "l"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "gq:1",
+          "gr:0",
+          "p:0",
+          "p:1"
+        ],
+        "q": [
+          "h:0",
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "a0:0",
+          "a0:1",
+          "a1:0",
+          "a1:1",
+          "m:0"
+        ],
+        "s": [
+          "l:0",
+          "l:1",
+          "e:0",
+          "e:1",
+          "gq:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "q|rds",
+        "a1": "rqds",
+        "e": "rqds",
+        "gq": "rqd|s",
+        "l": "rqds",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 2,
+      "split_roles": [
+        "gq"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "a1:0",
+          "h:0",
+          "m:0",
+          "gq:0",
+          "gq:1"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1",
+          "l:0",
+          "e:0"
+        ],
+        "r": [
+          "a0:1",
+          "a1:1",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "l:1",
+          "e:1",
+          "gr:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "rqds",
+        "a1": "q|rds",
+        "e": "rqds",
+        "gq": "ds|rq",
+        "l": "rqds",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 3,
+      "split_roles": [
+        "a0",
+        "a1",
+        "e",
+        "l"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "a1:0",
+          "h:0",
+          "m:0",
+          "gr:0"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1",
+          "e:0"
+        ],
+        "r": [
+          "a0:1",
+          "a1:1",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "l:0",
+          "l:1",
+          "e:1",
+          "gq:0",
+          "gq:1"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "rqds",
+        "a1": "q|rds",
+        "e": "rqd|s",
+        "gq": "ds|rq",
+        "l": "rqds",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 4,
+      "split_roles": [
+        "a0",
+        "a1",
+        "e"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "gq:0",
+          "gq:1",
+          "gr:0",
+          "p:1"
+        ],
+        "q": [
+          "h:0",
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "a0:0",
+          "a0:1",
+          "a1:0",
+          "a1:1",
+          "m:0"
+        ],
+        "s": [
+          "l:0",
+          "l:1",
+          "e:0",
+          "e:1",
+          "p:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "rqds",
+        "a1": "rqd|s",
+        "e": "qs|rd",
+        "gq": "ds|rq",
+        "l": "ds|rq",
+        "p": "rqd|s",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 5,
+      "split_roles": [
+        "p"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:1",
+          "h:0",
+          "m:0",
+          "gq:0",
+          "gq:1"
+        ],
+        "q": [
+          "a0:0",
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "a1:0",
+          "a1:1",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "l:0",
+          "l:1",
+          "e:0",
+          "e:1",
+          "gr:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "q|rds",
+        "a1": "rqd|s",
+        "e": "rqd|s",
+        "gq": "ds|rq",
+        "l": "ds|rq",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 6,
+      "split_roles": [
+        "a0"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "h:0",
+          "m:0",
+          "gq:0",
+          "gq:1",
+          "gr:0"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1",
+          "e:1"
+        ],
+        "r": [
+          "a1:1",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "a0:1",
+          "a1:0",
+          "l:0",
+          "l:1",
+          "e:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "rqds",
+        "a1": "rqd|s",
+        "e": "rqd|s",
+        "gq": "ds|rq",
+        "l": "ds|rq",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 7,
+      "split_roles": [
+        "a0",
+        "a1",
+        "e"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "a1:0",
+          "h:0",
+          "m:0",
+          "gq:1",
+          "gr:0"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1",
+          "gq:0"
+        ],
+        "r": [
+          "a0:1",
+          "a1:1",
+          "l:1"
+        ],
+        "s": [
+          "l:0",
+          "e:0",
+          "e:1",
+          "p:0",
+          "p:1"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "d|rqs",
+        "a1": "rqd|s",
+        "e": "qds|r",
+        "gq": "ds|rq",
+        "l": "ds|rq",
+        "p": "d|rqs",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 8,
+      "split_roles": [
+        "a0",
+        "a1",
+        "gq",
+        "l"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "h:0",
+          "m:0",
+          "gq:0",
+          "gq:1",
+          "gr:0"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1",
+          "l:0"
+        ],
+        "r": [
+          "a0:1",
+          "a1:1",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "a1:0",
+          "l:1",
+          "e:0",
+          "e:1"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "d|rqs",
+        "a1": "rqd|s",
+        "e": "qs|rd",
+        "gq": "ds|rq",
+        "l": "d|rqs",
+        "p": "d|rqs",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 9,
+      "split_roles": [
+        "a0",
+        "a1",
+        "l"
+      ]
+    },
+    {
+      "allocation": {
+        "d": [
+          "l:0",
+          "l:1",
+          "e:1",
+          "gr:0",
+          "p:0",
+          "p:1"
+        ],
+        "q": [
+          "j:0",
+          "k:0",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "a0:0",
+          "a0:1",
+          "a1:1",
+          "m:0",
+          "gq:0",
+          "gq:1"
+        ],
+        "s": [
+          "a1:0",
+          "h:0",
+          "e:0"
+        ]
+      },
+      "coincidence_partitions": {
+        "a0": "d|rqs",
+        "a1": "qs|rd",
+        "e": "qds|r",
+        "gq": "qds|r",
+        "l": "rqd|s",
+        "p": "rqds",
+        "q0": "rqds"
+      },
+      "concrete_status": "sat",
+      "iteration": 10,
+      "split_roles": [
+        "a1",
+        "e"
+      ]
+    }
+  ],
+  "schema": "identity-aware-witness-side-cegar-v1",
+  "script_sha256": "4f584558d4c638b371062298445270b8ec959073f9250fc38991478099b6ffee",
+  "side_pattern_family": "two physical goods per multi-good role; the coincidence partition of each role ranges over the eight partitions of the four observers into at most two blocks",
+  "singleton_roles": [
+    "h",
+    "j",
+    "k",
+    "m",
+    "gr"
+  ],
+  "source_profile": "/private/tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json",
+  "source_profile_sha256": "24872d6bf5e5b75ae2dc0de8faa453346806c2bc97f2cd38d975e935d130896b",
+  "source_profile_status": "SAT_ONE_MINIMUM_SPLIT_SELECTOR_OBSTRUCTION",
+  "status": "UNSAT_EVERY_SIDE_PATTERN_ADMITS_A_BANKED_ALLOCATION",
+  "terminal": null
+}
