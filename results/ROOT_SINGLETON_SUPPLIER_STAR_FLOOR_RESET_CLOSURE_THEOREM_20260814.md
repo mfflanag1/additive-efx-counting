@@ -1,8 +1,20 @@
 # Root singleton supplier-star floor-reset closure theorem
 
+**Referee downgrade (2026-08-16).** Independent adversarial referee round
+returned **GAP FOUND** on this closure: S3 (registry admissibility of the
+controlled floor reset) is asserted, not derived; S4 (a well-founded descent
+coordinate) is not addressed; the claimed progress form is excluded by the
+frozen contracts `AUG14_COLLISION_CANDIDATE_TRANSITION_ADMISSIBILITY_AUDIT
+_20260814.md:44-49` and `RETIRED_PACKET_CHARGE_OR_ANCHOR_EXCHANGE_CONTRACT
+_20260813.md:102-103`; and the supporting audit scripts verify provenance,
+not content. The nonroot-holder branch is unaffected. Status is downgraded to
+**conditionally closed on admissibility of the controlled floor reset**. Do
+not quote externally. Full report: `TLX_CLOSURE_REFEREE_REPORT_20260816.md`.
+
 **Date:** 2026-08-14
 
-**Status:** cap-free closure of every root-held retired-packet collision under
+**Status (superseded 2026-08-16, see referee downgrade above):** cap-free
+closure of every root-held retired-packet collision under
 the frozen anchored `GG` import
 
 ## Exact root-holder input

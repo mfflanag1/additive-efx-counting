@@ -1,6 +1,15 @@
 # GG cycle-class referee composition
 
-**Collision-resolution update (2026-08-14).** The previously open
+**Referee downgrade (2026-08-16).** The 2026-08-14 collision-resolution update
+below is **withdrawn to conditional status**: an independent adversarial
+referee round returned GAP FOUND on the floor-reset/supplier-star closure
+(S3/S4 undischarged; progress form excluded by this document's own
+acceptable-leaf list at lines 76-78). `T_{L,times}^*` is NOT closed; the live
+GG terminals are `T_0^* dot-union T_{L,perp}^* dot-union T_{L,times}^*`
+(the last conditional on repairing the floor-reset admissibility). See
+`TLX_CLOSURE_REFEREE_REPORT_20260816.md`.
+
+**Collision-resolution update (2026-08-14, superseded above).** The previously open
 `T_{L,times}^*` collision component is closed by the strict first-priority
 floor-reset and singleton supplier-star theorem. The remaining global typed
 terminal is `T_0^* dot-union T_{L,perp}^*`. The historical collision audit
