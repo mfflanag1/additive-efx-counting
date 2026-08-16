@@ -76,3 +76,73 @@ this pin explicitly.
 10. **Process observation:** the length-three audit (08-09) has no EXTERNAL-TRUSTED
     inventory and marks identical BCFF rows "Hidden assumption? No" where the newer audits
     (08-16) mark them EXTERNAL-TRUSTED. Bring it into the newer format.
+
+## Additivity-dependence sweep (BCFF-audit repair 2026-08-16)
+
+Requested by finding 7's residual risk: since Lemma A.1 delivers a *cancelable*
+witness, any proof step that genuinely needs **additivity** rests on a citation that
+does not support it. Sweep of the alternating and adjacent chains as they stand on
+`codex/efx-gg-cycle-referee-20260812`. Reading of "nondegenerate" throughout: distinct
+subsets receive distinct values (the sense used at LENGTH_THREE_GLOBAL_LEX_TARGET.md:64-71
+and in the `1000a_g+2^{e_g}` construction of ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md).
+Under that reading, monotonicity gives `>=` and nondegeneracy upgrades it to `>` whenever
+the two sets differ — which is what every "positivity" step below actually consumes.
+
+**VERDICT: finding 7's claim is CONFIRMED for every order-closing step.** Exactly one
+genuinely additive step exists in the two branches, and it sits in an intermediate
+contraction that closes no priority order and is superseded by an additivity-free theorem.
+
+### Sites where the inequality suffices
+
+| Site | Displayed step | Why monotone + cancelable + nondegenerate is enough |
+|---|---|---|
+| ALTERNATING_RESERVOIR_EXCHANGE_LEMMA.md:81, eq (1) | `v_r(U)=b_r+v_r(B_q)>b_r`, `U=X_r+B_q` | Only `v_r(X_r ∪ B_q) > v_r(X_r)` is consumed. `B_q≠∅` makes the two sets distinct; monotonicity gives `>=`, nondegeneracy makes it strict. The additive equality is decorative |
+| ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md:77, eq (1) | `v_q(W)=b_q+v_q(B_r)>b_q`, `W=X_q+B_r` | Identical shape, with `B_r≠∅` |
+| ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md:104 and :368 | `v_q(W)>b_q`, `v_r(U)>b_r` (the reservoir-extraction premise "the pool contains a desired set") | Same; these are already written as inequalities, not equalities |
+| Both reservoir lemmas + adjacent extraction, minimal-crossing bodies | `tau_j(A)<=v_j(A)<=v_j(P)`, `v_j(A)<=v_j(R-h)<t` | Pure set-inclusion monotonicity plus minimality of the chosen crossing set |
+| ADJACENT :166 (6), :219 (10), :390 (19) | `v_i(D)>tau_i(D)>v_i(A)>=tau_i(A)` | "Total exceeds every one-good deletion" is monotonicity + nondegeneracy; the middle strict step is the branch inequality, not an additive computation |
+| ADJACENT safe-repartition lemma (16) | conditions 1--3 and the EFX verification | Desiredness, common safety, one threshold inequality. Common safety is downward closed under monotonicity alone (`Z'⊆Z`, `g∈Z'` ⟹ `Z'-g ⊆ Z-g`) |
+| ALTERNATING_ROOT_FLIP_LEMMA.md, (8)/(9) contradiction | `v_s(X_q)>v_s(D)` from `v_s(X_q-h)>v_s(D)` | Monotonicity. The lemma states this itself at :147 ("uses only monotonicity, base EFX, desired-set safety, and the two strict envy relations; additivity ... not needed") — confirmed |
+| ALTERNATING_EASY_PRIORITY_ESCAPE_LEMMA.md:36-40 | singleton-only allocations are automatically EFX | Deletion leaves `∅` and `v_i(∅)<=v_i(Y_i)`; nonnegativity/monotonicity. Its header "four additive agents" is inherited framing, not a consumed hypothesis |
+| ALTERNATING_TWO_SAFE_BUNDLE_REDUCTION.md, proof of (4)/(5) | every EFX comparison in the handoff allocation | Base-safety, the two strict envy relations, and threshold inequality (3); self-comparisons by nonnegativity |
+| ALTERNATING_DUAL_RESERVOIR_TRICHOTOMY.md:106-112 | EFX check of all three alternatives | Common safety against base, plus the single displayed `r`-threshold inequality |
+
+### The one genuinely additive site
+
+**ADJACENT_LARGE_GLOBAL_LEX_TARGET_20260809.md, Theorem 2 "Contested-top contraction",
+equations (14)--(15) — GENUINELY ADDITIVE.** With `δ_p=b_p-v_p(D_p∖H)` and
+`δ_r=b_r-v_r(B∖H)`, the step "if `v_p(H_p)>δ_p` then `D'_p=(D_p∖H)+H_p` is desired by `p`"
+is exactly the additive identity `v_p((D_p∖H) ∪ H_p) = v_p(D_p∖H) + v_p(H_p)`. Under
+monotone + cancelable + nondegenerate valuations the value of a union is not determined by
+the values of its parts, so the quota arithmetic and the resulting obstruction (15) do not
+survive the weakening. (The *common-safety* half of the same step — "would remain
+common-safe by downward closure" — is fine on monotonicity alone.)
+
+**Mitigation, and why this does not touch the result.** Theorem 2 is explicitly
+intermediate: the document says it "was the intermediate contraction that isolated the five
+hard types", and the next theorem "closes them without having to solve the quota wall
+directly". It closes no priority order. Theorem 3 (safe repartition) supersedes it and is
+additivity-free per the table above, so no order-closing step in the adjacent branch depends
+on additivity. Recommended follow-up, not applied here: either attach an explicit
+additivity hypothesis to Theorem 2, or state that it is offered only inside the additive
+class where the corpus's headline theorem lives.
+
+### Two further flags (no action taken)
+
+- **TWO_NONSINGLETON_COMPOSITION_THEOREM_20260809.md, "Packet nondegeneracy" part (a)**
+  displays `v_w(D)=b_w+v_w(f)>b_w`. Only `v_w(X_w+f)>v_w(X_w)` is consumed, so
+  "inequality suffices"; the additive equality introduced by the 2026-08-16 referee repair
+  is decorative and could be replaced in one line. Left as written, since this sweep was
+  scoped to report rather than edit.
+- **ALTERNATING_CROSS_BOTTOM_LOCAL_OBSTRUCTION.md** says "Positive additivity makes every
+  offer obtained by shrinking the incoming packet or enlarging the prescribed release still
+  less valuable" — monotonicity alone gives the shrinking direction. Its profile `V*` and
+  the `1000a_g+2^{e_g}` nondegeneracy argument *are* genuinely additive, but that is a
+  counterexample witness: living in the additive class makes the refutation stronger, not
+  weaker, so this is not a hidden premise.
+
+### Sweep boundary
+
+Displayed proof bodies of the alternating and adjacent chains on this branch only. BCFF's
+own lemmas were not re-derived. The length-two chain — the only one invoking Theorem 3.16
+and Definition 3.9 — was out of scope for this sweep.
