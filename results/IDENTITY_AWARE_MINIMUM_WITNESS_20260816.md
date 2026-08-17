@@ -6,6 +6,14 @@
 `results/R2_RESPONSE_ROLE_CRITICAL_COMPRESSION_LEMMA_20260814.md`, and the
 session-1 artifacts salvaged on `cc/efx-fixed-u-salvage-20260814`.
 
+**Successors on this branch,** taking open items 2 and 3 of §10:
+`results/IDENTITY_AWARE_SLACK_TWO_20260816.md` (the slack-two theorem and the
+selector repair) and `results/FIXED_U_TAME_MENU_CHART_20260816.md` (the
+chart-level covering-menu question its Theorem 1 reduces to).  Their §7
+independently reproduces this note's §6.1 pattern: a second obstruction on this
+chart dissolved on inspection, that one an artifact of its run's move family
+rather than of an identity-blind deletion floor.
+
 ## Outcome
 
 This note does **not** prove or refute the active fixed-`U` theorem, and it
@@ -611,9 +619,11 @@ New script and output sha256 values are recorded in §10.
 **Evidence.**
 
 - The same verdict across all `113` distinct banked adversarial profiles, with
-  zero unknowns and zero countermodels; `68` of the `113` are exhaustive and
-  so are exact-computational rather than evidence.  The remaining `45` are
-  discovery evidence for a general theorem, not a proof of one.
+  zero unknowns and zero countermodels.  `79` of the `113` are exhaustive —
+  `68` by slack two and `11` more by the three-good cap of §7.4 — and so are
+  exact-computational rather than evidence.  The remaining `34` are discovery
+  evidence for a general theorem, not a proof of one, and `19` of those have
+  not been examined above the two-good family at all.
 
 **Open.**
 
@@ -640,13 +650,14 @@ Nothing here resolves four-agent or general additive EFX.
    argument showing that splitting a good further never destroys a four-edge
    repair, which would collapse the tail to a bounded check, or a direct
    argument that a role whose slack is large is never the binding one.
-2. **Prove the slack-two theorem.** The verdict is uniform over all `113`
-   profiles and exact on the `68` slack-two ones.  Lemma C says only split
-   roles matter and the canonical baselines split at most three roles, so the
-   target is a bounded statement: for a slack-two profile, a four-edge EFX
-   allocation exists that is robust to the side pattern of its split roles.
-   This looks reachable by hand.
-3. **Re-audit the one-minimum-split driver.** Since its obstruction is an
+2. **Prove the slack-two theorem.** *Taken up in
+   `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`.* The verdict is uniform over
+   all `113` profiles and exact on `79` of them.  Lemma C says only split roles
+   matter and the canonical baselines split at most three roles, so the target
+   is a bounded statement: for a slack-two profile, a four-edge EFX allocation
+   exists that is robust to the side pattern of its split roles.
+3. **Re-audit the one-minimum-split driver.** *Taken up in
+   `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`.* Since its obstruction is an
    artifact, `run_exact_response_one_minimum_split_cegar.py` should either be
    re-run with the identity-aware deletion floor (floor `M` only on the side
    carrying the witness, `T-M` on the other) or retired in favour of the
