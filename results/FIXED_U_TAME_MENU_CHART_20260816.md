@@ -428,24 +428,34 @@ split, so it could not express the closing menu and reported an obstruction
 that does not exist.  The `SAT` verdict is therefore superseded by this
 re-test, and the chart-level question stays **open**, not answered negatively.
 
-### 7.2 The lesson, because this is the second time
+### 7.2 The lesson, because this keeps happening
 
-The banked `SAT_ONE_MINIMUM_SPLIT_SELECTOR_OBSTRUCTION` that the predecessor
-note retired was an artifact of an identity-blind deletion floor and of
-demanding one allocation for all realizations.  This obstruction is an artifact
-of a move family too narrow to express the closing allocation.  Different
-defect, same shape:
+By the end of this session the count is **four**, across two independent
+workers, and every one dissolved:
 
-> **On this chart, an obstruction verdict has never yet survived contact with a
-> wider move family.**  Every `SAT` reported so far has been a statement about
-> the selector, not about the chart.  A future obstruction should be assumed to
-> be a selector artifact until it has been re-tested against the widest
-> available family, and the re-test should be run *before* the verdict is
-> banked, not after.
+| # | verdict | actual cause | found by |
+|---|---|---|---|
+| 1 | `SAT_ONE_MINIMUM_SPLIT_SELECTOR_OBSTRUCTION` | identity-blind deletion floor, plus one allocation demanded for all realizations at once | the predecessor note |
+| 2 | `SAT_NO_TAME_COVERING_MENU_FOR_THIS_PROFILE` (§7.1) | move family capped at one tame split; the closing menu needs three | this note |
+| 3 | `SAT` from the widened driver at split cap `3` (§7.4) | the cap itself; the closing menu needs four | §7.4 |
+| 4 | a "budget bound" halt at a product of `64` against a budget of `4096` (§7.4) | split set proposed from the wide CEGAR's baseline instead of its whole menu | §7.4 |
 
-I built the caveat into §4 before this run finished and it caught the error, so
-the discipline works; but the driver should not have been able to emit a
-verdict its own oracle was too narrow to justify.
+Four different causes — a deletion floor, a move family, a search cap, a
+proposal heuristic — and one shape.  Defects 3 and 4 are the sharpest evidence,
+because they were committed *while fixing* defect 2, by someone who had just
+written the rule against them.
+
+> **Standing hazard on this chart.**  No obstruction verdict here has ever
+> survived contact with a wider family.  Every `SAT` reported so far has been a
+> statement about the selector, not about the chart.  Treat any obstruction
+> from a restricted driver as a selector artifact until it has been re-tested
+> against the unrestricted family, and run that re-test *before* banking the
+> verdict, not after.
+
+The discipline works — the §4 caveat was written before the run finished and it
+caught defect 2 — but discipline was not enough for defects 3 and 4, which is
+why the widened driver enforces the rule in code rather than in prose (§7.4).
+A driver should not be *able* to emit a verdict its own oracle cannot justify.
 
 ### 7.3 The fix, and its soundness requirement
 

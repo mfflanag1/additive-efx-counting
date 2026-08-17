@@ -137,11 +137,28 @@ every observer `i` and every owner `u`,
 v_i^R(B_u) = v_i^model(B_u)      and      min_{x in B_u} v_i^R(x) = min_{x in B_u} v_i^model(x),
 ```
 
-the first by additivity over roles *(additive)* and the second because the
-minimum over a bundle is the minimum over its roles of the per-role minima,
-which agree role by role *(abstraction, via Lemma C′(2))*.  EFX for `i` against
-`B_u` is equivalent to `v_i(B_i) >= v_i(B_u) - min_{x in B_u} v_i(x)`
-*(additive)*, so `A_j` is EFX in `R` exactly because it is EFX in the model.
+the first by additivity over roles *(additive)*.
+
+The second deserves spelling out, because the quantity at stake is the minimum
+over the **whole bundle**, not a per-role one, and a reader may reasonably
+wonder whether replacing a role of `99` goods by a two-good stand-in perturbs
+the argmin of a bundle that mixes it with other roles.  It does not.  The
+bundle's goods partition into its roles, so
+
+```text
+min_{x in B_u} v_i(x) = min over the roles g inside B_u of ( min_{x in g} v_i(x) ),
+```
+
+and by Lemma C′(2) each inner term is `M[i,g]` in `R` and `M[i,g]` in the model
+alike — a wide role and its stand-in offer the *same* candidate to the outer
+minimum.  A minimum of a fixed multiset of candidates is unchanged when every
+candidate is unchanged, so the outer minimum agrees whichever roles are wide
+*(abstraction, via Lemma C′(2))*.
+
+EFX for `i` against `B_u` is equivalent to
+`v_i(B_i) >= v_i(B_u) - min_{x in B_u} v_i(x)` *(additive)* — the deletion
+family over all `x in B_u` is binding exactly at the argmin — so `A_j` is EFX
+in `R` exactly because it is EFX in the model, with no slack either way.
 
 *Completeness and budget.*  `A_j` assigns every wild role wholly to one owner
 and every tame role to one or two owners; transporting it to `R` places every
