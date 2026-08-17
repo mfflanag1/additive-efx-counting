@@ -28,9 +28,12 @@ confirmation run:
    insufficient, they fail everywhere.
 4. **The failure shape is characterised** (§3) and turns out to be a genuine
    near-miss, which sharpens the countermodel hunt considerably.
-5. The chart-level run remains **evidence, not theorem**.  The seeded attempt
-   did not reach `unsat`; §4 reports where it got to and why the seeding
-   backfired.
+5. The chart-level run remains **evidence, not theorem** — and its terminal
+   `SAT` verdict turned out to be an **artifact of its own move family**, which
+   §7 documents.  The obstruction it reported is closed, realization-free, by a
+   menu splitting three tame roles at once.  This is the second time an
+   obstruction on this chart has dissolved on inspection; §7.2 draws the
+   lesson.
 
 ## 1. Open item (a) — what "fixed-`U`-admissible" means
 
@@ -277,12 +280,11 @@ phase suggests.  An early impression of the slowdown taken from the first few
 rounds would have been badly wrong, which is why the rate is quoted from a
 timed interval in steady state rather than from the start of the run.
 
-At that rate the declared `600`-round budget is several hours, and the run had
-not reached `unsat` at the time of banking; §7 records the state it had
-reached.  So the chart-level claim stands where the predecessor left it —
-evidence, not theorem.  Seeding buys a stronger starting menu at roughly half
-the round rate, and on this evidence neither the seeded nor the unseeded route
-looks likely to decide the question by search alone.
+The run terminated at iteration `43` with `SAT`, not `unsat`, and that verdict
+turned out to be an artifact of the driver's own move family — §7 documents the
+re-test that dissolves it.  So the chart-level claim stands where the
+predecessor left it: evidence, not theorem, and now with a known defect in the
+search driver rather than merely an inconclusive run.
 
 For the record, the unseeded run of the predecessor note reached `120` rounds,
 `111` closed whole-role and `9` by a tame split, with `0` obstructions, and the
@@ -320,20 +322,30 @@ through that wider family before being called a failure shape.
 - Every one of the `9` split-needing profiles splits a role of slack exactly
   `2`; the wildness distribution over roles is as tabulated in §3.
 
+**Exact-computational (continued).**
+
+- The seeded chart CEGAR's terminal `SAT` at iteration `43` is superseded: its
+  reported obstruction is closed realization-free, in `8` rounds, by a menu
+  splitting the three tame roles `gq`, `k`, `q0` at once.  The verdict was an
+  artifact of a one-split oracle.
+
 **Evidence.**
 
-- The seeded chart CEGAR reached `9` rounds with `0` obstructions before
-  becoming too slow to continue usefully; the unseeded run reached `120` rounds
-  with `0` obstructions.  Neither reached `unsat`, so the chart-level statement
-  is not a theorem.
+- The seeded chart CEGAR reached `43` rounds and the unseeded run `120`, both
+  with `0` surviving obstructions.  Neither reached `unsat`, so the chart-level
+  statement is not a theorem.
 
 **Open.**
 
 - The chart-level positive theorem itself, and specifically the selection rule
   named in §2.3's Gap.  This is the live obstacle.
-- The sharpened countermodel target of §3.
-- Whether a faster encoding of the seeded master exists; the current one is too
-  slow to decide the question by search.
+- The sharpened countermodel target of §3.  Note that the one profile which
+  looked like a hit — `a0` wild at slack `6` — was not one, so the target is
+  still unmet rather than met.
+- A chart driver whose oracle matches Theorem 1's hypothesis, per §7.3,
+  together with the pattern-product soundness requirement recorded there.  The
+  present driver's move family is strictly narrower than the theorem it is
+  testing, which is a defect, not a conservatism.
 
 ## 6. Verification
 
@@ -354,35 +366,100 @@ python -m tracks.parkability.run_fixed_u_tame_menu_chart_theorem \
   --form-index 2 --seed-menu results/seed_whole_role_menu_form2.json \
   --output results/fixed_u_tame_menu_chart_theorem.json \
   --maximum-rounds 600 --timeout-seconds 120
+
+# the re-test of §7 that supersedes that run's SAT verdict; the driver reads
+# countermodel_totals / countermodel_minima straight out of the chart output
+python -m tracks.parkability.run_realization_free_universality_cegar \
+  --profile results/fixed_u_tame_menu_chart_theorem.json \
+  --output results/fixed_u_chart_countermodel_wide_family_retest.json \
+  --maximum-rounds 200 --timeout-seconds 120
 ```
 
-## 7. Chart-run state at banking
+## 7. The chart run terminated — and its verdict is an artifact
 
-The seeded run was still in flight when this note was frozen.  State recorded
-at that moment:
+### 7.1 What happened
+
+The seeded run terminated at iteration `43`:
 
 ```text
-status                RUNNING
-seed certificates     83   (all verified complete and within the edge budget)
-rounds completed      33 (of a declared 600-round budget)
-obstructions found    0
-branch used           whole-role on every round so far
+status              SAT_NO_TAME_COVERING_MENU_FOR_THIS_PROFILE
+seed certificates   83   (all verified complete and within the edge budget)
+rounds completed    43   (39 whole-role, 4 tame-split on roles k and gr)
+menu size at exit   126
+countermodel slacks a0: 6, p: 6, and gq, gr, k, q0 at 2, the rest singletons
 ```
 
-It is banked as an in-flight artifact rather than held back, because the
-structural results of §2 and §3 do not depend on it and should not wait for it.
-If the run later terminates, the terminal verdict supersedes this snapshot and
-should be appended here; `unsat` would upgrade §4 from evidence to theorem, and
-`sat` would need re-testing against multi-tame-split menus per §4's caveat
-before being read as a failure shape.
+At face value this is the shape §3 predicted: `a0` is a role of the forced set
+`{gq, m, l, a0, a1}` and it is **wild**, at slack `6`.
+
+**It is not a countermodel.**  §4's caveat required re-testing any `SAT`
+against the multi-tame-split family before reading it as a failure shape, and
+that test dissolves it:
+
+```text
+run_realization_free_universality_cegar --profile <the countermodel>
+  -> UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION   in 8 rounds
+     tame roles k, q0, gq, gr | wild roles a0, p
+     the closing baseline splits gq, k and q0 simultaneously
+```
+
+The profile is closed realization-free — every cardinality, every witness
+identity — by a menu that splits **three** tame roles at once.  The chart
+driver's oracle tries a whole-role allocation and then at most **one** tame
+split, so it could not express the closing menu and reported an obstruction
+that does not exist.  The `SAT` verdict is therefore superseded by this
+re-test, and the chart-level question stays **open**, not answered negatively.
+
+### 7.2 The lesson, because this is the second time
+
+The banked `SAT_ONE_MINIMUM_SPLIT_SELECTOR_OBSTRUCTION` that the predecessor
+note retired was an artifact of an identity-blind deletion floor and of
+demanding one allocation for all realizations.  This obstruction is an artifact
+of a move family too narrow to express the closing allocation.  Different
+defect, same shape:
+
+> **On this chart, an obstruction verdict has never yet survived contact with a
+> wider move family.**  Every `SAT` reported so far has been a statement about
+> the selector, not about the chart.  A future obstruction should be assumed to
+> be a selector artifact until it has been re-tested against the widest
+> available family, and the re-test should be run *before* the verdict is
+> banked, not after.
+
+I built the caveat into §4 before this run finished and it caught the error, so
+the discipline works; but the driver should not have been able to emit a
+verdict its own oracle was too narrow to justify.
+
+### 7.3 The fix, and its soundness requirement
+
+The repair is to widen `close_profile` to a branch that splits a *set* of tame
+roles, taking its menu from the realization-free CEGAR.  The symbolic cut must
+then be
+
+```text
+guard( every split role is tame )  AND  AND_{pattern vectors s}  OR_{A in menu} EFX(A, s),
+```
+
+quantified over the full product of side patterns of the split roles — `8^k`
+vectors for `k` split roles, so `64` at `k = 2` and `512` at `k = 3`.  That
+product is the soundness requirement and is where a widened driver would most
+easily go wrong: dropping to a single allocation per split role, or covering
+only the patterns the CEGAR happened to visit, would produce an unsound cut and
+hence a false chart theorem.  Remark 4 of the predecessor note (the pattern
+space factorizes over observers) is the lever that keeps this tractable, since
+it decides one allocation's universality in `4 · 2^k` checks rather than
+`2^(4k)`.
+
+I have not built that driver, and I would rather leave the chart question open
+than bank a theorem resting on a cut I had not verified covers every pattern.
 
 ## 8. Artifact sha256
 
-Recorded at freeze.  The chart-theorem run's own output is not listed: it was
-still in flight, so it carries no stable hash yet and is to be banked with the
-terminal verdict per §7.
+Recorded at freeze, including the chart run's terminal output and the re-test
+that supersedes its verdict.
 
 ```text
+fc9f2e8aab0b100b4a51addb5a5f50856d6d65d7b85bffcf1b0bd5d94930d906  results/fixed_u_tame_menu_chart_theorem.json
+01c27852cbe0210716c6b1191a86ccb432c9d3272e54be69542307a576800f6c  results/fixed_u_chart_countermodel_wide_family_retest.json
 6ba597f499084ca41e2697d209133513d741b187309ed8b2b5ab24c705ecc97d  tracks/parkability/run_fixed_u_tame_menu_chart_theorem.py
 a2b24ff0a7e3cb7bea0087f5bbc83fb89f6ff515819ce9c24699505229bf8064  tracks/parkability/audit_fixed_u_chart_structure.py
 3871aa3f90974b904dea04871943bba01fe746b5c00bfd8b73677330382a7cde  tracks/parkability/test_fixed_u_tame_menu_chart.py

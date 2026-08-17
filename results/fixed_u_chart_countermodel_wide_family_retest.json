@@ -1,0 +1,40 @@
+{
+  "claim_boundary": "A realization_free verdict is exhaustive for the profile: every physical realization of its totals and minima, at every cardinality of every role and every witness identity, admits a complete EFX allocation within the support-edge budget.  It rests on Lemma B (a slack-two role has the forced two-good column) and the cardinality-free form of Lemma C (an unsplit role of any width is exactly modelled by its total and its minimum).  It does not establish chart coverage or the universal fixed-U theorem.",
+  "edge_cap": 4,
+  "profiles_examined": 1,
+  "realization_free_count": 1,
+  "records": [
+    {
+      "baseline_split_roles": [
+        "gq",
+        "k",
+        "q0"
+      ],
+      "baseline_status": "sat",
+      "cegar_rounds": 8,
+      "index": 0,
+      "maximum_role_slack": "6",
+      "realization_free": true,
+      "source": "chart_countermodel_profile.json",
+      "source_iteration": "terminal",
+      "status": "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION",
+      "tame_roles": [
+        "k",
+        "q0",
+        "gq",
+        "gr"
+      ],
+      "terminal_coincidence_partitions": null,
+      "wild_roles": [
+        "a0",
+        "p"
+      ]
+    }
+  ],
+  "schema": "realization-free-universality-cegar-v1",
+  "script_sha256": "63d86bb9ce0294da5ef4e216ec9f6d9a6c899811139da8fb38120b145af1fdb8",
+  "status_tally": {
+    "UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION": 1
+  },
+  "traces": []
+}
