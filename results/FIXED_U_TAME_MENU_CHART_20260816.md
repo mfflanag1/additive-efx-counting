@@ -439,11 +439,17 @@ workers, and every one dissolved:
 | 2 | `SAT_NO_TAME_COVERING_MENU_FOR_THIS_PROFILE` (§7.1) | move family capped at one tame split; the closing menu needs three | this note |
 | 3 | `SAT` from the widened driver at split cap `3` (§7.4) | the cap itself; the closing menu needs four | §7.4 |
 | 4 | a "budget bound" halt at a product of `64` against a budget of `4096` (§7.4) | split set proposed from the wide CEGAR's baseline instead of its whole menu | §7.4 |
+| 4′ | the predecessor's "baselines split at most three roles, so the target is bounded" | the same baseline-for-menu-union confusion, in prose rather than code; the true unions are `6` and `10` | the symbolic-realization track, self-reported |
 
 Four different causes — a deletion floor, a move family, a search cap, a
 proposal heuristic — and one shape.  Defects 3 and 4 are the sharpest evidence,
 because they were committed *while fixing* defect 2, by someone who had just
 written the rule against them.
+
+And `4′` shows the shape propagating *between* workers: a baseline statistic
+stated as a menu bound in one note became a search parameter in another's
+driver, which then emitted defect 2's false verdict.  A wrong number in prose
+is not contained by the note that carries it.
 
 > **Standing hazard on this chart.**  No obstruction verdict here has ever
 > survived contact with a wider family.  Every `SAT` reported so far has been a
@@ -504,6 +510,32 @@ hypothetical.  Recording them matters more than the driver does.
 > splits `{gq, gr}`, so the driver gave up at a pattern product of `64` against
 > a budget of `4096` — failing well inside its own limits and mislabelling the
 > result a budget bound.
+
+**The same confusion is upstream of defect 2, and that is the instructive
+part.**  The predecessor note's §10 argued the slack-two hand target was
+"bounded" and "reachable by hand" because *the canonical baselines split at
+most three roles*.  That is a baseline statistic doing menu-union work — the
+same error as defect 3, one level up.  Recomputed from the banked per-round
+allocations of the two flagship CEGAR traces:
+
+| profile | baseline split set | **menu union** | most in one allocation |
+|---|---|---|---|
+| one-minimum-split | `2` — `{gq, l}` | **`6`** — `{a0, a1, e, gq, l, p}` | `4` |
+| whole-role obstruction | `3` — `{a1, h, p}` | **`10`** — every multi-good role | `5` |
+
+(Recomputed independently on both sides and agreeing exactly.)
+
+The `3` in "at most three roles" is where my split-set cap of `3` came from.
+An understated statistic did not merely mislead a reader: it was compiled into
+a search parameter, and that parameter then emitted a false mathematical
+verdict.  Defect 2 is a direct descendant of defect 3's error, committed by a
+different worker, one step removed, through a sentence in a note.
+
+It also fixes the barrier figure twice over.  A certificate over the six-role
+union costs `8^6 = 262144` pattern vectors — the same number reached
+independently from the widened driver's own run in §7.4, from different data.
+Two routes, one figure, so the barrier is a fact about the chart rather than an
+artifact of either setup.
 
 Both are now closed structurally rather than by care:
 
