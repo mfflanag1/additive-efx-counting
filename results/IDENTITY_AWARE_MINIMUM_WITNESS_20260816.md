@@ -14,6 +14,86 @@ independently reproduces this note's §6.1 pattern: a second obstruction on this
 chart dissolved on inspection, that one an artifact of its run's move family
 rather than of an identity-blind deletion floor.
 
+---
+
+## Campaign summary
+
+**The rung closes.  No countermodel exists in the identity-aware family, and a
+live obstruction was retired rather than added.**
+
+**The abstraction.** Enrich the banked `(T, M)` state with, per named role, the
+*coincidence partition* `ker(w)` of a witness selection `w : N -> g` picking one
+minimiser per observer.  Four observers give `B_4 = 15` candidate partitions.
+Selection semantics are forced, not cosmetic: the naive "their argmin sets
+intersect" relation is not transitive, so it induces no partition at all.
+
+**What is proved by hand.**
+
+- **Lemma A.** A `b`-block partition is realizable at role `g` iff
+  `T[i,g] >= b M[i,g]` for every observer.  Admission therefore depends on a
+  partition *only through its block count* — the shape carries zero
+  information.  This **refutes the proposed two-case coincidence dichotomy**:
+  it is a four-level ladder in the single statistic
+  `rho(g) = min_i floor(T[i,g]/M[i,g])`.
+- **Lemma B.** A physical role carries at most `rho(g)` goods; at slack two its
+  value column is forced to `{M, T-M}`.
+- **Lemma C.** Witness identity is **split-local** — invisible to any allocation
+  that does not split the role.
+- **Proposition 4.** The identity-aware state is **exactly complete on the
+  slack-two stratum and strictly incomplete above it**.  That is the honest
+  boundary of the whole enrichment.
+
+**The obstruction retired.** The banked
+`SAT_ONE_MINIMUM_SPLIT_SELECTOR_OBSTRUCTION` is an artifact of its driver
+flooring *both* pieces of a split role at `M` — sound but strictly
+conservative, and identity-blind by construction.  Every role of that profile
+has slack two, so by Lemma B the two-good family is every realization, and all
+`2^21` of them repair within four support edges (§6.1).
+
+**Coverage.** All `113` distinct banked adversarial profiles admit a complete
+four-support-edge EFX allocation, with zero unknowns and zero countermodels.
+`79` of the `113` are settled here for *every* physical realization — `68` by
+slack two, `11` more by the three-good cap of §7.4.  **All `113` are settled at
+every cardinality** by Theorem 1 of
+`results/IDENTITY_AWARE_SLACK_TWO_20260816.md`, whose allocation-restriction
+argument supersedes the enumeration of §§7.3–7.4; I verified its load-bearing
+step independently, and those sections now stand as an independent cross-check
+by a route sharing only Lemmas A and B.
+
+**Slack distribution over the `113`,** which bounds what any cardinality cap can
+ever buy: `2` on 68 profiles, `3` on 11, `4` on 12, `5` on 3, `6` on 2, `7` on
+2, `8` on 1, `10` on 2, and one each at `11, 12, 14, 23, 30, 37, 48, 53, 54,
+89, 133, 236`.  The tail is long and thin, so cap-raising was never a route to
+the remainder — and Theorem 1 makes it unnecessary.
+
+**Standing rule, from two independent instances on this chart.** Presume a
+`SAT`/obstruction verdict from a restricted driver is a *selector artifact*
+until it has been re-tested against the widest available family, and run that
+re-test before banking.  Instance one is §6.1 here (identity-blind deletion
+floor); instance two is `FIXED_U_TAME_MENU_CHART_20260816.md` §7 (too-narrow
+move family).  Both dissolved on exactly that test.
+
+**Data-integrity correction.** The cited `173` adversarial profiles is not
+reproducible.  The four traces hold `211` rounds collapsing to `111` distinct
+profiles — the stage-2 run resumed from stage 1 and replayed its cuts — or
+`113` counting terminal countermodels (§7.1).
+
+**What remains open.** Exactly one thing: an admissible profile on which *every*
+complete four-edge EFX allocation must split a wild role (`rho >= 3`).  By
+Theorem 1 that is the only surviving countermodel route and the only gap in a
+fully realization-free rung.  My premise-side hunt found none in `180`
+adversarially generated admissible profiles across all twelve roles as the wild
+one, but ended at its round limit, never at `unsat` — **evidence, not proof**
+(§7.5).  The master carries `96` rational unknowns and goes intractable past
+roughly twenty CEGAR rounds, and every round produced a *new* allocation, which
+corroborates from the premise side that no profile-independent menu exists.
+More compute is therefore the wrong instrument.  **Assigned onward** to the
+widened-oracle chart run of `FIXED_U_TAME_MENU_CHART_20260816.md`, which
+subsumes a separate premise hunt: a `SAT` surviving the widest family is the
+real shape, and a terminating `UNSAT` is the positive chart theorem.
+
+---
+
 ## Outcome
 
 This note does **not** prove or refute the active fixed-`U` theorem, and it
