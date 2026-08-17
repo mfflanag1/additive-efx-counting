@@ -74,12 +74,23 @@ ever buy: `2` on 68 profiles, `3` on 11, `4` on 12, `5` on 3, `6` on 2, `7` on
 89, 133, 236`.  The tail is long and thin, so cap-raising was never a route to
 the remainder — and Theorem 1 makes it unnecessary.
 
-**Standing rule, from two independent instances on this chart.** Presume a
+**Standing rule, from four instances across two workers.** Presume a
 `SAT`/obstruction verdict from a restricted driver is a *selector artifact*
 until it has been re-tested against the widest available family, and run that
-re-test before banking.  Instance one is §6.1 here (identity-blind deletion
-floor); instance two is `FIXED_U_TAME_MENU_CHART_20260816.md` §7 (too-narrow
-move family).  Both dissolved on exactly that test.
+re-test before banking.  The instances are §6.1 here (identity-blind deletion
+floor), and in `FIXED_U_TAME_MENU_CHART_20260816.md` a one-tame-split move
+family, a split-cap of three, and a budget bound read off a baseline instead of
+a whole menu.  All four dissolved on exactly that test.  Two of them were
+committed *immediately after* the rule was written down, which is the argument
+for enforcing it in code rather than prose — the successor note now gives every
+search limit its own status name so none can borrow countermodel language.
+
+**Barrier convergence.** The `8^6 = 262,144` pattern vectors per certificate
+was reached twice from different data: here by recomputing the menu-union split
+roles of the banked allocations (§10, item 2), and in the chart note by its
+widened driver's own run.  Agreement across two routes indicates the barrier is
+a property of the chart rather than of either setup, and it is why search is
+not expected to decide the chart question in this form.
 
 **Data-integrity correction.** The cited `173` adversarial profiles is not
 reproducible.  The four traces hold `211` rounds collapsing to `111` distinct
@@ -890,6 +901,18 @@ Nothing here resolves four-agent or general additive EFX.
    reproduces the barrier figure reached in
    `FIXED_U_TAME_MENU_CHART_20260816.md`.  The hand target is therefore
    substantially harder than this note first suggested.
+
+   **The consequence was not confined to this note.** That sentence was carried
+   into the successor worker's task brief, and its `3` became the split-set cap
+   of the widened chart driver, which then emitted a false `SAT` — the
+   move-family artifact recorded as instance two of the standing rule in §6.1.
+   So an understated statistic did not merely mislead a reader: it was compiled
+   into a search parameter one worker removed, where it produced a wrong
+   mathematical verdict.  The lesson worth carrying is narrower and sharper
+   than "check your numbers" — **a wrong number in prose is not contained by
+   the note that carries it**, because downstream work turns prose into
+   parameters.  Statistics offered as bounds should name the quantity they
+   actually measure; this one said "baselines" and was read as "menus".
 3. **Re-audit the one-minimum-split driver.** *Taken up in
    `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`.* Since its obstruction is an
    artifact, `run_exact_response_one_minimum_split_cegar.py` should either be
