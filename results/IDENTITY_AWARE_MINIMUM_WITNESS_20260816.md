@@ -56,9 +56,17 @@ four-support-edge EFX allocation, with zero unknowns and zero countermodels.
 slack two, `11` more by the three-good cap of §7.4.  **All `113` are settled at
 every cardinality** by Theorem 1 of
 `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`, whose allocation-restriction
-argument supersedes the enumeration of §§7.3–7.4; I verified its load-bearing
-step independently, and those sections now stand as an independent cross-check
-by a route sharing only Lemmas A and B.
+argument supersedes the enumeration of §§7.3–7.4.
+
+That theorem carries a **non-author check**: I re-derived its load-bearing step
+rather than reading it for agreement (§7.5).  EFX reads only the bundle
+*minimum*, since `own >= total - v_i(x)` for all `x` binds at `x = argmin`; an
+unsplit role of any width contributes total `T` and argmin candidate `M`, which
+is exactly what the two-good stand-in `{M, T-M}` contributes, so the predicate
+receives identical inputs and a mixed bundle's argmin cannot move.  With
+Lemma B forcing the tame column, the theorem holds with no gap.  §§7.3–7.4
+therefore stand as an independent cross-check by a route sharing only Lemmas A
+and B — agreement between them is real evidence against an error in either.
 
 **Slack distribution over the `113`,** which bounds what any cardinality cap can
 ever buy: `2` on 68 profiles, `3` on 11, `4` on 12, `5` on 3, `6` on 2, `7` on
@@ -87,10 +95,20 @@ one, but ended at its round limit, never at `unsat` — **evidence, not proof**
 (§7.5).  The master carries `96` rational unknowns and goes intractable past
 roughly twenty CEGAR rounds, and every round produced a *new* allocation, which
 corroborates from the premise side that no profile-independent menu exists.
-More compute is therefore the wrong instrument.  **Assigned onward** to the
-widened-oracle chart run of `FIXED_U_TAME_MENU_CHART_20260816.md`, which
-subsumes a separate premise hunt: a `SAT` surviving the widest family is the
-real shape, and a terminating `UNSAT` is the positive chart theorem.
+More compute is therefore the wrong instrument; the remaining distance is
+analytic, and two routes are named for the next session:
+
+1. derive a **premise-level obstruction** to a role being wild and forced at
+   once, in the style of Lemma D of `FIXED_U_TAME_MENU_CHART_20260816.md`,
+   which extracts an allocation-wide constraint directly from the rank-three
+   wall; or
+2. find a **normal form that shrinks the master** before the search starts, so
+   the CEGAR can reach termination instead of stalling past twenty rounds.
+
+**Assigned onward** to the widened-oracle chart run of
+`FIXED_U_TAME_MENU_CHART_20260816.md`, which subsumes a separate premise hunt:
+a `SAT` surviving the widest family is the real shape, and a terminating
+`UNSAT` is the positive chart theorem.
 
 ---
 
