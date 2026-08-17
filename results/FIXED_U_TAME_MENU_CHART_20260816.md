@@ -342,22 +342,40 @@ through that wider family before being called a failure shape.
 - The sharpened countermodel target of §3.  Note that the one profile which
   looked like a hit — `a0` wild at slack `6` — was not one, so the target is
   still unmet rather than met.
-- A chart driver whose oracle matches Theorem 1's hypothesis, per §7.3,
-  together with the pattern-product soundness requirement recorded there.  The
-  present driver's move family is strictly narrower than the theorem it is
-  testing, which is a defect, not a conservatism.
+- The chart driver whose oracle matches Theorem 1's hypothesis is now built
+  (§7.4) and its run is in flight (§7.5) rather than terminal, so the chart
+  question is open on the evidence, not on the instrument.
+- The exponential barrier §7.4 quantifies: covering menus on this chart split
+  as many as six tame roles, a `8^6 = 262144` pattern product for one
+  certificate.  Deciding the chart by search needs a cut that avoids the full
+  product without losing soundness, and I do not have one.  Remark 4 collapses
+  a *single* allocation's universality to `4 · 2^k` checks but does not collapse
+  the menu-covering statement, which is where the product actually lives.
 
 ## 6. Verification
 
 ```bash
-pytest -q tracks/parkability/test_fixed_u_tame_menu_chart.py
+pytest -q tracks/parkability/test_fixed_u_tame_menu_chart.py \
+         tracks/parkability/test_fixed_u_multi_split_chart.py
 ```
 
-The tests check Lemma T on explicit rationals, including the tie case where the
-added role carries the new minimum; Lemma D's disjunction on the banked
-whole-role menu; that a seed certificate is rejected unless it is complete and
-inside the edge budget; and that the two refuted constructions are reproduced
-exactly as reported.
+Recorded result: `19 passed` and `26 passed`; `73 passed` across all four test
+files of this line of work.
+
+The first file checks Lemma T on explicit rationals, including the tie case
+where the added role carries the new minimum; Lemma D's disjunction on the
+banked whole-role menu; that a seed certificate is rejected unless it is
+complete and inside the edge budget; and that the two refuted constructions are
+reproduced exactly as reported.
+
+The second file is the instrument's own guard rail, and its tests are written
+against the three defects of §7.3 and §7.4 rather than against the happy path:
+that the side-pattern product is exactly `8^k` and factorises per role; that
+narrowing a certificate to "visited" patterns is rejected, as is dropping a
+single vector, claiming a larger split set than the certificate carries, or
+padding to the right count with wrong keys; and that no search limit -- an
+exhausted budget, an inconclusive wide-family run -- may be mapped to an
+obstruction verdict.
 
 Replay:
 
@@ -452,14 +470,119 @@ it decides one allocation's universality in `4 · 2^k` checks rather than
 I have not built that driver, and I would rather leave the chart question open
 than bank a theorem resting on a cut I had not verified covers every pattern.
 
+### 7.4 The widened oracle, built
+
+`run_fixed_u_multi_split_chart_theorem.py` is that driver.  A certificate fixes
+a set `S` of tame split roles and carries one allocation for **every** vector
+of the full `8^|S|` product; branch W is the case `S` empty, so whole-role and
+split certificates are one object.  Every certificate passes an exact rational
+re-audit of each allocation *and* a coverage audit before its cut is added.
+
+Building it surfaced two further defects of the same family, neither
+hypothetical.  Recording them matters more than the driver does.
+
+> **Defect 2 — a search cap reported as an obstruction.**  With the split set
+> capped at three roles the driver reported `SAT` on a profile whose closing
+> menu needs **four** tame roles split.  A limit of the instrument had been
+> dressed up as a fact about the chart, which is precisely the error §7.2 warns
+> about, committed while fixing it.
+
+> **Defect 3 — the split set proposed from the baseline alone.**  The wide
+> CEGAR reports its *baseline* allocation's split roles, which is a strict
+> understatement: later menu allocations routinely split others.  On one
+> profile the baseline proposed `{h, k}` while the covering menu actually
+> splits `{gq, gr}`, so the driver gave up at a pattern product of `64` against
+> a budget of `4096` — failing well inside its own limits and mislabelling the
+> result a budget bound.
+
+Both are now closed structurally rather than by care:
+
+* `close_profile` returns a *status*, and `HALT_VERDICT` maps an exhausted
+  budget and an inconclusive wide-family run to `HALTED_…` names.  Only a
+  genuine `UNSAT_NO_TAME_SPLIT_ALLOCATION` from the widest family may be called
+  an obstruction, and `OBSTRUCTION_STATUSES` is a single-element set the tests
+  pin down.
+* `wide_menu_split_union` recomputes the split set as the union over the whole
+  covering menu.  With `S` that union a certificate *must* exist — every menu
+  allocation splits inside `S`, and by Lemma C its EFX status depends only on
+  the pattern over the roles it splits — so the code asserts that rather than
+  assuming it, and tries subsets first only to keep the product small.
+
+Both profiles that produced false obstructions now close: the one-split
+driver's countermodel on the split set `{gq, gr, k}`, and the cap-bound profile
+on `{gq}`.
+
+The self-tests are the point of the exercise.
+`test_narrowing_a_certificate_to_visited_patterns_is_rejected` narrows a
+complete certificate to the patterns a search "visited" and asserts the audit
+refuses it; companions cover dropping a single vector, a certificate claiming a
+larger split set than it carries, and padding to the right count with wrong
+keys.  A separate test pins the rule that no search limit may be reported as an
+obstruction.  The instrument can no longer repeat any of the three defects
+silently.
+
+**What the widened run shows.**  The chart-level question is still open, and
+the driver now says why in a quantified way rather than by failing.  On this
+chart the covering menus are wide: one admissible profile's menu splits **six**
+tame roles, a pattern product of `8^6 = 262144` for a single certificate.  That
+is the real barrier to deciding the chart by search — not solver speed, but the
+exponential cost of certifying a profile whose closing menu splits many roles.
+The `4096`-vector budget that seemed generous is exceeded by a single profile
+needing four.
+
+### 7.5 The widened run
+
+Three configurations were run, and the first two are worth recording because
+each halted for a different instrument reason, both now fixed:
+
+| run | budget | outcome |
+|---|---|---|
+| seeded, one-split cap | — | `UNKNOWN` at round `67`, master timed out; `0` obstructions |
+| unseeded, split cap `3` | — | `SAT` at round `5` — **defect 2**, a cap reported as an obstruction |
+| unseeded, budget `4096`, baseline proposal | `4096` | halted at round `1` — **defect 3**, gave up at a product of `64` |
+| unseeded, budget `20000`, union proposal | `20000` | in flight; see below |
+
+The corrected run, with the union proposal and a `20000`-vector work budget:
+
+```text
+status              RUNNING at freeze
+rounds completed    191
+branch W            188   (whole-role, 1 pattern each)
+branch M              3   (split sets {a1}, {h}, {gq}, 8 patterns each)
+obstructions          0
+```
+
+It has passed every point at which an earlier configuration stopped — round
+`67`, round `5`, round `1` — and has found no obstruction.  The round rate
+decays as cuts accumulate, from roughly `6` per minute early to about `0.5` per
+minute at round `190`, so the `400`-round budget is hours away and the master
+is the bottleneck, not the oracle.
+
+**Tier: evidence, not theorem.**  The run has not reached `unsat`, so nothing
+here upgrades §4.  What the widened oracle does establish is that the two
+obstructions this line of work produced were both artifacts, and that no
+obstruction survives an oracle matching Theorem 1's hypothesis on any profile
+examined so far.
+
+The terminal verdict supersedes this snapshot when the run lands.  `unsat`
+would be the chart theorem; a `SAT_NO_TAME_COVERING_MENU_FOR_THIS_PROFILE` from
+*this* driver would, for the first time, be a genuine failure shape rather than
+a selector artifact, since only a real failure of the widest family can now
+produce that status.
+
 ## 8. Artifact sha256
 
-Recorded at freeze, including the chart run's terminal output and the re-test
-that supersedes its verdict.
+Recorded at freeze, including the one-split chart run's terminal output and the
+re-test that supersedes its verdict.  `results/fixed_u_multi_split_chart_theorem.json`
+is deliberately absent: it is the widened run's in-flight snapshot per §7.5, so
+its hash is not stable until the run lands.
 
 ```text
 fc9f2e8aab0b100b4a51addb5a5f50856d6d65d7b85bffcf1b0bd5d94930d906  results/fixed_u_tame_menu_chart_theorem.json
 01c27852cbe0210716c6b1191a86ccb432c9d3272e54be69542307a576800f6c  results/fixed_u_chart_countermodel_wide_family_retest.json
+0892a2a26b520d5c5ddc5254f981bfa8800e2240591a5f1d9b25d88dbe917eb0  tracks/parkability/run_fixed_u_multi_split_chart_theorem.py
+458066f7070e870cb48cb6607493ce7b12227acefeb51b30495ad45612fc4857  tracks/parkability/test_fixed_u_multi_split_chart.py
+58435d30bb97e8df279b5f49c9dcc4a28066ff9d348b05100fa3108a0d4b1d74  results/fixed_u_multi_split_chart_capbound_defect.json
 6ba597f499084ca41e2697d209133513d741b187309ed8b2b5ab24c705ecc97d  tracks/parkability/run_fixed_u_tame_menu_chart_theorem.py
 a2b24ff0a7e3cb7bea0087f5bbc83fb89f6ff515819ce9c24699505229bf8064  tracks/parkability/audit_fixed_u_chart_structure.py
 3871aa3f90974b904dea04871943bba01fe746b5c00bfd8b73677330382a7cde  tracks/parkability/test_fixed_u_tame_menu_chart.py
