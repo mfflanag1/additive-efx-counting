@@ -91,8 +91,9 @@ complete four-edge EFX allocation must split a wild role (`rho >= 3`).  By
 Theorem 1 that is the only surviving countermodel route and the only gap in a
 fully realization-free rung.  My premise-side hunt found none in `180`
 adversarially generated admissible profiles across all twelve roles as the wild
-one, but ended at its round limit, never at `unsat` — **evidence, not proof**
-(§7.5).  The master carries `96` rational unknowns and goes intractable past
+one, but ended at its round limit, never at `unsat` — **evidence, not proof**,
+and evidence weakened by an adversely biased template that excludes singletons
+and so hands the allocator eleven extra splittable roles (§7.5).  The master carries `96` rational unknowns and goes intractable past
 roughly twenty CEGAR rounds, and every round produced a *new* allocation, which
 corroborates from the premise side that no profile-independent menu exists.
 More compute is therefore the wrong instrument; the remaining distance is
@@ -677,6 +678,38 @@ somewhere past twenty rounds.  So this does **not** prove the premises forbid a
 forced wild split — the honest statement is that the shape did not appear under
 `180` adversarial attempts.
 
+**Correction: the template is adversely biased, so the null result is weaker
+than it looks.** The search forces every non-`X` role to be tame *multi-good*.
+An earlier draft called that a conservative stratum limitation on the grounds
+that it "can only lose countermodels, never manufacture one".  That is true and
+it is exactly the problem: in a countermodel hunt, losing countermodels is the
+failure mode.  A multi-good role is splittable, so forcing eleven of them hands
+the allocator eleven extra degrees of freedom and makes an EFX allocation
+avoiding `X` *easier* to build — biasing the search toward the `unsat` outcome
+it in fact produced.  Singletons do the opposite: they are unsplittable, they
+constrain the allocator, and they are what an adversary wants.  In the banked
+`113`, singletons are common — `k`, `q0`, `gr`, `h`, `j` and `m` all appear as
+singletons — so a zero-singleton template is a thin and unrepresentative slice
+of the chart.  The `180`-profile null result should be read accordingly.
+
+The right generalization is to require only `rho(g) <= 2` for every `g != X`,
+which admits singletons and tame multi-good roles alike while keeping the
+two-good stand-in exact.  Two technical points make it more than a flag change,
+and both are corrections to the form in which this was proposed:
+
+1. **Do not simply free the master's native size-class disjunction.** That
+   disjunction is "singleton, or `2M <= T`", and `2M <= T` permits `T >= 3M` —
+   a second *wild* role.  The family under test forbids splitting only `X`, so
+   a second wild role could be split, and Lemma C′ does not cover a *split*
+   wild role.  Tameness of the non-`X` roles must stay explicit.
+2. **A singleton cannot be faked by a two-good stand-in.** A true singleton
+   offers argmin candidate `T`; a two-good stand-in offers `min(a, T-a) < T`.
+   A smaller candidate makes `own >= total - candidate` *harder*, so the
+   stand-in is strictly stricter than the role it replaces and could
+   manufacture a false `unsat`.  Singleton support needs a genuine one-good
+   layout, which changes the good set the allocation ranges over — hence a
+   sweep over singleton subsets rather than a single run.
+
 One structural by-product is worth recording.  Every single round produced a
 *new* allocation; the master never ran out of admissible profiles that defeat
 the current menu.  That independently corroborates, from the premise side, the
@@ -843,9 +876,20 @@ Nothing here resolves four-agent or general additive EFX.
 2. **Prove the slack-two theorem.** *Taken up in
    `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`.* The verdict is uniform over
    all `113` profiles and exact on `79` of them.  Lemma C says only split roles
-   matter and the canonical baselines split at most three roles, so the target
-   is a bounded statement: for a slack-two profile, a four-edge EFX allocation
-   exists that is robust to the side pattern of its split roles.
+   matter, so the target is: for a slack-two profile, a four-edge EFX
+   allocation exists that is robust to the side pattern of its split roles.
+   **Correction — this is not as bounded as an earlier draft of this note
+   claimed.** That draft argued the target was small because "the canonical
+   baselines split at most three roles".  That statistic is a *baseline*
+   figure and understates the truth: the baseline is one allocation, while the
+   covering menu splits strictly more.  Recomputing the union over each whole
+   menu gives `6` split roles on the one-minimum-split profile (baseline said
+   `2`) and `10` on the whole-role obstruction profile (baseline said `3`),
+   with up to `5` roles split by a single allocation.  A certificate over a
+   six-role union costs `8^6 = 262,144` pattern vectors, which independently
+   reproduces the barrier figure reached in
+   `FIXED_U_TAME_MENU_CHART_20260816.md`.  The hand target is therefore
+   substantially harder than this note first suggested.
 3. **Re-audit the one-minimum-split driver.** *Taken up in
    `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`.* Since its obstruction is an
    artifact, `run_exact_response_one_minimum_split_cegar.py` should either be
