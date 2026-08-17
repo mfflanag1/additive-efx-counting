@@ -36,10 +36,23 @@ It does three things.
    realization admits a complete EFX allocation within four support edges.
    The banked obstruction was an artifact of identity-blind conservatism.
 
+4. It searches the premises for the **one surviving countermodel route** left
+   open by the successor note's Theorem 1 — a profile on which every complete
+   four-edge EFX allocation must split a wild role — and does not find one in
+   `180` adversarially generated admissible profiles (§7.5).  That is evidence,
+   not a proof: the search ended at its round limit, never at `unsat`.
+
 The net effect on the program is negative for the countermodel hunt and
 positive for the theorem: identity-awareness was the recommended next attack
 surface, and on all `113` banked adversarial profiles it closes rather than
 opens.
+
+Two sections have been **superseded by the successor note and are retained only
+as independent cross-checks**: §7.3 and §7.4 establish by realization
+enumeration, capped at three goods per role, what its Theorem 1 proves outright
+at every cardinality.  Their verdicts agree with it; since the two routes share
+only Lemmas A and B, that agreement is real evidence against an error in
+either, but the coverage claim belongs to the theorem, not to the sweeps.
 
 ## 1. The abstraction
 
@@ -504,6 +517,77 @@ Still no countermodel anywhere.  The identity-aware attack has now failed to
 produce one under a two-good template, under a real-valued master, and across
 the entire slack-3/4/5 population.
 
+## 7.5 The wild-split hunt: the last countermodel route, and a null result
+
+Theorem 1 of `results/IDENTITY_AWARE_SLACK_TWO_20260816.md` supersedes §7.3 and
+§7.4: a *tame* menu — complete within-budget allocations, none splitting a role
+of slack at least three — closes a profile for **every** realization at every
+cardinality.  I verified its load-bearing step independently before building on
+it.  EFX reads only the bundle *minimum*, since `own >= total - v_i(x)` for all
+`x` binds at `x = argmin`.  An unsplit role of any width contributes total
+`T[i,g]` and argmin candidate `M[i,g]`; the two-good stand-in `{M, T-M}`
+contributes total `T` and candidate `M`.  The predicate therefore receives
+identical inputs, and swapping a wide role for its stand-in cannot move a mixed
+bundle's argmin.  The theorem holds.
+
+That leaves exactly one shape the reduction cannot close, and hence exactly one
+surviving countermodel route above slack two:
+
+> an admissible profile on which **every** complete four-support-edge EFX
+> allocation splits a wild role.
+
+`run_identity_aware_wild_split_forced_hunt.py` searches the premises for it.
+Designate a role `X`; constrain the form-2 physical master so `X` is wild
+(`T >= 3M` for every observer) and every other role is tame multi-good
+(`2M <= T` for all observers, `T < 3M` for some); then seek a profile under
+which no complete four-edge EFX allocation avoids splitting `X`.
+
+Two design points matter.  The single-wild-role restriction is what makes the
+question **exactly** decidable in the two-good model rather than a template
+approximation: tame roles are forced to two goods by Lemma B, and `X`, never
+split by the family under test, is exact by Lemma C′.  And the allocation
+family permits splitting **any number of tame roles at once** — testing
+forcedness one split at a time manufactures false positives, which is how the
+chart obstruction of `FIXED_U_TAME_MENU_CHART_20260816.md` §7 arose.
+
+**Result: no countermodel, over a search that was actively trying to build
+one.**
+
+| wild role | rounds | wild-split-forced profiles found |
+|---|---|---|
+| each of `a0, a1, h, j, k, q0, l, e, m, gq, gr, p` | 15 | 0 |
+| **total** | **180** | **0** |
+
+Every round is a fresh fixed-`U`-admissible profile that the master produced
+*specifically to defeat the allocations already found*, carrying a designated
+wild role — and in every one of the `180`, the decision returned a complete
+four-support-edge EFX allocation that does not split that role.
+
+This is stronger than the banked-population statistic in three ways: the
+profiles are adversarially generated rather than incidental, every one is
+guaranteed to carry a wild role, and all twelve roles take the wild slot in
+turn.  The `9` banked profiles that need a split all split a *tame* role, and
+none of them carries the wild-and-forced coincidence; the hunt says that
+coincidence also resists an active search from the premise side.
+
+**Claim tier: evidence, and deliberately not more.** Every role ended at
+`ROUND_LIMIT`, not `unsat`.  Earlier unbounded attempts with a free side
+pattern ended at `UNKNOWN` (`gq` after 28 rounds, `m` after 24, `a0` after 20
+with the pattern pinned): the master carries `96` rational unknowns under the
+full premise set, and its accumulated failure clauses make it intractable
+somewhere past twenty rounds.  So this does **not** prove the premises forbid a
+forced wild split — the honest statement is that the shape did not appear under
+`180` adversarial attempts.
+
+One structural by-product is worth recording.  Every single round produced a
+*new* allocation; the master never ran out of admissible profiles that defeat
+the current menu.  That independently corroborates, from the premise side, the
+chart note's finding that no profile-independent menu exists — it reports `83`
+distinct whole-role allocations over `47` distinct edge sets.  Any positive
+chart-level theorem therefore needs a profile-sensitive selection rule, and the
+CEGAR's non-termination here is a symptom of the same fact rather than a
+tooling accident.
+
 ## 8. Verification
 
 ```bash
@@ -556,6 +640,10 @@ python -m tracks.parkability.run_identity_aware_symbolic_realization_cegar \
   --profile /tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json \
   --output results/identity_aware_symbolic_realization_whole_role_obstruction.json \
   --cap 3 --maximum-rounds 200 --timeout-seconds 120
+
+python -m tracks.parkability.run_identity_aware_wild_split_forced_hunt \
+  --output results/identity_aware_wild_split_forced_hunt_canonical_form2.json \
+  --form-index 2 --canonical-sides --maximum-rounds 15 --timeout-seconds 90
 
 python -m tracks.parkability.run_identity_aware_symbolic_realization_batch \
   --trace /tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json \
@@ -642,14 +730,18 @@ Nothing here resolves four-agent or general additive EFX.
 
 ## 10. Next steps, in priority order
 
-1. **Raise the cardinality cap.** §7.3 built the symbolic-value driver and ran
-   it to `cap = 3`, so both banked profiles are now settled for every
-   realization with at most three goods per role.  What remains is the tail:
-   the whole-role obstruction profile has `rho(m) = 99` and `rho(p) = 236`.
-   Two routes are worth trying before brute cap-raising — a monotonicity
-   argument showing that splitting a good further never destroys a four-edge
-   repair, which would collapse the tail to a bounded check, or a direct
-   argument that a role whose slack is large is never the binding one.
+1. **Settle the wild-split question.** This is now the whole ballgame: by
+   Theorem 1, a profile forcing every four-edge EFX allocation to split a wild
+   role is the only route to a countermodel above slack two, and the only gap
+   in a fully realization-free rung.  §7.5 found none in `180` adversarial
+   attempts but proved nothing.  The obstacle is solver capacity — the master
+   carries `96` rational unknowns and goes intractable past roughly twenty
+   CEGAR rounds — so the productive moves are analytic, not more compute.  Two
+   candidates: derive a premise-level obstruction to wild-and-forced
+   co-occurrence directly (Lemma D of the chart note is the model for this
+   kind of argument), or find a normal form that shrinks the master before the
+   search starts.  *Raising the cardinality cap is no longer worth doing:*
+   Theorem 1 already covers every cardinality.
 2. **Prove the slack-two theorem.** *Taken up in
    `results/IDENTITY_AWARE_SLACK_TWO_20260816.md`.* The verdict is uniform over
    all `113` profiles and exact on `79` of them.  Lemma C says only split roles
@@ -681,6 +773,7 @@ Recorded at freeze.  Each output JSON also carries its driver's
 e13343c88b3543d59958e5e101e4c581f85e2794c83893674ca46bbc7e212de0  tracks/parkability/run_identity_aware_witness_side_batch.py
 d8cf21e6606b26854930bb366e5a0871e7a1c318ae2b9d8e47c06e9414f44419  tracks/parkability/run_identity_aware_symbolic_realization_cegar.py
 7100d1b531b2a3ea586c7edde12fe58322882035bfbf8ef684c8637a72c9b075  tracks/parkability/run_identity_aware_symbolic_realization_batch.py
+9d8693a9604fdc84b64508e73d49832955c13f0411dbc89ba3995e5e8fbc8bb9  tracks/parkability/run_identity_aware_wild_split_forced_hunt.py
 2bc0e51a5c9eb444814669db872ff8bbed7eb371a3a5e454140cf953ec126ebb  tracks/parkability/test_identity_aware_witness.py
 2e5c9d13b7167e790619333d58427b21fce76a2d00d1b56b562afa26841b8314  results/identity_aware_witness_realizability_audit.json
 e7ce8125dc70e62d4c2d77129c5002fc6e5490e00adef9fb95d94ffaf2d19dc4  results/identity_aware_partition_admission_sweep_form2.json
@@ -690,4 +783,5 @@ e67935f76c0fe35fbf722d4741c05aaf1732c8e62a67ddbeb73a59d5b20fb159  results/identi
 2b210cf3c3116662f179bba6df72a3aaf2448d2f6b8442c40240d90d9115e2e9  results/identity_aware_symbolic_realization_one_minimum_split.json
 157e2e60aeb31dfce1cbaaa8598aa13f036f02e8c5ea516fae30a3f993cc05f0  results/identity_aware_symbolic_realization_whole_role_obstruction.json
 8cbacb6398a13d453c834c76aa6db25b7418fca0d468f00c34e60985ebd13441  results/identity_aware_symbolic_realization_batch_form2.json
+d03e539e904cd5b66e38b0985d9d1eb40ab71ee54158984d5826a2f82c6c5005  results/identity_aware_wild_split_forced_hunt_canonical_form2.json
 ```
