@@ -454,6 +454,48 @@ The cap still binds there.  That profile has `rho(m) = 99` and
 outside the sweep, and `cap_covers_every_role` is recorded as `false` in the
 output.  This narrows open item 1 rather than closing it.
 
+## 7.4 Symbolic sweep over the high-slack population
+
+The slack distribution over the `113` profiles decides how much a cardinality
+cap can buy, and it had not been stated before:
+
+| maximum role slack | profiles | effect of a three-good cap |
+|---|---|---|
+| `2` | 68 | already exact from the two-good family (Corollary B1) |
+| `3` | 11 | **cap makes these exact** |
+| `4` | 12 | strictly stronger than two-good, still capped |
+| `5` | 3 | strictly stronger than two-good, still capped |
+| `6`–`14` | 10 | not examined |
+| `23`–`236` | 9 | not examined |
+
+`run_identity_aware_symbolic_realization_batch.py` runs the symbolic driver
+over this population in increasing order of maximum slack, so the profiles the
+cap actually closes are decided first.  It examined the `26` profiles of
+maximum slack `3`, `4` and `5` — every profile in the population at those
+levels — with a per-profile time budget.
+
+| quantity | value |
+|---|---|
+| profiles with a role of slack `> 2` | `45` |
+| profiles examined (all of maximum slack `3`, `4`, `5`) | `26` |
+| `UNSAT_EVERY_REALIZATION_ADMITS_A_BANKED_ALLOCATION` | `25` |
+| `INCOMPLETE` (one configuration hit the round limit, one the time budget) | `1` |
+| identity-sensitive countermodels found | `0` |
+| **profiles newly made exhaustive** | `11` |
+| settled but still cap-limited | `14` |
+| CEGAR rounds | `964` |
+
+**The headline number moves from 68 to 79.** Of the `113` banked adversarial
+profiles, `79` are now decided for *every* physical realization of their
+totals and minima — `68` because slack two makes the two-good family complete,
+and `11` more because a three-good cap covers every role at maximum slack
+three.  A further `14` carry a verdict strictly stronger than the two-good one
+but remain cap-limited.
+
+Still no countermodel anywhere.  The identity-aware attack has now failed to
+produce one under a two-good template, under a real-valued master, and across
+the entire slack-3/4/5 population.
+
 ## 8. Verification
 
 ```bash
@@ -506,6 +548,15 @@ python -m tracks.parkability.run_identity_aware_symbolic_realization_cegar \
   --profile /tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json \
   --output results/identity_aware_symbolic_realization_whole_role_obstruction.json \
   --cap 3 --maximum-rounds 200 --timeout-seconds 120
+
+python -m tracks.parkability.run_identity_aware_symbolic_realization_batch \
+  --trace /tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json \
+  --trace /tmp/efx-idw-inputs/exact_response_form2_physical_minimum_cegar_checkpoint_20260814.json \
+  --trace /tmp/efx-idw-inputs/exact_response_form2_canonical_physical_cegar_20260814.json \
+  --trace /tmp/efx-idw-inputs/exact_response_form2_canonical_physical_cegar_stage2_20260814.json \
+  --output results/identity_aware_symbolic_realization_batch_form2.json \
+  --cap 3 --max-vectors 16 --profile-budget-seconds 240 --limit 26 \
+  --maximum-rounds 200 --timeout-seconds 60
 
 python -m tracks.parkability.run_identity_aware_witness_side_batch \
   --trace /tmp/efx-idw-inputs/exact_response_form2_one_minimum_split_cegar_20260814.json \
@@ -618,6 +669,7 @@ Recorded at freeze.  Each output JSON also carries its driver's
 4f584558d4c638b371062298445270b8ec959073f9250fc38991478099b6ffee  tracks/parkability/run_identity_aware_witness_side_cegar.py
 e13343c88b3543d59958e5e101e4c581f85e2794c83893674ca46bbc7e212de0  tracks/parkability/run_identity_aware_witness_side_batch.py
 d8cf21e6606b26854930bb366e5a0871e7a1c318ae2b9d8e47c06e9414f44419  tracks/parkability/run_identity_aware_symbolic_realization_cegar.py
+7100d1b531b2a3ea586c7edde12fe58322882035bfbf8ef684c8637a72c9b075  tracks/parkability/run_identity_aware_symbolic_realization_batch.py
 2bc0e51a5c9eb444814669db872ff8bbed7eb371a3a5e454140cf953ec126ebb  tracks/parkability/test_identity_aware_witness.py
 2e5c9d13b7167e790619333d58427b21fce76a2d00d1b56b562afa26841b8314  results/identity_aware_witness_realizability_audit.json
 e7ce8125dc70e62d4c2d77129c5002fc6e5490e00adef9fb95d94ffaf2d19dc4  results/identity_aware_partition_admission_sweep_form2.json
@@ -626,4 +678,5 @@ e67935f76c0fe35fbf722d4741c05aaf1732c8e62a67ddbeb73a59d5b20fb159  results/identi
 792400756569a8dc4c8f71a54216c74bd5c057d7b11fc1114bd62d8415c2dbd5  results/identity_aware_witness_side_batch_form2.json
 2b210cf3c3116662f179bba6df72a3aaf2448d2f6b8442c40240d90d9115e2e9  results/identity_aware_symbolic_realization_one_minimum_split.json
 157e2e60aeb31dfce1cbaaa8598aa13f036f02e8c5ea516fae30a3f993cc05f0  results/identity_aware_symbolic_realization_whole_role_obstruction.json
+8cbacb6398a13d453c834c76aa6db25b7418fca0d468f00c34e60985ebd13441  results/identity_aware_symbolic_realization_batch_form2.json
 ```
