@@ -501,6 +501,22 @@ HALT_VERDICT = {
 OBSTRUCTION_STATUSES = frozenset({WIDE_FAMILY_FAILED})
 
 
+MASTER_MODES = ("qflra", "smt")
+
+
+def select_master_solver(source, mode, timeout_seconds, random_seed):
+    """Preserve the master assertions while changing only Z3's front end."""
+    if mode == "qflra":
+        solver = source
+    elif mode == "smt":
+        solver = z3.Solver()
+        solver.add(*source.assertions())
+    else:
+        raise ValueError(mode)
+    solver.set(timeout=timeout_seconds * 1000, random_seed=random_seed)
+    return solver
+
+
 def close_profile(totals, minima, edge_cap, pattern_budget, timeout_seconds):
     """Close a profile, or say precisely why this oracle could not.
 
@@ -660,9 +676,11 @@ def prepare_cut_records(resume_path, ledger_path, edge_cap):
 
 def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
         random_seed, edge_cap, pattern_budget, resume_path=None,
-        cut_ledger_path=None):
-    solver, total, minimum = build_physical_master(form_index)
-    solver.set(timeout=timeout_seconds * 1000, random_seed=random_seed)
+        cut_ledger_path=None, master_mode="qflra"):
+    source, total, minimum = build_physical_master(form_index)
+    solver = select_master_solver(
+        source, master_mode, timeout_seconds, random_seed
+    )
 
     seeds = load_seed_menu(seed_path, edge_cap) if seed_path else []
     for certificate in seeds:
@@ -692,6 +710,10 @@ def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
         "form_index": form_index,
         "edge_cap": edge_cap,
         "pattern_budget": pattern_budget,
+        "master_mode": master_mode,
+        "resumed_master_mode": (
+            previous.get("master_mode", "legacy_qflra") if previous else None
+        ),
         "seed_certificates": len(seeds),
         "seed_source": str(seed_path) if seed_path else None,
         "seed_source_sha256": (
@@ -815,6 +837,7 @@ def main():
     parser.add_argument("--maximum-rounds", type=int, default=400)
     parser.add_argument("--timeout-seconds", type=int, default=120)
     parser.add_argument("--random-seed", type=int, default=0)
+    parser.add_argument("--master-mode", choices=MASTER_MODES, default="qflra")
     parser.add_argument("--resume", type=Path)
     parser.add_argument(
         "--cut-ledger", type=Path, required=True,
@@ -824,7 +847,7 @@ def main():
     result = run(args.output, args.form_index, args.seed_menu,
                  args.maximum_rounds, args.timeout_seconds, args.random_seed,
                  args.edge_cap, args.pattern_budget, args.resume,
-                 args.cut_ledger)
+                 args.cut_ledger, args.master_mode)
     print(json.dumps({
         "status": result["status"],
         "seed_certificates": result["seed_certificates"],

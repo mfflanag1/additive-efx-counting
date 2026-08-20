@@ -4,6 +4,11 @@
 **Branch:** `codex/efx-fixed-u-resume-20260820`  
 **Parent:** `cc/efx-idwitness-20260816` at `ef67d89`
 
+**Superseded terminal status:** the replayable run subsequently reached the
+genuine wild-and-forced profile at iteration 198. See
+`FIXED_U_WILD_FORCED_TERMINAL_20260820.md`. The 194-cut material below remains
+the reproducible checkpoint from which that terminal profile was obtained.
+
 ## Corrected starting point
 
 This checkpoint adopts `HANDOFF_FROM_CC_20260817.md` and the identity-aware
@@ -123,4 +128,3 @@ after the handoff.
 Not proved: termination of the 194-cut master; the wild-and-forced implication;
 the form-2 tame covering-menu theorem; coverage of every saturated root-facing
 rank-three fixed-`U` state by form 2; or the active universal theorem.
-

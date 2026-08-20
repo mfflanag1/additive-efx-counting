@@ -2115,3 +2115,9 @@ both encodings.
   certificate-complete JSONL ledger. The widest-family run advances from 191
   to 194 exact cuts with no obstruction, then confirms that master
   normalization—not the oracle—is the live computational bottleneck.
+- [`FIXED_U_WILD_FORCED_TERMINAL_20260820.md`](FIXED_U_WILD_FORCED_TERMINAL_20260820.md)
+  records the first obstruction surviving the widest tame-family guard. It
+  refutes the form-2 tame-covering-menu theorem, but its canonical realization
+  still has a four-edge EFX allocation obtained by splitting wild role `a1`.
+  The active gap is now the finite three-through-seven-good realization problem
+  for that role.

@@ -14,12 +14,14 @@ import itertools
 import json
 
 import pytest
+import z3
 
 from .run_fixed_u_multi_split_chart_theorem import (
     CAP_BOUND,
     CLOSED,
     HALT_VERDICT,
     OBSTRUCTION_STATUSES,
+    MASTER_MODES,
     WIDE_FAMILY_FAILED,
     WIDE_FAMILY_INCONCLUSIVE,
     PatternCoverageError,
@@ -34,6 +36,7 @@ from .run_fixed_u_multi_split_chart_theorem import (
     pieces_for_set,
     prepare_cut_records,
     role_patterns,
+    select_master_solver,
     side_pattern_vectors,
     whole_role_certificate,
 )
@@ -208,6 +211,17 @@ def test_every_negative_outcome_has_a_distinct_verdict():
     }
     assert len(set(HALT_VERDICT.values())) == 3
     assert CLOSED not in HALT_VERDICT
+
+
+@pytest.mark.parametrize("mode", MASTER_MODES)
+def test_master_mode_preserves_the_assertion_set(mode):
+    source = z3.SolverFor("QF_LRA")
+    x = z3.Real("master_mode_x")
+    source.add(x > 0, x < 1)
+    solver = select_master_solver(source, mode, 5, 0)
+    assert solver.check() == z3.sat
+    solver.add(x >= 1)
+    assert solver.check() == z3.unsat
 
 
 @pytest.mark.parametrize("budget,expected_sizes", (
