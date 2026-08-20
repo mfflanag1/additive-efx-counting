@@ -34,6 +34,7 @@ import argparse
 import hashlib
 import itertools
 import json
+import os
 from fractions import Fraction
 from pathlib import Path
 
@@ -273,6 +274,14 @@ def audit_split_set_is_tame(totals, minima, split_roles):
         assert role_slack_is_two(totals, minima, role), role
 
 
+def deserialize_rows(rows):
+    """Inverse of `serialize`, with observers outermost in stored records."""
+    return {
+        observer: {role: Fraction(amount) for role, amount in row.items()}
+        for observer, row in rows.items()
+    }
+
+
 # --- certificates ----------------------------------------------------------
 
 def build_certificate(totals, minima, split_roles, edge_cap):
@@ -319,6 +328,87 @@ def certificate_cut(certificate, total, minimum):
                         - symbolic_floor(total, minimum, observer, piece, vector)
                     )
     return z3.And(*clauses)
+
+
+def audit_certificate_at_profile(certificate, totals, minima, edge_cap):
+    """Replay every allocation in a certificate against its source profile."""
+    split_roles = tuple(certificate["split_roles"])
+    audit_pattern_coverage(certificate)
+    audit_split_set_is_tame(totals, minima, split_roles)
+    for vector in side_pattern_vectors(split_roles):
+        allocation = certificate["allocations"][
+            pattern_key(split_roles, vector)
+        ]
+        exact_audit(
+            allocation, totals, minima, split_roles, vector, edge_cap
+        )
+
+
+# --- durable cut ledger ---------------------------------------------------
+
+def atomic_json_write(path, payload):
+    """Replace a JSON summary atomically so interruption cannot truncate it."""
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    os.replace(temporary, path)
+
+
+def load_cut_ledger(path):
+    """Load complete JSONL records; a torn final line is a hard failure."""
+    if path is None or not path.exists():
+        return []
+    records = []
+    with path.open() as handle:
+        for line_number, line in enumerate(handle, 1):
+            if not line.strip():
+                continue
+            try:
+                records.append(json.loads(line))
+            except json.JSONDecodeError as error:
+                raise ValueError(
+                    f"torn cut-ledger line {line_number} in {path}"
+                ) from error
+    return records
+
+
+def append_cut_record(path, record):
+    """Durably append a certificate before advancing the JSON summary."""
+    if path is None:
+        return
+    path.parent.mkdir(parents=True, exist_ok=True)
+    encoded = json.dumps(record, sort_keys=True, separators=(",", ":")) + "\n"
+    with path.open("a") as handle:
+        handle.write(encoded)
+        handle.flush()
+        os.fsync(handle.fileno())
+
+
+def cut_record(round_record, certificate):
+    payload = {
+        "schema": "fixed-u-multi-split-cut-v1",
+        "iteration": round_record["iteration"],
+        "round": round_record,
+        "certificate": certificate,
+    }
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    payload["payload_sha256"] = hashlib.sha256(canonical.encode()).hexdigest()
+    return payload
+
+
+def audit_cut_record(record, edge_cap):
+    payload = {k: v for k, v in record.items() if k != "payload_sha256"}
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    assert record["payload_sha256"] == hashlib.sha256(canonical.encode()).hexdigest()
+    assert record["schema"] == "fixed-u-multi-split-cut-v1"
+    assert record["iteration"] == record["round"]["iteration"]
+    totals = deserialize_rows(record["round"]["totals"])
+    minima = deserialize_rows(record["round"]["minima"])
+    certificate = record["certificate"]
+    assert certificate["split_roles"] == record["round"]["split_roles"]
+    assert certificate["branch"] == record["round"]["branch"]
+    assert certificate["pattern_count"] == record["round"]["pattern_count"]
+    audit_certificate_at_profile(certificate, totals, minima, edge_cap)
+    return certificate
 
 
 def wide_menu_split_union(totals, minima, edge_cap, timeout_seconds,
@@ -517,10 +607,60 @@ def load_seed_menu(path, edge_cap):
     return seeds
 
 
+def reconstruct_cut_record(round_record, edge_cap):
+    """Rebuild a pre-ledger certificate from its frozen source profile."""
+    totals = deserialize_rows(round_record["totals"])
+    minima = deserialize_rows(round_record["minima"])
+    certificate = build_certificate(
+        totals, minima, round_record["split_roles"], edge_cap
+    )
+    if certificate is None:
+        raise AssertionError(
+            f"cannot reconstruct iteration {round_record['iteration']}"
+        )
+    assert certificate["branch"] == round_record["branch"]
+    assert certificate["pattern_count"] == round_record["pattern_count"]
+    return cut_record(round_record, certificate)
+
+
+def prepare_cut_records(resume_path, ledger_path, edge_cap):
+    """Audit a ledger and recover cuts absent from either crash-side artifact."""
+    ledger_records = load_cut_ledger(ledger_path)
+    by_iteration = {}
+    for record in ledger_records:
+        audit_cut_record(record, edge_cap)
+        iteration = record["iteration"]
+        if iteration in by_iteration:
+            raise ValueError(f"duplicate cut-ledger iteration {iteration}")
+        by_iteration[iteration] = record
+
+    previous = None
+    if resume_path is not None:
+        previous = json.loads(resume_path.read_text())
+        for round_record in previous["rounds"]:
+            iteration = round_record["iteration"]
+            if iteration in by_iteration:
+                assert by_iteration[iteration]["round"] == round_record
+                continue
+            record = reconstruct_cut_record(round_record, edge_cap)
+            append_cut_record(ledger_path, record)
+            by_iteration[iteration] = record
+    elif by_iteration:
+        raise ValueError("a nonempty cut ledger requires --resume")
+
+    if by_iteration:
+        expected = list(range(max(by_iteration) + 1))
+        assert sorted(by_iteration) == expected, (
+            "cut ledger has an iteration gap", sorted(by_iteration)
+        )
+    return previous, [by_iteration[i] for i in sorted(by_iteration)]
+
+
 # --- the chart loop --------------------------------------------------------
 
 def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
-        random_seed, edge_cap, pattern_budget):
+        random_seed, edge_cap, pattern_budget, resume_path=None,
+        cut_ledger_path=None):
     solver, total, minimum = build_physical_master(form_index)
     solver.set(timeout=timeout_seconds * 1000, random_seed=random_seed)
 
@@ -528,9 +668,26 @@ def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
     for certificate in seeds:
         solver.add(z3.Not(certificate_cut(certificate, total, minimum)))
 
-    rounds = []
+    previous, records = prepare_cut_records(
+        resume_path, cut_ledger_path, edge_cap
+    )
+    if previous is not None:
+        assert previous["form_index"] == form_index
+        assert previous["edge_cap"] == edge_cap
+        assert previous["pattern_budget"] == pattern_budget
+        assert previous["seed_certificates"] == len(seeds)
+        assert previous["seed_source_sha256"] == (
+            hashlib.sha256(seed_path.read_bytes()).hexdigest()
+            if seed_path else None
+        )
+    for record in records:
+        solver.add(z3.Not(certificate_cut(
+            record["certificate"], total, minimum
+        )))
+
+    rounds = [record["round"] for record in records]
     result = {
-        "schema": "fixed-u-multi-split-chart-theorem-v1",
+        "schema": "fixed-u-multi-split-chart-theorem-v2",
         "status": "RUNNING",
         "form_index": form_index,
         "edge_cap": edge_cap,
@@ -547,11 +704,18 @@ def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
             "allocation before its cut is added"
         ),
         "rounds": rounds,
+        "resumed_from": str(resume_path) if resume_path else None,
+        "resumed_from_sha256": (
+            hashlib.sha256(resume_path.read_bytes()).hexdigest()
+            if resume_path else None
+        ),
+        "cut_ledger": str(cut_ledger_path) if cut_ledger_path else None,
+        "cut_ledger_record_count": len(records),
         "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
     }
-    output_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    atomic_json_write(output_path, result)
 
-    for iteration in range(maximum_rounds):
+    for iteration in range(len(rounds), maximum_rounds):
         status = solver.check()
         if status != z3.sat:
             result["status"] = (
@@ -597,22 +761,26 @@ def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
                 result["countermodel_iteration"] = iteration
                 result["countermodel_role_slacks"] = result["profile_role_slacks"]
             break
-        solver.add(z3.Not(certificate_cut(certificate, total, minimum)))
-        rounds.append({
+        round_record = {
             "iteration": iteration,
             "branch": certificate["branch"],
             "split_roles": certificate["split_roles"],
             "pattern_count": certificate["pattern_count"],
             "totals": serialize(model, total),
             "minima": serialize(model, minimum),
-        })
+        }
+        record = cut_record(round_record, certificate)
+        audit_cut_record(record, edge_cap)
+        # Durability order is intentional: if interrupted after this append but
+        # before the summary write, resume treats the ledger as authoritative.
+        append_cut_record(cut_ledger_path, record)
+        solver.add(z3.Not(certificate_cut(certificate, total, minimum)))
+        rounds.append(round_record)
+        result["cut_ledger_record_count"] = len(rounds)
         print(iteration, certificate["branch"],
               certificate["split_roles"], certificate["pattern_count"],
               flush=True)
-        if iteration % 10 == 0:
-            output_path.write_text(
-                json.dumps(result, indent=2, sort_keys=True) + "\n"
-            )
+        atomic_json_write(output_path, result)
     else:
         result["status"] = "ITERATION_LIMIT"
 
@@ -633,7 +801,7 @@ def run(output_path, form_index, seed_path, maximum_rounds, timeout_seconds,
         "the genuine failure shape; a wild role is still never split, so such "
         "a profile is open rather than refuted."
     )
-    output_path.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n")
+    atomic_json_write(output_path, result)
     return result
 
 
@@ -647,10 +815,16 @@ def main():
     parser.add_argument("--maximum-rounds", type=int, default=400)
     parser.add_argument("--timeout-seconds", type=int, default=120)
     parser.add_argument("--random-seed", type=int, default=0)
+    parser.add_argument("--resume", type=Path)
+    parser.add_argument(
+        "--cut-ledger", type=Path, required=True,
+        help="fsynced JSONL certificate ledger; required for every chart run",
+    )
     args = parser.parse_args()
     result = run(args.output, args.form_index, args.seed_menu,
                  args.maximum_rounds, args.timeout_seconds, args.random_seed,
-                 args.edge_cap, args.pattern_budget)
+                 args.edge_cap, args.pattern_budget, args.resume,
+                 args.cut_ledger)
     print(json.dumps({
         "status": result["status"],
         "seed_certificates": result["seed_certificates"],

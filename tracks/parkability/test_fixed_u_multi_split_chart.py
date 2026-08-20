@@ -11,6 +11,7 @@ error quietly.
 from __future__ import annotations
 
 import itertools
+import json
 
 import pytest
 
@@ -23,10 +24,15 @@ from .run_fixed_u_multi_split_chart_theorem import (
     WIDE_FAMILY_INCONCLUSIVE,
     PatternCoverageError,
     audit_pattern_coverage,
+    append_cut_record,
+    audit_cut_record,
+    cut_record,
     carries_witness,
     expected_pattern_keys,
     pattern_key,
+    load_cut_ledger,
     pieces_for_set,
+    prepare_cut_records,
     role_patterns,
     side_pattern_vectors,
     whole_role_certificate,
@@ -223,3 +229,60 @@ def test_a_seed_over_the_edge_budget_is_refused():
     role_owner["l"] = "r"
     with pytest.raises(AssertionError):
         whole_role_certificate(role_owner, edge_cap=1)
+
+
+# --- durable cut checkpointing --------------------------------------------
+
+def unit_profile():
+    totals = {owner: {role: "1" for role in GOODS} for owner in OWNERS}
+    minima = {owner: {role: "1" for role in GOODS} for owner in OWNERS}
+    return totals, minima
+
+
+def unit_round_and_certificate():
+    totals, minima = unit_profile()
+    certificate = whole_role_certificate(supplier_home_map("s"), edge_cap=4)
+    round_record = {
+        "iteration": 0,
+        "branch": "W",
+        "split_roles": [],
+        "pattern_count": 1,
+        "totals": totals,
+        "minima": minima,
+    }
+    return round_record, certificate
+
+
+def test_cut_ledger_round_trip_is_hash_and_arithmetic_audited(tmp_path):
+    round_record, certificate = unit_round_and_certificate()
+    record = cut_record(round_record, certificate)
+    audit_cut_record(record, edge_cap=4)
+    ledger = tmp_path / "cuts.jsonl"
+    append_cut_record(ledger, record)
+    assert load_cut_ledger(ledger) == [record]
+
+
+def test_cut_ledger_rejects_payload_tampering():
+    round_record, certificate = unit_round_and_certificate()
+    record = cut_record(round_record, certificate)
+    record["round"]["pattern_count"] = 8
+    with pytest.raises(AssertionError):
+        audit_cut_record(record, edge_cap=4)
+
+
+def test_cut_ledger_rejects_a_torn_final_line(tmp_path):
+    ledger = tmp_path / "cuts.jsonl"
+    ledger.write_text('{"schema":"fixed-u-multi')
+    with pytest.raises(ValueError, match="torn cut-ledger line"):
+        load_cut_ledger(ledger)
+
+
+def test_resume_recovers_a_ledger_record_ahead_of_the_summary(tmp_path):
+    round_record, certificate = unit_round_and_certificate()
+    ledger = tmp_path / "cuts.jsonl"
+    append_cut_record(ledger, cut_record(round_record, certificate))
+    summary = tmp_path / "summary.json"
+    summary.write_text(json.dumps({"rounds": []}))
+    previous, records = prepare_cut_records(summary, ledger, edge_cap=4)
+    assert previous["rounds"] == []
+    assert [record["iteration"] for record in records] == [0]

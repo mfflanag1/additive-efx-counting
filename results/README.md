@@ -2110,3 +2110,8 @@ both encodings.
   complete-EFX selector using at most four frozen-support pairs.  This is not
   an EFX counterexample: arbitrary within-role packet splits remain available,
   and are now the sharply identified next proof gate.
+- [`FIXED_U_WIDENED_CUT_CHECKPOINT_20260820.md`](FIXED_U_WIDENED_CUT_CHECKPOINT_20260820.md)
+  migrates the corrected identity-aware chart campaign to an fsynced,
+  certificate-complete JSONL ledger. The widest-family run advances from 191
+  to 194 exact cuts with no obstruction, then confirms that master
+  normalization—not the oracle—is the live computational bottleneck.
