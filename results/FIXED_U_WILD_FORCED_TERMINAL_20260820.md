@@ -1,9 +1,16 @@
 # Fixed-U wild-and-forced terminal profile
 
 **Date:** 2026-08-20  
-**Status:** exact countermodel to the tame-covering-menu chart theorem; exact
-wild-split repair in the canonical physical realization; universal fixed-`U`
-theorem open
+**Status:** exact countermodel to the tame-covering-menu chart theorem. The
+realization gap recorded below is now closed by
+`FIXED_U_WILD_A1_ALL_REALIZATIONS_LEMMA_20260820.md`; the universal fixed-`U`
+theorem remains open.
+
+> **2026-08-20 continuation:** The proposed three-through-seven-good campaign
+> closed more strongly than anticipated. One four-edge allocation keeps all
+> `a1` goods together and is EFX for every feasible `a1` realization. Treat
+> the “remaining problem” and “not proved” items below as historical motivation,
+> superseded by the all-realizations lemma.
 
 ## Headline
 

@@ -1,0 +1,84 @@
+{
+  "claim_boundary": "The master exactly covers every labelled three-good realization of a1 with the frozen totals/minima and every witness identity/tie pattern; all other roles remain at their audited canonical values. The oracle exhausts all complete allocations using at most four support-transfer edges. A SAT countermodel or master UNSAT is exact for this rung, not for cardinalities four through seven or for every fixed-U state.",
+  "cut_count": 1,
+  "edge_cap": 4,
+  "labelled_witness_pattern_count": 1296,
+  "ledger": "results/fixed_u_a1_three_good_cuts_20260820.jsonl",
+  "pattern_coverage": "for each observer all three values are >= M, sum to T, and at least one equals M; since T>3M in every a1 row, exactly the six nonempty proper witness subsets are feasible, independently across four rows",
+  "physical_good_count": 21,
+  "profile": "results/fixed_u_wild_forced_terminal_profile_20260820.json",
+  "profile_sha256": "55be177414982b9a001479b445c99319eee26859495478e559f643cc3d4044d6",
+  "repair": "results/fixed_u_terminal_profile_unrestricted_physical_decision_20260820.json",
+  "repair_sha256": "a47726679aa674b5cb902e5bc34dd1e9e35ddee3ea6c9dfbf1037e137cce47dc",
+  "rounds": [
+    {
+      "a1_values": {
+        "d": {
+          "a1:0": "2843/3848",
+          "a1:1": "989/7696",
+          "a1:2": "989/7696"
+        },
+        "q": {
+          "a1:0": "10375/11544",
+          "a1:1": "1/3848",
+          "a1:2": "1/3848"
+        },
+        "r": {
+          "a1:0": "1893/3848",
+          "a1:1": "1/1924",
+          "a1:2": "1/1924"
+        },
+        "s": {
+          "a1:0": "11/1924",
+          "a1:1": "1/1924",
+          "a1:2": "1/1924"
+        }
+      },
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "iteration": 0,
+      "minimum_efx_slack": "23/1924",
+      "payload_sha256": "0d1536233faed3f54a6b7edaebc9ad4252d50c499ab5ed95ffc23ac524c0b4cd",
+      "schema": "fixed-u-a1-three-good-cut-v1",
+      "witness_pattern": {
+        "d": [
+          1,
+          2
+        ],
+        "q": [
+          1,
+          2
+        ],
+        "r": [
+          1,
+          2
+        ],
+        "s": [
+          1,
+          2
+        ]
+      }
+    }
+  ],
+  "schema": "fixed-u-a1-three-good-cegar-v1",
+  "script_sha256": "4c34310041b1eb413959e42d1a67e0e0f398ab9e0d32fbb4390e8a1f4045bfee",
+  "status": "UNSAT_EVERY_THREE_GOOD_A1_REALIZATION_HAS_FOUR_EDGE_EFX",
+  "target_cardinality": 3,
+  "target_role": "a1"
+}

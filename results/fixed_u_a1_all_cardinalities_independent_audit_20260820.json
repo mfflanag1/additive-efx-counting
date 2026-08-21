@@ -1,0 +1,67 @@
+{
+  "claim_boundary": "Every positive finite realization of a1 with this immutable terminal profile's totals and minima has this complete EFX allocation using four support-transfer edges. Exactly cardinalities 2 through 7 are feasible across all observers; cardinality 8 and above is impossible because 8 M_d > T_d. Other roles remain in the canonical physical realization; this is not a theorem for every fixed-U state.",
+  "edge_cap": 4,
+  "edges": [
+    [
+      "charity",
+      "q"
+    ],
+    [
+      "q",
+      "r"
+    ],
+    [
+      "r",
+      "s"
+    ],
+    [
+      "s",
+      "d"
+    ]
+  ],
+  "feasible_target_cardinalities": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "labelled_witness_pattern_count": 1296,
+  "ledger": "results/fixed_u_a1_three_good_cuts_20260820.jsonl",
+  "ledger_sha256": "d13829a7daa0f92909868388c148f6c41180df2c97868f100f68223e72221195",
+  "maximum_feasible_target_cardinality": 7,
+  "method": "independent exact Fraction audit of own minus target plus the least target-good value; no CEGAR code or SMT formula imported",
+  "minimum_worst_efx_slack": "23/1924",
+  "pairwise_worst_efx_slacks": {
+    "d": {
+      "q": "2857/3848",
+      "r": "9/37",
+      "s": "6673/7696"
+    },
+    "q": {
+      "d": "5279/11544",
+      "r": "23/1924",
+      "s": "157/481"
+    },
+    "r": {
+      "d": "147/296",
+      "q": "1923/1924",
+      "s": "1935/1924"
+    },
+    "s": {
+      "d": "935/1443",
+      "q": "971/2886",
+      "r": "1843/5772"
+    }
+  },
+  "profile": "results/fixed_u_wild_forced_terminal_profile_20260820.json",
+  "profile_sha256": "55be177414982b9a001479b445c99319eee26859495478e559f643cc3d4044d6",
+  "repair": "results/fixed_u_terminal_profile_unrestricted_physical_decision_20260820.json",
+  "repair_sha256": "a47726679aa674b5cb902e5bc34dd1e9e35ddee3ea6c9dfbf1037e137cce47dc",
+  "schema": "fixed-u-a1-three-good-independent-aggregate-audit-v1",
+  "script_sha256": "a0e35c05fed7a990d14aae13b471fa3e98697d526a71085254774d09ce703cca",
+  "status": "VERIFIED_ALL_FEASIBLE_A1_CARDINALITIES_UNIVERSAL_EFX_ALLOCATION",
+  "target_owner": "r",
+  "universal_reason": "the allocation keeps the entire a1 realization together, so every bundle total uses only T_i and every hardest deletion uses only M_i; substitution is valid at every feasible cardinality"
+}

@@ -2119,5 +2119,12 @@ both encodings.
   records the first obstruction surviving the widest tame-family guard. It
   refutes the form-2 tame-covering-menu theorem, but its canonical realization
   still has a four-edge EFX allocation obtained by splitting wild role `a1`.
-  The active gap is now the finite three-through-seven-good realization problem
-  for that role.
+  Its formerly active three-through-seven-good realization gap is superseded
+  by the next result.
+- [`FIXED_U_WILD_A1_ALL_REALIZATIONS_LEMMA_20260820.md`](FIXED_U_WILD_A1_ALL_REALIZATIONS_LEMMA_20260820.md)
+  closes every feasible realization of wild role `a1` in that immutable
+  terminal profile. A one-cut exact CEGAR theorem covers all 1,296 labelled
+  three-good witness patterns; an independent aggregate audit then proves the
+  same fixed four-edge allocation works at every feasible cardinality 2--7,
+  with minimum EFX slack `23/1924`. This removes the terminal profile as an
+  obstruction but does not prove the universal fixed-`U` or general EFX theorem.
