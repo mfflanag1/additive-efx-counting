@@ -4,6 +4,11 @@
 **Status:** exact theorem for the immutable terminal profile; independently
 audited; all feasible `a1` cardinalities closed
 
+> **Superseded scope, 2026-08-21:**
+> `FIXED_U_SPLIT_SWITCHING_COMPLETION_THEOREM_20260821.md` now closes
+> simultaneous arbitrary realizations of every role in this profile and
+> supplies two independent cap-free anchor selectors.
+
 ## Headline
 
 The wild-and-forced terminal profile is not an obstruction once splitting its

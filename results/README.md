@@ -2128,3 +2128,12 @@ both encodings.
   same fixed four-edge allocation works at every feasible cardinality 2--7,
   with minimum EFX slack `23/1924`. This removes the terminal profile as an
   obstruction but does not prove the universal fixed-`U` or general EFX theorem.
+- [`FIXED_U_SPLIT_SWITCHING_COMPLETION_THEOREM_20260821.md`](FIXED_U_SPLIT_SWITCHING_COMPLETION_THEOREM_20260821.md)
+  strengthens the terminal result to simultaneous arbitrary realizations of
+  every role. Choosing any `q`-minimum `a1` good or any `r`-minimum `k` good
+  gives an explicit cap-free four-edge EFX allocation. An exact master closes
+  all 267,673,492 labelled witness patterns represented across the eight
+  feasible cardinality lanes, and an independent Fraction proof gives strict
+  margins. A 205-profile census shows the fixed anchor inequalities are not
+  consequences of the declared form-2 master; the universal next step must
+  select the role, anchor, and topology dynamically.

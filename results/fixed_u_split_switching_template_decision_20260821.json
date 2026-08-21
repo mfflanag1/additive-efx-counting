@@ -1,0 +1,126 @@
+{
+  "claim_boundary": "SAT refutes only coverage by templates A and B. It is not a four-edge EFX countermodel until an unrestricted allocation oracle returns UNSAT.",
+  "exact_acceptance_criterion": "For each labelled subset assignment, every ordered observer-target pair satisfies own bundle total minus target bundle total plus each split-good value in the target and each whole-role prescribed minimum in the target >= 0. Their conjunction is necessary and sufficient for EFX; the family is the disjunction over all 2^cardinality assignments.",
+  "lanes": [
+    {
+      "assignment_count": 4,
+      "cardinality": 2,
+      "split_role": "a1",
+      "status": "unsat",
+      "template": "A_split_a1"
+    },
+    {
+      "assignment_count": 8,
+      "cardinality": 3,
+      "split_role": "a1",
+      "status": "unsat",
+      "template": "A_split_a1"
+    },
+    {
+      "assignment_count": 16,
+      "cardinality": 4,
+      "split_role": "a1",
+      "status": "unsat",
+      "template": "A_split_a1"
+    },
+    {
+      "assignment_count": 32,
+      "cardinality": 5,
+      "split_role": "a1",
+      "status": "unsat",
+      "template": "A_split_a1"
+    },
+    {
+      "assignment_count": 64,
+      "cardinality": 6,
+      "split_role": "a1",
+      "status": "unsat",
+      "template": "A_split_a1"
+    },
+    {
+      "assignment_count": 128,
+      "cardinality": 7,
+      "split_role": "a1",
+      "status": "unsat",
+      "template": "A_split_a1"
+    },
+    {
+      "assignment_count": 4,
+      "cardinality": 2,
+      "split_role": "k",
+      "status": "unsat",
+      "template": "B_split_k"
+    },
+    {
+      "assignment_count": 8,
+      "cardinality": 3,
+      "split_role": "k",
+      "status": "unsat",
+      "template": "B_split_k"
+    }
+  ],
+  "logical_factorization": "A depends only on a1 and B only on k. Hence forall(a1,k), A(a1) or B(k) iff forall(a1) A(a1) or forall(k) B(k).",
+  "profile": "results/fixed_u_wild_forced_terminal_profile_20260820.json",
+  "profile_sha256": "55be177414982b9a001479b445c99319eee26859495478e559f643cc3d4044d6",
+  "schema": "fixed-u-split-switching-template-decision-v1",
+  "script_sha256": "945daffa36dda797448b557adeb43ba560306ed964f5d86944672488eb2f713c",
+  "status": "UNSAT_NO_SPLIT_SWITCHING_SELECTOR_COUNTERMODEL",
+  "templates": {
+    "A_split_a1": {
+      "recipients": [
+        "d",
+        "q"
+      ],
+      "split_role": "a1",
+      "whole_roles": {
+        "d": [
+          "h",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j"
+        ],
+        "r": [
+          "a0",
+          "k",
+          "q0"
+        ],
+        "s": [
+          "l",
+          "e",
+          "p"
+        ]
+      }
+    },
+    "B_split_k": {
+      "recipients": [
+        "q",
+        "r"
+      ],
+      "split_role": "k",
+      "whole_roles": {
+        "d": [
+          "l",
+          "m",
+          "gq",
+          "gr"
+        ],
+        "q": [
+          "j",
+          "q0",
+          "p"
+        ],
+        "r": [
+          "a0",
+          "a1"
+        ],
+        "s": [
+          "h",
+          "e"
+        ]
+      }
+    }
+  }
+}

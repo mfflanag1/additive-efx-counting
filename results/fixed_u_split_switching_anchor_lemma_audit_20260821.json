@@ -1,0 +1,944 @@
+{
+  "abstract_lemma": "For a two-recipient split template, if every exact EFX slack after sending one anchor-minimum good to the first recipient and the nonempty complement to the second is nonnegative over x_i in [M_i,T_i-M_i] (with anchor row x=M), then that allocation is EFX for every finite realization with at least two goods.",
+  "claim_boundary": "Both selectors are cap-free for the immutable terminal totals/minima and arbitrary realizations of every whole role. This does not show that the anchor inequalities follow from every saturated GG state.",
+  "coverage": {
+    "a1": [
+      {
+        "cardinality": 2,
+        "labelled_minimum_witness_pattern_count": 16,
+        "packet_assignment_count_exhausted_by_decision": 4,
+        "row_pattern_counts": {
+          "d": 2,
+          "q": 2,
+          "r": 2,
+          "s": 2
+        }
+      },
+      {
+        "cardinality": 3,
+        "labelled_minimum_witness_pattern_count": 1296,
+        "packet_assignment_count_exhausted_by_decision": 8,
+        "row_pattern_counts": {
+          "d": 6,
+          "q": 6,
+          "r": 6,
+          "s": 6
+        }
+      },
+      {
+        "cardinality": 4,
+        "labelled_minimum_witness_pattern_count": 38416,
+        "packet_assignment_count_exhausted_by_decision": 16,
+        "row_pattern_counts": {
+          "d": 14,
+          "q": 14,
+          "r": 14,
+          "s": 14
+        }
+      },
+      {
+        "cardinality": 5,
+        "labelled_minimum_witness_pattern_count": 810000,
+        "packet_assignment_count_exhausted_by_decision": 32,
+        "row_pattern_counts": {
+          "d": 30,
+          "q": 30,
+          "r": 30,
+          "s": 30
+        }
+      },
+      {
+        "cardinality": 6,
+        "labelled_minimum_witness_pattern_count": 14776336,
+        "packet_assignment_count_exhausted_by_decision": 64,
+        "row_pattern_counts": {
+          "d": 62,
+          "q": 62,
+          "r": 62,
+          "s": 62
+        }
+      },
+      {
+        "cardinality": 7,
+        "labelled_minimum_witness_pattern_count": 252047376,
+        "packet_assignment_count_exhausted_by_decision": 128,
+        "row_pattern_counts": {
+          "d": 126,
+          "q": 126,
+          "r": 126,
+          "s": 126
+        }
+      }
+    ],
+    "k": [
+      {
+        "cardinality": 2,
+        "labelled_minimum_witness_pattern_count": 16,
+        "packet_assignment_count_exhausted_by_decision": 4,
+        "row_pattern_counts": {
+          "d": 2,
+          "q": 2,
+          "r": 2,
+          "s": 2
+        }
+      },
+      {
+        "cardinality": 3,
+        "labelled_minimum_witness_pattern_count": 36,
+        "packet_assignment_count_exhausted_by_decision": 8,
+        "row_pattern_counts": {
+          "d": 1,
+          "q": 1,
+          "r": 6,
+          "s": 6
+        }
+      }
+    ]
+  },
+  "lemmas": {
+    "A_q_min_a1_anchor": {
+      "anchor_observer": "q",
+      "applicable": true,
+      "edge_count": 4,
+      "edges": [
+        [
+          "charity",
+          "s"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "inequalities": [
+        {
+          "certified_slack_lower_bound": "7/296",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "89/3848",
+          "deletion": "whole:j",
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "11/481",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "43/1924",
+          "deletion": "arbitrary_complement_good",
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "61/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "489/962",
+          "deletion": "whole:h",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "53/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "487/962",
+          "deletion": "whole:m",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "27/1924",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "1949/3848",
+          "deletion": "whole:gq",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "53/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "487/962",
+          "deletion": "whole:gr",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "1947/3848",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "1947/3848",
+          "deletion": "selected_split_good",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3/481",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "3/481",
+          "deletion": "whole:l",
+          "observer": "r",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "45/3848",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "45/3848",
+          "deletion": "whole:e",
+          "observer": "r",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "11/962",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "1895/3848",
+          "constant": "11/962",
+          "deletion": "whole:p",
+          "observer": "r",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "10891/11544",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "419/444",
+          "deletion": "whole:a0",
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "4047/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "506/481",
+          "deletion": "whole:k",
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "4015/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "502/481",
+          "deletion": "whole:q0",
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "5177/5772",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "35/39",
+          "deletion": "whole:h",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "1289/2886",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "2581/5772",
+          "deletion": "whole:m",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3203/5772",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "1603/2886",
+          "deletion": "whole:gq",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "1349/2886",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "73/156",
+          "deletion": "whole:gr",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "5153/11544",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "1289/2886",
+          "deletion": "selected_split_good",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "7/296",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "23/962",
+          "deletion": "whole:l",
+          "observer": "q",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "179/481",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "1433/3848",
+          "deletion": "whole:e",
+          "observer": "q",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "1431/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/3848",
+          "chosen_good_upper": "1/3848",
+          "constant": "179/481",
+          "deletion": "whole:p",
+          "observer": "q",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "1441/1924",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "4775/7696",
+          "deletion": "whole:a0",
+          "observer": "d",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "517/592",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "1433/1924",
+          "deletion": "whole:k",
+          "observer": "d",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "6719/7696",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "2865/3848",
+          "deletion": "whole:q0",
+          "observer": "d",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "35/3848",
+          "chosen_good_coefficient": "2",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "-477/1924",
+          "deletion": "whole:j",
+          "observer": "d",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "6/481",
+          "chosen_good_coefficient": "2",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "-941/3848",
+          "deletion": "arbitrary_complement_good",
+          "observer": "d",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "495/1924",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "991/7696",
+          "deletion": "whole:l",
+          "observer": "d",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "989/3848",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "989/7696",
+          "deletion": "whole:e",
+          "observer": "d",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "19/74",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "989/7696",
+          "chosen_good_upper": "6675/7696",
+          "constant": "987/7696",
+          "deletion": "whole:p",
+          "observer": "d",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "3935/23088",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3935/23088",
+          "deletion": "whole:a0",
+          "observer": "s",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "293/1776",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "293/1776",
+          "deletion": "whole:k",
+          "observer": "s",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "3803/23088",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3803/23088",
+          "deletion": "whole:q0",
+          "observer": "s",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "3947/11544",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3941/11544",
+          "deletion": "whole:j",
+          "observer": "s",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "1969/5772",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "983/2886",
+          "deletion": "arbitrary_complement_good",
+          "observer": "s",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "1879/2886",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "1897/2886",
+          "deletion": "whole:h",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3671/23088",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3815/23088",
+          "deletion": "whole:m",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3545/23088",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3689/23088",
+          "deletion": "whole:gq",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3713/23088",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3857/23088",
+          "deletion": "whole:gr",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3671/23088",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/1924",
+          "chosen_good_upper": "3/481",
+          "constant": "3671/23088",
+          "deletion": "selected_split_good",
+          "observer": "s",
+          "target": "d"
+        }
+      ],
+      "minimum_certified_slack": "3/481",
+      "selector": "choose any a1 good attaining observer q's prescribed minimum; give it alone to d and every remaining a1 good to q",
+      "split_role": "a1",
+      "verified": true
+    },
+    "B_r_min_k_anchor": {
+      "anchor_observer": "r",
+      "applicable": true,
+      "edge_count": 4,
+      "edges": [
+        [
+          "charity",
+          "q"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "r",
+          "s"
+        ],
+        [
+          "s",
+          "d"
+        ]
+      ],
+      "inequalities": [
+        {
+          "certified_slack_lower_bound": "1",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "482/481",
+          "deletion": "whole:j",
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "1923/1924",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "1927/1924",
+          "deletion": "whole:q0",
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "483/481",
+          "chosen_good_coefficient": "-2",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "484/481",
+          "deletion": "whole:p",
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "3847/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "3851/3848",
+          "deletion": "selected_split_good",
+          "observer": "r",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "147/296",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "1915/3848",
+          "deletion": "whole:l",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "147/296",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "1915/3848",
+          "deletion": "whole:m",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "239/481",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "479/962",
+          "deletion": "whole:gq",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "147/296",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "1915/3848",
+          "deletion": "whole:gr",
+          "observer": "r",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "1935/1924",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "149/148",
+          "deletion": "whole:h",
+          "observer": "r",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "3883/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "1/962",
+          "constant": "299/296",
+          "deletion": "whole:e",
+          "observer": "r",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "6/481",
+          "chosen_good_coefficient": "2",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "-1187/5772",
+          "deletion": "whole:a0",
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "23/1924",
+          "chosen_good_coefficient": "2",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "-595/2886",
+          "deletion": "whole:a1",
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "697/5772",
+          "chosen_good_coefficient": "2",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "-281/2886",
+          "deletion": "arbitrary_complement_good",
+          "observer": "q",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "6421/11544",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "2581/5772",
+          "deletion": "whole:l",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "5279/11544",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "335/962",
+          "deletion": "whole:m",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "6529/11544",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "2635/5772",
+          "deletion": "whole:gq",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "5519/11544",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "355/962",
+          "deletion": "whole:gr",
+          "observer": "q",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "1267/3848",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "1271/5772",
+          "deletion": "whole:h",
+          "observer": "q",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "157/481",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1259/11544",
+          "chosen_good_upper": "1259/5772",
+          "constant": "193/888",
+          "deletion": "whole:e",
+          "observer": "q",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "9/37",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "911/7696",
+          "deletion": "whole:a0",
+          "observer": "d",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "2857/7696",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "237/962",
+          "deletion": "whole:a1",
+          "observer": "d",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "2829/7696",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "467/1924",
+          "deletion": "arbitrary_complement_good",
+          "observer": "d",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "2857/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "1909/1924",
+          "deletion": "whole:j",
+          "observer": "d",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "2855/3848",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "477/481",
+          "deletion": "whole:q0",
+          "observer": "d",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "4753/7696",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "6675/7696",
+          "deletion": "whole:p",
+          "observer": "d",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "6673/7696",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "6673/7696",
+          "deletion": "selected_split_good",
+          "observer": "d",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "957/962",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "957/962",
+          "deletion": "whole:h",
+          "observer": "d",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "6673/7696",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "961/7696",
+          "chosen_good_upper": "961/3848",
+          "constant": "6673/7696",
+          "deletion": "whole:e",
+          "observer": "d",
+          "target": "s"
+        },
+        {
+          "certified_slack_lower_bound": "3755/11544",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "3743/11544",
+          "deletion": "whole:a0",
+          "observer": "s",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "1843/5772",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "1837/5772",
+          "deletion": "whole:a1",
+          "observer": "s",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "71/222",
+          "chosen_good_coefficient": "1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "460/1443",
+          "deletion": "arbitrary_complement_good",
+          "observer": "s",
+          "target": "r"
+        },
+        {
+          "certified_slack_lower_bound": "947/2886",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "1951/5772",
+          "deletion": "whole:j",
+          "observer": "s",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "1891/5772",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "487/1443",
+          "deletion": "whole:q0",
+          "observer": "s",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "3817/7696",
+          "chosen_good_coefficient": "-1",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "3893/7696",
+          "deletion": "whole:p",
+          "observer": "s",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "299/888",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "299/888",
+          "deletion": "selected_split_good",
+          "observer": "s",
+          "target": "q"
+        },
+        {
+          "certified_slack_lower_bound": "935/1443",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "935/1443",
+          "deletion": "whole:l",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "7549/11544",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "7549/11544",
+          "deletion": "whole:m",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3743/5772",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "3743/5772",
+          "deletion": "whole:gq",
+          "observer": "s",
+          "target": "d"
+        },
+        {
+          "certified_slack_lower_bound": "3785/5772",
+          "chosen_good_coefficient": "0",
+          "chosen_good_lower": "1/962",
+          "chosen_good_upper": "19/1924",
+          "constant": "3785/5772",
+          "deletion": "whole:gr",
+          "observer": "s",
+          "target": "d"
+        }
+      ],
+      "minimum_certified_slack": "23/1924",
+      "selector": "choose any k good attaining observer r's prescribed minimum; give it alone to q and every remaining k good to r",
+      "split_role": "k",
+      "verified": true
+    }
+  },
+  "method": "independent exact Fraction lower bounds; no SMT or template-decision module imported",
+  "profile": "results/fixed_u_wild_forced_terminal_profile_20260820.json",
+  "profile_sha256": "55be177414982b9a001479b445c99319eee26859495478e559f643cc3d4044d6",
+  "schema": "fixed-u-split-switching-anchor-lemma-audit-v1",
+  "script_sha256": "3cd90a01009849d3298c898934c4f369685591909fd861e0722a1b3afd031a79",
+  "status": "VERIFIED_BOTH_ANCHOR_SELECTORS_UNIVERSAL"
+}

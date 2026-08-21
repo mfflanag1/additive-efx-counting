@@ -11,6 +11,11 @@ theorem remains open.
 > `a1` goods together and is EFX for every feasible `a1` realization. Treat
 > the “remaining problem” and “not proved” items below as historical motivation,
 > superseded by the all-realizations lemma.
+>
+> **2026-08-21 completion:**
+> `FIXED_U_SPLIT_SWITCHING_COMPLETION_THEOREM_20260821.md` strengthens that
+> result to simultaneous arbitrary realizations of every role. The terminal
+> profile is now fully EFX-safe within the four-support-edge target.
 
 ## Headline
 
