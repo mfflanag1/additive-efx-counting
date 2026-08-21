@@ -1,0 +1,250 @@
+{
+  "canonical_physical_repair": {
+    "attempts": [
+      {
+        "split_cap": 0,
+        "status": "unsat"
+      },
+      {
+        "split_cap": 1,
+        "status": "sat"
+      }
+    ],
+    "split_roles": [
+      "a1"
+    ],
+    "status": "SAT_COMPLETE_EFX_SPLIT_REPAIR",
+    "used_edges": [
+      [
+        "charity",
+        "q"
+      ],
+      [
+        "q",
+        "d"
+      ],
+      [
+        "r",
+        "s"
+      ],
+      [
+        "s",
+        "r"
+      ]
+    ]
+  },
+  "claim_boundary": "This refutes the dynamic-anchor theorem for the declared form-2 master. The canonical physical realization has a one-split four-edge EFX repair, so it is not an EFX countermodel.",
+  "independent_anchor_lane_count": 40,
+  "independent_anchor_lanes": [
+    {
+      "anchor_observer": "r",
+      "split_role": "a0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "a0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "a0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "a0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "a1",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "a1",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "a1",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "a1",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "h",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "h",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "h",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "h",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "k",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "k",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "k",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "k",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "q0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "q0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "q0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "q0",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "l",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "l",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "l",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "l",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "e",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "e",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "e",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "e",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "gq",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "gq",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "gq",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "gq",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "gr",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "gr",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "gr",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "gr",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "r",
+      "split_role": "p",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "q",
+      "split_role": "p",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "d",
+      "split_role": "p",
+      "status": "unsat"
+    },
+    {
+      "anchor_observer": "s",
+      "split_role": "p",
+      "status": "unsat"
+    }
+  ],
+  "independent_whole_role_status": "unsat",
+  "master_replay_status": "sat",
+  "method": "independent integer-owner placement encoding with edge flags derived from owner equalities; does not import the primary Boolean oracle",
+  "physical_decision": "results/fixed_u_dynamic_anchor_obstruction_canonical_physical_decision_20260821.json",
+  "physical_decision_sha256": "47bf18d4d6cb4b328f0a785e34185452329ef848de2d050bde1c39b36113b6c1",
+  "profile": "results/fixed_u_dynamic_anchor_cegar_20260821.json",
+  "profile_sha256": "2255c2cf4ba3537097d510ddb2972645405f78329dc0cbccd02570400901df4a",
+  "schema": "fixed-u-dynamic-anchor-obstruction-independent-audit-v1",
+  "script_sha256": "6fe8f5a747737f3a44d18503b64b95f639495ce6eacd0da4ee5f038802c6bd25",
+  "status": "AUDIT_PASS_DYNAMIC_ANCHOR_REFUTED_EFX_NOT_REFUTED"
+}

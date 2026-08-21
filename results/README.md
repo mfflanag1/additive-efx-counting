@@ -2137,3 +2137,11 @@ both encodings.
   margins. A 205-profile census shows the fixed anchor inequalities are not
   consequences of the declared form-2 master; the universal next step must
   select the role, anchor, and topology dynamically.
+- [`FIXED_U_DYNAMIC_ANCHOR_EXTRACTION_REFUTATION_20260821.md`](FIXED_U_DYNAMIC_ANCHOR_EXTRACTION_REFUTATION_20260821.md)
+  refutes that proposed dynamic one-anchor theorem with an independently
+  encoded admissible form-2 profile: no whole-role allocation and none of 40
+  applicable role/anchor lanes works universally. The canonical realization
+  still has a one-split EFX repair, and a complete 64-pattern tame menu closes
+  the profile, so general EFX is not refuted. A second exact campaign also
+  refutes the tame-menu-or-anchor dichotomy after 81 fresh cuts and isolates
+  pattern-dependent multi-packet routing as the next mechanism.

@@ -30,13 +30,21 @@ def q(value: Fraction):
 
 def load_physical_profile(path: Path):
     raw = json.loads(path.read_text())
+    totals_key = (
+        "countermodel_totals" if "countermodel_totals" in raw
+        else "terminal_profile_totals"
+    )
+    minima_key = (
+        "countermodel_minima" if "countermodel_minima" in raw
+        else "terminal_profile_minima"
+    )
     totals = {
         observer: {role: Fraction(amount) for role, amount in row.items()}
-        for observer, row in raw["countermodel_totals"].items()
+        for observer, row in raw[totals_key].items()
     }
     minima = {
         observer: {role: Fraction(amount) for role, amount in row.items()}
-        for observer, row in raw["countermodel_minima"].items()
+        for observer, row in raw[minima_key].items()
     }
     physical = {}
     role_goods = {}
