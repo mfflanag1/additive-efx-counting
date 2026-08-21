@@ -2145,3 +2145,13 @@ both encodings.
   the profile, so general EFX is not refuted. A second exact campaign also
   refutes the tame-menu-or-anchor dichotomy after 81 fresh cuts and isolates
   pattern-dependent multi-packet routing as the next mechanism.
+- [`FIXED_U_PATTERN_DEPENDENT_MIXED_MENU_REFUTATION_20260821.md`](FIXED_U_PATTERN_DEPENDENT_MIXED_MENU_REFUTATION_20260821.md)
+  exhausts the proposed pattern-dependent correction on the second profile:
+  all 64 tame-role/side-pattern cells, arbitrary cell-specific anchor roles,
+  observers, recipients, whole-role assignments, and four-edge topologies.
+  Every conditioning role has a negative cell. An independent integer-owner
+  verifier checks 320 decisive anchor lanes and exhibits an exact physical
+  global product-cell realization for which zero- through three-split EFX
+  allocations are UNSAT but a four-split allocation is SAT. Thus neither two
+  nor three coordinated split roles suffice for the declared form-2 chart,
+  while complete EFX remains unrefuted.
