@@ -1,0 +1,230 @@
+{
+  "cpsat_verdict_matrix": [
+    {
+      "edge_cap": 3,
+      "split_cap": null,
+      "status": "unsat"
+    },
+    {
+      "edge_cap": 4,
+      "split_cap": null,
+      "status": "unsat"
+    },
+    {
+      "edge_cap": 4,
+      "split_cap": 4,
+      "status": "unsat"
+    },
+    {
+      "edge_cap": 4,
+      "split_cap": 0,
+      "status": "unsat"
+    },
+    {
+      "allocation": {
+        "d": [
+          "gq:0",
+          "gq:1",
+          "gr:0",
+          "p:0",
+          "p:1"
+        ],
+        "q": [
+          "a0:0",
+          "a0:1",
+          "h:0",
+          "h:1",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "a1:0",
+          "a1:1",
+          "k:0",
+          "k:1",
+          "m:0",
+          "m:1"
+        ],
+        "s": [
+          "j:0",
+          "j:1",
+          "l:0",
+          "l:1",
+          "e:0",
+          "e:1"
+        ]
+      },
+      "edge_cap": 5,
+      "edges": [
+        [
+          "charity",
+          "d"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "split_cap": 0,
+      "split_roles": [],
+      "status": "sat"
+    },
+    {
+      "allocation": {
+        "d": [
+          "a0:0",
+          "a0:1",
+          "a1:0",
+          "h:1",
+          "gq:0",
+          "gq:1"
+        ],
+        "q": [
+          "a1:1",
+          "j:1",
+          "k:0",
+          "k:1",
+          "q0:0",
+          "q0:1"
+        ],
+        "r": [
+          "h:0",
+          "m:0",
+          "m:1",
+          "gr:0",
+          "p:0",
+          "p:1"
+        ],
+        "s": [
+          "j:0",
+          "l:0",
+          "l:1",
+          "e:0",
+          "e:1"
+        ]
+      },
+      "edge_cap": 5,
+      "edges": [
+        [
+          "charity",
+          "r"
+        ],
+        [
+          "d",
+          "r"
+        ],
+        [
+          "q",
+          "s"
+        ],
+        [
+          "r",
+          "d"
+        ],
+        [
+          "r",
+          "q"
+        ]
+      ],
+      "split_cap": null,
+      "split_roles": [
+        "a1",
+        "h",
+        "j"
+      ],
+      "status": "sat"
+    }
+  ],
+  "master_replay_status": "sat",
+  "method": "CP-SAT integer-scaled Boolean owner encoding plus exact Fraction certificate recheck",
+  "pattern": {
+    "a0:d": 0,
+    "a0:q": 0,
+    "a0:r": 0,
+    "a0:s": 0,
+    "a1:d": 0,
+    "a1:q": 0,
+    "a1:r": 0,
+    "a1:s": 0,
+    "e:d": 0,
+    "e:q": 0,
+    "e:r": 0,
+    "e:s": 0,
+    "gq:d": 0,
+    "gq:q": 0,
+    "gq:r": 0,
+    "gq:s": 1,
+    "h:d": 0,
+    "h:q": 0,
+    "h:r": 0,
+    "h:s": 0,
+    "j:d": 0,
+    "j:q": 0,
+    "j:r": 0,
+    "j:s": 1,
+    "k:d": 0,
+    "k:q": 0,
+    "k:r": 0,
+    "k:s": 0,
+    "l:d": 0,
+    "l:q": 0,
+    "l:r": 0,
+    "l:s": 0,
+    "m:d": 0,
+    "m:q": 0,
+    "m:r": 0,
+    "m:s": 1,
+    "p:d": 0,
+    "p:q": 0,
+    "p:r": 0,
+    "p:s": 0,
+    "q0:d": 0,
+    "q0:q": 0,
+    "q0:r": 0,
+    "q0:s": 0
+  },
+  "primary_audit": "results/fixed_u_four_edge_obstruction_20260826.json",
+  "primary_audit_sha256": "b94b7e010f9c8aad82b738e2384ef46301adba4c9e648666d78d65ecf1d6fa73",
+  "primary_five_edge_certificate_recheck": {
+    "edges": [
+      [
+        "charity",
+        "r"
+      ],
+      [
+        "d",
+        "r"
+      ],
+      [
+        "q",
+        "s"
+      ],
+      [
+        "r",
+        "d"
+      ],
+      [
+        "r",
+        "q"
+      ]
+    ],
+    "split_roles": []
+  },
+  "profile": "results/fixed_u_tame_or_anchor_cegar_20260821.json",
+  "profile_sha256": "995077adf48c0e6fe57f770489de4aebfdb6ec4872991e8063438f4517e5056c",
+  "schema": "fixed-u-four-edge-obstruction-independent-audit-v1",
+  "script_sha256": "4ffce8e9056cba6964e8c2f33fa8e09e36761371673259658fea015e62eecabc",
+  "status": "AUDIT_PASS_FOUR_EDGE_DECLARATION_REFUTED_FIVE_EDGES_ZERO_SPLITS_SUFFICE"
+}
