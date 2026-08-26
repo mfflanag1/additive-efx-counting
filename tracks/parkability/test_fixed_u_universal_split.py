@@ -64,7 +64,7 @@ def test_independent_boolean_encoding_agrees_on_pinned_cell():
     totals = {o: {r: Fraction(v) for r, v in row.items()} for o, row in raw["terminal_profile_totals"].items()}
     minima = {o: {r: Fraction(v) for r, v in row.items()} for o, row in raw["terminal_profile_minima"].items()}
     goods, values = I.realization(totals, minima, OBSTRUCTING_CELL)
-    assert len(goods) == 24
+    assert len(goods) == 23
     assert I.decide(goods, values, len(goods), 4, 120)[0] == "unsat"
     st, alloc = I.decide(goods, values, 0, 5, 120)
     assert st == "sat"

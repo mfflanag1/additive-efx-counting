@@ -112,13 +112,20 @@ def seeds_from_ledgers(paths):
     return [load_rows(r) for _, r in profiles(paths)]
 
 
-def run(edge_cap, master_timeout, oracle_timeout, max_rounds, seed_ledgers, seed_profiles, out_path, ledger_path, log, resume_cuts=()):
+def run(edge_cap, master_timeout, oracle_timeout, max_rounds, seed_ledgers, seed_profiles, out_path, ledger_path, log, resume_cuts=(), z3_seed=None):
     solver, value, minimum = build_physical_master(2)
     solver.set(timeout=master_timeout * 1000)
+    if z3_seed is not None:
+        solver.set("random_seed", z3_seed)
+    seen_allocations = set()
     menu, records = [], []
     t0 = time.time()
 
     def install(allocation, origin, totals, minima):
+        key = json.dumps(allocation, sort_keys=True)
+        if key in seen_allocations:
+            return
+        seen_allocations.add(key)
         edges = audit_whole(allocation, totals, minima, edge_cap)
         solver.add(z3.Not(cut_formula(allocation, value, minimum)))
         menu.append(allocation)
@@ -217,11 +224,12 @@ def main():
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--cut-ledger", type=Path, required=True)
     ap.add_argument("--resume-cuts", type=Path, action="append", default=[])
+    ap.add_argument("--z3-seed", type=int, default=None)
     a = ap.parse_args()
     Path(a.cut_ledger).write_text("")
     status = run(a.edge_cap, a.master_timeout_seconds, a.oracle_timeout_seconds, a.max_rounds,
                  a.seed_ledger, a.seed_profile, a.output, a.cut_ledger, lambda s: print(s, flush=True),
-                 resume_cuts=a.resume_cuts)
+                 resume_cuts=a.resume_cuts, z3_seed=a.z3_seed)
     print("STATUS", status)
 
 

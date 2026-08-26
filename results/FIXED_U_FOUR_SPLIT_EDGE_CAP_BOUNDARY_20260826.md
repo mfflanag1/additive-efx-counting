@@ -67,7 +67,7 @@ Independent Boolean piece-placement encoding
 (`independently_verify_fixed_u_universal_split_cell.py`, no shared solver code):
 `edge4/split0 unsat`, `edge4/split23 unsat`, `edge5/split0 sat` with edges
 `charity->r, d->r, q->s, r->d, r->q`, `edge5/split23 sat`.  Every SAT allocation is
-re-audited with exact `Fraction` arithmetic.  The realization has 24 physical goods, so
+re-audited with exact `Fraction` arithmetic.  The realization has 23 physical goods (eleven two-good roles and one singleton), so
 the Alkassar–Fouz–Mehlhorn `(4, <=9)` theorem does not apply and is not contradicted;
 the cell is not an EFX counterexample (cap-free SAT).
 
@@ -83,7 +83,8 @@ allocation closes every cell).
 `census_fixed_u_universal_split.py` over the three cut ledgers (205 + 7 + 81 profiles):
 
 - `(split_cap 0, edge_cap 5)`: **293/293 CLOSED, every menu of size 1** — each profile
-  has a whole-role five-edge EFX allocation.
+  has a whole-role five-edge EFX allocation.  The three named profiles (terminal,
+  dynamic-anchor, pattern-mixed) likewise close at `(0, 5)` with menu size 1.
 - `(split_cap 4, edge_cap 4)`: CENSUS_S4E4_PLACEHOLDER
 
 ## Result 3: whole-role CEGAR over the complete form-2 master
