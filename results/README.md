@@ -2164,4 +2164,5 @@ both encodings.
   allocation once five support-transfer edges are allowed. Introduces the
   universal two-good-cell oracle (`fixed_u_universal_split.py`, CEGAR with an
   exact uncovered-cell query), its calibration gates, and a symbolic
-  whole-role edge-cap CEGAR over the complete form-2 master.
+  whole-role edge-cap CEGAR over the complete form-2 master (160 cuts, no obstruction, not
+  terminated; resumable).  Artifact digests in `FIXED_U_FOUR_SPLIT_ARTIFACT_SHA256_20260826.txt`.

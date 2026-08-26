@@ -5,7 +5,7 @@
 **Status:** exact obstruction to Conjecture F4 as stated (permitted outcome 2), with the
 model-boundary verdict of outcome 3: the obstructing realization closes with **zero**
 split roles as soon as a fifth support-transfer edge is allowed.  Complete EFX is not
-refuted anywhere.  W5_STATUS_PLACEHOLDER
+refuted anywhere.  The five-edge whole-role CEGAR over the complete master is still running at the end of the session: 160 distinct whole-role cuts after one completed parallel burst and a partial second (stopped under machine load 100–450), no obstruction found; the five-edge whole-role closure is therefore a certified census plus an open symbolic CEGAR, not a theorem.
 
 ## Conjecture and quantifier discipline
 
@@ -85,7 +85,7 @@ allocation closes every cell).
 - `(split_cap 0, edge_cap 5)`: **293/293 CLOSED, every menu of size 1** — each profile
   has a whole-role five-edge EFX allocation.  The three named profiles (terminal,
   dynamic-anchor, pattern-mixed) likewise close at `(0, 5)` with menu size 1.
-- `(split_cap 4, edge_cap 4)`: CENSUS_S4E4_PLACEHOLDER
+- `(split_cap 4, edge_cap 4)`: 213 CLOSED of 225 decided within the session budget (60 s per solver call; 12 timed out as UNKNOWN under machine load — profile #192 of the multi-split ledger, one of them, closes with a 600 s budget, menu 38, four splits used); 68 profiles not reached. Largest menu 123 allocations; largest split count used 4. No obstruction: the pattern-mixed terminal profile (not a ledger row) is the only known `(4,4)` obstruction.
 
 ## Result 3: whole-role CEGAR over the complete form-2 master
 
@@ -99,7 +99,7 @@ no whole-role allocation under the cap.
   the phenomenon the split program was built to work around.  All 95 closing four-edge
   allocations use exactly `3` owner-pair edges plus charity (or fewer).
 - **Edge cap 5:** all 296 seeds closed by 101 whole-role allocations; 98 of the first 111
-  cuts use exactly four owner-pair edges plus the charity edge.  W5_RESULT_PLACEHOLDER
+  cuts use exactly four owner-pair edges plus the charity edge.  After one completed burst and a partial second of four seeded solvers (six rounds each, cuts merged and deduplicated): 160 distinct whole-role five-edge allocations, every master model closed, no obstruction. Owner-pair edge counts of the cuts: {2: 2, 3: 13, 4: 145} (plus the charity edge). The run is resumable from `w5_merged.jsonl` (`--resume-cuts`); termination UNSAT would upgrade the census to a theorem for the declared master.
 
 ## Verdict
 

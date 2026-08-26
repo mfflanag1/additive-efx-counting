@@ -19,7 +19,10 @@ Branch `cc/efx-four-split-20260826` from `codex/efx-fixed-u-resume-20260820` @ `
 F4 is FALSE as stated (exact cell, independently verified), and the split ladder was an artifact of the
 four-edge support cap: the cell and all 293 ledger profiles close with ZERO splits at five edges.
 Whether the five-edge whole-role closure is a theorem for the whole form-2 master is decided by the
-W5 CEGAR (`run_fixed_u_whole_role_edge_cegar.py --edge-cap 5`); see the write-up's status line.
+W5 CEGAR (`run_fixed_u_whole_role_edge_cegar.py --edge-cap 5`): stopped at the end of the session with 160 distinct
+whole-role cuts and no obstruction (machine load 100-450 from other campaigns made master checks take minutes).
+RESUME: `--resume-cuts results/fixed_u_whole_role_edge5_cegar_cuts_20260826.jsonl` with the six seed arguments in the
+write-up; termination UNSAT = theorem for the declared master; an obstruction = escalate to edge cap 6.
 
 ## Laws
 - Quantify per cell: the allocation may depend on the realization; the selector theorems of Aug 20-21
