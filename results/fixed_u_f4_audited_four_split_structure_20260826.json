@@ -1,0 +1,133 @@
+{
+ "template": {
+  "a0": {
+   "anchor": "r",
+   "selected_to": "r",
+   "complement_to": "q"
+  },
+  "a1": {
+   "whole": "r"
+  },
+  "h": {
+   "whole": "q"
+  },
+  "j": {
+   "anchor": "r",
+   "selected_to": "q",
+   "complement_to": "s"
+  },
+  "k": {
+   "anchor": "r",
+   "selected_to": "q",
+   "complement_to": "s"
+  },
+  "q0": {
+   "whole": "q"
+  },
+  "l": {
+   "whole": "s"
+  },
+  "e": {
+   "whole": "s"
+  },
+  "m": {
+   "anchor": "s",
+   "selected_to": "r",
+   "complement_to": "d"
+  },
+  "gq": {
+   "whole": "d"
+  },
+  "gr": {
+   "whole": "r"
+  },
+  "p": {
+   "whole": "d"
+  }
+ },
+ "edges": [
+  [
+   "charity",
+   "d"
+  ],
+  [
+   "d",
+   "r"
+  ],
+  [
+   "q",
+   "s"
+  ],
+  [
+   "r",
+   "q"
+  ]
+ ],
+ "splits": {
+  "a0": {
+   "anchor": "r",
+   "selected_to": "r",
+   "complement_to": "q"
+  },
+  "j": {
+   "anchor": "r",
+   "selected_to": "q",
+   "complement_to": "s"
+  },
+  "k": {
+   "anchor": "r",
+   "selected_to": "q",
+   "complement_to": "s"
+  },
+  "m": {
+   "anchor": "s",
+   "selected_to": "r",
+   "complement_to": "d"
+  }
+ },
+ "edge_carriers": {
+  "r->q": [
+   [
+    "a0",
+    "complement_to"
+   ],
+   [
+    "h",
+    "whole"
+   ]
+  ],
+  "q->s": [
+   [
+    "j",
+    "complement_to"
+   ],
+   [
+    "k",
+    "complement_to"
+   ]
+  ],
+  "d->r": [
+   [
+    "m",
+    "selected_to"
+   ],
+   [
+    "gr",
+    "whole"
+   ]
+  ],
+  "charity->d": [
+   [
+    "p",
+    "whole"
+   ]
+  ]
+ },
+ "split_role_suppliers": {
+  "a0": "r",
+  "j": "q",
+  "k": "q",
+  "m": "d"
+ },
+ "slack": "62/7445"
+}
