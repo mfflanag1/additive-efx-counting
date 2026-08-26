@@ -1,0 +1,101 @@
+# Fixed-U normal form: the exact response-relation chart and the immediate-EFX reduction
+
+**Date:** 2026-08-26  **Branch:** `fable/efx-fixed-u-normal-form` (from `69c1dcd`)  
+**Status:** exhaustive chart theorem (twelve-atom, exact); the named five-response classification
+is a premise-level statement, not a normal-form theorem; every chart cell's witness — and
+GLOBAL_STATUS_PLACEHOLDER — closes by an immediate complete EFX allocation within four support
+edges, so at the twelve-atom level the reduction to form 2 is unnecessary.  Nothing here concerns
+general additive EFX, and the cap-free (arbitrary-packet) lift is stated separately.
+
+Companion: `FIXED_U_NORMAL_FORM_PREMISE_LEDGER_20260826.md` (frozen premises P1–P15).
+
+## 1. Objects
+
+The saturated root-facing rank-three fixed-U separator, as encoded, is the twelve-atom master
+`M` = P1–P9 of the ledger: the canonical support state `Y` (r{a0,a1,h}, q{j,k,q0}, d{m,gq,gr},
+s{l,e}, charity{p}), positive valuations `0<v<16` with base normalization and base EFX, the named
+packet inequalities, the retained cores `A,Q,E`, the root-facing wall on `d`, and no rank-four
+response matching at the support, split and reassembly states, with self responses excluded.
+The **exact response relation** of a valuation is the set of nonself pairs `s->t` (`s` an owner,
+`t` an owner or charity) such that some nonempty subset of `Y_t` is a base-common-safe or
+current-common-safe desired core of `s`.  The relation is a function of the valuation; the
+premises P10–P15 (global lex maximality, PI-freeness, ledgers, saturation exclusions) are not
+encoded and are not used below.
+
+## 2. Chart theorem (exact, twelve-atom)
+
+**Theorem A.**  Exactly 316 exact nonself response relations are realizable under `M`.  In every
+one of them `d->q` and `d->r` hold and no response targets charity; the rank (maximum owner
+matching) is 3 in 264 relations, 2 in 50 and 1 in 2; the edge counts range from 2 to 9 (80
+relations have exactly five edges).  Among the four named "corrected forms", indices 1 and 3 are
+unrealizable; indices 0 and 2 occur exactly once each and as strict sub-relations of 8 and 16
+further cells respectively.
+
+*Proof.*  `census_fixed_u_exact_response_relations.py` runs the CEGAR "master ∧ (relation ≠ each
+recorded relation)" to UNSAT (316 rounds, 15 s), recording a rational witness per relation.
+`independently_verify_fixed_u_relation_chart.py` (no solver, no shared code) re-derives at every
+witness all displayed premises of `M`, the exact relation and the rank, and the absence of a
+rank-four matching at all three states; all 316 verify (`fixed_u_exact_response_relation_chart_*`).
+The unrealizability of forms 1 and 3 and realizability of 0 and 2 is additionally confirmed by the
+code's own exact-form masters (`unsat, sat, unsat, sat`).  ∎
+
+**Corollary A1 (what the classification lemma proves).**  The step "the exact support relation
+has five edges" (ledger item 4) is a premise.  Under `M` alone, 236 realizable relations have
+other edge counts and 78 five-edge relations are not of the matching form; the lemma's
+"exactly two forms survive" is correct *relative to that premise* and is verified here, but it
+is not a normal form for the states of `M`.  No document in the reference set derives the
+five-edge premise from the saturation exclusions (items 7–12); it is an inserted saturation step.
+
+## 3. Immediate-EFX closure
+
+**Proposition B (witness level).**  At each of the 316 chart witnesses there is a complete EFX
+allocation of the twelve atoms to the four owners (charity empty) using at most four
+support-transfer edges from `Y`; the minimal edge counts are 1 (one cell), 2 (12), 3 (180) and
+4 (123).  Verified by exact `Fraction` re-audit of every allocation.
+
+**Theorem C (universal, twelve-atom).**  GLOBAL_THEOREM_PLACEHOLDER
+
+*Method.*  `run_fixed_u_master_complete_efx_cegar.py`: the loop "M ∧ (no menu allocation is EFX)
+→ valuation → minimal-edge complete EFX allocation → cut" with the EFX conditions of an
+allocation being linear in the valuation, seeded with the 165 distinct minimal-edge allocations
+of the chart witnesses; parallel seeded bursts with merged, deduplicated cuts.  A terminal UNSAT
+is a proof over all valuations of `M`; a terminal UNSAT oracle would be an exact residual
+valuation with no four-edge complete EFX allocation.
+
+## 4. The reduction, stated conditionally on FORM2-CLOSURE
+
+Let FORM2-CLOSURE be the black box "every form-2 state admits a complete EFX allocation (by some
+proved mechanism)".  For states of `M`:
+
+1. If Theorem C holds, every state of `M` — in any of the 316 cells, including the two named
+   forms — admits an immediate complete four-edge EFX allocation (outcome 1 of the target), and
+   FORM2-CLOSURE is not needed at the twelve-atom level:
+   `FORM2-CLOSURE ⇒ UNIVERSAL FIXED-U CLOSURE` holds because the right side holds outright on `M`.
+2. Independently of Theorem C, the *literal* predicate (items 1–12 with the five-edge premise)
+   reduces to cells 0 and 2 by Theorem A and Corollary A1 — a premise-level reduction.  Cell 2 is
+   FORM2-CLOSURE; cell 0 (the two-cycle R2) has in the reference set only a bounded twelve-atom
+   PI exclusion, so under the literal predicate the one remaining lemma for
+   `FORM2-CLOSURE ⇒ UNIVERSAL FIXED-U CLOSURE` is **FORM0-CLOSURE** (or a proof that form 0 states
+   terminate by a proved mechanism) — unless Theorem C discharges both.
+
+## 5. What is not established
+
+- The cap-free lift: `M` treats the twelve goods as atoms.  In the physical-minimum wrapper
+  (roles with totals/minima, arbitrary packet sizes) the four-edge whole-role closure fails on
+  70 of 296 audited form-2 profiles and five edges suffice on all audited profiles
+  (`cc/efx-four-split-20260826`); the analogous statement for all 316 cells is not run here.
+- P10–P15 (global lex maximality, PI-freeness, saturation exclusions) are never encoded; they are
+  not needed for Theorem C and they are not available for termination arguments.
+- Whether every saturated fixed-U state is represented by `M` at all (the "representation by
+  form 2" gate of `PHYSICAL_MINIMUM_ROLE_UNION_CHECKPOINT_20260814.md`) is untouched.
+- Nothing about four-agent or general additive EFX.
+
+## 6. Reproduction
+
+```bash
+python -m tracks.parkability.census_fixed_u_exact_response_relations --output /tmp/chart.json
+python -m tracks.parkability.independently_verify_fixed_u_relation_chart --chart /tmp/chart.json
+python -m tracks.parkability.run_fixed_u_master_complete_efx_cegar --edge-cap 4 --seed-chart /tmp/chart.json \
+  --output /tmp/g4.json --cut-ledger /tmp/g4_cuts.jsonl      # resume with --resume-cuts
+pytest -q tracks/parkability/test_fixed_u_normal_form_chart.py
+```
