@@ -93,3 +93,46 @@ results/fixed_u_f4_audited_four_split_structure_20260826.json
 results/fixed_u_f4_ablation_*_20260826.json                edge-free / zero-floor / random / no-exact
 results/fixed_u_f4_profile_cegar_20260826.json(.jsonl)     profile-level CEGAR run
 ```
+
+## Suggested next targets, in order
+
+1. **Finish W5** on `cc/efx-four-split-20260826`
+   (`run_fixed_u_whole_role_edge_cegar.py`, seeded/resumable): UNSAT is the
+   theorem "every admissible form-2 profile has a whole-role five-edge EFX
+   allocation"; SAT is a profile to run through the split oracle at five
+   edges *before* naming it (do not repeat the four-edge mistake one edge up).
+2. **Five-edge termination:** decide whether the retained-support termination
+   argument (`FIXED_U_RETAINED_SUPPORT_TERMINATION_THEOREM_20260813.md`)
+   tolerates a five-edge premise (three owner pairs + charity + one more).
+   This is the real cap-free bridge now.
+3. Cleanup on this branch: decide the two undecided profiles on a quiet
+   machine (`python -m tracks.parkability.decide_fixed_u_f4 --profile ...
+   --split-cap 4 --oracle-timeout 300`); give the one-hot obstruction check a
+   better encoding at cap 4 (it times out on 12-role cells; the Int-owner
+   oracle decides them in about 30 s).
+
+## Tools on this branch (`tracks/parkability/`)
+
+`decide_fixed_u_f4.py` (CEGAR in the relaxed realization space;
+`--minima-table`), `independently_verify_fixed_u_f4.py` (one-hot;
+`verify_cover` is instant, `verify_obstruction` slow),
+`build_/run_/verify_/summarize_fixed_u_f4_corpus.py`,
+`run_fixed_u_f4_cegar.py` (profile-level; the master returned UNKNOWN at
+900 s in QF_LRA mode with 286 seeded cuts — a search tool, not a theorem
+tool), `ablate_fixed_u_f4*.py`, `test_fixed_u_f4.py`.
+
+## Hazards / laws
+
+- Quantify allocations **per cell**; selectors quantified over realizations
+  were the recurring flaw.  Test named cells directly: the adversary CEGAR
+  ran more than 120 rounds without reaching the refuting cell that a direct
+  query decides in 30 s.
+- Under machine load above 100, z3 `unknown` is a timeout, not a verdict.
+  Use `python3 -u` under `nohup`, or nothing appears until exit.
+- `independently_verify_fixed_u_mixed_and_four_split` embeds the
+  `--primary-audit` *path* in its artifact; pass the repository path or the
+  SHA-256 will not match.
+- Two sessions worked this goal concurrently; check `MEMORY.md` and the
+  branch list before banking anything as first.
+- Nothing here touches complete EFX, universal fixed-`U` closure, or general
+  additive EFX; do not return to (4,8).
