@@ -63,3 +63,23 @@ def test_census_reproduces_chart():
     chart = json.loads(CHART.read_text())
     assert replay["status"] == "COMPLETE"
     assert {r["key"] for r in replay["relations"]} == {r["key"] for r in chart["relations"]}
+
+
+PHYSICAL = ROOT / "results/fixed_u_physical_exact_response_relation_chart_20260826.json"
+
+
+def test_physical_chart_pinned_facts():
+    from . import independently_verify_fixed_u_physical_relation_chart as PV
+    chart = json.loads(PHYSICAL.read_text())
+    assert chart["status"] == "COMPLETE" and chart["relation_count"] == 679
+    atom = {r["key"] for r in json.loads(CHART.read_text())["relations"]}
+    phys = {r["key"] for r in chart["relations"]}
+    assert atom <= phys and len(phys - atom) == 363
+    assert all(("d", "r") in {tuple(e) for e in r["edges"]} for r in chart["relations"] if r["key"] in atom)
+    assert all(("d", "r") not in {tuple(e) for e in r["edges"]} for r in chart["relations"] if r["key"] not in atom)
+    for r in chart["relations"]:
+        E = {tuple(e) for e in r["edges"]}
+        assert ("d", "q") in E and not any(t == "charity" for _, t in E) and r["rank"] <= 3
+        v = {tuple(k.split(":")): Fraction(x) for k, x in r["witness_totals"].items()}
+        PV.MIN.clear(); PV.MIN.update({tuple(k.split(":")): Fraction(x) for k, x in r["witness_minima"].items()})
+        assert sorted(PV.edges(v, PV.SUPPORT, True)) == sorted(E)

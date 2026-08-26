@@ -39,6 +39,16 @@ rank-four matching at all three states; all 316 verify (`fixed_u_exact_response_
 The unrealizability of forms 1 and 3 and realizability of 0 and 2 is additionally confirmed by the
 code's own exact-form masters (`unsat, sat, unsat, sat`).  ∎
 
+**Theorem A′ (cap-free chart).**  Under the physical-minimum master (every atom a role with
+total `T` and per-observer minimum `M`, singleton iff `T=M` for all observers, otherwise
+`T>=2M`; tails `T−min M`), exactly **679** exact nonself response relations are realizable.  The
+316 twelve-atom relations are exactly the 316 physical relations containing `d->r`; the other 363
+lack `d->r`.  `d->q` is universal, charity is never a target, ranks are 3/2/1 in 545/127/7 cells,
+forms 1 and 3 remain unrealizable and forms 0 and 2 occur exactly once each.  Verified by the same
+census CEGAR (679 rounds, 60 s) and a solver-free physical verifier at every witness
+(`fixed_u_physical_exact_response_relation_chart_*`).  In particular the ledger's statement that
+the strong-envy wall *forces* `d->r` (item 4, O:22-25) is true for atoms and **false for packets**.
+
 **Corollary A1 (what the classification lemma proves).**  The step "the exact support relation
 has five edges" (ledger item 4) is a premise.  Under `M` alone, 236 realizable relations have
 other edge counts and 78 five-edge relations are not of the matching form; the lemma's
@@ -78,12 +88,19 @@ proved mechanism)".  For states of `M`:
    `FORM2-CLOSURE ⇒ UNIVERSAL FIXED-U CLOSURE` is **FORM0-CLOSURE** (or a proof that form 0 states
    terminate by a proved mechanism) — unless Theorem C discharges both.
 
+## 4′. Cap-free lift (physical-minimum master, no form restriction)
+
+- **Four edges, whole roles: refuted.**  `run_fixed_u_physical_master_whole_role_cegar.py
+  --edge-cap 4` finds after 8 cuts an exact rational profile with no whole-role four-edge EFX
+  allocation; its exact relation is `{d>q, q>r, q>s, r>s, s>q, s>r}` (rank 3, no `d>r`, i.e.
+  outside the twelve-atom chart).  It closes whole-role at five edges, and at four edges with a
+  single split role (universal over its two-good realizations, menu 6).  This matches the
+  four-split session: the four-edge cap, not splitting, is the operative obstruction.
+- **Five edges, whole roles:** P5_STATUS_PLACEHOLDER
+
 ## 5. What is not established
 
-- The cap-free lift: `M` treats the twelve goods as atoms.  In the physical-minimum wrapper
-  (roles with totals/minima, arbitrary packet sizes) the four-edge whole-role closure fails on
-  70 of 296 audited form-2 profiles and five edges suffice on all audited profiles
-  (`cc/efx-four-split-20260826`); the analogous statement for all 316 cells is not run here.
+- The cap-free lift beyond the two statements above.
 - P10–P15 (global lex maximality, PI-freeness, saturation exclusions) are never encoded; they are
   not needed for Theorem C and they are not available for termination arguments.
 - Whether every saturated fixed-U state is represented by `M` at all (the "representation by

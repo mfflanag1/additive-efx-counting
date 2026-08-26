@@ -39,8 +39,9 @@ Throughout this ledger "form 2" means code index 2.
 
 ## 2. Item 4 dissected: what is derived and what is inserted
 
-- (a) `d->q`, `d->r` always hold.  **Derived and verified**: they hold in every one of the 316
-  realizable exact relations (chart census, independent recomputation).
+- (a) `d->q` always holds (**verified**, twelve-atom and physical).  `d->r` always holds for
+  atoms (**verified**, 316/316) but **not for packets**: 363 of the 679 physical relations lack
+  it, so "forced by the literal strong-envy wall" (O:22-25, item 4) is an atom-level fact.
 - (b) No response into charity.  **Derived** (O:8-28) for paid represented sources; **verified**
   for all sources in the census (0 of 316 relations has a charity target — a stronger statement
   than the lemma, which excludes only paid sources).
