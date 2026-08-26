@@ -2155,3 +2155,13 @@ both encodings.
   allocations are UNSAT but a four-split allocation is SAT. Thus neither two
   nor three coordinated split roles suffice for the declared form-2 chart,
   while complete EFX remains unrefuted.
+- [`FIXED_U_FOUR_SPLIT_EDGE_CAP_BOUNDARY_20260826.md`](FIXED_U_FOUR_SPLIT_EDGE_CAP_BOUNDARY_20260826.md)
+  refutes the four-split form-2 conjecture F4 with an exact realization cell of
+  the pattern-mixed profile that has no four-edge EFX allocation at any split
+  count (independently verified by a Boolean piece-placement encoding), and
+  shows the separation is a four-edge-cap artifact: the same cell, and every
+  one of the 293 ledger profiles, closes universally with a single whole-role
+  allocation once five support-transfer edges are allowed. Introduces the
+  universal two-good-cell oracle (`fixed_u_universal_split.py`, CEGAR with an
+  exact uncovered-cell query), its calibration gates, and a symbolic
+  whole-role edge-cap CEGAR over the complete form-2 master.
