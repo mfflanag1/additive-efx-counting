@@ -3,7 +3,7 @@
 **Date:** 2026-08-26  **Branch:** `fable/efx-fixed-u-normal-form` (from `69c1dcd`)  
 **Status:** exhaustive chart theorem (twelve-atom, exact); the named five-response classification
 is a premise-level statement, not a normal-form theorem; every chart cell's witness — and
-GLOBAL_STATUS_PLACEHOLDER — closes by an immediate complete EFX allocation within four support
+every master model examined so far — closes by an immediate complete EFX allocation within four support
 edges, so at the twelve-atom level the reduction to form 2 is unnecessary.  Nothing here concerns
 general additive EFX, and the cap-free (arbitrary-packet) lift is stated separately.
 
@@ -63,14 +63,18 @@ allocation of the twelve atoms to the four owners (charity empty) using at most 
 support-transfer edges from `Y`; the minimal edge counts are 1 (one cell), 2 (12), 3 (180) and
 4 (123).  Verified by exact `Fraction` re-audit of every allocation.
 
-**Theorem C (universal, twelve-atom).**  GLOBAL_THEOREM_PLACEHOLDER
+**Theorem C (universal, twelve-atom).**  **Not terminated within the session.**  The global four-edge CEGAR closed every master model it produced: 381 distinct minimal-edge allocations after the 40-round seeded run and 2 completed parallel bursts, no residual valuation found.  Rounds slow as cuts accumulate (master checks grew from ~1 s to ~45 s); the run is resumable from the merged cut ledger (`--resume-cuts`).  Until termination, Theorem C is a certified census over the master models generated, not a theorem.
 
 *Method.*  `run_fixed_u_master_complete_efx_cegar.py`: the loop "M ∧ (no menu allocation is EFX)
 → valuation → minimal-edge complete EFX allocation → cut" with the EFX conditions of an
 allocation being linear in the valuation, seeded with the 165 distinct minimal-edge allocations
 of the chart witnesses; parallel seeded bursts with merged, deduplicated cuts.  A terminal UNSAT
 is a proof over all valuations of `M`; a terminal UNSAT oracle would be an exact residual
-valuation with no four-edge complete EFX allocation.
+valuation with no four-edge complete EFX allocation.  The menu is not a small fixed-topology
+selector: after the seeded pass and the first parallel burst the 292 distinct closing allocations
+use 122 distinct support topologies (edge counts 1/2/3/4 in 1/12/118/161 cuts; charity's `p` goes
+to each of the four owners), consistent with the corpus's earlier finding that no small named
+topology family is a universal selector.
 
 ## 4. The reduction, stated conditionally on FORM2-CLOSURE
 
@@ -96,7 +100,7 @@ proved mechanism)".  For states of `M`:
   outside the twelve-atom chart).  It closes whole-role at five edges, and at four edges with a
   single split role (universal over its two-good realizations, menu 6).  This matches the
   four-split session: the four-edge cap, not splitting, is the operative obstruction.
-- **Five edges, whole roles:** P5_STATUS_PLACEHOLDER
+- **Five edges, whole roles:** not terminated in the session: 150 distinct whole-role five-edge allocations installed, every master model closed, no obstruction; resumable.
 
 ## 5. What is not established
 
