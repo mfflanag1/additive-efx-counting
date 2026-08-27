@@ -1,11 +1,12 @@
 # Fixed-U normal form: the exact response-relation chart and the immediate-EFX reduction
 
 **Date:** 2026-08-26  **Branch:** `fable/efx-fixed-u-normal-form` (from `69c1dcd`)  
-**Status:** exhaustive chart theorem (twelve-atom, exact); the named five-response classification
-is a premise-level statement, not a normal-form theorem; every chart cell's witness — and
-every master model examined so far — closes by an immediate complete EFX allocation within four support
-edges, so at the twelve-atom level the reduction to form 2 is unnecessary.  Nothing here concerns
-general additive EFX, and the cap-free (arbitrary-packet) lift is stated separately.
+**Status:** exhaustive chart theorems (twelve-atom: 316 cells; cap-free: 679 cells); the named
+five-response classification is a premise-level statement, not a normal form; **the frozen
+twelve-atom four-edge objective is refuted by two exact rational residual states** of the master
+that lie outside the named forms, have no complete EFX allocation within four support edges, and
+close with five (outcome 3 of the target: an exact obstruction to the asserted classification,
+with the four-edge cap — not EFX — as the boundary).  Nothing here concerns general additive EFX.
 
 Companion: `FIXED_U_NORMAL_FORM_PREMISE_LEDGER_20260826.md` (frozen premises P1–P15).
 
@@ -63,7 +64,20 @@ allocation of the twelve atoms to the four owners (charity empty) using at most 
 support-transfer edges from `Y`; the minimal edge counts are 1 (one cell), 2 (12), 3 (180) and
 4 (123).  Verified by exact `Fraction` re-audit of every allocation.
 
-**Theorem C (universal, twelve-atom).**  **Not terminated within the session.**  The global four-edge CEGAR closed every master model it produced: 381 distinct minimal-edge allocations after the 40-round seeded run and 2 completed parallel bursts, no residual valuation found.  Rounds slow as cuts accumulate (master checks grew from ~1 s to ~45 s); the run is resumable from the merged cut ledger (`--resume-cuts`).  Until termination, Theorem C is a certified census over the master models generated, not a theorem.
+**Theorem C (negative, twelve-atom, exact).**  There are valuations of `M` with no complete EFX
+allocation of the twelve atoms using at most four support-transfer edges.  Two are pinned in
+`fixed_u_twelve_atom_four_edge_residuals_20260826.json`: their exact relations are
+`{d>q,d>r,d>s,q>r,r>d,r>q,r>s,s>r}` (8 edges) and `{d>q,d>r,q>r,r>d,r>s,s>q,s>r}` (7 edges), both
+rank 3, neither a named form.  At each, every master premise P1–P9 verifies solver-free; the
+integer-owner and the Boolean piece-placement encodings both return UNSAT at four edges and SAT
+at five; and an exhaustive brute force over all `4^12 = 16,777,216` complete allocations finds
+22,364 EFX allocations at the first residual, none with fewer than five support edges.  Hence the
+frozen objective "every saturated root-facing rank-three fixed-U state admits a complete EFX
+allocation through at most four support-provenance edges" is **false on `M`** (twelve-atom,
+unit packets), while complete EFX itself holds there with a fifth edge.  The residuals were found
+by the global four-edge CEGAR after 515 closing allocations (the seeded pass plus four parallel
+bursts); the 515-allocation menu closes every other master model generated and is pinned as
+`fixed_u_master_complete_efx_edge4_cuts_20260826.jsonl`.
 
 *Method.*  `run_fixed_u_master_complete_efx_cegar.py`: the loop "M ∧ (no menu allocation is EFX)
 → valuation → minimal-edge complete EFX allocation → cut" with the EFX conditions of an
@@ -76,31 +90,38 @@ use 122 distinct support topologies (edge counts 1/2/3/4 in 1/12/118/161 cuts; c
 to each of the four owners), consistent with the corpus's earlier finding that no small named
 topology family is a universal selector.
 
-## 4. The reduction, stated conditionally on FORM2-CLOSURE
+## 4. The reduction and the exact implication
 
-Let FORM2-CLOSURE be the black box "every form-2 state admits a complete EFX allocation (by some
-proved mechanism)".  For states of `M`:
+Let FORM2-CLOSURE be the black box "every form-2 state admits a complete EFX allocation with at
+most four support edges (and ≤4 split roles)".  On the twelve-atom master `M`:
 
-1. If Theorem C holds, every state of `M` — in any of the 316 cells, including the two named
-   forms — admits an immediate complete four-edge EFX allocation (outcome 1 of the target), and
-   FORM2-CLOSURE is not needed at the twelve-atom level:
-   `FORM2-CLOSURE ⇒ UNIVERSAL FIXED-U CLOSURE` holds because the right side holds outright on `M`.
-2. Independently of Theorem C, the *literal* predicate (items 1–12 with the five-edge premise)
-   reduces to cells 0 and 2 by Theorem A and Corollary A1 — a premise-level reduction.  Cell 2 is
-   FORM2-CLOSURE; cell 0 (the two-cycle R2) has in the reference set only a bounded twelve-atom
-   PI exclusion, so under the literal predicate the one remaining lemma for
-   `FORM2-CLOSURE ⇒ UNIVERSAL FIXED-U CLOSURE` is **FORM0-CLOSURE** (or a proof that form 0 states
-   terminate by a proved mechanism) — unless Theorem C discharges both.
+1. **The literal predicate** (items 1–12 including the five-edge premise) reduces, by Theorem A
+   and Corollary A1, to the two cells form 0 and form 2 — a premise-level reduction.  Under it,
+   `FORM2-CLOSURE ⇒ UNIVERSAL FIXED-U CLOSURE` needs exactly one more lemma, **FORM0-CLOSURE**
+   (the two-cycle R2 cell has only a bounded PI exclusion in the reference set).
+2. **Without the five-edge premise** — i.e. for every state of `M` — the implication is
+   **false for the four-edge conclusion**: Theorem C exhibits states of `M` outside both named
+   forms with no four-edge complete EFX allocation.  Since FORM2-CLOSURE (a statement about
+   form-2 states) says nothing about those cells, no conditional reduction of `M` to form 2 can
+   be a theorem for the four-edge objective; the exact residual states are the obstruction to the
+   asserted classification (target outcome 3).
+3. **What survives.**  Every state of `M` examined — all 316 chart witnesses and all 517 master
+   models generated by the global CEGAR — has a complete EFX allocation within **five** support
+   edges (at most 5 in every case, exactly 5 at the residuals).  The corrected universal statement
+   "every state of `M` admits a complete EFX allocation with at most five support-transfer edges"
+   is the one remaining lemma for universal fixed-U closure at the twelve-atom level, and its
+   cap-free analogue (whole roles, physical master, any of the 679 cells) is the running five-edge
+   CEGAR of §4′.  Under that lemma FORM2-CLOSURE is not needed at all.
 
 ## 4′. Cap-free lift (physical-minimum master, no form restriction)
 
-- **Four edges, whole roles: refuted.**  `run_fixed_u_physical_master_whole_role_cegar.py
+- **Four edges, whole roles: refuted** (and, by Theorem C, four edges fail already for atoms).  `run_fixed_u_physical_master_whole_role_cegar.py
   --edge-cap 4` finds after 8 cuts an exact rational profile with no whole-role four-edge EFX
   allocation; its exact relation is `{d>q, q>r, q>s, r>s, s>q, s>r}` (rank 3, no `d>r`, i.e.
   outside the twelve-atom chart).  It closes whole-role at five edges, and at four edges with a
   single split role (universal over its two-good realizations, menu 6).  This matches the
   four-split session: the four-edge cap, not splitting, is the operative obstruction.
-- **Five edges, whole roles:** not terminated in the session: 150 distinct whole-role five-edge allocations installed, every master model closed, no obstruction; resumable.
+- **Five edges, whole roles:** not terminated in the session: 235 distinct whole-role five-edge allocations installed, every physical master model closed, no obstruction; resumable from `fixed_u_physical_whole_role_edge5_cuts_20260826.jsonl`.
 
 ## 5. What is not established
 

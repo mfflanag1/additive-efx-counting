@@ -85,6 +85,11 @@ not by a theorem — and the states of the master outside (d) are the 314 furthe
 4. The value box `v < 16` and the twelve-atom (unit-packet) model — every UNSAT statement here is
    a twelve-atom theorem; the cap-free (arbitrary packet) lift is the physical-minimum wrapper and
    is treated separately.
+5. **The four-edge support cap** is the single most load-bearing premise of the frozen objective:
+   two exact states of `M` (P1–P9 verified, outside the named forms) have no four-edge complete
+   EFX allocation and are closed by five edges.  Any theorem carrying the cap must exclude those
+   states by P10–P15, which are unencoded; a theorem without the cap (five edges) has no known
+   obstruction on `M`.
 
 ## 5. Silent assumptions found and removed from the record
 

@@ -83,3 +83,23 @@ def test_physical_chart_pinned_facts():
         v = {tuple(k.split(":")): Fraction(x) for k, x in r["witness_totals"].items()}
         PV.MIN.clear(); PV.MIN.update({tuple(k.split(":")): Fraction(x) for k, x in r["witness_minima"].items()})
         assert sorted(PV.edges(v, PV.SUPPORT, True)) == sorted(E)
+
+
+RESIDUALS = ROOT / "results/fixed_u_twelve_atom_four_edge_residuals_20260826.json"
+
+
+def test_twelve_atom_four_edge_residuals_are_exact_and_close_at_five_edges():
+    from . import independently_verify_fixed_u_universal_split_cell as I
+    data = json.loads(RESIDUALS.read_text())
+    assert set(data) == {"g4_b3", "g4_b5"}
+    for name, row in data.items():
+        vals = {tuple(k.split(":")): Fraction(v) for k, v in row["valuation"].items()}
+        assert all(f for _, f in V.check_master(vals)), name
+        E = V.edges(vals, V.SUPPORT, True)
+        assert sorted(E) == sorted(tuple(e) for e in row["relation"]) and V.max_matching(E) == 3
+        assert decide_complete_efx(vals, 4, 600)[0] == "unsat"
+        st, alloc = decide_complete_efx(vals, 5, 600)
+        assert st == "sat" and audit(alloc, vals) == 5
+        ivals = {(o, g): vals[g, o] for g in V.GOODS for o in V.OWNERS}
+        assert I.decide(list(V.GOODS), ivals, 0, 4, 600)[0] == "unsat"
+        assert I.decide(list(V.GOODS), ivals, 0, 5, 600)[0] == "sat"
