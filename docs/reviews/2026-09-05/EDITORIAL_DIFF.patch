@@ -1,0 +1,66 @@
+--- original/paper/main.tex
++++ review/paper/main.tex
+@@ -30,9 +30,8 @@
+ 
+ \title{Exact count-\texorpdfstring{$n$}{n} EFX instances for additive valuations beyond
+ \texorpdfstring{$m=n+2$}{m=n+2}\\and a bounded counting verification}
+-\author{% TODO-AUTHOR: fill in author name(s), affiliation, and email before submission
+-}
+-\date{}
++\author{Specialist review copy}
++\date{5 September 2026}
+ 
+ \begin{document}
+ \maketitle
+@@ -100,8 +99,8 @@
+ 
+ \begin{conjecture}[additive specialization of Neoh--Teh
+ \cite{NeohTeh2025}, Conjecture~6.1]\label{conj:nt}
+-With $n$ agents and additive valuations, there are at least $n$ $\efxo$
+-allocations.
++With $n\ge 1$ agents, at least one good, and additive valuations, there are
++at least $n$ $\efxo$ allocations.
+ \end{conjecture}
+ 
+ Conjecture~\ref{conj:nt} is the still-open additive restriction, not the
+@@ -145,8 +144,12 @@
+ For additive valuations, EFX exists for at most three agents
+ \cite{ChaudhuryThree}.  Mahara \cite{Mahara2107} proves EFX existence when
+ $m\le n+3$, so existence is unconditional in our three diagonal cells even for
+-general monotone valuations.  Together these results make $(4,8)$ the first
+-additive parameter cell not covered by a general existence theorem.
++general monotone valuations.  More recently, Alkassar, Fouz and Mehlhorn
++\cite{Alkassar2026} prove complete $\efxo$ existence for four additive agents
++and at most nine goods, including nonnegative real valuations.  Our claims at
++$(4,8)$ and $(4,9)$ concern the number of allocations, not a new existence
++frontier; the bounded $(4,7)$ result likewise certifies a count of at least four,
++not merely existence.
+ Akrami et al.\ \cite{Akrami2026SAT} refute general-monotone EFX existence from
+ $m=n+5$ onward, while explicitly leaving additive valuations outside their
+ counterexamples.  Their work also gives a recent computer-assisted precedent:
+@@ -545,8 +548,10 @@
+ differential tests, frozen DIMACS input, compressed binary DRAT proof, pinned
+ tool revisions, and proof-verification wrapper described above.
+ \end{itemize}
+-The deterministic release workflow under \path{supplement} binds this source
+-and PDF to those files in a SHA-256 manifest.  It intentionally excludes
++The archival deterministic release workflow under \path{supplement} binds
++the original source and PDF to those files.  This dated specialist-review
++copy instead supplies a separate SHA-256 review manifest, the pinned original
++source inventory, and an editorial diff.  The selected artifact excludes
+ exploratory results that are not claims of this paper.
+ 
+ The historical result reports infeasibility at pool size $1{,}295$, but its
+@@ -667,6 +672,12 @@
+ \newblock \emph{Journal of the ACM}, 71(1), Article 4, 2024;
+ arXiv:2002.05119.
+ 
++\bibitem{Alkassar2026}
++E.~Alkassar, M.~Fouz, and K.~Mehlhorn.
++\newblock Complete EFX allocations exist for four additive agents and up to
++nine goods.
++\newblock \href{https://arxiv.org/abs/2608.08590}{arXiv:2608.08590}, 2026.
++
+ \bibitem{Lipton2004}
+ R.~J. Lipton, E.~Markakis, E.~Mossel, and A.~Saberi.
+ \newblock On approximately fair allocations of indivisible goods.

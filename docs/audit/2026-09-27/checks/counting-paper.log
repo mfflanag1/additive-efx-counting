@@ -1,0 +1,272 @@
+mkdir -p /Users/maxf/projects/economics-research/game-theory/efx-audit-20260927/docs/audit/2026-09-27/checks
+PYTHONDONTWRITEBYTECODE=1 /Users/maxf/.cache/uv/builds-v0/.tmpmSqAge/bin/python repro/counting_witnesses/verify_all.py
+PASS n4_m7 (4,7): count=4 across 16,384 allocations
+PASS n5_m8 (5,8): count=5 across 390,625 allocations
+PASS n6_m9 (6,9): count=6 across 10,077,696 allocations
+PASS n4_m8 (4,8): count=4 across 65,536 allocations
+PASS n4_m9 (4,9): count=4 across 262,144 allocations
+PASS n4_m10 (4,10): count=4 across 1,048,576 allocations
+PASS all 6 count-n witness checks
+PYTHONDONTWRITEBYTECODE=1 /Users/maxf/.cache/uv/builds-v0/.tmpmSqAge/bin/python artifacts/generalized_parking/verify_certificates.py
+PASS n4_m7 (4,7): count=4, base-EFX-min=22, base-envy-min=1, parking-min=1, universal-min=no (exact enumeration)
+PASS n5_m8 (5,8): count=5, base-EFX-min=22, base-envy-min=3, parking-min=3, universal-min=no (exact enumeration)
+PASS n6_m9 (6,9): count=6, base-EFX-min=29, base-envy-min=1, parking-min=1, universal-min=yes (exact enumeration)
+PASS n4_m8_basin1 (4,8), basin 1: count=4, base-EFX-min=3, base-envy-min=1, parking-min=1, universal-min=no (exact enumeration)
+PASS n4_m8_basin2 (4,8), basin 2: count=4, base-EFX-min=9, base-envy-min=1, parking-min=1, universal-min=no (exact enumeration)
+PASS n4_m9 (4,9): count=4, base-EFX-min=2, base-envy-min=1, parking-min=1, universal-min=no (exact enumeration)
+PASS n4_m10 (4,10): count=4, base-EFX-min=6, base-envy-min=1, parking-min=1, universal-min=no (exact enumeration)
+PASS all 7 generalized-parking certificates
+PYTHONDONTWRITEBYTECODE=1 /Users/maxf/.cache/uv/builds-v0/.tmpmSqAge/bin/python repro/countcegar_k4/test_sat_differential.py --result-out /Users/maxf/projects/economics-research/game-theory/efx-audit-20260927/docs/audit/2026-09-27/checks/sat-differential.json
+{
+  "schema": 1,
+  "status": "PASS",
+  "test": "independent CNF against direct definitions and four Z3 master formulations",
+  "strong_envy_identity_checks": 3003,
+  "lexicographic_comparator_checks": 256,
+  "differential_cases": [
+    {
+      "matrix": "all_ones",
+      "case": "empty",
+      "pool_size": 0,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "three_efx0",
+      "pool_size": 3,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "four_efx0",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 4,
+      "expected_sat": false,
+      "statuses": {
+        "definition": false,
+        "cnf_slots": false,
+        "lia_slots": false,
+        "lia_cardinality": false,
+        "pb_slots": false,
+        "pb_cardinality": false
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "non_efx0_only",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "all_ones",
+      "case": "three_efx0_plus_non_efx0",
+      "pool_size": 5,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "empty",
+      "pool_size": 0,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "three_efx0",
+      "pool_size": 3,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "four_efx0",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 4,
+      "expected_sat": false,
+      "statuses": {
+        "definition": false,
+        "cnf_slots": false,
+        "lia_slots": false,
+        "lia_cardinality": false,
+        "pb_slots": false,
+        "pb_cardinality": false
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "non_efx0_only",
+      "pool_size": 4,
+      "distinct_efx0_in_pool": 0,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    },
+    {
+      "matrix": "staircase",
+      "case": "three_efx0_plus_non_efx0",
+      "pool_size": 5,
+      "distinct_efx0_in_pool": 3,
+      "expected_sat": true,
+      "statuses": {
+        "definition": true,
+        "cnf_slots": true,
+        "lia_slots": true,
+        "lia_cardinality": true,
+        "pb_slots": true,
+        "pb_cardinality": true
+      }
+    }
+  ],
+  "pool_and_dimacs_checks": {
+    "raw_pool_size": 2,
+    "unique_pool_size": 1,
+    "dimacs_sha256": "d3839195ed373898a2c97fe88600ef262d23de1fda3c7c250da8e04e369e4908"
+  },
+  "isolated_solver_process": {
+    "successful_backend": "Cadical195",
+    "crash_exit_code": 17,
+    "crash_detected_within_seconds": 0.503244,
+    "timeout_reason": "wall-clock timeout",
+    "timeout_detected_within_seconds": 0.103099
+  },
+  "seconds": 1.807205,
+  "command": "repro/countcegar_k4/test_sat_differential.py --result-out /Users/maxf/projects/economics-research/game-theory/efx-audit-20260927/docs/audit/2026-09-27/checks/sat-differential.json",
+  "source_sha256": {
+    "check_sat": "7c60ea7a99966f5d033d7a164043859839eb1bc532777cabfba1131e77135263",
+    "check_z3": "c63e481b9985d8bb9e65c102b18823189062db50205dcd9f7a0c40adbdc86fc7",
+    "differential_test": "adf3280047b68bbdc289f887c1fd5b849657e6ec3174f972825a1d04b85eb52e"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "python_sat": "1.9.dev15",
+    "z3": "5.1.0",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  }
+}
+PYTHONDONTWRITEBYTECODE=1 /Users/maxf/.cache/uv/builds-v0/.tmpmSqAge/bin/python repro/countcegar_k4/test_slot_boundary.py --result-out /Users/maxf/projects/economics-research/game-theory/efx-audit-20260927/docs/audit/2026-09-27/checks/slot-boundary.json
+{
+  "schema": 1,
+  "status": "PASS",
+  "test": "fixed t47 three-slot boundary",
+  "instance": "/Users/maxf/projects/economics-research/game-theory/efx-audit-20260927/results/t47.json",
+  "instance_sha256": "5dd6023dda9aeac85c921005ea345b176c6656f73a369f0f61a59658b2bf0481",
+  "efx0_count": 4,
+  "efx0_allocations": [
+    [
+      0,
+      3,
+      1,
+      0,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      3,
+      1,
+      1,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      3,
+      1,
+      2,
+      0,
+      0,
+      2
+    ],
+    [
+      0,
+      3,
+      1,
+      3,
+      0,
+      0,
+      2
+    ]
+  ],
+  "master_status": {
+    "empty_pool": "OPTIMAL",
+    "three_distinct_efx0": "OPTIMAL",
+    "all_four_efx0": "INFEASIBLE"
+  },
+  "seconds": 0.03,
+  "command": "repro/countcegar_k4/test_slot_boundary.py --result-out /Users/maxf/projects/economics-research/game-theory/efx-audit-20260927/docs/audit/2026-09-27/checks/slot-boundary.json",
+  "environment": {
+    "python": "3.13.5",
+    "ortools": "9.15.6755",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  }
+}
+PYTHONDONTWRITEBYTECODE=1 /Users/maxf/.cache/uv/builds-v0/.tmpmSqAge/bin/python repro/countcegar_k4/verify_drat.py --hash-only
+{
+  "schema": 1,
+  "status": "HASHES_PASS",
+  "cnf_sha256": "ccc2aa45a5710d967a166abf7bc56a2026c517f4157730872b99524027baa166",
+  "compressed_proof_sha256": "ddcad227664410e4e3552bd774ea369888dae4e56093a3016a4ce880eb549977",
+  "uncompressed_proof_sha256": "710c51bd36addd3d1ea73c14d902d2b1d9aba23cafcd4874ef1d21daf2779a5b",
+  "uncompressed_proof_bytes": 134426255,
+  "seconds": 3.776713
+}

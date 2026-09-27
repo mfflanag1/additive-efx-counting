@@ -1,5 +1,13 @@
 # Additive EFX counting
 
+**Current program audit (27 September 2026):**
+[results, corrections, review depth and next theorem](docs/EFX_PROGRAM_AUDIT_2026-09-27.md),
+[pinned later research branches](docs/RESEARCH_BRANCH_INDEX.md), and
+[the next goods campaign: global admission](docs/global-admission/GLOBAL_ADMISSION_CAMPAIGN.md).
+The adjacent [chores paper](https://github.com/mfflanag1/counterexample-hunt/tree/main/efx2)
+is a separate theorem with different certification tiers. General additive goods EFX
+is **not solved**. Older optimistic campaign summaries are not current status.
+
 This repository contains a research paper and its computational evidence on
 the number of labeled EFX allocations under positive additive valuations. The
 current result is deliberately narrow: it supplies six exact count-\(n\)
@@ -38,8 +46,9 @@ combined into an unrestricted equality theorem.
 | `results/`, `tracks/`, root research scripts | Campaign archive and discovery work; presence is not a claim of correctness |
 | `docs/` | Accomplishments, audit history, archive guide, and [thesis research program](docs/THESIS_RESEARCH_PROGRAM.md) |
 
-Canonical status is recorded here and in
-[ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md). Older reports and campaign notes are
+Canonical program status is recorded in the dated audit above; the counting
+claims remain recorded here and in [ACCOMPLISHMENTS.md](ACCOMPLISHMENTS.md).
+Older reports and campaign notes are
 preserved as research history; see
 [docs/CAMPAIGN_ARCHIVE.md](docs/CAMPAIGN_ARCHIVE.md) before citing them.
 

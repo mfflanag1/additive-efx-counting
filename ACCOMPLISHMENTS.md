@@ -1,5 +1,9 @@
 # Accomplishments and claim status
 
+For the later goods campaign, superseded claims, chores work and current review
+depth, use the [27 September 2026 consolidated audit](docs/EFX_PROGRAM_AUDIT_2026-09-27.md).
+This file records the narrower counting publication; it is not a general EFX proof.
+
 ## 1. Six exact count-\(n\) witnesses
 
 The project gives six positive additive valuation matrices whose complete set
