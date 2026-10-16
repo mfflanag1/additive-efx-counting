@@ -1,0 +1,16 @@
+{
+  "schema": "selector-exit-trace-v1",
+  "values": [
+    [1025,2050,1028,1032,16],
+    [1025,1026,1028,1032,16],
+    [1025,1026,1028,1032,16],
+    [1025,1026,1028,1032,16]
+  ],
+  "priority": [0,1,2,3],
+  "base_owner": [0,1,2,3,null],
+  "exit_owner": [1,0,2,null,3],
+  "repair_steps": [
+    {"rule":"pool_replacement","owner":[1,0,2,3,null],"recipient":3,"desired_goods":[3]}
+  ],
+  "outcome": "restricted_improvement"
+}

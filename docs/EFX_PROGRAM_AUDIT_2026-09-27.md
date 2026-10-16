@@ -6,6 +6,11 @@ underlying historical evidence. It is an internal source, literature and replay
 audit, **not an independent proof of every archived theorem or external acceptance**.
 The cooperative-game PXC/Lmin/Lmax program is separate and is not included here.
 
+**16 October correction:** the selector/maximality portion of the admission gap
+is closed by [BCFF-based repair](global-admission/RESTRICTED_SELECTOR_COMPATIBILITY_20261016.md).
+The older A0 framing overlooked BCFF Theorem 5.1's improvement guarantee. This
+does not establish physical fixed-U admission or general EFX.
+
 ## Bottom line
 
 There are defensible paper-sized contributions, but no resolution of general
@@ -43,7 +48,7 @@ rule only refutes that rule. It is not a failure of EFX itself.
 | Generalized parking criterion | Necessary and sufficient observer/host slack inequalities for assigning a leftover good to a fixed EFX base; seven exact certificates. | A proved local characterization and useful explanation of the witnesses. Do not market this elementary algebra alone as a field-level breakthrough. |
 | Bounded counting theorem | Every positive integer 4-by-7 matrix with entries in {1,2,3,4} has at least four labeled EFX allocations. Reconstructed 1,240-allocation terminal pool, independent CNF, retained DRAT proof. | Finite computer-assisted theorem, subject to encoding correctness. The magnitude bound is essential to the claim. |
 | Bounded two-safe-bundle theorem | External-observer lemma on the declared {1,2}^4 packet grid; checkpoint 723dec6 with independent replay and a finite census. | A bounded auxiliary result, not a cap-free lemma. |
-| Two-nonsingleton composition | Consolidation at a8e925e proposes a repaired conditional exclusion argument and a nice-cancelable extension. Assumes a globally selected partial EFX state in the required one-charity normal form. | Substantial candidate structural theorem. BCFF imports and all composition cases still need external mathematical review. It does not supply the joint global selection hypothesis. |
+| Two-nonsingleton composition | Consolidation at a8e925e proposes a repaired conditional exclusion argument and a nice-cancelable extension. Assumes a globally selected partial EFX state in the required one-charity normal form. | Substantial candidate structural theorem. BCFF imports and all composition cases still need external mathematical review. The selection interface is supplied separately by the 16 October BCFF repair corollary in the declared positive nondegenerate additive scope. |
 | Four-edge completion obstruction | Exact physical cell defeats every allocation allowed by the declared four-support-transfer-edge model, including its permitted splits; five edges complete the cell. F4 checkpoint 712a40e. | A rigorous obstruction to that capped mechanism, NOT an EFX counterexample. |
 | Dynamic-anchor, packet and normal-form classifications | Fixed-U model tests, exact residuals and the 316 atomic / 679 physical response-relation classifications. | Useful specification and falsification work; not universal physical admission or a general closure proof. |
 | Three-agent common-three-value chores through m=11 | Entire positive ratio continuum, via structural/geometry reductions and finite profile sweeps. Evidence tiers differ sharply by m. | Specialist-review candidate. Current potentially novel existence window is m=9,10,11, not m=7..11. No complete Lean formalization or fresh full larger-range replay. |
@@ -142,7 +147,7 @@ surviving m=9..11 novelty before submission.
 
 **Structural goods:** source and premise review plus focused regressions; not a
 fresh audit of every search in the archive. External review should start with the
-conditional two-nonsingleton theorem and joint-selection gap, then the physical
+conditional two-nonsingleton theorem, the corrected selection import and physical admission, then the physical
 four-edge obstruction. The retired closure must remain retired unless a new proof
 fixes the actual missing transition.
 
@@ -181,15 +186,15 @@ Vanished untracked scratch files in old temporary worktrees are not claimed reco
    checkable certificate for a surviving novel rung is more valuable than more
    low-item computation now covered by broader work.
 3. Resume goods only against [ADMIT4](global-admission/GLOBAL_ADMISSION_CAMPAIGN.md).
-   First prove or refute the joint selection of a globally maximal partial EFX
-   allocation with the charity structure the proof needs. BCFF's almost-complete
-   allocation does not by itself give this stronger selection. Freeze the exact
-   quantifiers before searching. A counterexample to an unconditional selection
-   lemma need not refute admission under a no-complete-EFX antecedent.
+   The joint selection gate is now closed using BCFF Theorem 5.1, not merely its
+   existence corollary. Next derive the physical role/support/base extraction
+   from that selected state, including all alternatives and original goods.
+   A counterexample to an unconditional sublemma need not refute admission
+   under a no-complete-EFX antecedent.
 4. After admission, close the entire admitted physical domain and prove pullback
    and termination. Admission alone does not prove local closure, and closure alone
    does not prove admission. The starting target fixes an owner priority and
-   assumes nondegenerate positive valuations; justify that selection and supply
+   assumes nondegenerate positive valuations; use the corrected selection and supply
    the tie/zero extension before asserting the unrestricted four-agent theorem.
    Four-agent existence for arbitrary item counts would
    itself be a major advance, but would still not settle arbitrary-agent EFX.

@@ -3,6 +3,11 @@
 Read the [current audit](EFX_PROGRAM_AUDIT_2026-09-27.md) before historical reports.
 Pins below are archival provenance, not endorsements of every claim in a branch.
 
+New work: `codex/efx-restricted-selector-20261016` isolates the
+[restricted-selector compatibility proof](global-admission/RESTRICTED_SELECTOR_COMPATIBILITY_20261016.md),
+exact replay, and correction to A0. It is a corollary of BCFF, not a new EFX
+existence theorem; no historical research branch was merged to obtain it.
+
 | Branch / checkpoint | Commit | Purpose / boundary |
 |---|---|---|
 | Previous publication main | b3eb183d2375c3b98ec0196bbcc06207b1d85a86 | Counting paper and earlier bounded goods evidence. |

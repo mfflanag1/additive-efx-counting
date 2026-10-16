@@ -1,0 +1,2455 @@
+{
+  "agent_order": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "arithmetic": {
+    "common_denominator": 1,
+    "method": "Exact rational input; common-denominator integer comparisons.",
+    "values_scaled": [
+      [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        6208,
+        4224,
+        256
+      ],
+      [
+        16385,
+        4098,
+        24580,
+        4104,
+        16,
+        34848,
+        31808,
+        128,
+        2304
+      ],
+      [
+        10241,
+        2,
+        18436,
+        8200,
+        20496,
+        32,
+        29760,
+        128,
+        6400
+      ],
+      [
+        1,
+        2,
+        4,
+        8,
+        18448,
+        20512,
+        19520,
+        128,
+        4352
+      ]
+    ]
+  },
+  "candidate": {
+    "attains_domain_maximum": {
+      "all_partial_efx": true,
+      "all_partial_efx_safe": true,
+      "at_most_one_charity_efx_safe": true,
+      "complete_efx": false,
+      "exactly_one_charity_efx_safe": true
+    },
+    "base_owner": [
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      0,
+      0,
+      null
+    ],
+    "bundles": [
+      [
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "charity": [
+      8
+    ],
+    "charity_nonenvy_slacks_scaled": [
+      10176,
+      30478,
+      24337,
+      16160
+    ],
+    "domain_membership": {
+      "all_partial_efx": true,
+      "all_partial_efx_safe": true,
+      "at_most_one_charity_efx_safe": true,
+      "complete_efx": false,
+      "exactly_one_charity_efx_safe": true
+    },
+    "efx_comparisons": [
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 4224,
+        "slack_scaled": 6208,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 6208,
+        "slack_scaled": 4224,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 12,
+        "slack_scaled": 10420,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 10,
+        "slack_scaled": 10422,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 6,
+        "slack_scaled": 10426,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 16,
+        "slack_scaled": 10416,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 1,
+        "slack_scaled": 10431,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 0,
+        "slack_scaled": 10432,
+        "target": 3
+      },
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 128,
+        "slack_scaled": 32654,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 31808,
+        "slack_scaled": 974,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 28684,
+        "slack_scaled": 4098,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 8202,
+        "slack_scaled": 24580,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 28678,
+        "slack_scaled": 4104,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 16,
+        "slack_scaled": 32766,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 16385,
+        "slack_scaled": 16397,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 0,
+        "slack_scaled": 32782,
+        "target": 3
+      },
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 128,
+        "slack_scaled": 30609,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 29760,
+        "slack_scaled": 977,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 26636,
+        "slack_scaled": 4101,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 8202,
+        "slack_scaled": 22535,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 18438,
+        "slack_scaled": 12299,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 20496,
+        "slack_scaled": 10241,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 10241,
+        "slack_scaled": 20496,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 0,
+        "slack_scaled": 30737,
+        "target": 3
+      },
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 128,
+        "slack_scaled": 20384,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 19520,
+        "slack_scaled": 992,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 12,
+        "slack_scaled": 20500,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 10,
+        "slack_scaled": 20502,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 6,
+        "slack_scaled": 20506,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 18448,
+        "slack_scaled": 2064,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 1,
+        "slack_scaled": 20511,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 0,
+        "slack_scaled": 20512,
+        "target": 3
+      }
+    ],
+    "is_efx": true,
+    "min_efx_slack_scaled": 974,
+    "utilities": [
+      10432,
+      32782,
+      30737,
+      20512
+    ],
+    "utilities_scaled": [
+      10432,
+      32782,
+      30737,
+      20512
+    ],
+    "whole_charity_nonenvy": true
+  },
+  "domains": {
+    "all_partial_efx": {
+      "allocation_count": 10929,
+      "definition": "All partial EFX allocations, including complete; no charity safety condition.",
+      "maximizer": {
+        "base_owner": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          0,
+          null
+        ],
+        "bundles": [
+          [
+            6,
+            7
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "charity": [
+          8
+        ],
+        "charity_nonenvy_slacks_scaled": [
+          10176,
+          30478,
+          24337,
+          16160
+        ],
+        "domain_membership": {
+          "all_partial_efx": true,
+          "all_partial_efx_safe": true,
+          "at_most_one_charity_efx_safe": true,
+          "complete_efx": false,
+          "exactly_one_charity_efx_safe": true
+        },
+        "efx_comparisons": [
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 4224,
+            "slack_scaled": 6208,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6208,
+            "slack_scaled": 4224,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 12,
+            "slack_scaled": 10420,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 10,
+            "slack_scaled": 10422,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6,
+            "slack_scaled": 10426,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 16,
+            "slack_scaled": 10416,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 1,
+            "slack_scaled": 10431,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 0,
+            "slack_scaled": 10432,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 128,
+            "slack_scaled": 32654,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 31808,
+            "slack_scaled": 974,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28684,
+            "slack_scaled": 4098,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 8202,
+            "slack_scaled": 24580,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28678,
+            "slack_scaled": 4104,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16,
+            "slack_scaled": 32766,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16385,
+            "slack_scaled": 16397,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 0,
+            "slack_scaled": 32782,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 128,
+            "slack_scaled": 30609,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 29760,
+            "slack_scaled": 977,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 26636,
+            "slack_scaled": 4101,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 8202,
+            "slack_scaled": 22535,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 18438,
+            "slack_scaled": 12299,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 20496,
+            "slack_scaled": 10241,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 10241,
+            "slack_scaled": 20496,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 0,
+            "slack_scaled": 30737,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 128,
+            "slack_scaled": 20384,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 19520,
+            "slack_scaled": 992,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 12,
+            "slack_scaled": 20500,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 10,
+            "slack_scaled": 20502,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 6,
+            "slack_scaled": 20506,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 18448,
+            "slack_scaled": 2064,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 1,
+            "slack_scaled": 20511,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 0,
+            "slack_scaled": 20512,
+            "target": 3
+          }
+        ],
+        "is_efx": true,
+        "min_efx_slack_scaled": 974,
+        "utilities": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "utilities_scaled": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "whole_charity_nonenvy": true
+      },
+      "maximizer_count": 1,
+      "maximum_utility_key": [
+        10432,
+        32782,
+        30737,
+        20512
+      ],
+      "maximum_utility_key_scaled": [
+        10432,
+        32782,
+        30737,
+        20512
+      ]
+    },
+    "all_partial_efx_safe": {
+      "allocation_count": 864,
+      "definition": "All partial EFX allocations with whole-charity nonenvy, including complete.",
+      "maximizer": {
+        "base_owner": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          0,
+          null
+        ],
+        "bundles": [
+          [
+            6,
+            7
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "charity": [
+          8
+        ],
+        "charity_nonenvy_slacks_scaled": [
+          10176,
+          30478,
+          24337,
+          16160
+        ],
+        "domain_membership": {
+          "all_partial_efx": true,
+          "all_partial_efx_safe": true,
+          "at_most_one_charity_efx_safe": true,
+          "complete_efx": false,
+          "exactly_one_charity_efx_safe": true
+        },
+        "efx_comparisons": [
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 4224,
+            "slack_scaled": 6208,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6208,
+            "slack_scaled": 4224,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 12,
+            "slack_scaled": 10420,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 10,
+            "slack_scaled": 10422,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6,
+            "slack_scaled": 10426,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 16,
+            "slack_scaled": 10416,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 1,
+            "slack_scaled": 10431,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 0,
+            "slack_scaled": 10432,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 128,
+            "slack_scaled": 32654,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 31808,
+            "slack_scaled": 974,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28684,
+            "slack_scaled": 4098,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 8202,
+            "slack_scaled": 24580,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28678,
+            "slack_scaled": 4104,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16,
+            "slack_scaled": 32766,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16385,
+            "slack_scaled": 16397,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 0,
+            "slack_scaled": 32782,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 128,
+            "slack_scaled": 30609,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 29760,
+            "slack_scaled": 977,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 26636,
+            "slack_scaled": 4101,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 8202,
+            "slack_scaled": 22535,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 18438,
+            "slack_scaled": 12299,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 20496,
+            "slack_scaled": 10241,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 10241,
+            "slack_scaled": 20496,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 0,
+            "slack_scaled": 30737,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 128,
+            "slack_scaled": 20384,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 19520,
+            "slack_scaled": 992,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 12,
+            "slack_scaled": 20500,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 10,
+            "slack_scaled": 20502,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 6,
+            "slack_scaled": 20506,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 18448,
+            "slack_scaled": 2064,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 1,
+            "slack_scaled": 20511,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 0,
+            "slack_scaled": 20512,
+            "target": 3
+          }
+        ],
+        "is_efx": true,
+        "min_efx_slack_scaled": 974,
+        "utilities": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "utilities_scaled": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "whole_charity_nonenvy": true
+      },
+      "maximizer_count": 1,
+      "maximum_utility_key": [
+        10432,
+        32782,
+        30737,
+        20512
+      ],
+      "maximum_utility_key_scaled": [
+        10432,
+        32782,
+        30737,
+        20512
+      ]
+    },
+    "at_most_one_charity_efx_safe": {
+      "allocation_count": 425,
+      "definition": "EFX and whole-charity nonenvy with zero or one charity good, including complete.",
+      "maximizer": {
+        "base_owner": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          0,
+          null
+        ],
+        "bundles": [
+          [
+            6,
+            7
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "charity": [
+          8
+        ],
+        "charity_nonenvy_slacks_scaled": [
+          10176,
+          30478,
+          24337,
+          16160
+        ],
+        "domain_membership": {
+          "all_partial_efx": true,
+          "all_partial_efx_safe": true,
+          "at_most_one_charity_efx_safe": true,
+          "complete_efx": false,
+          "exactly_one_charity_efx_safe": true
+        },
+        "efx_comparisons": [
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 4224,
+            "slack_scaled": 6208,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6208,
+            "slack_scaled": 4224,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 12,
+            "slack_scaled": 10420,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 10,
+            "slack_scaled": 10422,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6,
+            "slack_scaled": 10426,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 16,
+            "slack_scaled": 10416,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 1,
+            "slack_scaled": 10431,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 0,
+            "slack_scaled": 10432,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 128,
+            "slack_scaled": 32654,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 31808,
+            "slack_scaled": 974,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28684,
+            "slack_scaled": 4098,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 8202,
+            "slack_scaled": 24580,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28678,
+            "slack_scaled": 4104,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16,
+            "slack_scaled": 32766,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16385,
+            "slack_scaled": 16397,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 0,
+            "slack_scaled": 32782,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 128,
+            "slack_scaled": 30609,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 29760,
+            "slack_scaled": 977,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 26636,
+            "slack_scaled": 4101,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 8202,
+            "slack_scaled": 22535,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 18438,
+            "slack_scaled": 12299,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 20496,
+            "slack_scaled": 10241,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 10241,
+            "slack_scaled": 20496,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 0,
+            "slack_scaled": 30737,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 128,
+            "slack_scaled": 20384,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 19520,
+            "slack_scaled": 992,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 12,
+            "slack_scaled": 20500,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 10,
+            "slack_scaled": 20502,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 6,
+            "slack_scaled": 20506,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 18448,
+            "slack_scaled": 2064,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 1,
+            "slack_scaled": 20511,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 0,
+            "slack_scaled": 20512,
+            "target": 3
+          }
+        ],
+        "is_efx": true,
+        "min_efx_slack_scaled": 974,
+        "utilities": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "utilities_scaled": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "whole_charity_nonenvy": true
+      },
+      "maximizer_count": 1,
+      "maximum_utility_key": [
+        10432,
+        32782,
+        30737,
+        20512
+      ],
+      "maximum_utility_key_scaled": [
+        10432,
+        32782,
+        30737,
+        20512
+      ]
+    },
+    "complete_efx": {
+      "allocation_count": 103,
+      "definition": "Complete EFX allocations (zero charity goods).",
+      "maximizer": {
+        "base_owner": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          1,
+          0
+        ],
+        "bundles": [
+          [
+            6,
+            8
+          ],
+          [
+            1,
+            2,
+            3,
+            7
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "charity": [],
+        "charity_nonenvy_slacks_scaled": [
+          6464,
+          32910,
+          30737,
+          20512
+        ],
+        "domain_membership": {
+          "all_partial_efx": true,
+          "all_partial_efx_safe": true,
+          "at_most_one_charity_efx_safe": true,
+          "complete_efx": true,
+          "exactly_one_charity_efx_safe": false
+        },
+        "efx_comparisons": [
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 256,
+            "slack_scaled": 6208,
+            "target": 0
+          },
+          {
+            "deleted_good": 8,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 6208,
+            "slack_scaled": 256,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 4236,
+            "slack_scaled": 2228,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 4234,
+            "slack_scaled": 2230,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 4230,
+            "slack_scaled": 2234,
+            "target": 1
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 14,
+            "slack_scaled": 6450,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 16,
+            "slack_scaled": 6448,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 1,
+            "slack_scaled": 6463,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 6464,
+            "observer": 0,
+            "rhs_scaled": 0,
+            "slack_scaled": 6464,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 2304,
+            "slack_scaled": 30606,
+            "target": 0
+          },
+          {
+            "deleted_good": 8,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 31808,
+            "slack_scaled": 1102,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 28812,
+            "slack_scaled": 4098,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 8330,
+            "slack_scaled": 24580,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 28806,
+            "slack_scaled": 4104,
+            "target": 1
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 32782,
+            "slack_scaled": 128,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 16,
+            "slack_scaled": 32894,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 16385,
+            "slack_scaled": 16525,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 32910,
+            "observer": 1,
+            "rhs_scaled": 0,
+            "slack_scaled": 32910,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 6400,
+            "slack_scaled": 24337,
+            "target": 0
+          },
+          {
+            "deleted_good": 8,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 29760,
+            "slack_scaled": 977,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 26764,
+            "slack_scaled": 3973,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 8330,
+            "slack_scaled": 22407,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 18566,
+            "slack_scaled": 12171,
+            "target": 1
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 26638,
+            "slack_scaled": 4099,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 20496,
+            "slack_scaled": 10241,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 10241,
+            "slack_scaled": 20496,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 0,
+            "slack_scaled": 30737,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 4352,
+            "slack_scaled": 16160,
+            "target": 0
+          },
+          {
+            "deleted_good": 8,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 19520,
+            "slack_scaled": 992,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 140,
+            "slack_scaled": 20372,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 138,
+            "slack_scaled": 20374,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 134,
+            "slack_scaled": 20378,
+            "target": 1
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 14,
+            "slack_scaled": 20498,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 18448,
+            "slack_scaled": 2064,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 1,
+            "slack_scaled": 20511,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 0,
+            "slack_scaled": 20512,
+            "target": 3
+          }
+        ],
+        "is_efx": true,
+        "min_efx_slack_scaled": 128,
+        "utilities": [
+          6464,
+          32910,
+          30737,
+          20512
+        ],
+        "utilities_scaled": [
+          6464,
+          32910,
+          30737,
+          20512
+        ],
+        "whole_charity_nonenvy": true
+      },
+      "maximizer_count": 1,
+      "maximum_utility_key": [
+        6464,
+        32910,
+        30737,
+        20512
+      ],
+      "maximum_utility_key_scaled": [
+        6464,
+        32910,
+        30737,
+        20512
+      ]
+    },
+    "exactly_one_charity_efx_safe": {
+      "allocation_count": 322,
+      "definition": "EFX and whole-charity nonenvy with exactly one charity good.",
+      "maximizer": {
+        "base_owner": [
+          2,
+          1,
+          1,
+          1,
+          2,
+          3,
+          0,
+          0,
+          null
+        ],
+        "bundles": [
+          [
+            6,
+            7
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            5
+          ]
+        ],
+        "charity": [
+          8
+        ],
+        "charity_nonenvy_slacks_scaled": [
+          10176,
+          30478,
+          24337,
+          16160
+        ],
+        "domain_membership": {
+          "all_partial_efx": true,
+          "all_partial_efx_safe": true,
+          "at_most_one_charity_efx_safe": true,
+          "complete_efx": false,
+          "exactly_one_charity_efx_safe": true
+        },
+        "efx_comparisons": [
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 4224,
+            "slack_scaled": 6208,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6208,
+            "slack_scaled": 4224,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 12,
+            "slack_scaled": 10420,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 10,
+            "slack_scaled": 10422,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 6,
+            "slack_scaled": 10426,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 16,
+            "slack_scaled": 10416,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 1,
+            "slack_scaled": 10431,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 10432,
+            "observer": 0,
+            "rhs_scaled": 0,
+            "slack_scaled": 10432,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 128,
+            "slack_scaled": 32654,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 31808,
+            "slack_scaled": 974,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28684,
+            "slack_scaled": 4098,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 8202,
+            "slack_scaled": 24580,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 28678,
+            "slack_scaled": 4104,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16,
+            "slack_scaled": 32766,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 16385,
+            "slack_scaled": 16397,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 32782,
+            "observer": 1,
+            "rhs_scaled": 0,
+            "slack_scaled": 32782,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 128,
+            "slack_scaled": 30609,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 29760,
+            "slack_scaled": 977,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 26636,
+            "slack_scaled": 4101,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 8202,
+            "slack_scaled": 22535,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 18438,
+            "slack_scaled": 12299,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 20496,
+            "slack_scaled": 10241,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 10241,
+            "slack_scaled": 20496,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 30737,
+            "observer": 2,
+            "rhs_scaled": 0,
+            "slack_scaled": 30737,
+            "target": 3
+          },
+          {
+            "deleted_good": 6,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 128,
+            "slack_scaled": 20384,
+            "target": 0
+          },
+          {
+            "deleted_good": 7,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 19520,
+            "slack_scaled": 992,
+            "target": 0
+          },
+          {
+            "deleted_good": 1,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 12,
+            "slack_scaled": 20500,
+            "target": 1
+          },
+          {
+            "deleted_good": 2,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 10,
+            "slack_scaled": 20502,
+            "target": 1
+          },
+          {
+            "deleted_good": 3,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 6,
+            "slack_scaled": 20506,
+            "target": 1
+          },
+          {
+            "deleted_good": 0,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 18448,
+            "slack_scaled": 2064,
+            "target": 2
+          },
+          {
+            "deleted_good": 4,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 1,
+            "slack_scaled": 20511,
+            "target": 2
+          },
+          {
+            "deleted_good": 5,
+            "lhs_scaled": 20512,
+            "observer": 3,
+            "rhs_scaled": 0,
+            "slack_scaled": 20512,
+            "target": 3
+          }
+        ],
+        "is_efx": true,
+        "min_efx_slack_scaled": 974,
+        "utilities": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "utilities_scaled": [
+          10432,
+          32782,
+          30737,
+          20512
+        ],
+        "whole_charity_nonenvy": true
+      },
+      "maximizer_count": 1,
+      "maximum_utility_key": [
+        10432,
+        32782,
+        30737,
+        20512
+      ],
+      "maximum_utility_key_scaled": [
+        10432,
+        32782,
+        30737,
+        20512
+      ]
+    }
+  },
+  "enumeration": {
+    "assignment_count_by_charity_size": [
+      262144,
+      589824,
+      589824,
+      344064,
+      129024,
+      32256,
+      5376,
+      576,
+      36,
+      1
+    ],
+    "complete": true,
+    "efx_count_by_charity_size": [
+      103,
+      609,
+      1387,
+      1737,
+      1584,
+      3024,
+      2016,
+      432,
+      36,
+      1
+    ],
+    "expected_assignment_count": 1953125,
+    "safe_efx_count_by_charity_size": [
+      103,
+      322,
+      310,
+      116,
+      13,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tie_break": "First base-5 owner-code vector in lexicographic order; charity code is 4.",
+    "visited_assignment_count": 1953125
+  },
+  "globally_improving_out_of_class_efx_assignment": null,
+  "improvement_comparison": "Strict lexicographic utility improvement over the supplied candidate, priority [0,1,2,3]; outside the at-most-one-charity safe domain.",
+  "m": 9,
+  "n": 4,
+  "outside_at_most_one_safe_domain": {
+    "allocation_count": 10504,
+    "definition": "All partial EFX allocations that fail whole-charity nonenvy or have more than one charity good.",
+    "maximizer": {
+      "base_owner": [
+        1,
+        null,
+        2,
+        2,
+        3,
+        1,
+        0,
+        null,
+        3
+      ],
+      "bundles": [
+        [
+          6
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "charity": [
+        1,
+        7
+      ],
+      "charity_nonenvy_slacks_scaled": [
+        1982,
+        47007,
+        26506,
+        22670
+      ],
+      "domain_membership": {
+        "all_partial_efx": true,
+        "all_partial_efx_safe": true,
+        "at_most_one_charity_efx_safe": false,
+        "complete_efx": false,
+        "exactly_one_charity_efx_safe": false
+      },
+      "efx_comparisons": [
+        {
+          "deleted_good": 6,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 0,
+          "slack_scaled": 6208,
+          "target": 0
+        },
+        {
+          "deleted_good": 0,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 32,
+          "slack_scaled": 6176,
+          "target": 1
+        },
+        {
+          "deleted_good": 5,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 1,
+          "slack_scaled": 6207,
+          "target": 1
+        },
+        {
+          "deleted_good": 2,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 8,
+          "slack_scaled": 6200,
+          "target": 2
+        },
+        {
+          "deleted_good": 3,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 4,
+          "slack_scaled": 6204,
+          "target": 2
+        },
+        {
+          "deleted_good": 4,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 256,
+          "slack_scaled": 5952,
+          "target": 3
+        },
+        {
+          "deleted_good": 8,
+          "lhs_scaled": 6208,
+          "observer": 0,
+          "rhs_scaled": 16,
+          "slack_scaled": 6192,
+          "target": 3
+        },
+        {
+          "deleted_good": 6,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 0,
+          "slack_scaled": 51233,
+          "target": 0
+        },
+        {
+          "deleted_good": 0,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 34848,
+          "slack_scaled": 16385,
+          "target": 1
+        },
+        {
+          "deleted_good": 5,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 16385,
+          "slack_scaled": 34848,
+          "target": 1
+        },
+        {
+          "deleted_good": 2,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 4104,
+          "slack_scaled": 47129,
+          "target": 2
+        },
+        {
+          "deleted_good": 3,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 24580,
+          "slack_scaled": 26653,
+          "target": 2
+        },
+        {
+          "deleted_good": 4,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 2304,
+          "slack_scaled": 48929,
+          "target": 3
+        },
+        {
+          "deleted_good": 8,
+          "lhs_scaled": 51233,
+          "observer": 1,
+          "rhs_scaled": 16,
+          "slack_scaled": 51217,
+          "target": 3
+        },
+        {
+          "deleted_good": 6,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 0,
+          "slack_scaled": 26636,
+          "target": 0
+        },
+        {
+          "deleted_good": 0,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 32,
+          "slack_scaled": 26604,
+          "target": 1
+        },
+        {
+          "deleted_good": 5,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 10241,
+          "slack_scaled": 16395,
+          "target": 1
+        },
+        {
+          "deleted_good": 2,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 8200,
+          "slack_scaled": 18436,
+          "target": 2
+        },
+        {
+          "deleted_good": 3,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 18436,
+          "slack_scaled": 8200,
+          "target": 2
+        },
+        {
+          "deleted_good": 4,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 6400,
+          "slack_scaled": 20236,
+          "target": 3
+        },
+        {
+          "deleted_good": 8,
+          "lhs_scaled": 26636,
+          "observer": 2,
+          "rhs_scaled": 20496,
+          "slack_scaled": 6140,
+          "target": 3
+        },
+        {
+          "deleted_good": 6,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 0,
+          "slack_scaled": 22800,
+          "target": 0
+        },
+        {
+          "deleted_good": 0,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 20512,
+          "slack_scaled": 2288,
+          "target": 1
+        },
+        {
+          "deleted_good": 5,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 1,
+          "slack_scaled": 22799,
+          "target": 1
+        },
+        {
+          "deleted_good": 2,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 8,
+          "slack_scaled": 22792,
+          "target": 2
+        },
+        {
+          "deleted_good": 3,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 4,
+          "slack_scaled": 22796,
+          "target": 2
+        },
+        {
+          "deleted_good": 4,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 4352,
+          "slack_scaled": 18448,
+          "target": 3
+        },
+        {
+          "deleted_good": 8,
+          "lhs_scaled": 22800,
+          "observer": 3,
+          "rhs_scaled": 18448,
+          "slack_scaled": 4352,
+          "target": 3
+        }
+      ],
+      "is_efx": true,
+      "min_efx_slack_scaled": 2288,
+      "utilities": [
+        6208,
+        51233,
+        26636,
+        22800
+      ],
+      "utilities_scaled": [
+        6208,
+        51233,
+        26636,
+        22800
+      ],
+      "whole_charity_nonenvy": true
+    },
+    "maximizer_count": 1,
+    "maximum_utility_key": [
+      6208,
+      51233,
+      26636,
+      22800
+    ],
+    "maximum_utility_key_scaled": [
+      6208,
+      51233,
+      26636,
+      22800
+    ]
+  },
+  "schema": "selector-compatibility-independent-audit-v1"
+}

@@ -1,6 +1,6 @@
 # Next goods campaign: global admission, not another local selector
 
-Priority set 5 September 2026. This brief prepares the next research run; it does not assert that the theorem below holds or launch a long-running computation.
+Priority set 5 September 2026; selector gate corrected 16 October 2026. ADMIT4 remains open. The [restricted-selector compatibility proof](RESTRICTED_SELECTOR_COMPATIBILITY_20261016.md) closes A0 in the positive, bundle-nondegenerate four-agent scope using BCFF's stronger improvement theorem. Next research starts at A1, not another selector census.
 
 ## Why this is the next target
 
@@ -18,11 +18,11 @@ ADMIT4 is a proposed reduction, NOT an established equivalence and NOT the asser
 
 ## Proof obligations, in order
 
-### A0. Joint selection of the global starting state
+### A0. Joint selection — closed in the declared nondegenerate scope
 
-Define the finite set of partial EFX allocations of the ORIGINAL goods and the exact lexicographic objective over that set. Distinguish a global maximizer from a maximizer restricted to one leftover good. BCFF supplies an almost-complete allocation; it does not, without a separate argument, supply a global lexicographic maximizer having exactly one leftover good.
+Let F contain all partial EFX allocations of the original goods, including complete allocations, and let S contain those with at most one unallocated good and unenvied charity. Fix the owner priority once. BCFF Theorem 5.1 supplies a strict lex improvement from every F-state with at least two unallocated goods; the minimum-envied-charity replacement in Lemma 2.4's proof supplies a Pareto improvement when charity is envied. Finiteness therefore implies that every F-maximum lies in S and every S-maximum is an F-maximum. Under no complete EFX, the selected safe pool has exactly one good.
 
-Prove the joint property needed by the later argument, or replace it with a selection principle whose legally improving exits really contradict its own maximality. List every discarded case and the theorem that closes it. Do not use the two-nonsingleton exclusion until its one-charity/maximality hypotheses have been obtained. If this joint-selection lemma fails, freeze an exact physical counterexample to that lemma and stop the downstream admission proof at the failure.
+The previous paragraph of this brief omitted this stronger published improvement theorem and incorrectly left the joint property open. See the linked conventional repair proof and exact calibration. Any genuine original-good partial EFX exit that improves the same priority can be repaired to S without losing that improvement, even if it discards many goods. This supplies only the selection/maximality interface: the other hypotheses and composition cases of the two-nonsingleton argument still require their own proofs. Non-EFX resets remain invalid. Do not transfer a fixed state's EFX/maximality across a generic perturbation; the statement here stays inside the nondegenerate instance.
 
 ### A1. Physical role extraction without deleting goods
 
@@ -44,7 +44,7 @@ A complete EFX exit need not lexicographically improve the selected partial allo
 
 ## Two-sided attack and falsifiers
 
-First attack A0 by exact enumeration of actual small positive rational games and all their partial allocations. The test oracle must calculate global and one-charity maxima independently, with the priority order explicit. It is legitimate to refute a proposed joint-selection sublemma on a game that itself HAS a complete EFX allocation, provided that sublemma did not assume the contrary. Such a witness does not refute ADMIT4 under its no-complete-EFX antecedent.
+Use the completed A0 exact replay as a regression, not an open search target. First attack A1: map the chosen original global maximum to the claimed intermediate support/base layouts and derive their physical inequalities. Freeze this implication before searching. A counterexample must satisfy its exact antecedents; a game with complete EFX can refute an unconditional sublemma but not ADMIT4 under its no-complete-EFX assumption.
 
 For A1-A3, freeze each proposed implication BEFORE searching. Negative results must satisfy every antecedent of that implication, and defeat its full existential choice set if the claim is existential. A failure of one chosen selector or one partition is not a counterexample to admission. A marginal profile satisfying only P1-P9 is not a counterexample to a stronger global-premise theorem.
 
@@ -55,7 +55,7 @@ If an exact positive rational instance truly has NO complete EFX allocation, req
 1. Reproduce the existing 316/679 relation boundaries and the missing d->r phenomenon from the frozen definitions, reusing archived certificates where valid. The purpose is specification fidelity, not another census claim.
 2. Accept the known four-edge residuals and their five-edge completions. A new admission restriction excluding them needs a genuine global reason.
 3. Check the exact theorem/countermodel examples used in the BCFF import audit and reject the retired reset transition for its recorded failure.
-4. Before any long search, finish a proof-state table for A0-A3 with the first unproved implication highlighted. If A0 is open, spend the run there; do not start a downstream W5 continuation merely to remain busy.
+4. Before any long search, maintain the A0-A3 proof-state table. A0 is closed as above; A1 is the first unproved gate. Do not start a downstream W5 continuation without a precise source-to-physical-state admission implication.
 5. Continue only for a new conventional derivation, a new physical obstruction to a frozen sublemma, or a materially smaller EXACT missing premise. A growing menu or a restated sufficient condition is not this campaign's success criterion.
 
 ## Deliverables

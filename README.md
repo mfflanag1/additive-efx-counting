@@ -4,6 +4,10 @@
 [results, corrections, review depth and next theorem](docs/EFX_PROGRAM_AUDIT_2026-09-27.md),
 [pinned later research branches](docs/RESEARCH_BRANCH_INDEX.md), and
 [the next goods campaign: global admission](docs/global-admission/GLOBAL_ADMISSION_CAMPAIGN.md).
+
+16 October 2026: [restricted-selector/exit compatibility](docs/global-admission/RESTRICTED_SELECTOR_COMPATIBILITY_20261016.md)
+closes the selection gate using BCFF's published improvement theorem. Physical
+fixed-U admission and complete-EFX closure remain open.
 The adjacent [chores paper](https://github.com/mfflanag1/counterexample-hunt/tree/main/efx2)
 is a separate theorem with different certification tiers. General additive goods EFX
 is **not solved**. Older optimistic campaign summaries are not current status.
