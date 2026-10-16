@@ -12,6 +12,17 @@ The literal `<16` value box is redundant **conditional on physical base EFX and
 that layout**: every role-observer value is at most 1. This corrects the frozen
 August ledger's description of the box, without altering its historical text.
 
+A1 continuation: [physical cycle release](PHYSICAL_CYCLE_RELEASE_20261016.md) derives
+a one-underpaid support state for every two-charity-edge cycle, without an assumed
+role layout. It also derives a complete all-paid probe when the cycle has at most
+one ordinary run, and all-G cross-pool/Hall constraints without an assumed matching
+rank. Neither probe is automatically EFX. Exact calibration exposes an unchanged
+external-bundle wall for release and an internal enlarged-bundle wall for residual
+return. See [checks and review](PHYSICAL_CYCLE_RELEASE_VERIFICATION_20261016.md).
+The next missing implication is a physical repair handling both walls (or a complete
+EFX exit allowed to lower original utilities), plus coverage of multiple-underpaid
+and alternating-cycle cases. A1 and ADMIT4 remain open.
+
 ## Why this is the next target
 
 The August 26 premise audit is the controlling record. The twelve-atom master has 316 exact response relations; its physical totals/minima extension has 679. These are classifications of particular models, not a proof that arbitrary globally selected EFX states enter those models. P10-P15 are not encoded. "Exactly five response edges" was inserted, and the purported compulsory response d->r fails in 363 physical-master relations. A response edge is NOT a transfer edge in a closing allocation.
