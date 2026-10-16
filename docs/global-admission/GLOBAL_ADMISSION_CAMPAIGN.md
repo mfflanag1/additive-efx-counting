@@ -2,6 +2,16 @@
 
 Priority set 5 September 2026; selector gate corrected 16 October 2026. ADMIT4 remains open. The [restricted-selector compatibility proof](RESTRICTED_SELECTOR_COMPATIBILITY_20261016.md) closes A0 in the positive, bundle-nondegenerate four-agent scope using BCFF's stronger improvement theorem. Next research starts at A1, not another selector census.
 
+A1 checkpoint, 16 October: [physical entry and state separation](PHYSICAL_ADMISSION_A1_20261016.md)
+derives actual augmented common-safe cores from the selected state and excludes
+every disjoint-core improving cycle. It does not derive the fixed-U layout. The
+selected original O, the numerical base B (three charity roles), and non-EFX support
+Y must be kept distinct. An O-to-B construction must retain the original normalized
+threshold vector gamma; improvement above B's all-ones vector is insufficient.
+The literal `<16` value box is redundant **conditional on physical base EFX and
+that layout**: every role-observer value is at most 1. This corrects the frozen
+August ledger's description of the box, without altering its historical text.
+
 ## Why this is the next target
 
 The August 26 premise audit is the controlling record. The twelve-atom master has 316 exact response relations; its physical totals/minima extension has 679. These are classifications of particular models, not a proof that arbitrary globally selected EFX states enter those models. P10-P15 are not encoded. "Exactly five response edges" was inserted, and the purported compulsory response d->r fails in 363 physical-master relations. A response edge is NOT a transfer edge in a closing allocation.
@@ -25,6 +35,14 @@ Let F contain all partial EFX allocations of the original goods, including compl
 The previous paragraph of this brief omitted this stronger published improvement theorem and incorrectly left the joint property open. See the linked conventional repair proof and exact calibration. Any genuine original-good partial EFX exit that improves the same priority can be repaired to S without losing that improvement, even if it discards many goods. This supplies only the selection/maximality interface: the other hypotheses and composition cases of the two-nonsingleton argument still require their own proofs. Non-EFX resets remain invalid. Do not transfer a fixed state's EFX/maximality across a generic perturbation; the statement here stays inside the nondegenerate instance.
 
 ### A1. Physical role extraction without deleting goods
+
+The first proven entry is now the physical augmented-core graph in the A1 checkpoint.
+It has a cycle using charity in at least two cores; no two-cycle or GG flower is
+forced by this alone. The exact nine-good global-maximum calibration has only a
+three-cycle in that graph and also has complete EFX allocations. The next theorem
+must therefore handle the complete-exit branch and the longer-cycle/cardinality
+branches, not assume a GG two-cycle. Neither the original-to-numerical-base trace
+nor its threshold/provenance alignment has been supplied by the archived sources.
 
 Give a labeled partition of the original goods into the named roles and charity, with every intermediate support state and signed transfer recorded. Role totals and observer minima must be computed from those same goods; arbitrary marginal numbers are not a physical instance. Specify empty and singleton roles, common cardinalities, and how minima are realized. Do not identify a multi-good role with a single atom merely because its total agrees.
 

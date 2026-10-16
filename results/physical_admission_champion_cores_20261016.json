@@ -1,0 +1,655 @@
+{
+  "agent_order": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "arithmetic": {
+    "common_denominator": 1,
+    "method": "Exact common-denominator integer comparisons; no binary floats.",
+    "values_scaled": [
+      [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        6208,
+        4224,
+        256
+      ],
+      [
+        16385,
+        4098,
+        24580,
+        4104,
+        16,
+        34848,
+        31808,
+        128,
+        2304
+      ],
+      [
+        10241,
+        2,
+        18436,
+        8200,
+        20496,
+        32,
+        29760,
+        128,
+        6400
+      ],
+      [
+        1,
+        2,
+        4,
+        8,
+        18448,
+        20512,
+        19520,
+        128,
+        4352
+      ]
+    ]
+  },
+  "base_allocation": {
+    "base_owner": [
+      2,
+      1,
+      1,
+      1,
+      2,
+      3,
+      0,
+      0,
+      null
+    ],
+    "bundles": [
+      [
+        6,
+        7
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        5
+      ]
+    ],
+    "charity": [
+      8
+    ],
+    "charity_nonenvy_slacks_scaled": [
+      10176,
+      30478,
+      24337,
+      16160
+    ],
+    "efx_comparisons": [
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 4224,
+        "slack_scaled": 6208,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 6208,
+        "slack_scaled": 4224,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 12,
+        "slack_scaled": 10420,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 10,
+        "slack_scaled": 10422,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 6,
+        "slack_scaled": 10426,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 16,
+        "slack_scaled": 10416,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 1,
+        "slack_scaled": 10431,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 10432,
+        "observer": 0,
+        "rhs_scaled": 0,
+        "slack_scaled": 10432,
+        "target": 3
+      },
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 128,
+        "slack_scaled": 32654,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 31808,
+        "slack_scaled": 974,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 28684,
+        "slack_scaled": 4098,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 8202,
+        "slack_scaled": 24580,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 28678,
+        "slack_scaled": 4104,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 16,
+        "slack_scaled": 32766,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 16385,
+        "slack_scaled": 16397,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 32782,
+        "observer": 1,
+        "rhs_scaled": 0,
+        "slack_scaled": 32782,
+        "target": 3
+      },
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 128,
+        "slack_scaled": 30609,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 29760,
+        "slack_scaled": 977,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 26636,
+        "slack_scaled": 4101,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 8202,
+        "slack_scaled": 22535,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 18438,
+        "slack_scaled": 12299,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 20496,
+        "slack_scaled": 10241,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 10241,
+        "slack_scaled": 20496,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 30737,
+        "observer": 2,
+        "rhs_scaled": 0,
+        "slack_scaled": 30737,
+        "target": 3
+      },
+      {
+        "deleted_good": 6,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 128,
+        "slack_scaled": 20384,
+        "target": 0
+      },
+      {
+        "deleted_good": 7,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 19520,
+        "slack_scaled": 992,
+        "target": 0
+      },
+      {
+        "deleted_good": 1,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 12,
+        "slack_scaled": 20500,
+        "target": 1
+      },
+      {
+        "deleted_good": 2,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 10,
+        "slack_scaled": 20502,
+        "target": 1
+      },
+      {
+        "deleted_good": 3,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 6,
+        "slack_scaled": 20506,
+        "target": 1
+      },
+      {
+        "deleted_good": 0,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 18448,
+        "slack_scaled": 2064,
+        "target": 2
+      },
+      {
+        "deleted_good": 4,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 1,
+        "slack_scaled": 20511,
+        "target": 2
+      },
+      {
+        "deleted_good": 5,
+        "lhs_scaled": 20512,
+        "observer": 3,
+        "rhs_scaled": 0,
+        "slack_scaled": 20512,
+        "target": 3
+      }
+    ],
+    "is_efx": true,
+    "utilities_scaled": [
+      10432,
+      32782,
+      30737,
+      20512
+    ],
+    "whole_charity_nonenvy": true
+  },
+  "champion_records": [
+    {
+      "core_id": 0,
+      "goods": [
+        6,
+        8
+      ],
+      "source": 1,
+      "target": 0
+    },
+    {
+      "core_id": 0,
+      "goods": [
+        6,
+        8
+      ],
+      "source": 2,
+      "target": 0
+    },
+    {
+      "core_id": 0,
+      "goods": [
+        6,
+        8
+      ],
+      "source": 3,
+      "target": 0
+    },
+    {
+      "core_id": 1,
+      "goods": [
+        2,
+        3,
+        8
+      ],
+      "source": 2,
+      "target": 1
+    },
+    {
+      "core_id": 2,
+      "goods": [
+        4,
+        8
+      ],
+      "source": 3,
+      "target": 2
+    },
+    {
+      "core_id": 3,
+      "goods": [
+        5
+      ],
+      "source": 1,
+      "target": 3
+    }
+  ],
+  "cores": [
+    {
+      "champions": [
+        1,
+        2,
+        3
+      ],
+      "contains_charity": true,
+      "core_id": 0,
+      "goods": [
+        6,
+        8
+      ],
+      "single_deletion_slacks_scaled": [
+        {
+          "deleted_good": 6,
+          "slacks_scaled": [
+            10176,
+            30478,
+            24337,
+            16160
+          ]
+        },
+        {
+          "deleted_good": 8,
+          "slacks_scaled": [
+            4224,
+            974,
+            977,
+            992
+          ]
+        }
+      ],
+      "target": 0,
+      "values_scaled": [
+        6464,
+        34112,
+        36160,
+        23872
+      ]
+    },
+    {
+      "champions": [
+        2
+      ],
+      "contains_charity": true,
+      "core_id": 1,
+      "goods": [
+        2,
+        3,
+        8
+      ],
+      "single_deletion_slacks_scaled": [
+        {
+          "deleted_good": 2,
+          "slacks_scaled": [
+            10168,
+            26374,
+            16137,
+            16152
+          ]
+        },
+        {
+          "deleted_good": 3,
+          "slacks_scaled": [
+            10172,
+            5898,
+            5901,
+            16156
+          ]
+        },
+        {
+          "deleted_good": 8,
+          "slacks_scaled": [
+            10420,
+            4098,
+            4101,
+            20500
+          ]
+        }
+      ],
+      "target": 1,
+      "values_scaled": [
+        268,
+        30988,
+        33036,
+        4364
+      ]
+    },
+    {
+      "champions": [
+        3
+      ],
+      "contains_charity": true,
+      "core_id": 2,
+      "goods": [
+        4,
+        8
+      ],
+      "single_deletion_slacks_scaled": [
+        {
+          "deleted_good": 4,
+          "slacks_scaled": [
+            10176,
+            30478,
+            24337,
+            16160
+          ]
+        },
+        {
+          "deleted_good": 8,
+          "slacks_scaled": [
+            10416,
+            32766,
+            10241,
+            2064
+          ]
+        }
+      ],
+      "target": 2,
+      "values_scaled": [
+        272,
+        2320,
+        26896,
+        22800
+      ]
+    },
+    {
+      "champions": [
+        1
+      ],
+      "contains_charity": false,
+      "core_id": 3,
+      "goods": [
+        5
+      ],
+      "single_deletion_slacks_scaled": [
+        {
+          "deleted_good": 5,
+          "slacks_scaled": [
+            10432,
+            32782,
+            30737,
+            20512
+          ]
+        }
+      ],
+      "target": 3,
+      "values_scaled": [
+        32,
+        34848,
+        32,
+        20512
+      ]
+    }
+  ],
+  "decorated_cycles": [
+    {
+      "charity_occurrences": 2,
+      "cores_disjoint": false,
+      "edges": [
+        {
+          "core_id": 3,
+          "goods": [
+            5
+          ],
+          "source": 1,
+          "target": 3
+        },
+        {
+          "core_id": 2,
+          "goods": [
+            4,
+            8
+          ],
+          "source": 3,
+          "target": 2
+        },
+        {
+          "core_id": 1,
+          "goods": [
+            2,
+            3,
+            8
+          ],
+          "source": 2,
+          "target": 1
+        }
+      ],
+      "exchange": null,
+      "vertices": [
+        1,
+        3,
+        2
+      ]
+    }
+  ],
+  "m": 9,
+  "n": 4,
+  "schema": "physical-champion-cores-audit-v1",
+  "scope": {
+    "complete_efx_nonexistence_claimed": false,
+    "conditional_cycle_exclusion": "If O is fixed-order lexmax over ALL partial EFX allocations, every decorated simple champion cycle uses p at least twice.",
+    "downstream_two_cycle_or_role_layout_proved": false,
+    "exchange_charity_safety_required": false,
+    "global_lexmax_verified": false,
+    "global_maximality_claims_from_archive_used": false
+  },
+  "summary": {
+    "champion_record_count": 6,
+    "core_count": 4,
+    "core_count_by_target": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "decorated_cycle_count": 1,
+    "decorated_cycle_count_by_length": {
+      "1": 0,
+      "2": 0,
+      "3": 1,
+      "4": 0
+    },
+    "decorated_self_loop_count": 0,
+    "disjoint_core_cycle_count": 0,
+    "minimum_charity_occurrences_on_cycle": 2,
+    "nonempty_core_subsets_checked_by_target": [
+      7,
+      15,
+      7,
+      3
+    ],
+    "simple_vertex_cycles_examined": 24
+  }
+}
